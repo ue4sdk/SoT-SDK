@@ -19,7 +19,8 @@ namespace SDK
 class ABP_SmallShip_Capstan_C : public ABP_Base_Capstan_C
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UChildActorComponent*                        Arm1;                                                     // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Arm2;                                                     // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

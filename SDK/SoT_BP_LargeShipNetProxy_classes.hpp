@@ -19,7 +19,8 @@ namespace SDK
 class ABP_LargeShipNetProxy_C : public AShipNetProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x04F0(0x0018) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UMaterialInstanceDynamic*>            Dynamic_Materials;                                        // 0x04F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -140,9 +140,9 @@ public:
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x685];                                     // 0x01F3(0x0685) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x00D0(0x0048) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x750];                                     // 0x0128(0x0750) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -185,7 +185,8 @@ public:
 class UCustomClientValidityCheckCallback : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	bool                                               ShouldPassClientValidation;                               // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -246,8 +247,8 @@ public:
 class UActionStatePriorityTableData : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	TArray<struct FActionStatePriorityRelationship>    StateDefaultValue;                                        // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FActionStatePriorityRelationship>    StateDefaultValue;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FActionStatePriorityList>            PriorityTableEntry;                                       // 0x0038(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -281,8 +282,8 @@ public:
 class UMockActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	TArray<class UClass*>                              ActiveActionStateIds;                                     // 0x01E3(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
+	TArray<class UClass*>                              ActiveActionStateIds;                                     // 0x00F0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -298,7 +299,7 @@ public:
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0470(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -338,7 +339,8 @@ public:
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0470(0x0018) MISSED OFFSET
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0470(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0478(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -19,7 +19,7 @@ namespace SDK
 class UJwtAuthenticationTokenSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	class FString                                      TokenSecretKey;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 class UJwtAuthenticationTokenEditorSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	class FString                                      TokenSecretKey;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

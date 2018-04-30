@@ -19,7 +19,8 @@ namespace SDK
 class ABP_BountyRewardSkull_Proxy_C : public ABountyRewardItemProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x08A8(0x0010) MISSED OFFSET
+	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x08A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x08B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

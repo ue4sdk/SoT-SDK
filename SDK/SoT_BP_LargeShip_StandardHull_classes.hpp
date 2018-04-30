@@ -19,7 +19,8 @@ namespace SDK
 class ABP_LargeShip_StandardHull_C : public AHull
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	class UChildActorComponent*                        Damage;                                                   // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Art;                                                      // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

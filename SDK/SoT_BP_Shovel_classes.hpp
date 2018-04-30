@@ -19,7 +19,7 @@ namespace SDK
 class ABP_Shovel_C : public AShovel
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0840(0x0008) MISSED OFFSET
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_MerchantCrate_ChickenCrate_C : public AMerchantCrate
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07E0(0x0008) MISSED OFFSET
+	class UMountpointComponent*                        Mountpoint;                                               // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

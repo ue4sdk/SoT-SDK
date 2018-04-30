@@ -19,7 +19,11 @@ namespace SDK
 class ABP_AmmoChest_C : public AInteractableObject
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0518(0x0040) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0518(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UInteractableComponent*                      Interactable;                                             // 0x0520(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        AmmoChest;                                                // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               Emitter;                                                  // 0x0530(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0550(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

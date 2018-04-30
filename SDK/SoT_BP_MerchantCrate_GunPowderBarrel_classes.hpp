@@ -19,7 +19,12 @@ namespace SDK
 class ABP_MerchantCrate_GunpowderBarrel_C : public AStaticMerchantCrate
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x07E8(0x0030) MISSED OFFSET
+	class UBoxComponent*                               StashedAttackHitVolume;                                   // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               AttackHitVolume;                                          // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UExplosionComponent*                         Explosion;                                                // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UExplosiveComponent*                         Explosive;                                                // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UHealthComponent*                            Health;                                                   // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorDamageableComponent*                   ActorDamageable;                                          // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

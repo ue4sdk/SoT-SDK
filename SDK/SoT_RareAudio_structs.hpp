@@ -30,64 +30,62 @@ struct FWwiseEmitter
 // 0x0028
 struct FWwiseEmitterCreationParams
 {
-	struct FName                                       SwitchValue;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	class UWwiseEvent*                                 Event;                                                    // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       RTPCName;                                                 // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RTPCValue;                                                // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SwitchGroup;                                              // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 Event;                                                    // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RTPCName;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RTPCValue;                                                // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SwitchGroup;                                              // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SwitchValue;                                              // 0x001C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct RareAudio.WwiseNativeEmitterPoolDensityParams
 // 0x0028
 struct FWwiseNativeEmitterPoolDensityParams
 {
-	float                                              DensityDistance;                                          // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	bool                                               PlayPoolDensityAudio;                                     // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 PoolDensityAudioPlayEvent;                                // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 PoolDensityAudioStopEvent;                                // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FName                                       DensityRtpcName;                                          // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                FullDensityAmount;                                        // 0x01E3(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               PlayPoolDensityAudio;                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class UWwiseEvent*                                 PoolDensityAudioPlayEvent;                                // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PoolDensityAudioStopEvent;                                // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FName                                       DensityRtpcName;                                          // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                FullDensityAmount;                                        // 0x0020(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DensityDistance;                                          // 0x0024(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct RareAudio.EventToComponentMapping
 // 0x0020
 struct FEventToComponentMapping
 {
-	TArray<class UWwiseEmitterComponent*>              WwiseEmitterComponents;                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	class UWwiseEvent*                                 PlayEvent;                                                // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StopEvent;                                                // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayEvent;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopEvent;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UWwiseEmitterComponent*>              WwiseEmitterComponents;                                   // 0x0010(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
 };
 
 // ScriptStruct RareAudio.StaticMeshWwiseEmitterData
 // 0x0038
 struct FStaticMeshWwiseEmitterData
 {
-	TArray<class UWwiseEvent*>                         StopEvents;                                               // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     Pool;                                                     // 0x01E3(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LocalOriginOffset;                                        // 0x01E3(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UWwiseEvent*>                         StartEvents;                                              // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	class UWwiseObjectPoolWrapper*                     Pool;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LocalOriginOffset;                                        // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	TArray<class UWwiseEvent*>                         StartEvents;                                              // 0x0018(0x0010) (Edit, ZeroConstructor)
+	TArray<class UWwiseEvent*>                         StopEvents;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct RareAudio.StaticMeshAudioAssociation
 // 0x0020
 struct FStaticMeshAudioAssociation
 {
-	TArray<class UStaticMesh*>                         Meshes;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	TArray<struct FStaticMeshWwiseEmitterData>         PlaybackDataArray;                                        // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FStaticMeshWwiseEmitterData>         PlaybackDataArray;                                        // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TArray<class UStaticMesh*>                         Meshes;                                                   // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct RareAudio.StaticMeshComponentAudioAssociation
 // 0x0068
 struct FStaticMeshComponentAudioAssociation
 {
-	struct FVector                                     EmitterPositionRelativeToComponentOrigin;                 // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1D7];                                     // 0x000C(0x01D7) MISSED OFFSET
-	struct FStaticMeshWwiseEmitterData                 PlaybackData;                                             // 0x01E3(0x0038) (Edit)
+	struct FStaticMeshWwiseEmitterData                 PlaybackData;                                             // 0x0000(0x0038) (Edit)
+	struct FVector                                     EmitterPositionRelativeToComponentOrigin;                 // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x24];                                      // 0x0044(0x0024) MISSED OFFSET
 };
 
 }

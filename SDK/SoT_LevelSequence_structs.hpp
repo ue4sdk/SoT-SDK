@@ -28,19 +28,18 @@ struct FLevelSequenceObjectReferenceMap
 // 0x0038
 struct FLevelSequenceObject
 {
-	TWeakObjectPtr<class UObject>                      CachedComponent;                                          // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	TLazyObjectPtr<class UObject>                      ObjectOrOwner;                                            // 0x01E3(0x001C) (IsPlainOldData)
-	class FString                                      ComponentName;                                            // 0x01E3(0x0010) (ZeroConstructor)
+	TLazyObjectPtr<class UObject>                      ObjectOrOwner;                                            // 0x0000(0x001C) (IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class FString                                      ComponentName;                                            // 0x0020(0x0010) (ZeroConstructor)
+	TWeakObjectPtr<class UObject>                      CachedComponent;                                          // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
 // ScriptStruct LevelSequence.LevelSequencePlaybackSettings
 // 0x0008
 struct FLevelSequencePlaybackSettings
 {
-	float                                              PlayRate;                                                 // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	int                                                LoopCount;                                                // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                LoopCount;                                                // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRate;                                                 // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct LevelSequence.LevelSequenceObjectReference

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_SmallShip_DamageZone_MezzanineDeck_00_C : public ABP_BaseInternalDamageZone_C
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x08A0(0x0008) MISSED OFFSET
+	class UStaticMeshComponent*                        Cube;                                                     // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -19,7 +19,11 @@ namespace SDK
 class ABP_LargeShip_QuestTable_C : public AVoyageProposalContainer
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0758(0x0028) MISSED OFFSET
+	class UChildActorComponent*                        CancelVoyage;                                             // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot4;                                     // 0x0760(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot3;                                     // 0x0768(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot2;                                     // 0x0770(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot1;                                     // 0x0778(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

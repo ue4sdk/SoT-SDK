@@ -20,10 +20,9 @@ namespace SDK
 // 0x0030
 struct FBlueprintLiveStreamInfo
 {
-	class FString                                      URL;                                                      // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	class FString                                      GameName;                                                 // 0x01E3(0x0010) (Edit, ZeroConstructor)
-	class FString                                      StreamName;                                               // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	class FString                                      GameName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	class FString                                      StreamName;                                               // 0x0010(0x0010) (Edit, ZeroConstructor)
+	class FString                                      URL;                                                      // 0x0020(0x0010) (Edit, ZeroConstructor)
 };
 
 }

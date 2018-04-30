@@ -19,7 +19,8 @@ namespace SDK
 class ABP_WaterProjectile_C : public ALiquidProjectile
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x06F8(0x0010) MISSED OFFSET
+	class UStaticMeshComponent*                        Sphere;                                                   // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Collision;                                                // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

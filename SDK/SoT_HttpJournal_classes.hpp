@@ -19,9 +19,10 @@ namespace SDK
 class UHttpJournalSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      JournalUrl;                                               // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      JournalAuthKey;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      JournalUrl;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      JournalAuthKey;                                           // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	int                                                MaxLogVerbosity;                                          // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

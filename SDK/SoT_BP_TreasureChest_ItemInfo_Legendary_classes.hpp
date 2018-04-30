@@ -19,7 +19,7 @@ namespace SDK
 class ABP_TreasureChest_ItemInfo_Legendary_C : public ATreasureChestItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0578(0x0008) MISSED OFFSET
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

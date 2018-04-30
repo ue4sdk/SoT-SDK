@@ -38,7 +38,8 @@ public:
 class UQueryLiveStreamsCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnQueriedLiveStreams;                                     // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

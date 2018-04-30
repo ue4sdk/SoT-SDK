@@ -19,7 +19,12 @@ namespace SDK
 class ABP_TreasureChest_Wieldable_Weeping_C : public ABP_TreasureChest_C
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x07C0(0x0030) MISSED OFFSET
+	class UParticleSystemComponent*                    vfx_weepingchest_long_sides2;                             // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_long_sides;                              // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_short_sides2;                            // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_short_sides;                             // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWeepingComponent*                           Weeping;                                                  // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Sphere;                                                   // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

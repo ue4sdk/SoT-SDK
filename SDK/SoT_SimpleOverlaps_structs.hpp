@@ -27,9 +27,8 @@ struct FSimpleOverlapAggregateTickFunction : public FTickFunction
 // 0x0010
 struct FSimpleOverlapInfo
 {
-	class UPrimitiveComponent*                         OtherComponent;                                           // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	class AActor*                                      OtherActor;                                               // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      OtherActor;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         OtherComponent;                                           // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct SimpleOverlaps.SimpleOverlapEnd

@@ -19,7 +19,8 @@ namespace SDK
 class UWwiseEmitterComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x02F0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x02F0(0x0018) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x0308(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -93,9 +94,10 @@ public:
 class UAnimNotify_WwiseSound : public UAnimNotify
 {
 public:
-	unsigned char                                      UnknownData00[0x1B3];                                     // 0x0030(0x01B3) MISSED OFFSET
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x01E3(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               OwnedByWorld;                                             // 0x01E3(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0030(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               OwnedByWorld;                                             // 0x0038(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     OwnedByWorldWisePoolToUse;                                // 0x0040(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -111,8 +113,9 @@ public:
 class UAnimNotifyState_WwiseSound : public UAnimNotifyState
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x01E3(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0028(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WwiseEventEnd;                                            // 0x0030(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0038(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -128,10 +131,10 @@ public:
 class UWwiseObjectPoolWrapper : public UObjectPoolWrapper
 {
 public:
-	unsigned char                                      UnknownData00[0x193];                                     // 0x0050(0x0193) MISSED OFFSET
-	bool                                               DisableOcclusion;                                         // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableReverb;                                            // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x01E3(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	bool                                               DisableOcclusion;                                         // 0x0050(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableReverb;                                            // 0x0051(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0052(0x0006) MISSED OFFSET
+	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x0058(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
@@ -147,7 +150,7 @@ public:
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -167,8 +170,7 @@ public:
 class UAudioEventToComponentMapComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x01E3(0x0010) (ZeroConstructor)
+	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x00D0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -188,7 +190,7 @@ public:
 class UStaticMeshAudioDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<struct FStaticMeshAudioAssociation>         MeshToAudioAssociations;                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -219,9 +221,9 @@ public:
 class UAudioSpaceDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	struct FName                                       RtpcToUpdate;                                             // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 AmbienceToStart;                                          // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RtpcToUpdate;                                             // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 AmbienceToStart;                                          // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 AmbienceToStop;                                           // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -239,7 +241,12 @@ public:
 class UAudioPortalComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x02F0(0x0020) MISSED OFFSET
+	class UAudioSpaceDataAsset*                        AudioOutsideSpace;                                        // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PortalTriggerDistance;                                    // 0x02F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InsideRtpcUpdateDistance;                                 // 0x02FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OutsideRtpcUpdateDistance;                                // 0x0300(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TrackAttachmentToActor;                                   // 0x0304(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB];                                       // 0x0305(0x000B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -293,7 +300,8 @@ public:
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x06F0(0x0010) MISSED OFFSET
+	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x06F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x06F8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -312,8 +320,7 @@ public:
 class UAudioSpaceTrackerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x01E3(0x0010) (ExportObject, ZeroConstructor, Transient)
+	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x00D0(0x0010) (ExportObject, ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -365,7 +372,8 @@ public:
 class UTritonAcousticMap : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0028(0x0038) MISSED OFFSET
+	class FString                                      TritonMapFilename;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0038(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -381,7 +389,8 @@ public:
 class UTritonComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x02F0(0x0010) MISSED OFFSET
+	float                                              TritonEffectRadius;                                       // 0x02F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x02F4(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -412,7 +421,9 @@ public:
 class UTritonService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class UTritonComponent*>                    RegisteredTritonComponents;                               // 0x0038(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

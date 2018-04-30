@@ -19,7 +19,13 @@ namespace SDK
 class ABP_SmallShip_Mast_C : public ABP_Mast_C
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x07A8(0x0038) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UChildActorComponent*                        BP_ShipFlagCustomizationChest;                            // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        BP_Bell1;                                                 // 0x07B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_small_mast_bell_support_01_a;                         // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        BP_Bell;                                                  // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_flag_jolly_roger_01_a;                                // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_crows_nest_01_a;                                      // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

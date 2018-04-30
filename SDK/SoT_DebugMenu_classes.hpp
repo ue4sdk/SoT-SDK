@@ -19,8 +19,9 @@ namespace SDK
 class UDebugMenuComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
+	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -51,10 +52,10 @@ public:
 class UDebugMenuDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	TArray<class UDebugMenuDataAsset*>                 DataAssets;                                               // 0x01E3(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FDebugMenuDataAssetEntry>            MenuEntires;                                              // 0x01E3(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FDebugMenuButtonShortcut>            ButtonShortcuts;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	TArray<class UDebugMenuDataAsset*>                 DataAssets;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FDebugMenuDataAssetEntry>            MenuEntires;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FDebugMenuButtonShortcut>            ButtonShortcuts;                                          // 0x0048(0x0010) (Edit, ZeroConstructor)
+	TArray<class UDebugMenuEntryGenerator*>            MenuEntryGenerators;                                      // 0x0058(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

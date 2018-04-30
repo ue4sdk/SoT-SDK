@@ -19,7 +19,11 @@ namespace SDK
 class ABP_Mermaid_C : public AMermaid
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x08F8(0x0028) MISSED OFFSET
+	class UInteractableComponent*                      Interactable;                                             // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0900(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           PlayerHits;                                               // 0x0908(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x0910(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           WorldHits;                                                // 0x0918(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

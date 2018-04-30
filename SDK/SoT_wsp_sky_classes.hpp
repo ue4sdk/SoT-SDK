@@ -19,7 +19,9 @@ namespace SDK
 class Awsp_sky_C : public ALevelScriptActor
 {
 public:
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0478(0x000C) MISSED OFFSET
+	float                                              Atmospheric_Cloud_Pressure;                               // 0x0478(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ElapsedTime;                                              // 0x047C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Interval;                                                 // 0x0480(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

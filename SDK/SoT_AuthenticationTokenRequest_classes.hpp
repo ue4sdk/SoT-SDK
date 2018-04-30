@@ -19,15 +19,16 @@ namespace SDK
 class UDevAuthenticationTokenRequestSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      SandboxId;                                                // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ClientTitleId;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ServerTitleId;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      TokenServiceUrl;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	bool                                               UseDevTokenOnXbox;                                        // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      ClientId;                                                 // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ClientSecret;                                             // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ClientCertificateThumbprint;                              // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      SandboxId;                                                // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ClientTitleId;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ServerTitleId;                                            // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      TokenServiceUrl;                                          // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	bool                                               UseDevTokenOnXbox;                                        // 0x0068(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	class FString                                      ClientId;                                                 // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ClientSecret;                                             // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ClientCertificateThumbprint;                              // 0x0090(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      LivePrivileges;                                           // 0x00A0(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

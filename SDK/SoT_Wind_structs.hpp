@@ -21,45 +21,41 @@ namespace SDK
 // 0x0024
 struct FWindServiceParams
 {
-	float                                              MaxBlendTimeBetweenChanges;                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	float                                              MinAngleChange;                                           // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxAngleChange;                                           // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinTimeChange;                                            // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTimeChange;                                            // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinWindMagnitude;                                         // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxWindMagnitude;                                         // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AbsoluteMaxWindMagnitude;                                 // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinBlendTimeBetweenChanges;                               // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinAngleChange;                                           // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxAngleChange;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinTimeChange;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTimeChange;                                            // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinWindMagnitude;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxWindMagnitude;                                         // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AbsoluteMaxWindMagnitude;                                 // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinBlendTimeBetweenChanges;                               // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxBlendTimeBetweenChanges;                               // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Wind.WindZoneTurbulence
 // 0x0008
 struct FWindZoneTurbulence
 {
-	float                                              Current;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	float                                              Base;                                                     // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Base;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Current;                                                  // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Wind.WindZoneParams
 // 0x000C
 struct FWindZoneParams
 {
-	float                                              TurbulenceScalar;                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	float                                              OuterRadius;                                              // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InnerRadius;                                              // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OuterRadius;                                              // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InnerRadius;                                              // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TurbulenceScalar;                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Wind.WindTurbulenceParameters
 // 0x0070
 struct FWindTurbulenceParameters
 {
-	struct FWeightedProbabilityRangeOfRanges           CalmTime;                                                 // 0x0000(0x0030) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x1B3];                                     // 0x0030(0x01B3) MISSED OFFSET
-	struct FFloatRange                                 GustPower;                                                // 0x01E3(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           GustTime;                                                 // 0x01E3(0x0030) (Edit, BlueprintVisible)
+	struct FFloatRange                                 GustPower;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           GustTime;                                                 // 0x0010(0x0030) (Edit, BlueprintVisible)
+	struct FWeightedProbabilityRangeOfRanges           CalmTime;                                                 // 0x0040(0x0030) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct Wind.WindMagnitudeChanged

@@ -19,9 +19,10 @@ namespace SDK
 class UEditableGameplayTagQuery : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      UserDescription;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UEditableGameplayTagQueryExpression*         RootExpression;                                           // 0x01E3(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class FString                                      UserDescription;                                          // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+	class UEditableGameplayTagQueryExpression*         RootExpression;                                           // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FGameplayTagQuery                           TagQueryExportText_Helper;                                // 0x0050(0x0048)
 
 	static UClass* StaticClass()
 	{
@@ -52,7 +53,7 @@ public:
 class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -68,7 +69,7 @@ public:
 class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -84,7 +85,7 @@ public:
 class UEditableGameplayTagQueryExpression_NoTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -100,7 +101,7 @@ public:
 class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -116,7 +117,7 @@ public:
 class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -132,7 +133,7 @@ public:
 class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -195,7 +196,9 @@ public:
 class UGameplayTagsManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x178];                                     // 0x0028(0x0178) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x118];                                     // 0x0028(0x0118) MISSED OFFSET
+	TArray<class UDataTable*>                          GameplayTagTables;                                        // 0x0140(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0150(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -213,7 +216,7 @@ public:
 class UGameplayTagsSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class FString>                              GameplayTags;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

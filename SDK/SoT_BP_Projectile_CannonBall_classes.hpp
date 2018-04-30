@@ -19,7 +19,8 @@ namespace SDK
 class ABP_Projectile_CannonBall_C : public ACannonProjectile
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0580(0x0010) MISSED OFFSET
+	class UStaticMeshComponent*                        CannonBall;                                               // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Collision;                                                // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

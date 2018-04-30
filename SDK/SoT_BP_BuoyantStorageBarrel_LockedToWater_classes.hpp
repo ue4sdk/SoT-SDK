@@ -19,7 +19,7 @@ namespace SDK
 class ABP_BuoyantStorageBarrel_LockedToWater_C : public ABuoyantStorageContainer
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0778(0x0008) MISSED OFFSET
+	class UCapsuleComponent*                           Capsule;                                                  // 0x0778(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

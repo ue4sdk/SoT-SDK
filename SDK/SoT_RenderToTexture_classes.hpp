@@ -19,12 +19,13 @@ namespace SDK
 class URenderToTextureSceneDetails : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class UClass*                                      ClassToSpawn;                                             // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FIntPoint                                   Resolution;                                               // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UWorld*                                      World;                                                    // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TWeakObjectPtr<class UWorld>                       ParentWorld;                                              // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TWeakObjectPtr<class AActor>                       SpawnedActor;                                             // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UClass*                                      ClassToSpawn;                                             // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FIntPoint                                   Resolution;                                               // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UWorld*                                      World;                                                    // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TWeakObjectPtr<class UWorld>                       ParentWorld;                                              // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TWeakObjectPtr<class AActor>                       SpawnedActor;                                             // 0x0048(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0058(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

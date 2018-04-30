@@ -76,8 +76,8 @@ public:
 class ULinkerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                          // 0x01E3(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x00D0(0x00C8) MISSED OFFSET
+	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                          // 0x0198(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

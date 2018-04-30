@@ -19,7 +19,7 @@ namespace SDK
 class ABP_SkellyFort_SkullCloud_C : public AGameplayEventSignal
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04F8(0x0008) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

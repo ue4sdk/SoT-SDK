@@ -19,21 +19,19 @@ namespace SDK
 // 0x0004
 struct FMaterialQualityOverrides
 {
-	bool                                               bForceDisableLMDirectionality;                            // 0x0000(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1E2];                                     // 0x0001(0x01E2) MISSED OFFSET
-	bool                                               bEnableOverride;                                          // 0x01E3(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bForceFullyRough;                                         // 0x01E3(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bForceNonMetal;                                           // 0x01E3(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bEnableOverride;                                          // 0x0000(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bForceFullyRough;                                         // 0x0001(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bForceNonMetal;                                           // 0x0002(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bForceDisableLMDirectionality;                            // 0x0003(0x0001) (ZeroConstructor, Config, IsPlainOldData)
 };
 
 // ScriptStruct MaterialShaderQualitySettings.ShaderQualityOverridesListItem
 // 0x0020
 struct FShaderQualityOverridesListItem
 {
-	class UShaderPlatformQualitySettings*              SettingContainer;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	class FString                                      RangeName;                                                // 0x01E3(0x0010) (ZeroConstructor)
-	class UBoolProperty*                               QualityProperty;                                          // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      RangeName;                                                // 0x0000(0x0010) (ZeroConstructor)
+	class UBoolProperty*                               QualityProperty;                                          // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UShaderPlatformQualitySettings*              SettingContainer;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

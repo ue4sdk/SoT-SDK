@@ -64,9 +64,10 @@ public:
 class UAnimationDataContainingThreeInstancesOfTheSameStruct : public UAnimationData
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance1;                                          // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
-	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance2;                                          // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
+	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance1;                                          // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance2;                                          // 0x0029(0x0001) (ZeroConstructor, IsPlainOldData)
+	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance3;                                          // 0x002A(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x002B(0x0005) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -102,7 +103,7 @@ public:
 class UAnimationDataStore : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<struct FAnimationDataStoreEntry>            Data;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, EditConst)
 
 	static UClass* StaticClass()
 	{
@@ -118,7 +119,7 @@ public:
 class UAnimationDataStoreAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<struct FAnimationDataStoreAssetEntry>       AssetRefs;                                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -355,7 +356,8 @@ public:
 class UWaitForAnimationStateEntryProxy : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnReachedState;                                           // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -375,7 +377,8 @@ public:
 class UWaitForAnimationStateExitProxy : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnStateExit;                                              // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

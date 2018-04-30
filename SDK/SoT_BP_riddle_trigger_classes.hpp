@@ -19,7 +19,10 @@ namespace SDK
 class ABP_riddle_trigger_C : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x0470(0x001C) MISSED OFFSET
+	class UStaticMeshComponent*                        Shockwave;                                                // 0x0470(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0480(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Duration;                                                 // 0x0488(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

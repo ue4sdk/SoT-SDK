@@ -19,7 +19,8 @@ namespace SDK
 class ABP_BountyRewardSkull_Mythical_C : public ABP_BountyRewardSkull_C
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07C0(0x0010) MISSED OFFSET
+	class UParticleSystemComponent*                    VFX_Skull_Glow_1st;                                       // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    VFX_Skull_Glow_3rd;                                       // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -19,7 +19,9 @@ namespace SDK
 class ABP_LegendaryTavern_C : public ACompanyShopkeeper
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0548(0x0018) MISSED OFFSET
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNPCDialogComponent*                         NPCDialog;                                                // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

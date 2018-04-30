@@ -19,7 +19,9 @@ namespace SDK
 class ABP_LargeShip_StandardHull_InternalShipWater_C : public AShipInternalWater
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0640(0x0018) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0640(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UDynamicFlowComponent*                       DynamicFlow;                                              // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 Foaminess;                                                // 0x0650(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

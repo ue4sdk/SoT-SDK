@@ -35,9 +35,8 @@ struct FSocketPath
 // 0x0020
 struct FSocketId
 {
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	struct FSocketPath                                 path;                                                     // 0x01E3(0x0018) (Edit, BlueprintVisible)
+	struct FSocketPath                                 path;                                                     // 0x0000(0x0018) (Edit, BlueprintVisible)
+	struct FName                                       Name;                                                     // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaSocketLookup.SocketLookupCache

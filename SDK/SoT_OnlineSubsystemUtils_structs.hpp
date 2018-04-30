@@ -21,20 +21,20 @@ namespace SDK
 // 0x0030
 struct FPlayerReservation
 {
-	float                                              ElapsedTime;                                              // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x01E3(0x0018) (Transient)
-	class FString                                      ValidationStr;                                            // 0x01E3(0x0010) (ZeroConstructor, Transient)
+	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0000(0x0018) (Transient)
+	class FString                                      ValidationStr;                                            // 0x0018(0x0010) (ZeroConstructor, Transient)
+	float                                              ElapsedTime;                                              // 0x0028(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct OnlineSubsystemUtils.PartyReservation
 // 0x0030
 struct FPartyReservation
 {
-	TArray<struct FPlayerReservation>                  PartyMembers;                                             // 0x0000(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	int                                                TeamNum;                                                  // 0x01E3(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FUniqueNetIdRepl                            PartyLeader;                                              // 0x01E3(0x0018) (Transient)
+	int                                                TeamNum;                                                  // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	struct FUniqueNetIdRepl                            PartyLeader;                                              // 0x0008(0x0018) (Transient)
+	TArray<struct FPlayerReservation>                  PartyMembers;                                             // 0x0020(0x0010) (ZeroConstructor, Transient)
 };
 
 // ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult

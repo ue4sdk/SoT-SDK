@@ -34,9 +34,11 @@ public:
 class UMovieSceneCapture : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	struct FMovieSceneCaptureSettings                  Settings;                                                 // 0x01E3(0x0050) (Edit, Config)
-	class FString                                      AdditionalCommandLineArguments;                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	struct FMovieSceneCaptureSettings                  Settings;                                                 // 0x0030(0x0050) (Edit, Config)
+	class FString                                      AdditionalCommandLineArguments;                           // 0x0080(0x0010) (Edit, ZeroConstructor, Transient)
+	bool                                               bBufferVisualizationDumpFrames;                           // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x47];                                      // 0x0091(0x0047) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -52,13 +54,14 @@ public:
 class UAutomatedLevelSequenceCapture : public UMovieSceneCapture
 {
 public:
-	unsigned char                                      UnknownData00[0x10B];                                     // 0x00D8(0x010B) MISSED OFFSET
-	struct FStringAssetReference                       LevelSequence;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor)
-	struct FStringAssetReference                       Level;                                                    // 0x01E3(0x0010) (Edit, ZeroConstructor)
-	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x01E3(0x0008) (Edit, Config)
-	float                                              PrerollAmount;                                            // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class ULevelSequenceInstance*                      AnimationInstance;                                        // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class ULevelSequencePlayer*                        AnimationPlayback;                                        // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FStringAssetReference                       LevelSequence;                                            // 0x00D8(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       Level;                                                    // 0x00E8(0x0010) (Edit, ZeroConstructor)
+	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x00F8(0x0008) (Edit, Config)
+	float                                              PrerollAmount;                                            // 0x0100(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0104(0x0004) MISSED OFFSET
+	class ULevelSequenceInstance*                      AnimationInstance;                                        // 0x0108(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class ULevelSequencePlayer*                        AnimationPlayback;                                        // 0x0110(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -74,8 +77,7 @@ public:
 class ULevelCapture : public UMovieSceneCapture
 {
 public:
-	unsigned char                                      UnknownData00[0x10B];                                     // 0x00D8(0x010B) MISSED OFFSET
-	struct FStringAssetReference                       Level;                                                    // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       Level;                                                    // 0x00D8(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

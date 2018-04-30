@@ -19,7 +19,7 @@ namespace SDK
 class UDefaultServerEnvironmentSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	class FString                                      EnvironmentId;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

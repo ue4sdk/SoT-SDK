@@ -19,7 +19,8 @@ namespace SDK
 class Awsp_bush_cluster_01_j_C : public ABP_Placement_HeightDrop_C
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04B0(0x0010) MISSED OFFSET
+	class UStaticMeshComponent*                        wsp_bush_01_a6_1;                                         // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        wsp_bush_06_b_01;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_Cutlass_Item_C : public AMeleeWeapon
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0A10(0x0008) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A10(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

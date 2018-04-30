@@ -19,7 +19,10 @@ namespace SDK
 class ABP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0470(0x0020) MISSED OFFSET
+	class UStaticMeshComponent*                        shp_small_brig_01_a;                                      // 0x0470(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_small_lower_deck_rope_01_a;                           // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_small_lower_deck_01_a;                                // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

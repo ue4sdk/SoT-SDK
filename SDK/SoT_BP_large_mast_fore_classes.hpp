@@ -19,7 +19,8 @@ namespace SDK
 class ABP_large_mast_fore_C : public ABP_Mast_C
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07A8(0x0010) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        shp_flag_pennant_01_a;                                    // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

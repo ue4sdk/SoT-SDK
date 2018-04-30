@@ -144,8 +144,8 @@ public:
 class UTestServiceProviderGameInstance : public UGameInstance
 {
 public:
-	unsigned char                                      UnknownData00[0x15B];                                     // 0x0088(0x015B) MISSED OFFSET
-	class UObject*                                     ServiceToReturn;                                          // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
+	class UObject*                                     ServiceToReturn;                                          // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -161,7 +161,8 @@ public:
 class ATestServiceProviderGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x04C8(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x04C8(0x0010) MISSED OFFSET
+	class UObject*                                     ServiceToReturn;                                          // 0x04D8(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

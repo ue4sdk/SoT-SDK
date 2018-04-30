@@ -19,8 +19,9 @@ namespace SDK
 class UAnimationSwitchDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	float                                              Threshold;                                                // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Threshold;                                                // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	TArray<struct FAnimationSwitchEntry>               Entries;                                                  // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -74,15 +75,16 @@ public:
 class UCharacterMeshBakeSpecification : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	bool                                               StripTopLOD;                                              // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class USkeletalMesh*                               CharacterMesh;                                            // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class USkeletalMesh*                               BaseMeshReferenceSkeleton;                                // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class USkeletonsDataAsset*                         SourceSkeletons;                                          // 0x01E3(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FName>                               SourceSkeletonNames;                                      // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<float>                                      SourceSkeletonWeights;                                    // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FBlendedSubMeshSpecification>        BlendedSubMeshes;                                         // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class USkeletalMesh*>                       UnblendedSubMeshes;                                       // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool                                               StripTopLOD;                                              // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	class USkeletalMesh*                               CharacterMesh;                                            // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class USkeletalMesh*                               BaseMeshReferenceSkeleton;                                // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class USkeletonsDataAsset*                         SourceSkeletons;                                          // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FName>                               SourceSkeletonNames;                                      // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<float>                                      SourceSkeletonWeights;                                    // 0x0058(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FBlendedSubMeshSpecification>        BlendedSubMeshes;                                         // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class USkeletalMesh*>                       UnblendedSubMeshes;                                       // 0x0078(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FIPGBlendShape>                      BlendShapes;                                              // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -118,8 +120,7 @@ public:
 class UColorTexture : public UTexture
 {
 public:
-	unsigned char                                      UnknownData00[0xAB];                                      // 0x0138(0x00AB) MISSED OFFSET
-	struct FLinearColor                                Color;                                                    // 0x01E3(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // 0x0138(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -153,7 +154,7 @@ public:
 class UMaterialReferencesDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<struct FMaterialReferencesEntry>            MaterialReferences;                                       // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -214,20 +215,20 @@ public:
 class UPirateGeneratorSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      ConfigJson;                                               // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      PiratesFolder;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      WardrobeFolder;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       WardrobeDataAsset;                                        // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FName>                               DefaultWardrobeItems;                                     // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       MaterialReferencesDataAsset;                              // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       SkeletonsDataAsset;                                       // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               BaseSkeletonMeshes;                                       // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               Characterization;                                         // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<class FString>                              SkeletonMeshFormats;                                      // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       FirstPersonAnimations;                                    // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       ThirdPersonAnimations;                                    // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<float>                                      LODScreenSizes;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ConfigJson;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      PiratesFolder;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      WardrobeFolder;                                           // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       WardrobeDataAsset;                                        // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FName>                               DefaultWardrobeItems;                                     // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       MaterialReferencesDataAsset;                              // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       SkeletonsDataAsset;                                       // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               BaseSkeletonMeshes;                                       // 0x0098(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               Characterization;                                         // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<class FString>                              SkeletonMeshFormats;                                      // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       FirstPersonAnimations;                                    // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       ThirdPersonAnimations;                                    // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<float>                                      LODScreenSizes;                                           // 0x00E8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<float>                                      LODHysteresis;                                            // 0x00F8(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -261,8 +262,8 @@ public:
 class UTextureSwitch : public UTextureProxy
 {
 public:
-	unsigned char                                      UnknownData00[0xA3];                                      // 0x0140(0x00A3) MISSED OFFSET
-	struct FTextureSwitchParameters                    DefaultParameters;                                        // 0x01E3(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x80];                                      // 0x0140(0x0080) MISSED OFFSET
+	struct FTextureSwitchParameters                    DefaultParameters;                                        // 0x01C0(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
@@ -278,7 +279,12 @@ public:
 class UTextureSwitchBySeed : public UTextureSwitch
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0218(0x0038) MISSED OFFSET
+	struct FName                                       HashSource;                                               // 0x0218(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              FallbackProbability;                                      // 0x0220(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FallbackReferenceName;                                    // 0x0224(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x022C(0x0004) MISSED OFFSET
+	struct FStringAssetReference                       FallbackTexture;                                          // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchSeedEntry>             Entries;                                                  // 0x0240(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -294,7 +300,7 @@ public:
 class UTextureSwitchByGender : public UTextureSwitch
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0218(0x0010) MISSED OFFSET
+	TArray<struct FTextureSwitchGenderEntry>           Entries;                                                  // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -310,7 +316,7 @@ public:
 class UTextureSwitchByEthnicity : public UTextureSwitch
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0218(0x0010) MISSED OFFSET
+	TArray<struct FTextureSwitchEthnicityEntry>        Entries;                                                  // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -326,7 +332,7 @@ public:
 class UTextureSwitchByBodyShape : public UTextureSwitch
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0218(0x0010) MISSED OFFSET
+	TArray<struct FTextureSwitchBodyShapeEntry>        Entries;                                                  // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -342,7 +348,8 @@ public:
 class UTextureSwitchByItem : public UTextureSwitch
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0218(0x0020) MISSED OFFSET
+	struct FStringAssetReference                       FallbackTexture;                                          // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchItemEntry>             Entries;                                                  // 0x0228(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -358,7 +365,8 @@ public:
 class UColorTextureSwitchBySeed : public UTextureSwitch
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0218(0x0018) MISSED OFFSET
+	struct FName                                       HashSource;                                               // 0x0218(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FColorTextureSwitchSeedEntry>        Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -374,7 +382,8 @@ public:
 class UWardrobeDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0028(0x0050) MISSED OFFSET
+	TArray<struct FMeshPatchEntry>                     AssetMap;                                                 // 0x0078(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -390,9 +399,9 @@ public:
 class UWardrobeOutfitDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	TArray<struct FName>                               FemaleWardrobeItems;                                      // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FName>                               MaleWardrobeItems;                                        // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FName>                               FemaleWardrobeItems;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FName>                               MaleWardrobeItems;                                        // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FWardrobeOutfitCategoryBias>         BiasPerCategory;                                          // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

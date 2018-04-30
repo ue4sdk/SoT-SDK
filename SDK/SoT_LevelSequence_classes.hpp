@@ -19,9 +19,9 @@ namespace SDK
 class ULevelSequence : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	struct FLevelSequenceObjectReferenceMap            DefaultObjectReferences;                                  // 0x01E3(0x0050)
-	class UMovieScene*                                 MovieScene;                                               // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLevelSequenceObjectReferenceMap            DefaultObjectReferences;                                  // 0x0028(0x0050)
+	class UMovieScene*                                 MovieScene;                                               // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+	TMap<class FString, struct FLevelSequenceObject>   PossessedObjects;                                         // 0x0080(0x0050) (ZeroConstructor, Deprecated)
 
 	static UClass* StaticClass()
 	{
@@ -37,9 +37,11 @@ public:
 class ULevelSequenceInstance : public UMovieSceneSequence
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class ULevelSequence*                              LevelSequence;                                            // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               bCanRemapBindings;                                        // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
+	class ULevelSequence*                              LevelSequence;                                            // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               bCanRemapBindings;                                        // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	struct FLevelSequenceObjectReferenceMap            RemappedObjectReferences;                                 // 0x0038(0x0050)
+	unsigned char                                      UnknownData01[0xA8];                                      // 0x0088(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -55,10 +57,13 @@ public:
 class ULevelSequencePlayer : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class ULevelSequenceInstance*                      LevelSequenceInstance;                                    // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIsPlaying;                                               // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
-	float                                              TimeCursorPosition;                                       // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class ULevelSequenceInstance*                      LevelSequenceInstance;                                    // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               bIsPlaying;                                               // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
+	float                                              TimeCursorPosition;                                       // 0x003C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x0040(0x0008)
+	unsigned char                                      UnknownData02[0x78];                                      // 0x0048(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -86,7 +91,13 @@ public:
 class ALevelSequenceActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0470(0x0030) MISSED OFFSET
+	bool                                               bAutoPlay;                                                // 0x0470(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0471(0x0003) MISSED OFFSET
+	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x0474(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x047C(0x0004) MISSED OFFSET
+	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x0480(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	struct FStringAssetReference                       LevelSequence;                                            // 0x0488(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class ULevelSequenceInstance*                      SequenceInstance;                                         // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

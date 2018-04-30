@@ -86,7 +86,7 @@ public:
 class UWaterProperties : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<struct FWaterInformation>                   WaterInfo;                                                // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -128,7 +128,11 @@ public:
 class AFFTWaterService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0470(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0470(0x0010) MISSED OFFSET
+	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x0480(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x0488(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0490(0x0050) MISSED OFFSET
+	double                                             ReplicatedServerCreationTime;                             // 0x04E0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -147,7 +151,7 @@ public:
 class AFFTWaterPerformanceCountService : public AFFTWaterService
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04E8(0x0008) MISSED OFFSET
+	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x04E8(0x0008)
 
 	static UClass* StaticClass()
 	{
@@ -166,7 +170,8 @@ public:
 class AFFTWaterServiceFixedWaterHeight : public AFFTWaterService
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04E8(0x0008) MISSED OFFSET
+	float                                              RequiredWaterHeight;                                      // 0x04E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04EC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

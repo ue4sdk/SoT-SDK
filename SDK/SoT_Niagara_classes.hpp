@@ -19,7 +19,7 @@ namespace SDK
 class ANiagaraActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UNiagaraComponent*                           NiagaraComponent;                                         // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,8 @@ public:
 class UNiagaraComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0670(0x0010) MISSED OFFSET
+	class UNiagaraEffect*                              Asset;                                                    // 0x0670(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0678(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -51,9 +52,9 @@ public:
 class UNiagaraScript : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	TArray<unsigned char>                              ByteCode;                                                 // 0x01E3(0x0010) (ZeroConstructor)
-	struct FNiagaraScriptConstantData                  ConstantData;                                             // 0x01E3(0x0180)
+	TArray<unsigned char>                              ByteCode;                                                 // 0x0028(0x0010) (ZeroConstructor)
+	struct FNiagaraScriptConstantData                  ConstantData;                                             // 0x0038(0x0180)
+	TArray<struct FNiagaraVariableInfo>                Attributes;                                               // 0x01B8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -69,17 +70,21 @@ public:
 class UNiagaraEmitterProperties : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      EmitterName;                                              // 0x01E3(0x0010) (Edit, ZeroConstructor)
-	bool                                               bIsEnabled;                                               // 0x01E3(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SpawnRate;                                                // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterial*                                   Material;                                                 // 0x01E3(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEmitterRenderModuleType>              RenderModuleType;                                         // 0x01E3(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              StartTime;                                                // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EndTime;                                                  // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UNiagaraEffectRendererProperties*            RendererProperties;                                       // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                NumLoops;                                                 // 0x01E3(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FNiagaraEmitterScriptProperties             UpdateScriptProps;                                        // 0x01E3(0x0048) (Edit)
+	class FString                                      EmitterName;                                              // 0x0028(0x0010) (Edit, ZeroConstructor)
+	bool                                               bIsEnabled;                                               // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
+	float                                              SpawnRate;                                                // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterial*                                   Material;                                                 // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEmitterRenderModuleType>              RenderModuleType;                                         // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
+	float                                              StartTime;                                                // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EndTime;                                                  // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
+	class UNiagaraEffectRendererProperties*            RendererProperties;                                       // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                NumLoops;                                                 // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	struct FNiagaraEmitterScriptProperties             UpdateScriptProps;                                        // 0x0068(0x0048) (Edit)
+	struct FNiagaraEmitterScriptProperties             SpawnScriptProps;                                         // 0x00B0(0x0048) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -95,8 +100,8 @@ public:
 class UNiagaraEffect : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	TArray<struct FDeprecatedNiagaraEmitterProperties> EmitterPropsSerialized;                                   // 0x01E3(0x0010) (ZeroConstructor, Deprecated)
+	TArray<struct FDeprecatedNiagaraEmitterProperties> EmitterPropsSerialized;                                   // 0x0028(0x0010) (ZeroConstructor, Deprecated)
+	TArray<class UNiagaraEmitterProperties*>           EmitterProps;                                             // 0x0038(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -147,7 +152,7 @@ public:
 class UNiagaraSequence : public UMovieSceneSequence
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UMovieScene*                                 MovieScene;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

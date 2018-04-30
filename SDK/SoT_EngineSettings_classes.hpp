@@ -19,9 +19,10 @@ namespace SDK
 class UConsoleSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	int                                                MaxScrollbackSize;                                        // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	TArray<struct FAutoCompleteCommand>                ManualAutoCompleteList;                                   // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
+	int                                                MaxScrollbackSize;                                        // 0x0028(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	TArray<struct FAutoCompleteCommand>                ManualAutoCompleteList;                                   // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<class FString>                              AutoCompleteMapPaths;                                     // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -37,17 +38,18 @@ public:
 class UGameMapsSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      EditorStartupMap;                                         // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      LocalMapOptions;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      TransitionMap;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	bool                                               bUseSplitscreen;                                          // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TEnumAsByte<ETwoPlayerSplitScreenType>             TwoPlayerSplitscreenLayout;                               // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TEnumAsByte<EThreePlayerSplitScreenType>           ThreePlayerSplitscreenLayout;                             // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FStringClassReference                       GameInstanceClass;                                        // 0x01E3(0x0010) (Edit, ZeroConstructor, Config, NoClear)
-	class FString                                      GameDefaultMap;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ServerDefaultMap;                                         // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringClassReference                       GlobalDefaultGameMode;                                    // 0x01E3(0x0010) (Edit, ZeroConstructor, Config, NoClear)
+	class FString                                      EditorStartupMap;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      LocalMapOptions;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      TransitionMap;                                            // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	bool                                               bUseSplitscreen;                                          // 0x0058(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<ETwoPlayerSplitScreenType>             TwoPlayerSplitscreenLayout;                               // 0x0059(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<EThreePlayerSplitScreenType>           ThreePlayerSplitscreenLayout;                             // 0x005A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x005B(0x0005) MISSED OFFSET
+	struct FStringClassReference                       GameInstanceClass;                                        // 0x0060(0x0010) (Edit, ZeroConstructor, Config, NoClear)
+	class FString                                      GameDefaultMap;                                           // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ServerDefaultMap;                                         // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringClassReference                       GlobalDefaultGameMode;                                    // 0x0090(0x0010) (Edit, ZeroConstructor, Config, NoClear)
+	struct FStringClassReference                       GlobalDefaultServerGameMode;                              // 0x00A0(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -63,17 +65,19 @@ public:
 class UGameNetworkManagerSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	int                                                MinDynamicBandwidth;                                      // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	int                                                MaxDynamicBandwidth;                                      // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	int                                                TotalNetBandwidth;                                        // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	int                                                BadPingThreshold;                                         // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bIsStandbyCheckingEnabled : 1;                            // 0x01E3(0x0001) (Edit, Config)
-	float                                              StandbyRxCheatTime;                                       // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              StandbyTxCheatTime;                                       // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              PercentMissingForRxStandby;                               // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              PercentMissingForTxStandby;                               // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              PercentForBadPing;                                        // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                MinDynamicBandwidth;                                      // 0x0028(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	int                                                MaxDynamicBandwidth;                                      // 0x002C(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	int                                                TotalNetBandwidth;                                        // 0x0030(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	int                                                BadPingThreshold;                                         // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bIsStandbyCheckingEnabled : 1;                            // 0x0038(0x0001) (Edit, Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
+	float                                              StandbyRxCheatTime;                                       // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              StandbyTxCheatTime;                                       // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              PercentMissingForRxStandby;                               // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              PercentMissingForTxStandby;                               // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              PercentForBadPing;                                        // 0x004C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              JoinInProgressStandbyWaitTime;                            // 0x0050(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -89,9 +93,10 @@ public:
 class UGameSessionSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	int                                                MaxSpectators;                                            // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	int                                                MaxPlayers;                                               // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	int                                                MaxSpectators;                                            // 0x0028(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	int                                                MaxPlayers;                                               // 0x002C(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	unsigned char                                      bRequiresPushToTalk : 1;                                  // 0x0030(0x0001) (Edit, Config, GlobalConfig)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -122,18 +127,19 @@ public:
 class UGeneralProjectSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	class FString                                      CompanyName;                                              // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      CompanyDistinguishedName;                                 // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      CopyrightNotice;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      Description;                                              // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      Homepage;                                                 // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      LicensingTerms;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      PrivacyPolicy;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	struct FGuid                                       ProjectID;                                                // 0x01E3(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      ProjectName;                                              // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ProjectVersion;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      SupportContact;                                           // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      CompanyName;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      CompanyDistinguishedName;                                 // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      CopyrightNotice;                                          // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      Description;                                              // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      Homepage;                                                 // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      LicensingTerms;                                           // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      PrivacyPolicy;                                            // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
+	struct FGuid                                       ProjectID;                                                // 0x0098(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	class FString                                      ProjectName;                                              // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      ProjectVersion;                                           // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      SupportContact;                                           // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FText                                       ProjectDisplayedTitle;                                    // 0x00D8(0x0018) (Edit, Config)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00D8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 	static UClass* StaticClass()
 	{
@@ -149,8 +155,9 @@ public:
 class UHudSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	unsigned char                                      bShowHUD : 1;                                             // 0x01E3(0x0001) (Edit, Config)
+	unsigned char                                      bShowHUD : 1;                                             // 0x0028(0x0001) (Edit, Config)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	TArray<struct FName>                               DebugDisplay;                                             // 0x0030(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
 
 	static UClass* StaticClass()
 	{

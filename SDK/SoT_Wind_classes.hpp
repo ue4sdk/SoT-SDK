@@ -150,7 +150,13 @@ public:
 class AWindService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x120];                                     // 0x0470(0x0120) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0470(0x0010) MISSED OFFSET
+	class AWindDirectionalSource*                      GlobalWindSource;                                         // 0x0480(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0488(0x0010) MISSED OFFSET
+	float                                              CurrentWindAngle;                                         // 0x0498(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              CurrentWindMagnitude;                                     // 0x049C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xE0];                                      // 0x04A0(0x00E0) MISSED OFFSET
+	TArray<class UObject*>                             WindZones;                                                // 0x0580(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -203,7 +209,9 @@ public:
 class UWindZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x02F0(0x0090) MISSED OFFSET
+	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02F0(0x0070) (Edit, BlueprintVisible)
+	struct FWindZoneParams                             WindZoneParams;                                           // 0x0360(0x000C) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x036C(0x0014) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

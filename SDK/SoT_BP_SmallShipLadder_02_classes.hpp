@@ -19,7 +19,9 @@ namespace SDK
 class ABP_SmallShipLadder_02_C : public ALadder
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0660(0x0028) MISSED OFFSET
+	class UInteractableComponent*                      Interactable;                                             // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             OffTopSplineComponentPositions;                           // 0x0668(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             OnTopSplineComponentPositions;                            // 0x0678(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

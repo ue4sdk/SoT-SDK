@@ -34,7 +34,7 @@ public:
 class UNiagaraCurveDataObject : public UNiagaraDataObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UCurveVector*                                CurveObj;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

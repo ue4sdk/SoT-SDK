@@ -19,7 +19,9 @@ namespace SDK
 class ABP_TreasureChest_Wieldable_Drunken_C : public ABP_TreasureChest_C
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x07C0(0x0018) MISSED OFFSET
+	class UTankardRefillerComponent*                   TankardRefiller;                                          // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDrunkenChestComponent*                      DrunkenChest;                                             // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

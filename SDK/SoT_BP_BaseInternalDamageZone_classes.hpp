@@ -19,7 +19,10 @@ namespace SDK
 class ABP_BaseInternalDamageZone_C : public ABP_DamageZone_C
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0868(0x0038) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0868(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        RepairWood;                                               // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 Start_Repair_Cue;                                         // 0x0878(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWwiseEmitter                               RepairEmitter;                                            // 0x0880(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

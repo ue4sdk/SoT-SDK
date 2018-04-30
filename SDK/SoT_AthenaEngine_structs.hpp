@@ -20,9 +20,8 @@ namespace SDK
 // 0x0030
 struct FStringAssetClassPair
 {
-	TAssetPtr<class UClass>                            AssetClass;                                               // 0x0000(0x0020) (Edit)
-	unsigned char                                      UnknownData00[0x1C3];                                     // 0x0020(0x01C3) MISSED OFFSET
-	class FString                                      String;                                                   // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	class FString                                      String;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TAssetPtr<class UClass>                            AssetClass;                                               // 0x0010(0x0020) (Edit)
 };
 
 }

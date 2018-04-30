@@ -27,20 +27,18 @@ struct FJsonObjectWrapper
 // 0x0070
 struct FTestTextObject
 {
-	struct FText                                       TestTextExport;                                           // 0x0000(0x0018)
+	struct FText                                       TestText;                                                 // 0x0000(0x0018)
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData01[0x1AB];                                     // 0x0038(0x01AB) MISSED OFFSET
-	struct FText                                       TestText;                                                 // 0x01E3(0x0018)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       TestTextExport;                                           // 0x0038(0x0018)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 };
 
 // ScriptStruct JsonUtilities.TestFloatObject
 // 0x0008
 struct FTestFloatObject
 {
-	float                                              TestFloat2;                                               // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	float                                              TestFloat1;                                               // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              TestFloat1;                                               // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              TestFloat2;                                               // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct JsonUtilities.TestEnumObject
@@ -68,11 +66,11 @@ struct FTestMessageDateTime
 // 0x0028
 struct FTestSerializationObject
 {
-	struct FGuid                                       TestGuid;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	bool                                               TestBool;                                                 // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
-	int                                                TestInt;                                                  // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
-	class FString                                      TestString;                                               // 0x01E3(0x0010) (ZeroConstructor)
+	bool                                               TestBool;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	int                                                TestInt;                                                  // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	class FString                                      TestString;                                               // 0x0008(0x0010) (ZeroConstructor)
+	struct FGuid                                       TestGuid;                                                 // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct JsonUtilities.TestSerializationNestedObject

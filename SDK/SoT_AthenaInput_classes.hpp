@@ -70,7 +70,8 @@ public:
 class UInputBinder : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
+	class UInputComponent*                             InputComponent;                                           // 0x0028(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0030(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

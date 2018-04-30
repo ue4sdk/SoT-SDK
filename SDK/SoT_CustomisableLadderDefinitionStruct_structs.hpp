@@ -18,10 +18,9 @@ namespace SDK
 // 0x001C
 struct FCustomisableLadderDefinitionStruct
 {
-	float                                              BottomRungOffset_13_3DB7AE6242ED48E7DA3A9FA0B52E34B6;     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	TArray<class UStaticMesh*>                         LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979;    // 0x01E3(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UStaticMesh*                                 LadderTop_6_6BF9F2424757005036BA87A9BC524EBA;             // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UStaticMesh*>                         LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979;    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UStaticMesh*                                 LadderTop_6_6BF9F2424757005036BA87A9BC524EBA;             // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BottomRungOffset_13_3DB7AE6242ED48E7DA3A9FA0B52E34B6;     // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

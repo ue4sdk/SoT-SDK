@@ -19,7 +19,7 @@ namespace SDK
 class ABP_DefaultWaterBasedAISupplier_C : public AWaterbasedAISupplier
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

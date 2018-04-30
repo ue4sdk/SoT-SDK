@@ -19,18 +19,18 @@ namespace SDK
 class UAD_FirstPerson_PlayerPirate_Female_Default_C : public UAnimationData
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	struct FADS_IdlesNative                            Idles;                                                    // 0x01E3(0x0010) (Edit, BlueprintVisible)
-	struct FADS_LocomotionNative                       Locomotion;                                               // 0x01E3(0x0048) (Edit, BlueprintVisible)
-	struct FADS_JumpingNative                          Jumping;                                                  // 0x01E3(0x0078) (Edit, BlueprintVisible)
-	struct FADS_SwimmingNative                         Swimming;                                                 // 0x01E3(0x0068) (Edit, BlueprintVisible)
-	struct FADS_WheelNative                            Wheel;                                                    // 0x01E3(0x0088) (Edit, BlueprintVisible)
-	struct FADS_CapstanNative                          Capstan;                                                  // 0x01E3(0x0068) (Edit, BlueprintVisible)
-	struct FADS_CameraAdditiveNative                   CameraAdditive;                                           // 0x01E3(0x0050) (Edit, BlueprintVisible)
-	struct FADS_ObjectsNative                          Items;                                                    // 0x01E3(0x0010) (Edit, BlueprintVisible)
-	struct FADS_Sockets                                Sockets;                                                  // 0x01E3(0x0002) (Edit, BlueprintVisible)
-	struct FADS_DeathNative                            Death;                                                    // 0x01E3(0x0020) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x10D];                                     // 0x0203(0x010D) MISSED OFFSET
+	struct FADS_IdlesNative                            Idles;                                                    // 0x0028(0x0010) (Edit, BlueprintVisible)
+	struct FADS_LocomotionNative                       Locomotion;                                               // 0x0038(0x0048) (Edit, BlueprintVisible)
+	struct FADS_JumpingNative                          Jumping;                                                  // 0x0080(0x0078) (Edit, BlueprintVisible)
+	struct FADS_SwimmingNative                         Swimming;                                                 // 0x00F8(0x0068) (Edit, BlueprintVisible)
+	struct FADS_WheelNative                            Wheel;                                                    // 0x0160(0x0088) (Edit, BlueprintVisible)
+	struct FADS_CapstanNative                          Capstan;                                                  // 0x01E8(0x0068) (Edit, BlueprintVisible)
+	struct FADS_CameraAdditiveNative                   CameraAdditive;                                           // 0x0250(0x0050) (Edit, BlueprintVisible)
+	struct FADS_ObjectsNative                          Items;                                                    // 0x02A0(0x0010) (Edit, BlueprintVisible)
+	struct FADS_Sockets                                Sockets;                                                  // 0x02B0(0x0002) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x02B2(0x0006) MISSED OFFSET
+	struct FADS_DeathNative                            Death;                                                    // 0x02B8(0x0020) (Edit, BlueprintVisible)
+	struct FADS_CannonNative                           Cannon;                                                   // 0x02D8(0x0038) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

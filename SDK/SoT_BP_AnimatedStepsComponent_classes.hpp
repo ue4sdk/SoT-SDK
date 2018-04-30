@@ -19,14 +19,13 @@ namespace SDK
 class UBP_AnimatedStepsComponent_C : public UAnimatedStepsComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xEB];                                      // 0x00F8(0x00EB) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x01E3(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<float>                                      BoxDelays;                                                // 0x01E3(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<float>                                      BoxTargetZs;                                              // 0x01E3(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UCurveFloat*                                 AnimCurve;                                                // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MovementTimer;                                            // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
-	float                                              AnimationDuration;                                        // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AnimationStartDelay;                                      // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x00F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<float>                                      BoxDelays;                                                // 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<float>                                      BoxTargetZs;                                              // 0x0110(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UCurveFloat*                                 AnimCurve;                                                // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MovementTimer;                                            // 0x0128(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	float                                              AnimationDuration;                                        // 0x012C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AnimationStartDelay;                                      // 0x0130(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

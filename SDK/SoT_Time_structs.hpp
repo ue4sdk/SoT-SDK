@@ -27,12 +27,11 @@ struct FReplicatedDateTime
 // 0x0014
 struct FEventSetDateTime
 {
-	int                                                Minute;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DF];                                     // 0x0004(0x01DF) MISSED OFFSET
-	int                                                Year;                                                     // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Month;                                                    // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Day;                                                      // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Hour;                                                     // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Year;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Month;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Day;                                                      // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Hour;                                                     // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Minute;                                                   // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 }

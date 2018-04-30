@@ -19,7 +19,9 @@ namespace SDK
 class ABP_MerchantCrate_CannonballCrateProxy_C : public AMerchantCrateItemProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0890(0x0018) MISSED OFFSET
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNPCDialogComponent*                         NPCDialog;                                                // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

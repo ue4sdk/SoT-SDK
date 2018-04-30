@@ -19,15 +19,18 @@ namespace SDK
 class UUdpMessagingSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	bool                                               EnableTransport;                                          // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      UnicastEndpoint;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      MulticastEndpoint;                                        // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	unsigned char                                      MulticastTimeToLive;                                      // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TArray<class FString>                              StaticEndpoints;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	bool                                               EnableTunnel;                                             // 0x01E3(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      TunnelUnicastEndpoint;                                    // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      TunnelMulticastEndpoint;                                  // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
+	bool                                               EnableTransport;                                          // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	class FString                                      UnicastEndpoint;                                          // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      MulticastEndpoint;                                        // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	unsigned char                                      MulticastTimeToLive;                                      // 0x0050(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	TArray<class FString>                              StaticEndpoints;                                          // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	bool                                               EnableTunnel;                                             // 0x0068(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	class FString                                      TunnelUnicastEndpoint;                                    // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      TunnelMulticastEndpoint;                                  // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<class FString>                              RemoteTunnelEndpoints;                                    // 0x0090(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

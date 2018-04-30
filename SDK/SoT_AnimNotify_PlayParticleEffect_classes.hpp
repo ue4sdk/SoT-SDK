@@ -19,11 +19,12 @@ namespace SDK
 class UAnimNotify_PlayParticleEffect_C : public UAnimNotify
 {
 public:
-	unsigned char                                      UnknownData00[0x1B3];                                     // 0x0030(0x01B3) MISSED OFFSET
-	class UParticleSystem*                             PSTemplate;                                               // 0x01E3(0x0008) (Edit, ConstParm, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class FString                                      SocketName;                                               // 0x01E3(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               Attached;                                                 // 0x01E3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LocationOffset;                                           // 0x01E3(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             PSTemplate;                                               // 0x0030(0x0008) (Edit, ConstParm, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class FString                                      SocketName;                                               // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               Attached;                                                 // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
+	struct FVector                                     LocationOffset;                                           // 0x004C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotationOffset;                                           // 0x0058(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

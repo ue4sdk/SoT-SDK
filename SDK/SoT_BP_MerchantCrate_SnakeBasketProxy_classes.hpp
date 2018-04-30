@@ -19,7 +19,8 @@ namespace SDK
 class ABP_MerchantCrate_SnakeBasketProxy_C : public AMerchantCrateItemProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0890(0x0010) MISSED OFFSET
+	class UMountpointComponent*                        Mountpoint;                                               // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

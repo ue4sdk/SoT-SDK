@@ -27,8 +27,9 @@ struct FObjectMessagingDispatcherHandle
 // 0x0048
 struct FObjectMessagingHandle
 {
-	class UStruct*                                     EventType;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0008(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class UStruct*                                     EventType;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x38];                                      // 0x0010(0x0038) MISSED OFFSET
 };
 
 // ScriptStruct ObjectMessaging.ObjectMessagingDispatcher

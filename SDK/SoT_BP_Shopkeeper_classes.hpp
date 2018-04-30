@@ -19,7 +19,9 @@ namespace SDK
 class ABP_Shopkeeper_C : public AShopkeeper
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0540(0x0018) MISSED OFFSET
+	class UNPCDialogComponent*                         NPCDialog;                                                // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

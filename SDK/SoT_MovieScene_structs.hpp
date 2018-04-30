@@ -19,30 +19,28 @@ namespace SDK
 // 0x0030
 struct FMovieSceneSpawnable
 {
-	class UClass*                                      GeneratedClass;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	struct FGuid                                       Guid;                                                     // 0x01E3(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      Name;                                                     // 0x01E3(0x0010) (ZeroConstructor)
+	struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      Name;                                                     // 0x0010(0x0010) (ZeroConstructor)
+	class UClass*                                      GeneratedClass;                                           // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieScenePossessable
 // 0x0028
 struct FMovieScenePossessable
 {
-	class UClass*                                      PossessedObjectClass;                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	struct FGuid                                       Guid;                                                     // 0x01E3(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      Name;                                                     // 0x01E3(0x0010) (ZeroConstructor)
+	struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      Name;                                                     // 0x0010(0x0010) (ZeroConstructor)
+	class UClass*                                      PossessedObjectClass;                                     // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct MovieScene.MovieSceneBinding
 // 0x0030
 struct FMovieSceneBinding
 {
-	TArray<class UMovieSceneTrack*>                    Tracks;                                                   // 0x0000(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	struct FGuid                                       ObjectGuid;                                               // 0x01E3(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      BindingName;                                              // 0x01E3(0x0010) (ZeroConstructor)
+	struct FGuid                                       ObjectGuid;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      BindingName;                                              // 0x0010(0x0010) (ZeroConstructor)
+	TArray<class UMovieSceneTrack*>                    Tracks;                                                   // 0x0020(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct MovieScene.MovieSceneExpansionState

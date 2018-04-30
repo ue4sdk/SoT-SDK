@@ -34,7 +34,8 @@ public:
 class UGameplayTask : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0028(0x0030) MISSED OFFSET
+	struct FName                                       InstanceName;                                             // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0030(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -54,10 +55,10 @@ public:
 class UGameplayTask_SpawnActor : public UGameplayTask
 {
 public:
-	unsigned char                                      UnknownData00[0x18B];                                     // 0x0058(0x018B) MISSED OFFSET
-	struct FScriptMulticastDelegate                    Success;                                                  // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DidNotSpawn;                                              // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UClass*                                      ClassToSpawn;                                             // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate                    Success;                                                  // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    DidNotSpawn;                                              // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0078(0x0018) MISSED OFFSET
+	class UClass*                                      ClassToSpawn;                                             // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -77,8 +78,8 @@ public:
 class UGameplayTask_WaitDelay : public UGameplayTask
 {
 public:
-	unsigned char                                      UnknownData00[0x18B];                                     // 0x0058(0x018B) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -97,8 +98,10 @@ public:
 class UGameplayTaskResource : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	int                                                ManualResourceID;                                         // 0x01E3(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	int                                                ManualResourceID;                                         // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	unsigned char                                      bManuallySetID : 1;                                       // 0x0030(0x0001)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -114,10 +117,11 @@ public:
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x01E3(0x0010) (Net, ZeroConstructor)
-	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x01E3(0x0010) (ZeroConstructor)
-	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x01E3(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x00D8(0x0010) (Net, ZeroConstructor)
+	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x00E8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x00F8(0x0028) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0120(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
 
 	static UClass* StaticClass()
 	{

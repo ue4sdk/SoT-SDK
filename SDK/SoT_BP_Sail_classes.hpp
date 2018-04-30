@@ -19,7 +19,8 @@ namespace SDK
 class ABP_Sail_C : public ASail
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0618(0x0020) MISSED OFFSET
+	TArray<struct FVector>                             Sail_Positions_Top;                                       // 0x0618(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             Sail_Positions_Bottom;                                    // 0x0628(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -19,7 +19,8 @@ namespace SDK
 class ABP_TreasureArtifact_Proxy_Base_C : public AStaticSimpleBootyItemProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0870(0x0010) MISSED OFFSET
+	class UStaticMeshComponent*                        Glint;                                                    // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

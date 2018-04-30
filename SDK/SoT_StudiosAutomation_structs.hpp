@@ -20,9 +20,8 @@ namespace SDK
 // 0x0020
 struct FTestLevelMetadataEntry
 {
-	class FString                                      Value;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1D3];                                     // 0x0010(0x01D3) MISSED OFFSET
-	class FString                                      Property;                                                 // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	class FString                                      Property;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	class FString                                      Value;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct StudiosAutomation.ClientPawnDetails

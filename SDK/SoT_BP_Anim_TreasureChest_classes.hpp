@@ -19,7 +19,9 @@ namespace SDK
 class UBP_Anim_TreasureChest_C : public UWieldableItemAnimationInstance
 {
 public:
-	unsigned char                                      UnknownData00[0xA0];                                      // 0x0630(0x00A0) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0630(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                              AnimGraphNode_Root_F070536E4391701403115F87197E6883;      // 0x0638(0x0048)
+	struct FAnimNode_SequenceEvaluator                 AnimGraphNode_SequenceEvaluator_0963D6274B6A08B871BEACBD45613A07;// 0x0680(0x0050)
 
 	static UClass* StaticClass()
 	{

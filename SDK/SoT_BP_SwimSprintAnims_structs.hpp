@@ -18,9 +18,8 @@ namespace SDK
 // 0x0010
 struct FBP_SwimSprintAnims
 {
-	class UAnimSequence*                               Loop_5_FFD50929417A2B4373EBA99465D6C291;                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1DB];                                     // 0x0008(0x01DB) MISSED OFFSET
-	class UAnimSequence*                               Into_2_C08FE6B242737247BAC193A670907225;                  // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequence*                               Into_2_C08FE6B242737247BAC193A670907225;                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequence*                               Loop_5_FFD50929417A2B4373EBA99465D6C291;                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

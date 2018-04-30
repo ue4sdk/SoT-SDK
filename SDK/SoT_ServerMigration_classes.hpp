@@ -93,7 +93,7 @@ public:
 class UServerMigrationSerialisationDetailsTestsActorRef : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class AActor*                                      ActorReferenceWithMigrationMarkup;                        // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -109,7 +109,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsActorThatMovesOnBeginPlay : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -125,7 +125,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsActorWithChild : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UChildActorComponent*                        ChildActorComponent;                                      // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -141,7 +141,8 @@ public:
 class AServerMigrationSerialisationDetailsTestsActorWithNetActorPtr : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0470(0x0018) MISSED OFFSET
+	struct FNetActorPtr                                ActorPtr;                                                 // 0x0470(0x0014)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0484(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -157,7 +158,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsActorWithUniqueNetId : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0470(0x0018) MISSED OFFSET
+	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0470(0x0018)
 
 	static UClass* StaticClass()
 	{
@@ -173,9 +174,8 @@ public:
 class UServerMigrationSerialisationDetailsTestsMigratableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x113];                                     // 0x00D0(0x0113) MISSED OFFSET
-	float                                              FloatWithMigrationMarkup;                                 // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                IntWithNoMarkup;                                          // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              FloatWithMigrationMarkup;                                 // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                IntWithNoMarkup;                                          // 0x00D4(0x0004) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -191,7 +191,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsMigratableComponentActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UServerMigrationSerialisationDetailsTestsMigratableComponent* ComponentWithMigrationMarkup;                             // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -207,7 +207,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsMigratableDefaultComponentActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UServerMigrationSerialisationDetailsTestsMigratableComponent* ComponentWithMigrationMarkup;                             // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -239,7 +239,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsMigrationChildActorLinkedActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class UChildActorComponent*                        Component;                                                // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -255,7 +255,8 @@ public:
 class AServerMigrationSerialisationDetailsTestsMigrationCustomSerialiseActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	struct FServerMigrationCustomMigrationSerialisationStruct TestStruct;                                               // 0x0470(0x0004)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0474(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -271,7 +272,7 @@ public:
 class AServerMigrationSerialisationDetailsTestsMigrationGetLinkedActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class AActor*                                      DependentActor;                                           // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -287,7 +288,8 @@ public:
 class AServerMigrationSerialisationDetailsTestsMigrationReferenceActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0470(0x0010) MISSED OFFSET
+	class AActor*                                      ActorReferenceWithMigrationMarkup;                        // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -303,10 +305,12 @@ public:
 class UServerMigrationSerialisationDetailsTestsPropertyMarkup : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	int                                                Int32NoMarkup;                                            // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               BoolWithMigrationMarkup;                                  // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
-	class FString                                      StringWithSaveGameMarkup;                                 // 0x01E3(0x0010) (ZeroConstructor, SaveGame)
+	int                                                Int32NoMarkup;                                            // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               BoolWithMigrationMarkup;                                  // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	class FString                                      StringWithSaveGameMarkup;                                 // 0x0030(0x0010) (ZeroConstructor, SaveGame)
+	float                                              FloatWithMigrationAndReplicationMarkup;                   // 0x0040(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -322,7 +326,7 @@ public:
 class UServerMigrationSerialisationDetailsTestsTArrayProperty : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<int>                                        IntegerArrayWithMigrationMarkup;                          // 0x0028(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -338,7 +342,8 @@ public:
 class UServerMigrationSerialisationDetailsTestsUStructProperty : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	struct FServerMigrationSerialisationDetailsTestsUStruct SubStructWithMigrationMarkup;                             // 0x0028(0x000C)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -354,16 +359,18 @@ public:
 class UServerMigrationSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	int                                                MaxSimultaneousMigrations;                                // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      TransportImplementation;                                  // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	int                                                ServerDefaultListenPort;                                  // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                ServerListenPortRangeSize;                                // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                AutomationServerDefaultListenPort;                        // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      InstanceImplementation;                                   // 0x01E3(0x0010) (Edit, ZeroConstructor, Config)
-	float                                              MigrationConnectionTimeoutSeconds;                        // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              WaitForClientActorRemappingTimeoutLength;                 // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              WaitForTransferOwnershipAcknowledgementTimeoutLength;     // 0x01E3(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                MaxSimultaneousMigrations;                                // 0x0028(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	class FString                                      TransportImplementation;                                  // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	int                                                ServerDefaultListenPort;                                  // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                ServerListenPortRangeSize;                                // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                AutomationServerDefaultListenPort;                        // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class FString                                      InstanceImplementation;                                   // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
+	float                                              MigrationConnectionTimeoutSeconds;                        // 0x0060(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              WaitForClientActorRemappingTimeoutLength;                 // 0x0064(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              WaitForTransferOwnershipAcknowledgementTimeoutLength;     // 0x0068(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              DeserialisationTimeSliceLength;                           // 0x006C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

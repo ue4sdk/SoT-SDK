@@ -19,7 +19,7 @@ namespace SDK
 class ABP_TreasureChest_Proxy_Drunken_C : public ABP_TreasureChestProxy_C
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x09C8(0x0008) MISSED OFFSET
+	class UTankardRefillerComponent*                   TankardRefiller;                                          // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

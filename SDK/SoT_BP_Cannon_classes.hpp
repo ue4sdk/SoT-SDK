@@ -19,7 +19,16 @@ namespace SDK
 class ABP_Cannon_C : public ACannon
 {
 public:
-	unsigned char                                      UnknownData00[0x1D0];                                     // 0x0A00(0x01D0) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A00(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UGroupedInteractableAreaComponent*           GroupedInteractableArea;                                  // 0x0A08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0A10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Collision;                                                // 0x0A18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      CannonAimingCenteredPitchEvent;                           // 0x0A20(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStartedPitchEvent;                            // 0x0A68(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStoppedPitchEvent;                            // 0x0AB0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingCenteredYawEvent;                             // 0x0AF8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStartedYawEvent;                              // 0x0B40(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStoppedYawEvent;                              // 0x0B88(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

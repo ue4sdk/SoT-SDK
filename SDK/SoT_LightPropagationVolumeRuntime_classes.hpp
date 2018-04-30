@@ -19,8 +19,10 @@ namespace SDK
 class ULightPropagationVolumeBlendable : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
-	struct FLightPropagationVolumeSettings             Settings;                                                 // 0x01E3(0x0070) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	struct FLightPropagationVolumeSettings             Settings;                                                 // 0x0030(0x0070) (Edit, BlueprintVisible)
+	float                                              BlendWeight;                                              // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x00A4(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
