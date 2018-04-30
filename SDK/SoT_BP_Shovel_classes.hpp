@@ -1,0 +1,39 @@
+#pragma once
+
+// Sea of Thieves (1.0.5) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_BP_Shovel_structs.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass BP_Shovel.BP_Shovel_C
+// 0x0008 (0x0848 - 0x0840)
+class ABP_Shovel_C : public AShovel
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0840(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Shovel.BP_Shovel_C");
+		return ptr;
+	}
+
+
+	void UserConstructionScript();
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

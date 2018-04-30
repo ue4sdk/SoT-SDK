@@ -1,0 +1,1536 @@
+#pragma once
+
+// Sea of Thieves (1.0.5) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_GameplayAbilities_structs.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// Class GameplayAbilities.AttributeSet
+// 0x0008 (0x0030 - 0x0028)
+class UAttributeSet : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AttributeSet");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectCalculation
+// 0x0010 (0x0038 - 0x0028)
+class UGameplayEffectCalculation : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectCalculation");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffect
+// 0x0550 (0x0578 - 0x0028)
+class UGameplayEffect : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
+	TEnumAsByte<EGameplayEffectDurationType>           DurationPolicy;                                           // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FGameplayEffectModifierMagnitude            DurationMagnitude;                                        // 0x01E3(0x0170) (Edit, DisableEditOnInstance)
+	struct FScalableFloat                              Period;                                                   // 0x01E3(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	bool                                               bExecutePeriodicEffectOnApplication;                      // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FGameplayModifierInfo>               Modifiers;                                                // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FGameplayEffectExecutionDefinition>  Executions;                                               // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FScalableFloat                              ChanceToApplyToTarget;                                    // 0x01E3(0x0020) (Edit, DisableEditOnInstance)
+	TArray<class UClass*>                              TargetEffectClasses;                                      // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UGameplayEffect*>                     TargetEffects;                                            // 0x01E3(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst)
+	TArray<class UClass*>                              OverflowEffects;                                          // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bDenyOverflowApplication;                                 // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bClearStackOnOverflow;                                    // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              PrematureExpirationEffectClasses;                         // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              RoutineExpirationEffectClasses;                           // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bRequireModifierSuccessToTriggerCues;                     // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FGameplayEffectCue>                  GameplayCues;                                             // 0x01E3(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	class UGameplayEffectUIData*                       UIData;                                                   // 0x01E3(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FInheritedTagContainer                      InheritableGameplayEffectTags;                            // 0x01E3(0x0078) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FGameplayTagContainer                       GameplayEffectTags;                                       // 0x01E3(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FInheritedTagContainer                      InheritableOwnedTagsContainer;                            // 0x01E3(0x0078) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FGameplayTagContainer                       OwnedTagsContainer;                                       // 0x01E3(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FGameplayTagRequirements                    OngoingTagRequirements;                                   // 0x01E3(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FGameplayTagRequirements                    ApplicationTagRequirements;                               // 0x01E3(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FInheritedTagContainer                      RemoveGameplayEffectsWithTags;                            // 0x01E3(0x0078) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FGameplayTagContainer                       ClearTagsContainer;                                       // 0x01E3(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FGameplayTagRequirements                    GrantedApplicationImmunityTags;                           // 0x01E3(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	TEnumAsByte<EGameplayEffectStackingType>           StackingType;                                             // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                StackLimitCount;                                          // 0x01E3(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EGameplayEffectStackingDurationPolicy> StackDurationRefreshPolicy;                               // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EGameplayEffectStackingPeriodPolicy>   StackPeriodResetPolicy;                                   // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x394];                                     // 0x01E4(0x0394) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffect");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbility
+// 0x04B0 (0x04D8 - 0x0028)
+class UGameplayAbility : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
+	struct FGameplayTagContainer                       AbilityTags;                                              // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	bool                                               bReplicateInputDirectly;                                  // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EGameplayAbilityReplicationPolicy>     ReplicationPolicy;                                        // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EGameplayAbilityInstancingPolicy>      InstancingPolicy;                                         // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bServerRespectsRemoteAbilityCancellation;                 // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bRetriggerInstancedAbility;                               // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FGameplayAbilityActivationInfo              CurrentActivationInfo;                                    // 0x01E3(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	struct FGameplayEventData                          CurrentEventData;                                         // 0x01E3(0x00A0) (BlueprintVisible, BlueprintReadOnly)
+	TEnumAsByte<EGameplayAbilityNetExecutionPolicy>    NetExecutionPolicy;                                       // 0x01E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      CostGameplayEffectClass;                                  // 0x01E3(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UGameplayEffect*                             CostGameplayEffect;                                       // 0x01E3(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData)
+	TArray<struct FAbilityTriggerData>                 AbilityTriggers;                                          // 0x01E3(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      CooldownGameplayEffectClass;                              // 0x01E3(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UGameplayEffect*                             CooldownGameplayEffect;                                   // 0x01E3(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData)
+	struct FGameplayTagQuery                           CancelAbilitiesMatchingTagQuery;                          // 0x01E3(0x0048) (Edit, DisableEditOnInstance)
+	struct FGameplayTagQuery                           ConstTagQuery;                                            // 0x01E3(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, EditConst)
+	struct FGameplayTagContainer                       CancelAbilitiesWithTag;                                   // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       BlockAbilitiesWithTag;                                    // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       ActivationOwnedTags;                                      // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       ActivationRequiredTags;                                   // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       ActivationBlockedTags;                                    // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       SourceRequiredTags;                                       // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       SourceBlockedTags;                                        // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       TargetRequiredTags;                                       // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer                       TargetBlockedTags;                                        // 0x01E3(0x0028) (Edit, DisableEditOnInstance)
+	class UAnimMontage*                                CurrentMontage;                                           // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               bIsActive;                                                // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bIsCancelable;                                            // 0x01E3(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2F4];                                     // 0x01E4(0x02F4) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility");
+		return ptr;
+	}
+
+
+	void SetShouldBlockOtherAbilities(bool bShouldBlockAbilities);
+	void SetCanBeCanceled(bool bCanBeCanceled);
+	void SendGameplayEvent(const struct FGameplayTag& EventTag, const struct FGameplayEventData& payload);
+	void MontageStop(float OverrideBlendOutTime);
+	void MontageSetNextSectionName(const struct FName& FromSectionName, const struct FName& ToSectionName);
+	void MontageJumpToSection(const struct FName& SectionName);
+	struct FGameplayAbilityTargetingLocationInfo MakeTargetLocationInfoFromOwnerSkeletalMeshComponent(const struct FName& SocketName);
+	struct FGameplayAbilityTargetingLocationInfo MakeTargetLocationInfoFromOwnerActor();
+	struct FGameplayEffectSpecHandle MakeOutgoingGameplayEffectSpec(class UClass* GameplayEffectClass, float Level);
+	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& payload);
+	void K2_RemoveGameplayCue(const struct FGameplayTag& GameplayCueTag);
+	void K2_OnEndAbility();
+	void K2_ExecuteGameplayCueWithParams(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& GameplayCueParameters);
+	void K2_ExecuteGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayEffectContextHandle& Context);
+	void K2_EndAbility();
+	void K2_CommitExecute();
+	bool K2_CommitAbilityCost(bool BroadcastCommitEvent);
+	bool K2_CommitAbilityCooldown(bool BroadcastCommitEvent);
+	bool K2_CommitAbility();
+	bool K2_CheckAbilityCost();
+	bool K2_CheckAbilityCooldown();
+	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags);
+	TArray<struct FActiveGameplayEffectHandle> K2_ApplyGameplayEffectToTarget(const struct FGameplayAbilityTargetDataHandle& TargetData, class UGameplayEffect* GameplayEffect, int GameplayEffectLevel);
+	struct FActiveGameplayEffectHandle K2_ApplyGameplayEffectToOwner(class UGameplayEffect* GameplayEffect, int GameplayEffectLevel);
+	TArray<struct FActiveGameplayEffectHandle> K2_ApplyGameplayEffectSpecToTarget(const struct FGameplayEffectSpecHandle& EffectSpecHandle, const struct FGameplayAbilityTargetDataHandle& TargetData);
+	struct FActiveGameplayEffectHandle K2_ApplyGameplayEffectSpecToOwner(const struct FGameplayEffectSpecHandle& EffectSpecHandle);
+	void K2_AddGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayEffectContextHandle& Context, bool bRemoveOnAbilityEnd);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& eventData);
+	void K2_ActivateAbility();
+	class USkeletalMeshComponent* GetOwningComponentFromActorInfo();
+	class AActor* GetOwningActorFromActorInfo();
+	struct FGameplayEffectSpecHandle GetOutgoingGameplayEffectSpec(class UGameplayEffect* GameplayEffect, float Level);
+	class UObject* GetCurrentSourceObject();
+	class UAnimMontage* GetCurrentMontage();
+	struct FGameplayEffectContextHandle GetContextFromOwner(const struct FGameplayAbilityTargetDataHandle& OptionalTargetData);
+	class AActor* GetAvatarActorFromActorInfo();
+	struct FGameplayAbilityActorInfo GetActorInfo();
+	int GetAbilityLevel();
+	void EndTaskByInstanceName(const struct FName& InstanceName);
+	void EndAbilityState(const struct FName& OptionalStateNameToEnd);
+	void ConfirmTaskByInstanceName(const struct FName& InstanceName, bool bEndTask);
+	void CancelTaskByInstanceName(const struct FName& InstanceName);
+	void BP_RemoveGameplayEffectFromOwnerWithGrantedTags(const struct FGameplayTagContainer& WithGrantedTags, int StacksToRemove);
+	void BP_RemoveGameplayEffectFromOwnerWithAssetTags(const struct FGameplayTagContainer& WithAssetTags, int StacksToRemove);
+	TArray<struct FActiveGameplayEffectHandle> BP_ApplyGameplayEffectToTarget(const struct FGameplayAbilityTargetDataHandle& TargetData, class UClass* GameplayEffectClass, int GameplayEffectLevel);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToOwner(class UClass* GameplayEffectClass, int GameplayEffectLevel);
+};
+
+
+// Class GameplayAbilities.GameplayCueInterface
+// 0x0000 (0x0028 - 0x0028)
+class UGameplayCueInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueInterface");
+		return ptr;
+	}
+
+
+	void ForwardGameplayCueToParent();
+	void BlueprintCustomHandler(TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters);
+};
+
+
+// Class GameplayAbilities.AbilitySystemBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAbilitySystemBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemBlueprintLibrary");
+		return ptr;
+	}
+
+
+	bool STATIC_TargetDataHasOrigin(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	bool STATIC_TargetDataHasHitResult(const struct FGameplayAbilityTargetDataHandle& HitResult, int Index);
+	bool STATIC_TargetDataHasEndPoint(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	bool STATIC_TargetDataHasActor(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	struct FGameplayEffectSpecHandle STATIC_SetStackCountToMax(const struct FGameplayEffectSpecHandle& SpecHandle);
+	struct FGameplayEffectSpecHandle STATIC_SetStackCount(const struct FGameplayEffectSpecHandle& SpecHandle, int StackCount);
+	struct FGameplayEffectSpecHandle STATIC_SetDuration(const struct FGameplayEffectSpecHandle& SpecHandle, float Duration);
+	void STATIC_SendGameplayEventToActor(class AActor* Actor, const struct FGameplayTag& EventTag, const struct FGameplayEventData& payload);
+	struct FGameplayEffectSpecHandle STATIC_MakeSpecHandle(class UGameplayEffect* InGameplayEffect, class AActor* InInstigator, class AActor* InEffectCauser, float InLevel);
+	struct FGameplayTargetDataFilterHandle STATIC_MakeFilterHandle(const struct FGameplayTargetDataFilter& Filter, class AActor* FilterActor);
+	bool STATIC_IsInstigatorLocallyControlledPlayer(const struct FGameplayCueParameters& Parameters);
+	bool STATIC_IsInstigatorLocallyControlled(const struct FGameplayCueParameters& Parameters);
+	bool STATIC_HasHitResult(const struct FGameplayCueParameters& Parameters);
+	struct FTransform STATIC_GetTargetDataOrigin(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	struct FTransform STATIC_GetTargetDataEndPointTransform(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	struct FVector STATIC_GetTargetDataEndPoint(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	struct FVector STATIC_GetOrigin(const struct FGameplayCueParameters& Parameters);
+	struct FTransform STATIC_GetInstigatorTransform(const struct FGameplayCueParameters& Parameters);
+	class AActor* STATIC_GetInstigatorActor(const struct FGameplayCueParameters& Parameters);
+	struct FHitResult STATIC_GetHitResultFromTargetData(const struct FGameplayAbilityTargetDataHandle& HitResult, int Index);
+	struct FHitResult STATIC_GetHitResult(const struct FGameplayCueParameters& Parameters);
+	bool STATIC_GetGameplayCueEndLocationAndNormal(class AActor* TargetActor, const struct FGameplayCueParameters& Parameters, struct FVector* Location, struct FVector* Normal);
+	bool STATIC_GetGameplayCueDirection(class AActor* TargetActor, const struct FGameplayCueParameters& Parameters, struct FVector* Direction);
+	float STATIC_GetFloatAttribute(class AActor* Actor, const struct FGameplayAttribute& Attribute, bool* bSuccessfullyFoundAttribute);
+	int STATIC_GetDataCountFromTargetData(const struct FGameplayAbilityTargetDataHandle& TargetData);
+	TArray<class AActor*> STATIC_GetActorsFromTargetData(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index);
+	int STATIC_GetActorCount(const struct FGameplayCueParameters& Parameters);
+	class AActor* STATIC_GetActorByIndex(const struct FGameplayCueParameters& Parameters, int Index);
+	int STATIC_GetActiveGameplayEffectStackCount(const struct FActiveGameplayEffectHandle& ActiveHandle);
+	class UAbilitySystemComponent* STATIC_GetAbilitySystemComponent(class AActor* Actor);
+	void STATIC_ForwardGameplayCueToTarget(const TScriptInterface<class UGameplayCueInterface>& TargetCueInterface, TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters);
+	struct FGameplayAbilityTargetDataHandle STATIC_FilterTargetData(const struct FGameplayAbilityTargetDataHandle& TargetDataHandle, const struct FGameplayTargetDataFilterHandle& ActorFilterClass);
+	bool STATIC_EffectContextIsInstigatorLocallyControlled(const struct FGameplayEffectContextHandle& EffectContext);
+	bool STATIC_EffectContextHasHitResult(const struct FGameplayEffectContextHandle& EffectContext);
+	class UObject* STATIC_EffectContextGetSourceObject(const struct FGameplayEffectContextHandle& EffectContext);
+	class AActor* STATIC_EffectContextGetOriginalInstigatorActor(const struct FGameplayEffectContextHandle& EffectContext);
+	struct FVector STATIC_EffectContextGetOrigin(const struct FGameplayEffectContextHandle& EffectContext);
+	class AActor* STATIC_EffectContextGetInstigatorActor(const struct FGameplayEffectContextHandle& EffectContext);
+	struct FHitResult STATIC_EffectContextGetHitResult(const struct FGameplayEffectContextHandle& EffectContext);
+	class AActor* STATIC_EffectContextGetEffectCauser(const struct FGameplayEffectContextHandle& EffectContext);
+	bool STATIC_DoesTargetDataContainActor(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index, class AActor* Actor);
+	bool STATIC_DoesGameplayCueMeetTagRequirements(const struct FGameplayCueParameters& Parameters, struct FGameplayTagRequirements* SourceTagReqs, struct FGameplayTagRequirements* TargetTagReqs);
+	struct FGameplayEffectSpecHandle STATIC_AssignSetByCallerMagnitude(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FName& DataName, float Magnitude);
+	struct FGameplayAbilityTargetDataHandle STATIC_AppendTargetDataHandle(const struct FGameplayAbilityTargetDataHandle& TargetHandle, const struct FGameplayAbilityTargetDataHandle& HandleToAdd);
+	struct FGameplayEffectSpecHandle STATIC_AddLinkedGameplayEffectSpec(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayEffectSpecHandle& LinkedGameplayEffectSpec);
+	struct FGameplayEffectSpecHandle STATIC_AddGrantedTags(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTagContainer& NewGameplayTags);
+	struct FGameplayEffectSpecHandle STATIC_AddGrantedTag(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTag& NewGameplayTag);
+	struct FGameplayEffectSpecHandle STATIC_AddAssetTags(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTagContainer& NewGameplayTags);
+	struct FGameplayEffectSpecHandle STATIC_AddAssetTag(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTag& NewGameplayTag);
+	struct FGameplayAbilityTargetDataHandle STATIC_AbilityTargetDataFromLocations(const struct FGameplayAbilityTargetingLocationInfo& SourceLocation, const struct FGameplayAbilityTargetingLocationInfo& TargetLocation);
+	struct FGameplayAbilityTargetDataHandle STATIC_AbilityTargetDataFromHitResult(const struct FHitResult& HitResult);
+	struct FGameplayAbilityTargetDataHandle STATIC_AbilityTargetDataFromActorArray(TArray<class AActor*> ActorArray, bool OneTargetPerHandle);
+	struct FGameplayAbilityTargetDataHandle STATIC_AbilityTargetDataFromActor(class AActor* Actor);
+};
+
+
+// Class GameplayAbilities.AbilitySystemComponent
+// 0x0D50 (0x0E80 - 0x0130)
+class UAbilitySystemComponent : public UGameplayTasksComponent
+{
+public:
+	unsigned char                                      UnknownData00[0xB3];                                      // 0x0130(0x00B3) MISSED OFFSET
+	TArray<struct FAttributeDefaults>                  DefaultStartingData;                                      // 0x01E3(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAttributeSet*>                       SpawnedAttributes;                                        // 0x01E3(0x0010) (ExportObject, Net, ZeroConstructor)
+	struct FPredictionKey                              ReplicatedPredictionKey;                                  // 0x01E3(0x0018) (Net)
+	float                                              OutgoingDuration;                                         // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              IncomingDuration;                                         // 0x01E3(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FGameplayAbilitySpecContainer               ActivatableAbilities;                                     // 0x01E3(0x00C0) (BlueprintVisible, BlueprintReadOnly, Net)
+	TArray<class UGameplayAbility*>                    AllReplicatedInstancedAbilities;                          // 0x01E3(0x0010) (ZeroConstructor)
+	TArray<class AGameplayAbilityTargetActor*>         SpawnedTargetActors;                                      // 0x01E3(0x0010) (ZeroConstructor)
+	struct FGameplayAbilityRepAnimMontage              RepAnimMontageInfo;                                       // 0x01E3(0x0030) (Net)
+	struct FGameplayAbilityLocalAnimMontage            LocalAnimMontageInfo;                                     // 0x01E3(0x0030)
+	class AActor*                                      OwnerActor;                                               // 0x01E3(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      AvatarActor;                                              // 0x01E3(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FActiveGameplayEffectsContainer             ActiveGameplayEffects;                                    // 0x01E3(0x03C8) (Net)
+	struct FActiveGameplayCueContainer                 ActiveGameplayCues;                                       // 0x01E3(0x00C0) (Net)
+	TArray<unsigned char>                              BlockedAbilityBindings;                                   // 0x01E3(0x0010) (Net, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0xC8D];                                     // 0x01F3(0x0C8D) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemComponent");
+		return ptr;
+	}
+
+
+	bool TryActivateAbilityByClass(class UClass* InAbilityToActivate, bool bAllowRemoteActivation);
+	bool TryActivateAbilitiesByTag(const struct FGameplayTagContainer& GameplayTagContainer, bool bAllowRemoteActivation);
+	void TargetConfirm();
+	void TargetCancel();
+	void SetUserAbilityActivationInhibited(bool NewInhibit);
+	void SetActiveGameplayEffectLevel(const struct FActiveGameplayEffectHandle& ActiveHandle, int NewLevel);
+	void ServerTryActivateAbilityWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData);
+	void ServerTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey);
+	void ServerSetReplicatedTargetDataCancelled(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey);
+	void ServerSetReplicatedTargetData(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FGameplayAbilityTargetDataHandle& ReplicatedTargetDataHandle, const struct FGameplayTag& ApplicationTag, const struct FPredictionKey& CurrentPredictionKey);
+	void ServerSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey);
+	void ServerSetInputReleased(const struct FGameplayAbilitySpecHandle& AbilityHandle);
+	void ServerSetInputPressed(const struct FGameplayAbilitySpecHandle& AbilityHandle);
+	void ServerEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo, const struct FPredictionKey& PredictionKey);
+	void ServerCurrentMontageSetNextSectionName(class UAnimMontage* ClientAnimMontage, float ClientPosition, const struct FName& SectionName, const struct FName& NextSectionName);
+	void ServerCurrentMontageJumpToSectionName(class UAnimMontage* ClientAnimMontage, const struct FName& SectionName);
+	void ServerCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo);
+	void RemoveActiveGameplayEffectBySourceEffect(class UClass* GameplayEffect, class UAbilitySystemComponent* InstigatorAbilitySystemComponent, int StacksToRemove);
+	bool RemoveActiveGameplayEffect(const struct FActiveGameplayEffectHandle& Handle, int StacksToRemove);
+	void RemoveActiveEffectsWithTags(const struct FGameplayTagContainer& Tags);
+	void OnRep_ReplicatedAnimMontage();
+	void OnRep_PredictionKey();
+	void OnRep_OwningActor();
+	void OnRep_GameplayEffects();
+	void OnRep_ActivateAbilities();
+	void NetMulticast_InvokeGameplayCueExecuted_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
+	void NetMulticast_InvokeGameplayCueExecuted_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey);
+	void NetMulticast_InvokeGameplayCueExecuted(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
+	void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey);
+	void NetMulticast_InvokeGameplayCueAdded(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
+	struct FGameplayEffectSpecHandle MakeOutgoingSpec(class UClass* GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& Context);
+	void K2_InitStats(class UClass* Attributes, class UDataTable* DataTable);
+	struct FActiveGameplayEffectHandle K2_ApplyGameplayEffectToTarget(class UGameplayEffect* GameplayEffect, class UAbilitySystemComponent* Target, float Level, const struct FGameplayEffectContextHandle& Context);
+	struct FActiveGameplayEffectHandle K2_ApplyGameplayEffectToSelf(class UGameplayEffect* GameplayEffect, float Level, const struct FGameplayEffectContextHandle& EffectContext);
+	bool IsGameplayCueActive(const struct FGameplayTag& GameplayCueTag);
+	bool GetUserAbilityActivationInhibited();
+	struct FGameplayEffectSpecHandle GetOutgoingSpec(class UGameplayEffect* GameplayEffect, float Level);
+	float GetGameplayEffectMagnitude(const struct FActiveGameplayEffectHandle& Handle, const struct FGameplayAttribute& Attribute);
+	int GetGameplayEffectCount(class UClass* SourceGameplayEffect, class UAbilitySystemComponent* OptionalInstigatorFilterComponent);
+	struct FGameplayEffectContextHandle GetEffectContext();
+	void ClientTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate);
+	void ClientSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey);
+	void ClientEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo);
+	void ClientCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo);
+	void ClientActivateAbilitySucceedWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData);
+	void ClientActivateAbilitySucceed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey);
+	void ClientActivateAbilityFailed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, int16_t PredictionKey);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToTarget(class UClass* GameplayEffectClass, class UAbilitySystemComponent* Target, float Level, const struct FGameplayEffectContextHandle& Context);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToSelf(class UClass* GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& EffectContext);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToTarget(class UAbilitySystemComponent* Target, struct FGameplayEffectSpecHandle* SpecHandle);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToSelf(struct FGameplayEffectSpecHandle* SpecHandle);
+	void AbilityConfirmOrCancel__DelegateSignature();
+	void AbilityAbilityKey__DelegateSignature(int InputID);
+};
+
+
+// Class GameplayAbilities.AbilitySystemDebugHUD
+// 0x0000 (0x0568 - 0x0568)
+class AAbilitySystemDebugHUD : public AHUD
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemDebugHUD");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.AbilitySystemGlobals
+// 0x0108 (0x0130 - 0x0028)
+class UAbilitySystemGlobals : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
+	struct FStringClassReference                       AbilitySystemGlobalsClassName;                            // 0x01E3(0x0010) (ZeroConstructor, Config)
+	struct FGameplayTag                                ActivateFailCooldownTag;                                  // 0x01E3(0x0008)
+	struct FName                                       ActivateFailCooldownName;                                 // 0x01E3(0x0008) (ZeroConstructor, Config, IsPlainOldData)
+	struct FGameplayTag                                ActivateFailCostTag;                                      // 0x01E3(0x0008)
+	struct FName                                       ActivateFailCostName;                                     // 0x01E3(0x0008) (ZeroConstructor, Config, IsPlainOldData)
+	struct FGameplayTag                                ActivateFailTagsBlockedTag;                               // 0x01E3(0x0008)
+	struct FName                                       ActivateFailTagsBlockedName;                              // 0x01E3(0x0008) (ZeroConstructor, Config, IsPlainOldData)
+	struct FGameplayTag                                ActivateFailTagsMissingTag;                               // 0x01E3(0x0008)
+	struct FName                                       ActivateFailTagsMissingName;                              // 0x01E3(0x0008) (ZeroConstructor, Config, IsPlainOldData)
+	struct FGameplayTag                                ActivateFailNetworkingTag;                                // 0x01E3(0x0008)
+	struct FName                                       ActivateFailNetworkingName;                               // 0x01E3(0x0008) (ZeroConstructor, Config, IsPlainOldData)
+	class FString                                      GlobalCurveTableName;                                     // 0x01E3(0x0010) (ZeroConstructor, Config)
+	class FString                                      GlobalAttributeMetaDataTableName;                         // 0x01E3(0x0010) (ZeroConstructor, Config)
+	class FString                                      GlobalAttributeSetDefaultsTableName;                      // 0x01E3(0x0010) (ZeroConstructor, Config)
+	struct FStringAssetReference                       GlobalGameplayCueManagerName;                             // 0x01E3(0x0010) (ZeroConstructor, Config)
+	TArray<class FString>                              GameplayCueNotifyPaths;                                   // 0x01E3(0x0010) (ZeroConstructor, Config)
+	struct FStringAssetReference                       GameplayTagResponseTableName;                             // 0x01E3(0x0010) (ZeroConstructor, Config)
+	class UGameplayTagReponseTable*                    GameplayTagResponseTable;                                 // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               PredictTargetGameplayEffects;                             // 0x01E3(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	class UCurveTable*                                 GlobalCurveTable;                                         // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCurveTable*                                 GlobalAttributeDefaultsTable;                             // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UDataTable*                                  GlobalAttributeMetaDataTable;                             // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemGlobals");
+		return ptr;
+	}
+
+
+	void ToggleIgnoreAbilitySystemCosts();
+	void ToggleIgnoreAbilitySystemCooldowns();
+};
+
+
+// Class GameplayAbilities.AbilitySystemInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAbilitySystemInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.AbilitySystemTestPawn
+// 0x0020 (0x0518 - 0x04F8)
+class AAbilitySystemTestPawn : public ADefaultPawn
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x04F8(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestPawn");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.AbilityTask
+// 0x0010 (0x0068 - 0x0058)
+class UAbilityTask : public UGameplayTask
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0058(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.AbilityTask_MoveToLocation
+// 0x0048 (0x00B0 - 0x0068)
+class UAbilityTask_MoveToLocation : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnTargetLocationReached;                                  // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FVector                                     StartLocation;                                            // 0x01E3(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TargetLocation;                                           // 0x01E3(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              DurationOfMovement;                                       // 0x01E3(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 LerpCurve;                                                // 0x01E3(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UCurveVector*                                LerpCurveVector;                                          // 0x01E3(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_MoveToLocation");
+		return ptr;
+	}
+
+
+	class UAbilityTask_MoveToLocation* STATIC_MoveToLocation(class UObject* WorldContextObject, const struct FName& TaskInstanceName, const struct FVector& Location, float Duration, class UCurveFloat* OptionalInterpolationCurve, class UCurveVector* OptionalVectorInterpolationCurve);
+};
+
+
+// Class GameplayAbilities.AbilityTask_NetworkSyncPoint
+// 0x0018 (0x0080 - 0x0068)
+class UAbilityTask_NetworkSyncPoint : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSync;                                                   // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_NetworkSyncPoint");
+		return ptr;
+	}
+
+
+	class UAbilityTask_NetworkSyncPoint* STATIC_WaitNetSync(class UObject* WorldContextObject, TEnumAsByte<EAbilityTaskNetSyncType> SyncType);
+	void OnSignalCallback();
+};
+
+
+// Class GameplayAbilities.AbilityTask_PlayMontageAndWait
+// 0x0058 (0x00C0 - 0x0068)
+class UAbilityTask_PlayMontageAndWait : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnComplete;                                               // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInterrupted;                                            // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnCancelled;                                              // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_PlayMontageAndWait");
+		return ptr;
+	}
+
+
+	void OnMontageInterrupted();
+	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
+	class UAbilityTask_PlayMontageAndWait* STATIC_CreatePlayMontageAndWaitProxy(class UObject* WorldContextObject, const struct FName& TaskInstanceName, class UAnimMontage* MontageToPlay, float Rate, const struct FName& StartSection);
+};
+
+
+// Class GameplayAbilities.AbilityTask_Repeat
+// 0x0030 (0x0098 - 0x0068)
+class UAbilityTask_Repeat : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnPerformAction;                                          // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFinished;                                               // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_Repeat");
+		return ptr;
+	}
+
+
+	class UAbilityTask_Repeat* STATIC_RepeatAction(class UObject* WorldContextObject, float TimeBetweenActions, int TotalActionCount);
+};
+
+
+// Class GameplayAbilities.AbilityTask_SpawnActor
+// 0x0030 (0x0098 - 0x0068)
+class UAbilityTask_SpawnActor : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Success;                                                  // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    DidNotSpawn;                                              // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_SpawnActor");
+		return ptr;
+	}
+
+
+	class UAbilityTask_SpawnActor* STATIC_SpawnActor(class UObject* WorldContextObject, const struct FGameplayAbilityTargetDataHandle& TargetData, class UClass* Class);
+	void FinishSpawningActor(class UObject* WorldContextObject, const struct FGameplayAbilityTargetDataHandle& TargetData, class AActor* SpawnedActor);
+	bool BeginSpawningActor(class UObject* WorldContextObject, const struct FGameplayAbilityTargetDataHandle& TargetData, class UClass* Class, class AActor** SpawnedActor);
+};
+
+
+// Class GameplayAbilities.AbilityTask_StartAbilityState
+// 0x0038 (0x00A0 - 0x0068)
+class UAbilityTask_StartAbilityState : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnStateEnded;                                             // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnStateInterrupted;                                       // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_StartAbilityState");
+		return ptr;
+	}
+
+
+	class UAbilityTask_StartAbilityState* STATIC_StartAbilityState(class UObject* WorldContextObject, const struct FName& StateName, bool bEndCurrentState);
+};
+
+
+// Class GameplayAbilities.AbilityTask_VisualizeTargeting
+// 0x0028 (0x0090 - 0x0068)
+class UAbilityTask_VisualizeTargeting : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    TimeElapsed;                                              // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_VisualizeTargeting");
+		return ptr;
+	}
+
+
+	class UAbilityTask_VisualizeTargeting* STATIC_VisualizeTargetingUsingActor(class UObject* WorldContextObject, class AGameplayAbilityTargetActor* TargetActor, const struct FName& TaskInstanceName, float Duration);
+	class UAbilityTask_VisualizeTargeting* STATIC_VisualizeTargeting(class UObject* WorldContextObject, class UClass* Class, const struct FName& TaskInstanceName, float Duration);
+	void FinishSpawningActor(class UObject* WorldContextObject, class AGameplayAbilityTargetActor* SpawnedActor);
+	bool BeginSpawningActor(class UObject* WorldContextObject, class UClass* Class, class AGameplayAbilityTargetActor** SpawnedActor);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitAbilityActivate
+// 0x0030 (0x0098 - 0x0068)
+class UAbilityTask_WaitAbilityActivate : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnActivate;                                               // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityActivate");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitAbilityActivate* STATIC_WaitForAbilityActivate(class UObject* WorldContextObject, const struct FGameplayTag& WithTag, const struct FGameplayTag& WithoutTag, bool IncludeTriggeredAbilities, bool TriggerOnce);
+	void OnAbilityActivate(class UGameplayAbility* ActivatedAbility);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitAbilityCommit
+// 0x0030 (0x0098 - 0x0068)
+class UAbilityTask_WaitAbilityCommit : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnCommit;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityCommit");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitAbilityCommit* STATIC_WaitForAbilityCommit(class UObject* WorldContextObject, const struct FGameplayTag& WithTag, const struct FGameplayTag& WithoutTage, bool TriggerOnce);
+	void OnAbilityCommit(class UGameplayAbility* ActivatedAbility);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitAttributeChange
+// 0x0040 (0x00A8 - 0x0068)
+class UAbilityTask_WaitAttributeChange : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnChange;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAttributeChange");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitAttributeChange* STATIC_WaitForAttributeChangeWithComparison(class UObject* WorldContextObject, const struct FGameplayAttribute& InAttribute, const struct FGameplayTag& InWithTag, const struct FGameplayTag& InWithoutTag, TEnumAsByte<EWaitAttributeChangeComparison> InComparisonType, float InComparisonValue, bool TriggerOnce);
+	class UAbilityTask_WaitAttributeChange* STATIC_WaitForAttributeChange(class UObject* WorldContextObject, const struct FGameplayAttribute& Attribute, const struct FGameplayTag& WithSrcTag, const struct FGameplayTag& WithoutSrcTag, bool TriggerOnce);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitCancel
+// 0x0018 (0x0080 - 0x0068)
+class UAbilityTask_WaitCancel : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnCancel;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitCancel");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitCancel* STATIC_WaitCancel(class UObject* WorldContextObject);
+	void OnLocalCancelCallback();
+	void OnCancelCallback();
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitConfirm
+// 0x0020 (0x0088 - 0x0068)
+class UAbilityTask_WaitConfirm : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnConfirm;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirm");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitConfirm* STATIC_WaitConfirm(class UObject* WorldContextObject);
+	void OnConfirmCallback(class UGameplayAbility* Ability);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitConfirmCancel
+// 0x0028 (0x0090 - 0x0068)
+class UAbilityTask_WaitConfirmCancel : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnConfirm;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnCancel;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirmCancel");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitConfirmCancel* STATIC_WaitConfirmCancel(class UObject* WorldContextObject);
+	void OnLocalConfirmCallback();
+	void OnLocalCancelCallback();
+	void OnConfirmCallback();
+	void OnCancelCallback();
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitDelay
+// 0x0018 (0x0080 - 0x0068)
+class UAbilityTask_WaitDelay : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitDelay");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitDelay* STATIC_WaitDelay(class UObject* WorldContextObject, float Time);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied
+// 0x00C8 (0x0130 - 0x0068)
+class UAbilityTask_WaitGameplayEffectApplied : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x0068(0x00C8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied");
+		return ptr;
+	}
+
+
+	void OnApplyGameplayEffectCallback(class UAbilitySystemComponent* Target, const struct FGameplayEffectSpec& SpecApplied, const struct FActiveGameplayEffectHandle& ActiveHandle);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self
+// 0x0018 (0x0148 - 0x0130)
+class UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGameplayEffectApplied
+{
+public:
+	unsigned char                                      UnknownData00[0xB3];                                      // 0x0130(0x00B3) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnApplied;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitGameplayEffectApplied_Self* STATIC_WaitGameplayEffectAppliedToSelf(class UObject* WorldContextObject, const struct FGameplayTargetDataFilterHandle& SourceFilter, const struct FGameplayTagRequirements& SourceTagRequirements, const struct FGameplayTagRequirements& TargetTagRequirements, bool TriggerOnce, class AActor* OptionalExternalOwner);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target
+// 0x0018 (0x0148 - 0x0130)
+class UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGameplayEffectApplied
+{
+public:
+	unsigned char                                      UnknownData00[0xB3];                                      // 0x0130(0x00B3) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnApplied;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitGameplayEffectApplied_Target* STATIC_WaitGameplayEffectAppliedToTarget(class UObject* WorldContextObject, const struct FGameplayTargetDataFilterHandle& TargetFilter, const struct FGameplayTagRequirements& SourceTagRequirements, const struct FGameplayTagRequirements& TargetTagRequirements, bool TriggerOnce, class AActor* OptionalExternalOwner);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved
+// 0x0030 (0x0098 - 0x0068)
+class UAbilityTask_WaitGameplayEffectRemoved : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnRemoved;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    InvalidHandle;                                            // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitGameplayEffectRemoved* STATIC_WaitForGameplayEffectRemoved(class UObject* WorldContextObject, const struct FActiveGameplayEffectHandle& Handle);
+	void OnGameplayEffectRemoved();
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayTag
+// 0x0020 (0x0088 - 0x0068)
+class UAbilityTask_WaitGameplayTag : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTag");
+		return ptr;
+	}
+
+
+	void GameplayTagCallback(const struct FGameplayTag& Tag, int NewCount);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded
+// 0x0010 (0x0098 - 0x0088)
+class UAbilityTask_WaitGameplayTagAdded : public UAbilityTask_WaitGameplayTag
+{
+public:
+	unsigned char                                      UnknownData00[0x15B];                                     // 0x0088(0x015B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Added;                                                    // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitGameplayTagAdded* STATIC_WaitGameplayTagAdd(class UObject* WorldContextObject, const struct FGameplayTag& Tag, class AActor* OptionalExternalTarget, bool OnlyTriggerOnce);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved
+// 0x0010 (0x0098 - 0x0088)
+class UAbilityTask_WaitGameplayTagRemoved : public UAbilityTask_WaitGameplayTag
+{
+public:
+	unsigned char                                      UnknownData00[0x15B];                                     // 0x0088(0x015B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Removed;                                                  // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitGameplayTagRemoved* STATIC_WaitGameplayTagRemove(class UObject* WorldContextObject, const struct FGameplayTag& Tag, class AActor* OptionalExternalTarget, bool OnlyTriggerOnce);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitInputPress
+// 0x0020 (0x0088 - 0x0068)
+class UAbilityTask_WaitInputPress : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnPress;                                                  // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputPress");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitInputPress* STATIC_WaitInputPress(class UObject* WorldContextObject, bool bTestAlreadyPressed);
+	void OnPressCallback();
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitInputRelease
+// 0x0020 (0x0088 - 0x0068)
+class UAbilityTask_WaitInputRelease : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnRelease;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputRelease");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitInputRelease* STATIC_WaitInputRelease(class UObject* WorldContextObject, bool bTestAlreadyReleased);
+	void OnReleaseCallback();
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitMovementModeChange
+// 0x0020 (0x0088 - 0x0068)
+class UAbilityTask_WaitMovementModeChange : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnChange;                                                 // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitMovementModeChange");
+		return ptr;
+	}
+
+
+	void OnMovementModeChange(class ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, unsigned char PreviousCustomMode);
+	class UAbilityTask_WaitMovementModeChange* STATIC_CreateWaitMovementModeChange(class UObject* WorldContextObject, TEnumAsByte<EMovementMode> NewMode);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitOverlap
+// 0x0010 (0x0078 - 0x0068)
+class UAbilityTask_WaitOverlap : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnOverlap;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitOverlap");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitOverlap* STATIC_WaitForOverlap(class UObject* WorldContextObject);
+	void OnOverlapCallback(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void OnHitCallback(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitTargetData
+// 0x0040 (0x00A8 - 0x0068)
+class UAbilityTask_WaitTargetData : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    ValidData;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Cancelled;                                                // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitTargetData");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitTargetData* STATIC_WaitTargetDataUsingActor(class UObject* WorldContextObject, const struct FName& TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation> ConfirmationType, class AGameplayAbilityTargetActor* TargetActor);
+	class UAbilityTask_WaitTargetData* STATIC_WaitTargetData(class UObject* WorldContextObject, const struct FName& TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation> ConfirmationType, class UClass* Class);
+	void OnTargetDataReplicatedCancelledCallback();
+	void OnTargetDataReplicatedCallback(const struct FGameplayAbilityTargetDataHandle& Data, const struct FGameplayTag& ActivationTag);
+	void OnTargetDataReadyCallback(const struct FGameplayAbilityTargetDataHandle& Data);
+	void OnTargetDataCancelledCallback(const struct FGameplayAbilityTargetDataHandle& Data);
+	void FinishSpawningActor(class UObject* WorldContextObject, class AGameplayAbilityTargetActor* SpawnedActor);
+	bool BeginSpawningActor(class UObject* WorldContextObject, class UClass* Class, class AGameplayAbilityTargetActor** SpawnedActor);
+};
+
+
+// Class GameplayAbilities.AbilityTask_WaitVelocityChange
+// 0x0028 (0x0090 - 0x0068)
+class UAbilityTask_WaitVelocityChange : public UAbilityTask
+{
+public:
+	unsigned char                                      UnknownData00[0x17B];                                     // 0x0068(0x017B) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnVelocityChage;                                          // 0x01E3(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UMovementComponent*                          CachedMovementComponent;                                  // 0x01E3(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitVelocityChange");
+		return ptr;
+	}
+
+
+	class UAbilityTask_WaitVelocityChange* STATIC_CreateWaitVelocityChange(class UObject* WorldContextObject, const struct FVector& Direction, float MinimumMagnitude);
+};
+
+
+// Class GameplayAbilities.AbilitySystemTestAttributeSet
+// 0x0040 (0x0070 - 0x0030)
+class UAbilitySystemTestAttributeSet : public UAttributeSet
+{
+public:
+	unsigned char                                      UnknownData00[0x1B3];                                     // 0x0030(0x01B3) MISSED OFFSET
+	float                                              MaxHealth;                                                // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              Health;                                                   // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              Mana;                                                     // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              MaxMana;                                                  // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              Damage;                                                   // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SpellDamage;                                              // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              PhysicalDamage;                                           // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              CritChance;                                               // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              CritMultiplier;                                           // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              ArmorDamageReduction;                                     // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              DodgeChance;                                              // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              LifeSteal;                                                // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              Strength;                                                 // 0x01E3(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              StackingAttribute1;                                       // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              StackingAttribute2;                                       // 0x01E3(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestAttributeSet");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbility_CharacterJump
+// 0x0000 (0x04D8 - 0x04D8)
+class UGameplayAbility_CharacterJump : public UGameplayAbility
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_CharacterJump");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbility_Montage
+// 0x0038 (0x0510 - 0x04D8)
+class UGameplayAbility_Montage : public UGameplayAbility
+{
+public:
+	unsigned char                                      UnknownData00[0x38];                                      // 0x04D8(0x0038) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_Montage");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityBlueprint
+// 0x0000 (0x0138 - 0x0138)
+class UGameplayAbilityBlueprint : public UBlueprint
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprint");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass
+// 0x0000 (0x0200 - 0x0200)
+class UGameplayAbilityBlueprintGeneratedClass : public UBlueprintGeneratedClass
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilitySet
+// 0x0010 (0x0038 - 0x0028)
+class UGameplayAbilitySet : public UDataAsset
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilitySet");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityWorldReticle
+// 0x0020 (0x0490 - 0x0470)
+class AGameplayAbilityWorldReticle : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0470(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle");
+		return ptr;
+	}
+
+
+	void SetReticleMaterialParamVector(const struct FName& ParamName, const struct FVector& Value);
+	void SetReticleMaterialParamFloat(const struct FName& ParamName, float Value);
+	void OnValidTargetChanged(bool bNewValue);
+	void OnTargetingAnActor(bool bNewValue);
+	void OnParametersInitialized();
+	void FaceTowardSource(bool bFaceIn2D);
+};
+
+
+// Class GameplayAbilities.GameplayAbilityTargetActor
+// 0x0180 (0x05F0 - 0x0470)
+class AGameplayAbilityTargetActor : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x180];                                     // 0x0470(0x0180) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor");
+		return ptr;
+	}
+
+
+	void ConfirmTargeting();
+	void CancelTargeting();
+};
+
+
+// Class GameplayAbilities.GameplayAbilityTargetActor_Radius
+// 0x0000 (0x05F0 - 0x05F0)
+class AGameplayAbilityTargetActor_Radius : public AGameplayAbilityTargetActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Radius");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityTargetActor_Trace
+// 0x0010 (0x0600 - 0x05F0)
+class AGameplayAbilityTargetActor_Trace : public AGameplayAbilityTargetActor
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05F0(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Trace");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace
+// 0x0020 (0x0620 - 0x0600)
+class AGameplayAbilityTargetActor_GroundTrace : public AGameplayAbilityTargetActor_Trace
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0600(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization
+// 0x0018 (0x04A8 - 0x0490)
+class AGameplayAbilityWorldReticle_ActorVisualization : public AGameplayAbilityWorldReticle
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0490(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement
+// 0x0020 (0x0640 - 0x0620)
+class AGameplayAbilityTargetActor_ActorPlacement : public AGameplayAbilityTargetActor_GroundTrace
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0620(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace
+// 0x0000 (0x0600 - 0x0600)
+class AGameplayAbilityTargetActor_SingleLineTrace : public AGameplayAbilityTargetActor_Trace
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayCueNotify_Actor
+// 0x0020 (0x0490 - 0x0470)
+class AGameplayCueNotify_Actor : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0470(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Actor");
+		return ptr;
+	}
+
+
+	bool WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	void OnOwnerDestroyed();
+	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	void K2_HandleGameplayCue(class AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters);
+};
+
+
+// Class GameplayAbilities.GameplayCueManager
+// 0x0140 (0x0168 - 0x0028)
+class UGameplayCueManager : public UDataAsset
+{
+public:
+	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
+	class UGameplayCueSet*                             GlobalCueSet;                                             // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UObjectLibrary*                              GameplayCueNotifyActorObjectLibrary;                      // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UObjectLibrary*                              GameplayCueNotifyStaticObjectLibrary;                     // 0x01E3(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FStreamableManager                          StreamableManager;                                        // 0x01E3(0x00A8) (Transient)
+	TArray<struct FGameplayCuePendingExecute>          PendingExecuteCues;                                       // 0x01E3(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueManager");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayCueNotify_Static
+// 0x0018 (0x0040 - 0x0028)
+class UGameplayCueNotify_Static : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
+	struct FGameplayTag                                GameplayCueTag;                                           // 0x01E3(0x0008) (Edit, DisableEditOnInstance)
+	struct FName                                       GameplayCueName;                                          // 0x01E3(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Static");
+		return ptr;
+	}
+
+
+	bool WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	void K2_HandleGameplayCue(class AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters);
+};
+
+
+// Class GameplayAbilities.GameplayCueNotify_HitImpact
+// 0x0010 (0x0050 - 0x0040)
+class UGameplayCueNotify_HitImpact : public UGameplayCueNotify_Static
+{
+public:
+	unsigned char                                      UnknownData00[0x1A3];                                     // 0x0040(0x01A3) MISSED OFFSET
+	class USoundBase*                                  Sound;                                                    // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             ParticleSystem;                                           // 0x01E3(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_HitImpact");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayCueSet
+// 0x0060 (0x0088 - 0x0028)
+class UGameplayCueSet : public UDataAsset
+{
+public:
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueSet");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectTemplate
+// 0x0000 (0x0578 - 0x0578)
+class UGameplayEffectTemplate : public UGameplayEffect
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectTemplate");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectExecutionCalculation
+// 0x0008 (0x0040 - 0x0038)
+class UGameplayEffectExecutionCalculation : public UGameplayEffectCalculation
+{
+public:
+	unsigned char                                      UnknownData00[0x1AB];                                     // 0x0038(0x01AB) MISSED OFFSET
+	bool                                               bRequiresPassedInTags;                                    // 0x01E3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExecutionCalculation");
+		return ptr;
+	}
+
+
+	void Execute(const struct FGameplayEffectCustomExecutionParameters& ExecutionParams, struct FGameplayEffectCustomExecutionOutput* OutExecutionOutput);
+};
+
+
+// Class GameplayAbilities.GameplayModMagnitudeCalculation
+// 0x0000 (0x0038 - 0x0038)
+class UGameplayModMagnitudeCalculation : public UGameplayEffectCalculation
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayModMagnitudeCalculation");
+		return ptr;
+	}
+
+
+	float CalculateBaseMagnitude(const struct FGameplayEffectSpec& Spec);
+};
+
+
+// Class GameplayAbilities.GameplayEffectExtension
+// 0x0020 (0x0048 - 0x0028)
+class UGameplayEffectExtension : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x1BB];                                     // 0x0028(0x01BB) MISSED OFFSET
+	TArray<struct FGameplayAttribute>                  RelevantSourceAttributes;                                 // 0x01E3(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectExtension_LifestealTest
+// 0x0008 (0x0050 - 0x0048)
+class UGameplayEffectExtension_LifestealTest : public UGameplayEffectExtension
+{
+public:
+	unsigned char                                      UnknownData00[0x19B];                                     // 0x0048(0x019B) MISSED OFFSET
+	class UGameplayEffect*                             HealthRestoreGameplayEffect;                              // 0x01E3(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_LifestealTest");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectExtension_ShieldTest
+// 0x0008 (0x0050 - 0x0048)
+class UGameplayEffectExtension_ShieldTest : public UGameplayEffectExtension
+{
+public:
+	unsigned char                                      UnknownData00[0x19B];                                     // 0x0048(0x019B) MISSED OFFSET
+	class UGameplayEffect*                             ShieldRemoveGameplayEffect;                               // 0x01E3(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_ShieldTest");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectUIData
+// 0x0000 (0x0028 - 0x0028)
+class UGameplayEffectUIData : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayEffectUIData_TextOnly
+// 0x0038 (0x0060 - 0x0028)
+class UGameplayEffectUIData_TextOnly : public UGameplayEffectUIData
+{
+public:
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0028(0x0038) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData_TextOnly");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayAbilities.GameplayTagReponseTable
+// 0x0060 (0x0088 - 0x0028)
+class UGameplayTagReponseTable : public UDataAsset
+{
+public:
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayTagReponseTable");
+		return ptr;
+	}
+
+
+	void TagResponseEvent(const struct FGameplayTag& Tag, int NewCount, class UAbilitySystemComponent* ASC, int idx);
+};
+
+
+// Class GameplayAbilities.TickableAttributeSetInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTickableAttributeSetInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayAbilities.TickableAttributeSetInterface");
+		return ptr;
+	}
+
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

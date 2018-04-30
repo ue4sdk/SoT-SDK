@@ -1,0 +1,87 @@
+#pragma once
+
+// Sea of Thieves (1.0.5) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_BP_Lantern_classes.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function BP_Lantern.BP_Lantern_C.CreateLanternDynamicMaterial
+struct ABP_Lantern_C_CreateLanternDynamicMaterial_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.OnAttachThirdPerson
+struct ABP_Lantern_C_OnAttachThirdPerson_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.OnAttachFirstPerson
+struct ABP_Lantern_C_OnAttachFirstPerson_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.TurnOff
+struct ABP_Lantern_C_TurnOff_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.TurnOn
+struct ABP_Lantern_C_TurnOn_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.UserConstructionScript
+struct ABP_Lantern_C_UserConstructionScript_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.ReceiveWieldFirstPerson
+struct ABP_Lantern_C_ReceiveWieldFirstPerson_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.ReceiveWieldThirdPerson
+struct ABP_Lantern_C_ReceiveWieldThirdPerson_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.ReceiveBeginPlay
+struct ABP_Lantern_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.ReceiveLightChange
+struct ABP_Lantern_C_ReceiveLightChange_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.TriggerGlow
+struct ABP_Lantern_C_TriggerGlow_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent
+struct ABP_Lantern_C_PostMeshChangedBPEvent_Params
+{
+};
+
+// Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern
+struct ABP_Lantern_C_ExecuteUbergraph_BP_Lantern_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
