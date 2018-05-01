@@ -132,7 +132,7 @@ void ABP_Mast_C::Initialise_Sails()
 
 
 // Function BP_Mast.BP_Mast_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Mast_C::UserConstructionScript()
 {

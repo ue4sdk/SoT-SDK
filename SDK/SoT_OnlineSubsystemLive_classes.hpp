@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class OnlineSubsystemLive.LiveNetDriver
-// 0x0000 (0x0388 - 0x0388)
+// 0x0000 (0x03A0 - 0x03A0)
 class ULiveNetDriver : public UIpNetDriver
 {
 public:

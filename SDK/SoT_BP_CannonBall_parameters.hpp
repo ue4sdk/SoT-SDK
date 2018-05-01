@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_CannonBall.BP_CannonBall_C.UserConstructionScript
+struct ABP_CannonBall_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

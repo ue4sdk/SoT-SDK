@@ -22727,27 +22727,6 @@ bool ANavLinkProxy::HasMovingAgents()
 }
 
 
-// Function Engine.ChildActorComponent.SetChildActorClass
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UChildActorComponent::SetChildActorClass(class UClass* InClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ChildActorComponent.SetChildActorClass");
-
-	UChildActorComponent_SetChildActorClass_Params params;
-	params.InClass = InClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.SkeletalMesh.IsSectionUsingCloth
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -27082,6 +27061,27 @@ void UAudioComponent::AdjustAttenuation(const struct FAttenuationSettings& InAtt
 
 	UAudioComponent_AdjustAttenuation_Params params;
 	params.InAttenuationSettings = InAttenuationSettings;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ChildActorComponent.SetChildActorClass
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UChildActorComponent::SetChildActorClass(class UClass* InClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ChildActorComponent.SetChildActorClass");
+
+	UChildActorComponent_SetChildActorClass_Params params;
+	params.InClass = InClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

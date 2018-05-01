@@ -19,7 +19,7 @@ namespace SDK
 class ABP_WaterExclusionVolume_C : public AStaticMeshActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
+	class UWaterPlaneExclusionComponent*               WaterPlaneExclusion;                                      // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

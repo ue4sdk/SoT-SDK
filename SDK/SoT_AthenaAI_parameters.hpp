@@ -268,8 +268,6 @@ struct AAthenaAIController_SetNamedControllerParam_Params
 struct AAthenaAIController_RegisterSpawnTriggerActorAsStimulus_Params
 {
 	class AActor*                                      TriggerActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     TriggerActorLocation;                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FVector                                     SpawnPosition;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function AthenaAI.AthenaAIController.OnPerceptionUpdated
@@ -457,6 +455,13 @@ struct UAthenaAIDebugFunctionLibrary_CanProjectPointToNavigation_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled
+struct UAthenaAIPerceptionComponent_IsPerceptionSenseEnabled_Params
+{
+	class UClass*                                      Sense;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled
 struct UAthenaAIPerceptionComponent_IsAnyPerceptionEnabled_Params
 {
@@ -474,6 +479,23 @@ struct UAthenaAIPerceptionComponent_EnablePerceptionSense_Params
 struct UAthenaAIPerceptionComponent_EnableAllPerception_Params
 {
 	bool                                               Enable;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
+struct ATinySharkService_RequestTinySharkWithLocation_Params
+{
+	struct FVector                                     SpawnLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function AthenaAI.TinySharkService.DismissTinyShark
+struct ATinySharkService_DismissTinyShark_Params
+{
+};
+
+// Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience
+struct ATinySharkService_CanSpawnTinySharkExperience_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

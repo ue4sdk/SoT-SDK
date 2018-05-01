@@ -136,13 +136,13 @@ public:
 
 
 // Class ActionStateMachine.ActionStateMachineComponent
-// 0x07A8 (0x0878 - 0x00D0)
+// 0x07B8 (0x0888 - 0x00D0)
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x48];                                      // 0x00D0(0x0048) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x750];                                     // 0x0128(0x0750) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x760];                                     // 0x0128(0x0760) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -165,11 +165,11 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateMachineComponent
-// 0x0018 (0x0890 - 0x0878)
+// 0x0018 (0x08A0 - 0x0888)
 class UTestActionStateMachineComponent : public UActionStateMachineComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0878(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0888(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

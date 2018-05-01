@@ -6731,12 +6731,6 @@ struct ANavLinkProxy_HasMovingAgents_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Engine.ChildActorComponent.SetChildActorClass
-struct UChildActorComponent_SetChildActorClass_Params
-{
-	class UClass*                                      InClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Engine.SkeletalMesh.IsSectionUsingCloth
 struct USkeletalMesh_IsSectionUsingCloth_Params
 {
@@ -8021,6 +8015,12 @@ struct UAudioComponent_AdjustVolume_Params
 struct UAudioComponent_AdjustAttenuation_Params
 {
 	struct FAttenuationSettings                        InAttenuationSettings;                                    // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function Engine.ChildActorComponent.SetChildActorClass
+struct UChildActorComponent_SetChildActorClass_Params
+{
+	class UClass*                                      InClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DecalComponent.SetSortOrder

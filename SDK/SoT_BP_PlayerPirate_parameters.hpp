@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_PlayerPirate.BP_PlayerPirate_C.TattoGlowDynamicMaterials
+struct ABP_PlayerPirate_C_TattoGlowDynamicMaterials_Params
+{
+	class UMeshComponent*                              Mesh;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_PlayerPirate.BP_PlayerPirate_C.GetMouthPosition
 struct ABP_PlayerPirate_C_GetMouthPosition_Params
 {
@@ -93,6 +99,11 @@ struct ABP_PlayerPirate_C_IK_Limb_Stretch_Params
 
 // Function BP_PlayerPirate.BP_PlayerPirate_C.ReceiveBeginPlay
 struct ABP_PlayerPirate_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function BP_PlayerPirate.BP_PlayerPirate_C.TriggerTattooGlow
+struct ABP_PlayerPirate_C_TriggerTattooGlow_Params
 {
 };
 

@@ -42,6 +42,7 @@ public:
 	}
 
 
+	void TattoGlowDynamicMaterials(class UMeshComponent* Mesh);
 	struct FVector GetMouthPosition();
 	void UserConstructionScript();
 	void Update_Athena_Character(class AAthenaCharacter* AthenaCharacter);
@@ -54,6 +55,7 @@ public:
 	void IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Active, TEnumAsByte<ELimbIKSpace> CoordinateSpace);
 	void IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch);
 	void ReceiveBeginPlay();
+	void TriggerTattooGlow();
 	void ExecuteUbergraph_BP_PlayerPirate(int EntryPoint);
 };
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MerchantAlliance.MerchantAlliance_C
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0068 - 0x0068)
 class UMerchantAlliance_C : public UCompany
 {
 public:

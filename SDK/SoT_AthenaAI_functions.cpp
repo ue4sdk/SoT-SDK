@@ -887,20 +887,16 @@ void AAthenaAIController::SetNamedControllerParam(const struct FName& ParamName,
 
 
 // Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// (Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                  TriggerActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 TriggerActorLocation           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 SpawnPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* TriggerActor, const struct FVector& TriggerActorLocation, const struct FVector& SpawnPosition)
+void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* TriggerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus");
 
 	AAthenaAIController_RegisterSpawnTriggerActorAsStimulus_Params params;
 	params.TriggerActor = TriggerActor;
-	params.TriggerActorLocation = TriggerActorLocation;
-	params.SpawnPosition = SpawnPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1523,6 +1519,30 @@ struct FVector UAthenaAIDebugFunctionLibrary::STATIC_CanProjectPointToNavigation
 }
 
 
+// Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled");
+
+	UAthenaAIPerceptionComponent_IsPerceptionSenseEnabled_Params params;
+	params.Sense = Sense;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -1586,6 +1606,67 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 SpawnLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation");
+
+	ATinySharkService_RequestTinySharkWithLocation_Params params;
+	params.SpawnLocation = SpawnLocation;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaAI.TinySharkService.DismissTinyShark
+// (Native, Public, BlueprintCallable)
+
+void ATinySharkService::DismissTinyShark()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.DismissTinyShark");
+
+	ATinySharkService_DismissTinyShark_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATinySharkService::CanSpawnTinySharkExperience()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience");
+
+	ATinySharkService_CanSpawnTinySharkExperience_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

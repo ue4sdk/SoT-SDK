@@ -31,6 +31,25 @@ struct FVector
 	float                                              X;                                                        // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              Y;                                                        // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              Z;                                                        // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+
+    inline FVector() : X(0.f), Y(0.f), Z(0.f) {}
+
+    inline FVector(float x, float y, float z) : X(x), Y(y), Z(z) {}
+
+    inline FVector operator + (const FVector& other) const { return FVector(X + other.X, Y + other.Y, Z + other.Z); }
+
+    inline FVector operator - (const FVector& other) const { return FVector(X - other.X, Y - other.Y, Z - other.Z); }
+
+    inline FVector operator * (float scalar) const { return FVector(X * scalar, Y * scalar, Z * scalar); }
+
+    inline FVector& operator=  (const FVector& other) { X  = other.X; Y  = other.Y; Z  = other.Z; return *this; }
+
+    inline FVector& operator+= (const FVector& other) { X += other.X; Y += other.Y; Z += other.Z; return *this; }
+
+    inline FVector& operator-= (const FVector& other) { X -= other.X; Y -= other.Y; Z -= other.Z; return *this; }
+
+    inline FVector& operator*= (const float other)    { X *= other;   Y *= other;   Z *= other;   return *this; }
+
 };
 
 // ScriptStruct CoreUObject.Vector4

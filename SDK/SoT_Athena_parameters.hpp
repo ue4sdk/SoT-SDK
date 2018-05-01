@@ -625,7 +625,7 @@ struct UInventoryItemInterface_GetIconRotation_Params
 struct UWielderAnimationInterface_SetItemVisibility_Params
 {
 	TScriptInterface<class UWieldableInterface>        Item;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	bool                                               Visibility;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               VISIBILITY;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.WielderAnimationInterface.ItemWielded
@@ -2453,6 +2453,16 @@ struct AAthenaPlayerCharacter_UseItem_Params
 {
 	class UClass*                                      NotificationInputId;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.AthenaPlayerCharacter.TriggerTattooGlow
+struct AAthenaPlayerCharacter_TriggerTattooGlow_Params
+{
+};
+
+// Function Athena.AthenaPlayerCharacter.TattooGlow
+struct AAthenaPlayerCharacter_TattooGlow_Params
+{
 };
 
 // Function Athena.AthenaPlayerCharacter.SprintActivate
@@ -5115,6 +5125,17 @@ struct UCameraFadeManagerTestFunctions_FireFadeAckRequestToClient_Params
 	float                                              AckTimeout;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Athena.Campfire.SetIsOnFire
+struct ACampfire_SetIsOnFire_Params
+{
+	bool                                               InIsOnFire;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.Campfire.OnRep_ShouldBeOnFireChanged
+struct ACampfire_OnRep_ShouldBeOnFireChanged_Params
+{
+};
+
 // Function Athena.CannonAnimInterface.SetCannonFiring
 struct UCannonAnimInterface_SetCannonFiring_Params
 {
@@ -6697,6 +6718,12 @@ struct AEnsemble_GetNumInstrumentData_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.Ensemble.GetInstruments
+struct AEnsemble_GetInstruments_Params
+{
+	TArray<class AActor*>                              ReturnValue;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+};
+
 // Function Athena.Ensemble.GetInstrumentDataPlaybackPosition
 struct AEnsemble_GetInstrumentDataPlaybackPosition_Params
 {
@@ -7922,6 +7949,32 @@ struct AShipInternalWater_GetDistanceFromPosition_Params
 struct AShipInternalWater_AddWaterAmount_Params
 {
 	float                                              WaterToAdd;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.ShantyInterface.RequestInstrumentStop
+struct UShantyInterface_RequestInstrumentStop_Params
+{
+	class AActor*                                      InstrumentActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.ShantyInterface.RequestInstrumentPlay
+struct UShantyInterface_RequestInstrumentPlay_Params
+{
+	class AActor*                                      InstrumentActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UPlayerEntitlementViewInterface> EntitlementInterface;                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function Athena.ShantyInterface.GetNumberOfShantiesPlaying
+struct UShantyInterface_GetNumberOfShantiesPlaying_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.ShantyInterface.GetNumberOfInstrumentsPlayingOnEnsemble
+struct UShantyInterface_GetNumberOfInstrumentsPlayingOnEnsemble_Params
+{
+	int                                                EnsembleIndex;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Athena.ImpactDecalParamModifier.SetParamValues
@@ -9374,6 +9427,16 @@ struct ULimpingComponent_GetHasActiveCameraModifiers_Params
 struct ULimpingComponent_GetCheatPenaltyTimeLeft_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.LimpingComponent.EndLimpingIndefinitely
+struct ULimpingComponent_EndLimpingIndefinitely_Params
+{
+};
+
+// Function Athena.LimpingComponent.BeginLimpingIndefinitely
+struct ULimpingComponent_BeginLimpingIndefinitely_Params
+{
 };
 
 // Function Athena.LiquidContainerInterface.SetLiquidLevel
@@ -11425,32 +11488,6 @@ struct UShadowAIFormComponent_Multicast_ChangedToState_Params
 	TEnumAsByte<EShadowAIFormState>                    InState;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Athena.ShantyInterface.RequestInstrumentStop
-struct UShantyInterface_RequestInstrumentStop_Params
-{
-	class AActor*                                      InstrumentActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Athena.ShantyInterface.RequestInstrumentPlay
-struct UShantyInterface_RequestInstrumentPlay_Params
-{
-	class AActor*                                      InstrumentActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	TScriptInterface<class UPlayerEntitlementViewInterface> EntitlementInterface;                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Athena.ShantyInterface.GetNumberOfShantiesPlaying
-struct UShantyInterface_GetNumberOfShantiesPlaying_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Athena.ShantyInterface.GetNumberOfInstrumentsPlayingOnEnsemble
-struct UShantyInterface_GetNumberOfInstrumentsPlayingOnEnsemble_Params
-{
-	int                                                EnsembleIndex;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Athena.SharkPawn.SetAIStrategy
 struct ASharkPawn_SetAIStrategy_Params
 {
@@ -12172,12 +12209,6 @@ struct UStatusEffectComponentProviderInterface_GetStatusEffectComponent_Params
 // Function Athena.StatusEffectComponent.OnRep_StatusEffect
 struct UStatusEffectComponent_OnRep_StatusEffect_Params
 {
-};
-
-// Function Athena.StatusEffectManagerComponentProviderInterface.GetStatusEffectManagerComponent
-struct UStatusEffectManagerComponentProviderInterface_GetStatusEffectManagerComponent_Params
-{
-	class UStatusEffectManagerComponent*               ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Athena.StatusEffectManagerComponent.OnRep_Statuses

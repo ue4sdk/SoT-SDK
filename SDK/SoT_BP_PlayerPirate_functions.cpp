@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PlayerPirate.BP_PlayerPirate_C.TattoGlowDynamicMaterials
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMeshComponent*          Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerPirate_C::TattoGlowDynamicMaterials(class UMeshComponent* Mesh)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.TattoGlowDynamicMaterials");
+
+	ABP_PlayerPirate_C_TattoGlowDynamicMaterials_Params params;
+	params.Mesh = Mesh;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_PlayerPirate.BP_PlayerPirate_C.GetMouthPosition
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -262,6 +282,23 @@ void ABP_PlayerPirate_C::ReceiveBeginPlay()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.ReceiveBeginPlay");
 
 	ABP_PlayerPirate_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PlayerPirate.BP_PlayerPirate_C.TriggerTattooGlow
+// (Event, Public, BlueprintEvent)
+
+void ABP_PlayerPirate_C::TriggerTattooGlow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.TriggerTattooGlow");
+
+	ABP_PlayerPirate_C_TriggerTattooGlow_Params params;
 
 	auto flags = fn->FunctionFlags;
 

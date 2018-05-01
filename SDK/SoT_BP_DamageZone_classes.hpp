@@ -55,7 +55,7 @@ public:
 	void Set_Repair_Visibility(bool Visible);
 	void Add_External_Hit(const struct FHullDamageHit& HitData);
 	void Show_Damage_Level(int DamageLevel);
-	void Set_Damage_Level_Visibility(bool Visibility, int Damage_Level);
+	void Set_Damage_Level_Visibility(bool VISIBILITY, int Damage_Level);
 	void CollectTaggedComponents();
 	void UserConstructionScript();
 	void AddExternalHit(const struct FHullDamageHit& Hit_Data);

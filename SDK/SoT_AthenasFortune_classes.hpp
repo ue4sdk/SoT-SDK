@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AthenasFortune.AthenasFortune_C
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0068 - 0x0068)
 class UAthenasFortune_C : public UCompany
 {
 public:

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_CannonBallProxy_C : public AStaticMeshItemProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x06B0(0x0008) MISSED OFFSET
+	class UInteractableComponent*                      Interactable;                                             // 0x06B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

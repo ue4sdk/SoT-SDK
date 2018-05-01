@@ -803,7 +803,7 @@ public:
 	class UWidget*                                     ToolTipWidget;                                            // 0x0098(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FScriptDelegate                             ToolTipWidgetDelegate;                                    // 0x00A0(0x0014) (ZeroConstructor, InstancedReference)
 	TEnumAsByte<ESlateVisibility>                      Visiblity;                                                // 0x00B0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	TEnumAsByte<ESlateVisibility>                      Visibility;                                               // 0x00B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESlateVisibility>                      VISIBILITY;                                               // 0x00B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x2];                                       // 0x00B2(0x0002) MISSED OFFSET
 	struct FScriptDelegate                             VisibilityDelegate;                                       // 0x00B4(0x0014) (ZeroConstructor, InstancedReference)
 	unsigned char                                      bOverride_Cursor : 1;                                     // 0x00C4(0x0001)

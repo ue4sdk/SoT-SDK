@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaGameState.BP_AthenaGameState_C
-// 0x0008 (0x0840 - 0x0838)
+// 0x0008 (0x0848 - 0x0840)
 class ABP_AthenaGameState_C : public AAthenaGameState
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

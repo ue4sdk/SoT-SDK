@@ -224,15 +224,15 @@ void ABP_DamageZone_C::Show_Damage_Level(int DamageLevel)
 // Function BP_DamageZone.BP_DamageZone_C.Set Damage Level Visibility
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           VISIBILITY                     (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Damage_Level                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DamageZone_C::Set_Damage_Level_Visibility(bool Visibility, int Damage_Level)
+void ABP_DamageZone_C::Set_Damage_Level_Visibility(bool VISIBILITY, int Damage_Level)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Set Damage Level Visibility");
 
 	ABP_DamageZone_C_Set_Damage_Level_Visibility_Params params;
-	params.Visibility = Visibility;
+	params.VISIBILITY = VISIBILITY;
 	params.Damage_Level = Damage_Level;
 
 	auto flags = fn->FunctionFlags;

@@ -2108,15 +2108,15 @@ float UInventoryItemInterface::GetIconRotation()
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class UWieldableInterface> Item                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           VISIBILITY                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWielderAnimationInterface::SetItemVisibility(const TScriptInterface<class UWieldableInterface>& Item, bool Visibility)
+void UWielderAnimationInterface::SetItemVisibility(const TScriptInterface<class UWieldableInterface>& Item, bool VISIBILITY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.WielderAnimationInterface.SetItemVisibility");
 
 	UWielderAnimationInterface_SetItemVisibility_Params params;
 	params.Item = Item;
-	params.Visibility = Visibility;
+	params.VISIBILITY = VISIBILITY;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8524,6 +8524,41 @@ bool AAthenaPlayerCharacter::UseItem(class UClass* NotificationInputId)
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.AthenaPlayerCharacter.TriggerTattooGlow
+// (Event, Public, BlueprintEvent)
+
+void AAthenaPlayerCharacter::TriggerTattooGlow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaPlayerCharacter.TriggerTattooGlow");
+
+	AAthenaPlayerCharacter_TriggerTattooGlow_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaPlayerCharacter.TattooGlow
+// (Final, Native, Public, BlueprintCallable)
+
+void AAthenaPlayerCharacter::TattooGlow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaPlayerCharacter.TattooGlow");
+
+	AAthenaPlayerCharacter_TattooGlow_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -17682,6 +17717,45 @@ void UCameraFadeManagerTestFunctions::STATIC_FireFadeAckRequestToClient(class AA
 }
 
 
+// Function Athena.Campfire.SetIsOnFire
+// (Final, Native, Public)
+// Parameters:
+// bool                           InIsOnFire                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void ACampfire::SetIsOnFire(bool InIsOnFire)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Campfire.SetIsOnFire");
+
+	ACampfire_SetIsOnFire_Params params;
+	params.InIsOnFire = InIsOnFire;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Campfire.OnRep_ShouldBeOnFireChanged
+// (Final, Native, Private)
+
+void ACampfire::OnRep_ShouldBeOnFireChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Campfire.OnRep_ShouldBeOnFireChanged");
+
+	ACampfire_OnRep_ShouldBeOnFireChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.CannonAnimInterface.SetCannonFiring
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -23107,6 +23181,28 @@ int AEnsemble::GetNumInstrumentData()
 }
 
 
+// Function Athena.Ensemble.GetInstruments
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class AActor*>          ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+
+TArray<class AActor*> AEnsemble::GetInstruments()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ensemble.GetInstruments");
+
+	AEnsemble_GetInstruments_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.Ensemble.GetInstrumentDataPlaybackPosition
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -27413,6 +27509,96 @@ void AShipInternalWater::AddWaterAmount(float WaterToAdd)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ShantyInterface.RequestInstrumentStop
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  InstrumentActor                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShantyInterface::RequestInstrumentStop(class AActor* InstrumentActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.RequestInstrumentStop");
+
+	UShantyInterface_RequestInstrumentStop_Params params;
+	params.InstrumentActor = InstrumentActor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ShantyInterface.RequestInstrumentPlay
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class AActor*                  InstrumentActor                (Parm, ZeroConstructor, IsPlainOldData)
+// TScriptInterface<class UPlayerEntitlementViewInterface> EntitlementInterface           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UShantyInterface::RequestInstrumentPlay(class AActor* InstrumentActor, const TScriptInterface<class UPlayerEntitlementViewInterface>& EntitlementInterface)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.RequestInstrumentPlay");
+
+	UShantyInterface_RequestInstrumentPlay_Params params;
+	params.InstrumentActor = InstrumentActor;
+	params.EntitlementInterface = EntitlementInterface;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ShantyInterface.GetNumberOfShantiesPlaying
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UShantyInterface::GetNumberOfShantiesPlaying()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.GetNumberOfShantiesPlaying");
+
+	UShantyInterface_GetNumberOfShantiesPlaying_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.ShantyInterface.GetNumberOfInstrumentsPlayingOnEnsemble
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            EnsembleIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UShantyInterface::GetNumberOfInstrumentsPlayingOnEnsemble(int EnsembleIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.GetNumberOfInstrumentsPlayingOnEnsemble");
+
+	UShantyInterface_GetNumberOfInstrumentsPlayingOnEnsemble_Params params;
+	params.EnsembleIndex = EnsembleIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -32443,6 +32629,42 @@ float ULimpingComponent::GetCheatPenaltyTimeLeft()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.LimpingComponent.EndLimpingIndefinitely
+// (Final, Native, Public, BlueprintCallable)
+
+void ULimpingComponent::EndLimpingIndefinitely()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.LimpingComponent.EndLimpingIndefinitely");
+
+	ULimpingComponent_EndLimpingIndefinitely_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.LimpingComponent.BeginLimpingIndefinitely
+// (Final, Native, Public, BlueprintCallable)
+
+void ULimpingComponent::BeginLimpingIndefinitely()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.LimpingComponent.BeginLimpingIndefinitely");
+
+	ULimpingComponent_BeginLimpingIndefinitely_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -39505,96 +39727,6 @@ void UShadowAIFormComponent::Multicast_ChangedToState(TEnumAsByte<EShadowAIFormS
 }
 
 
-// Function Athena.ShantyInterface.RequestInstrumentStop
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  InstrumentActor                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UShantyInterface::RequestInstrumentStop(class AActor* InstrumentActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.RequestInstrumentStop");
-
-	UShantyInterface_RequestInstrumentStop_Params params;
-	params.InstrumentActor = InstrumentActor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ShantyInterface.RequestInstrumentPlay
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  InstrumentActor                (Parm, ZeroConstructor, IsPlainOldData)
-// TScriptInterface<class UPlayerEntitlementViewInterface> EntitlementInterface           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UShantyInterface::RequestInstrumentPlay(class AActor* InstrumentActor, const TScriptInterface<class UPlayerEntitlementViewInterface>& EntitlementInterface)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.RequestInstrumentPlay");
-
-	UShantyInterface_RequestInstrumentPlay_Params params;
-	params.InstrumentActor = InstrumentActor;
-	params.EntitlementInterface = EntitlementInterface;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ShantyInterface.GetNumberOfShantiesPlaying
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UShantyInterface::GetNumberOfShantiesPlaying()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.GetNumberOfShantiesPlaying");
-
-	UShantyInterface_GetNumberOfShantiesPlaying_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.ShantyInterface.GetNumberOfInstrumentsPlayingOnEnsemble
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            EnsembleIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UShantyInterface::GetNumberOfInstrumentsPlayingOnEnsemble(int EnsembleIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.GetNumberOfInstrumentsPlayingOnEnsemble");
-
-	UShantyInterface_GetNumberOfInstrumentsPlayingOnEnsemble_Params params;
-	params.EnsembleIndex = EnsembleIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.SharkPawn.SetAIStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -42093,28 +42225,6 @@ void UStatusEffectComponent::OnRep_StatusEffect()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.StatusEffectManagerComponentProviderInterface.GetStatusEffectManagerComponent
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UStatusEffectManagerComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UStatusEffectManagerComponent* UStatusEffectManagerComponentProviderInterface::GetStatusEffectManagerComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.StatusEffectManagerComponentProviderInterface.GetStatusEffectManagerComponent");
-
-	UStatusEffectManagerComponentProviderInterface_GetStatusEffectManagerComponent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

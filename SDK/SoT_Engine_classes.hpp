@@ -3499,7 +3499,7 @@ public:
 
 
 // Class Engine.NetDriver
-// 0x0310 (0x0338 - 0x0028)
+// 0x0328 (0x0350 - 0x0028)
 class UNetDriver : public UObject
 {
 public:
@@ -3528,7 +3528,7 @@ public:
 	struct FName                                       NetDriverName;                                            // 0x00D8(0x0008) (ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x8];                                       // 0x00E0(0x0008) MISSED OFFSET
 	float                                              Time;                                                     // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x24C];                                     // 0x00EC(0x024C) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x264];                                     // 0x00EC(0x0264) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5552,41 +5552,6 @@ public:
 };
 
 
-// Class Engine.ChildActorComponent
-// 0x0020 (0x0310 - 0x02F0)
-class UChildActorComponent : public USceneComponent
-{
-public:
-	class AActor*                                      ChildActor;                                               // 0x02F0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x02F8(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.ChildActorComponent");
-		return ptr;
-	}
-
-
-	void SetChildActorClass(class UClass* InClass);
-};
-
-
-// Class Engine.ParentTestActor
-// 0x0008 (0x0478 - 0x0470)
-class AParentTestActor : public AActor
-{
-public:
-	class UChildActorComponent*                        ChildActorComponent;                                      // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.ParentTestActor");
-		return ptr;
-	}
-
-};
-
-
 // Class Engine.ParticleEventManager
 // 0x0000 (0x0470 - 0x0470)
 class AParticleEventManager : public AActor
@@ -7136,6 +7101,25 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Engine.ChildActorComponent
+// 0x0020 (0x0310 - 0x02F0)
+class UChildActorComponent : public USceneComponent
+{
+public:
+	class AActor*                                      ChildActor;                                               // 0x02F0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x02F8(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.ChildActorComponent");
+		return ptr;
+	}
+
+
+	void SetChildActorClass(class UClass* InClass);
 };
 
 
@@ -10256,10 +10240,11 @@ public:
 
 
 // Class Engine.NestedWorldComposition
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0018 (0x00D0 - 0x00B8)
 class UNestedWorldComposition : public UWorldComposition
 {
 public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00B8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16124,11 +16109,11 @@ public:
 
 
 // Class Engine.DemoNetDriver
-// 0x00C8 (0x0400 - 0x0338)
+// 0x00C8 (0x0418 - 0x0350)
 class UDemoNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      UnknownData00[0xC8];                                      // 0x0338(0x00C8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x0350(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19305,21 +19290,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Engine.DemoNetConnection");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.MockNetConnection
-// 0x0000 (0x34410 - 0x34410)
-class UMockNetConnection : public UNetConnection
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.MockNetConnection");
 		return ptr;
 	}
 

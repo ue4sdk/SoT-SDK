@@ -19,7 +19,7 @@ namespace SDK
 class ABP_cmn_cannon_ball_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04B8(0x0008) MISSED OFFSET
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

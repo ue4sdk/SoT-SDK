@@ -78,7 +78,7 @@ struct ABP_DamageZone_C_Show_Damage_Level_Params
 // Function BP_DamageZone.BP_DamageZone_C.Set Damage Level Visibility
 struct ABP_DamageZone_C_Set_Damage_Level_Visibility_Params
 {
-	bool                                               Visibility;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               VISIBILITY;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Damage_Level;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

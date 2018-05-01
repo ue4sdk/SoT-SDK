@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass OrderOfSouls.OrderOfSouls_C
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0068 - 0x0068)
 class UOrderOfSouls_C : public UCompany
 {
 public:
