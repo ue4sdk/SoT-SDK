@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_SlateCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
-#include "SoT_SlateCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
 
 namespace SDK
@@ -746,7 +746,7 @@ struct FMovementProperties
 };
 
 // ScriptStruct Engine.NavAgentProperties
-// 0x001C (0x0020 - 0x0004)
+// 0x0024 (0x0028 - 0x0004)
 struct FNavAgentProperties : public FMovementProperties
 {
 	struct FName                                       Name;                                                     // 0x0004(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -755,6 +755,8 @@ struct FNavAgentProperties : public FMovementProperties
 	float                                              AgentStepHeight;                                          // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              NavWalkingSearchHeightScale;                              // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              NavWalkingSearchRadiusScale;                              // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AgentMaxSlope;                                            // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinRegionArea;                                            // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.FindFloorResult
@@ -1199,19 +1201,6 @@ struct FNetViewer
 	struct FVector                                     ViewDir;                                                  // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.ExternalMip
-// 0x0028
-struct FExternalMip
-{
-	uint32_t                                           SizeX;                                                    // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           SizeY;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           OffsetInFile;                                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           DataSizeOnDisk;                                           // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           DataSize;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           DecompressionFlags;                                       // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0018(0x0010) MISSED OFFSET
-};
-
 // ScriptStruct Engine.PaintedVertex
 // 0x0014
 struct FPaintedVertex
@@ -1244,6 +1233,19 @@ struct FLightmassPrimitiveSettings
 	float                                              EmissiveBoost;                                            // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              DiffuseBoost;                                             // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              FullyOccludedSamplesFraction;                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.ExternalMip
+// 0x0028
+struct FExternalMip
+{
+	uint32_t                                           SizeX;                                                    // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           SizeY;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           OffsetInFile;                                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           DataSizeOnDisk;                                           // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           DataSize;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           DecompressionFlags;                                       // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0018(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Engine.DebugTextInfo
@@ -1765,13 +1767,13 @@ struct FNavigationFilterFlags
 };
 
 // ScriptStruct Engine.NavDataConfig
-// 0x0028 (0x0048 - 0x0020)
+// 0x0028 (0x0050 - 0x0028)
 struct FNavDataConfig : public FNavAgentProperties
 {
-	struct FColor                                      Color;                                                    // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DefaultQueryExtent;                                       // 0x0024(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      NavigationDataClass;                                      // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	struct FStringClassReference                       NavigationDataClassName;                                  // 0x0038(0x0010) (ZeroConstructor, Config)
+	struct FColor                                      Color;                                                    // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DefaultQueryExtent;                                       // 0x002C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      NavigationDataClass;                                      // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	struct FStringClassReference                       NavigationDataClassName;                                  // 0x0040(0x0010) (ZeroConstructor, Config)
 };
 
 // ScriptStruct Engine.SupportedAreaData
@@ -3264,6 +3266,16 @@ struct FCanvasUVTri
 	struct FVector2D                                   V2_Pos;                                                   // 0x0040(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   V2_UV;                                                    // 0x0048(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                V2_Color;                                                 // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.InstancedNavMesh
+// 0x0038
+struct FInstancedNavMesh
+{
+	TAssetPtr<class UClass>                            AssetClass;                                               // 0x0000(0x0020) (Edit, DisableEditOnInstance)
+	struct FVector                                     Location;                                                 // 0x0020(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       NavMeshName;                                              // 0x002C(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FNavAgentSelector                           SupportedAgents;                                          // 0x0034(0x0004) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct Engine.FractureMaterial

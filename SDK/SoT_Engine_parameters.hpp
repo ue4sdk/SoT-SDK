@@ -2328,6 +2328,12 @@ struct UPawnMovementComponent_AddInputVector_Params
 	bool                                               bForce;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.CharacterMovementComponent.UpdateMaxNavMeshProjectionIntervalAndModifier
+struct UCharacterMovementComponent_UpdateMaxNavMeshProjectionIntervalAndModifier_Params
+{
+	float                                              DesiredMaxNavMeshProjectionInterval;                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.CharacterMovementComponent.SetWalkableFloorZ
 struct UCharacterMovementComponent_SetWalkableFloorZ_Params
 {
@@ -2338,6 +2344,12 @@ struct UCharacterMovementComponent_SetWalkableFloorZ_Params
 struct UCharacterMovementComponent_SetWalkableFloorAngle_Params
 {
 	float                                              InWalkableFloorAngle;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetNavMeshProjectionInterval
+struct UCharacterMovementComponent_SetNavMeshProjectionInterval_Params
+{
+	float                                              InNavMeshProjectionInterval;                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.CharacterMovementComponent.SetMovementMode
@@ -2470,6 +2482,12 @@ struct UCharacterMovementComponent_GetValidPerchRadius_Params
 
 // Function Engine.CharacterMovementComponent.GetPerchRadiusThreshold
 struct UCharacterMovementComponent_GetPerchRadiusThreshold_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetNavMeshProjectionInterval
+struct UCharacterMovementComponent_GetNavMeshProjectionInterval_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -4791,6 +4809,48 @@ struct AWorldSettings_OnRep_WorldGravityZ_Params
 {
 };
 
+// Function Engine.MeshComponent.ResetDefaultMaterials
+struct UMeshComponent_ResetDefaultMaterials_Params
+{
+};
+
+// Function Engine.MeshComponent.GetMaterials
+struct UMeshComponent_GetMaterials_Params
+{
+	TArray<class UMaterialInterface*>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Engine.StaticMeshComponent.SetStaticMesh
+struct UStaticMeshComponent_SetStaticMesh_Params
+{
+	class UStaticMesh*                                 NewMesh;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.StaticMeshComponent.SetForcedLodModel
+struct UStaticMeshComponent_SetForcedLodModel_Params
+{
+	int                                                NewForcedLodModel;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.StaticMeshComponent.OnRep_StaticMesh
+struct UStaticMeshComponent_OnRep_StaticMesh_Params
+{
+	class UStaticMesh*                                 OldStaticMesh;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.StaticMeshComponent.GetLocalBounds
+struct UStaticMeshComponent_GetLocalBounds_Params
+{
+	struct FVector                                     Min;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Max;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
+struct UStaticMeshComponent_EnableAutomaticInstancing_Params
+{
+};
+
 // Function Engine.CameraModifier.IsDisabled
 struct UCameraModifier_IsDisabled_Params
 {
@@ -4856,48 +4916,6 @@ struct ADebugCameraController_DecreaseFOV_Params
 
 // Function Engine.DebugCameraController.DecreaseCameraSpeed
 struct ADebugCameraController_DecreaseCameraSpeed_Params
-{
-};
-
-// Function Engine.MeshComponent.ResetDefaultMaterials
-struct UMeshComponent_ResetDefaultMaterials_Params
-{
-};
-
-// Function Engine.MeshComponent.GetMaterials
-struct UMeshComponent_GetMaterials_Params
-{
-	TArray<class UMaterialInterface*>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Engine.StaticMeshComponent.SetStaticMesh
-struct UStaticMeshComponent_SetStaticMesh_Params
-{
-	class UStaticMesh*                                 NewMesh;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.StaticMeshComponent.SetForcedLodModel
-struct UStaticMeshComponent_SetForcedLodModel_Params
-{
-	int                                                NewForcedLodModel;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.StaticMeshComponent.OnRep_StaticMesh
-struct UStaticMeshComponent_OnRep_StaticMesh_Params
-{
-	class UStaticMesh*                                 OldStaticMesh;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.StaticMeshComponent.GetLocalBounds
-struct UStaticMeshComponent_GetLocalBounds_Params
-{
-	struct FVector                                     Min;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Max;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
-struct UStaticMeshComponent_EnableAutomaticInstancing_Params
 {
 };
 
@@ -5189,31 +5207,6 @@ struct ALevelScriptActor_InitialNetRelevantActorsCreated_Params
 {
 };
 
-// Function Engine.SphereComponent.SetSphereRadius
-struct USphereComponent_SetSphereRadius_Params
-{
-	float                                              InSphereRadius;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bUpdateOverlaps;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.SphereComponent.GetUnscaledSphereRadius
-struct USphereComponent_GetUnscaledSphereRadius_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.SphereComponent.GetShapeScale
-struct USphereComponent_GetShapeScale_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.SphereComponent.GetScaledSphereRadius
-struct USphereComponent_GetScaledSphereRadius_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Engine.GameState.OnRep_SpectatorClass
 struct AGameState_OnRep_SpectatorClass_Params
 {
@@ -5241,6 +5234,31 @@ struct AGameState_OnRep_ElapsedTime_Params
 
 // Function Engine.GameState.GetServerWorldTimeSeconds
 struct AGameState_GetServerWorldTimeSeconds_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.SphereComponent.SetSphereRadius
+struct USphereComponent_SetSphereRadius_Params
+{
+	float                                              InSphereRadius;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bUpdateOverlaps;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.SphereComponent.GetUnscaledSphereRadius
+struct USphereComponent_GetUnscaledSphereRadius_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.SphereComponent.GetShapeScale
+struct USphereComponent_GetShapeScale_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.SphereComponent.GetScaledSphereRadius
+struct USphereComponent_GetScaledSphereRadius_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

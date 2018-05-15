@@ -50,6 +50,18 @@ struct UDebugTimeInterface_SetTimeCatchupScalar_Params
 	float                                              RequestedCatchupScalar;                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
+// Function Time.DebugTimeInterface.SetSunset
+struct UDebugTimeInterface_SetSunset_Params
+{
+	float                                              SunsetHours;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Time.DebugTimeInterface.SetSunrise
+struct UDebugTimeInterface_SetSunrise_Params
+{
+	float                                              SunriseHours;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Time.DebugTimeInterface.SetGameWorldTime
 struct UDebugTimeInterface_SetGameWorldTime_Params
 {

@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Maths_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Maths_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
@@ -247,13 +247,22 @@ struct FAISpawnWaveSequenceRankMapping
 	TArray<float>                                      Weights;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
-// ScriptStruct AthenaAI.AISpawnContextIdEncounterSettingsPair
+// ScriptStruct AthenaAI.AIWeightedProbabilityRangeOfRangesRankMapping
 // 0x0018
+struct FAIWeightedProbabilityRangeOfRangesRankMapping
+{
+	class UAIWeightedProbabilityRangeOfRangesAsset*    RangeOfRanges;                                            // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<float>                                      Weights;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct AthenaAI.AISpawnContextIdEncounterSettingsPair
+// 0x0028
 struct FAISpawnContextIdEncounterSettingsPair
 {
-	class UClass*                                      SpawnContext;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAIEncounterSettings*                        EncounterSettings;                                        // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAISpawnWaveSequenceRankProgression*         SpawnWaveProgression;                                     // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              SpawnContexts;                                            // 0x0000(0x0010) (Edit, ZeroConstructor)
+	class UAIEncounterSettings*                        EncounterSettings;                                        // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAISpawnWaveSequenceRankProgression*         SpawnWaveProgression;                                     // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAIWeightedProbabilityRangeOfRangesRankProgression* RespawnTimerRangeProgression;                             // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AISpawnContextData
@@ -387,6 +396,15 @@ struct FChanceAndBlackboardKeyPair
 	struct FBlackboardKeySelector                      BlackboardKey;                                            // 0x0030(0x0028) (Edit)
 };
 
+// ScriptStruct AthenaAI.WeightedAIStrategyChance
+// 0x0010
+struct FWeightedAIStrategyChance
+{
+	class UClass*                                      Strategy;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WeightedChance;                                           // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct AthenaAI.AttackableTypeToAnimMapping
 // 0x0028
 struct FAttackableTypeToAnimMapping
@@ -489,31 +507,11 @@ struct FAIBountySpawnerWaveLocation
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct AthenaAI.RankBasedWave
-// 0x0148
-struct FRankBasedWave
-{
-	int                                                MinRankInclusive;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxRankInclusive;                                         // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              AppliesOnlyToSpawnContextList;                            // 0x0008(0x0010) (Edit, ZeroConstructor)
-	struct FAISpawnerWave                              Wave;                                                     // 0x0018(0x0130) (Edit)
-};
-
 // ScriptStruct AthenaAI.AIPerCrewSpawnerCrewUnit
 // 0x0018
 struct FAIPerCrewSpawnerCrewUnit
 {
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
-};
-
-// ScriptStruct AthenaAI.RankedWaveArray
-// 0x0028
-struct FRankedWaveArray
-{
-	int                                                MinRankInclusive;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxRankInclusive;                                         // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              AppliesOnlyToSpawnContextList;                            // 0x0008(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FAISpawnerWave>                      Waves;                                                    // 0x0018(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct AthenaAI.AthenaAIControllerAggregateTickFunction
@@ -660,10 +658,11 @@ struct FEventVisualAppearanceSelected
 };
 
 // ScriptStruct AthenaAI.EventAILoadoutSelected
-// 0x0020
+// 0x0028
 struct FEventAILoadoutSelected
 {
 	struct FItemLoadout                                Loadout;                                                  // 0x0000(0x0020)
+	class UClass*                                      NonStorableItem;                                          // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.EventAIFormSelected

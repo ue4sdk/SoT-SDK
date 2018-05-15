@@ -185,6 +185,22 @@ public:
 };
 
 
+// Class PirateGenerator.PirateGeneratorMaterials
+// 0x0010 (0x0038 - 0x0028)
+class UPirateGeneratorMaterials : public UObject
+{
+public:
+	TArray<class UMaterialInterface*>                  Materials;                                                // 0x0028(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorMaterials");
+		return ptr;
+	}
+
+};
+
+
 // Class PirateGenerator.PirateGeneratorFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UPirateGeneratorFunctionLibrary : public UBlueprintFunctionLibrary
@@ -377,13 +393,30 @@ public:
 };
 
 
+// Class PirateGenerator.WardrobeExcludeDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UWardrobeExcludeDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FName>                               ExcludeItems;                                             // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeExcludeDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class PirateGenerator.WardrobeDataAsset
-// 0x0060 (0x0088 - 0x0028)
+// 0x00C0 (0x00E8 - 0x0028)
 class UWardrobeDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0028(0x0050) MISSED OFFSET
-	TArray<struct FMeshPatchEntry>                     AssetMap;                                                 // 0x0078(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData00[0xA0];                                      // 0x0028(0x00A0) MISSED OFFSET
+	TArray<class UWardrobeExcludeDataAsset*>           ExcludeDataAssets;                                        // 0x00C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FMeshPatchEntry>                     AssetMap;                                                 // 0x00D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -433,8 +466,9 @@ public:
 	TArray<struct FName> STATIC_GetRandomWardrobeItems(int Seed, TArray<struct FName> InputItems);
 	TArray<struct FName> STATIC_GetRandomOutfit(class UWardrobeOutfitDataAsset* Outfit, int Seed, TEnumAsByte<EIPGGender> Gender);
 	TArray<struct FName> STATIC_GetAllWardrobeTypes();
-	TArray<struct FName> STATIC_GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType);
+	TArray<struct FName> STATIC_GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions);
 	TArray<struct FName> STATIC_GetAllWardrobeItems(TEnumAsByte<EIPGPirateType> PirateType);
+	bool STATIC_CanLoadOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender);
 	void AsyncOutfitResultDynamic__DelegateSignature(bool Success, TArray<class USkeletalMesh*> Meshes);
 };
 

@@ -141,6 +141,48 @@ void UDebugTimeInterface::SetTimeCatchupScalar(float RequestedCatchupScalar)
 }
 
 
+// Function Time.DebugTimeInterface.SetSunset
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          SunsetHours                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UDebugTimeInterface::SetSunset(float SunsetHours)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetSunset");
+
+	UDebugTimeInterface_SetSunset_Params params;
+	params.SunsetHours = SunsetHours;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Time.DebugTimeInterface.SetSunrise
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          SunriseHours                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UDebugTimeInterface::SetSunrise(float SunriseHours)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetSunrise");
+
+	UDebugTimeInterface_SetSunrise_Params params;
+	params.SunriseHours = SunriseHours;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Time.DebugTimeInterface.SetGameWorldTime
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:

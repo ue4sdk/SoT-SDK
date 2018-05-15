@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AIPartsService_parameters.hpp"
+#include "SoT_bp_aipartsservice_parameters.hpp"
 
 namespace SDK
 {

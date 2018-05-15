@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AIPartsService_classes.hpp"
+#include "SoT_bp_aipartsservice_classes.hpp"
 
 namespace SDK
 {

@@ -897,15 +897,17 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeTypes()
 // Parameters:
 // class FString                  TypeName                       (Parm, ZeroConstructor)
 // TEnumAsByte<EIPGPirateType>    PirateType                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bWithExclusions                (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType)
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItemsForType");
 
 	UWardrobeFunctionLibrary_GetAllWardrobeItemsForType_Params params;
 	params.TypeName = TypeName;
 	params.PirateType = PirateType;
+	params.bWithExclusions = bWithExclusions;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -930,6 +932,36 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItems(TEnumA
 
 	UWardrobeFunctionLibrary_GetAllWardrobeItems_Params params;
 	params.PirateType = PirateType;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PirateGenerator.WardrobeFunctionLibrary.CanLoadOutfit
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<struct FName>           ClothingItemNames              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FName>           Tags                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TEnumAsByte<EIPGPirateType>    PirateType                     (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EIPGGender>        Gender                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWardrobeFunctionLibrary::STATIC_CanLoadOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.CanLoadOutfit");
+
+	UWardrobeFunctionLibrary_CanLoadOutfit_Params params;
+	params.ClothingItemNames = ClothingItemNames;
+	params.Tags = Tags;
+	params.PirateType = PirateType;
+	params.Gender = Gender;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

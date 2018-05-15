@@ -485,6 +485,7 @@ struct UAthenaAIPerceptionComponent_EnableAllPerception_Params
 struct ATinySharkService_RequestTinySharkWithLocation_Params
 {
 	struct FVector                                     SpawnLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function AthenaAI.TinySharkService.DismissTinyShark

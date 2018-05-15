@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PegsClothingCategory.PegsClothingCategory_C
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x00A0 - 0x00A0)
 class UPegsClothingCategory_C : public UClothingCategory
 {
 public:

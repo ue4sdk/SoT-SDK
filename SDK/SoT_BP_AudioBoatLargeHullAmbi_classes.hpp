@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_AudioBoatLargeHullAmbi.BP_AudioBoatLargeHullAmbi_C
 // 0x01C0 (0x0788 - 0x05C8)
-class ABP_AudioBoatLargeHullAmbi_C : public AShipHullAudioLarge
+class ABP_AudioBoatLargeHullAmbi_C : public AShipHullAudio
 {
 public:
 	class UTritonComponent*                            Triton;                                                   // 0x05C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)

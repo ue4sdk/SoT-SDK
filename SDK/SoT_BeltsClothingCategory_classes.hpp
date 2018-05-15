@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BeltsClothingCategory.BeltsClothingCategory_C
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x00A0 - 0x00A0)
 class UBeltsClothingCategory_C : public UClothingCategory
 {
 public:

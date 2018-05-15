@@ -1613,8 +1613,9 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector                 SpawnLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation)
+bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation");
 
@@ -1627,6 +1628,8 @@ void ATinySharkService::RequestTinySharkWithLocation(const struct FVector& Spawn
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

@@ -7893,6 +7893,27 @@ void UPawnMovementComponent::AddInputVector(const struct FVector& WorldVector, b
 }
 
 
+// Function Engine.CharacterMovementComponent.UpdateMaxNavMeshProjectionIntervalAndModifier
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          DesiredMaxNavMeshProjectionInterval (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCharacterMovementComponent::UpdateMaxNavMeshProjectionIntervalAndModifier(float DesiredMaxNavMeshProjectionInterval)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.UpdateMaxNavMeshProjectionIntervalAndModifier");
+
+	UCharacterMovementComponent_UpdateMaxNavMeshProjectionIntervalAndModifier_Params params;
+	params.DesiredMaxNavMeshProjectionInterval = DesiredMaxNavMeshProjectionInterval;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.CharacterMovementComponent.SetWalkableFloorZ
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -7925,6 +7946,27 @@ void UCharacterMovementComponent::SetWalkableFloorAngle(float InWalkableFloorAng
 
 	UCharacterMovementComponent_SetWalkableFloorAngle_Params params;
 	params.InWalkableFloorAngle = InWalkableFloorAngle;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.CharacterMovementComponent.SetNavMeshProjectionInterval
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InNavMeshProjectionInterval    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCharacterMovementComponent::SetNavMeshProjectionInterval(float InNavMeshProjectionInterval)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.SetNavMeshProjectionInterval");
+
+	UCharacterMovementComponent_SetNavMeshProjectionInterval_Params params;
+	params.InNavMeshProjectionInterval = InNavMeshProjectionInterval;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8342,6 +8384,28 @@ float UCharacterMovementComponent::GetPerchRadiusThreshold()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.GetPerchRadiusThreshold");
 
 	UCharacterMovementComponent_GetPerchRadiusThreshold_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CharacterMovementComponent.GetNavMeshProjectionInterval
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCharacterMovementComponent::GetNavMeshProjectionInterval()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.GetNavMeshProjectionInterval");
+
+	UCharacterMovementComponent_GetNavMeshProjectionInterval_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16216,6 +16280,156 @@ void AWorldSettings::OnRep_WorldGravityZ()
 }
 
 
+// Function Engine.MeshComponent.ResetDefaultMaterials
+// (Final, Native, Public, BlueprintCallable)
+
+void UMeshComponent::ResetDefaultMaterials()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.MeshComponent.ResetDefaultMaterials");
+
+	UMeshComponent_ResetDefaultMaterials_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.MeshComponent.GetMaterials
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMaterialInterface*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class UMaterialInterface*> UMeshComponent::GetMaterials()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.MeshComponent.GetMaterials");
+
+	UMeshComponent_GetMaterials_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMeshComponent.SetStaticMesh
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UStaticMeshComponent::SetStaticMesh(class UStaticMesh* NewMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.SetStaticMesh");
+
+	UStaticMeshComponent_SetStaticMesh_Params params;
+	params.NewMesh = NewMesh;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMeshComponent.SetForcedLodModel
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewForcedLodModel              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStaticMeshComponent::SetForcedLodModel(int NewForcedLodModel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.SetForcedLodModel");
+
+	UStaticMeshComponent_SetForcedLodModel_Params params;
+	params.NewForcedLodModel = NewForcedLodModel;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.StaticMeshComponent.OnRep_StaticMesh
+// (Final, Native, Public)
+// Parameters:
+// class UStaticMesh*             OldStaticMesh                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStaticMeshComponent::OnRep_StaticMesh(class UStaticMesh* OldStaticMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.OnRep_StaticMesh");
+
+	UStaticMeshComponent_OnRep_StaticMesh_Params params;
+	params.OldStaticMesh = OldStaticMesh;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.StaticMeshComponent.GetLocalBounds
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Min                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Max                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* Max)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.GetLocalBounds");
+
+	UStaticMeshComponent_GetLocalBounds_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Min != nullptr)
+		*Min = params.Min;
+	if (Max != nullptr)
+		*Max = params.Max;
+}
+
+
+// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
+// (Final, Native, Public, BlueprintCallable)
+
+void UStaticMeshComponent::EnableAutomaticInstancing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.EnableAutomaticInstancing");
+
+	UStaticMeshComponent_EnableAutomaticInstancing_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.CameraModifier.IsDisabled
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -16442,156 +16656,6 @@ void ADebugCameraController::DecreaseCameraSpeed()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DebugCameraController.DecreaseCameraSpeed");
 
 	ADebugCameraController_DecreaseCameraSpeed_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.MeshComponent.ResetDefaultMaterials
-// (Final, Native, Public, BlueprintCallable)
-
-void UMeshComponent::ResetDefaultMaterials()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.MeshComponent.ResetDefaultMaterials");
-
-	UMeshComponent_ResetDefaultMaterials_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.MeshComponent.GetMaterials
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UMaterialInterface*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<class UMaterialInterface*> UMeshComponent::GetMaterials()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.MeshComponent.GetMaterials");
-
-	UMeshComponent_GetMaterials_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMeshComponent.SetStaticMesh
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UStaticMeshComponent::SetStaticMesh(class UStaticMesh* NewMesh)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.SetStaticMesh");
-
-	UStaticMeshComponent_SetStaticMesh_Params params;
-	params.NewMesh = NewMesh;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMeshComponent.SetForcedLodModel
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            NewForcedLodModel              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStaticMeshComponent::SetForcedLodModel(int NewForcedLodModel)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.SetForcedLodModel");
-
-	UStaticMeshComponent_SetForcedLodModel_Params params;
-	params.NewForcedLodModel = NewForcedLodModel;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.StaticMeshComponent.OnRep_StaticMesh
-// (Final, Native, Public)
-// Parameters:
-// class UStaticMesh*             OldStaticMesh                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStaticMeshComponent::OnRep_StaticMesh(class UStaticMesh* OldStaticMesh)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.OnRep_StaticMesh");
-
-	UStaticMeshComponent_OnRep_StaticMesh_Params params;
-	params.OldStaticMesh = OldStaticMesh;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.StaticMeshComponent.GetLocalBounds
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Min                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Max                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* Max)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.GetLocalBounds");
-
-	UStaticMeshComponent_GetLocalBounds_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Min != nullptr)
-		*Min = params.Min;
-	if (Max != nullptr)
-		*Max = params.Max;
-}
-
-
-// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
-// (Final, Native, Public, BlueprintCallable)
-
-void UStaticMeshComponent::EnableAutomaticInstancing()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.EnableAutomaticInstancing");
-
-	UStaticMeshComponent_EnableAutomaticInstancing_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -17473,95 +17537,6 @@ void ALevelScriptActor::InitialNetRelevantActorsCreated()
 }
 
 
-// Function Engine.SphereComponent.SetSphereRadius
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InSphereRadius                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void USphereComponent::SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.SetSphereRadius");
-
-	USphereComponent_SetSphereRadius_Params params;
-	params.InSphereRadius = InSphereRadius;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SphereComponent.GetUnscaledSphereRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetUnscaledSphereRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.GetUnscaledSphereRadius");
-
-	USphereComponent_GetUnscaledSphereRadius_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SphereComponent.GetShapeScale
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetShapeScale()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.GetShapeScale");
-
-	USphereComponent_GetShapeScale_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SphereComponent.GetScaledSphereRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetScaledSphereRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.GetScaledSphereRadius");
-
-	USphereComponent_GetScaledSphereRadius_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.GameState.OnRep_SpectatorClass
 // (Native, Public)
 
@@ -17662,6 +17637,95 @@ float AGameState::GetServerWorldTimeSeconds()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameState.GetServerWorldTimeSeconds");
 
 	AGameState_GetServerWorldTimeSeconds_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.SetSphereRadius
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InSphereRadius                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void USphereComponent::SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.SetSphereRadius");
+
+	USphereComponent_SetSphereRadius_Params params;
+	params.InSphereRadius = InSphereRadius;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SphereComponent.GetUnscaledSphereRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetUnscaledSphereRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.GetUnscaledSphereRadius");
+
+	USphereComponent_GetUnscaledSphereRadius_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.GetShapeScale
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetShapeScale()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.GetShapeScale");
+
+	USphereComponent_GetShapeScale_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.GetScaledSphereRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetScaledSphereRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SphereComponent.GetScaledSphereRadius");
+
+	USphereComponent_GetScaledSphereRadius_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Scar_08_Desc_classes.hpp"
+#include "SoT_BP_scar_08_Desc_classes.hpp"
 
 namespace SDK
 {

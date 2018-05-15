@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Liv_EyebrowsClothingCategory.Liv_EyebrowsClothingCategory_C
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x00A0 - 0x00A0)
 class ULiv_EyebrowsClothingCategory_C : public UClothingCategory
 {
 public:

@@ -6846,6 +6846,24 @@ TArray<class AAthenaPlayerCharacter*> UPlayerManagerServiceInterface::GetActiveL
 }
 
 
+// Function Athena.StatusEffectManagerComponent.OnRep_Statuses
+// (Final, Native, Private)
+
+void UStatusEffectManagerComponent::OnRep_Statuses()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.StatusEffectManagerComponent.OnRep_Statuses");
+
+	UStatusEffectManagerComponent_OnRep_Statuses_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.WieldableInterface.GetItemInfo
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -15528,15 +15546,17 @@ void ACannon::Multicast_OnPlayerLoaded(class AActor* LoadedPlayer)
 // Function Athena.Cannon.Multicast_FireProjectile
 // (Net, NetReliable, Native, Event, NetMulticast, Public, HasDefaults)
 // Parameters:
+// class UClass*                  ProjectileType                 (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  InInstigator                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 LaunchVelocity                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ACannon::Multicast_FireProjectile(class AActor* InInstigator, const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity)
+void ACannon::Multicast_FireProjectile(class UClass* ProjectileType, class AActor* InInstigator, const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.Cannon.Multicast_FireProjectile");
 
 	ACannon_Multicast_FireProjectile_Params params;
+	params.ProjectileType = ProjectileType;
 	params.InInstigator = InInstigator;
 	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
 	params.LaunchVelocity = LaunchVelocity;
@@ -16860,6 +16880,219 @@ bool UBuoyancyComponent::IsEnabled()
 }
 
 
+// Function Athena.PickupableInterface.HandleDestroy
+// (Native, Public)
+
+void UPickupableInterface::HandleDestroy()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.PickupableInterface.HandleDestroy");
+
+	UPickupableInterface_HandleDestroy_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ItemProxy.PerformDropOnSurfaceFx
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EPhysicalSurface>  ServerSurfaceType              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           AttachVFXToItem                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OverrideVFXPos                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  ActorToParentVfxTo             (Parm, ZeroConstructor, IsPlainOldData)
+
+void AItemProxy::PerformDropOnSurfaceFx(TEnumAsByte<EPhysicalSurface> ServerSurfaceType, bool AttachVFXToItem, const struct FVector& OverrideVFXPos, class AActor* ActorToParentVfxTo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ItemProxy.PerformDropOnSurfaceFx");
+
+	AItemProxy_PerformDropOnSurfaceFx_Params params;
+	params.ServerSurfaceType = ServerSurfaceType;
+	params.AttachVFXToItem = AttachVFXToItem;
+	params.OverrideVFXPos = OverrideVFXPos;
+	params.ActorToParentVfxTo = ActorToParentVfxTo;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ItemProxy.Multicast_DropOnSurfaceRPC
+// (Net, Native, Event, NetMulticast, Public, HasDefaults)
+// Parameters:
+// TEnumAsByte<EPhysicalSurface>  SurfaceType                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           AttachVFXToItem                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OverrideVFXPos                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  ActorToParentVfxTo             (Parm, ZeroConstructor, IsPlainOldData)
+
+void AItemProxy::Multicast_DropOnSurfaceRPC(TEnumAsByte<EPhysicalSurface> SurfaceType, bool AttachVFXToItem, const struct FVector& OverrideVFXPos, class AActor* ActorToParentVfxTo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ItemProxy.Multicast_DropOnSurfaceRPC");
+
+	AItemProxy_Multicast_DropOnSurfaceRPC_Params params;
+	params.SurfaceType = SurfaceType;
+	params.AttachVFXToItem = AttachVFXToItem;
+	params.OverrideVFXPos = OverrideVFXPos;
+	params.ActorToParentVfxTo = ActorToParentVfxTo;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ItemProxy.GetItemInfo
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AItemInfo*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AItemInfo* AItemProxy::GetItemInfo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ItemProxy.GetItemInfo");
+
+	AItemProxy_GetItemInfo_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.IslandServiceInterface.OnCrewSpawningOnIsland
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   IslandName                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UIslandServiceInterface::OnCrewSpawningOnIsland(const struct FName& IslandName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandServiceInterface.OnCrewSpawningOnIsland");
+
+	UIslandServiceInterface_OnCrewSpawningOnIsland_Params params;
+	params.IslandName = IslandName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.IslandServiceInterface.GetAllIslandNames
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FName> UIslandServiceInterface::GetAllIslandNames()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandServiceInterface.GetAllIslandNames");
+
+	UIslandServiceInterface_GetAllIslandNames_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.IslandData.OnOverlapEnd
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void AIslandData::OnOverlapEnd(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandData.OnOverlapEnd");
+
+	AIslandData_OnOverlapEnd_Params params;
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.IslandData.OnOverlapBegin
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void AIslandData::OnOverlapBegin(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandData.OnOverlapBegin");
+
+	AIslandData_OnOverlapBegin_Params params;
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+	params.bFromSweep = bFromSweep;
+	params.OverlapInfo = OverlapInfo;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.IslandData.MakeFIsland
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FIsland                 ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FIsland AIslandData::MakeFIsland()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandData.MakeFIsland");
+
+	AIslandData_MakeFIsland_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.InteractableObject.Blueprint_OnInteract_Server
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -17234,6 +17467,24 @@ void AStorageContainer::AddDefaultStockLevel()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.StorageContainer.AddDefaultStockLevel");
 
 	AStorageContainer_AddDefaultStockLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.BuoyantStorageContainer.OnRep_PhysicsState
+// (Final, Native, Private)
+
+void ABuoyantStorageContainer::OnRep_PhysicsState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.BuoyantStorageContainer.OnRep_PhysicsState");
+
+	ABuoyantStorageContainer_OnRep_PhysicsState_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -17721,13 +17972,15 @@ void UCameraFadeManagerTestFunctions::STATIC_FireFadeAckRequestToClient(class AA
 // (Final, Native, Public)
 // Parameters:
 // bool                           InIsOnFire                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ForceUpdate                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ACampfire::SetIsOnFire(bool InIsOnFire)
+void ACampfire::SetIsOnFire(bool InIsOnFire, bool ForceUpdate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.Campfire.SetIsOnFire");
 
 	ACampfire_SetIsOnFire_Params params;
 	params.InIsOnFire = InIsOnFire;
+	params.ForceUpdate = ForceUpdate;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -18498,100 +18751,6 @@ TArray<struct FName> UCarouselPirateGenerator::STATIC_GenerateClothingItems(int 
 	params.InParams = InParams;
 	params.InTargetGender = InTargetGender;
 	params.InTargetEthnicity = InTargetEthnicity;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.PickupableInterface.HandleDestroy
-// (Native, Public)
-
-void UPickupableInterface::HandleDestroy()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.PickupableInterface.HandleDestroy");
-
-	UPickupableInterface_HandleDestroy_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ItemProxy.PerformDropOnSurfaceFx
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EPhysicalSurface>  ServerSurfaceType              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AttachVFXToItem                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OverrideVFXPos                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  ActorToParentVfxTo             (Parm, ZeroConstructor, IsPlainOldData)
-
-void AItemProxy::PerformDropOnSurfaceFx(TEnumAsByte<EPhysicalSurface> ServerSurfaceType, bool AttachVFXToItem, const struct FVector& OverrideVFXPos, class AActor* ActorToParentVfxTo)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ItemProxy.PerformDropOnSurfaceFx");
-
-	AItemProxy_PerformDropOnSurfaceFx_Params params;
-	params.ServerSurfaceType = ServerSurfaceType;
-	params.AttachVFXToItem = AttachVFXToItem;
-	params.OverrideVFXPos = OverrideVFXPos;
-	params.ActorToParentVfxTo = ActorToParentVfxTo;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ItemProxy.Multicast_DropOnSurfaceRPC
-// (Net, Native, Event, NetMulticast, Public, HasDefaults)
-// Parameters:
-// TEnumAsByte<EPhysicalSurface>  SurfaceType                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AttachVFXToItem                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OverrideVFXPos                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  ActorToParentVfxTo             (Parm, ZeroConstructor, IsPlainOldData)
-
-void AItemProxy::Multicast_DropOnSurfaceRPC(TEnumAsByte<EPhysicalSurface> SurfaceType, bool AttachVFXToItem, const struct FVector& OverrideVFXPos, class AActor* ActorToParentVfxTo)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ItemProxy.Multicast_DropOnSurfaceRPC");
-
-	AItemProxy_Multicast_DropOnSurfaceRPC_Params params;
-	params.SurfaceType = SurfaceType;
-	params.AttachVFXToItem = AttachVFXToItem;
-	params.OverrideVFXPos = OverrideVFXPos;
-	params.ActorToParentVfxTo = ActorToParentVfxTo;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ItemProxy.GetItemInfo
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AItemInfo*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AItemInfo* AItemProxy::GetItemInfo()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ItemProxy.GetItemInfo");
-
-	AItemProxy_GetItemInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -20988,6 +21147,1454 @@ void UCrewVoyageParticipant::OnPlayerStateDestroyed()
 }
 
 
+// Function Athena.LauncherParentInterface.GetProjectileIgnoreActors
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class AActor*> ULauncherParentInterface::GetProjectileIgnoreActors()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.LauncherParentInterface.GetProjectileIgnoreActors");
+
+	ULauncherParentInterface_GetProjectileIgnoreActors_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.LauncherParentInterface.GetInheritedLaunchVelocity
+// (Native, Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector ULauncherParentInterface::GetInheritedLaunchVelocity()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.LauncherParentInterface.GetInheritedLaunchVelocity");
+
+	ULauncherParentInterface_GetInheritedLaunchVelocity_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.TeleportLocationInterface.GetTeleportLocationForCharacter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AAthenaCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTeleportLocation       ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FTeleportLocation UTeleportLocationInterface::GetTeleportLocationForCharacter(class AAthenaCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.TeleportLocationInterface.GetTeleportLocationForCharacter");
+
+	UTeleportLocationInterface_GetTeleportLocationForCharacter_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.TeleportLocationInterface.GetAllTeleportLocationsForCharacter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AAthenaCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FTeleportLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FTeleportLocation> UTeleportLocationInterface::GetAllTeleportLocationsForCharacter(class AAthenaCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.TeleportLocationInterface.GetAllTeleportLocationsForCharacter");
+
+	UTeleportLocationInterface_GetAllTeleportLocationsForCharacter_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneInterface.GetRainZoneParametersAtTime
+// (Native, Public, Const)
+// Parameters:
+// double                         InTime                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRainZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FRainZoneParametersAndLocation URainZoneInterface::GetRainZoneParametersAtTime(double InTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneInterface.GetRainZoneParametersAtTime");
+
+	URainZoneInterface_GetRainZoneParametersAtTime_Params params;
+	params.InTime = InTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneInterface.GetRainZoneParameters
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRainZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FRainZoneParametersAndLocation URainZoneInterface::GetRainZoneParameters()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneInterface.GetRainZoneParameters");
+
+	URainZoneInterface_GetRainZoneParameters_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneServiceInterface.UnregisterRainZoneFromService
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class URainZoneInterface> RainZone                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void URainZoneServiceInterface::UnregisterRainZoneFromService(const TScriptInterface<class URainZoneInterface>& RainZone)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.UnregisterRainZoneFromService");
+
+	URainZoneServiceInterface_UnregisterRainZoneFromService_Params params;
+	params.RainZone = RainZone;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.RainZoneServiceInterface.RegisterRainZoneWithService
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class URainZoneInterface> RainZone                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void URainZoneServiceInterface::RegisterRainZoneWithService(const TScriptInterface<class URainZoneInterface>& RainZone)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.RegisterRainZoneWithService");
+
+	URainZoneServiceInterface_RegisterRainZoneWithService_Params params;
+	params.RainZone = RainZone;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.RainZoneServiceInterface.GetRainZone
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int                            RainZoneIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRainZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FRainZoneParametersAndLocation URainZoneServiceInterface::GetRainZone(int RainZoneIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetRainZone");
+
+	URainZoneServiceInterface_GetRainZone_Params params;
+	params.RainZoneIndex = RainZoneIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneServiceInterface.GetRainStrengthAtTime
+// (Native, Public, HasOutParms, HasDefaults, Const)
+// Parameters:
+// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// double                         InTime                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float URainZoneServiceInterface::GetRainStrengthAtTime(const struct FVector& Position, double InTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetRainStrengthAtTime");
+
+	URainZoneServiceInterface_GetRainStrengthAtTime_Params params;
+	params.Position = Position;
+	params.InTime = InTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneServiceInterface.GetRainStrength
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float URainZoneServiceInterface::GetRainStrength(const struct FVector& Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetRainStrength");
+
+	URainZoneServiceInterface_GetRainStrength_Params params;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneServiceInterface.GetNumberOfRainZones
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int URainZoneServiceInterface::GetNumberOfRainZones()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetNumberOfRainZones");
+
+	URainZoneServiceInterface_GetNumberOfRainZones_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RainZoneServiceInterface.GetAllRainZones
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FRainZoneParametersAndLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FRainZoneParametersAndLocation> URainZoneServiceInterface::GetAllRainZones()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetAllRainZones");
+
+	URainZoneServiceInterface_GetAllRainZones_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.SurfaceWaterComponent.SetSimulationActive
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           IsActive                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void USurfaceWaterComponent::SetSimulationActive(bool IsActive)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.SetSimulationActive");
+
+	USurfaceWaterComponent_SetSimulationActive_Params params;
+	params.IsActive = IsActive;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.SurfaceWaterComponent.OnRep_AddWater
+// (Final, Native, Private)
+
+void USurfaceWaterComponent::OnRep_AddWater()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.OnRep_AddWater");
+
+	USurfaceWaterComponent_OnRep_AddWater_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.SurfaceWaterComponent.GetWaterTexture
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UTexture*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture* USurfaceWaterComponent::GetWaterTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.GetWaterTexture");
+
+	USurfaceWaterComponent_GetWaterTexture_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.SurfaceWaterComponent.GetNormalTexture
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UTexture*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture* USurfaceWaterComponent::GetNormalTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.GetNormalTexture");
+
+	USurfaceWaterComponent_GetNormalTexture_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.SurfaceWaterComponent.ConvertToWaterSpace
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 WorldSpacePosition             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USurfaceWaterComponent::ConvertToWaterSpace(const struct FVector& WorldSpacePosition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.ConvertToWaterSpace");
+
+	USurfaceWaterComponent_ConvertToWaterSpace_Params params;
+	params.WorldSpacePosition = WorldSpacePosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.SurfaceWaterComponent.ClearWaterTexture
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor            ClearColor                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void USurfaceWaterComponent::ClearWaterTexture(const struct FLinearColor& ClearColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.ClearWaterTexture");
+
+	USurfaceWaterComponent_ClearWaterTexture_Params params;
+	params.ClearColor = ClearColor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.SurfaceWaterComponent.AddWater
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Strength                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CheckBounds                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void USurfaceWaterComponent::AddWater(const struct FVector& Position, float Radius, float Strength, bool CheckBounds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.AddWater");
+
+	USurfaceWaterComponent_AddWater_Params params;
+	params.Position = Position;
+	params.Radius = Radius;
+	params.Strength = Strength;
+	params.CheckBounds = CheckBounds;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneType
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClass* UWaterModifierZoneInterface::GetWaterModifierZoneType()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneType");
+
+	UWaterModifierZoneInterface_GetWaterModifierZoneType_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneParameters
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FWaterModifierZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWaterModifierZoneParametersAndLocation UWaterModifierZoneInterface::GetWaterModifierZoneParameters()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneParameters");
+
+	UWaterModifierZoneInterface_GetWaterModifierZoneParameters_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.UnregisterWaterModifierZoneFromService
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UWaterModifierZoneInterface> WaterModifierZone              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWaterModifierZoneServiceInterface::UnregisterWaterModifierZoneFromService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.UnregisterWaterModifierZoneFromService");
+
+	UWaterModifierZoneServiceInterface_UnregisterWaterModifierZoneFromService_Params params;
+	params.WaterModifierZone = WaterModifierZone;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.RegisterWaterModifierZoneWithService
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UWaterModifierZoneInterface> WaterModifierZone              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWaterModifierZoneServiceInterface::RegisterWaterModifierZoneWithService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.RegisterWaterModifierZoneWithService");
+
+	UWaterModifierZoneServiceInterface_RegisterWaterModifierZoneWithService_Params params;
+	params.WaterModifierZone = WaterModifierZone;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZones
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  Type                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<struct FWaterModifierZoneParametersAndLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FWaterModifierZoneParametersAndLocation> UWaterModifierZoneServiceInterface::GetWaterModifierZones(class UClass* Type)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZones");
+
+	UWaterModifierZoneServiceInterface_GetWaterModifierZones_Params params;
+	params.Type = Type;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZone
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            WaterModifierZoneIndex         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FWaterModifierZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWaterModifierZoneParametersAndLocation UWaterModifierZoneServiceInterface::GetWaterModifierZone(int WaterModifierZoneIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZone");
+
+	UWaterModifierZoneServiceInterface_GetWaterModifierZone_Params params;
+	params.WaterModifierZoneIndex = WaterModifierZoneIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierStrength
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  Type                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UWaterModifierZoneServiceInterface::GetWaterModifierStrength(class UClass* Type, const struct FVector& Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierStrength");
+
+	UWaterModifierZoneServiceInterface_GetWaterModifierStrength_Params params;
+	params.Type = Type;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierDrowningParams
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AAthenaCharacter*        Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlendableDrowningParams DefaultParams                  (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBlendableDrowningParams ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FBlendableDrowningParams UWaterModifierZoneServiceInterface::GetWaterModifierDrowningParams(class AAthenaCharacter* Actor, const struct FBlendableDrowningParams& DefaultParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierDrowningParams");
+
+	UWaterModifierZoneServiceInterface_GetWaterModifierDrowningParams_Params params;
+	params.Actor = Actor;
+	params.DefaultParams = DefaultParams;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZonesByType
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  Type                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UWaterModifierZoneServiceInterface::GetNumberOfWaterModifierZonesByType(class UClass* Type)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZonesByType");
+
+	UWaterModifierZoneServiceInterface_GetNumberOfWaterModifierZonesByType_Params params;
+	params.Type = Type;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZones
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UWaterModifierZoneServiceInterface::GetNumberOfWaterModifierZones()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZones");
+
+	UWaterModifierZoneServiceInterface_GetNumberOfWaterModifierZones_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetDragScalarAtLocation
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UWaterModifierZoneServiceInterface::GetDragScalarAtLocation(const struct FVector& Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetDragScalarAtLocation");
+
+	UWaterModifierZoneServiceInterface_GetDragScalarAtLocation_Params params;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WaterModifierZoneServiceInterface.GetAllWaterModifierZones
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FWaterModifierZoneParametersAndLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FWaterModifierZoneParametersAndLocation> UWaterModifierZoneServiceInterface::GetAllWaterModifierZones()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetAllWaterModifierZones");
+
+	UWaterModifierZoneServiceInterface_GetAllWaterModifierZones_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.ToggleShipWaterReflections
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           EnableReflections              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::ToggleShipWaterReflections(bool EnableReflections)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.ToggleShipWaterReflections");
+
+	AShip_ToggleShipWaterReflections_Params params;
+	params.EnableReflections = EnableReflections;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.SetVelocity
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 Velocity                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::SetVelocity(const struct FVector& Velocity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.SetVelocity");
+
+	AShip_SetVelocity_Params params;
+	params.Velocity = Velocity;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.SetDebugKeelOverSpeedScalar
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          Scalar                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::SetDebugKeelOverSpeedScalar(float Scalar)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.SetDebugKeelOverSpeedScalar");
+
+	AShip_SetDebugKeelOverSpeedScalar_Params params;
+	params.Scalar = Scalar;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.Replenish
+// (Native, Public, BlueprintCallable)
+
+void AShip::Replenish()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.Replenish");
+
+	AShip_Replenish_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.ReduceWaterOcclusionZone
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          ReduceWaterOcclusionZoneTime   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::ReduceWaterOcclusionZone(float ReduceWaterOcclusionZoneTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.ReduceWaterOcclusionZone");
+
+	AShip_ReduceWaterOcclusionZone_Params params;
+	params.ReduceWaterOcclusionZoneTime = ReduceWaterOcclusionZoneTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.OnShipPartUnregistered
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FName                   PartName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  PartActor                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::OnShipPartUnregistered(const struct FName& PartName, class AActor* PartActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnShipPartUnregistered");
+
+	AShip_OnShipPartUnregistered_Params params;
+	params.PartName = PartName;
+	params.PartActor = PartActor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.OnShipPartRegistered
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FName                   PartName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  PartActor                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::OnShipPartRegistered(const struct FName& PartName, class AActor* PartActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnShipPartRegistered");
+
+	AShip_OnShipPartRegistered_Params params;
+	params.PartName = PartName;
+	params.PartActor = PartActor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.OnRep_CrewShipManifest
+// (Final, Native, Private)
+
+void AShip::OnRep_CrewShipManifest()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnRep_CrewShipManifest");
+
+	AShip_OnRep_CrewShipManifest_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.OnOverlapEnd
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnOverlapEnd");
+
+	AShip_OnOverlapEnd_Params params;
+	params.OtherActor = OtherActor;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.OnOverlapBegin
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FromSweep                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void AShip::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnOverlapBegin");
+
+	AShip_OnOverlapBegin_Params params;
+	params.OtherActor = OtherActor;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+	params.FromSweep = FromSweep;
+	params.SweepResult = SweepResult;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.Multicast_DisableAllShipInteractables
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+
+void AShip::Multicast_DisableAllShipInteractables()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.Multicast_DisableAllShipInteractables");
+
+	AShip_Multicast_DisableAllShipInteractables_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.IsWorldSpacePositionBelowTopDeckPlane
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::IsWorldSpacePositionBelowTopDeckPlane(const struct FVector& Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.IsWorldSpacePositionBelowTopDeckPlane");
+
+	AShip_IsWorldSpacePositionBelowTopDeckPlane_Params params;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.IsWorldSpacePositionBelowMidDeckPlane
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::IsWorldSpacePositionBelowMidDeckPlane(const struct FVector& Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.IsWorldSpacePositionBelowMidDeckPlane");
+
+	AShip_IsWorldSpacePositionBelowMidDeckPlane_Params params;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.IsOcclusionZoneFullyReduced
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::IsOcclusionZoneFullyReduced()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.IsOcclusionZoneFullyReduced");
+
+	AShip_IsOcclusionZoneFullyReduced_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetShipLocatorPositionChecked
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EShipLocation>     LocatorID                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AShip::GetShipLocatorPositionChecked(TEnumAsByte<EShipLocation> LocatorID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetShipLocatorPositionChecked");
+
+	AShip_GetShipLocatorPositionChecked_Params params;
+	params.LocatorID = LocatorID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetShipLocatorPosition
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EShipLocation>     LocatorName                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 LocatorPosition                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::GetShipLocatorPosition(TEnumAsByte<EShipLocation> LocatorName, struct FVector* LocatorPosition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetShipLocatorPosition");
+
+	AShip_GetShipLocatorPosition_Params params;
+	params.LocatorName = LocatorName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (LocatorPosition != nullptr)
+		*LocatorPosition = params.LocatorPosition;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetSampledSpeed
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AShip::GetSampledSpeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetSampledSpeed");
+
+	AShip_GetSampledSpeed_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetInternalWater
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AShipInternalWater*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AShipInternalWater* AShip::GetInternalWater()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetInternalWater");
+
+	AShip_GetInternalWater_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetHullSubmersedPercentage
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AShip::GetHullSubmersedPercentage()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetHullSubmersedPercentage");
+
+	AShip_GetHullSubmersedPercentage_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetHasShipEverSetSail
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::GetHasShipEverSetSail()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetHasShipEverSetSail");
+
+	AShip_GetHasShipEverSetSail_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetEmpiricalMaxShipSpeedInMPS
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AShip::GetEmpiricalMaxShipSpeedInMPS()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetEmpiricalMaxShipSpeedInMPS");
+
+	AShip_GetEmpiricalMaxShipSpeedInMPS_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetDeckSurfaceWater
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class USurfaceWaterComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USurfaceWaterComponent* AShip::GetDeckSurfaceWater()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetDeckSurfaceWater");
+
+	AShip_GetDeckSurfaceWater_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetCurrentVelocity
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AShip::GetCurrentVelocity()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetCurrentVelocity");
+
+	AShip_GetCurrentVelocity_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.EnableCalmWaterBobbing
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnable                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShip::EnableCalmWaterBobbing(bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.EnableCalmWaterBobbing");
+
+	AShip_EnableCalmWaterBobbing_Params params;
+	params.bEnable = bEnable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.Deplete
+// (Native, Public, BlueprintCallable)
+
+void AShip::Deplete()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.Deplete");
+
+	AShip_Deplete_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Ship.CanBeReplenished
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::CanBeReplenished()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.CanBeReplenished");
+
+	AShip_CanBeReplenished_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.AreShipInteractablesDisabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShip::AreShipInteractablesDisabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.AreShipInteractablesDisabled");
+
+	AShip_AreShipInteractablesDisabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.CustomisationPreviewShip.UpdateVisuals
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ACustomisationPreviewShip::UpdateVisuals()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomisationPreviewShip.UpdateVisuals");
+
+	ACustomisationPreviewShip_UpdateVisuals_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.CustomisationPreviewShip.SetShipCustomizationInfo
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UShipCustomizationInfo*  NewShipCustomizationInfo       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACustomisationPreviewShip::SetShipCustomizationInfo(class UShipCustomizationInfo* NewShipCustomizationInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomisationPreviewShip.SetShipCustomizationInfo");
+
+	ACustomisationPreviewShip_SetShipCustomizationInfo_Params params;
+	params.NewShipCustomizationInfo = NewShipCustomizationInfo;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.CustomisationPreviewShip.SetLiveryCustomiser
+// (Final, Native, Public, BlueprintCallable)
+
+void ACustomisationPreviewShip::SetLiveryCustomiser()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomisationPreviewShip.SetLiveryCustomiser");
+
+	ACustomisationPreviewShip_SetLiveryCustomiser_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.CustomisationPreviewShip.SetCategory
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   NewCategory                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACustomisationPreviewShip::SetCategory(const struct FName& NewCategory)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomisationPreviewShip.SetCategory");
+
+	ACustomisationPreviewShip_SetCategory_Params params;
+	params.NewCategory = NewCategory;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.CustomisationPreviewShip.GetShipCustomizationInfo
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UShipCustomizationInfo*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UShipCustomizationInfo* ACustomisationPreviewShip::GetShipCustomizationInfo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomisationPreviewShip.GetShipCustomizationInfo");
+
+	ACustomisationPreviewShip_GetShipCustomizationInfo_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.CustomisationPreviewShip.GetCategory
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName ACustomisationPreviewShip::GetCategory()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomisationPreviewShip.GetCategory");
+
+	ACustomisationPreviewShip_GetCategory_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.DamageableInterface.OnDamageableImpact
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -22139,284 +23746,6 @@ void ADrawDebugService::OnRep_ReplicatedItems()
 }
 
 
-// Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneType
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UClass* UWaterModifierZoneInterface::GetWaterModifierZoneType()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneType");
-
-	UWaterModifierZoneInterface_GetWaterModifierZoneType_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneParameters
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FWaterModifierZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWaterModifierZoneParametersAndLocation UWaterModifierZoneInterface::GetWaterModifierZoneParameters()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneInterface.GetWaterModifierZoneParameters");
-
-	UWaterModifierZoneInterface_GetWaterModifierZoneParameters_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.UnregisterWaterModifierZoneFromService
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class UWaterModifierZoneInterface> WaterModifierZone              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWaterModifierZoneServiceInterface::UnregisterWaterModifierZoneFromService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.UnregisterWaterModifierZoneFromService");
-
-	UWaterModifierZoneServiceInterface_UnregisterWaterModifierZoneFromService_Params params;
-	params.WaterModifierZone = WaterModifierZone;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.RegisterWaterModifierZoneWithService
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class UWaterModifierZoneInterface> WaterModifierZone              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWaterModifierZoneServiceInterface::RegisterWaterModifierZoneWithService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.RegisterWaterModifierZoneWithService");
-
-	UWaterModifierZoneServiceInterface_RegisterWaterModifierZoneWithService_Params params;
-	params.WaterModifierZone = WaterModifierZone;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZones
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  Type                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// TArray<struct FWaterModifierZoneParametersAndLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FWaterModifierZoneParametersAndLocation> UWaterModifierZoneServiceInterface::GetWaterModifierZones(class UClass* Type)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZones");
-
-	UWaterModifierZoneServiceInterface_GetWaterModifierZones_Params params;
-	params.Type = Type;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZone
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            WaterModifierZoneIndex         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FWaterModifierZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWaterModifierZoneParametersAndLocation UWaterModifierZoneServiceInterface::GetWaterModifierZone(int WaterModifierZoneIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierZone");
-
-	UWaterModifierZoneServiceInterface_GetWaterModifierZone_Params params;
-	params.WaterModifierZoneIndex = WaterModifierZoneIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierStrength
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  Type                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UWaterModifierZoneServiceInterface::GetWaterModifierStrength(class UClass* Type, const struct FVector& Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierStrength");
-
-	UWaterModifierZoneServiceInterface_GetWaterModifierStrength_Params params;
-	params.Type = Type;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierDrowningParams
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AAthenaCharacter*        Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlendableDrowningParams DefaultParams                  (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBlendableDrowningParams ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FBlendableDrowningParams UWaterModifierZoneServiceInterface::GetWaterModifierDrowningParams(class AAthenaCharacter* Actor, const struct FBlendableDrowningParams& DefaultParams)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetWaterModifierDrowningParams");
-
-	UWaterModifierZoneServiceInterface_GetWaterModifierDrowningParams_Params params;
-	params.Actor = Actor;
-	params.DefaultParams = DefaultParams;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZonesByType
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  Type                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UWaterModifierZoneServiceInterface::GetNumberOfWaterModifierZonesByType(class UClass* Type)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZonesByType");
-
-	UWaterModifierZoneServiceInterface_GetNumberOfWaterModifierZonesByType_Params params;
-	params.Type = Type;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZones
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UWaterModifierZoneServiceInterface::GetNumberOfWaterModifierZones()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetNumberOfWaterModifierZones");
-
-	UWaterModifierZoneServiceInterface_GetNumberOfWaterModifierZones_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetDragScalarAtLocation
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UWaterModifierZoneServiceInterface::GetDragScalarAtLocation(const struct FVector& Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetDragScalarAtLocation");
-
-	UWaterModifierZoneServiceInterface_GetDragScalarAtLocation_Params params;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.WaterModifierZoneServiceInterface.GetAllWaterModifierZones
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FWaterModifierZoneParametersAndLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FWaterModifierZoneParametersAndLocation> UWaterModifierZoneServiceInterface::GetAllWaterModifierZones()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterModifierZoneServiceInterface.GetAllWaterModifierZones");
-
-	UWaterModifierZoneServiceInterface_GetAllWaterModifierZones_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.DrowningComponent.OnRep_CurrentState
 // (Final, Native, Private)
 
@@ -23515,49 +24844,6 @@ float UInventoryItemComponent::GetIconRotation()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.InventoryItemComponent.GetIconRotation");
 
 	UInventoryItemComponent_GetIconRotation_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.IslandServiceInterface.OnCrewSpawningOnIsland
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FName                   IslandName                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UIslandServiceInterface::OnCrewSpawningOnIsland(const struct FName& IslandName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandServiceInterface.OnCrewSpawningOnIsland");
-
-	UIslandServiceInterface_OnCrewSpawningOnIsland_Params params;
-	params.IslandName = IslandName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.IslandServiceInterface.GetAllIslandNames
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FName> UIslandServiceInterface::GetAllIslandNames()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandServiceInterface.GetAllIslandNames");
-
-	UIslandServiceInterface_GetAllIslandNames_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -27538,14 +28824,16 @@ void UShantyInterface::RequestInstrumentStop(class AActor* InstrumentActor)
 // Parameters:
 // class AActor*                  InstrumentActor                (Parm, ZeroConstructor, IsPlainOldData)
 // TScriptInterface<class UPlayerEntitlementViewInterface> EntitlementInterface           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TEnumAsByte<EShantyEnsembleOption> ForceNewEnsemble               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UShantyInterface::RequestInstrumentPlay(class AActor* InstrumentActor, const TScriptInterface<class UPlayerEntitlementViewInterface>& EntitlementInterface)
+void UShantyInterface::RequestInstrumentPlay(class AActor* InstrumentActor, const TScriptInterface<class UPlayerEntitlementViewInterface>& EntitlementInterface, TEnumAsByte<EShantyEnsembleOption> ForceNewEnsemble)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShantyInterface.RequestInstrumentPlay");
 
 	UShantyInterface_RequestInstrumentPlay_Params params;
 	params.InstrumentActor = InstrumentActor;
 	params.EntitlementInterface = EntitlementInterface;
+	params.ForceNewEnsemble = ForceNewEnsemble;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -29479,24 +30767,6 @@ void ASkeletonFortDoor::OnRep_ServerDoorState()
 }
 
 
-// Function Athena.BuoyantStorageContainer.OnRep_PhysicsState
-// (Final, Native, Private)
-
-void ABuoyantStorageContainer::OnRep_PhysicsState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.BuoyantStorageContainer.OnRep_PhysicsState");
-
-	ABuoyantStorageContainer_OnRep_PhysicsState_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Athena.LadderInterface.GetLadderHeight
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -30933,82 +32203,6 @@ void AAthenaGameState::OnRep_ReplicatedCrewService()
 }
 
 
-// Function Athena.IslandData.OnOverlapEnd
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void AIslandData::OnOverlapEnd(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandData.OnOverlapEnd");
-
-	AIslandData_OnOverlapEnd_Params params;
-	params.Other = Other;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.IslandData.OnOverlapBegin
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
-
-void AIslandData::OnOverlapBegin(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandData.OnOverlapBegin");
-
-	AIslandData_OnOverlapBegin_Params params;
-	params.Other = Other;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.bFromSweep = bFromSweep;
-	params.OverlapInfo = OverlapInfo;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.IslandData.MakeFIsland
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FIsland                 ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FIsland AIslandData::MakeFIsland()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandData.MakeFIsland");
-
-	AIslandData_MakeFIsland_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.IslandLocationVerifierInterface.VerifyLocation
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
@@ -32115,50 +33309,6 @@ void ULaunchedFromKrakenActionStateId::STATIC_PopCharacterOutOfLaunchedFromKrake
 }
 
 
-// Function Athena.LauncherParentInterface.GetProjectileIgnoreActors
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<class AActor*> ULauncherParentInterface::GetProjectileIgnoreActors()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.LauncherParentInterface.GetProjectileIgnoreActors");
-
-	ULauncherParentInterface_GetProjectileIgnoreActors_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.LauncherParentInterface.GetInheritedLaunchVelocity
-// (Native, Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector ULauncherParentInterface::GetInheritedLaunchVelocity()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.LauncherParentInterface.GetInheritedLaunchVelocity");
-
-	ULauncherParentInterface_GetInheritedLaunchVelocity_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.LeaveGhostShipActionStateId.PushCharacterIntoLeaveGhostShipActionState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -32216,52 +33366,6 @@ struct FLightingZoneParametersAndLocation ULightingZoneInterface::GetLightingZon
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.LightingZoneInterface.GetLightingZoneParameters");
 
 	ULightingZoneInterface_GetLightingZoneParameters_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.RainZoneInterface.GetRainZoneParametersAtTime
-// (Native, Public, Const)
-// Parameters:
-// double                         InTime                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FRainZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FRainZoneParametersAndLocation URainZoneInterface::GetRainZoneParametersAtTime(double InTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneInterface.GetRainZoneParametersAtTime");
-
-	URainZoneInterface_GetRainZoneParametersAtTime_Params params;
-	params.InTime = InTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.RainZoneInterface.GetRainZoneParameters
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRainZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FRainZoneParametersAndLocation URainZoneInterface::GetRainZoneParameters()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneInterface.GetRainZoneParameters");
-
-	URainZoneInterface_GetRainZoneParameters_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -38803,166 +39907,6 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnItemRa
 }
 
 
-// Function Athena.RainZoneServiceInterface.UnregisterRainZoneFromService
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class URainZoneInterface> RainZone                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void URainZoneServiceInterface::UnregisterRainZoneFromService(const TScriptInterface<class URainZoneInterface>& RainZone)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.UnregisterRainZoneFromService");
-
-	URainZoneServiceInterface_UnregisterRainZoneFromService_Params params;
-	params.RainZone = RainZone;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.RainZoneServiceInterface.RegisterRainZoneWithService
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class URainZoneInterface> RainZone                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void URainZoneServiceInterface::RegisterRainZoneWithService(const TScriptInterface<class URainZoneInterface>& RainZone)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.RegisterRainZoneWithService");
-
-	URainZoneServiceInterface_RegisterRainZoneWithService_Params params;
-	params.RainZone = RainZone;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.RainZoneServiceInterface.GetRainZone
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int                            RainZoneIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRainZoneParametersAndLocation ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FRainZoneParametersAndLocation URainZoneServiceInterface::GetRainZone(int RainZoneIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetRainZone");
-
-	URainZoneServiceInterface_GetRainZone_Params params;
-	params.RainZoneIndex = RainZoneIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.RainZoneServiceInterface.GetRainStrengthAtTime
-// (Native, Public, HasOutParms, HasDefaults, Const)
-// Parameters:
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// double                         InTime                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float URainZoneServiceInterface::GetRainStrengthAtTime(const struct FVector& Position, double InTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetRainStrengthAtTime");
-
-	URainZoneServiceInterface_GetRainStrengthAtTime_Params params;
-	params.Position = Position;
-	params.InTime = InTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.RainZoneServiceInterface.GetRainStrength
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float URainZoneServiceInterface::GetRainStrength(const struct FVector& Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetRainStrength");
-
-	URainZoneServiceInterface_GetRainStrength_Params params;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.RainZoneServiceInterface.GetNumberOfRainZones
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int URainZoneServiceInterface::GetNumberOfRainZones()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetNumberOfRainZones");
-
-	URainZoneServiceInterface_GetNumberOfRainZones_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.RainZoneServiceInterface.GetAllRainZones
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FRainZoneParametersAndLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FRainZoneParametersAndLocation> URainZoneServiceInterface::GetAllRainZones()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RainZoneServiceInterface.GetAllRainZones");
-
-	URainZoneServiceInterface_GetAllRainZones_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.RendererSettingsFunctionLibrary.UpdateRendererSettings
 // (Final, Native, Static, Public, BlueprintCallable)
 
@@ -39900,804 +40844,6 @@ class UClass* ASharkPawn::GetAIStrategy()
 }
 
 
-// Function Athena.TeleportLocationInterface.GetTeleportLocationForCharacter
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AAthenaCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTeleportLocation       ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FTeleportLocation UTeleportLocationInterface::GetTeleportLocationForCharacter(class AAthenaCharacter* Character)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.TeleportLocationInterface.GetTeleportLocationForCharacter");
-
-	UTeleportLocationInterface_GetTeleportLocationForCharacter_Params params;
-	params.Character = Character;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.TeleportLocationInterface.GetAllTeleportLocationsForCharacter
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AAthenaCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FTeleportLocation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FTeleportLocation> UTeleportLocationInterface::GetAllTeleportLocationsForCharacter(class AAthenaCharacter* Character)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.TeleportLocationInterface.GetAllTeleportLocationsForCharacter");
-
-	UTeleportLocationInterface_GetAllTeleportLocationsForCharacter_Params params;
-	params.Character = Character;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SurfaceWaterComponent.SetSimulationActive
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           IsActive                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void USurfaceWaterComponent::SetSimulationActive(bool IsActive)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.SetSimulationActive");
-
-	USurfaceWaterComponent_SetSimulationActive_Params params;
-	params.IsActive = IsActive;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.SurfaceWaterComponent.OnRep_AddWater
-// (Final, Native, Private)
-
-void USurfaceWaterComponent::OnRep_AddWater()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.OnRep_AddWater");
-
-	USurfaceWaterComponent_OnRep_AddWater_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.SurfaceWaterComponent.GetWaterTexture
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UTexture*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UTexture* USurfaceWaterComponent::GetWaterTexture()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.GetWaterTexture");
-
-	USurfaceWaterComponent_GetWaterTexture_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SurfaceWaterComponent.GetNormalTexture
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UTexture*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UTexture* USurfaceWaterComponent::GetNormalTexture()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.GetNormalTexture");
-
-	USurfaceWaterComponent_GetNormalTexture_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SurfaceWaterComponent.ConvertToWaterSpace
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 WorldSpacePosition             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USurfaceWaterComponent::ConvertToWaterSpace(const struct FVector& WorldSpacePosition)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.ConvertToWaterSpace");
-
-	USurfaceWaterComponent_ConvertToWaterSpace_Params params;
-	params.WorldSpacePosition = WorldSpacePosition;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SurfaceWaterComponent.ClearWaterTexture
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor            ClearColor                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void USurfaceWaterComponent::ClearWaterTexture(const struct FLinearColor& ClearColor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.ClearWaterTexture");
-
-	USurfaceWaterComponent_ClearWaterTexture_Params params;
-	params.ClearColor = ClearColor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.SurfaceWaterComponent.AddWater
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 Position                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Strength                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CheckBounds                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void USurfaceWaterComponent::AddWater(const struct FVector& Position, float Radius, float Strength, bool CheckBounds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SurfaceWaterComponent.AddWater");
-
-	USurfaceWaterComponent_AddWater_Params params;
-	params.Position = Position;
-	params.Radius = Radius;
-	params.Strength = Strength;
-	params.CheckBounds = CheckBounds;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.ToggleShipWaterReflections
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           EnableReflections              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::ToggleShipWaterReflections(bool EnableReflections)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.ToggleShipWaterReflections");
-
-	AShip_ToggleShipWaterReflections_Params params;
-	params.EnableReflections = EnableReflections;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.SetVelocity
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 Velocity                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::SetVelocity(const struct FVector& Velocity)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.SetVelocity");
-
-	AShip_SetVelocity_Params params;
-	params.Velocity = Velocity;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.SetDebugKeelOverSpeedScalar
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Scalar                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::SetDebugKeelOverSpeedScalar(float Scalar)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.SetDebugKeelOverSpeedScalar");
-
-	AShip_SetDebugKeelOverSpeedScalar_Params params;
-	params.Scalar = Scalar;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.Replenish
-// (Native, Public, BlueprintCallable)
-
-void AShip::Replenish()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.Replenish");
-
-	AShip_Replenish_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.ReduceWaterOcclusionZone
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          ReduceWaterOcclusionZoneTime   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::ReduceWaterOcclusionZone(float ReduceWaterOcclusionZoneTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.ReduceWaterOcclusionZone");
-
-	AShip_ReduceWaterOcclusionZone_Params params;
-	params.ReduceWaterOcclusionZoneTime = ReduceWaterOcclusionZoneTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.OnShipPartUnregistered
-// (Event, Public, HasOutParms, BlueprintEvent)
-// Parameters:
-// struct FName                   PartName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  PartActor                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::OnShipPartUnregistered(const struct FName& PartName, class AActor* PartActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnShipPartUnregistered");
-
-	AShip_OnShipPartUnregistered_Params params;
-	params.PartName = PartName;
-	params.PartActor = PartActor;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.OnShipPartRegistered
-// (Event, Public, HasOutParms, BlueprintEvent)
-// Parameters:
-// struct FName                   PartName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  PartActor                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::OnShipPartRegistered(const struct FName& PartName, class AActor* PartActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnShipPartRegistered");
-
-	AShip_OnShipPartRegistered_Params params;
-	params.PartName = PartName;
-	params.PartActor = PartActor;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.OnRep_CrewShipManifest
-// (Final, Native, Private)
-
-void AShip::OnRep_CrewShipManifest()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnRep_CrewShipManifest");
-
-	AShip_OnRep_CrewShipManifest_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.OnOverlapEnd
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnOverlapEnd");
-
-	AShip_OnOverlapEnd_Params params;
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.OnOverlapBegin
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FromSweep                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
-
-void AShip::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnOverlapBegin");
-
-	AShip_OnOverlapBegin_Params params;
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.FromSweep = FromSweep;
-	params.SweepResult = SweepResult;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.Multicast_DisableAllShipInteractables
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-
-void AShip::Multicast_DisableAllShipInteractables()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.Multicast_DisableAllShipInteractables");
-
-	AShip_Multicast_DisableAllShipInteractables_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.IsWorldSpacePositionBelowTopDeckPlane
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::IsWorldSpacePositionBelowTopDeckPlane(const struct FVector& Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.IsWorldSpacePositionBelowTopDeckPlane");
-
-	AShip_IsWorldSpacePositionBelowTopDeckPlane_Params params;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.IsWorldSpacePositionBelowMidDeckPlane
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::IsWorldSpacePositionBelowMidDeckPlane(const struct FVector& Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.IsWorldSpacePositionBelowMidDeckPlane");
-
-	AShip_IsWorldSpacePositionBelowMidDeckPlane_Params params;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.IsOcclusionZoneFullyReduced
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::IsOcclusionZoneFullyReduced()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.IsOcclusionZoneFullyReduced");
-
-	AShip_IsOcclusionZoneFullyReduced_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetShipLocatorPositionChecked
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<EShipLocation>     LocatorID                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector AShip::GetShipLocatorPositionChecked(TEnumAsByte<EShipLocation> LocatorID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetShipLocatorPositionChecked");
-
-	AShip_GetShipLocatorPositionChecked_Params params;
-	params.LocatorID = LocatorID;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetShipLocatorPosition
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<EShipLocation>     LocatorName                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 LocatorPosition                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::GetShipLocatorPosition(TEnumAsByte<EShipLocation> LocatorName, struct FVector* LocatorPosition)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetShipLocatorPosition");
-
-	AShip_GetShipLocatorPosition_Params params;
-	params.LocatorName = LocatorName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (LocatorPosition != nullptr)
-		*LocatorPosition = params.LocatorPosition;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetSampledSpeed
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector AShip::GetSampledSpeed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetSampledSpeed");
-
-	AShip_GetSampledSpeed_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetInternalWater
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class AShipInternalWater*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AShipInternalWater* AShip::GetInternalWater()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetInternalWater");
-
-	AShip_GetInternalWater_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetHullSubmersedPercentage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AShip::GetHullSubmersedPercentage()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetHullSubmersedPercentage");
-
-	AShip_GetHullSubmersedPercentage_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetHasShipEverSetSail
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::GetHasShipEverSetSail()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetHasShipEverSetSail");
-
-	AShip_GetHasShipEverSetSail_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetEmpiricalMaxShipSpeedInMPS
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AShip::GetEmpiricalMaxShipSpeedInMPS()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetEmpiricalMaxShipSpeedInMPS");
-
-	AShip_GetEmpiricalMaxShipSpeedInMPS_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetDeckSurfaceWater
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class USurfaceWaterComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class USurfaceWaterComponent* AShip::GetDeckSurfaceWater()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetDeckSurfaceWater");
-
-	AShip_GetDeckSurfaceWater_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.GetCurrentVelocity
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector AShip::GetCurrentVelocity()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.GetCurrentVelocity");
-
-	AShip_GetCurrentVelocity_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.EnableCalmWaterBobbing
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnable                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AShip::EnableCalmWaterBobbing(bool bEnable)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.EnableCalmWaterBobbing");
-
-	AShip_EnableCalmWaterBobbing_Params params;
-	params.bEnable = bEnable;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.Deplete
-// (Native, Public, BlueprintCallable)
-
-void AShip::Deplete()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.Deplete");
-
-	AShip_Deplete_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Ship.CanBeReplenished
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::CanBeReplenished()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.CanBeReplenished");
-
-	AShip_CanBeReplenished_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.Ship.AreShipInteractablesDisabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AShip::AreShipInteractablesDisabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.AreShipInteractablesDisabled");
-
-	AShip_AreShipInteractablesDisabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.ShipCustomizationLoadoutControlInterface.UnequipShipCustomization
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -40956,7 +41102,7 @@ struct FShipDesc UShipDescGeneratorTestFunctionLibrary::STATIC_GenerateShipDescF
 
 
 // Function Athena.ShipFactory.SpawnSyncWithDatabase
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FShipDesc               Desc                           (ConstParm, Parm, OutParm, ReferenceParm)
@@ -40988,7 +41134,7 @@ class AActor* UShipFactory::SpawnSyncWithDatabase(class UObject* WorldContextObj
 
 
 // Function Athena.ShipFactory.SpawnSync
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FShipDesc               Desc                           (ConstParm, Parm, OutParm, ReferenceParm)
@@ -42218,24 +42364,6 @@ void UStatusEffectComponent::OnRep_StatusEffect()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.StatusEffectComponent.OnRep_StatusEffect");
 
 	UStatusEffectComponent_OnRep_StatusEffect_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.StatusEffectManagerComponent.OnRep_Statuses
-// (Final, Native, Private)
-
-void UStatusEffectManagerComponent::OnRep_Statuses()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.StatusEffectManagerComponent.OnRep_Statuses");
-
-	UStatusEffectManagerComponent_OnRep_Statuses_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -46465,28 +46593,6 @@ void ABucket::Multicast_Scoop()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Bucket.GetFillState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<EBucketFillState>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EBucketFillState> ABucket::GetFillState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Bucket.GetFillState");
-
-	ABucket_GetFillState_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

@@ -49,6 +49,8 @@ public:
 	void SetTimeSlowdownScalar(float RequestedSlowdownScalar);
 	void SetTimeScalar(int RequestedTimeScalar);
 	void SetTimeCatchupScalar(float RequestedCatchupScalar);
+	void SetSunset(float SunsetHours);
+	void SetSunrise(float SunriseHours);
 	void SetGameWorldTime(const struct FDateTime& RequestedTime);
 	float GetTimeSlowdownScalar();
 	int GetTimeScalar();
@@ -78,22 +80,25 @@ public:
 
 
 // Class Time.TimeService
-// 0x0088 (0x04F8 - 0x0470)
+// 0x0098 (0x0508 - 0x0470)
 class ATimeService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0470(0x0028) MISSED OFFSET
 	struct FTimespan                                   GameWorldTimeOffset;                                      // 0x0498(0x0008) (Edit, Net, ZeroConstructor, Config, DisableEditOnInstance)
-	struct FReplicatedDateTime                         ReplicatedServerTime;                                     // 0x04A0(0x0008) (BlueprintVisible, BlueprintReadOnly, Net)
-	uint32_t                                           TimeScalar;                                               // 0x04A8(0x0004) (Edit, Net, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              SynchronizeTimeSpeedupRate;                               // 0x04AC(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              SynchronizeTimeSlowdownRate;                              // 0x04B0(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04B4(0x0004) MISSED OFFSET
-	double                                             ServiceTimeQueryRapidFrequencyOffsetMax;                  // 0x04B8(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              ServiceTimeQueryRapidFrequencyInSeconds;                  // 0x04C0(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              ServiceTimeQueryFrequencyInSeconds;                       // 0x04C4(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              ClientTimeUpdateFrequencyInSeconds;                       // 0x04C8(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2C];                                      // 0x04CC(0x002C) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
+	struct FReplicatedDateTime                         ReplicatedServerTime;                                     // 0x04A8(0x0008) (BlueprintVisible, BlueprintReadOnly, Net)
+	uint32_t                                           TimeScalar;                                               // 0x04B0(0x0004) (Edit, Net, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              SynchronizeTimeSpeedupRate;                               // 0x04B4(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              SynchronizeTimeSlowdownRate;                              // 0x04B8(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x04BC(0x0004) MISSED OFFSET
+	double                                             ServiceTimeQueryRapidFrequencyOffsetMax;                  // 0x04C0(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              ServiceTimeQueryRapidFrequencyInSeconds;                  // 0x04C8(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              ServiceTimeQueryFrequencyInSeconds;                       // 0x04CC(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              ClientTimeUpdateFrequencyInSeconds;                       // 0x04D0(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              SunriseTimeHours;                                         // 0x04D4(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              SunsetTimeHours;                                          // 0x04D8(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2C];                                      // 0x04DC(0x002C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -108,11 +113,11 @@ public:
 
 
 // Class Time.DebugTimeService
-// 0x0008 (0x0500 - 0x04F8)
+// 0x0008 (0x0510 - 0x0508)
 class ADebugTimeService : public ATimeService
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04F8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0508(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

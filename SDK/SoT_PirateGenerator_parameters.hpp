@@ -292,6 +292,7 @@ struct UWardrobeFunctionLibrary_GetAllWardrobeItemsForType_Params
 {
 	class FString                                      TypeName;                                                 // (Parm, ZeroConstructor)
 	TEnumAsByte<EIPGPirateType>                        PirateType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bWithExclusions;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
@@ -300,6 +301,16 @@ struct UWardrobeFunctionLibrary_GetAllWardrobeItems_Params
 {
 	TEnumAsByte<EIPGPirateType>                        PirateType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function PirateGenerator.WardrobeFunctionLibrary.CanLoadOutfit
+struct UWardrobeFunctionLibrary_CanLoadOutfit_Params
+{
+	TArray<struct FName>                               ClothingItemNames;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FName>                               Tags;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TEnumAsByte<EIPGPirateType>                        PirateType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EIPGGender>                            Gender;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // DelegateFunction PirateGenerator.WardrobeFunctionLibrary.AsyncOutfitResultDynamic__DelegateSignature
