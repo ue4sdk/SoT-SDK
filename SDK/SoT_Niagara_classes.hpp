@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Niagara.NiagaraActor
-// 0x0008 (0x0478 - 0x0470)
+// 0x0008 (0x0480 - 0x0478)
 class ANiagaraActor : public AActor
 {
 public:
-	class UNiagaraComponent*                           NiagaraComponent;                                         // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UNiagaraComponent*                           NiagaraComponent;                                         // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

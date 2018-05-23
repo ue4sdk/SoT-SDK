@@ -1,0 +1,104 @@
+#pragma once
+
+// Sea of Thieves (1.0.5) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_StatusEffects_structs.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// Class StatusEffects.StatusBase
+// 0x0000 (0x0028 - 0x0028)
+class UStatusBase : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.StatusBase");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusResponse
+// 0x0000 (0x0028 - 0x0028)
+class UStatusResponse : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponse");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusEffectRecipientInterface
+// 0x0000 (0x0028 - 0x0028)
+class UStatusEffectRecipientInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectRecipientInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusResponseAsset
+// 0x0018 (0x0040 - 0x0028)
+class UStatusResponseAsset : public UDataAsset
+{
+public:
+	class UClass*                                      TriggerStatus;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UStatusResponse*>                     Responses;                                                // 0x0030(0x0010) (Edit, ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponseAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusEffectManagerComponent
+// 0x0048 (0x0118 - 0x00D0)
+class UStatusEffectManagerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	TArray<class UStatusResponseAsset*>                Responses;                                                // 0x00D8(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00E8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectManagerComponent");
+		return ptr;
+	}
+
+
+	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldActiveEffects);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

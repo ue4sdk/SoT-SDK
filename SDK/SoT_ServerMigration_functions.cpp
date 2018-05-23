@@ -103,6 +103,30 @@ bool UNetworkTestingBlueprintFunctionLibrary::STATIC_IsActorNetRelevantFor(class
 }
 
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetDormant
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::STATIC_IsActorNetDormant(class AActor* TargetActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetDormant");
+
+	UNetworkTestingBlueprintFunctionLibrary_IsActorNetDormant_Params params;
+	params.TargetActor = TargetActor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.GetReliableBufferBunchCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

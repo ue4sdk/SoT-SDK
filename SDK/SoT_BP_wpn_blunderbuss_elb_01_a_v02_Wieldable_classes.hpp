@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wpn_blunderbuss_elb_01_a_v02_Wieldable.BP_wpn_blunderbuss_elb_01_a_v02_Wieldable_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x0A28 - 0x0A28)
 class ABP_wpn_blunderbuss_elb_01_a_v02_Wieldable_C : public ABP_Blunderbuss_C
 {
 public:

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_pocket_watch_mrh_01_c_ItemInfo.BP_cmp_pocket_watch_mrh_01_c_ItemInfo_C
-// 0x0008 (0x04C0 - 0x04B8)
+// 0x0008 (0x04D0 - 0x04C8)
 class ABP_cmp_pocket_watch_mrh_01_c_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

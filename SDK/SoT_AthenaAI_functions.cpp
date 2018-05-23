@@ -1352,8 +1352,9 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIBySpawner(const struct FName& 
 // bool                           RequireNavMesh                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           MakeAIPermanentlyNetRelevant   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InstancedNavMesh               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant)
+void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI");
 
@@ -1365,6 +1366,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AICla
 	params.RequireNavMesh = RequireNavMesh;
 	params.Delay = Delay;
 	params.MakeAIPermanentlyNetRelevant = MakeAIPermanentlyNetRelevant;
+	params.InstancedNavMesh = InstancedNavMesh;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

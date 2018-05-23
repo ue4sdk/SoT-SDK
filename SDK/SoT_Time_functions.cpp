@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Time.TimeInterface.GetTime
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FDateTime               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FGameTime               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FDateTime UTimeInterface::GetTime()
+struct FGameTime UTimeInterface::GetTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.GetTime");
 
@@ -66,6 +66,54 @@ struct FDateTime UTimeInterface::GetPreciseRealWorldTime()
 	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.GetPreciseRealWorldTime");
 
 	UTimeInterface_GetPreciseRealWorldTime_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Time.TimeInterface.ConvertRealWorldTimeToGameWorldTime
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FDateTime               RealWorldTime                  (ConstParm, Parm, ZeroConstructor)
+// struct FGameTime               ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FGameTime UTimeInterface::ConvertRealWorldTimeToGameWorldTime(const struct FDateTime& RealWorldTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.ConvertRealWorldTimeToGameWorldTime");
+
+	UTimeInterface_ConvertRealWorldTimeToGameWorldTime_Params params;
+	params.RealWorldTime = RealWorldTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Time.TimeInterface.ConvertGameWorldTimeToRealWorldTime
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FGameTime               GameWorldTime                  (ConstParm, Parm)
+// struct FDateTime               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FDateTime UTimeInterface::ConvertGameWorldTimeToRealWorldTime(const struct FGameTime& GameWorldTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.ConvertGameWorldTimeToRealWorldTime");
+
+	UTimeInterface_ConvertGameWorldTimeToRealWorldTime_Params params;
+	params.GameWorldTime = GameWorldTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -184,11 +232,11 @@ void UDebugTimeInterface::SetSunrise(float SunriseHours)
 
 
 // Function Time.DebugTimeInterface.SetGameWorldTime
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FDateTime               RequestedTime                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FGameTime               RequestedTime                  (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UDebugTimeInterface::SetGameWorldTime(const struct FDateTime& RequestedTime)
+void UDebugTimeInterface::SetGameWorldTime(const struct FGameTime& RequestedTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetGameWorldTime");
 

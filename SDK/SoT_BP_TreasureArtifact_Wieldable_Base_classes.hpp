@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_Wieldable_Base.BP_TreasureArtifact_Wieldable_Base_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07C8 - 0x07C8)
 class ABP_TreasureArtifact_Wieldable_Base_C : public AStaticSimpleBootyWieldableItem
 {
 public:

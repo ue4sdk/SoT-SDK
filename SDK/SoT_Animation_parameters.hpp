@@ -285,6 +285,16 @@ struct ULocomotionFunctionLib_UpdateCalculateRateAndCurrentYaw_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Animation.NetworkSyncedAnimationComponent.OnRep_PlayingAnimationIndex
+struct UNetworkSyncedAnimationComponent_OnRep_PlayingAnimationIndex_Params
+{
+};
+
+// Function Animation.NetworkSyncedAnimationComponent.OnRep_AnimationProgression
+struct UNetworkSyncedAnimationComponent_OnRep_AnimationProgression_Params
+{
+};
+
 // Function Animation.TurningFunctionLib.TurningUpdate
 struct UTurningFunctionLib_TurningUpdate_Params
 {

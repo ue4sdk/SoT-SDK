@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShadyEquipmentShop.BP_ShadyEquipmentShop_C
-// 0x0008 (0x0528 - 0x0520)
+// 0x0008 (0x0530 - 0x0528)
 class ABP_ShadyEquipmentShop_C : public AShopkeeperInteractionProxy
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0520(0x0008) MISSED OFFSET
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

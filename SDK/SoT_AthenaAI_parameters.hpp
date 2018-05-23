@@ -409,6 +409,7 @@ struct UAthenaAIDebugFunctionLibrary_SpawnAI_Params
 	bool                                               RequireNavMesh;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Delay;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               MakeAIPermanentlyNetRelevant;                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      InstancedNavMesh;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds

@@ -187,13 +187,13 @@ public:
 
 
 // Class Interaction.MockActorWithCharacterInteractionComponent
-// 0x00B0 (0x0520 - 0x0470)
+// 0x00B0 (0x0528 - 0x0478)
 class AMockActorWithCharacterInteractionComponent : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
-	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0480(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
+	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x0480(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0488(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -221,14 +221,14 @@ public:
 
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (0x0498 - 0x0470)
+// 0x0028 (0x04A0 - 0x0478)
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
-	class AActor*                                      FocusedInteractable;                                      // 0x0478(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      InteractedActor;                                          // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0488(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
+	class AActor*                                      FocusedInteractable;                                      // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      InteractedActor;                                          // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -240,12 +240,12 @@ public:
 
 
 // Class Interaction.TestActorWithInteractableComponent
-// 0x0010 (0x0480 - 0x0470)
+// 0x0010 (0x0488 - 0x0478)
 class ATestActorWithInteractableComponent : public AActor
 {
 public:
-	class USceneComponent*                             SceneRootComponent;                                       // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UInteractableComponent*                      InteractableComponent;                                    // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             SceneRootComponent;                                       // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInteractableComponent*                      InteractableComponent;                                    // 0x0480(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

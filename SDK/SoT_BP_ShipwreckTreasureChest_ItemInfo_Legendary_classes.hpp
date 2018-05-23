@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwreckTreasureChest_ItemInfo_Legendary.BP_ShipwreckTreasureChest_ItemInfo_Legendary_C
-// 0x0008 (0x0588 - 0x0580)
+// 0x0008 (0x0590 - 0x0588)
 class ABP_ShipwreckTreasureChest_ItemInfo_Legendary_C : public ATreasureChestItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

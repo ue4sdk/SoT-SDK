@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaDebug.Videprinter
-// 0x0028 (0x0498 - 0x0470)
+// 0x0028 (0x04A0 - 0x0478)
 class AVideprinter : public AActor
 {
 public:
-	TArray<class FString>                              OutputRingBuffer;                                         // 0x0470(0x0010) (Net, ZeroConstructor)
-	int                                                AddAt;                                                    // 0x0480(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Id;                                                       // 0x0484(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x048C(0x000C) MISSED OFFSET
+	TArray<class FString>                              OutputRingBuffer;                                         // 0x0478(0x0010) (Net, ZeroConstructor)
+	int                                                AddAt;                                                    // 0x0488(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Id;                                                       // 0x048C(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0494(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -503,6 +503,28 @@ void UPirateGeneratorFunctionLibrary::STATIC_K2_BakeFromDescriptionGameThread(co
 }
 
 
+// Function PirateGenerator.PirateGeneratorFunctionLibrary.IPGLatestVersion
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPirateGeneratorFunctionLibrary::STATIC_IPGLatestVersion()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.IPGLatestVersion");
+
+	UPirateGeneratorFunctionLibrary_IPGLatestVersion_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function PirateGenerator.PirateGeneratorFunctionLibrary.GetSeedFromString
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -564,6 +586,46 @@ TArray<class FString> UPirateGeneratorFunctionLibrary::STATIC_GetAllDescriptions
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllDescriptions");
 
 	UPirateGeneratorFunctionLibrary_GetAllDescriptions_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirateWithVersion
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Version                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOverrideBodyShape             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRadialCoordinate       BodyShapeOverride              (Parm)
+// TEnumAsByte<EIPGGender>        SpecificGender                 (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EIPGEthnicity>     SpecificEthnicity              (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FIPGDynamicSlider> DynamicSliders                 (Parm, ZeroConstructor)
+// TArray<struct FName>           TextureReferences              (Parm, ZeroConstructor)
+// TArray<struct FIPGScalarParameter> ScalarParameters               (Parm, ZeroConstructor)
+// struct FPirateDescription      ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FPirateDescription UPirateGeneratorFunctionLibrary::STATIC_GenerateRandomPirateWithVersion(int Seed, int Version, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirateWithVersion");
+
+	UPirateGeneratorFunctionLibrary_GenerateRandomPirateWithVersion_Params params;
+	params.Seed = Seed;
+	params.Version = Version;
+	params.bOverrideBodyShape = bOverrideBodyShape;
+	params.BodyShapeOverride = BodyShapeOverride;
+	params.SpecificGender = SpecificGender;
+	params.SpecificEthnicity = SpecificEthnicity;
+	params.DynamicSliders = DynamicSliders;
+	params.TextureReferences = TextureReferences;
+	params.ScalarParameters = ScalarParameters;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

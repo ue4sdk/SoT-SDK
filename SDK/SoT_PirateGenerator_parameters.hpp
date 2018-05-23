@@ -162,6 +162,12 @@ struct UPirateGeneratorFunctionLibrary_K2_BakeFromDescriptionGameThread_Params
 	struct FPirateDescription                          OutDesc;                                                  // (Parm, OutParm)
 };
 
+// Function PirateGenerator.PirateGeneratorFunctionLibrary.IPGLatestVersion
+struct UPirateGeneratorFunctionLibrary_IPGLatestVersion_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function PirateGenerator.PirateGeneratorFunctionLibrary.GetSeedFromString
 struct UPirateGeneratorFunctionLibrary_GetSeedFromString_Params
 {
@@ -181,6 +187,21 @@ struct UPirateGeneratorFunctionLibrary_GetAllTextureReferences_Params
 struct UPirateGeneratorFunctionLibrary_GetAllDescriptions_Params
 {
 	TArray<class FString>                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirateWithVersion
+struct UPirateGeneratorFunctionLibrary_GenerateRandomPirateWithVersion_Params
+{
+	int                                                Seed;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Version;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverrideBodyShape;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRadialCoordinate                           BodyShapeOverride;                                        // (Parm)
+	TEnumAsByte<EIPGGender>                            SpecificGender;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EIPGEthnicity>                         SpecificEthnicity;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FIPGDynamicSlider>                   DynamicSliders;                                           // (Parm, ZeroConstructor)
+	TArray<struct FName>                               TextureReferences;                                        // (Parm, ZeroConstructor)
+	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                         // (Parm, ZeroConstructor)
+	struct FPirateDescription                          ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirate

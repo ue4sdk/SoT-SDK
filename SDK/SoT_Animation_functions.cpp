@@ -960,6 +960,42 @@ float ULocomotionFunctionLib::STATIC_UpdateCalculateRateAndCurrentYaw(const stru
 }
 
 
+// Function Animation.NetworkSyncedAnimationComponent.OnRep_PlayingAnimationIndex
+// (Final, Native, Protected)
+
+void UNetworkSyncedAnimationComponent::OnRep_PlayingAnimationIndex()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Animation.NetworkSyncedAnimationComponent.OnRep_PlayingAnimationIndex");
+
+	UNetworkSyncedAnimationComponent_OnRep_PlayingAnimationIndex_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Animation.NetworkSyncedAnimationComponent.OnRep_AnimationProgression
+// (Final, Native, Protected)
+
+void UNetworkSyncedAnimationComponent::OnRep_AnimationProgression()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Animation.NetworkSyncedAnimationComponent.OnRep_AnimationProgression");
+
+	UNetworkSyncedAnimationComponent_OnRep_AnimationProgression_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Animation.TurningFunctionLib.TurningUpdate
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:

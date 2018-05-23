@@ -69,19 +69,6 @@ struct ABP_DamageZone_C_Add_External_Hit_Params
 	struct FHullDamageHit                              HitData;                                                  // (Parm)
 };
 
-// Function BP_DamageZone.BP_DamageZone_C.Show Damage Level
-struct ABP_DamageZone_C_Show_Damage_Level_Params
-{
-	int                                                DamageLevel;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_DamageZone.BP_DamageZone_C.Set Damage Level Visibility
-struct ABP_DamageZone_C_Set_Damage_Level_Visibility_Params
-{
-	bool                                               VISIBILITY;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Damage_Level;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_DamageZone.BP_DamageZone_C.CollectTaggedComponents
 struct ABP_DamageZone_C_CollectTaggedComponents_Params
 {
@@ -101,12 +88,6 @@ struct ABP_DamageZone_C_AddExternalHit_Params
 // Function BP_DamageZone.BP_DamageZone_C.ClearDecalFlags
 struct ABP_DamageZone_C_ClearDecalFlags_Params
 {
-};
-
-// Function BP_DamageZone.BP_DamageZone_C.OnDamageLevelUpdate
-struct ABP_DamageZone_C_OnDamageLevelUpdate_Params
-{
-	int*                                               InDamageLevel;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DamageZone.BP_DamageZone_C.OnRepairableStateUpdate

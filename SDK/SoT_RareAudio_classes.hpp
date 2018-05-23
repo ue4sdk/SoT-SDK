@@ -146,11 +146,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x0478 - 0x0470)
+// 0x0008 (0x0480 - 0x0478)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -202,7 +202,7 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x0470 - 0x0470)
+// 0x0000 (0x0478 - 0x0478)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -454,7 +454,7 @@ public:
 
 
 // Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x0470 - 0x0470)
+// 0x0000 (0x0478 - 0x0478)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:

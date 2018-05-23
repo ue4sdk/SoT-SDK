@@ -17,7 +17,7 @@ namespace SDK
 // Function Time.TimeInterface.GetTime
 struct UTimeInterface_GetTime_Params
 {
-	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+	struct FGameTime                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function Time.TimeInterface.GetSmoothRealWorldTime
@@ -29,6 +29,20 @@ struct UTimeInterface_GetSmoothRealWorldTime_Params
 // Function Time.TimeInterface.GetPreciseRealWorldTime
 struct UTimeInterface_GetPreciseRealWorldTime_Params
 {
+	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Time.TimeInterface.ConvertRealWorldTimeToGameWorldTime
+struct UTimeInterface_ConvertRealWorldTimeToGameWorldTime_Params
+{
+	struct FDateTime                                   RealWorldTime;                                            // (ConstParm, Parm, ZeroConstructor)
+	struct FGameTime                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Time.TimeInterface.ConvertGameWorldTimeToRealWorldTime
+struct UTimeInterface_ConvertGameWorldTimeToRealWorldTime_Params
+{
+	struct FGameTime                                   GameWorldTime;                                            // (ConstParm, Parm)
 	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
@@ -65,7 +79,7 @@ struct UDebugTimeInterface_SetSunrise_Params
 // Function Time.DebugTimeInterface.SetGameWorldTime
 struct UDebugTimeInterface_SetGameWorldTime_Params
 {
-	struct FDateTime                                   RequestedTime;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FGameTime                                   RequestedTime;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function Time.DebugTimeInterface.GetTimeSlowdownScalar

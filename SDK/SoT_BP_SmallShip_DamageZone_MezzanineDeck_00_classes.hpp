@@ -15,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShip_DamageZone_MezzanineDeck_00.BP_SmallShip_DamageZone_MezzanineDeck_00_C
-// 0x0008 (0x08A8 - 0x08A0)
+// 0x0000 (0x08B0 - 0x08B0)
 class ABP_SmallShip_DamageZone_MezzanineDeck_00_C : public ABP_BaseInternalDamageZone_C
 {
 public:
-	class UStaticMeshComponent*                        Cube;                                                     // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bsp_resource_island_01_a_terrainLOD1.bsp_resource_island_01_a_terrainLOD1_C
-// 0x0000 (0x0478 - 0x0478)
+// 0x0000 (0x0480 - 0x0480)
 class Absp_resource_island_01_a_terrainLOD1_C : public ALevelScriptActor
 {
 public:

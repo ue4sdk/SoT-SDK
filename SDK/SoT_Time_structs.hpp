@@ -16,6 +16,13 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct Time.GameTime
+// 0x0008
+struct FGameTime
+{
+	struct FDateTime                                   DateTimeRepresentation;                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct Time.ReplicatedDateTime
 // 0x0008
 struct FReplicatedDateTime

@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
@@ -247,11 +247,11 @@ struct FCrowdAvoidanceSamplingPattern
 };
 
 // ScriptStruct AIModule.EnvQueryInstanceCache
-// 0x0270
+// 0x0280
 struct FEnvQueryInstanceCache
 {
 	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x268];                                     // 0x0008(0x0268) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x278];                                     // 0x0008(0x0278) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.EnvTraceData
@@ -400,13 +400,13 @@ struct FEnvQueryResult
 };
 
 // ScriptStruct AIModule.EnvQueryRequest
-// 0x0158
+// 0x0168
 struct FEnvQueryRequest
 {
 	class UEnvQuery*                                   QueryTemplate;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UObject*                                     Owner;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UWorld*                                      World;                                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x140];                                     // 0x0018(0x0140) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x150];                                     // 0x0018(0x0150) MISSED OFFSET
 };
 
 }

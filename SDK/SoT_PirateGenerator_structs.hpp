@@ -58,23 +58,25 @@ struct FIPGScalarParameter
 };
 
 // ScriptStruct PirateGenerator.PirateDescription
-// 0x0078
+// 0x0080
 struct FPirateDescription
 {
 	TEnumAsByte<EIPGPirateType>                        Type;                                                     // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EIPGGender>                            Gender;                                                   // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EIPGEthnicity>                         Ethnicity;                                                // 0x0002(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
-	struct FRadialCoordinate                           BodyShapeCoordinate;                                      // 0x0004(0x0008) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	TArray<struct FIPGBlendShape>                      BlendShapes;                                              // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FIPGDynamicSlider>                   DynamicSliders;                                           // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                Seed;                                                     // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	TArray<struct FName>                               Items;                                                    // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               TextureReferences;                                        // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               MaterialReferences;                                       // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                         // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	int                                                Version;                                                  // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EIPGGender>                            Gender;                                                   // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EIPGEthnicity>                         Ethnicity;                                                // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
+	struct FRadialCoordinate                           BodyShapeCoordinate;                                      // 0x000C(0x0008) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	TArray<struct FIPGBlendShape>                      BlendShapes;                                              // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FIPGDynamicSlider>                   DynamicSliders;                                           // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                Seed;                                                     // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	TArray<struct FName>                               Items;                                                    // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               TextureReferences;                                        // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               MaterialReferences;                                       // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                         // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct PirateGenerator.BlendedSubMeshSpecification
@@ -297,14 +299,25 @@ struct FIPGSetData
 	TArray<struct FIPGBlendNode>                       Nodes;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
+// ScriptStruct PirateGenerator.IPGSetsData
+// 0x0018
+struct FIPGSetsData
+{
+	int                                                Version;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	TArray<struct FIPGSetData>                         Sets;                                                     // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct PirateGenerator.IPGData
-// 0x0040
+// 0x0048
 struct FIPGData
 {
 	TArray<struct FIPGDynamicSliderName>               DynamicSliderNames;                                       // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FIPGBlendingMethod>                  BlendingMethods;                                          // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FIPGSetGroup>                        Groups;                                                   // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FIPGSetData>                         Sets;                                                     // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                CurrentVersion;                                           // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	TArray<struct FIPGSetsData>                        Versions;                                                 // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct PirateGenerator.IPGBodyShape
@@ -324,13 +337,13 @@ struct FIPGBodyShapes
 };
 
 // ScriptStruct PirateGenerator.Config
-// 0x0070
+// 0x0078
 struct FConfig
 {
-	struct FIPGData                                    IPG;                                                      // 0x0000(0x0040) (Edit, BlueprintVisible)
-	struct FName                                       MaleBaseShape;                                            // 0x0040(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FemaleBaseShape;                                          // 0x0048(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FIPGBodyShapes                              BodyShapes;                                               // 0x0050(0x0020) (Edit, BlueprintVisible)
+	struct FIPGData                                    IPG;                                                      // 0x0000(0x0048) (Edit, BlueprintVisible)
+	struct FName                                       MaleBaseShape;                                            // 0x0048(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FemaleBaseShape;                                          // 0x0050(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FIPGBodyShapes                              BodyShapes;                                               // 0x0058(0x0020) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct PirateGenerator.ClothingSlot

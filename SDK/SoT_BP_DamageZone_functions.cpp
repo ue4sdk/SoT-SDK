@@ -201,48 +201,6 @@ void ABP_DamageZone_C::Add_External_Hit(const struct FHullDamageHit& HitData)
 }
 
 
-// Function BP_DamageZone.BP_DamageZone_C.Show Damage Level
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int                            DamageLevel                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_DamageZone_C::Show_Damage_Level(int DamageLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Show Damage Level");
-
-	ABP_DamageZone_C_Show_Damage_Level_Params params;
-	params.DamageLevel = DamageLevel;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_DamageZone.BP_DamageZone_C.Set Damage Level Visibility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           VISIBILITY                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Damage_Level                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_DamageZone_C::Set_Damage_Level_Visibility(bool VISIBILITY, int Damage_Level)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Set Damage Level Visibility");
-
-	ABP_DamageZone_C_Set_Damage_Level_Visibility_Params params;
-	params.VISIBILITY = VISIBILITY;
-	params.Damage_Level = Damage_Level;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_DamageZone.BP_DamageZone_C.CollectTaggedComponents
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -305,26 +263,6 @@ void ABP_DamageZone_C::ClearDecalFlags()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.ClearDecalFlags");
 
 	ABP_DamageZone_C_ClearDecalFlags_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_DamageZone.BP_DamageZone_C.OnDamageLevelUpdate
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int*                           InDamageLevel                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_DamageZone_C::OnDamageLevelUpdate(int* InDamageLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnDamageLevelUpdate");
-
-	ABP_DamageZone_C_OnDamageLevelUpdate_Params params;
-	params.InDamageLevel = InDamageLevel;
 
 	auto flags = fn->FunctionFlags;
 

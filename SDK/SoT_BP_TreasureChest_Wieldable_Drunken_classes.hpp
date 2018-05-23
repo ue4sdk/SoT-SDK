@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Drunken.BP_TreasureChest_Wieldable_Drunken_C
-// 0x0018 (0x07D8 - 0x07C0)
+// 0x0018 (0x07E0 - 0x07C8)
 class ABP_TreasureChest_Wieldable_Drunken_C : public ABP_TreasureChest_C
 {
 public:
-	class UTankardRefillerComponent*                   TankardRefiller;                                          // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDrunkenChestComponent*                      DrunkenChest;                                             // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTankardRefillerComponent*                   TankardRefiller;                                          // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDrunkenChestComponent*                      DrunkenChest;                                             // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

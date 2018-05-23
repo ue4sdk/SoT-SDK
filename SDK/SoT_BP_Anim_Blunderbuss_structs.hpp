@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_EObjectAnimationState_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
 
 namespace SDK
 {

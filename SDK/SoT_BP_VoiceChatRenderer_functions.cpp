@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bp_voicechatrenderer_parameters.hpp"
+#include "SoT_BP_VoiceChatRenderer_parameters.hpp"
 
 namespace SDK
 {

@@ -319,6 +319,47 @@ public:
 };
 
 
+// Class Animation.NetworkSyncedAnimationInstanceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UNetworkSyncedAnimationInstanceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Animation.NetworkSyncedAnimationInstanceInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.NetworkSyncedAnimationComponent
+// 0x0040 (0x0110 - 0x00D0)
+class UNetworkSyncedAnimationComponent : public UActorComponent
+{
+public:
+	float                                              PlayRateAdjustMaxTimeDelta;                               // 0x00D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRateAdjustMaxPercentageToSpeedUpPlayRate;             // 0x00D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRateAdjustMaxPercentageToSlowDownPlayRate;            // 0x00D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ReplicatedAnimationProgression;                           // 0x00DC(0x0004) (Edit, Net, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                ReplicatedPlayingAnimationIndex;                          // 0x00E0(0x0004) (Edit, Net, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
+	class UAnimInstance*                               AnimInstance;                                             // 0x00E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x00F0(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Animation.NetworkSyncedAnimationComponent");
+		return ptr;
+	}
+
+
+	void OnRep_PlayingAnimationIndex();
+	void OnRep_AnimationProgression();
+};
+
+
 // Class Animation.RemoteAnimPlayableInterface
 // 0x0000 (0x0028 - 0x0028)
 class URemoteAnimPlayableInterface : public UInterface

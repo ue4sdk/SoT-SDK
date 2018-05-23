@@ -41,6 +41,13 @@ struct UNetworkTestingBlueprintFunctionLibrary_IsActorNetRelevantFor_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetDormant
+struct UNetworkTestingBlueprintFunctionLibrary_IsActorNetDormant_Params
+{
+	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.GetReliableBufferBunchCount
 struct UNetworkTestingBlueprintFunctionLibrary_GetReliableBufferBunchCount_Params
 {
