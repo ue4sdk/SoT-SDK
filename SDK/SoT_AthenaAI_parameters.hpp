@@ -482,6 +482,12 @@ struct UAthenaAIPerceptionComponent_EnableAllPerception_Params
 	bool                                               Enable;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed
+struct ATinySharkExperience_TinySharkPawnDestroyed_Params
+{
+	class AActor*                                      InDestroyedActor;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
 struct ATinySharkService_RequestTinySharkWithLocation_Params
 {

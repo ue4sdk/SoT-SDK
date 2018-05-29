@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 
 namespace SDK
 {
@@ -417,6 +417,21 @@ struct FAttackableTypeToAnimMapping
 	float                                              TimeIntoAnimOfAttack;                                     // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TargetKnockBackStrength;                                  // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       RumbleTag;                                                // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.SwimAttackTargetShipImpulseData
+// 0x0038
+struct FSwimAttackTargetShipImpulseData
+{
+	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PushImpulseForce;                                         // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     PushImpulseLocation;                                      // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PushForceScalingFactorForeAndAftOfShipLowerBound;         // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PushForceScalingFactorForeAndAftOfShipUpperBound;         // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RollImpulseForce;                                         // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RollImpulseLocation;                                      // 0x0024(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RollForceScalingFactorForeAndAftOfShipLowerBound;         // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RollForceScalingFactorForeAndAftOfShipUpperBound;         // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.TinySharkParams
@@ -830,6 +845,20 @@ struct FAITargetInfo
 	float                                              TargetYaw;                                                // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct AthenaAI.TinySharkSpawnedNetworkEvent
+// 0x0000 (0x0010 - 0x0010)
+struct FTinySharkSpawnedNetworkEvent : public FNetworkEventStruct
+{
+
+};
+
+// ScriptStruct AthenaAI.TinySharkKilledNetworkEvent
+// 0x0000 (0x0010 - 0x0010)
+struct FTinySharkKilledNetworkEvent : public FNetworkEventStruct
+{
+
+};
+
 // ScriptStruct AthenaAI.EventTinySharkKilled
 // 0x0001
 struct FEventTinySharkKilled
@@ -838,16 +867,10 @@ struct FEventTinySharkKilled
 };
 
 // ScriptStruct AthenaAI.EventTinySharkDamaged
-// 0x0028
+// 0x0058
 struct FEventTinySharkDamaged
 {
-	float                                              From;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              To;                                                       // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Instigator;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EHealthChangedReason>                  Reason;                                                   // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	struct FGuid                                       IncidentId;                                               // 0x0014(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	struct FImpactDamageEvent                          ImpactDamageEvent;                                        // 0x0000(0x0058)
 };
 
 // ScriptStruct AthenaAI.EventTinySharkDespawned

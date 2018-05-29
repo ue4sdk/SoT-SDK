@@ -11285,6 +11285,31 @@ void UAthenaCheatManager::SpawnTreasureArtifact(const class FString& TypeString)
 }
 
 
+// Function Athena.AthenaCheatManager.SpawnTinySharkAtLocation
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SpawnTinySharkAtLocation(float X, float Y, float Z)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.SpawnTinySharkAtLocation");
+
+	UAthenaCheatManager_SpawnTinySharkAtLocation_Params params;
+	params.X = X;
+	params.Y = Y;
+	params.Z = Z;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.AthenaCheatManager.SpawnTinySharkAtCurrentLocation
 // (Final, Exec, Native, Public)
 
@@ -12605,6 +12630,42 @@ void UAthenaCheatManager::ScuttleShip()
 }
 
 
+// Function Athena.AthenaCheatManager.ScreenFadeStart
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ScreenFadeStart()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.ScreenFadeStart");
+
+	UAthenaCheatManager_ScreenFadeStart_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.ScreenFadeEnd
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ScreenFadeEnd()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.ScreenFadeEnd");
+
+	UAthenaCheatManager_ScreenFadeEnd_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.AthenaCheatManager.SailShip
 // (Final, Exec, Native, Public, BlueprintCallable)
 
@@ -12634,6 +12695,27 @@ void UAthenaCheatManager::RewindPhysicsSceneBy(float SecondsToRewindBy)
 
 	UAthenaCheatManager_RewindPhysicsSceneBy_Params params;
 	params.SecondsToRewindBy = SecondsToRewindBy;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.ResurfaceShipByActorId
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  ShipActorIdString              (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::ResurfaceShipByActorId(const class FString& ShipActorIdString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.ResurfaceShipByActorId");
+
+	UAthenaCheatManager_ResurfaceShipByActorId_Params params;
+	params.ShipActorIdString = ShipActorIdString;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -13990,6 +14072,27 @@ void UAthenaCheatManager::DrawNearbyAISpawnPoints()
 }
 
 
+// Function Athena.AthenaCheatManager.DiveShipByActorId
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  ShipActorIdString              (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::DiveShipByActorId(const class FString& ShipActorIdString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.DiveShipByActorId");
+
+	UAthenaCheatManager_DiveShipByActorId_Params params;
+	params.ShipActorIdString = ShipActorIdString;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.AthenaCheatManager.DisplaySingleEmblemProgress
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -14065,6 +14168,60 @@ void UAthenaCheatManager::DisplayNonVagueNonUniqueLandmarksForIsland(bool Enable
 
 	UAthenaCheatManager_DisplayNonVagueNonUniqueLandmarksForIsland_Params params;
 	params.Enabled = Enabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.DisplayLoadingScreenTeleport
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::DisplayLoadingScreenTeleport()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.DisplayLoadingScreenTeleport");
+
+	UAthenaCheatManager_DisplayLoadingScreenTeleport_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.DisplayLoadingScreenGame
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::DisplayLoadingScreenGame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.DisplayLoadingScreenGame");
+
+	UAthenaCheatManager_DisplayLoadingScreenGame_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.DisplayLoadingScreenBoot
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::DisplayLoadingScreenBoot()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.DisplayLoadingScreenBoot");
+
+	UAthenaCheatManager_DisplayLoadingScreenBoot_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -14590,6 +14747,24 @@ void UAthenaCheatManager::CloseSkeletonFortDoor()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.CloseSkeletonFortDoor");
 
 	UAthenaCheatManager_CloseSkeletonFortDoor_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.CloseLoadingScreen
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::CloseLoadingScreen()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.CloseLoadingScreen");
+
+	UAthenaCheatManager_CloseLoadingScreen_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -20874,8 +21049,9 @@ struct FGuid UCrewFunctions::STATIC_GetCrewIdFromActor(class UObject* WorldConte
 // struct FGuid                   CrewId                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FCrewSessionTemplate    CrewSessionTemplate            (ConstParm, Parm, OutParm, ReferenceParm)
 // class AAthenaPlayerState*      FirstMember                    (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ESessionVisibility> SessionVisibility              (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCrewFunctions::STATIC_CreateCrewWithSessionTemplate(class UObject* WorldContext, const struct FGuid& CrewId, const struct FCrewSessionTemplate& CrewSessionTemplate, class AAthenaPlayerState* FirstMember)
+void UCrewFunctions::STATIC_CreateCrewWithSessionTemplate(class UObject* WorldContext, const struct FGuid& CrewId, const struct FCrewSessionTemplate& CrewSessionTemplate, class AAthenaPlayerState* FirstMember, TEnumAsByte<ESessionVisibility> SessionVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.CrewFunctions.CreateCrewWithSessionTemplate");
 
@@ -20884,6 +21060,7 @@ void UCrewFunctions::STATIC_CreateCrewWithSessionTemplate(class UObject* WorldCo
 	params.CrewId = CrewId;
 	params.CrewSessionTemplate = CrewSessionTemplate;
 	params.FirstMember = FirstMember;
+	params.SessionVisibility = SessionVisibility;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -20900,8 +21077,9 @@ void UCrewFunctions::STATIC_CreateCrewWithSessionTemplate(class UObject* WorldCo
 // class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FGuid                   CrewId                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class AAthenaPlayerState*      FirstMember                    (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ESessionVisibility> SessionVisibility              (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCrewFunctions::STATIC_CreateCrew(class UObject* WorldContext, const struct FGuid& CrewId, class AAthenaPlayerState* FirstMember)
+void UCrewFunctions::STATIC_CreateCrew(class UObject* WorldContext, const struct FGuid& CrewId, class AAthenaPlayerState* FirstMember, TEnumAsByte<ESessionVisibility> SessionVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.CrewFunctions.CreateCrew");
 
@@ -20909,6 +21087,7 @@ void UCrewFunctions::STATIC_CreateCrew(class UObject* WorldContext, const struct
 	params.WorldContext = WorldContext;
 	params.CrewId = CrewId;
 	params.FirstMember = FirstMember;
+	params.SessionVisibility = SessionVisibility;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -31107,6 +31286,28 @@ struct FTransform ALadder::GetBottomLadderRungTransform()
 }
 
 
+// Function Athena.NPC.GetSkeletalMesh
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USkeletalMeshComponent* ANPC::GetSkeletalMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NPC.GetSkeletalMesh");
+
+	ANPC_GetSkeletalMesh_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.VoyageProposalContainer.SetManifest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -37847,6 +38048,140 @@ unsigned char AShipNetProxy::GetLanternBits()
 }
 
 
+// Function Athena.NetworkTriggeredVFXComponent.Multicast_PlayVFXRPC
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
+// Parameters:
+// int                            VFXIndex                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Location                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                Rotation                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UNetworkTriggeredVFXComponent::Multicast_PlayVFXRPC(int VFXIndex, const struct FVector& Location, const struct FRotator& Rotation, class AActor* Owner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NetworkTriggeredVFXComponent.Multicast_PlayVFXRPC");
+
+	UNetworkTriggeredVFXComponent_Multicast_PlayVFXRPC_Params params;
+	params.VFXIndex = VFXIndex;
+	params.Location = Location;
+	params.Rotation = Rotation;
+	params.Owner = Owner;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.NPCAnimInstance.UseHeldObject
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EAthenaNPCObjectSlot> ObjectSlot                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UNPCAnimInstance::UseHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand, TEnumAsByte<EAthenaNPCObjectSlot> ObjectSlot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NPCAnimInstance.UseHeldObject");
+
+	UNPCAnimInstance_UseHeldObject_Params params;
+	params.SpawnHand = SpawnHand;
+	params.ObjectSlot = ObjectSlot;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.NPCAnimInstance.DetachHeldObject
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UNPCAnimInstance::DetachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NPCAnimInstance.DetachHeldObject");
+
+	UNPCAnimInstance_DetachHeldObject_Params params;
+	params.SpawnHand = SpawnHand;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.NPCAnimInstance.DestroyHeldObject
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UNPCAnimInstance::DestroyHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NPCAnimInstance.DestroyHeldObject");
+
+	UNPCAnimInstance_DestroyHeldObject_Params params;
+	params.SpawnHand = SpawnHand;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.NPCAnimInstance.AttachHeldObject
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UNPCAnimInstance::AttachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NPCAnimInstance.AttachHeldObject");
+
+	UNPCAnimInstance_AttachHeldObject_Params params;
+	params.SpawnHand = SpawnHand;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Runnable.Run
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UObject*                 Runner                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void URunnable::Run(class UObject* Runner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Runnable.Run");
+
+	URunnable_Run_Params params;
+	params.Runner = Runner;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.NPCReactionBound.OnActivationRegionOverlapEnd
 // (Final, Native, Public)
 // Parameters:
@@ -38732,6 +39067,27 @@ void UPlayerCrewComponent::Server_VoteOnReleasePlayerFromBrig(class AAthenaPlaye
 }
 
 
+// Function Athena.PlayerCrewComponent.Server_VoteOnChangeMatchmakingVisibility
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// bool                           Change                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerCrewComponent::Server_VoteOnChangeMatchmakingVisibility(bool Change)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.PlayerCrewComponent.Server_VoteOnChangeMatchmakingVisibility");
+
+	UPlayerCrewComponent_Server_VoteOnChangeMatchmakingVisibility_Params params;
+	params.Change = Change;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.PlayerCrewComponent.OnRep_CrewShip
 // (Final, Native, Private)
 
@@ -38758,6 +39114,24 @@ void UPlayerCrewComponent::OnRep_CrewMembers()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.PlayerCrewComponent.OnRep_CrewMembers");
 
 	UPlayerCrewComponent_OnRep_CrewMembers_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.PlayerCrewComponent.OnRep_CrewMatchmakingVisibility
+// (Final, Native, Private)
+
+void UPlayerCrewComponent::OnRep_CrewMatchmakingVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.PlayerCrewComponent.OnRep_CrewMatchmakingVisibility");
+
+	UPlayerCrewComponent_OnRep_CrewMatchmakingVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -41086,6 +41460,27 @@ class UClass* ASharkPawn::GetAIStrategy()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.ShipCurseComponent.ApplyIntentOnSails
+// (Final, Native, Private)
+// Parameters:
+// float                          NewIntent                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UShipCurseComponent::ApplyIntentOnSails(float NewIntent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.ApplyIntentOnSails");
+
+	UShipCurseComponent_ApplyIntentOnSails_Params params;
+	params.NewIntent = NewIntent;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

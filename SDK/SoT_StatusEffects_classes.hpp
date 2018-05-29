@@ -60,12 +60,12 @@ public:
 
 
 // Class StatusEffects.StatusResponseAsset
-// 0x0018 (0x0040 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UStatusResponseAsset : public UDataAsset
 {
 public:
-	class UClass*                                      TriggerStatus;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UStatusResponse*>                     Responses;                                                // 0x0030(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UClass*>                              TriggerStatus;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<class UStatusResponse*>                     Responses;                                                // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

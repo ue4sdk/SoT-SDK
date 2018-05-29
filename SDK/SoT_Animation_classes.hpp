@@ -335,7 +335,7 @@ public:
 
 
 // Class Animation.NetworkSyncedAnimationComponent
-// 0x0040 (0x0110 - 0x00D0)
+// 0x0048 (0x0118 - 0x00D0)
 class UNetworkSyncedAnimationComponent : public UActorComponent
 {
 public:
@@ -344,9 +344,10 @@ public:
 	float                                              PlayRateAdjustMaxPercentageToSlowDownPlayRate;            // 0x00D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              ReplicatedAnimationProgression;                           // 0x00DC(0x0004) (Edit, Net, ZeroConstructor, EditConst, IsPlainOldData)
 	int                                                ReplicatedPlayingAnimationIndex;                          // 0x00E0(0x0004) (Edit, Net, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
-	class UAnimInstance*                               AnimInstance;                                             // 0x00E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00F0(0x0020) MISSED OFFSET
+	float                                              ReplicatedPlayRate;                                       // 0x00E4(0x0004) (Edit, Net, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00E8(0x0008) MISSED OFFSET
+	class UAnimInstance*                               AnimInstance;                                             // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

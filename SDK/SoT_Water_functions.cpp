@@ -749,9 +749,10 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSample
 // TArray<struct FBuoyancySampleMovementConfigurationEntry> NewSampleData                  (Parm, OutParm, ZeroConstructor)
 // float                          BuoyancyScalarAtNewPosition    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class UCurveFloat*             BuoyancyScalarCurve            (Parm, ZeroConstructor, IsPlainOldData)
+// class UCurveFloat*             ProbeMovementCurve             (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MoveTime                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSamplesLocally(class AActor* InActor, class UCurveVector* InCenterOfMassOffsetCurve, float BuoyancyScalarAtNewPosition, class UCurveFloat* BuoyancyScalarCurve, float MoveTime, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement, TArray<struct FBuoyancySampleMovementConfigurationEntry>* NewSampleData)
+void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSamplesLocally(class AActor* InActor, class UCurveVector* InCenterOfMassOffsetCurve, float BuoyancyScalarAtNewPosition, class UCurveFloat* BuoyancyScalarCurve, class UCurveFloat* ProbeMovementCurve, float MoveTime, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement, TArray<struct FBuoyancySampleMovementConfigurationEntry>* NewSampleData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocally");
 
@@ -760,6 +761,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSample
 	params.InCenterOfMassOffsetCurve = InCenterOfMassOffsetCurve;
 	params.BuoyancyScalarAtNewPosition = BuoyancyScalarAtNewPosition;
 	params.BuoyancyScalarCurve = BuoyancyScalarCurve;
+	params.ProbeMovementCurve = ProbeMovementCurve;
 	params.MoveTime = MoveTime;
 
 	auto flags = fn->FunctionFlags;

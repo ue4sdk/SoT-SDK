@@ -63,23 +63,6 @@ void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_Ani
 }
 
 
-// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB
-// (BlueprintEvent)
-
-void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB");
-
-	UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_3F28B3CF423C1190623B60A13F607335
 // (BlueprintEvent)
 
@@ -105,6 +88,23 @@ void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_Ani
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_43F9A72248609D19E5705EA6BAB1F30C");
 
 	UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_43F9A72248609D19E5705EA6BAB1F30C_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB
+// (BlueprintEvent)
+
+void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB");
+
+	UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -431,6 +431,244 @@ void UBP_Anim_NPC_C::AnimNotify_InteractVariantChange()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_InteractVariantChange");
 
 	UBP_Anim_NPC_C_AnimNotify_InteractVariantChange_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_UseItem_2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_3()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_UseItem_3_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_4()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_UseItem_4_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_5()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_UseItem_5_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DestroyItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_DestroyItem_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_UseItem_2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_3()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_UseItem_3_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_4()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_UseItem_4_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_5()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_UseItem_5_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DestroyItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_DestroyItem_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DetachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_DetachItem_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DetachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_DetachItem_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_AttachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem");
+
+	UBP_Anim_NPC_C_AnimNotify_LH_AttachItem_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_AttachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem");
+
+	UBP_Anim_NPC_C_AnimNotify_RH_AttachItem_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Orderofsouls.BP_Anim_Orderofsouls_C
-// 0x0000 (0x1368 - 0x1368)
+// 0x0000 (0x13A4 - 0x13A4)
 class UBP_Anim_Orderofsouls_C : public UBP_Anim_NPC_C
 {
 public:

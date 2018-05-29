@@ -79,6 +79,15 @@ struct FWwiseBinkSettings
 	TArray<struct FWwiseBinkTrackMappings>             Mappings;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 };
 
+// ScriptStruct WwiseAudio.WwiseIOPriorityMappingConfig
+// 0x0008
+struct FWwiseIOPriorityMappingConfig
+{
+	int                                                WwisePriority;                                            // 0x0000(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<EWwiseAsyncIOPriorityDisplay>          AsyncIOPriority;                                          // 0x0004(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct WwiseAudio.WwiseNetworkRelationship
 // 0x0018
 struct FWwiseNetworkRelationship

@@ -17,11 +17,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct StatusEffects.ActiveStatusEffect
-// 0x0018
+// 0x0020
 struct FActiveStatusEffect
 {
-	class UClass*                                      SourceStatus;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UStatusResponse*>                     Responses;                                                // 0x0008(0x0010) (ZeroConstructor)
+	TArray<class UClass*>                              SourceStatus;                                             // 0x0000(0x0010) (ZeroConstructor)
+	TArray<class UStatusResponse*>                     Responses;                                                // 0x0010(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct StatusEffects.StatusEffectManagerComponentAggregateTickFunction
@@ -29,6 +29,13 @@ struct FActiveStatusEffect
 struct FStatusEffectManagerComponentAggregateTickFunction : public FTickFunction
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct StatusEffects.Status
+// 0x0010
+struct FStatus
+{
+	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 }

@@ -1611,6 +1611,27 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 }
 
 
+// Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  InDestroyedActor               (Parm, ZeroConstructor, IsPlainOldData)
+
+void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed");
+
+	ATinySharkExperience_TinySharkPawnDestroyed_Params params;
+	params.InDestroyedActor = InDestroyedActor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:

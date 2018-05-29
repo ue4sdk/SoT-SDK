@@ -46,6 +46,26 @@ void ABP_Goldhoarder_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Goldhoarder_C::ReceiveTick(float* DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveTick");
+
+	ABP_Goldhoarder_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Goldhoarder.BP_Goldhoarder_C.ExecuteUbergraph_BP_Goldhoarder
 // ()
 // Parameters:

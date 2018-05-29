@@ -30,13 +30,13 @@ public:
 
 
 // Class AIShips.AIShipService
-// 0x0030 (0x04A8 - 0x0478)
+// 0x00C8 (0x0540 - 0x0478)
 class AAIShipService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
 	class UAIShipServiceDataAsset*                     AIShipServiceData;                                        // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0488(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x0488(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -48,13 +48,14 @@ public:
 
 
 // Class AIShips.AIShipServiceDataAsset
-// 0x0010 (0x0038 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UAIShipServiceDataAsset : public UDataAsset
 {
 public:
 	class UShipDescAsset*                              AIShipDescAsset;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AIShipSpawnDepth;                                         // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DistanceBetweenPlayerShipAndSpawnZone;                    // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FRelativeSpawnLocationGeneratorParams       SpawnParameters;                                          // 0x0038(0x0010) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

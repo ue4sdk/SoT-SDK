@@ -238,6 +238,7 @@ struct UWaterBuoyancySampleMovementFunctionLibrary_StartMovingVolumeSamplesLocal
 	TArray<struct FBuoyancySampleMovementConfigurationEntry> NewSampleData;                                            // (Parm, OutParm, ZeroConstructor)
 	float                                              BuoyancyScalarAtNewPosition;                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	class UCurveFloat*                                 BuoyancyScalarCurve;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 ProbeMovementCurve;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MoveTime;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 

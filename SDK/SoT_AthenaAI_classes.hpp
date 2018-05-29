@@ -2419,6 +2419,24 @@ public:
 };
 
 
+// Class AthenaAI.BTTask_NetworkTriggerAnim
+// 0x0010 (0x0070 - 0x0060)
+class UBTTask_NetworkTriggerAnim : public UBTTaskNode
+{
+public:
+	class UAnimSequence*                               Anim;                                                     // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AnimLength;                                               // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AnimPlayRate;                                             // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAI.BTTask_NetworkTriggerAnim");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.BTTask_NOP
 // 0x0008 (0x0068 - 0x0060)
 class UBTTask_NOP : public UBTTaskNode
@@ -2670,24 +2688,30 @@ public:
 
 
 // Class AthenaAI.BTTask_SwimAttackTargetShip
-// 0x0120 (0x01A8 - 0x0088)
+// 0x0180 (0x0208 - 0x0088)
 class UBTTask_SwimAttackTargetShip : public UBTTask_BlackboardBase
 {
 public:
 	float                                              BiteRadiusOffsetToBeginAttackHeadOn;                      // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              BiteRadiusOffsetToBeginAttackPerpendicular;               // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               AttackAnim;                                               // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AttackAnimLength;                                         // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TimeToPerformAttack;                                      // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       LoSTraceProfileName;                                      // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FAIDataProviderFloatValue                   LosTraceRadius;                                           // 0x00A8(0x0030) (Edit)
-	struct FAIDataProviderFloatValue                   MinImpactForce;                                           // 0x00D8(0x0030) (Edit)
-	struct FAIDataProviderFloatValue                   MaxImpactForce;                                           // 0x0108(0x0030) (Edit)
-	float                                              ImpactForceZ;                                             // 0x0138(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ImpactLocationZOffet;                                     // 0x013C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FAIDataProviderIntValue                     MinDamageHolesToApply;                                    // 0x0140(0x0030) (Edit)
-	struct FAIDataProviderIntValue                     MaxDamageHolesToApply;                                    // 0x0170(0x0030) (Edit)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x01A0(0x0008) MISSED OFFSET
+	float                                              MaxTimeToStartAttack;                                     // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	class UAnimSequence*                               AttackAnim;                                               // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AttackAnimLength;                                         // 0x00A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeToPerformAttack;                                      // 0x00A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     AttackVFX;                                                // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AttackVFXZOffset;                                         // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       LoSTraceProfileName;                                      // 0x00B4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
+	struct FAIDataProviderFloatValue                   LosTraceRadius;                                           // 0x00C0(0x0030) (Edit)
+	TArray<struct FSwimAttackTargetShipImpulseData>    ImpulseData;                                              // 0x00F0(0x0010) (Edit, ZeroConstructor)
+	struct FAIDataProviderIntValue                     MinDamageHolesToApply;                                    // 0x0100(0x0030) (Edit)
+	struct FAIDataProviderIntValue                     MaxDamageHolesToApply;                                    // 0x0130(0x0030) (Edit)
+	struct FAIDataProviderFloatValue                   PlayerBiteRadius;                                         // 0x0160(0x0030) (Edit)
+	struct FKnockBackInfo                              KnockbackParams;                                          // 0x0190(0x0034) (Edit)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x01C4(0x0004) MISSED OFFSET
+	struct FAIDataProviderFloatValue                   PlayerBiteDamage;                                         // 0x01C8(0x0030) (Edit)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x01F8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2966,6 +2990,7 @@ public:
 	class UClass*                                      Center;                                                   // 0x01C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bDefineArc : 1;                                           // 0x01C8(0x0001)
 	unsigned char                                      ProjectPointsToWaterSurface : 1;                          // 0x01C8(0x0001) (Edit)
+	unsigned char                                      ApplyZOffsetToProjectPoints : 1;                          // 0x01C8(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x01C9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -3092,6 +3117,8 @@ public:
 		return ptr;
 	}
 
+
+	void TinySharkPawnDestroyed(class AActor* InDestroyedActor);
 };
 
 

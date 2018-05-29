@@ -3266,6 +3266,14 @@ struct UAthenaCheatManager_SpawnTreasureArtifact_Params
 	class FString                                      TypeString;                                               // (Parm, ZeroConstructor)
 };
 
+// Function Athena.AthenaCheatManager.SpawnTinySharkAtLocation
+struct UAthenaCheatManager_SpawnTinySharkAtLocation_Params
+{
+	float                                              X;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Y;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Z;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.AthenaCheatManager.SpawnTinySharkAtCurrentLocation
 struct UAthenaCheatManager_SpawnTinySharkAtCurrentLocation_Params
 {
@@ -3652,6 +3660,16 @@ struct UAthenaCheatManager_ScuttleShip_Params
 {
 };
 
+// Function Athena.AthenaCheatManager.ScreenFadeStart
+struct UAthenaCheatManager_ScreenFadeStart_Params
+{
+};
+
+// Function Athena.AthenaCheatManager.ScreenFadeEnd
+struct UAthenaCheatManager_ScreenFadeEnd_Params
+{
+};
+
 // Function Athena.AthenaCheatManager.SailShip
 struct UAthenaCheatManager_SailShip_Params
 {
@@ -3661,6 +3679,12 @@ struct UAthenaCheatManager_SailShip_Params
 struct UAthenaCheatManager_RewindPhysicsSceneBy_Params
 {
 	float                                              SecondsToRewindBy;                                        // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.AthenaCheatManager.ResurfaceShipByActorId
+struct UAthenaCheatManager_ResurfaceShipByActorId_Params
+{
+	class FString                                      ShipActorIdString;                                        // (Parm, ZeroConstructor)
 };
 
 // Function Athena.AthenaCheatManager.RestockIslandBarrels
@@ -4045,6 +4069,12 @@ struct UAthenaCheatManager_DrawNearbyAISpawnPoints_Params
 {
 };
 
+// Function Athena.AthenaCheatManager.DiveShipByActorId
+struct UAthenaCheatManager_DiveShipByActorId_Params
+{
+	class FString                                      ShipActorIdString;                                        // (Parm, ZeroConstructor)
+};
+
 // Function Athena.AthenaCheatManager.DisplaySingleEmblemProgress
 struct UAthenaCheatManager_DisplaySingleEmblemProgress_Params
 {
@@ -4068,6 +4098,21 @@ struct UAthenaCheatManager_DisplayServersideHitsAtPlayerPos_Params
 struct UAthenaCheatManager_DisplayNonVagueNonUniqueLandmarksForIsland_Params
 {
 	bool                                               Enabled;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.AthenaCheatManager.DisplayLoadingScreenTeleport
+struct UAthenaCheatManager_DisplayLoadingScreenTeleport_Params
+{
+};
+
+// Function Athena.AthenaCheatManager.DisplayLoadingScreenGame
+struct UAthenaCheatManager_DisplayLoadingScreenGame_Params
+{
+};
+
+// Function Athena.AthenaCheatManager.DisplayLoadingScreenBoot
+struct UAthenaCheatManager_DisplayLoadingScreenBoot_Params
+{
 };
 
 // Function Athena.AthenaCheatManager.DisplayLandmarkValidTreasureLocationsForPlayer
@@ -4221,6 +4266,11 @@ struct UAthenaCheatManager_CompleteActiveQuests_Params
 
 // Function Athena.AthenaCheatManager.CloseSkeletonFortDoor
 struct UAthenaCheatManager_CloseSkeletonFortDoor_Params
+{
+};
+
+// Function Athena.AthenaCheatManager.CloseLoadingScreen
+struct UAthenaCheatManager_CloseLoadingScreen_Params
 {
 };
 
@@ -6048,6 +6098,7 @@ struct UCrewFunctions_CreateCrewWithSessionTemplate_Params
 	struct FGuid                                       CrewId;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FCrewSessionTemplate                        CrewSessionTemplate;                                      // (ConstParm, Parm, OutParm, ReferenceParm)
 	class AAthenaPlayerState*                          FirstMember;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESessionVisibility>                    SessionVisibility;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.CrewFunctions.CreateCrew
@@ -6056,6 +6107,7 @@ struct UCrewFunctions_CreateCrew_Params
 	class UObject*                                     WorldContext;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FGuid                                       CrewId;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	class AAthenaPlayerState*                          FirstMember;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESessionVisibility>                    SessionVisibility;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.CrewFunctions.AreInSameCrew
@@ -8970,6 +9022,12 @@ struct ALadder_GetBottomLadderRungTransform_Params
 	struct FTransform                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.NPC.GetSkeletalMesh
+struct ANPC_GetSkeletalMesh_Params
+{
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function Athena.VoyageProposalContainer.SetManifest
 struct AVoyageProposalContainer_SetManifest_Params
 {
@@ -10935,6 +10993,46 @@ struct AShipNetProxy_GetLanternBits_Params
 	unsigned char                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.NetworkTriggeredVFXComponent.Multicast_PlayVFXRPC
+struct UNetworkTriggeredVFXComponent_Multicast_PlayVFXRPC_Params
+{
+	int                                                VFXIndex;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Owner;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.NPCAnimInstance.UseHeldObject
+struct UNPCAnimInstance_UseHeldObject_Params
+{
+	TEnumAsByte<EAthenaNPCSpawnHand>                   SpawnHand;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAthenaNPCObjectSlot>                  ObjectSlot;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.NPCAnimInstance.DetachHeldObject
+struct UNPCAnimInstance_DetachHeldObject_Params
+{
+	TEnumAsByte<EAthenaNPCSpawnHand>                   SpawnHand;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.NPCAnimInstance.DestroyHeldObject
+struct UNPCAnimInstance_DestroyHeldObject_Params
+{
+	TEnumAsByte<EAthenaNPCSpawnHand>                   SpawnHand;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.NPCAnimInstance.AttachHeldObject
+struct UNPCAnimInstance_AttachHeldObject_Params
+{
+	TEnumAsByte<EAthenaNPCSpawnHand>                   SpawnHand;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.Runnable.Run
+struct URunnable_Run_Params
+{
+	class UObject*                                     Runner;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.NPCReactionBound.OnActivationRegionOverlapEnd
 struct UNPCReactionBound_OnActivationRegionOverlapEnd_Params
 {
@@ -11205,6 +11303,12 @@ struct UPlayerCrewComponent_Server_VoteOnReleasePlayerFromBrig_Params
 	bool                                               Release;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Athena.PlayerCrewComponent.Server_VoteOnChangeMatchmakingVisibility
+struct UPlayerCrewComponent_Server_VoteOnChangeMatchmakingVisibility_Params
+{
+	bool                                               Change;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.PlayerCrewComponent.OnRep_CrewShip
 struct UPlayerCrewComponent_OnRep_CrewShip_Params
 {
@@ -11212,6 +11316,11 @@ struct UPlayerCrewComponent_OnRep_CrewShip_Params
 
 // Function Athena.PlayerCrewComponent.OnRep_CrewMembers
 struct UPlayerCrewComponent_OnRep_CrewMembers_Params
+{
+};
+
+// Function Athena.PlayerCrewComponent.OnRep_CrewMatchmakingVisibility
+struct UPlayerCrewComponent_OnRep_CrewMatchmakingVisibility_Params
 {
 };
 
@@ -11875,6 +11984,12 @@ struct ASharkPawn_GetCreatureDistanceFromWaterHeight_Params
 struct ASharkPawn_GetAIStrategy_Params
 {
 	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.ShipCurseComponent.ApplyIntentOnSails
+struct UShipCurseComponent_ApplyIntentOnSails_Params
+{
+	float                                              NewIntent;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.ShipCustomizationLoadoutControlInterface.UnequipShipCustomization

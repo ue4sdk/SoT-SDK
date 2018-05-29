@@ -94,7 +94,7 @@ struct FBuoyancySampleMovementConfigurationEntry
 };
 
 // ScriptStruct Water.BuoyancySampleMovementConfiguration
-// 0x0030
+// 0x0038
 struct FBuoyancySampleMovementConfiguration
 {
 	class UCurveVector*                                CenterOfMassOffsetCurve;                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
@@ -102,18 +102,20 @@ struct FBuoyancySampleMovementConfiguration
 	float                                              OverallBuoyancyScalar;                                    // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	class UCurveFloat*                                 OverallBuoyancyScalarBlendCurve;                          // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Duration;                                                 // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 ProbeMovementBlendCurve;                                  // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Duration;                                                 // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Water.BuoyancySampleMovement
-// 0x0060
+// 0x0068
 struct FBuoyancySampleMovement
 {
 	TArray<struct FBuoyancySampleMovementConfiguration> Configurations;                                           // 0x0000(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData00[0x40];                                      // 0x0010(0x0040) MISSED OFFSET
 	class UCurveFloat*                                 BuoyancyScalarCurve;                                      // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
+	class UCurveFloat*                                 ProbeMovementCurve;                                       // 0x0058(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Water.WaterSplashProbe

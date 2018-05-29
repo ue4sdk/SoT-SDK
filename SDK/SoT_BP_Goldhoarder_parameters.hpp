@@ -24,6 +24,12 @@ struct ABP_Goldhoarder_C_ReceiveBeginPlay_Params
 {
 };
 
+// Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveTick
+struct ABP_Goldhoarder_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_Goldhoarder.BP_Goldhoarder_C.ExecuteUbergraph_BP_Goldhoarder
 struct ABP_Goldhoarder_C_ExecuteUbergraph_BP_Goldhoarder_Params
 {

@@ -29,11 +29,6 @@ struct UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_An
 {
 };
 
-// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB
-struct UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB_Params
-{
-};
-
 // Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_3F28B3CF423C1190623B60A13F607335
 struct UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_3F28B3CF423C1190623B60A13F607335_Params
 {
@@ -41,6 +36,11 @@ struct UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_An
 
 // Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_43F9A72248609D19E5705EA6BAB1F30C
 struct UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_43F9A72248609D19E5705EA6BAB1F30C_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB
+struct UBP_Anim_NPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB_Params
 {
 };
 
@@ -137,6 +137,76 @@ struct UBP_Anim_NPC_C_AnimNotify_InactiveVariantChange_Params
 
 // Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_InteractVariantChange
 struct UBP_Anim_NPC_C_AnimNotify_InteractVariantChange_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2
+struct UBP_Anim_NPC_C_AnimNotify_LH_UseItem_2_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3
+struct UBP_Anim_NPC_C_AnimNotify_LH_UseItem_3_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4
+struct UBP_Anim_NPC_C_AnimNotify_LH_UseItem_4_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5
+struct UBP_Anim_NPC_C_AnimNotify_LH_UseItem_5_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem
+struct UBP_Anim_NPC_C_AnimNotify_LH_DestroyItem_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2
+struct UBP_Anim_NPC_C_AnimNotify_RH_UseItem_2_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3
+struct UBP_Anim_NPC_C_AnimNotify_RH_UseItem_3_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4
+struct UBP_Anim_NPC_C_AnimNotify_RH_UseItem_4_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5
+struct UBP_Anim_NPC_C_AnimNotify_RH_UseItem_5_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem
+struct UBP_Anim_NPC_C_AnimNotify_RH_DestroyItem_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem
+struct UBP_Anim_NPC_C_AnimNotify_RH_DetachItem_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem
+struct UBP_Anim_NPC_C_AnimNotify_LH_DetachItem_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem
+struct UBP_Anim_NPC_C_AnimNotify_LH_AttachItem_Params
+{
+};
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem
+struct UBP_Anim_NPC_C_AnimNotify_RH_AttachItem_Params
 {
 };
 
