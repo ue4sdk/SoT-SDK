@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MultiCrewSkeletonThrone.BP_MultiCrewSkeletonThrone_C.UserConstructionScript
+struct ABP_MultiCrewSkeletonThrone_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

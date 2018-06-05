@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipsCompass.BP_ShipsCompass_C
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x04E8 - 0x04E8)
 class ABP_ShipsCompass_C : public AShipCompass
 {
 public:

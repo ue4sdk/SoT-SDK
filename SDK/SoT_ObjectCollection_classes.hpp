@@ -46,11 +46,11 @@ public:
 
 
 // Class ObjectCollection.TestObjectForCollection
-// 0x0040 (0x0068 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UTestObjectForCollection : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0028(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0028(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

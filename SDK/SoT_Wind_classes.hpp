@@ -209,9 +209,10 @@ public:
 class UWindZoneComponent : public USceneComponent
 {
 public:
-	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02F0(0x0070) (Edit, BlueprintVisible)
-	struct FWindZoneParams                             WindZoneParams;                                           // 0x0360(0x000C) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x036C(0x0014) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02F0(0x0008) MISSED OFFSET
+	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02F8(0x0070) (Edit, BlueprintVisible)
+	struct FWindZoneParams                             WindZoneParams;                                           // 0x0368(0x000C) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0374(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

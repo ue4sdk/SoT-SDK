@@ -75,6 +75,32 @@ void URiggingSystemComponent::SetSocketLookupSource(class AActor* InSocketSource
 }
 
 
+// Function AthenaRigging.RiggingSystemComponent.ConvertLineToRopeIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   InLineGroupName                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            InLineOffset                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int URiggingSystemComponent::ConvertLineToRopeIndex(const struct FName& InLineGroupName, int InLineOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.ConvertLineToRopeIndex");
+
+	URiggingSystemComponent_ConvertLineToRopeIndex_Params params;
+	params.InLineGroupName = InLineGroupName;
+	params.InLineOffset = InLineOffset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaRigging.RopeInterface.SetRopeUVOffset
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

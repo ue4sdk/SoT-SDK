@@ -61,18 +61,19 @@ struct FRopeCatenaryDynamicsParams
 };
 
 // ScriptStruct AthenaRigging.InstancedRopeParams
-// 0x0050
+// 0x0054
 struct FInstancedRopeParams
 {
 	struct FVector                                     Start;                                                    // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     End;                                                      // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Thickness;                                                // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              UVScale;                                                  // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              UVOffset;                                                 // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Roughness;                                                // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRopeCatenaryShapeParams                    Shape;                                                    // 0x0028(0x0018) (Edit, BlueprintVisible)
-	struct FRopeCatenarySwingParams                    Swing;                                                    // 0x0040(0x0008) (Edit, BlueprintVisible)
-	struct FRopeCatenaryDynamicsParams                 Dynamics;                                                 // 0x0048(0x0008) (Edit, BlueprintVisible)
+	float                                              UVBase;                                                   // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              UVOffset;                                                 // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Roughness;                                                // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRopeCatenaryShapeParams                    Shape;                                                    // 0x002C(0x0018) (Edit, BlueprintVisible)
+	struct FRopeCatenarySwingParams                    Swing;                                                    // 0x0044(0x0008) (Edit, BlueprintVisible)
+	struct FRopeCatenaryDynamicsParams                 Dynamics;                                                 // 0x004C(0x0008) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct AthenaRigging.RiggingSystemLine
@@ -157,6 +158,14 @@ struct FRiggingSystemLineParams
 	struct FRopeVisualParams                           Visuals;                                                  // 0x0050(0x000C) (Edit)
 	struct FRopeCatenaryShapeParams                    Shape;                                                    // 0x005C(0x0018) (Edit)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct AthenaRigging.RiggingSystemLineGroup
+// 0x0018
+struct FRiggingSystemLineGroup
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FRiggingSystemLineParams>            Lines;                                                    // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct AthenaRigging.RopeAggregateTickFunction

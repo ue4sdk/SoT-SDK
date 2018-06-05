@@ -119,27 +119,6 @@ bool AControllableObject::CanInteractImpl(class AActor* InCharacter)
 }
 
 
-// Function Athena.SailManipulator.SetRopeDeltaOffset
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InRopeDeltaOffset              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void ASailManipulator::SetRopeDeltaOffset(float InRopeDeltaOffset)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailManipulator.SetRopeDeltaOffset");
-
-	ASailManipulator_SetRopeDeltaOffset_Params params;
-	params.InRopeDeltaOffset = InRopeDeltaOffset;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Athena.SailManipulator.SetMastSocketId
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -11394,6 +11373,24 @@ void UAthenaCheatManager::SpawnSmallShip(float SpawnLocationX, float SpawnLocati
 }
 
 
+// Function Athena.AthenaCheatManager.SpawnSkeletonAtNearestAISpawnPoint
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SpawnSkeletonAtNearestAISpawnPoint()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.SpawnSkeletonAtNearestAISpawnPoint");
+
+	UAthenaCheatManager_SpawnSkeletonAtNearestAISpawnPoint_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.AthenaCheatManager.SpawnShipwreck
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -11763,14 +11760,17 @@ void UAthenaCheatManager::SpawnAINoTrigger(const class FString& AIDescString)
 }
 
 
-// Function Athena.AthenaCheatManager.SpawnAIBySpawner
+// Function Athena.AthenaCheatManager.SpawnAIAtNearestAISpawnPoint
 // (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  AIDescString                   (Parm, ZeroConstructor)
 
-void UAthenaCheatManager::SpawnAIBySpawner()
+void UAthenaCheatManager::SpawnAIAtNearestAISpawnPoint(const class FString& AIDescString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.SpawnAIBySpawner");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.SpawnAIAtNearestAISpawnPoint");
 
-	UAthenaCheatManager_SpawnAIBySpawner_Params params;
+	UAthenaCheatManager_SpawnAIAtNearestAISpawnPoint_Params params;
+	params.AIDescString = AIDescString;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -24406,15 +24406,15 @@ void UDynamicFlowComponent::ClearTexture(const struct FLinearColor& ClearColor)
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FEmoteData              EmoteData                      (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName                   EmoteIdentifier                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UEmoteActionStateId::STATIC_PushCharacterIntoEmoteActionState(class AActor* Character, const struct FEmoteData& EmoteData)
+void UEmoteActionStateId::STATIC_PushCharacterIntoEmoteActionState(class AActor* Character, const struct FName& EmoteIdentifier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.EmoteActionStateId.PushCharacterIntoEmoteActionState");
 
 	UEmoteActionStateId_PushCharacterIntoEmoteActionState_Params params;
 	params.Character = Character;
-	params.EmoteData = EmoteData;
+	params.EmoteIdentifier = EmoteIdentifier;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -30051,94 +30051,6 @@ float USailAngleInterface::GetSailAngleRatio()
 }
 
 
-// Function Athena.SailAngleInterface.GetRightRopeStartingPoint
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USailAngleInterface::GetRightRopeStartingPoint()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailAngleInterface.GetRightRopeStartingPoint");
-
-	USailAngleInterface_GetRightRopeStartingPoint_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SailAngleInterface.GetRightRopeEndingPoint
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USailAngleInterface::GetRightRopeEndingPoint()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailAngleInterface.GetRightRopeEndingPoint");
-
-	USailAngleInterface_GetRightRopeEndingPoint_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SailAngleInterface.GetLeftRopeStartingPoint
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USailAngleInterface::GetLeftRopeStartingPoint()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailAngleInterface.GetLeftRopeStartingPoint");
-
-	USailAngleInterface_GetLeftRopeStartingPoint_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SailAngleInterface.GetLeftRopeEndingPoint
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USailAngleInterface::GetLeftRopeEndingPoint()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailAngleInterface.GetLeftRopeEndingPoint");
-
-	USailAngleInterface_GetLeftRopeEndingPoint_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.SailHoistInterface.GetSailRaisedPercentage
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -30171,50 +30083,6 @@ float USailHoistInterface::GetSailMovementRate()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailHoistInterface.GetSailMovementRate");
 
 	USailHoistInterface_GetSailMovementRate_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SailHoistInterface.GetRopeStartingPoint
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USailHoistInterface::GetRopeStartingPoint()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailHoistInterface.GetRopeStartingPoint");
-
-	USailHoistInterface_GetRopeStartingPoint_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.SailHoistInterface.GetRopeEndingPoint
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USailHoistInterface::GetRopeEndingPoint()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailHoistInterface.GetRopeEndingPoint");
-
-	USailHoistInterface_GetRopeEndingPoint_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -30616,6 +30484,27 @@ void ATestDamageZone::TestStopWaterLeakRepairingSfx()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.TestDamageZone.TestStopWaterLeakRepairingSfx");
 
 	ATestDamageZone_TestStopWaterLeakRepairingSfx_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.TestDamageZone.TestSetRepairableState
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<ERepairableState>  InRepairableState              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void ATestDamageZone::TestSetRepairableState(TEnumAsByte<ERepairableState> InRepairableState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.TestDamageZone.TestSetRepairableState");
+
+	ATestDamageZone_TestSetRepairableState_Params params;
+	params.InRepairableState = InRepairableState;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -41146,6 +41035,70 @@ class ASailHoist* USailHoistTestFunctions::STATIC_SetupSailHoistClientSide(class
 }
 
 
+// Function Athena.SailManipulatorBlueprintFunctions.SetupHoistControl
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ASailHoist*              Hoist                          (Parm, ZeroConstructor, IsPlainOldData)
+// class FString                  MastLookatPath                 (Parm, ZeroConstructor)
+// struct FName                   MastLookatScoket               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class URiggingSystemComponent* Rigging                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName                   RiggingLineGroup               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            RiggingRopeIndex               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void USailManipulatorBlueprintFunctions::STATIC_SetupHoistControl(class ASailHoist* Hoist, const class FString& MastLookatPath, const struct FName& MastLookatScoket, class URiggingSystemComponent* Rigging, const struct FName& RiggingLineGroup, int RiggingRopeIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailManipulatorBlueprintFunctions.SetupHoistControl");
+
+	USailManipulatorBlueprintFunctions_SetupHoistControl_Params params;
+	params.Hoist = Hoist;
+	params.MastLookatPath = MastLookatPath;
+	params.MastLookatScoket = MastLookatScoket;
+	params.Rigging = Rigging;
+	params.RiggingLineGroup = RiggingLineGroup;
+	params.RiggingRopeIndex = RiggingRopeIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.SailManipulatorBlueprintFunctions.SetupAngleControl
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ASailAngle*              Angle                          (Parm, ZeroConstructor, IsPlainOldData)
+// class FString                  MastLookatPath                 (Parm, ZeroConstructor)
+// struct FName                   MastLookatScoket               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class URiggingSystemComponent* Rigging                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName                   RiggingLineGroup               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            RiggingLeftRopeIndex           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            RiggingRightRopeIndex          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void USailManipulatorBlueprintFunctions::STATIC_SetupAngleControl(class ASailAngle* Angle, const class FString& MastLookatPath, const struct FName& MastLookatScoket, class URiggingSystemComponent* Rigging, const struct FName& RiggingLineGroup, int RiggingLeftRopeIndex, int RiggingRightRopeIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.SailManipulatorBlueprintFunctions.SetupAngleControl");
+
+	USailManipulatorBlueprintFunctions_SetupAngleControl_Params params;
+	params.Angle = Angle;
+	params.MastLookatPath = MastLookatPath;
+	params.MastLookatScoket = MastLookatScoket;
+	params.Rigging = Rigging;
+	params.RiggingLineGroup = RiggingLineGroup;
+	params.RiggingLeftRopeIndex = RiggingLeftRopeIndex;
+	params.RiggingRightRopeIndex = RiggingRightRopeIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.Seagulls.Multicast_DismissSeagulls
 // (Net, NetReliable, Native, Event, NetMulticast, Protected)
 
@@ -41466,14 +41419,14 @@ class UClass* ASharkPawn::GetAIStrategy()
 // Function Athena.ShipCurseComponent.ApplyIntentOnSails
 // (Final, Native, Private)
 // Parameters:
-// float                          NewIntent                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InNewIntent                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UShipCurseComponent::ApplyIntentOnSails(float NewIntent)
+void UShipCurseComponent::ApplyIntentOnSails(float InNewIntent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.ApplyIntentOnSails");
 
 	UShipCurseComponent_ApplyIntentOnSails_Params params;
-	params.NewIntent = NewIntent;
+	params.InNewIntent = InNewIntent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

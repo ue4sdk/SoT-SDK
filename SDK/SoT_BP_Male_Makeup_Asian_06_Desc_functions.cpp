@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Male_Makeup_Asian_06_Desc_parameters.hpp"
+#include "SoT_BP_male_makeup_asian_06_Desc_parameters.hpp"
 
 namespace SDK
 {

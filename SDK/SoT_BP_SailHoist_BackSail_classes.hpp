@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailHoist_BackSail.BP_SailHoist_BackSail_C
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07B0 - 0x07B0)
 class ABP_SailHoist_BackSail_C : public ABP_SailHoist_C
 {
 public:

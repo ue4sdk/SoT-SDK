@@ -792,6 +792,24 @@ int UAIPerPlayerSpawner::GetNumOfPlayers()
 }
 
 
+// Function AthenaAI.AIWaveSpawner.SpawnWaveGroup
+// (Final, Native, Public, BlueprintCallable)
+
+void UAIWaveSpawner::SpawnWaveGroup()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIWaveSpawner.SpawnWaveGroup");
+
+	UAIWaveSpawner_SpawnWaveGroup_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -1319,29 +1337,6 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIWithSettings(TAssetPtr<class U
 }
 
 
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIBySpawner
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FName                   RegionName                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  TriggerActor                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIBySpawner(const struct FName& RegionName, class AActor* TriggerActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIBySpawner");
-
-	UAthenaAIDebugFunctionLibrary_SpawnAIBySpawner_Params params;
-	params.RegionName = RegionName;
-	params.TriggerActor = TriggerActor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -1629,6 +1624,28 @@ void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaAI.TinySharkExperience.GetTrackedShip
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AShip*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AShip* ATinySharkExperience::GetTrackedShip()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetTrackedShip");
+
+	ATinySharkExperience_GetTrackedShip_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

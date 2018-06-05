@@ -32,6 +32,14 @@ struct URiggingSystemComponent_SetSocketLookupSource_Params
 	class AActor*                                      InSocketSource;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaRigging.RiggingSystemComponent.ConvertLineToRopeIndex
+struct URiggingSystemComponent_ConvertLineToRopeIndex_Params
+{
+	struct FName                                       InLineGroupName;                                          // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                InLineOffset;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function AthenaRigging.RopeInterface.SetRopeUVOffset
 struct URopeInterface_SetRopeUVOffset_Params
 {

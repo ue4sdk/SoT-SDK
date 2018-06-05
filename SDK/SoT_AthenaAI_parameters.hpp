@@ -236,6 +236,11 @@ struct UAIPerPlayerSpawner_GetNumOfPlayers_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AthenaAI.AIWaveSpawner.SpawnWaveGroup
+struct UAIWaveSpawner_SpawnWaveGroup_Params
+{
+};
+
 // Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget
 struct UAITargetWeaponInterface_FindAimConfigToHitTarget_Params
 {
@@ -392,13 +397,6 @@ struct UAthenaAIDebugFunctionLibrary_SpawnAIWithSettings_Params
 	float                                              Delay;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIBySpawner
-struct UAthenaAIDebugFunctionLibrary_SpawnAIBySpawner_Params
-{
-	struct FName                                       RegionName;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	class AActor*                                      TriggerActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI
 struct UAthenaAIDebugFunctionLibrary_SpawnAI_Params
 {
@@ -486,6 +484,12 @@ struct UAthenaAIPerceptionComponent_EnableAllPerception_Params
 struct ATinySharkExperience_TinySharkPawnDestroyed_Params
 {
 	class AActor*                                      InDestroyedActor;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.TinySharkExperience.GetTrackedShip
+struct ATinySharkExperience_GetTrackedShip_Params
+{
+	class AShip*                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function AthenaAI.TinySharkService.RequestTinySharkWithLocation

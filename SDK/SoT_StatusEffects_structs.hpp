@@ -32,10 +32,12 @@ struct FStatusEffectManagerComponentAggregateTickFunction : public FTickFunction
 };
 
 // ScriptStruct StatusEffects.Status
-// 0x0010
+// 0x0018
 struct FStatus
 {
 	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
+	float                                              Intensity;                                                // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 }

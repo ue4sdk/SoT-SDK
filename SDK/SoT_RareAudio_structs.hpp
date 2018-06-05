@@ -10,8 +10,8 @@
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_WwiseAudio_classes.hpp"
-#include "SoT_RareEngine_classes.hpp"
 #include "SoT_ObjectLifetime_classes.hpp"
+#include "SoT_RareEngine_classes.hpp"
 
 namespace SDK
 {

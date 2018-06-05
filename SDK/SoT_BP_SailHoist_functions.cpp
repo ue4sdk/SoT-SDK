@@ -34,7 +34,7 @@ struct FDockableInfo ABP_SailHoist_C::GetDockableInfo()
 
 
 // Function BP_SailHoist.BP_SailHoist_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SailHoist_C::UserConstructionScript()
 {

@@ -34,7 +34,7 @@ struct FDockableInfo ABP_SailAngle_C::GetDockableInfo()
 
 
 // Function BP_SailAngle.BP_SailAngle_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SailAngle_C::UserConstructionScript()
 {

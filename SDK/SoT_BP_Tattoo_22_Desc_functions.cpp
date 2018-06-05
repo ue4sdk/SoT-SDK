@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Tattoo_22_Desc_parameters.hpp"
+#include "SoT_BP_tattoo_22_Desc_parameters.hpp"
 
 namespace SDK
 {

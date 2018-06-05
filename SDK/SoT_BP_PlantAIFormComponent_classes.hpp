@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlantAIFormComponent.BP_PlantAIFormComponent_C
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x01D8 - 0x01D8)
 class UBP_PlantAIFormComponent_C : public UPlantAIFormComponent
 {
 public:

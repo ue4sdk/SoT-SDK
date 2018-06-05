@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Eye_Col_Blue_02_Desc_classes.hpp"
+#include "SoT_BP_eye_col_blue_02_Desc_classes.hpp"
 
 namespace SDK
 {

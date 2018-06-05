@@ -45,12 +45,6 @@ struct AControllableObject_CanInteractImpl_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Athena.SailManipulator.SetRopeDeltaOffset
-struct ASailManipulator_SetRopeDeltaOffset_Params
-{
-	float                                              InRopeDeltaOffset;                                        // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Athena.SailManipulator.SetMastSocketId
 struct ASailManipulator_SetMastSocketId_Params
 {
@@ -3299,6 +3293,11 @@ struct UAthenaCheatManager_SpawnSmallShip_Params
 	float                                              SpawnYaw;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Athena.AthenaCheatManager.SpawnSkeletonAtNearestAISpawnPoint
+struct UAthenaCheatManager_SpawnSkeletonAtNearestAISpawnPoint_Params
+{
+};
+
 // Function Athena.AthenaCheatManager.SpawnShipwreck
 struct UAthenaCheatManager_SpawnShipwreck_Params
 {
@@ -3409,9 +3408,10 @@ struct UAthenaCheatManager_SpawnAINoTrigger_Params
 	class FString                                      AIDescString;                                             // (Parm, ZeroConstructor)
 };
 
-// Function Athena.AthenaCheatManager.SpawnAIBySpawner
-struct UAthenaCheatManager_SpawnAIBySpawner_Params
+// Function Athena.AthenaCheatManager.SpawnAIAtNearestAISpawnPoint
+struct UAthenaCheatManager_SpawnAIAtNearestAISpawnPoint_Params
 {
+	class FString                                      AIDescString;                                             // (Parm, ZeroConstructor)
 };
 
 // Function Athena.AthenaCheatManager.SpawnAIAtLocationDelayed
@@ -7075,7 +7075,7 @@ struct UDynamicFlowComponent_ClearTexture_Params
 struct UEmoteActionStateId_PushCharacterIntoEmoteActionState_Params
 {
 	class AActor*                                      Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FEmoteData                                  EmoteData;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FName                                       EmoteIdentifier;                                          // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function Athena.EmoteCompositeInputHandler.OnZoomOut
@@ -8679,30 +8679,6 @@ struct USailAngleInterface_GetSailAngleRatio_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Athena.SailAngleInterface.GetRightRopeStartingPoint
-struct USailAngleInterface_GetRightRopeStartingPoint_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Athena.SailAngleInterface.GetRightRopeEndingPoint
-struct USailAngleInterface_GetRightRopeEndingPoint_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Athena.SailAngleInterface.GetLeftRopeStartingPoint
-struct USailAngleInterface_GetLeftRopeStartingPoint_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Athena.SailAngleInterface.GetLeftRopeEndingPoint
-struct USailAngleInterface_GetLeftRopeEndingPoint_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Athena.SailHoistInterface.GetSailRaisedPercentage
 struct USailHoistInterface_GetSailRaisedPercentage_Params
 {
@@ -8713,18 +8689,6 @@ struct USailHoistInterface_GetSailRaisedPercentage_Params
 struct USailHoistInterface_GetSailMovementRate_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Athena.SailHoistInterface.GetRopeStartingPoint
-struct USailHoistInterface_GetRopeStartingPoint_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Athena.SailHoistInterface.GetRopeEndingPoint
-struct USailHoistInterface_GetRopeEndingPoint_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Athena.TestControllableObject.TestForceDisconnectIdleSecondsThreshold
@@ -8836,6 +8800,12 @@ struct ATestDamageZone_TestStopWaterLeakSfx_Params
 // Function Athena.TestDamageZone.TestStopWaterLeakRepairingSfx
 struct ATestDamageZone_TestStopWaterLeakRepairingSfx_Params
 {
+};
+
+// Function Athena.TestDamageZone.TestSetRepairableState
+struct ATestDamageZone_TestSetRepairableState_Params
+{
+	TEnumAsByte<ERepairableState>                      InRepairableState;                                        // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.TestDamageZone.TestPlayWaterLeakSfx
@@ -11896,6 +11866,29 @@ struct USailHoistTestFunctions_SetupSailHoistClientSide_Params
 	class ASailHoist*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.SailManipulatorBlueprintFunctions.SetupHoistControl
+struct USailManipulatorBlueprintFunctions_SetupHoistControl_Params
+{
+	class ASailHoist*                                  Hoist;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      MastLookatPath;                                           // (Parm, ZeroConstructor)
+	struct FName                                       MastLookatScoket;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class URiggingSystemComponent*                     Rigging;                                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       RiggingLineGroup;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RiggingRopeIndex;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.SailManipulatorBlueprintFunctions.SetupAngleControl
+struct USailManipulatorBlueprintFunctions_SetupAngleControl_Params
+{
+	class ASailAngle*                                  Angle;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      MastLookatPath;                                           // (Parm, ZeroConstructor)
+	struct FName                                       MastLookatScoket;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class URiggingSystemComponent*                     Rigging;                                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       RiggingLineGroup;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RiggingLeftRopeIndex;                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RiggingRightRopeIndex;                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.Seagulls.Multicast_DismissSeagulls
 struct ASeagulls_Multicast_DismissSeagulls_Params
 {
@@ -11989,7 +11982,7 @@ struct ASharkPawn_GetAIStrategy_Params
 // Function Athena.ShipCurseComponent.ApplyIntentOnSails
 struct UShipCurseComponent_ApplyIntentOnSails_Params
 {
-	float                                              NewIntent;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InNewIntent;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.ShipCustomizationLoadoutControlInterface.UnequipShipCustomization

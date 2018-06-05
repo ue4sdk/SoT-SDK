@@ -15,12 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class RareAudio.WwiseEmitterComponent
-// 0x0020 (0x0310 - 0x02F0)
+// 0x0030 (0x0320 - 0x02F0)
 class UWwiseEmitterComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x02F0(0x0018) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x0308(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               Emitter;                                                  // 0x02F0(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x0310(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0318(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -32,11 +33,11 @@ public:
 
 
 // Class RareAudio.AnimNotifyWwiseEmitterComponent
-// 0x0030 (0x0340 - 0x0310)
+// 0x0020 (0x0340 - 0x0320)
 class UAnimNotifyWwiseEmitterComponent : public UWwiseEmitterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0310(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0320(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -237,16 +238,17 @@ public:
 
 
 // Class RareAudio.AudioPortalComponent
-// 0x0020 (0x0310 - 0x02F0)
+// 0x0030 (0x0320 - 0x02F0)
 class UAudioPortalComponent : public USceneComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioOutsideSpace;                                        // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PortalTriggerDistance;                                    // 0x02F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InsideRtpcUpdateDistance;                                 // 0x02FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OutsideRtpcUpdateDistance;                                // 0x0300(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               TrackAttachmentToActor;                                   // 0x0304(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x0305(0x000B) MISSED OFFSET
+	class UAudioSpaceDataAsset*                        AudioInsideSpace;                                         // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAudioSpaceDataAsset*                        AudioOutsideSpace;                                        // 0x02F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PortalTriggerDistance;                                    // 0x0300(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InsideRtpcUpdateDistance;                                 // 0x0304(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OutsideRtpcUpdateDistance;                                // 0x0308(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TrackAttachmentToActor;                                   // 0x030C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x13];                                      // 0x030D(0x0013) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -296,12 +298,10 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0010 (0x0700 - 0x06F0)
+// 0x0000 (0x0700 - 0x0700)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x06F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x06F8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -354,7 +354,7 @@ public:
 class UStaticMeshAudioEmittersComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x02F0(0x0010) MISSED OFFSET
+	TArray<struct FStaticMeshComponentAudioAssociation> InstanceAssociations;                                     // 0x02F0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -389,8 +389,9 @@ public:
 class UTritonComponent : public USceneComponent
 {
 public:
-	float                                              TritonEffectRadius;                                       // 0x02F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x02F4(0x000C) MISSED OFFSET
+	class UTritonAcousticMap*                          TritonMapAsset;                                           // 0x02F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TritonEffectRadius;                                       // 0x02F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x02FC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

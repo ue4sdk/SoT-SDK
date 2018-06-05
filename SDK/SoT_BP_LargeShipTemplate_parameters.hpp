@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.SetupMastControls
+struct ABP_LargeShipTemplate_C_SetupMastControls_Params
+{
+	class UChildActorComponent*                        LeftHoist;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        RightHoist;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        LeftAngle;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        RightAngle;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RiggingGroupName;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.UserConstructionScript
 struct ABP_LargeShipTemplate_C_UserConstructionScript_Params
 {

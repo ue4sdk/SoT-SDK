@@ -2234,39 +2234,37 @@ public:
 
 
 // Class UMG.WidgetComponent
-// 0x0100 (0x0770 - 0x0670)
+// 0x00F0 (0x0770 - 0x0680)
 class UWidgetComponent : public UPrimitiveComponent
 {
 public:
-	TEnumAsByte<EWidgetSpace>                          Space;                                                    // 0x0670(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0671(0x0007) MISSED OFFSET
-	class UClass*                                      WidgetClass;                                              // 0x0678(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FIntPoint                                   DrawSize;                                                 // 0x0680(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   Pivot;                                                    // 0x0688(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxInteractionDistance;                                   // 0x0690(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0694(0x0004) MISSED OFFSET
-	class ULocalPlayer*                                OwnerPlayer;                                              // 0x0698(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                BackgroundColor;                                          // 0x06A0(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EWidgetBlendMode>                      BlendMode;                                                // 0x06B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsOpaque;                                                // 0x06B1(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	bool                                               bIsTwoSided;                                              // 0x06B2(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x06B3(0x0001) MISSED OFFSET
-	float                                              ParabolaDistortion;                                       // 0x06B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               TickWhenOffscreen;                                        // 0x06B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x06B9(0x0007) MISSED OFFSET
-	class UUserWidget*                                 Widget;                                                   // 0x06C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UBodySetup*                                  BodySetup;                                                // 0x06C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UMaterialInterface*                          TranslucentMaterial;                                      // 0x06D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          TranslucentMaterial_OneSided;                             // 0x06D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          OpaqueMaterial;                                           // 0x06E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          OpaqueMaterial_OneSided;                                  // 0x06E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          MaskedMaterial;                                           // 0x06F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          MaskedMaterial_OneSided;                                  // 0x06F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0700(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    MaterialInstance;                                         // 0x0708(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               bUseLegacyRotation;                                       // 0x0710(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bAddedToScreen;                                           // 0x0711(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x5E];                                      // 0x0712(0x005E) MISSED OFFSET
+	class UClass*                                      WidgetClass;                                              // 0x0680(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FIntPoint                                   DrawSize;                                                 // 0x0688(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   Pivot;                                                    // 0x0690(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxInteractionDistance;                                   // 0x0698(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x069C(0x0004) MISSED OFFSET
+	class ULocalPlayer*                                OwnerPlayer;                                              // 0x06A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                BackgroundColor;                                          // 0x06A8(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWidgetBlendMode>                      BlendMode;                                                // 0x06B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bIsOpaque;                                                // 0x06B9(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	bool                                               bIsTwoSided;                                              // 0x06BA(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x06BB(0x0001) MISSED OFFSET
+	float                                              ParabolaDistortion;                                       // 0x06BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TickWhenOffscreen;                                        // 0x06C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x06C1(0x0007) MISSED OFFSET
+	class UUserWidget*                                 Widget;                                                   // 0x06C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UBodySetup*                                  BodySetup;                                                // 0x06D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UMaterialInterface*                          TranslucentMaterial;                                      // 0x06D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          TranslucentMaterial_OneSided;                             // 0x06E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          OpaqueMaterial;                                           // 0x06E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          OpaqueMaterial_OneSided;                                  // 0x06F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          MaskedMaterial;                                           // 0x06F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          MaskedMaterial_OneSided;                                  // 0x0700(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0708(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    MaterialInstance;                                         // 0x0710(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               bUseLegacyRotation;                                       // 0x0718(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bAddedToScreen;                                           // 0x0719(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x56];                                      // 0x071A(0x0056) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

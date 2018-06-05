@@ -19,9 +19,8 @@ namespace SDK
 class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0870(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x0878(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0888(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                // 0x0870(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x0880(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -220,11 +219,10 @@ public:
 
 
 // Class Foliage.InteractiveFoliageComponent
-// 0x0010 (0x0700 - 0x06F0)
+// 0x0000 (0x0700 - 0x0700)
 class UInteractiveFoliageComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x06F0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
