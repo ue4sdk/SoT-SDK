@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,70 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Slate.ETextJustify
+enum class ETextJustify : uint8_t
+{
+	ETextJustify__Left             = 0,
+	None                           = 1,
+	NoFading                       = 2
+};
+
+
+// Enum Slate.ETableViewMode
+enum class ETableViewMode : uint8_t
+{
+	ETableViewMode__List           = 0,
+	None                           = 1,
+	EButtonPressMethod__DownAndUp  = 2
+};
+
+
+// Enum Slate.ESelectionMode
+enum class ESelectionMode : uint8_t
+{
+	ESelectionMode__None           = 0,
+	None                           = 1,
+	ESelectionMode__ESelectionMode_MAX = 2,
+	ESlateBrushTileType__NoTile    = 3
+};
+
+
+// Enum Slate.EStretch
+enum class EStretch : uint8_t
+{
+	EStretch__None                 = 0,
+	None                           = 1,
+	EStretch__ScaleToFitY          = 2,
+	None01                         = 3
+};
+
+
+// Enum Slate.EStretchDirection
+enum class EStretchDirection : uint8_t
+{
+	EStretchDirection__Both        = 0,
+	None                           = 1,
+	ETextJustify__Left             = 2
+};
+
+
+// Enum Slate.EProgressBarFillType
+enum class EProgressBarFillType : uint8_t
+{
+	EProgressBarFillType__LeftToRight = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EProgressBarFillType__BottomToTop = 3,
+	None01                         = 4,
+	EFoliageScaling__Uniform       = 5
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

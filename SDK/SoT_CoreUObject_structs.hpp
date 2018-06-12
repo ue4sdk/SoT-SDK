@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,6 +10,164 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum CoreUObject.EInterpCurveMode
+enum class EInterpCurveMode : uint8_t
+{
+	CIM_Linear                     = 0,
+	None                           = 1,
+	CIM_CurveBreak                 = 2,
+	None01                         = 3
+};
+
+
+// Enum CoreUObject.ERangeBoundTypes
+enum class ERangeBoundTypes : uint8_t
+{
+	ERangeBoundTypes__Exclusive    = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ERotatorQuantization__ByteComponents = 3
+};
+
+
+// Enum CoreUObject.EUnit
+enum class EUnit : uint8_t
+{
+	EUnit__Micrometers             = 0,
+	None                           = 1,
+	EUnit__Kilometers              = 2,
+	None01                         = 3,
+	NameProperty                   = 4,
+	EUnit__Miles                   = 5,
+	None02                         = 6,
+	EUnit__MetersPerSecond         = 7,
+	None03                         = 8,
+	AInteractorTestProxyObject     = 9,
+	EUnit__Farenheit               = 10,
+	None04                         = 11,
+	EUnit__Grams                   = 12,
+	None05                         = 13,
+	UInt16Property                 = 14,
+	EUnit__Pounds                  = 15,
+	None06                         = 16,
+	Int8Property                   = 17,
+	EUnit__KilogramsForce          = 18,
+	None07                         = 19,
+	EUnit__Gigahertz               = 20,
+	None08                         = 21,
+	EUnit__Megabytes               = 22,
+	None09                         = 23,
+	EUnit__Milliseconds            = 24,
+	None10                         = 25,
+	EUnit__Days                    = 26,
+	None11                         = 27,
+	EUnit__EUnit_MAX               = 28,
+	None12                         = 29,
+	None13                         = 30,
+	None14                         = 31,
+	None15                         = 32,
+	BoolProperty                   = 33,
+	None16                         = 34,
+	None17                         = 35
+};
+
+
+// Enum CoreUObject.EMouseCursor
+enum class EMouseCursor : uint8_t
+{
+	EMouseCursor__None             = 0,
+	None                           = 1,
+	EMouseCursor__ResizeUpDown     = 2,
+	None01                         = 3,
+	EMouseCursor__Crosshairs       = 4,
+	None02                         = 5,
+	EMouseCursor__SlashedCircle    = 6,
+	None03                         = 7,
+	EShipRegion__None              = 8,
+	None04                         = 9
+};
+
+
+// Enum CoreUObject.EPixelFormat
+enum class EPixelFormat : uint8_t
+{
+	PF_Unknown                     = 0,
+	None                           = 1,
+	PF_G16                         = 2,
+	None01                         = 3,
+	PF_UYVY                        = 4,
+	None02                         = 5,
+	PF_ShadowDepth                 = 6,
+	None03                         = 7,
+	PF_G16R16F_FILTER              = 8,
+	None04                         = 9,
+	PF_D24                         = 10,
+	None05                         = 11,
+	PF_V8U8                        = 12,
+	None06                         = 13,
+	PF_R32_UINT                    = 14,
+	None07                         = 15,
+	PF_R16_UINT                    = 16,
+	None08                         = 17,
+	PF_R5G6B5_UNORM                = 18,
+	None09                         = 19,
+	PF_R8G8                        = 20,
+	None10                         = 21,
+	PF_X24_G8                      = 22,
+	None11                         = 23,
+	PF_R32G32B32A32_UINT           = 24,
+	None12                         = 25,
+	PF_ASTC_8x8                    = 26,
+	None13                         = 27,
+	PF_BC7                         = 28,
+	None14                         = 29,
+	PF_R32G32_SINT                 = 30,
+	None15                         = 31,
+	None16                         = 32
+};
+
+
+// Enum CoreUObject.EAxis
+enum class EAxis : uint8_t
+{
+	EAxis__None                    = 0,
+	None                           = 1,
+	EAxis__EAxis_MAX               = 2,
+	ETextCommit__Default           = 3
+};
+
+
+// Enum CoreUObject.ELogTimes
+enum class ELogTimes : uint8_t
+{
+	ELogTimes__None                = 0,
+	None                           = 1,
+	ESearchDir__FromStart          = 2
+};
+
+
+// Enum CoreUObject.ESearchDir
+enum class ESearchDir : uint8_t
+{
+	ESearchDir__FromStart          = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum CoreUObject.ESearchCase
+enum class ESearchCase : uint8_t
+{
+	ESearchCase__CaseSensitive     = 0,
+	None                           = 1
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,48 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum OnlineSubsystemUtils.EBeaconConnectionState
+enum class EBeaconConnectionState : uint8_t
+{
+	EBeaconConnectionState__Invalid = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EBeaconConnectionState__EBeaconConnectionState_MAX = 3
+};
+
+
+// Enum OnlineSubsystemUtils.EPartyReservationResult
+enum class EPartyReservationResult : uint8_t
+{
+	EPartyReservationResult__NoResult = 0,
+	None                           = 1,
+	EPartyReservationResult__IncorrectPlayerCount = 2,
+	None01                         = 3,
+	EPartyReservationResult__ReservationAccepted = 4,
+	None02                         = 5,
+	StructProperty                 = 6,
+	EPartyReservationResult__ReservationInvalid = 7,
+	None03                         = 8,
+	TextProperty                   = 9
+};
+
+
+// Enum OnlineSubsystemUtils.EClientRequestType
+enum class EClientRequestType : uint8_t
+{
+	EClientRequestType__NonePending = 0,
+	None                           = 1,
+	EClientRequestType__ChangeWorldRequest = 2,
+	None01                         = 3,
+	NameProperty                   = 4
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

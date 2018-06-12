@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,33 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum AthenaObjectLinkage.EAddLinkResult
+enum class EAddLinkResult : uint8_t
+{
+	EAddLinkResult__Success_Set    = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EAddLinkResult__Failed_CoincidentEndpointIds = 3,
+	None01                         = 4,
+	NameProperty                   = 5
+};
+
+
+// Enum AthenaObjectLinkage.EAddEndpointResult
+enum class EAddEndpointResult : uint8_t
+{
+	EAddEndpointResult__Success    = 0,
+	None                           = 1,
+	EAddEndpointResult__Failed_DoesntImplementEndpointInterface = 2,
+	None01                         = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

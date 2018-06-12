@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,92 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum PirateGenerator.EIPGEthnicity
+enum class EIPGEthnicity : uint8_t
+{
+	EIPGEthnicity__UNSPECIFIED     = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EIPGEthnicity__EIPGEthnicity_MAX = 3
+};
+
+
+// Enum PirateGenerator.EIPGGender
+enum class EIPGGender : uint8_t
+{
+	EIPGGender__UNSPECIFIED        = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EConsoleForGamepadLabels__None = 3
+};
+
+
+// Enum PirateGenerator.EIPGPirateType
+enum class EIPGPirateType : uint8_t
+{
+	EIPGPirateType__PLAYER         = 0,
+	None                           = 1
+};
+
+
+// Enum PirateGenerator.EIPGTestEnum
+enum class EIPGTestEnum : uint8_t
+{
+	EIPGTestEnum__RANDOM           = 0,
+	None                           = 1
+};
+
+
+// Enum PirateGenerator.EIPGSetMode
+enum class EIPGSetMode : uint8_t
+{
+	EIPGSetMode__RANDOM            = 0,
+	None                           = 1,
+	EIPGSetMode__NONE              = 2,
+	None01                         = 3,
+	NameProperty                   = 4
+};
+
+
+// Enum PirateGenerator.EIPGBlendType
+enum class EIPGBlendType : uint8_t
+{
+	EIPGBlendType__NIX             = 0,
+	None                           = 1,
+	EIPGBlendType__POSNEG          = 2,
+	None01                         = 3,
+	NameProperty                   = 4,
+	EIPGBlendType__ONOFF_BIAS      = 5,
+	None02                         = 6,
+	StructProperty                 = 7,
+	None03                         = 8
+};
+
+
+// Enum PirateGenerator.EPirateBakeFlags
+enum class EPirateBakeFlags : uint8_t
+{
+	EPirateBakeFlags__None         = 0,
+	None                           = 1,
+	EPirateBakeFlags__StripTopLOD  = 2,
+	None01                         = 3,
+	EFontHinting__Default          = 4
+};
+
+
+// Enum PirateGenerator.EFileAccessAsyncResult
+enum class EFileAccessAsyncResult : uint8_t
+{
+	EFileAccessAsyncResult__Succeeded = 0,
+	None                           = 1
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

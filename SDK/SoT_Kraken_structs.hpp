@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,6 +15,70 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Kraken.EKrakenBehaviourType
+enum class EKrakenBehaviourType : uint8_t
+{
+	EKrakenBehaviourType__Idle     = 0,
+	None                           = 1,
+	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2,
+	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 3
+};
+
+
+// Enum Kraken.EKrakenShipWrappingTentacleState
+enum class EKrakenShipWrappingTentacleState : uint8_t
+{
+	EKrakenShipWrappingTentacleState__Dormant = 0,
+	None                           = 1,
+	EKrakenShipWrappingTentacleState__ShakeAttack = 2,
+	None01                         = 3,
+	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 4
+};
+
+
+// Enum Kraken.EKrakenDynamicsStateEvent
+enum class EKrakenDynamicsStateEvent : uint8_t
+{
+	EKrakenDynamicsStateEvent__Damage = 0,
+	None                           = 1
+};
+
+
+// Enum Kraken.EKrakenDespawnReason
+enum class EKrakenDespawnReason : uint8_t
+{
+	EKrakenDespawnReason__Invalid  = 0,
+	None                           = 1,
+	EKrakenDespawnReason__Dismissed = 2,
+	None01                         = 3
+};
+
+
+// Enum Kraken.EKrakenState
+enum class EKrakenState : uint8_t
+{
+	EKrakenState__Spawning         = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EKrakenDynamicsStateEvent__Damage = 3
+};
+
+
+// Enum Kraken.EKrakenTentacleBehaviourDamageActions
+enum class EKrakenTentacleBehaviourDamageActions : uint8_t
+{
+	EKrakenTentacleBehaviourDamageActions__StayActive = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ResetState                     = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

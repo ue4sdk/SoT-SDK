@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,434 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum AIModule.EPathFollowingResult
+enum class EPathFollowingResult : uint8_t
+{
+	EPathFollowingResult__Success  = 0,
+	None                           = 1,
+	EPathFollowingResult__Skipped  = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EEnvQueryStatus
+enum class EEnvQueryStatus : uint8_t
+{
+	EEnvQueryStatus__Processing    = 0,
+	None                           = 1,
+	EEnvQueryStatus__OwnerLost     = 2,
+	None01                         = 3,
+	EQSQueryDoneSignature__DelegateSignature = 4
+};
+
+
+// Enum AIModule.EAILockSource
+enum class EAILockSource : uint8_t
+{
+	EAILockSource__Animation       = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EAILockSource__MAX             = 3,
+	None01                         = 4,
+	EPathFollowingAction__Error    = 5
+};
+
+
+// Enum AIModule.EAIRequestPriority
+enum class EAIRequestPriority : uint8_t
+{
+	EAIRequestPriority__SoftScript = 0,
+	None                           = 1,
+	EAIRequestPriority__Ultimate   = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EPawnActionEventType
+enum class EPawnActionEventType : uint8_t
+{
+	EPawnActionEventType__Invalid  = 0,
+	None                           = 1,
+	EPawnActionEventType__FinishedExecution = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EPawnActionResult
+enum class EPawnActionResult : uint8_t
+{
+	EPawnActionResult__NotStarted  = 0,
+	None                           = 1,
+	EPawnActionResult__Aborted     = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EPawnActionAbortState
+enum class EPawnActionAbortState : uint8_t
+{
+	EPawnActionAbortState__NeverStarted = 0,
+	None                           = 1,
+	EPawnActionAbortState__AbortDone = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EAIOptionFlag
+enum class EAIOptionFlag : uint8_t
+{
+	EAIOptionFlag__Default         = 0,
+	None                           = 1,
+	EAIOptionFlag__EAIOptionFlag_MAX = 2,
+	EBTFlowAbortMode__None         = 3
+};
+
+
+// Enum AIModule.EPathFollowingRequestResult
+enum class EPathFollowingRequestResult : uint8_t
+{
+	EPathFollowingRequestResult__Failed = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ETaskResourceOverlapPolicy__StartOnTop = 3
+};
+
+
+// Enum AIModule.EPathFollowingAction
+enum class EPathFollowingAction : uint8_t
+{
+	EPathFollowingAction__Error    = 0,
+	None                           = 1,
+	EPathFollowingAction__PathToGoal = 2,
+	None01                         = 3,
+	EBTDecoratorLogic__Invalid     = 4
+};
+
+
+// Enum AIModule.EPathFollowingStatus
+enum class EPathFollowingStatus : uint8_t
+{
+	EPathFollowingStatus__Idle     = 0,
+	None                           = 1,
+	EPathFollowingStatus__EPathFollowingStatus_MAX = 2,
+	EBTNodeResult__Succeeded       = 3
+};
+
+
+// Enum AIModule.EBTFlowAbortMode
+enum class EBTFlowAbortMode : uint8_t
+{
+	EBTFlowAbortMode__None         = 0,
+	None                           = 1,
+	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 2
+};
+
+
+// Enum AIModule.EBTNodeResult
+enum class EBTNodeResult : uint8_t
+{
+	EBTNodeResult__Succeeded       = 0,
+	None                           = 1,
+	EBTNodeResult__EBTNodeResult_MAX = 2,
+	EAIOptionFlag__Default         = 3
+};
+
+
+// Enum AIModule.ETeamAttitude
+enum class ETeamAttitude : uint8_t
+{
+	ETeamAttitude__Friendly        = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EBasicKeyOperation__Set        = 3
+};
+
+
+// Enum AIModule.EAISenseNotifyType
+enum class EAISenseNotifyType : uint8_t
+{
+	EAISenseNotifyType__OnEveryPerception = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum AIModule.EAITaskPriority
+enum class EAITaskPriority : uint8_t
+{
+	EAITaskPriority__Lowest        = 0,
+	None                           = 1,
+	EAITaskPriority__Ultimate      = 2,
+	None01                         = 3,
+	EAILockSource__Animation       = 4
+};
+
+
+// Enum AIModule.EBTDecoratorLogic
+enum class EBTDecoratorLogic : uint8_t
+{
+	EBTDecoratorLogic__Invalid     = 0,
+	None                           = 1,
+	EBTDecoratorLogic__Not         = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EBTChildIndex
+enum class EBTChildIndex : uint8_t
+{
+	EBTChildIndex__FirstNode       = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.ETextKeyOperation
+enum class ETextKeyOperation : uint8_t
+{
+	ETextKeyOperation__Equal       = 0,
+	None                           = 1,
+	ETextKeyOperation__ETextKeyOperation_MAX = 2,
+	EEnvQueryRunMode__SingleResult = 3
+};
+
+
+// Enum AIModule.EArithmeticKeyOperation
+enum class EArithmeticKeyOperation : uint8_t
+{
+	EArithmeticKeyOperation__Equal = 0,
+	None                           = 1,
+	EArithmeticKeyOperation__Greater = 2,
+	None01                         = 3
+};
+
+
+// Enum AIModule.EBasicKeyOperation
+enum class EBasicKeyOperation : uint8_t
+{
+	EBasicKeyOperation__Set        = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EBTBlackboardRestart
+enum class EBTBlackboardRestart : uint8_t
+{
+	EBTBlackboardRestart__ValueChange = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EBlackBoardEntryComparison
+enum class EBlackBoardEntryComparison : uint8_t
+{
+	EBlackBoardEntryComparison__Equal = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EPathExistanceQueryType
+enum class EPathExistanceQueryType : uint8_t
+{
+	EPathExistanceQueryType__NavmeshRaycast2D = 0,
+	None                           = 1,
+	EBlackBoardEntryComparison__Equal = 2
+};
+
+
+// Enum AIModule.EBTParallelMode
+enum class EBTParallelMode : uint8_t
+{
+	EBTParallelMode__AbortBackground = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EEnvQueryTestClamping
+enum class EEnvQueryTestClamping : uint8_t
+{
+	EEnvQueryTestClamping__None    = 0,
+	None                           = 1,
+	TRAVEL_Absolute                = 2
+};
+
+
+// Enum AIModule.EEnvDirection
+enum class EEnvDirection : uint8_t
+{
+	EEnvDirection__TwoPoints       = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EEnvTraceShape
+enum class EEnvTraceShape : uint8_t
+{
+	EEnvTraceShape__Line           = 0,
+	None                           = 1,
+	EEnvTraceShape__EEnvTraceShape_MAX = 2,
+	EEnvQueryTrace__None           = 3
+};
+
+
+// Enum AIModule.EEnvQueryTrace
+enum class EEnvQueryTrace : uint8_t
+{
+	EEnvQueryTrace__None           = 0,
+	None                           = 1,
+	EEnvQueryTrace__EEnvQueryTrace_MAX = 2,
+	ETextKeyOperation__Equal       = 3
+};
+
+
+// Enum AIModule.EEnvQueryParam
+enum class EEnvQueryParam : uint8_t
+{
+	EEnvQueryParam__Float          = 0,
+	None                           = 1,
+	EBTChildIndex__FirstNode       = 2
+};
+
+
+// Enum AIModule.EEnvQueryRunMode
+enum class EEnvQueryRunMode : uint8_t
+{
+	EEnvQueryRunMode__SingleResult = 0,
+	None                           = 1,
+	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 2,
+	EPathFollowingStatus__Idle     = 3
+};
+
+
+// Enum AIModule.EEnvTestScoreOperator
+enum class EEnvTestScoreOperator : uint8_t
+{
+	EEnvTestScoreOperator__AverageScore = 0,
+	None                           = 1,
+	EEnvTestCost__Low              = 2
+};
+
+
+// Enum AIModule.EEnvTestFilterOperator
+enum class EEnvTestFilterOperator : uint8_t
+{
+	EEnvTestFilterOperator__AllPass = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EEnvTestCost
+enum class EEnvTestCost : uint8_t
+{
+	EEnvTestCost__Low              = 0,
+	None                           = 1,
+	EPawnActionFailHandling__RequireSuccess = 2
+};
+
+
+// Enum AIModule.EEnvTestWeight
+enum class EEnvTestWeight : uint8_t
+{
+	EEnvTestWeight__None           = 0,
+	None                           = 1,
+	EEnvTestWeight__Constant       = 2,
+	None01                         = 3,
+	NameProperty                   = 4
+};
+
+
+// Enum AIModule.EEnvTestScoreEquation
+enum class EEnvTestScoreEquation : uint8_t
+{
+	EEnvTestScoreEquation__Linear  = 0,
+	None                           = 1,
+	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 2,
+	EEnvTraceShape__Line           = 3
+};
+
+
+// Enum AIModule.EEnvTestFilterType
+enum class EEnvTestFilterType : uint8_t
+{
+	EEnvTestFilterType__Minimum    = 0,
+	None                           = 1,
+	EEnvTestFilterType__EEnvTestFilterType_MAX = 2
+};
+
+
+// Enum AIModule.EEnvTestPurpose
+enum class EEnvTestPurpose : uint8_t
+{
+	EEnvTestPurpose__Filter        = 0,
+	None                           = 1,
+	EPawnSubActionTriggeringPolicy__CopyBeforeTriggering = 2
+};
+
+
+// Enum AIModule.EPawnActionFailHandling
+enum class EPawnActionFailHandling : uint8_t
+{
+	EPawnActionFailHandling__RequireSuccess = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EPawnSubActionTriggeringPolicy
+enum class EPawnSubActionTriggeringPolicy : uint8_t
+{
+	EPawnSubActionTriggeringPolicy__CopyBeforeTriggering = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EEnvTestDistance
+enum class EEnvTestDistance : uint8_t
+{
+	EEnvTestDistance__Distance3D   = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EEnvQueryHightlightMode__All   = 3
+};
+
+
+// Enum AIModule.EEnvTestDot
+enum class EEnvTestDot : uint8_t
+{
+	EEnvTestDot__Dot3D             = 0,
+	None                           = 1
+};
+
+
+// Enum AIModule.EEnvTestPathfinding
+enum class EEnvTestPathfinding : uint8_t
+{
+	EEnvTestPathfinding__PathExist = 0,
+	None                           = 1,
+	EDrivenBoneModificationMode__AddToInput = 2
+};
+
+
+// Enum AIModule.EEnvQueryHightlightMode
+enum class EEnvQueryHightlightMode : uint8_t
+{
+	EEnvQueryHightlightMode__All   = 0,
+	None                           = 1,
+	EEnvTestDot__Dot3D             = 2
+};
+
+
+// Enum AIModule.EPawnActionMoveMode
+enum class EPawnActionMoveMode : uint8_t
+{
+	EPawnActionMoveMode__UsePathfinding = 0,
+	None                           = 1
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

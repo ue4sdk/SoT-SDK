@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,84 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Landscape.ELandscapeGizmoType
+enum class ELandscapeGizmoType : uint8_t
+{
+	LGT_None                       = 0,
+	None                           = 1,
+	ELandscapeLayerPaintingRestriction__None = 2
+};
+
+
+// Enum Landscape.ELandscapeLODFalloff
+enum class ELandscapeLODFalloff : uint8_t
+{
+	ELandscapeLODFalloff__Linear   = 0,
+	None                           = 1
+};
+
+
+// Enum Landscape.ELandscapeLayerPaintingRestriction
+enum class ELandscapeLayerPaintingRestriction : uint8_t
+{
+	ELandscapeLayerPaintingRestriction__None = 0,
+	None                           = 1,
+	ELandscapeLODFalloff__Linear   = 2
+};
+
+
+// Enum Landscape.ELandscapeSetupErrors
+enum class ELandscapeSetupErrors : uint8_t
+{
+	LSE_None                       = 0,
+	None                           = 1,
+	LSE_MAX                        = 2
+};
+
+
+// Enum Landscape.LandscapeSplineMeshOrientation
+enum class ELandscapeSplineMeshOrientation : uint8_t
+{
+	LSMO_XUp                       = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum Landscape.ELandscapeLayerBlendType
+enum class ELandscapeLayerBlendType : uint8_t
+{
+	LB_WeightBlend                 = 0,
+	None                           = 1,
+	EParticleKey__Active           = 2
+};
+
+
+// Enum Landscape.ELandscapeCustomizedCoordType
+enum class ELandscapeCustomizedCoordType : uint8_t
+{
+	LCCT_None                      = 0,
+	None                           = 1,
+	LCCT_WeightMapUV               = 2,
+	None01                         = 3,
+	MSKI_Auto                      = 4
+};
+
+
+// Enum Landscape.ETerrainCoordMappingType
+enum class ETerrainCoordMappingType : uint8_t
+{
+	TCMT_Auto                      = 0,
+	None                           = 1,
+	TCMT_MAX                       = 2
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

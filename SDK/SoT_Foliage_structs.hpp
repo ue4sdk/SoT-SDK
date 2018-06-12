@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,51 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Foliage.EFoliageScaling
+enum class EFoliageScaling : uint8_t
+{
+	EFoliageScaling__Uniform       = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EFoliageScaling__LockYZ        = 3,
+	None01                         = 4,
+	FOLIAGEVERTEXCOLORMASK_Disabled = 5
+};
+
+
+// Enum Foliage.FoliageVertexColorMask
+enum class EFoliageVertexColorMask : uint8_t
+{
+	FOLIAGEVERTEXCOLORMASK_Disabled = 0,
+	None                           = 1,
+	FOLIAGEVERTEXCOLORMASK_Alpha   = 2,
+	None01                         = 3
+};
+
+
+// Enum Foliage.ESimulationQuery
+enum class ESimulationQuery : uint8_t
+{
+	ESimulationQuery__CollisionOverlap = 0,
+	None                           = 1,
+	ESimulationOverlap__CollisionOverlap = 2
+};
+
+
+// Enum Foliage.ESimulationOverlap
+enum class ESimulationOverlap : uint8_t
+{
+	ESimulationOverlap__CollisionOverlap = 0,
+	None                           = 1,
+	LGT_None                       = 2
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,53 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum StudiosAutomation.EComparisonMethod
+enum class EComparisonMethod : uint8_t
+{
+	EComparisonMethod__Equal_To    = 0,
+	None                           = 1,
+	EComparisonMethod__Greater_Than = 2,
+	None01                         = 3
+};
+
+
+// Enum StudiosAutomation.EPerformanceCaptureType
+enum class EPerformanceCaptureType : uint8_t
+{
+	EPerformanceCaptureType__None  = 0,
+	None                           = 1,
+	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 2,
+	EUnusedAttributeBehaviour__Copy = 3
+};
+
+
+// Enum StudiosAutomation.ETestArea
+enum class ETestArea : uint8_t
+{
+	ETestArea__None                = 0,
+	None                           = 1,
+	ETestArea__Art                 = 2,
+	None01                         = 3,
+	EGameplayTaskRunResult__Error  = 4
+};
+
+
+// Enum StudiosAutomation.ETestCategory
+enum class ETestCategory : uint8_t
+{
+	ETestCategory__Unit            = 0,
+	None                           = 1,
+	ETestCategory__Soak            = 2,
+	None01                         = 3,
+	EGameplayTagQueryExprType__Undefined = 4
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

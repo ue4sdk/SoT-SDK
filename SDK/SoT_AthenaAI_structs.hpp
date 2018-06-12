@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,6 +16,216 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum AthenaAI.EAIDebugColour
+enum class EAIDebugColour : uint8_t
+{
+	EAIDebugColour__Red            = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EAIDebugColour__Yellow         = 3,
+	None01                         = 4,
+	NameProperty                   = 5
+};
+
+
+// Enum AthenaAI.AISpawnLocationSearchResult
+enum class EAISpawnLocationSearchResult : uint8_t
+{
+	AISpawnLocationSearchResult__Incomplete = 0,
+	None                           = 1,
+	AISpawnLocationSearchResult__Cancelled = 2,
+	None01                         = 3
+};
+
+
+// Enum AthenaAI.AISpawnRequestState
+enum class EAISpawnRequestState : uint8_t
+{
+	AISpawnRequestState__AwaitingBegin = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	AISpawnRequestState__WaitForLocationCheck = 3,
+	None01                         = 4,
+	NameProperty                   = 5
+};
+
+
+// Enum AthenaAI.EBountySpawnerAudioState
+enum class EBountySpawnerAudioState : uint8_t
+{
+	EBountySpawnerAudioState__None = 0,
+	None                           = 1,
+	EBlackboardValueCompositeType__And = 2
+};
+
+
+// Enum AthenaAI.EBountySpawnerType
+enum class EBountySpawnerType : uint8_t
+{
+	EBountySpawnerType__Default    = 0,
+	None                           = 1,
+	ETimeOfDay__Day                = 2
+};
+
+
+// Enum AthenaAI.EBountyTargetRank
+enum class EBountyTargetRank : uint8_t
+{
+	EBountyTargetRank__Captain     = 0,
+	None                           = 1
+};
+
+
+// Enum AthenaAI.EBountyTargetGender
+enum class EBountyTargetGender : uint8_t
+{
+	EBountyTargetGender__Male      = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum AthenaAI.EAIThreatLevel
+enum class EAIThreatLevel : uint8_t
+{
+	EAIThreatLevel__NoDanger       = 0,
+	None                           = 1,
+	EAIThreatLevel__EAIThreatLevel_MAX = 2
+};
+
+
+// Enum AthenaAI.EAIKnockbackStrengthType
+enum class EAIKnockbackStrengthType : uint8_t
+{
+	EAIKnockbackStrengthType__Low  = 0,
+	None                           = 1,
+	EBountyTargetGender__Male      = 2
+};
+
+
+// Enum AthenaAI.ECustomAiEventDuringDeathEnum
+enum class ECustomAiEventDuringDeathEnum : uint8_t
+{
+	ECustomAiEventDuringDeathEnum__None = 0,
+	None                           = 1,
+	EAIKnockbackStrengthType__Low  = 2
+};
+
+
+// Enum AthenaAI.EBlackboardValueCompositeType
+enum class EBlackboardValueCompositeType : uint8_t
+{
+	EBlackboardValueCompositeType__And = 0,
+	None                           = 1
+};
+
+
+// Enum AthenaAI.EBlackboardValueComparisonType
+enum class EBlackboardValueComparisonType : uint8_t
+{
+	EBlackboardValueComparisonType__NearlyEqual = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EBlackboardValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	NameProperty                   = 5
+};
+
+
+// Enum AthenaAI.EFloatValueComparisonType
+enum class EFloatValueComparisonType : uint8_t
+{
+	EFloatValueComparisonType__NearlyEqual = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EFloatValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	NameProperty                   = 5
+};
+
+
+// Enum AthenaAI.ESwimmingLineOfSightTest
+enum class ESwimmingLineOfSightTest : uint8_t
+{
+	ESwimmingLineOfSightTest__None = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ECustomAiEventDuringDeathEnum__None = 3
+};
+
+
+// Enum AthenaAI.ESwimmingSyncMode
+enum class ESwimmingSyncMode : uint8_t
+{
+	ESwimmingSyncMode__Synchronous = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum AthenaAI.ESwimmingArcMode
+enum class ESwimmingArcMode : uint8_t
+{
+	ESwimmingArcMode__ArcToTarget  = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum AthenaAI.ESwimmingGoalCheckMode
+enum class ESwimmingGoalCheckMode : uint8_t
+{
+	ESwimmingGoalCheckMode__Goal2D = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum AthenaAI.ETraceDirection
+enum class ETraceDirection : uint8_t
+{
+	ETraceDirection__ItemToContext = 0,
+	None                           = 1
+};
+
+
+// Enum AthenaAI.ETinySharkDespawnReason
+enum class ETinySharkDespawnReason : uint8_t
+{
+	ETinySharkDespawnReason__Invalid = 0,
+	None                           = 1,
+	ETraceDirection__ItemToContext = 2
+};
+
+
+// Enum AthenaAI.ETinySharkState
+enum class ETinySharkState : uint8_t
+{
+	ETinySharkState__Inactive      = 0,
+	None                           = 1,
+	ETinySharkState__Despawning    = 2,
+	None01                         = 3,
+	EAddEndpointResult__Success    = 4
+};
+
+
+// Enum AthenaAI.AISpawnRequestResult
+enum class EAISpawnRequestResult : uint8_t
+{
+	AISpawnRequestResult__Incomplete = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	AISpawnRequestResult__FailedNoValidPos = 3,
+	None01                         = 4,
+	NameProperty                   = 5
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

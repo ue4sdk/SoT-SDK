@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,59 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum WwiseAudio.EWwiseAsyncIOPriorityDisplay
+enum class EWwiseAsyncIOPriorityDisplay : uint8_t
+{
+	EWwiseAsyncIOPriorityDisplay__Low = 0,
+	None                           = 1,
+	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 2
+};
+
+
+// Enum WwiseAudio.EWwiseLanguageOrder
+enum class EWwiseLanguageOrder : uint8_t
+{
+	EWwiseLanguageOrder__English   = 0,
+	None                           = 1,
+	EWwiseLanguageOrder__Spanish   = 2,
+	None01                         = 3,
+	EWwiseLanguageOrder__Japanese  = 4,
+	None02                         = 5,
+	PSA_FacingCameraPosition       = 6,
+	None03                         = 7
+};
+
+
+// Enum WwiseAudio.EWwise7Point1Order
+enum class EWwise7Point1Order : uint8_t
+{
+	EWwise7Point1Order__Front_Left = 0,
+	None                           = 1,
+	EWwise7Point1Order__Right_Surround = 2,
+	None01                         = 3,
+	NameProperty                   = 4,
+	EWwise7Point1Order__Null_Channel = 5,
+	None02                         = 6,
+	EWwiseLanguageOrder__English   = 7,
+	None03                         = 8
+};
+
+
+// Enum WwiseAudio.EWwiseEventDurationType
+enum class EWwiseEventDurationType : uint8_t
+{
+	EWwiseEventDurationType__OneShot = 0,
+	None                           = 1,
+	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 2,
+	UDSS_UpToDate                  = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

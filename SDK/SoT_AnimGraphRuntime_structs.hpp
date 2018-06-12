@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,72 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum AnimGraphRuntime.EDrivenBoneModificationMode
+enum class EDrivenBoneModificationMode : uint8_t
+{
+	EDrivenBoneModificationMode__AddToInput = 0,
+	None                           = 1,
+	EPawnActionMoveMode__UsePathfinding = 2
+};
+
+
+// Enum AnimGraphRuntime.EComponentType
+enum class EComponentType : uint8_t
+{
+	EComponentType__None           = 0,
+	None                           = 1,
+	EComponentType__RotationX      = 2,
+	None01                         = 3,
+	EComponentType__ScaleX         = 4,
+	None02                         = 5,
+	None03                         = 6
+};
+
+
+// Enum AnimGraphRuntime.EInterpolationBlend
+enum class EInterpolationBlend : uint8_t
+{
+	EInterpolationBlend__Linear    = 0,
+	None                           = 1,
+	EInterpolationBlend__EaseInOutExponent3 = 2,
+	None01                         = 3,
+	EInterpolationBlend__EInterpolationBlend_MAX = 4
+};
+
+
+// Enum AnimGraphRuntime.EAxisOption
+enum class EAxisOption : uint8_t
+{
+	EAxisOption__X                 = 0,
+	None                           = 1,
+	EAxisOption__Y_Neg             = 2,
+	None01                         = 3
+};
+
+
+// Enum AnimGraphRuntime.EBoneModificationMode
+enum class EBoneModificationMode : uint8_t
+{
+	BMM_Ignore                     = 0,
+	None                           = 1,
+	BA_X                           = 2
+};
+
+
+// Enum AnimGraphRuntime.EBoneAxis
+enum class EBoneAxis : uint8_t
+{
+	BA_X                           = 0,
+	None                           = 1,
+	ETestEnum__Value0              = 2
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

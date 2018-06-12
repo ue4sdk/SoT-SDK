@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,27 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum AthenaRigging.EInstancedRopeParameterType
+enum class EInstancedRopeParameterType : uint8_t
+{
+	RPT_Start                      = 0,
+	None                           = 1,
+	RPT_UVScale                    = 2,
+	None01                         = 3,
+	RPT_WindAmount                 = 4,
+	None02                         = 5,
+	StructProperty                 = 6,
+	RPT_CatenaryXYDistance         = 7,
+	None03                         = 8,
+	TextProperty                   = 9
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

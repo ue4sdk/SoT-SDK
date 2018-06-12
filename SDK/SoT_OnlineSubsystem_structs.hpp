@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,36 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum OnlineSubsystem.EInAppPurchaseState
+enum class EInAppPurchaseState : uint8_t
+{
+	EInAppPurchaseState__Success   = 0,
+	None                           = 1,
+	EInAppPurchaseState__NotAllowed = 2,
+	None01                         = 3
+};
+
+
+// Enum OnlineSubsystem.EMPMatchOutcome
+enum class EMPMatchOutcome : uint8_t
+{
+	EMPMatchOutcome__None          = 0,
+	None                           = 1,
+	EMPMatchOutcome__Tied          = 2,
+	None01                         = 3,
+	EMPMatchOutcome__Third         = 4,
+	None02                         = 5,
+	StructProperty                 = 6,
+	None03                         = 7,
+	EComponentType__None           = 8
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

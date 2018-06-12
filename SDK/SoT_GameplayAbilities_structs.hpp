@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,257 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum GameplayAbilities.EGameplayEffectGrantedAbilityRemovePolicy
+enum class EGameplayEffectGrantedAbilityRemovePolicy : uint8_t
+{
+	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 0,
+	None                           = 1,
+	ESwimmingArcMode__ArcToTarget  = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayEffectAttributeCaptureSource
+enum class EGameplayEffectAttributeCaptureSource : uint8_t
+{
+	EGameplayEffectAttributeCaptureSource__Source = 0,
+	None                           = 1
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityActivationMode
+enum class EGameplayAbilityActivationMode : uint8_t
+{
+	EGameplayAbilityActivationMode__Authority = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 3
+};
+
+
+// Enum GameplayAbilities.EAbilityGenericReplicatedEvent
+enum class EAbilityGenericReplicatedEvent : uint8_t
+{
+	EAbilityGenericReplicatedEvent__GenericConfirm = 0,
+	None                           = 1,
+	EAbilityGenericReplicatedEvent__GenericSignalFromClient = 2,
+	None01                         = 3,
+	EAbilityGenericReplicatedEvent__GameCustom3 = 4,
+	None02                         = 5,
+	EAbilityGenericReplicatedEvent__EAbilityGenericReplicatedEvent_MAX = 6
+};
+
+
+// Enum GameplayAbilities.EGameplayTagEventType
+enum class EGameplayTagEventType : uint8_t
+{
+	EGameplayTagEventType__NewOrRemoved = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayCueEvent
+enum class EGameplayCueEvent : uint8_t
+{
+	EGameplayCueEvent__OnActive    = 0,
+	None                           = 1,
+	EGameplayCueEvent__EGameplayCueEvent_MAX = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayEffectStackingType
+enum class EGameplayEffectStackingType : uint8_t
+{
+	EGameplayEffectStackingType__None = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EGameplayTagEventType__NewOrRemoved = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayModOp
+enum class EGameplayModOp : uint8_t
+{
+	EGameplayModOp__Additive       = 0,
+	None                           = 1,
+	EGameplayModOp__Max            = 2,
+	None01                         = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityTargetingLocationType
+enum class EGameplayAbilityTargetingLocationType : uint8_t
+{
+	EGameplayAbilityTargetingLocationType__LiteralTransform = 0,
+	None                           = 1,
+	EGameplayEffectStackingType__None = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayTargetingConfirmation
+enum class EGameplayTargetingConfirmation : uint8_t
+{
+	EGameplayTargetingConfirmation__Instant = 0,
+	None                           = 1,
+	EGameplayTargetingConfirmation__EGameplayTargetingConfirmation_MAX = 2,
+	EGameplayEffectMagnitudeCalculation__ScalableFloat = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayEffectStackingPeriodPolicy
+enum class EGameplayEffectStackingPeriodPolicy : uint8_t
+{
+	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayEffectStackingDurationPolicy
+enum class EGameplayEffectStackingDurationPolicy : uint8_t
+{
+	EGameplayEffectStackingDurationPolicy__RefreshOnSuccessfulApplication = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayEffectDurationType
+enum class EGameplayEffectDurationType : uint8_t
+{
+	EGameplayEffectDurationType__Instant = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EGameplayEffectStackingDurationPolicy__RefreshOnSuccessfulApplication = 3
+};
+
+
+// Enum GameplayAbilities.EAttributeBasedFloatCalculationType
+enum class EAttributeBasedFloatCalculationType : uint8_t
+{
+	EAttributeBasedFloatCalculationType__AttributeMagnitude = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EGameplayEffectDurationType__Instant = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayEffectMagnitudeCalculation
+enum class EGameplayEffectMagnitudeCalculation : uint8_t
+{
+	EGameplayEffectMagnitudeCalculation__ScalableFloat = 0,
+	None                           = 1,
+	EGameplayEffectMagnitudeCalculation__EGameplayEffectMagnitudeCalculation_MAX = 2,
+	EGameplayCueEvent__OnActive    = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityTriggerSource
+enum class EGameplayAbilityTriggerSource : uint8_t
+{
+	EGameplayAbilityTriggerSource__GameplayEvent = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EAttributeBasedFloatCalculationType__AttributeMagnitude = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityReplicationPolicy
+enum class EGameplayAbilityReplicationPolicy : uint8_t
+{
+	EGameplayAbilityReplicationPolicy__ReplicateNo = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityNetExecutionPolicy
+enum class EGameplayAbilityNetExecutionPolicy : uint8_t
+{
+	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 0,
+	None                           = 1,
+	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2,
+	EGameplayTargetingConfirmation__Instant = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityInstancingPolicy
+enum class EGameplayAbilityInstancingPolicy : uint8_t
+{
+	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EGameplayAbilityReplicationPolicy__ReplicateNo = 3
+};
+
+
+// Enum GameplayAbilities.ETargetDataFilterSelf
+enum class ETargetDataFilterSelf : uint8_t
+{
+	ETargetDataFilterSelf__TDFS_Any = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EGameplayAbilityInstancingPolicy__NonInstanced = 3
+};
+
+
+// Enum GameplayAbilities.EAbilityTaskNetSyncType
+enum class EAbilityTaskNetSyncType : uint8_t
+{
+	EAbilityTaskNetSyncType__BothWait = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ETargetDataFilterSelf__TDFS_Any = 3
+};
+
+
+// Enum GameplayAbilities.EWaitAttributeChangeComparison
+enum class EWaitAttributeChangeComparison : uint8_t
+{
+	EWaitAttributeChangeComparison__None = 0,
+	None                           = 1,
+	EWaitAttributeChangeComparison__LessThanOrEqualTo = 2,
+	None01                         = 3,
+	EWaitAttributeChangeComparison__EWaitAttributeChangeComparison_MAX = 4
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityInputBinds
+enum class EGameplayAbilityInputBinds : uint8_t
+{
+	EGameplayAbilityInputBinds__Ability1 = 0,
+	None                           = 1,
+	EGameplayAbilityInputBinds__Ability5 = 2,
+	None01                         = 3,
+	EGameplayAbilityInputBinds__Ability9 = 4,
+	None02                         = 5
+};
+
+
+// Enum GameplayAbilities.ETargetAbilitySelfSelection
+enum class ETargetAbilitySelfSelection : uint8_t
+{
+	ETargetAbilitySelfSelection__TASS_Permit = 0,
+	None                           = 1,
+	EAbilityTaskNetSyncType__BothWait = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayCuePayloadType
+enum class EGameplayCuePayloadType : uint8_t
+{
+	EGameplayCuePayloadType__EffectContext = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ETargetAbilitySelfSelection__TASS_Permit = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

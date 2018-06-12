@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,38 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum ActionStateMachine.EActionStateMachineTrackId
+enum class EActionStateMachineTrackId : uint8_t
+{
+	EActionStateMachineTrackId__Locomotion = 0,
+	None                           = 1,
+	EActionStateMachineTrackId__Migration = 2,
+	None01                         = 3
+};
+
+
+// Enum ActionStateMachine.EActionPredictionType
+enum class EActionPredictionType : uint8_t
+{
+	EActionPredictionType__Predicted = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum ActionStateMachine.EActionStatePriority
+enum class EActionStatePriority : uint8_t
+{
+	EActionStatePriority__Overrides = 0,
+	None                           = 1
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,40 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Niagara.ENiagaraDataType
+enum class ENiagaraDataType : uint8_t
+{
+	ENiagaraDataType__Scalar       = 0,
+	None                           = 1,
+	ENiagaraDataType__ENiagaraDataType_MAX = 2
+};
+
+
+// Enum Niagara.EUnusedAttributeBehaviour
+enum class EUnusedAttributeBehaviour : uint8_t
+{
+	EUnusedAttributeBehaviour__Copy = 0,
+	None                           = 1,
+	EUnusedAttributeBehaviour__EUnusedAttributeBehaviour_MAX = 2,
+	ENiagaraDataType__Scalar       = 3
+};
+
+
+// Enum Niagara.EEmitterRenderModuleType
+enum class EEmitterRenderModuleType : uint8_t
+{
+	RMT_None                       = 0,
+	None                           = 1,
+	RMT_Meshes                     = 2,
+	None01                         = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

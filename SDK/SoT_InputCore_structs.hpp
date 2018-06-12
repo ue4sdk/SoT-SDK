@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,55 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum InputCore.ETouchIndex
+enum class ETouchIndex : uint8_t
+{
+	ETouchIndex__Touch1            = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	ETouchIndex__Touch5            = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	ETouchIndex__Touch9            = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9
+};
+
+
+// Enum InputCore.ETouchType
+enum class ETouchType : uint8_t
+{
+	ETouchType__Began              = 0,
+	None                           = 1,
+	ETouchType__NumTypes           = 2,
+	None01                         = 3
+};
+
+
+// Enum InputCore.EConsoleForGamepadLabels
+enum class EConsoleForGamepadLabels : uint8_t
+{
+	EConsoleForGamepadLabels__None = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EIPGTestEnum__RANDOM           = 3
+};
+
+
+// Enum InputCore.EControllerHand
+enum class EControllerHand : uint8_t
+{
+	EControllerHand__Left          = 0,
+	None                           = 1
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

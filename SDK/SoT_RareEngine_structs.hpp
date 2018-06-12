@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,27 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum RareEngine.EMemoryUsageVisualiserInstanceType
+enum class EMemoryUsageVisualiserInstanceType : uint8_t
+{
+	EMemoryUsageVisualiserInstanceType__Server = 0,
+	None                           = 1
+};
+
+
+// Enum RareEngine.EMemoryGatheringMode
+enum class EMemoryGatheringMode : uint8_t
+{
+	EMemoryGatheringMode__Exclusive = 0,
+	None                           = 1
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

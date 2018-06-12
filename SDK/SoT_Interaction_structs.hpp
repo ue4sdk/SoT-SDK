@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,20 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Interaction.EInteractionBlockReason
+enum class EInteractionBlockReason : uint8_t
+{
+	EInteractionBlockReason__None  = 0,
+	None                           = 1,
+	EPlaneLineIntersectionType__IntersectionWithinLineSegment = 2
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

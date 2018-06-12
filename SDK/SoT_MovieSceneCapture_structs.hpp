@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,21 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum MovieSceneCapture.EMovieCaptureType
+enum class EMovieCaptureType : uint8_t
+{
+	EMovieCaptureType__AVI         = 0,
+	None                           = 1,
+	EMovieCaptureType__EMovieCaptureType_MAX = 2,
+	EEnvTestFilterType__Minimum    = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

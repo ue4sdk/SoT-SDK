@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.0.5) SDK
+// Sea of Thieves (1.1.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,39 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Water.EWaterQueryResult
+enum class EWaterQueryResult : uint8_t
+{
+	EWaterQueryResult__Success     = 0,
+	None                           = 1,
+	IntProperty                    = 2,
+	EInteractionBlockReason__None  = 3
+};
+
+
+// Enum Water.EBuoyancyDragSampleType
+enum class EBuoyancyDragSampleType : uint8_t
+{
+	EBuoyancyDragSampleType__Spherical = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum Water.EBuoyancySampleType
+enum class EBuoyancySampleType : uint8_t
+{
+	EBuoyancySampleType__Spherical = 0,
+	None                           = 1,
+	EBuoyancyDragSampleType__Spherical = 2
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
