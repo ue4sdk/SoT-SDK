@@ -8161,6 +8161,11 @@ struct UExponentialHeightFogComponent_SetDirectionalInscatteringColor_Params
 	struct FLinearColor                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.FogVolumeComponent.UpdateFog
+struct UFogVolumeComponent_UpdateFog_Params
+{
+};
+
 // Function Engine.AmbientLightSourceComponent.SetTint
 struct UAmbientLightSourceComponent_SetTint_Params
 {

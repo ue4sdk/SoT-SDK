@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MetalForm_SkeletonAudioComponent.BP_MetalForm_SkeletonAudioComponent_C
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0310 - 0x0310)
 class UBP_MetalForm_SkeletonAudioComponent_C : public USkeletonAICharacterAudioComponent
 {
 public:

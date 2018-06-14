@@ -17,6 +17,14 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AthenaLoadingScreen.SlateLoadingScreenImageParams
+// 0x0020
+struct FSlateLoadingScreenImageParams
+{
+	struct FStringAssetReference                       ImageAsset;                                               // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FText>                               ImageTips;                                                // 0x0010(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenStateResponse
 // 0x0001
 struct FEventAthenaLoadingScreenStateResponse

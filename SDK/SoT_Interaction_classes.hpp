@@ -45,11 +45,11 @@ public:
 
 
 // Class Interaction.CharacterInteractionComponent
-// 0x0090 (0x0740 - 0x06B0)
+// 0x0090 (0x06F0 - 0x0660)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x06B0(0x0090) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x90];                                      // 0x0660(0x0090) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

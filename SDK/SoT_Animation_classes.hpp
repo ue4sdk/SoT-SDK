@@ -180,7 +180,7 @@ public:
 
 
 // Class Animation.ClientSkeletalMeshComponent
-// 0x0000 (0x0A90 - 0x0A90)
+// 0x0000 (0x0A20 - 0x0A20)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:

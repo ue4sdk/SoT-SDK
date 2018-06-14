@@ -499,8 +499,8 @@ struct ATinySharkService_RequestTinySharkWithLocation_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function AthenaAI.TinySharkService.DismissTinyShark
-struct ATinySharkService_DismissTinyShark_Params
+// Function AthenaAI.TinySharkService.DismissAllTinySharks
+struct ATinySharkService_DismissAllTinySharks_Params
 {
 };
 

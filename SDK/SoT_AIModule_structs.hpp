@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
-#include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -46,8 +46,7 @@ enum class EAILockSource : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EAILockSource__MAX             = 3,
-	None01                         = 4,
-	EPathFollowingAction__Error    = 5
+	None01                         = 4
 };
 
 
@@ -117,8 +116,7 @@ enum class EPathFollowingAction : uint8_t
 	EPathFollowingAction__Error    = 0,
 	None                           = 1,
 	EPathFollowingAction__PathToGoal = 2,
-	None01                         = 3,
-	EBTDecoratorLogic__Invalid     = 4
+	None01                         = 3
 };
 
 
@@ -176,8 +174,7 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3,
-	EAILockSource__Animation       = 4
+	None01                         = 3
 };
 
 
@@ -187,7 +184,8 @@ enum class EBTDecoratorLogic : uint8_t
 	EBTDecoratorLogic__Invalid     = 0,
 	None                           = 1,
 	EBTDecoratorLogic__Not         = 2,
-	None01                         = 3
+	None01                         = 3,
+	EPawnActionResult__NotStarted  = 4
 };
 
 
@@ -402,8 +400,7 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EEnvQueryHightlightMode__All   = 3
+	EEnvQueryHightlightMode__All   = 2
 };
 
 
@@ -411,7 +408,8 @@ enum class EEnvTestDistance : uint8_t
 enum class EEnvTestDot : uint8_t
 {
 	EEnvTestDot__Dot3D             = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

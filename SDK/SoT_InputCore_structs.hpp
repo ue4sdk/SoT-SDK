@@ -37,7 +37,8 @@ enum class ETouchType : uint8_t
 	ETouchType__Began              = 0,
 	None                           = 1,
 	ETouchType__NumTypes           = 2,
-	None01                         = 3
+	None01                         = 3,
+	EFontHinting__Default          = 4
 };
 
 

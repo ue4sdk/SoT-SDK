@@ -20,8 +20,7 @@ namespace SDK
 enum class ETestEnum : uint8_t
 {
 	ETestEnum__Value0              = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

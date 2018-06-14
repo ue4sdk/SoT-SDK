@@ -22,7 +22,8 @@ enum class EActionStateMachineTrackId : uint8_t
 	EActionStateMachineTrackId__Locomotion = 0,
 	None                           = 1,
 	EActionStateMachineTrackId__Migration = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

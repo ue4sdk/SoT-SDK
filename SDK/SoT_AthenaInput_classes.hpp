@@ -174,6 +174,36 @@ public:
 };
 
 
+// Class AthenaInput.PressedNotificationInputId
+// 0x0000 (0x0038 - 0x0038)
+class UPressedNotificationInputId : public UNotificationInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaInput.PressedNotificationInputId");
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaInput.ReleasedNotificationInputId
+// 0x0000 (0x0038 - 0x0038)
+class UReleasedNotificationInputId : public UNotificationInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaInput.ReleasedNotificationInputId");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaInput.TestNotificationInput2Id
 // 0x0000 (0x0038 - 0x0038)
 class UTestNotificationInput2Id : public UNotificationInputId

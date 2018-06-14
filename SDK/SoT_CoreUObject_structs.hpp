@@ -29,8 +29,7 @@ enum class ERangeBoundTypes : uint8_t
 {
 	ERangeBoundTypes__Exclusive    = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ERotatorQuantization__ByteComponents = 3
+	ERotatorQuantization__ByteComponents = 2
 };
 
 
@@ -46,7 +45,7 @@ enum class EUnit : uint8_t
 	None02                         = 6,
 	EUnit__MetersPerSecond         = 7,
 	None03                         = 8,
-	AInteractorTestProxyObject     = 9,
+	AShipCustomizationChest        = 9,
 	EUnit__Farenheit               = 10,
 	None04                         = 11,
 	EUnit__Grams                   = 12,
@@ -154,8 +153,7 @@ enum class ELogTimes : uint8_t
 enum class ESearchDir : uint8_t
 {
 	ESearchDir__FromStart          = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

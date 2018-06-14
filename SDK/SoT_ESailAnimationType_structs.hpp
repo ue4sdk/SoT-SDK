@@ -18,8 +18,7 @@ namespace SDK
 enum class ESailAnimationType : uint8_t
 {
 	ESailAnimationType__NewEnumerator0 = 0,
-	None                           = 1,
-	wsp_undersea_sm_01_b17         = 2
+	None                           = 1
 };
 
 

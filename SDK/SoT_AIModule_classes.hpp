@@ -157,6 +157,23 @@ public:
 };
 
 
+// Class AIModule.BTTask_RotateToFaceBBEntry
+// 0x0008 (0x0090 - 0x0088)
+class UBTTask_RotateToFaceBBEntry : public UBTTask_BlackboardBase
+{
+public:
+	float                                              Precision;                                                // 0x0088(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIModule.BTTask_RotateToFaceBBEntry");
+		return ptr;
+	}
+
+};
+
+
 // Class AIModule.EnvQueryContext
 // 0x0000 (0x0028 - 0x0028)
 class UEnvQueryContext : public UObject
@@ -1974,23 +1991,6 @@ public:
 };
 
 
-// Class AIModule.BTTask_RotateToFaceBBEntry
-// 0x0008 (0x0090 - 0x0088)
-class UBTTask_RotateToFaceBBEntry : public UBTTask_BlackboardBase
-{
-public:
-	float                                              Precision;                                                // 0x0088(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_RotateToFaceBBEntry");
-		return ptr;
-	}
-
-};
-
-
 // Class AIModule.EnvQueryItemType
 // 0x0008 (0x0030 - 0x0028)
 class UEnvQueryItemType : public UObject
@@ -2845,11 +2845,11 @@ public:
 
 
 // Class AIModule.EQSRenderingComponent
-// 0x0010 (0x0690 - 0x0680)
+// 0x0010 (0x0640 - 0x0630)
 class UEQSRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0680(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

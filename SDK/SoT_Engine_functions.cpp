@@ -27579,6 +27579,24 @@ void UExponentialHeightFogComponent::SetDirectionalInscatteringColor(const struc
 }
 
 
+// Function Engine.FogVolumeComponent.UpdateFog
+// (Final, Native, Public, BlueprintCallable)
+
+void UFogVolumeComponent::UpdateFog()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.FogVolumeComponent.UpdateFog");
+
+	UFogVolumeComponent_UpdateFog_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.AmbientLightSourceComponent.SetTint
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:

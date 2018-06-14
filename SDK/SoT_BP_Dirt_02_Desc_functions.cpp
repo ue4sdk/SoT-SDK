@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_dirt_02_Desc_parameters.hpp"
+#include "SoT_BP_Dirt_02_Desc_parameters.hpp"
 
 namespace SDK
 {

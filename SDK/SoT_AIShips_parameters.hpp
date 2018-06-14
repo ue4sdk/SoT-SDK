@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function AIShips.AIShipDebugFunctionLibrary.RequestAIShipForCrew
+struct UAIShipDebugFunctionLibrary_RequestAIShipForCrew_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CrewId;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

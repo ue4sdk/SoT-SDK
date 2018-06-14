@@ -205,14 +205,14 @@ public:
 
 
 // Class Wind.WindZoneComponent
-// 0x0090 (0x0380 - 0x02F0)
+// 0x0090 (0x0330 - 0x02A0)
 class UWindZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02F0(0x0008) MISSED OFFSET
-	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02F8(0x0070) (Edit, BlueprintVisible)
-	struct FWindZoneParams                             WindZoneParams;                                           // 0x0368(0x000C) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0374(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
+	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02A8(0x0070) (Edit, BlueprintVisible)
+	struct FWindZoneParams                             WindZoneParams;                                           // 0x0318(0x000C) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0324(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -224,7 +224,7 @@ public:
 
 
 // Class Wind.TestWindZoneComponent
-// 0x0000 (0x0380 - 0x0380)
+// 0x0000 (0x0330 - 0x0330)
 class UTestWindZoneComponent : public UWindZoneComponent
 {
 public:

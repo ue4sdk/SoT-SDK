@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaRigging.InstancedRopeComponent
-// 0x00C0 (0x0740 - 0x0680)
+// 0x00C0 (0x06F0 - 0x0630)
 class UInstancedRopeComponent : public UPrimitiveComponent
 {
 public:
-	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x0680(0x0010) (Edit, ZeroConstructor, EditConst)
-	int                                                ShadowLOD;                                                // 0x0690(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xAC];                                      // 0x0694(0x00AC) MISSED OFFSET
+	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x0630(0x0010) (Edit, ZeroConstructor, EditConst)
+	int                                                ShadowLOD;                                                // 0x0640(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xAC];                                      // 0x0644(0x00AC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -77,14 +77,14 @@ public:
 
 
 // Class AthenaRigging.RiggingSystemComponent
-// 0x0040 (0x0330 - 0x02F0)
+// 0x0040 (0x02E0 - 0x02A0)
 class URiggingSystemComponent : public USceneComponent
 {
 public:
-	struct FRopeStyleParams                            RopeStyle;                                                // 0x02F0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
-	TArray<struct FRiggingSystemLineGroup>             LineGroups;                                               // 0x0310(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class ARiggingSystem*                              Impl;                                                     // 0x0320(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
+	struct FRopeStyleParams                            RopeStyle;                                                // 0x02A0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	TArray<struct FRiggingSystemLineGroup>             LineGroups;                                               // 0x02C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class ARiggingSystem*                              Impl;                                                     // 0x02D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02D8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -55,8 +55,7 @@ enum class ELandscapeSetupErrors : uint8_t
 enum class ELandscapeSplineMeshOrientation : uint8_t
 {
 	LSMO_XUp                       = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -75,8 +74,7 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_None                      = 0,
 	None                           = 1,
 	LCCT_WeightMapUV               = 2,
-	None01                         = 3,
-	MSKI_Auto                      = 4
+	None01                         = 3
 };
 
 

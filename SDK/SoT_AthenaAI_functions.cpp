@@ -1673,14 +1673,14 @@ bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& Spawn
 }
 
 
-// Function AthenaAI.TinySharkService.DismissTinyShark
+// Function AthenaAI.TinySharkService.DismissAllTinySharks
 // (Native, Public, BlueprintCallable)
 
-void ATinySharkService::DismissTinyShark()
+void ATinySharkService::DismissAllTinySharks()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.DismissTinyShark");
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.DismissAllTinySharks");
 
-	ATinySharkService_DismissTinyShark_Params params;
+	ATinySharkService_DismissAllTinySharks_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

@@ -14,6 +14,23 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AIShips.AIShipDebugFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAIShipDebugFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.AIShipDebugFunctionLibrary");
+		return ptr;
+	}
+
+
+	void STATIC_RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId);
+};
+
+
 // Class AIShips.AIShipEncounterParamsDataAsset
 // 0x0010 (0x0038 - 0x0028)
 class UAIShipEncounterParamsDataAsset : public UDataAsset

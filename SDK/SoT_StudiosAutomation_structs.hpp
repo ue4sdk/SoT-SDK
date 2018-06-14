@@ -43,7 +43,7 @@ enum class ETestArea : uint8_t
 	None                           = 1,
 	ETestArea__Art                 = 2,
 	None01                         = 3,
-	EGameplayTaskRunResult__Error  = 4
+	EDesignPreviewSizeMode__FillScreen = 4
 };
 
 

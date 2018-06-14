@@ -49,8 +49,7 @@ enum class EClientRequestType : uint8_t
 	EClientRequestType__NonePending = 0,
 	None                           = 1,
 	EClientRequestType__ChangeWorldRequest = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 

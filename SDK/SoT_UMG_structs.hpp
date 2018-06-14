@@ -7,13 +7,13 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_MovieScene_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_MovieScene_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_MovieSceneTracks_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
-#include "SoT_InputCore_classes.hpp"
 
 namespace SDK
 {
@@ -72,7 +72,7 @@ enum class EDesignPreviewSizeMode : uint8_t
 	None                           = 1,
 	EDesignPreviewSizeMode__DesiredOnScreen = 2,
 	None01                         = 3,
-	RMT_None                       = 4
+	EGameplayTaskRunResult__Error  = 4
 };
 
 

@@ -32,24 +32,6 @@ public:
 };
 
 
-// Class AthenaLoadingScreen.SlateLoadingScreenImageParams
-// 0x0028 (0x0050 - 0x0028)
-class USlateLoadingScreenImageParams : public UDataAsset
-{
-public:
-	struct FName                                       FeatureName;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       PlaceholderBackgroundTexture;                             // 0x0030(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FStringAssetReference>               LoadingScreenImages;                                      // 0x0040(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaLoadingScreen.SlateLoadingScreenImageParams");
-		return ptr;
-	}
-
-};
-
-
 // Class AthenaLoadingScreen.SlateLoadingScreenParams
 // 0x01D0 (0x01F8 - 0x0028)
 class USlateLoadingScreenParams : public UDataAsset
@@ -60,11 +42,10 @@ public:
 	bool                                               DrawTips;                                                 // 0x002A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               DrawSpinner;                                              // 0x002B(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FStringAssetReference>               LoadingScreenImageAssets;                                 // 0x0030(0x0010) (Edit, ZeroConstructor)
-	struct FStringAssetReference                       PlaceholderSpinnerTexture;                                // 0x0040(0x0010) (Edit, ZeroConstructor)
-	struct FStringAssetReference                       PlaceholderBackgroundTexture;                             // 0x0050(0x0010) (Edit, ZeroConstructor)
-	struct FLinearColor                                BackgroundColour;                                         // 0x0060(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FStringAssetReference>               LoadingScreenImages;                                      // 0x0070(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       PlaceholderSpinnerTexture;                                // 0x0030(0x0010) (Edit, ZeroConstructor)
+	struct FLinearColor                                BackgroundColour;                                         // 0x0040(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FSlateLoadingScreenImageParams              PrimaryImage;                                             // 0x0050(0x0020) (Edit)
+	TArray<struct FSlateLoadingScreenImageParams>      CyclingImages;                                            // 0x0070(0x0010) (Edit, ZeroConstructor)
 	int                                                MaxNumImagesPerLoad;                                      // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
 	struct FText                                       SpinnerText;                                              // 0x0088(0x0018) (Edit)

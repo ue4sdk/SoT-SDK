@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
@@ -38,7 +38,8 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3
+	None01                         = 3,
+	CameraFacing_NoneUP            = 4
 };
 
 
@@ -241,6 +242,17 @@ struct FAIFormDamageResponse
 	unsigned char                                      UnknownData00[0x2];                                       // 0x000E(0x0002) MISSED OFFSET
 };
 
+// ScriptStruct AthenaAI.AIDebugVisualisationLine
+// 0x0020
+struct FAIDebugVisualisationLine
+{
+	struct FVector                                     From;                                                     // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     To;                                                       // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
+	float                                              LifeTime;                                                 // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct AthenaAI.AIDebugVisualisationBox
 // 0x0040
 struct FAIDebugVisualisationBox
@@ -249,33 +261,36 @@ struct FAIDebugVisualisationBox
 	struct FVector                                     Extents;                                                  // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 	struct FQuat                                       Rotation;                                                 // 0x0020(0x0010) (IsPlainOldData)
-	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0031(0x000F) MISSED OFFSET
+	float                                              LifeTime;                                                 // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB];                                       // 0x0035(0x000B) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIDebugVisualisationCylinder
-// 0x0020
+// 0x0024
 struct FAIDebugVisualisationCylinder
 {
 	struct FVector                                     To;                                                       // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     From;                                                     // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
+	float                                              LifeTime;                                                 // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIDebugVisualisationSphere
-// 0x0014
+// 0x0018
 struct FAIDebugVisualisationSphere
 {
 	struct FVector                                     Centre;                                                   // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	float                                              LifeTime;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIDebugVisualisationCone
-// 0x0028
+// 0x002C
 struct FAIDebugVisualisationCone
 {
 	struct FVector                                     Origin;                                                   // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
@@ -283,8 +298,9 @@ struct FAIDebugVisualisationCone
 	float                                              Length;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              AngleWidthRadians;                                        // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              AngleHeightRadians;                                       // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0024(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
+	float                                              LifeTime;                                                 // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIDebugColour>                        Colour;                                                   // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIIndividualVarietyEntry
@@ -661,7 +677,7 @@ struct FSwimAttackTargetShipImpulseData
 };
 
 // ScriptStruct AthenaAI.TinySharkParams
-// 0x00B0
+// 0x00C0
 struct FTinySharkParams
 {
 	class UClass*                                      TinySharkType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -669,16 +685,30 @@ struct FTinySharkParams
 	struct FVector                                     SpawnOffset;                                              // 0x000C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TAssetPtr<class UClass>                            TinySharkAIType;                                          // 0x0018(0x0020) (Edit, DisableEditOnInstance)
 	TAssetPtr<class UAthenaAIControllerParamsDataAsset> TinySharkSkillset;                                        // 0x0038(0x0020) (Edit, DisableEditOnInstance)
-	TAssetPtr<class ULoadoutAsset>                     TinySharkLoadout;                                         // 0x0058(0x0020) (Edit, DisableEditOnInstance)
-	class UClass*                                      TinySharkClassID;                                         // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           LifetimeTimeout;                                          // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	TArray<TAssetPtr<class UAthenaAIControllerParamsDataAsset>> PerDifficultyTinySharkSkillset;                           // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TAssetPtr<class ULoadoutAsset>                     TinySharkLoadout;                                         // 0x0068(0x0020) (Edit, DisableEditOnInstance)
+	class UClass*                                      TinySharkClassID;                                         // 0x0088(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           LifetimeTimeout;                                          // 0x0090(0x0030) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct AthenaAI.TinySharkShipSpawnData
+// 0x0058
+struct FTinySharkShipSpawnData
+{
+	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           Timer;                                                    // 0x0008(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRange                   Difficulty;                                               // 0x0038(0x0020) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct AthenaAI.TinySharkServiceParams
-// 0x0008
+// 0x0028
 struct FTinySharkServiceParams
 {
 	class UTinySharkParamsDataAsset*                   TinySharkParams;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FTinySharkShipSpawnData>             SpawnForShipData;                                         // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UEnvQuery*                                   SpawnForShipQuery;                                        // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpawnFailureTimer;                                        // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIEncounterSpecification
@@ -939,6 +969,27 @@ struct FPeriodicAINoiseEventAggregateTickFunction : public FTickFunction
 {
 	TArray<class UPeriodicAINoiseEventComponent*>      AINoiseEventComponents;                                   // 0x0048(0x0010) (ExportObject, ZeroConstructor, Transient)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.TinySharkExperienceAggregateTickFunction
+// 0x0010 (0x0058 - 0x0048)
+struct FTinySharkExperienceAggregateTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.TinySharkWorldSettingsParams
+// 0x0001
+struct FTinySharkWorldSettingsParams
+{
+	bool                                               TinySharkEnabled;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.TinySharkEQSRequest
+// 0x0020
+struct FTinySharkEQSRequest
+{
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.EventPlayerLeftAISpawnableWater

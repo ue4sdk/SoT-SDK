@@ -446,15 +446,15 @@ public:
 
 
 // Class Kraken.KrakenShipWrappingKnockbackRegionComponent
-// 0x0080 (0x0370 - 0x02F0)
+// 0x0080 (0x0320 - 0x02A0)
 class UKrakenShipWrappingKnockbackRegionComponent : public USceneComponent
 {
 public:
-	class UBoxComponent*                               KnockbackRegion;                                          // 0x02F0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     KnockbackDirection;                                       // 0x02F8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              KnockbackTime;                                            // 0x0304(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FKnockBackInfo                              KnockbackParams;                                          // 0x0308(0x0034) (Edit)
-	unsigned char                                      UnknownData00[0x34];                                      // 0x033C(0x0034) MISSED OFFSET
+	class UBoxComponent*                               KnockbackRegion;                                          // 0x02A0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FVector                                     KnockbackDirection;                                       // 0x02A8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              KnockbackTime;                                            // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FKnockBackInfo                              KnockbackParams;                                          // 0x02B8(0x0034) (Edit)
+	unsigned char                                      UnknownData00[0x34];                                      // 0x02EC(0x0034) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

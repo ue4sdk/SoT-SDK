@@ -58,8 +58,7 @@ enum class EIPGSetMode : uint8_t
 	EIPGSetMode__RANDOM            = 0,
 	None                           = 1,
 	EIPGSetMode__NONE              = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -84,8 +83,7 @@ enum class EPirateBakeFlags : uint8_t
 	EPirateBakeFlags__None         = 0,
 	None                           = 1,
 	EPirateBakeFlags__StripTopLOD  = 2,
-	None01                         = 3,
-	EFontHinting__Default          = 4
+	None01                         = 3
 };
 
 
