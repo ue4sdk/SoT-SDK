@@ -7,12 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -39,7 +39,7 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
 	None01                         = 3,
-	CameraFacing_NoneUP            = 4
+	OSM_Alpha                      = 4
 };
 
 
@@ -209,8 +209,7 @@ enum class ETinySharkState : uint8_t
 	ETinySharkState__Inactive      = 0,
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
-	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	None01                         = 3
 };
 
 
@@ -332,6 +331,22 @@ struct FAIEncounterGenerationRecipeFeatureBasedRankOrderList
 	TArray<class UAIEncounterGenerationRecipe*>        Recipes;                                                  // 0x0008(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct AthenaAI.AthenaAIControllerParamValue
+// 0x000C
+struct FAthenaAIControllerParamValue
+{
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Value;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
+// 0x0038
+struct FAthenaAIControllerWeightedRangesParamValue
+{
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           Value;                                                    // 0x0008(0x0030) (Edit)
+};
+
 // ScriptStruct AthenaAI.AthenaAIControllerSenseSettings
 // 0x0014
 struct FAthenaAIControllerSenseSettings
@@ -354,22 +369,6 @@ struct FAthenaAIControllerSenseSettingOverride
 	struct FAthenaAIControllerSenseSettings            SenseSettings;                                            // 0x0008(0x0014) (Edit)
 	bool                                               ClearPerceivedData;                                       // 0x001C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerParamValue
-// 0x000C
-struct FAthenaAIControllerParamValue
-{
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Value;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
-// 0x0038
-struct FAthenaAIControllerWeightedRangesParamValue
-{
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           Value;                                                    // 0x0008(0x0030) (Edit)
 };
 
 // ScriptStruct AthenaAI.AIFormRankMapping
@@ -677,7 +676,7 @@ struct FSwimAttackTargetShipImpulseData
 };
 
 // ScriptStruct AthenaAI.TinySharkParams
-// 0x00C0
+// 0x00B0
 struct FTinySharkParams
 {
 	class UClass*                                      TinySharkType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -685,19 +684,19 @@ struct FTinySharkParams
 	struct FVector                                     SpawnOffset;                                              // 0x000C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TAssetPtr<class UClass>                            TinySharkAIType;                                          // 0x0018(0x0020) (Edit, DisableEditOnInstance)
 	TAssetPtr<class UAthenaAIControllerParamsDataAsset> TinySharkSkillset;                                        // 0x0038(0x0020) (Edit, DisableEditOnInstance)
-	TArray<TAssetPtr<class UAthenaAIControllerParamsDataAsset>> PerDifficultyTinySharkSkillset;                           // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TAssetPtr<class ULoadoutAsset>                     TinySharkLoadout;                                         // 0x0068(0x0020) (Edit, DisableEditOnInstance)
-	class UClass*                                      TinySharkClassID;                                         // 0x0088(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           LifetimeTimeout;                                          // 0x0090(0x0030) (Edit, DisableEditOnInstance)
+	TAssetPtr<class ULoadoutAsset>                     TinySharkLoadout;                                         // 0x0058(0x0020) (Edit, DisableEditOnInstance)
+	class UClass*                                      TinySharkClassID;                                         // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           LifetimeTimeout;                                          // 0x0080(0x0030) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct AthenaAI.TinySharkShipSpawnData
-// 0x0058
+// 0x0068
 struct FTinySharkShipSpawnData
 {
 	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FWeightedProbabilityRangeOfRanges           Timer;                                                    // 0x0008(0x0030) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRange                   Difficulty;                                               // 0x0038(0x0020) (Edit, DisableEditOnInstance)
+	TArray<TAssetPtr<class UAthenaAIControllerParamsDataAsset>> ControllerParams;                                         // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FWeightedProbabilityRange                   ControllerParamsToUse;                                    // 0x0048(0x0020) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct AthenaAI.TinySharkServiceParams

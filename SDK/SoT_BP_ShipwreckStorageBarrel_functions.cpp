@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ShipwreckStorageBarrel.BP_ShipwreckStorageBarrel_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ShipwreckStorageBarrel_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel.BP_ShipwreckStorageBarrel_C.UserConstructionScript");
+
+	ABP_ShipwreckStorageBarrel_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

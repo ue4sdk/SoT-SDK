@@ -45,11 +45,12 @@ public:
 
 
 // Class Interaction.CharacterInteractionComponent
-// 0x0090 (0x06F0 - 0x0660)
+// 0x00A0 (0x0670 - 0x05D0)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0660(0x0090) MISSED OFFSET
+	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x98];                                      // 0x05D8(0x0098) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -58,7 +59,7 @@ public:
 	}
 
 
-	bool IsInteractionValid(class AActor* InInteractable);
+	bool IsInteractionValid(class UObject* InInteractable);
 	void InvalidateOptimalObject();
 	class UInteractableArea* GetOptimalFocusObject();
 	void ClearAllPolicies();
@@ -225,8 +226,8 @@ class AMockInteractorActor : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
-	class AActor*                                      FocusedInteractable;                                      // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      InteractedActor;                                          // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     FocusedInteractable;                                      // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InteractedObject;                                         // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()

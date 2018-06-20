@@ -14,6 +14,32 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AIShips.AIShipContextParamsDataAsset
+// 0x0038 (0x0060 - 0x0028)
+class UAIShipContextParamsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FAIShipEncounterParamsSpawnerData>   Spawners;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              IntervalBetweenRepairDamageAssignments;                   // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              IntervalBetweenUseCannonAssignments;                      // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMinXYAIInteractableUtility;                        // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMaxXYAIInteractableUtility;                        // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinXYAIInteractableUtility;                               // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxXYAIInteractableUtility;                               // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMinZAIInteractableUtility;                         // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMaxZAIInteractableUtility;                         // 0x0054(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinZAIInteractableUtility;                                // 0x0058(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxZAIInteractableUtility;                                // 0x005C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.AIShipContextParamsDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class AIShips.AIShipDebugFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UAIShipDebugFunctionLibrary : public UBlueprintFunctionLibrary
@@ -31,12 +57,32 @@ public:
 };
 
 
+// Class AIShips.AIShipEncounterSpawnParamsDataAsset
+// 0x00B0 (0x00D8 - 0x0028)
+class UAIShipEncounterSpawnParamsDataAsset : public UDataAsset
+{
+public:
+	class UShipDescAsset*                              AIShipDescAsset;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpawnDepth;                                               // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinSafeSpawnDistanceFromOtherShips;                       // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRelativeSpawnLocationGeneratorParams       RelativeSpawnLocationParams;                              // 0x0038(0x00A0) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.AIShipEncounterSpawnParamsDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class AIShips.AIShipEncounterParamsDataAsset
 // 0x0010 (0x0038 - 0x0028)
 class UAIShipEncounterParamsDataAsset : public UDataAsset
 {
 public:
-	struct FAIShipEncounterParams                      Params;                                                   // 0x0028(0x0010) (Edit, DisableEditOnInstance)
+	class UAIShipEncounterSpawnParamsDataAsset*        SpawnParams;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAIShipContextParamsDataAsset*               ContextParams;                                            // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -63,13 +109,13 @@ public:
 
 
 // Class AIShips.AIShipService
-// 0x00D8 (0x0550 - 0x0478)
+// 0x0040 (0x04B8 - 0x0478)
 class AAIShipService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
-	class UAIShipServiceDataAsset*                     AIShipServiceData;                                        // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC8];                                      // 0x0488(0x00C8) MISSED OFFSET
+	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x30];                                      // 0x0488(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -81,15 +127,11 @@ public:
 
 
 // Class AIShips.AIShipServiceDataAsset
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x0008 (0x0030 - 0x0028)
 class UAIShipServiceDataAsset : public UDataAsset
 {
 public:
-	class UShipDescAsset*                              AIShipDescAsset;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAIShipEncounterParamsDataAsset*             EncounterParams;                                          // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AIShipSpawnDepth;                                         // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinSafeSpawnDistanceFromOtherShips;                       // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRelativeSpawnLocationGeneratorParams       SpawnParameters;                                          // 0x0040(0x00A0) (Edit, DisableEditOnInstance)
+	class UAIShipEncounterParamsDataAsset*             EncounterParams;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

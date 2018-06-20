@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
 {

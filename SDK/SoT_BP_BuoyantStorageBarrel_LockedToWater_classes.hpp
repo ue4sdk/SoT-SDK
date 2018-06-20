@@ -15,11 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C
-// 0x0008 (0x0788 - 0x0780)
+// 0x0018 (0x06E0 - 0x06C8)
 class ABP_BuoyantStorageBarrel_LockedToWater_C : public ABuoyantStorageContainer
 {
 public:
-	class UCapsuleComponent*                           Capsule;                                                  // 0x0780(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTelemetrySubjectComponent*                  TelemetrySubject;                                         // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           Capsule;                                                  // 0x06D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

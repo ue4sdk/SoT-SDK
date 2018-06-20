@@ -298,10 +298,12 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0010 (0x0630 - 0x0620)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
+	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x0620(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0628(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

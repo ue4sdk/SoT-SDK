@@ -76,7 +76,21 @@ enum class ECoherentUIGTKeys : uint8_t
 	None26                         = 53,
 	ECoherentUIGTKeys__RightBracket = 54,
 	None27                         = 55,
-	None28                         = 56
+	None28                         = 56,
+	None29                         = 57,
+	None30                         = 58,
+	BoolProperty                   = 59,
+	None31                         = 60,
+	None32                         = 61,
+	ByteProperty                   = 62,
+	None33                         = 63,
+	BoolProperty01                 = 64,
+	ByteProperty01                 = 65,
+	None34                         = 66,
+	Purchased_SpeakingTrumpet_Total = 67,
+	None35                         = 68,
+	ByteProperty02                 = 69,
+	ByteProperty03                 = 70
 };
 
 

@@ -19,6 +19,17 @@ struct ABP_MerchantCrate_GunpowderBarrel_C_UserConstructionScript_Params
 {
 };
 
+// Function BP_MerchantCrate_GunPowderBarrel.BP_MerchantCrate_GunpowderBarrel_C.ReceiveBeginPlay
+struct ABP_MerchantCrate_GunpowderBarrel_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function BP_MerchantCrate_GunPowderBarrel.BP_MerchantCrate_GunpowderBarrel_C.ExecuteUbergraph_BP_MerchantCrate_GunpowderBarrel
+struct ABP_MerchantCrate_GunpowderBarrel_C_ExecuteUbergraph_BP_MerchantCrate_GunpowderBarrel_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

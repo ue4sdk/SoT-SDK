@@ -29,6 +29,43 @@ void ABP_MerchantCrate_GunpowderBarrelProxy_C::UserConstructionScript()
 }
 
 
+// Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ABP_MerchantCrate_GunpowderBarrelProxy_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.ReceiveBeginPlay");
+
+	ABP_MerchantCrate_GunpowderBarrelProxy_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.ExecuteUbergraph_BP_MerchantCrate_GunpowderBarrelProxy
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_MerchantCrate_GunpowderBarrelProxy_C::ExecuteUbergraph_BP_MerchantCrate_GunpowderBarrelProxy(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.ExecuteUbergraph_BP_MerchantCrate_GunpowderBarrelProxy");
+
+	ABP_MerchantCrate_GunpowderBarrelProxy_C_ExecuteUbergraph_BP_MerchantCrate_GunpowderBarrelProxy_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

@@ -15,13 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaRigging.InstancedRopeComponent
-// 0x00C0 (0x06F0 - 0x0630)
+// 0x00D0 (0x0670 - 0x05A0)
 class UInstancedRopeComponent : public UPrimitiveComponent
 {
 public:
-	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x0630(0x0010) (Edit, ZeroConstructor, EditConst)
-	int                                                ShadowLOD;                                                // 0x0640(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xAC];                                      // 0x0644(0x00AC) MISSED OFFSET
+	class UStaticMesh*                                 StaticMesh;                                               // 0x05A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x05A8(0x0010) (Edit, ZeroConstructor, EditConst)
+	int                                                ShadowLOD;                                                // 0x05B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB4];                                      // 0x05BC(0x00B4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

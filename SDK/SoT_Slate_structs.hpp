@@ -40,8 +40,7 @@ enum class ESelectionMode : uint8_t
 {
 	ESelectionMode__None           = 0,
 	None                           = 1,
-	ESelectionMode__ESelectionMode_MAX = 2,
-	ESlateBrushTileType__NoTile    = 3
+	ESelectionMode__ESelectionMode_MAX = 2
 };
 
 

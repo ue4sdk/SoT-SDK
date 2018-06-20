@@ -7,13 +7,13 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_InputCore_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_MovieScene_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_MovieSceneTracks_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
+#include "SoT_MovieScene_classes.hpp"
 #include "SoT_Slate_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 
 namespace SDK
 {
@@ -71,8 +71,7 @@ enum class EDesignPreviewSizeMode : uint8_t
 	EDesignPreviewSizeMode__FillScreen = 0,
 	None                           = 1,
 	EDesignPreviewSizeMode__DesiredOnScreen = 2,
-	None01                         = 3,
-	EGameplayTaskRunResult__Error  = 4
+	None01                         = 3
 };
 
 
@@ -106,7 +105,8 @@ enum class EWidgetBlendMode : uint8_t
 enum class EWidgetSpace : uint8_t
 {
 	EWidgetSpace__World            = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

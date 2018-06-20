@@ -15,10 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OutpostCrate_bld_shop_wood_box_01_a.BP_OutpostCrate_bld_shop_wood_box_01_a_C
-// 0x0000 (0x0630 - 0x0630)
-class ABP_OutpostCrate_bld_shop_wood_box_01_a_C : public AIslandStorageContainer
+// 0x0010 (0x0580 - 0x0570)
+class ABP_OutpostCrate_bld_shop_wood_box_01_a_C : public AStorageContainer
 {
 public:
+	class UIslandTelemetrySubjectComponent*            IslandTelemetrySubject;                                   // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +28,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

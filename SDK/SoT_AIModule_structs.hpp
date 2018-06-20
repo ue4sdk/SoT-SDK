@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
 {
@@ -174,7 +174,8 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3
+	None01                         = 3,
+	EAILockSource__Animation       = 4
 };
 
 
@@ -184,8 +185,7 @@ enum class EBTDecoratorLogic : uint8_t
 	EBTDecoratorLogic__Invalid     = 0,
 	None                           = 1,
 	EBTDecoratorLogic__Not         = 2,
-	None01                         = 3,
-	EPawnActionResult__NotStarted  = 4
+	None01                         = 3
 };
 
 
@@ -346,8 +346,7 @@ enum class EEnvTestWeight : uint8_t
 	EEnvTestWeight__None           = 0,
 	None                           = 1,
 	EEnvTestWeight__Constant       = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -400,7 +399,8 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	EEnvQueryHightlightMode__All   = 2
+	IntProperty                    = 2,
+	EEnvQueryHightlightMode__All   = 3
 };
 
 
@@ -408,8 +408,7 @@ enum class EEnvTestDistance : uint8_t
 enum class EEnvTestDot : uint8_t
 {
 	EEnvTestDot__Dot3D             = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

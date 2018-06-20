@@ -59,7 +59,7 @@ struct UInteractableComponent_GetBoxExtent_Params
 // Function Interaction.CharacterInteractionComponent.IsInteractionValid
 struct UCharacterInteractionComponent_IsInteractionValid_Params
 {
-	class AActor*                                      InInteractable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InInteractable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

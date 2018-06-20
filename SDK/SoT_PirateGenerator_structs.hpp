@@ -21,8 +21,7 @@ enum class EIPGEthnicity : uint8_t
 {
 	EIPGEthnicity__UNSPECIFIED     = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EIPGEthnicity__EIPGEthnicity_MAX = 3
+	EIPGEthnicity__EIPGEthnicity_MAX = 2
 };
 
 

@@ -167,10 +167,10 @@ struct FVector UInteractableComponent::GetBoxExtent()
 // Function Interaction.CharacterInteractionComponent.IsInteractionValid
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCharacterInteractionComponent::IsInteractionValid(class AActor* InInteractable)
+bool UCharacterInteractionComponent::IsInteractionValid(class UObject* InInteractable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.IsInteractionValid");
 

@@ -31,11 +31,12 @@ public:
 
 
 // Class Niagara.NiagaraComponent
-// 0x0010 (0x0640 - 0x0630)
+// 0x0010 (0x05B0 - 0x05A0)
 class UNiagaraComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
+	class UNiagaraEffect*                              Asset;                                                    // 0x05A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

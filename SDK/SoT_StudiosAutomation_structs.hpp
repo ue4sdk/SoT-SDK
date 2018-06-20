@@ -42,8 +42,7 @@ enum class ETestArea : uint8_t
 	ETestArea__None                = 0,
 	None                           = 1,
 	ETestArea__Art                 = 2,
-	None01                         = 3,
-	EDesignPreviewSizeMode__FillScreen = 4
+	None01                         = 3
 };
 
 

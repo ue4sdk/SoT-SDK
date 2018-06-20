@@ -45,7 +45,7 @@ enum class EUnit : uint8_t
 	None02                         = 6,
 	EUnit__MetersPerSecond         = 7,
 	None03                         = 8,
-	AShipCustomizationChest        = 9,
+	ALandmarkReactionActor         = 9,
 	EUnit__Farenheit               = 10,
 	None04                         = 11,
 	EUnit__Grams                   = 12,
@@ -84,10 +84,10 @@ enum class EMouseCursor : uint8_t
 	None01                         = 3,
 	EMouseCursor__Crosshairs       = 4,
 	None02                         = 5,
-	EMouseCursor__SlashedCircle    = 6,
-	None03                         = 7,
-	EShipRegion__None              = 8,
-	None04                         = 9
+	StructProperty                 = 6,
+	EMouseCursor__SlashedCircle    = 7,
+	None03                         = 8,
+	TextProperty                   = 9
 };
 
 
@@ -135,8 +135,7 @@ enum class EAxis : uint8_t
 {
 	EAxis__None                    = 0,
 	None                           = 1,
-	EAxis__EAxis_MAX               = 2,
-	ETextCommit__Default           = 3
+	EAxis__EAxis_MAX               = 2
 };
 
 

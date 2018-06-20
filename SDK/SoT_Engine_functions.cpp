@@ -4525,53 +4525,6 @@ void USceneComponent::DetachFromParent(bool bMaintainWorldPosition, bool bCallMo
 }
 
 
-// Function Engine.AnimNotify.Received_Notify
-// (Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotify.Received_Notify");
-
-	UAnimNotify_Received_Notify_Params params;
-	params.MeshComp = MeshComp;
-	params.Animation = Animation;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimNotify.GetNotifyName
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-class FString UAnimNotify::GetNotifyName()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotify.GetNotifyName");
-
-	UAnimNotify_GetNotifyName_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.AnimInstance.UnlockAIResources
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
@@ -5852,80 +5805,6 @@ void UAnimInstance::AnimNotify_Sound(class UAnimNotify* Notify)
 }
 
 
-// Function Engine.CameraComponent.ProjectWorldLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 WorldLocation                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FIntPoint               ViewDimensions                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UCameraComponent::ProjectWorldLocation(const struct FVector& WorldLocation, const struct FIntPoint& ViewDimensions)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraComponent.ProjectWorldLocation");
-
-	UCameraComponent_ProjectWorldLocation_Params params;
-	params.WorldLocation = WorldLocation;
-	params.ViewDimensions = ViewDimensions;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CameraComponent.GetCameraView
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FMinimalViewInfo        DesiredView                    (Parm, OutParm)
-
-void UCameraComponent::GetCameraView(float DeltaTime, struct FMinimalViewInfo* DesiredView)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraComponent.GetCameraView");
-
-	UCameraComponent_GetCameraView_Params params;
-	params.DeltaTime = DeltaTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (DesiredView != nullptr)
-		*DesiredView = params.DesiredView;
-}
-
-
-// Function Engine.CameraComponent.AddOrUpdateBlendable
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class UBlendableInterface> InBlendableObject              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InWeight                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCameraComponent::AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraComponent.AddOrUpdateBlendable");
-
-	UCameraComponent_AddOrUpdateBlendable_Params params;
-	params.InBlendableObject = InBlendableObject;
-	params.InWeight = InWeight;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.Pawn.SpawnDefaultController
 // (Native, Public, BlueprintCallable)
 
@@ -7076,6 +6955,199 @@ bool ACharacter::CanJump()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Engine.PlayerState.OnRep_UniqueId
+// (Native, Public)
+
+void APlayerState::OnRep_UniqueId()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_UniqueId");
+
+	APlayerState_OnRep_UniqueId_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerState.OnRep_Score
+// (Native, Public)
+
+void APlayerState::OnRep_Score()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_Score");
+
+	APlayerState_OnRep_Score_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerState.OnRep_PlayerName
+// (Native, Public)
+
+void APlayerState::OnRep_PlayerName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_PlayerName");
+
+	APlayerState_OnRep_PlayerName_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerState.OnRep_bIsInactive
+// (Native, Public)
+
+void APlayerState::OnRep_bIsInactive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_bIsInactive");
+
+	APlayerState_OnRep_bIsInactive_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.AnimNotify.Received_Notify
+// (Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotify.Received_Notify");
+
+	UAnimNotify_Received_Notify_Params params;
+	params.MeshComp = MeshComp;
+	params.Animation = Animation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimNotify.GetNotifyName
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString UAnimNotify::GetNotifyName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotify.GetNotifyName");
+
+	UAnimNotify_GetNotifyName_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CameraComponent.ProjectWorldLocation
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 WorldLocation                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FIntPoint               ViewDimensions                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UCameraComponent::ProjectWorldLocation(const struct FVector& WorldLocation, const struct FIntPoint& ViewDimensions)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraComponent.ProjectWorldLocation");
+
+	UCameraComponent_ProjectWorldLocation_Params params;
+	params.WorldLocation = WorldLocation;
+	params.ViewDimensions = ViewDimensions;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CameraComponent.GetCameraView
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMinimalViewInfo        DesiredView                    (Parm, OutParm)
+
+void UCameraComponent::GetCameraView(float DeltaTime, struct FMinimalViewInfo* DesiredView)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraComponent.GetCameraView");
+
+	UCameraComponent_GetCameraView_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (DesiredView != nullptr)
+		*DesiredView = params.DesiredView;
+}
+
+
+// Function Engine.CameraComponent.AddOrUpdateBlendable
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UBlendableInterface> InBlendableObject              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InWeight                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCameraComponent::AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraComponent.AddOrUpdateBlendable");
+
+	UCameraComponent_AddOrUpdateBlendable_Params params;
+	params.InBlendableObject = InBlendableObject;
+	params.InWeight = InWeight;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -16190,78 +16262,6 @@ class AEmitterCameraLensEffectBase* APlayerCameraManager::AddCameraLensEffect(cl
 }
 
 
-// Function Engine.PlayerState.OnRep_UniqueId
-// (Native, Public)
-
-void APlayerState::OnRep_UniqueId()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_UniqueId");
-
-	APlayerState_OnRep_UniqueId_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerState.OnRep_Score
-// (Native, Public)
-
-void APlayerState::OnRep_Score()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_Score");
-
-	APlayerState_OnRep_Score_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerState.OnRep_PlayerName
-// (Native, Public)
-
-void APlayerState::OnRep_PlayerName()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_PlayerName");
-
-	APlayerState_OnRep_PlayerName_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerState.OnRep_bIsInactive
-// (Native, Public)
-
-void APlayerState::OnRep_bIsInactive()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_bIsInactive");
-
-	APlayerState_OnRep_bIsInactive_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.WorldSettings.OnRep_WorldGravityZ
 // (Native, Public)
 
@@ -18212,6 +18212,45 @@ void UParticleSystemComponent::SetEmitterEnable(const struct FName& EmitterName,
 	UParticleSystemComponent_SetEmitterEnable_Params params;
 	params.EmitterName = EmitterName;
 	params.bNewEnableState = bNewEnableState;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ParticleSystemComponent.SetCustomLocalSpaceWorldSpace
+// (Final, Native, Public, BlueprintCallable)
+
+void UParticleSystemComponent::SetCustomLocalSpaceWorldSpace()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetCustomLocalSpaceWorldSpace");
+
+	UParticleSystemComponent_SetCustomLocalSpaceWorldSpace_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ParticleSystemComponent.SetCustomLocalSpaceComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USceneComponent*         InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UParticleSystemComponent::SetCustomLocalSpaceComponent(class USceneComponent* InComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetCustomLocalSpaceComponent");
+
+	UParticleSystemComponent_SetCustomLocalSpaceComponent_Params params;
+	params.InComponent = InComponent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

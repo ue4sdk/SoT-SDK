@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_IslandStorageBarrel_Outpost.BP_IslandStorageBarrel_Outpost_C.UserConstructionScript
+struct ABP_IslandStorageBarrel_Outpost_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

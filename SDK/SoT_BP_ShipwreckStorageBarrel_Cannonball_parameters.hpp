@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ShipwreckStorageBarrel_Cannonball.BP_ShipwreckStorageBarrel_Cannonball_C.UserConstructionScript
+struct ABP_ShipwreckStorageBarrel_Cannonball_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

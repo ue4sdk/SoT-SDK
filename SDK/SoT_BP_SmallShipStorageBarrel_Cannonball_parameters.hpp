@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_SmallShipStorageBarrel_Cannonball.BP_SmallShipStorageBarrel_Cannonball_C.UserConstructionScript
+struct ABP_SmallShipStorageBarrel_Cannonball_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

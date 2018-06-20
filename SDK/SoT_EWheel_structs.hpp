@@ -21,7 +21,10 @@ enum class EWheel : uint8_t
 	None                           = 1,
 	EWheel__NewEnumerator4         = 2,
 	None01                         = 3,
-	EWheel__EWheel_MAX             = 4
+	NameProperty                   = 4,
+	EWheel__EWheel_MAX             = 5,
+	None02                         = 6,
+	None03                         = 7
 };
 
 
