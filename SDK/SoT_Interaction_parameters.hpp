@@ -88,7 +88,7 @@ struct UInteractableArea_SetParent_Params
 // Function Interaction.InteractableArea.SetInteractable
 struct UInteractableArea_SetInteractable_Params
 {
-	class AActor*                                      InInteractable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InInteractable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Interaction.InteractableArea.SetAreaName
@@ -112,13 +112,19 @@ struct UInteractableArea_GetParent_Params
 // Function Interaction.InteractableArea.GetInteractable
 struct UInteractableArea_GetInteractable_Params
 {
-	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class UObject*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Interaction.InteractableArea.GetAreaName
 struct UInteractableArea_GetAreaName_Params
 {
 	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Interaction.InteractableArea.GetAreaLocation
+struct UInteractableArea_GetAreaLocation_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Interaction.InteractableArea.GetAreaBounds
@@ -135,14 +141,14 @@ struct UInteractableInterface_ShouldDrawTooltipInWorldSpace_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Interaction.InteractableInterface.SetInteractionsDisabled
-struct UInteractableInterface_SetInteractionsDisabled_Params
+// Function Interaction.InteractableInterface.SetInteractionState
+struct UInteractableInterface_SetInteractionState_Params
 {
-	bool                                               Disabled;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EInteractableState>                    InNewInteractableState;                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Interaction.InteractableInterface.InteractionsCanBeDisabled
-struct UInteractableInterface_InteractionsCanBeDisabled_Params
+// Function Interaction.InteractableInterface.IsInteractableDisabled
+struct UInteractableInterface_IsInteractableDisabled_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -154,10 +160,10 @@ struct UInteractableInterface_Interact_Params
 	class UClass*                                      NotificationInputId;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Interaction.InteractableInterface.GetInteractionsDisabled
-struct UInteractableInterface_GetInteractionsDisabled_Params
+// Function Interaction.InteractableInterface.GetInteractionState
+struct UInteractableInterface_GetInteractionState_Params
 {
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	TEnumAsByte<EInteractableState>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Interaction.InteractableInterface.GetFrontFacingVector
@@ -203,6 +209,12 @@ struct UInteractableInterface_CanInteractWithNotificationInputId_Params
 {
 	class AActor*                                      InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      NotificationInputId;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Interaction.InteractableInterface.CanInteractionStatesBeSet
+struct UInteractableInterface_CanInteractionStatesBeSet_Params
+{
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

@@ -20,8 +20,7 @@ enum class EObjectTargetingStates : uint8_t
 	EObjectTargetingStates__NewEnumerator0 = 0,
 	None                           = 1,
 	EObjectTargetingStates__NewEnumerator4 = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 

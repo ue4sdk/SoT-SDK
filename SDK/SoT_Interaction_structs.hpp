@@ -8,6 +8,7 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
@@ -34,8 +35,8 @@ enum class EInteractionBlockReason : uint8_t
 // 0x0010
 struct FEventOptimalInteractionObjectChanged
 {
-	class AActor*                                      PreviousFocusObject;                                      // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      NewFocusObject;                                           // 0x0008(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     PreviousFocusObject;                                      // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     NewFocusObject;                                           // 0x0008(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Interaction.EventInteractionBlockingStateChanged

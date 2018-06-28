@@ -1649,6 +1649,76 @@ class AShip* ATinySharkExperience::GetTrackedShip()
 }
 
 
+// Function AthenaAI.TinySharkExperience.GetCurrentState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<ETinySharkState>   ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetCurrentState");
+
+	ATinySharkExperience_GetCurrentState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkExperience.GetActiveState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<ETinySharkActiveState> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetActiveState");
+
+	ATinySharkExperience_GetActiveState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkService.RequestTinySharkWithShip
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AShip*                   InTrackedShip                  (Parm, ZeroConstructor, IsPlainOldData)
+// int                            OverrideControllerParamIndex   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithShip");
+
+	ATinySharkService_RequestTinySharkWithShip_Params params;
+	params.InTrackedShip = InTrackedShip;
+	params.OverrideControllerParamIndex = OverrideControllerParamIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:

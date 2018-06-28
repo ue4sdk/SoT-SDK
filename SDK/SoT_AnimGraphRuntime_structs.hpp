@@ -34,7 +34,9 @@ enum class EComponentType : uint8_t
 	None01                         = 3,
 	EComponentType__ScaleX         = 4,
 	None02                         = 5,
-	None03                         = 6
+	None03                         = 6,
+	EMPMatchOutcome__None          = 7,
+	None04                         = 8
 };
 
 
@@ -55,7 +57,8 @@ enum class EAxisOption : uint8_t
 	EAxisOption__X                 = 0,
 	None                           = 1,
 	EAxisOption__Y_Neg             = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

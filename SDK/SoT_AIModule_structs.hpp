@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
@@ -46,7 +46,8 @@ enum class EAILockSource : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EAILockSource__MAX             = 3,
-	None01                         = 4
+	None01                         = 4,
+	EPawnActionResult__NotStarted  = 5
 };
 
 
@@ -56,7 +57,8 @@ enum class EAIRequestPriority : uint8_t
 	EAIRequestPriority__SoftScript = 0,
 	None                           = 1,
 	EAIRequestPriority__Ultimate   = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -76,7 +78,8 @@ enum class EPawnActionResult : uint8_t
 	EPawnActionResult__NotStarted  = 0,
 	None                           = 1,
 	EPawnActionResult__Aborted     = 2,
-	None01                         = 3
+	None01                         = 3,
+	EPathFollowingAction__Error    = 4
 };
 
 
@@ -174,8 +177,7 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3,
-	EAILockSource__Animation       = 4
+	None01                         = 3
 };
 
 

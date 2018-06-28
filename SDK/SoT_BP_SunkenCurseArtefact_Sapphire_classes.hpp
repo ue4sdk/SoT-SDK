@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C
-// 0x0000 (0x05C0 - 0x05C0)
+// 0x0000 (0x05D0 - 0x05D0)
 class ABP_SunkenCurseArtefact_Sapphire_C : public ASunkenCurseArtefact
 {
 public:

@@ -14,6 +14,26 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AthenaAI.AthenaAIFormComponent
+// 0x0080 (0x0150 - 0x00D0)
+class UAthenaAIFormComponent : public UActorComponent
+{
+public:
+	class UAthenaAIFormDataAsset*                      FormData;                                                 // 0x00D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UCharacterHitReactionDamagerTypeToAnimTypeLayer* HitReactionsLayer;                                        // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x70];                                      // 0x00E0(0x0070) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAI.AthenaAIFormComponent");
+		return ptr;
+	}
+
+
+	void OnRep_FormData();
+};
+
+
 // Class AthenaAI.AIStrategyId
 // 0x0000 (0x0028 - 0x0028)
 class UAIStrategyId : public UObject
@@ -105,26 +125,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class AthenaAI.AthenaAIFormComponent
-// 0x0080 (0x0150 - 0x00D0)
-class UAthenaAIFormComponent : public UActorComponent
-{
-public:
-	class UAthenaAIFormDataAsset*                      FormData;                                                 // 0x00D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UCharacterHitReactionDamagerTypeToAnimTypeLayer* HitReactionsLayer;                                        // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x70];                                      // 0x00E0(0x0070) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAI.AthenaAIFormComponent");
-		return ptr;
-	}
-
-
-	void OnRep_FormData();
 };
 
 
@@ -1899,6 +1899,22 @@ public:
 };
 
 
+// Class AthenaAI.BTDecorator_TargetInRangeOfPoint
+// 0x0028 (0x0130 - 0x0108)
+class UBTDecorator_TargetInRangeOfPoint : public UBTDecorator_TargetInRange
+{
+public:
+	struct FBlackboardKeySelector                      ReferencePointKey;                                        // 0x0108(0x0028) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAI.BTDecorator_TargetInRangeOfPoint");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.BTDecorator_TestRange
 // 0x0068 (0x00E8 - 0x0080)
 class UBTDecorator_TestRange : public UBTDecorator_CompareBlackboardValues
@@ -3045,6 +3061,21 @@ public:
 };
 
 
+// Class AthenaAI.EnvQueryContext_SpawnedForActorFromBlackboard
+// 0x0000 (0x0028 - 0x0028)
+class UEnvQueryContext_SpawnedForActorFromBlackboard : public UEnvQueryContext
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAI.EnvQueryContext_SpawnedForActorFromBlackboard");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.EnvQueryContext_TargetActorFromBlackboard
 // 0x0000 (0x0028 - 0x0028)
 class UEnvQueryContext_TargetActorFromBlackboard : public UEnvQueryContext
@@ -3247,7 +3278,7 @@ public:
 
 
 // Class AthenaAI.TinySharkExperience
-// 0x0358 (0x07D0 - 0x0478)
+// 0x0390 (0x0808 - 0x0478)
 class ATinySharkExperience : public AActor
 {
 public:
@@ -3259,13 +3290,14 @@ public:
 	class UAIOnDemandSpawner*                          TinySharkSpawner;                                         // 0x0508(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class ASharkPawn*                                  TinySharkPawn;                                            // 0x0510(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x8];                                       // 0x0518(0x0008) MISSED OFFSET
-	struct FTinySharkParams                            Params;                                                   // 0x0520(0x00B0) (Transient)
-	class UTinySharkTelemetryComponent*                TinySharkTelemetryComponent;                              // 0x05D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AShip*                                       TrackedShip;                                              // 0x05D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x98];                                      // 0x05E0(0x0098) MISSED OFFSET
-	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0678(0x000C) (Edit, DisableEditOnInstance)
-	struct FEncounterParams                            CloseEncounterParams;                                     // 0x0684(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData04[0x140];                                     // 0x0690(0x0140) MISSED OFFSET
+	struct FTinySharkParams                            Params;                                                   // 0x0520(0x00B8) (Transient)
+	class UTinySharkTelemetryComponent*                TinySharkTelemetryComponent;                              // 0x05D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AShip*                                       TrackedShip;                                              // 0x05E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x98];                                      // 0x05E8(0x0098) MISSED OFFSET
+	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0680(0x000C) (Edit, DisableEditOnInstance)
+	struct FEncounterParams                            CloseEncounterParams;                                     // 0x068C(0x000C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData04[0x150];                                     // 0x0698(0x0150) MISSED OFFSET
+	TAssetPtr<class UAthenaAIControllerParamsDataAsset> CachedControllerParamsAsset;                              // 0x07E8(0x0020)
 
 	static UClass* StaticClass()
 	{
@@ -3276,15 +3308,17 @@ public:
 
 	void TinySharkPawnDestroyed(class AActor* InDestroyedActor);
 	class AShip* GetTrackedShip();
+	TEnumAsByte<ETinySharkState> GetCurrentState();
+	TEnumAsByte<ETinySharkActiveState> GetActiveState();
 };
 
 
 // Class AthenaAI.TinySharkParamsDataAsset
-// 0x00B0 (0x00D8 - 0x0028)
+// 0x00B8 (0x00E0 - 0x0028)
 class UTinySharkParamsDataAsset : public UDataAsset
 {
 public:
-	struct FTinySharkParams                            Params;                                                   // 0x0028(0x00B0) (Edit, DisableEditOnInstance)
+	struct FTinySharkParams                            Params;                                                   // 0x0028(0x00B8) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -3328,6 +3362,7 @@ public:
 	}
 
 
+	bool RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex);
 	bool RequestTinySharkWithLocation(const struct FVector& SpawnLocation);
 	void DismissAllTinySharks();
 	bool CanSpawnTinySharkExperience();

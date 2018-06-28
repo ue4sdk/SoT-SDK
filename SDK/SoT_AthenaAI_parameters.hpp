@@ -492,6 +492,26 @@ struct ATinySharkExperience_GetTrackedShip_Params
 	class AShip*                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AthenaAI.TinySharkExperience.GetCurrentState
+struct ATinySharkExperience_GetCurrentState_Params
+{
+	TEnumAsByte<ETinySharkState>                       ReturnValue;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.TinySharkExperience.GetActiveState
+struct ATinySharkExperience_GetActiveState_Params
+{
+	TEnumAsByte<ETinySharkActiveState>                 ReturnValue;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.TinySharkService.RequestTinySharkWithShip
+struct ATinySharkService_RequestTinySharkWithShip_Params
+{
+	class AShip*                                       InTrackedShip;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OverrideControllerParamIndex;                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
 struct ATinySharkService_RequestTinySharkWithLocation_Params
 {

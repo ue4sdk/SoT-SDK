@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_OnlineSubsystemUtils_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_OnlineSubsystemUtils_classes.hpp"
 
 namespace SDK
 {

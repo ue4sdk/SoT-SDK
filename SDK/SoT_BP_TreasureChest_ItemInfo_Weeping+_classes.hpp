@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_ItemInfo_Weeping+.BP_TreasureChest_ItemInfo_Weeping+_C
-// 0x0008 (0x0590 - 0x0588)
+// 0x0008 (0x0598 - 0x0590)
 class ABP_TreasureChest_ItemInfo_Weeping__C : public AWeepingChestItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

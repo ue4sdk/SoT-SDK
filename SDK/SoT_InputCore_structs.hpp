@@ -23,11 +23,10 @@ enum class ETouchIndex : uint8_t
 	IntProperty                    = 2,
 	ETouchIndex__Touch5            = 3,
 	None01                         = 4,
-	NameProperty                   = 5,
-	ETouchIndex__Touch9            = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9
+	ETouchIndex__Touch9            = 5,
+	None02                         = 6,
+	StructProperty                 = 7,
+	ByteProperty                   = 8
 };
 
 

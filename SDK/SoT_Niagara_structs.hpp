@@ -22,7 +22,8 @@ enum class ENiagaraDataType : uint8_t
 {
 	ENiagaraDataType__Scalar       = 0,
 	None                           = 1,
-	ENiagaraDataType__ENiagaraDataType_MAX = 2
+	ENiagaraDataType__ENiagaraDataType_MAX = 2,
+	EUnusedAttributeBehaviour__Copy = 3
 };
 
 
@@ -32,7 +33,7 @@ enum class EUnusedAttributeBehaviour : uint8_t
 	EUnusedAttributeBehaviour__Copy = 0,
 	None                           = 1,
 	EUnusedAttributeBehaviour__EUnusedAttributeBehaviour_MAX = 2,
-	ENiagaraDataType__Scalar       = 3
+	EPerformanceCaptureType__None  = 3
 };
 
 
@@ -42,7 +43,8 @@ enum class EEmitterRenderModuleType : uint8_t
 	RMT_None                       = 0,
 	None                           = 1,
 	RMT_Meshes                     = 2,
-	None01                         = 3
+	None01                         = 3,
+	EGameplayTaskState__Uninitialized = 4
 };
 
 

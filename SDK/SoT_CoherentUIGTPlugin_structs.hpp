@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_UMG_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_UMG_classes.hpp"
 
 namespace SDK
 {
@@ -87,7 +87,7 @@ enum class ECoherentUIGTKeys : uint8_t
 	BoolProperty01                 = 64,
 	ByteProperty01                 = 65,
 	None34                         = 66,
-	Purchased_SpeakingTrumpet_Total = 67,
+	Purchased_Ranks_MaxRank_GoldHoarders = 67,
 	None35                         = 68,
 	ByteProperty02                 = 69,
 	ByteProperty03                 = 70
@@ -99,8 +99,7 @@ enum class ECoherentUIGTInputPropagationBehaviour : uint8_t
 {
 	ECoherentUIGTInputPropagationBehaviour__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 3
+	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 2
 };
 
 
@@ -110,7 +109,7 @@ enum class EGamepadBehaviourOnFocusLost : uint8_t
 	ResetState                     = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EKrakenState__Spawning         = 3
+	GTInputLineTrace_Single        = 3
 };
 
 
@@ -127,7 +126,7 @@ enum class EGTInputWidgetRaycastQuality : uint8_t
 {
 	RaycastQuality_Fast            = 0,
 	None                           = 1,
-	GTInputLineTrace_Single        = 2
+	ResetState                     = 2
 };
 
 

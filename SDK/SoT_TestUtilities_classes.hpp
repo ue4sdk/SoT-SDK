@@ -61,6 +61,22 @@ public:
 };
 
 
+// Class TestUtilities.TestActorWithObjectMessagingDispatcher
+// 0x00A8 (0x0520 - 0x0478)
+class ATestActorWithObjectMessagingDispatcher : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0478(0x00A8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TestUtilities.TestActorWithObjectMessagingDispatcher");
+		return ptr;
+	}
+
+};
+
+
 // Class TestUtilities.TestEnvQueryContextPoints
 // 0x0000 (0x0028 - 0x0028)
 class UTestEnvQueryContextPoints : public UEnvQueryContext

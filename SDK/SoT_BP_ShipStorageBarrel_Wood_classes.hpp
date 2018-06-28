@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C
-// 0x0010 (0x0580 - 0x0570)
+// 0x0018 (0x0580 - 0x0568)
 class ABP_ShipStorageBarrel_Wood_C : public AStorageContainer
 {
 public:
+	class UReplenishableComponent*                     Replenishable;                                            // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                     // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 

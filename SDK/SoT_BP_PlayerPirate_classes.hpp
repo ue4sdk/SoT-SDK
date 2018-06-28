@@ -15,26 +15,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlayerPirate.BP_PlayerPirate_C
-// 0x007C (0x13DC - 0x1360)
+// 0x007C (0x13EC - 0x1370)
 class ABP_PlayerPirate_C : public AAthenaPlayerCharacter
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1360(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStatusEffectComponent*                      StatusEffect;                                             // 0x1368(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x1370(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UVomitComponent*                             Vomit;                                                    // 0x1378(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNoiseMakerComponent*                        NoiseMaker;                                               // 0x1380(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerNameplateComponent*                   PlayerNameplate;                                          // 0x1388(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBodyLightControllerComponent*               BodyLightController;                                      // 0x1390(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAmbientLightSourceComponent*                BodyLight;                                                // 0x1398(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioSpaceTrackerComponent*                 AudioSpaceTracker;                                        // 0x13A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerAtmosphericsAudioComponent*           PlayerAtmosphericsAudio;                                  // 0x13A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_CharacterVFXComponent_C*                 BP_CharacterVFXComponent;                                 // 0x13B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x13B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_CharacterAudioComponent_C*               BP_PlayerAudioComponent;                                  // 0x13C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x13C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerOceanAudioComponent*                  PlayerOceanAudio;                                         // 0x13D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TattooGlowDuration;                                       // 0x13D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1370(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStatusEffectComponent*                      StatusEffect;                                             // 0x1378(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x1380(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UVomitComponent*                             Vomit;                                                    // 0x1388(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNoiseMakerComponent*                        NoiseMaker;                                               // 0x1390(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerNameplateComponent*                   PlayerNameplate;                                          // 0x1398(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBodyLightControllerComponent*               BodyLightController;                                      // 0x13A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAmbientLightSourceComponent*                BodyLight;                                                // 0x13A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioSpaceTrackerComponent*                 AudioSpaceTracker;                                        // 0x13B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerAtmosphericsAudioComponent*           PlayerAtmosphericsAudio;                                  // 0x13B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_CharacterVFXComponent_C*                 BP_CharacterVFXComponent;                                 // 0x13C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x13C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_CharacterAudioComponent_C*               BP_PlayerAudioComponent;                                  // 0x13D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x13D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerOceanAudioComponent*                  PlayerOceanAudio;                                         // 0x13E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TattooGlowDuration;                                       // 0x13E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

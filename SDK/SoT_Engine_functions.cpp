@@ -12,6 +12,462 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Engine.ActorComponent.ToggleActive
+// (Native, Public, BlueprintCallable)
+
+void UActorComponent::ToggleActive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ToggleActive");
+
+	UActorComponent_ToggleActive_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.SetTickGroup
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<ETickingGroup>     NewTickGroup                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::SetTickGroup(TEnumAsByte<ETickingGroup> NewTickGroup)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetTickGroup");
+
+	UActorComponent_SetTickGroup_Params params;
+	params.NewTickGroup = NewTickGroup;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.SetTickableWhenPaused
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bTickableWhenPaused            (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::SetTickableWhenPaused(bool bTickableWhenPaused)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetTickableWhenPaused");
+
+	UActorComponent_SetTickableWhenPaused_Params params;
+	params.bTickableWhenPaused = bTickableWhenPaused;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.SetIsReplicated
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ShouldReplicate                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::SetIsReplicated(bool ShouldReplicate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetIsReplicated");
+
+	UActorComponent_SetIsReplicated_Params params;
+	params.ShouldReplicate = ShouldReplicate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.SetComponentTickEnabled
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::SetComponentTickEnabled(bool bEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetComponentTickEnabled");
+
+	UActorComponent_SetComponentTickEnabled_Params params;
+	params.bEnabled = bEnabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.SetActive
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewActive                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::SetActive(bool bNewActive, bool bReset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetActive");
+
+	UActorComponent_SetActive_Params params;
+	params.bNewActive = bNewActive;
+	params.bReset = bReset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.RemoveTickPrerequisiteComponent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent*         PrerequisiteComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UActorComponent::RemoveTickPrerequisiteComponent(class UActorComponent* PrerequisiteComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.RemoveTickPrerequisiteComponent");
+
+	UActorComponent_RemoveTickPrerequisiteComponent_Params params;
+	params.PrerequisiteComponent = PrerequisiteComponent;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.RemoveTickPrerequisiteActor
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  PrerequisiteActor              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::RemoveTickPrerequisiteActor(class AActor* PrerequisiteActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.RemoveTickPrerequisiteActor");
+
+	UActorComponent_RemoveTickPrerequisiteActor_Params params;
+	params.PrerequisiteActor = PrerequisiteActor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::ReceiveTick(float DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ReceiveTick");
+
+	UActorComponent_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ReceiveEndPlay");
+
+	UActorComponent_ReceiveEndPlay_Params params;
+	params.EndPlayReason = EndPlayReason;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UActorComponent::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ReceiveBeginPlay");
+
+	UActorComponent_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.OnRep_IsActive
+// (Final, Native, Public)
+
+void UActorComponent::OnRep_IsActive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.OnRep_IsActive");
+
+	UActorComponent_OnRep_IsActive_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.K2_DestroyComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::K2_DestroyComponent(class UObject* Object)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.K2_DestroyComponent");
+
+	UActorComponent_K2_DestroyComponent_Params params;
+	params.Object = Object;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.IsComponentTickEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorComponent::IsComponentTickEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.IsComponentTickEnabled");
+
+	UActorComponent_IsComponentTickEnabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.IsBeingDestroyed
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorComponent::IsBeingDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.IsBeingDestroyed");
+
+	UActorComponent_IsBeingDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.IsActive
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorComponent::IsActive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.IsActive");
+
+	UActorComponent_IsActive_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.GetOwner
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* UActorComponent::GetOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.GetOwner");
+
+	UActorComponent_GetOwner_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.Deactivate
+// (Native, Public, BlueprintCallable)
+
+void UActorComponent::Deactivate()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.Deactivate");
+
+	UActorComponent_Deactivate_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.ComponentHasTag
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorComponent::ComponentHasTag(const struct FName& Tag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ComponentHasTag");
+
+	UActorComponent_ComponentHasTag_Params params;
+	params.Tag = Tag;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.AddTickPrerequisiteComponent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent*         PrerequisiteComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UActorComponent::AddTickPrerequisiteComponent(class UActorComponent* PrerequisiteComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.AddTickPrerequisiteComponent");
+
+	UActorComponent_AddTickPrerequisiteComponent_Params params;
+	params.PrerequisiteComponent = PrerequisiteComponent;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.AddTickPrerequisiteActor
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  PrerequisiteActor              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::AddTickPrerequisiteActor(class AActor* PrerequisiteActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.AddTickPrerequisiteActor");
+
+	UActorComponent_AddTickPrerequisiteActor_Params params;
+	params.PrerequisiteActor = PrerequisiteActor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.Activate
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorComponent::Activate(bool bReset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.Activate");
+
+	UActorComponent_Activate_Params params;
+	params.bReset = bReset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.Actor.UserConstructionScript
 // (Event, Public, BlueprintEvent)
 
@@ -2712,462 +3168,6 @@ bool AActor::ActorHasTag(const struct FName& Tag)
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function Engine.ActorComponent.ToggleActive
-// (Native, Public, BlueprintCallable)
-
-void UActorComponent::ToggleActive()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ToggleActive");
-
-	UActorComponent_ToggleActive_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.SetTickGroup
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<ETickingGroup>     NewTickGroup                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::SetTickGroup(TEnumAsByte<ETickingGroup> NewTickGroup)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetTickGroup");
-
-	UActorComponent_SetTickGroup_Params params;
-	params.NewTickGroup = NewTickGroup;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.SetTickableWhenPaused
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bTickableWhenPaused            (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::SetTickableWhenPaused(bool bTickableWhenPaused)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetTickableWhenPaused");
-
-	UActorComponent_SetTickableWhenPaused_Params params;
-	params.bTickableWhenPaused = bTickableWhenPaused;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.SetIsReplicated
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           ShouldReplicate                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::SetIsReplicated(bool ShouldReplicate)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetIsReplicated");
-
-	UActorComponent_SetIsReplicated_Params params;
-	params.ShouldReplicate = ShouldReplicate;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.SetComponentTickEnabled
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::SetComponentTickEnabled(bool bEnabled)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetComponentTickEnabled");
-
-	UActorComponent_SetComponentTickEnabled_Params params;
-	params.bEnabled = bEnabled;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.SetActive
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewActive                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::SetActive(bool bNewActive, bool bReset)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.SetActive");
-
-	UActorComponent_SetActive_Params params;
-	params.bNewActive = bNewActive;
-	params.bReset = bReset;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.RemoveTickPrerequisiteComponent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UActorComponent*         PrerequisiteComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UActorComponent::RemoveTickPrerequisiteComponent(class UActorComponent* PrerequisiteComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.RemoveTickPrerequisiteComponent");
-
-	UActorComponent_RemoveTickPrerequisiteComponent_Params params;
-	params.PrerequisiteComponent = PrerequisiteComponent;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.RemoveTickPrerequisiteActor
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  PrerequisiteActor              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::RemoveTickPrerequisiteActor(class AActor* PrerequisiteActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.RemoveTickPrerequisiteActor");
-
-	UActorComponent_RemoveTickPrerequisiteActor_Params params;
-	params.PrerequisiteActor = PrerequisiteActor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::ReceiveTick(float DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ReceiveTick");
-
-	UActorComponent_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ReceiveEndPlay");
-
-	UActorComponent_ReceiveEndPlay_Params params;
-	params.EndPlayReason = EndPlayReason;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UActorComponent::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ReceiveBeginPlay");
-
-	UActorComponent_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.OnRep_IsActive
-// (Final, Native, Public)
-
-void UActorComponent::OnRep_IsActive()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.OnRep_IsActive");
-
-	UActorComponent_OnRep_IsActive_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.K2_DestroyComponent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::K2_DestroyComponent(class UObject* Object)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.K2_DestroyComponent");
-
-	UActorComponent_K2_DestroyComponent_Params params;
-	params.Object = Object;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.IsComponentTickEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UActorComponent::IsComponentTickEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.IsComponentTickEnabled");
-
-	UActorComponent_IsComponentTickEnabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.ActorComponent.IsBeingDestroyed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UActorComponent::IsBeingDestroyed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.IsBeingDestroyed");
-
-	UActorComponent_IsBeingDestroyed_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.ActorComponent.IsActive
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UActorComponent::IsActive()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.IsActive");
-
-	UActorComponent_IsActive_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.ActorComponent.GetOwner
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* UActorComponent::GetOwner()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.GetOwner");
-
-	UActorComponent_GetOwner_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.ActorComponent.Deactivate
-// (Native, Public, BlueprintCallable)
-
-void UActorComponent::Deactivate()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.Deactivate");
-
-	UActorComponent_Deactivate_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.ComponentHasTag
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UActorComponent::ComponentHasTag(const struct FName& Tag)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.ComponentHasTag");
-
-	UActorComponent_ComponentHasTag_Params params;
-	params.Tag = Tag;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.ActorComponent.AddTickPrerequisiteComponent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UActorComponent*         PrerequisiteComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UActorComponent::AddTickPrerequisiteComponent(class UActorComponent* PrerequisiteComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.AddTickPrerequisiteComponent");
-
-	UActorComponent_AddTickPrerequisiteComponent_Params params;
-	params.PrerequisiteComponent = PrerequisiteComponent;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.AddTickPrerequisiteActor
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  PrerequisiteActor              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::AddTickPrerequisiteActor(class AActor* PrerequisiteActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.AddTickPrerequisiteActor");
-
-	UActorComponent_AddTickPrerequisiteActor_Params params;
-	params.PrerequisiteActor = PrerequisiteActor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.ActorComponent.Activate
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UActorComponent::Activate(bool bReset)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.Activate");
-
-	UActorComponent_Activate_Params params;
-	params.bReset = bReset;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

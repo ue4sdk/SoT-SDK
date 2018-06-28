@@ -249,15 +249,15 @@ public:
 
 
 // Class Landscape.LandscapeMaterialInstanceConstant
-// 0x0010 (0x0200 - 0x01F0)
+// 0x0010 (0x01F8 - 0x01E8)
 class ULandscapeMaterialInstanceConstant : public UMaterialInstanceConstant
 {
 public:
-	unsigned char                                      bIsLayerThumbnail : 1;                                    // 0x01F0(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x01F1(0x0003) MISSED OFFSET
-	int                                                DataWeightmapIndex;                                       // 0x01F4(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                DataWeightmapSize;                                        // 0x01F8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01FC(0x0004) MISSED OFFSET
+	unsigned char                                      bIsLayerThumbnail : 1;                                    // 0x01E8(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x01E9(0x0003) MISSED OFFSET
+	int                                                DataWeightmapIndex;                                       // 0x01EC(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                DataWeightmapSize;                                        // 0x01F0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x01F4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

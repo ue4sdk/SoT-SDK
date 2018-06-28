@@ -14,6 +14,136 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Engine.ActorComponent.ToggleActive
+struct UActorComponent_ToggleActive_Params
+{
+};
+
+// Function Engine.ActorComponent.SetTickGroup
+struct UActorComponent_SetTickGroup_Params
+{
+	TEnumAsByte<ETickingGroup>                         NewTickGroup;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.SetTickableWhenPaused
+struct UActorComponent_SetTickableWhenPaused_Params
+{
+	bool                                               bTickableWhenPaused;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.SetIsReplicated
+struct UActorComponent_SetIsReplicated_Params
+{
+	bool                                               ShouldReplicate;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.SetComponentTickEnabled
+struct UActorComponent_SetComponentTickEnabled_Params
+{
+	bool                                               bEnabled;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.SetActive
+struct UActorComponent_SetActive_Params
+{
+	bool                                               bNewActive;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bReset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.RemoveTickPrerequisiteComponent
+struct UActorComponent_RemoveTickPrerequisiteComponent_Params
+{
+	class UActorComponent*                             PrerequisiteComponent;                                    // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.RemoveTickPrerequisiteActor
+struct UActorComponent_RemoveTickPrerequisiteActor_Params
+{
+	class AActor*                                      PrerequisiteActor;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.ReceiveTick
+struct UActorComponent_ReceiveTick_Params
+{
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.ReceiveEndPlay
+struct UActorComponent_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.ReceiveBeginPlay
+struct UActorComponent_ReceiveBeginPlay_Params
+{
+};
+
+// Function Engine.ActorComponent.OnRep_IsActive
+struct UActorComponent_OnRep_IsActive_Params
+{
+};
+
+// Function Engine.ActorComponent.K2_DestroyComponent
+struct UActorComponent_K2_DestroyComponent_Params
+{
+	class UObject*                                     Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.IsComponentTickEnabled
+struct UActorComponent_IsComponentTickEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.IsBeingDestroyed
+struct UActorComponent_IsBeingDestroyed_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.IsActive
+struct UActorComponent_IsActive_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.GetOwner
+struct UActorComponent_GetOwner_Params
+{
+	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.Deactivate
+struct UActorComponent_Deactivate_Params
+{
+};
+
+// Function Engine.ActorComponent.ComponentHasTag
+struct UActorComponent_ComponentHasTag_Params
+{
+	struct FName                                       Tag;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.AddTickPrerequisiteComponent
+struct UActorComponent_AddTickPrerequisiteComponent_Params
+{
+	class UActorComponent*                             PrerequisiteComponent;                                    // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.AddTickPrerequisiteActor
+struct UActorComponent_AddTickPrerequisiteActor_Params
+{
+	class AActor*                                      PrerequisiteActor;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ActorComponent.Activate
+struct UActorComponent_Activate_Params
+{
+	bool                                               bReset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.Actor.UserConstructionScript
 struct AActor_UserConstructionScript_Params
 {
@@ -811,136 +941,6 @@ struct AActor_ActorHasTag_Params
 {
 	struct FName                                       Tag;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.ToggleActive
-struct UActorComponent_ToggleActive_Params
-{
-};
-
-// Function Engine.ActorComponent.SetTickGroup
-struct UActorComponent_SetTickGroup_Params
-{
-	TEnumAsByte<ETickingGroup>                         NewTickGroup;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.SetTickableWhenPaused
-struct UActorComponent_SetTickableWhenPaused_Params
-{
-	bool                                               bTickableWhenPaused;                                      // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.SetIsReplicated
-struct UActorComponent_SetIsReplicated_Params
-{
-	bool                                               ShouldReplicate;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.SetComponentTickEnabled
-struct UActorComponent_SetComponentTickEnabled_Params
-{
-	bool                                               bEnabled;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.SetActive
-struct UActorComponent_SetActive_Params
-{
-	bool                                               bNewActive;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bReset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.RemoveTickPrerequisiteComponent
-struct UActorComponent_RemoveTickPrerequisiteComponent_Params
-{
-	class UActorComponent*                             PrerequisiteComponent;                                    // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.RemoveTickPrerequisiteActor
-struct UActorComponent_RemoveTickPrerequisiteActor_Params
-{
-	class AActor*                                      PrerequisiteActor;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.ReceiveTick
-struct UActorComponent_ReceiveTick_Params
-{
-	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.ReceiveEndPlay
-struct UActorComponent_ReceiveEndPlay_Params
-{
-	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.ReceiveBeginPlay
-struct UActorComponent_ReceiveBeginPlay_Params
-{
-};
-
-// Function Engine.ActorComponent.OnRep_IsActive
-struct UActorComponent_OnRep_IsActive_Params
-{
-};
-
-// Function Engine.ActorComponent.K2_DestroyComponent
-struct UActorComponent_K2_DestroyComponent_Params
-{
-	class UObject*                                     Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.IsComponentTickEnabled
-struct UActorComponent_IsComponentTickEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.IsBeingDestroyed
-struct UActorComponent_IsBeingDestroyed_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.IsActive
-struct UActorComponent_IsActive_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.GetOwner
-struct UActorComponent_GetOwner_Params
-{
-	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.Deactivate
-struct UActorComponent_Deactivate_Params
-{
-};
-
-// Function Engine.ActorComponent.ComponentHasTag
-struct UActorComponent_ComponentHasTag_Params
-{
-	struct FName                                       Tag;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.AddTickPrerequisiteComponent
-struct UActorComponent_AddTickPrerequisiteComponent_Params
-{
-	class UActorComponent*                             PrerequisiteComponent;                                    // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.AddTickPrerequisiteActor
-struct UActorComponent_AddTickPrerequisiteActor_Params
-{
-	class AActor*                                      PrerequisiteActor;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.ActorComponent.Activate
-struct UActorComponent_Activate_Params
-{
-	bool                                               bReset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.SceneComponent.ToggleVisibility

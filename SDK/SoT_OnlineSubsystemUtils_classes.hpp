@@ -93,11 +93,11 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpConnection
-// 0x0050 (0x344A8 - 0x34458)
+// 0x0050 (0x344C8 - 0x34478)
 class UIpConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x34458(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x34478(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -109,15 +109,15 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x0050 (0x03A0 - 0x0350)
+// 0x0050 (0x03B0 - 0x0360)
 class UIpNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      LogPortUnreach : 1;                                       // 0x0350(0x0001) (Config)
-	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0350(0x0001) (Config)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0351(0x0003) MISSED OFFSET
-	uint32_t                                           MaxPortCountToTry;                                        // 0x0354(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0358(0x0048) MISSED OFFSET
+	unsigned char                                      LogPortUnreach : 1;                                       // 0x0360(0x0001) (Config)
+	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0360(0x0001) (Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0361(0x0003) MISSED OFFSET
+	uint32_t                                           MaxPortCountToTry;                                        // 0x0364(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0368(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

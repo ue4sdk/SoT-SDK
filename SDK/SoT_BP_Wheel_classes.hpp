@@ -15,23 +15,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Wheel.BP_Wheel_C
-// 0x0139 (0x0959 - 0x0820)
+// 0x0139 (0x0949 - 0x0810)
 class ABP_Wheel_C : public AWheel
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0820(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UInteractableComponent*                      Interactable;                                             // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               Box;                                                      // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        WheelMountComponent;                                      // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        WheelMeshComponent;                                       // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      Wheel;                                                    // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            WheelBounds;                                              // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FObjectMessagingHandle                      Wheel_Centered;                                           // 0x0860(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Wheel_Movement_Started;                                   // 0x08A8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Wheel_Movement_Stopped;                                   // 0x08F0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FWwiseEmitter                               AudioEmitter;                                             // 0x0938(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               ShipWheelTurning;                                         // 0x0958(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0810(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UInteractableComponent*                      Interactable;                                             // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               Box;                                                      // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        WheelMountComponent;                                      // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        WheelMeshComponent;                                       // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      Wheel;                                                    // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            WheelBounds;                                              // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Scene;                                                    // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      Wheel_Centered;                                           // 0x0850(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Wheel_Movement_Started;                                   // 0x0898(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Wheel_Movement_Stopped;                                   // 0x08E0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FWwiseEmitter                               AudioEmitter;                                             // 0x0928(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               ShipWheelTurning;                                         // 0x0948(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

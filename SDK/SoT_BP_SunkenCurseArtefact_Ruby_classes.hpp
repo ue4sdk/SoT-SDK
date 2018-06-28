@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SunkenCurseArtefact_Ruby.BP_SunkenCurseArtefact_Ruby_C
-// 0x0000 (0x05C0 - 0x05C0)
+// 0x0000 (0x05D0 - 0x05D0)
 class ABP_SunkenCurseArtefact_Ruby_C : public ASunkenCurseArtefact
 {
 public:

@@ -270,9 +270,9 @@ void UInteractableArea::SetParent(class AActor* InParent)
 // Function Interaction.InteractableArea.SetInteractable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UInteractableArea::SetInteractable(class AActor* InInteractable)
+void UInteractableArea::SetInteractable(class UObject* InInteractable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetInteractable");
 
@@ -355,9 +355,9 @@ class AActor* UInteractableArea::GetParent()
 // Function Interaction.InteractableArea.GetInteractable
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* UInteractableArea::GetInteractable()
+class UObject* UInteractableArea::GetInteractable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetInteractable");
 
@@ -384,6 +384,28 @@ struct FName UInteractableArea::GetAreaName()
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaName");
 
 	UInteractableArea_GetAreaName_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Interaction.InteractableArea.GetAreaLocation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UInteractableArea::GetAreaLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaLocation");
+
+	UInteractableArea_GetAreaLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -446,17 +468,17 @@ bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInter
 }
 
 
-// Function Interaction.InteractableInterface.SetInteractionsDisabled
+// Function Interaction.InteractableInterface.SetInteractionState
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Disabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EInteractableState> InNewInteractableState         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UInteractableInterface::SetInteractionsDisabled(bool Disabled)
+void UInteractableInterface::SetInteractionState(TEnumAsByte<EInteractableState> InNewInteractableState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.SetInteractionsDisabled");
+	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.SetInteractionState");
 
-	UInteractableInterface_SetInteractionsDisabled_Params params;
-	params.Disabled = Disabled;
+	UInteractableInterface_SetInteractionState_Params params;
+	params.InNewInteractableState = InNewInteractableState;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -467,16 +489,16 @@ void UInteractableInterface::SetInteractionsDisabled(bool Disabled)
 }
 
 
-// Function Interaction.InteractableInterface.InteractionsCanBeDisabled
+// Function Interaction.InteractableInterface.IsInteractableDisabled
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInteractableInterface::InteractionsCanBeDisabled()
+bool UInteractableInterface::IsInteractableDisabled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.InteractionsCanBeDisabled");
+	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.IsInteractableDisabled");
 
-	UInteractableInterface_InteractionsCanBeDisabled_Params params;
+	UInteractableInterface_IsInteractableDisabled_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -512,16 +534,16 @@ void UInteractableInterface::Interact(class AActor* InInteractor, class UClass* 
 }
 
 
-// Function Interaction.InteractableInterface.GetInteractionsDisabled
+// Function Interaction.InteractableInterface.GetInteractionState
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<EInteractableState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInteractableInterface::GetInteractionsDisabled()
+TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetInteractionsDisabled");
+	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetInteractionState");
 
-	UInteractableInterface_GetInteractionsDisabled_Params params;
+	UInteractableInterface_GetInteractionState_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -687,6 +709,28 @@ bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* In
 	UInteractableInterface_CanInteractWithNotificationInputId_Params params;
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Interaction.InteractableInterface.CanInteractionStatesBeSet
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UInteractableInterface::CanInteractionStatesBeSet()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteractionStatesBeSet");
+
+	UInteractableInterface_CanInteractionStatesBeSet_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

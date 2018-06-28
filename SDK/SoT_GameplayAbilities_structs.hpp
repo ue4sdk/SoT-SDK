@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -40,7 +40,7 @@ enum class EGameplayAbilityActivationMode : uint8_t
 {
 	EGameplayAbilityActivationMode__Authority = 0,
 	None                           = 1,
-	IntProperty                    = 2,
+	EInterpolationBlend__Sinusoidal = 2,
 	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 3
 };
 
