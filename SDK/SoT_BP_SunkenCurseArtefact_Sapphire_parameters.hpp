@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C.UserConstructionScript
+struct ABP_SunkenCurseArtefact_Sapphire_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

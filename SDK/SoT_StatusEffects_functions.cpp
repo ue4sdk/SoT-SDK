@@ -13,16 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// TArray<struct FActiveStatusEffect> OldActiveEffects               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// (Final, Native, Private)
 
-void UStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldActiveEffects)
+void UStatusEffectManagerComponent::OnRep_ActiveEffects()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects");
 
 	UStatusEffectManagerComponent_OnRep_ActiveEffects_Params params;
-	params.OldActiveEffects = OldActiveEffects;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

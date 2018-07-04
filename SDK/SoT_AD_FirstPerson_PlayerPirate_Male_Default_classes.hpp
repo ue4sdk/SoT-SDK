@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Male_Default.AD_FirstPerson_PlayerPirate_Male_Default_C
-// 0x02E8 (0x0310 - 0x0028)
+// 0x0308 (0x0330 - 0x0028)
 class UAD_FirstPerson_PlayerPirate_Male_Default_C : public UAnimationData
 {
 public:
@@ -31,6 +31,7 @@ public:
 	unsigned char                                      UnknownData00[0x6];                                       // 0x02B2(0x0006) MISSED OFFSET
 	struct FADS_DeathNative                            Death;                                                    // 0x02B8(0x0020) (Edit, BlueprintVisible)
 	struct FADS_CannonNative                           Cannon;                                                   // 0x02D8(0x0038) (Edit, BlueprintVisible)
+	struct FADS_RowingBoatNative                       Rowboat;                                                  // 0x0310(0x0020) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

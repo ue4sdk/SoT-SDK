@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OnlineAthenaPlayerController.BP_OnlineAthenaPlayerController_C
-// 0x0000 (0x11A0 - 0x11A0)
+// 0x0000 (0x11B0 - 0x11B0)
 class ABP_OnlineAthenaPlayerController_C : public AOnlineAthenaPlayerController
 {
 public:

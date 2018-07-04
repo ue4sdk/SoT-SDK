@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GhostShipCaptain.BP_GhostShipCaptain_C
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0558 - 0x0558)
 class ABP_GhostShipCaptain_C : public ANPC
 {
 public:

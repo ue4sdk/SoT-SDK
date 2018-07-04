@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bell.BP_Bell_C
-// 0x0000 (0x0600 - 0x0600)
+// 0x0000 (0x0610 - 0x0610)
 class ABP_Bell_C : public ABell
 {
 public:

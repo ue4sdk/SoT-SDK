@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_telescope_mrh_01_b_ItemInfo.BP_cmp_telescope_mrh_01_b_ItemInfo_C
-// 0x0008 (0x04D8 - 0x04D0)
+// 0x0008 (0x04E8 - 0x04E0)
 class ABP_cmp_telescope_mrh_01_b_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

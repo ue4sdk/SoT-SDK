@@ -405,6 +405,12 @@ struct UAutomationBlueprintFunctionLibrary_DelayForFrames_Params
 	int                                                NumFrames;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading
+struct UAutomationBlueprintFunctionLibrary_BlockAsyncLoading_Params
+{
+	bool                                               EnableBlock;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BeginPerformanceCapture
 struct UAutomationBlueprintFunctionLibrary_BeginPerformanceCapture_Params
 {

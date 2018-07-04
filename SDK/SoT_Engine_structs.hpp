@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
-#include "SoT_Slate_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
+#include "SoT_Slate_classes.hpp"
 
 namespace SDK
 {
@@ -288,7 +288,7 @@ enum class EMoveComponentAction : uint8_t
 {
 	EMoveComponentAction__Move     = 0,
 	None                           = 1,
-	EEmoteSequenceType__Continuous = 2
+	EIKSolverType__NormalSolver    = 2
 };
 
 
@@ -305,17 +305,20 @@ enum class EViewModeIndex : uint8_t
 {
 	VMI_BrushWireframe             = 0,
 	None                           = 1,
-	VMI_Lit_DetailLighting         = 2,
-	None01                         = 3,
-	VMI_LightmapDensity            = 4,
-	None02                         = 5,
-	VMI_StationaryLightOverlap     = 6,
-	None03                         = 7,
-	VMI_LODColoration              = 8,
-	None04                         = 9,
-	None05                         = 10,
-	TMGS_FromTextureGroup          = 11,
-	None06                         = 12
+	IntProperty                    = 2,
+	VMI_Lit_DetailLighting         = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	VMI_LightmapDensity            = 6,
+	None02                         = 7,
+	VectorProperty                 = 8,
+	VMI_StationaryLightOverlap     = 9,
+	None03                         = 10,
+	MulticastDelegateProperty      = 11,
+	VMI_LODColoration              = 12,
+	None04                         = 13,
+	None05                         = 14,
+	Rotator                        = 15
 };
 
 
@@ -349,7 +352,7 @@ enum class ETravelFailure : uint8_t
 	None02                         = 5,
 	StructProperty                 = 6,
 	ETravelFailure__ETravelFailure_MAX = 7,
-	ENetworkFailure__NetDriverAlreadyExists = 8,
+	ESimplygonMaterialChannel__SG_MATERIAL_CHANNEL_AMBIENT = 8,
 	None03                         = 9
 };
 
@@ -364,9 +367,11 @@ enum class ENetworkFailure : uint8_t
 	ENetworkFailure__PendingConnectionFailure = 4,
 	None02                         = 5,
 	StructProperty                 = 6,
-	None03                         = 7,
-	ESimplygonMaterialChannel__SG_MATERIAL_CHANNEL_AMBIENT = 8,
-	None04                         = 9
+	ENetworkFailure__InitialConnectionTimeout = 7,
+	None03                         = 8,
+	TextProperty                   = 9,
+	EPartyReservationResult__NoResult = 10,
+	None04                         = 11
 };
 
 
@@ -376,7 +381,8 @@ enum class EInputEvent : uint8_t
 	IE_Pressed                     = 0,
 	None                           = 1,
 	IE_Axis                        = 2,
-	None01                         = 3
+	None01                         = 3,
+	ENodeTitleType__FullTitle      = 4
 };
 
 
@@ -443,19 +449,15 @@ enum class EPhysicalSurface : uint8_t
 	SurfaceType60                  = 30,
 	None15                         = 31,
 	EPhysicalSurface_MAX           = 32,
-	ByteProperty                   = 33,
-	ByteProperty01                 = 34,
-	BooleanAND                     = 35,
-	DelegateProperty               = 36,
-	None16                         = 37,
-	ByteProperty02                 = 38,
-	None17                         = 39,
-	None18                         = 40,
-	None19                         = 41,
-	None20                         = 42,
-	ByteProperty03                 = 43,
-	None21                         = 44,
-	None22                         = 45
+	ipg_eas_belt_01                = 33,
+	ipg_eas_belt_01_v03            = 34,
+	ipg_eas_belt_02_v02            = 35,
+	ipg_eas_belt_03                = 36,
+	ipg_eas_boots_01_v02           = 37,
+	ipg_eas_boots_02               = 38,
+	ipg_eas_boots_02_v03           = 39,
+	ipg_eas_dress_01_v02           = 40,
+	ipg_eas_dress_02               = 41
 };
 
 
@@ -510,7 +512,7 @@ enum class ESimplygonTextureResolution : uint8_t
 {
 	ESimplygonTextureResolution__TextureResolution = 0,
 	ESimplygonTextureResolution__TextureResolution01 = 1,
-	AthenaCharacterDodgeParams     = 2,
+	AAthenaGhostPlayerCharacter    = 2,
 	ESimplygonTextureResolution__TextureResolution_MAX = 3,
 	TLM_VolumetricNonDirectional   = 4,
 	None                           = 5
@@ -648,7 +650,7 @@ enum class ETimelineSigType : uint8_t
 	IntProperty                    = 2,
 	ETS_InvalidSignature           = 3,
 	None01                         = 4,
-	ENodeTitleType__FullTitle      = 5
+	IE_Pressed                     = 5
 };
 
 
@@ -665,8 +667,7 @@ enum class ESleepFamily : uint8_t
 enum class ERadialImpulseFalloff : uint8_t
 {
 	RIF_Constant                   = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -684,8 +685,7 @@ enum class ECollisionResponse : uint8_t
 {
 	ECR_Ignore                     = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	PST_Sync                       = 3
+	PST_Sync                       = 2
 };
 
 
@@ -713,8 +713,7 @@ enum class ETriangleSortOption : uint8_t
 	TRISORT_None                   = 0,
 	None                           = 1,
 	TRISORT_Custom                 = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -773,7 +772,8 @@ enum class EMaterialTessellationMode : uint8_t
 {
 	MTM_NoTessellation             = 0,
 	None                           = 1,
-	EParticleCollisionMode__SceneDepth = 2
+	IntProperty                    = 2,
+	EParticleCollisionMode__SceneDepth = 3
 };
 
 
@@ -984,7 +984,8 @@ enum class ECsgOper : uint8_t
 	CSG_Active                     = 0,
 	None                           = 1,
 	CSG_Deintersect                = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -1002,7 +1003,11 @@ enum class EReverbPreset : uint8_t
 	REVERB_Underwater              = 8,
 	None04                         = 9,
 	REVERB_MediumHall              = 10,
-	None05                         = 11
+	None05                         = 11,
+	ETrackedActorType__Unknown     = 12,
+	None06                         = 13,
+	ETrackedActorType__AI_Shark    = 14,
+	None07                         = 15
 };
 
 
@@ -1134,8 +1139,7 @@ enum class EViewTargetBlendFunction : uint8_t
 enum class EControllerAnalogStick : uint8_t
 {
 	EControllerAnalogStick__CAS_LeftStick = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -1548,7 +1552,8 @@ enum class ESoundDistanceModel : uint8_t
 	ATTENUATION_Linear             = 0,
 	None                           = 1,
 	ATTENUATION_NaturalSound       = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -1633,10 +1638,16 @@ enum class ETextureMipGenSettings : uint8_t
 	None02                         = 5,
 	TMGS_Sharpen10                 = 6,
 	None03                         = 7,
-	TMGS_Blur2                     = 8,
-	None04                         = 9,
-	TMGS_MAX                       = 10,
-	SHVector                       = 11
+	TextProperty                   = 8,
+	TMGS_Blur2                     = 9,
+	None04                         = 10,
+	LazyObjectProperty             = 11,
+	TMGS_MAX                       = 12,
+	VMI_BrushWireframe             = 13,
+	None05                         = 14,
+	IntProperty                    = 15,
+	VMI_Lit_DetailLighting         = 16,
+	None06                         = 17
 };
 
 
@@ -1727,7 +1738,7 @@ enum class ETextureFilter : uint8_t
 	TF_Nearest                     = 0,
 	None                           = 1,
 	TF_MAX                         = 2,
-	BCS_WorldSpace                 = 3
+	ABPT_None                      = 3
 };
 
 
@@ -1755,7 +1766,8 @@ enum class ESplineMeshAxis : uint8_t
 {
 	ESplineMeshAxis__X             = 0,
 	None                           = 1,
-	PARTICLESYSTEMLODMETHOD_Automatic = 2
+	IntProperty                    = 2,
+	PARTICLESYSTEMLODMETHOD_Automatic = 3
 };
 
 
@@ -1809,8 +1821,7 @@ enum class EParticleEventType : uint8_t
 	EPET_Any                       = 0,
 	None                           = 1,
 	EPET_Burst                     = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -1853,7 +1864,8 @@ enum class EHorizTextAligment : uint8_t
 {
 	EHTA_Left                      = 0,
 	None                           = 1,
-	SCS_SceneColorHDR              = 2
+	IntProperty                    = 2,
+	SCS_SceneColorHDR              = 3
 };
 
 
@@ -1937,8 +1949,7 @@ enum class EBoneRotationSource : uint8_t
 {
 	BRS_KeepComponentSpaceRotation = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAnimNotifyEventType__Begin    = 3
+	EAnimNotifyEventType__Begin    = 2
 };
 
 
@@ -1948,7 +1959,7 @@ enum class EBoneControlSpace : uint8_t
 	BCS_WorldSpace                 = 0,
 	None                           = 1,
 	BCS_MAX                        = 2,
-	EVRTA_TextTop                  = 3
+	TF_Nearest                     = 3
 };
 
 
@@ -1966,7 +1977,7 @@ enum class EAdditiveBasePoseType : uint8_t
 	ABPT_None                      = 0,
 	None                           = 1,
 	ABPT_MAX                       = 2,
-	InteractableBase               = 3
+	EVRTA_TextTop                  = 3
 };
 
 
@@ -1975,7 +1986,7 @@ enum class EAnimationKeyFormat : uint8_t
 {
 	AKF_ConstantKeyLerp            = 0,
 	None                           = 1,
-	EGrammaticalNumber__Singular   = 2
+	EEvaluateCurveTableResult__RowFound = 2
 };
 
 
@@ -1993,8 +2004,7 @@ enum class EAnimationCompressionFormat : uint8_t
 enum class ENotifyTriggerMode : uint8_t
 {
 	ENotifyTriggerMode__AllAnimations = 0,
-	None                           = 1,
-	BSA_None                       = 2
+	None                           = 1
 };
 
 
@@ -2002,8 +2012,7 @@ enum class ENotifyTriggerMode : uint8_t
 enum class EBlendSpaceAxis : uint8_t
 {
 	BSA_None                       = 0,
-	None                           = 1,
-	EEvaluateCurveTableResult__RowFound = 2
+	None                           = 1
 };
 
 
@@ -2029,7 +2038,7 @@ enum class EGrammaticalGender : uint8_t
 	EGrammaticalGender__Neuter     = 0,
 	None                           = 1,
 	EGrammaticalGender__EGrammaticalGender_MAX = 2,
-	ABPT_None                      = 3
+	BCS_WorldSpace                 = 3
 };
 
 
@@ -2038,7 +2047,7 @@ enum class ESuggestProjVelocityTraceOption : uint8_t
 {
 	ESuggestProjVelocityTraceOption__DoNotTrace = 0,
 	None                           = 1,
-	PhysType_Default               = 2
+	EBodyCollisionResponse__BodyCollision_Enabled = 2
 };
 
 
@@ -2047,7 +2056,7 @@ enum class EOrientPositionSelector : uint8_t
 {
 	EOrientPositionSelector__Orientation = 0,
 	None                           = 1,
-	ETransitionLogicType__TLT_StandardBlend = 2
+	ESuggestProjVelocityTraceOption__DoNotTrace = 2
 };
 
 
@@ -2064,7 +2073,7 @@ enum class EEasingFunc : uint8_t
 	EEasingFunc__CircularOut       = 7,
 	None03                         = 8,
 	TextProperty                   = 9,
-	EPartyReservationResult__NoResult = 10,
+	ENetworkFailure__NetDriverAlreadyExists = 10,
 	None04                         = 11
 };
 
@@ -2075,8 +2084,7 @@ enum class ERoundingMode : uint8_t
 	HalfToEven                     = 0,
 	None                           = 1,
 	ToZero                         = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -2094,7 +2102,8 @@ enum class EPhysicsType : uint8_t
 {
 	PhysType_Default               = 0,
 	None                           = 1,
-	DPM_Normal                     = 2
+	IntProperty                    = 2,
+	EOrientPositionSelector__Orientation = 3
 };
 
 
@@ -2164,7 +2173,7 @@ enum class EAntiAliasingMethodUI : uint8_t
 {
 	EAntiAliasingMethodUI__AAM_None = 0,
 	None                           = 1,
-	EBodyCollisionResponse__BodyCollision_Enabled = 2
+	CTF_UseDefault                 = 2
 };
 
 
@@ -2213,7 +2222,7 @@ enum class EDistributionParamMode : uint8_t
 {
 	DPM_Normal                     = 0,
 	None                           = 1,
-	CTF_UseDefault                 = 2
+	EAntiAliasingMethodUI__AAM_None = 2
 };
 
 
@@ -2221,7 +2230,8 @@ enum class EDistributionParamMode : uint8_t
 enum class EDistributionVectorMirrorFlags : uint8_t
 {
 	EDVMF_Same                     = 0,
-	None                           = 1
+	None                           = 1,
+	PhysType_Default               = 2
 };
 
 
@@ -2242,8 +2252,7 @@ enum class ECanCreateConnectionResponse : uint8_t
 	CONNECT_RESPONSE_MAKE          = 0,
 	None                           = 1,
 	CONNECT_RESPONSE_BREAK_OTHERS_AB = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -2285,7 +2294,7 @@ enum class EFullyLoadPackageType : uint8_t
 	None                           = 1,
 	FULLYLOAD_Mutator              = 2,
 	None01                         = 3,
-	None02                         = 4
+	MD_Surface                     = 4
 };
 
 
@@ -2294,7 +2303,7 @@ enum class EFontImportCharacterSet : uint8_t
 {
 	FontICS_Default                = 0,
 	None                           = 1,
-	CONSOLE_Any                    = 2
+	DPM_Normal                     = 2
 };
 
 
@@ -2303,7 +2312,7 @@ enum class EFontCacheType : uint8_t
 {
 	EFontCacheType__Offline        = 0,
 	None                           = 1,
-	AMergedCollisionActor          = 2
+	IntProperty                    = 2
 };
 
 
@@ -2361,10 +2370,7 @@ enum class EHIKEffector : uint8_t
 	HIKEffector_Last               = 30,
 	None11                         = 31,
 	None12                         = 32,
-	AddItem                        = 33,
-	CanAddItemOfItemCategory       = 34,
-	ConsumeItem                    = 35,
-	CycleItemDown                  = 36
+	ByteProperty                   = 33
 };
 
 
@@ -2383,127 +2389,135 @@ enum class EHIKProperty : uint8_t
 	None04                         = 9,
 	HIKProp_ReachActorRightWristRotationId = 10,
 	None05                         = 11,
-	UInt16Property                 = 12,
-	HIKProp_ReachActorRightToesBaseId = 13,
-	None06                         = 14,
-	Int8Property                   = 15,
-	HIKProp_ReachActorRightToesBaseRotationId = 16,
-	None07                         = 17,
-	Core                           = 18,
-	HIKProp_ReachActorLeftHandIndexId = 19,
-	None08                         = 20,
-	HIKProp_ReachActorLeftHandExtraFingerId = 21,
-	None09                         = 22,
-	HIKProp_ReachActorRightHandRingId = 23,
-	None10                         = 24,
-	HIKProp_ReachActorLeftFootIndexId = 25,
-	None11                         = 26,
-	HIKProp_ReachActorLeftFootExtraFingerId = 27,
-	None12                         = 28,
-	HIKProp_ReachActorRightFootRingId = 29,
-	None13                         = 30,
-	HIKProp_FootBottomToAnkleId    = 31,
-	None14                         = 32,
-	Name                           = 33,
-	HIKProp_FootInToAnkleId        = 34,
-	None15                         = 35,
-	HIKProp_HandBackToWristId      = 36,
-	None16                         = 37,
-	Spectating                     = 38,
-	HIKProp_HandOutToWristId       = 39,
-	None17                         = 40,
-	HIKProp_FootContactTypeId      = 41,
-	None18                         = 42,
-	HIKProp_LeftLegRollId          = 43,
-	None19                         = 44,
-	HIKProp_LeftForeArmRollId      = 45,
-	None20                         = 46,
-	HIKProp_LeftKneeKillPitchId    = 47,
-	None21                         = 48,
-	HIKProp_CtrlPullLeftFootId     = 49,
-	None22                         = 50,
-	HIKProp_CtrlPullHeadId         = 51,
-	None23                         = 52,
-	HIKProp_CtrlPullRightKneeId    = 53,
-	None24                         = 54,
-	HIKProp_CtrlPullRightElbowId   = 55,
-	None25                         = 56,
-	Actor                          = 57,
-	HIKProp_CtrlEnforceGravityId   = 58,
-	None26                         = 59,
-	HIKProp_CtrlResistLeftCollarId = 60,
-	None27                         = 61,
-	HIKProp_CtrlResistLeftElbowId  = 62,
-	None28                         = 63,
-	HIKProp_HipsTOffsetYId         = 64,
-	None29                         = 65,
-	HIKProp_ChestTOffsetZId        = 66,
-	None30                         = 67,
-	HIKProp_HandAutomaticFingersId = 68,
-	None31                         = 69,
-	HIKProp_FingerSolvingId        = 70,
-	None32                         = 71,
-	HIKProp_CtrlResistMaximumExtensionLeftElbow = 72,
-	None33                         = 73,
-	HIKProp_CtrlResistCompressionFactorLeftElbow = 74,
-	None34                         = 75,
-	HIKProp_HandContactStiffness   = 76,
-	None35                         = 77,
-	HIKProp_LeftHandIndexTip       = 78,
-	None36                         = 79,
-	HIKProp_LeftHandExtraFingerTip = 80,
-	None37                         = 81,
-	HIKProp_RightHandRingTip       = 82,
-	None38                         = 83,
-	HIKProp_LeftFootIndexTip       = 84,
-	None39                         = 85,
-	HIKProp_LeftFootExtraFingerTip = 86,
-	None40                         = 87,
-	HIKProp_RightFootRingTip       = 88,
-	None41                         = 89,
-	HIKProp_LeftLegMaxExtensionAngle = 90,
-	None42                         = 91,
-	HIKProp_ExtraCollarRatioId     = 92,
-	None43                         = 93,
-	HIKProp_ReachActorLeftShoulderId = 94,
-	None44                         = 95,
-	HIKProp_RealisticRightKneeSolvingId = 96,
-	None45                         = 97,
-	HIKProp_SnSReachLeftWrist      = 98,
-	None46                         = 99,
-	HIKProp_SnSScaleSpine          = 100,
-	None47                         = 101,
-	HIKProp_SnSReachHead           = 102,
-	None48                         = 103,
-	HIKProp_RightLegRollExId       = 104,
-	None49                         = 105,
-	HIKProp_RightForeArmRollExId   = 106,
-	None50                         = 107,
-	HIKProp_LockXId                = 108,
-	None51                         = 109,
-	HIKProp_LastPropertyId         = 110,
-	None52                         = 111,
-	None53                         = 112,
-	None54                         = 113,
+	HIKProp_ReachActorRightToesBaseId = 12,
+	None06                         = 13,
+	Int8Property                   = 14,
+	HIKProp_ReachActorRightToesBaseRotationId = 15,
+	None07                         = 16,
+	Core                           = 17,
+	HIKProp_ReachActorLeftHandIndexId = 18,
+	None08                         = 19,
+	HIKProp_ReachActorLeftHandExtraFingerId = 20,
+	None09                         = 21,
+	HIKProp_ReachActorRightHandRingId = 22,
+	None10                         = 23,
+	HIKProp_ReachActorLeftFootIndexId = 24,
+	None11                         = 25,
+	HIKProp_ReachActorLeftFootExtraFingerId = 26,
+	None12                         = 27,
+	HIKProp_ReachActorRightFootRingId = 28,
+	None13                         = 29,
+	HIKProp_FootBottomToAnkleId    = 30,
+	None14                         = 31,
+	HIKProp_FootInToAnkleId        = 32,
+	None15                         = 33,
+	HIKProp_HandBackToWristId      = 34,
+	None16                         = 35,
+	HIKProp_HandOutToWristId       = 36,
+	None17                         = 37,
+	HIKProp_FootContactTypeId      = 38,
+	None18                         = 39,
+	HIKProp_LeftLegRollId          = 40,
+	None19                         = 41,
+	HIKProp_LeftForeArmRollId      = 42,
+	None20                         = 43,
+	HIKProp_LeftKneeKillPitchId    = 44,
+	None21                         = 45,
+	HIKProp_CtrlPullLeftFootId     = 46,
+	None22                         = 47,
+	HIKProp_CtrlPullHeadId         = 48,
+	None23                         = 49,
+	HIKProp_CtrlPullRightKneeId    = 50,
+	None24                         = 51,
+	HIKProp_CtrlPullRightElbowId   = 52,
+	None25                         = 53,
+	Actor                          = 54,
+	HIKProp_CtrlEnforceGravityId   = 55,
+	None26                         = 56,
+	HIKProp_CtrlResistLeftCollarId = 57,
+	None27                         = 58,
+	HIKProp_CtrlResistLeftElbowId  = 59,
+	None28                         = 60,
+	HIKProp_HipsTOffsetYId         = 61,
+	None29                         = 62,
+	HIKProp_ChestTOffsetZId        = 63,
+	None30                         = 64,
+	HIKProp_HandAutomaticFingersId = 65,
+	None31                         = 66,
+	HIKProp_FingerSolvingId        = 67,
+	None32                         = 68,
+	HIKProp_CtrlResistMaximumExtensionLeftElbow = 69,
+	None33                         = 70,
+	HIKProp_CtrlResistCompressionFactorLeftElbow = 71,
+	None34                         = 72,
+	HIKProp_HandContactStiffness   = 73,
+	None35                         = 74,
+	HIKProp_LeftHandIndexTip       = 75,
+	None36                         = 76,
+	HIKProp_LeftHandExtraFingerTip = 77,
+	None37                         = 78,
+	HIKProp_RightHandRingTip       = 79,
+	None38                         = 80,
+	HIKProp_LeftFootIndexTip       = 81,
+	None39                         = 82,
+	HIKProp_LeftFootExtraFingerTip = 83,
+	None40                         = 84,
+	HIKProp_RightFootRingTip       = 85,
+	None41                         = 86,
+	HIKProp_LeftLegMaxExtensionAngle = 87,
+	None42                         = 88,
+	HIKProp_ExtraCollarRatioId     = 89,
+	None43                         = 90,
+	HIKProp_ReachActorLeftShoulderId = 91,
+	None44                         = 92,
+	HIKProp_RealisticRightKneeSolvingId = 93,
+	None45                         = 94,
+	HIKProp_SnSReachLeftWrist      = 95,
+	None46                         = 96,
+	HIKProp_SnSScaleSpine          = 97,
+	None47                         = 98,
+	HIKProp_SnSReachHead           = 99,
+	None48                         = 100,
+	HIKProp_RightLegRollExId       = 101,
+	None49                         = 102,
+	HIKProp_RightForeArmRollExId   = 103,
+	None50                         = 104,
+	FALSE                          = 105,
+	HIKProp_LockXId                = 106,
+	None51                         = 107,
+	Input                          = 108,
+	HIKProp_LastPropertyId         = 109,
+	None52                         = 110,
+	None53                         = 111,
+	None54                         = 112,
+	Sphere                         = 113,
 	None55                         = 114,
-	BoolProperty                   = 115,
-	None56                         = 116,
-	None57                         = 117,
-	IntProperty                    = 118,
-	None58                         = 119,
-	FloatProperty                  = 120,
-	None59                         = 121,
-	NameProperty                   = 122,
-	ClassProperty                  = 123,
-	BoolProperty01                 = 124,
-	None60                         = 125,
-	ByteProperty                   = 126,
-	ObjectProperty                 = 127,
-	BoolProperty02                 = 128,
-	None61                         = 129,
-	None62                         = 130,
-	ByteProperty01                 = 131,
-	IntProperty01                  = 132
+	None56                         = 115,
+	None57                         = 116,
+	None58                         = 117,
+	None59                         = 118,
+	None60                         = 119,
+	None61                         = 120,
+	None62                         = 121,
+	None63                         = 122,
+	BoolProperty                   = 123,
+	None64                         = 124,
+	None65                         = 125,
+	IntProperty                    = 126,
+	None66                         = 127,
+	FloatProperty                  = 128,
+	None67                         = 129,
+	NameProperty                   = 130,
+	ClassProperty                  = 131,
+	BoolProperty01                 = 132,
+	None68                         = 133,
+	ByteProperty                   = 134,
+	ObjectProperty                 = 135,
+	BoolProperty02                 = 136,
+	None69                         = 137,
+	None70                         = 138,
+	ByteProperty01                 = 139,
+	IntProperty01                  = 140
 };
 
 
@@ -2579,7 +2593,8 @@ enum class EVisibilityTrackCondition : uint8_t
 {
 	EVTC_Always                    = 0,
 	None                           = 1,
-	IntProperty                    = 2
+	IntProperty                    = 2,
+	EPostCopyOperation__None       = 3
 };
 
 
@@ -2727,7 +2742,7 @@ enum class ETextureColorChannel : uint8_t
 {
 	TCC_Red                        = 0,
 	None                           = 1,
-	StorageContainer               = 2,
+	IntProperty                    = 2,
 	TCC_MAX                        = 3,
 	TMVM_None                      = 4
 };
@@ -2738,7 +2753,7 @@ enum class EMaterialVectorCoordTransform : uint8_t
 {
 	TRANSFORM_Tangent              = 0,
 	None                           = 1,
-	SurfaceType57                  = 2,
+	IntProperty                    = 2,
 	TRANSFORM_MAX                  = 3,
 	TCC_Red                        = 4
 };
@@ -2749,8 +2764,9 @@ enum class EMaterialVectorCoordTransformSource : uint8_t
 {
 	TRANSFORMSOURCE_Tangent        = 0,
 	None                           = 1,
-	TRANSFORMSOURCE_MAX            = 2,
-	TRANSFORM_Tangent              = 3
+	IntProperty                    = 2,
+	TRANSFORMSOURCE_MAX            = 3,
+	TRANSFORM_Tangent              = 4
 };
 
 
@@ -2771,7 +2787,7 @@ enum class EMaterialExposedViewProperty : uint8_t
 	None                           = 1,
 	MEVP_WorldSpaceCameraPosition  = 2,
 	None01                         = 3,
-	PSUVIM_None                    = 4
+	ERM_Normal                     = 4
 };
 
 
@@ -2805,7 +2821,7 @@ enum class EMaterialDomain : uint8_t
 	None                           = 1,
 	MD_UI                          = 2,
 	None01                         = 3,
-	ERM_Normal                     = 4
+	STG_Branch                     = 4
 };
 
 
@@ -2834,7 +2850,7 @@ enum class EEmitterRenderMode : uint8_t
 	None                           = 1,
 	ERM_None                       = 2,
 	None01                         = 3,
-	STG_Branch                     = 4
+	StartHeightGroupB              = 4
 };
 
 
@@ -2855,8 +2871,7 @@ enum class EBurstGroup : uint8_t
 	GroupA                         = 0,
 	None                           = 1,
 	GroupE                         = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -2931,7 +2946,7 @@ enum class EBeam2SourceTargetMethod : uint8_t
 	IntProperty                    = 2,
 	PEB2STM_Actor                  = 3,
 	None01                         = 4,
-	StartHeightGroupB              = 5
+	StartLocationGroupB            = 5
 };
 
 
@@ -2981,7 +2996,8 @@ enum class EStartAlphaGroupsName : uint8_t
 	StartAlphaB                    = 0,
 	None                           = 1,
 	StartAlphaReplacement          = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -2991,8 +3007,7 @@ enum class EStartColorGroupsName : uint8_t
 	StartColorB                    = 0,
 	None                           = 1,
 	StartColorReplacement          = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -3014,7 +3029,7 @@ enum class EStartLocationGroupNames : uint8_t
 	None                           = 1,
 	StartLocationGroup_MAX         = 2,
 	None01                         = 3,
-	OSM_Alpha                      = 4
+	StartRadiusGroupB              = 4
 };
 
 
@@ -3051,7 +3066,7 @@ enum class EStartHeightGroupNames : uint8_t
 	IntProperty                    = 2,
 	StartHeightGroup_MAX           = 3,
 	None01                         = 4,
-	StartLocationGroupB            = 5
+	PSUVIM_None                    = 5
 };
 
 
@@ -3116,7 +3131,7 @@ enum class EEmitterDynamicParameterValue : uint8_t
 	IntProperty                    = 2,
 	EDPV_VelocityMag               = 3,
 	None01                         = 4,
-	PSORTMODE_None                 = 5
+	OSM_Alpha                      = 5
 };
 
 
@@ -3147,7 +3162,7 @@ enum class EOpacitySourceMode : uint8_t
 	None                           = 1,
 	OSM_BlueChannel                = 2,
 	None01                         = 3,
-	StartRadiusGroupB              = 4
+	PSORTMODE_None                 = 4
 };
 
 
@@ -3299,7 +3314,7 @@ enum class EMeshCameraFacingUpAxis : uint8_t
 	None                           = 1,
 	CameraFacing_NegativeYUp       = 2,
 	None01                         = 3,
-	NM_PreserveSmoothingGroups     = 4
+	ETinySharkState__Inactive      = 4
 };
 
 
@@ -5955,36 +5970,39 @@ struct FFFTWaterComponentWaveParticleType
 };
 
 // ScriptStruct Engine.FFTWaterComponentIntersectParticleType
-// 0x0040
+// 0x0058
 struct FFFTWaterComponentIntersectParticleType
 {
 	struct FVector2D                                   VelocityRange;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   FoamRange;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Density;                                                  // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              VolumeHorizontalVelocityWeight;                           // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              HorizontalDirectionFromVolumeWeight;                      // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              HorizontalRandomVelocityWeight;                           // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              VolumeVerticalVelocityWeight;                             // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              VerticalRandomVelocityWeight;                             // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WaterVelocityWeight;                                      // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              VelocityScaling;                                          // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnderwaterParticles : 1;                                  // 0x0030(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	class UParticleComputeShaderData*                  ParticleComputeShaderData;                                // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   HeightRange;                                              // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ParticleWaveVelocityRange;                                // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ParticleWaveAbsoluteSpeedDifferenceRange;                 // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Density;                                                  // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              VolumeHorizontalVelocityWeight;                           // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HorizontalDirectionFromVolumeWeight;                      // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HorizontalRandomVelocityWeight;                           // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              VolumeVerticalVelocityWeight;                             // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              VerticalRandomVelocityWeight;                             // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WaterVelocityWeight;                                      // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              VelocityScaling;                                          // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnderwaterParticles : 1;                                  // 0x0048(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	class UParticleComputeShaderData*                  ParticleComputeShaderData;                                // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.FFTWaterComponentParticleParams
-// 0x01D8
+// 0x0248
 struct FFFTWaterComponentParticleParams
 {
 	int                                                MaxParticlesPerFrame;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FFFTWaterComponentWaveParticleType          WaveParticles[0x6];                                       // 0x0008(0x0038) (Edit)
-	struct FFFTWaterComponentIntersectParticleType     IntersectionParticles[0x2];                               // 0x0158(0x0040) (Edit)
+	struct FFFTWaterComponentWaveParticleType          WaveParticles[0x4];                                       // 0x0008(0x0038) (Edit)
+	struct FFFTWaterComponentIntersectParticleType     IntersectionParticles[0x4];                               // 0x00E8(0x0058) (Edit)
 };
 
 // ScriptStruct Engine.FFTWaterComponentParams
-// 0x0298
+// 0x0308
 struct FFFTWaterComponentParams
 {
 	struct FLinearColor                                AmbientColour;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
@@ -6015,9 +6033,9 @@ struct FFFTWaterComponentParams
 	float                                              CausticsDepth;                                            // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00AC(0x0004) MISSED OFFSET
 	class UTexture*                                    FoamColourTex;                                            // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FFFTWaterComponentParticleParams            ParticleParams;                                           // 0x00B8(0x01D8) (Edit)
-	float                                              ExtendedPlaneSize;                                        // 0x0290(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ExtendedPlaneFadeDistance;                                // 0x0294(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFFTWaterComponentParticleParams            ParticleParams;                                           // 0x00B8(0x0248) (Edit)
+	float                                              ExtendedPlaneSize;                                        // 0x0300(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ExtendedPlaneFadeDistance;                                // 0x0304(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.MurkyRegion
@@ -7614,7 +7632,7 @@ struct FGPUSpriteEmitterInfo
 };
 
 // ScriptStruct Engine.GPUSpriteResourceData
-// 0x0530
+// 0x0540
 struct FGPUSpriteResourceData
 {
 	TArray<struct FColor>                              QuantizedColorSamples;                                    // 0x0000(0x0010) (ZeroConstructor)
@@ -7663,9 +7681,9 @@ struct FGPUSpriteResourceData
 	TEnumAsByte<EParticleAxisLock>                     LockAxisFlag;                                             // 0x01B9(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x01BA(0x0002) MISSED OFFSET
 	struct FVector2D                                   PivotOffset;                                              // 0x01BC(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x288];                                     // 0x01C4(0x0288) MISSED OFFSET
-	float                                              AlignmentInheritedVelocityScale;                          // 0x044C(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xE0];                                      // 0x0450(0x00E0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x28C];                                     // 0x01C4(0x028C) MISSED OFFSET
+	float                                              AlignmentInheritedVelocityScale;                          // 0x0450(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xEC];                                      // 0x0454(0x00EC) MISSED OFFSET
 };
 
 // ScriptStruct Engine.TireFrictionScalePair
@@ -8960,6 +8978,14 @@ struct FClusterNode
 	int                                                LastChild;                                                // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                FirstInstance;                                            // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                LastInstance;                                             // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.MobileInstancedStaticMeshLOD
+// 0x0008
+struct FMobileInstancedStaticMeshLOD
+{
+	float                                              LODReduction;                                             // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              DistanceToLOD;                                            // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.ParticleSystemAggregateTickFunction

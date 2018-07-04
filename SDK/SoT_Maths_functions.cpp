@@ -1290,6 +1290,43 @@ bool UVectorMaths::STATIC_LineIntersectsSphere(const struct FVector& LineStart, 
 }
 
 
+// Function Maths.VectorMaths.LineIntersectsCircle
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector2D               LineOrigin                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               LineDir                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               CircleOrigin                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CircleRadius                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               OutClosestIntersectionPoint    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutIntersectionDistance        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVectorMaths::STATIC_LineIntersectsCircle(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsCircle");
+
+	UVectorMaths_LineIntersectsCircle_Params params;
+	params.LineOrigin = LineOrigin;
+	params.LineDir = LineDir;
+	params.CircleOrigin = CircleOrigin;
+	params.CircleRadius = CircleRadius;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutClosestIntersectionPoint != nullptr)
+		*OutClosestIntersectionPoint = params.OutClosestIntersectionPoint;
+	if (OutIntersectionDistance != nullptr)
+		*OutIntersectionDistance = params.OutIntersectionDistance;
+
+	return params.ReturnValue;
+}
+
+
 // Function Maths.VectorMaths.IntersectLineSegmentWithPlane
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:

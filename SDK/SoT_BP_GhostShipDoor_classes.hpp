@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GhostShipDoor.BP_GhostShipDoor_C
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0530 - 0x0530)
 class ABP_GhostShipDoor_C : public AGhostShipDoor
 {
 public:

@@ -67,11 +67,11 @@ public:
 
 
 // Class DebugMenu.DebugMenu
-// 0x0060 (0x04D8 - 0x0478)
+// 0x0060 (0x04E8 - 0x0488)
 class ADebugMenu : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0478(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0488(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

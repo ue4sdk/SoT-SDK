@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_IslandCosmeticChest.BP_IslandCosmeticChest_C
-// 0x0000 (0x05E8 - 0x05E8)
+// 0x0000 (0x05F8 - 0x05F8)
 class ABP_IslandCosmeticChest_C : public AShipCustomizationChest
 {
 public:

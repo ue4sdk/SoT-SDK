@@ -1313,6 +1313,27 @@ void UAutomationBlueprintFunctionLibrary::STATIC_DelayForFrames(class UObject* W
 }
 
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                           EnableBlock                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAutomationBlueprintFunctionLibrary::STATIC_BlockAsyncLoading(bool EnableBlock)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading");
+
+	UAutomationBlueprintFunctionLibrary_BlockAsyncLoading_Params params;
+	params.EnableBlock = EnableBlock;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BeginPerformanceCapture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

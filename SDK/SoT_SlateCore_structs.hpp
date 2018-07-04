@@ -22,7 +22,8 @@ enum class EFontHinting : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EFontHinting__None             = 3,
-	None01                         = 4
+	None01                         = 4,
+	EProgressBarFillType__LeftToRight = 5
 };
 
 
@@ -223,7 +224,8 @@ enum class EUINavigationRule : uint8_t
 	EUINavigationRule__Escape      = 0,
 	None                           = 1,
 	EUINavigationRule__Custom      = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

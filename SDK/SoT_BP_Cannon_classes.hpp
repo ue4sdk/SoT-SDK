@@ -15,20 +15,20 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cannon.BP_Cannon_C
-// 0x01D0 (0x0BE8 - 0x0A18)
+// 0x01D0 (0x0BF8 - 0x0A28)
 class ABP_Cannon_C : public ACannon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A18(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UGroupedInteractableAreaComponent*           GroupedInteractableArea;                                  // 0x0A20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0A28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Collision;                                                // 0x0A30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FObjectMessagingHandle                      CannonAimingCenteredPitchEvent;                           // 0x0A38(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      CannonAimingStartedPitchEvent;                            // 0x0A80(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      CannonAimingStoppedPitchEvent;                            // 0x0AC8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      CannonAimingCenteredYawEvent;                             // 0x0B10(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      CannonAimingStartedYawEvent;                              // 0x0B58(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      CannonAimingStoppedYawEvent;                              // 0x0BA0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A28(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UGroupedInteractableAreaComponent*           GroupedInteractableArea;                                  // 0x0A30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0A38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Collision;                                                // 0x0A40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      CannonAimingCenteredPitchEvent;                           // 0x0A48(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStartedPitchEvent;                            // 0x0A90(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStoppedPitchEvent;                            // 0x0AD8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingCenteredYawEvent;                             // 0x0B20(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStartedYawEvent;                              // 0x0B68(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      CannonAimingStoppedYawEvent;                              // 0x0BB0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

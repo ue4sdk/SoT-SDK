@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShip_StandardHull_InternalShipWater.BP_SmallShip_StandardHull_InternalShipWater_C
-// 0x0018 (0x0660 - 0x0648)
+// 0x0018 (0x0670 - 0x0658)
 class ABP_SmallShip_StandardHull_InternalShipWater_C : public AShipInternalWater
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0648(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UDynamicFlowComponent*                       DynamicFlow;                                              // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 Foaminess;                                                // 0x0658(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0658(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UDynamicFlowComponent*                       DynamicFlow;                                              // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 Foaminess;                                                // 0x0668(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

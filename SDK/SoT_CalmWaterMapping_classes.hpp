@@ -33,11 +33,11 @@ public:
 
 
 // Class CalmWaterMapping.AthenaCalmWaterZone
-// 0x0020 (0x04A0 - 0x0480)
+// 0x0020 (0x04B0 - 0x0490)
 class AAthenaCalmWaterZone : public ACalmWaterZone
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0480(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0490(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -20,9 +20,7 @@ enum class EJumping : uint8_t
 	EJumping__NewEnumerator0       = 0,
 	None                           = 1,
 	EJumping__NewEnumerator4       = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EIKLimbName__NewEnumerator0    = 5
+	None01                         = 3
 };
 
 

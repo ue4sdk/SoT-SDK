@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_SunkenCurseArtefact_Ruby.BP_SunkenCurseArtefact_Ruby_C.UserConstructionScript
+struct ABP_SunkenCurseArtefact_Ruby_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

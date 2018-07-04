@@ -79,13 +79,15 @@ public:
 
 
 // Class AIShips.AIShipEncounterParamsDataAsset
-// 0x0018 (0x0040 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UAIShipEncounterParamsDataAsset : public UDataAsset
 {
 public:
-	class UAIShipEncounterSpawnParamsDataAsset*        SpawnParams;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAIShipContextParamsDataAsset*               ContextParams;                                            // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ShipPawnClass;                                            // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                NumberOfShipsInEncounter;                                 // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	class UAIShipEncounterSpawnParamsDataAsset*        SpawnParams;                                              // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAIShipContextParamsDataAsset*               ContextParams;                                            // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ShipPawnClass;                                            // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -112,14 +114,14 @@ public:
 
 
 // Class AIShips.AIShipService
-// 0x0070 (0x04E8 - 0x0478)
+// 0x0070 (0x04F8 - 0x0488)
 class AAIShipService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0478(0x0008) MISSED OFFSET
-	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UCursedSailsCampaignDataAsset*               CampaignParams;                                           // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x58];                                      // 0x0490(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0488(0x0008) MISSED OFFSET
+	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCursedSailsCampaignDataAsset*               CampaignParams;                                           // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x58];                                      // 0x04A0(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -147,11 +149,11 @@ public:
 
 
 // Class AIShips.AthenaAIShipController
-// 0x0008 (0x0568 - 0x0560)
+// 0x0008 (0x0578 - 0x0570)
 class AAthenaAIShipController : public AAIController
 {
 public:
-	class UBehaviorTree*                               BTAsset;                                                  // 0x0560(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBehaviorTree*                               BTAsset;                                                  // 0x0570(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -247,16 +249,37 @@ public:
 
 
 // Class AIShips.BTTask_AIShipSurface
-// 0x0010 (0x0098 - 0x0088)
+// 0x0008 (0x0090 - 0x0088)
 class UBTTask_AIShipSurface : public UBTTask_BlackboardBase
 {
 public:
 	float                                              SurfaceSpeedScalerRelativeToPlayerShip;                   // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x008C(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AIShips.BTTask_AIShipSurface");
+		return ptr;
+	}
+
+};
+
+
+// Class AIShips.BTTask_RamTargetShip
+// 0x00E0 (0x0168 - 0x0088)
+class UBTTask_RamTargetShip : public UBTTask_BlackboardBase
+{
+public:
+	float                                              MinDistanceFromTargetToStartRam;                          // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           RammingLocationOffsets;                                   // 0x0090(0x0030) (Edit)
+	float                                              MaxSpeedToRamTarget;                                      // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTurnSpeed;                                             // 0x00C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x00C8(0x00A0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.BTTask_RamTargetShip");
 		return ptr;
 	}
 
@@ -280,12 +303,12 @@ public:
 
 
 // Class AIShips.ShipProxyPawn
-// 0x0020 (0x04F8 - 0x04D8)
+// 0x0020 (0x0508 - 0x04E8)
 class AShipProxyPawn : public APawn
 {
 public:
-	class AShip*                                       Ship;                                                     // 0x04D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x04E0(0x0018) MISSED OFFSET
+	class AShip*                                       Ship;                                                     // 0x04E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x04F0(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

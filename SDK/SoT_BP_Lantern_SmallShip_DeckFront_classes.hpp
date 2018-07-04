@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_SmallShip_DeckFront.BP_Lantern_SmallShip_DeckFront_C
-// 0x0000 (0x06A1 - 0x06A1)
+// 0x0000 (0x06B1 - 0x06B1)
 class ABP_Lantern_SmallShip_DeckFront_C : public ABP_InteractableShipLantern_C
 {
 public:

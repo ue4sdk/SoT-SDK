@@ -404,6 +404,18 @@ struct UVectorMaths_LineIntersectsSphere_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Maths.VectorMaths.LineIntersectsCircle
+struct UVectorMaths_LineIntersectsCircle_Params
+{
+	struct FVector2D                                   LineOrigin;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   LineDir;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   CircleOrigin;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CircleRadius;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   OutClosestIntersectionPoint;                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              OutIntersectionDistance;                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Maths.VectorMaths.IntersectLineSegmentWithPlane
 struct UVectorMaths_IntersectLineSegmentWithPlane_Params
 {

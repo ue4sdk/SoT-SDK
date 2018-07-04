@@ -316,6 +316,7 @@ public:
 
 
 	bool STATIC_LineIntersectsSphere(const struct FVector& LineStart, const struct FVector& LineDir, const struct FVector& SphereCentre, float SphereRadius, struct FVector* ClosestIntersectionPoint);
+	bool STATIC_LineIntersectsCircle(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance);
 	TEnumAsByte<EPlaneLineIntersectionType> STATIC_IntersectLineSegmentWithPlane(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FVector& PlanePos, const struct FVector& PlaneNormal, float PlaneThickness, struct FVector* IntersectionPos, float* NormalisedIntersectionTOnLineSegment);
 	float STATIC_Distance(const struct FVector& A, const struct FVector& B);
 	float STATIC_Cross_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B);

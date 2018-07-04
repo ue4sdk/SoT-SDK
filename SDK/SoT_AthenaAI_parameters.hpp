@@ -337,12 +337,23 @@ struct AAthenaAIController_ApplyControllerParams_Params
 	class APawn*                                       InPawn;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaAI.AthenaAICharacterController.SetOverridePrioritiseInteractablesBeforeEnemies
+struct AAthenaAICharacterController_SetOverridePrioritiseInteractablesBeforeEnemies_Params
+{
+	bool                                               InPrioritiseInteractablesBeforeEnemies;                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AthenaAI.AthenaAICharacterController.SetItemSpecificNamedControllerParam
 struct AAthenaAICharacterController_SetItemSpecificNamedControllerParam_Params
 {
 	class UClass*                                      InItemCategory;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              Value;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies
+struct AAthenaAICharacterController_ClearOverridePrioritiseInteractablesBeforeEnemies_Params
+{
 };
 
 // Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed

@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C
-// 0x003B (0x08B0 - 0x0875)
+// 0x003B (0x08C0 - 0x0885)
 class ABP_BaseInternalDamageZone_C : public ABP_DamageZone_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0875(0x0003) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0878(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        RepairWood;                                               // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 Start_Repair_Cue;                                         // 0x0888(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWwiseEmitter                               RepairEmitter;                                            // 0x0890(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0885(0x0003) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0888(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        RepairWood;                                               // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 Start_Repair_Cue;                                         // 0x0898(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWwiseEmitter                               RepairEmitter;                                            // 0x08A0(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

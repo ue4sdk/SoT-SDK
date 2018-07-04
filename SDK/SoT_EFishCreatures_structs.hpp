@@ -21,7 +21,9 @@ enum class EFishCreatures : uint8_t
 	None                           = 1,
 	EFishCreatures__NewEnumerator5 = 2,
 	None01                         = 3,
-	EFishCreatures__EFishCreatures_MAX = 4
+	NameProperty                   = 4,
+	EFishCreatures__EFishCreatures_MAX = 5,
+	None02                         = 6
 };
 
 

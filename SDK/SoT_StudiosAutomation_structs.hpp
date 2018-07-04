@@ -32,7 +32,7 @@ enum class EPerformanceCaptureType : uint8_t
 	EPerformanceCaptureType__None  = 0,
 	None                           = 1,
 	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 2,
-	IntProperty                    = 3
+	EUnusedAttributeBehaviour__Copy = 3
 };
 
 

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShip_StandardHull.BP_SmallShip_StandardHull_C
-// 0x0010 (0x04B0 - 0x04A0)
+// 0x0010 (0x04C0 - 0x04B0)
 class ABP_SmallShip_StandardHull_C : public AHull
 {
 public:
-	class UChildActorComponent*                        Damage;                                                   // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        Art;                                                      // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Damage;                                                   // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Art;                                                      // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1142,6 +1142,27 @@ void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsD
 }
 
 
+// Function AthenaAI.AthenaAICharacterController.SetOverridePrioritiseInteractablesBeforeEnemies
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InPrioritiseInteractablesBeforeEnemies (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAICharacterController::SetOverridePrioritiseInteractablesBeforeEnemies(bool InPrioritiseInteractablesBeforeEnemies)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.SetOverridePrioritiseInteractablesBeforeEnemies");
+
+	AAthenaAICharacterController_SetOverridePrioritiseInteractablesBeforeEnemies_Params params;
+	params.InPrioritiseInteractablesBeforeEnemies = InPrioritiseInteractablesBeforeEnemies;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaAI.AthenaAICharacterController.SetItemSpecificNamedControllerParam
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -1157,6 +1178,24 @@ void AAthenaAICharacterController::SetItemSpecificNamedControllerParam(class UCl
 	params.InItemCategory = InItemCategory;
 	params.ParamName = ParamName;
 	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies
+// (Final, Native, Public, BlueprintCallable)
+
+void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEnemies()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies");
+
+	AAthenaAICharacterController_ClearOverridePrioritiseInteractablesBeforeEnemies_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

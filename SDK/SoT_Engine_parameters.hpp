@@ -402,6 +402,12 @@ struct AActor_OnRep_AttachmentReplication_Params
 {
 };
 
+// DelegateFunction Engine.Actor.OnEndPlayDynamicMulticastEvent__DelegateSignature
+struct AActor_OnEndPlayDynamicMulticastEvent__DelegateSignature_Params
+{
+	class AActor*                                      EndPlayActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // DelegateFunction Engine.Actor.OnDestroyedDynamicMulticastEvent__DelegateSignature
 struct AActor_OnDestroyedDynamicMulticastEvent__DelegateSignature_Params
 {
@@ -7373,6 +7379,30 @@ struct ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Params
 // DelegateFunction Engine.ApplicationLifecycleComponent.ApplicationLifetimeDelegate__DelegateSignature
 struct UApplicationLifecycleComponent_ApplicationLifetimeDelegate__DelegateSignature_Params
 {
+};
+
+// Function Engine.AggregatorInterface.UnregisterAggregatable
+struct UAggregatorInterface_UnregisterAggregatable_Params
+{
+	TScriptInterface<class UAggregatableInterface>     InAggregatable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.AggregatorInterface.RegisterAggregatable
+struct UAggregatorInterface_RegisterAggregatable_Params
+{
+	TScriptInterface<class UAggregatableInterface>     InAggregatable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ComponentAggregatorComponent.UnregisterAggregatable
+struct UComponentAggregatorComponent_UnregisterAggregatable_Params
+{
+	TScriptInterface<class UAggregatableInterface>     InAggregatable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.ComponentAggregatorComponent.RegisterAggregatable
+struct UComponentAggregatorComponent_RegisterAggregatable_Params
+{
+	TScriptInterface<class UAggregatableInterface>     InAggregatable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.InterpToMovementComponent.StopSimulating

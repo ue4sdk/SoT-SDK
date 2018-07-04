@@ -56,13 +56,13 @@ public:
 
 
 // Class WwiseAudio.WwiseBank
-// 0x0030 (0x0058 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UWwiseBank : public UObject
 {
 public:
 	class FString                                      path;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, EditConst)
 	uint32_t                                           WwiseId;                                                  // 0x0038(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x003C(0x001C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x24];                                      // 0x003C(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -50,8 +50,7 @@ enum class EStretch : uint8_t
 	EStretch__None                 = 0,
 	None                           = 1,
 	EStretch__ScaleToFitY          = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 

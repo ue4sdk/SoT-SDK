@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_SunkenCurseArtefact_Sapphire_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C.UserConstructionScript");
+
+	ABP_SunkenCurseArtefact_Sapphire_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

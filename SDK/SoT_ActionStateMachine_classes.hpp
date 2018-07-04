@@ -30,7 +30,7 @@ public:
 
 
 // Class ActionStateMachine.ActionStateCreatorDefinition
-// 0x0000 (0x0478 - 0x0478)
+// 0x0000 (0x0488 - 0x0488)
 class AActionStateCreatorDefinition : public AActor
 {
 public:
@@ -45,11 +45,11 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateCreatorDefinition
-// 0x0018 (0x0490 - 0x0478)
+// 0x0018 (0x04A0 - 0x0488)
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0478(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0488(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -295,11 +295,11 @@ public:
 
 
 // Class ActionStateMachine.RemoteValidationFailActionStateActor
-// 0x0008 (0x0480 - 0x0478)
+// 0x0008 (0x0490 - 0x0488)
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0478(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0488(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -335,12 +335,12 @@ public:
 
 
 // Class ActionStateMachine.TestObjectWithActionStateMachine
-// 0x0018 (0x0490 - 0x0478)
+// 0x0018 (0x04A0 - 0x0488)
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0478(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0480(0x0010) MISSED OFFSET
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0488(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

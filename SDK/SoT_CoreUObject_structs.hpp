@@ -45,7 +45,7 @@ enum class EUnit : uint8_t
 	None02                         = 6,
 	EUnit__MetersPerSecond         = 7,
 	None03                         = 8,
-	AMockCannon                    = 9,
+	UImpulseThrottlerComponent     = 9,
 	EUnit__Farenheit               = 10,
 	None04                         = 11,
 	EUnit__Grams                   = 12,
@@ -152,7 +152,8 @@ enum class ELogTimes : uint8_t
 enum class ESearchDir : uint8_t
 {
 	ESearchDir__FromStart          = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -160,7 +161,8 @@ enum class ESearchDir : uint8_t
 enum class ESearchCase : uint8_t
 {
 	ESearchCase__CaseSensitive     = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

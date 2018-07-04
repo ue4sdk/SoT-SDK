@@ -1323,6 +1323,26 @@ void AActor::OnRep_AttachmentReplication()
 }
 
 
+// DelegateFunction Engine.Actor.OnEndPlayDynamicMulticastEvent__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class AActor*                  EndPlayActor                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AActor::OnEndPlayDynamicMulticastEvent__DelegateSignature(class AActor* EndPlayActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction Engine.Actor.OnEndPlayDynamicMulticastEvent__DelegateSignature");
+
+	AActor_OnEndPlayDynamicMulticastEvent__DelegateSignature_Params params;
+	params.EndPlayActor = EndPlayActor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // DelegateFunction Engine.Actor.OnDestroyedDynamicMulticastEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
@@ -24919,6 +24939,90 @@ void UApplicationLifecycleComponent::ApplicationLifetimeDelegate__DelegateSignat
 	UApplicationLifecycleComponent_ApplicationLifetimeDelegate__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.AggregatorInterface.UnregisterAggregatable
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UAggregatableInterface> InAggregatable                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAggregatorInterface::UnregisterAggregatable(const TScriptInterface<class UAggregatableInterface>& InAggregatable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.AggregatorInterface.UnregisterAggregatable");
+
+	UAggregatorInterface_UnregisterAggregatable_Params params;
+	params.InAggregatable = InAggregatable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.AggregatorInterface.RegisterAggregatable
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UAggregatableInterface> InAggregatable                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAggregatorInterface::RegisterAggregatable(const TScriptInterface<class UAggregatableInterface>& InAggregatable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.AggregatorInterface.RegisterAggregatable");
+
+	UAggregatorInterface_RegisterAggregatable_Params params;
+	params.InAggregatable = InAggregatable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ComponentAggregatorComponent.UnregisterAggregatable
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UAggregatableInterface> InAggregatable                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UComponentAggregatorComponent::UnregisterAggregatable(const TScriptInterface<class UAggregatableInterface>& InAggregatable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ComponentAggregatorComponent.UnregisterAggregatable");
+
+	UComponentAggregatorComponent_UnregisterAggregatable_Params params;
+	params.InAggregatable = InAggregatable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ComponentAggregatorComponent.RegisterAggregatable
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UAggregatableInterface> InAggregatable                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UComponentAggregatorComponent::RegisterAggregatable(const TScriptInterface<class UAggregatableInterface>& InAggregatable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ComponentAggregatorComponent.RegisterAggregatable");
+
+	UComponentAggregatorComponent_RegisterAggregatable_Params params;
+	params.InAggregatable = InAggregatable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

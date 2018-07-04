@@ -84,7 +84,7 @@ public:
 
 
 // Class RareEngine.RareHUD
-// 0x0000 (0x0570 - 0x0570)
+// 0x0000 (0x0580 - 0x0580)
 class ARareHUD : public AHUD
 {
 public:

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Sail.BP_Sail_C
-// 0x0020 (0x0650 - 0x0630)
+// 0x0020 (0x0660 - 0x0640)
 class ABP_Sail_C : public ASail
 {
 public:
-	TArray<struct FVector>                             Sail_Positions_Top;                                       // 0x0630(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                             Sail_Positions_Bottom;                                    // 0x0640(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             Sail_Positions_Top;                                       // 0x0640(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             Sail_Positions_Bottom;                                    // 0x0650(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sot_world_layout_2.SOT_World_layout_1_C
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0490 - 0x0490)
 class ASOT_World_layout_1_C : public ALevelScriptActor
 {
 public:
