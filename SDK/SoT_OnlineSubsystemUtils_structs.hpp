@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,8 +48,10 @@ enum class EClientRequestType : uint8_t
 {
 	EClientRequestType__NonePending = 0,
 	None                           = 1,
-	EClientRequestType__ChangeWorldRequest = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EClientRequestType__ChangeWorldRequest = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

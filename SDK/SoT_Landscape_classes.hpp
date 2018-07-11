@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -249,15 +249,15 @@ public:
 
 
 // Class Landscape.LandscapeMaterialInstanceConstant
-// 0x0010 (0x01F8 - 0x01E8)
+// 0x0010 (0x01B0 - 0x01A0)
 class ULandscapeMaterialInstanceConstant : public UMaterialInstanceConstant
 {
 public:
-	unsigned char                                      bIsLayerThumbnail : 1;                                    // 0x01E8(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x01E9(0x0003) MISSED OFFSET
-	int                                                DataWeightmapIndex;                                       // 0x01EC(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                DataWeightmapSize;                                        // 0x01F0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01F4(0x0004) MISSED OFFSET
+	unsigned char                                      bIsLayerThumbnail : 1;                                    // 0x01A0(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x01A1(0x0003) MISSED OFFSET
+	int                                                DataWeightmapIndex;                                       // 0x01A4(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                DataWeightmapSize;                                        // 0x01A8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x01AC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Maths_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Maths_classes.hpp"
 
 namespace SDK
 {
@@ -42,6 +42,15 @@ enum class EBuoyancySampleType : uint8_t
 	EBuoyancySampleType__Spherical = 0,
 	None                           = 1,
 	EBuoyancyDragSampleType__Spherical = 2
+};
+
+
+// Enum Water.EWaterSplashProbeType
+enum class EWaterSplashProbeType : uint8_t
+{
+	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
+	None                           = 1,
+	EWaterSplashProbeType__EWaterSplashProbeType_MAX = 2
 };
 
 
@@ -152,7 +161,7 @@ struct FBuoyancySampleMovement
 };
 
 // ScriptStruct Water.WaterSplashProbe
-// 0x00C0
+// 0x00D0
 struct FWaterSplashProbe
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
@@ -163,7 +172,8 @@ struct FWaterSplashProbe
 	float                                              RateOfChangeThreshold;                                    // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     LocalOffsetAdjustment;                                    // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              LocalOffsetAdjustmentDuration;                            // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x80];                                      // 0x0040(0x0080) MISSED OFFSET
+	TEnumAsByte<EWaterSplashProbeType>                 Type;                                                     // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8F];                                      // 0x0041(0x008F) MISSED OFFSET
 };
 
 // ScriptStruct Water.WaterSplashProbesContainer

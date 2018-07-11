@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannon_ball_01_a_Proxy.BP_cmn_cannon_ball_01_a_Proxy_C
-// 0x0000 (0x06B8 - 0x06B8)
+// 0x0000 (0x06C8 - 0x06C8)
 class ABP_cmn_cannon_ball_01_a_Proxy_C : public ABP_CannonBallProxy_C
 {
 public:

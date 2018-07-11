@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,8 +15,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ReefIslandSunkenStatueSpawner.BP_ReefIslandSunkenStatueSpawner_C
-// 0x0000 (0x04F0 - 0x04F0)
-class UBP_ReefIslandSunkenStatueSpawner_C : public USalvageItemSpawnComponent
+// 0x0000 (0x0520 - 0x0520)
+class UBP_ReefIslandSunkenStatueSpawner_C : public UPersistentSalvageItemSpawnComponent
 {
 public:
 

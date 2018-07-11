@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,6 +38,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponse");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface
+// 0x0000 (0x0028 - 0x0028)
+class UActivateableSurfaceMaterialStatusZoneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface");
 		return ptr;
 	}
 
@@ -140,16 +155,32 @@ public:
 };
 
 
+// Class StatusEffects.StatusRecipientResponseList
+// 0x0010 (0x0038 - 0x0028)
+class UStatusRecipientResponseList : public UDataAsset
+{
+public:
+	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class StatusEffects.StatusRecipientResponseList");
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.StatusEffectManagerComponent
-// 0x0118 (0x01E8 - 0x00D0)
+// 0x0110 (0x01E0 - 0x00D0)
 class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
-	TArray<class UStatusResponseAsset*>                Responses;                                                // 0x00E0(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F0(0x0010) (Net, ZeroConstructor)
-	TArray<struct FActiveStatusEffect>                 ClientActiveEffects;                                      // 0x0100(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0xD8];                                      // 0x0110(0x00D8) MISSED OFFSET
+	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00E8(0x0010) (Net, ZeroConstructor)
+	TArray<struct FActiveStatusEffect>                 ClientActiveEffects;                                      // 0x00F8(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0xD8];                                      // 0x0108(0x00D8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

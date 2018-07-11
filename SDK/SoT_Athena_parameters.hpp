@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,6 +135,11 @@ struct AMast_UpdateSailsBasedOnIntent_Params
 struct AMast_UpdateSailsAngleBasedOnIntent_Params
 {
 	float                                              AngleIntent;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.Mast.OnRep_IsCursed
+struct AMast_OnRep_IsCursed_Params
+{
 };
 
 // Function Athena.Mast.OnMastDescLoaded
@@ -395,6 +400,14 @@ struct UAIPartsRetrievalComponent_RequestNewAIParts_Params
 // Function Athena.AIPartsRetrievalComponent.OnRep_ReplicatedAIPartsData
 struct UAIPartsRetrievalComponent_OnRep_ReplicatedAIPartsData_Params
 {
+};
+
+// Function Athena.AIShipCaptainActionStateId.PushCharacterIntoAIShipCaptainActionState
+struct UAIShipCaptainActionStateId_PushCharacterIntoAIShipCaptainActionState_Params
+{
+	TEnumAsByte<EActionStateMachineTrackId>            TrackId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      ControlledObject;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.AISpawnActionStateId.PushCharacterIntoAISpawnActionState
@@ -2359,6 +2372,12 @@ struct UThirdPersonAnimationInstance_GetAIKnockbackAnimation_Params
 	class UAnimSequence*                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.ThirdPersonAnimationInstance.AllocateNewShipCaptainIdleVariant
+struct UThirdPersonAnimationInstance_AllocateNewShipCaptainIdleVariant_Params
+{
+	bool                                               IsIdleStateA;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.ThirdPersonAnimationInstance.AllocateNewRandomContinuousEmote
 struct UThirdPersonAnimationInstance_AllocateNewRandomContinuousEmote_Params
 {
@@ -3159,6 +3178,11 @@ struct UAthenaCheatManager_ToggleThirdPerson_Params
 {
 };
 
+// Function Athena.AthenaCheatManager.ToggleNearestLava
+struct UAthenaCheatManager_ToggleNearestLava_Params
+{
+};
+
 // Function Athena.AthenaCheatManager.ToggleFastShipControls
 struct UAthenaCheatManager_ToggleFastShipControls_Params
 {
@@ -3338,6 +3362,16 @@ struct UAthenaCheatManager_SuperSailor_Params
 struct UAthenaCheatManager_StartVoyage_Params
 {
 	class FString                                      SourceAssetName;                                          // (Parm, ZeroConstructor)
+};
+
+// Function Athena.AthenaCheatManager.StartNearestVolcano
+struct UAthenaCheatManager_StartNearestVolcano_Params
+{
+};
+
+// Function Athena.AthenaCheatManager.StartNearestEarthquake
+struct UAthenaCheatManager_StartNearestEarthquake_Params
+{
 };
 
 // Function Athena.AthenaCheatManager.StartDemoSession
@@ -3589,6 +3623,12 @@ struct UAthenaCheatManager_ShowRandomCrewMemberGamerCard_Params
 // Function Athena.AthenaCheatManager.ShowAllItemsInRadialInventory
 struct UAthenaCheatManager_ShowAllItemsInRadialInventory_Params
 {
+};
+
+// Function Athena.AthenaCheatManager.ShowAllianceStatus
+struct UAthenaCheatManager_ShowAllianceStatus_Params
+{
+	class FString                                      CrewId;                                                   // (Parm, ZeroConstructor)
 };
 
 // Function Athena.AthenaCheatManager.ShipUpdateMassProperies
@@ -5403,12 +5443,6 @@ struct UCameraFadeManagerTestFunctions_FireFadeAckRequestToClient_Params
 	float                                              AckTimeout;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Athena.Campfire.SetIsOnFire
-struct ACampfire_SetIsOnFire_Params
-{
-	bool                                               InIsOnFire;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Athena.Campfire.OnRep_IsOnFire
 struct ACampfire_OnRep_IsOnFire_Params
 {
@@ -5651,19 +5685,13 @@ struct AFloatingItemProxy_OnRep_PhysicsState_Params
 struct UCharacterAudioComponent_SetNamedState_Params
 {
 	struct FName                                       StateName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	bool                                               Active;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Active;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Athena.CharacterAudioComponent.ResetNamedStates
 struct UCharacterAudioComponent_ResetNamedStates_Params
 {
-};
-
-// Function Athena.CharacterAudioComponent.PlaySoundOnLocalClientOnly_RPC
-struct UCharacterAudioComponent_PlaySoundOnLocalClientOnly_RPC_Params
-{
-	class UWwiseEvent*                                 Event;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.CharacterAudioComponent.GetSpaceRtpcValueFromRtpcName
@@ -5689,6 +5717,12 @@ struct UCharacterAudioComponent_GetEmitter_Params
 struct UCharacterAudioComponent_GetCurrentPlayerMusicState_Params
 {
 	TEnumAsByte<EPlayerMusicState>                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.CharacterAudioComponent.Client_PostAudioEventToLocalClientOnly
+struct UCharacterAudioComponent_Client_PostAudioEventToLocalClientOnly_Params
+{
+	class UWwiseEvent*                                 Event;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.CharacterInteractionComponentTestFunctions.PushCanInteractValidatorToInteractionComponent
@@ -6662,6 +6696,11 @@ struct AShip_OnShipPartRegistered_Params
 {
 	struct FName                                       PartName;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	class AActor*                                      PartActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.Ship.OnRep_ShipSizeObject
+struct AShip_OnRep_ShipSizeObject_Params
+{
 };
 
 // Function Athena.Ship.OnRep_CrewShipManifest
@@ -9627,6 +9666,11 @@ struct AAthenaGameState_OnRep_ReplicatedCrewService_Params
 {
 };
 
+// Function Athena.AthenaGameState.OnRep_ReplicatedAllianceService
+struct AAthenaGameState_OnRep_ReplicatedAllianceService_Params
+{
+};
+
 // Function Athena.IslandLocationVerifierInterface.VerifyLocation
 struct UIslandLocationVerifierInterface_VerifyLocation_Params
 {
@@ -11157,6 +11201,19 @@ struct UAINameplateComponent_OnRep_DisplayName_Params
 // Function Athena.AINameplateComponent.OnRep_DebugDisplayText
 struct UAINameplateComponent_OnRep_DebugDisplayText_Params
 {
+};
+
+// Function Athena.NetDormancyHelpers.SetNetDormancy
+struct UNetDormancyHelpers_SetNetDormancy_Params
+{
+	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ENetDormancy>                          DormancyMode;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.NetDormancyHelpers.FlushNetDormancy
+struct UNetDormancyHelpers_FlushNetDormancy_Params
+{
+	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.NetProxy.OnRep_OwningActor

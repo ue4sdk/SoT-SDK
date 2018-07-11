@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,6 +79,21 @@ public:
 };
 
 
+// Class AthenaAI.AIInteractableType
+// 0x0000 (0x0028 - 0x0028)
+class UAIInteractableType : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAI.AIInteractableType");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.AIInteractableComponent
 // 0x0020 (0x00F0 - 0x00D0)
 class UAIInteractableComponent : public UActorComponent
@@ -107,21 +122,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaAI.BTDecorator_BaseConditional");
-		return ptr;
-	}
-
-};
-
-
-// Class AthenaAI.AIInteractableType
-// 0x0000 (0x0028 - 0x0028)
-class UAIInteractableType : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAI.AIInteractableType");
 		return ptr;
 	}
 
@@ -1310,14 +1310,14 @@ public:
 
 
 // Class AthenaAI.AIWaveSpawner
-// 0x0148 (0x0340 - 0x01F8)
+// 0x0178 (0x0370 - 0x01F8)
 class UAIWaveSpawner : public UAISpawner
 {
 public:
 	struct FAISpawnerWave                              SpawnedWave;                                              // 0x01F8(0x0130) (Edit)
 	float                                              MinRespawnTime;                                           // 0x0328(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              MaxRespawnTime;                                           // 0x032C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0330(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0330(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1471,6 +1471,33 @@ public:
 };
 
 
+// Class AthenaAI.AthenaAICharacterControllerParamsDataAsset
+// 0x0118 (0x01E8 - 0x00D0)
+class UAthenaAICharacterControllerParamsDataAsset : public UAthenaAIControllerParamsDataAsset
+{
+public:
+	bool                                               UseRVOAvoidance;                                          // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
+	TArray<struct FAIStrategyMovementProperties>       AIStrategyMovementProperties;                             // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FItemCategoryAIStrategyMovementPropertiesOverride> ItemCategoryAIStrategyMovementPropertiesOverrides;        // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UCurveFloat*                                 DistanceInMToCannonShotHitChanceCurve;                    // 0x00F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAICharacterCannonTargetingParams     CannonTargetingParams;                                    // 0x0100(0x0010) (Edit)
+	bool                                               PrioritiseInteractablesBeforeEnemies;                     // 0x0110(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
+	TArray<struct FAthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties> WieldedItemProjectileEffectivenessProperties;             // 0x0118(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FAthenaAICharacterControllerItemCategoryNamedParams> WieldedItemOverrideNamedControllerParams;                 // 0x0128(0x0010) (Edit, ZeroConstructor)
+	struct FAthenaAICharacterControllerCollectedAmmoWeightings CollectedAmmoWeightings;                                  // 0x0138(0x00A0) (Edit)
+	TArray<struct FAthenaAIItemParamValue>             NamedItemParams;                                          // 0x01D8(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAI.AthenaAICharacterControllerParamsDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.AthenaAICharacterController
 // 0x00F0 (0x09A0 - 0x08B0)
 class AAthenaAICharacterController : public AAthenaAIController
@@ -1585,31 +1612,6 @@ public:
 
 	void TargetActorDestroyed(class AActor* Actor);
 	void SetTargetActor(class AActor* Actor);
-};
-
-
-// Class AthenaAI.AthenaAICharacterControllerParamsDataAsset
-// 0x0068 (0x0138 - 0x00D0)
-class UAthenaAICharacterControllerParamsDataAsset : public UAthenaAIControllerParamsDataAsset
-{
-public:
-	bool                                               UseRVOAvoidance;                                          // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
-	TArray<struct FAIStrategyMovementProperties>       AIStrategyMovementProperties;                             // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FItemCategoryAIStrategyMovementPropertiesOverride> ItemCategoryAIStrategyMovementPropertiesOverrides;        // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UCurveFloat*                                 DistanceInMToCannonShotHitChanceCurve;                    // 0x00F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               PrioritiseInteractablesBeforeEnemies;                     // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0101(0x0007) MISSED OFFSET
-	TArray<struct FAthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties> WieldedItemProjectileEffectivenessProperties;             // 0x0108(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FAthenaAICharacterControllerItemCategoryNamedParams> WieldedItemOverrideNamedControllerParams;                 // 0x0118(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FAthenaAIItemParamValue>             NamedItemParams;                                          // 0x0128(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAI.AthenaAICharacterControllerParamsDataAsset");
-		return ptr;
-	}
-
 };
 
 

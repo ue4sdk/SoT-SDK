@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,10 +16,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimDataEntryStruct ADS_RowingBoatNative.ADS_RowingBoatNative
-// 0x0020
+// 0x0030
 struct FADS_RowingBoatNative
 {
-	struct FAthenaAnimationRowingBoatAnimations        RowingBoatAnimations_2_1FEBDCAD4D0B1B9EC2D68CA56E8F9158;  // 0x0000(0x0020) (Edit, BlueprintVisible)
+	struct FAthenaAnimationRowingBoatAnimations        RowingBoatAnimations_2_1FEBDCAD4D0B1B9EC2D68CA56E8F9158;  // 0x0000(0x0030) (Edit, BlueprintVisible)
 };
 
 }

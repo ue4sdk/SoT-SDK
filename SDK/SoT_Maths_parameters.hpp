@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -226,6 +226,14 @@ struct UFloatMaths_WrapToRange_Params
 	float                                              Input;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              LowerLimit;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              UpperLimit;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Maths.FloatMaths.WrapToPositiveRange
+struct UFloatMaths_WrapToPositiveRange_Params
+{
+	float                                              Input;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              UpperLimit;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

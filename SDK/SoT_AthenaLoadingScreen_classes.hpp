@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 
 
 // Class AthenaLoadingScreen.SlateLoadingScreenParams
-// 0x01D0 (0x01F8 - 0x0028)
+// 0x01D8 (0x0200 - 0x0028)
 class USlateLoadingScreenParams : public UDataAsset
 {
 public:
@@ -62,8 +62,10 @@ public:
 	float                                              TipDurationBetweenTips;                                   // 0x0170(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                NumTipsPerImage;                                          // 0x0174(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FSlateFontInfo                              LoadingTipFont;                                           // 0x0178(0x0040) (Edit)
-	TArray<struct FText>                               LoadingScreenTips;                                        // 0x01B8(0x0010) (Edit, ZeroConstructor)
-	struct FSlateColor                                 LoadingScreenTipColour;                                   // 0x01C8(0x0030) (Edit)
+	float                                              LoadingTipFontLineHeightPercentage;                       // 0x01B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x01BC(0x0004) MISSED OFFSET
+	TArray<struct FText>                               LoadingScreenTips;                                        // 0x01C0(0x0010) (Edit, ZeroConstructor)
+	struct FSlateColor                                 LoadingScreenTipColour;                                   // 0x01D0(0x0030) (Edit)
 
 	static UClass* StaticClass()
 	{

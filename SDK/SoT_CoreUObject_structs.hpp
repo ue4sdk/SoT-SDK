@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ enum class EUnit : uint8_t
 	None02                         = 6,
 	EUnit__MetersPerSecond         = 7,
 	None03                         = 8,
-	UImpulseThrottlerComponent     = 9,
+	UImpactListDataAsset           = 9,
 	EUnit__Farenheit               = 10,
 	None04                         = 11,
 	EUnit__Grams                   = 12,
@@ -144,7 +144,7 @@ enum class ELogTimes : uint8_t
 {
 	ELogTimes__None                = 0,
 	None                           = 1,
-	ESearchDir__FromStart          = 2
+	EFileAccessAsyncResult__Succeeded = 2
 };
 
 
@@ -152,8 +152,7 @@ enum class ELogTimes : uint8_t
 enum class ESearchDir : uint8_t
 {
 	ESearchDir__FromStart          = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -161,8 +160,7 @@ enum class ESearchDir : uint8_t
 enum class ESearchCase : uint8_t
 {
 	ESearchCase__CaseSensitive     = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

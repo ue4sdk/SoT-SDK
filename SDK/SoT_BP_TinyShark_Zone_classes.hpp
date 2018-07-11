@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TinyShark_Zone.BP_TinyShark_Zone_C
-// 0x0000 (0x04E8 - 0x04E8)
+// 0x0000 (0x04F8 - 0x04F8)
 class ABP_TinyShark_Zone_C : public AHungeringDeep
 {
 public:

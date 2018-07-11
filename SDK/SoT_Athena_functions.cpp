@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -434,6 +434,24 @@ void AMast::UpdateSailsAngleBasedOnIntent(float AngleIntent)
 
 	AMast_UpdateSailsAngleBasedOnIntent_Params params;
 	params.AngleIntent = AngleIntent;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.Mast.OnRep_IsCursed
+// (Final, Native, Private)
+
+void AMast::OnRep_IsCursed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.OnRep_IsCursed");
+
+	AMast_OnRep_IsCursed_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1319,6 +1337,31 @@ void UAIPartsRetrievalComponent::OnRep_ReplicatedAIPartsData()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AIPartsRetrievalComponent.OnRep_ReplicatedAIPartsData");
 
 	UAIPartsRetrievalComponent_OnRep_ReplicatedAIPartsData_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AIShipCaptainActionStateId.PushCharacterIntoAIShipCaptainActionState
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EActionStateMachineTrackId> TrackId                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ControlledObject               (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAIShipCaptainActionStateId::STATIC_PushCharacterIntoAIShipCaptainActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AIShipCaptainActionStateId.PushCharacterIntoAIShipCaptainActionState");
+
+	UAIShipCaptainActionStateId_PushCharacterIntoAIShipCaptainActionState_Params params;
+	params.TrackId = TrackId;
+	params.ControlledObject = ControlledObject;
+	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8236,6 +8279,27 @@ class UAnimSequence* UThirdPersonAnimationInstance::GetAIKnockbackAnimation()
 }
 
 
+// Function Athena.ThirdPersonAnimationInstance.AllocateNewShipCaptainIdleVariant
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           IsIdleStateA                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UThirdPersonAnimationInstance::AllocateNewShipCaptainIdleVariant(bool IsIdleStateA)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ThirdPersonAnimationInstance.AllocateNewShipCaptainIdleVariant");
+
+	UThirdPersonAnimationInstance_AllocateNewShipCaptainIdleVariant_Params params;
+	params.IsIdleStateA = IsIdleStateA;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.ThirdPersonAnimationInstance.AllocateNewRandomContinuousEmote
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -10919,6 +10983,24 @@ void UAthenaCheatManager::ToggleThirdPerson()
 }
 
 
+// Function Athena.AthenaCheatManager.ToggleNearestLava
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ToggleNearestLava()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.ToggleNearestLava");
+
+	UAthenaCheatManager_ToggleNearestLava_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.AthenaCheatManager.ToggleFastShipControls
 // (Final, Exec, Native, Public)
 
@@ -11530,6 +11612,42 @@ void UAthenaCheatManager::StartVoyage(const class FString& SourceAssetName)
 
 	UAthenaCheatManager_StartVoyage_Params params;
 	params.SourceAssetName = SourceAssetName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.StartNearestVolcano
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::StartNearestVolcano()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.StartNearestVolcano");
+
+	UAthenaCheatManager_StartNearestVolcano_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.StartNearestEarthquake
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::StartNearestEarthquake()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.StartNearestEarthquake");
+
+	UAthenaCheatManager_StartNearestEarthquake_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -12382,6 +12500,27 @@ void UAthenaCheatManager::ShowAllItemsInRadialInventory()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.ShowAllItemsInRadialInventory");
 
 	UAthenaCheatManager_ShowAllItemsInRadialInventory_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.AthenaCheatManager.ShowAllianceStatus
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  CrewId                         (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::ShowAllianceStatus(const class FString& CrewId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCheatManager.ShowAllianceStatus");
+
+	UAthenaCheatManager_ShowAllianceStatus_Params params;
+	params.CrewId = CrewId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -18666,27 +18805,6 @@ void UCameraFadeManagerTestFunctions::STATIC_FireFadeAckRequestToClient(class AA
 }
 
 
-// Function Athena.Campfire.SetIsOnFire
-// (Final, Native, Public)
-// Parameters:
-// bool                           InIsOnFire                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void ACampfire::SetIsOnFire(bool InIsOnFire)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Campfire.SetIsOnFire");
-
-	ACampfire_SetIsOnFire_Params params;
-	params.InIsOnFire = InIsOnFire;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Athena.Campfire.OnRep_IsOnFire
 // (Final, Native, Private)
 
@@ -19500,10 +19618,10 @@ void AFloatingItemProxy::OnRep_PhysicsState()
 
 
 // Function Athena.CharacterAudioComponent.SetNamedState
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FName                   StateName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           Active                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Active                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCharacterAudioComponent::SetNamedState(const struct FName& StateName, bool Active)
@@ -19533,27 +19651,6 @@ void UCharacterAudioComponent::ResetNamedStates()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.CharacterAudioComponent.ResetNamedStates");
 
 	UCharacterAudioComponent_ResetNamedStates_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.CharacterAudioComponent.PlaySoundOnLocalClientOnly_RPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class UWwiseEvent*             Event                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCharacterAudioComponent::PlaySoundOnLocalClientOnly_RPC(class UWwiseEvent* Event)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.CharacterAudioComponent.PlaySoundOnLocalClientOnly_RPC");
-
-	UCharacterAudioComponent_PlaySoundOnLocalClientOnly_RPC_Params params;
-	params.Event = Event;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -19651,6 +19748,27 @@ TEnumAsByte<EPlayerMusicState> UCharacterAudioComponent::GetCurrentPlayerMusicSt
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.CharacterAudioComponent.Client_PostAudioEventToLocalClientOnly
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// class UWwiseEvent*             Event                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCharacterAudioComponent::Client_PostAudioEventToLocalClientOnly(class UWwiseEvent* Event)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CharacterAudioComponent.Client_PostAudioEventToLocalClientOnly");
+
+	UCharacterAudioComponent_Client_PostAudioEventToLocalClientOnly_Params params;
+	params.Event = Event;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -23013,6 +23131,24 @@ void AShip::OnShipPartRegistered(const struct FName& PartName, class AActor* Par
 }
 
 
+// Function Athena.Ship.OnRep_ShipSizeObject
+// (Final, Native, Private)
+
+void AShip::OnRep_ShipSizeObject()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Ship.OnRep_ShipSizeObject");
+
+	AShip_OnRep_ShipSizeObject_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.Ship.OnRep_CrewShipManifest
 // (Final, Native, Private)
 
@@ -23226,7 +23362,7 @@ bool AShip::GetShipLocatorPosition(TEnumAsByte<EShipLocation> LocatorName, struc
 
 
 // Function Athena.Ship.GetSampledSpeed
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -33352,6 +33488,24 @@ void AAthenaGameState::OnRep_ReplicatedCrewService()
 }
 
 
+// Function Athena.AthenaGameState.OnRep_ReplicatedAllianceService
+// (Final, Native, Private)
+
+void AAthenaGameState::OnRep_ReplicatedAllianceService()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaGameState.OnRep_ReplicatedAllianceService");
+
+	AAthenaGameState_OnRep_ReplicatedAllianceService_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.IslandLocationVerifierInterface.VerifyLocation
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
@@ -38598,6 +38752,50 @@ void UAINameplateComponent::OnRep_DebugDisplayText()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AINameplateComponent.OnRep_DebugDisplayText");
 
 	UAINameplateComponent_OnRep_DebugDisplayText_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.NetDormancyHelpers.SetNetDormancy
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ENetDormancy>      DormancyMode                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UNetDormancyHelpers::STATIC_SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NetDormancyHelpers.SetNetDormancy");
+
+	UNetDormancyHelpers_SetNetDormancy_Params params;
+	params.TargetActor = TargetActor;
+	params.DormancyMode = DormancyMode;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.NetDormancyHelpers.FlushNetDormancy
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UNetDormancyHelpers::STATIC_FlushNetDormancy(class AActor* TargetActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NetDormancyHelpers.FlushNetDormancy");
+
+	UNetDormancyHelpers_FlushNetDormancy_Params params;
+	params.TargetActor = TargetActor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ActorMacros.ActorMacros_C
-// 0x0000 (0x0478 - 0x0478)
+// 0x0000 (0x0488 - 0x0488)
 class AActorMacros_C : public AActor
 {
 public:

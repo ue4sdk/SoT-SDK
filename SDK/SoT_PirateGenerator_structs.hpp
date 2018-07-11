@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ enum class EIPGGender : uint8_t
 	EIPGGender__UNSPECIFIED        = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EConsoleForGamepadLabels__None = 3
+	EIPGTestEnum__RANDOM           = 3
 };
 
 
@@ -56,8 +56,10 @@ enum class EIPGSetMode : uint8_t
 {
 	EIPGSetMode__RANDOM            = 0,
 	None                           = 1,
-	EIPGSetMode__NONE              = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EIPGSetMode__NONE              = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -81,8 +83,10 @@ enum class EPirateBakeFlags : uint8_t
 {
 	EPirateBakeFlags__None         = 0,
 	None                           = 1,
-	EPirateBakeFlags__StripTopLOD  = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EPirateBakeFlags__StripTopLOD  = 3,
+	None01                         = 4,
+	WeakObjectProperty             = 5
 };
 
 

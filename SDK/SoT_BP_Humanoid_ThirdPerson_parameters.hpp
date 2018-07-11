@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1537,6 +1537,16 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 {
 };
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_A5F23D9C4473E7B0D1F76DAC2F65FF92
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_A5F23D9C4473E7B0D1F76DAC2F65FF92_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_40ECFC564853E5733C2590B87FDCA05A
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_40ECFC564853E5733C2590B87FDCA05A_Params
+{
+};
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_E4D5E8274B806C7088FD639CEFF744E2
 struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_E4D5E8274B806C7088FD639CEFF744E2_Params
 {
@@ -1572,6 +1582,11 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 {
 };
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_1BA5F9DA4622F2863BDA979F09EEABA0
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_1BA5F9DA4622F2863BDA979F09EEABA0_Params
+{
+};
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_605B71524F49221568CC96A308FA96AE
 struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_605B71524F49221568CC96A308FA96AE_Params
 {
@@ -1589,6 +1604,41 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B5C9FE7F4E59DB4F564CE58825730CE5
 struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B5C9FE7F4E59DB4F564CE58825730CE5_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_AD42DF3241E28D95512629A207B9810E
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_AD42DF3241E28D95512629A207B9810E_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_A45F5DB045A303760BD4C19FAC401AEA
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_A45F5DB045A303760BD4C19FAC401AEA_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B4417F144F333C7B48F3A0B24C6A57A9
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B4417F144F333C7B48F3A0B24C6A57A9_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_D2BABC2345602A0FE6F010AB2DBDF17E
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_D2BABC2345602A0FE6F010AB2DBDF17E_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_5467B10E42AF2338397E918DC48BF546
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_5467B10E42AF2338397E918DC48BF546_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_98A74BD945B74ED5F5388D85BAD3EA5D
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_98A74BD945B74ED5F5388D85BAD3EA5D_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_E130AA08422ABD0C45F39D89AFB63FDD
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequencePlayer_E130AA08422ABD0C45F39D89AFB63FDD_Params
 {
 };
 
@@ -3468,6 +3518,21 @@ struct UBP_Humanoid_ThirdPerson_C_OnImpact_Params
 	struct FVector*                                    ImpactNormal;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FVector*                                    ImpactVelocity;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	TEnumAsByte<ECharacterHitReactionAnimType>*        HitReactionAnimType;                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SetSkelCaptIdleB
+struct UBP_Humanoid_ThirdPerson_C_AnimNotify_SetSkelCaptIdleB_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SetSkelCaptIdleA
+struct UBP_Humanoid_ThirdPerson_C_AnimNotify_SetSkelCaptIdleA_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_ResetShipCaptainState
+struct UBP_Humanoid_ThirdPerson_C_AnimNotify_ResetShipCaptainState_Params
+{
 };
 
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_StartleEnd

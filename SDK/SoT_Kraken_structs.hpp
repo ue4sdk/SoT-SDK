@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -64,7 +64,7 @@ enum class EKrakenState : uint8_t
 	EKrakenState__Spawning         = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	None01                         = 3
+	EKrakenDynamicsStateEvent__Damage = 3
 };
 
 

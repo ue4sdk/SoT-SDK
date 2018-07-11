@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -168,6 +168,7 @@ public:
 
 
 	float STATIC_WrapToRange(float Input, float LowerLimit, float UpperLimit);
+	float STATIC_WrapToPositiveRange(float Input, float UpperLimit);
 	float STATIC_WrapAroundPivot(float Input, float Pivot, float Range);
 	float STATIC_MoveTowards(float From, float To, float Speed, float Time);
 	float STATIC_Map(float ValueToMapFrom, float FromRangeStart, float FromRangeEnd, float ToRangeStart, float ToRangeEnd, bool Clamp);

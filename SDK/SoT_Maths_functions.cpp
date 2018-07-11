@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -705,7 +705,7 @@ float UDragMaths::STATIC_CalculateMagnitude(float InSurfaceArea, float InSpeedRe
 
 
 // Function Maths.FloatMaths.WrapToRange
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // float                          Input                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          LowerLimit                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -719,6 +719,32 @@ float UFloatMaths::STATIC_WrapToRange(float Input, float LowerLimit, float Upper
 	UFloatMaths_WrapToRange_Params params;
 	params.Input = Input;
 	params.LowerLimit = LowerLimit;
+	params.UpperLimit = UpperLimit;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.FloatMaths.WrapToPositiveRange
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                          Input                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          UpperLimit                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UFloatMaths::STATIC_WrapToPositiveRange(float Input, float UpperLimit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapToPositiveRange");
+
+	UFloatMaths_WrapToPositiveRange_Params params;
+	params.Input = Input;
 	params.UpperLimit = UpperLimit;
 
 	auto flags = fn->FunctionFlags;

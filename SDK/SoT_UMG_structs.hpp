@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,11 +40,8 @@ enum class EDragPivot : uint8_t
 	IntProperty                    = 2,
 	EDragPivot__CenterLeft         = 3,
 	None01                         = 4,
-	NameProperty                   = 5,
-	EDragPivot__BottomCenter       = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9
+	EDragPivot__BottomCenter       = 5,
+	None02                         = 6
 };
 
 
@@ -72,7 +69,7 @@ enum class EDesignPreviewSizeMode : uint8_t
 	None                           = 1,
 	EDesignPreviewSizeMode__DesiredOnScreen = 2,
 	None01                         = 3,
-	RMT_None                       = 4
+	EGameplayTaskRunResult__Error  = 4
 };
 
 

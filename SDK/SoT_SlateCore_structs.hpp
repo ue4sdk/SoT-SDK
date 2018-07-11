@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,8 +22,7 @@ enum class EFontHinting : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EFontHinting__None             = 3,
-	None01                         = 4,
-	EProgressBarFillType__LeftToRight = 5
+	None01                         = 4
 };
 
 
@@ -42,7 +41,7 @@ enum class ETextCommit : uint8_t
 	ETextCommit__Default           = 0,
 	None                           = 1,
 	ETextCommit__ETextCommit_MAX   = 2,
-	EAxis__None                    = 3
+	VAlign_Fill                    = 3
 };
 
 
@@ -69,9 +68,7 @@ enum class EMenuPlacement : uint8_t
 	None                           = 1,
 	MenuPlacement_MenuRight        = 2,
 	None01                         = 3,
-	MenuPlacement_MAX              = 4,
-	EUINavigation__Left            = 5,
-	None02                         = 6
+	MenuPlacement_MAX              = 4
 };
 
 
@@ -91,7 +88,7 @@ enum class EHorizontalAlignment : uint8_t
 	HAlign_Fill                    = 0,
 	None                           = 1,
 	HAlign_MAX                     = 2,
-	VAlign_Fill                    = 3
+	EAxis__None                    = 3
 };
 
 
@@ -102,7 +99,10 @@ enum class EUINavigation : uint8_t
 	None                           = 1,
 	EUINavigation__Next            = 2,
 	None01                         = 3,
-	EUINavigation__EUINavigation_MAX = 4
+	NameProperty                   = 4,
+	EUINavigation__EUINavigation_MAX = 5,
+	MenuPlacement_BelowAnchor      = 6,
+	None02                         = 7
 };
 
 
@@ -148,7 +148,7 @@ enum class ESlateBrushImageType : uint8_t
 {
 	ESlateBrushImageType__NoImage  = 0,
 	None                           = 1,
-	ESlateCheckBoxType__CheckBox   = 2
+	EButtonPressMethod__DownAndUp  = 2
 };
 
 
@@ -187,7 +187,7 @@ enum class ECheckBoxState : uint8_t
 {
 	ECheckBoxState__Unchecked      = 0,
 	None                           = 1,
-	Orient_Horizontal              = 2
+	ESlateCheckBoxType__CheckBox   = 2
 };
 
 
@@ -223,9 +223,10 @@ enum class EUINavigationRule : uint8_t
 {
 	EUINavigationRule__Escape      = 0,
 	None                           = 1,
-	EUINavigationRule__Custom      = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	IntProperty                    = 2,
+	EUINavigationRule__Custom      = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Maths_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Maths_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 
 namespace SDK
@@ -19,13 +20,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct AIShips.AIShipEncounterParamsSpawnerData
-// 0x0010
+// 0x0018
 struct FAIShipEncounterParamsSpawnerData
 {
 	class UAISpawner*                                  Spawner;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanRepairDamage;                                          // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanUseCannons;                                            // 0x0009(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
+	struct FName                                       SpawnLocationType;                                        // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanRepairDamage;                                          // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanUseCannons;                                            // 0x0011(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsCaptain;                                                // 0x0012(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x0013(0x0005) MISSED OFFSET
 };
 
 // ScriptStruct AIShips.WeightedSpawnOffset
@@ -73,19 +76,6 @@ struct FShipMovementParams
 	float                                              MoveBackwardsShipSpeedThreshold;                          // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct AIShips.CursedSailsBattleParams
-// 0x0050
-struct FCursedSailsBattleParams
-{
-	struct FText                                       Name;                                                     // 0x0000(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	int                                                StartDay;                                                 // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                NumDaysActive;                                            // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector2D                                   Location;                                                 // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Radius;                                                   // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct AIShips.TrackingNoiseGenerator
 // 0x0018
 struct FTrackingNoiseGenerator
@@ -93,6 +83,48 @@ struct FTrackingNoiseGenerator
 	class UCurveFloat*                                 ParallelOffsetCurve;                                      // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              OscillationTime;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC];                                       // 0x000C(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct AIShips.AIShipEncounterWave
+// 0x0010
+struct FAIShipEncounterWave
+{
+	TArray<class UAIShipContextParamsDataAsset*>       AIShipsInWave;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct AIShips.AIShipEncounterDesc
+// 0x0020
+struct FAIShipEncounterDesc
+{
+	struct FVector2D                                   Location;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Radius;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	TArray<struct FAIShipEncounterWave>                Waves;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct AIShips.TimeLimitedAIShipEncounterDesc
+// 0x0010 (0x0030 - 0x0020)
+struct FTimeLimitedAIShipEncounterDesc : public FAIShipEncounterDesc
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0020(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct AIShips.CursedSailsBattleParams
+// 0x0070
+struct FCursedSailsBattleParams
+{
+	struct FText                                       Name;                                                     // 0x0000(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	int                                                StartDay;                                                 // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                NumDaysActive;                                            // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FTimeLimitedAIShipEncounterDesc             EncounterDescription;                                     // 0x0040(0x0030) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct AIShips.AIShipSpawnedNetworkEvent
+// 0x0000 (0x0010 - 0x0010)
+struct FAIShipSpawnedNetworkEvent : public FNetworkEventStruct
+{
+
 };
 
 // ScriptStruct AIShips.AIShipWorldSettings

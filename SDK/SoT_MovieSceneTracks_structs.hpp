@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,9 +22,10 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 {
 	MovieScene3DPathSection_Axis__X = 0,
 	None                           = 1,
-	MovieScene3DPathSection_Axis__NEG_Y = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	IntProperty                    = 2,
+	MovieScene3DPathSection_Axis__NEG_Y = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -32,7 +33,8 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 enum class EParticleKey : uint8_t
 {
 	EParticleKey__Active           = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

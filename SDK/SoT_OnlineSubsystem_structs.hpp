@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,8 @@ enum class EInAppPurchaseState : uint8_t
 	EInAppPurchaseState__Success   = 0,
 	None                           = 1,
 	EInAppPurchaseState__NotAllowed = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -35,7 +36,8 @@ enum class EMPMatchOutcome : uint8_t
 	EMPMatchOutcome__Third         = 4,
 	None02                         = 5,
 	StructProperty                 = 6,
-	None03                         = 7
+	None03                         = 7,
+	EComponentType__None           = 8
 };
 
 

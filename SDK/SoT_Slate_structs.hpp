@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.1) SDK
+// Sea of Thieves (1.1.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,8 @@ enum class ETextJustify : uint8_t
 {
 	ETextJustify__Left             = 0,
 	None                           = 1,
-	NoFading                       = 2
+	IntProperty                    = 2,
+	ECheckBoxState__Unchecked      = 3
 };
 
 
@@ -31,7 +32,7 @@ enum class ETableViewMode : uint8_t
 {
 	ETableViewMode__List           = 0,
 	None                           = 1,
-	EButtonPressMethod__DownAndUp  = 2
+	NoFading                       = 2
 };
 
 
@@ -49,8 +50,10 @@ enum class EStretch : uint8_t
 {
 	EStretch__None                 = 0,
 	None                           = 1,
-	EStretch__ScaleToFitY          = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EStretch__ScaleToFitY          = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -59,7 +62,7 @@ enum class EStretchDirection : uint8_t
 {
 	EStretchDirection__Both        = 0,
 	None                           = 1,
-	ETextJustify__Left             = 2
+	ETableViewMode__List           = 2
 };
 
 
