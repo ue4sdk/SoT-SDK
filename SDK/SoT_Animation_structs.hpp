@@ -21,7 +21,7 @@ enum class ELimbIKSpace : uint8_t
 {
 	ELimbIKSpace__Local            = 0,
 	None                           = 1,
-	EWaterQueryResult__Success     = 2
+	EPlaneLineIntersectionType__IntersectionWithinLineSegment = 2
 };
 
 

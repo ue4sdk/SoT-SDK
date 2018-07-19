@@ -21,10 +21,8 @@ enum class EActionStateMachineTrackId : uint8_t
 {
 	EActionStateMachineTrackId__Locomotion = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EActionStateMachineTrackId__Migration = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EActionStateMachineTrackId__Migration = 2,
+	None01                         = 3
 };
 
 
@@ -32,8 +30,7 @@ enum class EActionStateMachineTrackId : uint8_t
 enum class EActionPredictionType : uint8_t
 {
 	EActionPredictionType__Predicted = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

@@ -45,11 +45,12 @@ public:
 
 
 // Class AthenaEngine.StringToAssetClassMap
-// 0x0010 (0x0038 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UStringToAssetClassMap : public UDataAsset
 {
 public:
 	TArray<struct FStringAssetClassPair>               StringAssetClassPairs;                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0038(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -22,8 +22,7 @@ enum class ETextJustify : uint8_t
 {
 	ETextJustify__Left             = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECheckBoxState__Unchecked      = 3
+	NoFading                       = 2
 };
 
 
@@ -32,7 +31,7 @@ enum class ETableViewMode : uint8_t
 {
 	ETableViewMode__List           = 0,
 	None                           = 1,
-	NoFading                       = 2
+	EButtonPressMethod__DownAndUp  = 2
 };
 
 
@@ -50,10 +49,8 @@ enum class EStretch : uint8_t
 {
 	EStretch__None                 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EStretch__ScaleToFitY          = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EStretch__ScaleToFitY          = 2,
+	None01                         = 3
 };
 
 
@@ -62,7 +59,7 @@ enum class EStretchDirection : uint8_t
 {
 	EStretchDirection__Both        = 0,
 	None                           = 1,
-	ETableViewMode__List           = 2
+	ETextJustify__Left             = 2
 };
 
 

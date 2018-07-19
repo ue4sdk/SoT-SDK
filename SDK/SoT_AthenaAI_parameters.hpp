@@ -249,6 +249,34 @@ struct UAITargetWeaponInterface_FindAimConfigToHitTarget_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam
+struct AAthenaAIControllerBase_SetNamedControllerParam_Params
+{
+	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	float                                              Value;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam
+struct AAthenaAIControllerBase_FindNamedWeightedRangesControllerParam_Params
+{
+	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam
+struct AAthenaAIControllerBase_FindNamedControllerParam_Params
+{
+	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams
+struct AAthenaAIControllerBase_ApplyControllerParams_Params
+{
+	class UAthenaAIControllerParamsDataAsset*          ParamsAsset;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class APawn*                                       InPawn;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AthenaAI.AthenaAIController.StopBehaviourLogic
 struct AAthenaAIController_StopBehaviourLogic_Params
 {
@@ -260,13 +288,6 @@ struct AAthenaAIController_SetPerceptionExpirationAgeForActor_Params
 	class AActor*                                      Actor;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ExpirationAge;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      Sense;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AthenaAI.AthenaAIController.SetNamedControllerParam
-struct AAthenaAIController_SetNamedControllerParam_Params
-{
-	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              Value;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus
@@ -314,20 +335,6 @@ struct AAthenaAIController_GetAthenaAIPerceptionComponent_Params
 struct AAthenaAIController_GetAllSeenActors_Params
 {
 	TArray<class AActor*>                              SeenActors;                                               // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function AthenaAI.AthenaAIController.FindNamedWeightedRangesControllerParam
-struct AAthenaAIController_FindNamedWeightedRangesControllerParam_Params
-{
-	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function AthenaAI.AthenaAIController.FindNamedControllerParam
-struct AAthenaAIController_FindNamedControllerParam_Params
-{
-	struct FName                                       ParamName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function AthenaAI.AthenaAIController.ApplyControllerParams
@@ -378,18 +385,6 @@ struct AAthenaFaunaAIController_GetCourage_Params
 struct AAthenaFaunaAIController_GetAthenaAICharPathFollowingComp_Params
 {
 	class UAthenaAICharacterPathFollowingComponent*    ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function AthenaAI.AthenaSwimmingAIController.TargetActorDestroyed
-struct AAthenaSwimmingAIController_TargetActorDestroyed_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AthenaAI.AthenaSwimmingAIController.SetTargetActor
-struct AAthenaSwimmingAIController_SetTargetActor_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings

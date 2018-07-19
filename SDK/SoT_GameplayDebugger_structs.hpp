@@ -28,7 +28,7 @@ enum class EAIDebugDrawDataView : uint8_t
 	None02                         = 5,
 	EAIDebugDrawDataView__MAX      = 6,
 	None03                         = 7,
-	None04                         = 8
+	ByteProperty                   = 8
 };
 
 

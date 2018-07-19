@@ -66,6 +66,23 @@ void ABP_Shipwreck_01_a_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayRe
 }
 
 
+// Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.OnResetTo
+// (Event, Public, BlueprintEvent)
+
+void ABP_Shipwreck_01_a_C::OnResetTo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.OnResetTo");
+
+	ABP_Shipwreck_01_a_C_OnResetTo_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ExecuteUbergraph_BP_Shipwreck_01_a
 // (HasDefaults)
 // Parameters:

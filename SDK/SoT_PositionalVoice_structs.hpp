@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -22,8 +22,7 @@ enum class EVoiceChatState : uint8_t
 {
 	EVoiceChatState__Silent        = 0,
 	None                           = 1,
-	EVoiceChatState__EVoiceChatState_MAX = 2,
-	EKrakenBehaviourType__Idle     = 3
+	EVoiceChatState__EVoiceChatState_MAX = 2
 };
 
 

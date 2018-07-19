@@ -26,10 +26,9 @@ enum class EInstancedRopeParameterType : uint8_t
 	None01                         = 3,
 	RPT_WindAmount                 = 4,
 	None02                         = 5,
-	StructProperty                 = 6,
-	RPT_CatenaryXYDistance         = 7,
-	None03                         = 8,
-	TextProperty                   = 9
+	RPT_CatenaryXYDistance         = 6,
+	None03                         = 7,
+	TextProperty                   = 8
 };
 
 
@@ -108,15 +107,14 @@ struct FRiggingSystemLine
 };
 
 // ScriptStruct AthenaRigging.RiggingSystemPulleyData
-// 0x0060
+// 0x0050
 struct FRiggingSystemPulleyData
 {
-	TArray<class UStaticMeshComponent*>                Meshes;                                                   // 0x0000(0x0010) (ExportObject, ZeroConstructor)
-	TArray<float>                                      AttachmentSag;                                            // 0x0010(0x0010) (ZeroConstructor)
-	TArray<float>                                      AttachmentLength;                                         // 0x0020(0x0010) (ZeroConstructor)
-	TArray<float>                                      Scale;                                                    // 0x0030(0x0010) (ZeroConstructor)
-	TArray<float>                                      ScaledOffset;                                             // 0x0040(0x0010) (ZeroConstructor)
-	TArray<float>                                      ScaledRadius;                                             // 0x0050(0x0010) (ZeroConstructor)
+	TArray<float>                                      AttachmentSag;                                            // 0x0000(0x0010) (ZeroConstructor)
+	TArray<float>                                      AttachmentLength;                                         // 0x0010(0x0010) (ZeroConstructor)
+	TArray<float>                                      Scale;                                                    // 0x0020(0x0010) (ZeroConstructor)
+	TArray<float>                                      ScaledOffset;                                             // 0x0030(0x0010) (ZeroConstructor)
+	TArray<float>                                      ScaledRadius;                                             // 0x0040(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct AthenaRigging.RopeStyleParams

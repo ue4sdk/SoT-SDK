@@ -9,8 +9,9 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Athena_classes.hpp"
+#include "SoT_Kraken_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -41,8 +42,7 @@ enum class EVolcanoState : uint8_t
 {
 	EVolcanoState__Dormant         = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	GTInputLineTrace_Single        = 3
+	EGameplayEffectAttributeCaptureSource__Source = 2
 };
 
 
@@ -91,6 +91,15 @@ struct FEarthquakeSurfaceEffect
 	TEnumAsByte<EPhysicalSurface>                      SurfaceType;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	class UObject*                                     LocalPlayerEffect;                                        // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct NaturalDisasters.GeyserSpawnAngleOption
+// 0x000C
+struct FGeyserSpawnAngleOption
+{
+	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Direction;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Range;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct NaturalDisasters.WeightedVolcanoProjectile

@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bp_voicechatrenderer_structs.hpp"
+#include "SoT_BP_VoiceChatRenderer_structs.hpp"
 
 namespace SDK
 {
@@ -14,7 +14,7 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass bp_voicechatrenderer.BP_VoiceChatRenderer_C
+// BlueprintGeneratedClass BP_VoiceChatRenderer.BP_VoiceChatRenderer_C
 // 0x0000 (0x0138 - 0x0138)
 class UBP_VoiceChatRenderer_C : public UVoiceChatRenderer
 {
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass bp_voicechatrenderer.BP_VoiceChatRenderer_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_VoiceChatRenderer.BP_VoiceChatRenderer_C");
 		return ptr;
 	}
 

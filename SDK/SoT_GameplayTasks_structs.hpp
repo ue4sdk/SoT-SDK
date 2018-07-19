@@ -41,7 +41,7 @@ enum class EGameplayTaskRunResult : uint8_t
 	None                           = 1,
 	EGameplayTaskRunResult__Success_Finished = 2,
 	None01                         = 3,
-	EGameplayTaskState__Uninitialized = 4
+	ETestArea__None                = 4
 };
 
 

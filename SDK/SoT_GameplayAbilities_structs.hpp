@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -23,7 +23,7 @@ enum class EGameplayEffectGrantedAbilityRemovePolicy : uint8_t
 {
 	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 0,
 	None                           = 1,
-	ESwimmingArcMode__ArcToTarget  = 2
+	ETraceDirection__ItemToContext = 2
 };
 
 
@@ -62,8 +62,7 @@ enum class EAbilityGenericReplicatedEvent : uint8_t
 enum class EGameplayTagEventType : uint8_t
 {
 	EGameplayTagEventType__NewOrRemoved = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -81,8 +80,7 @@ enum class EGameplayEffectStackingType : uint8_t
 {
 	EGameplayEffectStackingType__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayTagEventType__NewOrRemoved = 3
+	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 2
 };
 
 
@@ -128,8 +126,7 @@ enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 enum class EGameplayEffectStackingDurationPolicy : uint8_t
 {
 	EGameplayEffectStackingDurationPolicy__RefreshOnSuccessfulApplication = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -139,7 +136,7 @@ enum class EGameplayEffectDurationType : uint8_t
 	EGameplayEffectDurationType__Instant = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EGameplayEffectStackingDurationPolicy__RefreshOnSuccessfulApplication = 3
+	EAttributeBasedFloatCalculationType__AttributeMagnitude = 3
 };
 
 
@@ -149,7 +146,7 @@ enum class EAttributeBasedFloatCalculationType : uint8_t
 	EAttributeBasedFloatCalculationType__AttributeMagnitude = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EGameplayEffectDurationType__Instant = 3
+	EGameplayAbilityTriggerSource__GameplayEvent = 3
 };
 
 
@@ -169,7 +166,7 @@ enum class EGameplayAbilityTriggerSource : uint8_t
 	EGameplayAbilityTriggerSource__GameplayEvent = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EAttributeBasedFloatCalculationType__AttributeMagnitude = 3
+	EGameplayAbilityReplicationPolicy__ReplicateNo = 3
 };
 
 
@@ -198,7 +195,7 @@ enum class EGameplayAbilityInstancingPolicy : uint8_t
 	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EGameplayAbilityReplicationPolicy__ReplicateNo = 3
+	ETargetDataFilterSelf__TDFS_Any = 3
 };
 
 
@@ -208,7 +205,7 @@ enum class ETargetDataFilterSelf : uint8_t
 	ETargetDataFilterSelf__TDFS_Any = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EGameplayAbilityInstancingPolicy__NonInstanced = 3
+	EAbilityTaskNetSyncType__BothWait = 3
 };
 
 
@@ -218,7 +215,7 @@ enum class EAbilityTaskNetSyncType : uint8_t
 	EAbilityTaskNetSyncType__BothWait = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	ETargetDataFilterSelf__TDFS_Any = 3
+	ETargetAbilitySelfSelection__TASS_Permit = 3
 };
 
 
@@ -250,7 +247,7 @@ enum class ETargetAbilitySelfSelection : uint8_t
 {
 	ETargetAbilitySelfSelection__TASS_Permit = 0,
 	None                           = 1,
-	EAbilityTaskNetSyncType__BothWait = 2
+	EGameplayCuePayloadType__EffectContext = 2
 };
 
 
@@ -259,8 +256,7 @@ enum class EGameplayCuePayloadType : uint8_t
 {
 	EGameplayCuePayloadType__EffectContext = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ETargetAbilitySelfSelection__TASS_Permit = 3
+	GTInputLineTrace_Single        = 2
 };
 
 

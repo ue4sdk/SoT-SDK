@@ -54,7 +54,7 @@ public:
 
 
 // Class AthenaRigging.RiggingSystem
-// 0x0130 (0x05B8 - 0x0488)
+// 0x0138 (0x05C0 - 0x0488)
 class ARiggingSystem : public AActor
 {
 public:
@@ -63,10 +63,11 @@ public:
 	class UInstancedRopeComponent*                     InstancedRopes;                                           // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TArray<struct FRiggingSystemLine>                  Lines;                                                    // 0x04A0(0x0010) (ZeroConstructor)
 	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x04B0(0x0010) (ZeroConstructor)
-	struct FRiggingSystemPulleyData                    Pulleys;                                                  // 0x04C0(0x0060)
-	TArray<struct FSocketId>                           Sockets;                                                  // 0x0520(0x0010) (ZeroConstructor)
-	TArray<float>                                      InitialMainRopeLengths;                                   // 0x0530(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x78];                                      // 0x0540(0x0078) MISSED OFFSET
+	class UMobileInstancedStaticMeshComponent*         PulleyInstances;                                          // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FRiggingSystemPulleyData                    Pulleys;                                                  // 0x04C8(0x0050)
+	TArray<struct FSocketId>                           Sockets;                                                  // 0x0518(0x0010) (ZeroConstructor)
+	TArray<float>                                      InitialMainRopeLengths;                                   // 0x0528(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x88];                                      // 0x0538(0x0088) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

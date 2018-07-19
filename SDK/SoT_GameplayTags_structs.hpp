@@ -22,10 +22,7 @@ enum class EGameplayTagQueryExprType : uint8_t
 	EGameplayTagQueryExprType__Undefined = 0,
 	None                           = 1,
 	EGameplayTagQueryExprType__AnyExprMatch = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	ETestCategory__Unit            = 5,
-	None02                         = 6
+	None01                         = 3
 };
 
 
@@ -42,7 +39,8 @@ enum class EGameplayContainerMatchType : uint8_t
 enum class EGameplayTagMatchType : uint8_t
 {
 	EGameplayTagMatchType__Explicit = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

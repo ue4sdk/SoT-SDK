@@ -21,10 +21,8 @@ enum class EComparisonMethod : uint8_t
 {
 	EComparisonMethod__Equal_To    = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EComparisonMethod__Greater_Than = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EComparisonMethod__Greater_Than = 2,
+	None01                         = 3
 };
 
 
@@ -43,8 +41,7 @@ enum class ETestArea : uint8_t
 	ETestArea__None                = 0,
 	None                           = 1,
 	ETestArea__Art                 = 2,
-	None01                         = 3,
-	EDesignPreviewSizeMode__FillScreen = 4
+	None01                         = 3
 };
 
 
@@ -53,10 +50,10 @@ enum class ETestCategory : uint8_t
 {
 	ETestCategory__Unit            = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ETestCategory__Soak            = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	ETestCategory__Soak            = 2,
+	None01                         = 3,
+	NameProperty                   = 4,
+	EGameplayTagQueryExprType__Undefined = 5
 };
 
 

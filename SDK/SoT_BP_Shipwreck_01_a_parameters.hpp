@@ -30,6 +30,11 @@ struct ABP_Shipwreck_01_a_C_ReceiveEndPlay_Params
 	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.OnResetTo
+struct ABP_Shipwreck_01_a_C_OnResetTo_Params
+{
+};
+
 // Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ExecuteUbergraph_BP_Shipwreck_01_a
 struct ABP_Shipwreck_01_a_C_ExecuteUbergraph_BP_Shipwreck_01_a_Params
 {

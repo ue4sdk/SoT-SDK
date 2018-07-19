@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_world_layout_2_classes.hpp"
+#include "SoT_SOT_World_layout_2_classes.hpp"
 
 namespace SDK
 {

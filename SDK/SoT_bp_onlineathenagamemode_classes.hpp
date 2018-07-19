@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bp_onlineathenagamemode_structs.hpp"
+#include "SoT_BP_OnlineAthenaGameMode_structs.hpp"
 
 namespace SDK
 {
@@ -14,16 +14,16 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass bp_onlineathenagamemode.BP_OnlineAthenaGameMode_C
-// 0x0008 (0x0A48 - 0x0A40)
+// BlueprintGeneratedClass BP_OnlineAthenaGameMode.BP_OnlineAthenaGameMode_C
+// 0x0008 (0x0A58 - 0x0A50)
 class ABP_OnlineAthenaGameMode_C : public AOnlineAthenaGameMode
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0A40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0A50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass bp_onlineathenagamemode.BP_OnlineAthenaGameMode_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_OnlineAthenaGameMode.BP_OnlineAthenaGameMode_C");
 		return ptr;
 	}
 

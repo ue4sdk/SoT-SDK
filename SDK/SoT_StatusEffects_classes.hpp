@@ -172,15 +172,14 @@ public:
 
 
 // Class StatusEffects.StatusEffectManagerComponent
-// 0x0110 (0x01E0 - 0x00D0)
+// 0x0100 (0x01D0 - 0x00D0)
 class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
 	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00E8(0x0010) (Net, ZeroConstructor)
-	TArray<struct FActiveStatusEffect>                 ClientActiveEffects;                                      // 0x00F8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0xD8];                                      // 0x0108(0x00D8) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xD8];                                      // 0x00F8(0x00D8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -189,7 +188,7 @@ public:
 	}
 
 
-	void OnRep_ActiveEffects();
+	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects);
 };
 
 

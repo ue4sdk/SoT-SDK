@@ -21,8 +21,7 @@ enum class E_Placement_MeshType : uint8_t
 	None                           = 1,
 	E_Placement_MeshType__NewEnumerator3 = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	Emissive_Intensity             = 5
+	NameProperty                   = 4
 };
 
 

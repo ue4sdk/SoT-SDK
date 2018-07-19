@@ -838,6 +838,100 @@ bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Ta
 }
 
 
+// Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamName, float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam");
+
+	AAthenaAIControllerBase_SetNamedControllerParam_Params params;
+	params.ParamName = ParamName;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FWeightedProbabilityRangeOfRanges ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeightedRangesControllerParam(const struct FName& ParamName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam");
+
+	AAthenaAIControllerBase_FindNamedWeightedRangesControllerParam_Params params;
+	params.ParamName = ParamName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& ParamName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam");
+
+	AAthenaAIControllerBase_FindNamedControllerParam_Params params;
+	params.ParamName = ParamName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UAthenaAIControllerParamsDataAsset* ParamsAsset                    (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams");
+
+	AAthenaAIControllerBase_ApplyControllerParams_Params params;
+	params.ParamsAsset = ParamsAsset;
+	params.InPawn = InPawn;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaAI.AthenaAIController.StopBehaviourLogic
 // (Native, Public, BlueprintCallable)
 
@@ -871,29 +965,6 @@ void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor
 	params.Actor = Actor;
 	params.ExpirationAge = ExpirationAge;
 	params.Sense = Sense;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function AthenaAI.AthenaAIController.SetNamedControllerParam
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaAIController::SetNamedControllerParam(const struct FName& ParamName, float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.SetNamedControllerParam");
-
-	AAthenaAIController_SetNamedControllerParam_Params params;
-	params.ParamName = ParamName;
-	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1005,7 +1076,7 @@ bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
 
 
 // Function AthenaAI.AthenaAIController.GetTargetActor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1068,54 +1139,6 @@ void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
 
 	if (SeenActors != nullptr)
 		*SeenActors = params.SeenActors;
-}
-
-
-// Function AthenaAI.AthenaAIController.FindNamedWeightedRangesControllerParam
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FWeightedProbabilityRangeOfRanges ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWeightedProbabilityRangeOfRanges AAthenaAIController::FindNamedWeightedRangesControllerParam(const struct FName& ParamName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.FindNamedWeightedRangesControllerParam");
-
-	AAthenaAIController_FindNamedWeightedRangesControllerParam_Params params;
-	params.ParamName = ParamName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIController.FindNamedControllerParam
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AAthenaAIController::FindNamedControllerParam(const struct FName& ParamName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.FindNamedControllerParam");
-
-	AAthenaAIController_FindNamedControllerParam_Params params;
-	params.ParamName = ParamName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -1290,48 +1313,6 @@ class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAth
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaSwimmingAIController.TargetActorDestroyed
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaSwimmingAIController::TargetActorDestroyed(class AActor* Actor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaSwimmingAIController.TargetActorDestroyed");
-
-	AAthenaSwimmingAIController_TargetActorDestroyed_Params params;
-	params.Actor = Actor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function AthenaAI.AthenaSwimmingAIController.SetTargetActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaSwimmingAIController::SetTargetActor(class AActor* Actor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaSwimmingAIController.SetTargetActor");
-
-	AAthenaSwimmingAIController_SetTargetActor_Params params;
-	params.Actor = Actor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

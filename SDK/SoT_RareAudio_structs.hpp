@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_WwiseAudio_classes.hpp"
 #include "SoT_ObjectLifetime_classes.hpp"
+#include "SoT_WwiseAudio_classes.hpp"
 #include "SoT_RareEngine_classes.hpp"
 
 namespace SDK
@@ -24,7 +24,7 @@ enum class EEmitterRelationship : uint8_t
 {
 	EEmitterRelationship__Audio_Remote = 0,
 	None                           = 1,
-	EMemoryUsageVisualiserInstanceType__Server = 2
+	EExecutionTarget__OldServer    = 2
 };
 
 

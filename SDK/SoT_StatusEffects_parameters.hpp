@@ -17,6 +17,7 @@ namespace SDK
 // Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects
 struct UStatusEffectManagerComponent_OnRep_ActiveEffects_Params
 {
+	TArray<struct FActiveStatusEffect>                 OldEffects;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 }

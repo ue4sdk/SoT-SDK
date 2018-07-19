@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -25,10 +25,9 @@ enum class EAIDebugColour : uint8_t
 {
 	EAIDebugColour__Red            = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAIDebugColour__Yellow         = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EAIDebugColour__Yellow         = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -39,7 +38,7 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
 	None01                         = 3,
-	CameraFacing_NoneUP            = 4
+	ETinySharkState__Inactive      = 4
 };
 
 
@@ -48,10 +47,9 @@ enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	AISpawnRequestState__WaitForLocationCheck = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	AISpawnRequestState__WaitForLocationCheck = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -60,7 +58,7 @@ enum class EBountySpawnerAudioState : uint8_t
 {
 	EBountySpawnerAudioState__None = 0,
 	None                           = 1,
-	EBlackboardValueCompositeType__And = 2
+	EBountyTargetRank__Captain     = 2
 };
 
 
@@ -69,7 +67,7 @@ enum class EBountySpawnerType : uint8_t
 {
 	EBountySpawnerType__Default    = 0,
 	None                           = 1,
-	ETimeOfDay__Day                = 2
+	EBuoyancyDragSampleType__Spherical = 2
 };
 
 
@@ -104,7 +102,7 @@ enum class EAIKnockbackStrengthType : uint8_t
 {
 	EAIKnockbackStrengthType__Low  = 0,
 	None                           = 1,
-	EBountyTargetGender__Male      = 2
+	ECustomAiEventDuringDeathEnum__None = 2
 };
 
 
@@ -113,7 +111,7 @@ enum class ECustomAiEventDuringDeathEnum : uint8_t
 {
 	ECustomAiEventDuringDeathEnum__None = 0,
 	None                           = 1,
-	EAIKnockbackStrengthType__Low  = 2
+	ESwimmingLineOfSightTest__None = 2
 };
 
 
@@ -130,10 +128,8 @@ enum class EBlackboardValueComparisonType : uint8_t
 {
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EBlackboardValueComparisonType__GreaterThanEquals = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EBlackboardValueComparisonType__GreaterThanEquals = 2,
+	None01                         = 3
 };
 
 
@@ -154,8 +150,7 @@ enum class ESwimmingLineOfSightTest : uint8_t
 {
 	ESwimmingLineOfSightTest__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECustomAiEventDuringDeathEnum__None = 3
+	ESwimmingSyncMode__Synchronous = 2
 };
 
 
@@ -163,8 +158,7 @@ enum class ESwimmingLineOfSightTest : uint8_t
 enum class ESwimmingSyncMode : uint8_t
 {
 	ESwimmingSyncMode__Synchronous = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -199,7 +193,7 @@ enum class ETinySharkDespawnReason : uint8_t
 {
 	ETinySharkDespawnReason__Invalid = 0,
 	None                           = 1,
-	ETraceDirection__ItemToContext = 2
+	EKrakenDynamicsStateEvent__Damage = 2
 };
 
 
@@ -208,8 +202,7 @@ enum class ETinySharkActiveState : uint8_t
 {
 	ETinySharkActiveState__TrackingTarget = 0,
 	None                           = 1,
-	ETinySharkActiveState__ETinySharkActiveState_MAX = 2,
-	EAIThreatLevel__NoDanger       = 3
+	ETinySharkActiveState__ETinySharkActiveState_MAX = 2
 };
 
 

@@ -19,8 +19,7 @@ enum class EFlyingCreatures : uint8_t
 {
 	EFlyingCreatures__NewEnumerator8 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EFlyingCreatures__EFlyingCreatures_MAX = 3
+	EFlyingCreatures__EFlyingCreatures_MAX = 2
 };
 
 

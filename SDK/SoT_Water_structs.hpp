@@ -23,7 +23,7 @@ enum class EWaterQueryResult : uint8_t
 	EWaterQueryResult__Success     = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EInteractionBlockReason__None  = 3
+	ETimeOfDay__Day                = 3
 };
 
 
@@ -41,7 +41,7 @@ enum class EBuoyancySampleType : uint8_t
 {
 	EBuoyancySampleType__Spherical = 0,
 	None                           = 1,
-	EBuoyancyDragSampleType__Spherical = 2
+	EBlackboardValueCompositeType__And = 2
 };
 
 
@@ -50,7 +50,9 @@ enum class EWaterSplashProbeType : uint8_t
 {
 	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
 	None                           = 1,
-	EWaterSplashProbeType__EWaterSplashProbeType_MAX = 2
+	EWaterSplashProbeType__Continuous = 2,
+	None01                         = 3,
+	AISpawnLocationSearchResult__Incomplete = 4
 };
 
 
@@ -161,19 +163,21 @@ struct FBuoyancySampleMovement
 };
 
 // ScriptStruct Water.WaterSplashProbe
-// 0x00D0
+// 0x00D8
 struct FWaterSplashProbe
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	class FString                                      ProbeDebugName;                                           // 0x0008(0x0010) (Edit, ZeroConstructor)
 	struct FVector                                     LocalOffset;                                              // 0x0018(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Height;                                                   // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Yaw;                                                      // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RateOfChangeThreshold;                                    // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LocalOffsetAdjustment;                                    // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LocalOffsetAdjustmentDuration;                            // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EWaterSplashProbeType>                 Type;                                                     // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8F];                                      // 0x0041(0x008F) MISSED OFFSET
+	float                                              Pitch;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Yaw;                                                      // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Roll;                                                     // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RateOfChangeThreshold;                                    // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LocalOffsetAdjustment;                                    // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LocalOffsetAdjustmentDuration;                            // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWaterSplashProbeType>                 Type;                                                     // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8F];                                      // 0x0049(0x008F) MISSED OFFSET
 };
 
 // ScriptStruct Water.WaterSplashProbesContainer

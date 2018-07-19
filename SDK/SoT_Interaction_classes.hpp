@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Interaction.InteractableComponent
-// 0x0040 (0x0110 - 0x00D0)
+// 0x0050 (0x0120 - 0x00D0)
 class UInteractableComponent : public UActorComponent
 {
 public:
@@ -25,11 +25,15 @@ public:
 	struct FName                                       FeatureFlag;                                              // 0x00DC(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     BoxExtent;                                                // 0x00E4(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     BoxOrigin;                                                // 0x00F0(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MayBeGrouped : 1;                                         // 0x00FC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00FD(0x0003) MISSED OFFSET
-	class UInteractableArea*                           InteractableArea;                                         // 0x0100(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TEnumAsByte<EInteractableState>                    CurrentInteractionState;                                  // 0x0108(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0109(0x0007) MISSED OFFSET
+	struct FRotator                                    BoxRotation;                                              // 0x00FC(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      MayBeGrouped : 1;                                         // 0x0108(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0109(0x0003) MISSED OFFSET
+	bool                                               RequiresFacingFront;                                      // 0x010C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               RequiresNotAirborne;                                      // 0x010D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x010E(0x0002) MISSED OFFSET
+	class UInteractableArea*                           InteractableArea;                                         // 0x0110(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TEnumAsByte<EInteractableState>                    CurrentInteractionState;                                  // 0x0118(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

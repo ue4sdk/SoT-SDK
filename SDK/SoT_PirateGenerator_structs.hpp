@@ -31,7 +31,7 @@ enum class EIPGGender : uint8_t
 	EIPGGender__UNSPECIFIED        = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EIPGTestEnum__RANDOM           = 3
+	EConsoleForGamepadLabels__None = 3
 };
 
 
@@ -56,10 +56,8 @@ enum class EIPGSetMode : uint8_t
 {
 	EIPGSetMode__RANDOM            = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EIPGSetMode__NONE              = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EIPGSetMode__NONE              = 2,
+	None01                         = 3
 };
 
 
@@ -70,11 +68,8 @@ enum class EIPGBlendType : uint8_t
 	None                           = 1,
 	EIPGBlendType__POSNEG          = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EIPGBlendType__ONOFF_BIAS      = 5,
-	None02                         = 6,
-	StructProperty                 = 7,
-	None03                         = 8
+	EIPGBlendType__ONOFF_BIAS      = 4,
+	None02                         = 5
 };
 
 
@@ -83,10 +78,9 @@ enum class EPirateBakeFlags : uint8_t
 {
 	EPirateBakeFlags__None         = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EPirateBakeFlags__StripTopLOD  = 3,
-	None01                         = 4,
-	WeakObjectProperty             = 5
+	EPirateBakeFlags__StripTopLOD  = 2,
+	None01                         = 3,
+	WeakObjectProperty             = 4
 };
 
 

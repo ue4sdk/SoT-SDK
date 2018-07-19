@@ -62,7 +62,7 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0488(0x0008) MISSED OFFSET
 	class UEarthquakeSetupDataAsset*                   EarthquakeSetupData;                                      // 0x0490(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class AVolcano*                                    AssociatedVolcano;                                        // 0x0498(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      AssociatedGeyserManager;                                  // 0x04A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AGeyserManager*                              AssociatedGeyserManager;                                  // 0x04A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              EarthquakeEffectInnerRadiusOffsetInMetres;                // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x04AC(0x0004) MISSED OFFSET
 	class UWwiseObjectPoolWrapper*                     AudioPool;                                                // 0x04B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -92,7 +92,7 @@ public:
 
 
 // Class NaturalDisasters.Geyser
-// 0x0048 (0x04D0 - 0x0488)
+// 0x0058 (0x04E0 - 0x0488)
 class AGeyser : public AActor
 {
 public:
@@ -104,8 +104,11 @@ public:
 	class UExplosionComponent*                         ExplosionComponent;                                       // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
 	class UParticleSystemComponent*                    ActiveParticlesComponent;                                 // 0x04B8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
 	class UParticleSystemComponent*                    EruptingParticlesComponent;                               // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	TEnumAsByte<EGeyserState>                          GeyserState;                                              // 0x04C8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     HitTestTraceChannel;                                      // 0x04C8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
+	class UClass*                                      GeyserHoleClass;                                          // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EGeyserState>                          GeyserState;                                              // 0x04D8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04D9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -116,6 +119,46 @@ public:
 
 	void OnRep_GeyserState();
 	void Multicast_TriggerExplosion();
+};
+
+
+// Class NaturalDisasters.GeyserManagerSetupDataAsset
+// 0x0118 (0x0140 - 0x0028)
+class UGeyserManagerSetupDataAsset : public UDataAsset
+{
+public:
+	struct FWeightedProbabilityRangeOfRanges           DormantDuration;                                          // 0x0028(0x0030) (Edit, DisableEditOnInstance)
+	class UClass*                                      GeyserToSpawn;                                            // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRange                   NumGeyserGroupsToSpawn;                                   // 0x0060(0x0020) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRange                   NumGeysersToSpawnPerGroup;                                // 0x0080(0x0020) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           SpawnDistanceFromPlayerInMetres;                          // 0x00A0(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           SpawnRadiusInMetres;                                      // 0x00D0(0x0030) (Edit, DisableEditOnInstance)
+	TArray<struct FGeyserSpawnAngleOption>             SpawnAngleRelativeToPlayerDirection;                      // 0x0100(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           DelayBetweenEachGeyserSpawningInAGroup;                   // 0x0110(0x0030) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NaturalDisasters.GeyserManagerSetupDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class NaturalDisasters.GeyserManager
+// 0x0010 (0x0498 - 0x0488)
+class AGeyserManager : public AActor
+{
+public:
+	class USceneComponent*                             Root;                                                     // 0x0488(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UGeyserManagerSetupDataAsset*                GeyserManagerSetupData;                                   // 0x0490(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NaturalDisasters.GeyserManager");
+		return ptr;
+	}
+
 };
 
 
@@ -142,17 +185,20 @@ public:
 
 
 // Class NaturalDisasters.LavaZone
-// 0x0040 (0x04C8 - 0x0488)
+// 0x00A0 (0x0528 - 0x0488)
 class ALavaZone : public AActor
 {
 public:
-	class UPhysicalMaterial*                           LavaMaterial;                                             // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class AActor*>                              ActorsInZone;                                             // 0x0490(0x0010) (Net, ZeroConstructor, Transient)
-	bool                                               Active;                                                   // 0x04A0(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               InitializeFromGlobalState;                                // 0x04A1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x04A2(0x0006) MISSED OFFSET
-	TScriptInterface<class UActivateableSurfaceMaterialStatusZoneInterface> MaterialZone;                                             // 0x04A8(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	TScriptInterface<class UObjectMessagingDispatcherInterface> MessagingDispatcher;                                      // 0x04B8(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           TimeBetweenActivations;                                   // 0x0488(0x0030) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           ActiveDuration;                                           // 0x04B8(0x0030) (Edit)
+	class UPhysicalMaterial*                           LavaMaterial;                                             // 0x04E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class AActor*>                              ActorsInZone;                                             // 0x04F0(0x0010) (Net, ZeroConstructor, Transient)
+	bool                                               Active;                                                   // 0x0500(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               InitializeFromGlobalState;                                // 0x0501(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               SelfActivating;                                           // 0x0502(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x0503(0x0005) MISSED OFFSET
+	TScriptInterface<class UActivateableSurfaceMaterialStatusZoneInterface> MaterialZone;                                             // 0x0508(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	TScriptInterface<class UObjectMessagingDispatcherInterface> MessagingDispatcher;                                      // 0x0518(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -166,6 +212,26 @@ public:
 };
 
 
+// Class NaturalDisasters.SuperheatedWater
+// 0x00E8 (0x05E8 - 0x0500)
+class ASuperheatedWater : public AMurk
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0500(0x0008) MISSED OFFSET
+	float                                              PlayerHealthChange;                                       // 0x0508(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeBetweenHealthReduction;                               // 0x050C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCapsuleComponent*                           HitDetectionVolume;                                       // 0x0510(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xD0];                                      // 0x0518(0x00D0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NaturalDisasters.SuperheatedWater");
+		return ptr;
+	}
+
+};
+
+
 // Class NaturalDisasters.VolcanoSetupDataAsset
 // 0x01A0 (0x01C8 - 0x0028)
 class UVolcanoSetupDataAsset : public UDataAsset
@@ -174,7 +240,7 @@ public:
 	struct FWeightedProbabilityRangeOfRanges           WarmUpDuration;                                           // 0x0028(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           EruptionDuration;                                         // 0x0058(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           DormantDuration;                                          // 0x0088(0x0030) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           SuperheatedWaterDurationAfterVolcanoFinishes;             // 0x00B8(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           GroundAndWaterStayHotDurationAfterVolcanoFinishesDuration;// 0x00B8(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           ProjectileTriggerFrequency;                               // 0x00E8(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRange                   NumProjectilesToTrigger;                                  // 0x0118(0x0020) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRange                   NumProjectilesThatCanTargetAnything;                      // 0x0138(0x0020) (Edit, DisableEditOnInstance)
@@ -200,7 +266,7 @@ public:
 
 
 // Class NaturalDisasters.Volcano
-// 0x00A8 (0x0530 - 0x0488)
+// 0x00B8 (0x0540 - 0x0488)
 class AVolcano : public AActor
 {
 public:
@@ -209,21 +275,22 @@ public:
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0491(0x0007) MISSED OFFSET
 	class UVolcanoSetupDataAsset*                      VolcanoSetupData;                                         // 0x0498(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class AMurk*                                       AssociatedSuperheatedWater;                               // 0x04A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InnerTargetRadiusInMetres;                                // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OuterTargetRadiusInMetres;                                // 0x04AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearbyPlayerRangeToFireProjectilesInMetres;               // 0x04B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RandomShipPositionScale;                                  // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    WarmingUpEmitter;                                         // 0x04B8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    EruptingEmitter;                                          // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     ProjectileLaunchOffset;                                   // 0x04C8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04D4(0x0004) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     AudioPool;                                                // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WarmupAudioPlayEvent;                                     // 0x04E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WarmupAudioStopEvent;                                     // 0x04E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 EruptingAudioPlayEvent;                                   // 0x04F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 EruptingAudioStopEvent;                                   // 0x04F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EVolcanoState>                         VolcanoState;                                             // 0x0500(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2F];                                      // 0x0501(0x002F) MISSED OFFSET
+	class ALavaZone*                                   AssociatedLavaZone;                                       // 0x04A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InnerTargetRadiusInMetres;                                // 0x04B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OuterTargetRadiusInMetres;                                // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearbyPlayerRangeToFireProjectilesInMetres;               // 0x04B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RandomShipPositionScale;                                  // 0x04BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    WarmingUpEmitter;                                         // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    EruptingEmitter;                                          // 0x04C8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FVector                                     ProjectileLaunchOffset;                                   // 0x04D0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     AudioPool;                                                // 0x04E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WarmupAudioPlayEvent;                                     // 0x04E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WarmupAudioStopEvent;                                     // 0x04F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 EruptingAudioPlayEvent;                                   // 0x04F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 EruptingAudioStopEvent;                                   // 0x0500(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EVolcanoState>                         VolcanoState;                                             // 0x0508(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x37];                                      // 0x0509(0x0037) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

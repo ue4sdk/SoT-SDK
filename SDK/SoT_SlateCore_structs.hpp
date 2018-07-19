@@ -148,7 +148,7 @@ enum class ESlateBrushImageType : uint8_t
 {
 	ESlateBrushImageType__NoImage  = 0,
 	None                           = 1,
-	EButtonPressMethod__DownAndUp  = 2
+	ESlateCheckBoxType__CheckBox   = 2
 };
 
 
@@ -187,7 +187,7 @@ enum class ECheckBoxState : uint8_t
 {
 	ECheckBoxState__Unchecked      = 0,
 	None                           = 1,
-	ESlateCheckBoxType__CheckBox   = 2
+	Orient_Horizontal              = 2
 };
 
 
@@ -223,10 +223,8 @@ enum class EUINavigationRule : uint8_t
 {
 	EUINavigationRule__Escape      = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EUINavigationRule__Custom      = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EUINavigationRule__Custom      = 2,
+	None01                         = 3
 };
 
 

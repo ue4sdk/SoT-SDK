@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_MovieScene_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_MovieScene_classes.hpp"
 
 namespace SDK
 {
@@ -43,7 +43,8 @@ enum class EEmitterRenderModuleType : uint8_t
 	RMT_None                       = 0,
 	None                           = 1,
 	RMT_Meshes                     = 2,
-	None01                         = 3
+	None01                         = 3,
+	EGameplayTaskRunResult__Error  = 4
 };
 
 
