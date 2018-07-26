@@ -19,13 +19,16 @@ enum class ESailAnimationState : uint8_t
 {
 	ESailAnimationState__NewEnumerator14 = 0,
 	None                           = 1,
-	ESailAnimationState__NewEnumerator18 = 2,
-	None01                         = 3,
-	ESailAnimationState__NewEnumerator22 = 4,
-	None02                         = 5,
-	ESailAnimationState__NewEnumerator26 = 6,
-	None03                         = 7,
-	None04                         = 8
+	IntProperty                    = 2,
+	ESailAnimationState__NewEnumerator18 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	ESailAnimationState__NewEnumerator22 = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	ESailAnimationState__NewEnumerator26 = 9,
+	None03                         = 10,
+	None04                         = 11
 };
 
 

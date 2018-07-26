@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Seagulls_Barrels.BP_Seagulls_Barrels_C
-// 0x0000 (0x04D8 - 0x04D8)
+// 0x0000 (0x04D0 - 0x04D0)
 class ABP_Seagulls_Barrels_C : public ABP_Seagull01_8POI_C
 {
 public:

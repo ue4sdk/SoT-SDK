@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass dmn_ship_world_01_a_lighting.dmn_ship_world_01_a_lighting_C
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0488 - 0x0488)
 class Admn_ship_world_01_a_lighting_C : public ALevelScriptActor
 {
 public:

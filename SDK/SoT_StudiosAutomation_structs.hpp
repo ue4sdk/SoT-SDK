@@ -31,7 +31,8 @@ enum class EPerformanceCaptureType : uint8_t
 {
 	EPerformanceCaptureType__None  = 0,
 	None                           = 1,
-	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 2
+	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 2,
+	EUnusedAttributeBehaviour__Copy = 3
 };
 
 
@@ -52,8 +53,7 @@ enum class ETestCategory : uint8_t
 	None                           = 1,
 	ETestCategory__Soak            = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EGameplayTagQueryExprType__Undefined = 5
+	EGameplayTagQueryExprType__Undefined = 4
 };
 
 

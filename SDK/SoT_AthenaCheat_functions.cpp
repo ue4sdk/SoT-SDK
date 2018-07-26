@@ -1185,6 +1185,27 @@ void UAthenaCheatManager::SpinShip(float YawSpdInDegreesPerSecond)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnWatercraft
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  WatercraftClassString          (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SpawnWatercraft(const class FString& WatercraftClassString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnWatercraft");
+
+	UAthenaCheatManager_SpawnWatercraft_Params params;
+	params.WatercraftClassString = WatercraftClassString;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnTreasureChestOfType
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:

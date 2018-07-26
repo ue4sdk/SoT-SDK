@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_SlateCore_classes.hpp"
-#include "SoT_InputCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 
 namespace SDK
 {
@@ -40,7 +40,8 @@ enum class ESelectionMode : uint8_t
 {
 	ESelectionMode__None           = 0,
 	None                           = 1,
-	ESelectionMode__ESelectionMode_MAX = 2
+	ESelectionMode__ESelectionMode_MAX = 2,
+	ESlateBrushTileType__NoTile    = 3
 };
 
 
@@ -50,7 +51,8 @@ enum class EStretch : uint8_t
 	EStretch__None                 = 0,
 	None                           = 1,
 	EStretch__ScaleToFitY          = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

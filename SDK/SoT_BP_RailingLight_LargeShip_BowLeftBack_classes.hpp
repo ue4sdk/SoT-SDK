@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RailingLight_LargeShip_BowLeftBack.BP_RailingLight_LargeShip_BowLeftBack_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x06A8 - 0x06A8)
 class ABP_RailingLight_LargeShip_BowLeftBack_C : public ABP_InteractableShipRailingLight_C
 {
 public:

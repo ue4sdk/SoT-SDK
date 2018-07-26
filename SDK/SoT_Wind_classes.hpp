@@ -146,17 +146,17 @@ public:
 
 
 // Class Wind.WindService
-// 0x0120 (0x05A8 - 0x0488)
+// 0x0120 (0x05A0 - 0x0480)
 class AWindService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0488(0x0010) MISSED OFFSET
-	class AWindDirectionalSource*                      GlobalWindSource;                                         // 0x0498(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04A0(0x0010) MISSED OFFSET
-	float                                              CurrentWindAngle;                                         // 0x04B0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              CurrentWindMagnitude;                                     // 0x04B4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xE0];                                      // 0x04B8(0x00E0) MISSED OFFSET
-	TArray<class UObject*>                             WindZones;                                                // 0x0598(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0480(0x0010) MISSED OFFSET
+	class AWindDirectionalSource*                      GlobalWindSource;                                         // 0x0490(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	float                                              CurrentWindAngle;                                         // 0x04A8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              CurrentWindMagnitude;                                     // 0x04AC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xE0];                                      // 0x04B0(0x00E0) MISSED OFFSET
+	TArray<class UObject*>                             WindZones;                                                // 0x0590(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -172,11 +172,11 @@ public:
 
 
 // Class Wind.DebugWindService
-// 0x0010 (0x05B8 - 0x05A8)
+// 0x0010 (0x05B0 - 0x05A0)
 class ADebugWindService : public AWindService
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05A8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

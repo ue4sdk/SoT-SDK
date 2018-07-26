@@ -236,11 +236,6 @@ struct UAIPerPlayerSpawner_GetNumOfPlayers_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function AthenaAI.AIWaveSpawner.SpawnWaveGroup
-struct UAIWaveSpawner_SpawnWaveGroup_Params
-{
-};
-
 // Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget
 struct UAITargetWeaponInterface_FindAimConfigToHitTarget_Params
 {

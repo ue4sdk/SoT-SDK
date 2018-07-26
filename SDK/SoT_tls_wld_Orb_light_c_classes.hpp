@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass tls_wld_Orb_light_c.tls_wld_Orb_light_c_C
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0008 (0x0498 - 0x0490)
 class Atls_wld_Orb_light_c_C : public AStaticMeshActor
 {
 public:
-	class UPointLightComponent*                        PointLight;                                               // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

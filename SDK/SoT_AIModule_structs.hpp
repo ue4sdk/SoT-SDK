@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
@@ -47,7 +47,7 @@ enum class EAILockSource : uint8_t
 	IntProperty                    = 2,
 	EAILockSource__MAX             = 3,
 	None01                         = 4,
-	EPawnActionResult__NotStarted  = 5
+	EPathFollowingAction__Error    = 5
 };
 
 
@@ -57,7 +57,8 @@ enum class EAIRequestPriority : uint8_t
 	EAIRequestPriority__SoftScript = 0,
 	None                           = 1,
 	EAIRequestPriority__Ultimate   = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -77,8 +78,7 @@ enum class EPawnActionResult : uint8_t
 	EPawnActionResult__NotStarted  = 0,
 	None                           = 1,
 	EPawnActionResult__Aborted     = 2,
-	None01                         = 3,
-	EAITaskPriority__Lowest        = 4
+	None01                         = 3
 };
 
 
@@ -98,7 +98,7 @@ enum class EAIOptionFlag : uint8_t
 	EAIOptionFlag__Default         = 0,
 	None                           = 1,
 	EAIOptionFlag__EAIOptionFlag_MAX = 2,
-	EBTNodeResult__Succeeded       = 3
+	EBTFlowAbortMode__None         = 3
 };
 
 
@@ -119,7 +119,7 @@ enum class EPathFollowingAction : uint8_t
 	None                           = 1,
 	EPathFollowingAction__PathToGoal = 2,
 	None01                         = 3,
-	EAILockSource__Animation       = 4
+	EAITaskPriority__Lowest        = 4
 };
 
 
@@ -129,7 +129,7 @@ enum class EPathFollowingStatus : uint8_t
 	EPathFollowingStatus__Idle     = 0,
 	None                           = 1,
 	EPathFollowingStatus__EPathFollowingStatus_MAX = 2,
-	EEnvQueryRunMode__SingleResult = 3
+	EBTNodeResult__Succeeded       = 3
 };
 
 
@@ -148,7 +148,7 @@ enum class EBTNodeResult : uint8_t
 	EBTNodeResult__Succeeded       = 0,
 	None                           = 1,
 	EBTNodeResult__EBTNodeResult_MAX = 2,
-	EPathFollowingStatus__Idle     = 3
+	EAIOptionFlag__Default         = 3
 };
 
 
@@ -205,7 +205,8 @@ enum class ETextKeyOperation : uint8_t
 {
 	ETextKeyOperation__Equal       = 0,
 	None                           = 1,
-	ETextKeyOperation__ETextKeyOperation_MAX = 2
+	ETextKeyOperation__ETextKeyOperation_MAX = 2,
+	EEnvQueryRunMode__SingleResult = 3
 };
 
 
@@ -215,8 +216,7 @@ enum class EArithmeticKeyOperation : uint8_t
 	EArithmeticKeyOperation__Equal = 0,
 	None                           = 1,
 	EArithmeticKeyOperation__Greater = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -284,7 +284,7 @@ enum class EEnvTraceShape : uint8_t
 	EEnvTraceShape__Line           = 0,
 	None                           = 1,
 	EEnvTraceShape__EEnvTraceShape_MAX = 2,
-	EEnvTestScoreEquation__Linear  = 3
+	EEnvQueryTrace__None           = 3
 };
 
 
@@ -294,7 +294,7 @@ enum class EEnvQueryTrace : uint8_t
 	EEnvQueryTrace__None           = 0,
 	None                           = 1,
 	EEnvQueryTrace__EEnvQueryTrace_MAX = 2,
-	EEnvTraceShape__Line           = 3
+	ETextKeyOperation__Equal       = 3
 };
 
 
@@ -313,7 +313,7 @@ enum class EEnvQueryRunMode : uint8_t
 	EEnvQueryRunMode__SingleResult = 0,
 	None                           = 1,
 	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 2,
-	EEnvQueryTrace__None           = 3
+	EPathFollowingStatus__Idle     = 3
 };
 
 
@@ -358,7 +358,8 @@ enum class EEnvTestScoreEquation : uint8_t
 {
 	EEnvTestScoreEquation__Linear  = 0,
 	None                           = 1,
-	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 2
+	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 2,
+	EEnvTraceShape__Line           = 3
 };
 
 
@@ -367,8 +368,7 @@ enum class EEnvTestFilterType : uint8_t
 {
 	EEnvTestFilterType__Minimum    = 0,
 	None                           = 1,
-	EEnvTestFilterType__EEnvTestFilterType_MAX = 2,
-	ETextKeyOperation__Equal       = 3
+	EEnvTestFilterType__EEnvTestFilterType_MAX = 2
 };
 
 
@@ -402,7 +402,8 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	EEnvQueryHightlightMode__All   = 2
+	IntProperty                    = 2,
+	EEnvQueryHightlightMode__All   = 3
 };
 
 

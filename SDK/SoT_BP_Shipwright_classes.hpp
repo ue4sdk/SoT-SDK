@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shipwright.BP_Shipwright_C
-// 0x0050 (0x05A8 - 0x0558)
+// 0x0050 (0x05A0 - 0x0550)
 class ABP_Shipwright_C : public ANPC
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0558(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UNPCDialogComponent*                         NPCDialogComponent;                                       // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           SolidHits;                                                // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FWwiseEmitter                               WwiseEmitter;                                             // 0x0578(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWwiseEvent*                                 WwiseShipwrightHummingPlay;                               // 0x0598(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WwiseShipwrightHummingStop;                               // 0x05A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0550(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UNPCDialogComponent*                         NPCDialogComponent;                                       // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           SolidHits;                                                // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               WwiseEmitter;                                             // 0x0570(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWwiseEvent*                                 WwiseShipwrightHummingPlay;                               // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WwiseShipwrightHummingStop;                               // 0x0598(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

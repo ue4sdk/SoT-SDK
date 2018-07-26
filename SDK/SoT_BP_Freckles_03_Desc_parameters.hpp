@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Freckles_03_Desc_classes.hpp"
+#include "SoT_BP_freckles_03_Desc_classes.hpp"
 
 namespace SDK
 {

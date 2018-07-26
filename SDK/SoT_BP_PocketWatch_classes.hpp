@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PocketWatch.BP_PocketWatch_C
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x0870 - 0x0870)
 class ABP_PocketWatch_C : public APocketWatch
 {
 public:

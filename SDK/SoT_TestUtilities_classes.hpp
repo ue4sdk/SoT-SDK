@@ -31,7 +31,7 @@ public:
 
 
 // Class TestUtilities.TestActor
-// 0x0000 (0x0488 - 0x0488)
+// 0x0000 (0x0480 - 0x0480)
 class ATestActor : public AActor
 {
 public:
@@ -46,11 +46,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithCapsule
-// 0x0008 (0x0490 - 0x0488)
+// 0x0008 (0x0488 - 0x0480)
 class ATestActorWithCapsule : public AActor
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x0488(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0480(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -62,11 +62,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithObjectMessagingDispatcher
-// 0x00A8 (0x0530 - 0x0488)
+// 0x00A8 (0x0528 - 0x0480)
 class ATestActorWithObjectMessagingDispatcher : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0488(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0480(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

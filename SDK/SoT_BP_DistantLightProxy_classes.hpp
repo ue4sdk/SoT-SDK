@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DistantLightProxy.BP_DistantLightProxy_C
-// 0x0028 (0x04B0 - 0x0488)
+// 0x0028 (0x04A8 - 0x0480)
 class ABP_DistantLightProxy_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0488(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UInstancedStaticMeshComponent*               InstancedStaticMesh;                                      // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FPointLightProxy>                    LightList;                                                // 0x04A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0480(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UInstancedStaticMeshComponent*               InstancedStaticMesh;                                      // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FPointLightProxy>                    LightList;                                                // 0x0498(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

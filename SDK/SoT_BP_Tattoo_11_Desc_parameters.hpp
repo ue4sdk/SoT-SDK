@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Tattoo_11_Desc_classes.hpp"
+#include "SoT_BP_tattoo_11_Desc_classes.hpp"
 
 namespace SDK
 {

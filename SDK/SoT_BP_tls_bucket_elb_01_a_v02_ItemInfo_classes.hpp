@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_bucket_elb_01_a_v02_ItemInfo.BP_tls_bucket_elb_01_a_v02_ItemInfo_C
-// 0x0008 (0x04E8 - 0x04E0)
+// 0x0008 (0x04E0 - 0x04D8)
 class ABP_tls_bucket_elb_01_a_v02_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

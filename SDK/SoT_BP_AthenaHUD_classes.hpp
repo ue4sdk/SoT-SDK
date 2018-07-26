@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaHUD.BP_AthenaHUD_C
-// 0x0008 (0x07F8 - 0x07F0)
+// 0x0008 (0x07F0 - 0x07E8)
 class ABP_AthenaHUD_C : public AAthenaHUD
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

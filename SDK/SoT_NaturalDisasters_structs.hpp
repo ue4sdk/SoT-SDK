@@ -9,9 +9,9 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Kraken_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Kraken_classes.hpp"
 
 namespace SDK
 {
@@ -24,8 +24,7 @@ enum class EEarthquakeState : uint8_t
 {
 	EEarthquakeState__Dormant      = 0,
 	None                           = 1,
-	EEarthquakeState__EEarthquakeState_MAX = 2,
-	EVoiceChatState__Silent        = 3
+	EEarthquakeState__EEarthquakeState_MAX = 2
 };
 
 
@@ -42,7 +41,8 @@ enum class EVolcanoState : uint8_t
 {
 	EVolcanoState__Dormant         = 0,
 	None                           = 1,
-	EGameplayEffectAttributeCaptureSource__Source = 2
+	IntProperty                    = 2,
+	EGameplayEffectAttributeCaptureSource__Source = 3
 };
 
 
@@ -85,12 +85,12 @@ struct FEarthquakeDistanceThrottling
 };
 
 // ScriptStruct NaturalDisasters.EarthquakeSurfaceEffect
-// 0x0010
+// 0x0018
 struct FEarthquakeSurfaceEffect
 {
 	TEnumAsByte<EPhysicalSurface>                      SurfaceType;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UObject*                                     LocalPlayerEffect;                                        // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UObject*>                             LocalPlayerEffects;                                       // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct NaturalDisasters.GeyserSpawnAngleOption

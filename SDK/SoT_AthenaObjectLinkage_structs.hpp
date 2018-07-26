@@ -34,8 +34,7 @@ enum class EAddEndpointResult : uint8_t
 	EAddEndpointResult__Success    = 0,
 	None                           = 1,
 	EAddEndpointResult__Failed_DoesntImplementEndpointInterface = 2,
-	None01                         = 3,
-	EKrakenDespawnReason__Invalid  = 4
+	None01                         = 3
 };
 
 

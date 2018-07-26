@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Female_Makeup_Black_05_Desc_parameters.hpp"
+#include "SoT_BP_female_makeup_black_05_Desc_parameters.hpp"
 
 namespace SDK
 {

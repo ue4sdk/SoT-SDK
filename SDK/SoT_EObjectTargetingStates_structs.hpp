@@ -21,7 +21,8 @@ enum class EObjectTargetingStates : uint8_t
 	None                           = 1,
 	EObjectTargetingStates__NewEnumerator4 = 2,
 	None01                         = 3,
-	Diffuse                        = 4
+	NameProperty                   = 4,
+	Engine                         = 5
 };
 
 

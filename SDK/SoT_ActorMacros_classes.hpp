@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ActorMacros.ActorMacros_C
-// 0x0000 (0x0488 - 0x0488)
+// 0x0000 (0x0480 - 0x0480)
 class AActorMacros_C : public AActor
 {
 public:

@@ -352,6 +352,12 @@ struct UAthenaCheatManager_SpinShip_Params
 	float                                              YawSpdInDegreesPerSecond;                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.SpawnWatercraft
+struct UAthenaCheatManager_SpawnWatercraft_Params
+{
+	class FString                                      WatercraftClassString;                                    // (Parm, ZeroConstructor)
+};
+
 // Function AthenaCheat.AthenaCheatManager.SpawnTreasureChestOfType
 struct UAthenaCheatManager_SpawnTreasureChestOfType_Params
 {

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_water.wsp_water_C
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0488 - 0x0488)
 class Awsp_water_C : public ALevelScriptActor
 {
 public:

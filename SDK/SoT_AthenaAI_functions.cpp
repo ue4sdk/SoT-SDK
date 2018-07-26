@@ -792,24 +792,6 @@ int UAIPerPlayerSpawner::GetNumOfPlayers()
 }
 
 
-// Function AthenaAI.AIWaveSpawner.SpawnWaveGroup
-// (Final, Native, Public, BlueprintCallable)
-
-void UAIWaveSpawner::SpawnWaveGroup()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIWaveSpawner.SpawnWaveGroup");
-
-	UAIWaveSpawner_SpawnWaveGroup_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

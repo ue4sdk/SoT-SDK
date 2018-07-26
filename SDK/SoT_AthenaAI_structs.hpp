@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -26,8 +26,7 @@ enum class EAIDebugColour : uint8_t
 	EAIDebugColour__Red            = 0,
 	None                           = 1,
 	EAIDebugColour__Yellow         = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -48,8 +47,7 @@ enum class EAISpawnRequestState : uint8_t
 	AISpawnRequestState__AwaitingBegin = 0,
 	None                           = 1,
 	AISpawnRequestState__WaitForLocationCheck = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -129,7 +127,8 @@ enum class EBlackboardValueComparisonType : uint8_t
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
 	EBlackboardValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -138,10 +137,9 @@ enum class EFloatValueComparisonType : uint8_t
 {
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EFloatValueComparisonType__GreaterThanEquals = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EFloatValueComparisonType__GreaterThanEquals = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -193,7 +191,7 @@ enum class ETinySharkDespawnReason : uint8_t
 {
 	ETinySharkDespawnReason__Invalid = 0,
 	None                           = 1,
-	EKrakenDynamicsStateEvent__Damage = 2
+	EAIShipDestructionReason__Defeated = 2
 };
 
 
@@ -212,7 +210,8 @@ enum class ETinySharkState : uint8_t
 	ETinySharkState__Inactive      = 0,
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
-	None01                         = 3
+	None01                         = 3,
+	EAddEndpointResult__Success    = 4
 };
 
 
@@ -221,10 +220,8 @@ enum class EAISpawnRequestResult : uint8_t
 {
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	AISpawnRequestResult__FailedNoValidPos = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	AISpawnRequestResult__FailedNoValidPos = 2,
+	None01                         = 3
 };
 
 
@@ -986,7 +983,7 @@ struct FEventAIPawnReadyToConstructDebugText
 };
 
 // ScriptStruct AthenaAI.EventOwnedPawnFinishedSpawning
-// 0x0040
+// 0x0048
 struct FEventOwnedPawnFinishedSpawning
 {
 	class UObject*                                     AICoordinator;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -998,6 +995,7 @@ struct FEventOwnedPawnFinishedSpawning
 	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	class UAthenaAIControllerParamsDataAsset*          Skillset;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       HomeRegionZone;                                           // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      TargetInteractableOnSpawn;                                // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.PeriodicAINoiseEventAggregateTickFunction

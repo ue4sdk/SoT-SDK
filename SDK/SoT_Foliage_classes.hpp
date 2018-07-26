@@ -172,11 +172,11 @@ public:
 
 
 // Class Foliage.InstancedFoliageActor
-// 0x0050 (0x04D8 - 0x0488)
+// 0x0050 (0x04D0 - 0x0480)
 class AInstancedFoliageActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0488(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0480(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -188,25 +188,25 @@ public:
 
 
 // Class Foliage.InteractiveFoliageActor
-// 0x0060 (0x04F8 - 0x0498)
+// 0x0060 (0x04F0 - 0x0490)
 class AInteractiveFoliageActor : public AStaticMeshActor
 {
 public:
-	class UCapsuleComponent*                           CapsuleComponent;                                         // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     TouchingActorEntryPosition;                               // 0x04A0(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     FoliageVelocity;                                          // 0x04AC(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     FoliageForce;                                             // 0x04B8(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     FoliagePosition;                                          // 0x04C4(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              FoliageDamageImpulseScale;                                // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageTouchImpulseScale;                                 // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageStiffness;                                         // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageStiffnessQuadratic;                                // 0x04DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageDamping;                                           // 0x04E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDamageImpulse;                                         // 0x04E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTouchImpulse;                                          // 0x04E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxForce;                                                 // 0x04EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Mass;                                                     // 0x04F0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04F4(0x0004) MISSED OFFSET
+	class UCapsuleComponent*                           CapsuleComponent;                                         // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FVector                                     TouchingActorEntryPosition;                               // 0x0498(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     FoliageVelocity;                                          // 0x04A4(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     FoliageForce;                                             // 0x04B0(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     FoliagePosition;                                          // 0x04BC(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              FoliageDamageImpulseScale;                                // 0x04C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageTouchImpulseScale;                                 // 0x04CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageStiffness;                                         // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageStiffnessQuadratic;                                // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageDamping;                                           // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDamageImpulse;                                         // 0x04DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTouchImpulse;                                          // 0x04E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxForce;                                                 // 0x04E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Mass;                                                     // 0x04E8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04EC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -236,11 +236,11 @@ public:
 
 
 // Class Foliage.ProceduralFoliageBlockingVolume
-// 0x0008 (0x04C8 - 0x04C0)
+// 0x0008 (0x04C0 - 0x04B8)
 class AProceduralFoliageBlockingVolume : public AVolume
 {
 public:
-	class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                  // 0x04C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                  // 0x04B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -315,11 +315,11 @@ public:
 
 
 // Class Foliage.ProceduralFoliageVolume
-// 0x0008 (0x04C8 - 0x04C0)
+// 0x0008 (0x04C0 - 0x04B8)
 class AProceduralFoliageVolume : public AVolume
 {
 public:
-	class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x04C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x04B8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

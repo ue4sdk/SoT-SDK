@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Female_Makeup_Black_06_Desc_classes.hpp"
+#include "SoT_BP_female_makeup_black_06_Desc_classes.hpp"
 
 namespace SDK
 {

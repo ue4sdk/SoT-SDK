@@ -15,8 +15,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ReefIslandSunkenStatueSpawner.BP_ReefIslandSunkenStatueSpawner_C
-// 0x0000 (0x0520 - 0x0520)
-class UBP_ReefIslandSunkenStatueSpawner_C : public UPersistentSalvageItemSpawnComponent
+// 0x0000 (0x04F0 - 0x04F0)
+class UBP_ReefIslandSunkenStatueSpawner_C : public USalvageItemSpawnComponent
 {
 public:
 

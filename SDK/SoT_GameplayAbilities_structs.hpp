@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -62,7 +62,8 @@ enum class EAbilityGenericReplicatedEvent : uint8_t
 enum class EGameplayTagEventType : uint8_t
 {
 	EGameplayTagEventType__NewOrRemoved = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -117,8 +118,7 @@ enum class EGameplayTargetingConfirmation : uint8_t
 enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 {
 	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -135,8 +135,7 @@ enum class EGameplayEffectDurationType : uint8_t
 {
 	EGameplayEffectDurationType__Instant = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAttributeBasedFloatCalculationType__AttributeMagnitude = 3
+	EAttributeBasedFloatCalculationType__AttributeMagnitude = 2
 };
 
 
@@ -145,8 +144,7 @@ enum class EAttributeBasedFloatCalculationType : uint8_t
 {
 	EAttributeBasedFloatCalculationType__AttributeMagnitude = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayAbilityTriggerSource__GameplayEvent = 3
+	EGameplayAbilityTriggerSource__GameplayEvent = 2
 };
 
 
@@ -165,8 +163,7 @@ enum class EGameplayAbilityTriggerSource : uint8_t
 {
 	EGameplayAbilityTriggerSource__GameplayEvent = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayAbilityReplicationPolicy__ReplicateNo = 3
+	EGameplayAbilityReplicationPolicy__ReplicateNo = 2
 };
 
 
@@ -174,8 +171,7 @@ enum class EGameplayAbilityTriggerSource : uint8_t
 enum class EGameplayAbilityReplicationPolicy : uint8_t
 {
 	EGameplayAbilityReplicationPolicy__ReplicateNo = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -194,8 +190,7 @@ enum class EGameplayAbilityInstancingPolicy : uint8_t
 {
 	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ETargetDataFilterSelf__TDFS_Any = 3
+	ETargetDataFilterSelf__TDFS_Any = 2
 };
 
 
@@ -214,8 +209,7 @@ enum class EAbilityTaskNetSyncType : uint8_t
 {
 	EAbilityTaskNetSyncType__BothWait = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ETargetAbilitySelfSelection__TASS_Permit = 3
+	ETargetAbilitySelfSelection__TASS_Permit = 2
 };
 
 

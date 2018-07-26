@@ -29,8 +29,7 @@ enum class ERangeBoundTypes : uint8_t
 {
 	ERangeBoundTypes__Exclusive    = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ERotatorQuantization__ByteComponents = 3
+	EMoveComponentAction__Move     = 2
 };
 
 
@@ -46,7 +45,7 @@ enum class EUnit : uint8_t
 	None02                         = 6,
 	EUnit__MetersPerSecond         = 7,
 	None03                         = 8,
-	DeadActionStateParams          = 9,
+	HoleContainer                  = 9,
 	EUnit__Farenheit               = 10,
 	None04                         = 11,
 	EUnit__Grams                   = 12,
@@ -137,7 +136,7 @@ enum class EAxis : uint8_t
 	EAxis__None                    = 0,
 	None                           = 1,
 	EAxis__EAxis_MAX               = 2,
-	IntProperty                    = 3
+	ETextCommit__Default           = 3
 };
 
 
@@ -162,7 +161,8 @@ enum class ESearchDir : uint8_t
 enum class ESearchCase : uint8_t
 {
 	ESearchCase__CaseSensitive     = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

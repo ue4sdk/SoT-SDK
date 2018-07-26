@@ -21,7 +21,8 @@ enum class EInAppPurchaseState : uint8_t
 	EInAppPurchaseState__Success   = 0,
 	None                           = 1,
 	EInAppPurchaseState__NotAllowed = 2,
-	None01                         = 3
+	None01                         = 3,
+	LazyObjectProperty             = 4
 };
 
 
@@ -33,7 +34,10 @@ enum class EMPMatchOutcome : uint8_t
 	EMPMatchOutcome__Tied          = 2,
 	None01                         = 3,
 	EMPMatchOutcome__Third         = 4,
-	None02                         = 5
+	None02                         = 5,
+	StructProperty                 = 6,
+	None03                         = 7,
+	EComponentType__None           = 8
 };
 
 

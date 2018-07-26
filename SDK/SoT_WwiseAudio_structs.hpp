@@ -34,7 +34,8 @@ enum class EWwiseLanguageOrder : uint8_t
 	None01                         = 3,
 	EWwiseLanguageOrder__Japanese  = 4,
 	None02                         = 5,
-	_Game_Blueprints_Environment_Frontend_BP_tavern_frontend_bar_01_a = 6
+	PSA_FacingCameraPosition       = 6,
+	None03                         = 7
 };
 
 

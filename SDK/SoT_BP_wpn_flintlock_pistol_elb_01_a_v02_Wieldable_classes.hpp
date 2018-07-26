@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wpn_flintlock_pistol_elb_01_a_v02_Wieldable.BP_wpn_flintlock_pistol_elb_01_a_v02_Wieldable_C
-// 0x0000 (0x0A40 - 0x0A40)
+// 0x0000 (0x0A38 - 0x0A38)
 class ABP_wpn_flintlock_pistol_elb_01_a_v02_Wieldable_C : public ABP_FlintlockPistol_C
 {
 public:

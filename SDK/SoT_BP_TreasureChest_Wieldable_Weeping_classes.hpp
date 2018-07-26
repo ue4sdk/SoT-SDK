@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Weeping.BP_TreasureChest_Wieldable_Weeping_C
-// 0x0030 (0x0810 - 0x07E0)
+// 0x0030 (0x0808 - 0x07D8)
 class ABP_TreasureChest_Wieldable_Weeping_C : public ABP_TreasureChest_C
 {
 public:
-	class UParticleSystemComponent*                    vfx_weepingchest_long_sides2;                             // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_long_sides;                              // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_short_sides2;                            // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_short_sides;                             // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWeepingComponent*                           Weeping;                                                  // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            Sphere;                                                   // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_long_sides2;                             // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_long_sides;                              // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_short_sides2;                            // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_short_sides;                             // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWeepingComponent*                           Weeping;                                                  // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Sphere;                                                   // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

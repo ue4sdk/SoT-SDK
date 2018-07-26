@@ -89,6 +89,7 @@ public:
 	void StartDemoSession();
 	void StartAllCrewVoyages();
 	void SpinShip(float YawSpdInDegreesPerSecond);
+	void SpawnWatercraft(const class FString& WatercraftClassString);
 	void SpawnTreasureChestOfType(class FString* ChestTypeString);
 	void SpawnTreasureArtifact(const class FString& TypeString);
 	void SpawnTinySharkAtLocation(float X, float Y, float Z);

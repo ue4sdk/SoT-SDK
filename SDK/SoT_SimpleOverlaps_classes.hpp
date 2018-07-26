@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class SimpleOverlaps.OverlapTestActor
-// 0x0018 (0x04A0 - 0x0488)
+// 0x0018 (0x0498 - 0x0480)
 class AOverlapTestActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0488(0x0010) MISSED OFFSET
-	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0480(0x0010) MISSED OFFSET
+	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -47,11 +47,11 @@ public:
 
 
 // Class SimpleOverlaps.TestObjectMessagingDispatcherInterface
-// 0x00A8 (0x0530 - 0x0488)
+// 0x00A8 (0x0528 - 0x0480)
 class ATestObjectMessagingDispatcherInterface : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0488(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0480(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -63,11 +63,11 @@ public:
 
 
 // Class SimpleOverlaps.TestSimpleOverlapsGameState
-// 0x0060 (0x0540 - 0x04E0)
+// 0x0060 (0x0538 - 0x04D8)
 class ATestSimpleOverlapsGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x04E0(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x04D8(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
