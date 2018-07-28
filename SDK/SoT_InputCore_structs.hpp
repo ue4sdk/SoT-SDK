@@ -56,7 +56,8 @@ enum class EConsoleForGamepadLabels : uint8_t
 enum class EControllerHand : uint8_t
 {
 	EControllerHand__Left          = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

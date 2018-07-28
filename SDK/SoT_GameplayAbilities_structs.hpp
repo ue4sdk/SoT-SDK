@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
@@ -199,8 +199,7 @@ enum class ETargetDataFilterSelf : uint8_t
 {
 	ETargetDataFilterSelf__TDFS_Any = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAbilityTaskNetSyncType__BothWait = 3
+	EAbilityTaskNetSyncType__BothWait = 2
 };
 
 

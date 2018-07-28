@@ -7,16 +7,18 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_PositionalVoice_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
 #include "SoT_Interaction_classes.hpp"
+#include "SoT_JsonUtilities_classes.hpp"
 #include "SoT_DebugMenu_classes.hpp"
 #include "SoT_AthenaInput_classes.hpp"
-#include "SoT_AthenaRigging_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaSocketLookup_classes.hpp"
+#include "SoT_AthenaRigging_classes.hpp"
+#include "SoT_StudiosAutomation_classes.hpp"
 #include "SoT_CoherentUIGTPlugin_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
 #include "SoT_ObjectMessaging_classes.hpp"
@@ -28,14 +30,12 @@
 #include "SoT_RareEngine_classes.hpp"
 #include "SoT_GameService_classes.hpp"
 #include "SoT_Wind_classes.hpp"
-#include "SoT_StudiosAutomation_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
 #include "SoT_AIShips_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_WwiseAudio_classes.hpp"
-#include "SoT_JsonUtilities_classes.hpp"
-#include "SoT_PositionalVoice_classes.hpp"
 #include "SoT_Time_classes.hpp"
 
 namespace SDK
@@ -272,7 +272,7 @@ enum class ESkeletonSensingState : uint8_t
 	None                           = 1,
 	ESkeletonSensingState__Pursuit = 2,
 	None01                         = 3,
-	EWieldItemReturnCode__Success  = 4
+	EWheelAnimationType__SmallTurn = 4
 };
 
 
@@ -331,7 +331,7 @@ enum class EItemPassiveState : uint8_t
 	None                           = 1,
 	EItemPassiveState__Swimming    = 2,
 	None01                         = 3,
-	EComplexOneShotSubState__WarmUp = 4
+	ESkeletonSensingState__None    = 4
 };
 
 
@@ -430,7 +430,7 @@ enum class EComplexOneShotSubState : uint8_t
 	None                           = 1,
 	EComplexOneShotSubState__HeavyAttackStun = 2,
 	None01                         = 3,
-	ESkeletonSensingState__None    = 4
+	EWieldItemReturnCode__Success  = 4
 };
 
 
@@ -470,7 +470,7 @@ enum class EWheelAnimationType : uint8_t
 	None                           = 1,
 	EWheelAnimationType__RightTurnFast = 2,
 	None01                         = 3,
-	EQuestType__Unknown            = 4
+	ERadialInventoryType__None     = 4
 };
 
 
@@ -519,7 +519,7 @@ enum class EWieldItemReturnCode : uint8_t
 	IntProperty                    = 2,
 	EWieldItemReturnCode__WaitingForUnstash = 3,
 	None01                         = 4,
-	ERadialInventoryType__None     = 5
+	EBucketState__Idle             = 5
 };
 
 
@@ -772,7 +772,7 @@ enum class EQuestType : uint8_t
 	None                           = 1,
 	EQuestType__Merchant           = 2,
 	None01                         = 3,
-	EBucketState__Idle             = 4
+	EComplexOneShotSubState__WarmUp = 4
 };
 
 
@@ -806,7 +806,7 @@ enum class ERadialInventoryType : uint8_t
 	IntProperty                    = 2,
 	ERadialInventoryType__Emotes   = 3,
 	None01                         = 4,
-	EWheelAnimationType__SmallTurn = 5
+	EQuestType__Unknown            = 5
 };
 
 
@@ -1501,7 +1501,8 @@ enum class EFaunaAnimationStartledLevel : uint8_t
 {
 	EFaunaAnimationStartledLevel__None = 0,
 	None                           = 1,
-	EFaunaAnimationLocation__Land  = 2
+	IntProperty                    = 2,
+	EFaunaAnimationLocation__Land  = 3
 };
 
 
@@ -1608,7 +1609,8 @@ enum class ELeakState : uint8_t
 enum class EShipLeakerUpdateType : uint8_t
 {
 	EShipLeakerUpdateType__Iterative = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -2397,8 +2399,7 @@ enum class EServerAsyncLoadingAckReason : uint8_t
 {
 	EServerAsyncLoadingAckReason__Invalid = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EServerTeleportAckReason__Invalid = 3
+	EServerTeleportAckReason__Invalid = 2
 };
 
 
@@ -2416,7 +2417,8 @@ enum class EInteractableState : uint8_t
 {
 	EInteractableState__Interactable = 0,
 	None                           = 1,
-	ECrewDestroyedReason__AllCrewMembersRemoved = 2
+	IntProperty                    = 2,
+	ECrewDestroyedReason__AllCrewMembersRemoved = 3
 };
 
 

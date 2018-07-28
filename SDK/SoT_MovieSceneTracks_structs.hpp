@@ -31,7 +31,8 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 enum class EParticleKey : uint8_t
 {
 	EParticleKey__Active           = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

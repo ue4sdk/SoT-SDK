@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CannonBallProxy.BP_CannonBallProxy_C
-// 0x0008 (0x06C8 - 0x06C0)
+// 0x0008 (0x06C0 - 0x06B8)
 class ABP_CannonBallProxy_C : public AStaticMeshItemProxy
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x06C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x06B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

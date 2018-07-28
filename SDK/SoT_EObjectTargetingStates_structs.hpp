@@ -19,10 +19,11 @@ enum class EObjectTargetingStates : uint8_t
 {
 	EObjectTargetingStates__NewEnumerator0 = 0,
 	None                           = 1,
-	EObjectTargetingStates__NewEnumerator4 = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	Engine                         = 5
+	UInvalidShipCustomizationCategory = 2,
+	EObjectTargetingStates__NewEnumerator4 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	None02                         = 6
 };
 
 

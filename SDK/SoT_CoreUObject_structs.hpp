@@ -29,7 +29,8 @@ enum class ERangeBoundTypes : uint8_t
 {
 	ERangeBoundTypes__Exclusive    = 0,
 	None                           = 1,
-	EMoveComponentAction__Move     = 2
+	IntProperty                    = 2,
+	EMoveComponentAction__Move     = 3
 };
 
 
@@ -161,8 +162,7 @@ enum class ESearchDir : uint8_t
 enum class ESearchCase : uint8_t
 {
 	ESearchCase__CaseSensitive     = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

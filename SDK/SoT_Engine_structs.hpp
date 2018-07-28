@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_InputCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
 
@@ -104,8 +104,7 @@ enum class EActorSpawnRestrictions : uint8_t
 {
 	EActorSpawnRestrictions__ServerOnly = 0,
 	None                           = 1,
-	EActorSpawnRestrictions__EActorSpawnRestrictions_MAX = 2,
-	BoolProperty                   = 3
+	EActorSpawnRestrictions__EActorSpawnRestrictions_MAX = 2
 };
 
 
@@ -216,7 +215,7 @@ enum class EDrawDebugTrace : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EDrawDebugTrace__EDrawDebugTrace_MAX = 3,
-	None01                         = 4
+	IntProperty01                  = 4
 };
 
 
@@ -394,7 +393,8 @@ enum class EComponentSocketType : uint8_t
 {
 	EComponentSocketType__Invalid  = 0,
 	None                           = 1,
-	EComponentMobility__Static     = 2
+	IntProperty                    = 2,
+	EComponentMobility__Static     = 3
 };
 
 
@@ -444,14 +444,14 @@ enum class EPhysicalSurface : uint8_t
 	None15                         = 31,
 	EPhysicalSurface_MAX           = 32,
 	None16                         = 33,
-	ByteProperty                   = 34,
-	None17                         = 35,
-	None18                         = 36,
-	None19                         = 37,
-	None20                         = 38,
-	ByteProperty01                 = 39,
-	None21                         = 40,
-	None22                         = 41
+	None17                         = 34,
+	None18                         = 35,
+	None19                         = 36,
+	None20                         = 37,
+	None21                         = 38,
+	None22                         = 39,
+	None23                         = 40,
+	None24                         = 41
 };
 
 
@@ -690,8 +690,7 @@ enum class ECollisionResponse : uint8_t
 {
 	ECR_Ignore                     = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	PST_Sync                       = 3
+	PST_Sync                       = 2
 };
 
 
@@ -781,7 +780,8 @@ enum class EMaterialTessellationMode : uint8_t
 {
 	MTM_NoTessellation             = 0,
 	None                           = 1,
-	EParticleCollisionMode__SceneDepth = 2
+	IntProperty                    = 2,
+	EParticleCollisionMode__SceneDepth = 3
 };
 
 
@@ -849,8 +849,7 @@ enum class EConstantMaterial : uint8_t
 {
 	CONSTMAT_None                  = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	SDPG_World                     = 3
+	SDPG_World                     = 2
 };
 
 
@@ -888,7 +887,8 @@ enum class EActorMetricsType : uint8_t
 {
 	METRICS_VERTS                  = 0,
 	None                           = 1,
-	ENodeAdvancedPins__NoPins      = 2
+	IntProperty                    = 2,
+	ENodeAdvancedPins__NoPins      = 3
 };
 
 
@@ -907,8 +907,7 @@ enum class ENodeAdvancedPins : uint8_t
 {
 	ENodeAdvancedPins__NoPins      = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	DM_Low                         = 3
+	DM_Low                         = 2
 };
 
 
@@ -1579,7 +1578,7 @@ enum class EAmbientLightConeShape : uint8_t
 	None                           = 1,
 	NarrowishCone                  = 2,
 	None01                         = 3,
-	ESettingsLockedAxis__None      = 4
+	ETextureSamplerFilter__Point   = 4
 };
 
 
@@ -1618,7 +1617,7 @@ enum class ETextureSamplerFilter : uint8_t
 	IntProperty                    = 2,
 	ETextureSamplerFilter__AnisotropicLinear = 3,
 	None01                         = 4,
-	CTM_Disabled                   = 5
+	EUIScalingRule__ShortestSide   = 5
 };
 
 
@@ -1645,7 +1644,10 @@ enum class ETextureMipGenSettings : uint8_t
 	None03                         = 7,
 	TMGS_Blur2                     = 8,
 	None04                         = 9,
-	TMGS_MAX                       = 10
+	TMGS_MAX                       = 10,
+	IntPoint                       = 11,
+	NameProperty                   = 12,
+	Name                           = 13
 };
 
 
@@ -1717,7 +1719,7 @@ enum class ECompositeTextureMode : uint8_t
 	IntProperty                    = 2,
 	CTM_NormalRoughnessToAlpha     = 3,
 	None01                         = 4,
-	EUIScalingRule__ShortestSide   = 5
+	ESettingsLockedAxis__None      = 5
 };
 
 
@@ -1753,8 +1755,9 @@ enum class ETextureCompressionSettings : uint8_t
 	TC_SignedHDR                   = 6,
 	None03                         = 7,
 	TC_MAX                         = 8,
-	EAlphaBlendOption__Linear      = 9,
-	None04                         = 10
+	None04                         = 9,
+	EAlphaBlendOption__Linear      = 10,
+	None05                         = 11
 };
 
 
@@ -1763,8 +1766,7 @@ enum class ESplineMeshAxis : uint8_t
 {
 	ESplineMeshAxis__X             = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	PARTICLESYSTEMLODMETHOD_Automatic = 3
+	PARTICLESYSTEMLODMETHOD_Automatic = 2
 };
 
 
@@ -1828,7 +1830,8 @@ enum class EParticleReplayState : uint8_t
 {
 	PRS_Disabled                   = 0,
 	None                           = 1,
-	EHTA_Left                      = 2
+	IntProperty                    = 2,
+	EHTA_Left                      = 3
 };
 
 
@@ -1995,7 +1998,8 @@ enum class ENotifyTriggerMode : uint8_t
 {
 	ENotifyTriggerMode__AllAnimations = 0,
 	None                           = 1,
-	BSA_None                       = 2
+	IntProperty                    = 2,
+	BSA_None                       = 3
 };
 
 
@@ -2115,7 +2119,7 @@ enum class EUIScalingRule : uint8_t
 	None                           = 1,
 	EUIScalingRule__Custom         = 2,
 	None01                         = 3,
-	EDVLF_None                     = 4
+	CTM_Disabled                   = 4
 };
 
 
@@ -2136,7 +2140,7 @@ enum class ESettingsLockedAxis : uint8_t
 	None                           = 1,
 	ESettingsLockedAxis__Invalid   = 2,
 	None01                         = 3,
-	ETextureSamplerFilter__Point   = 4
+	EDVLF_None                     = 4
 };
 
 
@@ -2257,7 +2261,7 @@ enum class EGraphType : uint8_t
 	IntProperty                    = 2,
 	GT_StateMachine                = 3,
 	None01                         = 4,
-	STG_Branch                     = 5
+	FULLYLOAD_Map                  = 5
 };
 
 
@@ -2287,7 +2291,7 @@ enum class EFullyLoadPackageType : uint8_t
 	None                           = 1,
 	FULLYLOAD_Mutator              = 2,
 	None01                         = 3,
-	MD_Surface                     = 4
+	MEVP_BufferSize                = 4
 };
 
 
@@ -2398,106 +2402,105 @@ enum class EHIKProperty : uint8_t
 	None15                         = 31,
 	HIKProp_HandBackToWristId      = 32,
 	None16                         = 33,
-	AdvanceFrame                   = 34,
+	Spectating                     = 34,
 	HIKProp_HandOutToWristId       = 35,
 	None17                         = 36,
-	Self                           = 37,
-	HIKProp_FootContactTypeId      = 38,
-	None18                         = 39,
-	HIKProp_LeftLegRollId          = 40,
-	None19                         = 41,
-	HIKProp_LeftForeArmRollId      = 42,
-	None20                         = 43,
-	HIKProp_LeftKneeKillPitchId    = 44,
-	None21                         = 45,
-	HIKProp_CtrlPullLeftFootId     = 46,
-	None22                         = 47,
-	HIKProp_CtrlPullHeadId         = 48,
-	None23                         = 49,
-	HIKProp_CtrlPullRightKneeId    = 50,
-	None24                         = 51,
-	HIKProp_CtrlPullRightElbowId   = 52,
-	None25                         = 53,
-	Actor                          = 54,
-	HIKProp_CtrlEnforceGravityId   = 55,
-	None26                         = 56,
-	HIKProp_CtrlResistLeftCollarId = 57,
-	None27                         = 58,
-	HIKProp_CtrlResistLeftElbowId  = 59,
-	None28                         = 60,
-	HIKProp_HipsTOffsetYId         = 61,
-	None29                         = 62,
-	HIKProp_ChestTOffsetZId        = 63,
-	None30                         = 64,
-	HIKProp_HandAutomaticFingersId = 65,
-	None31                         = 66,
-	HIKProp_FingerSolvingId        = 67,
-	None32                         = 68,
-	HIKProp_CtrlResistMaximumExtensionLeftElbow = 69,
-	None33                         = 70,
-	HIKProp_CtrlResistCompressionFactorLeftElbow = 71,
-	None34                         = 72,
-	HIKProp_HandContactStiffness   = 73,
-	None35                         = 74,
-	HIKProp_LeftHandIndexTip       = 75,
-	None36                         = 76,
-	HIKProp_LeftHandExtraFingerTip = 77,
-	None37                         = 78,
-	HIKProp_RightHandRingTip       = 79,
-	None38                         = 80,
-	HIKProp_LeftFootIndexTip       = 81,
-	None39                         = 82,
-	HIKProp_LeftFootExtraFingerTip = 83,
-	None40                         = 84,
-	HIKProp_RightFootRingTip       = 85,
-	None41                         = 86,
-	HIKProp_LeftLegMaxExtensionAngle = 87,
-	None42                         = 88,
-	HIKProp_ExtraCollarRatioId     = 89,
-	None43                         = 90,
-	HIKProp_ReachActorLeftShoulderId = 91,
-	None44                         = 92,
-	HIKProp_RealisticRightKneeSolvingId = 93,
-	None45                         = 94,
-	HIKProp_SnSReachLeftWrist      = 95,
-	None46                         = 96,
-	HIKProp_SnSScaleSpine          = 97,
-	None47                         = 98,
-	HIKProp_SnSReachHead           = 99,
-	None48                         = 100,
-	HIKProp_RightLegRollExId       = 101,
-	None49                         = 102,
-	HIKProp_RightForeArmRollExId   = 103,
-	None50                         = 104,
-	HIKProp_LockXId                = 105,
-	None51                         = 106,
-	HIKProp_LastPropertyId         = 107,
-	None52                         = 108,
-	None53                         = 109,
-	None54                         = 110,
-	None55                         = 111,
-	None56                         = 112,
-	None57                         = 113,
-	BoolProperty                   = 114,
-	Editor                         = 115,
-	None58                         = 116,
-	ClassProperty                  = 117,
-	BoolProperty01                 = 118,
-	None59                         = 119,
-	ByteProperty                   = 120,
-	None60                         = 121,
-	StructProperty                 = 122,
-	None61                         = 123,
-	None62                         = 124,
-	LinearColor                    = 125,
-	None63                         = 126,
-	VectorProperty                 = 127,
-	None64                         = 128,
-	VectorProperty01               = 129,
-	None65                         = 130,
-	None66                         = 131,
-	CoreUObject                    = 132,
-	Editor01                       = 133
+	HIKProp_FootContactTypeId      = 37,
+	None18                         = 38,
+	HIKProp_LeftLegRollId          = 39,
+	None19                         = 40,
+	HIKProp_LeftForeArmRollId      = 41,
+	None20                         = 42,
+	HIKProp_LeftKneeKillPitchId    = 43,
+	None21                         = 44,
+	HIKProp_CtrlPullLeftFootId     = 45,
+	None22                         = 46,
+	HIKProp_CtrlPullHeadId         = 47,
+	None23                         = 48,
+	HIKProp_CtrlPullRightKneeId    = 49,
+	None24                         = 50,
+	HIKProp_CtrlPullRightElbowId   = 51,
+	None25                         = 52,
+	Actor                          = 53,
+	HIKProp_CtrlEnforceGravityId   = 54,
+	None26                         = 55,
+	HIKProp_CtrlResistLeftCollarId = 56,
+	None27                         = 57,
+	HIKProp_CtrlResistLeftElbowId  = 58,
+	None28                         = 59,
+	HIKProp_HipsTOffsetYId         = 60,
+	None29                         = 61,
+	HIKProp_ChestTOffsetZId        = 62,
+	None30                         = 63,
+	HIKProp_HandAutomaticFingersId = 64,
+	None31                         = 65,
+	HIKProp_FingerSolvingId        = 66,
+	None32                         = 67,
+	HIKProp_CtrlResistMaximumExtensionLeftElbow = 68,
+	None33                         = 69,
+	HIKProp_CtrlResistCompressionFactorLeftElbow = 70,
+	None34                         = 71,
+	HIKProp_HandContactStiffness   = 72,
+	None35                         = 73,
+	HIKProp_LeftHandIndexTip       = 74,
+	None36                         = 75,
+	HIKProp_LeftHandExtraFingerTip = 76,
+	None37                         = 77,
+	HIKProp_RightHandRingTip       = 78,
+	None38                         = 79,
+	HIKProp_LeftFootIndexTip       = 80,
+	None39                         = 81,
+	HIKProp_LeftFootExtraFingerTip = 82,
+	None40                         = 83,
+	HIKProp_RightFootRingTip       = 84,
+	None41                         = 85,
+	HIKProp_LeftLegMaxExtensionAngle = 86,
+	None42                         = 87,
+	HIKProp_ExtraCollarRatioId     = 88,
+	None43                         = 89,
+	HIKProp_ReachActorLeftShoulderId = 90,
+	None44                         = 91,
+	HIKProp_RealisticRightKneeSolvingId = 92,
+	None45                         = 93,
+	HIKProp_SnSReachLeftWrist      = 94,
+	None46                         = 95,
+	HIKProp_SnSScaleSpine          = 96,
+	None47                         = 97,
+	HIKProp_SnSReachHead           = 98,
+	None48                         = 99,
+	HIKProp_RightLegRollExId       = 100,
+	None49                         = 101,
+	HIKProp_RightForeArmRollExId   = 102,
+	None50                         = 103,
+	HIKProp_LockXId                = 104,
+	None51                         = 105,
+	HIKProp_LastPropertyId         = 106,
+	None52                         = 107,
+	None53                         = 108,
+	None54                         = 109,
+	None55                         = 110,
+	None56                         = 111,
+	None57                         = 112,
+	BoolProperty                   = 113,
+	Editor                         = 114,
+	None58                         = 115,
+	ClassProperty                  = 116,
+	BoolProperty01                 = 117,
+	None59                         = 118,
+	ByteProperty                   = 119,
+	None60                         = 120,
+	StructProperty                 = 121,
+	None61                         = 122,
+	None62                         = 123,
+	LinearColor                    = 124,
+	None63                         = 125,
+	VectorProperty                 = 126,
+	None64                         = 127,
+	VectorProperty01               = 128,
+	None65                         = 129,
+	None66                         = 130,
+	CoreUObject                    = 131,
+	Editor01                       = 132
 };
 
 
@@ -2702,7 +2705,7 @@ enum class ESpeedTreeGeometryType : uint8_t
 	IntProperty                    = 2,
 	STG_Billboard                  = 3,
 	None01                         = 4,
-	FULLYLOAD_Map                  = 5
+	ERM_Normal                     = 5
 };
 
 
@@ -2766,7 +2769,7 @@ enum class EMaterialExposedViewProperty : uint8_t
 	None                           = 1,
 	MEVP_WorldSpaceCameraPosition  = 2,
 	None01                         = 3,
-	ERM_Normal                     = 4
+	MD_Surface                     = 4
 };
 
 
@@ -2800,7 +2803,7 @@ enum class EMaterialDomain : uint8_t
 	None                           = 1,
 	MD_UI                          = 2,
 	None01                         = 3,
-	MEVP_BufferSize                = 4
+	STG_Branch                     = 4
 };
 
 

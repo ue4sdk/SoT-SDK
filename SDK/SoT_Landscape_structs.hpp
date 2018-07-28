@@ -55,8 +55,7 @@ enum class ELandscapeSetupErrors : uint8_t
 enum class ELandscapeSplineMeshOrientation : uint8_t
 {
 	LSMO_XUp                       = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -65,8 +64,7 @@ enum class ELandscapeLayerBlendType : uint8_t
 {
 	LB_WeightBlend                 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EParticleKey__Active           = 3
+	EParticleKey__Active           = 2
 };
 
 

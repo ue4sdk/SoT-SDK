@@ -19,12 +19,12 @@ enum class EWheel : uint8_t
 {
 	EWheel__NewEnumerator0         = 0,
 	None                           = 1,
-	EWheel__NewEnumerator4         = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
+	IntProperty                    = 2,
+	EWheel__NewEnumerator4         = 3,
+	None01                         = 4,
 	EWheel__EWheel_MAX             = 5,
 	None02                         = 6,
-	None03                         = 7
+	Turn_2_C520E90D4EBA5702AED7C38AACEC1F98 = 7
 };
 
 

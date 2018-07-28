@@ -88,7 +88,8 @@ enum class EHorizontalAlignment : uint8_t
 {
 	HAlign_Fill                    = 0,
 	None                           = 1,
-	HAlign_MAX                     = 2
+	HAlign_MAX                     = 2,
+	FloatProperty                  = 3
 };
 
 

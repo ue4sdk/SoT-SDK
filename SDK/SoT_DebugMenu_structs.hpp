@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_InputCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 
 namespace SDK
 {

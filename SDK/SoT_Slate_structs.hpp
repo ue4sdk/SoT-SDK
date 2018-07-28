@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_SlateCore_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -72,8 +72,7 @@ enum class EProgressBarFillType : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EProgressBarFillType__BottomToTop = 3,
-	None01                         = 4,
-	EFoliageScaling__Uniform       = 5
+	None01                         = 4
 };
 
 
