@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_OnlineAthenaGameMode_structs.hpp"
+#include "SoT_bp_onlineathenagamemode_structs.hpp"
 
 namespace SDK
 {
@@ -14,7 +14,7 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass BP_OnlineAthenaGameMode.BP_OnlineAthenaGameMode_C
+// BlueprintGeneratedClass bp_onlineathenagamemode.BP_OnlineAthenaGameMode_C
 // 0x0008 (0x0A50 - 0x0A48)
 class ABP_OnlineAthenaGameMode_C : public AOnlineAthenaGameMode
 {
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_OnlineAthenaGameMode.BP_OnlineAthenaGameMode_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass bp_onlineathenagamemode.BP_OnlineAthenaGameMode_C");
 		return ptr;
 	}
 

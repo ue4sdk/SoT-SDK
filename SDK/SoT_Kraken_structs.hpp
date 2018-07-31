@@ -25,7 +25,7 @@ enum class EKrakenBehaviourType : uint8_t
 	EKrakenBehaviourType__Idle     = 0,
 	None                           = 1,
 	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2,
-	ETinySharkActiveState__TrackingTarget = 3
+	EVoiceChatState__Silent        = 3
 };
 
 
@@ -62,8 +62,7 @@ enum class EKrakenDespawnReason : uint8_t
 enum class EKrakenState : uint8_t
 {
 	EKrakenState__Spawning         = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

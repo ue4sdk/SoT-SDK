@@ -46,8 +46,7 @@ enum class EAILockSource : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EAILockSource__MAX             = 3,
-	None01                         = 4,
-	EPawnActionResult__NotStarted  = 5
+	None01                         = 4
 };
 
 
@@ -57,8 +56,7 @@ enum class EAIRequestPriority : uint8_t
 	EAIRequestPriority__SoftScript = 0,
 	None                           = 1,
 	EAIRequestPriority__Ultimate   = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -79,7 +77,7 @@ enum class EPawnActionResult : uint8_t
 	None                           = 1,
 	EPawnActionResult__Aborted     = 2,
 	None01                         = 3,
-	EAITaskPriority__Lowest        = 4
+	EPathFollowingAction__Error    = 4
 };
 
 
@@ -120,7 +118,7 @@ enum class EPathFollowingAction : uint8_t
 	None                           = 1,
 	EPathFollowingAction__PathToGoal = 2,
 	None01                         = 3,
-	EAILockSource__Animation       = 4
+	EAITaskPriority__Lowest        = 4
 };
 
 
@@ -178,8 +176,7 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3,
-	EBTDecoratorLogic__Invalid     = 4
+	None01                         = 3
 };
 
 
@@ -217,7 +214,8 @@ enum class EArithmeticKeyOperation : uint8_t
 	EArithmeticKeyOperation__Equal = 0,
 	None                           = 1,
 	EArithmeticKeyOperation__Greater = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -350,7 +348,8 @@ enum class EEnvTestWeight : uint8_t
 	EEnvTestWeight__None           = 0,
 	None                           = 1,
 	EEnvTestWeight__Constant       = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -403,8 +402,7 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EEnvQueryHightlightMode__All   = 3
+	EEnvQueryHightlightMode__All   = 2
 };
 
 

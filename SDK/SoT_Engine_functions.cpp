@@ -6996,24 +6996,6 @@ void APlayerState::OnRep_UniqueId()
 }
 
 
-// Function Engine.PlayerState.OnRep_Score
-// (Native, Public)
-
-void APlayerState::OnRep_Score()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_Score");
-
-	APlayerState_OnRep_Score_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.PlayerState.OnRep_PlayerName
 // (Native, Public)
 
@@ -7022,24 +7004,6 @@ void APlayerState::OnRep_PlayerName()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_PlayerName");
 
 	APlayerState_OnRep_PlayerName_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerState.OnRep_bIsInactive
-// (Native, Public)
-
-void APlayerState::OnRep_bIsInactive()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerState.OnRep_bIsInactive");
-
-	APlayerState_OnRep_bIsInactive_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

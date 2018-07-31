@@ -54,8 +54,10 @@ enum class EAxisOption : uint8_t
 {
 	EAxisOption__X                 = 0,
 	None                           = 1,
-	EAxisOption__Y_Neg             = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EAxisOption__Y_Neg             = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

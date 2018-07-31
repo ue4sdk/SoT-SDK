@@ -125,6 +125,7 @@ public:
 	void SinkShipByActorId(const class FString& ShipActorIdString);
 	void SinkShip();
 	void SinkAllBarrels();
+	void SinkAllAIShips();
 	void ShowRandomCrewMemberGamerCard();
 	void ShowAllItemsInRadialInventory();
 	void ShowAllianceStatus(const class FString& CrewId);

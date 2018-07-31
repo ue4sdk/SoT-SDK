@@ -83,6 +83,7 @@ struct AAIEncounterService_RegisterLoadedEncounter_Params
 struct UAIManagerServiceInterface_StartDespawnAI_Params
 {
 	class APawn*                                       AIActor;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaAI.AIManagerServiceInterface.GetNumOfSpawnedPawns
@@ -107,6 +108,7 @@ struct AAIManagerService_TickService_Params
 struct AAIManagerService_StartDespawnAI_Params
 {
 	class APawn*                                       AIActor;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaAI.AIManagerService.GetRegionSpawner

@@ -117,7 +117,6 @@ public:
 	TEnumAsByte<EWaterQueryResult> GetWaterHeightWithScaledChoppyness(const struct FVector& SamplePosition, class AActor* Actor, bool Interpolate, float ChoppynessScalar, float* Height);
 	TEnumAsByte<EWaterQueryResult> GetWaterHeightsBatched(TArray<struct FVector2D> SamplePositions, class AActor* Actor, TArray<float>* Heights);
 	TEnumAsByte<EWaterQueryResult> GetWaterHeight(const struct FVector& SamplePosition, class AActor* Actor, bool Interpolate, float* Height);
-	bool GetIsActorUsingNonDefaultWaterPlane(class AActor* Actor);
 	struct FWaterSimPlane GetActorWaterPlane(class AActor* Actor);
 	struct FWaterInformation GetActorWaterInformation(class AActor* Actor);
 };
@@ -143,6 +142,77 @@ public:
 
 	void OnRep_FFTWaterComponent();
 	void OnRep_FFTWaterActor();
+};
+
+
+// Class Water.WaterPlaneInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWaterPlaneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Water.WaterPlaneInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Water.WaterInteractionComponent
+// 0x0020 (0x05F0 - 0x05D0)
+class UWaterInteractionComponent : public UBoxComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05D0(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Water.WaterInteractionComponent");
+		return ptr;
+	}
+
+
+	void LeaveWaterPlane(class UBaseWaterComponent* WaterComponent);
+	void LeaveWaterExclusionZone();
+	bool IsUsingNonDefaultWaterPlane();
+	bool IsInWaterExcludedZone();
+	class UBaseWaterComponent* GetWaterPlaneComponent();
+	unsigned char GetNumberOfWaterPlanes();
+	void EnterWaterPlane(class UBaseWaterComponent* WaterComponent);
+	void EnterWaterExclusionZone();
+};
+
+
+// Class Water.WaterPlaneRetrievalProviderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWaterPlaneRetrievalProviderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Water.WaterPlaneRetrievalProviderInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Water.FFTWaterQueryTestActor
+// 0x0008 (0x0488 - 0x0480)
+class AFFTWaterQueryTestActor : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Water.FFTWaterQueryTestActor");
+		return ptr;
+	}
+
 };
 
 
@@ -233,6 +303,22 @@ public:
 };
 
 
+// Class Water.MockWaterPlaneComponent
+// 0x0050 (0x0120 - 0x00D0)
+class UMockWaterPlaneComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x50];                                      // 0x00D0(0x0050) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Water.MockWaterPlaneComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class Water.NoSwimWaterId
 // 0x0000 (0x0028 - 0x0028)
 class UNoSwimWaterId : public UWaterId
@@ -272,6 +358,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Water.ShipWaterId");
+		return ptr;
+	}
+
+};
+
+
+// Class Water.TestBaseWaterActor
+// 0x0010 (0x0490 - 0x0480)
+class ATestBaseWaterActor : public AActor
+{
+public:
+	class USceneComponent*                             SceneRootComponent;                                       // 0x0480(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x0488(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Water.TestBaseWaterActor");
 		return ptr;
 	}
 
@@ -346,47 +449,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Water.WaterInteractionComponent
-// 0x0020 (0x05F0 - 0x05D0)
-class UWaterInteractionComponent : public UBoxComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05D0(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Water.WaterInteractionComponent");
-		return ptr;
-	}
-
-
-	void LeaveWaterPlane(class UBaseWaterComponent* WaterComponent);
-	void LeaveWaterExclusionZone();
-	bool IsInWaterExcludedZone();
-	class UBaseWaterComponent* GetWaterPlaneComponent();
-	unsigned char GetNumberOfWaterPlanes();
-	void EnterWaterPlane(class UBaseWaterComponent* WaterComponent);
-	void EnterWaterExclusionZone();
-};
-
-
-// Class Water.WaterInteractionComponentProviderInterface
-// 0x0000 (0x0028 - 0x0028)
-class UWaterInteractionComponentProviderInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Water.WaterInteractionComponentProviderInterface");
-		return ptr;
-	}
-
-
-	class UWaterInteractionComponent* GetWaterInteractionComponent();
 };
 
 

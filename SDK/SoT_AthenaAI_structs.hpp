@@ -36,8 +36,7 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3,
-	ETinySharkState__Inactive      = 4
+	None01                         = 3
 };
 
 
@@ -127,8 +126,7 @@ enum class EBlackboardValueComparisonType : uint8_t
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
 	EBlackboardValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -191,7 +189,7 @@ enum class ETinySharkDespawnReason : uint8_t
 {
 	ETinySharkDespawnReason__Invalid = 0,
 	None                           = 1,
-	EAIShipDestructionReason__Defeated = 2
+	EKrakenDynamicsStateEvent__Damage = 2
 };
 
 
@@ -211,7 +209,7 @@ enum class ETinySharkState : uint8_t
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
 	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	EKrakenDespawnReason__Invalid  = 4
 };
 
 

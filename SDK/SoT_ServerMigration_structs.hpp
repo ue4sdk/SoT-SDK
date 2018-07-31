@@ -21,8 +21,7 @@ enum class EExecutionTarget : uint8_t
 {
 	EExecutionTarget__OldServer    = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EBuoyancyBlend__PrimaryToSecondary = 3
+	EBuoyancyBlend__PrimaryToSecondary = 2
 };
 
 

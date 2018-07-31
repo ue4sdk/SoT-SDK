@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Campaign001_TinyShark_Start.Campaign001_TinyShark_Start_C
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0070 - 0x0070)
 class UCampaign001_TinyShark_Start_C : public UCinematicQuestRunnable
 {
 public:

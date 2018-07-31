@@ -69,8 +69,11 @@ enum class EIPGBlendType : uint8_t
 	None                           = 1,
 	EIPGBlendType__POSNEG          = 2,
 	None01                         = 3,
-	EIPGBlendType__ONOFF_BIAS      = 4,
-	None02                         = 5
+	NameProperty                   = 4,
+	EIPGBlendType__ONOFF_BIAS      = 5,
+	None02                         = 6,
+	StructProperty                 = 7,
+	None03                         = 8
 };
 
 

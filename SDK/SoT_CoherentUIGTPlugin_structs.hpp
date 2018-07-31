@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_UMG_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_UMG_classes.hpp"
 
 namespace SDK
 {
@@ -78,18 +78,19 @@ enum class ECoherentUIGTKeys : uint8_t
 	None27                         = 55,
 	None28                         = 56,
 	None29                         = 57,
-	BoolProperty                   = 58,
-	None30                         = 59,
+	None30                         = 58,
+	BoolProperty                   = 59,
 	None31                         = 60,
-	ByteProperty                   = 61,
-	None32                         = 62,
-	BoolProperty01                 = 63,
-	ByteProperty01                 = 64,
-	None33                         = 65,
-	Crates_HandedIn_OnSchedule_Rare = 66,
-	None34                         = 67,
-	ByteProperty02                 = 68,
-	ByteProperty03                 = 69
+	None32                         = 61,
+	ByteProperty                   = 62,
+	None33                         = 63,
+	BoolProperty01                 = 64,
+	ByteProperty01                 = 65,
+	None34                         = 66,
+	Crates_HandedIn_OnSchedule_Pig = 67,
+	None35                         = 68,
+	ByteProperty02                 = 69,
+	ByteProperty03                 = 70
 };
 
 

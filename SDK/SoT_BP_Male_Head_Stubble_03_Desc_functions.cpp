@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_male_head_stubble_03_Desc_parameters.hpp"
+#include "SoT_BP_Male_Head_Stubble_03_Desc_parameters.hpp"
 
 namespace SDK
 {

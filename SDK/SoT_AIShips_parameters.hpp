@@ -21,6 +21,12 @@ struct UAIShipDebugFunctionLibrary_RequestAIShipForCrew_Params
 	struct FGuid                                       CrewId;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties
+struct UCursedCrewCustomisationInterface_SetCursedCrewCustomisationProperties_Params
+{
+	struct FAIShipSailData                             SailData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
 }
 
 #ifdef _MSC_VER

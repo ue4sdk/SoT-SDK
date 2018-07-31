@@ -22,7 +22,7 @@ enum class EInAppPurchaseState : uint8_t
 	None                           = 1,
 	EInAppPurchaseState__NotAllowed = 2,
 	None01                         = 3,
-	LazyObjectProperty             = 4
+	NameProperty                   = 4
 };
 
 

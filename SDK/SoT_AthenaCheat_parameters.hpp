@@ -583,6 +583,11 @@ struct UAthenaCheatManager_SinkAllBarrels_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.SinkAllAIShips
+struct UAthenaCheatManager_SinkAllAIShips_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ShowRandomCrewMemberGamerCard
 struct UAthenaCheatManager_ShowRandomCrewMemberGamerCard_Params
 {

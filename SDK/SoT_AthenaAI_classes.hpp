@@ -774,7 +774,7 @@ public:
 	}
 
 
-	void StartDespawnAI(class APawn* AIActor);
+	void StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharacterDeathType> DeathType);
 	int GetNumOfSpawnedPawns();
 };
 
@@ -1005,7 +1005,7 @@ public:
 
 
 	void TickService(float DeltaSeconds);
-	void StartDespawnAI(class APawn* AIActor);
+	void StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharacterDeathType> DeathType);
 	class UAISpawner* GetRegionSpawner(const struct FName& Region, int Index);
 	int GetNumOfSpawnRequests();
 };

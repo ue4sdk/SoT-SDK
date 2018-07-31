@@ -2191,36 +2191,6 @@ struct UShipServiceInterface_GetCrewFromShip_Params
 	struct FGuid                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Athena.AllianceService.Multicast_CrewsCreatedAlliance
-struct AAllianceService_Multicast_CrewsCreatedAlliance_Params
-{
-	struct FGuid                                       AllianceId;                                               // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FGuid                                       OfferingCrewId;                                           // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FGuid                                       AcceptingCrewId;                                          // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Athena.AllianceService.Multicast_CrewLeftAlliance
-struct AAllianceService_Multicast_CrewLeftAlliance_Params
-{
-	struct FGuid                                       AllianceId;                                               // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FGuid                                       LeavingCrewId;                                            // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Athena.AllianceService.Multicast_CrewJoinedAlliance
-struct AAllianceService_Multicast_CrewJoinedAlliance_Params
-{
-	struct FGuid                                       AllianceId;                                               // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FGuid                                       OfferingCrewId;                                           // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FGuid                                       AcceptingCrewId;                                          // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Athena.AllianceService.Multicast_CrewDisbandedAlliance
-struct AAllianceService_Multicast_CrewDisbandedAlliance_Params
-{
-	struct FGuid                                       AllianceId;                                               // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FGuid                                       DisbandingCrewId;                                         // (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
 // Function Athena.Anchor.SetAnchorLoweredProportion
 struct AAnchor_SetAnchorLoweredProportion_Params
 {
@@ -4956,24 +4926,17 @@ struct ULauncherParentInterface_GetInheritedLaunchVelocity_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.ShipCurseComponent.OnRep_ActiveCurseFX
+struct UShipCurseComponent_OnRep_ActiveCurseFX_Params
+{
+	TArray<struct FShipActiveCurseFXData>              PreviousActiveCurseFX;                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Athena.ShipCurseComponent.MulticastToggleInteractions
 struct UShipCurseComponent_MulticastToggleInteractions_Params
 {
 	TArray<class AActor*>                              InTargetsToToggleInteractionsFor;                         // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 	TEnumAsByte<EInteractableState>                    InNewInteractionState;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Athena.ShipCurseComponent.MulticastSpawnVFXComponent
-struct UShipCurseComponent_MulticastSpawnVFXComponent_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             Template;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Athena.ShipCurseComponent.MulticastDeactivateVFX
-struct UShipCurseComponent_MulticastDeactivateVFX_Params
-{
-	TArray<class AActor*>                              TargetActors;                                             // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Athena.ShipCurseComponent.ApplyIntentOnSails
@@ -9251,6 +9214,11 @@ struct AMapTable_OnRep_CentreLocation_Params
 {
 };
 
+// Function Athena.MapTable.OnRep_AllianceShipLocations
+struct AMapTable_OnRep_AllianceShipLocations_Params
+{
+};
+
 // Function Athena.MapTable.OnMapMove
 struct AMapTable_OnMapMove_Params
 {
@@ -10200,6 +10168,14 @@ struct UPlayerCurseComponent_OnRep_ActiveCurseForFX_Params
 	TEnumAsByte<EPlayerCurseTag>                       PreviousValue;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Athena.PlayerCurseComponent.OnMovementModeChanged
+struct UPlayerCurseComponent_OnMovementModeChanged_Params
+{
+	class ACharacter*                                  Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>                         PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      PreviousCustomMode;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.PlayerEntitlementBlueprintFunctionLibrary.GetEntitlements
 struct UPlayerEntitlementBlueprintFunctionLibrary_GetEntitlements_Params
 {
@@ -11125,6 +11101,16 @@ struct UShipHullCollisionComponent_GetIsShipInContactWithSolidHits_Params
 struct UShipHullCollisionComponent_GetIsShipInContactWithLand_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.ShipLightComponent.OnRep_OnLightStateChanged
+struct UShipLightComponent_OnRep_OnLightStateChanged_Params
+{
+};
+
+// Function Athena.ShipLightComponent.LightStateChanged
+struct UShipLightComponent_LightStateChanged_Params
+{
 };
 
 // Function Athena.ShipPartCustomization.MakeSyncShipPartCustomization

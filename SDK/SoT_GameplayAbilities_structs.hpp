@@ -118,7 +118,8 @@ enum class EGameplayTargetingConfirmation : uint8_t
 enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 {
 	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -126,7 +127,8 @@ enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 enum class EGameplayEffectStackingDurationPolicy : uint8_t
 {
 	EGameplayEffectStackingDurationPolicy__RefreshOnSuccessfulApplication = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -135,7 +137,8 @@ enum class EGameplayEffectDurationType : uint8_t
 {
 	EGameplayEffectDurationType__Instant = 0,
 	None                           = 1,
-	EAttributeBasedFloatCalculationType__AttributeMagnitude = 2
+	IntProperty                    = 2,
+	EAttributeBasedFloatCalculationType__AttributeMagnitude = 3
 };
 
 

@@ -7662,102 +7662,6 @@ struct FGuid UShipServiceInterface::GetCrewFromShip(class AShip* Ship)
 }
 
 
-// Function Athena.AllianceService.Multicast_CrewsCreatedAlliance
-// (Net, NetReliable, Native, Event, NetMulticast, Public, HasDefaults)
-// Parameters:
-// struct FGuid                   AllianceId                     (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FGuid                   OfferingCrewId                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FGuid                   AcceptingCrewId                (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void AAllianceService::Multicast_CrewsCreatedAlliance(const struct FGuid& AllianceId, const struct FGuid& OfferingCrewId, const struct FGuid& AcceptingCrewId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AllianceService.Multicast_CrewsCreatedAlliance");
-
-	AAllianceService_Multicast_CrewsCreatedAlliance_Params params;
-	params.AllianceId = AllianceId;
-	params.OfferingCrewId = OfferingCrewId;
-	params.AcceptingCrewId = AcceptingCrewId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.AllianceService.Multicast_CrewLeftAlliance
-// (Net, NetReliable, Native, Event, NetMulticast, Public, HasDefaults)
-// Parameters:
-// struct FGuid                   AllianceId                     (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FGuid                   LeavingCrewId                  (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void AAllianceService::Multicast_CrewLeftAlliance(const struct FGuid& AllianceId, const struct FGuid& LeavingCrewId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AllianceService.Multicast_CrewLeftAlliance");
-
-	AAllianceService_Multicast_CrewLeftAlliance_Params params;
-	params.AllianceId = AllianceId;
-	params.LeavingCrewId = LeavingCrewId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.AllianceService.Multicast_CrewJoinedAlliance
-// (Net, NetReliable, Native, Event, NetMulticast, Public, HasDefaults)
-// Parameters:
-// struct FGuid                   AllianceId                     (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FGuid                   OfferingCrewId                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FGuid                   AcceptingCrewId                (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void AAllianceService::Multicast_CrewJoinedAlliance(const struct FGuid& AllianceId, const struct FGuid& OfferingCrewId, const struct FGuid& AcceptingCrewId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AllianceService.Multicast_CrewJoinedAlliance");
-
-	AAllianceService_Multicast_CrewJoinedAlliance_Params params;
-	params.AllianceId = AllianceId;
-	params.OfferingCrewId = OfferingCrewId;
-	params.AcceptingCrewId = AcceptingCrewId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.AllianceService.Multicast_CrewDisbandedAlliance
-// (Net, NetReliable, Native, Event, NetMulticast, Public, HasDefaults)
-// Parameters:
-// struct FGuid                   AllianceId                     (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FGuid                   DisbandingCrewId               (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void AAllianceService::Multicast_CrewDisbandedAlliance(const struct FGuid& AllianceId, const struct FGuid& DisbandingCrewId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AllianceService.Multicast_CrewDisbandedAlliance");
-
-	AAllianceService_Multicast_CrewDisbandedAlliance_Params params;
-	params.AllianceId = AllianceId;
-	params.DisbandingCrewId = DisbandingCrewId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Athena.Anchor.SetAnchorLoweredProportion
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -17095,6 +16999,27 @@ struct FVector ULauncherParentInterface::GetInheritedLaunchVelocity()
 }
 
 
+// Function Athena.ShipCurseComponent.OnRep_ActiveCurseFX
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// TArray<struct FShipActiveCurseFXData> PreviousActiveCurseFX          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UShipCurseComponent::OnRep_ActiveCurseFX(TArray<struct FShipActiveCurseFXData> PreviousActiveCurseFX)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.OnRep_ActiveCurseFX");
+
+	UShipCurseComponent_OnRep_ActiveCurseFX_Params params;
+	params.PreviousActiveCurseFX = PreviousActiveCurseFX;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.ShipCurseComponent.MulticastToggleInteractions
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
@@ -17108,50 +17033,6 @@ void UShipCurseComponent::MulticastToggleInteractions(TArray<class AActor*> InTa
 	UShipCurseComponent_MulticastToggleInteractions_Params params;
 	params.InTargetsToToggleInteractionsFor = InTargetsToToggleInteractionsFor;
 	params.InNewInteractionState = InNewInteractionState;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ShipCurseComponent.MulticastSpawnVFXComponent
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-// Parameters:
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UParticleSystem*         Template                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UShipCurseComponent::MulticastSpawnVFXComponent(class AActor* Target, class UParticleSystem* Template)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.MulticastSpawnVFXComponent");
-
-	UShipCurseComponent_MulticastSpawnVFXComponent_Params params;
-	params.Target = Target;
-	params.Template = Template;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ShipCurseComponent.MulticastDeactivateVFX
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-// Parameters:
-// TArray<class AActor*>          TargetActors                   (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-
-void UShipCurseComponent::MulticastDeactivateVFX(TArray<class AActor*> TargetActors)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.MulticastDeactivateVFX");
-
-	UShipCurseComponent_MulticastDeactivateVFX_Params params;
-	params.TargetActors = TargetActors;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -32028,6 +31909,24 @@ void AMapTable::OnRep_CentreLocation()
 }
 
 
+// Function Athena.MapTable.OnRep_AllianceShipLocations
+// (Final, Native, Public)
+
+void AMapTable::OnRep_AllianceShipLocations()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MapTable.OnRep_AllianceShipLocations");
+
+	AMapTable_OnRep_AllianceShipLocations_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.MapTable.OnMapMove
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
@@ -35211,6 +35110,31 @@ void UPlayerCurseComponent::OnRep_ActiveCurseForFX(TEnumAsByte<EPlayerCurseTag> 
 
 	UPlayerCurseComponent_OnRep_ActiveCurseForFX_Params params;
 	params.PreviousValue = PreviousValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.PlayerCurseComponent.OnMovementModeChanged
+// (Final, Native, Private)
+// Parameters:
+// class ACharacter*              Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>     PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char                  PreviousCustomMode             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerCurseComponent::OnMovementModeChanged(class ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, unsigned char PreviousCustomMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.PlayerCurseComponent.OnMovementModeChanged");
+
+	UPlayerCurseComponent_OnMovementModeChanged_Params params;
+	params.Character = Character;
+	params.PrevMovementMode = PrevMovementMode;
+	params.PreviousCustomMode = PreviousCustomMode;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -38436,6 +38360,41 @@ bool UShipHullCollisionComponent::GetIsShipInContactWithLand()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.ShipLightComponent.OnRep_OnLightStateChanged
+// (Final, Native, Public)
+
+void UShipLightComponent::OnRep_OnLightStateChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipLightComponent.OnRep_OnLightStateChanged");
+
+	UShipLightComponent_OnRep_OnLightStateChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Athena.ShipLightComponent.LightStateChanged
+// (Event, Public, BlueprintEvent)
+
+void UShipLightComponent::LightStateChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipLightComponent.LightStateChanged");
+
+	UShipLightComponent_LightStateChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

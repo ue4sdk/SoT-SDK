@@ -108,13 +108,6 @@ struct UWaterInterface_GetWaterHeight_Params
 	TEnumAsByte<EWaterQueryResult>                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Water.WaterInterface.GetIsActorUsingNonDefaultWaterPlane
-struct UWaterInterface_GetIsActorUsingNonDefaultWaterPlane_Params
-{
-	class AActor*                                      Actor;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Water.WaterInterface.GetActorWaterPlane
 struct UWaterInterface_GetActorWaterPlane_Params
 {
@@ -136,6 +129,52 @@ struct AFFTWaterService_OnRep_FFTWaterComponent_Params
 
 // Function Water.FFTWaterService.OnRep_FFTWaterActor
 struct AFFTWaterService_OnRep_FFTWaterActor_Params
+{
+};
+
+// Function Water.WaterInteractionComponent.LeaveWaterPlane
+struct UWaterInteractionComponent_LeaveWaterPlane_Params
+{
+	class UBaseWaterComponent*                         WaterComponent;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Water.WaterInteractionComponent.LeaveWaterExclusionZone
+struct UWaterInteractionComponent_LeaveWaterExclusionZone_Params
+{
+};
+
+// Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane
+struct UWaterInteractionComponent_IsUsingNonDefaultWaterPlane_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Water.WaterInteractionComponent.IsInWaterExcludedZone
+struct UWaterInteractionComponent_IsInWaterExcludedZone_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Water.WaterInteractionComponent.GetWaterPlaneComponent
+struct UWaterInteractionComponent_GetWaterPlaneComponent_Params
+{
+	class UBaseWaterComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes
+struct UWaterInteractionComponent_GetNumberOfWaterPlanes_Params
+{
+	unsigned char                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Water.WaterInteractionComponent.EnterWaterPlane
+struct UWaterInteractionComponent_EnterWaterPlane_Params
+{
+	class UBaseWaterComponent*                         WaterComponent;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Water.WaterInteractionComponent.EnterWaterExclusionZone
+struct UWaterInteractionComponent_EnterWaterExclusionZone_Params
 {
 };
 
@@ -240,52 +279,6 @@ struct UWaterBuoyancySampleMovementFunctionLibrary_StartMovingVolumeSamplesLocal
 	class UCurveFloat*                                 BuoyancyScalarCurve;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	class UCurveFloat*                                 ProbeMovementCurve;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MoveTime;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Water.WaterInteractionComponent.LeaveWaterPlane
-struct UWaterInteractionComponent_LeaveWaterPlane_Params
-{
-	class UBaseWaterComponent*                         WaterComponent;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Water.WaterInteractionComponent.LeaveWaterExclusionZone
-struct UWaterInteractionComponent_LeaveWaterExclusionZone_Params
-{
-};
-
-// Function Water.WaterInteractionComponent.IsInWaterExcludedZone
-struct UWaterInteractionComponent_IsInWaterExcludedZone_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Water.WaterInteractionComponent.GetWaterPlaneComponent
-struct UWaterInteractionComponent_GetWaterPlaneComponent_Params
-{
-	class UBaseWaterComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes
-struct UWaterInteractionComponent_GetNumberOfWaterPlanes_Params
-{
-	unsigned char                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Water.WaterInteractionComponent.EnterWaterPlane
-struct UWaterInteractionComponent_EnterWaterPlane_Params
-{
-	class UBaseWaterComponent*                         WaterComponent;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Water.WaterInteractionComponent.EnterWaterExclusionZone
-struct UWaterInteractionComponent_EnterWaterExclusionZone_Params
-{
-};
-
-// Function Water.WaterInteractionComponentProviderInterface.GetWaterInteractionComponent
-struct UWaterInteractionComponentProviderInterface_GetWaterInteractionComponent_Params
-{
-	class UWaterInteractionComponent*                  ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Water.WaterPlaneExclusionComponent.OnOverlapEnd

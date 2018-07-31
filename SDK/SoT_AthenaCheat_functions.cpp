@@ -1965,6 +1965,24 @@ void UAthenaCheatManager::SinkAllBarrels()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SinkAllAIShips
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SinkAllAIShips()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SinkAllAIShips");
+
+	UAthenaCheatManager_SinkAllAIShips_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ShowRandomCrewMemberGamerCard
 // (Final, Exec, Native, Public)
 

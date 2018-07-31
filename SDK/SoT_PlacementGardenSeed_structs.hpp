@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_E_Placement_MeshType_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {

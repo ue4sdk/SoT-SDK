@@ -326,30 +326,6 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeight(const struct FVec
 }
 
 
-// Function Water.WaterInterface.GetIsActorUsingNonDefaultWaterPlane
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWaterInterface::GetIsActorUsingNonDefaultWaterPlane(class AActor* Actor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetIsActorUsingNonDefaultWaterPlane");
-
-	UWaterInterface_GetIsActorUsingNonDefaultWaterPlane_Params params;
-	params.Actor = Actor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Water.WaterInterface.GetActorWaterPlane
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -424,6 +400,172 @@ void AFFTWaterService::OnRep_FFTWaterActor()
 	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterService.OnRep_FFTWaterActor");
 
 	AFFTWaterService_OnRep_FFTWaterActor_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Water.WaterInteractionComponent.LeaveWaterPlane
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* WaterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.LeaveWaterPlane");
+
+	UWaterInteractionComponent_LeaveWaterPlane_Params params;
+	params.WaterComponent = WaterComponent;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Water.WaterInteractionComponent.LeaveWaterExclusionZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UWaterInteractionComponent::LeaveWaterExclusionZone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.LeaveWaterExclusionZone");
+
+	UWaterInteractionComponent_LeaveWaterExclusionZone_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWaterInteractionComponent::IsUsingNonDefaultWaterPlane()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane");
+
+	UWaterInteractionComponent_IsUsingNonDefaultWaterPlane_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.IsInWaterExcludedZone
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWaterInteractionComponent::IsInWaterExcludedZone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.IsInWaterExcludedZone");
+
+	UWaterInteractionComponent_IsInWaterExcludedZone_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.GetWaterPlaneComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBaseWaterComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.GetWaterPlaneComponent");
+
+	UWaterInteractionComponent_GetWaterPlaneComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes");
+
+	UWaterInteractionComponent_GetNumberOfWaterPlanes_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.EnterWaterPlane
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* WaterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.EnterWaterPlane");
+
+	UWaterInteractionComponent_EnterWaterPlane_Params params;
+	params.WaterComponent = WaterComponent;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Water.WaterInteractionComponent.EnterWaterExclusionZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UWaterInteractionComponent::EnterWaterExclusionZone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.EnterWaterExclusionZone");
+
+	UWaterInteractionComponent_EnterWaterExclusionZone_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -777,172 +919,6 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSample
 		*InSampleMovement = params.InSampleMovement;
 	if (NewSampleData != nullptr)
 		*NewSampleData = params.NewSampleData;
-}
-
-
-// Function Water.WaterInteractionComponent.LeaveWaterPlane
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* WaterComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.LeaveWaterPlane");
-
-	UWaterInteractionComponent_LeaveWaterPlane_Params params;
-	params.WaterComponent = WaterComponent;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Water.WaterInteractionComponent.LeaveWaterExclusionZone
-// (Final, Native, Public, BlueprintCallable)
-
-void UWaterInteractionComponent::LeaveWaterExclusionZone()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.LeaveWaterExclusionZone");
-
-	UWaterInteractionComponent_LeaveWaterExclusionZone_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Water.WaterInteractionComponent.IsInWaterExcludedZone
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWaterInteractionComponent::IsInWaterExcludedZone()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.IsInWaterExcludedZone");
-
-	UWaterInteractionComponent_IsInWaterExcludedZone_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.GetWaterPlaneComponent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UBaseWaterComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.GetWaterPlaneComponent");
-
-	UWaterInteractionComponent_GetWaterPlaneComponent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes");
-
-	UWaterInteractionComponent_GetNumberOfWaterPlanes_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.EnterWaterPlane
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* WaterComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.EnterWaterPlane");
-
-	UWaterInteractionComponent_EnterWaterPlane_Params params;
-	params.WaterComponent = WaterComponent;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Water.WaterInteractionComponent.EnterWaterExclusionZone
-// (Final, Native, Public, BlueprintCallable)
-
-void UWaterInteractionComponent::EnterWaterExclusionZone()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.EnterWaterExclusionZone");
-
-	UWaterInteractionComponent_EnterWaterExclusionZone_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Water.WaterInteractionComponentProviderInterface.GetWaterInteractionComponent
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class UWaterInteractionComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UWaterInteractionComponent* UWaterInteractionComponentProviderInterface::GetWaterInteractionComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponentProviderInterface.GetWaterInteractionComponent");
-
-	UWaterInteractionComponentProviderInterface_GetWaterInteractionComponent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

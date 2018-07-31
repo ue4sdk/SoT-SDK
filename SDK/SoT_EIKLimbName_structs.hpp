@@ -20,7 +20,9 @@ enum class EIKLimbName : uint8_t
 	EIKLimbName__NewEnumerator0    = 0,
 	None                           = 1,
 	EIKLimbName__NewEnumerator4    = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4,
+	EmissiveColourMultiply         = 5
 };
 
 

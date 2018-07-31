@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_eye_col_green_02_Desc_parameters.hpp"
+#include "SoT_BP_Eye_Col_Green_02_Desc_parameters.hpp"
 
 namespace SDK
 {

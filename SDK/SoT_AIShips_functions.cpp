@@ -35,6 +35,27 @@ void UAIShipDebugFunctionLibrary::STATIC_RequestAIShipForCrew(class UObject* Wor
 }
 
 
+// Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties
+// (Native, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FAIShipSailData         SailData                       (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UCursedCrewCustomisationInterface::SetCursedCrewCustomisationProperties(const struct FAIShipSailData& SailData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties");
+
+	UCursedCrewCustomisationInterface_SetCursedCrewCustomisationProperties_Params params;
+	params.SailData = SailData;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

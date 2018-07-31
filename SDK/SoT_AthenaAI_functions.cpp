@@ -244,13 +244,15 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 // (Native, Public, BlueprintCallable)
 // Parameters:
 // class APawn*                   AIActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECharacterDeathType> DeathType                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor)
+void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharacterDeathType> DeathType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerServiceInterface.StartDespawnAI");
 
 	UAIManagerServiceInterface_StartDespawnAI_Params params;
 	params.AIActor = AIActor;
+	params.DeathType = DeathType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -330,13 +332,15 @@ void AAIManagerService::TickService(float DeltaSeconds)
 // (Native, Public, BlueprintCallable)
 // Parameters:
 // class APawn*                   AIActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECharacterDeathType> DeathType                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAIManagerService::StartDespawnAI(class APawn* AIActor)
+void AAIManagerService::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharacterDeathType> DeathType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.StartDespawnAI");
 
 	AAIManagerService_StartDespawnAI_Params params;
 	params.AIActor = AIActor;
+	params.DeathType = DeathType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

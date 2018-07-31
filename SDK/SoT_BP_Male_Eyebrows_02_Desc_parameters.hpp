@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_male_eyebrows_02_Desc_classes.hpp"
+#include "SoT_BP_Male_Eyebrows_02_Desc_classes.hpp"
 
 namespace SDK
 {

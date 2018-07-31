@@ -2074,18 +2074,8 @@ struct APlayerState_OnRep_UniqueId_Params
 {
 };
 
-// Function Engine.PlayerState.OnRep_Score
-struct APlayerState_OnRep_Score_Params
-{
-};
-
 // Function Engine.PlayerState.OnRep_PlayerName
 struct APlayerState_OnRep_PlayerName_Params
-{
-};
-
-// Function Engine.PlayerState.OnRep_bIsInactive
-struct APlayerState_OnRep_bIsInactive_Params
 {
 };
 
