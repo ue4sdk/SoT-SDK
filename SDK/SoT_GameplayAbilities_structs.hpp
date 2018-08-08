@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -62,8 +62,7 @@ enum class EAbilityGenericReplicatedEvent : uint8_t
 enum class EGameplayTagEventType : uint8_t
 {
 	EGameplayTagEventType__NewOrRemoved = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -137,8 +136,7 @@ enum class EGameplayEffectDurationType : uint8_t
 {
 	EGameplayEffectDurationType__Instant = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAttributeBasedFloatCalculationType__AttributeMagnitude = 3
+	EAttributeBasedFloatCalculationType__AttributeMagnitude = 2
 };
 
 

@@ -123,7 +123,7 @@ public:
 
 
 // Class AIShips.AIShipContextParamsDataAsset
-// 0x0058 (0x0080 - 0x0028)
+// 0x0060 (0x0088 - 0x0028)
 class UAIShipContextParamsDataAsset : public UDataAsset
 {
 public:
@@ -149,6 +149,8 @@ public:
 	float                                              MaxDistanceFromEncounter;                                 // 0x0074(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ShipFlippedAngle;                                         // 0x0078(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              SecondsUntilKillAIAfterShipDefeated;                      // 0x007C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SecondsDelayForAIShipDefeatedNotification;                // 0x0080(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -212,7 +214,7 @@ public:
 	int                                                SecondsUntilEncounterCanReactivate;                       // 0x0088(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                SecondsUntilAllShipsSubmergeAfterLastCrewLeftEncounterZone;// 0x008C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              OuterRadiusMultiplier;                                    // 0x0090(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	float                                              InitialEncounterEntryDelay;                               // 0x0094(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

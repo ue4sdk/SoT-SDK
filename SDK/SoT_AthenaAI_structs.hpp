@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
@@ -36,7 +36,8 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3
+	None01                         = 3,
+	EAddEndpointResult__Success    = 4
 };
 
 
@@ -136,8 +137,7 @@ enum class EFloatValueComparisonType : uint8_t
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
 	EFloatValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -154,7 +154,8 @@ enum class ESwimmingLineOfSightTest : uint8_t
 enum class ESwimmingSyncMode : uint8_t
 {
 	ESwimmingSyncMode__Synchronous = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -209,7 +210,7 @@ enum class ETinySharkState : uint8_t
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
 	None01                         = 3,
-	EKrakenDespawnReason__Invalid  = 4
+	EWaterSplashProbeType__ThresholdedRateOfChange = 4
 };
 
 
@@ -219,7 +220,8 @@ enum class EAISpawnRequestResult : uint8_t
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnRequestResult__FailedNoValidPos = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

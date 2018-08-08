@@ -2104,6 +2104,12 @@ struct AAthenaPlayerCharacter_HasFinishedSpawning_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.AthenaPlayerCharacter.GetPrimaryVoyageParticipantComponent
+struct AAthenaPlayerCharacter_GetPrimaryVoyageParticipantComponent_Params
+{
+	class UVoyageParticipantComponent*                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function Athena.AthenaPlayerCharacter.GetPawnViewLocation
 struct AAthenaPlayerCharacter_GetPawnViewLocation_Params
 {
@@ -2138,6 +2144,12 @@ struct AAthenaPlayerCharacter_GetFocusedInteractable_Params
 struct AAthenaPlayerCharacter_GetFirstPersonMeshOffset_Params
 {
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.AthenaPlayerCharacter.GetEmergentVoyageParticipantComponent
+struct AAthenaPlayerCharacter_GetEmergentVoyageParticipantComponent_Params
+{
+	class UVoyageParticipantComponent*                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Athena.AthenaPlayerCharacter.GetCurrentShipRegion
@@ -3297,18 +3309,6 @@ struct ACannon_OnRep_LoadedItemInfo_Params
 struct ACannon_OnCannonDescLoaded_Params
 {
 	class UCannonDescAsset*                            CannonDesc;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Athena.Cannon.Multicast_OnPlayerUnloaded
-struct ACannon_Multicast_OnPlayerUnloaded_Params
-{
-	class AActor*                                      UnloadedPlayer;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Athena.Cannon.Multicast_OnPlayerLoaded
-struct ACannon_Multicast_OnPlayerLoaded_Params
-{
-	class AActor*                                      LoadedPlayer;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.Cannon.Multicast_FireProjectile
@@ -4486,14 +4486,14 @@ struct UCoherentBaseHUDComponent_HasInitializationErrorOccurred_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Athena.FrontendHUDComponent.SetFrontendMessagingDispatcher
-struct UFrontendHUDComponent_SetFrontendMessagingDispatcher_Params
+// Function Athena.FrontendHudComponent.SetFrontendMessagingDispatcher
+struct UFrontendHudComponent_SetFrontendMessagingDispatcher_Params
 {
 	TScriptInterface<class UObjectMessagingDispatcherInterface> Dispatcher;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Athena.FrontendHUDComponent.OnReadyForBindings
-struct UFrontendHUDComponent_OnReadyForBindings_Params
+// Function Athena.FrontendHudComponent.OnReadyForBindings
+struct UFrontendHudComponent_OnReadyForBindings_Params
 {
 };
 
@@ -4926,17 +4926,16 @@ struct ULauncherParentInterface_GetInheritedLaunchVelocity_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.ShipCurseComponent.OnRep_ActorsAffectedByToggleInteractionsCurse
+struct UShipCurseComponent_OnRep_ActorsAffectedByToggleInteractionsCurse_Params
+{
+	TArray<class AActor*>                              PreviousActorsAffectedByToggleInteractionsCurse;          // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Athena.ShipCurseComponent.OnRep_ActiveCurseFX
 struct UShipCurseComponent_OnRep_ActiveCurseFX_Params
 {
 	TArray<struct FShipActiveCurseFXData>              PreviousActiveCurseFX;                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function Athena.ShipCurseComponent.MulticastToggleInteractions
-struct UShipCurseComponent_MulticastToggleInteractions_Params
-{
-	TArray<class AActor*>                              InTargetsToToggleInteractionsFor;                         // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-	TEnumAsByte<EInteractableState>                    InNewInteractionState;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.ShipCurseComponent.ApplyIntentOnSails
@@ -6930,6 +6929,12 @@ struct UShipPartInterface_SetShip_Params
 	class AShip*                                       Ship;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Athena.ShipPartInterface.GetShip
+struct UShipPartInterface_GetShip_Params
+{
+	class AShip*                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Athena.ShipPartInterface.ClearShip
 struct UShipPartInterface_ClearShip_Params
 {
@@ -8787,16 +8792,10 @@ struct ULoadableInterface_CanBeLoaded_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Athena.LoadableComponent.OnRepLoadedItem
-struct ULoadableComponent_OnRepLoadedItem_Params
+// Function Athena.LoadableComponent.OnRepLoadableComponentState
+struct ULoadableComponent_OnRepLoadableComponentState_Params
 {
-	class UObject*                                     PrevLoadedItem;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Athena.LoadableComponent.OnRepLoadableState
-struct ULoadableComponent_OnRepLoadableState_Params
-{
-	TEnumAsByte<ELoadableState>                        PrevLoadableState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLoadableComponentState                     PrevLoadableComponentState;                               // (Parm)
 };
 
 // Function Athena.LoadItemActionStateId.PushCharacterIntoLoadItemActionState
@@ -12219,7 +12218,7 @@ struct UVfxFunctionLibrary_SetUnderwater_Params
 struct UVfxFunctionLibrary_SetCustomLocalSpaceDelegateForCharacter_Params
 {
 	class UParticleSystemComponent*                    PSC;                                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class AAthenaCharacter*                            AthenaCharacter;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EVfxCustomLocalSpaceMode>              CustomLocalSpaceMode;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

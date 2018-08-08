@@ -156,11 +156,12 @@ public:
 
 
 // Class StatusEffects.StatusRecipientResponseList
-// 0x0010 (0x0038 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UStatusRecipientResponseList : public UDataAsset
 {
 public:
 	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FFeatureToggledStatusResponseList>   FeatureToggledResponseLists;                              // 0x0038(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -172,14 +173,14 @@ public:
 
 
 // Class StatusEffects.StatusEffectManagerComponent
-// 0x0100 (0x01D0 - 0x00D0)
+// 0x00F0 (0x01C0 - 0x00D0)
 class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
 	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00E8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0xD8];                                      // 0x00F8(0x00D8) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xC8];                                      // 0x00F8(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -180,7 +180,7 @@ public:
 
 
 // Class GameplayDebugger.GameplayDebuggingReplicator
-// 0x00F8 (0x0578 - 0x0480)
+// 0x00E0 (0x0560 - 0x0480)
 class AGameplayDebuggingReplicator : public AActor
 {
 public:
@@ -207,10 +207,7 @@ public:
 	bool                                               GameView3;                                                // 0x04DF(0x0001) (Edit, ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               GameView4;                                                // 0x04E0(0x0001) (Edit, ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               GameView5;                                                // 0x04E1(0x0001) (Edit, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x04E2(0x0006) MISSED OFFSET
-	class UTexture2D*                                  DefaultTexture_Red;                                       // 0x04E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  DefaultTexture_Green;                                     // 0x04F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x80];                                      // 0x04F8(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x7E];                                      // 0x04E2(0x007E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

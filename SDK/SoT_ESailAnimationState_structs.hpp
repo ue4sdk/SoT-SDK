@@ -26,9 +26,7 @@ enum class ESailAnimationState : uint8_t
 	StructProperty                 = 6,
 	ESailAnimationState__NewEnumerator26 = 7,
 	None03                         = 8,
-	None04                         = 9,
-	None05                         = 10,
-	None06                         = 11
+	None04                         = 9
 };
 
 

@@ -64,7 +64,8 @@ enum class ELandscapeLayerBlendType : uint8_t
 {
 	LB_WeightBlend                 = 0,
 	None                           = 1,
-	EParticleKey__Active           = 2
+	IntProperty                    = 2,
+	EParticleKey__Active           = 3
 };
 
 

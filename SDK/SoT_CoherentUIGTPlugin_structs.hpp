@@ -87,7 +87,7 @@ enum class ECoherentUIGTKeys : uint8_t
 	BoolProperty01                 = 64,
 	ByteProperty01                 = 65,
 	None34                         = 66,
-	Crates_HandedIn_OnSchedule_Pig = 67,
+	BountySkulls_HandedIn_Legendary = 67,
 	None35                         = 68,
 	ByteProperty02                 = 69,
 	ByteProperty03                 = 70

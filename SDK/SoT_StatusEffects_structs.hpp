@@ -16,6 +16,14 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct StatusEffects.FeatureToggledStatusResponseList
+// 0x0018
+struct FFeatureToggledStatusResponseList
+{
+	struct FName                                       Feature;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct StatusEffects.ActiveStatusEffect
 // 0x0020
 struct FActiveStatusEffect

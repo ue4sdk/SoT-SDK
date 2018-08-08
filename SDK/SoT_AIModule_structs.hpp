@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
 {
@@ -46,7 +46,8 @@ enum class EAILockSource : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EAILockSource__MAX             = 3,
-	None01                         = 4
+	None01                         = 4,
+	EPawnActionResult__NotStarted  = 5
 };
 
 
@@ -117,8 +118,7 @@ enum class EPathFollowingAction : uint8_t
 	EPathFollowingAction__Error    = 0,
 	None                           = 1,
 	EPathFollowingAction__PathToGoal = 2,
-	None01                         = 3,
-	EAITaskPriority__Lowest        = 4
+	None01                         = 3
 };
 
 

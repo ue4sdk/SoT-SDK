@@ -7353,6 +7353,28 @@ bool AAthenaPlayerCharacter::HasFinishedSpawning()
 }
 
 
+// Function Athena.AthenaPlayerCharacter.GetPrimaryVoyageParticipantComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UVoyageParticipantComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UVoyageParticipantComponent* AAthenaPlayerCharacter::GetPrimaryVoyageParticipantComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaPlayerCharacter.GetPrimaryVoyageParticipantComponent");
+
+	AAthenaPlayerCharacter_GetPrimaryVoyageParticipantComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.AthenaPlayerCharacter.GetPawnViewLocation
 // (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -7473,6 +7495,28 @@ struct FVector AAthenaPlayerCharacter::GetFirstPersonMeshOffset()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaPlayerCharacter.GetFirstPersonMeshOffset");
 
 	AAthenaPlayerCharacter_GetFirstPersonMeshOffset_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.AthenaPlayerCharacter.GetEmergentVoyageParticipantComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UVoyageParticipantComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UVoyageParticipantComponent* AAthenaPlayerCharacter::GetEmergentVoyageParticipantComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaPlayerCharacter.GetEmergentVoyageParticipantComponent");
+
+	AAthenaPlayerCharacter_GetEmergentVoyageParticipantComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -11410,48 +11454,6 @@ void ACannon::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
 
 	ACannon_OnCannonDescLoaded_Params params;
 	params.CannonDesc = CannonDesc;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Cannon.Multicast_OnPlayerUnloaded
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class AActor*                  UnloadedPlayer                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void ACannon::Multicast_OnPlayerUnloaded(class AActor* UnloadedPlayer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Cannon.Multicast_OnPlayerUnloaded");
-
-	ACannon_Multicast_OnPlayerUnloaded_Params params;
-	params.UnloadedPlayer = UnloadedPlayer;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.Cannon.Multicast_OnPlayerLoaded
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class AActor*                  LoadedPlayer                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void ACannon::Multicast_OnPlayerLoaded(class AActor* LoadedPlayer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.Cannon.Multicast_OnPlayerLoaded");
-
-	ACannon_Multicast_OnPlayerLoaded_Params params;
-	params.LoadedPlayer = LoadedPlayer;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -15497,16 +15499,16 @@ bool UCoherentBaseHUDComponent::HasInitializationErrorOccurred()
 }
 
 
-// Function Athena.FrontendHUDComponent.SetFrontendMessagingDispatcher
+// Function Athena.FrontendHudComponent.SetFrontendMessagingDispatcher
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // TScriptInterface<class UObjectMessagingDispatcherInterface> Dispatcher                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UFrontendHUDComponent::SetFrontendMessagingDispatcher(const TScriptInterface<class UObjectMessagingDispatcherInterface>& Dispatcher)
+void UFrontendHudComponent::SetFrontendMessagingDispatcher(const TScriptInterface<class UObjectMessagingDispatcherInterface>& Dispatcher)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.FrontendHUDComponent.SetFrontendMessagingDispatcher");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.FrontendHudComponent.SetFrontendMessagingDispatcher");
 
-	UFrontendHUDComponent_SetFrontendMessagingDispatcher_Params params;
+	UFrontendHudComponent_SetFrontendMessagingDispatcher_Params params;
 	params.Dispatcher = Dispatcher;
 
 	auto flags = fn->FunctionFlags;
@@ -15518,14 +15520,14 @@ void UFrontendHUDComponent::SetFrontendMessagingDispatcher(const TScriptInterfac
 }
 
 
-// Function Athena.FrontendHUDComponent.OnReadyForBindings
+// Function Athena.FrontendHudComponent.OnReadyForBindings
 // (Native, Protected)
 
-void UFrontendHUDComponent::OnReadyForBindings()
+void UFrontendHudComponent::OnReadyForBindings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.FrontendHUDComponent.OnReadyForBindings");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.FrontendHudComponent.OnReadyForBindings");
 
-	UFrontendHUDComponent_OnReadyForBindings_Params params;
+	UFrontendHudComponent_OnReadyForBindings_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16999,6 +17001,27 @@ struct FVector ULauncherParentInterface::GetInheritedLaunchVelocity()
 }
 
 
+// Function Athena.ShipCurseComponent.OnRep_ActorsAffectedByToggleInteractionsCurse
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// TArray<class AActor*>          PreviousActorsAffectedByToggleInteractionsCurse (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UShipCurseComponent::OnRep_ActorsAffectedByToggleInteractionsCurse(TArray<class AActor*> PreviousActorsAffectedByToggleInteractionsCurse)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.OnRep_ActorsAffectedByToggleInteractionsCurse");
+
+	UShipCurseComponent_OnRep_ActorsAffectedByToggleInteractionsCurse_Params params;
+	params.PreviousActorsAffectedByToggleInteractionsCurse = PreviousActorsAffectedByToggleInteractionsCurse;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.ShipCurseComponent.OnRep_ActiveCurseFX
 // (Final, Native, Private, HasOutParms)
 // Parameters:
@@ -17010,29 +17033,6 @@ void UShipCurseComponent::OnRep_ActiveCurseFX(TArray<struct FShipActiveCurseFXDa
 
 	UShipCurseComponent_OnRep_ActiveCurseFX_Params params;
 	params.PreviousActiveCurseFX = PreviousActiveCurseFX;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.ShipCurseComponent.MulticastToggleInteractions
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-// Parameters:
-// TArray<class AActor*>          InTargetsToToggleInteractionsFor (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// TEnumAsByte<EInteractableState> InNewInteractionState          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UShipCurseComponent::MulticastToggleInteractions(TArray<class AActor*> InTargetsToToggleInteractionsFor, TEnumAsByte<EInteractableState> InNewInteractionState)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipCurseComponent.MulticastToggleInteractions");
-
-	UShipCurseComponent_MulticastToggleInteractions_Params params;
-	params.InTargetsToToggleInteractionsFor = InTargetsToToggleInteractionsFor;
-	params.InNewInteractionState = InNewInteractionState;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -23967,6 +23967,28 @@ void UShipPartInterface::SetShip(class AShip* Ship)
 }
 
 
+// Function Athena.ShipPartInterface.GetShip
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class AShip*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AShip* UShipPartInterface::GetShip()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ShipPartInterface.GetShip");
+
+	UShipPartInterface_GetShip_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.ShipPartInterface.ClearShip
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -30412,38 +30434,17 @@ bool ULoadableInterface::CanBeLoaded()
 }
 
 
-// Function Athena.LoadableComponent.OnRepLoadedItem
+// Function Athena.LoadableComponent.OnRepLoadableComponentState
 // (Final, Native, Private)
 // Parameters:
-// class UObject*                 PrevLoadedItem                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLoadableComponentState PrevLoadableComponentState     (Parm)
 
-void ULoadableComponent::OnRepLoadedItem(class UObject* PrevLoadedItem)
+void ULoadableComponent::OnRepLoadableComponentState(const struct FLoadableComponentState& PrevLoadableComponentState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.LoadableComponent.OnRepLoadedItem");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.LoadableComponent.OnRepLoadableComponentState");
 
-	ULoadableComponent_OnRepLoadedItem_Params params;
-	params.PrevLoadedItem = PrevLoadedItem;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Athena.LoadableComponent.OnRepLoadableState
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<ELoadableState>    PrevLoadableState              (Parm, ZeroConstructor, IsPlainOldData)
-
-void ULoadableComponent::OnRepLoadableState(TEnumAsByte<ELoadableState> PrevLoadableState)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.LoadableComponent.OnRepLoadableState");
-
-	ULoadableComponent_OnRepLoadableState_Params params;
-	params.PrevLoadableState = PrevLoadableState;
+	ULoadableComponent_OnRepLoadableComponentState_Params params;
+	params.PrevLoadableComponentState = PrevLoadableComponentState;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -42169,16 +42170,16 @@ void UVfxFunctionLibrary::STATIC_SetUnderwater(bool IsUnderwater, struct FVfxSpa
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UParticleSystemComponent* PSC                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AAthenaPlayerCharacter*  AthenaPlayerCharacter          (Parm, ZeroConstructor, IsPlainOldData)
+// class AAthenaCharacter*        AthenaCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UVfxFunctionLibrary::STATIC_SetCustomLocalSpaceDelegateForCharacter(class UParticleSystemComponent* PSC, class AAthenaPlayerCharacter* AthenaPlayerCharacter, TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode)
+void UVfxFunctionLibrary::STATIC_SetCustomLocalSpaceDelegateForCharacter(class UParticleSystemComponent* PSC, class AAthenaCharacter* AthenaCharacter, TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.VfxFunctionLibrary.SetCustomLocalSpaceDelegateForCharacter");
 
 	UVfxFunctionLibrary_SetCustomLocalSpaceDelegateForCharacter_Params params;
 	params.PSC = PSC;
-	params.AthenaPlayerCharacter = AthenaPlayerCharacter;
+	params.AthenaCharacter = AthenaCharacter;
 	params.CustomLocalSpaceMode = CustomLocalSpaceMode;
 
 	auto flags = fn->FunctionFlags;

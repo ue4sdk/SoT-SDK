@@ -23,8 +23,7 @@ enum class EFoliageScaling : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EFoliageScaling__LockYZ        = 3,
-	None01                         = 4,
-	FOLIAGEVERTEXCOLORMASK_Disabled = 5
+	None01                         = 4
 };
 
 
@@ -35,7 +34,7 @@ enum class EFoliageVertexColorMask : uint8_t
 	None                           = 1,
 	FOLIAGEVERTEXCOLORMASK_Alpha   = 2,
 	None01                         = 3,
-	LCCT_None                      = 4
+	EProgressBarFillType__LeftToRight = 4
 };
 
 

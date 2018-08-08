@@ -22,7 +22,7 @@ enum class EObjectTargetingStates : uint8_t
 	EObjectTargetingStates__NewEnumerator4 = 2,
 	None01                         = 3,
 	NameProperty                   = 4,
-	None02                         = 5
+	Diffuse                        = 5
 };
 
 

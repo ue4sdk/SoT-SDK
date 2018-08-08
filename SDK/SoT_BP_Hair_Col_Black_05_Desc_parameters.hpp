@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_hair_col_black_05_Desc_classes.hpp"
+#include "SoT_BP_Hair_Col_Black_05_Desc_classes.hpp"
 
 namespace SDK
 {

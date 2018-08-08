@@ -71,7 +71,8 @@ enum class EProgressBarFillType : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EProgressBarFillType__BottomToTop = 3,
-	None01                         = 4
+	None01                         = 4,
+	EFoliageScaling__Uniform       = 5
 };
 
 

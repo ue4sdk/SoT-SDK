@@ -22,7 +22,7 @@ enum class EOcclusionTypes : uint8_t
 	EOcclusionTypes__Visible       = 0,
 	None                           = 1,
 	EOcclusionTypes__EOcclusionTypes_MAX = 2,
-	FloatProperty                  = 3
+	DelegateProperty               = 3
 };
 
 
