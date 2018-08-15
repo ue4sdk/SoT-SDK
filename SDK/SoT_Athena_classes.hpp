@@ -4677,18 +4677,19 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterMovementComponent
-// 0x00D0 (0x0850 - 0x0780)
+// 0x00E0 (0x0860 - 0x0780)
 class UAthenaPlayerCharacterMovementComponent : public UAthenaCharacterMovementComponent
 {
 public:
-	class UCurveFloat*                                 LandingSpeedToFallDamageCurve;                            // 0x0780(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MinFallSpeedToPossiblyCauseDamage;                        // 0x0788(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MinTimeBetweenDamagingImpactsOnUnwalkableSurface;         // 0x078C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MinFallDamageToBreakLeg;                                  // 0x0790(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FiredFromActorFallDamageScalar;                           // 0x0794(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TimeUntilRecoverFallDamageAudioState;                     // 0x0798(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SwimmingStateFilterTime;                                  // 0x079C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB0];                                      // 0x07A0(0x00B0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0780(0x0008) MISSED OFFSET
+	class UCurveFloat*                                 LandingSpeedToFallDamageCurve;                            // 0x0788(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinFallSpeedToPossiblyCauseDamage;                        // 0x0790(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinTimeBetweenDamagingImpactsOnUnwalkableSurface;         // 0x0794(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinFallDamageToBreakLeg;                                  // 0x0798(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FiredFromActorFallDamageScalar;                           // 0x079C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TimeUntilRecoverFallDamageAudioState;                     // 0x07A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SwimmingStateFilterTime;                                  // 0x07A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x07A8(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4702,11 +4703,10 @@ public:
 
 
 // Class Athena.MockAthenaPlayerCharacterMovementComponent
-// 0x0010 (0x0860 - 0x0850)
+// 0x0000 (0x0860 - 0x0860)
 class UMockAthenaPlayerCharacterMovementComponent : public UAthenaPlayerCharacterMovementComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0850(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6856,6 +6856,21 @@ public:
 
 	class UAmbientLightSourceComponent* GetTargetLight();
 	void AssignTargetLight(class UAmbientLightSourceComponent* InTargetLight);
+};
+
+
+// Class Athena.BoilingStatus
+// 0x0000 (0x0028 - 0x0028)
+class UBoilingStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Athena.BoilingStatus");
+		return ptr;
+	}
+
 };
 
 
@@ -16226,6 +16241,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVolcanoRockMedium");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ImpactProjectileIdVolcanoRockMini
+// 0x0000 (0x0028 - 0x0028)
+class UImpactProjectileIdVolcanoRockMini : public UImpactProjectileId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVolcanoRockMini");
 		return ptr;
 	}
 

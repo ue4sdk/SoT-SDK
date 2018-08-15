@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bp_onlineathenagamemode_classes.hpp"
+#include "SoT_BP_OnlineAthenaGameMode_classes.hpp"
 
 namespace SDK
 {
@@ -14,7 +14,7 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function bp_onlineathenagamemode.BP_OnlineAthenaGameMode_C.UserConstructionScript
+// Function BP_OnlineAthenaGameMode.BP_OnlineAthenaGameMode_C.UserConstructionScript
 struct ABP_OnlineAthenaGameMode_C_UserConstructionScript_Params
 {
 };

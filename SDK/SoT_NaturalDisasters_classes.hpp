@@ -92,7 +92,7 @@ public:
 
 
 // Class NaturalDisasters.Geyser
-// 0x0058 (0x04D8 - 0x0480)
+// 0x0060 (0x04E0 - 0x0480)
 class AGeyser : public AActor
 {
 public:
@@ -109,6 +109,7 @@ public:
 	class UClass*                                      GeyserHoleClass;                                          // 0x04C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<EGeyserState>                          GeyserState;                                              // 0x04D0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x04D1(0x0007) MISSED OFFSET
+	class AHole*                                       GeyserHole;                                               // 0x04D8(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -213,15 +214,15 @@ public:
 
 
 // Class NaturalDisasters.SuperheatedWater
-// 0x00E8 (0x05E0 - 0x04F8)
+// 0x00B8 (0x05B0 - 0x04F8)
 class ASuperheatedWater : public AMurk
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x04F8(0x0008) MISSED OFFSET
-	float                                              PlayerHealthChange;                                       // 0x0500(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HealthChange;                                             // 0x0500(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TimeBetweenHealthReduction;                               // 0x0504(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UCapsuleComponent*                           HitDetectionVolume;                                       // 0x0508(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xD0];                                      // 0x0510(0x00D0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0510(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

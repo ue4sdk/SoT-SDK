@@ -78,19 +78,18 @@ enum class ECoherentUIGTKeys : uint8_t
 	None27                         = 55,
 	None28                         = 56,
 	None29                         = 57,
-	None30                         = 58,
-	BoolProperty                   = 59,
+	BoolProperty                   = 58,
+	None30                         = 59,
 	None31                         = 60,
-	None32                         = 61,
-	ByteProperty                   = 62,
-	None33                         = 63,
-	BoolProperty01                 = 64,
-	ByteProperty01                 = 65,
-	None34                         = 66,
-	BountySkulls_HandedIn_Legendary = 67,
-	None35                         = 68,
-	ByteProperty02                 = 69,
-	ByteProperty03                 = 70
+	ByteProperty                   = 61,
+	None32                         = 62,
+	BoolProperty01                 = 63,
+	ByteProperty01                 = 64,
+	None33                         = 65,
+	BountySkulls_HandedIn_Legendary = 66,
+	None34                         = 67,
+	ByteProperty02                 = 68,
+	ByteProperty03                 = 69
 };
 
 

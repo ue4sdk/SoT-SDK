@@ -19,7 +19,7 @@ enum class EDocking : uint8_t
 {
 	EDocking__NewEnumerator2       = 0,
 	None                           = 1,
-	FLpvDirectionalOcclusionCS     = 2
+	IntProperty                    = 2
 };
 
 

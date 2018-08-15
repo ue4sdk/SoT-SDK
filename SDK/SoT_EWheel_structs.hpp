@@ -19,11 +19,10 @@ enum class EWheel : uint8_t
 {
 	EWheel__NewEnumerator0         = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EWheel__NewEnumerator4         = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	EWheel__EWheel_MAX             = 6
+	EWheel__NewEnumerator4         = 2,
+	None01                         = 3,
+	NameProperty                   = 4,
+	EWheel__EWheel_MAX             = 5
 };
 
 

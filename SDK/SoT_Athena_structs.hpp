@@ -8,24 +8,24 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_AthenaAI_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_AthenaAI_classes.hpp"
 #include "SoT_Interaction_classes.hpp"
+#include "SoT_DebugMenu_classes.hpp"
 #include "SoT_AthenaInput_classes.hpp"
-#include "SoT_RareAudio_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaRigging_classes.hpp"
 #include "SoT_AthenaSocketLookup_classes.hpp"
-#include "SoT_RareEngine_classes.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_CoherentUIGTPlugin_classes.hpp"
+#include "SoT_RareAudio_classes.hpp"
 #include "SoT_Animation_classes.hpp"
 #include "SoT_Water_classes.hpp"
 #include "SoT_PirateGenerator_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
-#include "SoT_DebugMenu_classes.hpp"
-#include "SoT_GameService_classes.hpp"
 #include "SoT_GameplayDebugger_classes.hpp"
+#include "SoT_RareEngine_classes.hpp"
+#include "SoT_GameService_classes.hpp"
 #include "SoT_Wind_classes.hpp"
 #include "SoT_StudiosAutomation_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
@@ -55,19 +55,19 @@ enum class EHealthChangedReason : uint8_t
 	NameProperty                   = 5,
 	EHealthChangedReason__DamagedBySwimmingCreature = 6,
 	None02                         = 7,
-	Section                        = 8,
+	E_AccentAigu                   = 8,
 	EHealthChangedReason__EyeOfReach_Default = 9,
 	None03                         = 10,
-	Acceleration                   = 11,
+	RotationRate                   = 11,
 	EHealthChangedReason__PowerSlammedByKrakenTentacle = 12,
 	None04                         = 13,
 	IslandBoundsComponent          = 14,
 	EHealthChangedReason__Fire     = 15,
 	None05                         = 16,
-	ULandscapeLayerInfoObject      = 17,
+	ULandscapeInfo                 = 17,
 	EHealthChangedReason__SunkenCurseDamage = 18,
 	None06                         = 19,
-	NiagaraVariableInfo            = 20,
+	Niagara                        = 20,
 	EHealthChangedReason__MAX      = 21,
 	None07                         = 22,
 	PacketHandler                  = 23,
@@ -2301,59 +2301,74 @@ enum class EBootflowError : uint8_t
 {
 	EBootflowError__None           = 0,
 	None                           = 1,
-	EBootflowError__AthenaGameInstanceActiveConnectionToServerTimedOut = 2,
-	None01                         = 3,
-	EBootflowError__AthenaGameInstanceGameVersionMismatch = 4,
-	None02                         = 5,
-	EBootflowError__AthenaGameInstanceRPCSpamDetected = 6,
-	None03                         = 7,
-	EBootflowError__ClientBootflowPrimaryPlayerSignedOut = 8,
-	None04                         = 9,
-	EBootflowError__ClientEvicted  = 10,
-	None05                         = 11,
-	EBootflowError__ClientInGameStateStopMatchmakingFailed = 12,
-	None06                         = 13,
-	EBootflowError__CrewMatchmakingStateUnableToObtainLocalPlayerInterface = 14,
-	None07                         = 15,
-	EBootflowError__CrewSessionStateFailedToCreateCrewSession = 16,
-	None08                         = 17,
-	EBootflowError__EngageStateInviteHadInvalidControllerId = 18,
-	None09                         = 19,
-	EBootflowError__LoadLevelStateTimeout = 20,
-	None10                         = 21,
-	EBootflowError__LoginTokenExchangeFailedCannotRefreshExpiredToken = 22,
-	None11                         = 23,
-	EBootflowError__SelectUserStateFailedToObtainValidLocalPlayer = 24,
-	None12                         = 25,
-	EBootflowError__SelectUserStateUserDidNotSignIn = 26,
-	None13                         = 27,
-	EBootflowError__ServerMatchmakingStateSandboxDisabled = 28,
-	None14                         = 29,
-	EBootflowError__ServerMatchmakingStateNoServersAvailable = 30,
-	None15                         = 31,
-	EBootflowError__ServerMatchmakingStateUnexpectedResult = 32,
-	None16                         = 33,
-	EBootflowError__SetupCrewSessionStateFailedToCreateCrewSession = 34,
-	None17                         = 35,
-	EBootflowError__CrewSessionHandlerJoinFailedAsCrewDoesntExist = 36,
-	None18                         = 37,
-	EBootflowError__PirateSelectionStateUnableToRetrievePirates = 38,
-	None19                         = 39,
-	EBootflowError__InviteUnableToRetrieveSession = 40,
-	None20                         = 41,
-	EBootflowError__TestFailed     = 42,
-	None21                         = 43,
-	DrawDebugFrustum               = 44,
-	RotatorProperty                = 45,
-	DrawDebugPlane                 = 46,
-	TextProperty                   = 47,
-	ClassProperty                  = 48,
-	BaseProfileName                = 49,
-	BeginDebugFrameSave            = 50,
-	CreateDataModelFromStruct      = 51,
-	DebugSaveNextFrame             = 52,
-	EndDebugFrameSave              = 53,
-	HasRequestedView               = 54
+	IntProperty                    = 2,
+	EBootflowError__AthenaGameInstanceActiveConnectionToServerTimedOut = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EBootflowError__AthenaGameInstanceGameVersionMismatch = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	EBootflowError__AthenaGameInstanceRPCSpamDetected = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	EBootflowError__ClientBootflowPrimaryPlayerSignedOut = 12,
+	None04                         = 13,
+	LazyObjectProperty             = 14,
+	EBootflowError__ClientEvicted  = 15,
+	None05                         = 16,
+	UInt16Property                 = 17,
+	EBootflowError__ClientInGameStateStopMatchmakingFailed = 18,
+	None06                         = 19,
+	Int8Property                   = 20,
+	EBootflowError__CrewMatchmakingStateUnableToObtainLocalPlayerInterface = 21,
+	None07                         = 22,
+	Core                           = 23,
+	EBootflowError__CrewSessionStateFailedToCreateCrewSession = 24,
+	None08                         = 25,
+	EBootflowError__EngageStateInviteHadInvalidControllerId = 26,
+	None09                         = 27,
+	EBootflowError__LoadLevelStateTimeout = 28,
+	None10                         = 29,
+	EBootflowError__LoginTokenExchangeFailedCannotRefreshExpiredToken = 30,
+	None11                         = 31,
+	EBootflowError__SelectUserStateFailedToObtainValidLocalPlayer = 32,
+	None12                         = 33,
+	Cylinder                       = 34,
+	EBootflowError__SelectUserStateUserDidNotSignIn = 35,
+	None13                         = 36,
+	Vector2D                       = 37,
+	EBootflowError__ServerMatchmakingStateSandboxDisabled = 38,
+	None14                         = 39,
+	Name                           = 40,
+	EBootflowError__ServerMatchmakingStateNoServersAvailable = 41,
+	None15                         = 42,
+	Color                          = 43,
+	EBootflowError__ServerMatchmakingStateUnexpectedResult = 44,
+	None16                         = 45,
+	AdvanceFrame                   = 46,
+	EBootflowError__SetupCrewSessionStateFailedToCreateCrewSession = 47,
+	None17                         = 48,
+	Self                           = 49,
+	EBootflowError__CrewSessionHandlerJoinFailedAsCrewDoesntExist = 50,
+	None18                         = 51,
+	EBootflowError__PirateSelectionStateUnableToRetrievePirates = 52,
+	None19                         = 53,
+	EBootflowError__InviteUnableToRetrieveSession = 54,
+	None20                         = 55,
+	EBootflowError__TestFailed     = 56,
+	None21                         = 57,
+	None22                         = 58,
+	None23                         = 59,
+	None24                         = 60,
+	None25                         = 61,
+	None26                         = 62,
+	None27                         = 63,
+	None28                         = 64,
+	AllAnimationsLoaded            = 65,
+	GetCurrentShipRegion           = 66,
+	GetFirstPersonMeshOffset       = 67,
+	GetIsDigitallyWalking          = 68,
+	GetLocalPlayerWorldRegionName  = 69
 };
 
 

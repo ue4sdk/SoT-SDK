@@ -51,6 +51,7 @@ public:
 	void TriggerAIShipEncounter();
 	void ToggleVideprinter(const class FString& Id);
 	void ToggleThirdPerson();
+	void ToggleNearestSuperheatedWater();
 	void ToggleNearestLava();
 	void ToggleFastShipControls();
 	void ToggleDrawShipSpeed();

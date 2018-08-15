@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bp_aipartsservice_structs.hpp"
+#include "SoT_BP_AIPartsService_structs.hpp"
 
 namespace SDK
 {
@@ -14,7 +14,7 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass bp_aipartsservice.BP_AIPartsService_C
+// BlueprintGeneratedClass BP_AIPartsService.BP_AIPartsService_C
 // 0x0000 (0x0040 - 0x0040)
 class UBP_AIPartsService_C : public UAIPartsService
 {
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass bp_aipartsservice.BP_AIPartsService_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_AIPartsService.BP_AIPartsService_C");
 		return ptr;
 	}
 

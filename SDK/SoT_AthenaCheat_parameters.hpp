@@ -135,6 +135,11 @@ struct UAthenaCheatManager_ToggleThirdPerson_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.ToggleNearestSuperheatedWater
+struct UAthenaCheatManager_ToggleNearestSuperheatedWater_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ToggleNearestLava
 struct UAthenaCheatManager_ToggleNearestLava_Params
 {

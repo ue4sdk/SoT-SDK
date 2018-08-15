@@ -435,6 +435,24 @@ void UAthenaCheatManager::ToggleThirdPerson()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.ToggleNearestSuperheatedWater
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ToggleNearestSuperheatedWater()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ToggleNearestSuperheatedWater");
+
+	UAthenaCheatManager_ToggleNearestSuperheatedWater_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ToggleNearestLava
 // (Final, Exec, Native, Public)
 
