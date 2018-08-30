@@ -14,6 +14,23 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AIShips.AIShipBattlesDataAsset
+// 0x0020 (0x0048 - 0x0028)
+class UAIShipBattlesDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FAIShipBattleParams>                 Battles;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FText>                               SkellyCrewNames;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.AIShipBattlesDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class AIShips.AIShipObstacleServiceInterface
 // 0x0000 (0x0028 - 0x0028)
 class UAIShipObstacleServiceInterface : public UInterface
@@ -97,21 +114,20 @@ public:
 
 
 // Class AIShips.AIShipContextDescDataAsset
-// 0x0050 (0x0078 - 0x0028)
+// 0x0090 (0x00B8 - 0x0028)
 class UAIShipContextDescDataAsset : public UDataAsset
 {
 public:
-	class UAthenaAIShipControllerParamsDataAsset*      ControllerParams;                                         // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsFinalShip;                                              // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	TEnumAsByte<EAIShipType>                           ShipType;                                                 // 0x0028(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	class UAthenaAIShipControllerParamsDataAsset*      ControllerParams;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FAIShipEncounterParamsSpawnerData>   Spawners;                                                 // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	bool                                               OverrideRepairTime;                                       // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
-	float                                              RepairTimeOverrideValue;                                  // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               OverrideLeakAmounts;                                      // 0x0050(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
-	TArray<float>                                      LeakAmountOverrideValues;                                 // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FAIShipContextDescDamageParams              DamageParams;                                             // 0x0048(0x0020) (Edit, DisableEditOnInstance)
 	struct FAIShipSailData                             SailsCustomisation;                                       // 0x0068(0x0010) (Edit, DisableEditOnInstance)
+	struct FColor                                      SailColour;                                               // 0x0078(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	struct FAIShipCrewFormType                         FormType;                                                 // 0x0080(0x0020) (Transient)
+	struct FAIShipCrewAmmoType                         AmmoType;                                                 // 0x00A0(0x0018) (Transient)
 
 	static UClass* StaticClass()
 	{
@@ -129,28 +145,29 @@ class UAIShipContextParamsDataAsset : public UDataAsset
 public:
 	float                                              TopDeckPlayerTrackerRadius;                               // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TimeSpentEmotingOnInitialSpawn;                           // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              IntervalBetweenRepairDamageAssignments;                   // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              IntervalBetweenUseCannonAssignments;                      // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DistForMinXYAIInteractableUtility;                        // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DistForMaxXYAIInteractableUtility;                        // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinXYAIInteractableUtility;                               // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxXYAIInteractableUtility;                               // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DistForMinZAIInteractableUtility;                         // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DistForMaxZAIInteractableUtility;                         // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinZAIInteractableUtility;                                // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxZAIInteractableUtility;                                // 0x0054(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinInactiveRepairSpawnDelay;                              // 0x0058(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxInactiveRepairSpawnDelay;                              // 0x005C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SpawnSfxDistance;                                         // 0x0060(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SinkSfxDistance;                                          // 0x0064(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MinCannonAttackersWhenBoarded;                            // 0x0068(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              StuckCheckInterval;                                       // 0x006C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              StuckCheckDistance;                                       // 0x0070(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxDistanceFromEncounter;                                 // 0x0074(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShipFlippedAngle;                                         // 0x0078(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SecondsUntilKillAIAfterShipDefeated;                      // 0x007C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SecondsDelayForAIShipDefeatedNotification;                // 0x0080(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	bool                                               ForceAIToAlwaysSpawn;                                     // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
+	float                                              IntervalBetweenRepairDamageAssignments;                   // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              IntervalBetweenUseCannonAssignments;                      // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMinXYAIInteractableUtility;                        // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMaxXYAIInteractableUtility;                        // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinXYAIInteractableUtility;                               // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxXYAIInteractableUtility;                               // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMinZAIInteractableUtility;                         // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DistForMaxZAIInteractableUtility;                         // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinZAIInteractableUtility;                                // 0x0054(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxZAIInteractableUtility;                                // 0x0058(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinInactiveRepairSpawnDelay;                              // 0x005C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxInactiveRepairSpawnDelay;                              // 0x0060(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpawnSfxDistance;                                         // 0x0064(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SinkSfxDistance;                                          // 0x0068(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MinCannonAttackersWhenBoarded;                            // 0x006C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              StuckCheckInterval;                                       // 0x0070(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              StuckCheckDistance;                                       // 0x0074(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxDistanceFromEncounter;                                 // 0x0078(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShipFlippedAngle;                                         // 0x007C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SecondsUntilKillAIAfterShipDefeated;                      // 0x0080(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SecondsDelayForAIShipDefeatedNotification;                // 0x0084(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -178,6 +195,25 @@ public:
 };
 
 
+// Class AIShips.AIShipEncounterDesc
+// 0x0020 (0x0048 - 0x0028)
+class UAIShipEncounterDesc : public UDataAsset
+{
+public:
+	struct FVector2D                                   Location;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Radius;                                                   // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	TArray<struct FAIShipEncounterWave>                Waves;                                                    // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.AIShipEncounterDesc");
+		return ptr;
+	}
+
+};
+
+
 // Class AIShips.AIShipEncounterSpawnParamsDataAsset
 // 0x00B8 (0x00E0 - 0x0028)
 class UAIShipEncounterSpawnParamsDataAsset : public UDataAsset
@@ -199,8 +235,26 @@ public:
 };
 
 
+// Class AIShips.ShipProxyPawn
+// 0x0038 (0x0528 - 0x04F0)
+class AShipProxyPawn : public APawn
+{
+public:
+	class AShip*                                       Ship;                                                     // 0x04F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AShip*                                       SpawnTargetShip;                                          // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0500(0x0028) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AIShips.ShipProxyPawn");
+		return ptr;
+	}
+
+};
+
+
 // Class AIShips.AIShipEncounterParamsDataAsset
-// 0x0070 (0x0098 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UAIShipEncounterParamsDataAsset : public UDataAsset
 {
 public:
@@ -209,12 +263,15 @@ public:
 	class UAIShipContextDescDataAsset*                 DefaultContextDesc;                                       // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      ShipPawnClass;                                            // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UBuoyantObjectSpawnProfileDataAsset*         BuoyantObjectSpawnProfileAsset;                           // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FText                                       EncounterCompleteText;                                    // 0x0050(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0050(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	int                                                SecondsUntilEncounterCanReactivate;                       // 0x0088(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                SecondsUntilAllShipsSubmergeAfterLastCrewLeftEncounterZone;// 0x008C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OuterRadiusMultiplier;                                    // 0x0090(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              InitialEncounterEntryDelay;                               // 0x0094(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      EventSignalAssetClass;                                    // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EventSignalHeight;                                        // 0x0058(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	struct FText                                       EncounterCompleteText;                                    // 0x0060(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x005C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	int                                                SecondsUntilEncounterCanReactivate;                       // 0x0098(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              OuterRadiusMultiplier;                                    // 0x009C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InitialEncounterEntryDelay;                               // 0x00A0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -226,35 +283,15 @@ public:
 
 
 // Class AIShips.AIShipObstacleService
-// 0x0060 (0x04E0 - 0x0480)
+// 0x0060 (0x04F0 - 0x0490)
 class AAIShipObstacleService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0480(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0490(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AIShips.AIShipObstacleService");
-		return ptr;
-	}
-
-};
-
-
-// Class AIShips.AIShipProxy
-// 0x0050 (0x04D0 - 0x0480)
-class AAIShipProxy : public AActor
-{
-public:
-	class UShipDescAsset*                              ShipDesc;                                                 // 0x0480(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAIShipContextParamsDataAsset*               ContextParams;                                            // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAIShipContextDescDataAsset*                 ContextDesc;                                              // 0x0490(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UShipFactory*                                ShipFactory;                                              // 0x0498(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x30];                                      // 0x04A0(0x0030) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipProxy");
 		return ptr;
 	}
 
@@ -277,14 +314,13 @@ public:
 
 
 // Class AIShips.AIShipService
-// 0x0090 (0x0510 - 0x0480)
+// 0x0120 (0x05B0 - 0x0490)
 class AAIShipService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
-	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UCursedSailsCampaignDataAsset*               CampaignParams;                                           // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x78];                                      // 0x0498(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
+	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x110];                                     // 0x04A0(0x0110) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -296,7 +332,7 @@ public:
 
 
 // Class AIShips.AIShipServiceDataAsset
-// 0x0018 (0x0040 - 0x0028)
+// 0x0128 (0x0150 - 0x0028)
 class UAIShipServiceDataAsset : public UDataAsset
 {
 public:
@@ -304,6 +340,14 @@ public:
 	struct FIntPoint                                   ObstacleBucketDimensions;                                 // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ShipwreckObstacleRadius;                                  // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	struct FAIShipEncounterDescGenerationParams        EncounterGenerationParams;                                // 0x0040(0x0070) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimerBattleFirstRegenInterval;                            // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimerBattleRegenInterval;                                 // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
+	float                                              TimerBattleFinderThrottle;                                // 0x0110(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           TimerBattleRetryRegenInterval;                            // 0x0118(0x0030) (Edit, DisableEditOnInstance)
+	float                                              TimerBattleMinActivationDistanceFromPlayers;              // 0x0148(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x014C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -315,11 +359,11 @@ public:
 
 
 // Class AIShips.AIShipTelemetryComponent
-// 0x0040 (0x0110 - 0x00D0)
+// 0x0040 (0x0118 - 0x00D8)
 class UAIShipTelemetryComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x00D0(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x00D8(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -331,11 +375,13 @@ public:
 
 
 // Class AIShips.AthenaAIShipController
-// 0x0008 (0x0618 - 0x0610)
+// 0x0040 (0x0660 - 0x0620)
 class AAthenaAIShipController : public AAthenaAIControllerBase
 {
 public:
-	class UBehaviorTree*                               BTAsset;                                                  // 0x0610(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBehaviorTree*                               BTAsset;                                                  // 0x0620(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0628(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0630(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -463,24 +509,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AIShips.CursedSailsCampaignDataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class AIShips.ShipProxyPawn
-// 0x0038 (0x0518 - 0x04E0)
-class AShipProxyPawn : public APawn
-{
-public:
-	class AShip*                                       Ship;                                                     // 0x04E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AShip*                                       SpawnTargetShip;                                          // 0x04E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x04F0(0x0028) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AIShips.ShipProxyPawn");
 		return ptr;
 	}
 

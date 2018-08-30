@@ -25,11 +25,12 @@ struct FFeatureToggledStatusResponseList
 };
 
 // ScriptStruct StatusEffects.ActiveStatusEffect
-// 0x0020
+// 0x0030
 struct FActiveStatusEffect
 {
 	TArray<class UClass*>                              SourceStatus;                                             // 0x0000(0x0010) (ZeroConstructor)
-	TArray<class UStatusResponse*>                     Responses;                                                // 0x0010(0x0010) (ZeroConstructor)
+	TArray<class UStatusResponse*>                     ResponseTemplates;                                        // 0x0010(0x0010) (ZeroConstructor)
+	TArray<class UStatusResponse*>                     InstancedResponses;                                       // 0x0020(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 };
 
 // ScriptStruct StatusEffects.Status

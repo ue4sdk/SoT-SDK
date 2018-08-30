@@ -378,6 +378,24 @@ void UAthenaCheatManager::TriggerControllerConnectionChange(bool IsConnect, int 
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.TriggerAIShipTimerBattle
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::TriggerAIShipTimerBattle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.TriggerAIShipTimerBattle");
+
+	UAthenaCheatManager_TriggerAIShipTimerBattle_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.TriggerAIShipEncounter
 // (Final, Exec, Native, Public)
 
@@ -1398,31 +1416,6 @@ void UAthenaCheatManager::SpawnSkeletonAtNearestAISpawnPoint()
 }
 
 
-// Function AthenaCheat.AthenaCheatManager.SpawnShipwreck
-// (Final, Exec, Native, Public)
-// Parameters:
-// float                          SpawnLocationX                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          SpawnLocationY                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          SpawnLocationZ                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaCheatManager::SpawnShipwreck(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnShipwreck");
-
-	UAthenaCheatManager_SpawnShipwreck_Params params;
-	params.SpawnLocationX = SpawnLocationX;
-	params.SpawnLocationY = SpawnLocationY;
-	params.SpawnLocationZ = SpawnLocationZ;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function AthenaCheat.AthenaCheatManager.SpawnShipInFrontOfNearestAIInteractable
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -1718,6 +1711,27 @@ void UAthenaCheatManager::SpawnCursedCannonball(const class FString& CannonballT
 
 	UAthenaCheatManager_SpawnCursedCannonball_Params params;
 	params.CannonballTypeString = CannonballTypeString;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SpawnCargoRunCrate
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SpawnCargoRunCrateString       (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnCargoRunCrate");
+
+	UAthenaCheatManager_SpawnCargoRunCrate_Params params;
+	params.SpawnCargoRunCrateString = SpawnCargoRunCrateString;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -2058,6 +2072,70 @@ void UAthenaCheatManager::ShowAllianceStatus(const class FString& CrewId)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.ShipwrecksSpawnOne
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          SpawnLocationX                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          SpawnLocationY                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          SpawnLocationZ                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::ShipwrecksSpawnOne(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ShipwrecksSpawnOne");
+
+	UAthenaCheatManager_ShipwrecksSpawnOne_Params params;
+	params.SpawnLocationX = SpawnLocationX;
+	params.SpawnLocationY = SpawnLocationY;
+	params.SpawnLocationZ = SpawnLocationZ;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ShipwrecksRegen
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ShipwrecksRegen()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ShipwrecksRegen");
+
+	UAthenaCheatManager_ShipwrecksRegen_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ShipwrecksDrawDebugBeacons
+// (Final, Exec, Native, Public)
+// Parameters:
+// bool                           bEnabled                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::ShipwrecksDrawDebugBeacons(bool bEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ShipwrecksDrawDebugBeacons");
+
+	UAthenaCheatManager_ShipwrecksDrawDebugBeacons_Params params;
+	params.bEnabled = bEnabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ShipUpdateMassProperies
 // (Final, Exec, Native, Public)
 
@@ -2312,6 +2390,27 @@ void UAthenaCheatManager::SetShipYaw(float Yaw)
 
 	UAthenaCheatManager_SetShipYaw_Params params;
 	params.Yaw = Yaw;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetShipRoll
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          Roll                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetShipRoll(float Roll)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetShipRoll");
+
+	UAthenaCheatManager_SetShipRoll_Params params;
+	params.Roll = Roll;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -3819,24 +3918,6 @@ void UAthenaCheatManager::God()
 }
 
 
-// Function AthenaCheat.AthenaCheatManager.GenerateShipwrecks
-// (Final, Exec, Native, Public)
-
-void UAthenaCheatManager::GenerateShipwrecks()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.GenerateShipwrecks");
-
-	UAthenaCheatManager_GenerateShipwrecks_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function AthenaCheat.AthenaCheatManager.ForceOpenShop
 // (Final, Exec, Native, Public)
 
@@ -4212,27 +4293,6 @@ void UAthenaCheatManager::DrawTemporaryLandmarkDebug(bool Enabled)
 
 	UAthenaCheatManager_DrawTemporaryLandmarkDebug_Params params;
 	params.Enabled = Enabled;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function AthenaCheat.AthenaCheatManager.DrawShipwreckDebugBeacons
-// (Final, Exec, Native, Public)
-// Parameters:
-// bool                           bEnabled                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaCheatManager::DrawShipwreckDebugBeacons(bool bEnabled)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.DrawShipwreckDebugBeacons");
-
-	UAthenaCheatManager_DrawShipwreckDebugBeacons_Params params;
-	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5111,6 +5171,24 @@ void UAthenaCheatManager::CheckLandmarkRelativeToIslandCalculation()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.CapsizeShip
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::CapsizeShip()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.CapsizeShip");
+
+	UAthenaCheatManager_CapsizeShip_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.CancelVoyage
 // (Final, Exec, Native, Public)
 
@@ -5137,6 +5215,24 @@ void UAthenaCheatManager::CancelAllCrewVoyages()
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.CancelAllCrewVoyages");
 
 	UAthenaCheatManager_CancelAllCrewVoyages_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.CancelActiveAIShipEncounters
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::CancelActiveAIShipEncounters()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.CancelActiveAIShipEncounters");
+
+	UAthenaCheatManager_CancelActiveAIShipEncounters_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5219,6 +5315,48 @@ void UAthenaCheatManager::ApplyDamageToAllDamageZones(float Damage)
 
 	UAthenaCheatManager_ApplyDamageToAllDamageZones_Params params;
 	params.Damage = Damage;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ApplyCursedCannonballStatusToShip
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  CannonballTypeString           (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ApplyCursedCannonballStatusToShip");
+
+	UAthenaCheatManager_ApplyCursedCannonballStatusToShip_Params params;
+	params.CannonballTypeString = CannonballTypeString;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ApplyCursedCannonballStatusToPlayer
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  CannonballTypeString           (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ApplyCursedCannonballStatusToPlayer");
+
+	UAthenaCheatManager_ApplyCursedCannonballStatusToPlayer_Params params;
+	params.CannonballTypeString = CannonballTypeString;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

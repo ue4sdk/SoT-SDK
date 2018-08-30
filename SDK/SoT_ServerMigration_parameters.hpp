@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SwitchNetworkClusterForActor
+struct UNetworkTestingBlueprintFunctionLibrary_SwitchNetworkClusterForActor_Params
+{
+	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      NewOwner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SetConnectionLastReceiveTime
 struct UNetworkTestingBlueprintFunctionLibrary_SetConnectionLastReceiveTime_Params
 {

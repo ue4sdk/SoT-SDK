@@ -64,8 +64,7 @@ enum class ELandscapeLayerBlendType : uint8_t
 {
 	LB_WeightBlend                 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EParticleKey__Active           = 3
+	EParticleKey__Active           = 2
 };
 
 
@@ -75,8 +74,7 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_None                      = 0,
 	None                           = 1,
 	LCCT_WeightMapUV               = 2,
-	None01                         = 3,
-	MSKI_Auto                      = 4
+	None01                         = 3
 };
 
 

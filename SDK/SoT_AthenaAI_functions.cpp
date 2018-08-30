@@ -800,15 +800,17 @@ int UAIPerPlayerSpawner::GetNumOfPlayers()
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Target                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           CheckYaw                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                OutAimConfig                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Target, struct FRotator* OutAimConfig)
+bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Target, bool CheckYaw, struct FRotator* OutAimConfig)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget");
 
 	UAITargetWeaponInterface_FindAimConfigToHitTarget_Params params;
 	params.Target = Target;
+	params.CheckYaw = CheckYaw;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

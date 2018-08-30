@@ -75,29 +75,6 @@ void UActionStateMachineComponent::OnNetOwnershipChanged()
 }
 
 
-// Function ActionStateMachine.ActionStateMachineComponent.Multicast_UpdateEpoch
-// (Net, NetReliable, Native, Event, NetMulticast, Protected)
-// Parameters:
-// TEnumAsByte<EActionStateMachineTrackId> InTrackId                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FActionStateChangeRequestId InEpochId                      (ConstParm, Parm)
-
-void UActionStateMachineComponent::Multicast_UpdateEpoch(TEnumAsByte<EActionStateMachineTrackId> InTrackId, const struct FActionStateChangeRequestId& InEpochId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_UpdateEpoch");
-
-	UActionStateMachineComponent_Multicast_UpdateEpoch_Params params;
-	params.InTrackId = InTrackId;
-	params.InEpochId = InEpochId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushSerialisableData
 // (Net, NetReliable, Native, Event, NetMulticast, Protected)
 // Parameters:

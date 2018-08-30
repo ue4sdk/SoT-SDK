@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Skin_Col_White_05_Desc_classes.hpp"
+#include "SoT_BP_skin_col_white_05_Desc_classes.hpp"
 
 namespace SDK
 {

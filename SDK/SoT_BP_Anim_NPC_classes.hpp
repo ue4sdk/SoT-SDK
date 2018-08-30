@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_NPC.BP_Anim_NPC_C
-// 0x0F34 (0x13A4 - 0x0470)
+// 0x103D (0x14AD - 0x0470)
 class UBP_Anim_NPC_C : public UNPCAnimInstance
 {
 public:
@@ -63,18 +63,21 @@ public:
 	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_B01736E249D02A7A50013BA31AE82AEC;// 0x11D0(0x00B0)
 	struct FAnimNode_Slot                              AnimGraphNode_Slot_FF79273E485B4C8A75CFCDB0E540C69E;      // 0x1280(0x0060)
 	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_C348971345D740C3F82C24BFD13DDA32;// 0x12E0(0x0058)
-	float                                              IKAlpha;                                                  // 0x1338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                IdleVariant;                                              // 0x133C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UAnimSequence*>                       IdleVariantAnims;                                         // 0x1340(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UAnimSequence*>                       InactiveVariantAnims;                                     // 0x1350(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                InactiveVariant;                                          // 0x1360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                InteractVariant;                                          // 0x1364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UAnimSequence*>                       InteractVariantAnims;                                     // 0x1368(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UAnimSequence*>                       IntoIdleVariantAnims;                                     // 0x1378(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UAnimSequence*>                       OutOfIdleVariantAnims;                                    // 0x1388(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               LookAtIsOn;                                               // 0x1398(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1399(0x0003) MISSED OFFSET
-	struct FVector2D                                   LookAtAngleClamp;                                         // 0x139C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_3605DB2347D87DAB07D71689DAED9555;// 0x1338(0x00B0)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_703687174F6C196F2901F8BAA40C82DD;// 0x13E8(0x0058)
+	float                                              IKAlpha;                                                  // 0x1440(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                IdleVariant;                                              // 0x1444(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UAnimSequence*>                       IdleVariantAnims;                                         // 0x1448(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UAnimSequence*>                       InactiveVariantAnims;                                     // 0x1458(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                InactiveVariant;                                          // 0x1468(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                InteractVariant;                                          // 0x146C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UAnimSequence*>                       InteractVariantAnims;                                     // 0x1470(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UAnimSequence*>                       IntoIdleVariantAnims;                                     // 0x1480(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UAnimSequence*>                       OutOfIdleVariantAnims;                                    // 0x1490(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               LookAtIsOn;                                               // 0x14A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x14A1(0x0003) MISSED OFFSET
+	struct FVector2D                                   LookAtAngleClamp;                                         // 0x14A4(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               AnimgraphStarted;                                         // 0x14AC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -122,6 +125,7 @@ public:
 	void AnimNotify_LH_DetachItem();
 	void AnimNotify_LH_AttachItem();
 	void AnimNotify_RH_AttachItem();
+	void BlueprintInitializeAnimation();
 	void ExecuteUbergraph_BP_Anim_NPC(int EntryPoint);
 };
 

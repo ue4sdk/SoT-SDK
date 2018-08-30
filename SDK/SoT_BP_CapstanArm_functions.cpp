@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace");
+
+	ABP_CapstanArm_C_GetLookAtPosBasisSpace_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:

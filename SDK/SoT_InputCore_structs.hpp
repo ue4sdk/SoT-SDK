@@ -37,8 +37,7 @@ enum class ETouchType : uint8_t
 	ETouchType__Began              = 0,
 	None                           = 1,
 	ETouchType__NumTypes           = 2,
-	None01                         = 3,
-	EFontHinting__Default          = 4
+	None01                         = 3
 };
 
 
@@ -56,8 +55,7 @@ enum class EConsoleForGamepadLabels : uint8_t
 enum class EControllerHand : uint8_t
 {
 	EControllerHand__Left          = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

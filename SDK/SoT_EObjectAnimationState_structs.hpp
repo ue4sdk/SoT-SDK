@@ -25,10 +25,13 @@ enum class EObjectAnimationState : uint8_t
 	None02                         = 5,
 	EObjectAnimationState__NewEnumerator12 = 6,
 	None03                         = 7,
-	EObjectAnimationState__NewEnumerator16 = 8,
-	None04                         = 9,
-	EObjectAnimationState__NewEnumerator20 = 10,
-	None05                         = 11
+	TextProperty                   = 8,
+	EObjectAnimationState__NewEnumerator16 = 9,
+	None04                         = 10,
+	LazyObjectProperty             = 11,
+	EObjectAnimationState__NewEnumerator20 = 12,
+	None05                         = 13,
+	UInt16Property                 = 14
 };
 
 

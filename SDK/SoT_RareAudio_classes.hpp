@@ -19,9 +19,9 @@ namespace SDK
 class UWwiseEmitterComponent : public USceneComponent
 {
 public:
-	struct FWwiseEmitter                               Emitter;                                                  // 0x02A0(0x0020) (BlueprintVisible, BlueprintReadOnly)
-	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02C8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
+	struct FWwiseEmitter                               Emitter;                                                  // 0x02A8(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33,11 +33,11 @@ public:
 
 
 // Class RareAudio.AnimNotifyWwiseEmitterComponent
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0030 (0x0300 - 0x02D0)
 class UAnimNotifyWwiseEmitterComponent : public UWwiseEmitterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x02D0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x02D0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -127,6 +127,21 @@ public:
 };
 
 
+// Class RareAudio.WwiseEmitterInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWwiseEmitterInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class RareAudio.WwiseEmitterInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class RareAudio.WwiseObjectPoolWrapper
 // 0x0030 (0x0080 - 0x0050)
 class UWwiseObjectPoolWrapper : public UObjectPoolWrapper
@@ -147,11 +162,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x0488 - 0x0480)
+// 0x0008 (0x0498 - 0x0490)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0480(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -167,11 +182,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMapComponent
-// 0x0010 (0x00E0 - 0x00D0)
+// 0x0010 (0x00E8 - 0x00D8)
 class UAudioEventToComponentMapComponent : public UActorComponent
 {
 public:
-	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x00D0(0x0010) (ZeroConstructor)
+	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x00D8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -203,7 +218,7 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0490 - 0x0490)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -318,11 +333,11 @@ public:
 
 
 // Class RareAudio.AudioSpaceTrackerComponent
-// 0x0010 (0x00E0 - 0x00D0)
+// 0x0010 (0x00E8 - 0x00D8)
 class UAudioSpaceTrackerComponent : public UActorComponent
 {
 public:
-	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x00D0(0x0010) (ExportObject, ZeroConstructor, Transient)
+	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x00D8(0x0010) (ExportObject, ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -457,7 +472,7 @@ public:
 
 
 // Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0490 - 0x0490)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:

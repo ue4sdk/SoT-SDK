@@ -678,6 +678,23 @@ void UBP_Anim_NPC_C::AnimNotify_RH_AttachItem()
 }
 
 
+// Function BP_Anim_NPC.BP_Anim_NPC_C.BlueprintInitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UBP_Anim_NPC_C::BlueprintInitializeAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_NPC.BP_Anim_NPC_C.BlueprintInitializeAnimation");
+
+	UBP_Anim_NPC_C_BlueprintInitializeAnimation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Anim_NPC.BP_Anim_NPC_C.ExecuteUbergraph_BP_Anim_NPC
 // (HasDefaults)
 // Parameters:

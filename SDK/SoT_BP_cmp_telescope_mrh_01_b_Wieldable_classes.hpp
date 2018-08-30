@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_telescope_mrh_01_b_Wieldable.BP_cmp_telescope_mrh_01_b_Wieldable_C
-// 0x0000 (0x0890 - 0x0890)
+// 0x0000 (0x08A0 - 0x08A0)
 class ABP_cmp_telescope_mrh_01_b_Wieldable_C : public ABP_Spyglass_C
 {
 public:

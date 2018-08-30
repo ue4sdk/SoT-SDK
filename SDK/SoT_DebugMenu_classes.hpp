@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class DebugMenu.DebugMenuComponent
-// 0x0048 (0x0118 - 0x00D0)
+// 0x0048 (0x0120 - 0x00D8)
 class UDebugMenuComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
-	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00D8(0x0020) MISSED OFFSET
+	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0100(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -67,11 +67,11 @@ public:
 
 
 // Class DebugMenu.DebugMenu
-// 0x0060 (0x04E0 - 0x0480)
+// 0x0060 (0x04F0 - 0x0490)
 class ADebugMenu : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0480(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0490(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -83,11 +83,11 @@ public:
 
 
 // Class DebugMenu.DebugMenuComponentMock
-// 0x0008 (0x0120 - 0x0118)
+// 0x0008 (0x0128 - 0x0120)
 class UDebugMenuComponentMock : public UDebugMenuComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0120(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass Speaking_Trumpet_ItemCategory.Speaking_Trumpet_ItemCategory_C
 // 0x0000 (0x0080 - 0x0080)
-class USpeaking_Trumpet_ItemCategory_C : public UItemCategory
+class USpeaking_Trumpet_ItemCategory_C : public USpeakingTrumpetItemCategory
 {
 public:
 

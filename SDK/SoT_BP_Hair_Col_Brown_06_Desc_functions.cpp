@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Hair_Col_Brown_06_Desc_parameters.hpp"
+#include "SoT_BP_hair_col_brown_06_Desc_parameters.hpp"
 
 namespace SDK
 {

@@ -72,12 +72,12 @@ public:
 
 
 // Class AthenaObjectLinkage.LinkerComponent
-// 0x00D8 (0x01A8 - 0x00D0)
+// 0x00D8 (0x01B0 - 0x00D8)
 class ULinkerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xC8];                                      // 0x00D0(0x00C8) MISSED OFFSET
-	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                          // 0x0198(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x00D8(0x00C8) MISSED OFFSET
+	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                          // 0x01A0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

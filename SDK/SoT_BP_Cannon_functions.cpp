@@ -34,7 +34,7 @@ struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 
 
 // Function BP_Cannon.BP_Cannon_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Cannon_C::UserConstructionScript()
 {

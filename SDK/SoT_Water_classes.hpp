@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Water.AthenaFFTWater
-// 0x0028 (0x04F0 - 0x04C8)
+// 0x0028 (0x0500 - 0x04D8)
 class AAthenaFFTWater : public AFFTWater
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x04C8(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x04D8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -46,11 +46,11 @@ public:
 
 
 // Class Water.AthenaWaterEmissionVolume
-// 0x0008 (0x0490 - 0x0488)
+// 0x0008 (0x04A0 - 0x0498)
 class AAthenaWaterEmissionVolume : public AWaterEmissionVolume
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0488(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -123,15 +123,15 @@ public:
 
 
 // Class Water.FFTWaterService
-// 0x0078 (0x04F8 - 0x0480)
+// 0x0078 (0x0508 - 0x0490)
 class AFFTWaterService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0480(0x0010) MISSED OFFSET
-	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x0490(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x0498(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x04A0(0x0050) MISSED OFFSET
-	double                                             ReplicatedServerCreationTime;                             // 0x04F0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
+	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x04A0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x04A8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x04B0(0x0050) MISSED OFFSET
+	double                                             ReplicatedServerCreationTime;                             // 0x0500(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -201,11 +201,11 @@ public:
 
 
 // Class Water.FFTWaterQueryTestActor
-// 0x0008 (0x0488 - 0x0480)
+// 0x0008 (0x0498 - 0x0490)
 class AFFTWaterQueryTestActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -217,11 +217,11 @@ public:
 
 
 // Class Water.FFTWaterPerformanceCountService
-// 0x0008 (0x0500 - 0x04F8)
+// 0x0008 (0x0510 - 0x0508)
 class AFFTWaterPerformanceCountService : public AFFTWaterService
 {
 public:
-	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x04F8(0x0008)
+	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0508(0x0008)
 
 	static UClass* StaticClass()
 	{
@@ -236,12 +236,12 @@ public:
 
 
 // Class Water.FFTWaterServiceFixedWaterHeight
-// 0x0008 (0x0500 - 0x04F8)
+// 0x0008 (0x0510 - 0x0508)
 class AFFTWaterServiceFixedWaterHeight : public AFFTWaterService
 {
 public:
-	float                                              RequiredWaterHeight;                                      // 0x04F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04FC(0x0004) MISSED OFFSET
+	float                                              RequiredWaterHeight;                                      // 0x0508(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x050C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -304,11 +304,14 @@ public:
 
 
 // Class Water.MockWaterPlaneComponent
-// 0x0050 (0x0120 - 0x00D0)
+// 0x0058 (0x0130 - 0x00D8)
 class UMockWaterPlaneComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00D0(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00D8(0x0018) MISSED OFFSET
+	struct FWaterSimPlane                              GetWaterPlaneSetPlane;                                    // 0x00F0(0x0030)
+	class UBaseWaterComponent*                         EnterWaterPlaneComponent;                                 // 0x0120(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         LeaveWaterPlaneComponent;                                 // 0x0128(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -365,12 +368,12 @@ public:
 
 
 // Class Water.TestBaseWaterActor
-// 0x0010 (0x0490 - 0x0480)
+// 0x0010 (0x04A0 - 0x0490)
 class ATestBaseWaterActor : public AActor
 {
 public:
-	class USceneComponent*                             SceneRootComponent;                                       // 0x0480(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x0488(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             SceneRootComponent;                                       // 0x0490(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x0498(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -453,7 +456,7 @@ public:
 
 
 // Class Water.WaterPlaneExclusionComponent
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x00D8 - 0x00D8)
 class UWaterPlaneExclusionComponent : public UActorComponent
 {
 public:

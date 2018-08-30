@@ -115,11 +115,11 @@ public:
 
 
 // Class PositionalVoice.TestVoiceChatEmitter
-// 0x0038 (0x04B8 - 0x0480)
+// 0x0038 (0x04C8 - 0x0490)
 class ATestVoiceChatEmitter : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0480(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0490(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_ChickenCrate.BP_MerchantCrate_ChickenCrate_C
-// 0x0008 (0x0800 - 0x07F8)
+// 0x0008 (0x0810 - 0x0808)
 class ABP_MerchantCrate_ChickenCrate_C : public AMerchantCrate
 {
 public:
-	class UMountpointComponent*                        Mountpoint;                                               // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMountpointComponent*                        Mountpoint;                                               // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -31,7 +31,7 @@ public:
 
 
 // Class TestUtilities.TestActor
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0490 - 0x0490)
 class ATestActor : public AActor
 {
 public:
@@ -46,11 +46,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithCapsule
-// 0x0008 (0x0488 - 0x0480)
+// 0x0008 (0x0498 - 0x0490)
 class ATestActorWithCapsule : public AActor
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x0480(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -62,11 +62,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithObjectMessagingDispatcher
-// 0x00A8 (0x0528 - 0x0480)
+// 0x00A8 (0x0538 - 0x0490)
 class ATestActorWithObjectMessagingDispatcher : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0480(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0490(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -104,6 +104,24 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class TestUtilities.TestPrimitiveComponent
+// 0x0010 (0x05B0 - 0x05A0)
+class UTestPrimitiveComponent : public UPrimitiveComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TestUtilities.TestPrimitiveComponent");
+		return ptr;
+	}
+
+
+	TEnumAsByte<ECollisionChannel> GetCollisionObjectType();
 };
 
 

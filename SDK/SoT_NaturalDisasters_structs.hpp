@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Kraken_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Kraken_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
@@ -41,8 +41,7 @@ enum class EVolcanoState : uint8_t
 {
 	EVolcanoState__Dormant         = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayEffectAttributeCaptureSource__Source = 3
+	EGameplayEffectAttributeCaptureSource__Source = 2
 };
 
 
@@ -75,24 +74,6 @@ struct FPlayerFeedback
 	struct FWeightedProbabilityRangeOfRanges           StaggerStrength;                                          // 0x0050(0x0030) (Edit, DisableEditOnInstance)
 };
 
-// ScriptStruct NaturalDisasters.EarthquakeDistanceThrottling
-// 0x000C
-struct FEarthquakeDistanceThrottling
-{
-	float                                              DistanceInMetres;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxNumber;                                                // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0008(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct NaturalDisasters.EarthquakeSurfaceEffect
-// 0x0018
-struct FEarthquakeSurfaceEffect
-{
-	TEnumAsByte<EPhysicalSurface>                      SurfaceType;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<class UObject*>                             LocalPlayerEffects;                                       // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
 // ScriptStruct NaturalDisasters.GeyserSpawnAngleOption
 // 0x000C
 struct FGeyserSpawnAngleOption
@@ -119,6 +100,24 @@ struct FWeightedVolcanoProjectile
 	struct FWeightedProbabilityRangeOfRanges           RotationRateRoll;                                         // 0x0058(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           RotationRateYaw;                                          // 0x0088(0x0030) (Edit, DisableEditOnInstance)
 	class UWwiseEvent*                                 LaunchAudioPlayEvent;                                     // 0x00B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct NaturalDisasters.VolcanoSetupDataEmbersEntry
+// 0x0010
+struct FVolcanoSetupDataEmbersEntry
+{
+	float                                              MaxDistanceInMetres;                                      // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UObject*                                     Effect;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct NaturalDisasters.VolcanoStateData
+// 0x0008
+struct FVolcanoStateData
+{
+	TEnumAsByte<EVolcanoState>                         State;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              StateDuration;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 }

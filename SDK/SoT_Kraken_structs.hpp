@@ -24,8 +24,7 @@ enum class EKrakenBehaviourType : uint8_t
 {
 	EKrakenBehaviourType__Idle     = 0,
 	None                           = 1,
-	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2,
-	EVoiceChatState__Silent        = 3
+	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2
 };
 
 
@@ -54,8 +53,7 @@ enum class EKrakenDespawnReason : uint8_t
 	EKrakenDespawnReason__Invalid  = 0,
 	None                           = 1,
 	EKrakenDespawnReason__Dismissed = 2,
-	None01                         = 3,
-	AISpawnLocationSearchResult__Incomplete = 4
+	None01                         = 3
 };
 
 
@@ -63,7 +61,9 @@ enum class EKrakenDespawnReason : uint8_t
 enum class EKrakenState : uint8_t
 {
 	EKrakenState__Spawning         = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2,
+	EAIShipType__Normal            = 3
 };
 
 
@@ -72,8 +72,7 @@ enum class EKrakenTentacleBehaviourDamageActions : uint8_t
 {
 	EKrakenTentacleBehaviourDamageActions__StayActive = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGeyserState__Dormant          = 3
+	EAIShipDestructionReason__Defeated = 2
 };
 
 

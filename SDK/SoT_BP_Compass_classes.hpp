@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Compass.BP_Compass_C
-// 0x0000 (0x0838 - 0x0838)
+// 0x0000 (0x0848 - 0x0848)
 class ABP_Compass_C : public ACompass
 {
 public:

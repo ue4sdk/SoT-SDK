@@ -20,7 +20,9 @@ enum class E_Placement_MeshType : uint8_t
 	E_Placement_MeshType__NewEnumerator5 = 0,
 	None                           = 1,
 	E_Placement_MeshType__NewEnumerator3 = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4,
+	NavCollision_X                 = 5
 };
 
 

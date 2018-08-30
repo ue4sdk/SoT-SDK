@@ -113,6 +113,28 @@ void AKrakenService::RequestKrakenWithLocation(const struct FVector& SpawnLocati
 }
 
 
+// Function Kraken.KrakenService.IsServiceInitialized
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AKrakenService::IsServiceInitialized()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.IsServiceInitialized");
+
+	AKrakenService_IsServiceInitialized_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Kraken.KrakenService.IsKrakenActive
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -150,28 +172,6 @@ void AKrakenService::DismissKraken()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Kraken.KrakenService.CanSpawnKraken
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AKrakenService::CanSpawnKraken()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.CanSpawnKraken");
-
-	AKrakenService_CanSpawnKraken_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

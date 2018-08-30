@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -40,8 +40,7 @@ enum class EGameplayAbilityActivationMode : uint8_t
 {
 	EGameplayAbilityActivationMode__Authority = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 3
+	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 2
 };
 
 
@@ -71,7 +70,8 @@ enum class EGameplayCueEvent : uint8_t
 {
 	EGameplayCueEvent__OnActive    = 0,
 	None                           = 1,
-	EGameplayCueEvent__EGameplayCueEvent_MAX = 2
+	EGameplayCueEvent__EGameplayCueEvent_MAX = 2,
+	EGameplayEffectMagnitudeCalculation__ScalableFloat = 3
 };
 
 
@@ -109,7 +109,7 @@ enum class EGameplayTargetingConfirmation : uint8_t
 	EGameplayTargetingConfirmation__Instant = 0,
 	None                           = 1,
 	EGameplayTargetingConfirmation__EGameplayTargetingConfirmation_MAX = 2,
-	EGameplayEffectMagnitudeCalculation__ScalableFloat = 3
+	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 3
 };
 
 
@@ -117,8 +117,7 @@ enum class EGameplayTargetingConfirmation : uint8_t
 enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 {
 	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -126,8 +125,7 @@ enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 enum class EGameplayEffectStackingDurationPolicy : uint8_t
 {
 	EGameplayEffectStackingDurationPolicy__RefreshOnSuccessfulApplication = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -155,7 +153,7 @@ enum class EGameplayEffectMagnitudeCalculation : uint8_t
 	EGameplayEffectMagnitudeCalculation__ScalableFloat = 0,
 	None                           = 1,
 	EGameplayEffectMagnitudeCalculation__EGameplayEffectMagnitudeCalculation_MAX = 2,
-	EGameplayCueEvent__OnActive    = 3
+	EGameplayTargetingConfirmation__Instant = 3
 };
 
 
@@ -181,8 +179,7 @@ enum class EGameplayAbilityNetExecutionPolicy : uint8_t
 {
 	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 0,
 	None                           = 1,
-	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2,
-	EGameplayTargetingConfirmation__Instant = 3
+	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2
 };
 
 
@@ -209,7 +206,8 @@ enum class EAbilityTaskNetSyncType : uint8_t
 {
 	EAbilityTaskNetSyncType__BothWait = 0,
 	None                           = 1,
-	ETargetAbilitySelfSelection__TASS_Permit = 2
+	IntProperty                    = 2,
+	ETargetAbilitySelfSelection__TASS_Permit = 3
 };
 
 

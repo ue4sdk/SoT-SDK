@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AncientChest_Wieldable.BP_AncientChest_Wieldable_C
-// 0x0000 (0x07D8 - 0x07D8)
+// 0x0000 (0x07E8 - 0x07E8)
 class ABP_AncientChest_Wieldable_C : public ABP_TreasureChest_C
 {
 public:

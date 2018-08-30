@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function TestUtilities.TestPrimitiveComponent.GetCollisionObjectType
+struct UTestPrimitiveComponent_GetCollisionObjectType_Params
+{
+	TEnumAsByte<ECollisionChannel>                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

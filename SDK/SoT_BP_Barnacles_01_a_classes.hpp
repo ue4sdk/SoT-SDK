@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Barnacles_01_a.BP_Barnacles_01_a_C
-// 0x0000 (0x049C - 0x049C)
+// 0x0000 (0x04AC - 0x04AC)
 class ABP_Barnacles_01_a_C : public ABP_InstancedStaticMeshes_C
 {
 public:

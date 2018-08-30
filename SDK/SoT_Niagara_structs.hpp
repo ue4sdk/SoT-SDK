@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_MovieScene_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_MovieScene_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,8 @@ enum class ENiagaraDataType : uint8_t
 {
 	ENiagaraDataType__Scalar       = 0,
 	None                           = 1,
-	ENiagaraDataType__ENiagaraDataType_MAX = 2
+	ENiagaraDataType__ENiagaraDataType_MAX = 2,
+	EUnusedAttributeBehaviour__Copy = 3
 };
 
 
@@ -32,7 +33,7 @@ enum class EUnusedAttributeBehaviour : uint8_t
 	EUnusedAttributeBehaviour__Copy = 0,
 	None                           = 1,
 	EUnusedAttributeBehaviour__EUnusedAttributeBehaviour_MAX = 2,
-	ENiagaraDataType__Scalar       = 3
+	EPerformanceCaptureType__None  = 3
 };
 
 

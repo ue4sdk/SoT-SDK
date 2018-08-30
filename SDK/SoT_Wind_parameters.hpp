@@ -97,6 +97,13 @@ struct UWindInterface_GetWindAngle_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Wind.WindInterface.GetTurbulenceForTrees
+struct UWindInterface_GetTurbulenceForTrees_Params
+{
+	struct FVector                                     SamplePosition;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FWindZoneTurbulence                         ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function Wind.WindInterface.GetTurbulence
 struct UWindInterface_GetTurbulence_Params
 {

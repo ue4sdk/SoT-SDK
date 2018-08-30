@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EquipmentChest.BP_EquipmentChest_C
-// 0x0000 (0x05B8 - 0x05B8)
+// 0x0000 (0x05C8 - 0x05C8)
 class ABP_EquipmentChest_C : public APossessionsChest
 {
 public:

@@ -41,10 +41,20 @@ struct ALavaZone_OnRep_Active_Params
 {
 };
 
+// Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone
+struct ASuperheatedWater_OnRep_PlayersInZone_Params
+{
+};
+
 // Function NaturalDisasters.Volcano.OnRep_VolcanoState
 struct AVolcano_OnRep_VolcanoState_Params
 {
-	TEnumAsByte<EVolcanoState>                         OldVolcanoState;                                          // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVolcanoStateData                           OldVolcanoState;                                          // (ConstParm, Parm)
+};
+
+// Function NaturalDisasters.Volcano.OnRep_PlayersInZone
+struct AVolcano_OnRep_PlayersInZone_Params
+{
 };
 
 // Function NaturalDisasters.Volcano.Multicast_FireProjectile

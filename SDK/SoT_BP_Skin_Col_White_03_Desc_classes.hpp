@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Skin_Col_White_03_Desc_structs.hpp"
+#include "SoT_BP_skin_col_white_03_Desc_structs.hpp"
 
 namespace SDK
 {
@@ -14,7 +14,7 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass BP_Skin_Col_White_03_Desc.BP_skin_col_white_03_Desc_C
+// BlueprintGeneratedClass BP_skin_col_white_03_Desc.BP_skin_col_white_03_Desc_C
 // 0x0000 (0x00E0 - 0x00E0)
 class UBP_skin_col_white_03_Desc_C : public UClothingDesc
 {
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Skin_Col_White_03_Desc.BP_skin_col_white_03_Desc_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_skin_col_white_03_Desc.BP_skin_col_white_03_Desc_C");
 		return ptr;
 	}
 

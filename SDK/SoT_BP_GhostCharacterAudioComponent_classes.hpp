@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GhostCharacterAudioComponent.BP_GhostCharacterAudioComponent_C
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01A0 - 0x01A0)
 class UBP_GhostCharacterAudioComponent_C : public UGhostCharacterAudioComponent
 {
 public:

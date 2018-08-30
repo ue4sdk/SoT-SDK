@@ -12,6 +12,29 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SwitchNetworkClusterForActor
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  NewOwner                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UNetworkTestingBlueprintFunctionLibrary::STATIC_SwitchNetworkClusterForActor(class AActor* TargetActor, class AActor* NewOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SwitchNetworkClusterForActor");
+
+	UNetworkTestingBlueprintFunctionLibrary_SwitchNetworkClusterForActor_Params params;
+	params.TargetActor = TargetActor;
+	params.NewOwner = NewOwner;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SetConnectionLastReceiveTime
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

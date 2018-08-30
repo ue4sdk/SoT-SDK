@@ -41,7 +41,7 @@ enum class EBuoyancySampleType : uint8_t
 {
 	EBuoyancySampleType__Spherical = 0,
 	None                           = 1,
-	EBlackboardValueCompositeType__And = 2
+	ECustomAiEventDuringDeathEnum__None = 2
 };
 
 
@@ -52,7 +52,7 @@ enum class EWaterSplashProbeType : uint8_t
 	None                           = 1,
 	EWaterSplashProbeType__Continuous = 2,
 	None01                         = 3,
-	EKrakenDespawnReason__Invalid  = 4
+	EAddEndpointResult__Success    = 4
 };
 
 

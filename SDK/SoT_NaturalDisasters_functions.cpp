@@ -108,17 +108,53 @@ void ALavaZone::OnRep_Active()
 }
 
 
+// Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone
+// (Final, Native, Private)
+
+void ASuperheatedWater::OnRep_PlayersInZone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone");
+
+	ASuperheatedWater_OnRep_PlayersInZone_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function NaturalDisasters.Volcano.OnRep_VolcanoState
 // (Final, Native, Private)
 // Parameters:
-// TEnumAsByte<EVolcanoState>     OldVolcanoState                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVolcanoStateData       OldVolcanoState                (ConstParm, Parm)
 
-void AVolcano::OnRep_VolcanoState(TEnumAsByte<EVolcanoState> OldVolcanoState)
+void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.OnRep_VolcanoState");
 
 	AVolcano_OnRep_VolcanoState_Params params;
 	params.OldVolcanoState = OldVolcanoState;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NaturalDisasters.Volcano.OnRep_PlayersInZone
+// (Final, Native, Private)
+
+void AVolcano::OnRep_PlayersInZone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.OnRep_PlayersInZone");
+
+	AVolcano_OnRep_PlayersInZone_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

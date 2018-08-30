@@ -25,8 +25,10 @@ enum class EAIDebugColour : uint8_t
 {
 	EAIDebugColour__Red            = 0,
 	None                           = 1,
-	EAIDebugColour__Yellow         = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EAIDebugColour__Yellow         = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -36,8 +38,7 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	None01                         = 3
 };
 
 
@@ -46,8 +47,10 @@ enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
 	None                           = 1,
-	AISpawnRequestState__WaitForLocationCheck = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	AISpawnRequestState__WaitForLocationCheck = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -86,6 +89,15 @@ enum class EBountyTargetGender : uint8_t
 };
 
 
+// Enum AthenaAI.EAITargetWeaponFiringArcResult
+enum class EAITargetWeaponFiringArcResult : uint8_t
+{
+	LeftOfArc                      = 0,
+	None                           = 1,
+	EAIKnockbackStrengthType__Low  = 2
+};
+
+
 // Enum AthenaAI.EAIThreatLevel
 enum class EAIThreatLevel : uint8_t
 {
@@ -100,7 +112,7 @@ enum class EAIKnockbackStrengthType : uint8_t
 {
 	EAIKnockbackStrengthType__Low  = 0,
 	None                           = 1,
-	ECustomAiEventDuringDeathEnum__None = 2
+	EBlackboardValueCompositeType__And = 2
 };
 
 
@@ -109,7 +121,7 @@ enum class ECustomAiEventDuringDeathEnum : uint8_t
 {
 	ECustomAiEventDuringDeathEnum__None = 0,
 	None                           = 1,
-	ESwimmingLineOfSightTest__None = 2
+	EBountySpawnerAudioState__None = 2
 };
 
 
@@ -126,8 +138,10 @@ enum class EBlackboardValueComparisonType : uint8_t
 {
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	EBlackboardValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EBlackboardValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -136,8 +150,10 @@ enum class EFloatValueComparisonType : uint8_t
 {
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	EFloatValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EFloatValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -190,7 +206,7 @@ enum class ETinySharkDespawnReason : uint8_t
 {
 	ETinySharkDespawnReason__Invalid = 0,
 	None                           = 1,
-	EKrakenDynamicsStateEvent__Damage = 2
+	EKrakenState__Spawning         = 2
 };
 
 
@@ -199,7 +215,8 @@ enum class ETinySharkActiveState : uint8_t
 {
 	ETinySharkActiveState__TrackingTarget = 0,
 	None                           = 1,
-	ETinySharkActiveState__ETinySharkActiveState_MAX = 2
+	ETinySharkActiveState__ETinySharkActiveState_MAX = 2,
+	EEarthquakeState__Dormant      = 3
 };
 
 
@@ -210,7 +227,7 @@ enum class ETinySharkState : uint8_t
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
 	None01                         = 3,
-	EWaterSplashProbeType__ThresholdedRateOfChange = 4
+	CameraFacing_NoneUP            = 4
 };
 
 
@@ -219,9 +236,10 @@ enum class EAISpawnRequestResult : uint8_t
 {
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
-	AISpawnRequestResult__FailedNoValidPos = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	IntProperty                    = 2,
+	AISpawnRequestResult__FailedNoValidPos = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -239,6 +257,115 @@ struct FAIFormDamageResponse
 	TEnumAsByte<ECharacterHitReactionAnimType>         HitReaction;                                              // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IsKnockbackDisabled;                                      // 0x000D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x000E(0x0002) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerParamValue
+// 0x000C
+struct FAthenaAIControllerParamValue
+{
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Value;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
+// 0x0038
+struct FAthenaAIControllerWeightedRangesParamValue
+{
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           Value;                                                    // 0x0008(0x0030) (Edit)
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerSenseSettings
+// 0x0014
+struct FAthenaAIControllerSenseSettings
+{
+	bool                                               EnableSight;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               EnableHearing;                                            // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               EnableDamage;                                             // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
+	float                                              SightRadius;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LoseSightRadius;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PeripheralVisionAngleDegrees;                             // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxHearingRange;                                          // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerSenseSettingOverride
+// 0x0020
+struct FAthenaAIControllerSenseSettingOverride
+{
+	class UClass*                                      AIStrategy;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAIControllerSenseSettings            SenseSettings;                                            // 0x0008(0x0014) (Edit)
+	bool                                               ClearPerceivedData;                                       // 0x001C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.AIStrategyMovementProperties
+// 0x0018
+struct FAIStrategyMovementProperties
+{
+	class UClass*                                      AIStrategy;                                               // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSpeedAmp;                                              // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxAccelAmp;                                              // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideRVOAvoidanceRadius;                               // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideBlendSpeed;                                       // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterCannonTarget
+// 0x000C
+struct FAthenaAICharacterCannonTarget
+{
+	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       TargetLocation;                                           // 0x0004(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterCannonTargetingParams
+// 0x0010
+struct FAthenaAICharacterCannonTargetingParams
+{
+	TArray<struct FAthenaAICharacterCannonTarget>      Params;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties
+// 0x0010
+struct FAthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties
+{
+	class UClass*                                      ItemCategory;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 DistanceInMToProjectileHitChanceCurve;                    // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterControllerItemCategoryNamedParams
+// 0x0018
+struct FAthenaAICharacterControllerItemCategoryNamedParams
+{
+	class UClass*                                      ItemCategory;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAthenaAIControllerParamValue>       NamedControllerParams;                                    // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct AthenaAI.AthenaAIItemParamValue
+// 0x0030
+struct FAthenaAIItemParamValue
+{
+	TAssetPtr<class UClass>                            ItemClass;                                                // 0x0000(0x0020) (Edit)
+	struct FName                                       ParamName;                                                // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Value;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterControllerWeightedAmmoType
+// 0x0010
+struct FAthenaAICharacterControllerWeightedAmmoType
+{
+	class UClass*                                      AmmoType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Weighting;                                                // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.AIAmmoRankMapping
+// 0x0018
+struct FAIAmmoRankMapping
+{
+	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<float>                                      Weights;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct AthenaAI.AIDebugVisualisationLine
@@ -323,52 +450,20 @@ struct FAIFormVarietyEntry
 	TArray<struct FAIIndividualVarietyEntry>           Individuals;                                              // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
+// ScriptStruct AthenaAI.TargetSkillsetProgressionPair
+// 0x0020
+struct FTargetSkillsetProgressionPair
+{
+	struct FStringAssetReference                       CrewSkillset;                                             // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       CaptainSkillset;                                          // 0x0010(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct AthenaAI.AIEncounterGenerationRecipeFeatureBasedRankOrderList
 // 0x0018
 struct FAIEncounterGenerationRecipeFeatureBasedRankOrderList
 {
 	struct FName                                       FeatureName;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<class UAIEncounterGenerationRecipe*>        Recipes;                                                  // 0x0008(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerParamValue
-// 0x000C
-struct FAthenaAIControllerParamValue
-{
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Value;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
-// 0x0038
-struct FAthenaAIControllerWeightedRangesParamValue
-{
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           Value;                                                    // 0x0008(0x0030) (Edit)
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerSenseSettings
-// 0x0014
-struct FAthenaAIControllerSenseSettings
-{
-	bool                                               EnableSight;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               EnableHearing;                                            // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               EnableDamage;                                             // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
-	float                                              SightRadius;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LoseSightRadius;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PeripheralVisionAngleDegrees;                             // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxHearingRange;                                          // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerSenseSettingOverride
-// 0x0020
-struct FAthenaAIControllerSenseSettingOverride
-{
-	class UClass*                                      AIStrategy;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAIControllerSenseSettings            SenseSettings;                                            // 0x0008(0x0014) (Edit)
-	bool                                               ClearPerceivedData;                                       // 0x001C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIFormRankMapping
@@ -429,24 +524,25 @@ struct FAITypeData
 };
 
 // ScriptStruct AthenaAI.AISpawnTypeParams
-// 0x0068
+// 0x0078
 struct FAISpawnTypeParams
 {
 	TAssetPtr<class UClass>                            AIClass;                                                  // 0x0000(0x0020) (Edit)
 	struct FStringAssetReference                       SkillsetOverride;                                         // 0x0020(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       LoadoutOverride;                                          // 0x0030(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       FormOverride;                                             // 0x0040(0x0010) (Edit, ZeroConstructor)
-	class UClass*                                      AIClassIdOverride;                                        // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       TeamColorOverride;                                        // 0x0058(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       AmmoOverride;                                             // 0x0050(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      AIClassIdOverride;                                        // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       TeamColorOverride;                                        // 0x0068(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct AthenaAI.WeightedAISpawnTypeParams
-// 0x0070
+// 0x0080
 struct FWeightedAISpawnTypeParams
 {
 	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                MaxTimesCanBeSelected;                                    // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FAISpawnTypeParams                          Params;                                                   // 0x0008(0x0068) (Edit)
+	struct FAISpawnTypeParams                          Params;                                                   // 0x0008(0x0078) (Edit)
 };
 
 // ScriptStruct AthenaAI.AISpawnTypeParamsCollection
@@ -550,75 +646,6 @@ struct FAIPerCrewSpawnerRankBasedDelay
 	int                                                MaxRankInclusive;                                         // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<class UClass*>                              AppliesOnlyToSpawnContextList;                            // 0x0008(0x0010) (Edit, ZeroConstructor)
 	struct FWeightedProbabilityRangeOfRanges           WeightedProbabilityRangeOfRanges;                         // 0x0018(0x0030) (Edit)
-};
-
-// ScriptStruct AthenaAI.AIStrategyMovementProperties
-// 0x0018
-struct FAIStrategyMovementProperties
-{
-	class UClass*                                      AIStrategy;                                               // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxSpeedAmp;                                              // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxAccelAmp;                                              // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              OverrideRVOAvoidanceRadius;                               // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OverrideBlendSpeed;                                       // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterCannonTarget
-// 0x000C
-struct FAthenaAICharacterCannonTarget
-{
-	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       TargetLocation;                                           // 0x0004(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterCannonTargetingParams
-// 0x0010
-struct FAthenaAICharacterCannonTargetingParams
-{
-	TArray<struct FAthenaAICharacterCannonTarget>      Params;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties
-// 0x0010
-struct FAthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties
-{
-	class UClass*                                      ItemCategory;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 DistanceInMToProjectileHitChanceCurve;                    // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterControllerItemCategoryNamedParams
-// 0x0018
-struct FAthenaAICharacterControllerItemCategoryNamedParams
-{
-	class UClass*                                      ItemCategory;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAthenaAIControllerParamValue>       NamedControllerParams;                                    // 0x0008(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterControllerWeightedAmmoType
-// 0x0010
-struct FAthenaAICharacterControllerWeightedAmmoType
-{
-	class UClass*                                      AmmoType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Weighting;                                                // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterControllerCollectedAmmoWeightings
-// 0x00A0
-struct FAthenaAICharacterControllerCollectedAmmoWeightings
-{
-	TArray<struct FAthenaAICharacterControllerWeightedAmmoType> AmmoWeights;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0010(0x0090) MISSED OFFSET
-};
-
-// ScriptStruct AthenaAI.AthenaAIItemParamValue
-// 0x0030
-struct FAthenaAIItemParamValue
-{
-	TAssetPtr<class UClass>                            ItemClass;                                                // 0x0000(0x0020) (Edit)
-	struct FName                                       ParamName;                                                // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Value;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.CarriedItemThreatOverride
@@ -745,17 +772,18 @@ struct FTinySharkServiceParams
 };
 
 // ScriptStruct AthenaAI.AIEncounterSpecification
-// 0x0050
+// 0x0058
 struct FAIEncounterSpecification
 {
 	TAssetPtr<class UClass>                            PawnClass;                                                // 0x0000(0x0020)
 	class UAthenaAIControllerParamsDataAsset*          Skillset;                                                 // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 	class ULoadoutAsset*                               Loadout;                                                  // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UAthenaAIFormDataAsset*                      Form;                                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      AIClass;                                                  // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAIPartsCategory*                            PartsCategory;                                            // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                TeamColorIndex;                                           // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AIClass;                                                  // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAIPartsCategory*                            PartsCategory;                                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                TeamColorIndex;                                           // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIEncounterWave
@@ -864,7 +892,7 @@ struct FEventAIDebugTextUpdated
 // 0x0001
 struct FEventAIStartedDeadActionState
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	TEnumAsByte<ECharacterDeathType>                   DeathReason;                                              // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.EventAIControllerUnPossess
@@ -966,6 +994,13 @@ struct FEventAILoadoutSelected
 {
 	struct FItemLoadout                                Loadout;                                                  // 0x0000(0x0020)
 	class UClass*                                      NonStorableItem;                                          // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.EventAIAmmoSelected
+// 0x0008
+struct FEventAIAmmoSelected
+{
+	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.EventAIFormSelected

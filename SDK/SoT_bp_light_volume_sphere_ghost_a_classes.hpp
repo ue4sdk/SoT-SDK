@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bp_light_volume_sphere_ghost_a.bp_light_volume_sphere_ghost_a_C
-// 0x0008 (0x0488 - 0x0480)
+// 0x0008 (0x0498 - 0x0490)
 class Abp_light_volume_sphere_ghost_a_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        StaticMeshComponent0;                                     // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMeshComponent0;                                     // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

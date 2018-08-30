@@ -40,7 +40,8 @@ enum class ETextCommit : uint8_t
 {
 	ETextCommit__Default           = 0,
 	None                           = 1,
-	ETextCommit__ETextCommit_MAX   = 2
+	ETextCommit__ETextCommit_MAX   = 2,
+	EAxis__None                    = 3
 };
 
 
@@ -67,7 +68,9 @@ enum class EMenuPlacement : uint8_t
 	None                           = 1,
 	MenuPlacement_MenuRight        = 2,
 	None01                         = 3,
-	MenuPlacement_MAX              = 4
+	MenuPlacement_MAX              = 4,
+	EUINavigation__Left            = 5,
+	None02                         = 6
 };
 
 
@@ -77,7 +80,7 @@ enum class EVerticalAlignment : uint8_t
 	VAlign_Fill                    = 0,
 	None                           = 1,
 	VAlign_MAX                     = 2,
-	HAlign_Fill                    = 3
+	ESlateColorStylingMode__UseColor_Specified = 3
 };
 
 
@@ -86,7 +89,8 @@ enum class EHorizontalAlignment : uint8_t
 {
 	HAlign_Fill                    = 0,
 	None                           = 1,
-	HAlign_MAX                     = 2
+	HAlign_MAX                     = 2,
+	VAlign_Fill                    = 3
 };
 
 
@@ -97,10 +101,7 @@ enum class EUINavigation : uint8_t
 	None                           = 1,
 	EUINavigation__Next            = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EUINavigation__EUINavigation_MAX = 5,
-	MenuPlacement_BelowAnchor      = 6,
-	None02                         = 7
+	EUINavigation__EUINavigation_MAX = 4
 };
 
 
@@ -137,7 +138,7 @@ enum class ESlateColorStylingMode : uint8_t
 	ESlateColorStylingMode__UseColor_Specified = 0,
 	None                           = 1,
 	ESlateColorStylingMode__UseColor_MAX = 2,
-	VAlign_Fill                    = 3
+	ESlateBrushDrawType__NoDrawType = 3
 };
 
 
@@ -156,7 +157,7 @@ enum class ESlateBrushMirrorType : uint8_t
 	ESlateBrushMirrorType__NoMirror = 0,
 	None                           = 1,
 	ESlateBrushMirrorType__ESlateBrushMirrorType_MAX = 2,
-	ESlateBrushDrawType__NoDrawType = 3
+	ESlateBrushTileType__NoTile    = 3
 };
 
 
@@ -166,7 +167,7 @@ enum class ESlateBrushTileType : uint8_t
 	ESlateBrushTileType__NoTile    = 0,
 	None                           = 1,
 	ESlateBrushTileType__ESlateBrushTileType_MAX = 2,
-	ESlateBrushMirrorType__NoMirror = 3
+	ESelectionMode__None           = 3
 };
 
 
@@ -176,7 +177,7 @@ enum class ESlateBrushDrawType : uint8_t
 	ESlateBrushDrawType__NoDrawType = 0,
 	None                           = 1,
 	ESlateBrushDrawType__ESlateBrushDrawType_MAX = 2,
-	ESlateColorStylingMode__UseColor_Specified = 3
+	ESlateBrushMirrorType__NoMirror = 3
 };
 
 

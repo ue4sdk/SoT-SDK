@@ -242,6 +242,7 @@ struct UAIPerPlayerSpawner_GetNumOfPlayers_Params
 struct UAITargetWeaponInterface_FindAimConfigToHitTarget_Params
 {
 	struct FVector                                     Target;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	bool                                               CheckYaw;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    OutAimConfig;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

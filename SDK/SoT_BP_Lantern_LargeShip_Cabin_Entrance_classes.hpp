@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_LargeShip_Cabin_Entrance.BP_Lantern_LargeShip_Cabin_Entrance_C
-// 0x0000 (0x06A9 - 0x06A9)
+// 0x0000 (0x06B9 - 0x06B9)
 class ABP_Lantern_LargeShip_Cabin_Entrance_C : public ABP_InteractableShipLantern_C
 {
 public:

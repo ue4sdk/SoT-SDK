@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace
+struct ABP_CapstanArm_C_GetLookAtPosBasisSpace_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector
 struct ABP_CapstanArm_C_GetFrontFacingVector_Params
 {

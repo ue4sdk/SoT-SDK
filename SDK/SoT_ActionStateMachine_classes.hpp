@@ -30,7 +30,7 @@ public:
 
 
 // Class ActionStateMachine.ActionStateCreatorDefinition
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0490 - 0x0490)
 class AActionStateCreatorDefinition : public AActor
 {
 public:
@@ -45,11 +45,11 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateCreatorDefinition
-// 0x0018 (0x0498 - 0x0480)
+// 0x0018 (0x04A8 - 0x0490)
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0480(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0490(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -136,13 +136,13 @@ public:
 
 
 // Class ActionStateMachine.ActionStateMachineComponent
-// 0x07B8 (0x0888 - 0x00D0)
+// 0x07B8 (0x0890 - 0x00D8)
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x00D0(0x0048) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x760];                                     // 0x0128(0x0760) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x00D8(0x0048) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x0120(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x760];                                     // 0x0130(0x0760) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -154,7 +154,6 @@ public:
 	void Server_RequestAction(const struct FActionStateChangeRequestId& InEpochId, const struct FActionStateChangeRequestId& InRequestId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo, TEnumAsByte<EActionPredictionType> ClientPredicted);
 	void PostNetInit();
 	void OnNetOwnershipChanged();
-	void Multicast_UpdateEpoch(TEnumAsByte<EActionStateMachineTrackId> InTrackId, const struct FActionStateChangeRequestId& InEpochId);
 	void Multicast_PushSerialisableData(const struct FActionStateChangeRequestId& InEpochId, const struct FSerialisedActionStateInfo& InSerialisedActionStateSerialisationStateInfo);
 	void Multicast_PushActionFromRequest(const struct FActionStateChangeRequestId& InEpochId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo);
 	void Multicast_PushAction(const struct FActionStateChangeRequestId& InEpochId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo);
@@ -165,11 +164,11 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateMachineComponent
-// 0x0018 (0x08A0 - 0x0888)
+// 0x0018 (0x08A8 - 0x0890)
 class UTestActionStateMachineComponent : public UActionStateMachineComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0888(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0890(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -277,29 +276,12 @@ public:
 };
 
 
-// Class ActionStateMachine.MockActionStateMachineComponent
-// 0x0030 (0x0100 - 0x00D0)
-class UMockActionStateMachineComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
-	TArray<class UClass*>                              ActiveActionStateIds;                                     // 0x00F0(0x0010) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.MockActionStateMachineComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class ActionStateMachine.RemoteValidationFailActionStateActor
-// 0x0008 (0x0488 - 0x0480)
+// 0x0008 (0x0498 - 0x0490)
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0480(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0490(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -335,12 +317,12 @@ public:
 
 
 // Class ActionStateMachine.TestObjectWithActionStateMachine
-// 0x0018 (0x0498 - 0x0480)
+// 0x0018 (0x04A8 - 0x0490)
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0480(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0488(0x0010) MISSED OFFSET
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0490(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

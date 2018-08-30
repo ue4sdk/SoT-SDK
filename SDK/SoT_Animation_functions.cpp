@@ -114,7 +114,7 @@ void UAnimationDataFunctionLib::STATIC_CheckAnimDataClassTypeForDuplicateAnimDat
 
 
 // Function Animation.AnimationDataStoreAsset.LookupAnimationData
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UClass*                  AnimDataId                     (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimationData*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -132,6 +132,32 @@ class UAnimationData* UAnimationDataStoreAsset::LookupAnimationData(class UClass
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Animation.AnimationDataStoreAsset.GetAnimationDataClass
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FAnimationDataStoreAssetEntry Entry                          (Parm, OutParm, ReferenceParm)
+// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClass* UAnimationDataStoreAsset::STATIC_GetAnimationDataClass(struct FAnimationDataStoreAssetEntry* Entry)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreAsset.GetAnimationDataClass");
+
+	UAnimationDataStoreAsset_GetAnimationDataClass_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Entry != nullptr)
+		*Entry = params.Entry;
 
 	return params.ReturnValue;
 }

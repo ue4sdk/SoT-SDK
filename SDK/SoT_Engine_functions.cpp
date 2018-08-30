@@ -15301,6 +15301,29 @@ void AWorldSettings::OnRep_WorldGravityZ()
 }
 
 
+// Function Engine.PostProcessComponent.AddOrUpdateBlendable
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UBlendableInterface> InBlendableObject              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InWeight                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPostProcessComponent::AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PostProcessComponent.AddOrUpdateBlendable");
+
+	UPostProcessComponent_AddOrUpdateBlendable_Params params;
+	params.InBlendableObject = InBlendableObject;
+	params.InWeight = InWeight;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.MeshComponent.ResetDefaultMaterials
 // (Final, Native, Public, BlueprintCallable)
 
@@ -27520,29 +27543,6 @@ float UPhysicsSpringComponent::GetNormalizedCompressionScalar()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function Engine.PostProcessComponent.AddOrUpdateBlendable
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class UBlendableInterface> InBlendableObject              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InWeight                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UPostProcessComponent::AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PostProcessComponent.AddOrUpdateBlendable");
-
-	UPostProcessComponent_AddOrUpdateBlendable_Params params;
-	params.InBlendableObject = InBlendableObject;
-	params.InWeight = InWeight;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

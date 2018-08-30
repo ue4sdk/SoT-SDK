@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C
-// 0x0008 (0x06C0 - 0x06B8)
+// 0x0008 (0x06D0 - 0x06C8)
 class ABP_SunkenCurseArtefact_Sapphire_C : public ASunkenCurseArtefact
 {
 public:
-	class UStaticMeshComponent*                        Glint;                                                    // 0x06B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Glint;                                                    // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

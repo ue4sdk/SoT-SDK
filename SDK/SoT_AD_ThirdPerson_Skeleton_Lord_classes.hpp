@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_ThirdPerson_Skeleton_Lord.AD_ThirdPerson_Skeleton_Lord_C
-// 0x0000 (0x0650 - 0x0650)
+// 0x0000 (0x06E0 - 0x06E0)
 class UAD_ThirdPerson_Skeleton_Lord_C : public UAD_ThirdPerson_Skeleton_C
 {
 public:

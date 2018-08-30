@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class GameServiceTests.GameModeWithServiceProviderGameState
-// 0x0000 (0x0578 - 0x0578)
+// 0x0000 (0x0588 - 0x0588)
 class AGameModeWithServiceProviderGameState : public AGameMode
 {
 public:
@@ -92,11 +92,11 @@ public:
 
 
 // Class GameServiceTests.TestGameServiceActor
-// 0x0008 (0x0488 - 0x0480)
+// 0x0008 (0x0498 - 0x0490)
 class ATestGameServiceActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -124,11 +124,11 @@ public:
 
 
 // Class GameServiceTests.TestGameStateWithCollection
-// 0x0060 (0x0538 - 0x04D8)
+// 0x0060 (0x0548 - 0x04E8)
 class ATestGameStateWithCollection : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x04D8(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x04E8(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -157,12 +157,12 @@ public:
 
 
 // Class GameServiceTests.TestServiceProviderGameState
-// 0x0018 (0x04F0 - 0x04D8)
+// 0x0018 (0x0500 - 0x04E8)
 class ATestServiceProviderGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04D8(0x0010) MISSED OFFSET
-	class UObject*                                     ServiceToReturn;                                          // 0x04E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x04E8(0x0010) MISSED OFFSET
+	class UObject*                                     ServiceToReturn;                                          // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

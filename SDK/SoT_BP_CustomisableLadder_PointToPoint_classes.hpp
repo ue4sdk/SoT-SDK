@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C
-// 0x0028 (0x0714 - 0x06EC)
+// 0x0028 (0x0724 - 0x06FC)
 class ABP_CustomisableLadder_PointToPoint_C : public ABP_CustomisableLadder_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x06EC(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x06F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              Ladder_Roll;                                              // 0x06F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Ladder_Top_Target;                                        // 0x06FC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Ladder_Bottom_Target;                                     // 0x0708(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x06FC(0x0004) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0700(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	float                                              Ladder_Roll;                                              // 0x0708(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Ladder_Top_Target;                                        // 0x070C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Ladder_Bottom_Target;                                     // 0x0718(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

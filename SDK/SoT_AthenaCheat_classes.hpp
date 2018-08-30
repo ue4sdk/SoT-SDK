@@ -48,6 +48,7 @@ public:
 	void TriggerLandmarkReaction(int ActionType);
 	void TriggerEmblemUnlockedMessage(const class FString& EmblemFriendlyName);
 	void TriggerControllerConnectionChange(bool IsConnect, int UserId, int ControllerId);
+	void TriggerAIShipTimerBattle();
 	void TriggerAIShipEncounter();
 	void ToggleVideprinter(const class FString& Id);
 	void ToggleThirdPerson();
@@ -99,7 +100,6 @@ public:
 	void SpawnSmallShipAtIsland(const class FString& IslandName);
 	void SpawnSmallShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnSkeletonAtNearestAISpawnPoint();
-	void SpawnShipwreck(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ);
 	void SpawnShipInFrontOfNearestAIInteractable(float XProportion, float YProportion, float Yaw);
 	void SpawnShipFromDesc(const class FString& InShipDescAssetString, float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnShipAtIsland(const class FString& IslandName);
@@ -114,6 +114,7 @@ public:
 	void SpawnKrakenAtCurrentLocation();
 	void SpawnKraken();
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
+	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);
 	void SpawnBarrelGroup();
 	void SpawnAINoTrigger(const class FString& AIDescString);
@@ -130,6 +131,9 @@ public:
 	void ShowRandomCrewMemberGamerCard();
 	void ShowAllItemsInRadialInventory();
 	void ShowAllianceStatus(const class FString& CrewId);
+	void ShipwrecksSpawnOne(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ);
+	void ShipwrecksRegen();
+	void ShipwrecksDrawDebugBeacons(bool bEnabled);
 	void ShipUpdateMassProperies();
 	void SetWheelAngle(float Angle);
 	void SetWeaponsLockedOut(bool WeaponsLockedOut);
@@ -143,6 +147,7 @@ public:
 	void SetTimeHoursAndMinutes(int Hours, int Minutes);
 	void SetTime(int Hours);
 	void SetShipYaw(float Yaw);
+	void SetShipRoll(float Roll);
 	void SetShipBuoyancyBlend(float UnaryBlend);
 	void SetSailLoweredProportions(float Proportion);
 	void SetSailAngles(float Angle);
@@ -219,7 +224,6 @@ public:
 	void HealthReset();
 	void HealthAdjust(float Amount);
 	void God();
-	void GenerateShipwrecks();
 	void ForceOpenShop();
 	void ForceCloseShop();
 	void Fly();
@@ -239,7 +243,6 @@ public:
 	void DrawVideprinter(const class FString& Id, bool Active);
 	void DrawTreasureDebug(int Enabled);
 	void DrawTemporaryLandmarkDebug(bool Enabled);
-	void DrawShipwreckDebugBeacons(bool bEnabled);
 	void DrawNearbyAISpawnPointsRanged(float Range);
 	void DrawNearbyAISpawnPoints();
 	void DiveShipByActorId(const class FString& ShipActorIdString);
@@ -284,12 +287,16 @@ public:
 	void ClearAllItemsInInventory();
 	void CheckLandmarkValidTreasureLocationsAtPlayerPos();
 	void CheckLandmarkRelativeToIslandCalculation();
+	void CapsizeShip();
 	void CancelVoyage();
 	void CancelAllCrewVoyages();
+	void CancelActiveAIShipEncounters();
 	void BreakLeg();
 	void ApplyVenomWithParams(float InitialDamage, float DamagePerSecond, float DamageOverTimeDuration);
 	void ApplyVenom();
 	void ApplyDamageToAllDamageZones(float Damage);
+	void ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString);
+	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
 	void AIPlayerShip();
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);

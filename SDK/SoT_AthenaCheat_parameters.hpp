@@ -119,6 +119,11 @@ struct UAthenaCheatManager_TriggerControllerConnectionChange_Params
 	int                                                ControllerId;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.TriggerAIShipTimerBattle
+struct UAthenaCheatManager_TriggerAIShipTimerBattle_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.TriggerAIShipEncounter
 struct UAthenaCheatManager_TriggerAIShipEncounter_Params
 {
@@ -414,14 +419,6 @@ struct UAthenaCheatManager_SpawnSkeletonAtNearestAISpawnPoint_Params
 {
 };
 
-// Function AthenaCheat.AthenaCheatManager.SpawnShipwreck
-struct UAthenaCheatManager_SpawnShipwreck_Params
-{
-	float                                              SpawnLocationX;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              SpawnLocationY;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              SpawnLocationZ;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function AthenaCheat.AthenaCheatManager.SpawnShipInFrontOfNearestAIInteractable
 struct UAthenaCheatManager_SpawnShipInFrontOfNearestAIInteractable_Params
 {
@@ -511,6 +508,12 @@ struct UAthenaCheatManager_SpawnKraken_Params
 struct UAthenaCheatManager_SpawnCursedCannonball_Params
 {
 	class FString                                      CannonballTypeString;                                     // (Parm, ZeroConstructor)
+};
+
+// Function AthenaCheat.AthenaCheatManager.SpawnCargoRunCrate
+struct UAthenaCheatManager_SpawnCargoRunCrate_Params
+{
+	class FString                                      SpawnCargoRunCrateString;                                 // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.SpawnBountyReward
@@ -609,6 +612,25 @@ struct UAthenaCheatManager_ShowAllianceStatus_Params
 	class FString                                      CrewId;                                                   // (Parm, ZeroConstructor)
 };
 
+// Function AthenaCheat.AthenaCheatManager.ShipwrecksSpawnOne
+struct UAthenaCheatManager_ShipwrecksSpawnOne_Params
+{
+	float                                              SpawnLocationX;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              SpawnLocationY;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              SpawnLocationZ;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaCheat.AthenaCheatManager.ShipwrecksRegen
+struct UAthenaCheatManager_ShipwrecksRegen_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.ShipwrecksDrawDebugBeacons
+struct UAthenaCheatManager_ShipwrecksDrawDebugBeacons_Params
+{
+	bool                                               bEnabled;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AthenaCheat.AthenaCheatManager.ShipUpdateMassProperies
 struct UAthenaCheatManager_ShipUpdateMassProperies_Params
 {
@@ -683,6 +705,12 @@ struct UAthenaCheatManager_SetTime_Params
 struct UAthenaCheatManager_SetShipYaw_Params
 {
 	float                                              Yaw;                                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetShipRoll
+struct UAthenaCheatManager_SetShipRoll_Params
+{
+	float                                              Roll;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaCheat.AthenaCheatManager.SetShipBuoyancyBlend
@@ -1111,11 +1139,6 @@ struct UAthenaCheatManager_God_Params
 {
 };
 
-// Function AthenaCheat.AthenaCheatManager.GenerateShipwrecks
-struct UAthenaCheatManager_GenerateShipwrecks_Params
-{
-};
-
 // Function AthenaCheat.AthenaCheatManager.ForceOpenShop
 struct UAthenaCheatManager_ForceOpenShop_Params
 {
@@ -1224,12 +1247,6 @@ struct UAthenaCheatManager_DrawTreasureDebug_Params
 struct UAthenaCheatManager_DrawTemporaryLandmarkDebug_Params
 {
 	bool                                               Enabled;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AthenaCheat.AthenaCheatManager.DrawShipwreckDebugBeacons
-struct UAthenaCheatManager_DrawShipwreckDebugBeacons_Params
-{
-	bool                                               bEnabled;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaCheat.AthenaCheatManager.DrawNearbyAISpawnPointsRanged
@@ -1483,6 +1500,11 @@ struct UAthenaCheatManager_CheckLandmarkRelativeToIslandCalculation_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.CapsizeShip
+struct UAthenaCheatManager_CapsizeShip_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.CancelVoyage
 struct UAthenaCheatManager_CancelVoyage_Params
 {
@@ -1490,6 +1512,11 @@ struct UAthenaCheatManager_CancelVoyage_Params
 
 // Function AthenaCheat.AthenaCheatManager.CancelAllCrewVoyages
 struct UAthenaCheatManager_CancelAllCrewVoyages_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.CancelActiveAIShipEncounters
+struct UAthenaCheatManager_CancelActiveAIShipEncounters_Params
 {
 };
 
@@ -1515,6 +1542,18 @@ struct UAthenaCheatManager_ApplyVenom_Params
 struct UAthenaCheatManager_ApplyDamageToAllDamageZones_Params
 {
 	float                                              Damage;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaCheat.AthenaCheatManager.ApplyCursedCannonballStatusToShip
+struct UAthenaCheatManager_ApplyCursedCannonballStatusToShip_Params
+{
+	class FString                                      CannonballTypeString;                                     // (Parm, ZeroConstructor)
+};
+
+// Function AthenaCheat.AthenaCheatManager.ApplyCursedCannonballStatusToPlayer
+struct UAthenaCheatManager_ApplyCursedCannonballStatusToPlayer_Params
+{
+	class FString                                      CannonballTypeString;                                     // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.AIPlayerShip

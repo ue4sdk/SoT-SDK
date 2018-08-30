@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_shovel_elb_01_a_v02_Wieldable.BP_tls_shovel_elb_01_a_v02_Wieldable_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0870 - 0x0870)
 class ABP_tls_shovel_elb_01_a_v02_Wieldable_C : public ABP_Shovel_C
 {
 public:

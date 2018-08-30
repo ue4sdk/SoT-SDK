@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShadowAIFormComponent.BP_ShadowAIFormComponent_C
-// 0x0000 (0x0208 - 0x0208)
+// 0x0000 (0x0210 - 0x0210)
 class UBP_ShadowAIFormComponent_C : public UShadowAIFormComponent
 {
 public:

@@ -78,18 +78,28 @@ enum class ECoherentUIGTKeys : uint8_t
 	None27                         = 55,
 	None28                         = 56,
 	None29                         = 57,
-	BoolProperty                   = 58,
-	None30                         = 59,
-	None31                         = 60,
-	ByteProperty                   = 61,
-	None32                         = 62,
-	BoolProperty01                 = 63,
-	ByteProperty01                 = 64,
-	None33                         = 65,
-	BountySkulls_HandedIn_Legendary = 66,
-	None34                         = 67,
-	ByteProperty02                 = 68,
-	ByteProperty03                 = 69
+	None30                         = 58,
+	None31                         = 59,
+	None32                         = 60,
+	None33                         = 61,
+	None34                         = 62,
+	IntProperty                    = 63,
+	None35                         = 64,
+	None36                         = 65,
+	None37                         = 66,
+	None38                         = 67,
+	None39                         = 68,
+	None40                         = 69,
+	None41                         = 70,
+	None42                         = 71,
+	None43                         = 72,
+	None44                         = 73,
+	ByteProperty                   = 74,
+	None45                         = 75,
+	None46                         = 76,
+	None47                         = 77,
+	ByteProperty01                 = 78,
+	None48                         = 79
 };
 
 
@@ -98,8 +108,7 @@ enum class ECoherentUIGTInputPropagationBehaviour : uint8_t
 {
 	ECoherentUIGTInputPropagationBehaviour__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 3
+	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 2
 };
 
 

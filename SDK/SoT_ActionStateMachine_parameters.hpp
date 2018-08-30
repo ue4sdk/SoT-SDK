@@ -33,13 +33,6 @@ struct UActionStateMachineComponent_OnNetOwnershipChanged_Params
 {
 };
 
-// Function ActionStateMachine.ActionStateMachineComponent.Multicast_UpdateEpoch
-struct UActionStateMachineComponent_Multicast_UpdateEpoch_Params
-{
-	TEnumAsByte<EActionStateMachineTrackId>            InTrackId;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	struct FActionStateChangeRequestId                 InEpochId;                                                // (ConstParm, Parm)
-};
-
 // Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushSerialisableData
 struct UActionStateMachineComponent_Multicast_PushSerialisableData_Params
 {

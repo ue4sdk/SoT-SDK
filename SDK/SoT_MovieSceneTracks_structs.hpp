@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_MovieScene_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -31,8 +31,7 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 enum class EParticleKey : uint8_t
 {
 	EParticleKey__Active           = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

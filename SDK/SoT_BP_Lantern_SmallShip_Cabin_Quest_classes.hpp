@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_SmallShip_Cabin_Quest.BP_Lantern_SmallShip_Cabin_Quest_C
-// 0x0000 (0x06A9 - 0x06A9)
+// 0x0000 (0x06B9 - 0x06B9)
 class ABP_Lantern_SmallShip_Cabin_Quest_C : public ABP_InteractableShipLantern_C
 {
 public:

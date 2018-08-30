@@ -4531,6 +4531,13 @@ struct AWorldSettings_OnRep_WorldGravityZ_Params
 {
 };
 
+// Function Engine.PostProcessComponent.AddOrUpdateBlendable
+struct UPostProcessComponent_AddOrUpdateBlendable_Params
+{
+	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.MeshComponent.ResetDefaultMaterials
 struct UMeshComponent_ResetDefaultMaterials_Params
 {
@@ -8144,13 +8151,6 @@ struct UPhysicsSpringComponent_GetSpringCurrentEndPoint_Params
 struct UPhysicsSpringComponent_GetNormalizedCompressionScalar_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PostProcessComponent.AddOrUpdateBlendable
-struct UPostProcessComponent_AddOrUpdateBlendable_Params
-{
-	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.ArrowComponent.SetArrowColor_New

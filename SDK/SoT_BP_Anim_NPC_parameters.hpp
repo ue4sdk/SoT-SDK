@@ -210,6 +210,11 @@ struct UBP_Anim_NPC_C_AnimNotify_RH_AttachItem_Params
 {
 };
 
+// Function BP_Anim_NPC.BP_Anim_NPC_C.BlueprintInitializeAnimation
+struct UBP_Anim_NPC_C_BlueprintInitializeAnimation_Params
+{
+};
+
 // Function BP_Anim_NPC.BP_Anim_NPC_C.ExecuteUbergraph_BP_Anim_NPC
 struct UBP_Anim_NPC_C_ExecuteUbergraph_BP_Anim_NPC_Params
 {

@@ -51,6 +51,13 @@ struct UAnimationDataStoreAsset_LookupAnimationData_Params
 	class UAnimationData*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Animation.AnimationDataStoreAsset.GetAnimationDataClass
+struct UAnimationDataStoreAsset_GetAnimationDataClass_Params
+{
+	struct FAnimationDataStoreAssetEntry               Entry;                                                    // (Parm, OutParm, ReferenceParm)
+	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Animation.AnimationDataStoreInterface.GetAnimationDataForId
 struct UAnimationDataStoreInterface_GetAnimationDataForId_Params
 {

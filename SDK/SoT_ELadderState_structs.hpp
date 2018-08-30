@@ -19,7 +19,8 @@ enum class ELadderState : uint8_t
 {
 	ELadderState__NewEnumerator5   = 0,
 	None                           = 1,
-	ELadderState__ELadderState_MAX = 2
+	IntProperty                    = 2,
+	ELadderState__ELadderState_MAX = 3
 };
 
 

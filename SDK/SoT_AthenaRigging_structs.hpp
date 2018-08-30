@@ -26,11 +26,12 @@ enum class EInstancedRopeParameterType : uint8_t
 	None01                         = 3,
 	RPT_WindAmount                 = 4,
 	None02                         = 5,
-	RPT_CatenaryXYDistance         = 6,
-	None03                         = 7,
-	TextProperty                   = 8,
-	ECannonballIconType__Normal    = 9,
-	None04                         = 10
+	StructProperty                 = 6,
+	RPT_CatenaryXYDistance         = 7,
+	None03                         = 8,
+	TextProperty                   = 9,
+	ECannonballIconType__Normal    = 10,
+	None04                         = 11
 };
 
 
@@ -109,7 +110,7 @@ struct FRiggingSystemLine
 };
 
 // ScriptStruct AthenaRigging.RiggingSystemPulleyData
-// 0x0050
+// 0x0060
 struct FRiggingSystemPulleyData
 {
 	TArray<float>                                      AttachmentSag;                                            // 0x0000(0x0010) (ZeroConstructor)
@@ -117,6 +118,7 @@ struct FRiggingSystemPulleyData
 	TArray<float>                                      Scale;                                                    // 0x0020(0x0010) (ZeroConstructor)
 	TArray<float>                                      ScaledOffset;                                             // 0x0030(0x0010) (ZeroConstructor)
 	TArray<float>                                      ScaledRadius;                                             // 0x0040(0x0010) (ZeroConstructor)
+	TArray<int>                                        MeshIDs;                                                  // 0x0050(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct AthenaRigging.RopeStyleParams

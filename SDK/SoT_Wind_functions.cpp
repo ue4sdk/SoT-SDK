@@ -300,6 +300,30 @@ float UWindInterface::GetWindAngle(const struct FVector& SamplePosition)
 }
 
 
+// Function Wind.WindInterface.GetTurbulenceForTrees
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 SamplePosition                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FWindZoneTurbulence     ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWindZoneTurbulence UWindInterface::GetTurbulenceForTrees(const struct FVector& SamplePosition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetTurbulenceForTrees");
+
+	UWindInterface_GetTurbulenceForTrees_Params params;
+	params.SamplePosition = SamplePosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Wind.WindInterface.GetTurbulence
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

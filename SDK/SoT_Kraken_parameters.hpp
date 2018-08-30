@@ -43,6 +43,12 @@ struct AKrakenService_RequestKrakenWithLocation_Params
 	class AActor*                                      SpawnedForActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Kraken.KrakenService.IsServiceInitialized
+struct AKrakenService_IsServiceInitialized_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Kraken.KrakenService.IsKrakenActive
 struct AKrakenService_IsKrakenActive_Params
 {
@@ -52,12 +58,6 @@ struct AKrakenService_IsKrakenActive_Params
 // Function Kraken.KrakenService.DismissKraken
 struct AKrakenService_DismissKraken_Params
 {
-};
-
-// Function Kraken.KrakenService.CanSpawnKraken
-struct AKrakenService_CanSpawnKraken_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

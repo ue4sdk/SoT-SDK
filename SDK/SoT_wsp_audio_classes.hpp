@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_audio.wsp_audio_C
-// 0x0038 (0x04C0 - 0x0488)
+// 0x0038 (0x04D0 - 0x0498)
 class Awsp_audio_C : public ALevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0488(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              PreviousFrameTime;                                        // 0x0490(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0494(0x0004) MISSED OFFSET
-	struct FWwiseEmitter                               WSP_Audio_2D_Emitter;                                     // 0x0498(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UObject*                                     TimeInterface;                                            // 0x04B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0498(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	float                                              PreviousFrameTime;                                        // 0x04A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04A4(0x0004) MISSED OFFSET
+	struct FWwiseEmitter                               WSP_Audio_2D_Emitter;                                     // 0x04A8(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UObject*                                     TimeInterface;                                            // 0x04C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

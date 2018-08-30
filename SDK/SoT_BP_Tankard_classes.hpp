@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tankard.BP_Tankard_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x0858 - 0x0858)
 class ABP_Tankard_C : public ATankard
 {
 public:
