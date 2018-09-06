@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_TreasureChest_Wieldable_Legendary_DVR.BP_TreasureChest_Wieldable_Legendary_DVR_C.UserConstructionScript
+struct ABP_TreasureChest_Wieldable_Legendary_DVR_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

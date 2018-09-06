@@ -21,6 +21,14 @@ struct UAIShipDebugFunctionLibrary_RequestAIShipForCrew_Params
 	struct FGuid                                       CrewId;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AIShips.AIShipDebugFunctionLibrary.GenerateAIShipBattleDesc
+struct UAIShipDebugFunctionLibrary_GenerateAIShipBattleDesc_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAIShipServiceDataAsset*                     ServiceParams;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FAIShipEncounterBattleDesc                  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties
 struct UCursedCrewCustomisationInterface_SetCursedCrewCustomisationProperties_Params
 {

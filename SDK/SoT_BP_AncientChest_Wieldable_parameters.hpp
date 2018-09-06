@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_AncientChest_Wieldable.BP_AncientChest_Wieldable_C.UserConstructionScript
+struct ABP_AncientChest_Wieldable_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

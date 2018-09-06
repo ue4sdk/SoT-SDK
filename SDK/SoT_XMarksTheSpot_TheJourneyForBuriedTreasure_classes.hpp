@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass XMarksTheSpot_TheJourneyForBuriedTreasure.XMarksTheSpot_TheJourneyForBuriedTreasure_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0128 - 0x0128)
 class UXMarksTheSpot_TheJourneyForBuriedTreasure_C : public UVoyageProposalDesc
 {
 public:

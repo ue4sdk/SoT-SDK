@@ -109,15 +109,15 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x0050 (0x03C8 - 0x0378)
+// 0x0050 (0x03D0 - 0x0380)
 class UIpNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      LogPortUnreach : 1;                                       // 0x0378(0x0001) (Config)
-	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0378(0x0001) (Config)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0379(0x0003) MISSED OFFSET
-	uint32_t                                           MaxPortCountToTry;                                        // 0x037C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0380(0x0048) MISSED OFFSET
+	unsigned char                                      LogPortUnreach : 1;                                       // 0x0380(0x0001) (Config)
+	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0380(0x0001) (Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0381(0x0003) MISSED OFFSET
+	uint32_t                                           MaxPortCountToTry;                                        // 0x0384(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0388(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

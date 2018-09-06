@@ -32,7 +32,8 @@ enum class EActionStateMachineTrackId : uint8_t
 enum class EActionPredictionType : uint8_t
 {
 	EActionPredictionType__Predicted = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

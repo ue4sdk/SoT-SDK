@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MerchantCrate_Commodity_VolcanicStone_Wieldable.BP_MerchantCrate_Commodity_VolcanicStone_Wieldable_C.UserConstructionScript
+struct ABP_MerchantCrate_Commodity_VolcanicStone_Wieldable_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

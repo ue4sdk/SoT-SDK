@@ -28947,6 +28947,24 @@ void AAthenaGameState::OnRep_ReplicatedWaterService()
 }
 
 
+// Function Athena.AthenaGameState.OnRep_ReplicatedWatercraftService
+// (Final, Native, Private)
+
+void AAthenaGameState::OnRep_ReplicatedWatercraftService()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaGameState.OnRep_ReplicatedWatercraftService");
+
+	AAthenaGameState_OnRep_ReplicatedWatercraftService_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Athena.AthenaGameState.OnRep_ReplicatedTinySharkService
 // (Final, Native, Private)
 
@@ -31922,6 +31940,138 @@ TEnumAsByte<EInputHandlerResult> UControlWheelCompositeInputHandler::OnMoveRight
 }
 
 
+// Function Athena.RowingCompositeInputHandler.OnUseRightOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnUseRightOar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingCompositeInputHandler.OnUseRightOar");
+
+	URowingCompositeInputHandler_OnUseRightOar_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RowingCompositeInputHandler.OnUseLeftOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnUseLeftOar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingCompositeInputHandler.OnUseLeftOar");
+
+	URowingCompositeInputHandler_OnUseLeftOar_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RowingCompositeInputHandler.OnStopUseRightOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnStopUseRightOar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingCompositeInputHandler.OnStopUseRightOar");
+
+	URowingCompositeInputHandler_OnStopUseRightOar_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RowingCompositeInputHandler.OnStopUseLeftOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnStopUseLeftOar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingCompositeInputHandler.OnStopUseLeftOar");
+
+	URowingCompositeInputHandler_OnStopUseLeftOar_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RowingCompositeInputHandler.OnBrakeRightOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnBrakeRightOar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingCompositeInputHandler.OnBrakeRightOar");
+
+	URowingCompositeInputHandler_OnBrakeRightOar_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.RowingCompositeInputHandler.OnBrakeLeftOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnBrakeLeftOar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingCompositeInputHandler.OnBrakeLeftOar");
+
+	URowingCompositeInputHandler_OnBrakeLeftOar_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.UseLadderCompositeInputHandler.OnClimbLadder
 // (Final, Native, Private)
 // Parameters:
@@ -34243,12 +34393,15 @@ TEnumAsByte<EInputHandlerResult> UModalInteractionCompositeInputHandler::OnDisen
 
 // Function Athena.MountpointComponent.OnRep_ReplicatedMountedItem
 // (Final, Native, Private)
+// Parameters:
+// class UObject*                 PrevReplicatedMountedItem      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMountpointComponent::OnRep_ReplicatedMountedItem()
+void UMountpointComponent::OnRep_ReplicatedMountedItem(class UObject* PrevReplicatedMountedItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.MountpointComponent.OnRep_ReplicatedMountedItem");
 
 	UMountpointComponent_OnRep_ReplicatedMountedItem_Params params;
+	params.PrevReplicatedMountedItem = PrevReplicatedMountedItem;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

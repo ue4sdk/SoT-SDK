@@ -19,19 +19,22 @@ enum class EObjectAnimationState : uint8_t
 {
 	EObjectAnimationState__NewEnumerator0 = 0,
 	None                           = 1,
-	EObjectAnimationState__NewEnumerator4 = 2,
-	None01                         = 3,
-	EObjectAnimationState__NewEnumerator8 = 4,
-	None02                         = 5,
-	EObjectAnimationState__NewEnumerator12 = 6,
-	None03                         = 7,
-	TextProperty                   = 8,
-	EObjectAnimationState__NewEnumerator16 = 9,
-	None04                         = 10,
-	LazyObjectProperty             = 11,
-	EObjectAnimationState__NewEnumerator20 = 12,
-	None05                         = 13,
-	UInt16Property                 = 14
+	IntProperty                    = 2,
+	EObjectAnimationState__NewEnumerator4 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EObjectAnimationState__NewEnumerator8 = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	EObjectAnimationState__NewEnumerator12 = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	EObjectAnimationState__NewEnumerator16 = 12,
+	None04                         = 13,
+	LazyObjectProperty             = 14,
+	EObjectAnimationState__NewEnumerator20 = 15,
+	None05                         = 16,
+	UInt16Property                 = 17
 };
 
 

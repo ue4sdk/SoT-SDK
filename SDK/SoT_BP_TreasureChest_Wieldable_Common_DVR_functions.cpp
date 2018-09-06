@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TreasureChest_Wieldable_Common_DVR.BP_TreasureChest_Wieldable_Common_DVR_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TreasureChest_Wieldable_Common_DVR_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureChest_Wieldable_Common_DVR.BP_TreasureChest_Wieldable_Common_DVR_C.UserConstructionScript");
+
+	ABP_TreasureChest_Wieldable_Common_DVR_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

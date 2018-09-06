@@ -29,7 +29,6 @@ public:
 	}
 
 
-	struct FVector GetClosestInteractionPoint(struct FVector* ReferencePosition, float* OutInteractionPointRadius);
 	void UserConstructionScript();
 };
 

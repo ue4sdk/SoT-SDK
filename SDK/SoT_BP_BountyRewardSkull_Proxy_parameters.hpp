@@ -14,14 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_BountyRewardSkull_Proxy.BP_BountyRewardSkull_Proxy_C.GetClosestInteractionPoint
-struct ABP_BountyRewardSkull_Proxy_C_GetClosestInteractionPoint_Params
-{
-	struct FVector*                                    ReferencePosition;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              OutInteractionPointRadius;                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function BP_BountyRewardSkull_Proxy.BP_BountyRewardSkull_Proxy_C.UserConstructionScript
 struct ABP_BountyRewardSkull_Proxy_C_UserConstructionScript_Params
 {

@@ -31,7 +31,7 @@ enum class EGameplayTaskState : uint8_t
 	None                           = 1,
 	EGameplayTaskState__Finished   = 2,
 	None01                         = 3,
-	ETestArea__None                = 4
+	EDesignPreviewSizeMode__FillScreen = 4
 };
 
 

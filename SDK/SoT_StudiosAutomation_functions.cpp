@@ -1243,6 +1243,27 @@ void UAutomationBlueprintFunctionLibrary::STATIC_EndPerformanceCapture(bool Dump
 }
 
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReportDelayed
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int                            FrameDelay                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAutomationBlueprintFunctionLibrary::STATIC_DumpFullMemReportDelayed(int FrameDelay)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReportDelayed");
+
+	UAutomationBlueprintFunctionLibrary_DumpFullMemReportDelayed_Params params;
+	params.FrameDelay = FrameDelay;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReport
 // (Final, Native, Static, Public, BlueprintCallable)
 

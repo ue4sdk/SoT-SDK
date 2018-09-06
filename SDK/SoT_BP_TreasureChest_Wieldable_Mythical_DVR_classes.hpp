@@ -15,10 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Mythical_DVR.BP_TreasureChest_Wieldable_Mythical_DVR_C
-// 0x0000 (0x07E8 - 0x07E8)
+// 0x0020 (0x0808 - 0x07E8)
 class ABP_TreasureChest_Wieldable_Mythical_DVR_C : public ABP_TreasureChest_C
 {
 public:
+	class UPickupableComponent*                        Pickupable;                                               // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInput;                                   // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +30,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

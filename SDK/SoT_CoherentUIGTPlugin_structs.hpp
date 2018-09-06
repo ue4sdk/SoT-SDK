@@ -108,7 +108,8 @@ enum class ECoherentUIGTInputPropagationBehaviour : uint8_t
 {
 	ECoherentUIGTInputPropagationBehaviour__None = 0,
 	None                           = 1,
-	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 2
+	IntProperty                    = 2,
+	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 3
 };
 
 

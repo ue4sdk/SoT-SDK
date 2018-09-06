@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ShipwreckTreasureChest_Wieldable_Legendary.BP_ShipwreckTreasureChest_Wieldable_Legendary_C.UserConstructionScript
+struct ABP_ShipwreckTreasureChest_Wieldable_Legendary_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

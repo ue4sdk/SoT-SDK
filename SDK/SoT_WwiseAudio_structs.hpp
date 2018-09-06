@@ -59,7 +59,8 @@ enum class EWwiseEventDurationType : uint8_t
 {
 	EWwiseEventDurationType__OneShot = 0,
 	None                           = 1,
-	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 2
+	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 2,
+	UDSS_UpToDate                  = 3
 };
 
 

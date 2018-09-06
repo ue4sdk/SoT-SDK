@@ -37,14 +37,11 @@ enum class EDragPivot : uint8_t
 {
 	EDragPivot__MouseDown          = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EDragPivot__CenterLeft         = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	EDragPivot__BottomCenter       = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9
+	EDragPivot__CenterLeft         = 2,
+	None01                         = 3,
+	EDragPivot__BottomCenter       = 4,
+	None02                         = 5,
+	None03                         = 6
 };
 
 
@@ -72,7 +69,7 @@ enum class EDesignPreviewSizeMode : uint8_t
 	None                           = 1,
 	EDesignPreviewSizeMode__DesiredOnScreen = 2,
 	None01                         = 3,
-	RMT_None                       = 4
+	ETestArea__None                = 4
 };
 
 

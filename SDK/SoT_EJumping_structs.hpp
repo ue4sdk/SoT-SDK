@@ -21,7 +21,7 @@ enum class EJumping : uint8_t
 	None                           = 1,
 	EJumping__NewEnumerator4       = 2,
 	None01                         = 3,
-	NameProperty                   = 4
+	NavCollision_X                 = 4
 };
 
 

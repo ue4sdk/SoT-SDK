@@ -51,8 +51,7 @@ enum class EWaterSplashProbeType : uint8_t
 	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
 	None                           = 1,
 	EWaterSplashProbeType__Continuous = 2,
-	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	None01                         = 3
 };
 
 

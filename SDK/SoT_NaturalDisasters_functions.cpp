@@ -147,24 +147,6 @@ void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoStat
 }
 
 
-// Function NaturalDisasters.Volcano.OnRep_PlayersInZone
-// (Final, Native, Private)
-
-void AVolcano::OnRep_PlayersInZone()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.OnRep_PlayersInZone");
-
-	AVolcano_OnRep_PlayersInZone_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function NaturalDisasters.Volcano.Multicast_FireProjectile
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
 // Parameters:

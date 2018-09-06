@@ -7,12 +7,46 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Water_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Watercrafts.EOarState
+enum class EOarState : uint8_t
+{
+	EOarState__Idle                = 0,
+	None                           = 1,
+	EOarState__Braking             = 2,
+	None01                         = 3,
+	EAddEndpointResult__Success    = 4
+};
+
+
+// Enum Watercrafts.EOarIdentifier
+enum class EOarIdentifier : uint8_t
+{
+	EOarIdentifier__Left           = 0,
+	None                           = 1,
+	IntProperty                    = 2
+};
+
+
+// Enum Watercrafts.EOarInputState
+enum class EOarInputState : uint8_t
+{
+	EOarInputState__Inactive       = 0,
+	None                           = 1,
+	EGeyserState__Dormant          = 2
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

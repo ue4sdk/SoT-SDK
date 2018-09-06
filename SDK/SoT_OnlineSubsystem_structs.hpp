@@ -35,9 +35,7 @@ enum class EMPMatchOutcome : uint8_t
 	None01                         = 3,
 	EMPMatchOutcome__Third         = 4,
 	None02                         = 5,
-	StructProperty                 = 6,
-	None03                         = 7,
-	EComponentType__None           = 8
+	EComponentType__None           = 6
 };
 
 

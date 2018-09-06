@@ -19,9 +19,11 @@ enum class EFishCreatures : uint8_t
 {
 	EFishCreatures__NewEnumerator8 = 0,
 	None                           = 1,
-	EFishCreatures__NewEnumerator5 = 2,
-	None01                         = 3,
-	EFishCreatures__EFishCreatures_MAX = 4
+	IntProperty                    = 2,
+	EFishCreatures__NewEnumerator5 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EFishCreatures__EFishCreatures_MAX = 6
 };
 
 

@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_BountyRewardSkull.BP_BountyRewardSkull_C.UserConstructionScript
+struct ABP_BountyRewardSkull_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

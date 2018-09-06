@@ -45,7 +45,8 @@ enum class EInterpolationBlend : uint8_t
 	None                           = 1,
 	EInterpolationBlend__EaseInOutExponent3 = 2,
 	None01                         = 3,
-	EInterpolationBlend__EInterpolationBlend_MAX = 4
+	EInterpolationBlend__EInterpolationBlend_MAX = 4,
+	None02                         = 5
 };
 
 

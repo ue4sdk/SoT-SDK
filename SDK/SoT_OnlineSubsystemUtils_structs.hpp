@@ -22,8 +22,8 @@ enum class EBeaconConnectionState : uint8_t
 {
 	EBeaconConnectionState__Invalid = 0,
 	None                           = 1,
-	EBeaconConnectionState__EBeaconConnectionState_MAX = 2,
-	WalkableSlope_Default          = 3
+	IntProperty                    = 2,
+	EBeaconConnectionState__EBeaconConnectionState_MAX = 3
 };
 
 

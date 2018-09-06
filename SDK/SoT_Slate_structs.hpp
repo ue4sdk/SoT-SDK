@@ -40,7 +40,8 @@ enum class ESelectionMode : uint8_t
 {
 	ESelectionMode__None           = 0,
 	None                           = 1,
-	ESelectionMode__ESelectionMode_MAX = 2
+	ESelectionMode__ESelectionMode_MAX = 2,
+	ESlateBrushTileType__NoTile    = 3
 };
 
 
@@ -71,7 +72,7 @@ enum class EProgressBarFillType : uint8_t
 	IntProperty                    = 2,
 	EProgressBarFillType__BottomToTop = 3,
 	None01                         = 4,
-	ETouchType__Began              = 5
+	EFontHinting__Default          = 5
 };
 
 

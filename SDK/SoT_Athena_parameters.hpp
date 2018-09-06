@@ -8358,6 +8358,11 @@ struct AAthenaGameState_OnRep_ReplicatedWaterService_Params
 {
 };
 
+// Function Athena.AthenaGameState.OnRep_ReplicatedWatercraftService
+struct AAthenaGameState_OnRep_ReplicatedWatercraftService_Params
+{
+};
+
 // Function Athena.AthenaGameState.OnRep_ReplicatedTinySharkService
 struct AAthenaGameState_OnRep_ReplicatedTinySharkService_Params
 {
@@ -9215,6 +9220,42 @@ struct UControlWheelCompositeInputHandler_OnMoveRight_Params
 	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Athena.RowingCompositeInputHandler.OnUseRightOar
+struct URowingCompositeInputHandler_OnUseRightOar_Params
+{
+	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.RowingCompositeInputHandler.OnUseLeftOar
+struct URowingCompositeInputHandler_OnUseLeftOar_Params
+{
+	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.RowingCompositeInputHandler.OnStopUseRightOar
+struct URowingCompositeInputHandler_OnStopUseRightOar_Params
+{
+	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.RowingCompositeInputHandler.OnStopUseLeftOar
+struct URowingCompositeInputHandler_OnStopUseLeftOar_Params
+{
+	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.RowingCompositeInputHandler.OnBrakeRightOar
+struct URowingCompositeInputHandler_OnBrakeRightOar_Params
+{
+	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Athena.RowingCompositeInputHandler.OnBrakeLeftOar
+struct URowingCompositeInputHandler_OnBrakeLeftOar_Params
+{
+	TEnumAsByte<EInputHandlerResult>                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Athena.UseLadderCompositeInputHandler.OnClimbLadder
 struct UUseLadderCompositeInputHandler_OnClimbLadder_Params
 {
@@ -9901,6 +9942,7 @@ struct UModalInteractionCompositeInputHandler_OnDisengage_Params
 // Function Athena.MountpointComponent.OnRep_ReplicatedMountedItem
 struct UMountpointComponent_OnRep_ReplicatedMountedItem_Params
 {
+	class UObject*                                     PrevReplicatedMountedItem;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.NameplateComponent.GetWorldPosition

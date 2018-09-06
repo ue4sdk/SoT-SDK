@@ -1584,11 +1584,11 @@ public:
 
 
 // Class AthenaAI.AITargetService
-// 0x0040 (0x04D0 - 0x0490)
+// 0x0030 (0x04C0 - 0x0490)
 class AAITargetService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0490(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0490(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

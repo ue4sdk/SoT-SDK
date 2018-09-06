@@ -38,7 +38,8 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3
+	None01                         = 3,
+	EWaterSplashProbeType__ThresholdedRateOfChange = 4
 };
 
 
@@ -162,7 +163,8 @@ enum class ESwimmingLineOfSightTest : uint8_t
 {
 	ESwimmingLineOfSightTest__None = 0,
 	None                           = 1,
-	ESwimmingSyncMode__Synchronous = 2
+	IntProperty                    = 2,
+	ESwimmingSyncMode__Synchronous = 3
 };
 
 
@@ -170,8 +172,7 @@ enum class ESwimmingLineOfSightTest : uint8_t
 enum class ESwimmingSyncMode : uint8_t
 {
 	ESwimmingSyncMode__Synchronous = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -215,8 +216,7 @@ enum class ETinySharkActiveState : uint8_t
 {
 	ETinySharkActiveState__TrackingTarget = 0,
 	None                           = 1,
-	ETinySharkActiveState__ETinySharkActiveState_MAX = 2,
-	EEarthquakeState__Dormant      = 3
+	ETinySharkActiveState__ETinySharkActiveState_MAX = 2
 };
 
 
@@ -227,7 +227,7 @@ enum class ETinySharkState : uint8_t
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
 	None01                         = 3,
-	CameraFacing_NoneUP            = 4
+	NoCulling                      = 4
 };
 
 

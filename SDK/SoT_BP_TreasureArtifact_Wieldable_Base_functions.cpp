@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TreasureArtifact_Wieldable_Base.BP_TreasureArtifact_Wieldable_Base_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TreasureArtifact_Wieldable_Base_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureArtifact_Wieldable_Base.BP_TreasureArtifact_Wieldable_Base_C.UserConstructionScript");
+
+	ABP_TreasureArtifact_Wieldable_Base_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

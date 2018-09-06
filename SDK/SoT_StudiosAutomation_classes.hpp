@@ -150,6 +150,7 @@ public:
 	class FString STATIC_GetLevelUrl(class UObject* WorldContextObject);
 	class FString STATIC_GetCurrentMapTestName();
 	void STATIC_EndPerformanceCapture(bool DumpMemReport);
+	void STATIC_DumpFullMemReportDelayed(int FrameDelay);
 	void STATIC_DumpFullMemReport();
 	void STATIC_DelayForFramesWithDesc(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames, const class FString& Description);
 	void STATIC_DelayForFrames(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames);

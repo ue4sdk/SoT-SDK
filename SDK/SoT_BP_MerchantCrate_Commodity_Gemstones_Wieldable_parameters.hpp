@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MerchantCrate_Commodity_Gemstones_Wieldable.BP_MerchantCrate_Commodity_Gemstones_Wieldable_C.UserConstructionScript
+struct ABP_MerchantCrate_Commodity_Gemstones_Wieldable_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

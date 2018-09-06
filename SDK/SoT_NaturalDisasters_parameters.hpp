@@ -52,11 +52,6 @@ struct AVolcano_OnRep_VolcanoState_Params
 	struct FVolcanoStateData                           OldVolcanoState;                                          // (ConstParm, Parm)
 };
 
-// Function NaturalDisasters.Volcano.OnRep_PlayersInZone
-struct AVolcano_OnRep_PlayersInZone_Params
-{
-};
-
 // Function NaturalDisasters.Volcano.Multicast_FireProjectile
 struct AVolcano_Multicast_FireProjectile_Params
 {

@@ -3497,7 +3497,7 @@ public:
 
 
 // Class Engine.NetDriver
-// 0x0350 (0x0378 - 0x0028)
+// 0x0358 (0x0380 - 0x0028)
 class UNetDriver : public UObject
 {
 public:
@@ -3526,7 +3526,7 @@ public:
 	struct FName                                       NetDriverName;                                            // 0x00D8(0x0008) (ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x8];                                       // 0x00E0(0x0008) MISSED OFFSET
 	float                                              Time;                                                     // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x28C];                                     // 0x00EC(0x028C) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x294];                                     // 0x00EC(0x0294) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -10858,14 +10858,14 @@ public:
 
 
 // Class Engine.ActorChannel
-// 0x01E0 (0x0248 - 0x0068)
+// 0x01E8 (0x0250 - 0x0068)
 class UActorChannel : public UChannel
 {
 public:
 	class AActor*                                      Actor;                                                    // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xE8];                                      // 0x0070(0x00E8) MISSED OFFSET
 	TArray<class UObject*>                             ObjectsRequiredForQueuedBunches;                          // 0x0158(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0xE0];                                      // 0x0168(0x00E0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xE8];                                      // 0x0168(0x00E8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16396,11 +16396,11 @@ public:
 
 
 // Class Engine.DemoNetDriver
-// 0x00C8 (0x0440 - 0x0378)
+// 0x00C8 (0x0448 - 0x0380)
 class UDemoNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      UnknownData00[0xC8];                                      // 0x0378(0x00C8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x0380(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03.Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0128 - 0x0128)
 class UProposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03_C : public UVoyageProposalDesc
 {
 public:

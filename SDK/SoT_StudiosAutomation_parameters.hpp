@@ -383,6 +383,12 @@ struct UAutomationBlueprintFunctionLibrary_EndPerformanceCapture_Params
 	bool                                               DumpMemReport;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReportDelayed
+struct UAutomationBlueprintFunctionLibrary_DumpFullMemReportDelayed_Params
+{
+	int                                                FrameDelay;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReport
 struct UAutomationBlueprintFunctionLibrary_DumpFullMemReport_Params
 {

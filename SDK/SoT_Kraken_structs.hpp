@@ -53,7 +53,8 @@ enum class EKrakenDespawnReason : uint8_t
 	EKrakenDespawnReason__Invalid  = 0,
 	None                           = 1,
 	EKrakenDespawnReason__Dismissed = 2,
-	None01                         = 3
+	None01                         = 3,
+	EOarState__Idle                = 4
 };
 
 
@@ -62,8 +63,7 @@ enum class EKrakenState : uint8_t
 {
 	EKrakenState__Spawning         = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAIShipType__Normal            = 3
+	EAIShipType__Normal            = 2
 };
 
 

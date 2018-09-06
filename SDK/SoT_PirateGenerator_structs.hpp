@@ -21,7 +21,8 @@ enum class EIPGEthnicity : uint8_t
 {
 	EIPGEthnicity__UNSPECIFIED     = 0,
 	None                           = 1,
-	EIPGEthnicity__EIPGEthnicity_MAX = 2
+	IntProperty                    = 2,
+	EIPGEthnicity__EIPGEthnicity_MAX = 3
 };
 
 
@@ -68,11 +69,9 @@ enum class EIPGBlendType : uint8_t
 	None                           = 1,
 	EIPGBlendType__POSNEG          = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EIPGBlendType__ONOFF_BIAS      = 5,
-	None02                         = 6,
-	StructProperty                 = 7,
-	None03                         = 8
+	EIPGBlendType__ONOFF_BIAS      = 4,
+	None02                         = 5,
+	None03                         = 6
 };
 
 
@@ -82,8 +81,7 @@ enum class EPirateBakeFlags : uint8_t
 	EPirateBakeFlags__None         = 0,
 	None                           = 1,
 	EPirateBakeFlags__StripTopLOD  = 2,
-	None01                         = 3,
-	WeakObjectProperty             = 4
+	None01                         = 3
 };
 
 

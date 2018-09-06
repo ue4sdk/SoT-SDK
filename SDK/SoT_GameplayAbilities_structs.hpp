@@ -40,7 +40,8 @@ enum class EGameplayAbilityActivationMode : uint8_t
 {
 	EGameplayAbilityActivationMode__Authority = 0,
 	None                           = 1,
-	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 2
+	IntProperty                    = 2,
+	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 3
 };
 
 
@@ -70,8 +71,7 @@ enum class EGameplayCueEvent : uint8_t
 {
 	EGameplayCueEvent__OnActive    = 0,
 	None                           = 1,
-	EGameplayCueEvent__EGameplayCueEvent_MAX = 2,
-	EGameplayEffectMagnitudeCalculation__ScalableFloat = 3
+	EGameplayCueEvent__EGameplayCueEvent_MAX = 2
 };
 
 
@@ -109,7 +109,7 @@ enum class EGameplayTargetingConfirmation : uint8_t
 	EGameplayTargetingConfirmation__Instant = 0,
 	None                           = 1,
 	EGameplayTargetingConfirmation__EGameplayTargetingConfirmation_MAX = 2,
-	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 3
+	EGameplayEffectMagnitudeCalculation__ScalableFloat = 3
 };
 
 
@@ -153,7 +153,7 @@ enum class EGameplayEffectMagnitudeCalculation : uint8_t
 	EGameplayEffectMagnitudeCalculation__ScalableFloat = 0,
 	None                           = 1,
 	EGameplayEffectMagnitudeCalculation__EGameplayEffectMagnitudeCalculation_MAX = 2,
-	EGameplayTargetingConfirmation__Instant = 3
+	EGameplayCueEvent__OnActive    = 3
 };
 
 
@@ -179,7 +179,8 @@ enum class EGameplayAbilityNetExecutionPolicy : uint8_t
 {
 	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 0,
 	None                           = 1,
-	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2
+	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2,
+	EGameplayTargetingConfirmation__Instant = 3
 };
 
 
@@ -206,8 +207,7 @@ enum class EAbilityTaskNetSyncType : uint8_t
 {
 	EAbilityTaskNetSyncType__BothWait = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ETargetAbilitySelfSelection__TASS_Permit = 3
+	ETargetAbilitySelfSelection__TASS_Permit = 2
 };
 
 
