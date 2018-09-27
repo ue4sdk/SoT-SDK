@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.GameModeWithServiceProviderGameState");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.GameModeWithServiceProviderGameState");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameServiceInterface");
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameService");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameService");
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameServiceRequiringUninitialisation");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameServiceRequiringUninitialisation");
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameServiceActorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameServiceActorInterface");
 		return ptr;
 	}
 
@@ -100,7 +100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameServiceActor");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameServiceActor");
 		return ptr;
 	}
 
@@ -116,7 +116,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameServiceProvider");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameServiceProvider");
 		return ptr;
 	}
 
@@ -132,7 +132,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestGameStateWithCollection");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestGameStateWithCollection");
 		return ptr;
 	}
 
@@ -149,7 +149,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestServiceProviderGameInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestServiceProviderGameInstance");
 		return ptr;
 	}
 
@@ -166,7 +166,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameServiceTests.TestServiceProviderGameState");
+		static auto ptr = UObject::FindObject<UClass>("Class GameServiceTests.TestServiceProviderGameState");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveSta
 	UStatusEffectManagerComponent_OnRep_ActiveEffects_Params params;
 	params.OldEffects = OldEffects;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

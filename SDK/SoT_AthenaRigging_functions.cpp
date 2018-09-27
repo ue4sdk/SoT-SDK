@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UInstancedRopeComponent::SetUnderwater(bool Underwater)
 	UInstancedRopeComponent_SetUnderwater_Params params;
 	params.Underwater = Underwater;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,7 @@ void UInstancedRopeComponent::SetRopes(TArray<struct FInstancedRopeParams> InRop
 	UInstancedRopeComponent_SetRopes_Params params;
 	params.InRopes = InRopes;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -66,12 +56,7 @@ void URiggingSystemComponent::SetSocketLookupSource(class AActor* InSocketSource
 	URiggingSystemComponent_SetSocketLookupSource_Params params;
 	params.InSocketSource = InSocketSource;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -90,12 +75,7 @@ int URiggingSystemComponent::ConvertLineToRopeIndex(const struct FName& InLineGr
 	params.InLineGroupName = InLineGroupName;
 	params.InLineOffset = InLineOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -113,12 +93,7 @@ void URopeInterface::SetRopeUVOffset(float InUVOffset)
 	URopeInterface_SetRopeUVOffset_Params params;
 	params.InUVOffset = InUVOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -136,12 +111,7 @@ void URopeInterface::SetRopeEndpoints(const struct FVector& InWorldSpaceStart, c
 	params.InWorldSpaceStart = InWorldSpaceStart;
 	params.InWorldSpaceEnd = InWorldSpaceEnd;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

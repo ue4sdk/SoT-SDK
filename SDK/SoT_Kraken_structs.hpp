@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,7 +54,7 @@ enum class EKrakenDespawnReason : uint8_t
 	None                           = 1,
 	EKrakenDespawnReason__Dismissed = 2,
 	None01                         = 3,
-	EOarState__Idle                = 4
+	EAddEndpointResult__Success    = 4
 };
 
 
@@ -72,7 +72,8 @@ enum class EKrakenTentacleBehaviourDamageActions : uint8_t
 {
 	EKrakenTentacleBehaviourDamageActions__StayActive = 0,
 	None                           = 1,
-	EAIShipDestructionReason__Defeated = 2
+	IntProperty                    = 2,
+	EAIShipDestructionReason__Defeated = 3
 };
 
 
@@ -552,6 +553,13 @@ struct FKrakenShipWrappingBehaviourParams
 	struct FKrakenShipWrappingBehaviourHeavyAttackParams HeavyAttackParams;                                        // 0x02A0(0x00A0) (Edit, DisableEditOnInstance)
 	struct FKrakenShipWrappingBehaviourDamageParams    DamageParams;                                             // 0x0340(0x0068) (Edit, DisableEditOnInstance)
 	struct FKrakenShipWrappingBehaviourHealthParams    HealthParams;                                             // 0x03A8(0x0038) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct Kraken.MurkAggregateTickFunction
+// 0x0018 (0x0060 - 0x0048)
+struct FMurkAggregateTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.KrakenWorldSettingsParams

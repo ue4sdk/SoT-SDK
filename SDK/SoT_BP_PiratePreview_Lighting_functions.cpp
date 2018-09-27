@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 
 	ABP_PiratePreview_Lighting_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41,11 +37,7 @@ void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct 
 	ABP_PiratePreview_Lighting_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -61,11 +53,7 @@ void ABP_PiratePreview_Lighting_C::PreviewBusy__DelegateSignature(const struct F
 	ABP_PiratePreview_Lighting_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

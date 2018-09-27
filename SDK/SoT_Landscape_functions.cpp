@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,12 +44,7 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 	params.bLowerHeights = bLowerHeights;
 	params.PaintLayer = PaintLayer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -65,12 +60,7 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 	ALandscapeProxy_ChangeLODDistanceFactor_Params params;
 	params.InLODDistanceFactor = InLODDistanceFactor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

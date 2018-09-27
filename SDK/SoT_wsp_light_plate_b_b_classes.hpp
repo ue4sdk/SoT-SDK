@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass wsp_light_plate_b_b.wsp_light_plate_b_b_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass wsp_light_plate_b_b.wsp_light_plate_b_b_C");
 		return ptr;
 	}
 

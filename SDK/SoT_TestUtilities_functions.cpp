@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,14 +23,29 @@ TEnumAsByte<ECollisionChannel> UTestPrimitiveComponent::GetCollisionObjectType()
 
 	UTestPrimitiveComponent_GetCollisionObjectType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
 
-	fn->FunctionFlags = flags;
-
 	return params.ReturnValue;
+}
+
+
+// Function TestUtilities.TestStaticMeshComponent.AddForce
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 Force                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   BoneName                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAccelChange                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTestStaticMeshComponent::AddForce(const struct FVector& Force, const struct FName& BoneName, bool bAccelChange)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.TestStaticMeshComponent.AddForce");
+
+	UTestStaticMeshComponent_AddForce_Params params;
+	params.Force = Force;
+	params.BoneName = BoneName;
+	params.bAccelChange = bAccelChange;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

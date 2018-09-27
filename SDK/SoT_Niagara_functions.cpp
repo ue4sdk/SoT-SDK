@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,12 +37,7 @@ class UNiagaraComponent* UNiagaraFunctionLibrary::STATIC_SpawnEffectAttached(cla
 	params.LocationType = LocationType;
 	params.bAutoDestroy = bAutoDestroy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -69,12 +64,7 @@ class UNiagaraComponent* UNiagaraFunctionLibrary::STATIC_SpawnEffectAtLocation(c
 	params.Rotation = Rotation;
 	params.bAutoDestroy = bAutoDestroy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -98,12 +88,7 @@ void UNiagaraFunctionLibrary::STATIC_SetUpdateScriptConstant(class UNiagaraCompo
 	params.ConstantName = ConstantName;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,21 +21,17 @@ void UBP_Anim_FlintlockPistol_C::AnimNotify_ExitedFire()
 
 	UBP_Anim_FlintlockPistol_C_AnimNotify_ExitedFire_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.OnOneShotUseTriggered
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class UClass**                 InputID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FWieldableItemActionVisuals* ActionVisuals                  (ConstParm, Parm, OutParm, ReferenceParm)
+// class UClass*                  InputID                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FWieldableItemActionVisuals ActionVisuals                  (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UBP_Anim_FlintlockPistol_C::OnOneShotUseTriggered(class UClass** InputID, struct FWieldableItemActionVisuals* ActionVisuals)
+void UBP_Anim_FlintlockPistol_C::OnOneShotUseTriggered(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.OnOneShotUseTriggered");
 
@@ -43,21 +39,17 @@ void UBP_Anim_FlintlockPistol_C::OnOneShotUseTriggered(class UClass** InputID, s
 	params.InputID = InputID;
 	params.ActionVisuals = ActionVisuals;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.OnUseStarted
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class UClass**                 InputID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FWieldableItemActionVisuals* ActionVisuals                  (ConstParm, Parm, OutParm, ReferenceParm)
+// class UClass*                  InputID                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FWieldableItemActionVisuals ActionVisuals                  (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UBP_Anim_FlintlockPistol_C::OnUseStarted(class UClass** InputID, struct FWieldableItemActionVisuals* ActionVisuals)
+void UBP_Anim_FlintlockPistol_C::OnUseStarted(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.OnUseStarted");
 
@@ -65,11 +57,7 @@ void UBP_Anim_FlintlockPistol_C::OnUseStarted(class UClass** InputID, struct FWi
 	params.InputID = InputID;
 	params.ActionVisuals = ActionVisuals;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -82,11 +70,7 @@ void UBP_Anim_FlintlockPistol_C::BlueprintInitializeAnimation()
 
 	UBP_Anim_FlintlockPistol_C_BlueprintInitializeAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -102,11 +86,7 @@ void UBP_Anim_FlintlockPistol_C::ReloadEventDelegate(const struct FEventProjecti
 	UBP_Anim_FlintlockPistol_C_ReloadEventDelegate_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -119,11 +99,7 @@ void UBP_Anim_FlintlockPistol_C::BlueprintUninitializeAnimation()
 
 	UBP_Anim_FlintlockPistol_C_BlueprintUninitializeAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -136,11 +112,7 @@ void UBP_Anim_FlintlockPistol_C::AnimNotify_ResetReload()
 
 	UBP_Anim_FlintlockPistol_C_AnimNotify_ResetReload_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -156,11 +128,7 @@ void UBP_Anim_FlintlockPistol_C::ExecuteUbergraph_BP_Anim_FlintlockPistol(int En
 	UBP_Anim_FlintlockPistol_C_ExecuteUbergraph_BP_Anim_FlintlockPistol_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

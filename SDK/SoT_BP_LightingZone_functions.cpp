@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_LightingZone_C::Update_Lighting_Zone()
 
 	ABP_LightingZone_C_Update_Lighting_Zone_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,11 +34,7 @@ void ABP_LightingZone_C::UserConstructionScript()
 
 	ABP_LightingZone_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -55,11 +47,7 @@ void ABP_LightingZone_C::ReceiveBeginPlay()
 
 	ABP_LightingZone_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -75,11 +63,7 @@ void ABP_LightingZone_C::ExecuteUbergraph_BP_LightingZone(int EntryPoint)
 	ABP_LightingZone_C_ExecuteUbergraph_BP_LightingZone_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

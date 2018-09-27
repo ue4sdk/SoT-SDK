@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UWindInterface::UnregisterWindZone(const TScriptInterface<class UWindZoneIn
 	UWindInterface_UnregisterWindZone_Params params;
 	params.InWindZone = InWindZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,7 @@ void UWindInterface::TriggerChange(bool ChangeInstantly)
 	UWindInterface_TriggerChange_Params params;
 	params.ChangeInstantly = ChangeInstantly;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -66,12 +56,7 @@ void UWindInterface::SetParams(const struct FWindServiceParams& Params)
 	UWindInterface_SetParams_Params params;
 	params.Params = Params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -87,12 +72,7 @@ void UWindInterface::SetGlobalWindVector(const struct FVector& InWindVector)
 	UWindInterface_SetGlobalWindVector_Params params;
 	params.InWindVector = InWindVector;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -108,12 +88,7 @@ void UWindInterface::SetGlobalWindMagnitude(float InWindMagnitude)
 	UWindInterface_SetGlobalWindMagnitude_Params params;
 	params.InWindMagnitude = InWindMagnitude;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -129,12 +104,7 @@ void UWindInterface::SetGlobalWindDirection(const struct FVector& InWindDirectio
 	UWindInterface_SetGlobalWindDirection_Params params;
 	params.InWindDirection = InWindDirection;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -150,12 +120,7 @@ void UWindInterface::SetGlobalWindAngle(float InAngle)
 	UWindInterface_SetGlobalWindAngle_Params params;
 	params.InAngle = InAngle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -171,12 +136,7 @@ void UWindInterface::RegisterWindZone(const TScriptInterface<class UWindZoneInte
 	UWindInterface_RegisterWindZone_Params params;
 	params.InWindZone = InWindZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -193,12 +153,7 @@ TScriptInterface<class UWindZoneInterface> UWindInterface::GetWindZoneAtLocation
 	UWindInterface_GetWindZoneAtLocation_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -217,12 +172,7 @@ struct FVector UWindInterface::GetWindVector(const struct FVector& SamplePositio
 	UWindInterface_GetWindVector_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -241,12 +191,7 @@ float UWindInterface::GetWindMagnitude(const struct FVector& SamplePosition)
 	UWindInterface_GetWindMagnitude_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -265,12 +210,7 @@ struct FVector UWindInterface::GetWindDirection(const struct FVector& SamplePosi
 	UWindInterface_GetWindDirection_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -289,12 +229,7 @@ float UWindInterface::GetWindAngle(const struct FVector& SamplePosition)
 	UWindInterface_GetWindAngle_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -313,12 +248,7 @@ struct FWindZoneTurbulence UWindInterface::GetTurbulenceForTrees(const struct FV
 	UWindInterface_GetTurbulenceForTrees_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -337,12 +267,7 @@ struct FWindZoneTurbulence UWindInterface::GetTurbulence(const struct FVector& S
 	UWindInterface_GetTurbulence_Params params;
 	params.SamplePosition = SamplePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -359,12 +284,7 @@ float UWindInterface::GetMaxWindMagnitude()
 
 	UWindInterface_GetMaxWindMagnitude_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -381,12 +301,7 @@ struct FWindZoneParams UWindZoneInterface::GetWindZoneParams()
 
 	UWindZoneInterface_GetWindZoneParams_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -403,12 +318,7 @@ struct FVector2D UWindZoneInterface::GetWindZoneLocation()
 
 	UWindZoneInterface_GetWindZoneLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -427,12 +337,7 @@ struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVecto
 	UWindZoneInterface_GetTurbulence_Params params;
 	params.Location = Location;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -450,12 +355,7 @@ void UWindFunctions::STATIC_SetDefaultWindBlowingNorth(class UObject* WorldConte
 	UWindFunctions_SetDefaultWindBlowingNorth_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -474,12 +374,7 @@ struct FVector UWindFunctions::STATIC_GetWindAtLocation(class UObject* WorldCont
 	params.WorldContextObject = WorldContextObject;
 	params.WorldPosition = WorldPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -494,12 +389,7 @@ void AWindService::OnRep_WindMagnitude()
 
 	AWindService_OnRep_WindMagnitude_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -512,12 +402,7 @@ void AWindService::OnRep_WindAngle()
 
 	AWindService_OnRep_WindAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -532,12 +417,7 @@ struct FWindServiceParams AWindService::GetWindParams()
 
 	AWindService_GetWindParams_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -558,12 +438,7 @@ bool UWindServiceParamsFunctionLibrary::STATIC_AreWindServiceParamsEqual(const s
 	params.Params1 = Params1;
 	params.Params2 = Params2;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

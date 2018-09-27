@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class RareEngine.RareGameEngine
-// 0x0058 (0x0B20 - 0x0AC8)
+// 0x0058 (0x0B38 - 0x0AE0)
 class URareGameEngine : public UGameEngine
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0AC8(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0AE0(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.RareGameEngine");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.RareGameEngine");
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.AudioHardwareDeviceService");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.AudioHardwareDeviceService");
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.HitchDiagnosisBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.HitchDiagnosisBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -76,7 +76,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.MemoryUsageVisualiserSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.MemoryUsageVisualiserSettings");
 		return ptr;
 	}
 
@@ -91,7 +91,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.RareHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.RareHUD");
 		return ptr;
 	}
 
@@ -109,7 +109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.StallDetector");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.StallDetector");
 		return ptr;
 	}
 
@@ -128,7 +128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.StaticMeshActorBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.StaticMeshActorBlueprintLibrary");
 		return ptr;
 	}
 

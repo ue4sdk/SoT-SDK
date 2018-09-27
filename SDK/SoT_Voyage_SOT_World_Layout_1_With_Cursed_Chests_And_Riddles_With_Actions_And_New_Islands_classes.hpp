@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands.Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0138 - 0x0138)
 class UVoyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands_C : public UVoyageProposalDesc
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands.Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands.Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands_C");
 		return ptr;
 	}
 

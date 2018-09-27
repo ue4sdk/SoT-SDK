@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CharacterVFXComponent.BP_CharacterVFXComponent_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_CharacterVFXComponent.BP_CharacterVFXComponent_C");
 		return ptr;
 	}
 
@@ -62,8 +62,8 @@ public:
 	void Play_View_Under_Water_FX(const struct FEventPlayerViewUnderWaterStateChanged& Event);
 	void Play_Falling_Splash(float FallingSpeed);
 	void Play_Foot_Splash(const struct FVector& Location);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
-	void ReceiveTick(float* DeltaSeconds);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void PlayerViewUnderWaterEvent(const struct FEventPlayerViewUnderWaterStateChanged& Event);
 	void FallingIntoWaterEvent(const struct FAthena_FFallingIntoWaterEvent& Event);

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,40 +38,41 @@ enum class EUnit : uint8_t
 {
 	EUnit__Micrometers             = 0,
 	None                           = 1,
-	EUnit__Kilometers              = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EUnit__Miles                   = 5,
-	None02                         = 6,
-	EUnit__MetersPerSecond         = 7,
-	None03                         = 8,
-	ShipCurseSpawnedFXForCurse     = 9,
-	EUnit__Farenheit               = 10,
-	None04                         = 11,
-	EUnit__Grams                   = 12,
-	None05                         = 13,
-	UInt16Property                 = 14,
-	EUnit__Pounds                  = 15,
-	None06                         = 16,
-	Int8Property                   = 17,
-	EUnit__KilogramsForce          = 18,
-	None07                         = 19,
-	EUnit__Gigahertz               = 20,
-	None08                         = 21,
-	EUnit__Megabytes               = 22,
-	None09                         = 23,
-	EUnit__Milliseconds            = 24,
-	None10                         = 25,
-	EUnit__Days                    = 26,
-	None11                         = 27,
-	EUnit__EUnit_MAX               = 28,
-	None12                         = 29,
-	None13                         = 30,
-	None14                         = 31,
-	None15                         = 32,
-	BoolProperty                   = 33,
-	None16                         = 34,
-	None17                         = 35
+	IntProperty                    = 2,
+	EUnit__Kilometers              = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EUnit__Miles                   = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	EUnit__MetersPerSecond         = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	EUnit__Farenheit               = 12,
+	None04                         = 13,
+	LazyObjectProperty             = 14,
+	EUnit__Grams                   = 15,
+	None05                         = 16,
+	UInt16Property                 = 17,
+	EUnit__Pounds                  = 18,
+	None06                         = 19,
+	Int8Property                   = 20,
+	EUnit__KilogramsForce          = 21,
+	None07                         = 22,
+	Core                           = 23,
+	EUnit__Gigahertz               = 24,
+	None08                         = 25,
+	EUnit__Megabytes               = 26,
+	None09                         = 27,
+	EUnit__Milliseconds            = 28,
+	None10                         = 29,
+	EUnit__Days                    = 30,
+	None11                         = 31,
+	EUnit__EUnit_MAX               = 32,
+	None12                         = 33,
+	None13                         = 34,
+	None14                         = 35,
+	_Game_Blueprints_GameObjects_Items_MerchantCrates_BP_CargoRunCrate_Cloth_Desc = 36
 };
 
 
@@ -84,10 +85,9 @@ enum class EMouseCursor : uint8_t
 	None01                         = 3,
 	EMouseCursor__Crosshairs       = 4,
 	None02                         = 5,
-	StructProperty                 = 6,
-	EMouseCursor__SlashedCircle    = 7,
-	None03                         = 8,
-	TextProperty                   = 9
+	EMouseCursor__SlashedCircle    = 6,
+	None03                         = 7,
+	TextProperty                   = 8
 };
 
 

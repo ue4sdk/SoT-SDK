@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.MigrationControlChannel");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.MigrationControlChannel");
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.NetworkTestingBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.NetworkTestingBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -99,7 +99,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorRef");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorRef");
 		return ptr;
 	}
 
@@ -115,7 +115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorThatMovesOnBeginPlay");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorThatMovesOnBeginPlay");
 		return ptr;
 	}
 
@@ -131,7 +131,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithChild");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithChild");
 		return ptr;
 	}
 
@@ -148,7 +148,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithNetActorPtr");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithNetActorPtr");
 		return ptr;
 	}
 
@@ -164,7 +164,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithUniqueNetId");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithUniqueNetId");
 		return ptr;
 	}
 
@@ -181,7 +181,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent");
 		return ptr;
 	}
 
@@ -197,7 +197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponentActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponentActor");
 		return ptr;
 	}
 
@@ -213,7 +213,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableDefaultComponentActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableDefaultComponentActor");
 		return ptr;
 	}
 
@@ -229,7 +229,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationActorCallsOrderingTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationActorCallsOrderingTestActor");
 		return ptr;
 	}
 
@@ -245,7 +245,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationChildActorLinkedActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationChildActorLinkedActor");
 		return ptr;
 	}
 
@@ -262,7 +262,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationCustomSerialiseActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationCustomSerialiseActor");
 		return ptr;
 	}
 
@@ -278,7 +278,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationGetLinkedActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationGetLinkedActor");
 		return ptr;
 	}
 
@@ -295,7 +295,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationReferenceActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationReferenceActor");
 		return ptr;
 	}
 
@@ -316,7 +316,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsPropertyMarkup");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsPropertyMarkup");
 		return ptr;
 	}
 
@@ -332,7 +332,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsTArrayProperty");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsTArrayProperty");
 		return ptr;
 	}
 
@@ -349,7 +349,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSerialisationDetailsTestsUStructProperty");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsUStructProperty");
 		return ptr;
 	}
 
@@ -376,7 +376,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServerMigration.ServerMigrationSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSettings");
 		return ptr;
 	}
 

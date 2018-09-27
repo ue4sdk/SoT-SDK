@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ void ABP_DamageZone_C::GetNumExternalHits(int* NumExternalHits)
 
 	ABP_DamageZone_C_GetNumExternalHits_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (NumExternalHits != nullptr)
 		*NumExternalHits = params.NumExternalHits;
@@ -43,11 +39,7 @@ void ABP_DamageZone_C::Initialise()
 
 	ABP_DamageZone_C_Initialise_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -60,11 +52,7 @@ void ABP_DamageZone_C::Update_External_Hits()
 
 	ABP_DamageZone_C_Update_External_Hits_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -77,11 +65,7 @@ void ABP_DamageZone_C::OnRep_Rep_ExternalHitList()
 
 	ABP_DamageZone_C_OnRep_Rep_ExternalHitList_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -94,11 +78,7 @@ void ABP_DamageZone_C::Clear_Decal_Flags()
 
 	ABP_DamageZone_C_Clear_Decal_Flags_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -114,11 +94,7 @@ void ABP_DamageZone_C::Add_Deferred_Decal(class UDecalComponent* Decal)
 	ABP_DamageZone_C_Add_Deferred_Decal_Params params;
 	params.Decal = Decal;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -133,11 +109,7 @@ void ABP_DamageZone_C::KillDeferredDecal(class UDecalComponent** Decal)
 
 	ABP_DamageZone_C_KillDeferredDecal_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Decal != nullptr)
 		*Decal = params.Decal;
@@ -153,11 +125,7 @@ void ABP_DamageZone_C::RemoveDeferredDecals()
 
 	ABP_DamageZone_C_RemoveDeferredDecals_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -173,11 +141,7 @@ void ABP_DamageZone_C::Set_Repair_Visibility(bool Visible)
 	ABP_DamageZone_C_Set_Repair_Visibility_Params params;
 	params.Visible = Visible;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -193,11 +157,7 @@ void ABP_DamageZone_C::Add_External_Hit(const struct FHullDamageHit& HitData)
 	ABP_DamageZone_C_Add_External_Hit_Params params;
 	params.HitData = HitData;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -210,11 +170,7 @@ void ABP_DamageZone_C::CollectTaggedComponents()
 
 	ABP_DamageZone_C_CollectTaggedComponents_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -227,11 +183,7 @@ void ABP_DamageZone_C::UserConstructionScript()
 
 	ABP_DamageZone_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -247,11 +199,7 @@ void ABP_DamageZone_C::AddExternalHit(const struct FHullDamageHit& Hit_Data)
 	ABP_DamageZone_C_AddExternalHit_Params params;
 	params.Hit_Data = Hit_Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -264,31 +212,23 @@ void ABP_DamageZone_C::ClearDecalFlags()
 
 	ABP_DamageZone_C_ClearDecalFlags_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_DamageZone.BP_DamageZone_C.OnRepairableStateUpdate
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<ERepairableState>* InRepairableState              (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERepairableState>  InRepairableState              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DamageZone_C::OnRepairableStateUpdate(TEnumAsByte<ERepairableState>* InRepairableState)
+void ABP_DamageZone_C::OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InRepairableState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnRepairableStateUpdate");
 
 	ABP_DamageZone_C_OnRepairableStateUpdate_Params params;
 	params.InRepairableState = InRepairableState;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -301,11 +241,7 @@ void ABP_DamageZone_C::OnInitialise()
 
 	ABP_DamageZone_C_OnInitialise_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -321,11 +257,7 @@ void ABP_DamageZone_C::ExecuteUbergraph_BP_DamageZone(int EntryPoint)
 	ABP_DamageZone_C_ExecuteUbergraph_BP_DamageZone_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

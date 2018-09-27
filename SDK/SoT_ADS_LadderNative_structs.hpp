@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,10 +16,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimDataEntryStruct ADS_LadderNative.ADS_LadderNative
-// 0x0058
+// 0x0068
 struct FADS_LadderNative
 {
-	struct FAthenaAnimationLadderAnimData              Ladder_35_854F2A494E1FB6EBCFF72B8AB260262B;               // 0x0000(0x0058) (Edit, BlueprintVisible)
+	struct FAthenaAnimationLadderAnimData              Ladder_35_854F2A494E1FB6EBCFF72B8AB260262B;               // 0x0000(0x0068) (Edit, BlueprintVisible)
 };
 
 }

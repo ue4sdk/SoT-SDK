@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenTentacle");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenTentacle");
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllKrakenOccupiedLocations");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.EnvQueryContext_AllKrakenOccupiedLocations");
 		return ptr;
 	}
 
@@ -60,7 +60,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllocatedShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.EnvQueryContext_AllocatedShip");
 		return ptr;
 	}
 
@@ -75,7 +75,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllShipsInWorld");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.EnvQueryContext_AllShipsInWorld");
 		return ptr;
 	}
 
@@ -90,7 +90,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_PreviousLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.EnvQueryContext_PreviousLocation");
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryGenerator_KrakenSpawnLocations");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.EnvQueryGenerator_KrakenSpawnLocations");
 		return ptr;
 	}
 
@@ -120,7 +120,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryGenerator_KrakenTentacleSpawnLocations");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.EnvQueryGenerator_KrakenTentacleSpawnLocations");
 		return ptr;
 	}
 
@@ -128,7 +128,7 @@ public:
 
 
 // Class Kraken.Murk
-// 0x0078 (0x0508 - 0x0490)
+// 0x00A0 (0x0530 - 0x0490)
 class AMurk : public AActor
 {
 public:
@@ -140,11 +140,11 @@ public:
 	unsigned char                                      UnknownData00[0x4];                                       // 0x04B4(0x0004) MISSED OFFSET
 	class UMaterialInstanceDynamic*                    InnerSheetMaterialInstance;                               // 0x04B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UMaterialInstanceDynamic*                    OuterSheetMaterialInstance;                               // 0x04C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x04C8(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x68];                                      // 0x04C8(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.Murk");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.Murk");
 		return ptr;
 	}
 
@@ -174,7 +174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingTentacle");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenShipWrappingTentacle");
 		return ptr;
 	}
 
@@ -192,7 +192,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenTelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenTelemetryComponent");
 		return ptr;
 	}
 
@@ -224,7 +224,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.Kraken");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.Kraken");
 		return ptr;
 	}
 
@@ -252,7 +252,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenAnimatedTentacleAnimationDataAsset");
 		return ptr;
 	}
 
@@ -268,7 +268,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationMappingDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenAnimatedTentacleAnimationMappingDataAsset");
 		return ptr;
 	}
 
@@ -284,7 +284,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationSpecDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenAnimatedTentacleAnimationSpecDataAsset");
 		return ptr;
 	}
 
@@ -301,7 +301,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleStateAnimationsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenAnimatedTentacleStateAnimationsDataAsset");
 		return ptr;
 	}
 
@@ -317,7 +317,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenIdleBehaviourParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenIdleBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -333,7 +333,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenParamsDataAsset");
 		return ptr;
 	}
 
@@ -349,7 +349,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenPlayerGrabbingBehaviourParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenPlayerGrabbingBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -364,7 +364,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenServiceInterface");
 		return ptr;
 	}
 
@@ -372,7 +372,7 @@ public:
 
 
 // Class Kraken.KrakenService
-// 0x0220 (0x06B0 - 0x0490)
+// 0x0250 (0x06E0 - 0x0490)
 class AKrakenService : public AActor
 {
 public:
@@ -380,11 +380,11 @@ public:
 	class UKrakenServiceParamsDataAsset*               KrakenServiceParams;                                      // 0x0498(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x178];                                     // 0x04A0(0x0178) MISSED OFFSET
 	class AKraken*                                     Kraken;                                                   // 0x0618(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x90];                                      // 0x0620(0x0090) MISSED OFFSET
+	unsigned char                                      UnknownData02[0xC0];                                      // 0x0620(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenService");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenService");
 		return ptr;
 	}
 
@@ -405,7 +405,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenServiceParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenServiceParamsDataAsset");
 		return ptr;
 	}
 
@@ -421,7 +421,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipHittingBehaviourParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenShipHittingBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -438,7 +438,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingBehaviourParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenShipWrappingBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -446,19 +446,19 @@ public:
 
 
 // Class Kraken.KrakenShipWrappingKnockbackRegionComponent
-// 0x0080 (0x0320 - 0x02A0)
+// 0x0080 (0x0330 - 0x02B0)
 class UKrakenShipWrappingKnockbackRegionComponent : public USceneComponent
 {
 public:
-	class UBoxComponent*                               KnockbackRegion;                                          // 0x02A0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     KnockbackDirection;                                       // 0x02A8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              KnockbackTime;                                            // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FKnockBackInfo                              KnockbackParams;                                          // 0x02B8(0x0034) (Edit)
-	unsigned char                                      UnknownData00[0x34];                                      // 0x02EC(0x0034) MISSED OFFSET
+	class UBoxComponent*                               KnockbackRegion;                                          // 0x02B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FVector                                     KnockbackDirection;                                       // 0x02B8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              KnockbackTime;                                            // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FKnockBackInfo                              KnockbackParams;                                          // 0x02C8(0x0034) (Edit)
+	unsigned char                                      UnknownData00[0x34];                                      // 0x02FC(0x0034) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingKnockbackRegionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Kraken.KrakenShipWrappingKnockbackRegionComponent");
 		return ptr;
 	}
 

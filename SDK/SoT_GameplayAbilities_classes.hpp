@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AttributeSet");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AttributeSet");
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectCalculation");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectCalculation");
 		return ptr;
 	}
 
@@ -92,7 +92,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffect");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffect");
 		return ptr;
 	}
 
@@ -143,7 +143,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbility");
 		return ptr;
 	}
 
@@ -205,7 +205,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayCueInterface");
 		return ptr;
 	}
 
@@ -223,7 +223,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemBlueprintLibrary");
 		return ptr;
 	}
 
@@ -315,7 +315,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemComponent");
 		return ptr;
 	}
 
@@ -384,7 +384,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemDebugHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemDebugHUD");
 		return ptr;
 	}
 
@@ -424,7 +424,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemGlobals");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemGlobals");
 		return ptr;
 	}
 
@@ -442,7 +442,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemInterface");
 		return ptr;
 	}
 
@@ -459,7 +459,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestPawn");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemTestPawn");
 		return ptr;
 	}
 
@@ -475,7 +475,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask");
 		return ptr;
 	}
 
@@ -498,7 +498,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_MoveToLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_MoveToLocation");
 		return ptr;
 	}
 
@@ -517,7 +517,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_NetworkSyncPoint");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_NetworkSyncPoint");
 		return ptr;
 	}
 
@@ -539,7 +539,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_PlayMontageAndWait");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_PlayMontageAndWait");
 		return ptr;
 	}
 
@@ -561,7 +561,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_Repeat");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_Repeat");
 		return ptr;
 	}
 
@@ -581,7 +581,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_SpawnActor");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_SpawnActor");
 		return ptr;
 	}
 
@@ -603,7 +603,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_StartAbilityState");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_StartAbilityState");
 		return ptr;
 	}
 
@@ -622,7 +622,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_VisualizeTargeting");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_VisualizeTargeting");
 		return ptr;
 	}
 
@@ -644,7 +644,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityActivate");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitAbilityActivate");
 		return ptr;
 	}
 
@@ -664,7 +664,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityCommit");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitAbilityCommit");
 		return ptr;
 	}
 
@@ -684,7 +684,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAttributeChange");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitAttributeChange");
 		return ptr;
 	}
 
@@ -704,7 +704,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitCancel");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitCancel");
 		return ptr;
 	}
 
@@ -725,7 +725,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirm");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitConfirm");
 		return ptr;
 	}
 
@@ -746,7 +746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirmCancel");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitConfirmCancel");
 		return ptr;
 	}
 
@@ -769,7 +769,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitDelay");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitDelay");
 		return ptr;
 	}
 
@@ -787,7 +787,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied");
 		return ptr;
 	}
 
@@ -806,7 +806,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self");
 		return ptr;
 	}
 
@@ -825,7 +825,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target");
 		return ptr;
 	}
 
@@ -845,7 +845,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved");
 		return ptr;
 	}
 
@@ -864,7 +864,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTag");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayTag");
 		return ptr;
 	}
 
@@ -882,7 +882,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded");
 		return ptr;
 	}
 
@@ -900,7 +900,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved");
 		return ptr;
 	}
 
@@ -919,7 +919,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputPress");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitInputPress");
 		return ptr;
 	}
 
@@ -939,7 +939,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputRelease");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitInputRelease");
 		return ptr;
 	}
 
@@ -959,7 +959,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitMovementModeChange");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitMovementModeChange");
 		return ptr;
 	}
 
@@ -978,7 +978,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitOverlap");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitOverlap");
 		return ptr;
 	}
 
@@ -1000,7 +1000,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitTargetData");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitTargetData");
 		return ptr;
 	}
 
@@ -1027,7 +1027,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitVelocityChange");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilityTask_WaitVelocityChange");
 		return ptr;
 	}
 
@@ -1060,7 +1060,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestAttributeSet");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.AbilitySystemTestAttributeSet");
 		return ptr;
 	}
 
@@ -1075,7 +1075,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_CharacterJump");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbility_CharacterJump");
 		return ptr;
 	}
 
@@ -1096,7 +1096,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_Montage");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbility_Montage");
 		return ptr;
 	}
 
@@ -1111,7 +1111,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprint");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityBlueprint");
 		return ptr;
 	}
 
@@ -1126,7 +1126,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass");
 		return ptr;
 	}
 
@@ -1142,7 +1142,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilitySet");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilitySet");
 		return ptr;
 	}
 
@@ -1164,7 +1164,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityWorldReticle");
 		return ptr;
 	}
 
@@ -1201,7 +1201,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityTargetActor");
 		return ptr;
 	}
 
@@ -1219,7 +1219,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Radius");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityTargetActor_Radius");
 		return ptr;
 	}
 
@@ -1237,7 +1237,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Trace");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityTargetActor_Trace");
 		return ptr;
 	}
 
@@ -1255,7 +1255,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace");
 		return ptr;
 	}
 
@@ -1272,7 +1272,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization");
 		return ptr;
 	}
 
@@ -1290,7 +1290,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement");
 		return ptr;
 	}
 
@@ -1305,7 +1305,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace");
 		return ptr;
 	}
 
@@ -1329,7 +1329,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Actor");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayCueNotify_Actor");
 		return ptr;
 	}
 
@@ -1359,7 +1359,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueManager");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayCueManager");
 		return ptr;
 	}
 
@@ -1378,7 +1378,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Static");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayCueNotify_Static");
 		return ptr;
 	}
 
@@ -1401,7 +1401,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_HitImpact");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayCueNotify_HitImpact");
 		return ptr;
 	}
 
@@ -1418,7 +1418,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueSet");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayCueSet");
 		return ptr;
 	}
 
@@ -1433,7 +1433,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectTemplate");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectTemplate");
 		return ptr;
 	}
 
@@ -1450,7 +1450,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExecutionCalculation");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectExecutionCalculation");
 		return ptr;
 	}
 
@@ -1467,7 +1467,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayModMagnitudeCalculation");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayModMagnitudeCalculation");
 		return ptr;
 	}
 
@@ -1486,7 +1486,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectExtension");
 		return ptr;
 	}
 
@@ -1502,7 +1502,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_LifestealTest");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectExtension_LifestealTest");
 		return ptr;
 	}
 
@@ -1518,7 +1518,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_ShieldTest");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectExtension_ShieldTest");
 		return ptr;
 	}
 
@@ -1533,7 +1533,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectUIData");
 		return ptr;
 	}
 
@@ -1550,7 +1550,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData_TextOnly");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayEffectUIData_TextOnly");
 		return ptr;
 	}
 
@@ -1567,7 +1567,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayTagReponseTable");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.GameplayTagReponseTable");
 		return ptr;
 	}
 
@@ -1584,7 +1584,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.TickableAttributeSetInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayAbilities.TickableAttributeSetInterface");
 		return ptr;
 	}
 

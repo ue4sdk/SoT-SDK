@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServiceMessaging.ServiceMessagingDispatcherInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingDispatcherInterface");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServiceMessaging.ServiceMessagingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingInterface");
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServiceMessaging.ServiceMessagingFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingFunctions");
 		return ptr;
 	}
 
@@ -71,7 +71,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ServiceMessaging.ServiceMessagingListenerTestObject");
+		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingListenerTestObject");
 		return ptr;
 	}
 

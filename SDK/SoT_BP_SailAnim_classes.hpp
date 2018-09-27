@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,13 +50,13 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_SailAnim.BP_SailAnim_C");
+		static auto ptr = UObject::FindObject<UClass>("AnimBlueprintGeneratedClass BP_SailAnim.BP_SailAnim_C");
 		return ptr;
 	}
 
 
 	void Set_Billow_Animation_Rate();
-	void InitialiseSail(float* PlayRateMultiplier, bool* MainSail);
+	void InitialiseSail(float PlayRateMultiplier, bool MainSail);
 	void ExecuteUbergraph_BP_SailAnim(int EntryPoint);
 };
 

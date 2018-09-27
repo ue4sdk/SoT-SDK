@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetSe
 	UServiceMessagingFunctions_GetServiceMessagingDispatcherFromActor_Params params;
 	params.Object = Object;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -49,12 +44,7 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetSe
 	UServiceMessagingFunctions_GetServiceMessagingDispatcher_Params params;
 	params.ServiceMessagingDispatcher = ServiceMessagingDispatcher;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -71,12 +61,7 @@ void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServic
 
 	UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InMessage != nullptr)
 		*InMessage = params.InMessage;

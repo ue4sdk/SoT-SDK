@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ struct UBP_AnimatedStepsComponent_C_UpdateStep_Params
 // Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick
 struct UBP_AnimatedStepsComponent_C_ReceiveTick_Params
 {
-	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpening

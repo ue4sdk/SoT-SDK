@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.MockObjectWithMessagingDispatcher");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.MockObjectWithMessagingDispatcher");
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.TestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestActor");
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.TestActorWithCapsule");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestActorWithCapsule");
 		return ptr;
 	}
 
@@ -70,7 +70,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.TestActorWithObjectMessagingDispatcher");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestActorWithObjectMessagingDispatcher");
 		return ptr;
 	}
 
@@ -85,7 +85,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.TestEnvQueryContextPoints");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestEnvQueryContextPoints");
 		return ptr;
 	}
 
@@ -100,7 +100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.TestEnvQueryContextActors");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestEnvQueryContextActors");
 		return ptr;
 	}
 
@@ -108,20 +108,38 @@ public:
 
 
 // Class TestUtilities.TestPrimitiveComponent
-// 0x0010 (0x05B0 - 0x05A0)
+// 0x0010 (0x05C0 - 0x05B0)
 class UTestPrimitiveComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05B0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class TestUtilities.TestPrimitiveComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestPrimitiveComponent");
 		return ptr;
 	}
 
 
 	TEnumAsByte<ECollisionChannel> GetCollisionObjectType();
+};
+
+
+// Class TestUtilities.TestStaticMeshComponent
+// 0x0010 (0x0640 - 0x0630)
+class UTestStaticMeshComponent : public UStaticMeshComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestStaticMeshComponent");
+		return ptr;
+	}
+
+
+	void AddForce(const struct FVector& Force, const struct FName& BoneName, bool bAccelChange);
 };
 
 

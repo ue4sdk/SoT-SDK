@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_ShovelHole.BP_ShovelHole_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_ShovelHole.BP_ShovelHole_C");
 		return ptr;
 	}
 
@@ -36,7 +36,7 @@ public:
 	void SetFadeInParameters(float FadeTime);
 	void SetFadeOutParameters(float FadeTime);
 	void UserConstructionScript();
-	void OnStateChanged(TEnumAsByte<EHoleState>* InState);
+	void OnStateChanged(TEnumAsByte<EHoleState> InState);
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_ShovelHole(int EntryPoint);
 };

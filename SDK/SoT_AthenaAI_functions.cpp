@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,12 +21,7 @@ void UAthenaAIFormComponent::OnRep_FormData()
 
 	UAthenaAIFormComponent_OnRep_FormData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42,12 +37,7 @@ void UAIEncounterServiceInterface::RegisterLoadedSkillsetProgression(TAssetPtr<c
 	UAIEncounterServiceInterface_RegisterLoadedSkillsetProgression_Params params;
 	params.Progression = Progression;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -63,12 +53,7 @@ void UAIEncounterServiceInterface::RegisterLoadedSkillset(TAssetPtr<class UAthen
 	UAIEncounterServiceInterface_RegisterLoadedSkillset_Params params;
 	params.Skillset = Skillset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -84,12 +69,7 @@ void UAIEncounterServiceInterface::RegisterLoadedLoadout(TAssetPtr<class ULoadou
 	UAIEncounterServiceInterface_RegisterLoadedLoadout_Params params;
 	params.Loadout = Loadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -105,12 +85,7 @@ void UAIEncounterServiceInterface::RegisterLoadedForm(TAssetPtr<class UAthenaAIF
 	UAIEncounterServiceInterface_RegisterLoadedForm_Params params;
 	params.Form = Form;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -126,12 +101,7 @@ void UAIEncounterServiceInterface::RegisterLoadedEncounter(TAssetPtr<class UAIEn
 	UAIEncounterServiceInterface_RegisterLoadedEncounter_Params params;
 	params.Encounter = Encounter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -147,12 +117,7 @@ void AAIEncounterService::RegisterLoadedSkillsetProgression(TAssetPtr<class UAIS
 	AAIEncounterService_RegisterLoadedSkillsetProgression_Params params;
 	params.Progression = Progression;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -168,12 +133,7 @@ void AAIEncounterService::RegisterLoadedSkillset(TAssetPtr<class UAthenaAIContro
 	AAIEncounterService_RegisterLoadedSkillset_Params params;
 	params.Skillset = Skillset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -189,12 +149,7 @@ void AAIEncounterService::RegisterLoadedLoadout(TAssetPtr<class ULoadoutAsset> L
 	AAIEncounterService_RegisterLoadedLoadout_Params params;
 	params.Loadout = Loadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -210,12 +165,7 @@ void AAIEncounterService::RegisterLoadedForm(TAssetPtr<class UAthenaAIFormDataAs
 	AAIEncounterService_RegisterLoadedForm_Params params;
 	params.Form = Form;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -231,12 +181,7 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 	AAIEncounterService_RegisterLoadedEncounter_Params params;
 	params.Encounter = Encounter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -254,12 +199,7 @@ void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor, TEnumAsByt
 	params.AIActor = AIActor;
 	params.DeathType = DeathType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -274,12 +214,7 @@ int UAIManagerServiceInterface::GetNumOfSpawnedPawns()
 
 	UAIManagerServiceInterface_GetNumOfSpawnedPawns_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -296,12 +231,7 @@ int UAISpawner::GetNumOfSpawnRequests()
 
 	UAISpawner_GetNumOfSpawnRequests_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -319,12 +249,7 @@ void AAIManagerService::TickService(float DeltaSeconds)
 	AAIManagerService_TickService_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -342,12 +267,7 @@ void AAIManagerService::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharac
 	params.AIActor = AIActor;
 	params.DeathType = DeathType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -366,12 +286,7 @@ class UAISpawner* AAIManagerService::GetRegionSpawner(const struct FName& Region
 	params.Region = Region;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -388,12 +303,7 @@ int AAIManagerService::GetNumOfSpawnRequests()
 
 	AAIManagerService_GetNumOfSpawnRequests_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -411,12 +321,7 @@ void UDebugAIManagerServiceInterface::SetMaxNumOfSpawnedActors(int InMaxNumOfSpa
 	UDebugAIManagerServiceInterface_SetMaxNumOfSpawnedActors_Params params;
 	params.InMaxNumOfSpawnedActors = InMaxNumOfSpawnedActors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -432,12 +337,7 @@ void UDebugAIManagerServiceInterface::SetMaxAICostUnitsPerRegion(int InMaxAICost
 	UDebugAIManagerServiceInterface_SetMaxAICostUnitsPerRegion_Params params;
 	params.InMaxAICostUnitsPerRegion = InMaxAICostUnitsPerRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -453,12 +353,7 @@ void UDebugAIManagerServiceInterface::SetMaxAICostUnitsForWorld(int InMaxAICostU
 	UDebugAIManagerServiceInterface_SetMaxAICostUnitsForWorld_Params params;
 	params.InMaxAICostUnitsForWorld = InMaxAICostUnitsForWorld;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -474,12 +369,7 @@ void UDebugAIManagerServiceInterface::SetIgnoreCharacterLimits(bool Ignore)
 	UDebugAIManagerServiceInterface_SetIgnoreCharacterLimits_Params params;
 	params.Ignore = Ignore;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -495,12 +385,7 @@ void UDebugAIManagerServiceInterface::SetDistanceToPlayerToRaiseSpawnPriority(fl
 	UDebugAIManagerServiceInterface_SetDistanceToPlayerToRaiseSpawnPriority_Params params;
 	params.InDistanceToPlayerToRaiseSpawnPriority = InDistanceToPlayerToRaiseSpawnPriority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -516,12 +401,7 @@ void UDebugAIManagerServiceInterface::SetCharacterWorldDensityCheckTimer(float I
 	UDebugAIManagerServiceInterface_SetCharacterWorldDensityCheckTimer_Params params;
 	params.InCharacterWorldDensityCheckTimer = InCharacterWorldDensityCheckTimer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -537,12 +417,7 @@ void UDebugAIManagerServiceInterface::SetCharacterRegionDensityCheckTimer(float 
 	UDebugAIManagerServiceInterface_SetCharacterRegionDensityCheckTimer_Params params;
 	params.InCharacterRegionDensityCheckTimer = InCharacterRegionDensityCheckTimer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -558,12 +433,7 @@ void UDebugAIManagerServiceInterface::SetCharacterNetRelevancy(float InCloseByCh
 	UDebugAIManagerServiceInterface_SetCharacterNetRelevancy_Params params;
 	params.InCloseByCharactersRadius = InCloseByCharactersRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -579,12 +449,7 @@ void ADebugAIManagerService::SetMaxNumOfSpawnedActors(int InMaxNumOfSpawnedActor
 	ADebugAIManagerService_SetMaxNumOfSpawnedActors_Params params;
 	params.InMaxNumOfSpawnedActors = InMaxNumOfSpawnedActors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -600,12 +465,7 @@ void ADebugAIManagerService::SetMaxAICostUnitsPerRegion(int InMaxAICostUnitsPerR
 	ADebugAIManagerService_SetMaxAICostUnitsPerRegion_Params params;
 	params.InMaxAICostUnitsPerRegion = InMaxAICostUnitsPerRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -621,12 +481,7 @@ void ADebugAIManagerService::SetMaxAICostUnitsForWorld(int InMaxAICostUnitsForWo
 	ADebugAIManagerService_SetMaxAICostUnitsForWorld_Params params;
 	params.InMaxAICostUnitsForWorld = InMaxAICostUnitsForWorld;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -642,12 +497,7 @@ void ADebugAIManagerService::SetIgnoreCharacterLimits(bool Ignore)
 	ADebugAIManagerService_SetIgnoreCharacterLimits_Params params;
 	params.Ignore = Ignore;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -663,12 +513,7 @@ void ADebugAIManagerService::SetDistanceToPlayerToRaiseSpawnPriority(float InDis
 	ADebugAIManagerService_SetDistanceToPlayerToRaiseSpawnPriority_Params params;
 	params.InDistanceToPlayerToRaiseSpawnPriority = InDistanceToPlayerToRaiseSpawnPriority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -684,12 +529,7 @@ void ADebugAIManagerService::SetCharacterWorldDensityCheckTimer(float InCharacte
 	ADebugAIManagerService_SetCharacterWorldDensityCheckTimer_Params params;
 	params.InCharacterWorldDensityCheckTimer = InCharacterWorldDensityCheckTimer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -705,12 +545,7 @@ void ADebugAIManagerService::SetCharacterRegionDensityCheckTimer(float InCharact
 	ADebugAIManagerService_SetCharacterRegionDensityCheckTimer_Params params;
 	params.InCharacterRegionDensityCheckTimer = InCharacterRegionDensityCheckTimer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -726,12 +561,7 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 	ADebugAIManagerService_SetCharacterNetRelevancy_Params params;
 	params.InCloseByCharactersRadius = InCloseByCharactersRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -744,12 +574,7 @@ void UAIFaunaSpawner::SpawnFaunaGroup()
 
 	UAIFaunaSpawner_SpawnFaunaGroup_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -765,12 +590,7 @@ void UAIPerPlayerSpawner::PlayerDeath(class AActor* Player)
 	UAIPerPlayerSpawner_PlayerDeath_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -785,12 +605,7 @@ int UAIPerPlayerSpawner::GetNumOfPlayers()
 
 	UAIPerPlayerSpawner_GetNumOfPlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -812,12 +627,7 @@ bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Ta
 	params.Target = Target;
 	params.CheckYaw = CheckYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutAimConfig != nullptr)
 		*OutAimConfig = params.OutAimConfig;
@@ -840,12 +650,7 @@ void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamN
 	params.ParamName = ParamName;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -862,12 +667,7 @@ struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeigh
 	AAthenaAIControllerBase_FindNamedWeightedRangesControllerParam_Params params;
 	params.ParamName = ParamName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -886,12 +686,7 @@ float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& Para
 	AAthenaAIControllerBase_FindNamedControllerParam_Params params;
 	params.ParamName = ParamName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -911,12 +706,7 @@ void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerPar
 	params.ParamsAsset = ParamsAsset;
 	params.InPawn = InPawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -929,12 +719,7 @@ void AAthenaAIController::StopBehaviourLogic()
 
 	AAthenaAIController_StopBehaviourLogic_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -954,12 +739,7 @@ void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor
 	params.ExpirationAge = ExpirationAge;
 	params.Sense = Sense;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -975,12 +755,7 @@ void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* Trig
 	AAthenaAIController_RegisterSpawnTriggerActorAsStimulus_Params params;
 	params.TriggerActor = TriggerActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -996,12 +771,7 @@ void AAthenaAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerce
 	AAthenaAIController_OnPerceptionUpdated_Params params;
 	params.ChangedPerceivedActors = ChangedPerceivedActors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1014,11 +784,7 @@ void AAthenaAIController::OnNewlySpawned()
 
 	AAthenaAIController_OnNewlySpawned_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1031,11 +797,7 @@ void AAthenaAIController::OnFinishDespawn()
 
 	AAthenaAIController_OnFinishDespawn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1052,12 +814,7 @@ bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
 	AAthenaAIController_IsActorPerceived_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1074,12 +831,7 @@ class AActor* AAthenaAIController::GetTargetActor()
 
 	AAthenaAIController_GetTargetActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1096,12 +848,7 @@ class UAthenaAIPerceptionComponent* AAthenaAIController::GetAthenaAIPerceptionCo
 
 	AAthenaAIController_GetAthenaAIPerceptionComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1118,12 +865,7 @@ void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
 
 	AAthenaAIController_GetAllSeenActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SeenActors != nullptr)
 		*SeenActors = params.SeenActors;
@@ -1144,12 +886,7 @@ void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsD
 	params.ParamsAsset = ParamsAsset;
 	params.InPawn = InPawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1165,12 +902,7 @@ void AAthenaAICharacterController::SetOverridePrioritiseInteractablesBeforeEnemi
 	AAthenaAICharacterController_SetOverridePrioritiseInteractablesBeforeEnemies_Params params;
 	params.InPrioritiseInteractablesBeforeEnemies = InPrioritiseInteractablesBeforeEnemies;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1190,12 +922,7 @@ void AAthenaAICharacterController::SetItemSpecificNamedControllerParam(class UCl
 	params.ParamName = ParamName;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1208,12 +935,7 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 
 	AAthenaAICharacterController_ClearOverridePrioritiseInteractablesBeforeEnemies_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1229,12 +951,7 @@ void AAthenaFaunaAIController::LeaderDestroyed(class AActor* Actor)
 	AAthenaFaunaAIController_LeaderDestroyed_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1249,12 +966,7 @@ class AActor* AAthenaFaunaAIController::GetLeader()
 
 	AAthenaFaunaAIController_GetLeader_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1271,12 +983,7 @@ float AAthenaFaunaAIController::GetCourage()
 
 	AAthenaFaunaAIController_GetCourage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1293,12 +1000,7 @@ class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAth
 
 	AAthenaFaunaAIController_GetAthenaAICharPathFollowingComp_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1336,12 +1038,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIWithSettings(TAssetPtr<class U
 	params.NavMeshOverride = NavMeshOverride;
 	params.Delay = Delay;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1371,12 +1068,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AICla
 	params.MakeAIPermanentlyNetRelevant = MakeAIPermanentlyNetRelevant;
 	params.InstancedNavMesh = InstancedNavMesh;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1394,12 +1086,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SetEnvQueryManagerMaxAllowedSeconds(f
 	params.InMaxAllowedSeconds = InMaxAllowedSeconds;
 	params.QueryOwner = QueryOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1416,12 +1103,7 @@ int UAthenaAIDebugFunctionLibrary::STATIC_GetEnvQueryManagerNumRunningQueries(cl
 	UAthenaAIDebugFunctionLibrary_GetEnvQueryManagerNumRunningQueries_Params params;
 	params.QueryOwner = QueryOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1441,12 +1123,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_EnableMaximumSightSettings(class AAth
 	params.AIController = AIController;
 	params.ControllerParams = ControllerParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1462,12 +1139,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_EnableBehaviorTreeLogging(class UObje
 	UAthenaAIDebugFunctionLibrary_EnableBehaviorTreeLogging_Params params;
 	params.WorldContext = WorldContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1483,12 +1155,7 @@ void UAthenaAIDebugFunctionLibrary::STATIC_DespawnAIPawn(class APawn* Pawn)
 	UAthenaAIDebugFunctionLibrary_DespawnAIPawn_Params params;
 	params.Pawn = Pawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1513,12 +1180,7 @@ struct FVector UAthenaAIDebugFunctionLibrary::STATIC_CanProjectPointToNavigation
 	params.FilterClass = FilterClass;
 	params.QueryExtent = QueryExtent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1537,12 +1199,7 @@ bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
 	UAthenaAIPerceptionComponent_IsPerceptionSenseEnabled_Params params;
 	params.Sense = Sense;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1559,12 +1216,7 @@ bool UAthenaAIPerceptionComponent::IsAnyPerceptionEnabled()
 
 	UAthenaAIPerceptionComponent_IsAnyPerceptionEnabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1584,12 +1236,7 @@ void UAthenaAIPerceptionComponent::EnablePerceptionSense(class UClass* Sense, bo
 	params.Sense = Sense;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1605,12 +1252,7 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 	UAthenaAIPerceptionComponent_EnableAllPerception_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1626,12 +1268,7 @@ void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor
 	ATinySharkExperience_TinySharkPawnDestroyed_Params params;
 	params.InDestroyedActor = InDestroyedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1646,12 +1283,7 @@ class AShip* ATinySharkExperience::GetTrackedShip()
 
 	ATinySharkExperience_GetTrackedShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1668,12 +1300,7 @@ TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
 
 	ATinySharkExperience_GetCurrentState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1690,12 +1317,7 @@ TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
 
 	ATinySharkExperience_GetActiveState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1716,12 +1338,7 @@ bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int
 	params.InTrackedShip = InTrackedShip;
 	params.OverrideControllerParamIndex = OverrideControllerParamIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1740,12 +1357,7 @@ bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& Spawn
 	ATinySharkService_RequestTinySharkWithLocation_Params params;
 	params.SpawnLocation = SpawnLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1760,12 +1372,7 @@ void ATinySharkService::DismissAllTinySharks()
 
 	ATinySharkService_DismissAllTinySharks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1780,12 +1387,7 @@ bool ATinySharkService::CanSpawnTinySharkExperience()
 
 	ATinySharkService_CanSpawnTinySharkExperience_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

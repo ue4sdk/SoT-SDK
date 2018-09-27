@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,13 +27,13 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_Concertina.BP_Anim_Concertina_C");
+		static auto ptr = UObject::FindObject<UClass>("AnimBlueprintGeneratedClass BP_Anim_Concertina.BP_Anim_Concertina_C");
 		return ptr;
 	}
 
 
-	void OnUseStarted(class UClass** InputID, struct FWieldableItemActionVisuals* ActionVisuals);
-	void OnUseStopped(class UClass** InputID);
+	void OnUseStarted(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals);
+	void OnUseStopped(class UClass* InputID);
 	void ExecuteUbergraph_BP_Anim_Concertina(int EntryPoint);
 };
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UAthenaCheatManager::WindTriggerChange(int ChangeInstantly)
 	UAthenaCheatManager_WindTriggerChange_Params params;
 	params.ChangeInstantly = ChangeInstantly;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -47,12 +42,7 @@ void UAthenaCheatManager::WindSetVector(float X, float Y)
 	params.X = X;
 	params.Y = Y;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -68,12 +58,7 @@ void UAthenaCheatManager::WindSetMagnitude(float Magnitude)
 	UAthenaCheatManager_WindSetMagnitude_Params params;
 	params.Magnitude = Magnitude;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -91,12 +76,7 @@ void UAthenaCheatManager::WindSetDirection(float X, float Y)
 	params.X = X;
 	params.Y = Y;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -109,12 +89,7 @@ void UAthenaCheatManager::WindReloadParams()
 
 	UAthenaCheatManager_WindReloadParams_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -127,12 +102,7 @@ void UAthenaCheatManager::WindPrintDirection()
 
 	UAthenaCheatManager_WindPrintDirection_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -145,12 +115,7 @@ void UAthenaCheatManager::WindEnableDebug()
 
 	UAthenaCheatManager_WindEnableDebug_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -163,12 +128,7 @@ void UAthenaCheatManager::WindDisableDebug()
 
 	UAthenaCheatManager_WindDisableDebug_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -181,12 +141,7 @@ void UAthenaCheatManager::WindAlignWithCamera()
 
 	UAthenaCheatManager_WindAlignWithCamera_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -199,12 +154,7 @@ void UAthenaCheatManager::Walk()
 
 	UAthenaCheatManager_Walk_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -222,12 +172,7 @@ void UAthenaCheatManager::VomitWithType(const struct FName& VomitType, float Dur
 	params.VomitType = VomitType;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -240,12 +185,7 @@ void UAthenaCheatManager::Vomit()
 
 	UAthenaCheatManager_Vomit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -261,12 +201,7 @@ void UAthenaCheatManager::UnlockAllEntitlements(int TrueFalse)
 	UAthenaCheatManager_UnlockAllEntitlements_Params params;
 	params.TrueFalse = TrueFalse;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -279,12 +214,7 @@ void UAthenaCheatManager::UnlockAllEmblemsAndAchievements()
 
 	UAthenaCheatManager_UnlockAllEmblemsAndAchievements_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -299,12 +229,7 @@ void UAthenaCheatManager::TriggerRewardNotification(struct FName* Identifier)
 
 	UAthenaCheatManager_TriggerRewardNotification_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Identifier != nullptr)
 		*Identifier = params.Identifier;
@@ -323,12 +248,7 @@ void UAthenaCheatManager::TriggerLandmarkReaction(int ActionType)
 	UAthenaCheatManager_TriggerLandmarkReaction_Params params;
 	params.ActionType = ActionType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -344,12 +264,7 @@ void UAthenaCheatManager::TriggerEmblemUnlockedMessage(const class FString& Embl
 	UAthenaCheatManager_TriggerEmblemUnlockedMessage_Params params;
 	params.EmblemFriendlyName = EmblemFriendlyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -369,12 +284,7 @@ void UAthenaCheatManager::TriggerControllerConnectionChange(bool IsConnect, int 
 	params.UserId = UserId;
 	params.ControllerId = ControllerId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -387,12 +297,7 @@ void UAthenaCheatManager::TriggerAIShipTimerBattle()
 
 	UAthenaCheatManager_TriggerAIShipTimerBattle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -405,12 +310,20 @@ void UAthenaCheatManager::TriggerAIShipEncounter()
 
 	UAthenaCheatManager_TriggerAIShipEncounter_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.TriggerAIShipAggressive
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::TriggerAIShipAggressive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.TriggerAIShipAggressive");
+
+	UAthenaCheatManager_TriggerAIShipAggressive_Params params;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -426,12 +339,7 @@ void UAthenaCheatManager::ToggleVideprinter(const class FString& Id)
 	UAthenaCheatManager_ToggleVideprinter_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -444,12 +352,7 @@ void UAthenaCheatManager::ToggleThirdPerson()
 
 	UAthenaCheatManager_ToggleThirdPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -462,12 +365,7 @@ void UAthenaCheatManager::ToggleNearestSuperheatedWater()
 
 	UAthenaCheatManager_ToggleNearestSuperheatedWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -480,12 +378,7 @@ void UAthenaCheatManager::ToggleNearestLava()
 
 	UAthenaCheatManager_ToggleNearestLava_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -498,12 +391,7 @@ void UAthenaCheatManager::ToggleFastShipControls()
 
 	UAthenaCheatManager_ToggleFastShipControls_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -516,12 +404,7 @@ void UAthenaCheatManager::ToggleDrawShipSpeed()
 
 	UAthenaCheatManager_ToggleDrawShipSpeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -534,12 +417,7 @@ void UAthenaCheatManager::ToggleDisplayCannonAISpawnerZones()
 
 	UAthenaCheatManager_ToggleDisplayCannonAISpawnerZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -552,12 +430,7 @@ void UAthenaCheatManager::ToggleDebugFlying()
 
 	UAthenaCheatManager_ToggleDebugFlying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -570,12 +443,7 @@ void UAthenaCheatManager::ToggleDeathCamera()
 
 	UAthenaCheatManager_ToggleDeathCamera_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -588,12 +456,7 @@ void UAthenaCheatManager::ToggleCinematicCamera()
 
 	UAthenaCheatManager_ToggleCinematicCamera_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -606,12 +469,7 @@ void UAthenaCheatManager::ToggleAttributeOverride()
 
 	UAthenaCheatManager_ToggleAttributeOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -624,12 +482,7 @@ void UAthenaCheatManager::TestCrashDumpCreationOnRunnableThread()
 
 	UAthenaCheatManager_TestCrashDumpCreationOnRunnableThread_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -642,12 +495,7 @@ void UAthenaCheatManager::TestCrashDumpCreationOnMainThread()
 
 	UAthenaCheatManager_TestCrashDumpCreationOnMainThread_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -660,12 +508,7 @@ void UAthenaCheatManager::TeleportToShip()
 
 	UAthenaCheatManager_TeleportToShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -678,12 +521,7 @@ void UAthenaCheatManager::TeleportToPlayerStart()
 
 	UAthenaCheatManager_TeleportToPlayerStart_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -696,12 +534,7 @@ void UAthenaCheatManager::TeleportToNearestTreasureLocation()
 
 	UAthenaCheatManager_TeleportToNearestTreasureLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -721,12 +554,7 @@ void UAthenaCheatManager::TeleportToLocation(float LocationX, float LocationY, f
 	params.LocationY = LocationY;
 	params.LocationZ = LocationZ;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -739,12 +567,7 @@ void UAthenaCheatManager::TeleportToHideout()
 
 	UAthenaCheatManager_TeleportToHideout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -764,12 +587,7 @@ void UAthenaCheatManager::TeleportShip(float X, float Y, float Z)
 	params.Y = Y;
 	params.Z = Z;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -782,12 +600,7 @@ void UAthenaCheatManager::TeleportPlayerToSafety()
 
 	UAthenaCheatManager_TeleportPlayerToSafety_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -800,12 +613,7 @@ void UAthenaCheatManager::TeleportPlayerToKraken()
 
 	UAthenaCheatManager_TeleportPlayerToKraken_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -818,12 +626,7 @@ void UAthenaCheatManager::TeleportOutOfHideout()
 
 	UAthenaCheatManager_TeleportOutOfHideout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -839,12 +642,7 @@ void UAthenaCheatManager::TeleportCrewToShip(const class FString& CrewId)
 	UAthenaCheatManager_TeleportCrewToShip_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -862,12 +660,7 @@ void UAthenaCheatManager::TeleportCrewToSafeSpawnLocationFromRemoteActor(const c
 	params.ActorIdString = ActorIdString;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -883,12 +676,7 @@ void UAthenaCheatManager::TeleportCrewToSafeSpawnLocation(const class FString& C
 	UAthenaCheatManager_TeleportCrewToSafeSpawnLocation_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -904,12 +692,7 @@ void UAthenaCheatManager::TeleportCrewMemberToShip(const class FString& ActorIdS
 	UAthenaCheatManager_TeleportCrewMemberToShip_Params params;
 	params.ActorIdString = ActorIdString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -922,12 +705,7 @@ void UAthenaCheatManager::TeleportAllPlayersToShip()
 
 	UAthenaCheatManager_TeleportAllPlayersToShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -940,12 +718,7 @@ void UAthenaCheatManager::TeleportAllPlayersToPlayerStart()
 
 	UAthenaCheatManager_TeleportAllPlayersToPlayerStart_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -958,12 +731,7 @@ void UAthenaCheatManager::TeleportAllCrewsToCrewSpawnLocations()
 
 	UAthenaCheatManager_TeleportAllCrewsToCrewSpawnLocations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -981,12 +749,7 @@ void UAthenaCheatManager::TeleportActorToTeleportLocationActor(const class FStri
 	params.ControllerActorIdString = ControllerActorIdString;
 	params.TeleportLocationActorIdString = TeleportLocationActorIdString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1010,12 +773,7 @@ void UAthenaCheatManager::TeleportActorToLocation(const class FString& ActorIdSt
 	params.LocationZ = LocationZ;
 	params.Yaw = Yaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1033,12 +791,7 @@ void UAthenaCheatManager::TeleportActorToIsland(const class FString& ActorIdStri
 	params.ActorIdString = ActorIdString;
 	params.IslandName = IslandName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1062,12 +815,7 @@ void UAthenaCheatManager::TeleportActorToActorWithOffset(const class FString& Ac
 	params.OffsetY = OffsetY;
 	params.OffsetZ = OffsetZ;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1080,12 +828,7 @@ void UAthenaCheatManager::SuperSailor()
 
 	UAthenaCheatManager_SuperSailor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1101,12 +844,7 @@ void UAthenaCheatManager::StartVoyage(const class FString& SourceAssetName)
 	UAthenaCheatManager_StartVoyage_Params params;
 	params.SourceAssetName = SourceAssetName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1119,12 +857,7 @@ void UAthenaCheatManager::StartNearestVolcano()
 
 	UAthenaCheatManager_StartNearestVolcano_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1137,12 +870,7 @@ void UAthenaCheatManager::StartNearestGeysers()
 
 	UAthenaCheatManager_StartNearestGeysers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1155,12 +883,7 @@ void UAthenaCheatManager::StartNearestEarthquake()
 
 	UAthenaCheatManager_StartNearestEarthquake_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1173,12 +896,7 @@ void UAthenaCheatManager::StartDemoSession()
 
 	UAthenaCheatManager_StartDemoSession_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1191,12 +909,7 @@ void UAthenaCheatManager::StartAllCrewVoyages()
 
 	UAthenaCheatManager_StartAllCrewVoyages_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1212,12 +925,7 @@ void UAthenaCheatManager::SpinShip(float YawSpdInDegreesPerSecond)
 	UAthenaCheatManager_SpinShip_Params params;
 	params.YawSpdInDegreesPerSecond = YawSpdInDegreesPerSecond;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1233,12 +941,7 @@ void UAthenaCheatManager::SpawnWatercraft(const class FString& WatercraftClassSt
 	UAthenaCheatManager_SpawnWatercraft_Params params;
 	params.WatercraftClassString = WatercraftClassString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1253,12 +956,7 @@ void UAthenaCheatManager::SpawnTreasureChestOfType(class FString* ChestTypeStrin
 
 	UAthenaCheatManager_SpawnTreasureChestOfType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ChestTypeString != nullptr)
 		*ChestTypeString = params.ChestTypeString;
@@ -1277,12 +975,7 @@ void UAthenaCheatManager::SpawnTreasureArtifact(const class FString& TypeString)
 	UAthenaCheatManager_SpawnTreasureArtifact_Params params;
 	params.TypeString = TypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1302,12 +995,7 @@ void UAthenaCheatManager::SpawnTinySharkAtLocation(float X, float Y, float Z)
 	params.Y = Y;
 	params.Z = Z;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1323,12 +1011,7 @@ void UAthenaCheatManager::SpawnTinySharkAtCurrentLocation(int ControllerParamInd
 	UAthenaCheatManager_SpawnTinySharkAtCurrentLocation_Params params;
 	params.ControllerParamIndex = ControllerParamIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1341,12 +1024,7 @@ void UAthenaCheatManager::SpawnStrongholdKey()
 
 	UAthenaCheatManager_SpawnStrongholdKey_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1362,12 +1040,7 @@ void UAthenaCheatManager::SpawnSmallShipAtIsland(const class FString& IslandName
 	UAthenaCheatManager_SpawnSmallShipAtIsland_Params params;
 	params.IslandName = IslandName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1389,12 +1062,7 @@ void UAthenaCheatManager::SpawnSmallShip(float SpawnLocationX, float SpawnLocati
 	params.SpawnLocationZ = SpawnLocationZ;
 	params.SpawnYaw = SpawnYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1407,12 +1075,7 @@ void UAthenaCheatManager::SpawnSkeletonAtNearestAISpawnPoint()
 
 	UAthenaCheatManager_SpawnSkeletonAtNearestAISpawnPoint_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1432,12 +1095,7 @@ void UAthenaCheatManager::SpawnShipInFrontOfNearestAIInteractable(float XProport
 	params.YProportion = YProportion;
 	params.Yaw = Yaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1461,12 +1119,7 @@ void UAthenaCheatManager::SpawnShipFromDesc(const class FString& InShipDescAsset
 	params.SpawnLocationZ = SpawnLocationZ;
 	params.SpawnYaw = SpawnYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1482,12 +1135,7 @@ void UAthenaCheatManager::SpawnShipAtIsland(const class FString& IslandName)
 	UAthenaCheatManager_SpawnShipAtIsland_Params params;
 	params.IslandName = IslandName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1509,12 +1157,7 @@ void UAthenaCheatManager::SpawnShip(float SpawnLocationX, float SpawnLocationY, 
 	params.SpawnLocationZ = SpawnLocationZ;
 	params.SpawnYaw = SpawnYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1532,12 +1175,7 @@ void UAthenaCheatManager::SpawnNumberOfAI(const class FString& AITypeString, int
 	params.AITypeString = AITypeString;
 	params.NumToSpawn = NumToSpawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1553,12 +1191,7 @@ void UAthenaCheatManager::SpawnMessageInABottle(const class FString& MessageInAB
 	UAthenaCheatManager_SpawnMessageInABottle_Params params;
 	params.MessageInABottleTypeString = MessageInABottleTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1571,12 +1204,7 @@ void UAthenaCheatManager::SpawnMermaid()
 
 	UAthenaCheatManager_SpawnMermaid_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1592,12 +1220,7 @@ void UAthenaCheatManager::SpawnMerchantFauna(const class FString& FaunaTypeStrin
 	UAthenaCheatManager_SpawnMerchantFauna_Params params;
 	params.FaunaTypeString = FaunaTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1613,12 +1236,7 @@ void UAthenaCheatManager::SpawnMerchantCrate(const class FString& MerchantCrateT
 	UAthenaCheatManager_SpawnMerchantCrate_Params params;
 	params.MerchantCrateTypeString = MerchantCrateTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1634,12 +1252,7 @@ void UAthenaCheatManager::SpawnMerchantCargo(const class FString& MerchantCargoT
 	UAthenaCheatManager_SpawnMerchantCargo_Params params;
 	params.MerchantCargoTypeString = MerchantCargoTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1655,12 +1268,7 @@ void UAthenaCheatManager::SpawnKrakenAtCurrentLocationWithNumTentacles(uint32_t 
 	UAthenaCheatManager_SpawnKrakenAtCurrentLocationWithNumTentacles_Params params;
 	params.NumTentacles = NumTentacles;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1673,12 +1281,7 @@ void UAthenaCheatManager::SpawnKrakenAtCurrentLocation()
 
 	UAthenaCheatManager_SpawnKrakenAtCurrentLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1691,12 +1294,7 @@ void UAthenaCheatManager::SpawnKraken()
 
 	UAthenaCheatManager_SpawnKraken_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1712,12 +1310,7 @@ void UAthenaCheatManager::SpawnCursedCannonball(const class FString& CannonballT
 	UAthenaCheatManager_SpawnCursedCannonball_Params params;
 	params.CannonballTypeString = CannonballTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1733,12 +1326,7 @@ void UAthenaCheatManager::SpawnCargoRunCrate(const class FString& SpawnCargoRunC
 	UAthenaCheatManager_SpawnCargoRunCrate_Params params;
 	params.SpawnCargoRunCrateString = SpawnCargoRunCrateString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1754,12 +1342,7 @@ void UAthenaCheatManager::SpawnBountyReward(const class FString& BountyTypeStrin
 	UAthenaCheatManager_SpawnBountyReward_Params params;
 	params.BountyTypeString = BountyTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1772,12 +1355,7 @@ void UAthenaCheatManager::SpawnBarrelGroup()
 
 	UAthenaCheatManager_SpawnBarrelGroup_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1793,12 +1371,7 @@ void UAthenaCheatManager::SpawnAINoTrigger(const class FString& AIDescString)
 	UAthenaCheatManager_SpawnAINoTrigger_Params params;
 	params.AIDescString = AIDescString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1814,12 +1387,7 @@ void UAthenaCheatManager::SpawnAIAtNearestAISpawnPoint(const class FString& AIDe
 	UAthenaCheatManager_SpawnAIAtNearestAISpawnPoint_Params params;
 	params.AIDescString = AIDescString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1845,12 +1413,7 @@ void UAthenaCheatManager::SpawnAIAtLocationDelayed(const class FString& AITypeSt
 	params.Yaw = Yaw;
 	params.Delay = Delay;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1868,12 +1431,7 @@ void UAthenaCheatManager::SpawnAIAtCurrentLocationDelayed(const class FString& A
 	params.AITypeString = AITypeString;
 	params.Delay = Delay;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1889,12 +1447,7 @@ void UAthenaCheatManager::SpawnAI(const class FString& AIDescString)
 	UAthenaCheatManager_SpawnAI_Params params;
 	params.AIDescString = AIDescString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1910,12 +1463,7 @@ void UAthenaCheatManager::SlowMotionOverride(bool InValue)
 	UAthenaCheatManager_SlowMotionOverride_Params params;
 	params.InValue = InValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1931,12 +1479,7 @@ void UAthenaCheatManager::SinkShipWithKeelOverIndex(int KeelOverConfigIndex)
 	UAthenaCheatManager_SinkShipWithKeelOverIndex_Params params;
 	params.KeelOverConfigIndex = KeelOverConfigIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1952,12 +1495,7 @@ void UAthenaCheatManager::SinkShipByActorId(const class FString& ShipActorIdStri
 	UAthenaCheatManager_SinkShipByActorId_Params params;
 	params.ShipActorIdString = ShipActorIdString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1970,12 +1508,7 @@ void UAthenaCheatManager::SinkShip()
 
 	UAthenaCheatManager_SinkShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1988,12 +1521,7 @@ void UAthenaCheatManager::SinkAllBarrels()
 
 	UAthenaCheatManager_SinkAllBarrels_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2006,12 +1534,7 @@ void UAthenaCheatManager::SinkAllAIShips()
 
 	UAthenaCheatManager_SinkAllAIShips_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2024,12 +1547,7 @@ void UAthenaCheatManager::ShowRandomCrewMemberGamerCard()
 
 	UAthenaCheatManager_ShowRandomCrewMemberGamerCard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2042,12 +1560,7 @@ void UAthenaCheatManager::ShowAllItemsInRadialInventory()
 
 	UAthenaCheatManager_ShowAllItemsInRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2063,12 +1576,7 @@ void UAthenaCheatManager::ShowAllianceStatus(const class FString& CrewId)
 	UAthenaCheatManager_ShowAllianceStatus_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2088,12 +1596,7 @@ void UAthenaCheatManager::ShipwrecksSpawnOne(float SpawnLocationX, float SpawnLo
 	params.SpawnLocationY = SpawnLocationY;
 	params.SpawnLocationZ = SpawnLocationZ;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2106,12 +1609,7 @@ void UAthenaCheatManager::ShipwrecksRegen()
 
 	UAthenaCheatManager_ShipwrecksRegen_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2127,12 +1625,7 @@ void UAthenaCheatManager::ShipwrecksDrawDebugBeacons(bool bEnabled)
 	UAthenaCheatManager_ShipwrecksDrawDebugBeacons_Params params;
 	params.bEnabled = bEnabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2145,12 +1638,7 @@ void UAthenaCheatManager::ShipUpdateMassProperies()
 
 	UAthenaCheatManager_ShipUpdateMassProperies_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2166,12 +1654,7 @@ void UAthenaCheatManager::SetWheelAngle(float Angle)
 	UAthenaCheatManager_SetWheelAngle_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2187,12 +1670,7 @@ void UAthenaCheatManager::SetWeaponsLockedOut(bool WeaponsLockedOut)
 	UAthenaCheatManager_SetWeaponsLockedOut_Params params;
 	params.WeaponsLockedOut = WeaponsLockedOut;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2208,12 +1686,7 @@ void UAthenaCheatManager::SetWaveFlag(int InFlag)
 	UAthenaCheatManager_SetWaveFlag_Params params;
 	params.InFlag = InFlag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2233,12 +1706,7 @@ void UAthenaCheatManager::SetWaterWaveParams(float Amplitude, float WaveLength, 
 	params.WaveLength = WaveLength;
 	params.PropagationSpeed = PropagationSpeed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2251,12 +1719,7 @@ void UAthenaCheatManager::SetVoiceChatEndpointXAudio2()
 
 	UAthenaCheatManager_SetVoiceChatEndpointXAudio2_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2269,12 +1732,7 @@ void UAthenaCheatManager::SetVoiceChatEndpointWwise()
 
 	UAthenaCheatManager_SetVoiceChatEndpointWwise_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2287,12 +1745,7 @@ void UAthenaCheatManager::SetUnattenuatedChatMixingMethodToUseWwise()
 
 	UAthenaCheatManager_SetUnattenuatedChatMixingMethodToUseWwise_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2305,12 +1758,7 @@ void UAthenaCheatManager::SetUnattenuatedChatMixingMethodToUsePlatform()
 
 	UAthenaCheatManager_SetUnattenuatedChatMixingMethodToUsePlatform_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2326,12 +1774,7 @@ void UAthenaCheatManager::SetTimeScalar(float TimeScalar)
 	UAthenaCheatManager_SetTimeScalar_Params params;
 	params.TimeScalar = TimeScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2349,12 +1792,7 @@ void UAthenaCheatManager::SetTimeHoursAndMinutes(int Hours, int Minutes)
 	params.Hours = Hours;
 	params.Minutes = Minutes;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2370,12 +1808,7 @@ void UAthenaCheatManager::SetTime(int Hours)
 	UAthenaCheatManager_SetTime_Params params;
 	params.Hours = Hours;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2391,12 +1824,7 @@ void UAthenaCheatManager::SetShipYaw(float Yaw)
 	UAthenaCheatManager_SetShipYaw_Params params;
 	params.Yaw = Yaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2412,12 +1840,7 @@ void UAthenaCheatManager::SetShipRoll(float Roll)
 	UAthenaCheatManager_SetShipRoll_Params params;
 	params.Roll = Roll;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2433,12 +1856,7 @@ void UAthenaCheatManager::SetShipBuoyancyBlend(float UnaryBlend)
 	UAthenaCheatManager_SetShipBuoyancyBlend_Params params;
 	params.UnaryBlend = UnaryBlend;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2454,12 +1872,7 @@ void UAthenaCheatManager::SetSailLoweredProportions(float Proportion)
 	UAthenaCheatManager_SetSailLoweredProportions_Params params;
 	params.Proportion = Proportion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2475,12 +1888,7 @@ void UAthenaCheatManager::SetSailAngles(float Angle)
 	UAthenaCheatManager_SetSailAngles_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2496,12 +1904,7 @@ void UAthenaCheatManager::SetPreventLeakingOnAllDamageZones(bool PreventLeaking)
 	UAthenaCheatManager_SetPreventLeakingOnAllDamageZones_Params params;
 	params.PreventLeaking = PreventLeaking;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2514,12 +1917,7 @@ void UAthenaCheatManager::SetPlayerVisibleToAI()
 
 	UAthenaCheatManager_SetPlayerVisibleToAI_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2532,12 +1930,7 @@ void UAthenaCheatManager::SetPlayerInvisibleToAI()
 
 	UAthenaCheatManager_SetPlayerInvisibleToAI_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2553,12 +1946,7 @@ void UAthenaCheatManager::SetPhotoMode(bool Enabled)
 	UAthenaCheatManager_SetPhotoMode_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2574,12 +1962,7 @@ void UAthenaCheatManager::SetNonCrewChatSpatialisation(bool Enabled)
 	UAthenaCheatManager_SetNonCrewChatSpatialisation_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2595,12 +1978,7 @@ void UAthenaCheatManager::SetIdleDisconnectEnabled(bool Enabled)
 	UAthenaCheatManager_SetIdleDisconnectEnabled_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2616,12 +1994,7 @@ void UAthenaCheatManager::SetGrogSecondary(bool InValue)
 	UAthenaCheatManager_SetGrogSecondary_Params params;
 	params.InValue = InValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2637,12 +2010,7 @@ void UAthenaCheatManager::SetFOV(float InNewFOV)
 	UAthenaCheatManager_SetFOV_Params params;
 	params.InNewFOV = InNewFOV;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2658,12 +2026,7 @@ void UAthenaCheatManager::SetDebugCameraUseProjectileCollisionChannel(bool bUseP
 	UAthenaCheatManager_SetDebugCameraUseProjectileCollisionChannel_Params params;
 	params.bUseProjectileChannel = bUseProjectileChannel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2679,12 +2042,7 @@ void UAthenaCheatManager::SetDeathPenaltyRespawnTimer(float InSpawnTimer)
 	UAthenaCheatManager_SetDeathPenaltyRespawnTimer_Params params;
 	params.InSpawnTimer = InSpawnTimer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2700,12 +2058,7 @@ void UAthenaCheatManager::SetCapstanPosition(float Position)
 	UAthenaCheatManager_SetCapstanPosition_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2725,12 +2078,7 @@ void UAthenaCheatManager::SetAITeamAttitude(const class FString& TeamAString, co
 	params.TeamBString = TeamBString;
 	params.AttitudeString = AttitudeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2748,12 +2096,7 @@ void UAthenaCheatManager::SendStatEvent(const class FString& StatName, uint64_t 
 	params.StatName = StatName;
 	params.StatValue = StatValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2769,12 +2112,7 @@ void UAthenaCheatManager::SendRewardRequestEvent(const class FString& CompanyNam
 	UAthenaCheatManager_SendRewardRequestEvent_Params params;
 	params.CompanyNameAndRewardIdSeparatedByColon = CompanyNameAndRewardIdSeparatedByColon;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2787,12 +2125,7 @@ void UAthenaCheatManager::ScuttleShip()
 
 	UAthenaCheatManager_ScuttleShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2805,12 +2138,7 @@ void UAthenaCheatManager::ScreenFadeStart()
 
 	UAthenaCheatManager_ScreenFadeStart_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2823,12 +2151,7 @@ void UAthenaCheatManager::ScreenFadeEnd()
 
 	UAthenaCheatManager_ScreenFadeEnd_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2841,12 +2164,7 @@ void UAthenaCheatManager::SailShip()
 
 	UAthenaCheatManager_SailShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2862,12 +2180,7 @@ void UAthenaCheatManager::RewindPhysicsSceneBy(float SecondsToRewindBy)
 	UAthenaCheatManager_RewindPhysicsSceneBy_Params params;
 	params.SecondsToRewindBy = SecondsToRewindBy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2883,12 +2196,7 @@ void UAthenaCheatManager::ResurfaceShipByActorId(const class FString& ShipActorI
 	UAthenaCheatManager_ResurfaceShipByActorId_Params params;
 	params.ShipActorIdString = ShipActorIdString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2901,12 +2209,7 @@ void UAthenaCheatManager::RestockIslandBarrels()
 
 	UAthenaCheatManager_RestockIslandBarrels_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2919,12 +2222,7 @@ void UAthenaCheatManager::RestockAllReplenishables()
 
 	UAthenaCheatManager_RestockAllReplenishables_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2937,12 +2235,7 @@ void UAthenaCheatManager::RespawnAllIslandItemSpawners()
 
 	UAthenaCheatManager_RespawnAllIslandItemSpawners_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2958,12 +2251,7 @@ void UAthenaCheatManager::ResetTinySharkSpawnTimerWithTime(float Timer)
 	UAthenaCheatManager_ResetTinySharkSpawnTimerWithTime_Params params;
 	params.Timer = Timer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2976,12 +2264,7 @@ void UAthenaCheatManager::ResetTinySharkSpawnTimer()
 
 	UAthenaCheatManager_ResetTinySharkSpawnTimer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2994,12 +2277,7 @@ void UAthenaCheatManager::ResetStats()
 
 	UAthenaCheatManager_ResetStats_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3012,12 +2290,7 @@ void UAthenaCheatManager::ResetMouseDelta()
 
 	UAthenaCheatManager_ResetMouseDelta_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3033,12 +2306,7 @@ void UAthenaCheatManager::ResetDemoSession(bool StartNewSession)
 	UAthenaCheatManager_ResetDemoSession_Params params;
 	params.StartNewSession = StartNewSession;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3051,12 +2319,7 @@ void UAthenaCheatManager::ResetAITeamAttitudes()
 
 	UAthenaCheatManager_ResetAITeamAttitudes_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3069,12 +2332,7 @@ void UAthenaCheatManager::ReplenishShip()
 
 	UAthenaCheatManager_ReplenishShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3090,12 +2348,7 @@ void UAthenaCheatManager::ReplaceShipWithSmallShip(const class FString& ShipActo
 	UAthenaCheatManager_ReplaceShipWithSmallShip_Params params;
 	params.ShipActorIdConsoleString = ShipActorIdConsoleString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3108,12 +2361,7 @@ void UAthenaCheatManager::RepairShipAndClearInternalWater()
 
 	UAthenaCheatManager_RepairShipAndClearInternalWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3129,12 +2377,7 @@ void UAthenaCheatManager::RenameTreasure(const class FString& InVendorName)
 	UAthenaCheatManager_RenameTreasure_Params params;
 	params.InVendorName = InVendorName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3150,12 +2393,7 @@ void UAthenaCheatManager::RemoveItemInSlot(int SlotIndex)
 	UAthenaCheatManager_RemoveItemInSlot_Params params;
 	params.SlotIndex = SlotIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3171,12 +2409,7 @@ void UAthenaCheatManager::PushShip(float FwdSpdInMetersPerSecond)
 	UAthenaCheatManager_PushShip_Params params;
 	params.FwdSpdInMetersPerSecond = FwdSpdInMetersPerSecond;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3189,12 +2422,7 @@ void UAthenaCheatManager::PullLatestEmblemProgress()
 
 	UAthenaCheatManager_PullLatestEmblemProgress_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3207,12 +2435,7 @@ void UAthenaCheatManager::PrintTime()
 
 	UAthenaCheatManager_PrintTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3225,12 +2448,7 @@ void UAthenaCheatManager::PrintAllNetworkActors()
 
 	UAthenaCheatManager_PrintAllNetworkActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3246,12 +2464,7 @@ void UAthenaCheatManager::PlayerAnimationOverride(const struct FName& Name)
 	UAthenaCheatManager_PlayerAnimationOverride_Params params;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3271,12 +2484,7 @@ void UAthenaCheatManager::OverrideShipPartFromCatalogue(const class FString& InS
 	params.InCataloguePartIndex = InCataloguePartIndex;
 	params.InCataloguePartCustomisationIndex = InCataloguePartCustomisationIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3289,12 +2497,7 @@ void UAthenaCheatManager::OpenSkeletonFortDoor()
 
 	UAthenaCheatManager_OpenSkeletonFortDoor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3307,12 +2510,7 @@ void UAthenaCheatManager::MessageBoxOnGraphicsThreadTest()
 
 	UAthenaCheatManager_MessageBoxOnGraphicsThreadTest_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3325,12 +2523,7 @@ void UAthenaCheatManager::MakeSharksBrainDead()
 
 	UAthenaCheatManager_MakeSharksBrainDead_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3343,12 +2536,7 @@ void UAthenaCheatManager::LogShipHierarchy()
 
 	UAthenaCheatManager_LogShipHierarchy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3361,12 +2549,7 @@ void UAthenaCheatManager::LogServerShipHierarchy()
 
 	UAthenaCheatManager_LogServerShipHierarchy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3379,12 +2562,7 @@ void UAthenaCheatManager::LogAITeamAttitudes()
 
 	UAthenaCheatManager_LogAITeamAttitudes_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3397,12 +2575,7 @@ void UAthenaCheatManager::LocallyUnBreakLeg()
 
 	UAthenaCheatManager_LocallyUnBreakLeg_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3418,12 +2591,7 @@ void UAthenaCheatManager::LeaveAlliance(const class FString& CrewId)
 	UAthenaCheatManager_LeaveAlliance_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3441,12 +2609,7 @@ void UAthenaCheatManager::LaunchPlayer(float Velocity, float Angle)
 	params.Velocity = Velocity;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3459,12 +2622,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleThrowPlayer()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleThrowPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3480,12 +2638,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleTakeDamage(float Damage)
 	UAthenaCheatManager_KrakenAnimatedTentacleTakeDamage_Params params;
 	params.Damage = Damage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3498,12 +2651,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleSwallowPlayer()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleSwallowPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3516,12 +2664,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleSuckPlayer()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleSuckPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3534,12 +2677,7 @@ void UAthenaCheatManager::KrakenAnimatedTentaclePowerSlamPlayer()
 
 	UAthenaCheatManager_KrakenAnimatedTentaclePowerSlamPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3552,12 +2690,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleKill()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleKill_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3570,12 +2703,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleIngestPlayer()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleIngestPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3588,12 +2716,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleDropPlayer()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleDropPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3606,12 +2729,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleDespawn()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleDespawn_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3624,12 +2742,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleDefeat()
 
 	UAthenaCheatManager_KrakenAnimatedTentacleDefeat_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3645,12 +2758,7 @@ void UAthenaCheatManager::KrakenAnimatedTentacleChangePlayerHoldState(const clas
 	UAthenaCheatManager_KrakenAnimatedTentacleChangePlayerHoldState_Params params;
 	params.HoldState = HoldState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3663,12 +2771,7 @@ void UAthenaCheatManager::KillPlayer()
 
 	UAthenaCheatManager_KillPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3684,12 +2787,7 @@ void UAthenaCheatManager::KillCrew(const class FString& CrewId)
 	UAthenaCheatManager_KillCrew_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3702,12 +2800,7 @@ void UAthenaCheatManager::KillAllPlayers()
 
 	UAthenaCheatManager_KillAllPlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3720,12 +2813,7 @@ void UAthenaCheatManager::KillAllCrews()
 
 	UAthenaCheatManager_KillAllCrews_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3743,12 +2831,7 @@ void UAthenaCheatManager::JoinAlliance(const class FString& OfferingCrew, const 
 	params.OfferingCrew = OfferingCrew;
 	params.AcceptingCrew = AcceptingCrew;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3766,12 +2849,7 @@ void UAthenaCheatManager::IPGOverride(const struct FName& BodyShape, float Dista
 	params.BodyShape = BodyShape;
 	params.Distance = Distance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3787,12 +2865,7 @@ void UAthenaCheatManager::IPGLoad(const class FString& path)
 	UAthenaCheatManager_IPGLoad_Params params;
 	params.path = path;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3808,12 +2881,7 @@ void UAthenaCheatManager::InfiniteGunAmmo(bool Enabled)
 	UAthenaCheatManager_InfiniteGunAmmo_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3831,12 +2899,7 @@ void UAthenaCheatManager::IncrementTime(int Hours, int Minutes)
 	params.Hours = Hours;
 	params.Minutes = Minutes;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3852,12 +2915,7 @@ void UAthenaCheatManager::HealthSet(float Value)
 	UAthenaCheatManager_HealthSet_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3870,12 +2928,7 @@ void UAthenaCheatManager::HealthReset()
 
 	UAthenaCheatManager_HealthReset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3891,12 +2944,7 @@ void UAthenaCheatManager::HealthAdjust(float Amount)
 	UAthenaCheatManager_HealthAdjust_Params params;
 	params.Amount = Amount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3909,12 +2957,7 @@ void UAthenaCheatManager::God()
 
 	UAthenaCheatManager_God_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3927,12 +2970,7 @@ void UAthenaCheatManager::ForceOpenShop()
 
 	UAthenaCheatManager_ForceOpenShop_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3945,12 +2983,7 @@ void UAthenaCheatManager::ForceCloseShop()
 
 	UAthenaCheatManager_ForceCloseShop_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3963,12 +2996,7 @@ void UAthenaCheatManager::Fly()
 
 	UAthenaCheatManager_Fly_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3986,12 +3014,7 @@ void UAthenaCheatManager::FloodShipWithKeelOverIndex(float NormalisedWaterAmount
 	params.NormalisedWaterAmount = NormalisedWaterAmount;
 	params.KeelOverConfigIndex = KeelOverConfigIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4007,12 +3030,7 @@ void UAthenaCheatManager::FloodShip(float NormalisedWaterAmount)
 	UAthenaCheatManager_FloodShip_Params params;
 	params.NormalisedWaterAmount = NormalisedWaterAmount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4028,12 +3046,7 @@ void UAthenaCheatManager::EquipPirateTitle(const class FString& PirateTitleType)
 	UAthenaCheatManager_EquipPirateTitle_Params params;
 	params.PirateTitleType = PirateTitleType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4046,12 +3059,7 @@ void UAthenaCheatManager::EquipCompassInLoadout()
 
 	UAthenaCheatManager_EquipCompassInLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4064,12 +3072,7 @@ void UAthenaCheatManager::EndDemoSession()
 
 	UAthenaCheatManager_EndDemoSession_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4085,12 +3088,7 @@ void UAthenaCheatManager::EnableVoiceChatMeteringForOutgoingSignals(bool Enabled
 	UAthenaCheatManager_EnableVoiceChatMeteringForOutgoingSignals_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4106,12 +3104,7 @@ void UAthenaCheatManager::EnableVoiceChatMeteringForIncomingSignals(bool Enabled
 	UAthenaCheatManager_EnableVoiceChatMeteringForIncomingSignals_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4127,12 +3120,7 @@ void UAthenaCheatManager::EnableNTP(bool Enable)
 	UAthenaCheatManager_EnableNTP_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4148,12 +3136,7 @@ void UAthenaCheatManager::EnableMermaidSpawning(int Enable)
 	UAthenaCheatManager_EnableMermaidSpawning_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4169,12 +3152,7 @@ void UAthenaCheatManager::EnableMermaidDeletion(int Enable)
 	UAthenaCheatManager_EnableMermaidDeletion_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4190,12 +3168,7 @@ void UAthenaCheatManager::EnableHeadphoneMixing(bool Enabled)
 	UAthenaCheatManager_EnableHeadphoneMixing_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4208,12 +3181,7 @@ void UAthenaCheatManager::EnableCinematicCamera()
 
 	UAthenaCheatManager_EnableCinematicCamera_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4229,12 +3197,7 @@ void UAthenaCheatManager::EnableBeaconOnAllMermaids(int Enable)
 	UAthenaCheatManager_EnableBeaconOnAllMermaids_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4252,12 +3215,7 @@ void UAthenaCheatManager::DrawVideprinter(const class FString& Id, bool Active)
 	params.Id = Id;
 	params.Active = Active;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4273,12 +3231,7 @@ void UAthenaCheatManager::DrawTreasureDebug(int Enabled)
 	UAthenaCheatManager_DrawTreasureDebug_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4294,12 +3247,7 @@ void UAthenaCheatManager::DrawTemporaryLandmarkDebug(bool Enabled)
 	UAthenaCheatManager_DrawTemporaryLandmarkDebug_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4315,12 +3263,7 @@ void UAthenaCheatManager::DrawNearbyAISpawnPointsRanged(float Range)
 	UAthenaCheatManager_DrawNearbyAISpawnPointsRanged_Params params;
 	params.Range = Range;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4333,12 +3276,7 @@ void UAthenaCheatManager::DrawNearbyAISpawnPoints()
 
 	UAthenaCheatManager_DrawNearbyAISpawnPoints_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4354,12 +3292,7 @@ void UAthenaCheatManager::DiveShipByActorId(const class FString& ShipActorIdStri
 	UAthenaCheatManager_DiveShipByActorId_Params params;
 	params.ShipActorIdString = ShipActorIdString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4375,12 +3308,7 @@ void UAthenaCheatManager::DisplaySingleEmblemProgress(const class FString& StatN
 	UAthenaCheatManager_DisplaySingleEmblemProgress_Params params;
 	params.StatName = StatName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4393,12 +3321,7 @@ void UAthenaCheatManager::DisplayServersideHitsAtPlayerPosWithDefaults()
 
 	UAthenaCheatManager_DisplayServersideHitsAtPlayerPosWithDefaults_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4418,12 +3341,7 @@ void UAthenaCheatManager::DisplayServersideHitsAtPlayerPos(uint32_t NumSamplesPe
 	params.DistanceBetweenSamples = DistanceBetweenSamples;
 	params.TestHeight = TestHeight;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4439,12 +3357,7 @@ void UAthenaCheatManager::DisplayNonVagueNonUniqueLandmarksForIsland(bool Enable
 	UAthenaCheatManager_DisplayNonVagueNonUniqueLandmarksForIsland_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4457,12 +3370,7 @@ void UAthenaCheatManager::DisplayLoadingScreenTeleport()
 
 	UAthenaCheatManager_DisplayLoadingScreenTeleport_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4475,12 +3383,7 @@ void UAthenaCheatManager::DisplayLoadingScreenGame()
 
 	UAthenaCheatManager_DisplayLoadingScreenGame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4493,12 +3396,7 @@ void UAthenaCheatManager::DisplayLoadingScreenBoot()
 
 	UAthenaCheatManager_DisplayLoadingScreenBoot_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4511,12 +3409,7 @@ void UAthenaCheatManager::DisplayLandmarkValidTreasureLocationsForPlayer()
 
 	UAthenaCheatManager_DisplayLandmarkValidTreasureLocationsForPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4529,12 +3422,7 @@ void UAthenaCheatManager::DisplayLandmarkRegions()
 
 	UAthenaCheatManager_DisplayLandmarkRegions_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4547,12 +3435,7 @@ void UAthenaCheatManager::DisplayLandmarkNames()
 
 	UAthenaCheatManager_DisplayLandmarkNames_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4568,12 +3451,7 @@ void UAthenaCheatManager::DisplayFallDamageDebug(int Enable)
 	UAthenaCheatManager_DisplayFallDamageDebug_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4589,12 +3467,7 @@ void UAthenaCheatManager::DisplayDrunkenness(bool Flag)
 	UAthenaCheatManager_DisplayDrunkenness_Params params;
 	params.Flag = Flag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4607,12 +3480,7 @@ void UAthenaCheatManager::DisableCinematicCamera()
 
 	UAthenaCheatManager_DisableCinematicCamera_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4628,12 +3496,7 @@ void UAthenaCheatManager::DestroyShip(const class FString& ShipActorIdConsoleStr
 	UAthenaCheatManager_DestroyShip_Params params;
 	params.ShipActorIdConsoleString = ShipActorIdConsoleString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4646,12 +3509,7 @@ void UAthenaCheatManager::DestroyMyShip()
 
 	UAthenaCheatManager_DestroyMyShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4664,12 +3522,7 @@ void UAthenaCheatManager::DestroyKraken()
 
 	UAthenaCheatManager_DestroyKraken_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4682,12 +3535,7 @@ void UAthenaCheatManager::DestroyAllTreasureChests()
 
 	UAthenaCheatManager_DestroyAllTreasureChests_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4700,12 +3548,7 @@ void UAthenaCheatManager::DestroyAllTinySharks()
 
 	UAthenaCheatManager_DestroyAllTinySharks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4718,12 +3561,7 @@ void UAthenaCheatManager::DestroyAllShips()
 
 	UAthenaCheatManager_DestroyAllShips_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4741,12 +3579,7 @@ void UAthenaCheatManager::DespawnNumberOfAI(const class FString& AITypeString, i
 	params.AITypeString = AITypeString;
 	params.NumToDespawn = NumToDespawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4759,12 +3592,7 @@ void UAthenaCheatManager::DespawnFirstAI()
 
 	UAthenaCheatManager_DespawnFirstAI_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4780,12 +3608,7 @@ void UAthenaCheatManager::DespawnAI(const class FString& AITypeString)
 	UAthenaCheatManager_DespawnAI_Params params;
 	params.AITypeString = AITypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4798,12 +3621,7 @@ void UAthenaCheatManager::DeleteVoyageHistory()
 
 	UAthenaCheatManager_DeleteVoyageHistory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4816,12 +3634,7 @@ void UAthenaCheatManager::DeleteAllMermaids()
 
 	UAthenaCheatManager_DeleteAllMermaids_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4834,12 +3647,7 @@ void UAthenaCheatManager::DebugIslandDelta()
 
 	UAthenaCheatManager_DebugIslandDelta_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4869,12 +3677,7 @@ void UAthenaCheatManager::DamageShipFromRemoteActor(const class FString& ActorId
 	params.CameraForwardDirectionY = CameraForwardDirectionY;
 	params.CameraForwardDirectionZ = CameraForwardDirectionZ;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4890,12 +3693,7 @@ void UAthenaCheatManager::DamageShip(float Strength)
 	UAthenaCheatManager_DamageShip_Params params;
 	params.Strength = Strength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4925,12 +3723,7 @@ void UAthenaCheatManager::DamagePlayerFromRemoteActor(const class FString& Actor
 	params.CameraForwardDirectionY = CameraForwardDirectionY;
 	params.CameraForwardDirectionZ = CameraForwardDirectionZ;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4946,12 +3739,7 @@ void UAthenaCheatManager::DamagePlayer(float Strength)
 	UAthenaCheatManager_DamagePlayer_Params params;
 	params.Strength = Strength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4964,12 +3752,7 @@ void UAthenaCheatManager::CureAllAilings()
 
 	UAthenaCheatManager_CureAllAilings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4982,12 +3765,7 @@ void UAthenaCheatManager::CompleteVoyage()
 
 	UAthenaCheatManager_CompleteVoyage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5000,12 +3778,7 @@ void UAthenaCheatManager::CompleteActiveQuests()
 
 	UAthenaCheatManager_CompleteActiveQuests_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5018,12 +3791,7 @@ void UAthenaCheatManager::CloseSkeletonFortDoor()
 
 	UAthenaCheatManager_CloseSkeletonFortDoor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5036,12 +3804,7 @@ void UAthenaCheatManager::CloseLoadingScreen()
 
 	UAthenaCheatManager_CloseLoadingScreen_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5054,12 +3817,7 @@ void UAthenaCheatManager::ClearVoiceChatMeters()
 
 	UAthenaCheatManager_ClearVoiceChatMeters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5072,12 +3830,7 @@ void UAthenaCheatManager::ClearSlowMotionOverride()
 
 	UAthenaCheatManager_ClearSlowMotionOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5090,12 +3843,7 @@ void UAthenaCheatManager::ClearShipRestockingTimeouts()
 
 	UAthenaCheatManager_ClearShipRestockingTimeouts_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5108,12 +3856,7 @@ void UAthenaCheatManager::ClearGrogSecondary()
 
 	UAthenaCheatManager_ClearGrogSecondary_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5126,12 +3869,7 @@ void UAthenaCheatManager::ClearAllItemsInInventory()
 
 	UAthenaCheatManager_ClearAllItemsInInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5144,12 +3882,7 @@ void UAthenaCheatManager::CheckLandmarkValidTreasureLocationsAtPlayerPos()
 
 	UAthenaCheatManager_CheckLandmarkValidTreasureLocationsAtPlayerPos_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5162,12 +3895,7 @@ void UAthenaCheatManager::CheckLandmarkRelativeToIslandCalculation()
 
 	UAthenaCheatManager_CheckLandmarkRelativeToIslandCalculation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5180,12 +3908,7 @@ void UAthenaCheatManager::CapsizeShip()
 
 	UAthenaCheatManager_CapsizeShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5198,12 +3921,7 @@ void UAthenaCheatManager::CancelVoyage()
 
 	UAthenaCheatManager_CancelVoyage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5216,12 +3934,7 @@ void UAthenaCheatManager::CancelAllCrewVoyages()
 
 	UAthenaCheatManager_CancelAllCrewVoyages_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5234,12 +3947,7 @@ void UAthenaCheatManager::CancelActiveAIShipEncounters()
 
 	UAthenaCheatManager_CancelActiveAIShipEncounters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5252,12 +3960,7 @@ void UAthenaCheatManager::BreakLeg()
 
 	UAthenaCheatManager_BreakLeg_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5277,12 +3980,7 @@ void UAthenaCheatManager::ApplyVenomWithParams(float InitialDamage, float Damage
 	params.DamagePerSecond = DamagePerSecond;
 	params.DamageOverTimeDuration = DamageOverTimeDuration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5295,12 +3993,7 @@ void UAthenaCheatManager::ApplyVenom()
 
 	UAthenaCheatManager_ApplyVenom_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5316,12 +4009,7 @@ void UAthenaCheatManager::ApplyDamageToAllDamageZones(float Damage)
 	UAthenaCheatManager_ApplyDamageToAllDamageZones_Params params;
 	params.Damage = Damage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5337,12 +4025,7 @@ void UAthenaCheatManager::ApplyCursedCannonballStatusToShip(const class FString&
 	UAthenaCheatManager_ApplyCursedCannonballStatusToShip_Params params;
 	params.CannonballTypeString = CannonballTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5358,12 +4041,7 @@ void UAthenaCheatManager::ApplyCursedCannonballStatusToPlayer(const class FStrin
 	UAthenaCheatManager_ApplyCursedCannonballStatusToPlayer_Params params;
 	params.CannonballTypeString = CannonballTypeString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5376,12 +4054,7 @@ void UAthenaCheatManager::AIPlayerShip()
 
 	UAthenaCheatManager_AIPlayerShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5399,12 +4072,7 @@ void UAthenaCheatManager::AddShipToCrew(const class FString& ActorIdString, cons
 	params.ActorIdString = ActorIdString;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5422,12 +4090,7 @@ void UAthenaCheatManager::AddPlayerToCrew(const class FString& ActorIdString, co
 	params.ActorIdString = ActorIdString;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5445,12 +4108,7 @@ void UAthenaCheatManager::AddDrunkenness(int DrunkennessType, float DrunkennessC
 	params.DrunkennessType = DrunkennessType;
 	params.DrunkennessChange = DrunkennessChange;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5466,12 +4124,7 @@ void UAthenaCheatManager::ActivateSkellyFort(const class FString& FortName)
 	UAthenaCheatManager_ActivateSkellyFort_Params params;
 	params.FortName = FortName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

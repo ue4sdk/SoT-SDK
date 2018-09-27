@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,12 +28,7 @@ bool UAnimationDataFunctionLib::STATIC_UnwrapAnimDataEntryStruct(const struct FA
 	params.Wrapper = Wrapper;
 	params.DestinationStruct = DestinationStruct;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
 		*Value = params.Value;
@@ -55,12 +50,7 @@ class UAnimationData* UAnimationDataFunctionLib::STATIC_MakeAnimationData(class 
 	UAnimationDataFunctionLib_MakeAnimationData_Params params;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -81,12 +71,7 @@ struct FAnimDataEntryStructWrapper UAnimationDataFunctionLib::STATIC_GetAnimData
 	params.AnimationDataObject = AnimationDataObject;
 	params.TheClass = TheClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -104,12 +89,7 @@ void UAnimationDataFunctionLib::STATIC_CheckAnimDataClassTypeForDuplicateAnimDat
 	UAnimationDataFunctionLib_CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs_Params params;
 	params.InClass = InClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -126,12 +106,7 @@ class UAnimationData* UAnimationDataStoreAsset::LookupAnimationData(class UClass
 	UAnimationDataStoreAsset_LookupAnimationData_Params params;
 	params.AnimDataId = AnimDataId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -149,12 +124,7 @@ class UClass* UAnimationDataStoreAsset::STATIC_GetAnimationDataClass(struct FAni
 
 	UAnimationDataStoreAsset_GetAnimationDataClass_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Entry != nullptr)
 		*Entry = params.Entry;
@@ -176,12 +146,7 @@ class UAnimationData* UAnimationDataStoreInterface::GetAnimationDataForId(class 
 	UAnimationDataStoreInterface_GetAnimationDataForId_Params params;
 	params.AnimDataId = AnimDataId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -196,12 +161,7 @@ void UDockableInterface::HandleDestroy()
 
 	UDockableInterface_HandleDestroy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -216,12 +176,7 @@ struct FDockableInfo UDockableInterface::GetDockableInfo()
 
 	UDockableInterface_GetDockableInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -240,12 +195,7 @@ void UDockerBlueprintFunctions::STATIC_UpdateDock(float DeltaTime, struct FDocke
 	UDockerBlueprintFunctions_UpdateDock_Params params;
 	params.DeltaTime = DeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -259,8 +209,9 @@ void UDockerBlueprintFunctions::STATIC_UpdateDock(float DeltaTime, struct FDocke
 // class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DockDuration                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DelayAfterDocking              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UDockerBlueprintFunctions::STATIC_StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, struct FDocker* Docker)
+void UDockerBlueprintFunctions::STATIC_StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, float DelayAfterDocking, struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.StartDockingWithActor");
 
@@ -268,13 +219,9 @@ void UDockerBlueprintFunctions::STATIC_StartDockingWithActor(class AActor* Owner
 	params.Owner = Owner;
 	params.Target = Target;
 	params.DockDuration = DockDuration;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.DelayAfterDocking = DelayAfterDocking;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -293,12 +240,7 @@ bool UDockerBlueprintFunctions::STATIC_IsFullyDocked(struct FDocker* Docker)
 
 	UDockerBlueprintFunctions_IsFullyDocked_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -319,12 +261,7 @@ bool UDockerBlueprintFunctions::STATIC_IsDocking(struct FDocker* Docker)
 
 	UDockerBlueprintFunctions_IsDocking_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -346,12 +283,7 @@ struct FVector UDockerBlueprintFunctions::STATIC_GetTargetLocalOffset(const stru
 	UDockerBlueprintFunctions_GetTargetLocalOffset_Params params;
 	params.Docker = Docker;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -368,12 +300,7 @@ void UDockerBlueprintFunctions::STATIC_EndDock(struct FDocker* Docker)
 
 	UDockerBlueprintFunctions_EndDock_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -393,12 +320,7 @@ void ULimbIKFunctionLibrary::STATIC_SetTranslationStrength(float InRotationStren
 	ULimbIKFunctionLibrary_SetTranslationStrength_Params params;
 	params.InRotationStrength = InRotationStrength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -418,12 +340,7 @@ void ULimbIKFunctionLibrary::STATIC_SetTransform(const struct FTransform& InTran
 	ULimbIKFunctionLibrary_SetTransform_Params params;
 	params.InTransform = InTransform;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -443,12 +360,7 @@ void ULimbIKFunctionLibrary::STATIC_SetRotationStrength(float InRotationStrength
 	ULimbIKFunctionLibrary_SetRotationStrength_Params params;
 	params.InRotationStrength = InRotationStrength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -468,12 +380,7 @@ void ULimbIKFunctionLibrary::STATIC_SetParentBone(const struct FName& Bone, stru
 	ULimbIKFunctionLibrary_SetParentBone_Params params;
 	params.Bone = Bone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -493,12 +400,7 @@ void ULimbIKFunctionLibrary::STATIC_SetIKSpace(TEnumAsByte<ELimbIKSpace> IKSpace
 	ULimbIKFunctionLibrary_SetIKSpace_Params params;
 	params.IKSpace = IKSpace;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -522,12 +424,7 @@ void ULimbIKFunctionLibrary::STATIC_SetEnabled(bool Enabled, TEnumAsByte<ELimbIK
 	params.IKSpace = IKSpace;
 	params.ParentBone = ParentBone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -547,12 +444,7 @@ void ULimbIKFunctionLibrary::STATIC_SetBlendOutSpeed(float BlendOutSpeed, struct
 	ULimbIKFunctionLibrary_SetBlendOutSpeed_Params params;
 	params.BlendOutSpeed = BlendOutSpeed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -572,12 +464,7 @@ void ULimbIKFunctionLibrary::STATIC_SetBlendInSpeed(float BlendInSpeed, struct F
 	ULimbIKFunctionLibrary_SetBlendInSpeed_Params params;
 	params.BlendInSpeed = BlendInSpeed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -597,12 +484,7 @@ void ULimbIKFunctionLibrary::STATIC_SetAnimationOverride(bool AnimationOverride,
 	ULimbIKFunctionLibrary_SetAnimationOverride_Params params;
 	params.AnimationOverride = AnimationOverride;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -622,12 +504,7 @@ void ULimbIKFunctionLibrary::STATIC_SetAlphaTarget(float AlphaTarget, struct FLi
 	ULimbIKFunctionLibrary_SetAlphaTarget_Params params;
 	params.AlphaTarget = AlphaTarget;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -646,12 +523,7 @@ bool ULimbIKFunctionLibrary::STATIC_IsEnabled(struct FLimbIK* LimbIK)
 
 	ULimbIKFunctionLibrary_IsEnabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -672,12 +544,7 @@ float ULimbIKFunctionLibrary::STATIC_GetTranslationStrength(struct FLimbIK* Limb
 
 	ULimbIKFunctionLibrary_GetTranslationStrength_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -698,12 +565,7 @@ struct FTransform ULimbIKFunctionLibrary::STATIC_GetTransform(struct FLimbIK* Li
 
 	ULimbIKFunctionLibrary_GetTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -724,12 +586,7 @@ float ULimbIKFunctionLibrary::STATIC_GetRotationStrength(struct FLimbIK* LimbIK)
 
 	ULimbIKFunctionLibrary_GetRotationStrength_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -750,12 +607,7 @@ struct FName ULimbIKFunctionLibrary::STATIC_GetParentBone(struct FLimbIK* LimbIK
 
 	ULimbIKFunctionLibrary_GetParentBone_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -776,12 +628,7 @@ TEnumAsByte<ELimbIKSpace> ULimbIKFunctionLibrary::STATIC_GetIKSpace(struct FLimb
 
 	ULimbIKFunctionLibrary_GetIKSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -802,12 +649,7 @@ float ULimbIKFunctionLibrary::STATIC_GetCurrentAlpha(struct FLimbIK* LimbIK)
 
 	ULimbIKFunctionLibrary_GetCurrentAlpha_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -828,12 +670,7 @@ bool ULimbIKFunctionLibrary::STATIC_GetAnimationOverride(struct FLimbIK* LimbIK)
 
 	ULimbIKFunctionLibrary_GetAnimationOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -854,12 +691,7 @@ float ULimbIKFunctionLibrary::STATIC_GetAlphaTarget(struct FLimbIK* LimbIK)
 
 	ULimbIKFunctionLibrary_GetAlphaTarget_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -881,12 +713,7 @@ float ULimbIKFunctionLibrary::STATIC_ConvertBoolToAlpha(bool InBool)
 	ULimbIKFunctionLibrary_ConvertBoolToAlpha_Params params;
 	params.InBool = InBool;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -909,12 +736,7 @@ float ULocomotionFunctionLib::STATIC_UpdateControllerSpineRotation(const struct 
 	params.AngleSpeedMax = AngleSpeedMax;
 	params.AngleSpeedMin = AngleSpeedMin;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -943,12 +765,7 @@ struct FActorVelocityData ULocomotionFunctionLib::STATIC_UpdateCharacterSpeed(co
 	params.SpeedBlendValue = SpeedBlendValue;
 	params.IsSwimming = IsSwimming;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -972,12 +789,7 @@ float ULocomotionFunctionLib::STATIC_UpdateCalculateRateAndCurrentYaw(const stru
 	params.LargeRate = LargeRate;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (CurrentCharacterYaw != nullptr)
 		*CurrentCharacterYaw = params.CurrentCharacterYaw;
@@ -995,12 +807,7 @@ void UNetworkSyncedAnimationComponent::OnRep_PlayingAnimationIndex()
 
 	UNetworkSyncedAnimationComponent_OnRep_PlayingAnimationIndex_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1013,12 +820,7 @@ void UNetworkSyncedAnimationComponent::OnRep_AnimationProgression()
 
 	UNetworkSyncedAnimationComponent_OnRep_AnimationProgression_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1044,12 +846,7 @@ bool UTurningFunctionLib::STATIC_TurningUpdate(float DeltaSeconds, bool Characte
 	params.TurnRate = TurnRate;
 	params.CounterMax = CounterMax;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (DeadZone != nullptr)
 		*DeadZone = params.DeadZone;
@@ -1074,12 +871,7 @@ void UWaitForAnimationStateEntryProxy::OnEnteredState(const struct FName& path)
 	UWaitForAnimationStateEntryProxy_OnEnteredState_Params params;
 	params.path = path;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1092,12 +884,7 @@ void UWaitForAnimationStateEntryProxy::OnAnimationUpdated()
 
 	UWaitForAnimationStateEntryProxy_OnAnimationUpdated_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1116,12 +903,7 @@ class UWaitForAnimationStateEntryProxy* UWaitForAnimationStateEntryProxy::STATIC
 	params.AnimInstance = AnimInstance;
 	params.TargetPath = TargetPath;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1139,12 +921,7 @@ void UWaitForAnimationStateExitProxy::OnExitState(const struct FName& path)
 	UWaitForAnimationStateExitProxy_OnExitState_Params params;
 	params.path = path;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1157,12 +934,7 @@ void UWaitForAnimationStateExitProxy::OnAnimationUpdated()
 
 	UWaitForAnimationStateExitProxy_OnAnimationUpdated_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1181,12 +953,7 @@ class UWaitForAnimationStateExitProxy* UWaitForAnimationStateExitProxy::STATIC_C
 	params.AnimInstance = AnimInstance;
 	params.TargetPath = TargetPath;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

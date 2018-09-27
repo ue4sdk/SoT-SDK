@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,11 +46,10 @@ enum class EWwise7Point1Order : uint8_t
 	None                           = 1,
 	EWwise7Point1Order__Right_Surround = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EWwise7Point1Order__Null_Channel = 5,
-	None02                         = 6,
-	EWwiseLanguageOrder__English   = 7,
-	None03                         = 8
+	EWwise7Point1Order__Null_Channel = 4,
+	None02                         = 5,
+	EWwiseLanguageOrder__English   = 6,
+	None03                         = 7
 };
 
 

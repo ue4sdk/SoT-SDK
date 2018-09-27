@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,13 +35,13 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Wheel.BP_Wheel_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Wheel.BP_Wheel_C");
 		return ptr;
 	}
 
 
 	struct FDockableInfo GetDockableInfo();
-	struct FVector GetClosestInteractionPoint(struct FVector* ReferencePosition, float* OutInteractionPointRadius);
+	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
 	class USkeletalMeshComponent* GetWheelMesh();
 	void UserConstructionScript();
 	void Receive_Animation_State(const struct FRotator& WheelRotation, float WheelAnimationTime, TEnumAsByte<EWheel> EWheel, float Direction, float WheelRate);
@@ -55,8 +55,8 @@ public:
 	void IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId, float LocationStrength, float RotationStrength);
 	void IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Active, TEnumAsByte<ELimbIKSpace> CoordinateSpace);
 	void IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch);
-	void RequestStateChange(class AActor** Controller);
-	void OnWheelDescLoaded(class UWheelDescAsset** WheelDesc);
+	void RequestStateChange(class AActor* Controller);
+	void OnWheelDescLoaded(class UWheelDescAsset* WheelDesc);
 	void ExecuteUbergraph_BP_Wheel(int EntryPoint);
 };
 

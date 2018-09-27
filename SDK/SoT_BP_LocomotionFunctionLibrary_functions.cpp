@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,11 +33,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_DriveValueToClampByDelta(float Min,
 	params.Delta = Delta;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
 		*Value = params.Value;
@@ -67,11 +63,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_FindSailControlHandIKPositionFromAn
 	params.UpperRopeLocation = UpperRopeLocation;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Location_On_Rope != nullptr)
 		*Location_On_Rope = params.Location_On_Rope;
@@ -94,11 +86,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDrivenBlendSpac
 	params.FallbackBlendspace = FallbackBlendspace;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TargetArrayBlendspace != nullptr)
 		*TargetArrayBlendspace = params.TargetArrayBlendspace;
@@ -123,11 +111,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDriven1DBlendSp
 	params.FallbackBlendspace1D = FallbackBlendspace1D;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TargetArray_1D != nullptr)
 		*TargetArray_1D = params.TargetArray_1D;
@@ -152,11 +136,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDriven(class UA
 	params.FallbackAnimation = FallbackAnimation;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TargetArray != nullptr)
 		*TargetArray = params.TargetArray;
@@ -195,11 +175,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_IK_Limb_Controls(class USkel
 	params.BlendOut = BlendOut;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -218,11 +194,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Decrement_Integer(int Decrement, cl
 	params.Decrement = Decrement;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
 		*Value = params.Value;
@@ -244,11 +216,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Increment_Integer(int Increment, cl
 	params.Increment = Increment;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (integer != nullptr)
 		*integer = params.integer;
@@ -273,11 +241,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Calculate_Turn_Times(bool TurnLeft,
 	params.CurrentControllerYaw = CurrentControllerYaw;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PreviousControllerYaw != nullptr)
 		*PreviousControllerYaw = params.PreviousControllerYaw;
@@ -306,11 +270,7 @@ bool UBP_LocomotionFunctionLibrary_C::STATIC_InRangeAndRate(bool InZone, float M
 	params.Max = Max;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Turning != nullptr)
 		*Turning = params.Turning;
@@ -334,11 +294,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Turn_State_Change_Check(bool InZone
 	params.InZone = InZone;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Turning != nullptr)
 		*Turning = params.Turning;
@@ -364,11 +320,7 @@ bool UBP_LocomotionFunctionLibrary_C::STATIC_Not_In_Range(float Value, float Min
 	params.Max = Max;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -387,11 +339,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Turn_State(class U
 	UBP_LocomotionFunctionLibrary_C_Update_Animation_Turn_State_Params params;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Turning != nullptr)
 		*Turning = params.Turning;
@@ -419,11 +367,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Turn_Time(bool Tur
 	params.Current_Controller_Yaw = Current_Controller_Yaw;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (CurrentTurnAngle != nullptr)
 		*CurrentTurnAngle = params.CurrentTurnAngle;
@@ -456,11 +400,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_JumpingLogic(class ACharacter* Play
 	params.FrameDelta = FrameDelta;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (JumpImpactTimerMax != nullptr)
 		*JumpImpactTimerMax = params.JumpImpactTimerMax;
@@ -496,11 +436,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Ik_Blending(bool IKON, TEnumAsByte<
 	params.FrameDeltaTime = FrameDeltaTime;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (BlendCounter != nullptr)
 		*BlendCounter = params.BlendCounter;
@@ -531,11 +467,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Increment_Counter(float Counter, fl
 	params.DeltaTime = DeltaTime;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Hit_Max_Count != nullptr)
 		*Hit_Max_Count = params.Hit_Max_Count;
@@ -564,11 +496,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Decrement_Counter(float Counter, fl
 	params.DeltaTime = DeltaTime;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Hit_Min_Count != nullptr)
 		*Hit_Min_Count = params.Hit_Min_Count;
@@ -596,11 +524,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Out_Over_Time(float CurrentTime, fl
 	params.EasingType = EasingType;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Return_Val___0_1 != nullptr)
 		*Return_Val___0_1 = params.Return_Val___0_1;
@@ -625,11 +549,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Times(bool Turning
 	params.Current_Controller_Yaw = Current_Controller_Yaw;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Previous_Controller_Yaw != nullptr)
 		*Previous_Controller_Yaw = params.Previous_Controller_Yaw;
@@ -659,11 +579,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Turn_Animations(bool Turning
 	params.FrameDeltaTime = FrameDeltaTime;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Turning != nullptr)
 		*Turning = params.Turning;
@@ -687,11 +603,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Fix_Yaw_Wraparound(float CurrentYaw
 	params.PreviousYaw = PreviousYaw;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (NewPreviousYaw != nullptr)
 		*NewPreviousYaw = params.NewPreviousYaw;
@@ -715,11 +627,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ReflexAngleCheck(float Direction_A,
 	params.Direction_B = Direction_B;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ReflexAngle != nullptr)
 		*ReflexAngle = params.ReflexAngle;
@@ -742,11 +650,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ControllerRotation(class ACharacter
 	params.Character = Character;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Pitch != nullptr)
 		*Pitch = params.Pitch;
@@ -771,11 +675,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Character_Speed(class ACharacter* C
 	params.Character = Character;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Velocity != nullptr)
 		*Velocity = params.Velocity;

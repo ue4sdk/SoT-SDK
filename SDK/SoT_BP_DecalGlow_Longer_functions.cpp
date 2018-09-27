@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_DecalGlow_Longer_C::StartGlowEffect()
 
 	ABP_DecalGlow_Longer_C_StartGlowEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40,11 +36,7 @@ bool ABP_DecalGlow_Longer_C::StartReaction()
 
 	ABP_DecalGlow_Longer_C_StartReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -61,11 +53,7 @@ bool ABP_DecalGlow_Longer_C::StopReaction()
 
 	ABP_DecalGlow_Longer_C_StopReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -80,11 +68,7 @@ void ABP_DecalGlow_Longer_C::CollectDecalMaterials()
 
 	ABP_DecalGlow_Longer_C_CollectDecalMaterials_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -97,11 +81,7 @@ void ABP_DecalGlow_Longer_C::UserConstructionScript()
 
 	ABP_DecalGlow_Longer_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -114,11 +94,7 @@ void ABP_DecalGlow_Longer_C::ReceiveBeginPlay()
 
 	ABP_DecalGlow_Longer_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -134,11 +110,7 @@ void ABP_DecalGlow_Longer_C::ExecuteUbergraph_BP_DecalGlow_Longer(int EntryPoint
 	ABP_DecalGlow_Longer_C_ExecuteUbergraph_BP_DecalGlow_Longer_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ struct ABP_Cannon_C_UserConstructionScript_Params
 // Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded
 struct ABP_Cannon_C_OnCannonDescLoaded_Params
 {
-	class UCannonDescAsset**                           CannonDesc;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCannonDescAsset*                            CannonDesc;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Cannon.BP_Cannon_C.ExecuteUbergraph_BP_Cannon

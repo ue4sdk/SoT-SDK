@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,10 +82,10 @@ private:
 class FUObjectArray
 {
 public:
-	int32_t Dummy1;
-	int32_t Dummy2;
-	int32_t Dummy3;
-	int32_t Dummy4;
+	int32_t ObjFirstGCIndex;
+	int32_t ObjLastNonGCIndex;
+	int32_t MaxObjectsNotConsideredByGC;
+	int32_t OpenForDisregardForGC;
 	TUObjectArray ObjObjects;
 };
 

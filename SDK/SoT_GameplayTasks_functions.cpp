@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,12 +21,7 @@ void UGameplayTask::ReadyForActivation()
 
 	UGameplayTask_ReadyForActivation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39,11 +34,7 @@ void UGameplayTask::GenericGameplayTaskDelegate__DelegateSignature()
 
 	UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -56,12 +47,7 @@ void UGameplayTask::EndTask()
 
 	UGameplayTask_EndTask_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -86,12 +72,7 @@ class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::STATIC_SpawnActor(cons
 	params.Class = Class;
 	params.bSpawnOnlyOnAuthority = bSpawnOnlyOnAuthority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -111,12 +92,7 @@ void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextOb
 	params.WorldContextObject = WorldContextObject;
 	params.SpawnedActor = SpawnedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -134,12 +110,7 @@ bool UGameplayTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObj
 	UGameplayTask_SpawnActor_BeginSpawningActor_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SpawnedActor != nullptr)
 		*SpawnedActor = params.SpawnedActor;
@@ -163,12 +134,7 @@ class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::STATIC_TaskWaitDelay(con
 	params.TaskOwner = TaskOwner;
 	params.Time = Time;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -183,11 +149,7 @@ void UGameplayTask_WaitDelay::TaskDelayDelegate__DelegateSignature()
 
 	UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -200,12 +162,7 @@ void UGameplayTasksComponent::OnRep_SimulatedTasks()
 
 	UGameplayTasksComponent_OnRep_SimulatedTasks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -230,12 +187,7 @@ TEnumAsByte<EGameplayTaskRunResult> UGameplayTasksComponent::STATIC_K2_RunGamepl
 	params.AdditionalRequiredResources = AdditionalRequiredResources;
 	params.AdditionalClaimedResources = AdditionalClaimedResources;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

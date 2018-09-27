@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,8 +35,7 @@ enum class EEnvQueryStatus : uint8_t
 	None                           = 1,
 	EEnvQueryStatus__OwnerLost     = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EQSQueryDoneSignature__DelegateSignature = 5
+	EQSQueryDoneSignature__DelegateSignature = 4
 };
 
 
@@ -47,7 +46,8 @@ enum class EAILockSource : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EAILockSource__MAX             = 3,
-	None01                         = 4
+	None01                         = 4,
+	EPawnActionResult__NotStarted  = 5
 };
 
 
@@ -57,8 +57,7 @@ enum class EAIRequestPriority : uint8_t
 	EAIRequestPriority__SoftScript = 0,
 	None                           = 1,
 	EAIRequestPriority__Ultimate   = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -68,8 +67,7 @@ enum class EPawnActionEventType : uint8_t
 	EPawnActionEventType__Invalid  = 0,
 	None                           = 1,
 	EPawnActionEventType__FinishedExecution = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -80,7 +78,7 @@ enum class EPawnActionResult : uint8_t
 	None                           = 1,
 	EPawnActionResult__Aborted     = 2,
 	None01                         = 3,
-	EAITaskPriority__Lowest        = 4
+	EPathFollowingAction__Error    = 4
 };
 
 
@@ -90,7 +88,8 @@ enum class EPawnActionAbortState : uint8_t
 	EPawnActionAbortState__NeverStarted = 0,
 	None                           = 1,
 	EPawnActionAbortState__AbortDone = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -110,7 +109,7 @@ enum class EPathFollowingRequestResult : uint8_t
 	EPathFollowingRequestResult__Failed = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	ETaskResourceOverlapPolicy__StartOnTop = 3
+	ESimulationQuery__CollisionOverlap = 3
 };
 
 
@@ -121,7 +120,7 @@ enum class EPathFollowingAction : uint8_t
 	None                           = 1,
 	EPathFollowingAction__PathToGoal = 2,
 	None01                         = 3,
-	EPawnActionResult__NotStarted  = 4
+	EAITaskPriority__Lowest        = 4
 };
 
 
@@ -179,8 +178,7 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3,
-	EAILockSource__Animation       = 4
+	None01                         = 3
 };
 
 
@@ -190,8 +188,7 @@ enum class EBTDecoratorLogic : uint8_t
 	EBTDecoratorLogic__Invalid     = 0,
 	None                           = 1,
 	EBTDecoratorLogic__Not         = 2,
-	None01                         = 3,
-	EPathFollowingAction__Error    = 4
+	None01                         = 3
 };
 
 
@@ -218,10 +215,8 @@ enum class EArithmeticKeyOperation : uint8_t
 {
 	EArithmeticKeyOperation__Equal = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EArithmeticKeyOperation__Greater = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EArithmeticKeyOperation__Greater = 2,
+	None01                         = 3
 };
 
 
@@ -409,7 +404,8 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	EEnvQueryHightlightMode__All   = 2
+	IntProperty                    = 2,
+	EEnvQueryHightlightMode__All   = 3
 };
 
 

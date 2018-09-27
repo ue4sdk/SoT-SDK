@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.AthenaFFTWater");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.AthenaFFTWater");
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterEmissionVolumeInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterEmissionVolumeInterface");
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.AthenaWaterEmissionVolume");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.AthenaWaterEmissionVolume");
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterInterface");
 		return ptr;
 	}
 
@@ -90,7 +90,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterProperties");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterProperties");
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterInterface");
 		return ptr;
 	}
 
@@ -135,7 +135,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterService");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterService");
 		return ptr;
 	}
 
@@ -153,7 +153,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterPlaneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterPlaneInterface");
 		return ptr;
 	}
 
@@ -161,15 +161,15 @@ public:
 
 
 // Class Water.WaterInteractionComponent
-// 0x0020 (0x05F0 - 0x05D0)
+// 0x0020 (0x0600 - 0x05E0)
 class UWaterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05D0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05E0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterInteractionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterInteractionComponent");
 		return ptr;
 	}
 
@@ -193,7 +193,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterPlaneRetrievalProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterPlaneRetrievalProviderInterface");
 		return ptr;
 	}
 
@@ -209,7 +209,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterQueryTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterQueryTestActor");
 		return ptr;
 	}
 
@@ -225,7 +225,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterPerformanceCountService");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterPerformanceCountService");
 		return ptr;
 	}
 
@@ -245,7 +245,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterServiceFixedWaterHeight");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterServiceFixedWaterHeight");
 		return ptr;
 	}
 
@@ -253,15 +253,15 @@ public:
 
 
 // Class Water.FlatWaterPlaneComponent
-// 0x0010 (0x05C0 - 0x05B0)
+// 0x0010 (0x05D0 - 0x05C0)
 class UFlatWaterPlaneComponent : public UBaseWaterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05B0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FlatWaterPlaneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.FlatWaterPlaneComponent");
 		return ptr;
 	}
 
@@ -281,7 +281,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.MockWaterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterInterface");
 		return ptr;
 	}
 
@@ -296,7 +296,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterSubmersionTests");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterSubmersionTests");
 		return ptr;
 	}
 
@@ -315,7 +315,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.MockWaterPlaneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterPlaneComponent");
 		return ptr;
 	}
 
@@ -330,7 +330,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.NoSwimWaterId");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.NoSwimWaterId");
 		return ptr;
 	}
 
@@ -345,7 +345,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.SeaWaterId");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.SeaWaterId");
 		return ptr;
 	}
 
@@ -360,7 +360,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.ShipWaterId");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.ShipWaterId");
 		return ptr;
 	}
 
@@ -377,7 +377,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.TestBaseWaterActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.TestBaseWaterActor");
 		return ptr;
 	}
 
@@ -392,7 +392,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.UndergroundSeaWaterId");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.UndergroundSeaWaterId");
 		return ptr;
 	}
 
@@ -407,7 +407,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterBuoyancyFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterBuoyancyFunctionLibrary");
 		return ptr;
 	}
 
@@ -427,7 +427,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterBuoyancySampleMovementFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterBuoyancySampleMovementFunctionLibrary");
 		return ptr;
 	}
 
@@ -448,7 +448,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterEmissionVolumeService");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterEmissionVolumeService");
 		return ptr;
 	}
 
@@ -463,7 +463,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterPlaneExclusionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterPlaneExclusionComponent");
 		return ptr;
 	}
 
@@ -481,7 +481,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterSplashProbeFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterSplashProbeFunctionLibrary");
 		return ptr;
 	}
 

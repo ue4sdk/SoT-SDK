@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ void UBP_DamageZoneInterface_C::GetNumExternalHits(int* NumExternalHits)
 
 	UBP_DamageZoneInterface_C_GetNumExternalHits_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (NumExternalHits != nullptr)
 		*NumExternalHits = params.NumExternalHits;
@@ -43,11 +39,7 @@ void UBP_DamageZoneInterface_C::ClearDecalFlags()
 
 	UBP_DamageZoneInterface_C_ClearDecalFlags_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -63,11 +55,7 @@ void UBP_DamageZoneInterface_C::AddExternalHit(const struct FHullDamageHit& Hit_
 	UBP_DamageZoneInterface_C_AddExternalHit_Params params;
 	params.Hit_Data = Hit_Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

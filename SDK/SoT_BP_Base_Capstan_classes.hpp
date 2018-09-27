@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Base_Capstan.BP_Base_Capstan_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Base_Capstan.BP_Base_Capstan_C");
 		return ptr;
 	}
 
@@ -43,7 +43,7 @@ public:
 	void IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch);
 	void OnBodyMeshLoaded();
 	void OnArmMeshLoaded();
-	void OnCapstanDescLoaded(class UCapstanDescAsset** CapstanDesc);
+	void OnCapstanDescLoaded(class UCapstanDescAsset* CapstanDesc);
 	void ExecuteUbergraph_BP_Base_Capstan(int EntryPoint);
 };
 

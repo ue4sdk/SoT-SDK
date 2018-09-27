@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_VotableCancelVoyage.BP_VotableCancelVoyage_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_VotableCancelVoyage.BP_VotableCancelVoyage_C");
 		return ptr;
 	}
 
@@ -45,8 +45,8 @@ public:
 	struct FText GetObjectDisplayName();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void OnVoteAdded(TScriptInterface<class UVoterInterface>* Voter);
-	void OnVoteRemoved(TScriptInterface<class UVoterInterface>* Voter);
+	void OnVoteAdded(const TScriptInterface<class UVoterInterface>& Voter);
+	void OnVoteRemoved(const TScriptInterface<class UVoterInterface>& Voter);
 	void ExecuteUbergraph_BP_VotableCancelVoyage(int EntryPoint);
 };
 

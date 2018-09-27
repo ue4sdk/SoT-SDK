@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,8 +22,8 @@ struct UBP_SailAnim_C_Set_Billow_Animation_Rate_Params
 // Function BP_SailAnim.BP_SailAnim_C.InitialiseSail
 struct UBP_SailAnim_C_InitialiseSail_Params
 {
-	float*                                             PlayRateMultiplier;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool*                                              MainSail;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRateMultiplier;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               MainSail;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SailAnim.BP_SailAnim_C.ExecuteUbergraph_BP_SailAnim

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void AMapTable_C::UpdateBlurEffect()
 
 	AMapTable_C_UpdateBlurEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43,11 +39,7 @@ struct FVector AMapTable_C::GetClosestInteractionPoint(const struct FVector& Ref
 	AMapTable_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutInteractionPointRadius != nullptr)
 		*OutInteractionPointRadius = params.OutInteractionPointRadius;
@@ -65,11 +57,7 @@ void AMapTable_C::UserConstructionScript()
 
 	AMapTable_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -82,11 +70,7 @@ void AMapTable_C::ReceiveBeginPlay()
 
 	AMapTable_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -99,21 +83,17 @@ void AMapTable_C::SetEffectActiveWhenClose()
 
 	AMapTable_C_SetEffectActiveWhenClose_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function MapTable.MapTable_C.OnMapActivate
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool*                          IsMapActive                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UTextureRenderTarget2D** Texture                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsMapActive                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UTextureRenderTarget2D*  Texture                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMapTable_C::OnMapActivate(bool* IsMapActive, class UTextureRenderTarget2D** Texture)
+void AMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapActivate");
 
@@ -121,21 +101,17 @@ void AMapTable_C::OnMapActivate(bool* IsMapActive, class UTextureRenderTarget2D*
 	params.IsMapActive = IsMapActive;
 	params.Texture = Texture;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function MapTable.MapTable_C.OnMapMove
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FVector2D*              CentreLocation                 (Parm, ZeroConstructor, IsPlainOldData)
-// float*                         ZoomLevel                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               CentreLocation                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               ZoomLevel                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMapTable_C::OnMapMove(struct FVector2D* CentreLocation, float* ZoomLevel)
+void AMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct FVector2D& ZoomLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapMove");
 
@@ -143,11 +119,7 @@ void AMapTable_C::OnMapMove(struct FVector2D* CentreLocation, float* ZoomLevel)
 	params.CentreLocation = CentreLocation;
 	params.ZoomLevel = ZoomLevel;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -163,11 +135,7 @@ void AMapTable_C::ExecuteUbergraph_MapTable(int EntryPoint)
 	AMapTable_C_ExecuteUbergraph_MapTable_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

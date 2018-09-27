@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,7 +93,7 @@ struct ABP_DamageZone_C_ClearDecalFlags_Params
 // Function BP_DamageZone.BP_DamageZone_C.OnRepairableStateUpdate
 struct ABP_DamageZone_C_OnRepairableStateUpdate_Params
 {
-	TEnumAsByte<ERepairableState>*                     InRepairableState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ERepairableState>                      InRepairableState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DamageZone.BP_DamageZone_C.OnInitialise

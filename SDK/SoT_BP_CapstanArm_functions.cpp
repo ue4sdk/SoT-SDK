@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
 
 	ABP_CapstanArm_C_GetLookAtPosBasisSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44,11 +40,7 @@ struct FVector ABP_CapstanArm_C::GetFrontFacingVector()
 
 	ABP_CapstanArm_C_GetFrontFacingVector_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -65,11 +57,7 @@ bool ABP_CapstanArm_C::DoesRequireFacingFront()
 
 	ABP_CapstanArm_C_DoesRequireFacingFront_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -86,11 +74,7 @@ struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 
 	ABP_CapstanArm_C_GetDockableInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -99,22 +83,18 @@ struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 // Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector*                ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(struct FVector* ReferencePosition, float* OutInteractionPointRadius)
+struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint");
 
 	ABP_CapstanArm_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutInteractionPointRadius != nullptr)
 		*OutInteractionPointRadius = params.OutInteractionPointRadius;
@@ -134,11 +114,7 @@ struct FVector ABP_CapstanArm_C::GetLookAtPos()
 
 	ABP_CapstanArm_C_GetLookAtPos_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -153,11 +129,7 @@ void ABP_CapstanArm_C::UserConstructionScript()
 
 	ABP_CapstanArm_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

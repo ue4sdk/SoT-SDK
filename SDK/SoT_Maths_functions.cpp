@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,12 +27,7 @@ float UAngleMaths::STATIC_CalculateEulerAngle(float FromAngle, float ToAngle)
 	params.FromAngle = FromAngle;
 	params.ToAngle = ToAngle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -55,12 +50,7 @@ float UAngleMaths::STATIC_AngleMoveTowardsMod180(float Angle, float TargetAngle,
 	params.TargetAngle = TargetAngle;
 	params.Rate = Rate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -79,12 +69,7 @@ float UAngleMaths::STATIC_AngleMod360(float Angle)
 	UAngleMaths_AngleMod360_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -103,12 +88,7 @@ float UAngleMaths::STATIC_AngleMod180(float Angle)
 	UAngleMaths_AngleMod180_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -131,12 +111,7 @@ float UAngleMaths::STATIC_AngleLerpShortest(float Start, float End, float Amount
 	params.End = End;
 	params.Amount = Amount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -159,12 +134,7 @@ float UBuoyancyMaths::STATIC_CalculateMagnitude(float InSubmersedVolume, float I
 	params.InFluidDensity = InFluidDensity;
 	params.InGravity = InGravity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -193,12 +163,7 @@ float UBuoyancyMaths::STATIC_CalcBlendedProbeCurveBuoyancy(class UCurveFloat* Pr
 	params.Blend = Blend;
 	params.BlendType = BlendType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -221,12 +186,7 @@ int UCircleMaths::STATIC_ConvertAngleToCircleSectorIndex(float AngleInDegrees, i
 	params.NumberOfSectors = NumberOfSectors;
 	params.IgnoredFraction = IgnoredFraction;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -245,12 +205,7 @@ float UCircleMaths::STATIC_Area(float InRadius)
 	UCircleMaths_Area_Params params;
 	params.InRadius = InRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -271,12 +226,7 @@ float UCurveMaths::STATIC_GetDistanceSquaredToCurve(const struct FVector& WorldS
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -297,12 +247,7 @@ float UCurveMaths::STATIC_GetClosestTimeOnCurve(const struct FVector& WorldSpace
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -323,12 +268,7 @@ struct FVector UCurveMaths::STATIC_GetClosestPositionOnCurve(const struct FVecto
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -349,12 +289,7 @@ float UCurveMaths::STATIC_GetClosestPointOnCurve(const struct FVector& WorldSpac
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -373,12 +308,7 @@ struct FVector UCurveMaths::STATIC_GetCentre(class USplineComponent* Spline)
 	UCurveMaths_GetCentre_Params params;
 	params.Spline = Spline;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -395,12 +325,7 @@ float UDensity::STATIC_Water()
 
 	UDensity_Water_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -417,12 +342,7 @@ float UDensity::STATIC_SeaWater()
 
 	UDensity_SeaWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -439,12 +359,7 @@ float UDensity::STATIC_Min()
 
 	UDensity_Min_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -461,12 +376,7 @@ float UDensity::STATIC_Max()
 
 	UDensity_Max_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -485,12 +395,7 @@ bool UDensity::STATIC_IsValid(float InValue)
 	UDensity_IsValid_Params params;
 	params.InValue = InValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -507,12 +412,7 @@ float UDensity::STATIC_Air()
 
 	UDensity_Air_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -529,12 +429,7 @@ float UDragCoefficients::STATIC_Sphere()
 
 	UDragCoefficients_Sphere_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -551,12 +446,7 @@ float UDragCoefficients::STATIC_PlanePerpendicularToFlow()
 
 	UDragCoefficients_PlanePerpendicularToFlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -573,12 +463,7 @@ float UDragCoefficients::STATIC_PlaneParallelToFlow()
 
 	UDragCoefficients_PlaneParallelToFlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -595,12 +480,7 @@ float UDragCoefficients::STATIC_Min()
 
 	UDragCoefficients_Min_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -617,12 +497,7 @@ float UDragCoefficients::STATIC_Max()
 
 	UDragCoefficients_Max_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -641,12 +516,7 @@ bool UDragCoefficients::STATIC_IsValid(float Value)
 	UDragCoefficients_IsValid_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -663,12 +533,7 @@ float UDragCoefficients::STATIC_Cube()
 
 	UDragCoefficients_Cube_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -693,12 +558,7 @@ float UDragMaths::STATIC_CalculateMagnitude(float InSurfaceArea, float InSpeedRe
 	params.InDragCoefficient = InDragCoefficient;
 	params.InFluidDensity = InFluidDensity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -721,12 +581,7 @@ float UFloatMaths::STATIC_WrapToRange(float Input, float LowerLimit, float Upper
 	params.LowerLimit = LowerLimit;
 	params.UpperLimit = UpperLimit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -747,12 +602,7 @@ float UFloatMaths::STATIC_WrapToPositiveRange(float Input, float UpperLimit)
 	params.Input = Input;
 	params.UpperLimit = UpperLimit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -775,12 +625,7 @@ float UFloatMaths::STATIC_WrapAroundPivot(float Input, float Pivot, float Range)
 	params.Pivot = Pivot;
 	params.Range = Range;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -805,12 +650,7 @@ float UFloatMaths::STATIC_MoveTowards(float From, float To, float Speed, float T
 	params.Speed = Speed;
 	params.Time = Time;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -839,12 +679,7 @@ float UFloatMaths::STATIC_Map(float ValueToMapFrom, float FromRangeStart, float 
 	params.ToRangeEnd = ToRangeEnd;
 	params.Clamp = Clamp;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -866,12 +701,7 @@ bool UFloatMaths::STATIC_IncrementCounter(float Delta, float CounterMax, float* 
 	params.Delta = Delta;
 	params.CounterMax = CounterMax;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Counter != nullptr)
 		*Counter = params.Counter;
@@ -899,12 +729,7 @@ float UFloatMaths::STATIC_FindMidpointInWrappedRange(float Value1, float Value2,
 	params.LowerLimit = LowerLimit;
 	params.UpperLimit = UpperLimit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -927,12 +752,7 @@ float UFloatMaths::STATIC_Bound(float ValueToBound, float Bound1, float Bound2)
 	params.Bound1 = Bound1;
 	params.Bound2 = Bound2;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -949,12 +769,7 @@ float UGravity::STATIC_Earth()
 
 	UGravity_Earth_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -983,12 +798,7 @@ TArray<struct FVector> UPoissonDiscSampling::STATIC_GeneratePoissonDiscDistribut
 	params.InMinDistance = InMinDistance;
 	params.InRNGSeed = InRNGSeed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1013,12 +823,7 @@ struct FTransform URotationMaths::STATIC_TransformAroundArbitraryPivot(const str
 	params.TransformToApply = TransformToApply;
 	params.LockFinalOrientation = LockFinalOrientation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1037,12 +842,7 @@ struct FQuat URotationMaths::STATIC_RotatorToQuat(const struct FRotator& Rotatio
 	URotationMaths_RotatorToQuat_Params params;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1061,12 +861,7 @@ float USphereMaths::STATIC_VolumeFromRadius(float InRadius)
 	USphereMaths_VolumeFromRadius_Params params;
 	params.InRadius = InRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1085,12 +880,7 @@ float USphereMaths::STATIC_SurfaceAreaFromRadius(float InRadius)
 	USphereMaths_SurfaceAreaFromRadius_Params params;
 	params.InRadius = InRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1111,12 +901,7 @@ float USphericalCapMaths::STATIC_Volume(float InRadius, float InHeight)
 	params.InRadius = InRadius;
 	params.InHeight = InHeight;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1137,12 +922,7 @@ float USphericalCapMaths::STATIC_CalculateGeometricCentroidOffsetRelativeToBound
 	params.InRadius = InRadius;
 	params.InHeight = InHeight;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1163,12 +943,7 @@ float USphericalCapMaths::STATIC_BaseRadius(float InRadius, float InHeight)
 	params.InRadius = InRadius;
 	params.InHeight = InHeight;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1189,12 +964,7 @@ void UTimedBufferFunctionLibrary::STATIC_UpdateInterval(float DeltaTime, float V
 	params.DeltaTime = DeltaTime;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TimedBuffer != nullptr)
 		*TimedBuffer = params.TimedBuffer;
@@ -1216,12 +986,7 @@ bool UTimedBufferFunctionLibrary::STATIC_GetValueRange(float MinWindowLength, st
 	UTimedBufferFunctionLibrary_GetValueRange_Params params;
 	params.MinWindowLength = MinWindowLength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TimedBuffer != nullptr)
 		*TimedBuffer = params.TimedBuffer;
@@ -1245,12 +1010,7 @@ struct FTimedBuffer UTimedBufferFunctionLibrary::STATIC_CreateTimedBuffer(float 
 	UTimedBufferFunctionLibrary_CreateTimedBuffer_Params params;
 	params.WindowLength = WindowLength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1271,12 +1031,7 @@ struct FTimespan UTimeMaths::STATIC_GetDifference(const struct FDateTime& A, con
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1302,12 +1057,7 @@ bool UVectorMaths::STATIC_LineIntersectsSphere(const struct FVector& LineStart, 
 	params.SphereCentre = SphereCentre;
 	params.SphereRadius = SphereRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ClosestIntersectionPoint != nullptr)
 		*ClosestIntersectionPoint = params.ClosestIntersectionPoint;
@@ -1337,12 +1087,7 @@ bool UVectorMaths::STATIC_LineIntersectsCircle(const struct FVector2D& LineOrigi
 	params.CircleOrigin = CircleOrigin;
 	params.CircleRadius = CircleRadius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutClosestIntersectionPoint != nullptr)
 		*OutClosestIntersectionPoint = params.OutClosestIntersectionPoint;
@@ -1376,12 +1121,7 @@ TEnumAsByte<EPlaneLineIntersectionType> UVectorMaths::STATIC_IntersectLineSegmen
 	params.PlaneNormal = PlaneNormal;
 	params.PlaneThickness = PlaneThickness;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (IntersectionPos != nullptr)
 		*IntersectionPos = params.IntersectionPos;
@@ -1407,12 +1147,7 @@ float UVectorMaths::STATIC_Distance(const struct FVector& A, const struct FVecto
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1433,12 +1168,7 @@ float UVectorMaths::STATIC_Cross_Vector2DVector2D(const struct FVector2D& A, con
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

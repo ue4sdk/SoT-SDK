@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ struct FDockableInfo ABP_CustomisableLadder_C::GetDockableInfo()
 
 	ABP_CustomisableLadder_C_GetDockableInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42,11 +38,7 @@ void ABP_CustomisableLadder_C::Construct_Ladder()
 
 	ABP_CustomisableLadder_C_Construct_Ladder_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -61,11 +53,7 @@ void ABP_CustomisableLadder_C::Get_Total_Height_Before_Cap(float* Height)
 
 	ABP_CustomisableLadder_C_Get_Total_Height_Before_Cap_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Height != nullptr)
 		*Height = params.Height;
@@ -83,11 +71,7 @@ void ABP_CustomisableLadder_C::Get_Steps(int* Num_Steps)
 
 	ABP_CustomisableLadder_C_Get_Steps_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Num_Steps != nullptr)
 		*Num_Steps = params.Num_Steps;
@@ -105,11 +89,7 @@ struct FTransform ABP_CustomisableLadder_C::GetBottomLadderRungTransform()
 
 	ABP_CustomisableLadder_C_GetBottomLadderRungTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -126,11 +106,7 @@ struct FTransform ABP_CustomisableLadder_C::GetTopLadderRungTransform()
 
 	ABP_CustomisableLadder_C_GetTopLadderRungTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -149,11 +125,7 @@ void ABP_CustomisableLadder_C::Get_World_Loc_at_Height_Along_Z(float Relative_Z,
 	ABP_CustomisableLadder_C_Get_World_Loc_at_Height_Along_Z_Params params;
 	params.Relative_Z = Relative_Z;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Return_Value != nullptr)
 		*Return_Value = params.Return_Value;
@@ -173,11 +145,7 @@ void ABP_CustomisableLadder_C::SetupSpline(class USplineComponent* Spline_Compon
 	ABP_CustomisableLadder_C_SetupSpline_Params params;
 	params.Spline_Component = Spline_Component;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Positions != nullptr)
 		*Positions = params.Positions;
@@ -193,11 +161,7 @@ void ABP_CustomisableLadder_C::UserConstructionScript()
 
 	ABP_CustomisableLadder_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -210,11 +174,7 @@ void ABP_CustomisableLadder_C::ReceiveBeginPlay()
 
 	ABP_CustomisableLadder_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -230,11 +190,7 @@ void ABP_CustomisableLadder_C::ExecuteUbergraph_BP_CustomisableLadder(int EntryP
 	ABP_CustomisableLadder_C_ExecuteUbergraph_BP_CustomisableLadder_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

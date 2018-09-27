@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Time.TimeInterface");
 		return ptr;
 	}
 
@@ -43,7 +43,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.DebugTimeInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Time.DebugTimeInterface");
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Time.TimeBlueprintLibrary");
 		return ptr;
 	}
 
@@ -89,7 +89,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeFormatterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Time.TimeFormatterInterface");
 		return ptr;
 	}
 
@@ -119,7 +119,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeService");
+		static auto ptr = UObject::FindObject<UClass>("Class Time.TimeService");
 		return ptr;
 	}
 
@@ -138,7 +138,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.DebugTimeService");
+		static auto ptr = UObject::FindObject<UClass>("Class Time.DebugTimeService");
 		return ptr;
 	}
 

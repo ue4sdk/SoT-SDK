@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_AudioCoast_C::UserConstructionScript()
 
 	ABP_AudioCoast_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,31 +34,23 @@ void ABP_AudioCoast_C::ReceiveBeginPlay()
 
 	ABP_AudioCoast_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_AudioCoast.BP_AudioCoast_C.ReceiveEndPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AudioCoast_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+void ABP_AudioCoast_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AudioCoast.BP_AudioCoast_C.ReceiveEndPlay");
 
 	ABP_AudioCoast_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -78,11 +66,7 @@ void ABP_AudioCoast_C::ExecuteUbergraph_BP_AudioCoast(int EntryPoint)
 	ABP_AudioCoast_C_ExecuteUbergraph_BP_AudioCoast_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

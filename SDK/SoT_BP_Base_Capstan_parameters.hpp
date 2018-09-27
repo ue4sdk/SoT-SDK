@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -104,7 +104,7 @@ struct ABP_Base_Capstan_C_OnArmMeshLoaded_Params
 // Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
 struct ABP_Base_Capstan_C_OnCapstanDescLoaded_Params
 {
-	class UCapstanDescAsset**                          CapstanDesc;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCapstanDescAsset*                           CapstanDesc;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Base_Capstan.BP_Base_Capstan_C.ExecuteUbergraph_BP_Base_Capstan

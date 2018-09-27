@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,11 +24,7 @@ void ABP_VotableVoyageProposal_C::PlayShowTokenAnimation(class UPrimitiveCompone
 	ABP_VotableVoyageProposal_C_PlayShowTokenAnimation_Params params;
 	params.Token = Token;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43,11 +39,7 @@ void ABP_VotableVoyageProposal_C::Is_Session_Locked(bool* IsLocked)
 
 	ABP_VotableVoyageProposal_C_Is_Session_Locked_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (IsLocked != nullptr)
 		*IsLocked = params.IsLocked;
@@ -63,11 +55,7 @@ void ABP_VotableVoyageProposal_C::UserConstructionScript()
 
 	ABP_VotableVoyageProposal_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -80,51 +68,39 @@ void ABP_VotableVoyageProposal_C::ReceiveBeginPlay()
 
 	ABP_VotableVoyageProposal_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.OnVoteAdded
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UVoterInterface>* Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TScriptInterface<class UVoterInterface> Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ABP_VotableVoyageProposal_C::OnVoteAdded(TScriptInterface<class UVoterInterface>* Voter)
+void ABP_VotableVoyageProposal_C::OnVoteAdded(const TScriptInterface<class UVoterInterface>& Voter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.OnVoteAdded");
 
 	ABP_VotableVoyageProposal_C_OnVoteAdded_Params params;
 	params.Voter = Voter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.OnVoteRemoved
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UVoterInterface>* Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TScriptInterface<class UVoterInterface> Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ABP_VotableVoyageProposal_C::OnVoteRemoved(TScriptInterface<class UVoterInterface>* Voter)
+void ABP_VotableVoyageProposal_C::OnVoteRemoved(const TScriptInterface<class UVoterInterface>& Voter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.OnVoteRemoved");
 
 	ABP_VotableVoyageProposal_C_OnVoteRemoved_Params params;
 	params.Voter = Voter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -140,11 +116,7 @@ void ABP_VotableVoyageProposal_C::ExecuteUbergraph_BP_VotableVoyageProposal(int 
 	ABP_VotableVoyageProposal_C_ExecuteUbergraph_BP_VotableVoyageProposal_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

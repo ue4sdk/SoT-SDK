@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,22 +19,20 @@ enum class EObjectAnimationState : uint8_t
 {
 	EObjectAnimationState__NewEnumerator0 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EObjectAnimationState__NewEnumerator4 = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	EObjectAnimationState__NewEnumerator8 = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	EObjectAnimationState__NewEnumerator12 = 9,
-	None03                         = 10,
-	TextProperty                   = 11,
-	EObjectAnimationState__NewEnumerator16 = 12,
-	None04                         = 13,
-	LazyObjectProperty             = 14,
-	EObjectAnimationState__NewEnumerator20 = 15,
-	None05                         = 16,
-	UInt16Property                 = 17
+	EObjectAnimationState__NewEnumerator4 = 2,
+	None01                         = 3,
+	EObjectAnimationState__NewEnumerator8 = 4,
+	None02                         = 5,
+	EObjectAnimationState__NewEnumerator12 = 6,
+	None03                         = 7,
+	EObjectAnimationState__NewEnumerator16 = 8,
+	None04                         = 9,
+	EObjectAnimationState__NewEnumerator20 = 10,
+	None05                         = 11,
+	Cloth_Displacement             = 12,
+	None06                         = 13,
+	SSS_Opacity                    = 14,
+	None07                         = 15
 };
 
 

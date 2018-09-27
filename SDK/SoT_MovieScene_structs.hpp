@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,8 @@ enum class EMovieSceneKeyInterpolation : uint8_t
 	MSKI_Auto                      = 0,
 	None                           = 1,
 	MSKI_Constant                  = 2,
-	None01                         = 3
+	None01                         = 3,
+	ESlateVisibility__Visible      = 4
 };
 
 

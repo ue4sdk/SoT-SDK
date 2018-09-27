@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ struct ABP_AmmoChest_C_GetObjectDisplayName_Params
 // Function BP_AmmoChest.BP_AmmoChest_C.GetClosestInteractionPoint
 struct ABP_AmmoChest_C_GetClosestInteractionPoint_Params
 {
-	struct FVector*                                    ReferencePosition;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector                                     ReferencePosition;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              OutInteractionPointRadius;                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -41,13 +41,13 @@ struct ABP_AmmoChest_C_ReceiveBeginPlay_Params
 // Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Client
 struct ABP_AmmoChest_C_Blueprint_OnInteract_Client_Params
 {
-	class AActor**                                     InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Server
 struct ABP_AmmoChest_C_Blueprint_OnInteract_Server_Params
 {
-	class AActor**                                     InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_AmmoChest.BP_AmmoChest_C.ExecuteUbergraph_BP_AmmoChest

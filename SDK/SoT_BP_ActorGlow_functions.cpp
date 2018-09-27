@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_ActorGlow_C::StartGlowEffect()
 
 	ABP_ActorGlow_C_StartGlowEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40,11 +36,7 @@ bool ABP_ActorGlow_C::StartReaction()
 
 	ABP_ActorGlow_C_StartReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -61,11 +53,7 @@ bool ABP_ActorGlow_C::StopReaction()
 
 	ABP_ActorGlow_C_StopReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -80,11 +68,7 @@ void ABP_ActorGlow_C::CollectDecalMaterials()
 
 	ABP_ActorGlow_C_CollectDecalMaterials_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -97,11 +81,7 @@ void ABP_ActorGlow_C::UserConstructionScript()
 
 	ABP_ActorGlow_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -114,11 +94,7 @@ void ABP_ActorGlow_C::ReceiveBeginPlay()
 
 	ABP_ActorGlow_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -134,11 +110,7 @@ void ABP_ActorGlow_C::ExecuteUbergraph_BP_ActorGlow(int EntryPoint)
 	ABP_ActorGlow_C_ExecuteUbergraph_BP_ActorGlow_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

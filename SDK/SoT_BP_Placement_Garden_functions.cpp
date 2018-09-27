@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,11 +27,7 @@ void ABP_Placement_Garden_C::Set_Garden_Parameters(float Radius, int Int, bool* 
 	params.Radius = Radius;
 	params.Int = Int;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Instances_Created != nullptr)
 		*Instances_Created = params.Instances_Created;
@@ -47,11 +43,7 @@ void ABP_Placement_Garden_C::Create_Garden()
 
 	ABP_Placement_Garden_C_Create_Garden_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -64,11 +56,7 @@ void ABP_Placement_Garden_C::Initialise_Instances()
 
 	ABP_Placement_Garden_C_Initialise_Instances_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -81,11 +69,7 @@ void ABP_Placement_Garden_C::UserConstructionScript()
 
 	ABP_Placement_Garden_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -98,11 +82,7 @@ void ABP_Placement_Garden_C::Force_Create_Garden()
 
 	ABP_Placement_Garden_C_Force_Create_Garden_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -118,11 +98,7 @@ void ABP_Placement_Garden_C::ExecuteUbergraph_BP_Placement_Garden(int EntryPoint
 	ABP_Placement_Garden_C_ExecuteUbergraph_BP_Placement_Garden_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

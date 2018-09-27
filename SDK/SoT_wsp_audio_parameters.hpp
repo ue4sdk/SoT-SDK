@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function wsp_audio.wsp_audio_C.ReceiveTick
 struct Awsp_audio_C_ReceiveTick_Params
 {
-	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function wsp_audio.wsp_audio_C.ReceiveBeginPlay

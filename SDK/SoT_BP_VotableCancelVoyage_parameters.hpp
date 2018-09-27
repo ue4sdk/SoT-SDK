@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,13 +45,13 @@ struct ABP_VotableCancelVoyage_C_ReceiveBeginPlay_Params
 // Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteAdded
 struct ABP_VotableCancelVoyage_C_OnVoteAdded_Params
 {
-	TScriptInterface<class UVoterInterface>*           Voter;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	TScriptInterface<class UVoterInterface>            Voter;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteRemoved
 struct ABP_VotableCancelVoyage_C_OnVoteRemoved_Params
 {
-	TScriptInterface<class UVoterInterface>*           Voter;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	TScriptInterface<class UVoterInterface>            Voter;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ExecuteUbergraph_BP_VotableCancelVoyage

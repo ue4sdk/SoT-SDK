@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,11 +24,7 @@ void ABP_ShovelHole_C::SetFadeInParameters(float FadeTime)
 	ABP_ShovelHole_C_SetFadeInParameters_Params params;
 	params.FadeTime = FadeTime;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44,11 +40,7 @@ void ABP_ShovelHole_C::SetFadeOutParameters(float FadeTime)
 	ABP_ShovelHole_C_SetFadeOutParameters_Params params;
 	params.FadeTime = FadeTime;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -61,31 +53,23 @@ void ABP_ShovelHole_C::UserConstructionScript()
 
 	ABP_ShovelHole_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EHoleState>*       InState                        (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EHoleState>        InState                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<EHoleState>* InState)
+void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged");
 
 	ABP_ShovelHole_C_OnStateChanged_Params params;
 	params.InState = InState;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -98,11 +82,7 @@ void ABP_ShovelHole_C::ReceiveBeginPlay()
 
 	ABP_ShovelHole_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -118,11 +98,7 @@ void ABP_ShovelHole_C::ExecuteUbergraph_BP_ShovelHole(int EntryPoint)
 	ABP_ShovelHole_C_ExecuteUbergraph_BP_ShovelHole_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

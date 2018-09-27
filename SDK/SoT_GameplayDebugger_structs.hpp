@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,7 @@ enum class EAIDebugDrawDataView : uint8_t
 	EAIDebugDrawDataView__GameView3 = 4,
 	None02                         = 5,
 	EAIDebugDrawDataView__MAX      = 6,
-	None03                         = 7,
-	None04                         = 8
+	None03                         = 7
 };
 
 
@@ -37,10 +36,8 @@ enum class EDebugComponentMessage : uint8_t
 {
 	EDebugComponentMessage__EnableExtendedView = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EDebugComponentMessage__ActivateDataView = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EDebugComponentMessage__ActivateDataView = 2,
+	None01                         = 3
 };
 
 

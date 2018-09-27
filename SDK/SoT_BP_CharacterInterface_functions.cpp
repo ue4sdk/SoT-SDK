@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,11 +28,7 @@ void UBP_CharacterInterface_C::IK_Limb_Stretch(float ArmStretch, float SpineStre
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -52,11 +48,7 @@ void UBP_CharacterInterface_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, b
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -76,11 +68,7 @@ void UBP_CharacterInterface_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> 
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -100,11 +88,7 @@ void UBP_CharacterInterface_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> Lim
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -122,11 +106,7 @@ void UBP_CharacterInterface_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName>
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -148,11 +128,7 @@ void UBP_CharacterInterface_C::CapstanForce(float IndividualForce, const struct 
 	params.RH_IK = RH_IK;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -168,11 +144,7 @@ void UBP_CharacterInterface_C::DockingInterface(const struct FBP_Docking& Dockin
 	UBP_CharacterInterface_C_DockingInterface_Params params;
 	params.Docking = Docking;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -188,11 +160,7 @@ void UBP_CharacterInterface_C::CapstanRotationSpeed(float RotationSpeed)
 	UBP_CharacterInterface_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -208,11 +176,7 @@ void UBP_CharacterInterface_C::Update_Athena_Character(class AAthenaCharacter* A
 	UBP_CharacterInterface_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

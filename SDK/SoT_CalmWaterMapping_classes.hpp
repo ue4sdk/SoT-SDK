@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CalmWaterMapping.CalmWaterMappingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class CalmWaterMapping.CalmWaterMappingInterface");
 		return ptr;
 	}
 
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CalmWaterMapping.AthenaCalmWaterZone");
+		static auto ptr = UObject::FindObject<UClass>("Class CalmWaterMapping.AthenaCalmWaterZone");
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CalmWaterMapping.CalmWaterMappingService");
+		static auto ptr = UObject::FindObject<UClass>("Class CalmWaterMapping.CalmWaterMappingService");
 		return ptr;
 	}
 

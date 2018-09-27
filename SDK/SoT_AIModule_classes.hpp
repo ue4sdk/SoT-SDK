@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTNode");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTNode");
 		return ptr;
 	}
 
@@ -43,7 +43,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTAuxiliaryNode");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTAuxiliaryNode");
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator");
 		return ptr;
 	}
 
@@ -79,7 +79,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_BlackboardBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_BlackboardBase");
 		return ptr;
 	}
 
@@ -99,7 +99,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTService");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTService");
 		return ptr;
 	}
 
@@ -115,7 +115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTaskNode");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTaskNode");
 		return ptr;
 	}
 
@@ -131,7 +131,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_BlackboardBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_BlackboardBase");
 		return ptr;
 	}
 
@@ -150,7 +150,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_RunEQSQuery");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_RunEQSQuery");
 		return ptr;
 	}
 
@@ -167,7 +167,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_RotateToFaceBBEntry");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_RotateToFaceBBEntry");
 		return ptr;
 	}
 
@@ -182,7 +182,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryContext");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryContext");
 		return ptr;
 	}
 
@@ -199,7 +199,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryNode");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryNode");
 		return ptr;
 	}
 
@@ -216,7 +216,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator");
 		return ptr;
 	}
 
@@ -250,7 +250,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest");
 		return ptr;
 	}
 
@@ -265,7 +265,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIResourceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIResourceInterface");
 		return ptr;
 	}
 
@@ -287,7 +287,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PathFollowingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PathFollowingComponent");
 		return ptr;
 	}
 
@@ -309,7 +309,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIAsyncTaskBlueprintProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIAsyncTaskBlueprintProxy");
 		return ptr;
 	}
 
@@ -326,7 +326,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIBlueprintHelperLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIBlueprintHelperLibrary");
 		return ptr;
 	}
 
@@ -357,7 +357,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnActionsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnActionsComponent");
 		return ptr;
 	}
 
@@ -377,7 +377,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIPerceptionListenerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIPerceptionListenerInterface");
 		return ptr;
 	}
 
@@ -392,7 +392,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BehaviorTreeTypes");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BehaviorTreeTypes");
 		return ptr;
 	}
 
@@ -407,7 +407,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.GenericTeamAgentInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.GenericTeamAgentInterface");
 		return ptr;
 	}
 
@@ -438,7 +438,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIController");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIController");
 		return ptr;
 	}
 
@@ -473,7 +473,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.DetourCrowdAIController");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.DetourCrowdAIController");
 		return ptr;
 	}
 
@@ -488,7 +488,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIDataProvider");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIDataProvider");
 		return ptr;
 	}
 
@@ -508,7 +508,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIDataProvider_QueryParams");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIDataProvider_QueryParams");
 		return ptr;
 	}
 
@@ -523,7 +523,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIHotSpotManager");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIHotSpotManager");
 		return ptr;
 	}
 
@@ -551,7 +551,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISystem");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISystem");
 		return ptr;
 	}
 
@@ -580,7 +580,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense");
 		return ptr;
 	}
 
@@ -599,7 +599,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIPerceptionSystem");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIPerceptionSystem");
 		return ptr;
 	}
 
@@ -634,7 +634,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIPerceptionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIPerceptionComponent");
 		return ptr;
 	}
 
@@ -659,7 +659,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIPerceptionStimuliSourceComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIPerceptionStimuliSourceComponent");
 		return ptr;
 	}
 
@@ -679,7 +679,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIResource_Movement");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIResource_Movement");
 		return ptr;
 	}
 
@@ -694,7 +694,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AIResource_Logic");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AIResource_Logic");
 		return ptr;
 	}
 
@@ -712,7 +712,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Blueprint");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Blueprint");
 		return ptr;
 	}
 
@@ -736,7 +736,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Damage");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Damage");
 		return ptr;
 	}
 
@@ -761,7 +761,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Hearing");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Hearing");
 		return ptr;
 	}
 
@@ -779,7 +779,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Prediction");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Prediction");
 		return ptr;
 	}
 
@@ -804,7 +804,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Sight");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Sight");
 		return ptr;
 	}
 
@@ -820,7 +820,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Team");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Team");
 		return ptr;
 	}
 
@@ -836,7 +836,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISense_Touch");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISense_Touch");
 		return ptr;
 	}
 
@@ -851,7 +851,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseBlueprintListener");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseBlueprintListener");
 		return ptr;
 	}
 
@@ -869,7 +869,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig");
 		return ptr;
 	}
 
@@ -885,7 +885,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Blueprint");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Blueprint");
 		return ptr;
 	}
 
@@ -901,7 +901,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Damage");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Damage");
 		return ptr;
 	}
 
@@ -922,7 +922,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Hearing");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Hearing");
 		return ptr;
 	}
 
@@ -937,7 +937,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Prediction");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Prediction");
 		return ptr;
 	}
 
@@ -959,7 +959,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Sight");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Sight");
 		return ptr;
 	}
 
@@ -974,7 +974,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Team");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Team");
 		return ptr;
 	}
 
@@ -989,7 +989,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseConfig_Touch");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseConfig_Touch");
 		return ptr;
 	}
 
@@ -1004,7 +1004,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseEvent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseEvent");
 		return ptr;
 	}
 
@@ -1020,7 +1020,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseEvent_Damage");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseEvent_Damage");
 		return ptr;
 	}
 
@@ -1036,7 +1036,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISenseEvent_Hearing");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISenseEvent_Hearing");
 		return ptr;
 	}
 
@@ -1051,7 +1051,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AISightTargetInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AISightTargetInterface");
 		return ptr;
 	}
 
@@ -1067,7 +1067,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AITask");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AITask");
 		return ptr;
 	}
 
@@ -1092,7 +1092,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.AITask_MoveTo");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.AITask_MoveTo");
 		return ptr;
 	}
 
@@ -1113,7 +1113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BrainComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BrainComponent");
 		return ptr;
 	}
 
@@ -1134,7 +1134,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BehaviorTreeComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BehaviorTreeComponent");
 		return ptr;
 	}
 
@@ -1156,7 +1156,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTCompositeNode");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTCompositeNode");
 		return ptr;
 	}
 
@@ -1176,7 +1176,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BehaviorTree");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BehaviorTree");
 		return ptr;
 	}
 
@@ -1195,7 +1195,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BehaviorTreeManager");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BehaviorTreeManager");
 		return ptr;
 	}
 
@@ -1211,7 +1211,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType");
 		return ptr;
 	}
 
@@ -1230,7 +1230,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Enum");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Enum");
 		return ptr;
 	}
 
@@ -1247,7 +1247,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_NativeEnum");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_NativeEnum");
 		return ptr;
 	}
 
@@ -1266,7 +1266,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardData");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardData");
 		return ptr;
 	}
 
@@ -1286,7 +1286,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardComponent");
 		return ptr;
 	}
 
@@ -1328,7 +1328,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Bool");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Bool");
 		return ptr;
 	}
 
@@ -1344,7 +1344,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Class");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Class");
 		return ptr;
 	}
 
@@ -1359,7 +1359,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Float");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Float");
 		return ptr;
 	}
 
@@ -1374,7 +1374,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Int");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Int");
 		return ptr;
 	}
 
@@ -1389,7 +1389,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Name");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Name");
 		return ptr;
 	}
 
@@ -1405,7 +1405,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Object");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Object");
 		return ptr;
 	}
 
@@ -1420,7 +1420,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Rotator");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Rotator");
 		return ptr;
 	}
 
@@ -1436,7 +1436,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_String");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_String");
 		return ptr;
 	}
 
@@ -1451,7 +1451,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Vector");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BlackboardKeyType_Vector");
 		return ptr;
 	}
 
@@ -1466,7 +1466,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTFunctionLibrary");
 		return ptr;
 	}
 
@@ -1516,7 +1516,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_Blackboard");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_Blackboard");
 		return ptr;
 	}
 
@@ -1531,7 +1531,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_ConditionalLoop");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_ConditionalLoop");
 		return ptr;
 	}
 
@@ -1549,7 +1549,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_IsAtLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_IsAtLocation");
 		return ptr;
 	}
 
@@ -1565,7 +1565,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_IsBBEntryOfClass");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_IsBBEntryOfClass");
 		return ptr;
 	}
 
@@ -1588,7 +1588,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_BlueprintBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_BlueprintBase");
 		return ptr;
 	}
 
@@ -1625,7 +1625,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_CheckGameplayTagsOnActor");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_CheckGameplayTagsOnActor");
 		return ptr;
 	}
 
@@ -1644,7 +1644,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_CompareBBEntries");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_CompareBBEntries");
 		return ptr;
 	}
 
@@ -1665,7 +1665,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_ConeCheck");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_ConeCheck");
 		return ptr;
 	}
 
@@ -1682,7 +1682,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_Cooldown");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_Cooldown");
 		return ptr;
 	}
 
@@ -1704,7 +1704,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_DoesPathExist");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_DoesPathExist");
 		return ptr;
 	}
 
@@ -1719,7 +1719,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_ForceSuccess");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_ForceSuccess");
 		return ptr;
 	}
 
@@ -1741,7 +1741,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_KeepInCone");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_KeepInCone");
 		return ptr;
 	}
 
@@ -1759,7 +1759,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_Loop");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_Loop");
 		return ptr;
 	}
 
@@ -1774,7 +1774,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_ReachedMoveGoal");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_ReachedMoveGoal");
 		return ptr;
 	}
 
@@ -1793,7 +1793,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_SetTagCooldown");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_SetTagCooldown");
 		return ptr;
 	}
 
@@ -1813,7 +1813,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_TagCooldown");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_TagCooldown");
 		return ptr;
 	}
 
@@ -1830,7 +1830,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTDecorator_TimeLimit");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTDecorator_TimeLimit");
 		return ptr;
 	}
 
@@ -1846,7 +1846,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTService_BlackboardBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTService_BlackboardBase");
 		return ptr;
 	}
 
@@ -1863,7 +1863,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTService_DefaultFocus");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTService_DefaultFocus");
 		return ptr;
 	}
 
@@ -1884,7 +1884,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTService_BlueprintBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTService_BlueprintBase");
 		return ptr;
 	}
 
@@ -1909,7 +1909,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTComposite_Selector");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTComposite_Selector");
 		return ptr;
 	}
 
@@ -1924,7 +1924,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTComposite_Sequence");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTComposite_Sequence");
 		return ptr;
 	}
 
@@ -1941,7 +1941,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTComposite_SimpleParallel");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTComposite_SimpleParallel");
 		return ptr;
 	}
 
@@ -1962,7 +1962,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_MoveDirectlyToward");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_MoveDirectlyToward");
 		return ptr;
 	}
 
@@ -1984,7 +1984,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_MoveTo");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_MoveTo");
 		return ptr;
 	}
 
@@ -2000,7 +2000,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryItemType");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryItemType");
 		return ptr;
 	}
 
@@ -2015,7 +2015,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTypes");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTypes");
 		return ptr;
 	}
 
@@ -2035,7 +2035,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_BlueprintBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_BlueprintBase");
 		return ptr;
 	}
 
@@ -2065,7 +2065,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_MakeNoise");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_MakeNoise");
 		return ptr;
 	}
 
@@ -2090,7 +2090,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnAction");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnAction");
 		return ptr;
 	}
 
@@ -2109,7 +2109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_PawnActionBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_PawnActionBase");
 		return ptr;
 	}
 
@@ -2125,7 +2125,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_PushPawnAction");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_PushPawnAction");
 		return ptr;
 	}
 
@@ -2147,7 +2147,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_PlayAnimation");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_PlayAnimation");
 		return ptr;
 	}
 
@@ -2163,7 +2163,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_PlaySound");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_PlaySound");
 		return ptr;
 	}
 
@@ -2179,7 +2179,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_RunBehavior");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_RunBehavior");
 		return ptr;
 	}
 
@@ -2197,7 +2197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_RunBehaviorDynamic");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_RunBehaviorDynamic");
 		return ptr;
 	}
 
@@ -2216,7 +2216,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_SetTagCooldown");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_SetTagCooldown");
 		return ptr;
 	}
 
@@ -2233,7 +2233,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_Wait");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_Wait");
 		return ptr;
 	}
 
@@ -2249,7 +2249,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.BTTask_WaitBlackboardTime");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTask_WaitBlackboardTime");
 		return ptr;
 	}
 
@@ -2264,7 +2264,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.CrowdAgentInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.CrowdAgentInterface");
 		return ptr;
 	}
 
@@ -2291,7 +2291,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.CrowdManager");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.CrowdManager");
 		return ptr;
 	}
 
@@ -2307,7 +2307,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQuery");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQuery");
 		return ptr;
 	}
 
@@ -2323,7 +2323,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryContext_BlueprintBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryContext_BlueprintBase");
 		return ptr;
 	}
 
@@ -2343,7 +2343,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryContext_Item");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryContext_Item");
 		return ptr;
 	}
 
@@ -2358,7 +2358,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryContext_Querier");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryContext_Querier");
 		return ptr;
 	}
 
@@ -2373,7 +2373,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.VisualLoggerExtension");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.VisualLoggerExtension");
 		return ptr;
 	}
 
@@ -2388,7 +2388,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryDebugHelpers");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryDebugHelpers");
 		return ptr;
 	}
 
@@ -2403,7 +2403,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EQSQueryResultSourceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EQSQueryResultSourceInterface");
 		return ptr;
 	}
 
@@ -2425,7 +2425,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryInstanceBlueprintWrapper");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryInstanceBlueprintWrapper");
 		return ptr;
 	}
 
@@ -2445,7 +2445,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_VectorBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryItemType_VectorBase");
 		return ptr;
 	}
 
@@ -2460,7 +2460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_ActorBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryItemType_ActorBase");
 		return ptr;
 	}
 
@@ -2475,7 +2475,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Actor");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryItemType_Actor");
 		return ptr;
 	}
 
@@ -2490,7 +2490,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Direction");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryItemType_Direction");
 		return ptr;
 	}
 
@@ -2505,7 +2505,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Point");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryItemType_Point");
 		return ptr;
 	}
 
@@ -2524,7 +2524,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryManager");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryManager");
 		return ptr;
 	}
 
@@ -2544,7 +2544,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ActorsOfClass");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_ActorsOfClass");
 		return ptr;
 	}
 
@@ -2564,7 +2564,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_BlueprintBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_BlueprintBase");
 		return ptr;
 	}
 
@@ -2587,7 +2587,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Composite");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_Composite");
 		return ptr;
 	}
 
@@ -2603,7 +2603,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ProjectedPoints");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_ProjectedPoints");
 		return ptr;
 	}
 
@@ -2629,7 +2629,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Donut");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_Donut");
 		return ptr;
 	}
 
@@ -2654,7 +2654,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_OnCircle");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_OnCircle");
 		return ptr;
 	}
 
@@ -2672,7 +2672,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_SimpleGrid");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_SimpleGrid");
 		return ptr;
 	}
 
@@ -2690,7 +2690,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_PathingGrid");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryGenerator_PathingGrid");
 		return ptr;
 	}
 
@@ -2708,7 +2708,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Distance");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_Distance");
 		return ptr;
 	}
 
@@ -2728,7 +2728,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Dot");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_Dot");
 		return ptr;
 	}
 
@@ -2746,7 +2746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_GameplayTags");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_GameplayTags");
 		return ptr;
 	}
 
@@ -2769,7 +2769,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Pathfinding");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_Pathfinding");
 		return ptr;
 	}
 
@@ -2785,7 +2785,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_PathfindingBatch");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_PathfindingBatch");
 		return ptr;
 	}
 
@@ -2800,7 +2800,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Random");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_Random");
 		return ptr;
 	}
 
@@ -2820,7 +2820,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Trace");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest_Trace");
 		return ptr;
 	}
 
@@ -2837,7 +2837,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EnvQueryOption");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryOption");
 		return ptr;
 	}
 
@@ -2845,15 +2845,15 @@ public:
 
 
 // Class AIModule.EQSRenderingComponent
-// 0x0020 (0x05C0 - 0x05A0)
+// 0x0020 (0x05D0 - 0x05B0)
 class UEQSRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05A0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05B0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EQSRenderingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EQSRenderingComponent");
 		return ptr;
 	}
 
@@ -2881,7 +2881,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.EQSTestingPawn");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EQSTestingPawn");
 		return ptr;
 	}
 
@@ -2904,7 +2904,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.CrowdFollowingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.CrowdFollowingComponent");
 		return ptr;
 	}
 
@@ -2921,7 +2921,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnAction_BlueprintBase");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnAction_BlueprintBase");
 		return ptr;
 	}
 
@@ -2954,7 +2954,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnAction_Move");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnAction_Move");
 		return ptr;
 	}
 
@@ -2973,7 +2973,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnAction_Repeat");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnAction_Repeat");
 		return ptr;
 	}
 
@@ -2993,7 +2993,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnAction_Sequence");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnAction_Sequence");
 		return ptr;
 	}
 
@@ -3010,7 +3010,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnAction_Wait");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnAction_Wait");
 		return ptr;
 	}
 
@@ -3039,7 +3039,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIModule.PawnSensingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PawnSensingComponent");
 		return ptr;
 	}
 

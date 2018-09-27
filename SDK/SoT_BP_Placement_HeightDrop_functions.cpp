@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_Placement_HeightDrop_C::CreateComponentList()
 
 	ABP_Placement_HeightDrop_C_CreateComponentList_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,11 +34,7 @@ void ABP_Placement_HeightDrop_C::CreateParentBounds()
 
 	ABP_Placement_HeightDrop_C_CreateParentBounds_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -55,11 +47,7 @@ void ABP_Placement_HeightDrop_C::CheckMobilityState()
 
 	ABP_Placement_HeightDrop_C_CheckMobilityState_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -81,11 +69,7 @@ void ABP_Placement_HeightDrop_C::Get_Valid_Collision(bool Hit_Success, class USc
 	params.Hit_Success = Hit_Success;
 	params.Current_Component = Current_Component;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Hit_Results != nullptr)
 		*Hit_Results = params.Hit_Results;
@@ -107,11 +91,7 @@ void ABP_Placement_HeightDrop_C::Drop_Components()
 
 	ABP_Placement_HeightDrop_C_Drop_Components_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -124,11 +104,7 @@ void ABP_Placement_HeightDrop_C::UserConstructionScript()
 
 	ABP_Placement_HeightDrop_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

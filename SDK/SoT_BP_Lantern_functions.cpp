@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_Lantern_C::CreateLanternDynamicMaterial()
 
 	ABP_Lantern_C_CreateLanternDynamicMaterial_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,11 +34,7 @@ void ABP_Lantern_C::OnAttachThirdPerson()
 
 	ABP_Lantern_C_OnAttachThirdPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -55,11 +47,7 @@ void ABP_Lantern_C::OnAttachFirstPerson()
 
 	ABP_Lantern_C_OnAttachFirstPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -72,11 +60,7 @@ void ABP_Lantern_C::TurnOff()
 
 	ABP_Lantern_C_TurnOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -89,11 +73,7 @@ void ABP_Lantern_C::TurnOn()
 
 	ABP_Lantern_C_TurnOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -106,11 +86,7 @@ void ABP_Lantern_C::UserConstructionScript()
 
 	ABP_Lantern_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -123,11 +99,7 @@ void ABP_Lantern_C::ReceiveWieldFirstPerson()
 
 	ABP_Lantern_C_ReceiveWieldFirstPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -140,11 +112,7 @@ void ABP_Lantern_C::ReceiveWieldThirdPerson()
 
 	ABP_Lantern_C_ReceiveWieldThirdPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -157,11 +125,7 @@ void ABP_Lantern_C::ReceiveBeginPlay()
 
 	ABP_Lantern_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -174,11 +138,7 @@ void ABP_Lantern_C::ReceiveLightChange()
 
 	ABP_Lantern_C_ReceiveLightChange_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -191,11 +151,7 @@ void ABP_Lantern_C::TriggerGlow()
 
 	ABP_Lantern_C_TriggerGlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -208,11 +164,7 @@ void ABP_Lantern_C::PostMeshChangedBPEvent()
 
 	ABP_Lantern_C_PostMeshChangedBPEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -228,11 +180,7 @@ void ABP_Lantern_C::ExecuteUbergraph_BP_Lantern(int EntryPoint)
 	ABP_Lantern_C_ExecuteUbergraph_BP_Lantern_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

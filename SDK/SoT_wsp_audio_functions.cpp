@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,20 +15,16 @@ namespace SDK
 // Function wsp_audio.wsp_audio_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void Awsp_audio_C::ReceiveTick(float* DeltaSeconds)
+void Awsp_audio_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ReceiveTick");
 
 	Awsp_audio_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41,11 +37,7 @@ void Awsp_audio_C::ReceiveBeginPlay()
 
 	Awsp_audio_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -61,11 +53,7 @@ void Awsp_audio_C::ExecuteUbergraph_wsp_audio(int EntryPoint)
 	Awsp_audio_C_ExecuteUbergraph_wsp_audio_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

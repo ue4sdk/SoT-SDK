@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.AngleMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.AngleMaths");
 		return ptr;
 	}
 
@@ -43,7 +43,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.BuoyancyMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.BuoyancyMaths");
 		return ptr;
 	}
 
@@ -61,7 +61,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.CircleMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.CircleMaths");
 		return ptr;
 	}
 
@@ -79,7 +79,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.CurveMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.CurveMaths");
 		return ptr;
 	}
 
@@ -100,7 +100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.Density");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.Density");
 		return ptr;
 	}
 
@@ -122,7 +122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.DragCoefficients");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.DragCoefficients");
 		return ptr;
 	}
 
@@ -145,7 +145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.DragMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.DragMaths");
 		return ptr;
 	}
 
@@ -162,7 +162,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.FloatMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.FloatMaths");
 		return ptr;
 	}
 
@@ -186,7 +186,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.Gravity");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.Gravity");
 		return ptr;
 	}
 
@@ -203,7 +203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.PoissonDiscSampling");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.PoissonDiscSampling");
 		return ptr;
 	}
 
@@ -220,7 +220,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.RotationMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.RotationMaths");
 		return ptr;
 	}
 
@@ -238,7 +238,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.SphereMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.SphereMaths");
 		return ptr;
 	}
 
@@ -256,7 +256,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.SphericalCapMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.SphericalCapMaths");
 		return ptr;
 	}
 
@@ -275,7 +275,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.TimedBufferFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.TimedBufferFunctionLibrary");
 		return ptr;
 	}
 
@@ -294,7 +294,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.TimeMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.TimeMaths");
 		return ptr;
 	}
 
@@ -311,7 +311,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.VectorMaths");
+		static auto ptr = UObject::FindObject<UClass>("Class Maths.VectorMaths");
 		return ptr;
 	}
 

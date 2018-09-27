@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,12 +21,7 @@ void ULevelSequencePlayer::Stop()
 
 	ULevelSequencePlayer_Stop_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42,12 +37,7 @@ void ULevelSequencePlayer::SetPlayRate(float PlayRate)
 	ULevelSequencePlayer_SetPlayRate_Params params;
 	params.PlayRate = PlayRate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -63,12 +53,7 @@ void ULevelSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 	ULevelSequencePlayer_SetPlaybackPosition_Params params;
 	params.NewPlaybackPosition = NewPlaybackPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -84,12 +69,7 @@ void ULevelSequencePlayer::PlayLooping(int NumLoops)
 	ULevelSequencePlayer_PlayLooping_Params params;
 	params.NumLoops = NumLoops;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -102,12 +82,7 @@ void ULevelSequencePlayer::Play()
 
 	ULevelSequencePlayer_Play_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -120,12 +95,7 @@ void ULevelSequencePlayer::Pause()
 
 	ULevelSequencePlayer_Pause_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -140,12 +110,7 @@ bool ULevelSequencePlayer::IsPlaying()
 
 	ULevelSequencePlayer_IsPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -162,12 +127,7 @@ float ULevelSequencePlayer::GetPlayRate()
 
 	ULevelSequencePlayer_GetPlayRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -184,12 +144,7 @@ float ULevelSequencePlayer::GetPlaybackPosition()
 
 	ULevelSequencePlayer_GetPlaybackPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -206,12 +161,7 @@ float ULevelSequencePlayer::GetLength()
 
 	ULevelSequencePlayer_GetLength_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -234,12 +184,7 @@ class ULevelSequencePlayer* ULevelSequencePlayer::STATIC_CreateLevelSequencePlay
 	params.LevelSequence = LevelSequence;
 	params.Settings = Settings;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -257,12 +202,7 @@ void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 	ALevelSequenceActor_SetSequence_Params params;
 	params.InSequence = InSequence;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

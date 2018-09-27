@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,14 +32,14 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_GhostShipCaptain.BP_Anim_GhostShipCaptain_C");
+		static auto ptr = UObject::FindObject<UClass>("AnimBlueprintGeneratedClass BP_Anim_GhostShipCaptain.BP_Anim_GhostShipCaptain_C");
 		return ptr;
 	}
 
 
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_GhostShipCaptain_AnimGraphNode_HIKLookAt_559E08FE4278B4C88466CCBBB6544058();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_GhostShipCaptain_AnimGraphNode_BlendListByBool_CA8E748947CB37638D1D77AF82F419EB();
-	void BlueprintUpdateAnimation(float* DeltaTimeX);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void ExecuteUbergraph_BP_Anim_GhostShipCaptain(int EntryPoint);
 };
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,11 +28,7 @@ void UBP_InternalShipWaterInterface_C::GetLineIntersectionFromPlane(const struct
 	params.LineStart = LineStart;
 	params.LineEnd = LineEnd;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Intersect != nullptr)
 		*Intersect = params.Intersect;
@@ -54,11 +50,7 @@ void UBP_InternalShipWaterInterface_C::GetDistanceFromPlane(const struct FVector
 	UBP_InternalShipWaterInterface_C_GetDistanceFromPlane_Params params;
 	params.Location = Location;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Distance != nullptr)
 		*Distance = params.Distance;
@@ -76,11 +68,7 @@ void UBP_InternalShipWaterInterface_C::GetWaterLevel(float* WaterLevel)
 
 	UBP_InternalShipWaterInterface_C_GetWaterLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (WaterLevel != nullptr)
 		*WaterLevel = params.WaterLevel;
@@ -99,11 +87,7 @@ void UBP_InternalShipWaterInterface_C::AddWater(float Water_Amount)
 	UBP_InternalShipWaterInterface_C_AddWater_Params params;
 	params.Water_Amount = Water_Amount;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

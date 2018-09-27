@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ void UGameServiceMapFunctions::STATIC_UnregisterService(class UObject* Service, 
 	UGameServiceMapFunctions_UnregisterService_Params params;
 	params.Service = Service;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ServiceMap != nullptr)
 		*ServiceMap = params.ServiceMap;
@@ -52,12 +47,7 @@ void UGameServiceMapFunctions::STATIC_RegisterService(class UObject* Service, cl
 	params.Service = Service;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ServiceMap != nullptr)
 		*ServiceMap = params.ServiceMap;
@@ -78,12 +68,7 @@ class UObject* UGameServiceMapFunctions::STATIC_GetService(class UClass* Class, 
 	UGameServiceMapFunctions_GetService_Params params;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ServiceMap != nullptr)
 		*ServiceMap = params.ServiceMap;
@@ -104,12 +89,7 @@ int UGameServiceMapFunctions::STATIC_GetNumServices(struct FGameServiceMap* Serv
 
 	UGameServiceMapFunctions_GetNumServices_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ServiceMap != nullptr)
 		*ServiceMap = params.ServiceMap;
@@ -130,12 +110,7 @@ void UGameServiceProviderInterface::UnregisterService(class UObject* Service)
 	UGameServiceProviderInterface_UnregisterService_Params params;
 	params.Service = Service;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -153,12 +128,7 @@ void UGameServiceProviderInterface::RegisterService(class UObject* Service, clas
 	params.Service = Service;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -175,12 +145,7 @@ class UObject* UGameServiceProviderInterface::GetService(class UClass* Class)
 	UGameServiceProviderInterface_GetService_Params params;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_Cutlass_Item_C::DoBlockEffect()
 
 	ABP_Cutlass_Item_C_DoBlockEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,31 +34,23 @@ void ABP_Cutlass_Item_C::UserConstructionScript()
 
 	ABP_Cutlass_Item_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Cutlass_Item.BP_Cutlass_Item_C.OnBlockedAttack
 // (Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FEventBlocked*          Event                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FEventBlocked           Event                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ABP_Cutlass_Item_C::OnBlockedAttack(struct FEventBlocked* Event)
+void ABP_Cutlass_Item_C::OnBlockedAttack(const struct FEventBlocked& Event)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.OnBlockedAttack");
 
 	ABP_Cutlass_Item_C_OnBlockedAttack_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -78,11 +66,7 @@ void ABP_Cutlass_Item_C::ExecuteUbergraph_BP_Cutlass_Item(int EntryPoint)
 	ABP_Cutlass_Item_C_ExecuteUbergraph_BP_Cutlass_Item_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

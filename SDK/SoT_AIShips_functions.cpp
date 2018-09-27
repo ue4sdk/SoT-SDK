@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,12 +26,7 @@ void UAIShipDebugFunctionLibrary::STATIC_RequestAIShipForCrew(class UObject* Wor
 	params.WorldContextObject = WorldContextObject;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -50,12 +45,7 @@ struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::STATIC_GenerateAI
 	params.WorldContextObject = WorldContextObject;
 	params.ServiceParams = ServiceParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -73,12 +63,7 @@ void UCursedCrewCustomisationInterface::SetCursedCrewCustomisationProperties(con
 	UCursedCrewCustomisationInterface_SetCursedCrewCustomisationProperties_Params params;
 	params.SailData = SailData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

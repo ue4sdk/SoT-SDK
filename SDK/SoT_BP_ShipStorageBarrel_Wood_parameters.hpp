@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C.ShouldDrawTooltipInWorldSpace
 struct ABP_ShipStorageBarrel_Wood_C_ShouldDrawTooltipInWorldSpace_Params
 {
-	class AActor**                                     InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      InInteractor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     DesiredTooltipWorldPosition;                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

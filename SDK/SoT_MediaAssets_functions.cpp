@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,12 +23,7 @@ bool UMediaPlayer::SupportsSeeking()
 
 	UMediaPlayer_SupportsSeeking_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45,12 +40,7 @@ bool UMediaPlayer::SupportsScrubbing()
 
 	UMediaPlayer_SupportsScrubbing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -71,12 +61,7 @@ bool UMediaPlayer::SupportsRate(float Rate, bool Unthinned)
 	params.Rate = Rate;
 	params.Unthinned = Unthinned;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -95,12 +80,7 @@ bool UMediaPlayer::SetRate(float Rate)
 	UMediaPlayer_SetRate_Params params;
 	params.Rate = Rate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -119,12 +99,7 @@ bool UMediaPlayer::SetLooping(bool InLooping)
 	UMediaPlayer_SetLooping_Params params;
 	params.InLooping = InLooping;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -143,12 +118,7 @@ bool UMediaPlayer::Seek(const struct FTimespan& InTime)
 	UMediaPlayer_Seek_Params params;
 	params.InTime = InTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -165,12 +135,7 @@ bool UMediaPlayer::Rewind()
 
 	UMediaPlayer_Rewind_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -187,12 +152,7 @@ bool UMediaPlayer::Play()
 
 	UMediaPlayer_Play_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -209,12 +169,7 @@ bool UMediaPlayer::Pause()
 
 	UMediaPlayer_Pause_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -233,12 +188,7 @@ bool UMediaPlayer::OpenUrl(const class FString& NewUrl)
 	UMediaPlayer_OpenUrl_Params params;
 	params.NewUrl = NewUrl;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -255,12 +205,7 @@ bool UMediaPlayer::IsStopped()
 
 	UMediaPlayer_IsStopped_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -277,12 +222,7 @@ bool UMediaPlayer::IsPlaying()
 
 	UMediaPlayer_IsPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -299,12 +239,7 @@ bool UMediaPlayer::IsPaused()
 
 	UMediaPlayer_IsPaused_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -321,12 +256,7 @@ bool UMediaPlayer::IsLooping()
 
 	UMediaPlayer_IsLooping_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -343,12 +273,7 @@ class FString UMediaPlayer::GetUrl()
 
 	UMediaPlayer_GetUrl_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -365,12 +290,7 @@ struct FTimespan UMediaPlayer::GetTime()
 
 	UMediaPlayer_GetTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -387,12 +307,7 @@ float UMediaPlayer::GetRate()
 
 	UMediaPlayer_GetRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -409,12 +324,7 @@ struct FTimespan UMediaPlayer::GetDuration()
 
 	UMediaPlayer_GetDuration_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -429,12 +339,7 @@ void UMediaPlayer::Close()
 
 	UMediaPlayer_Close_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -449,12 +354,7 @@ bool UMediaPlayer::CanPlay()
 
 	UMediaPlayer_CanPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -471,12 +371,7 @@ bool UMediaPlayer::CanPause()
 
 	UMediaPlayer_CanPause_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -494,12 +389,7 @@ void UMediaSoundWave::SetMediaPlayer(class UMediaPlayer* InMediaPlayer)
 	UMediaSoundWave_SetMediaPlayer_Params params;
 	params.InMediaPlayer = InMediaPlayer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -515,12 +405,7 @@ void UMediaTexture::SetMediaPlayer(class UMediaPlayer* InMediaPlayer)
 	UMediaTexture_SetMediaPlayer_Params params;
 	params.InMediaPlayer = InMediaPlayer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,11 +26,7 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, b
 	params.Match = Match;
 	params.bDidBecomeActive = bDidBecomeActive;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -46,11 +42,7 @@ void UTurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
 	UTurnBasedMatchInterface_OnMatchEnded_Params params;
 	params.Match = Match;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

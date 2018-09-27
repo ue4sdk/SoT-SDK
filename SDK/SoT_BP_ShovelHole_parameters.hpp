@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct ABP_ShovelHole_C_UserConstructionScript_Params
 // Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged
 struct ABP_ShovelHole_C_OnStateChanged_Params
 {
-	TEnumAsByte<EHoleState>*                           InState;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EHoleState>                            InState;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ShovelHole.BP_ShovelHole_C.ReceiveBeginPlay

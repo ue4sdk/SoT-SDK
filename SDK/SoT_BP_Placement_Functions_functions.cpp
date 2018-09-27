@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,11 +31,7 @@ void UBP_Placement_Functions_C::STATIC_GenerateRadialXYPositionsAroundPoint(cons
 	params.Segments = Segments;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Positions != nullptr)
 		*Positions = params.Positions;
@@ -57,11 +53,7 @@ void UBP_Placement_Functions_C::STATIC_Get_First_Valid_Hit(class UObject* __Worl
 	UBP_Placement_Functions_C_Get_First_Valid_Hit_Params params;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Hits != nullptr)
 		*Hits = params.Hits;
@@ -93,11 +85,7 @@ void UBP_Placement_Functions_C::STATIC_Generate_Random_Rotated_Box_Raycast(const
 	params.Rotation = Rotation;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Random != nullptr)
 		*Random = params.Random;
@@ -132,11 +120,7 @@ void UBP_Placement_Functions_C::STATIC_Detonate_Charge(class AActor* Spawn, cons
 	params.Seed = Seed;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Blast_Radii != nullptr)
 		*Blast_Radii = params.Blast_Radii;
@@ -162,11 +146,7 @@ void UBP_Placement_Functions_C::STATIC_Does_A_Delete_B(const class FString& A_St
 	params.B_String = B_String;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Return != nullptr)
 		*Return = params.Return;
@@ -189,11 +169,7 @@ void UBP_Placement_Functions_C::STATIC_Get_Actor_Placement_Asset_Type(class AAct
 	params.Input_Actor = Input_Actor;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Returning_Tag != nullptr)
 		*Returning_Tag = params.Returning_Tag;
@@ -218,11 +194,7 @@ void UBP_Placement_Functions_C::STATIC_Check_Actor_Overlap(class AActor* Input_A
 	params.Input_Actor = Input_Actor;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Delete_Actor != nullptr)
 		*Delete_Actor = params.Delete_Actor;
@@ -251,11 +223,7 @@ void UBP_Placement_Functions_C::STATIC_Get_Mesh_Instance_Transform(const struct 
 	params.Normal = Normal;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Random != nullptr)
 		*Random = params.Random;
@@ -278,11 +246,7 @@ void UBP_Placement_Functions_C::STATIC_Normalise_Mesh_Probabilities(class UObjec
 	UBP_Placement_Functions_C_Normalise_Mesh_Probabilities_Params params;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Charges != nullptr)
 		*Charges = params.Charges;
@@ -321,11 +285,7 @@ void UBP_Placement_Functions_C::STATIC_Set_Mesh(float Generator_Radius, float Sp
 	params.Actor = Actor;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Meshes != nullptr)
 		*Meshes = params.Meshes;
@@ -379,11 +339,7 @@ void UBP_Placement_Functions_C::STATIC_Set_Charge(float Generator_Radius, float 
 	params.Actor = Actor;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Charges != nullptr)
 		*Charges = params.Charges;
@@ -422,11 +378,7 @@ void UBP_Placement_Functions_C::STATIC_Check_Surface_Materials(class UObject* Pl
 	params.Placement_Material = Placement_Material;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Physical_Materials != nullptr)
 		*Physical_Materials = params.Physical_Materials;
@@ -452,11 +404,7 @@ void UBP_Placement_Functions_C::STATIC_Check_Slope(const struct FVector& Normal,
 	params.Slope_Range = Slope_Range;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Placement_Permission != nullptr)
 		*Placement_Permission = params.Placement_Permission;
@@ -480,11 +428,7 @@ void UBP_Placement_Functions_C::STATIC_Check_Height(const struct FVector& Positi
 	params.Height_Range = Height_Range;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Placement_Permission != nullptr)
 		*Placement_Permission = params.Placement_Permission;
@@ -511,11 +455,7 @@ void UBP_Placement_Functions_C::STATIC_Check_Radius_Overlap(const struct FVector
 	params.Radius_Overlap = Radius_Overlap;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Blast_Radii != nullptr)
 		*Blast_Radii = params.Blast_Radii;
@@ -543,11 +483,7 @@ void UBP_Placement_Functions_C::STATIC_Set_Spawn_Properties(class UObject* Objec
 	params.Radius = Radius;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Cast_Success != nullptr)
 		*Cast_Success = params.Cast_Success;
@@ -573,11 +509,7 @@ void UBP_Placement_Functions_C::STATIC_Generate_Random_Box_Raycast(const struct 
 	params.Extent = Extent;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Random != nullptr)
 		*Random = params.Random;
@@ -605,11 +537,7 @@ void UBP_Placement_Functions_C::STATIC_Get_Box_Sample_Count(class AActor* Actor,
 	params.Seed_Density = Seed_Density;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Sample_Count != nullptr)
 		*Sample_Count = params.Sample_Count;
@@ -641,11 +569,7 @@ void UBP_Placement_Functions_C::STATIC_Generate_Random_Radial_Raycast(float Radi
 	params.Actor_Transform = Actor_Transform;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Random != nullptr)
 		*Random = params.Random;
@@ -672,11 +596,7 @@ void UBP_Placement_Functions_C::STATIC_Calculate_Index_from_Probabilities(float 
 	params.Random_Float = Random_Float;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Charge_Probabilities != nullptr)
 		*Charge_Probabilities = params.Charge_Probabilities;
@@ -702,11 +622,7 @@ void UBP_Placement_Functions_C::STATIC_Get_Radial_Sample_Count(float Radius, flo
 	params.Spawn_Sample_Density = Spawn_Sample_Density;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Sample_Count != nullptr)
 		*Sample_Count = params.Sample_Count;
@@ -727,11 +643,7 @@ void UBP_Placement_Functions_C::STATIC_Normalise_Charge_Probabilities(class UObj
 	UBP_Placement_Functions_C_Normalise_Charge_Probabilities_Params params;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Charges != nullptr)
 		*Charges = params.Charges;

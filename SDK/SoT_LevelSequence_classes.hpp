@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
+		static auto ptr = UObject::FindObject<UClass>("Class LevelSequence.LevelSequence");
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class LevelSequence.LevelSequenceInstance");
 		return ptr;
 	}
 
@@ -67,7 +67,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
+		static auto ptr = UObject::FindObject<UClass>("Class LevelSequence.LevelSequencePlayer");
 		return ptr;
 	}
 
@@ -101,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
+		static auto ptr = UObject::FindObject<UClass>("Class LevelSequence.LevelSequenceActor");
 		return ptr;
 	}
 

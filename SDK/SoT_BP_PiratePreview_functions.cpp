@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_PiratePreview_C::UserConstructionScript()
 
 	ABP_PiratePreview_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,11 +34,7 @@ void ABP_PiratePreview_C::ReceiveBeginPlay()
 
 	ABP_PiratePreview_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -58,11 +50,7 @@ void ABP_PiratePreview_C::PreviewBusy_Event(const struct FPiratePreviewBusyEvent
 	ABP_PiratePreview_C_PreviewBusy_Event_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -78,31 +66,23 @@ void ABP_PiratePreview_C::PreviewReady_Event(const struct FPiratePreviewReadyEve
 	ABP_PiratePreview_C_PreviewReady_Event_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_PiratePreview.BP_PiratePreview_C.ReceiveEndPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PiratePreview_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+void ABP_PiratePreview_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveEndPlay");
 
 	ABP_PiratePreview_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -118,11 +98,7 @@ void ABP_PiratePreview_C::ExecuteUbergraph_BP_PiratePreview(int EntryPoint)
 	ABP_PiratePreview_C_ExecuteUbergraph_BP_PiratePreview_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -138,11 +114,7 @@ void ABP_PiratePreview_C::PreviewShutdown__DelegateSignature(const struct FPirat
 	ABP_PiratePreview_C_PreviewShutdown__DelegateSignature_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -158,11 +130,7 @@ void ABP_PiratePreview_C::PreviewReady__DelegateSignature(const struct FPiratePr
 	ABP_PiratePreview_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -178,11 +146,7 @@ void ABP_PiratePreview_C::PreviewBusy__DelegateSignature(const struct FPiratePre
 	ABP_PiratePreview_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

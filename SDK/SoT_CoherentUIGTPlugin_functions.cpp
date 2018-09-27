@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromStruct(class UStructPro
 	UCoherentUIGTBaseComponent_UpdateWholeDataModelFromStruct_Params params;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,7 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromObject(class UObject* M
 	UCoherentUIGTBaseComponent_UpdateWholeDataModelFromObject_Params params;
 	params.Model = Model;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -68,12 +58,7 @@ void UCoherentUIGTBaseComponent::TriggerJSEvent(const class FString& Name, class
 	params.Name = Name;
 	params.eventData = eventData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -86,12 +71,7 @@ void UCoherentUIGTBaseComponent::SynchronizeModels()
 
 	UCoherentUIGTBaseComponent_SynchronizeModels_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -107,12 +87,7 @@ void UCoherentUIGTBaseComponent::ShowPaintRects(bool show)
 	UCoherentUIGTBaseComponent_ShowPaintRects_Params params;
 	params.show = show;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -128,12 +103,7 @@ void UCoherentUIGTBaseComponent::SetClickThroughAlphaThreshold(float Threshold)
 	UCoherentUIGTBaseComponent_SetClickThroughAlphaThreshold_Params params;
 	params.Threshold = Threshold;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -151,12 +121,7 @@ void UCoherentUIGTBaseComponent::Resize(int Width, int Height)
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -169,12 +134,7 @@ void UCoherentUIGTBaseComponent::Reload()
 
 	UCoherentUIGTBaseComponent_Reload_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -187,12 +147,7 @@ void UCoherentUIGTBaseComponent::Redraw()
 
 	UCoherentUIGTBaseComponent_Redraw_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -208,12 +163,7 @@ void UCoherentUIGTBaseComponent::Load(const class FString& path)
 	UCoherentUIGTBaseComponent_Load_Params params;
 	params.path = path;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -228,12 +178,7 @@ bool UCoherentUIGTBaseComponent::IsTransparent()
 
 	UCoherentUIGTBaseComponent_IsTransparent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -250,12 +195,7 @@ bool UCoherentUIGTBaseComponent::IsReadyToCreateView()
 
 	UCoherentUIGTBaseComponent_IsReadyToCreateView_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -272,12 +212,7 @@ bool UCoherentUIGTBaseComponent::IsReadyForBindings()
 
 	UCoherentUIGTBaseComponent_IsReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -294,12 +229,7 @@ bool UCoherentUIGTBaseComponent::IsDocumentReady()
 
 	UCoherentUIGTBaseComponent_IsDocumentReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -316,12 +246,7 @@ bool UCoherentUIGTBaseComponent::HasRequestedView()
 
 	UCoherentUIGTBaseComponent_HasRequestedView_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -338,12 +263,7 @@ float UCoherentUIGTBaseComponent::GetClickThroughAlphaThreshold()
 
 	UCoherentUIGTBaseComponent_GetClickThroughAlphaThreshold_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -358,12 +278,7 @@ void UCoherentUIGTBaseComponent::EndDebugFrameSave()
 
 	UCoherentUIGTBaseComponent_EndDebugFrameSave_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -379,12 +294,7 @@ void UCoherentUIGTBaseComponent::EnableDelayedUpdate(bool bEnabled)
 	UCoherentUIGTBaseComponent_EnableDelayedUpdate_Params params;
 	params.bEnabled = bEnabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -397,12 +307,7 @@ void UCoherentUIGTBaseComponent::DebugSaveNextFrame()
 
 	UCoherentUIGTBaseComponent_DebugSaveNextFrame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -417,12 +322,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBaseComponent::CreateJSEvent()
 
 	UCoherentUIGTBaseComponent_CreateJSEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -442,12 +342,7 @@ void UCoherentUIGTBaseComponent::CreateDataModelFromStruct(const class FString& 
 	params.Name = Name;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -465,12 +360,7 @@ void UCoherentUIGTBaseComponent::CreateDataModelFromObject(const class FString& 
 	params.Name = Name;
 	params.Model = Model;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -483,12 +373,7 @@ void UCoherentUIGTBaseComponent::BeginDebugFrameSave()
 
 	UCoherentUIGTBaseComponent_BeginDebugFrameSave_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -508,12 +393,7 @@ void UCoherentUIGTLiveView::OnLiveViewSizeRequest(class UCoherentUIGTBaseCompone
 	params.BaseComponent = BaseComponent;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Width != nullptr)
 		*Width = params.Width;
@@ -534,12 +414,7 @@ void UCoherentUIGTJSEvent::AddStructArg(class UStructProperty* Arg)
 	UCoherentUIGTJSEvent_AddStructArg_Params params;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -555,12 +430,7 @@ void UCoherentUIGTJSEvent::AddString(const class FString& Str)
 	UCoherentUIGTJSEvent_AddString_Params params;
 	params.Str = Str;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -576,12 +446,7 @@ void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 	UCoherentUIGTJSEvent_AddObject_Params params;
 	params.Object = Object;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -597,12 +462,7 @@ void UCoherentUIGTJSEvent::AddInt32(int integer)
 	UCoherentUIGTJSEvent_AddInt32_Params params;
 	params.integer = integer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -618,12 +478,7 @@ void UCoherentUIGTJSEvent::AddFloat(float fl)
 	UCoherentUIGTJSEvent_AddFloat_Params params;
 	params.fl = fl;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -639,12 +494,7 @@ void UCoherentUIGTJSEvent::AddByte(unsigned char byte)
 	UCoherentUIGTJSEvent_AddByte_Params params;
 	params.byte = byte;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -660,12 +510,7 @@ void UCoherentUIGTJSEvent::AddBool(bool B)
 	UCoherentUIGTJSEvent_AddBool_Params params;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -681,12 +526,7 @@ void UCoherentUIGTJSEvent::AddArray(TArray<int> Array)
 	UCoherentUIGTJSEvent_AddArray_Params params;
 	params.Array = Array;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -704,12 +544,7 @@ void UCoherentUIGTJSPayload::ReadObject(int Index, class UObject* Object)
 	params.Index = Index;
 	params.Object = Object;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -726,12 +561,7 @@ class FString UCoherentUIGTJSPayload::GetString(int Index)
 	UCoherentUIGTJSPayload_GetString_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -750,12 +580,7 @@ float UCoherentUIGTJSPayload::GetNumber(int Index)
 	UCoherentUIGTJSPayload_GetNumber_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -774,12 +599,7 @@ int UCoherentUIGTJSPayload::GetInt32(int Index)
 	UCoherentUIGTJSPayload_GetInt32_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -798,12 +618,7 @@ bool UCoherentUIGTJSPayload::GetBool(int Index)
 	UCoherentUIGTJSPayload_GetBool_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -825,12 +640,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_TriggerJSEvent(class UCoheren
 	params.EventName = EventName;
 	params.JSEvent = JSEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -848,12 +658,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_SetupLoadingScreen(class UObj
 	params.WorldContextObject = WorldContextObject;
 	params.Settings = Settings;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -870,12 +675,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::STATIC_Create
 	UCoherentUIGTBlueprintFunctionLibrary_CreateJSEvent_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -895,12 +695,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddStructArg(class UCoherentU
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -918,12 +713,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddString(class UCoherentUIGT
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -941,12 +731,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddObject(class UCoherentUIGT
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -964,12 +749,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddInt32(class UCoherentUIGTJ
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -987,12 +767,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddFloat(class UCoherentUIGTJ
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1010,12 +785,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddByte(class UCoherentUIGTJS
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1033,12 +803,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddBool(class UCoherentUIGTJS
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1056,12 +821,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArrayOfStructs(class UCohe
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1081,12 +841,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArray(class UCoherentUIGTJ
 	params.Arg = Arg;
 	params.ArrayType = ArrayType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1110,12 +865,7 @@ void ACoherentUIGTGameHUD::SetupUIGTView(const class FString& PageUrl, bool bIsT
 	params.AnimationFrameDefer = AnimationFrameDefer;
 	params.bDelayedUpdate = bDelayedUpdate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1128,12 +878,7 @@ void ACoherentUIGTInputActor::ToggleCoherentUIGTInputFocus()
 
 	ACoherentUIGTInputActor_ToggleCoherentUIGTInputFocus_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1149,12 +894,7 @@ void ACoherentUIGTInputActor::SetLineTraceMode(TEnumAsByte<EGTInputWidgetLineTra
 	ACoherentUIGTInputActor_SetLineTraceMode_Params params;
 	params.Mode = Mode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1170,12 +910,7 @@ void ACoherentUIGTInputActor::SetInputPropagationBehaviour(TEnumAsByte<ECoherent
 	ACoherentUIGTInputActor_SetInputPropagationBehaviour_Params params;
 	params.Propagation = Propagation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1191,12 +926,7 @@ void ACoherentUIGTInputActor::SetCoherentUIGTViewFocus(class UCoherentUIGTBaseCo
 	ACoherentUIGTInputActor_SetCoherentUIGTViewFocus_Params params;
 	params.NewFocusedView = NewFocusedView;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1212,12 +942,7 @@ void ACoherentUIGTInputActor::SetCoherentUIGTInputFocus(bool FocusUI)
 	ACoherentUIGTInputActor_SetCoherentUIGTInputFocus_Params params;
 	params.FocusUI = FocusUI;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1232,12 +957,7 @@ bool ACoherentUIGTInputActor::IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATE
 
 	ACoherentUIGTInputActor_IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1254,12 +974,7 @@ bool ACoherentUIGTInputActor::IsCoherentUIGTFocused()
 
 	ACoherentUIGTInputActor_IsCoherentUIGTFocused_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1283,12 +998,7 @@ void ACoherentUIGTInputActor::Initialize(TEnumAsByte<ECollisionChannel> Collisio
 	params.RaycastQuality = RaycastQuality;
 	params.UVChannel = UVChannel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1303,12 +1013,7 @@ TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> ACoherentUIGTInputActor::Get
 
 	ACoherentUIGTInputActor_GetInputPropagationBehaviour_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1326,12 +1031,7 @@ void ACoherentUIGTInputActor::AlwaysAcceptMouseInput(bool bAccept)
 	ACoherentUIGTInputActor_AlwaysAcceptMouseInput_Params params;
 	params.bAccept = bAccept;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1347,12 +1047,7 @@ void ACoherentUIGTInputActor::AllowJoystickInputWhileUIGTIsFocused_DEPRECATED(bo
 	ACoherentUIGTInputActor_AllowJoystickInputWhileUIGTIsFocused_DEPRECATED_Params params;
 	params.bAllow = bAllow;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1368,12 +1063,7 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromStruct(class UStructProperty* 
 	UCoherentUIGTWidget_UpdateWholeDataModelFromStruct_Params params;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1389,12 +1079,7 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromObject(class UObject* Model)
 	UCoherentUIGTWidget_UpdateWholeDataModelFromObject_Params params;
 	params.Model = Model;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1412,12 +1097,7 @@ void UCoherentUIGTWidget::TriggerJSEvent(const class FString& Name, class UCoher
 	params.Name = Name;
 	params.eventData = eventData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1430,12 +1110,7 @@ void UCoherentUIGTWidget::SynchronizeModels()
 
 	UCoherentUIGTWidget_SynchronizeModels_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1451,12 +1126,7 @@ void UCoherentUIGTWidget::ShowPaintRects(bool show)
 	UCoherentUIGTWidget_ShowPaintRects_Params params;
 	params.show = show;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1472,12 +1142,7 @@ void UCoherentUIGTWidget::SetClickThroughAlphaThreshold(float Threshold)
 	UCoherentUIGTWidget_SetClickThroughAlphaThreshold_Params params;
 	params.Threshold = Threshold;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1490,12 +1155,7 @@ void UCoherentUIGTWidget::Reload()
 
 	UCoherentUIGTWidget_Reload_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1508,12 +1168,7 @@ void UCoherentUIGTWidget::Redraw()
 
 	UCoherentUIGTWidget_Redraw_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1529,12 +1184,7 @@ void UCoherentUIGTWidget::Load(const class FString& path)
 	UCoherentUIGTWidget_Load_Params params;
 	params.path = path;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1549,12 +1199,7 @@ bool UCoherentUIGTWidget::IsTransparent()
 
 	UCoherentUIGTWidget_IsTransparent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1571,12 +1216,7 @@ bool UCoherentUIGTWidget::IsReadyToCreateView()
 
 	UCoherentUIGTWidget_IsReadyToCreateView_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1593,12 +1233,7 @@ bool UCoherentUIGTWidget::IsReadyForBindings()
 
 	UCoherentUIGTWidget_IsReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1615,12 +1250,7 @@ bool UCoherentUIGTWidget::IsDocumentReady()
 
 	UCoherentUIGTWidget_IsDocumentReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1637,12 +1267,7 @@ bool UCoherentUIGTWidget::HasRequestedView()
 
 	UCoherentUIGTWidget_HasRequestedView_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1659,12 +1284,7 @@ float UCoherentUIGTWidget::GetClickThroughAlphaThreshold()
 
 	UCoherentUIGTWidget_GetClickThroughAlphaThreshold_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1679,12 +1299,7 @@ void UCoherentUIGTWidget::EndDebugFrameSave()
 
 	UCoherentUIGTWidget_EndDebugFrameSave_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1697,12 +1312,7 @@ void UCoherentUIGTWidget::DebugSaveNextFrame()
 
 	UCoherentUIGTWidget_DebugSaveNextFrame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1717,12 +1327,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTWidget::CreateJSEvent()
 
 	UCoherentUIGTWidget_CreateJSEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1742,12 +1347,7 @@ void UCoherentUIGTWidget::CreateDataModelFromStruct(const class FString& Name, c
 	params.Name = Name;
 	params.Arg = Arg;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1765,12 +1365,7 @@ void UCoherentUIGTWidget::CreateDataModelFromObject(const class FString& Name, c
 	params.Name = Name;
 	params.Model = Model;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1783,12 +1378,7 @@ void UCoherentUIGTWidget::BeginDebugFrameSave()
 
 	UCoherentUIGTWidget_BeginDebugFrameSave_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

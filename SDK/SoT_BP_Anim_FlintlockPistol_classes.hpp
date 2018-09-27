@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,14 +30,14 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C");
+		static auto ptr = UObject::FindObject<UClass>("AnimBlueprintGeneratedClass BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C");
 		return ptr;
 	}
 
 
 	void AnimNotify_ExitedFire();
-	void OnOneShotUseTriggered(class UClass** InputID, struct FWieldableItemActionVisuals* ActionVisuals);
-	void OnUseStarted(class UClass** InputID, struct FWieldableItemActionVisuals* ActionVisuals);
+	void OnOneShotUseTriggered(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals);
+	void OnUseStarted(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals);
 	void BlueprintInitializeAnimation();
 	void ReloadEventDelegate(const struct FEventProjectileWeaponReload& Event);
 	void BlueprintUninitializeAnimation();

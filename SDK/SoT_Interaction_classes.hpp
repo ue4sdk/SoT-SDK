@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableComponent");
 		return ptr;
 	}
 
@@ -53,16 +53,16 @@ public:
 
 
 // Class Interaction.CharacterInteractionComponent
-// 0x00A0 (0x0670 - 0x05D0)
+// 0x00A0 (0x0680 - 0x05E0)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x98];                                      // 0x05D8(0x0098) MISSED OFFSET
+	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x98];                                      // 0x05E8(0x0098) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.CharacterInteractionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.CharacterInteractionComponent");
 		return ptr;
 	}
 
@@ -82,7 +82,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.GroupedInteractableAreaComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.GroupedInteractableAreaComponent");
 		return ptr;
 	}
 
@@ -102,7 +102,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableArea");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableArea");
 		return ptr;
 	}
 
@@ -127,7 +127,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableInterface");
 		return ptr;
 	}
 
@@ -157,7 +157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableServiceInterface");
 		return ptr;
 	}
 
@@ -169,11 +169,12 @@ public:
 class UInteractableService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class UInteractableArea*>                   InteractableAreas;                                        // 0x0038(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableService");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableService");
 		return ptr;
 	}
 
@@ -188,7 +189,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractorInterface");
 		return ptr;
 	}
 
@@ -206,7 +207,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.MockActorWithCharacterInteractionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockActorWithCharacterInteractionComponent");
 		return ptr;
 	}
 
@@ -222,7 +223,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.MockInteractableService");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockInteractableService");
 		return ptr;
 	}
 
@@ -241,7 +242,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.MockInteractorActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockInteractorActor");
 		return ptr;
 	}
 
@@ -258,7 +259,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.TestActorWithInteractableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Interaction.TestActorWithInteractableComponent");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void AEarthquake::OnRep_EarthquakeState(TEnumAsByte<EEarthquakeState> OldEarthqu
 	AEarthquake_OnRep_EarthquakeState_Params params;
 	params.OldEarthquakeState = OldEarthquakeState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42,12 +37,7 @@ void AGeyser::OnRep_GeyserState()
 
 	AGeyser_OnRep_GeyserState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -60,12 +50,7 @@ void AGeyser::Multicast_TriggerExplosion()
 
 	AGeyser_Multicast_TriggerExplosion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -81,12 +66,7 @@ void ALavaZone::OnRep_ActorsInZone(TArray<class AActor*> PreviousActors)
 	ALavaZone_OnRep_ActorsInZone_Params params;
 	params.PreviousActors = PreviousActors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -99,12 +79,7 @@ void ALavaZone::OnRep_Active()
 
 	ALavaZone_OnRep_Active_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -117,12 +92,7 @@ void ASuperheatedWater::OnRep_PlayersInZone()
 
 	ASuperheatedWater_OnRep_PlayersInZone_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -138,12 +108,7 @@ void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoStat
 	AVolcano_OnRep_VolcanoState_Params params;
 	params.OldVolcanoState = OldVolcanoState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -169,12 +134,7 @@ void AVolcano::Multicast_FireProjectile(class UClass* ProjectileType, const stru
 	params.ProjectileGravityScale = ProjectileGravityScale;
 	params.LaunchAudioPlayEvent = LaunchAudioPlayEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

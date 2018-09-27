@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void UBP_AnimatedStepsComponent_C::StartOpeningSteps()
 
 	UBP_AnimatedStepsComponent_C_StartOpeningSteps_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42,11 +38,7 @@ void UBP_AnimatedStepsComponent_C::SetAllStepsZs(bool OpeningOrClosing, TArray<f
 	UBP_AnimatedStepsComponent_C_SetAllStepsZs_Params params;
 	params.OpeningOrClosing = OpeningOrClosing;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TargetZOffsets != nullptr)
 		*TargetZOffsets = params.TargetZOffsets;
@@ -73,31 +65,23 @@ void UBP_AnimatedStepsComponent_C::UpdateStep(int BoneIndex, float TargetZ, floa
 	params.AttachedBox = AttachedBox;
 	params.BoxOrigin = BoxOrigin;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimatedStepsComponent_C::ReceiveTick(float* DeltaSeconds)
+void UBP_AnimatedStepsComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick");
 
 	UBP_AnimatedStepsComponent_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -110,11 +94,7 @@ void UBP_AnimatedStepsComponent_C::StartOpening()
 
 	UBP_AnimatedStepsComponent_C_StartOpening_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -127,11 +107,7 @@ void UBP_AnimatedStepsComponent_C::OpenImmediate()
 
 	UBP_AnimatedStepsComponent_C_OpenImmediate_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -144,11 +120,7 @@ void UBP_AnimatedStepsComponent_C::Close()
 
 	UBP_AnimatedStepsComponent_C_Close_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -164,11 +136,7 @@ void UBP_AnimatedStepsComponent_C::ExecuteUbergraph_BP_AnimatedStepsComponent(in
 	UBP_AnimatedStepsComponent_C_ExecuteUbergraph_BP_AnimatedStepsComponent_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

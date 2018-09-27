@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,12 +21,7 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StopBroadcastingGame()
 
 	UGameLiveStreamingFunctionLibrary_StopBroadcastingGame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -58,12 +53,7 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StartBroadcastingGame(int FrameRa
 	params.bCaptureAudioFromMicrophone = bCaptureAudioFromMicrophone;
 	params.bDrawSimpleWebCamVideo = bDrawSimpleWebCamVideo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -78,12 +68,7 @@ bool UGameLiveStreamingFunctionLibrary::STATIC_IsBroadcastingGame()
 
 	UGameLiveStreamingFunctionLibrary_IsBroadcastingGame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -102,12 +87,7 @@ class UQueryLiveStreamsCallbackProxy* UQueryLiveStreamsCallbackProxy::STATIC_Que
 	UQueryLiveStreamsCallbackProxy_QueryLiveStreams_Params params;
 	params.GameName = GameName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

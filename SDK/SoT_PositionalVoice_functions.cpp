@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ int UPositionalVoiceTestFunctionLibrary::STATIC_GetNumberOfUnmutedRemotePlayers(
 	UPositionalVoiceTestFunctionLibrary_GetNumberOfUnmutedRemotePlayers_Params params;
 	params.CurrentPlayer = CurrentPlayer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -51,12 +46,7 @@ int UPositionalVoiceTestFunctionLibrary::STATIC_GetNumberOfRegisteredChatEmitter
 	params.WorldContextObject = WorldContextObject;
 	params.VoiceChatRendererClass = VoiceChatRendererClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -73,12 +63,7 @@ int UPositionalVoiceTestFunctionLibrary::STATIC_GetMaxNumberOfAudibleChatEmitter
 
 	UPositionalVoiceTestFunctionLibrary_GetMaxNumberOfAudibleChatEmitters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -95,12 +80,7 @@ struct FVector UVoiceChatEmitterInterface::GetVoiceLocation()
 
 	UVoiceChatEmitterInterface_GetVoiceLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -117,12 +97,7 @@ void UVoiceChatEmitterInterface::GetVoiceAudioEmitterProxy(struct FWwiseEmitter*
 
 	UVoiceChatEmitterInterface_GetVoiceAudioEmitterProxy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (EmitterProxy != nullptr)
 		*EmitterProxy = params.EmitterProxy;
@@ -142,12 +117,7 @@ float UVoiceChatEmitterInterface::GetVoiceAttenuationScaler(const TScriptInterfa
 	UVoiceChatEmitterInterface_GetVoiceAttenuationScaler_Params params;
 	params.RelativeToThisEmitter = RelativeToThisEmitter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -164,12 +134,7 @@ struct FVector ATestVoiceChatEmitter::GetVoiceLocation()
 
 	ATestVoiceChatEmitter_GetVoiceLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -186,12 +151,7 @@ void ATestVoiceChatEmitter::GetVoiceAudioEmitterProxy(struct FWwiseEmitter* Emit
 
 	ATestVoiceChatEmitter_GetVoiceAudioEmitterProxy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (EmitterProxy != nullptr)
 		*EmitterProxy = params.EmitterProxy;
@@ -211,12 +171,7 @@ float ATestVoiceChatEmitter::GetVoiceAttenuationScaler(const TScriptInterface<cl
 	ATestVoiceChatEmitter_GetVoiceAttenuationScaler_Params params;
 	params.RelativeToThisEmitter = RelativeToThisEmitter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

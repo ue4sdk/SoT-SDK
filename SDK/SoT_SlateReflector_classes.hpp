@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateReflector.WidgetReflectorNodeBase");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateReflector.WidgetReflectorNodeBase");
 		return ptr;
 	}
 
@@ -42,7 +42,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateReflector.LiveWidgetReflectorNode");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateReflector.LiveWidgetReflectorNode");
 		return ptr;
 	}
 
@@ -72,7 +72,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateReflector.SnapshotWidgetReflectorNode");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateReflector.SnapshotWidgetReflectorNode");
 		return ptr;
 	}
 

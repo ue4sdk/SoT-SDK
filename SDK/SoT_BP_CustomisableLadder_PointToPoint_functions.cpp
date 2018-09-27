@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,11 +26,7 @@ void ABP_CustomisableLadder_PointToPoint_C::Orientate_Ladder(const struct FVecto
 	params.Point_A = Point_A;
 	params.Point_B = Point_B;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43,11 +39,7 @@ void ABP_CustomisableLadder_PointToPoint_C::UserConstructionScript()
 
 	ABP_CustomisableLadder_PointToPoint_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -60,11 +52,7 @@ void ABP_CustomisableLadder_PointToPoint_C::ReceiveBeginPlay()
 
 	ABP_CustomisableLadder_PointToPoint_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -80,11 +68,7 @@ void ABP_CustomisableLadder_PointToPoint_C::ExecuteUbergraph_BP_CustomisableLadd
 	ABP_CustomisableLadder_PointToPoint_C_ExecuteUbergraph_BP_CustomisableLadder_PointToPoint_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

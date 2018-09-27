@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ struct UBP_Anim_GhostShipCaptain_C_EvaluateGraphExposedInputs_ExecuteUbergraph_B
 // Function BP_Anim_GhostShipCaptain.BP_Anim_GhostShipCaptain_C.BlueprintUpdateAnimation
 struct UBP_Anim_GhostShipCaptain_C_BlueprintUpdateAnimation_Params
 {
-	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Anim_GhostShipCaptain.BP_Anim_GhostShipCaptain_C.ExecuteUbergraph_BP_Anim_GhostShipCaptain

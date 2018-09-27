@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataStoreId");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataStoreId");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationData");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationData");
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataContainingNoDuplicateStructs");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataContainingNoDuplicateStructs");
 		return ptr;
 	}
 
@@ -71,7 +71,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataContainingThreeInstancesOfTheSameStruct");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataContainingThreeInstancesOfTheSameStruct");
 		return ptr;
 	}
 
@@ -86,7 +86,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataFunctionLib");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataFunctionLib");
 		return ptr;
 	}
 
@@ -107,7 +107,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataStore");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataStore");
 		return ptr;
 	}
 
@@ -123,7 +123,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataStoreAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataStoreAsset");
 		return ptr;
 	}
 
@@ -141,7 +141,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataTestIdOne");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataTestIdOne");
 		return ptr;
 	}
 
@@ -156,7 +156,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataTestIdTwo");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataTestIdTwo");
 		return ptr;
 	}
 
@@ -171,7 +171,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.AnimationDataStoreInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataStoreInterface");
 		return ptr;
 	}
 
@@ -181,14 +181,14 @@ public:
 
 
 // Class Animation.ClientSkeletalMeshComponent
-// 0x0000 (0x09A0 - 0x09A0)
+// 0x0000 (0x09B0 - 0x09B0)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.ClientSkeletalMeshComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.ClientSkeletalMeshComponent");
 		return ptr;
 	}
 
@@ -203,7 +203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.DockableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.DockableInterface");
 		return ptr;
 	}
 
@@ -221,13 +221,13 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.DockerBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.DockerBlueprintFunctions");
 		return ptr;
 	}
 
 
 	void STATIC_UpdateDock(float DeltaTime, struct FDocker* Docker);
-	void STATIC_StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, struct FDocker* Docker);
+	void STATIC_StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, float DelayAfterDocking, struct FDocker* Docker);
 	bool STATIC_IsFullyDocked(struct FDocker* Docker);
 	bool STATIC_IsDocking(struct FDocker* Docker);
 	struct FVector STATIC_GetTargetLocalOffset(const struct FDocker& Docker);
@@ -243,7 +243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.DockerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.DockerInterface");
 		return ptr;
 	}
 
@@ -258,7 +258,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.IndexedPlayableMontagesInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.IndexedPlayableMontagesInterface");
 		return ptr;
 	}
 
@@ -273,7 +273,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.LimbIKFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.LimbIKFunctionLibrary");
 		return ptr;
 	}
 
@@ -309,7 +309,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.LocomotionFunctionLib");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.LocomotionFunctionLib");
 		return ptr;
 	}
 
@@ -328,7 +328,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.NetworkSyncedAnimationInstanceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.NetworkSyncedAnimationInstanceInterface");
 		return ptr;
 	}
 
@@ -352,7 +352,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.NetworkSyncedAnimationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.NetworkSyncedAnimationComponent");
 		return ptr;
 	}
 
@@ -370,7 +370,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.RemoteAnimPlayableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.RemoteAnimPlayableInterface");
 		return ptr;
 	}
 
@@ -385,7 +385,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.TurningFunctionLib");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.TurningFunctionLib");
 		return ptr;
 	}
 
@@ -404,7 +404,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.WaitForAnimationStateEntryProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.WaitForAnimationStateEntryProxy");
 		return ptr;
 	}
 
@@ -425,7 +425,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Animation.WaitForAnimationStateExitProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.WaitForAnimationStateExitProxy");
 		return ptr;
 	}
 

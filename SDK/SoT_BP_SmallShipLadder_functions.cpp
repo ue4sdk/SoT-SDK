@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ struct FDockableInfo ABP_SmallShipLadder_C::GetDockableInfo()
 
 	ABP_SmallShipLadder_C_GetDockableInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -46,11 +42,7 @@ void ABP_SmallShipLadder_C::Setup_Spline(class USplineComponent* Spline, TArray<
 	ABP_SmallShipLadder_C_Setup_Spline_Params params;
 	params.Spline = Spline;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Positions != nullptr)
 		*Positions = params.Positions;
@@ -60,21 +52,17 @@ void ABP_SmallShipLadder_C::Setup_Spline(class USplineComponent* Spline, TArray<
 // Function BP_SmallShipLadder.BP_SmallShipLadder_C.CanInteract
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor**                 InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SmallShipLadder_C::CanInteract(class AActor** InInteractor)
+bool ABP_SmallShipLadder_C::CanInteract(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadder.BP_SmallShipLadder_C.CanInteract");
 
 	ABP_SmallShipLadder_C_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -89,11 +77,7 @@ void ABP_SmallShipLadder_C::UserConstructionScript()
 
 	ABP_SmallShipLadder_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ struct FText ABP_AmmoChest_C::GetObjectDisplayName()
 
 	ABP_AmmoChest_C_GetObjectDisplayName_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36,22 +32,18 @@ struct FText ABP_AmmoChest_C::GetObjectDisplayName()
 // Function BP_AmmoChest.BP_AmmoChest_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector*                ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_AmmoChest_C::GetClosestInteractionPoint(struct FVector* ReferencePosition, float* OutInteractionPointRadius)
+struct FVector ABP_AmmoChest_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.GetClosestInteractionPoint");
 
 	ABP_AmmoChest_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutInteractionPointRadius != nullptr)
 		*OutInteractionPointRadius = params.OutInteractionPointRadius;
@@ -69,11 +61,7 @@ void ABP_AmmoChest_C::UserConstructionScript()
 
 	ABP_AmmoChest_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -86,51 +74,39 @@ void ABP_AmmoChest_C::ReceiveBeginPlay()
 
 	ABP_AmmoChest_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Client
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor**                 InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AmmoChest_C::Blueprint_OnInteract_Client(class AActor** InInteractor)
+void ABP_AmmoChest_C::Blueprint_OnInteract_Client(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Client");
 
 	ABP_AmmoChest_C_Blueprint_OnInteract_Client_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Server
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor**                 InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AmmoChest_C::Blueprint_OnInteract_Server(class AActor** InInteractor)
+void ABP_AmmoChest_C::Blueprint_OnInteract_Server(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Server");
 
 	ABP_AmmoChest_C_Blueprint_OnInteract_Server_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -146,11 +122,7 @@ void ABP_AmmoChest_C::ExecuteUbergraph_BP_AmmoChest(int EntryPoint)
 	ABP_AmmoChest_C_ExecuteUbergraph_BP_AmmoChest_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

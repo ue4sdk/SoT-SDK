@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseAudioSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseAudioSettings");
 		return ptr;
 	}
 
@@ -66,7 +66,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseBank");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseBank");
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseSubSystemInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseSubSystemInterface");
 		return ptr;
 	}
 
@@ -97,7 +97,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseDebugManager");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseDebugManager");
 		return ptr;
 	}
 
@@ -113,7 +113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseEmitterManager");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseEmitterManager");
 		return ptr;
 	}
 
@@ -137,7 +137,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseEvent");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseEvent");
 		return ptr;
 	}
 
@@ -159,7 +159,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseInputManager");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseInputManager");
 		return ptr;
 	}
 
@@ -175,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseMediaManager");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseMediaManager");
 		return ptr;
 	}
 
@@ -191,7 +191,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwisePersistentContentStore");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwisePersistentContentStore");
 		return ptr;
 	}
 
@@ -207,7 +207,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class WwiseAudio.WwiseSoundFrameManager");
+		static auto ptr = UObject::FindObject<UClass>("Class WwiseAudio.WwiseSoundFrameManager");
 		return ptr;
 	}
 

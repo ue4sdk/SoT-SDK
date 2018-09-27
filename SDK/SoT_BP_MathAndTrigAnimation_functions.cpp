@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,11 +28,7 @@ void UBP_MathAndTrigAnimation_C::STATIC_DisplayAllCharacterSockets(class AAthena
 	params.Size = Size;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -51,11 +47,7 @@ void UBP_MathAndTrigAnimation_C::STATIC_DecrementFloat(float DecrementValue, cla
 	params.DecrementValue = DecrementValue;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Float != nullptr)
 		*Float = params.Float;
@@ -77,11 +69,7 @@ void UBP_MathAndTrigAnimation_C::STATIC_Increment_Float(float Incement_Value, cl
 	params.Incement_Value = Incement_Value;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Float != nullptr)
 		*Float = params.Float;
@@ -105,11 +93,7 @@ void UBP_MathAndTrigAnimation_C::STATIC_Apply_Relative_Transform(const struct FT
 	params.BaseTransform = BaseTransform;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (CombinedTransform != nullptr)
 		*CombinedTransform = params.CombinedTransform;
@@ -133,11 +117,7 @@ void UBP_MathAndTrigAnimation_C::STATIC_Calculate_Relative_Transform(const struc
 	params.BaseObjectsWorldTransform = BaseObjectsWorldTransform;
 	params.__WorldContext = __WorldContext;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (RealtiveOffsetTransform != nullptr)
 		*RealtiveOffsetTransform = params.RealtiveOffsetTransform;

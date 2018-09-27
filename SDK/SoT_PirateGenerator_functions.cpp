@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ class UClass* UAnimationSwitchDataAsset::GetAnimSetIdForDesc(const struct FPirat
 	UAnimationSwitchDataAsset_GetAnimSetIdForDesc_Params params;
 	params.Desc = Desc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -50,12 +45,7 @@ void UCharacterMeshBakeFunctionLibrary::STATIC_BakeCharacterMeshAsync(class UCha
 	params.CharacterMeshSpecification = CharacterMeshSpecification;
 	params.AsyncResult = AsyncResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -72,12 +62,7 @@ class USkeletalMesh* UCharacterMeshBakeFunctionLibrary::STATIC_BakeCharacterMesh
 	UCharacterMeshBakeFunctionLibrary_BakeCharacterMesh_Params params;
 	params.CharacterMeshSpecification = CharacterMeshSpecification;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -95,11 +80,7 @@ void UCharacterMeshBakeFunctionLibrary::AsyncBakeResultDynamic__DelegateSignatur
 	UCharacterMeshBakeFunctionLibrary_AsyncBakeResultDynamic__DelegateSignature_Params params;
 	params.Mesh = Mesh;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -117,12 +98,7 @@ void UCharacterMeshBakeFunctionLibrary::STATIC_AppendCharacterBlendShapes(class 
 	params.CharacterMeshSpecification = CharacterMeshSpecification;
 	params.BlendShapes = BlendShapes;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -137,12 +113,7 @@ class UCharacterMeshBakeSpecification* UCharacterMeshBakeTestFunctionLibrary::ST
 
 	UCharacterMeshBakeTestFunctionLibrary_MakeCharacterMeshSpecification_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -167,12 +138,7 @@ void UCharacterMeshBakeTestFunctionLibrary::STATIC_BlendMeshWithMeshPatchAssets(
 	params.MeshPatchAssets = MeshPatchAssets;
 	params.MeshPatchAssetWeights = MeshPatchAssetWeights;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TargetMesh != nullptr)
 		*TargetMesh = params.TargetMesh;
@@ -192,12 +158,7 @@ class USkeletalMesh* UCharacterMeshBakeTestFunctionLibrary::STATIC_BakeCharacter
 	UCharacterMeshBakeTestFunctionLibrary_BakeCharacterMeshFromClassDefault_Params params;
 	params.CharacterMeshBakeSpecificationClass = CharacterMeshBakeSpecificationClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -218,12 +179,7 @@ bool UCharacterMeshBakeTestFunctionLibrary::STATIC_AreMeshesEquivalentByMeshPatc
 	params.MeshA = MeshA;
 	params.MeshB = MeshB;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -244,12 +200,7 @@ class FString UFileAccessFunctionLibrary::STATIC_GetMeshPatchAssetPathFromMeshPa
 	params.MeshPath = MeshPath;
 	params.TypeName = TypeName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -270,12 +221,7 @@ class UMeshPatchAsset* UFileAccessFunctionLibrary::STATIC_GetMeshPatchAssetForMe
 	params.Mesh = Mesh;
 	params.TypeName = TypeName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -300,12 +246,7 @@ class FString UPirateBodyShapeFunctionLibrary::STATIC_GetHighestWeighted(float B
 	params.BodyShapeBlendWeights = BodyShapeBlendWeights;
 	params.Threshold = Threshold;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -329,12 +270,7 @@ bool UPirateBodyShapeFunctionLibrary::STATIC_FindBodyBlendsFromBodyShapeWheelRad
 	params.Gender = Gender;
 	params.BodyShapeWheelRadialCoordinate = BodyShapeWheelRadialCoordinate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (BaseMeshBlendWeight != nullptr)
 		*BaseMeshBlendWeight = params.BaseMeshBlendWeight;
@@ -360,12 +296,7 @@ struct FRadialCoordinate UPirateBodyShapeFunctionLibrary::STATIC_ConvertToRadial
 	UPirateBodyShapeFunctionLibrary_ConvertToRadialCoordinate_Params params;
 	params.UV = UV;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -384,12 +315,7 @@ struct FVector2D UPirateBodyShapeFunctionLibrary::STATIC_ConvertFromRadialCoordi
 	UPirateBodyShapeFunctionLibrary_ConvertFromRadialCoordinate_Params params;
 	params.Coord = Coord;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -410,12 +336,7 @@ bool UPirateGeneratorFunctionLibrary::STATIC_SavePirateDescription(const class F
 	params.RelativePath = RelativePath;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -434,12 +355,7 @@ struct FRadialCoordinate UPirateGeneratorFunctionLibrary::STATIC_RandomBodyShape
 	UPirateGeneratorFunctionLibrary_RandomBodyShape_Params params;
 	params.Seed = Seed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -459,12 +375,7 @@ bool UPirateGeneratorFunctionLibrary::STATIC_LoadPirateDescription(const class F
 	UPirateGeneratorFunctionLibrary_LoadPirateDescription_Params params;
 	params.RelativePath = RelativePath;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutDesc != nullptr)
 		*OutDesc = params.OutDesc;
@@ -489,12 +400,7 @@ void UPirateGeneratorFunctionLibrary::STATIC_K2_BakeFromDescriptionGameThread(co
 	params.Desc = Desc;
 	params.Flags = Flags;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutMesh != nullptr)
 		*OutMesh = params.OutMesh;
@@ -514,12 +420,7 @@ int UPirateGeneratorFunctionLibrary::STATIC_IPGLatestVersion()
 
 	UPirateGeneratorFunctionLibrary_IPGLatestVersion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -540,12 +441,7 @@ int UPirateGeneratorFunctionLibrary::STATIC_GetSeedFromString(const class FStrin
 	params.RefName = RefName;
 	params.Str = Str;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -564,12 +460,7 @@ void UPirateGeneratorFunctionLibrary::STATIC_GetAllTextureReferences(class USkel
 	UPirateGeneratorFunctionLibrary_GetAllTextureReferences_Params params;
 	params.Mesh = Mesh;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutReferences != nullptr)
 		*OutReferences = params.OutReferences;
@@ -587,12 +478,7 @@ TArray<class FString> UPirateGeneratorFunctionLibrary::STATIC_GetAllDescriptions
 
 	UPirateGeneratorFunctionLibrary_GetAllDescriptions_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -627,12 +513,7 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::STATIC_GenerateRandom
 	params.TextureReferences = TextureReferences;
 	params.ScalarParameters = ScalarParameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -665,12 +546,7 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::STATIC_GenerateRandom
 	params.TextureReferences = TextureReferences;
 	params.ScalarParameters = ScalarParameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -692,12 +568,7 @@ void UPirateGeneratorFunctionLibrary::STATIC_BakeFromDescriptionAsync(const stru
 	params.Flags = Flags;
 	params.AsyncResult = AsyncResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -725,12 +596,7 @@ void UPreparePirateMeshBakeTestFunctionLibrary::STATIC_PopulateSkeletonBlendsInC
 	params.BodyShapeBlendNames = BodyShapeBlendNames;
 	params.BodyShapeBlendWeights = BodyShapeBlendWeights;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -754,12 +620,7 @@ void UPreparePirateMeshBakeTestFunctionLibrary::STATIC_PopulateBlendedSubMeshesI
 	params.BodyShapeBlendNames = BodyShapeBlendNames;
 	params.BodyShapeBlendWeights = BodyShapeBlendWeights;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -776,12 +637,7 @@ float UWardrobeOutfitDataAsset::GetBiasForCategory(const struct FName& Name)
 	UWardrobeOutfitDataAsset_GetBiasForCategory_Params params;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -807,12 +663,7 @@ void UWardrobeFunctionLibrary::STATIC_PickOutfitAsync(TArray<struct FName> Cloth
 	params.Gender = Gender;
 	params.AsyncResult = AsyncResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -836,12 +687,7 @@ bool UWardrobeFunctionLibrary::STATIC_PickOutfit(TArray<struct FName> ClothingIt
 	params.PirateType = PirateType;
 	params.Gender = Gender;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Result != nullptr)
 		*Result = params.Result;
@@ -867,12 +713,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetRandomWardrobeItemsWith
 	params.InputItems = InputItems;
 	params.BiasPerCategory = BiasPerCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -893,12 +734,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetRandomWardrobeItems(int
 	params.Seed = Seed;
 	params.InputItems = InputItems;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -921,12 +757,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetRandomOutfit(class UWar
 	params.Seed = Seed;
 	params.Gender = Gender;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -943,12 +774,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeTypes()
 
 	UWardrobeFunctionLibrary_GetAllWardrobeTypes_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -971,12 +797,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItemsForType
 	params.PirateType = PirateType;
 	params.bWithExclusions = bWithExclusions;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -995,12 +816,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItems(TEnumA
 	UWardrobeFunctionLibrary_GetAllWardrobeItems_Params params;
 	params.PirateType = PirateType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1025,12 +841,7 @@ bool UWardrobeFunctionLibrary::STATIC_CanLoadOutfit(TArray<struct FName> Clothin
 	params.PirateType = PirateType;
 	params.Gender = Gender;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1050,11 +861,7 @@ void UWardrobeFunctionLibrary::AsyncOutfitResultDynamic__DelegateSignature(bool 
 	params.Success = Success;
 	params.Meshes = Meshes;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

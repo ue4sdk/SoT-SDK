@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 	void StartOpeningSteps();
 	void SetAllStepsZs(bool OpeningOrClosing, TArray<float>* TargetZOffsets);
 	void UpdateStep(int BoneIndex, float TargetZ, float MovementDelay, class UBoxComponent* AttachedBox, const struct FVector& BoxOrigin);
-	void ReceiveTick(float* DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void StartOpening();
 	void OpenImmediate();
 	void Close();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Occlusion.OcclusionFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionFunctionLibrary");
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Occlusion.OcclusionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionInterface");
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Occlusion.OcclusionMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionMock");
 		return ptr;
 	}
 
@@ -73,7 +73,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Occlusion.OcclusionService");
+		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionService");
 		return ptr;
 	}
 

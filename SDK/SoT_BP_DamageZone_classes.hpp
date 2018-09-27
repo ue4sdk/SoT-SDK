@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_DamageZone.BP_DamageZone_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_DamageZone.BP_DamageZone_C");
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 	void UserConstructionScript();
 	void AddExternalHit(const struct FHullDamageHit& Hit_Data);
 	void ClearDecalFlags();
-	void OnRepairableStateUpdate(TEnumAsByte<ERepairableState>* InRepairableState);
+	void OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InRepairableState);
 	void OnInitialise();
 	void ExecuteUbergraph_BP_DamageZone(int EntryPoint);
 };

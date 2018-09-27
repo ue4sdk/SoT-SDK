@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class DebugMenu.DebugMenuComponent
-// 0x0048 (0x0120 - 0x00D8)
+// 0x0050 (0x0128 - 0x00D8)
 class UDebugMenuComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D8(0x0020) MISSED OFFSET
-	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0100(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x00D8(0x0028) MISSED OFFSET
+	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0108(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuComponent");
 		return ptr;
 	}
 
@@ -40,7 +40,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuEntryGenerator");
+		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuEntryGenerator");
 		return ptr;
 	}
 
@@ -59,7 +59,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuDataAsset");
 		return ptr;
 	}
 
@@ -75,7 +75,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenu");
+		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenu");
 		return ptr;
 	}
 
@@ -83,15 +83,15 @@ public:
 
 
 // Class DebugMenu.DebugMenuComponentMock
-// 0x0008 (0x0128 - 0x0120)
+// 0x0008 (0x0130 - 0x0128)
 class UDebugMenuComponentMock : public UDebugMenuComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0120(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0128(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuComponentMock");
 		return ptr;
 	}
 
@@ -106,7 +106,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuTestFunctions");
 		return ptr;
 	}
 

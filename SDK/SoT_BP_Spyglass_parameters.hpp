@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ struct ABP_Spyglass_C_UserConstructionScript_Params
 // Function BP_Spyglass.BP_Spyglass_C.ReceiveTick
 struct ABP_Spyglass_C_ReceiveTick_Params
 {
-	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Spyglass.BP_Spyglass_C.ScopeOn

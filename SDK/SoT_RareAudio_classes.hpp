@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class RareAudio.WwiseEmitterComponent
-// 0x0030 (0x02D0 - 0x02A0)
+// 0x0030 (0x02E0 - 0x02B0)
 class UWwiseEmitterComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FWwiseEmitter                               Emitter;                                                  // 0x02A8(0x0020) (BlueprintVisible, BlueprintReadOnly)
-	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FWwiseEmitter                               Emitter;                                                  // 0x02B8(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwiseEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterComponent");
 		return ptr;
 	}
 
@@ -33,15 +33,15 @@ public:
 
 
 // Class RareAudio.AnimNotifyWwiseEmitterComponent
-// 0x0030 (0x0300 - 0x02D0)
+// 0x0030 (0x0310 - 0x02E0)
 class UAnimNotifyWwiseEmitterComponent : public UWwiseEmitterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x02D0(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x02E0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AnimNotifyWwiseEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AnimNotifyWwiseEmitterComponent");
 		return ptr;
 	}
 
@@ -56,7 +56,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwiseEmitterBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterBlueprintLibrary");
 		return ptr;
 	}
 
@@ -102,7 +102,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AnimNotify_WwiseSound");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AnimNotify_WwiseSound");
 		return ptr;
 	}
 
@@ -120,7 +120,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AnimNotifyState_WwiseSound");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AnimNotifyState_WwiseSound");
 		return ptr;
 	}
 
@@ -135,7 +135,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwiseEmitterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterInterface");
 		return ptr;
 	}
 
@@ -154,7 +154,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwiseObjectPoolWrapper");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseObjectPoolWrapper");
 		return ptr;
 	}
 
@@ -170,7 +170,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioEventToComponentMap");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioEventToComponentMap");
 		return ptr;
 	}
 
@@ -190,7 +190,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioEventToComponentMapComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioEventToComponentMapComponent");
 		return ptr;
 	}
 
@@ -210,7 +210,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.StaticMeshAudioDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.StaticMeshAudioDataAsset");
 		return ptr;
 	}
 
@@ -225,7 +225,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioIslandStaticMeshAssociatorBase");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioIslandStaticMeshAssociatorBase");
 		return ptr;
 	}
 
@@ -243,7 +243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioSpaceDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioSpaceDataAsset");
 		return ptr;
 	}
 
@@ -253,21 +253,21 @@ public:
 
 
 // Class RareAudio.AudioPortalComponent
-// 0x0030 (0x02D0 - 0x02A0)
+// 0x0030 (0x02E0 - 0x02B0)
 class UAudioPortalComponent : public USceneComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioInsideSpace;                                         // 0x02A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAudioSpaceDataAsset*                        AudioOutsideSpace;                                        // 0x02A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PortalTriggerDistance;                                    // 0x02B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InsideRtpcUpdateDistance;                                 // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OutsideRtpcUpdateDistance;                                // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               TrackAttachmentToActor;                                   // 0x02BC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x13];                                      // 0x02BD(0x0013) MISSED OFFSET
+	class UAudioSpaceDataAsset*                        AudioInsideSpace;                                         // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAudioSpaceDataAsset*                        AudioOutsideSpace;                                        // 0x02B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PortalTriggerDistance;                                    // 0x02C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InsideRtpcUpdateDistance;                                 // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OutsideRtpcUpdateDistance;                                // 0x02C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TrackAttachmentToActor;                                   // 0x02CC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x13];                                      // 0x02CD(0x0013) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioPortalComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioPortalComponent");
 		return ptr;
 	}
 
@@ -284,7 +284,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioPortalInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioPortalInterface");
 		return ptr;
 	}
 
@@ -305,7 +305,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioPortalService");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioPortalService");
 		return ptr;
 	}
 
@@ -313,16 +313,16 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0010 (0x0630 - 0x0620)
+// 0x0010 (0x0640 - 0x0630)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x0620(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0628(0x0008) MISSED OFFSET
+	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x0630(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioSpaceComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioSpaceComponent");
 		return ptr;
 	}
 
@@ -341,7 +341,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.AudioSpaceTrackerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioSpaceTrackerComponent");
 		return ptr;
 	}
 
@@ -359,7 +359,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.RareAudioHardwareDeviceService");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.RareAudioHardwareDeviceService");
 		return ptr;
 	}
 
@@ -367,15 +367,15 @@ public:
 
 
 // Class RareAudio.StaticMeshAudioEmittersComponent
-// 0x0010 (0x02B0 - 0x02A0)
+// 0x0010 (0x02C0 - 0x02B0)
 class UStaticMeshAudioEmittersComponent : public USceneComponent
 {
 public:
-	TArray<struct FStaticMeshComponentAudioAssociation> InstanceAssociations;                                     // 0x02A0(0x0010) (ZeroConstructor)
+	TArray<struct FStaticMeshComponentAudioAssociation> InstanceAssociations;                                     // 0x02B0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.StaticMeshAudioEmittersComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.StaticMeshAudioEmittersComponent");
 		return ptr;
 	}
 
@@ -394,7 +394,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.TritonAcousticMap");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonAcousticMap");
 		return ptr;
 	}
 
@@ -402,17 +402,17 @@ public:
 
 
 // Class RareAudio.TritonComponent
-// 0x0010 (0x02B0 - 0x02A0)
+// 0x0010 (0x02C0 - 0x02B0)
 class UTritonComponent : public USceneComponent
 {
 public:
-	class UTritonAcousticMap*                          TritonMapAsset;                                           // 0x02A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TritonEffectRadius;                                       // 0x02A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x02AC(0x0004) MISSED OFFSET
+	class UTritonAcousticMap*                          TritonMapAsset;                                           // 0x02B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TritonEffectRadius;                                       // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x02BC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.TritonComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonComponent");
 		return ptr;
 	}
 
@@ -427,7 +427,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.TritonInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonInterface");
 		return ptr;
 	}
 
@@ -445,7 +445,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.TritonService");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonService");
 		return ptr;
 	}
 
@@ -460,7 +460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwiseEmitterComponentBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterComponentBlueprintLibrary");
 		return ptr;
 	}
 
@@ -479,7 +479,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor");
 		return ptr;
 	}
 
@@ -495,7 +495,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareAudio.WwisePoolManager");
+		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwisePoolManager");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.AnimationSwitchDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.AnimationSwitchDataAsset");
 		return ptr;
 	}
 
@@ -42,7 +42,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.CharacterMeshBakeFunctionLibrary");
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.SkeletonsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.SkeletonsDataAsset");
 		return ptr;
 	}
 
@@ -88,7 +88,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeSpecification");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.CharacterMeshBakeSpecification");
 		return ptr;
 	}
 
@@ -103,7 +103,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeTestFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.CharacterMeshBakeTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -124,7 +124,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.ColorTexture");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.ColorTexture");
 		return ptr;
 	}
 
@@ -139,7 +139,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.FileAccessFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.FileAccessFunctionLibrary");
 		return ptr;
 	}
 
@@ -158,7 +158,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.MaterialReferencesDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.MaterialReferencesDataAsset");
 		return ptr;
 	}
 
@@ -173,7 +173,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateBodyShapeFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.PirateBodyShapeFunctionLibrary");
 		return ptr;
 	}
 
@@ -194,7 +194,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorMaterials");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.PirateGeneratorMaterials");
 		return ptr;
 	}
 
@@ -209,7 +209,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.PirateGeneratorFunctionLibrary");
 		return ptr;
 	}
 
@@ -250,7 +250,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.PirateGeneratorSettings");
 		return ptr;
 	}
 
@@ -265,7 +265,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -285,7 +285,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitch");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.TextureSwitch");
 		return ptr;
 	}
 
@@ -306,7 +306,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchBySeed");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.TextureSwitchBySeed");
 		return ptr;
 	}
 
@@ -322,7 +322,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByGender");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.TextureSwitchByGender");
 		return ptr;
 	}
 
@@ -338,7 +338,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByEthnicity");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.TextureSwitchByEthnicity");
 		return ptr;
 	}
 
@@ -354,7 +354,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByBodyShape");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.TextureSwitchByBodyShape");
 		return ptr;
 	}
 
@@ -371,7 +371,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByItem");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.TextureSwitchByItem");
 		return ptr;
 	}
 
@@ -388,7 +388,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.ColorTextureSwitchBySeed");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.ColorTextureSwitchBySeed");
 		return ptr;
 	}
 
@@ -404,7 +404,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeExcludeDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.WardrobeExcludeDataAsset");
 		return ptr;
 	}
 
@@ -422,7 +422,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.WardrobeDataAsset");
 		return ptr;
 	}
 
@@ -440,7 +440,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeOutfitDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.WardrobeOutfitDataAsset");
 		return ptr;
 	}
 
@@ -457,7 +457,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PirateGenerator.WardrobeFunctionLibrary");
 		return ptr;
 	}
 

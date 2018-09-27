@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,10 +25,8 @@ enum class EAIDebugColour : uint8_t
 {
 	EAIDebugColour__Red            = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAIDebugColour__Yellow         = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EAIDebugColour__Yellow         = 2,
+	None01                         = 3
 };
 
 
@@ -38,8 +36,7 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3,
-	EWaterSplashProbeType__ThresholdedRateOfChange = 4
+	None01                         = 3
 };
 
 
@@ -48,10 +45,8 @@ enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	AISpawnRequestState__WaitForLocationCheck = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	AISpawnRequestState__WaitForLocationCheck = 2,
+	None01                         = 3
 };
 
 
@@ -139,10 +134,9 @@ enum class EBlackboardValueComparisonType : uint8_t
 {
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EBlackboardValueComparisonType__GreaterThanEquals = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EBlackboardValueComparisonType__GreaterThanEquals = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -151,10 +145,8 @@ enum class EFloatValueComparisonType : uint8_t
 {
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EFloatValueComparisonType__GreaterThanEquals = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EFloatValueComparisonType__GreaterThanEquals = 2,
+	None01                         = 3
 };
 
 
@@ -227,7 +219,7 @@ enum class ETinySharkState : uint8_t
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
 	None01                         = 3,
-	NoCulling                      = 4
+	CameraFacing_NoneUP            = 4
 };
 
 
@@ -236,10 +228,8 @@ enum class EAISpawnRequestResult : uint8_t
 {
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	AISpawnRequestResult__FailedNoValidPos = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	AISpawnRequestResult__FailedNoValidPos = 2,
+	None01                         = 3
 };
 
 
@@ -1030,7 +1020,7 @@ struct FEventOwnedPawnFinishedSpawning
 	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	class UAthenaAIControllerParamsDataAsset*          Skillset;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       HomeRegionZone;                                           // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      TargetInteractableOnSpawn;                                // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     TargetInteractableOnSpawn;                                // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.PeriodicAINoiseEventAggregateTickFunction

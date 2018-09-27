@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Default.AD_FirstPerson_PlayerPirate_Female_Default_C
-// 0x0380 (0x03A8 - 0x0028)
+// 0x03E8 (0x0410 - 0x0028)
 class UAD_FirstPerson_PlayerPirate_Female_Default_C : public UAnimationData
 {
 public:
@@ -31,12 +31,12 @@ public:
 	unsigned char                                      UnknownData00[0x6];                                       // 0x02B2(0x0006) MISSED OFFSET
 	struct FADS_DeathNative                            Death;                                                    // 0x02B8(0x0020) (Edit, BlueprintVisible)
 	struct FADS_CannonNative                           Cannon;                                                   // 0x02D8(0x0038) (Edit, BlueprintVisible)
-	struct FADS_RowingBoatNative                       Rowboat;                                                  // 0x0310(0x0030) (Edit, BlueprintVisible)
-	struct FADS_WhisperingNative                       Whispering;                                               // 0x0340(0x0068) (Edit, BlueprintVisible)
+	struct FADS_RowingBoatNative                       Rowboat;                                                  // 0x0310(0x0098) (Edit, BlueprintVisible)
+	struct FADS_WhisperingNative                       Whispering;                                               // 0x03A8(0x0068) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Default.AD_FirstPerson_PlayerPirate_Female_Default_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Default.AD_FirstPerson_PlayerPirate_Female_Default_C");
 		return ptr;
 	}
 

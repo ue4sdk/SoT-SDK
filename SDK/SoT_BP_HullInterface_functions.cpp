@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,11 +31,7 @@ void UBP_HullInterface_C::Apply_Hit(const struct FVector& HitPosition, const str
 	params.HitStrength = HitStrength;
 	params.Has_Decal = Has_Decal;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Decal != nullptr)
 		*Decal = params.Decal;

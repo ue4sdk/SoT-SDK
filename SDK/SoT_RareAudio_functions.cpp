@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,12 +26,7 @@ void UWwiseEmitterBlueprintLibrary::STATIC_WwiseSetState(const struct FName& Sta
 	params.StateGroup = StateGroup;
 	params.StateValue = StateValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -49,12 +44,7 @@ void UWwiseEmitterBlueprintLibrary::STATIC_WwiseSetGlobalRTPC(const struct FName
 	params.RTPCName = RTPCName;
 	params.RTPCValue = RTPCValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -70,12 +60,7 @@ void UWwiseEmitterBlueprintLibrary::STATIC_WwisePostGlobalEvent(class UWwiseEven
 	UWwiseEmitterBlueprintLibrary_WwisePostGlobalEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -101,12 +86,7 @@ int UWwiseEmitterBlueprintLibrary::STATIC_WwisePostEventAtLocation(class UWwiseE
 	params.EmitterPool = EmitterPool;
 	params.Relationship = Relationship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Emitter != nullptr)
 		*Emitter = params.Emitter;
@@ -129,12 +109,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseGetListenerInfo(int Viewport, st
 	UWwiseEmitterBlueprintLibrary_WwiseGetListenerInfo_Params params;
 	params.Viewport = Viewport;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InfoOut != nullptr)
 		*InfoOut = params.InfoOut;
@@ -167,12 +142,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseGetListenerEmitter(class UObject
 	params.bFollowOrientaion = bFollowOrientaion;
 	params.EmitterPool = EmitterPool;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Emitter != nullptr)
 		*Emitter = params.Emitter;
@@ -201,12 +171,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseGetEmitter(const struct FName& N
 	params.EmitterPool = EmitterPool;
 	params.Offset = Offset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Emitter != nullptr)
 		*Emitter = params.Emitter;
@@ -234,12 +199,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterWaitToComplete(const stru
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -262,12 +222,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterStop(const struct FWwiseE
 	params.PlayId = PlayId;
 	params.FadeTime = FadeTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -290,12 +245,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterSetRTPCOnAll(TArray<struc
 	params.Name = Name;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -318,12 +268,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterSetRTPC(const struct FWwi
 	params.Name = Name;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -344,12 +289,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterSetParams(const struct FW
 	params.Emitter = Emitter;
 	params.Params = Params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -370,12 +310,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterSetLocation(const struct 
 	params.Emitter = Emitter;
 	params.Location = Location;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -402,12 +337,7 @@ TArray<int> UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterPostEventOnAll(TAr
 	params.SourcePath = SourcePath;
 	params.SourceObj = SourceObj;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -434,12 +364,7 @@ int UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterPostEvent(const struct FWw
 	params.SourcePath = SourcePath;
 	params.SourceObj = SourceObj;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -458,12 +383,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterIsValid(const struct FWwi
 	UWwiseEmitterBlueprintLibrary_WwiseEmitterIsValid_Params params;
 	params.Emitter = Emitter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -484,12 +404,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterIsPlaying(const struct FW
 	params.Emitter = Emitter;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -511,12 +426,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterGetRTPC(const struct FWwi
 	params.Emitter = Emitter;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
 		*Value = params.Value;
@@ -536,12 +446,7 @@ void UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterDestroy(struct FWwiseEmit
 
 	UWwiseEmitterBlueprintLibrary_WwiseEmitterDestroy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Emitter != nullptr)
 		*Emitter = params.Emitter;
@@ -565,12 +470,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterComponentSetRTPCOnAll(TAr
 	params.Name = Name;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -593,12 +493,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterComponentSetRTPC(class UW
 	params.Name = Name;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -625,12 +520,7 @@ TArray<int> UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterComponentPostEvent
 	params.SourcePath = SourcePath;
 	params.SourceObj = SourceObj;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -657,12 +547,7 @@ int UWwiseEmitterBlueprintLibrary::STATIC_WwiseEmitterComponentPostEvent(class U
 	params.SourcePath = SourcePath;
 	params.SourceObj = SourceObj;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -692,12 +577,7 @@ int UWwiseEmitterBlueprintLibrary::STATIC_WwiseCreateDetachedEmitter(const struc
 	params.Relationship = Relationship;
 	params.Forward = Forward;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Emitter != nullptr)
 		*Emitter = params.Emitter;
@@ -727,12 +607,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_SeekOnEvent(const struct FWwiseEmitte
 	params.in_bSeekToNearestMarker = in_bSeekToNearestMarker;
 	params.in_PlayingID = in_PlayingID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -754,12 +629,7 @@ bool UWwiseEmitterBlueprintLibrary::STATIC_GetPlaybackPosition(const struct FWwi
 	params.WwiseEmitter = WwiseEmitter;
 	params.in_PlayingID = in_PlayingID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PlaybackPositionInMs != nullptr)
 		*PlaybackPositionInMs = params.PlaybackPositionInMs;
@@ -777,12 +647,7 @@ void AAudioEventToComponentMap::ClearMappings()
 
 	AAudioEventToComponentMap_ClearMappings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -803,12 +668,7 @@ void AAudioEventToComponentMap::AddMappingWithSingleEmitterComponent(class UWwis
 	params.StopEvent = StopEvent;
 	params.WwiseEmitterPool = WwiseEmitterPool;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (WwiseEmitterComponent != nullptr)
 		*WwiseEmitterComponent = params.WwiseEmitterComponent;
@@ -832,12 +692,7 @@ void AAudioEventToComponentMap::AddMapping(class UWwiseEvent* PlayEvent, class U
 	params.StopEvent = StopEvent;
 	params.WwiseEmitterPool = WwiseEmitterPool;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (WwiseEmitterComponents != nullptr)
 		*WwiseEmitterComponents = params.WwiseEmitterComponents;
@@ -853,12 +708,7 @@ void UAudioEventToComponentMapComponent::ClearMappings()
 
 	UAudioEventToComponentMapComponent_ClearMappings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -879,12 +729,7 @@ void UAudioEventToComponentMapComponent::AddMappingWithSingleEmitterComponent(cl
 	params.StopEvent = StopEvent;
 	params.WwiseEmitterPool = WwiseEmitterPool;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (WwiseEmitterComponent != nullptr)
 		*WwiseEmitterComponent = params.WwiseEmitterComponent;
@@ -908,12 +753,7 @@ void UAudioEventToComponentMapComponent::AddMapping(class UWwiseEvent* PlayEvent
 	params.StopEvent = StopEvent;
 	params.WwiseEmitterPool = WwiseEmitterPool;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (WwiseEmitterComponents != nullptr)
 		*WwiseEmitterComponents = params.WwiseEmitterComponents;
@@ -931,12 +771,7 @@ struct FName UAudioSpaceDataAsset::GetRtpcName()
 
 	UAudioSpaceDataAsset_GetRtpcName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -954,12 +789,7 @@ void UAudioPortalComponent::SetParentShip(class AActor* ParentShip)
 	UAudioPortalComponent_SetParentShip_Params params;
 	params.ParentShip = ParentShip;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -975,12 +805,7 @@ void UAudioPortalInterface::UnregisterPortal(class UAudioPortalComponent* AudioP
 	UAudioPortalInterface_UnregisterPortal_Params params;
 	params.AudioPortal = AudioPortal;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -998,12 +823,7 @@ void UAudioPortalInterface::RegisterPortal(class UAudioPortalComponent* AudioPor
 	params.AudioPortal = AudioPortal;
 	params.OwningActor = OwningActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1022,12 +842,7 @@ TArray<TWeakObjectPtr<class UAudioPortalComponent>> UAudioPortalInterface::GetAl
 	params.AudioSpace = AudioSpace;
 	params.OwningActor = OwningActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1044,12 +859,7 @@ TArray<TWeakObjectPtr<class UAudioPortalComponent>> UAudioPortalInterface::GetAl
 
 	UAudioPortalInterface_GetAllRegisteredPortals_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1071,12 +881,7 @@ void UAudioSpaceComponent::OnOverlapEnd(class AActor* OtherActor, class UPrimiti
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1100,12 +905,7 @@ void UAudioSpaceComponent::OnOverlapBegin(class AActor* OtherActor, class UPrimi
 	params.FromSweep = FromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1120,12 +920,7 @@ class UAudioSpaceDataAsset* UAudioSpaceTrackerComponent::GetCurrentSpace()
 
 	UAudioSpaceTrackerComponent_GetCurrentSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1140,12 +935,7 @@ void UStaticMeshAudioEmittersComponent::PopulateInstanceAssociations()
 
 	UStaticMeshAudioEmittersComponent_PopulateInstanceAssociations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1165,12 +955,7 @@ bool UWwiseEmitterComponentBlueprintLibrary::STATIC_GetNamedEmitter(const struct
 	params.InNameOfEmitterToRetrieve = InNameOfEmitterToRetrieve;
 	params.InActorToFindEmitterOn = InActorToFindEmitterOn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutEmitter != nullptr)
 		*OutEmitter = params.OutEmitter;
@@ -1197,12 +982,7 @@ bool UWwiseEmitterComponentBlueprintLibrary::STATIC_GetClosestNEmitters(const st
 	params.InNumEmittersToFind = InNumEmittersToFind;
 	params.InActorToFindClosestEmitterOn = InActorToFindClosestEmitterOn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutEmitters != nullptr)
 		*OutEmitters = params.OutEmitters;
@@ -1227,12 +1007,7 @@ bool UWwiseEmitterComponentBlueprintLibrary::STATIC_GetClosestEmitter(const stru
 	params.InFromPosition = InFromPosition;
 	params.InActorToFindClosestEmitterOn = InActorToFindClosestEmitterOn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutEmitter != nullptr)
 		*OutEmitter = params.OutEmitter;

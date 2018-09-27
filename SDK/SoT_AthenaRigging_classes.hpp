@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,18 +15,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaRigging.InstancedRopeComponent
-// 0x00D0 (0x0670 - 0x05A0)
+// 0x00D0 (0x0680 - 0x05B0)
 class UInstancedRopeComponent : public UPrimitiveComponent
 {
 public:
-	class UStaticMesh*                                 StaticMesh;                                               // 0x05A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x05A8(0x0010) (Edit, ZeroConstructor, EditConst)
-	int                                                ShadowLOD;                                                // 0x05B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB4];                                      // 0x05BC(0x00B4) MISSED OFFSET
+	class UStaticMesh*                                 StaticMesh;                                               // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FInstancedRopeParams>                Ropes;                                                    // 0x05B8(0x0010) (Edit, ZeroConstructor, EditConst)
+	int                                                ShadowLOD;                                                // 0x05C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB4];                                      // 0x05CC(0x00B4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.InstancedRopeComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaRigging.InstancedRopeComponent");
 		return ptr;
 	}
 
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.MaterialExpressionRopeParameter");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaRigging.MaterialExpressionRopeParameter");
 		return ptr;
 	}
 
@@ -71,7 +71,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RiggingSystem");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaRigging.RiggingSystem");
 		return ptr;
 	}
 
@@ -79,18 +79,18 @@ public:
 
 
 // Class AthenaRigging.RiggingSystemComponent
-// 0x0040 (0x02E0 - 0x02A0)
+// 0x0040 (0x02F0 - 0x02B0)
 class URiggingSystemComponent : public USceneComponent
 {
 public:
-	struct FRopeStyleParams                            RopeStyle;                                                // 0x02A0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
-	TArray<struct FRiggingSystemLineGroup>             LineGroups;                                               // 0x02C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class ARiggingSystem*                              Impl;                                                     // 0x02D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02D8(0x0008) MISSED OFFSET
+	struct FRopeStyleParams                            RopeStyle;                                                // 0x02B0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	TArray<struct FRiggingSystemLineGroup>             LineGroups;                                               // 0x02D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class ARiggingSystem*                              Impl;                                                     // 0x02E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02E8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RiggingSystemComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaRigging.RiggingSystemComponent");
 		return ptr;
 	}
 
@@ -108,7 +108,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RopeInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaRigging.RopeInterface");
 		return ptr;
 	}
 

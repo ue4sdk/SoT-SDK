@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,15 +45,15 @@ struct ABP_SmallMapTable_C_SetEffectActiveWhenClose_Params
 // Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapActivate
 struct ABP_SmallMapTable_C_OnMapActivate_Params
 {
-	bool*                                              IsMapActive;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	class UTextureRenderTarget2D**                     Texture;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsMapActive;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class UTextureRenderTarget2D*                      Texture;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapMove
 struct ABP_SmallMapTable_C_OnMapMove_Params
 {
-	struct FVector2D*                                  CentreLocation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	float*                                             ZoomLevel;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   CentreLocation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ZoomLevel;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SmallMapTable.BP_SmallMapTable_C.ExecuteUbergraph_BP_SmallMapTable

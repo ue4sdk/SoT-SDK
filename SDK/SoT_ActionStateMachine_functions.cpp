@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,7 @@ void UActionStateMachineComponent::Server_RequestAction(const struct FActionStat
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
 	params.ClientPredicted = ClientPredicted;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -48,12 +43,7 @@ void UActionStateMachineComponent::PostNetInit()
 
 	UActionStateMachineComponent_PostNetInit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -66,12 +56,7 @@ void UActionStateMachineComponent::OnNetOwnershipChanged()
 
 	UActionStateMachineComponent_OnNetOwnershipChanged_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -89,12 +74,7 @@ void UActionStateMachineComponent::Multicast_PushSerialisableData(const struct F
 	params.InEpochId = InEpochId;
 	params.InSerialisedActionStateSerialisationStateInfo = InSerialisedActionStateSerialisationStateInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -112,12 +92,7 @@ void UActionStateMachineComponent::Multicast_PushActionFromRequest(const struct 
 	params.InEpochId = InEpochId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -135,12 +110,7 @@ void UActionStateMachineComponent::Multicast_PushAction(const struct FActionStat
 	params.InEpochId = InEpochId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -153,12 +123,7 @@ void UActionStateMachineComponent::End()
 
 	UActionStateMachineComponent_End_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -174,12 +139,7 @@ void UActionStateMachineComponent::Client_ResetStateMachine(const struct FResetS
 	UActionStateMachineComponent_Client_ResetStateMachine_Params params;
 	params.Rpc = Rpc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -199,12 +159,7 @@ void UActionStateMachineComponent::Client_CorrectAction(const struct FActionStat
 	params.InRequestId = InRequestId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -223,12 +178,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateValidatorThat
 	params.InComponent = InComponent;
 	params.StateId = StateId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -247,12 +197,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateValidatorThat
 	UActionStateMachineComponentTestFunctions_SetTestStateValidatorThatAlwaysPasses_Params params;
 	params.InComponent = InComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -271,12 +216,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateValidatorThat
 	UActionStateMachineComponentTestFunctions_SetTestStateValidatorThatAlwaysFails_Params params;
 	params.InComponent = InComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -295,12 +235,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateFactoryChange
 	UActionStateMachineComponentTestFunctions_SetTestStateFactoryChangeToNullOnUpdate_Params params;
 	params.InComponent = InComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -319,12 +254,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateFactory(class
 	UActionStateMachineComponentTestFunctions_SetTestStateFactory_Params params;
 	params.InComponent = InComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -345,12 +275,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_SetCustomClientValidation
 	params.InComponent = InComponent;
 	params.InCallback = InCallback;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -375,12 +300,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_RequestUnpredictedTestAct
 	params.ClientStateId = ClientStateId;
 	params.ServerStateId = ServerStateId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -403,12 +323,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_RequestTestActionStateWit
 	params.TrackId = TrackId;
 	params.StateId = StateId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -429,12 +344,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_RequestNullActionStateOnT
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -458,12 +368,7 @@ void UActionStateMachineComponentTestFunctions::STATIC_PushTestActionStateSerial
 	params.StateId = StateId;
 	params.DataValue = DataValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -484,12 +389,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_IsActionStateTypeActiveOn
 	params.TrackId = TrackId;
 	params.StateId = StateId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -510,12 +410,7 @@ class UClass* UActionStateMachineComponentTestFunctions::STATIC_GetTypeOfActionS
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -537,12 +432,7 @@ bool UActionStateMachineComponentTestFunctions::STATIC_GetTestActionStateSeriali
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Data != nullptr)
 		*Data = params.Data;
@@ -562,12 +452,7 @@ class UCustomClientValidityCheckCallback* UActionStateMachineComponentTestFuncti
 
 	UActionStateMachineComponentTestFunctions_CreateCustomClientValidityCheckCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -589,12 +474,7 @@ TEnumAsByte<EActionStatePriority> UActionStatePriorityTableUtility::STATIC_GetPr
 	params.InStateA = InStateA;
 	params.InStateB = InStateB;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PriorityTable != nullptr)
 		*PriorityTable = params.PriorityTable;
@@ -616,12 +496,7 @@ struct FActionStatePriorityTable UActionStatePriorityTableUtility::STATIC_Create
 	UActionStatePriorityTableUtility_CreatePriorityTable_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -640,12 +515,7 @@ bool USerialisedActionStateConstructionInfoTestFunctions::STATIC_IsValid(const s
 	USerialisedActionStateConstructionInfoTestFunctions_IsValid_Params params;
 	params.TestStruct = TestStruct;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -664,12 +534,7 @@ bool USerialisedActionStateConstructionInfoTestFunctions::STATIC_HasTestConstruc
 	USerialisedActionStateConstructionInfoTestFunctions_HasTestConstructionInfoWithInner_Params params;
 	params.TestStruct = TestStruct;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -688,12 +553,7 @@ bool USerialisedActionStateConstructionInfoTestFunctions::STATIC_HasTestConstruc
 	USerialisedActionStateConstructionInfoTestFunctions_HasTestConstructionInfo_Params params;
 	params.TestStruct = TestStruct;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -712,12 +572,7 @@ struct FTestActionStateConstructionInfoWithInner USerialisedActionStateConstruct
 	USerialisedActionStateConstructionInfoTestFunctions_GetTestConstructionInfoWithInner_Params params;
 	params.TestStruct = TestStruct;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -736,12 +591,7 @@ struct FTestActionStateConstructionInfo USerialisedActionStateConstructionInfoTe
 	USerialisedActionStateConstructionInfoTestFunctions_GetTestConstructionInfo_Params params;
 	params.TestStruct = TestStruct;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -762,12 +612,7 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 	params.Id = Id;
 	params.IntProp = IntProp;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -792,12 +637,7 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 	params.BoolProp = BoolProp;
 	params.StringProp = StringProp;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -818,12 +658,7 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 	params.Id = Id;
 	params.IntProp = IntProp;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

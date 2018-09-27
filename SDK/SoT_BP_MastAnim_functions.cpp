@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void UBP_MastAnim_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_MastAnim_Ani
 
 	UBP_MastAnim_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_MastAnim_AnimGraphNode_SequenceEvaluator_289A9AD845D48FFB76FDEA99E492FF2B_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41,11 +37,7 @@ void UBP_MastAnim_C::SetMastAngle(float Angle)
 	UBP_MastAnim_C_SetMastAngle_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -61,11 +53,7 @@ void UBP_MastAnim_C::InitializeMast(float FallingLimit)
 	UBP_MastAnim_C_InitializeMast_Params params;
 	params.FallingLimit = FallingLimit;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -81,11 +69,7 @@ void UBP_MastAnim_C::ExecuteUbergraph_BP_MastAnim(int EntryPoint)
 	UBP_MastAnim_C_ExecuteUbergraph_BP_MastAnim_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

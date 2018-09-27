@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Mast.BP_Mast_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Mast.BP_Mast_C");
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 	void Cull_Excess_Components(TArray<class UActorComponent*>* TargetArray);
 	void Initialise_Sails();
 	void UserConstructionScript();
-	void OnMastDescLoaded(class UMastDescAsset** MastDesc);
+	void OnMastDescLoaded(class UMastDescAsset* MastDesc);
 	void ExecuteUbergraph_BP_Mast(int EntryPoint);
 };
 

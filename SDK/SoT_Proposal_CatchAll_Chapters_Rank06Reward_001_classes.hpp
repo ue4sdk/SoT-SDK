@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_CatchAll_Chapters_Rank06Reward_001.Proposal_CatchAll_Chapters_Rank06Reward_001_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_CatchAll_Chapters_Rank06Reward_001_C : public UVoyageProposalDesc
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Proposal_CatchAll_Chapters_Rank06Reward_001.Proposal_CatchAll_Chapters_Rank06Reward_001_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass Proposal_CatchAll_Chapters_Rank06Reward_001.Proposal_CatchAll_Chapters_Rank06Reward_001_C");
 		return ptr;
 	}
 

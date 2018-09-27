@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UGameplayAbility::SetShouldBlockOtherAbilities(bool bShouldBlockAbilities)
 	UGameplayAbility_SetShouldBlockOtherAbilities_Params params;
 	params.bShouldBlockAbilities = bShouldBlockAbilities;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,7 @@ void UGameplayAbility::SetCanBeCanceled(bool bCanBeCanceled)
 	UGameplayAbility_SetCanBeCanceled_Params params;
 	params.bCanBeCanceled = bCanBeCanceled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -68,12 +58,7 @@ void UGameplayAbility::SendGameplayEvent(const struct FGameplayTag& EventTag, co
 	params.EventTag = EventTag;
 	params.payload = payload;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -89,12 +74,7 @@ void UGameplayAbility::MontageStop(float OverrideBlendOutTime)
 	UGameplayAbility_MontageStop_Params params;
 	params.OverrideBlendOutTime = OverrideBlendOutTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -112,12 +92,7 @@ void UGameplayAbility::MontageSetNextSectionName(const struct FName& FromSection
 	params.FromSectionName = FromSectionName;
 	params.ToSectionName = ToSectionName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -133,12 +108,7 @@ void UGameplayAbility::MontageJumpToSection(const struct FName& SectionName)
 	UGameplayAbility_MontageJumpToSection_Params params;
 	params.SectionName = SectionName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -155,12 +125,7 @@ struct FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocatio
 	UGameplayAbility_MakeTargetLocationInfoFromOwnerSkeletalMeshComponent_Params params;
 	params.SocketName = SocketName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -177,12 +142,7 @@ struct FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocatio
 
 	UGameplayAbility_MakeTargetLocationInfoFromOwnerActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -203,12 +163,7 @@ struct FGameplayEffectSpecHandle UGameplayAbility::MakeOutgoingGameplayEffectSpe
 	params.GameplayEffectClass = GameplayEffectClass;
 	params.Level = Level;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -229,11 +184,7 @@ bool UGameplayAbility::K2_ShouldAbilityRespondToEvent(const struct FGameplayAbil
 	params.ActorInfo = ActorInfo;
 	params.payload = payload;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -251,12 +202,7 @@ void UGameplayAbility::K2_RemoveGameplayCue(const struct FGameplayTag& GameplayC
 	UGameplayAbility_K2_RemoveGameplayCue_Params params;
 	params.GameplayCueTag = GameplayCueTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -269,11 +215,7 @@ void UGameplayAbility::K2_OnEndAbility()
 
 	UGameplayAbility_K2_OnEndAbility_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -291,12 +233,7 @@ void UGameplayAbility::K2_ExecuteGameplayCueWithParams(const struct FGameplayTag
 	params.GameplayCueTag = GameplayCueTag;
 	params.GameplayCueParameters = GameplayCueParameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -314,12 +251,7 @@ void UGameplayAbility::K2_ExecuteGameplayCue(const struct FGameplayTag& Gameplay
 	params.GameplayCueTag = GameplayCueTag;
 	params.Context = Context;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -332,12 +264,7 @@ void UGameplayAbility::K2_EndAbility()
 
 	UGameplayAbility_K2_EndAbility_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -350,11 +277,7 @@ void UGameplayAbility::K2_CommitExecute()
 
 	UGameplayAbility_K2_CommitExecute_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -371,12 +294,7 @@ bool UGameplayAbility::K2_CommitAbilityCost(bool BroadcastCommitEvent)
 	UGameplayAbility_K2_CommitAbilityCost_Params params;
 	params.BroadcastCommitEvent = BroadcastCommitEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -395,12 +313,7 @@ bool UGameplayAbility::K2_CommitAbilityCooldown(bool BroadcastCommitEvent)
 	UGameplayAbility_K2_CommitAbilityCooldown_Params params;
 	params.BroadcastCommitEvent = BroadcastCommitEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -417,12 +330,7 @@ bool UGameplayAbility::K2_CommitAbility()
 
 	UGameplayAbility_K2_CommitAbility_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -439,12 +347,7 @@ bool UGameplayAbility::K2_CheckAbilityCost()
 
 	UGameplayAbility_K2_CheckAbilityCost_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -461,12 +364,7 @@ bool UGameplayAbility::K2_CheckAbilityCooldown()
 
 	UGameplayAbility_K2_CheckAbilityCooldown_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -486,11 +384,7 @@ bool UGameplayAbility::K2_CanActivateAbility(const struct FGameplayAbilityActorI
 	UGameplayAbility_K2_CanActivateAbility_Params params;
 	params.ActorInfo = ActorInfo;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (RelevantTags != nullptr)
 		*RelevantTags = params.RelevantTags;
@@ -516,12 +410,7 @@ TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::K2_ApplyGameplayEff
 	params.GameplayEffect = GameplayEffect;
 	params.GameplayEffectLevel = GameplayEffectLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -542,12 +431,7 @@ struct FActiveGameplayEffectHandle UGameplayAbility::K2_ApplyGameplayEffectToOwn
 	params.GameplayEffect = GameplayEffect;
 	params.GameplayEffectLevel = GameplayEffectLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -568,12 +452,7 @@ TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::K2_ApplyGameplayEff
 	params.EffectSpecHandle = EffectSpecHandle;
 	params.TargetData = TargetData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -592,12 +471,7 @@ struct FActiveGameplayEffectHandle UGameplayAbility::K2_ApplyGameplayEffectSpecT
 	UGameplayAbility_K2_ApplyGameplayEffectSpecToOwner_Params params;
 	params.EffectSpecHandle = EffectSpecHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -619,12 +493,7 @@ void UGameplayAbility::K2_AddGameplayCue(const struct FGameplayTag& GameplayCueT
 	params.Context = Context;
 	params.bRemoveOnAbilityEnd = bRemoveOnAbilityEnd;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -640,11 +509,7 @@ void UGameplayAbility::K2_ActivateAbilityFromEvent(const struct FGameplayEventDa
 	UGameplayAbility_K2_ActivateAbilityFromEvent_Params params;
 	params.eventData = eventData;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -657,11 +522,7 @@ void UGameplayAbility::K2_ActivateAbility()
 
 	UGameplayAbility_K2_ActivateAbility_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -676,12 +537,7 @@ class USkeletalMeshComponent* UGameplayAbility::GetOwningComponentFromActorInfo(
 
 	UGameplayAbility_GetOwningComponentFromActorInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -698,12 +554,7 @@ class AActor* UGameplayAbility::GetOwningActorFromActorInfo()
 
 	UGameplayAbility_GetOwningActorFromActorInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -724,12 +575,7 @@ struct FGameplayEffectSpecHandle UGameplayAbility::GetOutgoingGameplayEffectSpec
 	params.GameplayEffect = GameplayEffect;
 	params.Level = Level;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -746,12 +592,7 @@ class UObject* UGameplayAbility::GetCurrentSourceObject()
 
 	UGameplayAbility_GetCurrentSourceObject_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -768,12 +609,7 @@ class UAnimMontage* UGameplayAbility::GetCurrentMontage()
 
 	UGameplayAbility_GetCurrentMontage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -792,12 +628,7 @@ struct FGameplayEffectContextHandle UGameplayAbility::GetContextFromOwner(const 
 	UGameplayAbility_GetContextFromOwner_Params params;
 	params.OptionalTargetData = OptionalTargetData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -814,12 +645,7 @@ class AActor* UGameplayAbility::GetAvatarActorFromActorInfo()
 
 	UGameplayAbility_GetAvatarActorFromActorInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -836,12 +662,7 @@ struct FGameplayAbilityActorInfo UGameplayAbility::GetActorInfo()
 
 	UGameplayAbility_GetActorInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -858,12 +679,7 @@ int UGameplayAbility::GetAbilityLevel()
 
 	UGameplayAbility_GetAbilityLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -881,12 +697,7 @@ void UGameplayAbility::EndTaskByInstanceName(const struct FName& InstanceName)
 	UGameplayAbility_EndTaskByInstanceName_Params params;
 	params.InstanceName = InstanceName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -902,12 +713,7 @@ void UGameplayAbility::EndAbilityState(const struct FName& OptionalStateNameToEn
 	UGameplayAbility_EndAbilityState_Params params;
 	params.OptionalStateNameToEnd = OptionalStateNameToEnd;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -925,12 +731,7 @@ void UGameplayAbility::ConfirmTaskByInstanceName(const struct FName& InstanceNam
 	params.InstanceName = InstanceName;
 	params.bEndTask = bEndTask;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -946,12 +747,7 @@ void UGameplayAbility::CancelTaskByInstanceName(const struct FName& InstanceName
 	UGameplayAbility_CancelTaskByInstanceName_Params params;
 	params.InstanceName = InstanceName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -969,12 +765,7 @@ void UGameplayAbility::BP_RemoveGameplayEffectFromOwnerWithGrantedTags(const str
 	params.WithGrantedTags = WithGrantedTags;
 	params.StacksToRemove = StacksToRemove;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -992,12 +783,7 @@ void UGameplayAbility::BP_RemoveGameplayEffectFromOwnerWithAssetTags(const struc
 	params.WithAssetTags = WithAssetTags;
 	params.StacksToRemove = StacksToRemove;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1018,12 +804,7 @@ TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::BP_ApplyGameplayEff
 	params.GameplayEffectClass = GameplayEffectClass;
 	params.GameplayEffectLevel = GameplayEffectLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1044,12 +825,7 @@ struct FActiveGameplayEffectHandle UGameplayAbility::BP_ApplyGameplayEffectToOwn
 	params.GameplayEffectClass = GameplayEffectClass;
 	params.GameplayEffectLevel = GameplayEffectLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1064,12 +840,7 @@ void UGameplayCueInterface::ForwardGameplayCueToParent()
 
 	UGameplayCueInterface_ForwardGameplayCueToParent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1087,11 +858,7 @@ void UGameplayCueInterface::BlueprintCustomHandler(TEnumAsByte<EGameplayCueEvent
 	params.EventType = EventType;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1110,12 +877,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_TargetDataHasOrigin(const struct FGa
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1136,12 +898,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_TargetDataHasHitResult(const struct 
 	params.HitResult = HitResult;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1162,12 +919,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_TargetDataHasEndPoint(const struct F
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1188,12 +940,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_TargetDataHasActor(const struct FGam
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1212,12 +959,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_SetStack
 	UAbilitySystemBlueprintLibrary_SetStackCountToMax_Params params;
 	params.SpecHandle = SpecHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1238,12 +980,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_SetStack
 	params.SpecHandle = SpecHandle;
 	params.StackCount = StackCount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1264,12 +1001,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_SetDurat
 	params.SpecHandle = SpecHandle;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1291,12 +1023,7 @@ void UAbilitySystemBlueprintLibrary::STATIC_SendGameplayEventToActor(class AActo
 	params.EventTag = EventTag;
 	params.payload = payload;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1319,12 +1046,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_MakeSpec
 	params.InEffectCauser = InEffectCauser;
 	params.InLevel = InLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1345,12 +1067,7 @@ struct FGameplayTargetDataFilterHandle UAbilitySystemBlueprintLibrary::STATIC_Ma
 	params.Filter = Filter;
 	params.FilterActor = FilterActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1369,12 +1086,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_IsInstigatorLocallyControlledPlayer(
 	UAbilitySystemBlueprintLibrary_IsInstigatorLocallyControlledPlayer_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1393,12 +1105,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_IsInstigatorLocallyControlled(const 
 	UAbilitySystemBlueprintLibrary_IsInstigatorLocallyControlled_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1417,12 +1124,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_HasHitResult(const struct FGameplayC
 	UAbilitySystemBlueprintLibrary_HasHitResult_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1443,12 +1145,7 @@ struct FTransform UAbilitySystemBlueprintLibrary::STATIC_GetTargetDataOrigin(con
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1469,12 +1166,7 @@ struct FTransform UAbilitySystemBlueprintLibrary::STATIC_GetTargetDataEndPointTr
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1495,12 +1187,7 @@ struct FVector UAbilitySystemBlueprintLibrary::STATIC_GetTargetDataEndPoint(cons
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1519,12 +1206,7 @@ struct FVector UAbilitySystemBlueprintLibrary::STATIC_GetOrigin(const struct FGa
 	UAbilitySystemBlueprintLibrary_GetOrigin_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1543,12 +1225,7 @@ struct FTransform UAbilitySystemBlueprintLibrary::STATIC_GetInstigatorTransform(
 	UAbilitySystemBlueprintLibrary_GetInstigatorTransform_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1567,12 +1244,7 @@ class AActor* UAbilitySystemBlueprintLibrary::STATIC_GetInstigatorActor(const st
 	UAbilitySystemBlueprintLibrary_GetInstigatorActor_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1593,12 +1265,7 @@ struct FHitResult UAbilitySystemBlueprintLibrary::STATIC_GetHitResultFromTargetD
 	params.HitResult = HitResult;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1617,12 +1284,7 @@ struct FHitResult UAbilitySystemBlueprintLibrary::STATIC_GetHitResult(const stru
 	UAbilitySystemBlueprintLibrary_GetHitResult_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1645,12 +1307,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_GetGameplayCueEndLocationAndNormal(c
 	params.TargetActor = TargetActor;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Location != nullptr)
 		*Location = params.Location;
@@ -1677,12 +1334,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_GetGameplayCueDirection(class AActor
 	params.TargetActor = TargetActor;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Direction != nullptr)
 		*Direction = params.Direction;
@@ -1707,12 +1359,7 @@ float UAbilitySystemBlueprintLibrary::STATIC_GetFloatAttribute(class AActor* Act
 	params.Actor = Actor;
 	params.Attribute = Attribute;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (bSuccessfullyFoundAttribute != nullptr)
 		*bSuccessfullyFoundAttribute = params.bSuccessfullyFoundAttribute;
@@ -1734,12 +1381,7 @@ int UAbilitySystemBlueprintLibrary::STATIC_GetDataCountFromTargetData(const stru
 	UAbilitySystemBlueprintLibrary_GetDataCountFromTargetData_Params params;
 	params.TargetData = TargetData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1760,12 +1402,7 @@ TArray<class AActor*> UAbilitySystemBlueprintLibrary::STATIC_GetActorsFromTarget
 	params.TargetData = TargetData;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1784,12 +1421,7 @@ int UAbilitySystemBlueprintLibrary::STATIC_GetActorCount(const struct FGameplayC
 	UAbilitySystemBlueprintLibrary_GetActorCount_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1810,12 +1442,7 @@ class AActor* UAbilitySystemBlueprintLibrary::STATIC_GetActorByIndex(const struc
 	params.Parameters = Parameters;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1834,12 +1461,7 @@ int UAbilitySystemBlueprintLibrary::STATIC_GetActiveGameplayEffectStackCount(con
 	UAbilitySystemBlueprintLibrary_GetActiveGameplayEffectStackCount_Params params;
 	params.ActiveHandle = ActiveHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1858,12 +1480,7 @@ class UAbilitySystemComponent* UAbilitySystemBlueprintLibrary::STATIC_GetAbility
 	UAbilitySystemBlueprintLibrary_GetAbilitySystemComponent_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1885,12 +1502,7 @@ void UAbilitySystemBlueprintLibrary::STATIC_ForwardGameplayCueToTarget(const TSc
 	params.EventType = EventType;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1909,12 +1521,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::STATIC_F
 	params.TargetDataHandle = TargetDataHandle;
 	params.ActorFilterClass = ActorFilterClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1933,12 +1540,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_EffectContextIsInstigatorLocallyCont
 	UAbilitySystemBlueprintLibrary_EffectContextIsInstigatorLocallyControlled_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1957,12 +1559,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_EffectContextHasHitResult(const stru
 	UAbilitySystemBlueprintLibrary_EffectContextHasHitResult_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1981,12 +1578,7 @@ class UObject* UAbilitySystemBlueprintLibrary::STATIC_EffectContextGetSourceObje
 	UAbilitySystemBlueprintLibrary_EffectContextGetSourceObject_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2005,12 +1597,7 @@ class AActor* UAbilitySystemBlueprintLibrary::STATIC_EffectContextGetOriginalIns
 	UAbilitySystemBlueprintLibrary_EffectContextGetOriginalInstigatorActor_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2029,12 +1616,7 @@ struct FVector UAbilitySystemBlueprintLibrary::STATIC_EffectContextGetOrigin(con
 	UAbilitySystemBlueprintLibrary_EffectContextGetOrigin_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2053,12 +1635,7 @@ class AActor* UAbilitySystemBlueprintLibrary::STATIC_EffectContextGetInstigatorA
 	UAbilitySystemBlueprintLibrary_EffectContextGetInstigatorActor_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2077,12 +1654,7 @@ struct FHitResult UAbilitySystemBlueprintLibrary::STATIC_EffectContextGetHitResu
 	UAbilitySystemBlueprintLibrary_EffectContextGetHitResult_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2101,12 +1673,7 @@ class AActor* UAbilitySystemBlueprintLibrary::STATIC_EffectContextGetEffectCause
 	UAbilitySystemBlueprintLibrary_EffectContextGetEffectCauser_Params params;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2129,12 +1696,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_DoesTargetDataContainActor(const str
 	params.Index = Index;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2155,12 +1717,7 @@ bool UAbilitySystemBlueprintLibrary::STATIC_DoesGameplayCueMeetTagRequirements(c
 	UAbilitySystemBlueprintLibrary_DoesGameplayCueMeetTagRequirements_Params params;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SourceTagReqs != nullptr)
 		*SourceTagReqs = params.SourceTagReqs;
@@ -2188,12 +1745,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_AssignSe
 	params.DataName = DataName;
 	params.Magnitude = Magnitude;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2214,12 +1766,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::STATIC_A
 	params.TargetHandle = TargetHandle;
 	params.HandleToAdd = HandleToAdd;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2240,12 +1787,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_AddLinke
 	params.SpecHandle = SpecHandle;
 	params.LinkedGameplayEffectSpec = LinkedGameplayEffectSpec;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2266,12 +1808,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_AddGrant
 	params.SpecHandle = SpecHandle;
 	params.NewGameplayTags = NewGameplayTags;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2292,12 +1829,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_AddGrant
 	params.SpecHandle = SpecHandle;
 	params.NewGameplayTag = NewGameplayTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2318,12 +1850,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_AddAsset
 	params.SpecHandle = SpecHandle;
 	params.NewGameplayTags = NewGameplayTags;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2344,12 +1871,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::STATIC_AddAsset
 	params.SpecHandle = SpecHandle;
 	params.NewGameplayTag = NewGameplayTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2370,12 +1892,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::STATIC_A
 	params.SourceLocation = SourceLocation;
 	params.TargetLocation = TargetLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2394,12 +1911,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::STATIC_A
 	UAbilitySystemBlueprintLibrary_AbilityTargetDataFromHitResult_Params params;
 	params.HitResult = HitResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2420,12 +1932,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::STATIC_A
 	params.ActorArray = ActorArray;
 	params.OneTargetPerHandle = OneTargetPerHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2444,12 +1951,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::STATIC_A
 	UAbilitySystemBlueprintLibrary_AbilityTargetDataFromActor_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2470,12 +1972,7 @@ bool UAbilitySystemComponent::TryActivateAbilityByClass(class UClass* InAbilityT
 	params.InAbilityToActivate = InAbilityToActivate;
 	params.bAllowRemoteActivation = bAllowRemoteActivation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2496,12 +1993,7 @@ bool UAbilitySystemComponent::TryActivateAbilitiesByTag(const struct FGameplayTa
 	params.GameplayTagContainer = GameplayTagContainer;
 	params.bAllowRemoteActivation = bAllowRemoteActivation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2516,12 +2008,7 @@ void UAbilitySystemComponent::TargetConfirm()
 
 	UAbilitySystemComponent_TargetConfirm_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2534,12 +2021,7 @@ void UAbilitySystemComponent::TargetCancel()
 
 	UAbilitySystemComponent_TargetCancel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2555,12 +2037,7 @@ void UAbilitySystemComponent::SetUserAbilityActivationInhibited(bool NewInhibit)
 	UAbilitySystemComponent_SetUserAbilityActivationInhibited_Params params;
 	params.NewInhibit = NewInhibit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2578,12 +2055,7 @@ void UAbilitySystemComponent::SetActiveGameplayEffectLevel(const struct FActiveG
 	params.ActiveHandle = ActiveHandle;
 	params.NewLevel = NewLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2605,12 +2077,7 @@ void UAbilitySystemComponent::ServerTryActivateAbilityWithEventData(const struct
 	params.PredictionKey = PredictionKey;
 	params.TriggerEventData = TriggerEventData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2630,12 +2097,7 @@ void UAbilitySystemComponent::ServerTryActivateAbility(const struct FGameplayAbi
 	params.InputPressed = InputPressed;
 	params.PredictionKey = PredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2655,12 +2117,7 @@ void UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled(const struc
 	params.AbilityOriginalPredictionKey = AbilityOriginalPredictionKey;
 	params.CurrentPredictionKey = CurrentPredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2684,12 +2141,7 @@ void UAbilitySystemComponent::ServerSetReplicatedTargetData(const struct FGamepl
 	params.ApplicationTag = ApplicationTag;
 	params.CurrentPredictionKey = CurrentPredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2711,12 +2163,7 @@ void UAbilitySystemComponent::ServerSetReplicatedEvent(TEnumAsByte<EAbilityGener
 	params.AbilityOriginalPredictionKey = AbilityOriginalPredictionKey;
 	params.CurrentPredictionKey = CurrentPredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2732,12 +2179,7 @@ void UAbilitySystemComponent::ServerSetInputReleased(const struct FGameplayAbili
 	UAbilitySystemComponent_ServerSetInputReleased_Params params;
 	params.AbilityHandle = AbilityHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2753,12 +2195,7 @@ void UAbilitySystemComponent::ServerSetInputPressed(const struct FGameplayAbilit
 	UAbilitySystemComponent_ServerSetInputPressed_Params params;
 	params.AbilityHandle = AbilityHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2778,12 +2215,7 @@ void UAbilitySystemComponent::ServerEndAbility(const struct FGameplayAbilitySpec
 	params.ActivationInfo = ActivationInfo;
 	params.PredictionKey = PredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2805,12 +2237,7 @@ void UAbilitySystemComponent::ServerCurrentMontageSetNextSectionName(class UAnim
 	params.SectionName = SectionName;
 	params.NextSectionName = NextSectionName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2828,12 +2255,7 @@ void UAbilitySystemComponent::ServerCurrentMontageJumpToSectionName(class UAnimM
 	params.ClientAnimMontage = ClientAnimMontage;
 	params.SectionName = SectionName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2851,12 +2273,7 @@ void UAbilitySystemComponent::ServerCancelAbility(const struct FGameplayAbilityS
 	params.AbilityToCancel = AbilityToCancel;
 	params.ActivationInfo = ActivationInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2876,12 +2293,7 @@ void UAbilitySystemComponent::RemoveActiveGameplayEffectBySourceEffect(class UCl
 	params.InstigatorAbilitySystemComponent = InstigatorAbilitySystemComponent;
 	params.StacksToRemove = StacksToRemove;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2900,12 +2312,7 @@ bool UAbilitySystemComponent::RemoveActiveGameplayEffect(const struct FActiveGam
 	params.Handle = Handle;
 	params.StacksToRemove = StacksToRemove;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2923,12 +2330,7 @@ void UAbilitySystemComponent::RemoveActiveEffectsWithTags(const struct FGameplay
 	UAbilitySystemComponent_RemoveActiveEffectsWithTags_Params params;
 	params.Tags = Tags;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2941,12 +2343,7 @@ void UAbilitySystemComponent::OnRep_ReplicatedAnimMontage()
 
 	UAbilitySystemComponent_OnRep_ReplicatedAnimMontage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2959,12 +2356,7 @@ void UAbilitySystemComponent::OnRep_PredictionKey()
 
 	UAbilitySystemComponent_OnRep_PredictionKey_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2977,12 +2369,7 @@ void UAbilitySystemComponent::OnRep_OwningActor()
 
 	UAbilitySystemComponent_OnRep_OwningActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2995,12 +2382,7 @@ void UAbilitySystemComponent::OnRep_GameplayEffects()
 
 	UAbilitySystemComponent_OnRep_GameplayEffects_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3013,12 +2395,7 @@ void UAbilitySystemComponent::OnRep_ActivateAbilities()
 
 	UAbilitySystemComponent_OnRep_ActivateAbilities_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3038,12 +2415,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams(
 	params.PredictionKey = PredictionKey;
 	params.GameplayCueParameters = GameplayCueParameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3061,12 +2433,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec(co
 	params.Spec = Spec;
 	params.PredictionKey = PredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3086,12 +2453,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted(const struc
 	params.PredictionKey = PredictionKey;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3109,12 +2471,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_
 	params.Spec = Spec;
 	params.PredictionKey = PredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3134,12 +2491,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded(const struct F
 	params.PredictionKey = PredictionKey;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3160,12 +2512,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemComponent::MakeOutgoingSpec(class
 	params.Level = Level;
 	params.Context = Context;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3185,12 +2532,7 @@ void UAbilitySystemComponent::K2_InitStats(class UClass* Attributes, class UData
 	params.Attributes = Attributes;
 	params.DataTable = DataTable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3213,12 +2555,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::K2_ApplyGameplayEffe
 	params.Level = Level;
 	params.Context = Context;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3241,12 +2578,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::K2_ApplyGameplayEffe
 	params.Level = Level;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3265,12 +2597,7 @@ bool UAbilitySystemComponent::IsGameplayCueActive(const struct FGameplayTag& Gam
 	UAbilitySystemComponent_IsGameplayCueActive_Params params;
 	params.GameplayCueTag = GameplayCueTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3287,12 +2614,7 @@ bool UAbilitySystemComponent::GetUserAbilityActivationInhibited()
 
 	UAbilitySystemComponent_GetUserAbilityActivationInhibited_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3313,12 +2635,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemComponent::GetOutgoingSpec(class 
 	params.GameplayEffect = GameplayEffect;
 	params.Level = Level;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3339,12 +2656,7 @@ float UAbilitySystemComponent::GetGameplayEffectMagnitude(const struct FActiveGa
 	params.Handle = Handle;
 	params.Attribute = Attribute;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3365,12 +2677,7 @@ int UAbilitySystemComponent::GetGameplayEffectCount(class UClass* SourceGameplay
 	params.SourceGameplayEffect = SourceGameplayEffect;
 	params.OptionalInstigatorFilterComponent = OptionalInstigatorFilterComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3387,12 +2694,7 @@ struct FGameplayEffectContextHandle UAbilitySystemComponent::GetEffectContext()
 
 	UAbilitySystemComponent_GetEffectContext_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3410,12 +2712,7 @@ void UAbilitySystemComponent::ClientTryActivateAbility(const struct FGameplayAbi
 	UAbilitySystemComponent_ClientTryActivateAbility_Params params;
 	params.AbilityToActivate = AbilityToActivate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3435,12 +2732,7 @@ void UAbilitySystemComponent::ClientSetReplicatedEvent(TEnumAsByte<EAbilityGener
 	params.AbilityHandle = AbilityHandle;
 	params.AbilityOriginalPredictionKey = AbilityOriginalPredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3458,12 +2750,7 @@ void UAbilitySystemComponent::ClientEndAbility(const struct FGameplayAbilitySpec
 	params.AbilityToEnd = AbilityToEnd;
 	params.ActivationInfo = ActivationInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3481,12 +2768,7 @@ void UAbilitySystemComponent::ClientCancelAbility(const struct FGameplayAbilityS
 	params.AbilityToCancel = AbilityToCancel;
 	params.ActivationInfo = ActivationInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3506,12 +2788,7 @@ void UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData(const st
 	params.PredictionKey = PredictionKey;
 	params.TriggerEventData = TriggerEventData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3529,12 +2806,7 @@ void UAbilitySystemComponent::ClientActivateAbilitySucceed(const struct FGamepla
 	params.AbilityToActivate = AbilityToActivate;
 	params.PredictionKey = PredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3552,12 +2824,7 @@ void UAbilitySystemComponent::ClientActivateAbilityFailed(const struct FGameplay
 	params.AbilityToActivate = AbilityToActivate;
 	params.PredictionKey = PredictionKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3580,12 +2847,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 	params.Level = Level;
 	params.Context = Context;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3608,12 +2870,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 	params.Level = Level;
 	params.EffectContext = EffectContext;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3633,12 +2890,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 	UAbilitySystemComponent_BP_ApplyGameplayEffectSpecToTarget_Params params;
 	params.Target = Target;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SpecHandle != nullptr)
 		*SpecHandle = params.SpecHandle;
@@ -3659,12 +2911,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 
 	UAbilitySystemComponent_BP_ApplyGameplayEffectSpecToSelf_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SpecHandle != nullptr)
 		*SpecHandle = params.SpecHandle;
@@ -3682,11 +2929,7 @@ void UAbilitySystemComponent::AbilityConfirmOrCancel__DelegateSignature()
 
 	UAbilitySystemComponent_AbilityConfirmOrCancel__DelegateSignature_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3702,11 +2945,7 @@ void UAbilitySystemComponent::AbilityAbilityKey__DelegateSignature(int InputID)
 	UAbilitySystemComponent_AbilityAbilityKey__DelegateSignature_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3719,12 +2958,7 @@ void UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCosts()
 
 	UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCosts_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3737,12 +2971,7 @@ void UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCooldowns()
 
 	UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3769,12 +2998,7 @@ class UAbilityTask_MoveToLocation* UAbilityTask_MoveToLocation::STATIC_MoveToLoc
 	params.OptionalInterpolationCurve = OptionalInterpolationCurve;
 	params.OptionalVectorInterpolationCurve = OptionalVectorInterpolationCurve;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3795,12 +3019,7 @@ class UAbilityTask_NetworkSyncPoint* UAbilityTask_NetworkSyncPoint::STATIC_WaitN
 	params.WorldContextObject = WorldContextObject;
 	params.SyncType = SyncType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3815,12 +3034,7 @@ void UAbilityTask_NetworkSyncPoint::OnSignalCallback()
 
 	UAbilityTask_NetworkSyncPoint_OnSignalCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3833,12 +3047,7 @@ void UAbilityTask_PlayMontageAndWait::OnMontageInterrupted()
 
 	UAbilityTask_PlayMontageAndWait_OnMontageInterrupted_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3856,12 +3065,7 @@ void UAbilityTask_PlayMontageAndWait::OnMontageBlendingOut(class UAnimMontage* M
 	params.Montage = Montage;
 	params.bInterrupted = bInterrupted;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3886,12 +3090,7 @@ class UAbilityTask_PlayMontageAndWait* UAbilityTask_PlayMontageAndWait::STATIC_C
 	params.Rate = Rate;
 	params.StartSection = StartSection;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3914,12 +3113,7 @@ class UAbilityTask_Repeat* UAbilityTask_Repeat::STATIC_RepeatAction(class UObjec
 	params.TimeBetweenActions = TimeBetweenActions;
 	params.TotalActionCount = TotalActionCount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3942,12 +3136,7 @@ class UAbilityTask_SpawnActor* UAbilityTask_SpawnActor::STATIC_SpawnActor(class 
 	params.TargetData = TargetData;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3969,12 +3158,7 @@ void UAbilityTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextObj
 	params.TargetData = TargetData;
 	params.SpawnedActor = SpawnedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3996,12 +3180,7 @@ bool UAbilityTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObje
 	params.TargetData = TargetData;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SpawnedActor != nullptr)
 		*SpawnedActor = params.SpawnedActor;
@@ -4027,12 +3206,7 @@ class UAbilityTask_StartAbilityState* UAbilityTask_StartAbilityState::STATIC_Sta
 	params.StateName = StateName;
 	params.bEndCurrentState = bEndCurrentState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4057,12 +3231,7 @@ class UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::STATIC_V
 	params.TaskInstanceName = TaskInstanceName;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4087,12 +3256,7 @@ class UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::STATIC_V
 	params.TaskInstanceName = TaskInstanceName;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4112,12 +3276,7 @@ void UAbilityTask_VisualizeTargeting::FinishSpawningActor(class UObject* WorldCo
 	params.WorldContextObject = WorldContextObject;
 	params.SpawnedActor = SpawnedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4137,12 +3296,7 @@ bool UAbilityTask_VisualizeTargeting::BeginSpawningActor(class UObject* WorldCon
 	params.WorldContextObject = WorldContextObject;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SpawnedActor != nullptr)
 		*SpawnedActor = params.SpawnedActor;
@@ -4172,12 +3326,7 @@ class UAbilityTask_WaitAbilityActivate* UAbilityTask_WaitAbilityActivate::STATIC
 	params.IncludeTriggeredAbilities = IncludeTriggeredAbilities;
 	params.TriggerOnce = TriggerOnce;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4195,12 +3344,7 @@ void UAbilityTask_WaitAbilityActivate::OnAbilityActivate(class UGameplayAbility*
 	UAbilityTask_WaitAbilityActivate_OnAbilityActivate_Params params;
 	params.ActivatedAbility = ActivatedAbility;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4223,12 +3367,7 @@ class UAbilityTask_WaitAbilityCommit* UAbilityTask_WaitAbilityCommit::STATIC_Wai
 	params.WithoutTage = WithoutTage;
 	params.TriggerOnce = TriggerOnce;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4246,12 +3385,7 @@ void UAbilityTask_WaitAbilityCommit::OnAbilityCommit(class UGameplayAbility* Act
 	UAbilityTask_WaitAbilityCommit_OnAbilityCommit_Params params;
 	params.ActivatedAbility = ActivatedAbility;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4280,12 +3414,7 @@ class UAbilityTask_WaitAttributeChange* UAbilityTask_WaitAttributeChange::STATIC
 	params.InComparisonValue = InComparisonValue;
 	params.TriggerOnce = TriggerOnce;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4312,12 +3441,7 @@ class UAbilityTask_WaitAttributeChange* UAbilityTask_WaitAttributeChange::STATIC
 	params.WithoutSrcTag = WithoutSrcTag;
 	params.TriggerOnce = TriggerOnce;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4336,12 +3460,7 @@ class UAbilityTask_WaitCancel* UAbilityTask_WaitCancel::STATIC_WaitCancel(class 
 	UAbilityTask_WaitCancel_WaitCancel_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4356,12 +3475,7 @@ void UAbilityTask_WaitCancel::OnLocalCancelCallback()
 
 	UAbilityTask_WaitCancel_OnLocalCancelCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4374,12 +3488,7 @@ void UAbilityTask_WaitCancel::OnCancelCallback()
 
 	UAbilityTask_WaitCancel_OnCancelCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4396,12 +3505,7 @@ class UAbilityTask_WaitConfirm* UAbilityTask_WaitConfirm::STATIC_WaitConfirm(cla
 	UAbilityTask_WaitConfirm_WaitConfirm_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4419,12 +3523,7 @@ void UAbilityTask_WaitConfirm::OnConfirmCallback(class UGameplayAbility* Ability
 	UAbilityTask_WaitConfirm_OnConfirmCallback_Params params;
 	params.Ability = Ability;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4441,12 +3540,7 @@ class UAbilityTask_WaitConfirmCancel* UAbilityTask_WaitConfirmCancel::STATIC_Wai
 	UAbilityTask_WaitConfirmCancel_WaitConfirmCancel_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4461,12 +3555,7 @@ void UAbilityTask_WaitConfirmCancel::OnLocalConfirmCallback()
 
 	UAbilityTask_WaitConfirmCancel_OnLocalConfirmCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4479,12 +3568,7 @@ void UAbilityTask_WaitConfirmCancel::OnLocalCancelCallback()
 
 	UAbilityTask_WaitConfirmCancel_OnLocalCancelCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4497,12 +3581,7 @@ void UAbilityTask_WaitConfirmCancel::OnConfirmCallback()
 
 	UAbilityTask_WaitConfirmCancel_OnConfirmCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4515,12 +3594,7 @@ void UAbilityTask_WaitConfirmCancel::OnCancelCallback()
 
 	UAbilityTask_WaitConfirmCancel_OnCancelCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4539,12 +3613,7 @@ class UAbilityTask_WaitDelay* UAbilityTask_WaitDelay::STATIC_WaitDelay(class UOb
 	params.WorldContextObject = WorldContextObject;
 	params.Time = Time;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4566,12 +3635,7 @@ void UAbilityTask_WaitGameplayEffectApplied::OnApplyGameplayEffectCallback(class
 	params.SpecApplied = SpecApplied;
 	params.ActiveHandle = ActiveHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4598,12 +3662,7 @@ class UAbilityTask_WaitGameplayEffectApplied_Self* UAbilityTask_WaitGameplayEffe
 	params.TriggerOnce = TriggerOnce;
 	params.OptionalExternalOwner = OptionalExternalOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4632,12 +3691,7 @@ class UAbilityTask_WaitGameplayEffectApplied_Target* UAbilityTask_WaitGameplayEf
 	params.TriggerOnce = TriggerOnce;
 	params.OptionalExternalOwner = OptionalExternalOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4658,12 +3712,7 @@ class UAbilityTask_WaitGameplayEffectRemoved* UAbilityTask_WaitGameplayEffectRem
 	params.WorldContextObject = WorldContextObject;
 	params.Handle = Handle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4678,12 +3727,7 @@ void UAbilityTask_WaitGameplayEffectRemoved::OnGameplayEffectRemoved()
 
 	UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4701,12 +3745,7 @@ void UAbilityTask_WaitGameplayTag::GameplayTagCallback(const struct FGameplayTag
 	params.Tag = Tag;
 	params.NewCount = NewCount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4729,12 +3768,7 @@ class UAbilityTask_WaitGameplayTagAdded* UAbilityTask_WaitGameplayTagAdded::STAT
 	params.OptionalExternalTarget = OptionalExternalTarget;
 	params.OnlyTriggerOnce = OnlyTriggerOnce;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4759,12 +3793,7 @@ class UAbilityTask_WaitGameplayTagRemoved* UAbilityTask_WaitGameplayTagRemoved::
 	params.OptionalExternalTarget = OptionalExternalTarget;
 	params.OnlyTriggerOnce = OnlyTriggerOnce;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4785,12 +3814,7 @@ class UAbilityTask_WaitInputPress* UAbilityTask_WaitInputPress::STATIC_WaitInput
 	params.WorldContextObject = WorldContextObject;
 	params.bTestAlreadyPressed = bTestAlreadyPressed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4805,12 +3829,7 @@ void UAbilityTask_WaitInputPress::OnPressCallback()
 
 	UAbilityTask_WaitInputPress_OnPressCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4829,12 +3848,7 @@ class UAbilityTask_WaitInputRelease* UAbilityTask_WaitInputRelease::STATIC_WaitI
 	params.WorldContextObject = WorldContextObject;
 	params.bTestAlreadyReleased = bTestAlreadyReleased;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4849,12 +3863,7 @@ void UAbilityTask_WaitInputRelease::OnReleaseCallback()
 
 	UAbilityTask_WaitInputRelease_OnReleaseCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4874,12 +3883,7 @@ void UAbilityTask_WaitMovementModeChange::OnMovementModeChange(class ACharacter*
 	params.PrevMovementMode = PrevMovementMode;
 	params.PreviousCustomMode = PreviousCustomMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4898,12 +3902,7 @@ class UAbilityTask_WaitMovementModeChange* UAbilityTask_WaitMovementModeChange::
 	params.WorldContextObject = WorldContextObject;
 	params.NewMode = NewMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4922,12 +3921,7 @@ class UAbilityTask_WaitOverlap* UAbilityTask_WaitOverlap::STATIC_WaitForOverlap(
 	UAbilityTask_WaitOverlap_WaitForOverlap_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4953,12 +3947,7 @@ void UAbilityTask_WaitOverlap::OnOverlapCallback(class AActor* OtherActor, class
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4980,12 +3969,7 @@ void UAbilityTask_WaitOverlap::OnHitCallback(class AActor* OtherActor, class UPr
 	params.NormalImpulse = NormalImpulse;
 	params.Hit = Hit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5008,12 +3992,7 @@ class UAbilityTask_WaitTargetData* UAbilityTask_WaitTargetData::STATIC_WaitTarge
 	params.ConfirmationType = ConfirmationType;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5038,12 +4017,7 @@ class UAbilityTask_WaitTargetData* UAbilityTask_WaitTargetData::STATIC_WaitTarge
 	params.ConfirmationType = ConfirmationType;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5058,12 +4032,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataReplicatedCancelledCallback()
 
 	UAbilityTask_WaitTargetData_OnTargetDataReplicatedCancelledCallback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5081,12 +4050,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataReplicatedCallback(const struct FG
 	params.Data = Data;
 	params.ActivationTag = ActivationTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5102,12 +4066,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataReadyCallback(const struct FGamepl
 	UAbilityTask_WaitTargetData_OnTargetDataReadyCallback_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5123,12 +4082,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataCancelledCallback(const struct FGa
 	UAbilityTask_WaitTargetData_OnTargetDataCancelledCallback_Params params;
 	params.Data = Data;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5146,12 +4100,7 @@ void UAbilityTask_WaitTargetData::FinishSpawningActor(class UObject* WorldContex
 	params.WorldContextObject = WorldContextObject;
 	params.SpawnedActor = SpawnedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5171,12 +4120,7 @@ bool UAbilityTask_WaitTargetData::BeginSpawningActor(class UObject* WorldContext
 	params.WorldContextObject = WorldContextObject;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (SpawnedActor != nullptr)
 		*SpawnedActor = params.SpawnedActor;
@@ -5202,12 +4146,7 @@ class UAbilityTask_WaitVelocityChange* UAbilityTask_WaitVelocityChange::STATIC_C
 	params.Direction = Direction;
 	params.MinimumMagnitude = MinimumMagnitude;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5227,11 +4166,7 @@ void AGameplayAbilityWorldReticle::SetReticleMaterialParamVector(const struct FN
 	params.ParamName = ParamName;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5249,11 +4184,7 @@ void AGameplayAbilityWorldReticle::SetReticleMaterialParamFloat(const struct FNa
 	params.ParamName = ParamName;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5269,11 +4200,7 @@ void AGameplayAbilityWorldReticle::OnValidTargetChanged(bool bNewValue)
 	AGameplayAbilityWorldReticle_OnValidTargetChanged_Params params;
 	params.bNewValue = bNewValue;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5289,11 +4216,7 @@ void AGameplayAbilityWorldReticle::OnTargetingAnActor(bool bNewValue)
 	AGameplayAbilityWorldReticle_OnTargetingAnActor_Params params;
 	params.bNewValue = bNewValue;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5306,11 +4229,7 @@ void AGameplayAbilityWorldReticle::OnParametersInitialized()
 
 	AGameplayAbilityWorldReticle_OnParametersInitialized_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5326,12 +4245,7 @@ void AGameplayAbilityWorldReticle::FaceTowardSource(bool bFaceIn2D)
 	AGameplayAbilityWorldReticle_FaceTowardSource_Params params;
 	params.bFaceIn2D = bFaceIn2D;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5344,12 +4258,7 @@ void AGameplayAbilityTargetActor::ConfirmTargeting()
 
 	AGameplayAbilityTargetActor_ConfirmTargeting_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5362,12 +4271,7 @@ void AGameplayAbilityTargetActor::CancelTargeting()
 
 	AGameplayAbilityTargetActor_CancelTargeting_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5386,12 +4290,7 @@ bool AGameplayCueNotify_Actor::WhileActive(class AActor* MyTarget, const struct 
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5412,12 +4311,7 @@ bool AGameplayCueNotify_Actor::OnRemove(class AActor* MyTarget, const struct FGa
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5432,12 +4326,7 @@ void AGameplayCueNotify_Actor::OnOwnerDestroyed()
 
 	AGameplayCueNotify_Actor_OnOwnerDestroyed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5456,12 +4345,7 @@ bool AGameplayCueNotify_Actor::OnExecute(class AActor* MyTarget, const struct FG
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5482,12 +4366,7 @@ bool AGameplayCueNotify_Actor::OnActive(class AActor* MyTarget, const struct FGa
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5509,11 +4388,7 @@ void AGameplayCueNotify_Actor::K2_HandleGameplayCue(class AActor* MyTarget, TEnu
 	params.EventType = EventType;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5532,12 +4407,7 @@ bool UGameplayCueNotify_Static::WhileActive(class AActor* MyTarget, const struct
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5558,12 +4428,7 @@ bool UGameplayCueNotify_Static::OnRemove(class AActor* MyTarget, const struct FG
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5584,12 +4449,7 @@ bool UGameplayCueNotify_Static::OnExecute(class AActor* MyTarget, const struct F
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5610,12 +4470,7 @@ bool UGameplayCueNotify_Static::OnActive(class AActor* MyTarget, const struct FG
 	params.MyTarget = MyTarget;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5637,11 +4492,7 @@ void UGameplayCueNotify_Static::K2_HandleGameplayCue(class AActor* MyTarget, TEn
 	params.EventType = EventType;
 	params.Parameters = Parameters;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5658,12 +4509,7 @@ void UGameplayEffectExecutionCalculation::Execute(const struct FGameplayEffectCu
 	UGameplayEffectExecutionCalculation_Execute_Params params;
 	params.ExecutionParams = ExecutionParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutExecutionOutput != nullptr)
 		*OutExecutionOutput = params.OutExecutionOutput;
@@ -5683,12 +4529,7 @@ float UGameplayModMagnitudeCalculation::CalculateBaseMagnitude(const struct FGam
 	UGameplayModMagnitudeCalculation_CalculateBaseMagnitude_Params params;
 	params.Spec = Spec;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5712,12 +4553,7 @@ void UGameplayTagReponseTable::TagResponseEvent(const struct FGameplayTag& Tag, 
 	params.ASC = ASC;
 	params.idx = idx;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,12 +21,7 @@ void UMetalAIFormComponent::OnRep_IsWet()
 
 	UMetalAIFormComponent_OnRep_IsWet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39,12 +34,7 @@ void UPlantAIFormComponent::OnRep_IsWet()
 
 	UPlantAIFormComponent_OnRep_IsWet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -57,12 +47,7 @@ void UPlantAIFormComponent::OnRep_IsWeak()
 
 	UPlantAIFormComponent_OnRep_IsWeak_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -78,12 +63,7 @@ void UShadowAIFormComponent::OnRep_CurrentState(TEnumAsByte<EShadowAIFormState> 
 	UShadowAIFormComponent_OnRep_CurrentState_Params params;
 	params.PreviousState = PreviousState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -99,17 +79,12 @@ void UShadowAIFormComponent::Multicast_ChangedToState(TEnumAsByte<EShadowAIFormS
 	UShadowAIFormComponent_Multicast_ChangedToState_Params params;
 	params.InState = InState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function Athena.ControllableObject.TakenControlImpl
-// (Event, Public, BlueprintEvent)
+// (Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor*                  Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -120,11 +95,7 @@ void AControllableObject::TakenControlImpl(class AActor* Controller)
 	AControllableObject_TakenControlImpl_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -140,17 +111,12 @@ void AControllableObject::SetCanInteract(bool InCanInteract)
 	AControllableObject_SetCanInteract_Params params;
 	params.InCanInteract = InCanInteract;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function Athena.ControllableObject.RelinquishedControlImpl
-// (Event, Public, BlueprintEvent)
+// (Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor*                  Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -161,11 +127,7 @@ void AControllableObject::RelinquishedControlImpl(class AActor* Controller)
 	AControllableObject_RelinquishedControlImpl_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -180,12 +142,7 @@ class AActor* AControllableObject::GetControllingActor()
 
 	AControllableObject_GetControllingActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -204,12 +161,7 @@ bool AControllableObject::CanInteractImpl(class AActor* InCharacter)
 	AControllableObject_CanInteractImpl_Params params;
 	params.InCharacter = InCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -227,12 +179,7 @@ void ASailManipulator::SetMastSocketId(const struct FSocketId& InMastSocketId)
 	ASailManipulator_SetMastSocketId_Params params;
 	params.InMastSocketId = InMastSocketId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -248,12 +195,7 @@ void ASailManipulator::SetMast(class AMast* InMast)
 	ASailManipulator_SetMast_Params params;
 	params.InMast = InMast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -269,12 +211,7 @@ void ASailManipulator::RotateTowardsLocation(const struct FVector& TargetLocatio
 	ASailManipulator_RotateTowardsLocation_Params params;
 	params.TargetLocation = TargetLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -287,12 +224,7 @@ void ASailManipulator::OnRep_PendingBoundMast()
 
 	ASailManipulator_OnRep_PendingBoundMast_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -308,12 +240,7 @@ void ASailManipulator::HandleBoundMastEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 	ASailManipulator_HandleBoundMastEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -326,12 +253,7 @@ void ASailManipulator::HandleBoundMastDestroyed()
 
 	ASailManipulator_HandleBoundMastDestroyed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -346,12 +268,7 @@ float ASailManipulator::GetRopeUVOffset()
 
 	ASailManipulator_GetRopeUVOffset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -368,12 +285,7 @@ class AMast* ASailManipulator::GetMast()
 
 	ASailManipulator_GetMast_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -391,12 +303,7 @@ void AMast::UpdateSailsLoweredBasedOnIntent(float LoweredIntent)
 	AMast_UpdateSailsLoweredBasedOnIntent_Params params;
 	params.LoweredIntent = LoweredIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -414,12 +321,7 @@ void AMast::UpdateSailsBasedOnIntent(float AngleIntent, float LoweredIntent)
 	params.AngleIntent = AngleIntent;
 	params.LoweredIntent = LoweredIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -435,12 +337,7 @@ void AMast::UpdateSailsAngleBasedOnIntent(float AngleIntent)
 	AMast_UpdateSailsAngleBasedOnIntent_Params params;
 	params.AngleIntent = AngleIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -453,12 +350,7 @@ void AMast::OnRep_IsCursed()
 
 	AMast_OnRep_IsCursed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -474,12 +366,7 @@ void AMast::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 	AMast_OnMastDescLoaded_Params params;
 	params.MastDesc = MastDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -497,12 +384,7 @@ void AMast::OnLoweredProportionChange(float LoweredProportion, float DeltaTime)
 	params.LoweredProportion = LoweredProportion;
 	params.DeltaTime = DeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -520,12 +402,7 @@ void AMast::OnAngleChanged(float Angle, float DeltaTime)
 	params.Angle = Angle;
 	params.DeltaTime = DeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -540,12 +417,7 @@ float AMast::GetSailTurnRate()
 
 	AMast_GetSailTurnRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -562,12 +434,7 @@ TArray<class ASail*> AMast::GetSails()
 
 	AMast_GetSails_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -584,12 +451,7 @@ float AMast::GetSailMovementRate()
 
 	AMast_GetSailMovementRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -606,12 +468,7 @@ float AMast::GetSailLoweredProportion()
 
 	AMast_GetSailLoweredProportion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -628,12 +485,7 @@ float AMast::GetSailAngleRatio()
 
 	AMast_GetSailAngleRatio_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -650,12 +502,7 @@ struct FTransform AMast::GetMastAngleBoneTransform()
 
 	AMast_GetMastAngleBoneTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -672,12 +519,7 @@ struct FVector AMast::GetLookAtPos()
 
 	AMast_GetLookAtPos_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -695,12 +537,7 @@ void AMast::FinaliseSails(TArray<class ASail*> InSails)
 	AMast_FinaliseSails_Params params;
 	params.InSails = InSails;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -718,12 +555,7 @@ void UActionRulesBlueprintFunctionLibrary::STATIC_AddOneShotUseActionRule(class 
 	params.StartInput = StartInput;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -743,12 +575,7 @@ void UActionRulesBlueprintFunctionLibrary::STATIC_AddHoldToUseActionRule(class U
 	params.EndInput = EndInput;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -761,12 +588,7 @@ void UActorCoherentViewComponent::ReadyForBindingsEventReceived()
 
 	UActorCoherentViewComponent_ReadyForBindingsEventReceived_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -784,12 +606,7 @@ void UActorFunctionLibrary::STATIC_TestSetNetCullDistance(class AActor* Actor, f
 	params.Actor = Actor;
 	params.InDistance = InDistance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -805,12 +622,7 @@ void UActorFunctionLibrary::STATIC_TestSetActorRoleAutonomousProxy(class AActor*
 	UActorFunctionLibrary_TestSetActorRoleAutonomousProxy_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -829,12 +641,7 @@ bool UActorFunctionLibrary::STATIC_IsParentActorInChildActorComponentHierarchy(c
 	params.ChildActor = ChildActor;
 	params.TestParentActor = TestParentActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -855,12 +662,7 @@ bool UActorFunctionLibrary::STATIC_IsDependentActorSpawnAckedOnClient(class AAct
 	params.RealViewer = RealViewer;
 	params.DependencyActor = DependencyActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -879,12 +681,7 @@ bool UActorFunctionLibrary::STATIC_IsActorTickFunctionRegistered(class AActor* A
 	UActorFunctionLibrary_IsActorTickFunctionRegistered_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -905,12 +702,7 @@ struct FTransform UActorFunctionLibrary::STATIC_GetTransformOfActorRelativeToAno
 	params.TargetActor = TargetActor;
 	params.RelativeToActor = RelativeToActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -929,12 +721,7 @@ int UActorFunctionLibrary::STATIC_GetActorNetGuidValue(class AActor* Actor)
 	UActorFunctionLibrary_GetActorNetGuidValue_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -955,12 +742,7 @@ TArray<class AActor*> UActorFunctionLibrary::STATIC_FindChildActorsByClass(class
 	params.ParentActor = ParentActor;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -981,12 +763,7 @@ class AActor* UActorFunctionLibrary::STATIC_FindActorByNetGuidValue(class UObjec
 	params.WorldContext = WorldContext;
 	params.NetGuidValue = NetGuidValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1007,12 +784,7 @@ class AActor* UActorFunctionLibrary::STATIC_FindActorByName(class UObject* World
 	params.WorldContext = WorldContext;
 	params.ActorName = ActorName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1033,12 +805,7 @@ class AActor* UActorFunctionLibrary::STATIC_FindActorByClass(class UObject* Worl
 	params.WorldContext = WorldContext;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1059,12 +826,7 @@ TArray<class AActor*> UActorFunctionLibrary::STATIC_FilterActorArrayByInterface(
 	params.Actors = Actors;
 	params.InterfaceToTest = InterfaceToTest;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1085,12 +847,7 @@ class AActor* UActorFunctionLibrary::STATIC_ClosestActorToPoint(TArray<class AAc
 	params.Actors = Actors;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1116,12 +873,7 @@ void UActorRelevancyTestFunctions::STATIC_WaitForActorToBeAckedForPlayerId(class
 	params.ClientId = ClientId;
 	params.SplitScreenIndex = SplitScreenIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1143,12 +895,7 @@ void UActorRelevancyTestFunctions::STATIC_WaitForActorToBeAckedForPlayerControll
 	params.Actor = Actor;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1167,12 +914,7 @@ bool UActorRelevancyTestFunctions::STATIC_IsActorAckedForPlayer(class APlayerCon
 	params.PlayerController = PlayerController;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1189,12 +931,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnSecondary
 
 	UAILocomotionCompositeInputHandler_OnSecondaryItemUseReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1211,12 +948,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnSecondary
 
 	UAILocomotionCompositeInputHandler_OnSecondaryItemUsePressed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1233,12 +965,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnQuickSwit
 
 	UAILocomotionCompositeInputHandler_OnQuickSwitchWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1255,12 +982,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnQuickSwit
 
 	UAILocomotionCompositeInputHandler_OnQuickSwitchSecondaryWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1277,12 +999,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnQuickSwit
 
 	UAILocomotionCompositeInputHandler_OnQuickSwitchPrimaryWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1299,12 +1016,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnPrimaryIt
 
 	UAILocomotionCompositeInputHandler_OnPrimaryItemUseReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1321,12 +1033,7 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnPrimaryIt
 
 	UAILocomotionCompositeInputHandler_OnPrimaryItemUsePressed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1346,12 +1053,7 @@ void UAIPartsRetrievalComponent::RequestNewAIParts(class UAIPartsCategory* Assig
 	params.AssignedPartsCategory = AssignedPartsCategory;
 	params.TeamColorIndex = TeamColorIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1364,12 +1066,7 @@ void UAIPartsRetrievalComponent::OnRep_ReplicatedAIPartsData()
 
 	UAIPartsRetrievalComponent_OnRep_ReplicatedAIPartsData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1402,12 +1099,7 @@ void UCameraFunctionLib::STATIC_UpdateCameraAdditiveType(TEnumAsByte<ECameraLook
 	params.MaxYawAngle = MaxYawAngle;
 	params.MinYawAngle = MinYawAngle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (IsCameraAdditive != nullptr)
 		*IsCameraAdditive = params.IsCameraAdditive;
@@ -1429,12 +1121,7 @@ struct FLookAtOffset ULookAtOffsetComponent::GetLookAtOffset()
 
 	ULookAtOffsetComponent_GetLookAtOffset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1452,12 +1139,7 @@ void UAthenaAnimationLODInterface::SetIKState(TEnumAsByte<EIKState> NewState)
 	UAthenaAnimationLODInterface_SetIKState_Params params;
 	params.NewState = NewState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1473,12 +1155,7 @@ void UAthenaAnimationLODInterface::SetIKSolverType(TEnumAsByte<EIKSolverType> Ne
 	UAthenaAnimationLODInterface_SetIKSolverType_Params params;
 	params.NewState = NewState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1494,12 +1171,7 @@ void UAthenaAnimationLODInterface::SetIKFootplantState(TEnumAsByte<EIKFootPlanti
 	UAthenaAnimationLODInterface_SetIKFootplantState_Params params;
 	params.NewState = NewState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1515,12 +1187,7 @@ void UCharacterAnimationInterface::UnbindFromCharacter(class AAthenaCharacter* C
 	UCharacterAnimationInterface_UnbindFromCharacter_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1542,12 +1209,7 @@ void UCharacterAnimationInterface::OnImpact(const struct FVector& ImpactLocation
 	params.ImpactVelocity = ImpactVelocity;
 	params.HitReactionAnimType = HitReactionAnimType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1563,12 +1225,7 @@ void UCharacterAnimationInterface::LoadCharacterAnimations(class UClass* AnimDat
 	UCharacterAnimationInterface_LoadCharacterAnimations_Params params;
 	params.AnimDataId = AnimDataId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1586,12 +1243,7 @@ void UCharacterAnimationInterface::BindThirdPersonToCharacter(class AAthenaChara
 	params.Character = Character;
 	params.AnimDataId = AnimDataId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1609,12 +1261,7 @@ void UCharacterAnimationInterface::BindFirstPersonToCharacter(class AAthenaChara
 	params.Character = Character;
 	params.AnimDataId = AnimDataId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1629,12 +1276,7 @@ void UAthenaAnimationLocomotionComponentFunctions::STATIC_MarkRunStopComplete(st
 
 	UAthenaAnimationLocomotionComponentFunctions_MarkRunStopComplete_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Locomotion != nullptr)
 		*Locomotion = params.Locomotion;
@@ -1654,12 +1296,7 @@ float UAthenaAnimationLocomotionComponentFunctions::STATIC_GetWantedMovementSpee
 	UAthenaAnimationLocomotionComponentFunctions_GetWantedMovementSpeed_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1678,12 +1315,7 @@ struct FVector UAthenaAnimationLocomotionComponentFunctions::STATIC_GetVelocity(
 	UAthenaAnimationLocomotionComponentFunctions_GetVelocity_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1702,12 +1334,7 @@ bool UAthenaAnimationLocomotionComponentFunctions::STATIC_GetTurningLeft(const s
 	UAthenaAnimationLocomotionComponentFunctions_GetTurningLeft_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1726,12 +1353,7 @@ bool UAthenaAnimationLocomotionComponentFunctions::STATIC_GetTurningActive(const
 	UAthenaAnimationLocomotionComponentFunctions_GetTurningActive_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1750,12 +1372,7 @@ bool UAthenaAnimationLocomotionComponentFunctions::STATIC_GetRunStopWanted(const
 	UAthenaAnimationLocomotionComponentFunctions_GetRunStopWanted_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1774,12 +1391,7 @@ bool UAthenaAnimationLocomotionComponentFunctions::STATIC_GetIsUnderwaterSwimmin
 	UAthenaAnimationLocomotionComponentFunctions_GetIsUnderwaterSwimming_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1798,12 +1410,7 @@ bool UAthenaAnimationLocomotionComponentFunctions::STATIC_GetIsSwimming(const st
 	UAthenaAnimationLocomotionComponentFunctions_GetIsSwimming_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1822,12 +1429,7 @@ float UAthenaAnimationLocomotionComponentFunctions::STATIC_GetCurrentYaw(const s
 	UAthenaAnimationLocomotionComponentFunctions_GetCurrentYaw_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1846,12 +1448,7 @@ float UAthenaAnimationLocomotionComponentFunctions::STATIC_GetCurrentDirection(c
 	UAthenaAnimationLocomotionComponentFunctions_GetCurrentDirection_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1870,12 +1467,7 @@ bool UAthenaAnimationLocomotionComponentFunctions::STATIC_GetCharacterMoving(con
 	UAthenaAnimationLocomotionComponentFunctions_GetCharacterMoving_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1894,12 +1486,7 @@ float UAthenaAnimationLocomotionComponentFunctions::STATIC_GetBlendedTurnRate(co
 	UAthenaAnimationLocomotionComponentFunctions_GetBlendedTurnRate_Params params;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1917,12 +1504,7 @@ void UInventoryItemInterface::SetItemType(TEnumAsByte<EItemType> InType)
 	UInventoryItemInterface_SetItemType_Params params;
 	params.InType = InType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1935,12 +1517,7 @@ void UInventoryItemInterface::OnAddedToInventory()
 
 	UInventoryItemInterface_OnAddedToInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1955,12 +1532,7 @@ TEnumAsByte<EItemType> UInventoryItemInterface::GetItemType()
 
 	UInventoryItemInterface_GetItemType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1977,12 +1549,7 @@ class FString UInventoryItemInterface::GetIconURL()
 
 	UInventoryItemInterface_GetIconURL_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1999,12 +1566,7 @@ float UInventoryItemInterface::GetIconScale()
 
 	UInventoryItemInterface_GetIconScale_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2021,12 +1583,7 @@ float UInventoryItemInterface::GetIconRotation()
 
 	UInventoryItemInterface_GetIconRotation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2043,12 +1600,7 @@ class FString UInventoryItemInterface::GetBackgroundImageURL()
 
 	UInventoryItemInterface_GetBackgroundImageURL_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2068,12 +1620,7 @@ void UWielderAnimationInterface::SetItemVisibility(const TScriptInterface<class 
 	params.Item = Item;
 	params.VISIBILITY = VISIBILITY;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2090,12 +1637,7 @@ void UWielderAnimationInterface::ItemWielded(const TScriptInterface<class UWield
 	UWielderAnimationInterface_ItemWielded_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (AnimParams != nullptr)
 		*AnimParams = params.AnimParams;
@@ -2116,12 +1658,7 @@ void UWielderAnimationInterface::ItemStowed(const TScriptInterface<class UWielda
 	params.Item = Item;
 	params.FastStow = FastStow;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2138,12 +1675,7 @@ class UPrimitiveComponent* UWielderAnimationInterface::GetWieldedItemMesh(const 
 	UWielderAnimationInterface_GetWieldedItemMesh_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2161,12 +1693,7 @@ void UWielderAnimationInterface::DetachWieldedItem(const TScriptInterface<class 
 	UWielderAnimationInterface_DetachWieldedItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2184,12 +1711,7 @@ void UWielderAnimationInterface::AttachWieldedItem(const TScriptInterface<class 
 	params.Item = Item;
 	params.AnimParams = AnimParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2204,12 +1726,7 @@ struct FText UNamedObjectInterface::GetObjectDisplayName()
 
 	UNamedObjectInterface_GetObjectDisplayName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2226,12 +1743,7 @@ bool ULoadableItemInterface::CanBeUnloaded()
 
 	ULoadableItemInterface_CanBeUnloaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2248,12 +1760,7 @@ bool ULoadableItemInterface::CanBeLoaded()
 
 	ULoadableItemInterface_CanBeLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2270,12 +1777,7 @@ class UClass* AItemInfo::GetItemType()
 
 	AItemInfo_GetItemType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2292,12 +1794,7 @@ class UClass* AItemInfo::GetItemCategory()
 
 	AItemInfo_GetItemCategory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2314,12 +1811,7 @@ class AActor* AItemInfo::GetItem()
 
 	AItemInfo_GetItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2336,12 +1828,7 @@ class AWieldableItem* AItemInfo::GetAsWieldable()
 
 	AItemInfo_GetAsWieldable_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2362,12 +1849,7 @@ class AWieldableItem* AItemInfo::CreateWieldableItem(class AActor* InNewOwner, c
 	params.InNewOwner = InNewOwner;
 	params.InTransform = InTransform;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2388,12 +1870,7 @@ class AItemProxy* AItemInfo::CreateProxyItem(const struct FTransform& InTransfor
 	params.InTransform = InTransform;
 	params.LifetimeManagement = LifetimeManagement;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2418,12 +1895,7 @@ bool UAthenaAnimationInstance::SpawnCosmeticItem(class AAthenaCharacter* Owner, 
 	params.SpawnLocation = SpawnLocation;
 	params.Animgraph = Animgraph;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2441,12 +1913,7 @@ void UAthenaAnimationInstance::SetWieldedItemContinuousIsAlternate(bool IsAltern
 	UAthenaAnimationInstance_SetWieldedItemContinuousIsAlternate_Params params;
 	params.IsAlternate = IsAlternate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2462,12 +1929,7 @@ void UAthenaAnimationInstance::SetLoadedItemAllAnimations(const struct FAthenaAn
 	UAthenaAnimationInstance_SetLoadedItemAllAnimations_Params params;
 	params.AllAnimationSet = AllAnimationSet;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2483,12 +1945,7 @@ void UAthenaAnimationInstance::SetControllableSocketGroupCharacterSize(TEnumAsBy
 	UAthenaAnimationInstance_SetControllableSocketGroupCharacterSize_Params params;
 	params.InGroup = InGroup;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2504,12 +1961,7 @@ void UAthenaAnimationInstance::SetControllableSocketGroup(TEnumAsByte<EAthenaAni
 	UAthenaAnimationInstance_SetControllableSocketGroup_Params params;
 	params.InGroup = InGroup;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2524,12 +1976,7 @@ class UBlendSpace1D* UAthenaAnimationInstance::PickItemOneShotSequencePitchOverr
 
 	UAthenaAnimationInstance_PickItemOneShotSequencePitchOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2546,12 +1993,7 @@ class UAnimSequence* UAthenaAnimationInstance::PickItemOneShotSequence()
 
 	UAthenaAnimationInstance_PickItemOneShotSequence_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2568,12 +2010,7 @@ bool UAthenaAnimationInstance::NotRunningOnServer()
 
 	UAthenaAnimationInstance_NotRunningOnServer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2596,12 +2033,7 @@ TArray<struct FAthenaAnimationLoadObjectsWrapper> UAthenaAnimationInstance::Load
 	params.DestinationStruct = DestinationStruct;
 	params.CharacterType = CharacterType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2616,12 +2048,7 @@ void UAthenaAnimationInstance::LeftItemBlockingFeedbackState()
 
 	UAthenaAnimationInstance_LeftItemBlockingFeedbackState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2636,12 +2063,7 @@ bool UAthenaAnimationInstance::InMeleeBlock()
 
 	UAthenaAnimationInstance_InMeleeBlock_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2658,12 +2080,7 @@ bool UAthenaAnimationInstance::InMeleeAttack()
 
 	UAthenaAnimationInstance_InMeleeAttack_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2680,12 +2097,7 @@ bool UAthenaAnimationInstance::GetWantsToReenterItemBlockingFeedback()
 
 	UAthenaAnimationInstance_GetWantsToReenterItemBlockingFeedback_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2702,12 +2114,7 @@ TEnumAsByte<EWieldableItemComplexOneShotAnimType> UAthenaAnimationInstance::GetM
 
 	UAthenaAnimationInstance_GetMeleeStrikeType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2724,12 +2131,7 @@ struct FAthenaAnimationLocomotion UAthenaAnimationInstance::GetLocomotion()
 
 	UAthenaAnimationInstance_GetLocomotion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2746,12 +2148,7 @@ struct FWieldAnimationParams UAthenaAnimationInstance::GetLoadedItemWieldedParam
 
 	UAthenaAnimationInstance_GetLoadedItemWieldedParams_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2768,12 +2165,7 @@ bool UAthenaAnimationInstance::GetLoadedItemSecondaryPitchOverride()
 
 	UAthenaAnimationInstance_GetLoadedItemSecondaryPitchOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2790,12 +2182,7 @@ struct FAthenaAnimationObjectActionContinuousStruct UAthenaAnimationInstance::Ge
 
 	UAthenaAnimationInstance_GetLoadedItemSecondaryContinuousAnimationsMain_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2812,12 +2199,7 @@ struct FTransform UAthenaAnimationInstance::GetLoadedItemRightHandOffset()
 
 	UAthenaAnimationInstance_GetLoadedItemRightHandOffset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2834,12 +2216,7 @@ bool UAthenaAnimationInstance::GetLoadedItemPrimaryPitchOverride()
 
 	UAthenaAnimationInstance_GetLoadedItemPrimaryPitchOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2856,12 +2233,7 @@ struct FAthenaAnimationObjectActionContinuousStruct UAthenaAnimationInstance::Ge
 
 	UAthenaAnimationInstance_GetLoadedItemPrimaryContinuousAnimationsMain_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2878,12 +2250,7 @@ struct FAthenaAnimationObjectMeleeV2 UAthenaAnimationInstance::GetLoadedItemMele
 
 	UAthenaAnimationInstance_GetLoadedItemMeleeAnimationsV2_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2900,12 +2267,7 @@ struct FAthenaAnimationObjectLocomotionAnimations UAthenaAnimationInstance::GetL
 
 	UAthenaAnimationInstance_GetLoadedItemLocomotionAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2922,12 +2284,7 @@ struct FTransform UAthenaAnimationInstance::GetLoadedItemLeftHandOffset()
 
 	UAthenaAnimationInstance_GetLoadedItemLeftHandOffset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2944,12 +2301,7 @@ struct FAthenaAnimationObjectJumpingAnimations UAthenaAnimationInstance::GetLoad
 
 	UAthenaAnimationInstance_GetLoadedItemJumpingAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2966,12 +2318,7 @@ bool UAthenaAnimationInstance::GetLoadedItemIsRangedWeapon()
 
 	UAthenaAnimationInstance_GetLoadedItemIsRangedWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2988,12 +2335,7 @@ struct FAthenaAnimationObjectIdleAnimations UAthenaAnimationInstance::GetLoadedI
 
 	UAthenaAnimationInstance_GetLoadedItemIdleAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3010,12 +2352,7 @@ class UAnimSequence* UAthenaAnimationInstance::GetLoadedItemHandAdditiveOverlayA
 
 	UAthenaAnimationInstance_GetLoadedItemHandAdditiveOverlayAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3032,12 +2369,7 @@ struct FAthenaAnimationObjectFacial UAthenaAnimationInstance::GetLoadedItemFacia
 
 	UAthenaAnimationInstance_GetLoadedItemFacialAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3054,12 +2386,7 @@ struct FAthenaAnimationObjectEquipAnimations UAthenaAnimationInstance::GetLoaded
 
 	UAthenaAnimationInstance_GetLoadedItemEquippingAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3076,12 +2403,7 @@ struct FAthenaAnimationObjectLocomotionAnimations UAthenaAnimationInstance::GetL
 
 	UAthenaAnimationInstance_GetLoadedItemAlternateLocomotionAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3098,12 +2420,7 @@ struct FAthenaAnimationObjectIdleAnimations UAthenaAnimationInstance::GetLoadedI
 
 	UAthenaAnimationInstance_GetLoadedItemAlternateIdleAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3120,12 +2437,7 @@ struct FAthenaAnimationCoreObjectAnimations UAthenaAnimationInstance::GetLoadedI
 
 	UAthenaAnimationInstance_GetLoadedItemAllAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3142,12 +2454,7 @@ TEnumAsByte<EAthenaAnimationJumpingState> UAthenaAnimationInstance::GetJumpingAn
 
 	UAthenaAnimationInstance_GetJumpingAnimationState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3164,12 +2471,7 @@ bool UAthenaAnimationInstance::GetItemUsePitchOverride()
 
 	UAthenaAnimationInstance_GetItemUsePitchOverride_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3186,12 +2488,7 @@ class UBlendSpace* UAthenaAnimationInstance::GetItemMeleeDodgeBlendspace()
 
 	UAthenaAnimationInstance_GetItemMeleeDodgeBlendspace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3212,12 +2509,7 @@ struct FAthenaAnimationObjectActionContinuousStructPitchOverride UAthenaAnimatio
 	params.ContinuousUseID = ContinuousUseID;
 	params.Override = Override;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3238,12 +2530,7 @@ struct FAthenaAnimationObjectActionContinuousStruct UAthenaAnimationInstance::Ge
 	params.ContinuousUseID = ContinuousUseID;
 	params.Override = Override;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3262,12 +2549,7 @@ class UAnimSequence* UAthenaAnimationInstance::GetItemComplexOneShotSequence(TEn
 	UAthenaAnimationInstance_GetItemComplexOneShotSequence_Params params;
 	params.ComplexOneShotSubState = ComplexOneShotSubState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3288,12 +2570,7 @@ float UAthenaAnimationInstance::GetItemComplexOneShotPlaySpeed(class UAnimSequen
 	params.AnimSequence = AnimSequence;
 	params.ComplexOneShotSubState = ComplexOneShotSubState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3310,12 +2587,7 @@ TEnumAsByte<EItemBlockingSubState> UAthenaAnimationInstance::GetItemBlockingSubS
 
 	UAthenaAnimationInstance_GetItemBlockingSubState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3332,12 +2604,7 @@ class UAnimSequence* UAthenaAnimationInstance::GetItemBlockingMainOutOfAnimation
 
 	UAthenaAnimationInstance_GetItemBlockingMainOutOfAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3354,12 +2621,7 @@ class UAnimSequence* UAthenaAnimationInstance::GetItemBlockingMainIntoAnimation(
 
 	UAthenaAnimationInstance_GetItemBlockingMainIntoAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3376,12 +2638,7 @@ class UBlendSpace* UAthenaAnimationInstance::GetItemBlockingMainBlendspace()
 
 	UAthenaAnimationInstance_GetItemBlockingMainBlendspace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3398,12 +2655,7 @@ class UAnimSequence* UAthenaAnimationInstance::GetItemBlockingFeedbackSequence()
 
 	UAthenaAnimationInstance_GetItemBlockingFeedbackSequence_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3420,12 +2672,7 @@ bool UAthenaAnimationInstance::GetInDockingTransition()
 
 	UAthenaAnimationInstance_GetInDockingTransition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3442,12 +2689,26 @@ class AActor* UAthenaAnimationInstance::GetCurrentEqippedItem()
 
 	UAthenaAnimationInstance_GetCurrentEqippedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
 
-	fn->FunctionFlags = flags;
+	return params.ReturnValue;
+}
+
+
+// Function Athena.AthenaAnimationInstance.GetCosmeticItem
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EWieldAnimationLocation> CosmeticLocation               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* UAthenaAnimationInstance::GetCosmeticItem(TEnumAsByte<EWieldAnimationLocation> CosmeticLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaAnimationInstance.GetCosmeticItem");
+
+	UAthenaAnimationInstance_GetCosmeticItem_Params params;
+	params.CosmeticLocation = CosmeticLocation;
+
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -3464,12 +2725,7 @@ TEnumAsByte<EAthenaAnimationSocketGroupCharacterSize> UAthenaAnimationInstance::
 
 	UAthenaAnimationInstance_GetControllableSocketGroupCharacterSize_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3486,12 +2742,7 @@ TEnumAsByte<EAthenaAnimationSocketGroup> UAthenaAnimationInstance::GetControllab
 
 	UAthenaAnimationInstance_GetControllableSocketGroup_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3510,12 +2761,7 @@ float UAthenaAnimationInstance::GetAnimationLength(class UAnimSequence* Animatio
 	UAthenaAnimationInstance_GetAnimationLength_Params params;
 	params.Animation = Animation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3530,12 +2776,7 @@ void UAthenaAnimationInstance::EnteredItemBlockingFeedbackState()
 
 	UAthenaAnimationInstance_EnteredItemBlockingFeedbackState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3552,12 +2793,7 @@ bool UAthenaAnimationInstance::DestroyCosmeticItem(TEnumAsByte<EWieldAnimationLo
 	UAthenaAnimationInstance_DestroyCosmeticItem_Params params;
 	params.SpawnLocation = SpawnLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3574,12 +2810,7 @@ struct FVector UCharacterInterface::GetMouthPosition()
 
 	UCharacterInterface_GetMouthPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3596,12 +2827,7 @@ class USkeletalMeshComponent* UCharacterFootImpactMeshInterface::GetFootImpactSk
 
 	UCharacterFootImpactMeshInterface_GetFootImpactSkeletonMeshComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3618,12 +2844,7 @@ bool UCharacterInertInterface::SetInert()
 
 	UCharacterInertInterface_SetInert_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3640,12 +2861,7 @@ bool UCharacterInertInterface::IsInert()
 
 	UCharacterInertInterface_IsInert_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3662,12 +2878,7 @@ bool UCharacterInertInterface::ClearInert()
 
 	UCharacterInertInterface_ClearInert_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3682,12 +2893,7 @@ void UControllerInterface::EndControl()
 
 	UControllerInterface_EndControl_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3706,12 +2912,7 @@ TEnumAsByte<EWieldItemReturnCode> UInventoryManipulatorInterface::WieldItemByAct
 	params.Item = Item;
 	params.UnwieldFast = UnwieldFast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3726,12 +2927,7 @@ void UInventoryManipulatorInterface::ToggleWieldItem()
 
 	UInventoryManipulatorInterface_ToggleWieldItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3748,12 +2944,7 @@ bool UInventoryManipulatorInterface::RemoveItem(class AItemInfo* Item)
 	UInventoryManipulatorInterface_RemoveItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3773,12 +2964,7 @@ void UInventoryManipulatorInterface::QuickSelectItemOfType(TEnumAsByte<EItemType
 	params.ItemType = ItemType;
 	params.TypedItemIndex = TypedItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3796,12 +2982,7 @@ void UInventoryManipulatorInterface::QuickSelectItemOfCategory(class UClass* Cat
 	params.Category = Category;
 	params.IndexIntoCategory = IndexIntoCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3817,12 +2998,7 @@ void UInventoryManipulatorInterface::QuickSelectItem(int ItemIndex)
 	UInventoryManipulatorInterface_QuickSelectItem_Params params;
 	params.ItemIndex = ItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3831,22 +3007,19 @@ void UInventoryManipulatorInterface::QuickSelectItem(int ItemIndex)
 // Parameters:
 // class AItemInfo*               Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AndWield                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldNotifyClients            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInventoryManipulatorInterface::PickUpItem(class AItemInfo* Item, bool AndWield)
+bool UInventoryManipulatorInterface::PickUpItem(class AItemInfo* Item, bool AndWield, bool ShouldNotifyClients)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.InventoryManipulatorInterface.PickUpItem");
 
 	UInventoryManipulatorInterface_PickUpItem_Params params;
 	params.Item = Item;
 	params.AndWield = AndWield;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.ShouldNotifyClients = ShouldNotifyClients;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3865,12 +3038,7 @@ int UInventoryManipulatorInterface::GetNumberOfItemsOfItemCategory(class UClass*
 	UInventoryManipulatorInterface_GetNumberOfItemsOfItemCategory_Params params;
 	params.ItemSlot = ItemSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3887,12 +3055,7 @@ TArray<class UClass*> UInventoryManipulatorInterface::GetItems()
 
 	UInventoryManipulatorInterface_GetItems_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3909,12 +3072,7 @@ int UInventoryManipulatorInterface::GetCurrentItemIndex()
 
 	UInventoryManipulatorInterface_GetCurrentItemIndex_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3931,12 +3089,7 @@ TEnumAsByte<EDropItemReturnCode> UInventoryManipulatorInterface::DropWieldedItem
 
 	UInventoryManipulatorInterface_DropWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3951,12 +3104,7 @@ void UInventoryManipulatorInterface::CycleItemUp()
 
 	UInventoryManipulatorInterface_CycleItemUp_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3972,12 +3120,7 @@ void UInventoryManipulatorInterface::CycleItemType(TEnumAsByte<EItemType> ItemTy
 	UInventoryManipulatorInterface_CycleItemType_Params params;
 	params.ItemType = ItemType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3990,12 +3133,7 @@ void UInventoryManipulatorInterface::CycleItemDown()
 
 	UInventoryManipulatorInterface_CycleItemDown_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4011,12 +3149,7 @@ void UInventoryManipulatorInterface::CycleItemCategory(class UClass* Category)
 	UInventoryManipulatorInterface_CycleItemCategory_Params params;
 	params.Category = Category;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4033,12 +3166,7 @@ bool UInventoryManipulatorInterface::ConsumeItem(class AItemInfo* Item)
 	UInventoryManipulatorInterface_ConsumeItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4055,12 +3183,7 @@ TEnumAsByte<EDropItemReturnCode> UInventoryManipulatorInterface::CanDropWieldedI
 
 	UInventoryManipulatorInterface_CanDropWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4079,12 +3202,7 @@ TEnumAsByte<ECanAddItemQueryResult> UInventoryManipulatorInterface::CanAddItemOf
 	UInventoryManipulatorInterface_CanAddItemOfItemCategory_Params params;
 	params.ItemSlot = ItemSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4103,12 +3221,7 @@ bool UInventoryManipulatorInterface::AddItemOfSubclass(class UClass* InItem)
 	UInventoryManipulatorInterface_AddItemOfSubclass_Params params;
 	params.InItem = InItem;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4127,12 +3240,7 @@ bool UInventoryManipulatorInterface::AddItem(class AItemInfo* Item)
 	UInventoryManipulatorInterface_AddItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4153,12 +3261,7 @@ TEnumAsByte<EWieldItemReturnCode> UWieldedItemInterface::WieldItem(const TScript
 	params.Item = Item;
 	params.Fast = Fast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4176,12 +3279,7 @@ void UWieldedItemInterface::UnstashItem(TEnumAsByte<EStashReason> Reason)
 	UWieldedItemInterface_UnstashItem_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4197,12 +3295,7 @@ void UWieldedItemInterface::StashItem(TEnumAsByte<EStashReason> Reason)
 	UWieldedItemInterface_StashItem_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4218,12 +3311,7 @@ void UWieldedItemInterface::SlowStashItem(TEnumAsByte<EStashReason> Reason)
 	UWieldedItemInterface_SlowStashItem_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4238,12 +3326,7 @@ bool UWieldedItemInterface::ShouldDropLargeItemOnDestroy()
 
 	UWieldedItemInterface_ShouldDropLargeItemOnDestroy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4260,12 +3343,7 @@ TScriptInterface<class UWieldableInterface> UWieldedItemInterface::GetWieldedIte
 
 	UWieldedItemInterface_GetWieldedItemIfNotStashed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4282,12 +3360,7 @@ TScriptInterface<class UWieldableInterface> UWieldedItemInterface::GetWieldedIte
 
 	UWieldedItemInterface_GetWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4308,12 +3381,7 @@ void UCloudDomeInterface::UpdateCloudMeshes(struct FCloudVisualParameters* Cloud
 
 	UCloudDomeInterface_UpdateCloudMeshes_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (CloudVisualParametersIn != nullptr)
 		*CloudVisualParametersIn = params.CloudVisualParametersIn;
@@ -4339,12 +3407,7 @@ struct FVector UCloudDomeInterface::GetCloudDomePosition()
 
 	UCloudDomeInterface_GetCloudDomePosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4361,12 +3424,7 @@ class FString UTelemetrySubjectInterface::GetSubjectName()
 
 	UTelemetrySubjectInterface_GetSubjectName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4383,12 +3441,7 @@ class FString UTelemetrySubjectInterface::GetSubjectId()
 
 	UTelemetrySubjectInterface_GetSubjectId_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4409,12 +3462,7 @@ TEnumAsByte<EWieldItemReturnCode> AAthenaCharacter::WieldItem(const TScriptInter
 	params.Item = Item;
 	params.Fast = Fast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4433,12 +3481,7 @@ bool AAthenaCharacter::UseItem(class UClass* NotificationInputId)
 	AAthenaCharacter_UseItem_Params params;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4453,12 +3496,7 @@ void AAthenaCharacter::UnforceWaterHeight()
 
 	AAthenaCharacter_UnforceWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4474,12 +3512,7 @@ void AAthenaCharacter::SetIgnoreReplicationRotationOnly(bool InIgnoreReplication
 	AAthenaCharacter_SetIgnoreReplicationRotationOnly_Params params;
 	params.InIgnoreReplicationRotationOnly = InIgnoreReplicationRotationOnly;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4492,11 +3525,7 @@ void AAthenaCharacter::ReceiveRestart()
 
 	AAthenaCharacter_ReceiveRestart_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4514,12 +3543,7 @@ void AAthenaCharacter::PickUpItem(class AItemInfo* ItemInfo, bool AndWield)
 	params.ItemInfo = ItemInfo;
 	params.AndWield = AndWield;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4535,12 +3559,7 @@ void AAthenaCharacter::Kill(TEnumAsByte<ECharacterDeathType> DeathType)
 	AAthenaCharacter_Kill_Params params;
 	params.DeathType = DeathType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4555,12 +3574,7 @@ bool AAthenaCharacter::IsInWater()
 
 	AAthenaCharacter_IsInWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4579,12 +3593,7 @@ bool AAthenaCharacter::IsInteractionValid(class UObject* InInteractable)
 	AAthenaCharacter_IsInteractionValid_Params params;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4601,12 +3610,7 @@ bool AAthenaCharacter::IsDead()
 
 	AAthenaCharacter_IsDead_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4625,12 +3629,7 @@ bool AAthenaCharacter::IsCurrentItemReadyForAI(class UClass* NotificationInputId
 	AAthenaCharacter_IsCurrentItemReadyForAI_Params params;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4650,12 +3649,7 @@ void AAthenaCharacter::InteractWith(class UObject* InInteractable, class UClass*
 	params.InInteractable = InInteractable;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4671,12 +3665,7 @@ void AAthenaCharacter::Interact(class UObject* InInteractable)
 	AAthenaCharacter_Interact_Params params;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4691,12 +3680,7 @@ bool AAthenaCharacter::HasValidWaterHeight()
 
 	AAthenaCharacter_HasValidWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4718,12 +3702,7 @@ void AAthenaCharacter::HandleCharacterMovementUpdated(float DeltaSeconds, const 
 	params.OldLocation = OldLocation;
 	params.OldVelocity = OldVelocity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4738,12 +3717,7 @@ float AAthenaCharacter::GetYawOnMovingBase()
 
 	AAthenaCharacter_GetYawOnMovingBase_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4760,12 +3734,7 @@ float AAthenaCharacter::GetWaterLevelRelativeToCharacterBasePosition()
 
 	AAthenaCharacter_GetWaterLevelRelativeToCharacterBasePosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4782,12 +3751,7 @@ struct FWaterInformation AAthenaCharacter::GetWaterInformation()
 
 	AAthenaCharacter_GetWaterInformation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4804,12 +3768,7 @@ float AAthenaCharacter::GetWaterHeight()
 
 	AAthenaCharacter_GetWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4826,12 +3785,7 @@ float AAthenaCharacter::GetViewPitch()
 
 	AAthenaCharacter_GetViewPitch_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4849,12 +3803,7 @@ bool AAthenaCharacter::GetValidWaterHeightAtomic(float* OutWaterHeight)
 
 	AAthenaCharacter_GetValidWaterHeightAtomic_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutWaterHeight != nullptr)
 		*OutWaterHeight = params.OutWaterHeight;
@@ -4874,12 +3823,7 @@ class USkeletalMeshComponent* AAthenaCharacter::GetThirdPersonMeshComponent()
 
 	AAthenaCharacter_GetThirdPersonMeshComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4896,12 +3840,7 @@ class UCharacterInputBinder* AAthenaCharacter::GetInputBinder()
 
 	AAthenaCharacter_GetInputBinder_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4918,12 +3857,7 @@ bool AAthenaCharacter::GetIgnoreReplicationRotationOnly()
 
 	AAthenaCharacter_GetIgnoreReplicationRotationOnly_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4940,12 +3874,7 @@ class UObject* AAthenaCharacter::GetFocusedInteractable()
 
 	AAthenaCharacter_GetFocusedInteractable_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4962,12 +3891,7 @@ struct FCollisionResponseContainer AAthenaCharacter::GetFloorSweepCollisionRespo
 
 	AAthenaCharacter_GetFloorSweepCollisionResponseContainer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4984,12 +3908,7 @@ class USkeletalMeshComponent* AAthenaCharacter::GetFirstPersonMeshComponent()
 
 	AAthenaCharacter_GetFirstPersonMeshComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5006,12 +3925,7 @@ class AActor* AAthenaCharacter::GetCurrentShipAsActor()
 
 	AAthenaCharacter_GetCurrentShipAsActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5028,12 +3942,7 @@ class AShip* AAthenaCharacter::GetCurrentShip()
 
 	AAthenaCharacter_GetCurrentShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5050,12 +3959,7 @@ struct FTransform AAthenaCharacter::GetCharacterTransform()
 
 	AAthenaCharacter_GetCharacterTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5072,12 +3976,7 @@ struct FRotator AAthenaCharacter::GetCharacterRotation()
 
 	AAthenaCharacter_GetCharacterRotation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5092,12 +3991,7 @@ void AAthenaCharacter::GenerateNewRandomAnimationSeed()
 
 	AAthenaCharacter_GenerateNewRandomAnimationSeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5115,12 +4009,7 @@ void AAthenaCharacter::ForceWaterHeight(float WaterHeight, class UClass* WaterId
 	params.WaterHeight = WaterHeight;
 	params.WaterId = WaterId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5133,12 +4022,7 @@ void AAthenaCharacter::CureAllAilings()
 
 	AAthenaCharacter_CureAllAilings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5151,12 +4035,7 @@ void AAthenaCharacter::CreateProjectileTraceHitVolume()
 
 	AAthenaCharacter_CreateProjectileTraceHitVolume_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5175,12 +4054,7 @@ bool AAthenaCharacter::CanInteractWith(class UObject* InInteractable, class UCla
 	params.InInteractable = InInteractable;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5195,12 +4069,7 @@ void AAthenaCharacter::CalculateWaterHeight()
 
 	AAthenaCharacter_CalculateWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5215,12 +4084,7 @@ bool AAthenaCharacter::AllAnimationsLoaded()
 
 	AAthenaCharacter_AllAnimationsLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5237,12 +4101,7 @@ class USceneComponent* UPlayerCharacterInterface::GetFirstPersonWwiseEmitterOwne
 
 	UPlayerCharacterInterface_GetFirstPersonWwiseEmitterOwner_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5260,12 +4119,7 @@ void UPlayerCharacterInterface::ExecuteRumbleProfile(const struct FName& RumbleT
 	UPlayerCharacterInterface_ExecuteRumbleProfile_Params params;
 	params.RumbleTag = RumbleTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5282,12 +4136,7 @@ bool UDamageInstigatorInterface::CanDamageActor(class AActor* DamageRecipient)
 	UDamageInstigatorInterface_CanDamageActor_Params params;
 	params.DamageRecipient = DamageRecipient;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5306,12 +4155,7 @@ class AAthenaPlayerCharacter* UPlayerManagerServiceInterface::GetPlayerCharacter
 	UPlayerManagerServiceInterface_GetPlayerCharacterFromPlayerState_Params params;
 	params.PlayerState = PlayerState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5328,12 +4172,7 @@ int UPlayerManagerServiceInterface::GetNumPlayers()
 
 	UPlayerManagerServiceInterface_GetNumPlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5350,12 +4189,7 @@ int UPlayerManagerServiceInterface::GetNumActiveLocalPlayers()
 
 	UPlayerManagerServiceInterface_GetNumActiveLocalPlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5372,12 +4206,7 @@ class AAthenaPlayerCharacter* UPlayerManagerServiceInterface::GetFirstLocalPlaye
 
 	UPlayerManagerServiceInterface_GetFirstLocalPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5394,12 +4223,7 @@ TArray<struct FWeakActorHandle> UPlayerManagerServiceInterface::GetAllPlayerCont
 
 	UPlayerManagerServiceInterface_GetAllPlayerControllersWeakActorHandle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5416,12 +4240,7 @@ TArray<class AAthenaPlayerCharacter*> UPlayerManagerServiceInterface::GetAllActi
 
 	UPlayerManagerServiceInterface_GetAllActivePlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5438,12 +4257,7 @@ TArray<class AAthenaPlayerCharacter*> UPlayerManagerServiceInterface::GetActiveL
 
 	UPlayerManagerServiceInterface_GetActiveLocalPlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5460,12 +4274,7 @@ class AItemInfo* UWieldableInterface::GetItemInfo()
 
 	UWieldableInterface_GetItemInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5482,12 +4291,7 @@ class UClass* UWieldableInterface::GetAnimationKey()
 
 	UWieldableInterface_GetAnimationKey_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5504,12 +4308,7 @@ class AActor* UWieldableInterface::GetActor()
 
 	UWieldableInterface_GetActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5528,12 +4327,7 @@ bool UItemLoadoutViewInterface::HasCapacity(class UClass* InItemCategory)
 	UItemLoadoutViewInterface_HasCapacity_Params params;
 	params.InItemCategory = InItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5550,12 +4344,7 @@ TArray<class UClass*> UItemLoadoutViewInterface::GetWeaponsLoadout()
 
 	UItemLoadoutViewInterface_GetWeaponsLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5574,12 +4363,7 @@ int UItemLoadoutViewInterface::GetNumItems(class UClass* InItemCategory)
 	UItemLoadoutViewInterface_GetNumItems_Params params;
 	params.InItemCategory = InItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5596,12 +4380,7 @@ int UItemLoadoutViewInterface::GetNumCategories()
 
 	UItemLoadoutViewInterface_GetNumCategories_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5620,12 +4399,7 @@ TArray<class AItemInfo*> UItemLoadoutViewInterface::GetItems(class UClass* InIte
 	UItemLoadoutViewInterface_GetItems_Params params;
 	params.InItemCategory = InItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5642,12 +4416,7 @@ struct FItemLoadout UItemLoadoutViewInterface::GetItemLoadout()
 
 	UItemLoadoutViewInterface_GetItemLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5668,12 +4437,7 @@ class AItemInfo* UItemLoadoutViewInterface::GetItemByIndex(class UClass* InItemC
 	params.InItemCategory = InItemCategory;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5692,12 +4456,7 @@ class AItemInfo* UItemLoadoutViewInterface::GetItem(class UClass* InItemCategory
 	UItemLoadoutViewInterface_GetItem_Params params;
 	params.InItemCategory = InItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5714,12 +4473,7 @@ TArray<class UClass*> UItemLoadoutViewInterface::GetCategories()
 
 	UItemLoadoutViewInterface_GetCategories_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5738,12 +4492,7 @@ int UItemLoadoutViewInterface::GetCapacity(class UClass* InItemCategory)
 	UItemLoadoutViewInterface_GetCapacity_Params params;
 	params.InItemCategory = InItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5760,12 +4509,7 @@ TArray<class AItemInfo*> UItemLoadoutViewInterface::GetAllItems()
 
 	UItemLoadoutViewInterface_GetAllItems_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5784,12 +4528,7 @@ bool URadialInventoryInterface::TrySetLastSelectedItem(class AActor* InItem)
 	URadialInventoryInterface_TrySetLastSelectedItem_Params params;
 	params.InItem = InItem;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5804,12 +4543,7 @@ void URadialInventoryInterface::ResetRadialInventory()
 
 	URadialInventoryInterface_ResetRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5825,12 +4559,7 @@ void URadialInventoryInterface::OnRadialInventoryInput(const struct FVector2D& I
 	URadialInventoryInterface_OnRadialInventoryInput_Params params;
 	params.InputVector = InputVector;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5845,12 +4574,7 @@ bool URadialInventoryInterface::IsFullyOpened()
 
 	URadialInventoryInterface_IsFullyOpened_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5867,12 +4591,7 @@ int URadialInventoryInterface::GetNumSlots()
 
 	URadialInventoryInterface_GetNumSlots_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5889,12 +4608,7 @@ int URadialInventoryInterface::GetMaxNumOfPages()
 
 	URadialInventoryInterface_GetMaxNumOfPages_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5911,12 +4625,7 @@ class AActor* URadialInventoryInterface::GetLastSelectedItem()
 
 	URadialInventoryInterface_GetLastSelectedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -5931,12 +4640,7 @@ void URadialInventoryInterface::DeactivateRadialInventory()
 
 	URadialInventoryInterface_DeactivateRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5949,12 +4653,7 @@ void URadialInventoryInterface::ConfirmRadialFullyOpened()
 
 	URadialInventoryInterface_ConfirmRadialFullyOpened_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5970,12 +4669,7 @@ void URadialInventoryInterface::ActivateRadialInventory(TEnumAsByte<ERadialMenuI
 	URadialInventoryInterface_ActivateRadialInventory_Params params;
 	params.InputModality = InputModality;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -5992,12 +4686,7 @@ bool UWieldableItemSetInterface::RemoveItem(class AActor* Item)
 	UWieldableItemSetInterface_RemoveItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6016,12 +4705,7 @@ class UClass* UWieldableItemSetInterface::GetSlotForItem(int Index)
 	UWieldableItemSetInterface_GetSlotForItem_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6040,12 +4724,7 @@ int UWieldableItemSetInterface::GetNumItemsOfType(class UClass* Type)
 	UWieldableItemSetInterface_GetNumItemsOfType_Params params;
 	params.Type = Type;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6062,12 +4741,7 @@ int UWieldableItemSetInterface::GetNumItems()
 
 	UWieldableItemSetInterface_GetNumItems_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6086,12 +4760,7 @@ TArray<class AActor*> UWieldableItemSetInterface::GetItemsOfCategory(class UClas
 	UWieldableItemSetInterface_GetItemsOfCategory_Params params;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6112,12 +4781,7 @@ int UWieldableItemSetInterface::GetItemIndexInCategorySet(class AActor* Item, cl
 	params.Item = Item;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6136,12 +4800,7 @@ int UWieldableItemSetInterface::GetItemIndex(class AActor* Item)
 	UWieldableItemSetInterface_GetItemIndex_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6160,12 +4819,7 @@ class AActor* UWieldableItemSetInterface::GetItemFromSlot(class UClass* ItemCate
 	UWieldableItemSetInterface_GetItemFromSlot_Params params;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6184,12 +4838,7 @@ class AActor* UWieldableItemSetInterface::GetItem(int Index)
 	UWieldableItemSetInterface_GetItem_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6208,12 +4857,7 @@ bool UWieldableItemSetInterface::ContainsItemOfType(class UClass* ItemType)
 	UWieldableItemSetInterface_ContainsItemOfType_Params params;
 	params.ItemType = ItemType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6232,12 +4876,7 @@ bool UWieldableItemSetInterface::Contains(class AActor* Item)
 	UWieldableItemSetInterface_Contains_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6258,12 +4897,7 @@ bool UWieldableItemSetInterface::AddItemToSlot(class AActor* Item, class UClass*
 	params.Item = Item;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6282,12 +4916,7 @@ bool UWieldableItemSetInterface::AddItem(class AActor* Item)
 	UWieldableItemSetInterface_AddItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6306,12 +4935,7 @@ bool URadialInventoryComponent::TrySetLastSelectedItem(class AActor* InItem)
 	URadialInventoryComponent_TrySetLastSelectedItem_Params params;
 	params.InItem = InItem;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6326,12 +4950,7 @@ void URadialInventoryComponent::SetDefaultRemappingPolicy()
 
 	URadialInventoryComponent_SetDefaultRemappingPolicy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6344,12 +4963,7 @@ void URadialInventoryComponent::ResetRadialInventory()
 
 	URadialInventoryComponent_ResetRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6365,12 +4979,7 @@ void URadialInventoryComponent::OnRadialInventoryInput(const struct FVector2D& I
 	URadialInventoryComponent_OnRadialInventoryInput_Params params;
 	params.InputVector = InputVector;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6385,12 +4994,7 @@ bool URadialInventoryComponent::IsHUDScriptingReady()
 
 	URadialInventoryComponent_IsHUDScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6407,12 +5011,7 @@ bool URadialInventoryComponent::IsFullyOpened()
 
 	URadialInventoryComponent_IsFullyOpened_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6429,12 +5028,7 @@ int URadialInventoryComponent::GetSelectedRadialInventorySlot()
 
 	URadialInventoryComponent_GetSelectedRadialInventorySlot_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6451,12 +5045,7 @@ int URadialInventoryComponent::GetNumSlots()
 
 	URadialInventoryComponent_GetNumSlots_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6473,12 +5062,7 @@ int URadialInventoryComponent::GetMaxNumOfPages()
 
 	URadialInventoryComponent_GetMaxNumOfPages_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6495,12 +5079,7 @@ class AActor* URadialInventoryComponent::GetLastSelectedItem()
 
 	URadialInventoryComponent_GetLastSelectedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6517,12 +5096,7 @@ TEnumAsByte<ERadialMenuInputModality> URadialInventoryComponent::GetInputModalit
 
 	URadialInventoryComponent_GetInputModality_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6539,12 +5113,7 @@ class UInputBinder* URadialInventoryComponent::GetInputBinder()
 
 	URadialInventoryComponent_GetInputBinder_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6559,12 +5128,7 @@ void URadialInventoryComponent::DeactivateRadialInventory()
 
 	URadialInventoryComponent_DeactivateRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6577,12 +5141,7 @@ void URadialInventoryComponent::ConfirmRadialFullyOpened()
 
 	URadialInventoryComponent_ConfirmRadialFullyOpened_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6598,12 +5157,7 @@ void URadialInventoryComponent::ActivateRadialInventory(TEnumAsByte<ERadialMenuI
 	URadialInventoryComponent_ActivateRadialInventory_Params params;
 	params.InputModality = InputModality;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6618,12 +5172,7 @@ int UPhrasesRadialComponent::GetNumSlots()
 
 	UPhrasesRadialComponent_GetNumSlots_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6640,12 +5189,7 @@ class AActor* UPhrasesRadialComponent::GetLastSelectedItem()
 
 	UPhrasesRadialComponent_GetLastSelectedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6660,12 +5204,7 @@ void UPhrasesRadialComponent::DeactivateRadialInventory()
 
 	UPhrasesRadialComponent_DeactivateRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6680,12 +5219,7 @@ class UPhrasesRadialDataAsset* URadialPhrasesAdjusterInterface::GetRadialPhrases
 
 	URadialPhrasesAdjusterInterface_GetRadialPhrases_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6705,12 +5239,7 @@ void AWieldableItem::SetItemWwiseSwitch(const struct FName& SwitchGroup, const s
 	params.SwitchGroup = SwitchGroup;
 	params.SwitchOption = SwitchOption;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6727,12 +5256,7 @@ void AWieldableItem::SetItemWwiseRTPC(float Value, struct FName* RTPCName)
 	AWieldableItem_SetItemWwiseRTPC_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (RTPCName != nullptr)
 		*RTPCName = params.RTPCName;
@@ -6751,12 +5275,7 @@ void AWieldableItem::PostItemWwiseEvent(class UWwiseEvent* Event)
 	AWieldableItem_PostItemWwiseEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6769,11 +5288,7 @@ void AWieldableItem::OnWielderHasLandedFromJumpBPImpl()
 
 	AWieldableItem_OnWielderHasLandedFromJumpBPImpl_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -6788,12 +5303,7 @@ bool AWieldableItem::IsUnderwater()
 
 	AWieldableItem_IsUnderwater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6810,12 +5320,7 @@ class AAthenaCharacter* AWieldableItem::GetWielderCharacter()
 
 	AWieldableItem_GetWielderCharacter_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6832,12 +5337,7 @@ class AActor* AWieldableItem::GetWielder()
 
 	AWieldableItem_GetWielder_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6854,12 +5354,7 @@ TEnumAsByte<EWieldableItemSize> AWieldableItem::GetWieldableItemSize()
 
 	AWieldableItem_GetWieldableItemSize_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6876,12 +5371,7 @@ class AActor* AWieldableItem::GetLastKnownWielder()
 
 	AWieldableItem_GetLastKnownWielder_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6898,12 +5388,7 @@ struct FWwiseEmitter AWieldableItem::GetItemSfxEmitter()
 
 	AWieldableItem_GetItemSfxEmitter_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6920,12 +5405,7 @@ bool AWieldableItem::GetIsFirstPerson()
 
 	AWieldableItem_GetIsFirstPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6944,12 +5424,7 @@ TEnumAsByte<EInputHandlerResult> URadialCompositeInputHandler::OnRadialY(float V
 	URadialCompositeInputHandler_OnRadialY_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6968,12 +5443,7 @@ TEnumAsByte<EInputHandlerResult> URadialCompositeInputHandler::OnRadialX(float V
 	URadialCompositeInputHandler_OnRadialX_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -6991,12 +5461,7 @@ void URadialCompositeInputHandler::HandleAxisChange(float Value)
 	URadialCompositeInputHandler_HandleAxisChange_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7013,12 +5478,7 @@ TEnumAsByte<EInputHandlerResult> URadialCompositeInputHandler::HandleAnalogInput
 	URadialCompositeInputHandler_HandleAnalogInputsIfBlocking_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7036,12 +5496,7 @@ void UCloudDomeServiceInterface::UnregisterCloudDomeFromService(const TScriptInt
 	UCloudDomeServiceInterface_UnregisterCloudDomeFromService_Params params;
 	params.CloudDome = CloudDome;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7057,12 +5512,7 @@ void UCloudDomeServiceInterface::RegisterCloudDomeWithService(const TScriptInter
 	UCloudDomeServiceInterface_RegisterCloudDomeWithService_Params params;
 	params.CloudDome = CloudDome;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7077,12 +5527,7 @@ int UCloudDomeServiceInterface::GetNumberOfCloudDomes()
 
 	UCloudDomeServiceInterface_GetNumberOfCloudDomes_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7101,12 +5546,7 @@ TScriptInterface<class UCloudDomeInterface> UCloudDomeServiceInterface::GetCloud
 	UCloudDomeServiceInterface_GetCloudDome_Params params;
 	params.CloudDomeIndex = CloudDomeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7125,12 +5565,7 @@ class ACloudDome* UCloudDomeServiceInterface::GetActualCloudDome(int CloudDomeIn
 	UCloudDomeServiceInterface_GetActualCloudDome_Params params;
 	params.CloudDomeIndex = CloudDomeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7145,12 +5580,7 @@ void AAthenaPlayerCharacter::WalkActivate()
 
 	AAthenaPlayerCharacter_WalkActivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7167,12 +5597,7 @@ bool AAthenaPlayerCharacter::UseItem(class UClass* NotificationInputId)
 	AAthenaPlayerCharacter_UseItem_Params params;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7187,11 +5612,7 @@ void AAthenaPlayerCharacter::TriggerTattooGlow()
 
 	AAthenaPlayerCharacter_TriggerTattooGlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7204,12 +5625,7 @@ void AAthenaPlayerCharacter::TattooGlowClient()
 
 	AAthenaPlayerCharacter_TattooGlowClient_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7222,12 +5638,7 @@ void AAthenaPlayerCharacter::TattooGlow()
 
 	AAthenaPlayerCharacter_TattooGlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7240,12 +5651,7 @@ void AAthenaPlayerCharacter::SprintActivate()
 
 	AAthenaPlayerCharacter_SprintActivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7258,12 +5664,7 @@ void AAthenaPlayerCharacter::OnWieldedItem()
 
 	AAthenaPlayerCharacter_OnWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7276,12 +5677,7 @@ void AAthenaPlayerCharacter::OnRep_ReplicatedIsSprinting()
 
 	AAthenaPlayerCharacter_OnRep_ReplicatedIsSprinting_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7294,12 +5690,7 @@ void AAthenaPlayerCharacter::OnRep_OverridePirateDescSeed()
 
 	AAthenaPlayerCharacter_OnRep_OverridePirateDescSeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7312,12 +5703,7 @@ void AAthenaPlayerCharacter::OnRep_OverrideAnimationEntry()
 
 	AAthenaPlayerCharacter_OnRep_OverrideAnimationEntry_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7330,11 +5716,7 @@ void AAthenaPlayerCharacter::OnMeshSet()
 
 	AAthenaPlayerCharacter_OnMeshSet_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7350,12 +5732,7 @@ void AAthenaPlayerCharacter::Multicast_OnKrakenTentacleDeath(int RemainingTentac
 	AAthenaPlayerCharacter_Multicast_OnKrakenTentacleDeath_Params params;
 	params.RemainingTentacles = RemainingTentacles;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7370,12 +5747,7 @@ bool AAthenaPlayerCharacter::IsSprintEnabled()
 
 	AAthenaPlayerCharacter_IsSprintEnabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7394,12 +5766,7 @@ bool AAthenaPlayerCharacter::IsInteractionValid(class UObject* InInteractable)
 	AAthenaPlayerCharacter_IsInteractionValid_Params params;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7416,12 +5783,7 @@ bool AAthenaPlayerCharacter::HasMeshSet()
 
 	AAthenaPlayerCharacter_HasMeshSet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7438,12 +5800,7 @@ bool AAthenaPlayerCharacter::HasFinishedSpawning()
 
 	AAthenaPlayerCharacter_HasFinishedSpawning_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7460,12 +5817,7 @@ class UVoyageParticipantComponent* AAthenaPlayerCharacter::GetPrimaryVoyageParti
 
 	AAthenaPlayerCharacter_GetPrimaryVoyageParticipantComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7482,12 +5834,7 @@ struct FVector AAthenaPlayerCharacter::GetPawnViewLocation()
 
 	AAthenaPlayerCharacter_GetPawnViewLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7504,12 +5851,7 @@ struct FName AAthenaPlayerCharacter::GetLocalPlayerWorldRegionName()
 
 	AAthenaPlayerCharacter_GetLocalPlayerWorldRegionName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7526,12 +5868,7 @@ bool AAthenaPlayerCharacter::GetIsSprinting()
 
 	AAthenaPlayerCharacter_GetIsSprinting_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7548,12 +5885,7 @@ bool AAthenaPlayerCharacter::GetIsDigitallyWalking()
 
 	AAthenaPlayerCharacter_GetIsDigitallyWalking_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7570,12 +5902,7 @@ class UObject* AAthenaPlayerCharacter::GetFocusedInteractable()
 
 	AAthenaPlayerCharacter_GetFocusedInteractable_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7592,12 +5919,7 @@ struct FVector AAthenaPlayerCharacter::GetFirstPersonMeshOffset()
 
 	AAthenaPlayerCharacter_GetFirstPersonMeshOffset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7614,12 +5936,7 @@ class UVoyageParticipantComponent* AAthenaPlayerCharacter::GetEmergentVoyagePart
 
 	AAthenaPlayerCharacter_GetEmergentVoyageParticipantComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7636,12 +5953,7 @@ TEnumAsByte<EShipRegion> AAthenaPlayerCharacter::GetCurrentShipRegion()
 
 	AAthenaPlayerCharacter_GetCurrentShipRegion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7658,12 +5970,7 @@ class UClothingLoadoutComponent* AAthenaPlayerCharacter::GetClothingLoadoutCompo
 
 	AAthenaPlayerCharacter_GetClothingLoadoutComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7681,12 +5988,7 @@ void AAthenaPlayerCharacter::ClientAddPlayerAsFriend(class AAthenaPlayerCharacte
 	AAthenaPlayerCharacter_ClientAddPlayerAsFriend_Params params;
 	params.PlayerToAddAsFriend = PlayerToAddAsFriend;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7701,12 +6003,7 @@ bool AAthenaPlayerCharacter::AllAnimationsLoaded()
 
 	AAthenaPlayerCharacter_AllAnimationsLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7721,12 +6018,7 @@ void AAthenaPlayerState::OnRep_PirateDescription()
 
 	AAthenaPlayerState_OnRep_PirateDescription_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7746,12 +6038,7 @@ void UAIShipCaptainActionStateId::STATIC_PushCharacterIntoAIShipCaptainActionSta
 	params.ControlledObject = ControlledObject;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7767,12 +6054,7 @@ void UAISpawnActionStateId::STATIC_PushCharacterIntoAISpawnActionState(class AAc
 	UAISpawnActionStateId_PushCharacterIntoAISpawnActionState_Params params;
 	params.InCharacter = InCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7789,12 +6071,7 @@ class AShip* UShipServiceInterface::GetShipForCrew(const struct FGuid& CrewId)
 	UShipServiceInterface_GetShipForCrew_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7813,12 +6090,7 @@ struct FGuid UShipServiceInterface::GetCrewFromShip(class AShip* Ship)
 	UShipServiceInterface_GetCrewFromShip_Params params;
 	params.Ship = Ship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7833,12 +6105,7 @@ void AAllianceService::OnRep_CrewAllianceJoinStatuses()
 
 	AAllianceService_OnRep_CrewAllianceJoinStatuses_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7854,12 +6121,7 @@ void AAnchor::SetAnchorLoweredProportion(float InLoweredProportion)
 	AAnchor_SetAnchorLoweredProportion_Params params;
 	params.InLoweredProportion = InLoweredProportion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7872,11 +6134,7 @@ void UAnimatedStepsComponent::StartOpening()
 
 	UAnimatedStepsComponent_StartOpening_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7889,11 +6147,7 @@ void UAnimatedStepsComponent::OpenImmediate()
 
 	UAnimatedStepsComponent_OpenImmediate_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7906,11 +6160,7 @@ void UAnimatedStepsComponent::Close()
 
 	UAnimatedStepsComponent_Close_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7926,12 +6176,7 @@ void UAthenaAIInteractableComponent::SetOwnerAITeam(TEnumAsByte<EAthenaAITeam> I
 	UAthenaAIInteractableComponent_SetOwnerAITeam_Params params;
 	params.InOwner = InOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -7946,12 +6191,7 @@ float UAthenaAIInteractableComponent::GetTriggerRegionRadius()
 
 	UAthenaAIInteractableComponent_GetTriggerRegionRadius_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7968,12 +6208,7 @@ struct FVector UAthenaAIInteractableComponent::GetTriggerRegionCenterPoint()
 
 	UAthenaAIInteractableComponent_GetTriggerRegionCenterPoint_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -7990,12 +6225,7 @@ TEnumAsByte<EAthenaAITeam> UAthenaAIInteractableComponent::GetOwnerAITeam()
 
 	UAthenaAIInteractableComponent_GetOwnerAITeam_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8014,12 +6244,7 @@ void UAthenaAnimationCapstanBlueprintFunctions::STATIC_SetAnimationRemapSpeed(fl
 	UAthenaAnimationCapstanBlueprintFunctions_SetAnimationRemapSpeed_Params params;
 	params.Speed = Speed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Capstan != nullptr)
 		*Capstan = params.Capstan;
@@ -8039,12 +6264,7 @@ TEnumAsByte<EAthenaAnimationCapstanState> UAthenaAnimationCapstanBlueprintFuncti
 	UAthenaAnimationCapstanBlueprintFunctions_GetCapstanState_Params params;
 	params.Capstan = Capstan;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8063,12 +6283,7 @@ float UAthenaAnimationCapstanBlueprintFunctions::STATIC_GetAngularVelocityWanted
 	UAthenaAnimationCapstanBlueprintFunctions_GetAngularVelocityWanted_Params params;
 	params.Capstan = Capstan;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8088,12 +6303,7 @@ void UFirstPersonAnimationInstance::LoadSpecificItemAnimations(TArray<struct FAt
 	params.AllItemData = AllItemData;
 	params.ItemId = ItemId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8109,12 +6319,7 @@ void UThirdPersonAnimationInstance::UpdateSkeletonFleeingAnimations(class UClass
 	UThirdPersonAnimationInstance_UpdateSkeletonFleeingAnimations_Params params;
 	params.ObjectID = ObjectID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8130,12 +6335,7 @@ void UThirdPersonAnimationInstance::UpdatePitchOverrideAnimation(bool IsPrimary)
 	UThirdPersonAnimationInstance_UpdatePitchOverrideAnimation_Params params;
 	params.IsPrimary = IsPrimary;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8158,12 +6358,7 @@ float UThirdPersonAnimationInstance::UpdateAISpawnAnimation(class AAthenaCharact
 	params.OnLand = OnLand;
 	params.QuickSpawn = QuickSpawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8181,12 +6376,7 @@ void UThirdPersonAnimationInstance::TriggerSensingAnimation(TEnumAsByte<ESkeleto
 	UThirdPersonAnimationInstance_TriggerSensingAnimation_Params params;
 	params.NewSensingState = NewSensingState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8202,12 +6392,7 @@ void UThirdPersonAnimationInstance::TriggerEmoteActionAnimation(TEnumAsByte<ESke
 	UThirdPersonAnimationInstance_TriggerEmoteActionAnimation_Params params;
 	params.EmoteActionState = EmoteActionState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8220,12 +6405,7 @@ void UThirdPersonAnimationInstance::StopMeleeStanceChange()
 
 	UThirdPersonAnimationInstance_StopMeleeStanceChange_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8238,12 +6418,7 @@ void UThirdPersonAnimationInstance::StartMeleeStanceChange()
 
 	UThirdPersonAnimationInstance_StartMeleeStanceChange_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8261,12 +6436,7 @@ void UThirdPersonAnimationInstance::SetLocomotionTypeActive(TEnumAsByte<ELocomot
 	params.LocomotionType = LocomotionType;
 	params.Active = Active;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8281,12 +6451,7 @@ bool UThirdPersonAnimationInstance::SelectSkeletonFleeingVariationAnimation()
 
 	UThirdPersonAnimationInstance_SelectSkeletonFleeingVariationAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8308,12 +6473,7 @@ void UThirdPersonAnimationInstance::OnEventAllocateShopInteractionAnimations(cla
 	params.Active = Active;
 	params.Type = Type;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8331,12 +6491,7 @@ void UThirdPersonAnimationInstance::LoadSpecificItemAnimations(TArray<struct FAt
 	params.AllItemData = AllItemData;
 	params.ItemId = ItemId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8351,12 +6506,7 @@ float UThirdPersonAnimationInstance::GetTargetingPitch()
 
 	UThirdPersonAnimationInstance_GetTargetingPitch_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8373,12 +6523,7 @@ TEnumAsByte<ELocomotionType> UThirdPersonAnimationInstance::GetCurrentLocomotion
 
 	UThirdPersonAnimationInstance_GetCurrentLocomotionType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8395,12 +6540,7 @@ float UThirdPersonAnimationInstance::GetCharacterPitch()
 
 	UThirdPersonAnimationInstance_GetCharacterPitch_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8417,12 +6557,7 @@ class UAnimSequence* UThirdPersonAnimationInstance::GetAIKnockbackAnimation()
 
 	UThirdPersonAnimationInstance_GetAIKnockbackAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8442,12 +6577,7 @@ void UThirdPersonAnimationInstance::AllocateNewTauntCheerVariant(bool IsPrimary,
 	params.IsPrimary = IsPrimary;
 	params.EmoteActionState = EmoteActionState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8463,12 +6593,7 @@ void UThirdPersonAnimationInstance::AllocateNewShipCaptainIdleVariant(bool IsIdl
 	UThirdPersonAnimationInstance_AllocateNewShipCaptainIdleVariant_Params params;
 	params.IsIdleStateA = IsIdleStateA;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8484,12 +6609,7 @@ void UThirdPersonAnimationInstance::AllocateNewRandomContinuousEmote(bool IsSlot
 	UThirdPersonAnimationInstance_AllocateNewRandomContinuousEmote_Params params;
 	params.IsSlotA = IsSlotA;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -8508,12 +6628,7 @@ bool UAthenaAnimationInstanceTestFunctions::STATIC_IsStateActiveOnAnimationInsta
 	params.AnimationInstance = AnimationInstance;
 	params.InStatePathName = InStatePathName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8532,12 +6647,7 @@ TArray<struct FName> UAthenaAnimationInstanceTestFunctions::STATIC_GetActiveStat
 	UAthenaAnimationInstanceTestFunctions_GetActiveStatesOnAnimationInstance_Params params;
 	params.AnimationInstance = AnimationInstance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8556,12 +6666,7 @@ void UAthenaAnimationJumpingBlueprintFunctions::STATIC_SetMaxJumpSequence(int Ne
 	UAthenaAnimationJumpingBlueprintFunctions_SetMaxJumpSequence_Params params;
 	params.NewMaxJumpSequence = NewMaxJumpSequence;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Jumping != nullptr)
 		*Jumping = params.Jumping;
@@ -8579,12 +6684,7 @@ void UAthenaAnimationJumpingBlueprintFunctions::STATIC_SetJumpCompleted(struct F
 
 	UAthenaAnimationJumpingBlueprintFunctions_SetJumpCompleted_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Jumping != nullptr)
 		*Jumping = params.Jumping;
@@ -8604,12 +6704,7 @@ bool UAthenaAnimationJumpingBlueprintFunctions::STATIC_IsHeavyLanding(const stru
 	UAthenaAnimationJumpingBlueprintFunctions_IsHeavyLanding_Params params;
 	params.Jumping = Jumping;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8628,12 +6723,7 @@ float UAthenaAnimationJumpingBlueprintFunctions::STATIC_GetPreImpactTime(const s
 	UAthenaAnimationJumpingBlueprintFunctions_GetPreImpactTime_Params params;
 	params.Jumping = Jumping;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8652,12 +6742,7 @@ int UAthenaAnimationJumpingBlueprintFunctions::STATIC_GetLandingSequence(const s
 	UAthenaAnimationJumpingBlueprintFunctions_GetLandingSequence_Params params;
 	params.Jumping = Jumping;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8676,12 +6761,7 @@ int UAthenaAnimationJumpingBlueprintFunctions::STATIC_GetJumpSequence(const stru
 	UAthenaAnimationJumpingBlueprintFunctions_GetJumpSequence_Params params;
 	params.Jumping = Jumping;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8700,12 +6780,7 @@ TEnumAsByte<EAthenaAnimationJumpingState> UAthenaAnimationJumpingBlueprintFuncti
 	UAthenaAnimationJumpingBlueprintFunctions_GetJumpingState_Params params;
 	params.Jumping = Jumping;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8722,12 +6797,7 @@ void UAthenaAnimationLadderBlueprintFunctions::STATIC_SetClimbOnComplete(struct 
 
 	UAthenaAnimationLadderBlueprintFunctions_SetClimbOnComplete_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Ladder != nullptr)
 		*Ladder = params.Ladder;
@@ -8745,12 +6815,7 @@ void UAthenaAnimationLadderBlueprintFunctions::STATIC_SetClimbOffComplete(struct
 
 	UAthenaAnimationLadderBlueprintFunctions_SetClimbOffComplete_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Ladder != nullptr)
 		*Ladder = params.Ladder;
@@ -8770,12 +6835,7 @@ float UAthenaAnimationLadderBlueprintFunctions::STATIC_GetPlayerIntent(const str
 	UAthenaAnimationLadderBlueprintFunctions_GetPlayerIntent_Params params;
 	params.Ladder = Ladder;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8794,12 +6854,7 @@ TEnumAsByte<EAthenaAnimationLadderState> UAthenaAnimationLadderBlueprintFunction
 	UAthenaAnimationLadderBlueprintFunctions_GetLadderState_Params params;
 	params.Ladder = Ladder;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8818,12 +6873,7 @@ float UAthenaAnimationLadderBlueprintFunctions::STATIC_GetClimbDistance(const st
 	UAthenaAnimationLadderBlueprintFunctions_GetClimbDistance_Params params;
 	params.Ladder = Ladder;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8840,12 +6890,7 @@ void UAthenaAnimationMountedWeaponBlueprintFunctions::STATIC_SetFireFinished(str
 
 	UAthenaAnimationMountedWeaponBlueprintFunctions_SetFireFinished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (MountedWeapon != nullptr)
 		*MountedWeapon = params.MountedWeapon;
@@ -8865,12 +6910,7 @@ float UAthenaAnimationWheelBlueprintFunctions::STATIC_GetWheelTime(const struct 
 	UAthenaAnimationWheelBlueprintFunctions_GetWheelTime_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8889,12 +6929,7 @@ float UAthenaAnimationWheelBlueprintFunctions::STATIC_GetWheelDirection(const st
 	UAthenaAnimationWheelBlueprintFunctions_GetWheelDirection_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8913,12 +6948,7 @@ TEnumAsByte<EWheelAnimationType> UAthenaAnimationWheelBlueprintFunctions::STATIC
 	UAthenaAnimationWheelBlueprintFunctions_GetWheelAnimationType_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8937,12 +6967,7 @@ bool UAthenaAnimationWheelBlueprintFunctions::STATIC_GetRightWheelArmDown(const 
 	UAthenaAnimationWheelBlueprintFunctions_GetRightWheelArmDown_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8963,12 +6988,7 @@ struct FSocketId UAthenaAnimationWheelBlueprintFunctions::STATIC_GetRightHandSoc
 	params.Wheel = Wheel;
 	params.Owner = Owner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -8987,12 +7007,7 @@ float UAthenaAnimationWheelBlueprintFunctions::STATIC_GetRightFingerAlpha(const 
 	UAthenaAnimationWheelBlueprintFunctions_GetRightFingerAlpha_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9011,12 +7026,7 @@ bool UAthenaAnimationWheelBlueprintFunctions::STATIC_GetLeftWheelArmDown(const s
 	UAthenaAnimationWheelBlueprintFunctions_GetLeftWheelArmDown_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9037,12 +7047,7 @@ struct FSocketId UAthenaAnimationWheelBlueprintFunctions::STATIC_GetLeftHandSock
 	params.Wheel = Wheel;
 	params.Owner = Owner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9061,12 +7066,7 @@ float UAthenaAnimationWheelBlueprintFunctions::STATIC_GetLeftFingerAlpha(const s
 	UAthenaAnimationWheelBlueprintFunctions_GetLeftFingerAlpha_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9085,12 +7085,7 @@ float UAthenaAnimationWheelBlueprintFunctions::STATIC_GetFullBodyAlpha(const str
 	UAthenaAnimationWheelBlueprintFunctions_GetFullBodyAlpha_Params params;
 	params.Wheel = Wheel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9112,12 +7107,7 @@ void UAthenaAnimationWieldedItemAnimationOverlayFunctions::STATIC_UpdateThirdPer
 	params.SourceString = SourceString;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9137,12 +7127,7 @@ void UAthenaAnimationWieldedItemAnimationOverlayFunctions::STATIC_UpdateFirstPer
 	params.SourceString = SourceString;
 	params.Locomotion = Locomotion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9162,12 +7147,7 @@ void UAthenaAnimationWieldedItemAnimationOverlayFunctions::STATIC_UpdateAnimOver
 	params.ArmOverlayState = ArmOverlayState;
 	params.ThirdPersonAnimgraph = ThirdPersonAnimgraph;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9190,12 +7170,7 @@ bool UAthenaAnimationWieldedItemAnimationOverlayFunctions::STATIC_StopFacialAnim
 	params.BlendTime = BlendTime;
 	params.Priority = Priority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9220,12 +7195,7 @@ bool UAthenaAnimationWieldedItemAnimationOverlayFunctions::STATIC_PlayNewFacialA
 	params.MontagePlayRate = MontagePlayRate;
 	params.Priority = Priority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9250,12 +7220,7 @@ bool UAthenaAnimationWieldedItemAnimationOverlayFunctions::STATIC_JumpToFacialAn
 	params.MontageSection = MontageSection;
 	params.Priority = Priority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9276,12 +7241,7 @@ class UBlendSpace* UAthenaAnimationWieldedItemFunctions::STATIC_GetIntoContinuou
 	params.AnimInstance = AnimInstance;
 	params.Override = Override;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9302,12 +7262,7 @@ class UAnimSequenceBase* UAthenaAnimationWieldedItemFunctions::STATIC_GetIntoCon
 	params.AnimInstance = AnimInstance;
 	params.Override = Override;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9324,12 +7279,7 @@ bool UAthenaCameraComponent::GetIsUnderwater()
 
 	UAthenaCameraComponent_GetIsUnderwater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9347,12 +7297,7 @@ void UAthenaCameraComponent::Activate(bool bReset)
 	UAthenaCameraComponent_Activate_Params params;
 	params.bReset = bReset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9368,12 +7313,7 @@ void AAthenaAICharacter::SetTargetActorToFace(class AActor* InActor)
 	AAthenaAICharacter_SetTargetActorToFace_Params params;
 	params.InActor = InActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9389,12 +7329,7 @@ void AAthenaAICharacter::SetRegion(const struct FName& InRegion)
 	AAthenaAICharacter_SetRegion_Params params;
 	params.InRegion = InRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9412,12 +7347,7 @@ void AAthenaAICharacter::SetOverrideShotHitChance(bool Enabled, float HitChance)
 	params.Enabled = Enabled;
 	params.HitChance = HitChance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9435,12 +7365,7 @@ void AAthenaAICharacter::SetOverrideCannonShotHitChance(bool Enabled, float HitC
 	params.Enabled = Enabled;
 	params.HitChance = HitChance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9456,12 +7381,7 @@ void AAthenaAICharacter::SetLoadout(TAssetPtr<class ULoadoutAsset> InLoadout)
 	AAthenaAICharacter_SetLoadout_Params params;
 	params.InLoadout = InLoadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9477,12 +7397,7 @@ void AAthenaAICharacter::SetAIStrategy(class UClass* InStrategy)
 	AAthenaAICharacter_SetAIStrategy_Params params;
 	params.InStrategy = InStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9498,12 +7413,7 @@ void AAthenaAICharacter::SetAIAnimationState(class UClass* InAnimationState)
 	AAthenaAICharacter_SetAIAnimationState_Params params;
 	params.InAnimationState = InAnimationState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9519,12 +7429,7 @@ void AAthenaAICharacter::OnRep_CurrentAnimationState(class UClass* OldAnimationS
 	AAthenaAICharacter_OnRep_CurrentAnimationState_Params params;
 	params.OldAnimationState = OldAnimationState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9540,12 +7445,7 @@ void AAthenaAICharacter::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
 	AAthenaAICharacter_OnRep_CurrentAIStrategy_Params params;
 	params.OldAIStrategy = OldAIStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9560,12 +7460,7 @@ struct FName AAthenaAICharacter::GetRegion()
 
 	AAthenaAICharacter_GetRegion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9582,12 +7477,7 @@ class UClass* AAthenaAICharacter::GetAIStrategy()
 
 	AAthenaAICharacter_GetAIStrategy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9604,12 +7494,7 @@ class UClass* AAthenaAICharacter::GetAIAnimationState()
 
 	AAthenaAICharacter_GetAIAnimationState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9624,12 +7509,7 @@ void UVoyageParticipantComponent::OnRep_View()
 
 	UVoyageParticipantComponent_OnRep_View_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9647,12 +7527,7 @@ void ULocalDisturbanceFunctionLibrary::STATIC_SetWindowSize(class UObject* World
 	params.WorldContextObject = WorldContextObject;
 	params.WindowSize = WindowSize;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9670,12 +7545,7 @@ void ULocalDisturbanceFunctionLibrary::STATIC_SetBlendValues(class UObject* Worl
 	params.WorldContextObject = WorldContextObject;
 	params.BlendValues = BlendValues;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9699,12 +7569,7 @@ void ULocalDisturbanceFunctionLibrary::STATIC_AddDisturbance(class UObject* Worl
 	params.Size = Size;
 	params.GrassCutScale = GrassCutScale;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9722,12 +7587,7 @@ void UAthenaCharacterMovementComponent::SetMovementMode(TEnumAsByte<EMovementMod
 	params.NewMovementMode = NewMovementMode;
 	params.NewCustomMode = NewCustomMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9743,12 +7603,7 @@ void UAthenaCharacterMovementComponent::SetErrorOnResolvePenetration(bool ErrorO
 	UAthenaCharacterMovementComponent_SetErrorOnResolvePenetration_Params params;
 	params.ErrorOnResolve = ErrorOnResolve;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9763,12 +7618,7 @@ bool UAthenaCharacterMovementComponent::HasValidAckedMoveClientOnly()
 
 	UAthenaCharacterMovementComponent_HasValidAckedMoveClientOnly_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9785,12 +7635,7 @@ float UAthenaCharacterMovementComponent::GetTimestampOfMostRecentPredictedMoveCl
 
 	UAthenaCharacterMovementComponent_GetTimestampOfMostRecentPredictedMoveClientOnly_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9807,12 +7652,7 @@ float UAthenaCharacterMovementComponent::GetTimestampOfLastAckedMoveClientOnly()
 
 	UAthenaCharacterMovementComponent_GetTimestampOfLastAckedMoveClientOnly_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9829,12 +7669,7 @@ float UAthenaCharacterMovementComponent::GetTerminalVelocity()
 
 	UAthenaCharacterMovementComponent_GetTerminalVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9851,12 +7686,7 @@ TEnumAsByte<EMovementMode> UAthenaCharacterMovementComponent::GetMovementMode()
 
 	UAthenaCharacterMovementComponent_GetMovementMode_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9873,12 +7703,7 @@ float UAthenaCharacterMovementComponent::GetMaxSprintSpeed()
 
 	UAthenaCharacterMovementComponent_GetMaxSprintSpeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9895,12 +7720,7 @@ float UAthenaCharacterMovementComponent::GetMaxMoveSpeedScalar()
 
 	UAthenaCharacterMovementComponent_GetMaxMoveSpeedScalar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -9915,12 +7735,7 @@ void UAthenaCharacterMovementComponent::FindCurrentFloor()
 
 	UAthenaCharacterMovementComponent_FindCurrentFloor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9933,12 +7748,7 @@ void UAthenaPlayerCharacterMovementComponent::RestoreAudioStateAfterFallDamage()
 
 	UAthenaPlayerCharacterMovementComponent_RestoreAudioStateAfterFallDamage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -9949,8 +7759,9 @@ void UAthenaPlayerCharacterMovementComponent::RestoreAudioStateAfterFallDamage()
 // class AAthenaCharacter*        Owner                          (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DockDuration                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DelayAfterDockDuration         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaCharacterDockingFunctions::STATIC_StartDockingCharacterWithActor(class AAthenaCharacter* Owner, class AActor* Target, float DockDuration, struct FDocker* Docker)
+void UAthenaCharacterDockingFunctions::STATIC_StartDockingCharacterWithActor(class AAthenaCharacter* Owner, class AActor* Target, float DockDuration, float DelayAfterDockDuration, struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCharacterDockingFunctions.StartDockingCharacterWithActor");
 
@@ -9958,13 +7769,9 @@ void UAthenaCharacterDockingFunctions::STATIC_StartDockingCharacterWithActor(cla
 	params.Owner = Owner;
 	params.Target = Target;
 	params.DockDuration = DockDuration;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.DelayAfterDockDuration = DelayAfterDockDuration;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -9983,12 +7790,7 @@ void UAthenaCharacterDodgeComponent::Server_RequestDodge(const struct FVector& D
 	UAthenaCharacterDodgeComponent_Server_RequestDodge_Params params;
 	params.Direction = Direction;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10004,12 +7806,7 @@ void UAthenaCharacterDodgeComponent::Multicast_CharacterDodge(const struct FVect
 	UAthenaCharacterDodgeComponent_Multicast_CharacterDodge_Params params;
 	params.Direction = Direction;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10028,12 +7825,7 @@ bool UAthenaCharacterFunctions::STATIC_TeleportPlayerToLocation(class AAthenaCha
 	params.Character = Character;
 	params.Where = Where;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10052,12 +7844,7 @@ struct FTeleportLocation UAthenaCharacterFunctions::STATIC_GetTeleportLocationFo
 	UAthenaCharacterFunctions_GetTeleportLocationForPlayer_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10076,12 +7863,7 @@ bool UAthenaCharacterFunctions::STATIC_AllAnimationsLoadedForCharacter(class AAt
 	UAthenaCharacterFunctions_AllAnimationsLoadedForCharacter_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10099,12 +7881,7 @@ void UAthenaCharacterKnockbackComponent::SetDisabled(bool IsDisabled)
 	UAthenaCharacterKnockbackComponent_SetDisabled_Params params;
 	params.IsDisabled = IsDisabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10126,12 +7903,7 @@ void UAthenaCharacterKnockbackComponent::KnockBack(const struct FKnockBackInfo& 
 	params.NoWaterDragDuration = NoWaterDragDuration;
 	params.DamagerType = DamagerType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10151,12 +7923,7 @@ void UAthenaCharacterKnockbackComponent::Client_PlayerKnockBackRPC(const struct 
 	params.Direction = Direction;
 	params.NoWaterDragDuration = NoWaterDragDuration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10174,12 +7941,7 @@ void UAthenaCharacterTestFunctions::STATIC_WaitUntilFullySpawned(class AAthenaCh
 	params.Target = Target;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10199,12 +7961,7 @@ void UAthenaCharacterTestFunctions::STATIC_WaitUntilDocked(class UObject* WorldC
 	params.LatentInfo = LatentInfo;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10224,12 +7981,7 @@ void UAthenaCharacterTestFunctions::STATIC_WaitForTeleport(class UObject* WorldC
 	params.AthenaCharacter = AthenaCharacter;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10253,12 +8005,7 @@ void UAthenaCharacterTestFunctions::STATIC_WaitForMovementMode(class UObject* Wo
 	params.WantedMovementMode = WantedMovementMode;
 	params.NumFramesInMovementMode = NumFramesInMovementMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10282,12 +8029,7 @@ void UAthenaCharacterTestFunctions::STATIC_WaitForCustomMovementMode(class UObje
 	params.CustomMovementMode = CustomMovementMode;
 	params.NumFramesInMovementMode = NumFramesInMovementMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10305,12 +8047,7 @@ void UAthenaCharacterTestFunctions::STATIC_TestRadialHandleNotificationInput(cla
 	params.AthenaCharacter = AthenaCharacter;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10330,12 +8067,7 @@ void UAthenaCharacterTestFunctions::STATIC_TestRadialHandleAnalogInput(class AAt
 	params.Id = Id;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10353,12 +8085,7 @@ void UAthenaCharacterTestFunctions::STATIC_TestAthenaCharacterHandleNotification
 	params.AthenaCharacter = AthenaCharacter;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10378,12 +8105,7 @@ void UAthenaCharacterTestFunctions::STATIC_TestAthenaCharacterHandleAnalogInput(
 	params.Id = Id;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10413,12 +8135,7 @@ void UAthenaCharacterTestFunctions::STATIC_TeleportToPosition(class UObject* Wor
 	params.StreamOutLevel = StreamOutLevel;
 	params.StreamInLevel = StreamInLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10436,12 +8153,7 @@ void UAthenaCharacterTestFunctions::STATIC_SimulateButtonPress(class APlayerCont
 	params.PlayerController = PlayerController;
 	params.Button = Button;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10458,12 +8170,7 @@ class UCharacterInputBinder* UAthenaCharacterTestFunctions::STATIC_SetupInputBin
 	UAthenaCharacterTestFunctions_SetupInputBinder_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10483,12 +8190,7 @@ void UAthenaCharacterTestFunctions::STATIC_SetupCharacterForMPTesting(class UObj
 	params.WorldContextObject = WorldContextObject;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10507,12 +8209,7 @@ class AAthenaCharacter* UAthenaCharacterTestFunctions::STATIC_SetupAthenaCharact
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerIndex = PlayerIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10533,12 +8230,7 @@ class AAthenaCharacter* UAthenaCharacterTestFunctions::STATIC_SetupAthenaCharact
 	params.WorldContextObject = WorldContextObject;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10558,12 +8250,7 @@ void UAthenaCharacterTestFunctions::STATIC_SendCharacterMoveInput(class AAthenaC
 	params.Character = Character;
 	params.Movement = Movement;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10580,12 +8267,7 @@ bool UAthenaCharacterTestFunctions::STATIC_HasAnyoneGotInputBindings(class UObje
 	UAthenaCharacterTestFunctions_HasAnyoneGotInputBindings_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10606,12 +8288,7 @@ class AAthenaPlayerCharacter* UAthenaCharacterTestFunctions::STATIC_GetLocalAthe
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerIndex = PlayerIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10634,12 +8311,7 @@ class AAthenaPlayerCharacter* UAthenaCharacterTestFunctions::STATIC_GetClientPla
 	params.ClientId = ClientId;
 	params.SplitScreenIndex = SplitScreenIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10662,12 +8334,7 @@ class AAthenaCharacter* UAthenaCharacterTestFunctions::STATIC_GetClientCharacter
 	params.ClientId = ClientId;
 	params.SplitScreenIndex = SplitScreenIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10693,12 +8360,7 @@ void UAthenaCharacterTestFunctions::STATIC_ForceInteract(class UObject* WorldCon
 	params.Interactable = Interactable;
 	params.WaitUntilFullyDocked = WaitUntilFullyDocked;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10717,12 +8379,7 @@ class AItemInfo* UAthenaCharacterTestFunctions::STATIC_CreateAndEquipItemDesc(cl
 	params.Character = Character;
 	params.ItemDesc = ItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10743,12 +8400,7 @@ class AItemInfo* UAthenaCharacterTestFunctions::STATIC_CreateAndAddItemDescToInv
 	params.Character = Character;
 	params.ItemDesc = ItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10766,12 +8418,7 @@ void UAthenaCharacterTestFunctions::STATIC_ClearInputBindings(class UObject* Wor
 	UAthenaCharacterTestFunctions_ClearInputBindings_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10787,12 +8434,7 @@ void UAthenaCharacterTestFunctions::STATIC_ClearCharacterInteractionPolicies(cla
 	UAthenaCharacterTestFunctions_ClearCharacterInteractionPolicies_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10808,12 +8450,7 @@ void UAthenaGameInstance::SetClientOnboardingEnabledForCurrentPirate(bool Enable
 	UAthenaGameInstance_SetClientOnboardingEnabledForCurrentPirate_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10829,12 +8466,7 @@ void UReplenishableInterface::SetShouldRefresh(bool InShouldRefresh)
 	UReplenishableInterface_SetShouldRefresh_Params params;
 	params.InShouldRefresh = InShouldRefresh;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10847,12 +8479,7 @@ void UReplenishableInterface::Replenish()
 
 	UReplenishableInterface_Replenish_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10865,12 +8492,7 @@ void UReplenishableInterface::RefreshFromSpawner()
 
 	UReplenishableInterface_RefreshFromSpawner_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10885,12 +8507,7 @@ bool UReplenishableInterface::IsAtMaxCapacity()
 
 	UReplenishableInterface_IsAtMaxCapacity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10907,12 +8524,7 @@ bool UReplenishableInterface::GetShouldRefresh()
 
 	UReplenishableInterface_GetShouldRefresh_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10930,12 +8542,7 @@ void UReplenishableInterface::FillWithDefaultDesc(TArray<struct FStorageContaine
 	UReplenishableInterface_FillWithDefaultDesc_Params params;
 	params.Nodes = Nodes;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10948,12 +8555,7 @@ void UReplenishableInterface::Deplete()
 
 	UReplenishableInterface_Deplete_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -10968,12 +8570,7 @@ bool UReplenishableInterface::CanBeReplenished()
 
 	UReplenishableInterface_CanBeReplenished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -10988,12 +8585,7 @@ void UReplenishableInterface::AddDefaultStockLevel()
 
 	UReplenishableInterface_AddDefaultStockLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11009,12 +8601,7 @@ void AAthenaGameMode::SetStorageContainerRefreshInterval(float InRefreshInterval
 	AAthenaGameMode_SetStorageContainerRefreshInterval_Params params;
 	params.InRefreshInterval = InRefreshInterval;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11030,12 +8617,7 @@ void AAthenaGameMode::SetRespawnTimer(float InRespawnTimer)
 	AAthenaGameMode_SetRespawnTimer_Params params;
 	params.InRespawnTimer = InRespawnTimer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11048,12 +8630,7 @@ void AAthenaGameMode::ResetStorageContainers()
 
 	AAthenaGameMode_ResetStorageContainers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11071,12 +8648,7 @@ void AAthenaGameMode::RequestDemoSessionReset(class AAthenaPlayerController* Ath
 	params.AthenaPlayerController = AthenaPlayerController;
 	params.InStartNewSession = InStartNewSession;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11093,12 +8665,7 @@ bool AAthenaGameMode::IsPlayerOnGhostShip(class APawn* PlayerPawn)
 	AAthenaGameMode_IsPlayerOnGhostShip_Params params;
 	params.PlayerPawn = PlayerPawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11118,12 +8685,7 @@ void UAthenaPlayerCharacterTestFunctions::STATIC_ForceShipRegion(class AAthenaPl
 	params.AthenaPlayerCharacter = AthenaPlayerCharacter;
 	params.ShipRegion = ShipRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11139,12 +8701,7 @@ void UAthenaPlayerCharacterTestFunctions::STATIC_ForceReCalculateShipRegion(clas
 	UAthenaPlayerCharacterTestFunctions_ForceReCalculateShipRegion_Params params;
 	params.AthenaPlayerCharacter = AthenaPlayerCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11162,12 +8719,7 @@ void UAthenaPlayerCharacterTestFunctions::STATIC_DisableStatusResponse(class AAt
 	params.AthenaPlayerCharacter = AthenaPlayerCharacter;
 	params.StatusResponseClass = StatusResponseClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11183,12 +8735,7 @@ void UControllableInterface::TakenControl(class AActor* Controller)
 	UControllableInterface_TakenControl_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11204,12 +8751,7 @@ void UControllableInterface::RequestStateChange(class AActor* Controller)
 	UControllableInterface_RequestStateChange_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11222,12 +8764,7 @@ void UControllableInterface::RequestRelinquishControl()
 
 	UControllableInterface_RequestRelinquishControl_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11243,12 +8780,7 @@ void UControllableInterface::RelinquishedController(class AActor* Controller)
 	UControllableInterface_RelinquishedController_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11263,12 +8795,7 @@ float UMountedWeaponInterface::GetYaw()
 
 	UMountedWeaponInterface_GetYaw_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11285,12 +8812,7 @@ float UMountedWeaponInterface::GetPitch()
 
 	UMountedWeaponInterface_GetPitch_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11307,12 +8829,7 @@ bool ALaunchableProjectile::TrailSfxIsActive()
 
 	ALaunchableProjectile_TrailSfxIsActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11329,12 +8846,7 @@ bool ALaunchableProjectile::TrailIsActive()
 
 	ALaunchableProjectile_TrailIsActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11352,12 +8864,7 @@ void ALaunchableProjectile::OnStop(const struct FHitResult& Result)
 	ALaunchableProjectile_OnStop_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11370,12 +8877,7 @@ void ALaunchableProjectile::OnReachedDeepWater()
 
 	ALaunchableProjectile_OnReachedDeepWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11391,12 +8893,7 @@ void ALaunchableProjectile::OnImpactEffects(const struct FHitResult& Result)
 	ALaunchableProjectile_OnImpactEffects_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11412,12 +8909,7 @@ void ALaunchableProjectile::OnImpact(const struct FHitResult& Result)
 	ALaunchableProjectile_OnImpact_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11430,12 +8922,7 @@ void ALaunchableProjectile::OnExitWater()
 
 	ALaunchableProjectile_OnExitWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11448,12 +8935,7 @@ void ALaunchableProjectile::OnEnterWater()
 
 	ALaunchableProjectile_OnEnterWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11471,12 +8953,7 @@ void ALaunchableProjectile::LaunchWithOffset(const struct FVector& LaunchVelocit
 	params.LaunchVelocity = LaunchVelocity;
 	params.SpawnLaunchOffset = SpawnLaunchOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11491,12 +8968,7 @@ bool ALaunchableProjectile::IsInWater()
 
 	ALaunchableProjectile_IsInWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11511,12 +8983,7 @@ void UReplicatedShipPartCustomizationComponent::OnReplicate_PartDesc()
 
 	UReplicatedShipPartCustomizationComponent_OnReplicate_PartDesc_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11534,12 +9001,7 @@ void ACannon::Server_RequestAim(float NewPitch, float NewYaw)
 	params.NewPitch = NewPitch;
 	params.NewYaw = NewYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11557,12 +9019,7 @@ void ACannon::Server_Fire(float InPitch, float InYaw)
 	params.InPitch = InPitch;
 	params.InYaw = InYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11575,12 +9032,7 @@ void ACannon::OnRep_ServerYaw()
 
 	ACannon_OnRep_ServerYaw_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11593,12 +9045,7 @@ void ACannon::OnRep_ServerPitch()
 
 	ACannon_OnRep_ServerPitch_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11611,12 +9058,7 @@ void ACannon::OnRep_LoadedItemInfo()
 
 	ACannon_OnRep_LoadedItemInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11632,12 +9074,7 @@ void ACannon::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
 	ACannon_OnCannonDescLoaded_Params params;
 	params.CannonDesc = CannonDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11659,12 +9096,7 @@ void ACannon::Multicast_FireProjectile(class UClass* ProjectileType, class AActo
 	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
 	params.LaunchVelocity = LaunchVelocity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11682,12 +9114,7 @@ void ACannon::Multicast_FirePlayer(class AActor* InInstigator, bool InstigatorWa
 	params.InInstigator = InInstigator;
 	params.InstigatorWasControllingActor = InstigatorWasControllingActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11702,12 +9129,7 @@ bool ACannon::IsReadyToFire()
 
 	ACannon_IsReadyToFire_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11725,12 +9147,7 @@ void ACannon::HandleYawInput(float YawInput)
 	ACannon_HandleYawInput_Params params;
 	params.YawInput = YawInput;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11746,12 +9163,7 @@ void ACannon::HandlePitchInput(float PitchInput)
 	ACannon_HandlePitchInput_Params params;
 	params.PitchInput = PitchInput;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11766,12 +9178,7 @@ float ACannon::GetNormalisedYawRate()
 
 	ACannon_GetNormalisedYawRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11788,12 +9195,7 @@ float ACannon::GetNormalisedPitchRate()
 
 	ACannon_GetNormalisedPitchRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11813,12 +9215,7 @@ void ACannon::ForceAimCannon(float Pitch, float Yaw)
 	params.Pitch = Pitch;
 	params.Yaw = Yaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11831,12 +9228,7 @@ void ACannon::Fire()
 
 	ACannon_Fire_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11852,12 +9244,7 @@ void AAthenaPlayerController::Server_ReportPlayerDelta(const struct FVector& InV
 	AAthenaPlayerController_Server_ReportPlayerDelta_Params params;
 	params.InVector = InVector;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11873,12 +9260,7 @@ void AAthenaPlayerController::Server_ExecuteCommand(const class FString& Command
 	AAthenaPlayerController_Server_ExecuteCommand_Params params;
 	params.Command = Command;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11894,12 +9276,7 @@ bool AAthenaPlayerController::GetPlayerStreamingReferenceLocation(struct FVector
 
 	AAthenaPlayerController_GetPlayerStreamingReferenceLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Location != nullptr)
 		*Location = params.Location;
@@ -11919,12 +9296,7 @@ class UAthenaCheatManager* AAthenaPlayerController::GetAthenaCheatManager()
 
 	AAthenaPlayerController_GetAthenaCheatManager_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -11942,12 +9314,7 @@ void AAthenaPlayerController::EOS(const class FString& Command)
 	AAthenaPlayerController_EOS_Params params;
 	params.Command = Command;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11965,12 +9332,7 @@ void AAthenaPlayerController::AddYawRotationInput(float Input, TEnumAsByte<ELook
 	params.Input = Input;
 	params.RotationType = RotationType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -11988,12 +9350,7 @@ void AAthenaPlayerController::AddPitchRotationInput(float Input, TEnumAsByte<ELo
 	params.Input = Input;
 	params.RotationType = RotationType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12009,12 +9366,7 @@ void AOnlineAthenaPlayerController::ModifyActiveState(bool IsActive)
 	AOnlineAthenaPlayerController_ModifyActiveState_Params params;
 	params.IsActive = IsActive;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12027,12 +9379,7 @@ void ATestAthenaPlayerController::TestConsoleExecutableFunction()
 
 	ATestAthenaPlayerController_TestConsoleExecutableFunction_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12048,12 +9395,7 @@ void ATestAthenaPlayerController::GrantDebugMenuPermissions(bool AllowAccess)
 	ATestAthenaPlayerController_GrantDebugMenuPermissions_Params params;
 	params.AllowAccess = AllowAccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12069,12 +9411,7 @@ void ATestAthenaPlayerController::FakeInput(const struct FKey& Key)
 	ATestAthenaPlayerController_FakeInput_Params params;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12094,12 +9431,7 @@ void ATestAthenaPlayerController::FakeAxisInput(const struct FKey& Key, float De
 	params.Delta = Delta;
 	params.DeltaTime = DeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12115,12 +9447,7 @@ void ATestPlayerRelevancyAthenaPlayerController::QueryRelevancyService(float Tim
 	ATestPlayerRelevancyAthenaPlayerController_QueryRelevancyService_Params params;
 	params.Timeout = Timeout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12136,12 +9463,7 @@ void UAthenaPlayerControllerTestFunctions::STATIC_TestAthenaPlayerControllerDisa
 	UAthenaPlayerControllerTestFunctions_TestAthenaPlayerControllerDisableNormalInputHandling_Params params;
 	params.AthenaPlayerController = AthenaPlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12159,12 +9481,7 @@ void UAthenaPlayerControllerTestFunctions::STATIC_AddEntitlementDescToInventory(
 	params.Controller = Controller;
 	params.EntitlementDesc = EntitlementDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12180,12 +9497,7 @@ void ATestAthenaPlayerState::SetUniquePlayerID(const class FString& InUniquePlay
 	ATestAthenaPlayerState_SetUniquePlayerID_Params params;
 	params.InUniquePlayerId = InUniquePlayerId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12205,12 +9517,7 @@ void AAthenaTextRender::OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12225,12 +9532,7 @@ struct FAtmosphericPressureZoneParametersAndLocation UAtmosphericPressureZoneInt
 
 	UAtmosphericPressureZoneInterface_GetPressureZoneParameters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12248,12 +9550,7 @@ void UAtmosphericPressureServiceInterface::UnregisterAtmosphericPressureZoneFrom
 	UAtmosphericPressureServiceInterface_UnregisterAtmosphericPressureZoneFromService_Params params;
 	params.PressureZone = PressureZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12269,12 +9566,7 @@ void UAtmosphericPressureServiceInterface::RegisterAtmosphericPressureZoneWithSe
 	UAtmosphericPressureServiceInterface_RegisterAtmosphericPressureZoneWithService_Params params;
 	params.PressureZone = PressureZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12289,12 +9581,7 @@ int UAtmosphericPressureServiceInterface::GetNumberOfAtmosphericPressureZones()
 
 	UAtmosphericPressureServiceInterface_GetNumberOfAtmosphericPressureZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12313,12 +9600,7 @@ struct FAtmosphericPressureZoneParametersAndLocation UAtmosphericPressureService
 	UAtmosphericPressureServiceInterface_GetAtmosphericPressureZone_Params params;
 	params.PressureZoneIndex = PressureZoneIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12335,12 +9617,7 @@ TArray<struct FAtmosphericPressureZoneParametersAndLocation> UAtmosphericPressur
 
 	UAtmosphericPressureServiceInterface_GetAllAtmosphericPressureZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12357,12 +9634,7 @@ struct FWwiseEmitter UAudioEmitterInterface::GetAudioEmitter()
 
 	UAudioEmitterInterface_GetAudioEmitter_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12379,12 +9651,7 @@ class UWwiseObjectPoolWrapper* UAudioEmitterPoolSourceInterface::GetAudioEmitter
 
 	UAudioEmitterPoolSourceInterface_GetAudioEmitterPool_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12412,12 +9679,7 @@ void UAudioUtilities::STATIC_UpdateCharacterWadingRtpc(class AAthenaCharacter* A
 	params.MinRtpcValue = MinRtpcValue;
 	params.MaxRtpcValue = MaxRtpcValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12451,12 +9713,7 @@ void UAudioUtilities::STATIC_PlayFootstepSound(class UObject* WorldContextObject
 	params.MaxRtpcValue = MaxRtpcValue;
 	params.FootImpactType = FootImpactType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12472,12 +9729,7 @@ void UAudioUtilities::STATIC_FilterLocalPlayerFootStepSounds(TEnumAsByte<ECharac
 	UAudioUtilities_FilterLocalPlayerFootStepSounds_Params params;
 	params.FootImpactType = FootImpactType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12492,12 +9744,7 @@ class UTexture* UBakedDecalComponent::GetTargetTexture()
 
 	UBakedDecalComponent_GetTargetTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12515,12 +9762,7 @@ void UBakedDecalComponent::FinishInitialisation(class UObject* WorldContextObjec
 	UBakedDecalComponent_FinishInitialisation_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12533,12 +9775,7 @@ void UBakedDecalComponent::FilterEdges()
 
 	UBakedDecalComponent_FilterEdges_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12572,12 +9809,7 @@ void UBakedDecalComponent::DrawDecal(class UObject* WorldContextObject, const st
 	params.BlendMode = BlendMode;
 	params.LODIndex = LODIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12595,12 +9827,7 @@ void UBakedDecalComponent::CopyToTargetTexture(class UObject* WorldContextObject
 	params.WorldContextObject = WorldContextObject;
 	params.SourceTexture = SourceTexture;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12616,12 +9843,7 @@ void UBakedDecalComponent::ClearTargetTexture(const struct FLinearColor& ClearCo
 	UBakedDecalComponent_ClearTargetTexture_Params params;
 	params.ClearColor = ClearColor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12637,12 +9859,7 @@ void UBakedDecalComponent::AddMesh(class UStaticMeshComponent* Mesh)
 	UBakedDecalComponent_AddMesh_Params params;
 	params.Mesh = Mesh;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12657,12 +9874,7 @@ class UAmbientLightSourceComponent* UBodyLightControllerComponent::GetTargetLigh
 
 	UBodyLightControllerComponent_GetTargetLight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12680,12 +9892,7 @@ void UBodyLightControllerComponent::AssignTargetLight(class UAmbientLightSourceC
 	UBodyLightControllerComponent_AssignTargetLight_Params params;
 	params.InTargetLight = InTargetLight;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12701,12 +9908,7 @@ void UBoxedRpcDispatcherComponent::Server_SendRpc(const struct FSerialisedRpc& E
 	UBoxedRpcDispatcherComponent_Server_SendRpc_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12722,12 +9924,7 @@ void UBoxedRpcDispatcherComponent::Client_SendRpc(const struct FSerialisedRpc& E
 	UBoxedRpcDispatcherComponent_Client_SendRpc_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12743,12 +9940,7 @@ void UBTService_DetermineRecoveryMethod::OnDamageTaken(const struct FImpactDamag
 	UBTService_DetermineRecoveryMethod_OnDamageTaken_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12764,12 +9956,7 @@ void UBTService_ObserveTargetMeleeAttacks::OnTargetActorDestroyed(class AActor* 
 	UBTService_ObserveTargetMeleeAttacks_OnTargetActorDestroyed_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12785,12 +9972,7 @@ void UBTService_ObserveTargetReceivedDamage::OnObservedActorDestroyed(class AAct
 	UBTService_ObserveTargetReceivedDamage_OnObservedActorDestroyed_Params params;
 	params.ObservedActor = ObservedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12803,12 +9985,7 @@ void UBuoyancyComponent::Sink()
 
 	UBuoyancyComponent_Sink_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12823,12 +10000,7 @@ bool UBuoyancyComponent::ShouldBeStationary()
 
 	UBuoyancyComponent_ShouldBeStationary_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12846,12 +10018,7 @@ void UBuoyancyComponent::SetEnabled(bool InEnabled)
 	UBuoyancyComponent_SetEnabled_Params params;
 	params.InEnabled = InEnabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12867,12 +10034,7 @@ void UBuoyancyComponent::OnRigidBodyWake(const struct FName& InBoneName)
 	UBuoyancyComponent_OnRigidBodyWake_Params params;
 	params.InBoneName = InBoneName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12888,12 +10050,7 @@ void UBuoyancyComponent::OnRigidBodySleep(const struct FName& InBoneName)
 	UBuoyancyComponent_OnRigidBodySleep_Params params;
 	params.InBoneName = InBoneName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12906,12 +10063,7 @@ void UBuoyancyComponent::OnRep_State()
 
 	UBuoyancyComponent_OnRep_State_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -12926,12 +10078,7 @@ bool UBuoyancyComponent::IsStationary()
 
 	UBuoyancyComponent_IsStationary_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12948,12 +10095,7 @@ bool UBuoyancyComponent::IsSinking()
 
 	UBuoyancyComponent_IsSinking_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12970,12 +10112,7 @@ bool UBuoyancyComponent::IsEnabled()
 
 	UBuoyancyComponent_IsEnabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -12990,12 +10127,7 @@ void UPickupableInterface::HandleDestroy()
 
 	UPickupableInterface_HandleDestroy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13017,12 +10149,7 @@ void AItemProxy::PerformDropOnSurfaceFx(TEnumAsByte<EPhysicalSurface> ServerSurf
 	params.OverrideVFXPos = OverrideVFXPos;
 	params.ActorToParentVfxTo = ActorToParentVfxTo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13044,12 +10171,7 @@ void AItemProxy::Multicast_DropOnSurfaceRPC(TEnumAsByte<EPhysicalSurface> Surfac
 	params.OverrideVFXPos = OverrideVFXPos;
 	params.ActorToParentVfxTo = ActorToParentVfxTo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13064,12 +10186,7 @@ class AItemInfo* AItemProxy::GetItemInfo()
 
 	AItemProxy_GetItemInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13087,12 +10204,7 @@ void UIslandServiceInterface::OnCrewSpawningOnIsland(const struct FName& IslandN
 	UIslandServiceInterface_OnCrewSpawningOnIsland_Params params;
 	params.IslandName = IslandName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13107,12 +10219,7 @@ TArray<struct FName> UIslandServiceInterface::GetAllIslandNames()
 
 	UIslandServiceInterface_GetAllIslandNames_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13134,12 +10241,7 @@ void AIslandData::OnOverlapEnd(class AActor* Other, class UPrimitiveComponent* O
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13163,12 +10265,7 @@ void AIslandData::OnOverlapBegin(class AActor* Other, class UPrimitiveComponent*
 	params.bFromSweep = bFromSweep;
 	params.OverlapInfo = OverlapInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13183,12 +10280,7 @@ struct FIsland AIslandData::MakeFIsland()
 
 	AIslandData_MakeFIsland_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13205,12 +10297,7 @@ bool AIslandData::IsOnWorldMap()
 
 	AIslandData_IsOnWorldMap_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13228,11 +10315,7 @@ void AInteractableObject::Blueprint_OnInteract_Server(class AActor* InInteractor
 	AInteractableObject_Blueprint_OnInteract_Server_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13248,11 +10331,7 @@ void AInteractableObject::Blueprint_OnInteract_Client(class AActor* InInteractor
 	AInteractableObject_Blueprint_OnInteract_Client_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13265,12 +10344,7 @@ void ABuoyantStorageContainer::OnRep_PhysicsState()
 
 	ABuoyantStorageContainer_OnRep_PhysicsState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13288,12 +10362,7 @@ void UBurpComponent::Multicast_Burp(float DurationRTPC, float TypeRTPC)
 	params.DurationRTPC = DurationRTPC;
 	params.TypeRTPC = TypeRTPC;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13308,12 +10377,7 @@ float UBurpComponent::GetCurrentGasAmount()
 
 	UBurpComponent_GetCurrentGasAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13334,12 +10398,7 @@ TEnumAsByte<EWieldItemReturnCode> ABurpTestActor::WieldItemByActor(class AActor*
 	params.Item = Item;
 	params.UnwieldFast = UnwieldFast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13354,12 +10413,7 @@ void ABurpTestActor::ToggleWieldItem()
 
 	ABurpTestActor_ToggleWieldItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13376,12 +10430,7 @@ bool ABurpTestActor::RemoveItem(class AItemInfo* Item)
 	ABurpTestActor_RemoveItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13401,12 +10450,7 @@ void ABurpTestActor::QuickSelectItemOfType(TEnumAsByte<EItemType> ItemType, int 
 	params.ItemType = ItemType;
 	params.TypedItemIndex = TypedItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13424,12 +10468,7 @@ void ABurpTestActor::QuickSelectItemOfCategory(class UClass* Category, int Index
 	params.Category = Category;
 	params.IndexIntoCategory = IndexIntoCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13445,12 +10484,7 @@ void ABurpTestActor::QuickSelectItem(int ItemIndex)
 	ABurpTestActor_QuickSelectItem_Params params;
 	params.ItemIndex = ItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13459,22 +10493,19 @@ void ABurpTestActor::QuickSelectItem(int ItemIndex)
 // Parameters:
 // class AItemInfo*               Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AndWield                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldNotifyClients            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABurpTestActor::PickUpItem(class AItemInfo* Item, bool AndWield)
+bool ABurpTestActor::PickUpItem(class AItemInfo* Item, bool AndWield, bool ShouldNotifyClients)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.BurpTestActor.PickUpItem");
 
 	ABurpTestActor_PickUpItem_Params params;
 	params.Item = Item;
 	params.AndWield = AndWield;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.ShouldNotifyClients = ShouldNotifyClients;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13493,12 +10524,7 @@ int ABurpTestActor::GetNumberOfItemsOfItemCategory(class UClass* ItemSlot)
 	ABurpTestActor_GetNumberOfItemsOfItemCategory_Params params;
 	params.ItemSlot = ItemSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13515,12 +10541,7 @@ int ABurpTestActor::GetCurrentItemIndex()
 
 	ABurpTestActor_GetCurrentItemIndex_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13535,12 +10556,7 @@ void ABurpTestActor::CycleItemUp()
 
 	ABurpTestActor_CycleItemUp_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13556,12 +10572,7 @@ void ABurpTestActor::CycleItemType(TEnumAsByte<EItemType> ItemType)
 	ABurpTestActor_CycleItemType_Params params;
 	params.ItemType = ItemType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13574,12 +10585,7 @@ void ABurpTestActor::CycleItemDown()
 
 	ABurpTestActor_CycleItemDown_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13595,12 +10601,7 @@ void ABurpTestActor::CycleItemCategory(class UClass* Category)
 	ABurpTestActor_CycleItemCategory_Params params;
 	params.Category = Category;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13617,12 +10618,7 @@ bool ABurpTestActor::ConsumeItem(class AItemInfo* Item)
 	ABurpTestActor_ConsumeItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13641,12 +10637,7 @@ TEnumAsByte<ECanAddItemQueryResult> ABurpTestActor::CanAddItemOfItemCategory(cla
 	ABurpTestActor_CanAddItemOfItemCategory_Params params;
 	params.ItemSlot = ItemSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13665,12 +10656,7 @@ bool ABurpTestActor::AddItem(class AItemInfo* Item)
 	ABurpTestActor_AddItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13689,12 +10675,7 @@ bool UCameraFadeManagerTestFunctions::STATIC_IsFadeComplete(class APlayerControl
 	UCameraFadeManagerTestFunctions_IsFadeComplete_Params params;
 	params.TargetController = TargetController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13713,12 +10694,7 @@ bool UCameraFadeManagerTestFunctions::STATIC_IsFadeActive(class APlayerControlle
 	UCameraFadeManagerTestFunctions_IsFadeActive_Params params;
 	params.TargetController = TargetController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13738,12 +10714,7 @@ void UCameraFadeManagerTestFunctions::STATIC_FireFadeAckRequestToClient(class AA
 	params.TargetController = TargetController;
 	params.AckTimeout = AckTimeout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13756,12 +10727,7 @@ void ACampfire::OnRep_IsOnFire()
 
 	ACampfire_OnRep_IsOnFire_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13777,12 +10743,7 @@ void UCannonAnimInterface::SetCannonFiring(bool CannonFiring)
 	UCannonAnimInterface_SetCannonFiring_Params params;
 	params.CannonFiring = CannonFiring;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13797,12 +10758,7 @@ bool UCannonAnimInterface::GetCannonFiring()
 
 	UCannonAnimInterface_GetCannonFiring_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13819,12 +10775,7 @@ bool UCannonAnimInstance::GetCannonFiring()
 
 	UCannonAnimInstance_GetCannonFiring_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13846,11 +10797,7 @@ void UIterativeCanvasRenderTarget2D::ReceiveUpdate(class UCanvas* Canvas, int Wi
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13866,12 +10813,7 @@ void UIterativeCanvasRenderTarget2D::GetSize(int* Width, int* Height)
 
 	UIterativeCanvasRenderTarget2D_GetSize_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Width != nullptr)
 		*Width = params.Width;
@@ -13901,12 +10843,7 @@ class UIterativeCanvasRenderTarget2D* UIterativeCanvasRenderTarget2D::STATIC_Cre
 	params.Height = Height;
 	params.InClearColor = InClearColor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13928,12 +10865,7 @@ void UCanvasWorldMapComponent::OnCanvasUpdate(class UCanvas* Canvas, int Width, 
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13948,12 +10880,7 @@ bool UCapstanInterface::IsLocked()
 
 	UCapstanInterface_IsLocked_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13970,12 +10897,7 @@ float UCapstanInterface::GetCapstanState()
 
 	UCapstanInterface_GetCapstanState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -13992,12 +10914,7 @@ float UCapstanInterface::GetCapstanRatioVelocity()
 
 	UCapstanInterface_GetCapstanRatioVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14014,12 +10931,7 @@ int UCapstanInterface::GetCapstanNumCurrentUsers()
 
 	UCapstanInterface_GetCapstanNumCurrentUsers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14036,12 +10948,7 @@ float UCapstanInterface::GetCapstanMaxVelocityPerPlayer()
 
 	UCapstanInterface_GetCapstanMaxVelocityPerPlayer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14058,12 +10965,7 @@ float UCapstanInterface::GetCapstanMaxRatioVelocity()
 
 	UCapstanInterface_GetCapstanMaxRatioVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14081,12 +10983,7 @@ void ACapstan::OnCapstanDescLoaded(class UCapstanDescAsset* CapstanDesc)
 	ACapstan_OnCapstanDescLoaded_Params params;
 	params.CapstanDesc = CapstanDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14101,12 +10998,7 @@ class ACapstanRelease* ACapstan::GetCapstanReleaseActor()
 
 	ACapstan_GetCapstanReleaseActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14123,11 +11015,7 @@ TArray<class ACapstanArm*> ACapstan::GetArms()
 
 	ACapstan_GetArms_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14145,12 +11033,7 @@ void UCapstanArmInterface::SetIntent(float NewIntent)
 	UCapstanArmInterface_SetIntent_Params params;
 	params.NewIntent = NewIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14165,12 +11048,7 @@ bool UCapstanArmInterface::IsLocked()
 
 	UCapstanArmInterface_IsLocked_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14187,12 +11065,7 @@ bool UCapstanArmInterface::IsArmInUse()
 
 	UCapstanArmInterface_IsArmInUse_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14209,12 +11082,7 @@ float UCapstanArmInterface::GetCurrentIntent()
 
 	UCapstanArmInterface_GetCurrentIntent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14231,12 +11099,7 @@ float UCapstanArmInterface::GetCapstanRatioVelocity()
 
 	UCapstanArmInterface_GetCapstanRatioVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14259,12 +11122,7 @@ class ACapstan* UCapstanTestFunctions::STATIC_SetupCapstanTestServerSide(class U
 	params.SpawnLocation = SpawnLocation;
 	params.CapstanClass = CapstanClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14283,12 +11141,7 @@ class ACapstan* UCapstanTestFunctions::STATIC_SetupCapstanTestClientSide(class U
 	UCapstanTestFunctions_SetupCapstanTestClientSide_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14310,12 +11163,7 @@ void UCapstanTestFunctions::STATIC_SetCapstanSpeed(class ACapstan* Capstan, floa
 	params.MaxPlayerVelocity = MaxPlayerVelocity;
 	params.MaxLoweringVelocity = MaxLoweringVelocity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14334,12 +11182,7 @@ class ACapstanArm* UCapstanTestFunctions::STATIC_GetCapstanArm(class ACapstan* C
 	params.Capstan = Capstan;
 	params.ArmIndex = ArmIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14359,12 +11202,7 @@ void UCapstanTestFunctions::STATIC_ForceSetCapstanRatio(class ACapstan* Capstan,
 	params.Capstan = Capstan;
 	params.TargetRatio = TargetRatio;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14382,12 +11220,7 @@ void UCapturedByKrakenActionStateId::STATIC_PushCharacterIntoCapturedByKrakenAct
 	params.Character = Character;
 	params.Tentacle = Tentacle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14403,12 +11236,7 @@ void UCapturedByKrakenActionStateId::STATIC_PopCharacterOutOfCapturedByKrakenAct
 	UCapturedByKrakenActionStateId_PopCharacterOutOfCapturedByKrakenActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14421,12 +11249,7 @@ void UCargoRunCrateComponent::OnRep_DropOffData()
 
 	UCargoRunCrateComponent_OnRep_DropOffData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14443,12 +11266,7 @@ struct FPirateDescription UCarouselPirateDescConversion::STATIC_ToPirateDescript
 	UCarouselPirateDescConversion_ToPirateDescriptor_Params params;
 	params.InParams = InParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14467,12 +11285,7 @@ TArray<class UClass*> UCarouselPirateDescConversion::STATIC_ToOutfit(const struc
 	UCarouselPirateDescConversion_ToOutfit_Params params;
 	params.InParams = InParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14492,12 +11305,7 @@ void UCarouselPirateGenerator::STATIC_RefreshCurrentPirateStatus(class UObject* 
 	params.WorldContextObject = WorldContextObject;
 	params.Locked = Locked;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14518,12 +11326,7 @@ TArray<struct FCarouselPirateDesc> UCarouselPirateGenerator::STATIC_GenerateSetO
 	params.InCount = InCount;
 	params.InParams = InParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14548,12 +11351,7 @@ TArray<struct FName> UCarouselPirateGenerator::STATIC_GenerateClothingItems(int 
 	params.InTargetGender = InTargetGender;
 	params.InTargetEthnicity = InTargetEthnicity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14568,12 +11366,7 @@ void AFloatingItemProxy::OnRep_PhysicsState()
 
 	AFloatingItemProxy_OnRep_PhysicsState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14592,12 +11385,7 @@ bool UCharacterAudioComponent::SetNamedState(const struct FName& StateName, bool
 	params.StateName = StateName;
 	params.Active = Active;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14612,12 +11400,7 @@ void UCharacterAudioComponent::ResetNamedStates()
 
 	UCharacterAudioComponent_ResetNamedStates_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14634,12 +11417,7 @@ float UCharacterAudioComponent::GetSpaceRtpcValueFromRtpcName(const struct FName
 	UCharacterAudioComponent_GetSpaceRtpcValueFromRtpcName_Params params;
 	params.RTPCName = RTPCName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14656,12 +11434,7 @@ int UCharacterAudioComponent::GetNumberOfSkeletonsAffectingMusicSystem()
 
 	UCharacterAudioComponent_GetNumberOfSkeletonsAffectingMusicSystem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14678,12 +11451,7 @@ struct FWwiseEmitter UCharacterAudioComponent::GetEmitter()
 
 	UCharacterAudioComponent_GetEmitter_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14700,12 +11468,7 @@ TEnumAsByte<EPlayerMusicState> UCharacterAudioComponent::GetCurrentPlayerMusicSt
 
 	UCharacterAudioComponent_GetCurrentPlayerMusicState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14723,12 +11486,7 @@ void UCharacterAudioComponent::Client_PostAudioEventToLocalClientOnly(class UWwi
 	UCharacterAudioComponent_Client_PostAudioEventToLocalClientOnly_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14744,12 +11502,7 @@ void UCharacterInteractionComponentTestFunctions::STATIC_PushCanInteractValidato
 	UCharacterInteractionComponentTestFunctions_PushCanInteractValidatorToInteractionComponent_Params params;
 	params.InCharacterInteractionComponent = InCharacterInteractionComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -14766,12 +11519,7 @@ bool UCharacterInteractionComponentTestFunctions::STATIC_CharacterInteractionCom
 	UCharacterInteractionComponentTestFunctions_CharacterInteractionComponentWithoutInteractors_WhenPolicyIsAdded_PolicyIsntCalled_Params params;
 	params.InCharacterInteractionComponent = InCharacterInteractionComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14790,12 +11538,7 @@ bool UCharacterInteractionComponentTestFunctions::STATIC_CharacterInteractionCom
 	UCharacterInteractionComponentTestFunctions_CharacterInteractionComponentWithInteractors_WhenPolicyIsAdded_PolicyIsCalled_Params params;
 	params.InCharacterInteractionComponent = InCharacterInteractionComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14814,12 +11557,7 @@ bool UCharacterInteractionComponentTestFunctions::STATIC_CharacterInteractionCom
 	UCharacterInteractionComponentTestFunctions_CharacterInteractionComponentWithInteractor_TwoPolicies_HighestPriorityFirst_Params params;
 	params.InCharacterInteractionComponent = InCharacterInteractionComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14836,12 +11574,7 @@ bool UCharacterPossessedEventTestComponent::HasReceivedPlayerStateReplicatedEven
 
 	UCharacterPossessedEventTestComponent_HasReceivedPlayerStateReplicatedEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14862,12 +11595,7 @@ bool UCharacterSocketCollisionFunctionLibrary::STATIC_NotEqual(const struct FCha
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14886,12 +11614,7 @@ bool UCharacterSocketCollisionFunctionLibrary::STATIC_IsValid(const struct FChar
 	UCharacterSocketCollisionFunctionLibrary_IsValid_Params params;
 	params.Handle = Handle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14912,12 +11635,7 @@ bool UCharacterSocketCollisionFunctionLibrary::STATIC_Equal(const struct FCharac
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14934,12 +11652,7 @@ void UCharacterSocketCollisionServiceInterface::UnregisterSocket(struct FCharact
 
 	UCharacterSocketCollisionServiceInterface_UnregisterSocket_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Handle != nullptr)
 		*Handle = params.Handle;
@@ -14961,12 +11674,7 @@ struct FCharacterSocketCollisionHandle UCharacterSocketCollisionServiceInterface
 	params.InCharacter = InCharacter;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -14985,12 +11693,7 @@ bool UCharacterSocketCollisionServiceInterface::IsSocketRegistered(const struct 
 	UCharacterSocketCollisionServiceInterface_IsSocketRegistered_Params params;
 	params.Handle = Handle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15007,12 +11710,7 @@ TEnumAsByte<EInputHandlerResult> UChatboxCompositeInputHandler::OnOpenChatbox()
 
 	UChatboxCompositeInputHandler_OnOpenChatbox_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15030,12 +11728,7 @@ void ACinematicCameraController::SetFOV(float NewFOV)
 	ACinematicCameraController_SetFOV_Params params;
 	params.NewFOV = NewFOV;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15050,27 +11743,23 @@ float ACinematicCameraController::GetFOV()
 
 	ACinematicCameraController_GetFOV_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
 
 
 // Function Athena.ClamberActionStateId.PushCharacterIntoClamberActionState
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // TEnumAsByte<EActionStateMachineTrackId> TrackId                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  ClamberActor                   (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          NormalisedInteractionWidth     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClimbId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLadderBlendParams      ClamberBlendParams             (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UClamberActionStateId::STATIC_PushCharacterIntoClamberActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ClamberActor, class AActor* Character, float NormalisedInteractionWidth, unsigned char ClimbId)
+void UClamberActionStateId::STATIC_PushCharacterIntoClamberActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ClamberActor, class AActor* Character, float NormalisedInteractionWidth, unsigned char ClimbId, const struct FLadderBlendParams& ClamberBlendParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.ClamberActionStateId.PushCharacterIntoClamberActionState");
 
@@ -15080,13 +11769,9 @@ void UClamberActionStateId::STATIC_PushCharacterIntoClamberActionState(TEnumAsBy
 	params.Character = Character;
 	params.NormalisedInteractionWidth = NormalisedInteractionWidth;
 	params.ClimbId = ClimbId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.ClamberBlendParams = ClamberBlendParams;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15103,12 +11788,7 @@ bool UClothingLoadoutControlInterface::UnequipClothing(class UClass* InDesc)
 	UClothingLoadoutControlInterface_UnequipClothing_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15126,12 +11806,7 @@ void UClothingLoadoutControlInterface::SetClothingLoadout(const struct FClothing
 	UClothingLoadoutControlInterface_SetClothingLoadout_Params params;
 	params.InLoadout = InLoadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15148,12 +11823,7 @@ bool UClothingLoadoutControlInterface::EquipClothing(class UClass* InDesc)
 	UClothingLoadoutControlInterface_EquipClothing_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15170,12 +11840,7 @@ struct FClothingLoadout UClothingLoadoutViewInterface::GetClothingLoadout()
 
 	UClothingLoadoutViewInterface_GetClothingLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15193,12 +11858,7 @@ void UTitleLoadoutControlInterface::Client_UpdateTitleUI(class UClass* InLoadout
 	UTitleLoadoutControlInterface_Client_UpdateTitleUI_Params params;
 	params.InLoadout = InLoadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15213,12 +11873,7 @@ class UClass* UTitleLoadoutViewInterface::GetTitleLoadout()
 
 	UTitleLoadoutViewInterface_GetTitleLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15233,12 +11888,7 @@ void UClothingLoadoutComponent::OnRep_Loadout()
 
 	UClothingLoadoutComponent_OnRep_Loadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15254,12 +11904,7 @@ void ACloudSystem::SetGlobalAtmosphericPressure(float NewAtmosphericPressure)
 	ACloudSystem_SetGlobalAtmosphericPressure_Params params;
 	params.NewAtmosphericPressure = NewAtmosphericPressure;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15275,12 +11920,7 @@ void UCoastInterface::UnregisterCoast(const struct FBlueprintableIntegerHandle& 
 	UCoastInterface_UnregisterCoast_Params params;
 	params.CoastHandle = CoastHandle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15301,12 +11941,33 @@ struct FBlueprintableIntegerHandle UCoastInterface::RegisterCoast(class USplineC
 	params.InnerSpline = InnerSpline;
 	params.SplineOrigin = SplineOrigin;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.CoastInterface.GetClosestPointOnClosestCoast
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 LookupPosition                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 OutClosestPoint                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           OutIsOnIsland                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCoastInterface::GetClosestPointOnClosestCoast(const struct FVector& LookupPosition, struct FVector* OutClosestPoint, bool* OutIsOnIsland)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CoastInterface.GetClosestPointOnClosestCoast");
+
+	UCoastInterface_GetClosestPointOnClosestCoast_Params params;
+	params.LookupPosition = LookupPosition;
 
 	UObject::ProcessEvent(fn, &params);
 
-	fn->FunctionFlags = flags;
+	if (OutClosestPoint != nullptr)
+		*OutClosestPoint = params.OutClosestPoint;
+	if (OutIsOnIsland != nullptr)
+		*OutIsOnIsland = params.OutIsOnIsland;
 
 	return params.ReturnValue;
 }
@@ -15328,12 +11989,7 @@ struct FName UCoastInterface::GetClosestIslandNameOfCoastlineForPointAndToleranc
 	params.Pos = Pos;
 	params.MaxDistFromCoast = MaxDistFromCoast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutClosestDistToShore != nullptr)
 		*OutClosestDistToShore = params.OutClosestDistToShore;
@@ -15355,12 +12011,7 @@ TArray<struct FCoastObject> UCoastInterface::GetClosestCoastObjects(const struct
 	UCoastInterface_GetClosestCoastObjects_Params params;
 	params.LookupPosition = LookupPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15377,12 +12028,7 @@ bool ACoherentBaseHUD::IsViewportValid()
 
 	ACoherentBaseHUD_IsViewportValid_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15400,12 +12046,7 @@ void UItemLoadoutControlInterface::SetItemLoadout(const struct FItemLoadout& InI
 	UItemLoadoutControlInterface_SetItemLoadout_Params params;
 	params.InItemLoadout = InItemLoadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15424,12 +12065,7 @@ bool UItemLoadoutControlInterface::RemoveItem(class AItemInfo* InItem, TEnumAsBy
 	params.InItem = InItem;
 	params.InDestroyBehaviour = InDestroyBehaviour;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15448,12 +12084,7 @@ bool UItemLoadoutControlInterface::PushItem(class AItemInfo* InItem)
 	UItemLoadoutControlInterface_PushItem_Params params;
 	params.InItem = InItem;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15474,12 +12105,7 @@ bool UItemLoadoutControlInterface::EquipWeapon_Client(class UClass* InItemDesc, 
 	params.InItemDesc = InItemDesc;
 	params.InIndex = InIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15500,12 +12126,7 @@ bool UItemLoadoutControlInterface::EquipWeapon(class UClass* InItemDesc, int InI
 	params.InItemDesc = InItemDesc;
 	params.InIndex = InIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15524,12 +12145,7 @@ bool UItemLoadoutControlInterface::EquipItem(class UClass* InItemDesc)
 	UItemLoadoutControlInterface_EquipItem_Params params;
 	params.InItemDesc = InItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15547,12 +12163,7 @@ void UQuickInventoryComponent::Server_InventoryEquipItem(class UClass* InItemDes
 	UQuickInventoryComponent_Server_InventoryEquipItem_Params params;
 	params.InItemDesc = InItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15565,12 +12176,7 @@ void AAthenaHUD::ShowTooltipsDetailedAtlas()
 
 	AAthenaHUD_ShowTooltipsDetailedAtlas_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15583,12 +12189,7 @@ void AAthenaHUD::ShowTooltipsAtlas()
 
 	AAthenaHUD_ShowTooltipsAtlas_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15601,12 +12202,7 @@ void AAthenaHUD::ShowNameplatesAtlas()
 
 	AAthenaHUD_ShowNameplatesAtlas_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15621,12 +12217,7 @@ bool AAthenaHUD::HasInputFocus()
 
 	AAthenaHUD_HasInputFocus_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15643,12 +12234,7 @@ bool AAthenaHUD::AreInGameMenusActive()
 
 	AAthenaHUD_AreInGameMenusActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15665,12 +12251,7 @@ bool AAthenaHUD::AreAllViewScriptingReady()
 
 	AAthenaHUD_AreAllViewScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15685,12 +12266,7 @@ void UCoherentUIGTInstancedComponent::ScriptingReadyEventReceived()
 
 	UCoherentUIGTInstancedComponent_ScriptingReadyEventReceived_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15703,12 +12279,7 @@ void UCoherentUIGTInstancedComponent::ReadyForBindingsEventReceived()
 
 	UCoherentUIGTInstancedComponent_ReadyForBindingsEventReceived_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15721,12 +12292,7 @@ void UCoherentUIGTInstancedComponent::OnScriptingReady()
 
 	UCoherentUIGTInstancedComponent_OnScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15739,12 +12305,7 @@ void UCoherentUIGTInstancedComponent::OnReadyForBindings()
 
 	UCoherentUIGTInstancedComponent_OnReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15759,12 +12320,7 @@ bool UCoherentUIGTInstancedComponent::IsScriptingReady()
 
 	UCoherentUIGTInstancedComponent_IsScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15781,12 +12337,7 @@ class UMaterialInstanceDynamic* UCoherentUIGTInstancedComponent::GetHUDMaterial(
 
 	UCoherentUIGTInstancedComponent_GetHUDMaterial_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15806,12 +12357,7 @@ void UCoherentUIGTInstancedComponent::FinishLoadEventReceived(const class FStrin
 	params.path = path;
 	params.isMainFrame = isMainFrame;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15824,12 +12370,7 @@ void UCoherentUIGTInstancedComponent::BindingsReleasedEventReceived()
 
 	UCoherentUIGTInstancedComponent_BindingsReleasedEventReceived_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15842,12 +12383,7 @@ void UCoherentBaseHUDComponent::OnScriptingReady()
 
 	UCoherentBaseHUDComponent_OnScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15860,12 +12396,7 @@ void UCoherentBaseHUDComponent::OnReadyForBindings()
 
 	UCoherentBaseHUDComponent_OnReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15880,12 +12411,7 @@ bool UCoherentBaseHUDComponent::HasInitializationErrorOccurred()
 
 	UCoherentBaseHUDComponent_HasInitializationErrorOccurred_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15903,12 +12429,7 @@ void UFrontendHudComponent::SetFrontendMessagingDispatcher(const TScriptInterfac
 	UFrontendHudComponent_SetFrontendMessagingDispatcher_Params params;
 	params.Dispatcher = Dispatcher;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15921,12 +12442,7 @@ void UFrontendHudComponent::OnReadyForBindings()
 
 	UFrontendHudComponent_OnReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15939,12 +12455,7 @@ void UUIInputForwardComponent::TargetViewScriptingReady()
 
 	UUIInputForwardComponent_TargetViewScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15962,12 +12473,7 @@ void UUIInputForwardComponent::SetUIFocus(TEnumAsByte<EUIInputFocusType> FocusTy
 	params.FocusType = FocusType;
 	params.TargetViewComponent = TargetViewComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -15983,12 +12489,7 @@ void UUIInputForwardComponent::SetTargetView(class UCoherentUIGTBaseComponent* V
 	UUIInputForwardComponent_SetTargetView_Params params;
 	params.ViewComponent = ViewComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16003,12 +12504,7 @@ bool UUIInputForwardComponent::IsUIFocused()
 
 	UUIInputForwardComponent_IsUIFocused_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16025,12 +12521,7 @@ TEnumAsByte<EUIInputFocusType> UUIInputForwardComponent::GetCurrentInputFocusTyp
 
 	UUIInputForwardComponent_GetCurrentInputFocusType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16045,12 +12536,7 @@ void UUIInputForwardComponent::CentreMouseCursor()
 
 	UUIInputForwardComponent_CentreMouseCursor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16066,12 +12552,7 @@ void AFrontendHUD::SetBootFlowMessagingDispatcher(const TScriptInterface<class U
 	AFrontendHUD_SetBootFlowMessagingDispatcher_Params params;
 	params.Dispatcher = Dispatcher;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16086,12 +12567,7 @@ TScriptInterface<class UObjectMessagingDispatcherInterface> AFrontendHUD::GetBoo
 
 	AFrontendHUD_GetBootFlowMessagingDispatcher_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16106,12 +12582,7 @@ void AFrontendHUD::DeletePirate()
 
 	AFrontendHUD_DeletePirate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16124,12 +12595,7 @@ void AFrontendHUD::AttachToBootFlowMessagingDispatcher()
 
 	AFrontendHUD_AttachToBootFlowMessagingDispatcher_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16144,12 +12610,7 @@ bool UCoherentToWwiseEventComponent::IsPlayingAny()
 
 	UCoherentToWwiseEventComponent_IsPlayingAny_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16166,12 +12627,7 @@ struct FWwiseEmitter UCoherentToWwiseEventComponent::GetEmitter()
 
 	UCoherentToWwiseEventComponent_GetEmitter_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16186,12 +12642,7 @@ void UCoherentUIGTHUDComponent::OnScriptingReady()
 
 	UCoherentUIGTHUDComponent_OnScriptingReady_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16204,12 +12655,7 @@ void UCoherentUIGTHUDComponent::OnReadyForBindings()
 
 	UCoherentUIGTHUDComponent_OnReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16222,12 +12668,7 @@ void UCoherentUIGTInGameMenusComponent::OnReadyForBindings()
 
 	UCoherentUIGTInGameMenusComponent_OnReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16240,12 +12681,7 @@ void UCoherentUIGTAtlasComponent::OnReadyForBindings()
 
 	UCoherentUIGTAtlasComponent_OnReadyForBindings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16261,12 +12697,7 @@ void UCompanyNPCInterface::PurchaseWieldedBooty(class AActor* Vendor)
 	UCompanyNPCInterface_PurchaseWieldedBooty_Params params;
 	params.Vendor = Vendor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16283,12 +12714,7 @@ bool UCompanyNPCInterface::CanPurchaseBootyOfType(TEnumAsByte<EBootyTypes> Booty
 	UCompanyNPCInterface_CanPurchaseBootyOfType_Params params;
 	params.BootyType = BootyType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16310,12 +12736,7 @@ void UControlCapstanArmActionStateId::STATIC_PushCharacterIntoControlCapstanArmA
 	params.ControlledObject = ControlledObject;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16331,12 +12752,7 @@ void UControllableMessagesInterface::TakenControlOfWheel(class AActor* Actor)
 	UControllableMessagesInterface_TakenControlOfWheel_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16352,12 +12768,7 @@ void UControllableMessagesInterface::RelinquishedControl(class AActor* Actor)
 	UControllableMessagesInterface_RelinquishedControl_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16374,12 +12785,7 @@ class AActor* UControllableObjectFunctionLibrary::STATIC_GetAnyUncontrolledActor
 	UControllableObjectFunctionLibrary_GetAnyUncontrolledActor_Params params;
 	params.Actors = Actors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16397,12 +12803,7 @@ TArray<class AActor*> UControllableObjectFunctionLibrary::STATIC_FilterUncontrol
 
 	UControllableObjectFunctionLibrary_FilterUncontrolledActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Actors != nullptr)
 		*Actors = params.Actors;
@@ -16423,12 +12824,7 @@ TArray<class AActor*> UControllableObjectFunctionLibrary::STATIC_FilterControlla
 
 	UControllableObjectFunctionLibrary_FilterControllableActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Actors != nullptr)
 		*Actors = params.Actors;
@@ -16453,12 +12849,7 @@ void UControlObjectActionStateId::STATIC_PushCharacterIntoControlObjectActionSta
 	params.ControlledObject = ControlledObject;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16482,12 +12873,7 @@ void UControlSailManipulatorActionStateId::STATIC_PushCharacterIntoControlSailMa
 	params.ControllableType = ControllableType;
 	params.AnalogInputId = AnalogInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16507,12 +12893,7 @@ void UControlWheelActionStateId::STATIC_PushCharacterIntoControlWheelActionState
 	params.ControlledObject = ControlledObject;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16532,12 +12913,7 @@ void UCrewFunctions::STATIC_ResetCrewToSpawnLocation(class UObject* WorldContext
 	params.CrewId = CrewId;
 	params.SpawnLocation = SpawnLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16557,12 +12933,7 @@ void UCrewFunctions::STATIC_ResetCrewToSafeSpawnLocation(class UObject* WorldCon
 	params.CrewId = CrewId;
 	params.ActorLocation = ActorLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16580,12 +12951,7 @@ void UCrewFunctions::STATIC_RemoveCharacterFromCrew(class UObject* WorldContext,
 	params.WorldContext = WorldContext;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16604,12 +12970,7 @@ bool UCrewFunctions::STATIC_IsCharacterMemberOfCrew(class AAthenaCharacter* Play
 	params.Player = Player;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16630,12 +12991,7 @@ bool UCrewFunctions::STATIC_IsActorMemberOfCharactersCrew(class AActor* Actor, c
 	params.Actor = Actor;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16656,12 +13012,7 @@ class UClass* UCrewFunctions::STATIC_GetShipSizeForCrewId(class UObject* WorldCo
 	params.WorldContext = WorldContext;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16682,12 +13033,7 @@ class UClass* UCrewFunctions::STATIC_GetShipSizeForActorsCrew(class UObject* Wor
 	params.WorldContext = WorldContext;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16708,12 +13054,7 @@ struct FGuid UCrewFunctions::STATIC_GetCrewIdFromActor(class UObject* WorldConte
 	params.WorldContext = WorldContext;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16739,12 +13080,7 @@ void UCrewFunctions::STATIC_CreateCrewWithSessionTemplate(class UObject* WorldCo
 	params.FirstMember = FirstMember;
 	params.SessionVisibility = SessionVisibility;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16766,12 +13102,7 @@ void UCrewFunctions::STATIC_CreateCrew(class UObject* WorldContext, const struct
 	params.FirstMember = FirstMember;
 	params.SessionVisibility = SessionVisibility;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16790,12 +13121,7 @@ bool UCrewFunctions::STATIC_AreInSameCrew(const struct FGuid& CrewId1, const str
 	params.CrewId1 = CrewId1;
 	params.CrewId2 = CrewId2;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16816,12 +13142,7 @@ bool UCrewFunctions::STATIC_AreCharactersInSameCrew(class AAthenaCharacter* Play
 	params.Player1 = Player1;
 	params.Player2 = Player2;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16843,12 +13164,7 @@ void UCrewFunctions::STATIC_AddShipToCrew(class UObject* WorldContext, class ASh
 	params.Ship = Ship;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16868,12 +13184,7 @@ void UCrewFunctions::STATIC_AddCharacterToCrew(class UObject* WorldContext, clas
 	params.Player = Player;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16888,12 +13199,7 @@ struct FGuid UCrewMembershipInterface::GetLastKnownCrewId()
 
 	UCrewMembershipInterface_GetLastKnownCrewId_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16910,12 +13216,7 @@ struct FGuid UCrewMembershipInterface::GetCrewId()
 
 	UCrewMembershipInterface_GetCrewId_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16934,12 +13235,7 @@ bool UShipCustomizationLoadoutControlInterface::UnequipShipCustomization(class U
 	UShipCustomizationLoadoutControlInterface_UnequipShipCustomization_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -16957,12 +13253,7 @@ void UShipCustomizationLoadoutControlInterface::SetShipCustomizationLoadout(cons
 	UShipCustomizationLoadoutControlInterface_SetShipCustomizationLoadout_Params params;
 	params.InLoadout = InLoadout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -16979,12 +13270,7 @@ bool UShipCustomizationLoadoutControlInterface::SetInitialShipCustomizations(TAr
 	UShipCustomizationLoadoutControlInterface_SetInitialShipCustomizations_Params params;
 	params.InInitialCustomizations = InInitialCustomizations;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17001,12 +13287,7 @@ struct FShipCustomizationLoadout UShipCustomizationLoadoutControlInterface::GetS
 
 	UShipCustomizationLoadoutControlInterface_GetShipCustomizationLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17027,12 +13308,7 @@ bool UShipCustomizationLoadoutControlInterface::EquipShipCustomization(class UCl
 	params.InDesc = InDesc;
 	params.InInstigator = InInstigator;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17049,12 +13325,7 @@ struct FShipCustomizationLoadout UShipCustomizationLoadoutViewInterface::GetShip
 
 	UShipCustomizationLoadoutViewInterface_GetShipCustomizationLoadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17071,12 +13342,7 @@ TArray<class UClass*> UShipCustomizationLoadoutViewInterface::GetInitialShipCust
 
 	UShipCustomizationLoadoutViewInterface_GetInitialShipCustomizations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17093,12 +13359,7 @@ TArray<struct FPartDesc> UShipCustomizationLoadoutViewInterface::GetActivePartCu
 
 	UShipCustomizationLoadoutViewInterface_GetActivePartCustomizations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17113,12 +13374,7 @@ void UShipCustomizationLoadoutComponent::OnRep_Loadout()
 
 	UShipCustomizationLoadoutComponent_OnRep_Loadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17136,12 +13392,7 @@ void ACrewShipManifest::SetProposedVoyage(class UVoyageProposalDesc* Proposal, i
 	params.Proposal = Proposal;
 	params.SlotIndex = SlotIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17154,12 +13405,7 @@ void ACrewShipManifest::OnRep_VoyageSelectionVoteData()
 
 	ACrewShipManifest_OnRep_VoyageSelectionVoteData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17172,12 +13418,7 @@ void ACrewShipManifest::OnRep_VoyageCancelVoteData()
 
 	ACrewShipManifest_OnRep_VoyageCancelVoteData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17190,12 +13431,7 @@ void ACrewShipManifest::OnRep_ProposedVoyages()
 
 	ACrewShipManifest_OnRep_ProposedVoyages_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17208,12 +13444,7 @@ void ACrewShipManifest::OnRep_CurrentActiveVoyage()
 
 	ACrewShipManifest_OnRep_CurrentActiveVoyage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17226,12 +13457,7 @@ void ACrewShipManifest::OnCrewUpdated()
 
 	ACrewShipManifest_OnCrewUpdated_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17248,12 +13474,7 @@ bool ACrewShipManifest::IsCurrentVoyageActive(class UVoyageProposalDesc* Proposa
 	ACrewShipManifest_IsCurrentVoyageActive_Params params;
 	params.Proposal = Proposal;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17272,12 +13493,7 @@ bool ACrewShipManifest::HasPlayerProposedVoyage(class AAthenaPlayerState* Player
 	ACrewShipManifest_HasPlayerProposedVoyage_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17298,12 +13514,7 @@ bool ACrewShipManifest::HasPlayerProposedParticularVoyage(class AAthenaPlayerSta
 	params.Player = Player;
 	params.Proposal = Proposal;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17320,12 +13531,7 @@ void ACrewShipManifest::GetProposedVoyages(TArray<struct FProposedVoyageEntry>* 
 
 	ACrewShipManifest_GetProposedVoyages_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutProposedVoyages != nullptr)
 		*OutProposedVoyages = params.OutProposedVoyages;
@@ -17344,12 +13550,7 @@ void UCrewVoyageParticipant::OnPlayerStateEndPlay(TEnumAsByte<EEndPlayReason> In
 	UCrewVoyageParticipant_OnPlayerStateEndPlay_Params params;
 	params.InReason = InReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17362,12 +13563,7 @@ void UCrewVoyageParticipant::OnPlayerStateDestroyed()
 
 	UCrewVoyageParticipant_OnPlayerStateDestroyed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17382,12 +13578,7 @@ TArray<class AActor*> ULauncherParentInterface::GetProjectileIgnoreActors()
 
 	ULauncherParentInterface_GetProjectileIgnoreActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17404,12 +13595,7 @@ struct FVector ULauncherParentInterface::GetInheritedLaunchVelocity()
 
 	ULauncherParentInterface_GetInheritedLaunchVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17427,12 +13613,7 @@ void UShipCurseComponent::OnRep_ActorsAffectedByToggleInteractionsCurse(TArray<c
 	UShipCurseComponent_OnRep_ActorsAffectedByToggleInteractionsCurse_Params params;
 	params.PreviousActorsAffectedByToggleInteractionsCurse = PreviousActorsAffectedByToggleInteractionsCurse;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17448,12 +13629,7 @@ void UShipCurseComponent::OnRep_ActiveCurseFX(TArray<struct FShipActiveCurseFXDa
 	UShipCurseComponent_OnRep_ActiveCurseFX_Params params;
 	params.PreviousActiveCurseFX = PreviousActiveCurseFX;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17469,12 +13645,7 @@ void UShipCurseComponent::ApplyIntentOnSails(float InNewIntent)
 	UShipCurseComponent_ApplyIntentOnSails_Params params;
 	params.InNewIntent = InNewIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17491,12 +13662,7 @@ struct FTeleportLocation UTeleportLocationInterface::GetTeleportLocationForChara
 	UTeleportLocationInterface_GetTeleportLocationForCharacter_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17515,12 +13681,7 @@ TArray<struct FTeleportLocation> UTeleportLocationInterface::GetAllTeleportLocat
 	UTeleportLocationInterface_GetAllTeleportLocationsForCharacter_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17539,12 +13700,7 @@ struct FRainZoneParametersAndLocation URainZoneInterface::GetRainZoneParametersA
 	URainZoneInterface_GetRainZoneParametersAtTime_Params params;
 	params.InTime = InTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17561,12 +13717,7 @@ struct FRainZoneParametersAndLocation URainZoneInterface::GetRainZoneParameters(
 
 	URainZoneInterface_GetRainZoneParameters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17584,12 +13735,7 @@ void URainZoneServiceInterface::UnregisterRainZoneFromService(const TScriptInter
 	URainZoneServiceInterface_UnregisterRainZoneFromService_Params params;
 	params.RainZone = RainZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17605,12 +13751,7 @@ void URainZoneServiceInterface::RegisterRainZoneWithService(const TScriptInterfa
 	URainZoneServiceInterface_RegisterRainZoneWithService_Params params;
 	params.RainZone = RainZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17627,12 +13768,7 @@ struct FRainZoneParametersAndLocation URainZoneServiceInterface::GetRainZone(int
 	URainZoneServiceInterface_GetRainZone_Params params;
 	params.RainZoneIndex = RainZoneIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17653,12 +13789,7 @@ float URainZoneServiceInterface::GetRainStrengthAtTime(const struct FVector& Pos
 	params.Position = Position;
 	params.InTime = InTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17677,12 +13808,7 @@ float URainZoneServiceInterface::GetRainStrength(const struct FVector& Position)
 	URainZoneServiceInterface_GetRainStrength_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17699,12 +13825,7 @@ int URainZoneServiceInterface::GetNumberOfRainZones()
 
 	URainZoneServiceInterface_GetNumberOfRainZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17721,12 +13842,7 @@ TArray<struct FRainZoneParametersAndLocation> URainZoneServiceInterface::GetAllR
 
 	URainZoneServiceInterface_GetAllRainZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17744,12 +13860,7 @@ void USurfaceWaterComponent::SetSimulationActive(bool IsActive)
 	USurfaceWaterComponent_SetSimulationActive_Params params;
 	params.IsActive = IsActive;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17762,12 +13873,7 @@ void USurfaceWaterComponent::OnRep_AddWater()
 
 	USurfaceWaterComponent_OnRep_AddWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17782,12 +13888,7 @@ class UTexture* USurfaceWaterComponent::GetWaterTexture()
 
 	USurfaceWaterComponent_GetWaterTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17804,12 +13905,7 @@ class UTexture* USurfaceWaterComponent::GetNormalTexture()
 
 	USurfaceWaterComponent_GetNormalTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17828,12 +13924,7 @@ struct FVector USurfaceWaterComponent::ConvertToWaterSpace(const struct FVector&
 	USurfaceWaterComponent_ConvertToWaterSpace_Params params;
 	params.WorldSpacePosition = WorldSpacePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17851,12 +13942,7 @@ void USurfaceWaterComponent::ClearWaterTexture(const struct FLinearColor& ClearC
 	USurfaceWaterComponent_ClearWaterTexture_Params params;
 	params.ClearColor = ClearColor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17878,12 +13964,7 @@ void USurfaceWaterComponent::AddWater(const struct FVector& Position, float Radi
 	params.Strength = Strength;
 	params.CheckBounds = CheckBounds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17898,12 +13979,7 @@ class UClass* UWaterModifierZoneInterface::GetWaterModifierZoneType()
 
 	UWaterModifierZoneInterface_GetWaterModifierZoneType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17920,12 +13996,7 @@ struct FWaterModifierZoneParametersAndLocation UWaterModifierZoneInterface::GetW
 
 	UWaterModifierZoneInterface_GetWaterModifierZoneParameters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -17943,12 +14014,7 @@ void UWaterModifierZoneServiceInterface::UnregisterWaterModifierZoneFromService(
 	UWaterModifierZoneServiceInterface_UnregisterWaterModifierZoneFromService_Params params;
 	params.WaterModifierZone = WaterModifierZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17964,12 +14030,7 @@ void UWaterModifierZoneServiceInterface::RegisterWaterModifierZoneWithService(co
 	UWaterModifierZoneServiceInterface_RegisterWaterModifierZoneWithService_Params params;
 	params.WaterModifierZone = WaterModifierZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17986,12 +14047,7 @@ TArray<struct FWaterModifierZoneParametersAndLocation> UWaterModifierZoneService
 	UWaterModifierZoneServiceInterface_GetWaterModifierZones_Params params;
 	params.Type = Type;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18010,12 +14066,7 @@ struct FWaterModifierZoneParametersAndLocation UWaterModifierZoneServiceInterfac
 	UWaterModifierZoneServiceInterface_GetWaterModifierZone_Params params;
 	params.WaterModifierZoneIndex = WaterModifierZoneIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18036,12 +14087,7 @@ float UWaterModifierZoneServiceInterface::GetWaterModifierStrength(class UClass*
 	params.Type = Type;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18062,12 +14108,7 @@ struct FBlendableDrowningParams UWaterModifierZoneServiceInterface::GetWaterModi
 	params.Actor = Actor;
 	params.DefaultParams = DefaultParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18086,12 +14127,7 @@ int UWaterModifierZoneServiceInterface::GetNumberOfWaterModifierZonesByType(clas
 	UWaterModifierZoneServiceInterface_GetNumberOfWaterModifierZonesByType_Params params;
 	params.Type = Type;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18108,12 +14144,7 @@ int UWaterModifierZoneServiceInterface::GetNumberOfWaterModifierZones()
 
 	UWaterModifierZoneServiceInterface_GetNumberOfWaterModifierZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18132,12 +14163,7 @@ float UWaterModifierZoneServiceInterface::GetDragScalarAtLocation(const struct F
 	UWaterModifierZoneServiceInterface_GetDragScalarAtLocation_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18154,12 +14180,7 @@ TArray<struct FWaterModifierZoneParametersAndLocation> UWaterModifierZoneService
 
 	UWaterModifierZoneServiceInterface_GetAllWaterModifierZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18177,12 +14198,7 @@ void AShip::ToggleShipWaterReflections(bool EnableReflections)
 	AShip_ToggleShipWaterReflections_Params params;
 	params.EnableReflections = EnableReflections;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18198,12 +14214,7 @@ void AShip::SetVelocity(const struct FVector& Velocity)
 	AShip_SetVelocity_Params params;
 	params.Velocity = Velocity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18219,12 +14230,7 @@ void AShip::SetDebugKeelOverSpeedScalar(float Scalar)
 	AShip_SetDebugKeelOverSpeedScalar_Params params;
 	params.Scalar = Scalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18237,12 +14243,7 @@ void AShip::Replenish()
 
 	AShip_Replenish_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18258,12 +14259,7 @@ void AShip::ReduceWaterOcclusionZone(float ReduceWaterOcclusionZoneTime)
 	AShip_ReduceWaterOcclusionZone_Params params;
 	params.ReduceWaterOcclusionZoneTime = ReduceWaterOcclusionZoneTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18276,11 +14272,7 @@ void AShip::OnShipSurface()
 
 	AShip_OnShipSurface_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18298,11 +14290,7 @@ void AShip::OnShipPartUnregistered(const struct FName& PartName, class AActor* P
 	params.PartName = PartName;
 	params.PartActor = PartActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18320,11 +14308,7 @@ void AShip::OnShipPartRegistered(const struct FName& PartName, class AActor* Par
 	params.PartName = PartName;
 	params.PartActor = PartActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18337,11 +14321,7 @@ void AShip::OnShipDive()
 
 	AShip_OnShipDive_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18354,12 +14334,7 @@ void AShip::OnRep_ShipSizeObject()
 
 	AShip_OnRep_ShipSizeObject_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18372,12 +14347,7 @@ void AShip::OnRep_CrewShipManifest()
 
 	AShip_OnRep_CrewShipManifest_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18397,12 +14367,7 @@ void AShip::OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* Ot
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18426,12 +14391,7 @@ void AShip::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* 
 	params.FromSweep = FromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18444,12 +14404,7 @@ void AShip::Multicast_DisableAllShipInteractables()
 
 	AShip_Multicast_DisableAllShipInteractables_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18466,12 +14421,7 @@ bool AShip::IsWorldSpacePositionBelowTopDeckPlane(const struct FVector& Position
 	AShip_IsWorldSpacePositionBelowTopDeckPlane_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18490,12 +14440,7 @@ bool AShip::IsWorldSpacePositionBelowMidDeckPlane(const struct FVector& Position
 	AShip_IsWorldSpacePositionBelowMidDeckPlane_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18512,12 +14457,7 @@ bool AShip::IsOcclusionZoneFullyReduced()
 
 	AShip_IsOcclusionZoneFullyReduced_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18536,12 +14476,7 @@ struct FVector AShip::GetShipLocatorPositionChecked(TEnumAsByte<EShipLocation> L
 	AShip_GetShipLocatorPositionChecked_Params params;
 	params.LocatorID = LocatorID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18561,12 +14496,7 @@ bool AShip::GetShipLocatorPosition(TEnumAsByte<EShipLocation> LocatorName, struc
 	AShip_GetShipLocatorPosition_Params params;
 	params.LocatorName = LocatorName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LocatorPosition != nullptr)
 		*LocatorPosition = params.LocatorPosition;
@@ -18586,12 +14516,7 @@ struct FVector AShip::GetSampledSpeed()
 
 	AShip_GetSampledSpeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18608,12 +14533,7 @@ float AShip::GetRawHullSubmersedPercentage()
 
 	AShip_GetRawHullSubmersedPercentage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18630,12 +14550,7 @@ class AShipInternalWater* AShip::GetInternalWater()
 
 	AShip_GetInternalWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18652,12 +14567,7 @@ float AShip::GetHullSubmersedPercentage()
 
 	AShip_GetHullSubmersedPercentage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18674,12 +14584,7 @@ class AHullDamage* AShip::GetHullDamage()
 
 	AShip_GetHullDamage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18696,12 +14601,7 @@ bool AShip::GetHasShipEverSetSail()
 
 	AShip_GetHasShipEverSetSail_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18718,12 +14618,7 @@ float AShip::GetEmpiricalMaxShipSpeedInMPS()
 
 	AShip_GetEmpiricalMaxShipSpeedInMPS_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18740,12 +14635,7 @@ class USurfaceWaterComponent* AShip::GetDeckSurfaceWater()
 
 	AShip_GetDeckSurfaceWater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18762,12 +14652,7 @@ struct FVector AShip::GetCurrentVelocity()
 
 	AShip_GetCurrentVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18785,12 +14670,7 @@ void AShip::EnableCalmWaterBobbing(bool bEnable)
 	AShip_EnableCalmWaterBobbing_Params params;
 	params.bEnable = bEnable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18803,12 +14683,7 @@ void AShip::Deplete()
 
 	AShip_Deplete_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18823,12 +14698,7 @@ bool AShip::CanBeReplenished()
 
 	AShip_CanBeReplenished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18845,12 +14715,7 @@ bool AShip::AreShipInteractablesDisabled()
 
 	AShip_AreShipInteractablesDisabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18865,12 +14730,7 @@ void ACustomisationPreviewShip::UpdateVisuals()
 
 	ACustomisationPreviewShip_UpdateVisuals_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18886,12 +14746,7 @@ void ACustomisationPreviewShip::SetShipCustomizationInfo(class UShipCustomizatio
 	ACustomisationPreviewShip_SetShipCustomizationInfo_Params params;
 	params.NewShipCustomizationInfo = NewShipCustomizationInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18904,12 +14759,7 @@ void ACustomisationPreviewShip::SetLiveryCustomiser()
 
 	ACustomisationPreviewShip_SetLiveryCustomiser_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18925,12 +14775,7 @@ void ACustomisationPreviewShip::SetCategory(const struct FName& NewCategory)
 	ACustomisationPreviewShip_SetCategory_Params params;
 	params.NewCategory = NewCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -18945,12 +14790,7 @@ class UShipCustomizationInfo* ACustomisationPreviewShip::GetShipCustomizationInf
 
 	ACustomisationPreviewShip_GetShipCustomizationInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18967,12 +14807,7 @@ struct FName ACustomisationPreviewShip::GetCategory()
 
 	ACustomisationPreviewShip_GetCategory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -18991,12 +14826,7 @@ bool UDamageableInterface::OnDamageableImpact(const struct FImpactDamageEvent& I
 	UDamageableInterface_OnDamageableImpact_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19015,12 +14845,7 @@ bool UDamageableInterface::CanApplyDamage(const struct FImpactDamageEvent& Impac
 	UDamageableInterface_CanApplyDamage_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19039,12 +14864,7 @@ bool UDamageableComponent::OnDamageableImpact(const struct FImpactDamageEvent& I
 	UDamageableComponent_OnDamageableImpact_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19062,12 +14882,7 @@ void UShipDamageableComponent::Multicast_DamageTriggered(const struct FImpactDam
 	UShipDamageableComponent_Multicast_DamageTriggered_Params params;
 	params.DamageEvent = DamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19087,12 +14902,7 @@ void UDamageBlueprintFunctionLibrary::STATIC_TriggerShipImpactDamageFromLookAt(c
 	params.Strength = Strength;
 	params.IgnoreList = IgnoreList;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19116,12 +14926,7 @@ void UDamageBlueprintFunctionLibrary::STATIC_TriggerShipImpactDamageFromLocation
 	params.Direction = Direction;
 	params.IgnoreList = IgnoreList;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19143,12 +14948,7 @@ void UDamageBlueprintFunctionLibrary::STATIC_TriggerShipImpactDamageAtLocation(c
 	params.NumHoles = NumHoles;
 	params.DamagerType = DamagerType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19168,12 +14968,7 @@ void UDamageBlueprintFunctionLibrary::STATIC_TriggerPlayerImpactDamageFromLookAt
 	params.Strength = Strength;
 	params.IgnoreList = IgnoreList;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19197,12 +14992,7 @@ void UDamageBlueprintFunctionLibrary::STATIC_TriggerPlayerImpactDamageFromLocati
 	params.Direction = Direction;
 	params.IgnoreList = IgnoreList;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19222,12 +15012,7 @@ void UDeadActionStateId::STATIC_PushCharacterIntoDeadActionState(class AActor* C
 	params.FinalBlow = FinalBlow;
 	params.DeathType = DeathType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19245,12 +15030,7 @@ void UDebugFlyingActionStateId::STATIC_PushCharacterIntoDebugFlyingActionState(T
 	params.TrackId = TrackId;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19267,12 +15047,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnTurnRate(f
 	UDebugFlyingCompositeInputHandler_OnTurnRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19291,12 +15066,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnTurn(float
 	UDebugFlyingCompositeInputHandler_OnTurn_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19315,12 +15085,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnMoveUp(flo
 	UDebugFlyingCompositeInputHandler_OnMoveUp_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19339,12 +15104,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnMoveRight(
 	UDebugFlyingCompositeInputHandler_OnMoveRight_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19363,12 +15123,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnMoveForwar
 	UDebugFlyingCompositeInputHandler_OnMoveForward_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19387,12 +15142,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnLookUpRate
 	UDebugFlyingCompositeInputHandler_OnLookUpRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19411,12 +15161,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnLookUp(flo
 	UDebugFlyingCompositeInputHandler_OnLookUp_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19433,12 +15178,7 @@ TEnumAsByte<EInputHandlerResult> UDebugFlyingCompositeInputHandler::OnDisengageI
 
 	UDebugFlyingCompositeInputHandler_OnDisengageInput_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19456,12 +15196,7 @@ void ADebugLandmarkLocation::EnableDrawingForAllMachines_RPC(bool Flag)
 	ADebugLandmarkLocation_EnableDrawingForAllMachines_RPC_Params params;
 	params.Flag = Flag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19481,12 +15216,7 @@ void UDebugShipControlActionStateId::STATIC_PushCharacterIntoDebugShipControlAct
 	params.DebugShipController = DebugShipController;
 	params.Owner = Owner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19503,12 +15233,7 @@ TEnumAsByte<EInputHandlerResult> UDebugShipControlCompositeInputHandler::OnTurnR
 	UDebugShipControlCompositeInputHandler_OnTurnRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19527,12 +15252,7 @@ TEnumAsByte<EInputHandlerResult> UDebugShipControlCompositeInputHandler::OnMoveR
 	UDebugShipControlCompositeInputHandler_OnMoveRight_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19551,12 +15271,7 @@ TEnumAsByte<EInputHandlerResult> UDebugShipControlCompositeInputHandler::OnLookU
 	UDebugShipControlCompositeInputHandler_OnLookUpRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19573,12 +15288,7 @@ TEnumAsByte<EInputHandlerResult> UDebugShipControlCompositeInputHandler::OnJump(
 
 	UDebugShipControlCompositeInputHandler_OnJump_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19598,12 +15308,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllWheelAngle(class AActor* Ship, floa
 	params.Ship = Ship;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19621,12 +15326,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllSailsLoweredProportion(class AActor
 	params.Ship = Ship;
 	params.Proportion = Proportion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19644,12 +15344,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllSailsDamageScalar(class AActor* Shi
 	params.Ship = Ship;
 	params.Proportion = Proportion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19667,12 +15362,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllSailsAngle(class AActor* Ship, floa
 	params.Ship = Ship;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19690,12 +15380,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllRuddersAngleRatio(class AActor* Shi
 	params.Ship = Ship;
 	params.InRudderAngleRatio = InRudderAngleRatio;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19713,12 +15398,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllCapstansPosition(class AActor* Ship
 	params.Ship = Ship;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19738,12 +15418,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllCannonsAim(class AActor* Ship, floa
 	params.Pitch = Pitch;
 	params.Yaw = Yaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19761,12 +15436,7 @@ void UDebugShipFunctionLibrary::STATIC_SetAllAnchorsLoweredProportion(class AAct
 	params.Ship = Ship;
 	params.InLoweredProportion = InLoweredProportion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19785,12 +15455,7 @@ void UDebugShipFunctionLibrary::STATIC_RotateAllMastsSailAngles(TArray<class AAc
 	params.Masts = Masts;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PercentPerSec != nullptr)
 		*PercentPerSec = params.PercentPerSec;
@@ -19811,12 +15476,7 @@ void UDebugShipFunctionLibrary::STATIC_FireEveryNthCannons(class AActor* Ship, i
 	params.Ship = Ship;
 	params.EveryNthCannons = EveryNthCannons;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19838,12 +15498,7 @@ void UDebugShipFunctionLibrary::STATIC_FireCannonEveryXSecond(TArray<class AActo
 	params.DeltaSeconds = DeltaSeconds;
 	params.SecondsBetweenShots = SecondsBetweenShots;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Accumulator != nullptr)
 		*Accumulator = params.Accumulator;
@@ -19864,12 +15519,7 @@ void UDebugShipFunctionLibrary::STATIC_FireAllCannons(class AActor* Ship)
 	UDebugShipFunctionLibrary_FireAllCannons_Params params;
 	params.Ship = Ship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19888,12 +15538,7 @@ void UDebugShipFunctionLibrary::STATIC_CycleAllMastsSailLowered(TArray<class AAc
 	params.Masts = Masts;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PercentPerSec != nullptr)
 		*PercentPerSec = params.PercentPerSec;
@@ -19914,12 +15559,7 @@ void UDebugSuperSailorActionStateId::STATIC_PushCharacterIntoDebugSuperSailorAct
 	params.TrackId = TrackId;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -19936,12 +15576,7 @@ TEnumAsByte<EInputHandlerResult> UDebugSuperSailorCompositeInputHandler::OnRight
 	UDebugSuperSailorCompositeInputHandler_OnRightTrigger_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19960,12 +15595,7 @@ TEnumAsByte<EInputHandlerResult> UDebugSuperSailorCompositeInputHandler::OnMoveR
 	UDebugSuperSailorCompositeInputHandler_OnMoveRight_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19984,12 +15614,7 @@ TEnumAsByte<EInputHandlerResult> UDebugSuperSailorCompositeInputHandler::OnMoveF
 	UDebugSuperSailorCompositeInputHandler_OnMoveForward_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20006,12 +15631,7 @@ TEnumAsByte<EInputHandlerResult> UDebugSuperSailorCompositeInputHandler::OnDisen
 
 	UDebugSuperSailorCompositeInputHandler_OnDisengageInput_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20029,12 +15649,7 @@ void ADebugTreasureLocation::EnableDrawingForAllMachines_RPC(bool Flag)
 	ADebugTreasureLocation_EnableDrawingForAllMachines_RPC_Params params;
 	params.Flag = Flag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20050,12 +15665,7 @@ void UDitherComponent::SetCurrentTransparency(float Val)
 	UDitherComponent_SetCurrentTransparency_Params params;
 	params.Val = Val;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20068,12 +15678,7 @@ void UDitherComponent::FadeOut()
 
 	UDitherComponent_FadeOut_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20086,12 +15691,7 @@ void UDitherComponent::FadeIn()
 
 	UDitherComponent_FadeIn_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20107,12 +15707,7 @@ void UDitherFunctionLibrary::STATIC_DisableDitheringOnMaterial(class UMaterialIn
 	UDitherFunctionLibrary_DisableDitheringOnMaterial_Params params;
 	params.Material = Material;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20127,12 +15722,7 @@ TEnumAsByte<EInputHandlerResult> UDockToObjectCompositeInputHandler::OnDisengage
 
 	UDockToObjectCompositeInputHandler_OnDisengage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20147,12 +15737,7 @@ void ADrawDebugService::OnRep_ReplicatedItems()
 
 	ADrawDebugService_OnRep_ReplicatedItems_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20165,12 +15750,7 @@ void UDrowningComponent::OnRep_CurrentState()
 
 	UDrowningComponent_OnRep_CurrentState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20183,12 +15763,7 @@ void UDrowningComponent::OnRep_CurrentOxygen()
 
 	UDrowningComponent_OnRep_CurrentOxygen_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20203,12 +15778,7 @@ float UDrowningComponent::GetOxygenLevel()
 
 	UDrowningComponent_GetOxygenLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20226,12 +15796,7 @@ void UDrunkennessComponent::TestForceVomiting(float Duration)
 	UDrunkennessComponent_TestForceVomiting_Params params;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20251,12 +15816,7 @@ void UDrunkennessComponent::SetTargetDrunkenness_RPC(TEnumAsByte<EDrunkennessTyp
 	params.Value = Value;
 	params.bInstantlySetActualToTarget = bInstantlySetActualToTarget;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20274,12 +15834,7 @@ void UDrunkennessComponent::SetTargetDrunkenness(TEnumAsByte<EDrunkennessType> T
 	params.Type = Type;
 	params.TargetDrunkeness = TargetDrunkeness;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20292,12 +15847,7 @@ void UDrunkennessComponent::Reset()
 
 	UDrunkennessComponent_Reset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20310,12 +15860,7 @@ void UDrunkennessComponent::OnRep_RemainingAmountToSoberUpDueToWaterSplash()
 
 	UDrunkennessComponent_OnRep_RemainingAmountToSoberUpDueToWaterSplash_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20328,12 +15873,7 @@ void UDrunkennessComponent::OnRep_CurrentDrunkenness()
 
 	UDrunkennessComponent_OnRep_CurrentDrunkenness_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20348,12 +15888,7 @@ class UVomitComponent* UDrunkennessComponent::GetVomitComponent()
 
 	UDrunkennessComponent_GetVomitComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20370,12 +15905,7 @@ float UDrunkennessComponent::GetStaggerAmplitude()
 
 	UDrunkennessComponent_GetStaggerAmplitude_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20392,12 +15922,7 @@ float UDrunkennessComponent::GetOverallCurrentDrunkenness()
 
 	UDrunkennessComponent_GetOverallCurrentDrunkenness_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20417,12 +15942,7 @@ void UDrunkennessComponent::ChangeDrunkenness(TEnumAsByte<EDrunkennessType> Type
 	params.Type = Type;
 	params.DrunkennessChange = DrunkennessChange;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20440,12 +15960,7 @@ void UDynamicFlowComponent::SetTexture(class UObject* WorldContextObject, class 
 	params.WorldContextObject = WorldContextObject;
 	params.SourceTexture = SourceTexture;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20460,12 +15975,7 @@ class UTexture* UDynamicFlowComponent::GetTexture()
 
 	UDynamicFlowComponent_GetTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20483,12 +15993,7 @@ void UDynamicFlowComponent::ClearTexture(const struct FLinearColor& ClearColor)
 	UDynamicFlowComponent_ClearTexture_Params params;
 	params.ClearColor = ClearColor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20508,12 +16013,7 @@ void UEmoteActionStateId::STATIC_PushCharacterIntoEmoteActionState(class AActor*
 	params.EmoteIdentifier = EmoteIdentifier;
 	params.ForcedEmote = ForcedEmote;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20530,12 +16030,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnZoomOut(float Va
 	UEmoteCompositeInputHandler_OnZoomOut_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20554,12 +16049,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnZoomMouse(float 
 	UEmoteCompositeInputHandler_OnZoomMouse_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20578,12 +16068,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnZoomIn(float Val
 	UEmoteCompositeInputHandler_OnZoomIn_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20602,12 +16087,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnTurnRate(float V
 	UEmoteCompositeInputHandler_OnTurnRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20626,12 +16106,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnTurn(float Value
 	UEmoteCompositeInputHandler_OnTurn_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20650,12 +16125,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnMoveRight(float 
 	UEmoteCompositeInputHandler_OnMoveRight_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20674,12 +16144,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnMoveForward(floa
 	UEmoteCompositeInputHandler_OnMoveForward_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20698,12 +16163,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnLookUpRate(float
 	UEmoteCompositeInputHandler_OnLookUpRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20722,12 +16182,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnLookUp(float Val
 	UEmoteCompositeInputHandler_OnLookUp_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20744,12 +16199,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnJump()
 
 	UEmoteCompositeInputHandler_OnJump_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20766,12 +16216,7 @@ TEnumAsByte<EInputHandlerResult> UEmoteCompositeInputHandler::OnCancel()
 
 	UEmoteCompositeInputHandler_OnCancel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20788,12 +16233,7 @@ int UEmotesRadialComponent::GetNumSlots()
 
 	UEmotesRadialComponent_GetNumSlots_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20810,12 +16250,7 @@ class AActor* UEmotesRadialComponent::GetLastSelectedItem()
 
 	UEmotesRadialComponent_GetLastSelectedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20830,12 +16265,7 @@ void UEmotesRadialComponent::DeactivateRadialInventory()
 
 	UEmotesRadialComponent_DeactivateRadialInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20851,12 +16281,7 @@ void UEncounterService::StopListeningForEncounters(class AActor* EncounterListen
 	UEncounterService_StopListeningForEncounters_Params params;
 	params.EncounterListenerActor = EncounterListenerActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20869,12 +16294,7 @@ void AEnsemble::OnRep_Instruments()
 
 	AEnsemble_OnRep_Instruments_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -20889,12 +16309,7 @@ int AEnsemble::GetNumInstruments()
 
 	AEnsemble_GetNumInstruments_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20911,12 +16326,7 @@ int AEnsemble::GetNumInstrumentData()
 
 	AEnsemble_GetNumInstrumentData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20933,12 +16343,7 @@ TArray<class AActor*> AEnsemble::GetInstruments()
 
 	AEnsemble_GetInstruments_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20957,12 +16362,7 @@ int AEnsemble::GetInstrumentDataPlaybackPosition(int Index)
 	AEnsemble_GetInstrumentDataPlaybackPosition_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -20980,12 +16380,7 @@ void UUsableInterface::UpdateUsage(float DeltaTime)
 	UUsableInterface_UpdateUsage_Params params;
 	params.DeltaTime = DeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21001,12 +16396,7 @@ void UUsableInterface::StopUsing(class UClass* InputID)
 	UUsableInterface_StopUsing_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21022,12 +16412,7 @@ void UUsableInterface::StartUsing(class UClass* InputID)
 	UUsableInterface_StartUsing_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21042,12 +16427,7 @@ bool UUsableInterface::IsBeingUsed()
 
 	UUsableInterface_IsBeingUsed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21064,12 +16444,7 @@ bool UUsableInterface::CanBeUsed()
 
 	UUsableInterface_CanBeUsed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21088,12 +16463,7 @@ struct FText UNamedNotificationInputInterface::GetNotificationInputDisplayName(c
 	UNamedNotificationInputInterface_GetNotificationInputDisplayName_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21111,12 +16481,7 @@ void UInventoryItemComponent::SetItemType(TEnumAsByte<EItemType> InType)
 	UInventoryItemComponent_SetItemType_Params params;
 	params.InType = InType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21132,12 +16497,7 @@ void UInventoryItemComponent::SetIconURL(const struct FStringAssetReference& InI
 	UInventoryItemComponent_SetIconURL_Params params;
 	params.InIconURL = InIconURL;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21153,12 +16513,7 @@ void UInventoryItemComponent::SetIconRotation(float InIconRotation)
 	UInventoryItemComponent_SetIconRotation_Params params;
 	params.InIconRotation = InIconRotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21171,12 +16526,7 @@ void UInventoryItemComponent::OnAddedToInventory()
 
 	UInventoryItemComponent_OnAddedToInventory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21191,12 +16541,7 @@ TEnumAsByte<EItemType> UInventoryItemComponent::GetItemType()
 
 	UInventoryItemComponent_GetItemType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21213,12 +16558,7 @@ class FString UInventoryItemComponent::GetIconURL()
 
 	UInventoryItemComponent_GetIconURL_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21235,12 +16575,7 @@ float UInventoryItemComponent::GetIconScale()
 
 	UInventoryItemComponent_GetIconScale_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21257,12 +16592,7 @@ float UInventoryItemComponent::GetIconRotation()
 
 	UInventoryItemComponent_GetIconRotation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21279,12 +16609,7 @@ class FString UInventoryItemComponent::GetBackgroundImageURL()
 
 	UInventoryItemComponent_GetBackgroundImageURL_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21302,12 +16627,7 @@ void UHitReactionInterface::OnHitReactionImpact(const struct FImpactDamageEvent&
 	UHitReactionInterface_OnHitReactionImpact_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21320,12 +16640,7 @@ void UExplosiveComponent::Multicast_Explode()
 
 	UExplosiveComponent_Multicast_Explode_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21341,12 +16656,7 @@ void UFaceTargetComponent::OnRep_TargetActorToFace(class AActor* PrevTargetActor
 	UFaceTargetComponent_OnRep_TargetActorToFace_Params params;
 	params.PrevTargetActorToFace = PrevTargetActorToFace;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21362,12 +16672,7 @@ void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
 	AFauna_TestingSetWaterState_Params params;
 	params.NewInState = NewInState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21383,12 +16688,7 @@ void AFauna::SetAIStrategy(class UClass* InStrategy)
 	AFauna_SetAIStrategy_Params params;
 	params.InStrategy = InStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21401,12 +16701,7 @@ void AFauna::OnRep_TargetTurnAngle()
 
 	AFauna_OnRep_TargetTurnAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21419,12 +16714,7 @@ void AFauna::OnRep_IsPlayingStarvingAnim()
 
 	AFauna_OnRep_IsPlayingStarvingAnim_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21437,12 +16727,7 @@ void AFauna::OnRep_IsCalm()
 
 	AFauna_OnRep_IsCalm_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21455,12 +16740,7 @@ void AFauna::OnRep_IsAgitated()
 
 	AFauna_OnRep_IsAgitated_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21473,12 +16753,7 @@ void AFauna::OnRep_InWaterState()
 
 	AFauna_OnRep_InWaterState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21494,12 +16769,7 @@ void AFauna::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
 	AFauna_OnRep_CurrentAIStrategy_Params params;
 	params.OldAIStrategy = OldAIStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21515,12 +16785,7 @@ void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedStat
 	AFauna_OnRep_CratedState_Params params;
 	params.PreviousCratedState = PreviousCratedState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21536,12 +16801,7 @@ void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
 	AFauna_Multicast_PlayPutInCrateEffectsRPC_Params params;
 	params.Crate = Crate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21557,12 +16817,7 @@ void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
 	AFauna_Multicast_JustBeenFedRPC_Params params;
 	params.FedBy = FedBy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21578,12 +16833,7 @@ void AFauna::Multicast_HightlightLeader(bool bIsLeader)
 	AFauna_Multicast_HightlightLeader_Params params;
 	params.bIsLeader = bIsLeader;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21596,12 +16846,7 @@ void AFauna::Multicast_DespawnRPC()
 
 	AFauna_Multicast_DespawnRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21616,12 +16861,7 @@ class UClass* AFauna::GetAIStrategy()
 
 	AFauna_GetAIStrategy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21636,12 +16876,7 @@ void AFauna::GenerateNewRandomAnimationSeed()
 
 	AFauna_GenerateNewRandomAnimationSeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21657,12 +16892,7 @@ void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 	AFauna_ActivateResponseRPC_Params params;
 	params.InTargetTurnAngle = InTargetTurnAngle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -21677,12 +16907,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetTurnRightAnimation()
 
 	UFaunaAnimationInstance_GetTurnRightAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21699,12 +16924,7 @@ float UFaunaAnimationInstance::GetTurnRate()
 
 	UFaunaAnimationInstance_GetTurnRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21721,12 +16941,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetTurnLeftAnimation()
 
 	UFaunaAnimationInstance_GetTurnLeftAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21743,12 +16958,7 @@ void UFaunaAnimationInstance::GetSurfaceOrientation(float* NewPitch)
 
 	UFaunaAnimationInstance_GetSurfaceOrientation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (NewPitch != nullptr)
 		*NewPitch = params.NewPitch;
@@ -21766,12 +16976,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetStartledLowUnderwaterAnimation(
 
 	UFaunaAnimationInstance_GetStartledLowUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21788,12 +16993,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetStartledLowOnSeaAnimation()
 
 	UFaunaAnimationInstance_GetStartledLowOnSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21810,12 +17010,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetStartledLowOnLandAnimation()
 
 	UFaunaAnimationInstance_GetStartledLowOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21832,12 +17027,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetStartledHighUnderwaterAnimation
 
 	UFaunaAnimationInstance_GetStartledHighUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21854,12 +17044,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetStartledHighOnSeaAnimation()
 
 	UFaunaAnimationInstance_GetStartledHighOnSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21876,12 +17061,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetStartledHighOnLandAnimation()
 
 	UFaunaAnimationInstance_GetStartledHighOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21899,12 +17079,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSpecialUnderwaterAnimation(bool
 
 	UFaunaAnimationInstance_GetSpecialUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LoopSpecial != nullptr)
 		*LoopSpecial = params.LoopSpecial;
@@ -21925,12 +17100,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSpecialSeaAnimation(bool* LoopS
 
 	UFaunaAnimationInstance_GetSpecialSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LoopSpecial != nullptr)
 		*LoopSpecial = params.LoopSpecial;
@@ -21951,12 +17121,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSpecialLandAnimation(bool* Loop
 
 	UFaunaAnimationInstance_GetSpecialLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LoopSpecial != nullptr)
 		*LoopSpecial = params.LoopSpecial;
@@ -21976,12 +17141,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeStrikeOnLandAnimation()
 
 	UFaunaAnimationInstance_GetSnakeStrikeOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -21998,12 +17158,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeCharmStanceOutOnLandAnimat
 
 	UFaunaAnimationInstance_GetSnakeCharmStanceOutOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22020,12 +17175,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeCharmStanceLoopOnLandAnima
 
 	UFaunaAnimationInstance_GetSnakeCharmStanceLoopOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22042,12 +17192,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeCharmStanceInOnLandAnimati
 
 	UFaunaAnimationInstance_GetSnakeCharmStanceInOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22064,12 +17209,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeAttackStanceOutOnLandAnima
 
 	UFaunaAnimationInstance_GetSnakeAttackStanceOutOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22086,12 +17226,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeAttackStanceLoopOnLandAnim
 
 	UFaunaAnimationInstance_GetSnakeAttackStanceLoopOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22108,12 +17243,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetSnakeAttackStanceInOnLandAnimat
 
 	UFaunaAnimationInstance_GetSnakeAttackStanceInOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22130,12 +17260,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigStarveStartledLowOnLandAnima
 
 	UFaunaAnimationInstance_GetPigStarveStartledLowOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22152,12 +17277,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigStarveStartledHighOnLandAnim
 
 	UFaunaAnimationInstance_GetPigStarveStartledHighOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22174,12 +17294,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigStarveOutOnLandAnimation()
 
 	UFaunaAnimationInstance_GetPigStarveOutOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22196,12 +17311,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigStarveLoopOnLandAnimation()
 
 	UFaunaAnimationInstance_GetPigStarveLoopOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22218,12 +17328,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigStarveInOnLandAnimation()
 
 	UFaunaAnimationInstance_GetPigStarveInOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22240,12 +17345,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigStarveDeathOnLandAnimation()
 
 	UFaunaAnimationInstance_GetPigStarveDeathOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22262,12 +17362,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigEatingUnderwaterAnimation()
 
 	UFaunaAnimationInstance_GetPigEatingUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22284,12 +17379,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigEatingOnSeaAnimation()
 
 	UFaunaAnimationInstance_GetPigEatingOnSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22306,12 +17396,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetPigEatingOnLandAnimation()
 
 	UFaunaAnimationInstance_GetPigEatingOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22328,12 +17413,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetLocomotionUnderwaterAnimationB(
 
 	UFaunaAnimationInstance_GetLocomotionUnderwaterAnimationB_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22350,12 +17430,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetLocomotionUnderwaterAnimationA(
 
 	UFaunaAnimationInstance_GetLocomotionUnderwaterAnimationA_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22372,12 +17447,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetLocomotionSeaAnimationB()
 
 	UFaunaAnimationInstance_GetLocomotionSeaAnimationB_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22394,12 +17464,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetLocomotionSeaAnimationA()
 
 	UFaunaAnimationInstance_GetLocomotionSeaAnimationA_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22416,12 +17481,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetLocomotionLandAnimationB()
 
 	UFaunaAnimationInstance_GetLocomotionLandAnimationB_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22438,12 +17498,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetLocomotionLandAnimationA()
 
 	UFaunaAnimationInstance_GetLocomotionLandAnimationA_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22460,12 +17515,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetImpactUnderwaterAnimation()
 
 	UFaunaAnimationInstance_GetImpactUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22482,12 +17532,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetImpactOnSeaAnimation()
 
 	UFaunaAnimationInstance_GetImpactOnSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22504,12 +17549,7 @@ class UBlendSpace1D* UFaunaAnimationInstance::GetImpactOnLandAnimation()
 
 	UFaunaAnimationInstance_GetImpactOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22526,12 +17566,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetIdleUnderwaterAnimationB()
 
 	UFaunaAnimationInstance_GetIdleUnderwaterAnimationB_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22548,12 +17583,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetIdleUnderwaterAnimationA()
 
 	UFaunaAnimationInstance_GetIdleUnderwaterAnimationA_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22570,12 +17600,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetIdleSeaAnimationB()
 
 	UFaunaAnimationInstance_GetIdleSeaAnimationB_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22592,12 +17617,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetIdleSeaAnimationA()
 
 	UFaunaAnimationInstance_GetIdleSeaAnimationA_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22614,12 +17634,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetIdleLandAnimationB()
 
 	UFaunaAnimationInstance_GetIdleLandAnimationB_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22636,12 +17651,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetIdleLandAnimationA()
 
 	UFaunaAnimationInstance_GetIdleLandAnimationA_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22658,12 +17668,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetDyingLoopUnderwaterAnimation()
 
 	UFaunaAnimationInstance_GetDyingLoopUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22680,12 +17685,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetDyingLoopOnSeaAnimation()
 
 	UFaunaAnimationInstance_GetDyingLoopOnSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22702,12 +17702,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetDyingLoopOnLandAnimation()
 
 	UFaunaAnimationInstance_GetDyingLoopOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22724,12 +17719,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetDeathUnderwaterAnimation()
 
 	UFaunaAnimationInstance_GetDeathUnderwaterAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22746,12 +17736,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetDeathOnSeaAnimation()
 
 	UFaunaAnimationInstance_GetDeathOnSeaAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22768,12 +17753,7 @@ class UAnimSequence* UFaunaAnimationInstance::GetDeathOnLandAnimation()
 
 	UFaunaAnimationInstance_GetDeathOnLandAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22797,12 +17777,7 @@ void UFaunaAnimationInstance::GenerateNewValidAnimationIndex(class AActor* Owner
 	params.InState = InState;
 	params.IsIdleStateA = IsIdleStateA;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22817,12 +17792,7 @@ bool UFaunaAnimationInstance::AssetArrayValidationCheck()
 
 	UFaunaAnimationInstance_AssetArrayValidationCheck_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -22837,12 +17807,7 @@ void UFeedingComponent::OnRep_ActorToFeed()
 
 	UFeedingComponent_OnRep_ActorToFeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22862,12 +17827,7 @@ void UFiredFromActorActionStateId::STATIC_PushCharacterIntoFiredFromActorActionS
 	params.FiringActor = FiringActor;
 	params.LaunchVelocity = LaunchVelocity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22883,12 +17843,7 @@ void UFiredFromActorActionStateId::STATIC_PopCharacterOutOfFiredFromActorActionS
 	UFiredFromActorActionStateId_PopCharacterOutOfFiredFromActorActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22908,12 +17863,7 @@ void UFiredFromCannonActionStateId::STATIC_PushCharacterIntoFiredFromCannonActio
 	params.FiringActor = FiringActor;
 	params.LaunchVelocity = LaunchVelocity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22929,12 +17879,7 @@ void UFiredFromCannonActionStateId::STATIC_PopCharacterOutOfFiredFromCannonActio
 	UFiredFromCannonActionStateId_PopCharacterOutOfFiredFromCannonActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22952,12 +17897,7 @@ void UFOVHandlerFunctions::STATIC_SetTargetFOV(class AAthenaPlayerCharacter* Cha
 	params.Character = Character;
 	params.TargetFOV = TargetFOV;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22975,12 +17915,7 @@ void UFOVHandlerFunctions::STATIC_SetBlendSpeed(class AAthenaPlayerCharacter* Ch
 	params.Character = Character;
 	params.BlendSpeed = BlendSpeed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -22996,12 +17931,7 @@ void UFOVHandlerFunctions::STATIC_ResetToDefault(class AAthenaPlayerCharacter* C
 	UFOVHandlerFunctions_ResetToDefault_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23018,12 +17948,7 @@ float UFOVHandlerFunctions::STATIC_GetTargetFOV(class AAthenaPlayerCharacter* Ch
 	UFOVHandlerFunctions_GetTargetFOV_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23042,12 +17967,7 @@ float UFOVHandlerFunctions::STATIC_GetDefaultTargetFOV(class AAthenaPlayerCharac
 	UFOVHandlerFunctions_GetDefaultTargetFOV_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23066,12 +17986,7 @@ float UFOVHandlerFunctions::STATIC_GetDefaultFOV(class AAthenaPlayerCharacter* C
 	UFOVHandlerFunctions_GetDefaultFOV_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23090,12 +18005,7 @@ float UFOVHandlerFunctions::STATIC_GetBlendSpeed(class AAthenaPlayerCharacter* C
 	UFOVHandlerFunctions_GetBlendSpeed_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23113,12 +18023,7 @@ void UFrontendCameraComponent::SetMapTablePlaybackRate(float InPlaybackRate)
 	UFrontendCameraComponent_SetMapTablePlaybackRate_Params params;
 	params.InPlaybackRate = InPlaybackRate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23131,12 +18036,7 @@ void UFrontendCameraComponent::MapTableAnimationFinished()
 
 	UFrontendCameraComponent_MapTableAnimationFinished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23149,12 +18049,7 @@ void AFrontendGameMode::BeginPreloading()
 
 	AFrontendGameMode_BeginPreloading_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23172,12 +18067,7 @@ void UOneShotUsable::Trigger(class UClass* InputID, class AActor* InTriggeringAc
 	params.InputID = InputID;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23194,12 +18084,7 @@ bool UOneShotUsable::CanTrigger(class AActor* InTriggeringActor)
 	UOneShotUsable_CanTrigger_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23217,12 +18102,7 @@ void UFuseComponent::Server_RequestEnableFuse(bool Enabled)
 	UFuseComponent_Server_RequestEnableFuse_Params params;
 	params.Enabled = Enabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23235,12 +18115,7 @@ void UFuseComponent::OnRep_FuseEnabled()
 
 	UFuseComponent_OnRep_FuseEnabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23255,12 +18130,7 @@ bool UFuseComponent::GetIsActive()
 
 	UFuseComponent_GetIsActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23278,12 +18148,7 @@ void UGameAudioInterface::UnregisterShip(class AShip* Ship)
 	UGameAudioInterface_UnregisterShip_Params params;
 	params.Ship = Ship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23299,12 +18164,7 @@ void UGameAudioInterface::RegisterShip(class AShip* Ship)
 	UGameAudioInterface_RegisterShip_Params params;
 	params.Ship = Ship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23321,12 +18181,7 @@ float UGameAudioInterface::GetClosestNonCrewShipDistance(class AShip* PlayerShip
 	UGameAudioInterface_GetClosestNonCrewShipDistance_Params params;
 	params.PlayerShip = PlayerShip;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23341,12 +18196,7 @@ void AGameplayEventSignal::DeactivateAndDestroy()
 
 	AGameplayEventSignal_DeactivateAndDestroy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23363,12 +18213,7 @@ class AAthenaGameState* UGameStateFunctionLibrary::STATIC_GetAthenaGameStateFrom
 	UGameStateFunctionLibrary_GetAthenaGameStateFromWorld_Params params;
 	params.InWorld = InWorld;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23387,12 +18232,7 @@ class AAthenaGameState* UGameStateFunctionLibrary::STATIC_GetAthenaGameState(cla
 	UGameStateFunctionLibrary_GetAthenaGameState_Params params;
 	params.InWorldContextObject = InWorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23410,12 +18250,7 @@ void AGarbageGenerator::SetSizeOfPersistentSet(int InSizeOfPersistentSet)
 	AGarbageGenerator_SetSizeOfPersistentSet_Params params;
 	params.InSizeOfPersistentSet = InSizeOfPersistentSet;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23431,12 +18266,7 @@ void AGarbageGenerator::SetGarbageGenerationRatePerTick(int InAmountToGenerate)
 	AGarbageGenerator_SetGarbageGenerationRatePerTick_Params params;
 	params.InAmountToGenerate = InAmountToGenerate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23452,12 +18282,7 @@ void AGenericPart::OnPartMeshLoaded(class UStaticMesh* Mesh)
 	AGenericPart_OnPartMeshLoaded_Params params;
 	params.Mesh = Mesh;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23473,12 +18298,7 @@ void AGenericPart::OnPartDescLoaded(class UGenericPartDescAsset* Desc)
 	AGenericPart_OnPartDescLoaded_Params params;
 	params.Desc = Desc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23494,12 +18314,7 @@ void AGhostShipDoor::Multicast_ResetForPlayer(class APawn* Player)
 	AGhostShipDoor_Multicast_ResetForPlayer_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23515,12 +18330,7 @@ void AGhostShipDoor::Multicast_OpenForPlayer(class APawn* Player)
 	AGhostShipDoor_Multicast_OpenForPlayer_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23536,12 +18346,7 @@ void AGhostShipDoor::Multicast_OnDoorFullyOpen(class APawn* Player)
 	AGhostShipDoor_Multicast_OnDoorFullyOpen_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23557,12 +18362,7 @@ void AGhostShipTickManager::EnableActorsOnGhostShip(bool bEnable)
 	AGhostShipTickManager_EnableActorsOnGhostShip_Params params;
 	params.bEnable = bEnable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23581,12 +18381,7 @@ bool UHandlesFunctionLibrary::STATIC_NotEqual(const struct FBlueprintableInteger
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23605,12 +18400,7 @@ bool UHandlesFunctionLibrary::STATIC_IsValid(const struct FBlueprintableIntegerH
 	UHandlesFunctionLibrary_IsValid_Params params;
 	params.Handle = Handle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23631,12 +18421,7 @@ bool UHandlesFunctionLibrary::STATIC_Equal(const struct FBlueprintableIntegerHan
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23653,12 +18438,7 @@ bool UHealthComponent::ToggleGodMode()
 
 	UHealthComponent_ToggleGodMode_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23676,12 +18456,7 @@ void UHealthComponent::TakeDamage(const struct FDamageInstance& DamageInstance)
 	UHealthComponent_TakeDamage_Params params;
 	params.DamageInstance = DamageInstance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23697,12 +18472,7 @@ void UHealthComponent::StopContinuousHealthChange(TEnumAsByte<EHealthChangedReas
 	UHealthComponent_StopContinuousHealthChange_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23720,12 +18490,7 @@ void UHealthComponent::StartContinuousHealthChange(float AmountPerSecond, TEnumA
 	params.AmountPerSecond = AmountPerSecond;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23743,12 +18508,7 @@ void UHealthComponent::SetHealth(float Amount, TEnumAsByte<EHealthChangedReason>
 	params.Amount = Amount;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23761,12 +18521,7 @@ void UHealthComponent::ResetToMaxHealth()
 
 	UHealthComponent_ResetToMaxHealth_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23784,12 +18539,7 @@ void UHealthComponent::PreventAdjustmentFromHealthChangeReason(TEnumAsByte<EPrev
 	params.LockReason = LockReason;
 	params.HealthChangeReason = HealthChangeReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23807,12 +18557,23 @@ void UHealthComponent::PredictHealthChange(float Change, TEnumAsByte<EHealthChan
 	params.Change = Change;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.HealthComponent.OnRep_CurrentHealth
+// (Final, Native, Private)
+// Parameters:
+// float                          PrevCurrentHealth              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UHealthComponent::OnRep_CurrentHealth(float PrevCurrentHealth)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.HealthComponent.OnRep_CurrentHealth");
+
+	UHealthComponent_OnRep_CurrentHealth_Params params;
+	params.PrevCurrentHealth = PrevCurrentHealth;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23828,12 +18589,7 @@ void UHealthComponent::OnRep_ContinuousHealthChangeSources(TArray<struct FContin
 	UHealthComponent_OnRep_ContinuousHealthChangeSources_Params params;
 	params.PrevContinuousDamageSources = PrevContinuousDamageSources;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23849,12 +18605,7 @@ void UHealthComponent::Multicast_SetHealthOnClients(const struct FHealthChange& 
 	UHealthComponent_Multicast_SetHealthOnClients_Params params;
 	params.Instance = Instance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23869,12 +18620,7 @@ bool UHealthComponent::IsGodModeActive()
 
 	UHealthComponent_IsGodModeActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23893,12 +18639,7 @@ bool UHealthComponent::IsDamageTypePrevented(TEnumAsByte<EHealthChangedReason> H
 	UHealthComponent_IsDamageTypePrevented_Params params;
 	params.HealthChangeReason = HealthChangeReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23915,12 +18656,7 @@ float UHealthComponent::GetMaxHealth()
 
 	UHealthComponent_GetMaxHealth_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23937,12 +18673,7 @@ float UHealthComponent::GetCurrentHealth()
 
 	UHealthComponent_GetCurrentHealth_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -23962,12 +18693,7 @@ void UHealthComponent::EnableAdjustHealth(TEnumAsByte<EHealthAdjustLockReasons> 
 	params.Reason = Reason;
 	params.Strict = Strict;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -23985,12 +18711,7 @@ void UHealthComponent::DisableAdjustHealth(TEnumAsByte<EHealthAdjustLockReasons>
 	params.Reason = Reason;
 	params.Strict = Strict;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24005,12 +18726,7 @@ bool UHealthComponent::CanAdjustHealth()
 
 	UHealthComponent_CanAdjustHealth_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24030,12 +18746,7 @@ void UHealthComponent::AllowAdjustmentFromHealthChangeReason(TEnumAsByte<EPreven
 	params.LockReason = LockReason;
 	params.HealthChangeReason = HealthChangeReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24053,12 +18764,7 @@ void UHealthComponent::AdjustHealth(float Amount, TEnumAsByte<EHealthChangedReas
 	params.Amount = Amount;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24079,12 +18785,7 @@ struct FDamageInstance UHealthTestFunctions::STATIC_MakeDamageInstance(float Amo
 	params.From = From;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24106,12 +18807,7 @@ void UHideInObjectActionStateId::STATIC_PushCharacterIntoHideInObjectActionState
 	params.ObjectToHideIn = ObjectToHideIn;
 	params.Dockable = Dockable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24127,12 +18823,7 @@ void UHideInObjectActionStateId::STATIC_PopCharacterOutOfHideInObjectActionState
 	UHideInObjectActionStateId_PopCharacterOutOfHideInObjectActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24147,12 +18838,7 @@ TEnumAsByte<EInputHandlerResult> UHideInObjectCompositeInputHandler::OnUseConcea
 
 	UHideInObjectCompositeInputHandler_OnUseConcealingObjectNotificationRecieved_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24178,12 +18864,7 @@ void AHideout::OnPlayerInViewOfHideout(class AActor* Other, class UPrimitiveComp
 	params.bFromSweep = bFromSweep;
 	params.OverlapInfo = OverlapInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24207,12 +18888,7 @@ void AHideoutEntrance::OnBeginOverlap(class AActor* OtherActor, class UPrimitive
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24236,12 +18912,7 @@ void AHideoutExit::OnBeginOverlap(class AActor* OtherActor, class UPrimitiveComp
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24257,12 +18928,7 @@ void UHitReactionComponent::OnHitReactionImpact(const struct FImpactDamageEvent&
 	UHitReactionComponent_OnHitReactionImpact_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24278,12 +18944,7 @@ void UHitReactionComponent::Multicast_ProcessHitReaction(const struct FImpactDam
 	UHitReactionComponent_Multicast_ProcessHitReaction_Params params;
 	params.DamageEvent = DamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24299,12 +18960,7 @@ void UMockHitReactionComponent::SetServerAuthoritiveReactions(bool ServerAuthori
 	UMockHitReactionComponent_SetServerAuthoritiveReactions_Params params;
 	params.ServerAuthoritive = ServerAuthoritive;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24317,12 +18973,7 @@ void UMockHitReactionComponent::ResetMockHitReactionComponent()
 
 	UMockHitReactionComponent_ResetMockHitReactionComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24338,11 +18989,7 @@ void AHole::OnStateChanged(TEnumAsByte<EHoleState> InState)
 	AHole_OnStateChanged_Params params;
 	params.InState = InState;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24355,12 +19002,7 @@ void AHole::OnRep_State()
 
 	AHole_OnRep_State_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24373,12 +19015,7 @@ void AShovelHole::OnRep_ParallaxValue()
 
 	AShovelHole_OnRep_ParallaxValue_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24394,12 +19031,7 @@ void UShipPartInterface::SetShip(class AShip* Ship)
 	UShipPartInterface_SetShip_Params params;
 	params.Ship = Ship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24414,12 +19046,7 @@ class AShip* UShipPartInterface::GetShip()
 
 	UShipPartInterface_GetShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24434,12 +19061,7 @@ void UShipPartInterface::ClearShip()
 
 	UShipPartInterface_ClearShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24454,12 +19076,7 @@ float ULeakableInterface::GetLeakAmount()
 
 	ULeakableInterface_GetLeakAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24474,12 +19091,7 @@ void URepairableInterface::HandleDestroy()
 
 	URepairableInterface_HandleDestroy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24494,12 +19106,7 @@ class UClass* URepairableInterface::GetRepairType()
 
 	URepairableInterface_GetRepairType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24516,12 +19123,7 @@ float URepairableInterface::GetRepairTime()
 
 	URepairableInterface_GetRepairTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24538,12 +19140,7 @@ TEnumAsByte<ERepairableState> URepairableInterface::GetRepairableState()
 
 	URepairableInterface_GetRepairableState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24561,12 +19158,7 @@ void ADamageZone::SetPreventLeakingForTesting(bool InPreventLeaking)
 	ADamageZone_SetPreventLeakingForTesting_Params params;
 	params.InPreventLeaking = InPreventLeaking;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24582,12 +19174,7 @@ void ADamageZone::PlayHitVFX(class UParticleSystem* VFX)
 	ADamageZone_PlayHitVFX_Params params;
 	params.VFX = VFX;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24600,11 +19187,7 @@ void ADamageZone::OnUnderwaterStateChanged()
 
 	ADamageZone_OnUnderwaterStateChanged_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24617,11 +19200,7 @@ void ADamageZone::OnShipSet()
 
 	ADamageZone_OnShipSet_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24634,11 +19213,7 @@ void ADamageZone::OnShipCleared()
 
 	ADamageZone_OnShipCleared_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24651,11 +19226,7 @@ void ADamageZone::OnShipBeginsToSink()
 
 	ADamageZone_OnShipBeginsToSink_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24668,11 +19239,7 @@ void ADamageZone::OnRepairMounted()
 
 	ADamageZone_OnRepairMounted_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24688,11 +19255,7 @@ void ADamageZone::OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InRepair
 	ADamageZone_OnRepairableStateUpdate_Params params;
 	params.InRepairableState = InRepairableState;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24705,12 +19268,7 @@ void ADamageZone::OnRep_DamageLevel()
 
 	ADamageZone_OnRep_DamageLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24723,12 +19281,7 @@ void ADamageZone::OnRep_AuthorityRepairableState()
 
 	ADamageZone_OnRep_AuthorityRepairableState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24741,11 +19294,7 @@ void ADamageZone::OnInitialise()
 
 	ADamageZone_OnInitialise_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24763,12 +19312,7 @@ void ADamageZone::Multicast_PlayDamageEffectsRPC(bool PlaySfx, bool PlayVFX)
 	params.PlaySfx = PlaySfx;
 	params.PlayVFX = PlayVFX;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24783,12 +19327,7 @@ bool ADamageZone::IsOnSinkingShip()
 
 	ADamageZone_IsOnSinkingShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24805,12 +19344,7 @@ bool ADamageZone::IsAboutToBlow()
 
 	ADamageZone_IsAboutToBlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24825,12 +19359,7 @@ void ADamageZone::InitialiseInternalWaterSamplePositions()
 
 	ADamageZone_InitialiseInternalWaterSamplePositions_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -24845,12 +19374,7 @@ class AShip* ADamageZone::GetShipOwner()
 
 	ADamageZone_GetShipOwner_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24869,11 +19393,7 @@ bool ADamageZone::GetRepairMountLocation(class USceneComponent** MountLocation, 
 
 	ADamageZone_GetRepairMountLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (MountLocation != nullptr)
 		*MountLocation = params.MountLocation;
@@ -24895,12 +19415,7 @@ int ADamageZone::GetMaxDamageLevel()
 
 	ADamageZone_GetMaxDamageLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24917,12 +19432,7 @@ float ADamageZone::GetLeakAmount()
 
 	ADamageZone_GetLeakAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24939,12 +19449,7 @@ struct FVector ADamageZone::GetHoleDecalPositionWorldSpace()
 
 	ADamageZone_GetHoleDecalPositionWorldSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24961,12 +19466,7 @@ struct FVector ADamageZone::GetHoleDecalPositionLocalSpace()
 
 	ADamageZone_GetHoleDecalPositionLocalSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -24983,12 +19483,7 @@ float ADamageZone::GetDamagePercentage()
 
 	ADamageZone_GetDamagePercentage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25005,12 +19500,7 @@ int ADamageZone::GetDamageLevel()
 
 	ADamageZone_GetDamageLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25028,12 +19518,7 @@ void ADamageZone::ApplyDamage(const struct FHullDamageHit& InHit)
 	ADamageZone_ApplyDamage_Params params;
 	params.InHit = InHit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25054,12 +19539,7 @@ bool AHullDamage::ShouldHitGenerateDecal(const struct FVector& HitNormal, const 
 	params.HitVelocity = HitVelocity;
 	params.HitStrength = HitStrength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25082,12 +19562,7 @@ TArray<class ADamageZone*> AHullDamage::GetDamageZonesByDamagerType(class UClass
 	params.InPosition = InPosition;
 	params.InNumDamageZones = InNumDamageZones;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25110,12 +19585,7 @@ float AHullDamage::CalculateHitStrengthForImpact(const struct FVector& HitNormal
 	params.HitVelocity = HitVelocity;
 	params.HitStrength = HitStrength;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25137,12 +19607,7 @@ bool AShipInternalWater::TryGetIntersectionPosition(const struct FVector& StartP
 	params.StartPosition = StartPosition;
 	params.EndPosition = EndPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (IntersectionPosition != nullptr)
 		*IntersectionPosition = params.IntersectionPosition;
@@ -25163,12 +19628,7 @@ void AShipInternalWater::ShrinkWaterOcclusionVolume(float Time)
 	AShipInternalWater_ShrinkWaterOcclusionVolume_Params params;
 	params.Time = Time;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25184,12 +19644,7 @@ void AShipInternalWater::SetNormalizedWaterAmountLimit(float NormalizedWaterAmou
 	AShipInternalWater_SetNormalizedWaterAmountLimit_Params params;
 	params.NormalizedWaterAmount = NormalizedWaterAmount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25205,12 +19660,7 @@ void AShipInternalWater::SetNormalizedWaterAmount(float NoramlisedWaterAmount)
 	AShipInternalWater_SetNormalizedWaterAmount_Params params;
 	params.NoramlisedWaterAmount = NoramlisedWaterAmount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25226,12 +19676,7 @@ void AShipInternalWater::RegisterComponents(class UCurveFloat* CurveFloat)
 	AShipInternalWater_RegisterComponents_Params params;
 	params.CurveFloat = CurveFloat;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25244,12 +19689,7 @@ void AShipInternalWater::OnRep_ServerWaterAmount()
 
 	AShipInternalWater_OnRep_ServerWaterAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25264,12 +19704,7 @@ bool AShipInternalWater::IsWaterMeshVisible()
 
 	AShipInternalWater_IsWaterMeshVisible_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25286,12 +19721,7 @@ bool AShipInternalWater::IsOcclusionZoneFullyReduced()
 
 	AShipInternalWater_IsOcclusionZoneFullyReduced_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25308,12 +19738,7 @@ float AShipInternalWater::GetWaterAmount()
 
 	AShipInternalWater_GetWaterAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25330,12 +19755,7 @@ float AShipInternalWater::GetNormalizedWaterAmount()
 
 	AShipInternalWater_GetNormalizedWaterAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25352,12 +19772,7 @@ float AShipInternalWater::GetNormalizedVisualWaterAmount()
 
 	AShipInternalWater_GetNormalizedVisualWaterAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25376,12 +19791,7 @@ float AShipInternalWater::GetDistanceFromPosition(const struct FVector& Position
 	AShipInternalWater_GetDistanceFromPosition_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25399,12 +19809,7 @@ void AShipInternalWater::AddWaterAmount(float WaterToAdd)
 	AShipInternalWater_AddWaterAmount_Params params;
 	params.WaterToAdd = WaterToAdd;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25422,12 +19827,7 @@ void ULeakerComponent::SetLeakState(int InLeakId, TEnumAsByte<ELeakState> InStat
 	params.InLeakId = InLeakId;
 	params.InState = InState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25443,12 +19843,7 @@ void ULeakerComponent::RemoveLeak(int InLeakId)
 	ULeakerComponent_RemoveLeak_Params params;
 	params.InLeakId = InLeakId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25463,12 +19858,7 @@ float ULeakerComponent::GetLeakAmount()
 
 	ULeakerComponent_GetLeakAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25488,12 +19878,7 @@ void UShipLeakerComponent::Update(float InDeltaTime, TEnumAsByte<EShipLeakerUpda
 	params.InDeltaTime = InDeltaTime;
 	params.InUpdateTpe = InUpdateTpe;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25509,12 +19894,7 @@ void UShipLeakerComponent::SetShip(class AShip* InShip)
 	UShipLeakerComponent_SetShip_Params params;
 	params.InShip = InShip;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25535,12 +19915,7 @@ int UShipLeakerComponent::AddLeak(const struct FTransform& InWhere, float InAmou
 	params.InAmount = InAmount;
 	params.InParams = InParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25558,12 +19933,7 @@ void AHullDamage2::ReactToImpactOnServer(const struct FImpactDamageEvent& InImpa
 	AHullDamage2_ReactToImpactOnServer_Params params;
 	params.InImpact = InImpact;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25576,12 +19946,7 @@ void AHullDamage2::OnRep_Hits()
 
 	AHullDamage2_OnRep_Hits_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25601,12 +19966,7 @@ void AHullDamage2::Multicast_TriggerDamageFX(int InIndex, bool InPlaySFX, bool I
 	params.InPlaySFX = InPlaySFX;
 	params.InPlayVFX = InPlayVFX;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25623,12 +19983,7 @@ class UDecalComponent* AHullDamage2::MakeInternalHoleDecal(const struct FTransfo
 	AHullDamage2_MakeInternalHoleDecal_Params params;
 	params.InTransform = InTransform;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25647,12 +20002,7 @@ struct FHullDamageParamSet AHullDamage2::LookupParamsByIndex(int InIndex)
 	AHullDamage2_LookupParamsByIndex_Params params;
 	params.InIndex = InIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25671,12 +20021,7 @@ int AHullDamage2::IndexOfParamsForComponent(class UActorComponent* InComponent)
 	AHullDamage2_IndexOfParamsForComponent_Params params;
 	params.InComponent = InComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25694,12 +20039,7 @@ void UHullDamagePointProxy::ReactToRepairableStateChanged(TEnumAsByte<ERepairabl
 	UHullDamagePointProxy_ReactToRepairableStateChanged_Params params;
 	params.InNewState = InNewState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25715,12 +20055,7 @@ void UShantyInterface::RequestInstrumentStop(class AActor* InstrumentActor)
 	UShantyInterface_RequestInstrumentStop_Params params;
 	params.InstrumentActor = InstrumentActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25740,12 +20075,7 @@ void UShantyInterface::RequestInstrumentPlay(class AActor* InstrumentActor, cons
 	params.EntitlementInterface = EntitlementInterface;
 	params.ForceNewEnsemble = ForceNewEnsemble;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25760,12 +20090,7 @@ int UShantyInterface::GetNumberOfShantiesPlaying()
 
 	UShantyInterface_GetNumberOfShantiesPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25784,12 +20109,7 @@ int UShantyInterface::GetNumberOfInstrumentsPlayingOnEnsemble(int EnsembleIndex)
 	UShantyInterface_GetNumberOfInstrumentsPlayingOnEnsemble_Params params;
 	params.EnsembleIndex = EnsembleIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25810,12 +20130,7 @@ bool UImpactDecalParamModifier::SetParamValues(const struct FHitResult& HitResul
 	params.HitResult = HitResult;
 	params.DecalMatInstance = DecalMatInstance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25836,12 +20151,7 @@ bool UImpactDecalParamModifierTime::SetParamValues(const struct FHitResult& HitR
 	params.HitResult = HitResult;
 	params.DecalMatInstance = DecalMatInstance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25862,12 +20172,7 @@ bool UImpactDecalParamModifierVomit::SetParamValues(const struct FHitResult& Hit
 	params.HitResult = HitResult;
 	params.DecalMatInstance = DecalMatInstance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25887,12 +20192,7 @@ void UIngestedByKrakenActionStateId::STATIC_PushCharacterIntoIngestedByKrakenAct
 	params.Character = Character;
 	params.Tentacle = Tentacle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25908,12 +20208,7 @@ void UIngestedByKrakenActionStateId::STATIC_PopCharacterOutOfIngestedByKrakenAct
 	UIngestedByKrakenActionStateId_PopCharacterOutOfIngestedByKrakenActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25930,12 +20225,7 @@ TEnumAsByte<EInputHandlerResult> UIngestedByKrakenCompositeInputHandler::OnLookU
 	UIngestedByKrakenCompositeInputHandler_OnLookUpRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25954,12 +20244,7 @@ TEnumAsByte<EInputHandlerResult> UIngestedByKrakenCompositeInputHandler::OnLookU
 	UIngestedByKrakenCompositeInputHandler_OnLookUp_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -25977,12 +20262,7 @@ void UIntentCombinerComponent::SetIntentProviders(TArray<class UControllableInte
 	UIntentCombinerComponent_SetIntentProviders_Params params;
 	params.InIntentProviders = InIntentProviders;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -25999,12 +20279,7 @@ float UIntentCombinerComponent::GetCombinedIntent(bool IsMoving)
 	UIntentCombinerComponent_GetCombinedIntent_Params params;
 	params.IsMoving = IsMoving;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26022,12 +20297,7 @@ void UIntentComponent::SetIntent(float NewIntent)
 	UIntentComponent_SetIntent_Params params;
 	params.NewIntent = NewIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26043,12 +20313,7 @@ void UIntentComponent::Server_SetIntent(float NewIntent)
 	UIntentComponent_Server_SetIntent_Params params;
 	params.NewIntent = NewIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26063,12 +20328,7 @@ float UIntentComponent::GetIntent()
 
 	UIntentComponent_GetIntent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26086,12 +20346,7 @@ void UClimbingComponent::SetClimbId(unsigned char InClimbId)
 	UClimbingComponent_SetClimbId_Params params;
 	params.InClimbId = InClimbId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26106,12 +20361,7 @@ bool UClimbingComponent::IsClimbIdInSyncWithServer()
 
 	UClimbingComponent_IsClimbIdInSyncWithServer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26128,12 +20378,7 @@ float UClimbingComponent::GetServerHeight()
 
 	UClimbingComponent_GetServerHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26150,12 +20395,7 @@ bool UClimbingComponent::GetIsCurrentlyClimbing()
 
 	UClimbingComponent_GetIsCurrentlyClimbing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26172,12 +20412,7 @@ bool UControllableIntentComponent::HasController()
 
 	UControllableIntentComponent_HasController_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26194,12 +20429,7 @@ float UControllableIntentComponent::GetIntent()
 
 	UControllableIntentComponent_GetIntent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26216,12 +20446,7 @@ struct FVector ACapstanArm::GetLookAtPosBasisSpace()
 
 	ACapstanArm_GetLookAtPosBasisSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26238,12 +20463,7 @@ struct FVector ACapstanArm::GetLookAtPos()
 
 	ACapstanArm_GetLookAtPos_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26261,12 +20481,7 @@ void ADebugShipController::Server_RequestUpdateSailsLowered(float InRateOfChange
 	ADebugShipController_Server_RequestUpdateSailsLowered_Params params;
 	params.InRateOfChange = InRateOfChange;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26282,12 +20497,7 @@ void ADebugShipController::Server_RequestUpdateSailsAngle(float InRateOfChange)
 	ADebugShipController_Server_RequestUpdateSailsAngle_Params params;
 	params.InRateOfChange = InRateOfChange;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26300,12 +20510,7 @@ void ADebugShipController::Server_RequestToggleAnchorState()
 
 	ADebugShipController_Server_RequestToggleAnchorState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26321,12 +20526,7 @@ void ADebugShipController::Server_RequestSetRuddersAngleRatio(float InRateOfChan
 	ADebugShipController_Server_RequestSetRuddersAngleRatio_Params params;
 	params.InRateOfChange = InRateOfChange;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26342,12 +20542,7 @@ void APlayerLoadingInteractionPoint::Server_NotifyInteractionPointUsed(class AAc
 	APlayerLoadingInteractionPoint_Server_NotifyInteractionPointUsed_Params params;
 	params.UsingActor = UsingActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26363,12 +20558,7 @@ void USailManipulatorInterface::SetLocked(bool IsLocked)
 	USailManipulatorInterface_SetLocked_Params params;
 	params.IsLocked = IsLocked;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26384,12 +20574,7 @@ void USailManipulatorInterface::SetIntent(float NewIntent)
 	USailManipulatorInterface_SetIntent_Params params;
 	params.NewIntent = NewIntent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26404,12 +20589,7 @@ bool USailManipulatorInterface::IsLocked()
 
 	USailManipulatorInterface_IsLocked_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26426,12 +20606,7 @@ class UStaticMeshComponent* USailManipulatorInterface::GetTopMeshComponent()
 
 	USailManipulatorInterface_GetTopMeshComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26448,12 +20623,7 @@ float USailManipulatorInterface::GetCurrentIntent()
 
 	USailManipulatorInterface_GetCurrentIntent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26470,12 +20640,7 @@ class UStaticMeshComponent* USailManipulatorInterface::GetBaseMeshComponent()
 
 	USailManipulatorInterface_GetBaseMeshComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26492,12 +20657,7 @@ float USailAngleInterface::GetSailTurnRate()
 
 	USailAngleInterface_GetSailTurnRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26514,12 +20674,7 @@ float USailAngleInterface::GetSailAngleRatio()
 
 	USailAngleInterface_GetSailAngleRatio_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26536,12 +20691,7 @@ float USailHoistInterface::GetSailRaisedPercentage()
 
 	USailHoistInterface_GetSailRaisedPercentage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26558,12 +20708,7 @@ float USailHoistInterface::GetSailMovementRate()
 
 	USailHoistInterface_GetSailMovementRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26583,35 +20728,23 @@ void ARowingSeat::Server_SetOarInputState(int InOarIndex, TEnumAsByte<EOarInputS
 	params.InOarIndex = InOarIndex;
 	params.InOarState = InOarState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
-// Function Athena.RowingSeat.Multicast_SetOarInputState
-// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Function Athena.RowingSeat.OnRep_OarInputStates
+// (Final, Native, Protected)
 // Parameters:
-// int                            InOarIndex                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EOarInputState>    InOarState                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<TEnumAsByte<EOarInputState>> OldInputStates                 (Parm, ZeroConstructor)
 
-void ARowingSeat::Multicast_SetOarInputState(int InOarIndex, TEnumAsByte<EOarInputState> InOarState)
+void ARowingSeat::OnRep_OarInputStates(TArray<TEnumAsByte<EOarInputState>> OldInputStates)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingSeat.Multicast_SetOarInputState");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.RowingSeat.OnRep_OarInputStates");
 
-	ARowingSeat_Multicast_SetOarInputState_Params params;
-	params.InOarIndex = InOarIndex;
-	params.InOarState = InOarState;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	ARowingSeat_OnRep_OarInputStates_Params params;
+	params.OldInputStates = OldInputStates;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26627,12 +20760,7 @@ void ATestControllableObject::TestForceDisconnectIdleSecondsThreshold(float Disc
 	ATestControllableObject_TestForceDisconnectIdleSecondsThreshold_Params params;
 	params.DisconnectIdleThreshold = DisconnectIdleThreshold;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26648,12 +20776,7 @@ void ATestControllableObject::TestForceCanDisconnectWhenIdle(bool CanDisconnect)
 	ATestControllableObject_TestForceCanDisconnectWhenIdle_Params params;
 	params.CanDisconnect = CanDisconnect;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26668,12 +20791,7 @@ float UWheelInterface::GetWheelRate()
 
 	UWheelInterface_GetWheelRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26690,12 +20808,7 @@ float UWheelInterface::GetWheelAngle()
 
 	UWheelInterface_GetWheelAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26712,12 +20825,7 @@ float UWheelInterface::GetWantedWheelAngle()
 
 	UWheelInterface_GetWantedWheelAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26734,12 +20842,7 @@ float UWheelInterface::GetServerWheelAngle()
 
 	UWheelInterface_GetServerWheelAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26756,12 +20859,7 @@ float UWheelInterface::GetNormalizedWheelPosition()
 
 	UWheelInterface_GetNormalizedWheelPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26778,12 +20876,7 @@ TEnumAsByte<EWheelAnimationType> UWheelInterface::GetAnimationType()
 
 	UWheelInterface_GetAnimationType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26800,12 +20893,7 @@ float UWheelInterface::GetAnimationTime()
 
 	UWheelInterface_GetAnimationTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26823,12 +20911,7 @@ void AWheel::Server_SetWheelAngle(float WheelAngleIncrement)
 	AWheel_Server_SetWheelAngle_Params params;
 	params.WheelAngleIncrement = WheelAngleIncrement;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26844,12 +20927,7 @@ void AWheel::OnWheelDescLoaded(class UWheelDescAsset* WheelDesc)
 	AWheel_OnWheelDescLoaded_Params params;
 	params.WheelDesc = WheelDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26862,12 +20940,7 @@ void AWheel::OnRep_ServerWheelAngle()
 
 	AWheel_OnRep_ServerWheelAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26883,12 +20956,7 @@ void AWheel::Multicast_ForceSetWheelAngle(float Angle)
 	AWheel_Multicast_ForceSetWheelAngle_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26903,12 +20971,7 @@ class USkeletalMeshComponent* AWheel::GetWheelMesh()
 
 	AWheel_GetWheelMesh_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26925,12 +20988,7 @@ float AWheel::GetMinWheelAngle()
 
 	AWheel_GetMinWheelAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26947,12 +21005,7 @@ float AWheel::GetMaxWheelAngle()
 
 	AWheel_GetMaxWheelAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -26970,12 +21023,7 @@ void AWheel::ForceSetWheelAngle(float Angle)
 	AWheel_ForceSetWheelAngle_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -26991,12 +21039,7 @@ void AWheel::ApplyWheelInput(float Value)
 	AWheel_ApplyWheelInput_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27009,12 +21052,7 @@ void ATestDamageZone::TestStopWaterLeakSfx()
 
 	ATestDamageZone_TestStopWaterLeakSfx_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27027,12 +21065,7 @@ void ATestDamageZone::TestStopWaterLeakRepairingSfx()
 
 	ATestDamageZone_TestStopWaterLeakRepairingSfx_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27048,12 +21081,7 @@ void ATestDamageZone::TestSetRepairableState(TEnumAsByte<ERepairableState> InRep
 	ATestDamageZone_TestSetRepairableState_Params params;
 	params.InRepairableState = InRepairableState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27066,12 +21094,7 @@ void ATestDamageZone::TestPlayWaterLeakSfx()
 
 	ATestDamageZone_TestPlayWaterLeakSfx_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27084,12 +21107,7 @@ void ATestDamageZone::TestPlayWaterLeakRepairingSfx()
 
 	ATestDamageZone_TestPlayWaterLeakRepairingSfx_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27104,12 +21122,7 @@ bool ATestDamageZone::IsWaterLeakSfxPlaying()
 
 	ATestDamageZone_IsWaterLeakSfxPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27126,12 +21139,7 @@ bool ATestDamageZone::IsWaterLeakRepairSfxPlaying()
 
 	ATestDamageZone_IsWaterLeakRepairSfxPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27149,12 +21157,7 @@ void ABell::RingBell(bool IsInTurbulence)
 	ABell_RingBell_Params params;
 	params.IsInTurbulence = IsInTurbulence;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27167,12 +21170,7 @@ void AInteractableLight::OnRep_OnLightStateChanged()
 
 	AInteractableLight_OnRep_OnLightStateChanged_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27185,11 +21183,7 @@ void AInteractableLight::LightStateChanged()
 
 	AInteractableLight_LightStateChanged_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27204,12 +21198,7 @@ bool AInteractableLight::IsLightOn()
 
 	AInteractableLight_IsLightOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27224,12 +21213,7 @@ void AMermaid::OnRep_State()
 
 	AMermaid_OnRep_State_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27245,12 +21229,7 @@ void AMermaid::Multicast_TeleportPlayerRPC(class AAthenaPlayerCharacter* Player)
 	AMermaid_Multicast_TeleportPlayerRPC_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27263,12 +21242,7 @@ void AMermaid::Multicast_SurfacedRPC()
 
 	AMermaid_Multicast_SurfacedRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27281,12 +21255,7 @@ void AMermaid::Multicast_DiveRPC()
 
 	AMermaid_Multicast_DiveRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27301,12 +21270,7 @@ bool AMermaid::IsBeaconActive()
 
 	AMermaid_IsBeaconActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27323,12 +21287,7 @@ int AMermaid::GetUniqueMermaidId()
 
 	AMermaid_GetUniqueMermaidId_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27345,12 +21304,7 @@ TArray<struct FGuid> AMermaid::GetCrewIdsResponsibleForSavingAsCopy()
 
 	AMermaid_GetCrewIdsResponsibleForSavingAsCopy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27368,12 +21322,7 @@ void AMermaid::AddCrewResponsibleForSaving(const struct FGuid& CrewId)
 	AMermaid_AddCrewResponsibleForSaving_Params params;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27389,12 +21338,7 @@ void AMusicBox::OnRep_OnIsPlayingChanged(bool WasPlaying)
 	AMusicBox_OnRep_OnIsPlayingChanged_Params params;
 	params.WasPlaying = WasPlaying;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27407,12 +21351,7 @@ void AShipwrightOneShot::TestForceExpireAllRestockMoratoriums()
 
 	AShipwrightOneShot_TestForceExpireAllRestockMoratoriums_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27428,12 +21367,7 @@ void AShipwrightOneShot::RestockShip(class AActor* InInteractor)
 	AShipwrightOneShot_RestockShip_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27450,12 +21384,7 @@ bool AShipwrightOneShot::IsShipCloseAndSlowEnoughToRestock(class AShip* Ship)
 	AShipwrightOneShot_IsShipCloseAndSlowEnoughToRestock_Params params;
 	params.Ship = Ship;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27474,12 +21403,7 @@ float AShipwrightOneShot::GetTimeInSecondsUntilNextRestock(class AActor* Player)
 	AShipwrightOneShot_GetTimeInSecondsUntilNextRestock_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27498,12 +21422,7 @@ bool AShipwrightOneShot::GetHasRestockMoratoriumDataForPlayerCrew(class AActor* 
 	AShipwrightOneShot_GetHasRestockMoratoriumDataForPlayerCrew_Params params;
 	params.Player = Player;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27520,12 +21439,7 @@ bool ULandmarkReactionInterface::StopReaction()
 
 	ULandmarkReactionInterface_StopReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27542,12 +21456,7 @@ bool ULandmarkReactionInterface::StartReaction()
 
 	ULandmarkReactionInterface_StartReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27564,12 +21473,7 @@ bool ALandmarkReactionActor::StopReaction()
 
 	ALandmarkReactionActor_StopReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27586,12 +21490,7 @@ bool ALandmarkReactionActor::StartReaction()
 
 	ALandmarkReactionActor_StartReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27606,12 +21505,7 @@ void ASkeletonFortDoor::ResetDoor()
 
 	ASkeletonFortDoor_ResetDoor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27624,12 +21518,7 @@ void ASkeletonFortDoor::OpenDoor()
 
 	ASkeletonFortDoor_OpenDoor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27642,12 +21531,7 @@ void ASkeletonFortDoor::OnRep_ServerDoorState()
 
 	ASkeletonFortDoor_OnRep_ServerDoorState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27662,12 +21546,7 @@ float ULadderInterface::GetLadderHeight()
 
 	ULadderInterface_GetLadderHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27684,12 +21563,7 @@ struct FTransform ALadder::GetTopLadderRungTransform()
 
 	ALadder_GetTopLadderRungTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27706,12 +21580,7 @@ struct FTransform ALadder::GetBottomLadderRungTransform()
 
 	ALadder_GetBottomLadderRungTransform_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27728,12 +21597,7 @@ class USkeletalMeshComponent* ANPC::GetSkeletalMesh()
 
 	ANPC_GetSkeletalMesh_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27751,12 +21615,7 @@ void AVoyageProposalContainer::SetManifest(class ACrewShipManifest* Manifest)
 	AVoyageProposalContainer_SetManifest_Params params;
 	params.Manifest = Manifest;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27772,12 +21631,7 @@ void ATreasureChestItemProxy::OnRep_State(TEnumAsByte<ETreasureChestProxyState> 
 	ATreasureChestItemProxy_OnRep_State_Params params;
 	params.OldState = OldState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27793,12 +21647,7 @@ void ATreasureChestItemProxy::OnRep_NumDigsLeft(int PrevNumDigsLeft)
 	ATreasureChestItemProxy_OnRep_NumDigsLeft_Params params;
 	params.PrevNumDigsLeft = PrevNumDigsLeft;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27811,12 +21660,7 @@ void AMessageInABottleItemProxy::Multicast_Smash()
 
 	AMessageInABottleItemProxy_Multicast_Smash_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27832,11 +21676,7 @@ void AVotableObjectView::OnVoteRemoved(const TScriptInterface<class UVoterInterf
 	AVotableObjectView_OnVoteRemoved_Params params;
 	params.Voter = Voter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27852,11 +21692,7 @@ void AVotableObjectView::OnVoteCompleted(bool IsWinner)
 	AVotableObjectView_OnVoteCompleted_Params params;
 	params.IsWinner = IsWinner;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27872,11 +21708,7 @@ void AVotableObjectView::OnVoteAdded(const TScriptInterface<class UVoterInterfac
 	AVotableObjectView_OnVoteAdded_Params params;
 	params.Voter = Voter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -27893,12 +21725,7 @@ TScriptInterface<class UVoterInterface> AVotableObjectView::GetVoter(int Index)
 	AVotableObjectView_GetVoter_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27921,12 +21748,7 @@ class AShip* UInteractablesTestFunctions::STATIC_SpawnLargeShipForMPTesting(clas
 	params.Position = Position;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27949,12 +21771,7 @@ class AShip* UInteractablesTestFunctions::STATIC_SetupServerSideAndSpawnShip(cla
 	params.CapstanPosition = CapstanPosition;
 	params.SailsLoweredPosition = SailsLoweredPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27973,12 +21790,7 @@ class AShip* UInteractablesTestFunctions::STATIC_SetupClientSide(class UObject* 
 	UInteractablesTestFunctions_SetupClientSide_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -27995,12 +21807,7 @@ TEnumAsByte<EInputHandlerResult> UInteractionCompositeInputHandler::OnSecondaryI
 
 	UInteractionCompositeInputHandler_OnSecondaryInteractReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28017,12 +21824,7 @@ TEnumAsByte<EInputHandlerResult> UInteractionCompositeInputHandler::OnSecondaryI
 
 	UInteractionCompositeInputHandler_OnSecondaryInteract_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28039,12 +21841,7 @@ TEnumAsByte<EInputHandlerResult> UInteractionCompositeInputHandler::OnPrimaryInt
 
 	UInteractionCompositeInputHandler_OnPrimaryInteractReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28061,12 +21858,7 @@ TEnumAsByte<EInputHandlerResult> UInteractionCompositeInputHandler::OnPrimaryInt
 
 	UInteractionCompositeInputHandler_OnPrimaryInteract_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28087,12 +21879,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_WithinInteractionAngleValidationP
 	params.InCharacter = InCharacter;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28115,12 +21902,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_WithinInteractionAngleValidationP
 	params.InInteractionRegionDegrees = InInteractionRegionDegrees;
 	params.InRegionInteractor = InRegionInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28143,12 +21925,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_WithinInteractionAngleValidationP
 	params.InInteractionRegionDegrees = InInteractionRegionDegrees;
 	params.InOutOfRegionInteractor = InOutOfRegionInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28171,12 +21948,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_ClosestToPlayerSortingPolicy_With
 	params.InClosestInteractable = InClosestInteractable;
 	params.InFurthestInteractable = InFurthestInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28203,12 +21975,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_CenterOfScreenDistanceSortingPoli
 	params.InPlayerDistanceDelta = InPlayerDistanceDelta;
 	params.InCenterDistanceDelta = InCenterDistanceDelta;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28229,12 +21996,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_CanInteractValidationPolicy_WithC
 	params.InCharacter = InCharacter;
 	params.InCanInteractInteractor = InCanInteractInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28255,12 +22017,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_CanInteractValidationPolicy_WithC
 	params.InCharacter = InCharacter;
 	params.InCanInteractInteractor = InCanInteractInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28281,12 +22038,7 @@ bool UInteractionPoliciesTestFunctions::STATIC_AirbornePolicy_ExecuteCanInteract
 	params.InCharacter = InCharacter;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28306,12 +22058,7 @@ void UInteractObjectActionStateId::STATIC_PushCharacterIntoInteractObjectActionS
 	params.InteractObject = InteractObject;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28330,12 +22077,7 @@ TEnumAsByte<EWieldItemReturnCode> UInventoryManipulatorComponent::WieldItemByAct
 	params.Item = Item;
 	params.UnwieldFast = UnwieldFast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28355,12 +22097,7 @@ void UInventoryManipulatorComponent::WieldItem(int ItemIndex, bool Fast)
 	params.ItemIndex = ItemIndex;
 	params.Fast = Fast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28373,12 +22110,7 @@ void UInventoryManipulatorComponent::ToggleWieldItem()
 
 	UInventoryManipulatorComponent_ToggleWieldItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28394,12 +22126,7 @@ void UInventoryManipulatorComponent::Server_DropItemRPC(class AActor* Item)
 	UInventoryManipulatorComponent_Server_DropItemRPC_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28416,12 +22143,7 @@ bool UInventoryManipulatorComponent::RemoveItem(class AItemInfo* Item)
 	UInventoryManipulatorComponent_RemoveItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28441,12 +22163,7 @@ void UInventoryManipulatorComponent::QuickSelectItemOfType(TEnumAsByte<EItemType
 	params.ItemType = ItemType;
 	params.TypedItemIndex = TypedItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28464,12 +22181,7 @@ void UInventoryManipulatorComponent::QuickSelectItemOfCategory(class UClass* Cat
 	params.Category = Category;
 	params.IndexIntoCategory = IndexIntoCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28485,12 +22197,7 @@ void UInventoryManipulatorComponent::QuickSelectItem(int ItemIndex)
 	UInventoryManipulatorComponent_QuickSelectItem_Params params;
 	params.ItemIndex = ItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28499,22 +22206,19 @@ void UInventoryManipulatorComponent::QuickSelectItem(int ItemIndex)
 // Parameters:
 // class AItemInfo*               ItemInfo                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AndWield                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldNotifyClients            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInventoryManipulatorComponent::PickUpItem(class AItemInfo* ItemInfo, bool AndWield)
+bool UInventoryManipulatorComponent::PickUpItem(class AItemInfo* ItemInfo, bool AndWield, bool ShouldNotifyClients)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.InventoryManipulatorComponent.PickUpItem");
 
 	UInventoryManipulatorComponent_PickUpItem_Params params;
 	params.ItemInfo = ItemInfo;
 	params.AndWield = AndWield;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.ShouldNotifyClients = ShouldNotifyClients;
 
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28534,12 +22238,7 @@ void UInventoryManipulatorComponent::Multicast_ItemPickedUpRPC(TEnumAsByte<EWiel
 	params.ItemSize = ItemSize;
 	params.WasEmptyHanded = WasEmptyHanded;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28555,12 +22254,7 @@ void UInventoryManipulatorComponent::Multicast_CurrentItemActorIndexChangedRPC(i
 	UInventoryManipulatorComponent_Multicast_CurrentItemActorIndexChangedRPC_Params params;
 	params.NewIndex = NewIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28575,12 +22269,7 @@ bool UInventoryManipulatorComponent::IsIdle()
 
 	UInventoryManipulatorComponent_IsIdle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28599,12 +22288,7 @@ int UInventoryManipulatorComponent::GetNumberOfItemsOfItemCategory(class UClass*
 	UInventoryManipulatorComponent_GetNumberOfItemsOfItemCategory_Params params;
 	params.ItemSlot = ItemSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28621,12 +22305,7 @@ int UInventoryManipulatorComponent::GetCurrentItemIndex()
 
 	UInventoryManipulatorComponent_GetCurrentItemIndex_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28643,12 +22322,7 @@ TEnumAsByte<EDropItemReturnCode> UInventoryManipulatorComponent::DropWieldedItem
 
 	UInventoryManipulatorComponent_DropWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28663,12 +22337,7 @@ void UInventoryManipulatorComponent::DropOrDestroyLargeWieldedItem()
 
 	UInventoryManipulatorComponent_DropOrDestroyLargeWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28686,12 +22355,7 @@ bool UInventoryManipulatorComponent::DetermineDropPos(const struct FVector& InSp
 	UInventoryManipulatorComponent_DetermineDropPos_Params params;
 	params.InSpawnPos = InSpawnPos;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutHit != nullptr)
 		*OutHit = params.OutHit;
@@ -28709,12 +22373,7 @@ void UInventoryManipulatorComponent::CycleItemUp()
 
 	UInventoryManipulatorComponent_CycleItemUp_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28730,12 +22389,7 @@ void UInventoryManipulatorComponent::CycleItemType(TEnumAsByte<EItemType> ItemTy
 	UInventoryManipulatorComponent_CycleItemType_Params params;
 	params.ItemType = ItemType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28748,12 +22402,7 @@ void UInventoryManipulatorComponent::CycleItemDown()
 
 	UInventoryManipulatorComponent_CycleItemDown_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28769,12 +22418,7 @@ void UInventoryManipulatorComponent::CycleItemCategory(class UClass* Category)
 	UInventoryManipulatorComponent_CycleItemCategory_Params params;
 	params.Category = Category;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28791,12 +22435,7 @@ bool UInventoryManipulatorComponent::ConsumeItem(class AItemInfo* Item)
 	UInventoryManipulatorComponent_ConsumeItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28813,12 +22452,7 @@ TEnumAsByte<EDropItemReturnCode> UInventoryManipulatorComponent::CanDropWieldedI
 
 	UInventoryManipulatorComponent_CanDropWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28837,12 +22471,7 @@ TEnumAsByte<ECanAddItemQueryResult> UInventoryManipulatorComponent::CanAddItemOf
 	UInventoryManipulatorComponent_CanAddItemOfItemCategory_Params params;
 	params.ItemSlot = ItemSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28861,12 +22490,7 @@ bool UInventoryManipulatorComponent::AddItem(class AItemInfo* Item)
 	UInventoryManipulatorComponent_AddItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -28884,12 +22508,7 @@ void UInventoryManipulatorComponentMock::ForceDroppedItemToAttachToHitActor(bool
 	UInventoryManipulatorComponentMock_ForceDroppedItemToAttachToHitActor_Params params;
 	params.InValue = InValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28902,12 +22521,7 @@ void AAthenaGameState::OnRep_ServiceStatusNotificationsService()
 
 	AAthenaGameState_OnRep_ServiceStatusNotificationsService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28920,12 +22534,7 @@ void AAthenaGameState::OnRep_ReplicatedWindService()
 
 	AAthenaGameState_OnRep_ReplicatedWindService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28938,12 +22547,7 @@ void AAthenaGameState::OnRep_ReplicatedWaterService()
 
 	AAthenaGameState_OnRep_ReplicatedWaterService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28956,12 +22560,7 @@ void AAthenaGameState::OnRep_ReplicatedWatercraftService()
 
 	AAthenaGameState_OnRep_ReplicatedWatercraftService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28974,12 +22573,7 @@ void AAthenaGameState::OnRep_ReplicatedTinySharkService()
 
 	AAthenaGameState_OnRep_ReplicatedTinySharkService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -28992,12 +22586,7 @@ void AAthenaGameState::OnRep_ReplicatedTimeService()
 
 	AAthenaGameState_OnRep_ReplicatedTimeService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29010,12 +22599,7 @@ void AAthenaGameState::OnRep_ReplicatedStormService()
 
 	AAthenaGameState_OnRep_ReplicatedStormService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29028,12 +22612,7 @@ void AAthenaGameState::OnRep_ReplicatedShipwrightService()
 
 	AAthenaGameState_OnRep_ReplicatedShipwrightService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29046,12 +22625,7 @@ void AAthenaGameState::OnRep_ReplicatedShipService()
 
 	AAthenaGameState_OnRep_ReplicatedShipService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29064,12 +22638,7 @@ void AAthenaGameState::OnRep_ReplicatedPlayerManagerService()
 
 	AAthenaGameState_OnRep_ReplicatedPlayerManagerService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29082,12 +22651,7 @@ void AAthenaGameState::OnRep_ReplicatedNPCService()
 
 	AAthenaGameState_OnRep_ReplicatedNPCService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29100,12 +22664,7 @@ void AAthenaGameState::OnRep_ReplicatedKrakenService()
 
 	AAthenaGameState_OnRep_ReplicatedKrakenService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29118,12 +22677,7 @@ void AAthenaGameState::OnRep_ReplicatedIslandService()
 
 	AAthenaGameState_OnRep_ReplicatedIslandService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29136,12 +22690,7 @@ void AAthenaGameState::OnRep_ReplicatedDrawDebugService()
 
 	AAthenaGameState_OnRep_ReplicatedDrawDebugService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29154,12 +22703,7 @@ void AAthenaGameState::OnRep_ReplicatedCrewService()
 
 	AAthenaGameState_OnRep_ReplicatedCrewService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29172,12 +22716,7 @@ void AAthenaGameState::OnRep_ReplicatedAllianceService()
 
 	AAthenaGameState_OnRep_ReplicatedAllianceService_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29196,11 +22735,7 @@ struct FIslandLocationVerifierResult UIslandLocationVerifierInterface::VerifyLoc
 	params.Location = Location;
 	params.RequiresNavMesh = RequiresNavMesh;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29215,12 +22750,7 @@ void AIslandService::OnRep_ReplicatedIslandArray()
 
 	AIslandService_OnRep_ReplicatedIslandArray_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29233,12 +22763,7 @@ void AIslandService::CollectLandmarksFromWorld()
 
 	AIslandService_CollectLandmarksFromWorld_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29251,12 +22776,7 @@ void AIslandService::CollectIslandDataFromWorld()
 
 	AIslandService_CollectIslandDataFromWorld_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29279,12 +22799,7 @@ class AWieldableItem* UItemFactoryFunctions::STATIC_SpawnItemAsWieldable(class U
 	params.Where = Where;
 	params.Owner = Owner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29307,12 +22822,7 @@ class AItemProxy* UItemFactoryFunctions::STATIC_SpawnItemAsProxy(class UObject* 
 	params.What = What;
 	params.Where = Where;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29335,12 +22845,7 @@ class AItemInfo* UItemFactoryFunctions::STATIC_SpawnItem(class UObject* WorldCon
 	params.What = What;
 	params.Where = Where;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29355,12 +22860,7 @@ void UItemLoadoutComponent::OnRep_Slots()
 
 	UItemLoadoutComponent_OnRep_Slots_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29376,12 +22876,7 @@ void UItemLoadoutComponent::OnItemDestroyed(class AActor* InActor)
 	UItemLoadoutComponent_OnItemDestroyed_Params params;
 	params.InActor = InActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29398,12 +22893,7 @@ bool UItemPickupBlueprintFunctionLibrary::STATIC_IsActorWieldingLargeItem(class 
 	UItemPickupBlueprintFunctionLibrary_IsActorWieldingLargeItem_Params params;
 	params.WieldingActor = WieldingActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29418,12 +22908,7 @@ void AKrakenAnimatedTentacle::TestToggleInstantStateSwitching()
 
 	AKrakenAnimatedTentacle_TestToggleInstantStateSwitching_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29439,12 +22924,7 @@ void AKrakenAnimatedTentacle::SetMinHoldingTargetTime(float HoldingTime)
 	AKrakenAnimatedTentacle_SetMinHoldingTargetTime_Params params;
 	params.HoldingTime = HoldingTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29460,12 +22940,7 @@ void AKrakenAnimatedTentacle::SetCurrentTarget(class AAthenaCharacter* Target)
 	AKrakenAnimatedTentacle_SetCurrentTarget_Params params;
 	params.Target = Target;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29481,12 +22956,7 @@ void AKrakenAnimatedTentacle::RequestState(class UClass* NewState)
 	AKrakenAnimatedTentacle_RequestState_Params params;
 	params.NewState = NewState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29502,12 +22972,7 @@ void AKrakenAnimatedTentacle::RequestIdleState(class UClass* IdleState)
 	AKrakenAnimatedTentacle_RequestIdleState_Params params;
 	params.IdleState = IdleState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29523,12 +22988,7 @@ void AKrakenAnimatedTentacle::OnRep_TentacleYaw(float OldTentacleYaw)
 	AKrakenAnimatedTentacle_OnRep_TentacleYaw_Params params;
 	params.OldTentacleYaw = OldTentacleYaw;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29544,12 +23004,7 @@ void AKrakenAnimatedTentacle::OnRep_TentacleWorldLocation(const struct FVector& 
 	AKrakenAnimatedTentacle_OnRep_TentacleWorldLocation_Params params;
 	params.OldTentacleWorldLocation = OldTentacleWorldLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29562,12 +23017,7 @@ void AKrakenAnimatedTentacle::OnRep_PendingState()
 
 	AKrakenAnimatedTentacle_OnRep_PendingState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29580,12 +23030,7 @@ void AKrakenAnimatedTentacle::OnRep_CurrentTarget()
 
 	AKrakenAnimatedTentacle_OnRep_CurrentTarget_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29598,12 +23043,7 @@ void AKrakenAnimatedTentacle::OnRep_CurrentState()
 
 	AKrakenAnimatedTentacle_OnRep_CurrentState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29616,12 +23056,7 @@ void AKrakenAnimatedTentacle::OnRep_AnimationProgression()
 
 	AKrakenAnimatedTentacle_OnRep_AnimationProgression_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29636,12 +23071,7 @@ bool AKrakenAnimatedTentacle::IsAnimationLooping()
 
 	AKrakenAnimatedTentacle_IsAnimationLooping_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29658,12 +23088,7 @@ class AAthenaCharacter* AKrakenAnimatedTentacle::GetCurrentTarget()
 
 	AKrakenAnimatedTentacle_GetCurrentTarget_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29680,12 +23105,7 @@ class UClass* AKrakenAnimatedTentacle::GetCurrentState()
 
 	AKrakenAnimatedTentacle_GetCurrentState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29703,12 +23123,7 @@ void AKrakenAnimatedTentacle::DockToActor(class AActor* ActorToDockTo)
 	AKrakenAnimatedTentacle_DockToActor_Params params;
 	params.ActorToDockTo = ActorToDockTo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29721,12 +23136,7 @@ void UKrakenAnimatedTentacleRecordingAnimationInstance::StartRecordingAllAnimati
 
 	UKrakenAnimatedTentacleRecordingAnimationInstance_StartRecordingAllAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29755,12 +23165,7 @@ class AKrakenAnimatedTentacle* UKrakenDebugFunctionLibrary::STATIC_SpawnTentacle
 	params.AnimPlayRate = AnimPlayRate;
 	params.SuckingTellTime = SuckingTellTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29780,12 +23185,7 @@ void UKrakenDebugFunctionLibrary::STATIC_SetTimeUntilNextKrakenSpawnAttempt(clas
 	params.WorldContextObject = WorldContextObject;
 	params.Time = Time;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29803,12 +23203,7 @@ void UKrakenDebugFunctionLibrary::STATIC_RequestKrakenWithShip(class UObject* Wo
 	params.WorldContextObject = WorldContextObject;
 	params.ShipTarget = ShipTarget;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29826,12 +23221,7 @@ void UKrakenDebugFunctionLibrary::STATIC_OverridePlayRateScaleInKrakenServicePar
 	params.WorldContextObject = WorldContextObject;
 	params.OverridePlayRateScale = OverridePlayRateScale;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29849,12 +23239,7 @@ void UKrakenDebugFunctionLibrary::STATIC_OverrideNumberOfTentaclesSpawnedInKrake
 	params.WorldContextObject = WorldContextObject;
 	params.OverrideNumberOfTentacles = OverrideNumberOfTentacles;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29872,12 +23257,7 @@ void UKrakenDebugFunctionLibrary::STATIC_OverrideNewTargetTimeoutInKrakenService
 	params.WorldContextObject = WorldContextObject;
 	params.OverrideNewTargetTimeout = OverrideNewTargetTimeout;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29906,12 +23286,7 @@ TArray<struct FVector> UKrakenDebugFunctionLibrary::STATIC_GenerateKrakenSpawnLo
 	params.Seed = Seed;
 	params.SpawnLocationParams = SpawnLocationParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29932,12 +23307,7 @@ struct FVector ULadderBlueprintFunctionLibrary::STATIC_GetRelativePositionAtHeig
 	params.LadderInterface = LadderInterface;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -29959,12 +23329,7 @@ void UOverlapTriggerComponent::OnActivationRegionOverlapEnd(class AActor* OtherA
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29988,12 +23353,7 @@ void UOverlapTriggerComponent::OnActivationRegionOverlapBegin(class AActor* Othe
 	params.bFromSweep = bFromSweep;
 	params.OverlapInfo = OverlapInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30011,12 +23371,7 @@ void ALandmark::TriggerLandmarkReactionForNearbyPlayersExplicitList(int Landmark
 	params.LandmarkReactionIndex = LandmarkReactionIndex;
 	params.Players = Players;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30032,12 +23387,7 @@ void AVomitProjectile::SetImpactCallback(const struct FScriptDelegate& Callback)
 	AVomitProjectile_SetImpactCallback_Params params;
 	params.Callback = Callback;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30053,12 +23403,7 @@ void AVomitProjectile::STATIC_SetChannelToIgnoreInShip(TEnumAsByte<ECollisionCha
 	AVomitProjectile_SetChannelToIgnoreInShip_Params params;
 	params.Channel = Channel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30083,12 +23428,7 @@ class AVomitProjectile* AVomitProjectile::STATIC_LaunchVomitProjectile(class AAc
 	params.AdditionalLiftAngle = AdditionalLiftAngle;
 	params.Radius = Radius;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30110,12 +23450,7 @@ void ULaunchedFromKrakenActionStateId::STATIC_PushCharacterIntoLaunchedFromKrake
 	params.FiringActor = FiringActor;
 	params.Tentacle = Tentacle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30131,12 +23466,7 @@ void ULaunchedFromKrakenActionStateId::STATIC_PopCharacterOutOfLaunchedFromKrake
 	ULaunchedFromKrakenActionStateId_PopCharacterOutOfLaunchedFromKrakenActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30155,12 +23485,7 @@ int USimpleLeakerComponent::AddLeak(const struct FTransform& InWhere, float InAm
 	params.InWhere = InWhere;
 	params.InAmount = InAmount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30178,12 +23503,7 @@ void ULeaveGhostShipActionStateId::STATIC_PushCharacterIntoLeaveGhostShipActionS
 	ULeaveGhostShipActionStateId_PushCharacterIntoLeaveGhostShipActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30202,12 +23522,7 @@ struct FLightingControllerSettingsOutput ULightingControllerSettings::STATIC_Get
 	params.Settings = Settings;
 	params.Input = Input;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30224,12 +23539,7 @@ struct FLightingZoneParametersAndLocation ULightingZoneInterface::GetLightingZon
 
 	ULightingZoneInterface_GetLightingZoneParameters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30246,12 +23556,7 @@ bool ALightingController::IsPlayingInEditor()
 
 	ALightingController_IsPlayingInEditor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30268,12 +23573,7 @@ bool ALightingController::IsPlayerInBoatSpace()
 
 	ALightingController_IsPlayerInBoatSpace_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30290,12 +23590,7 @@ TArray<struct FLightingZoneBlendValues> ALightingController::GetZoneWeights()
 
 	ALightingController_GetZoneWeights_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30312,12 +23607,7 @@ float ALightingController::GetRainWeight()
 
 	ALightingController_GetRainWeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30335,12 +23625,7 @@ void ULightingZoneServiceInterface::UnregisterLightingZoneFromService(const TScr
 	ULightingZoneServiceInterface_UnregisterLightingZoneFromService_Params params;
 	params.LightingZone = LightingZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30356,12 +23641,7 @@ void ULightingZoneServiceInterface::RegisterLightingZoneWithService(const TScrip
 	ULightingZoneServiceInterface_RegisterLightingZoneWithService_Params params;
 	params.LightingZone = LightingZone;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30376,12 +23656,7 @@ int ULightingZoneServiceInterface::GetNumberOfLightingZones()
 
 	ULightingZoneServiceInterface_GetNumberOfLightingZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30400,12 +23675,7 @@ struct FLightingZoneParametersAndLocation ULightingZoneServiceInterface::GetLigh
 	ULightingZoneServiceInterface_GetLightingZone_Params params;
 	params.LightingZoneIndex = LightingZoneIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30422,12 +23692,7 @@ TArray<struct FLightingZoneParametersAndLocation> ULightingZoneServiceInterface:
 
 	ULightingZoneServiceInterface_GetAllLightingZones_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30442,12 +23707,7 @@ void ULimpingComponent::TestForceLimpingOffLocally()
 
 	ULimpingComponent_TestForceLimpingOffLocally_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30460,12 +23720,7 @@ void ULimpingComponent::StartLimping()
 
 	ULimpingComponent_StartLimping_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30478,12 +23733,7 @@ void ULimpingComponent::PredictStartLimping()
 
 	ULimpingComponent_PredictStartLimping_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30496,12 +23746,7 @@ void ULimpingComponent::OnRep_IsLimping()
 
 	ULimpingComponent_OnRep_IsLimping_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30516,12 +23761,7 @@ bool ULimpingComponent::IsLimpingPredicted()
 
 	ULimpingComponent_IsLimpingPredicted_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30538,12 +23778,7 @@ bool ULimpingComponent::IsLimping()
 
 	ULimpingComponent_IsLimping_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30560,12 +23795,7 @@ bool ULimpingComponent::GetHasActiveCameraModifiers()
 
 	ULimpingComponent_GetHasActiveCameraModifiers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30582,12 +23812,7 @@ float ULimpingComponent::GetCheatPenaltyTimeLeft()
 
 	ULimpingComponent_GetCheatPenaltyTimeLeft_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30602,12 +23827,7 @@ void ULimpingComponent::EndLimpingIndefinitely()
 
 	ULimpingComponent_EndLimpingIndefinitely_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30620,12 +23840,7 @@ void ULimpingComponent::BeginLimpingIndefinitely()
 
 	ULimpingComponent_BeginLimpingIndefinitely_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30641,12 +23856,7 @@ void ULiquidContainerInterface::SetLiquidLevel(float Level)
 	ULiquidContainerInterface_SetLiquidLevel_Params params;
 	params.Level = Level;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30661,12 +23871,7 @@ float ULiquidContainerInterface::GetWantedLiquidLevel()
 
 	ULiquidContainerInterface_GetWantedLiquidLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30683,12 +23888,7 @@ float ULiquidContainerInterface::GetLiquidLevel()
 
 	ULiquidContainerInterface_GetLiquidLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30706,12 +23906,7 @@ void ULiquidContainerComponent::SetLiquidType(TEnumAsByte<ELiquidType> LiquidTyp
 	ULiquidContainerComponent_SetLiquidType_Params params;
 	params.LiquidType = LiquidType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30727,12 +23922,7 @@ void ULiquidContainerComponent::SetLiquidLevel(float Level)
 	ULiquidContainerComponent_SetLiquidLevel_Params params;
 	params.Level = Level;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30747,12 +23937,7 @@ float ULiquidContainerComponent::GetLiquidLevel()
 
 	ULiquidContainerComponent_GetLiquidLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30770,12 +23955,7 @@ void ULiquidContainerComponent::CollectLiquidMaterials(class UMeshComponent* Mes
 	ULiquidContainerComponent_CollectLiquidMaterials_Params params;
 	params.MeshComponent = MeshComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30790,12 +23970,7 @@ bool ULoadableInterface::IsLoaded()
 
 	ULoadableInterface_IsLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30812,12 +23987,7 @@ bool ULoadableInterface::CanBeUnloaded()
 
 	ULoadableInterface_CanBeUnloaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30834,12 +24004,7 @@ bool ULoadableInterface::CanBeLoaded()
 
 	ULoadableInterface_CanBeLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30857,12 +24022,7 @@ void ULoadableComponent::OnRepLoadableComponentState(const struct FLoadableCompo
 	ULoadableComponent_OnRepLoadableComponentState_Params params;
 	params.PrevLoadableComponentState = PrevLoadableComponentState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30884,12 +24044,7 @@ void ULoadItemActionStateId::STATIC_PushCharacterIntoLoadItemActionState(class A
 	params.Interactable = Interactable;
 	params.DefaultItemDesc = DefaultItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30905,12 +24060,7 @@ void ULoadItemActionStateId::STATIC_PopCharacterOutOfLoadItemActionState(class A
 	ULoadItemActionStateId_PopCharacterOutOfLoadItemActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30925,12 +24075,7 @@ bool ULoadoutControlInterface::IsRequestLoadoutCompleted()
 
 	ULoadoutControlInterface_IsRequestLoadoutCompleted_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -30952,12 +24097,7 @@ void ULoadPlayerActionStateId::STATIC_PushCharacterIntoLoadPlayerActionState(cla
 	params.InLoadable = InLoadable;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30973,12 +24113,7 @@ void ULocomotionActionStateId::STATIC_PushCharacterIntoLocomotionActionState(cla
 	ULocomotionActionStateId_PushCharacterIntoLocomotionActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -30993,12 +24128,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnWalkActivat
 
 	ULocomotionCompositeInputHandler_OnWalkActivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31017,12 +24147,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnTurnRate(fl
 	ULocomotionCompositeInputHandler_OnTurnRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31041,12 +24166,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnTurn(float 
 	ULocomotionCompositeInputHandler_OnTurn_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31063,12 +24183,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnToggleItem(
 
 	ULocomotionCompositeInputHandler_OnToggleItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31085,12 +24200,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnSprintActiv
 
 	ULocomotionCompositeInputHandler_OnSprintActivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31107,12 +24217,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnSecondaryIt
 
 	ULocomotionCompositeInputHandler_OnSecondaryItemUseReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31129,12 +24234,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnSecondaryIt
 
 	ULocomotionCompositeInputHandler_OnSecondaryItemUsePressed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31151,12 +24251,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickSwitch
 
 	ULocomotionCompositeInputHandler_OnQuickSwitchWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31173,12 +24268,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickSwitch
 
 	ULocomotionCompositeInputHandler_OnQuickSwitchSecondaryWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31195,12 +24285,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickSwitch
 
 	ULocomotionCompositeInputHandler_OnQuickSwitchPrimaryWeapon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31221,12 +24306,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickSelect
 	params.Category = Category;
 	params.IndexIntoCategory = IndexIntoCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31243,12 +24323,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToWoodPlank_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31265,12 +24340,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToTankard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31287,12 +24357,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToSpyglass_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31309,12 +24374,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToSpeakingTrumpet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31331,12 +24391,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToShovel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31353,12 +24408,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToPocketWatch_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31375,12 +24425,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToLantern_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31397,12 +24442,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToInstrument_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31419,12 +24459,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToFruit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31441,12 +24476,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToCompass_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31463,12 +24493,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToCannonball_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31485,12 +24510,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleT
 
 	ULocomotionCompositeInputHandler_OnQuickCycleToBucket_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31509,12 +24529,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnQuickCycleI
 	ULocomotionCompositeInputHandler_OnQuickCycleItemsOfCategory_Params params;
 	params.Category = Category;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31531,12 +24546,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnPrimaryItem
 
 	ULocomotionCompositeInputHandler_OnPrimaryItemUseReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31553,12 +24563,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnPrimaryItem
 
 	ULocomotionCompositeInputHandler_OnPrimaryItemUsePressed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31577,12 +24582,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnMoveRight(f
 	ULocomotionCompositeInputHandler_OnMoveRight_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31601,12 +24601,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnMoveForward
 	ULocomotionCompositeInputHandler_OnMoveForward_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31625,12 +24620,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnLookUpRate(
 	ULocomotionCompositeInputHandler_OnLookUpRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31649,12 +24639,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnLookUp(floa
 	ULocomotionCompositeInputHandler_OnLookUp_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31671,12 +24656,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnJump()
 
 	ULocomotionCompositeInputHandler_OnJump_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31693,12 +24673,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnDropLargeWi
 
 	ULocomotionCompositeInputHandler_OnDropLargeWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31715,12 +24690,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnCycleItemUp
 
 	ULocomotionCompositeInputHandler_OnCycleItemUp_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31737,12 +24707,7 @@ TEnumAsByte<EInputHandlerResult> ULocomotionCompositeInputHandler::OnCycleItemDo
 
 	ULocomotionCompositeInputHandler_OnCycleItemDown_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31761,12 +24726,7 @@ TEnumAsByte<EInputHandlerResult> ULookAtOffsetCompositeInputHandler::OnYawRate(f
 	ULookAtOffsetCompositeInputHandler_OnYawRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31785,12 +24745,7 @@ TEnumAsByte<EInputHandlerResult> ULookAtOffsetCompositeInputHandler::OnYaw(float
 	ULookAtOffsetCompositeInputHandler_OnYaw_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31809,12 +24764,7 @@ TEnumAsByte<EInputHandlerResult> ULookAtOffsetCompositeInputHandler::OnPitchRate
 	ULookAtOffsetCompositeInputHandler_OnPitchRate_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31833,12 +24783,7 @@ TEnumAsByte<EInputHandlerResult> ULookAtOffsetCompositeInputHandler::OnPitch(flo
 	ULookAtOffsetCompositeInputHandler_OnPitch_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31857,12 +24802,7 @@ TEnumAsByte<EInputHandlerResult> UControlIntentCompositeInputHandler::OnRightTri
 	UControlIntentCompositeInputHandler_OnRightTriggerAnalog_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31881,12 +24821,7 @@ TEnumAsByte<EInputHandlerResult> UControlIntentCompositeInputHandler::OnChangeIn
 	UControlIntentCompositeInputHandler_OnChangeIntent_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31905,12 +24840,7 @@ TEnumAsByte<EInputHandlerResult> UControlWheelCompositeInputHandler::OnRightTrig
 	UControlWheelCompositeInputHandler_OnRightTrigger_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31929,12 +24859,7 @@ TEnumAsByte<EInputHandlerResult> UControlWheelCompositeInputHandler::OnMoveRight
 	UControlWheelCompositeInputHandler_OnMoveRight_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31951,12 +24876,7 @@ TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnUseRightOar()
 
 	URowingCompositeInputHandler_OnUseRightOar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31973,12 +24893,7 @@ TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnUseLeftOar()
 
 	URowingCompositeInputHandler_OnUseLeftOar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -31995,12 +24910,7 @@ TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnStopUseRightOar
 
 	URowingCompositeInputHandler_OnStopUseRightOar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32017,12 +24927,7 @@ TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnStopUseLeftOar(
 
 	URowingCompositeInputHandler_OnStopUseLeftOar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32039,12 +24944,7 @@ TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnBrakeRightOar()
 
 	URowingCompositeInputHandler_OnBrakeRightOar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32061,12 +24961,7 @@ TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnBrakeLeftOar()
 
 	URowingCompositeInputHandler_OnBrakeLeftOar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32085,12 +24980,7 @@ TEnumAsByte<EInputHandlerResult> UUseLadderCompositeInputHandler::OnClimbLadder(
 	UUseLadderCompositeInputHandler_OnClimbLadder_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32109,12 +24999,7 @@ bool ULookAtOffsetFunctions::STATIC_IsLookAtEnabled(const struct FLookAtOffset& 
 	ULookAtOffsetFunctions_IsLookAtEnabled_Params params;
 	params.LookAtOffset = LookAtOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32133,12 +25018,7 @@ float ULookAtOffsetFunctions::STATIC_GetLookAtYaw(const struct FLookAtOffset& Lo
 	ULookAtOffsetFunctions_GetLookAtYaw_Params params;
 	params.LookAtOffset = LookAtOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32157,12 +25037,7 @@ struct FVector ULookAtOffsetFunctions::STATIC_GetLookAtWorldLocation(const struc
 	ULookAtOffsetFunctions_GetLookAtWorldLocation_Params params;
 	params.LookAtOffset = LookAtOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32181,12 +25056,7 @@ float ULookAtOffsetFunctions::STATIC_GetLookAtPitch(const struct FLookAtOffset& 
 	ULookAtOffsetFunctions_GetLookAtPitch_Params params;
 	params.LookAtOffset = LookAtOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32205,12 +25075,7 @@ void ULookAtOffsetFunctions::STATIC_AddYawInput(float YawInput, struct FLookAtOf
 	ULookAtOffsetFunctions_AddYawInput_Params params;
 	params.YawInput = YawInput;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LookAtOffset != nullptr)
 		*LookAtOffset = params.LookAtOffset;
@@ -32230,12 +25095,7 @@ void ULookAtOffsetFunctions::STATIC_AddPitchInput(float PitchInput, struct FLook
 	ULookAtOffsetFunctions_AddPitchInput_Params params;
 	params.PitchInput = PitchInput;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LookAtOffset != nullptr)
 		*LookAtOffset = params.LookAtOffset;
@@ -32257,12 +25117,7 @@ void ULPVReferenceFrameAdaptationFunctionLibrary::STATIC_TickLPVAdaptation(float
 	ULPVReferenceFrameAdaptationFunctionLibrary_TickLPVAdaptation_Params params;
 	params.InDeltaTime = InDeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InOutLPVAdaptationState != nullptr)
 		*InOutLPVAdaptationState = params.InOutLPVAdaptationState;
@@ -32288,12 +25143,7 @@ void ULPVReferenceFrameAdaptationFunctionLibrary::STATIC_SetLPVAdaptationState(b
 	ULPVReferenceFrameAdaptationFunctionLibrary_SetLPVAdaptationState_Params params;
 	params.bInIsPlayerInLPVRefFrameArea = bInIsPlayerInLPVRefFrameArea;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InOutLPVAdaptationState != nullptr)
 		*InOutLPVAdaptationState = params.InOutLPVAdaptationState;
@@ -32323,12 +25173,7 @@ void ULPVReferenceFrameAdaptationFunctionLibrary::STATIC_InitializeLPVAdaptation
 	params.InTranslationBlendTime = InTranslationBlendTime;
 	params.InAdditionalBlendTime = InAdditionalBlendTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InOutLPVAdaptationState != nullptr)
 		*InOutLPVAdaptationState = params.InOutLPVAdaptationState;
@@ -32347,12 +25192,7 @@ void AMapTable::Server_SetPins(TArray<struct FVector2D> InMapPins)
 	AMapTable_Server_SetPins_Params params;
 	params.InMapPins = InMapPins;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32370,12 +25210,7 @@ void AMapTable::Server_MoveMap(const struct FVector2D& CentreLocation, float Zoo
 	params.CentreLocation = CentreLocation;
 	params.ZoomLevel = ZoomLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32391,12 +25226,7 @@ void AMapTable::Server_LeaveTable(class AActor* Controller)
 	AMapTable_Server_LeaveTable_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32412,12 +25242,7 @@ void AMapTable::Server_JoinTable(class AActor* Controller)
 	AMapTable_Server_JoinTable_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32430,12 +25255,7 @@ void AMapTable::OnRep_ZoomLevel()
 
 	AMapTable_OnRep_ZoomLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32448,12 +25268,7 @@ void AMapTable::OnRep_TrackedShips()
 
 	AMapTable_OnRep_TrackedShips_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32466,12 +25281,7 @@ void AMapTable::OnRep_MapPins()
 
 	AMapTable_OnRep_MapPins_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32484,12 +25294,7 @@ void AMapTable::OnRep_CentreLocation()
 
 	AMapTable_OnRep_CentreLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32497,9 +25302,9 @@ void AMapTable::OnRep_CentreLocation()
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
 // struct FVector2D               CentreLocation                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ZoomLevel                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               ZoomLevel                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMapTable::OnMapMove(const struct FVector2D& CentreLocation, float ZoomLevel)
+void AMapTable::OnMapMove(const struct FVector2D& CentreLocation, const struct FVector2D& ZoomLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.MapTable.OnMapMove");
 
@@ -32507,11 +25312,7 @@ void AMapTable::OnMapMove(const struct FVector2D& CentreLocation, float ZoomLeve
 	params.CentreLocation = CentreLocation;
 	params.ZoomLevel = ZoomLevel;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32529,11 +25330,7 @@ void AMapTable::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* Te
 	params.IsMapActive = IsMapActive;
 	params.Texture = Texture;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32551,12 +25348,7 @@ void UMapTableTestFunctions::STATIC_ZoomOut(class AMapTable* MapTable, float Zoo
 	params.MapTable = MapTable;
 	params.ZoomValue = ZoomValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32574,12 +25366,7 @@ void UMapTableTestFunctions::STATIC_ZoomIn(class AMapTable* MapTable, float Zoom
 	params.MapTable = MapTable;
 	params.ZoomValue = ZoomValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32597,12 +25384,7 @@ void UMapTableTestFunctions::STATIC_SetMinZoom(class AMapTable* MapTable, float 
 	params.MapTable = MapTable;
 	params.MinValue = MinValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32620,12 +25402,7 @@ void UMapTableTestFunctions::STATIC_SetMinPan(class AMapTable* MapTable, const s
 	params.MapTable = MapTable;
 	params.MinValue = MinValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32643,12 +25420,7 @@ void UMapTableTestFunctions::STATIC_SetMaxZoom(class AMapTable* MapTable, float 
 	params.MapTable = MapTable;
 	params.MaxValue = MaxValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32666,12 +25438,7 @@ void UMapTableTestFunctions::STATIC_SetMaxPan(class AMapTable* MapTable, const s
 	params.MapTable = MapTable;
 	params.MaxValue = MaxValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32689,12 +25456,7 @@ void UMapTableTestFunctions::STATIC_PanY(class AMapTable* MapTable, float PanVal
 	params.MapTable = MapTable;
 	params.PanValue = PanValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32712,12 +25474,7 @@ void UMapTableTestFunctions::STATIC_PanX(class AMapTable* MapTable, float PanVal
 	params.MapTable = MapTable;
 	params.PanValue = PanValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32734,12 +25491,7 @@ bool UMapTableTestFunctions::STATIC_IsUnderLocalControl(class AMapTable* MapTabl
 	UMapTableTestFunctions_IsUnderLocalControl_Params params;
 	params.MapTable = MapTable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32758,12 +25510,7 @@ bool UMapTableTestFunctions::STATIC_IsLocationDirty(class AMapTable* MapTable)
 	UMapTableTestFunctions_IsLocationDirty_Params params;
 	params.MapTable = MapTable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32784,12 +25531,7 @@ class AMapTableControlPoint* UMapTableTestFunctions::STATIC_GetControlPoint(clas
 	params.MapTable = MapTable;
 	params.PointIndex = PointIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -32808,12 +25550,7 @@ void UMapTableTestFunctions::STATIC_ConsumeLocationChange(class AMapTable* MapTa
 	UMapTableTestFunctions_ConsumeLocationChange_Params params;
 	params.MapTable = MapTable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Event != nullptr)
 		*Event = params.Event;
@@ -32832,11 +25569,7 @@ void UMastAnimInterface::SetMastAngle(float Angle)
 	UMastAnimInterface_SetMastAngle_Params params;
 	params.Angle = Angle;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32852,11 +25585,7 @@ void UMastAnimInterface::InitializeMast(float FallingLimit)
 	UMastAnimInterface_InitializeMast_Params params;
 	params.FallingLimit = FallingLimit;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32876,12 +25605,7 @@ bool UMaterialInformationServiceBlueprintFunctions::STATIC_GetVFXInformationForS
 	params.WorldContextObject = WorldContextObject;
 	params.SurfaceType = SurfaceType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (VFXSurfaceData != nullptr)
 		*VFXSurfaceData = params.VFXSurfaceData;
@@ -32906,12 +25630,7 @@ bool UMaterialInformationServiceBlueprintFunctions::STATIC_GetAudioInformationFo
 	params.WorldContextObject = WorldContextObject;
 	params.SurfaceType = SurfaceType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (AudioSurfaceData != nullptr)
 		*AudioSurfaceData = params.AudioSurfaceData;
@@ -32932,12 +25651,7 @@ void AMatineeUtility::Multicast_BroadcastStop(class AMatineeActor* MatineeActor)
 	AMatineeUtility_Multicast_BroadcastStop_Params params;
 	params.MatineeActor = MatineeActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32957,12 +25671,7 @@ void AMatineeUtility::Multicast_BroadcastSetPosition(class AMatineeActor* Matine
 	params.InterpolationPosition = InterpolationPosition;
 	params.Jump = Jump;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32978,12 +25687,7 @@ void AMatineeUtility::Multicast_BroadcastPlay(class AMatineeActor* MatineeActor)
 	AMatineeUtility_Multicast_BroadcastPlay_Params params;
 	params.MatineeActor = MatineeActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -32999,12 +25703,7 @@ void AMatineeUtility::HandleCharacterEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 	AMatineeUtility_HandleCharacterEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33017,12 +25716,7 @@ void AMatineeUtility::HandleCharacterDestroyed()
 
 	AMatineeUtility_HandleCharacterDestroyed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33038,12 +25732,7 @@ void AMatineeUtility::BroadcastStop(class AMatineeActor* MatineeActor)
 	AMatineeUtility_BroadcastStop_Params params;
 	params.MatineeActor = MatineeActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33063,12 +25752,7 @@ void AMatineeUtility::BroadcastSetPosition(class AMatineeActor* MatineeActor, fl
 	params.InterpolationPosition = InterpolationPosition;
 	params.Jump = Jump;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33084,12 +25768,7 @@ void AMatineeUtility::BroadcastPlay(class AMatineeActor* MatineeActor)
 	AMatineeUtility_BroadcastPlay_Params params;
 	params.MatineeActor = MatineeActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33105,12 +25784,7 @@ void UMeleeAttackProcessorComponent::Multicast_RespondToHit(const struct FMeleeA
 	UMeleeAttackProcessorComponent_Multicast_RespondToHit_Params params;
 	params.HitResponseData = HitResponseData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33126,12 +25800,7 @@ void UMeleeAttackProcessorComponent::Client_AttackCompleted(class UMeleeAttackDa
 	UMeleeAttackProcessorComponent_Client_AttackCompleted_Params params;
 	params.AttackCompleted = AttackCompleted;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33151,12 +25820,7 @@ void UMeleeBlockingActionStateId::STATIC_PushCharacterIntoMeleeBlockingActionSta
 	params.InputID = InputID;
 	params.BlockMovementTime = BlockMovementTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33172,12 +25836,7 @@ void UMeleeBlockingActionStateId::STATIC_PopCharacterOutOfMeleeBlockingActionSta
 	UMeleeBlockingActionStateId_PopCharacterOutOfMeleeBlockingActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33192,12 +25851,7 @@ TEnumAsByte<EInputHandlerResult> UMeleeBlockingCompositeInputHandler::OnDodge()
 
 	UMeleeBlockingCompositeInputHandler_OnDodge_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33217,12 +25871,7 @@ void AMemoryTestPawn::Server_SetActorLocationAndRotation(const struct FVector& L
 	params.Location = Location;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33237,12 +25886,7 @@ bool AMemoryTestPawn::IsFinished()
 
 	AMemoryTestPawn_IsFinished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33259,12 +25903,7 @@ TEnumAsByte<EInputHandlerResult> UMenuInputHandler::OnOpenQuickMenu()
 
 	UMenuInputHandler_OnOpenQuickMenu_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33281,12 +25920,7 @@ TEnumAsByte<EInputHandlerResult> UMenuInputHandler::OnOpenEscapeMenu()
 
 	UMenuInputHandler_OnOpenEscapeMenu_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33306,12 +25940,7 @@ void UMerchantCrateProviderInterface::CollectCrate(class AActor* Player, class U
 	params.Player = Player;
 	params.CrateDesc = CrateDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33329,12 +25958,7 @@ void UMermaidServiceInterface::SpawnMermaidForCrewWhoLostShip(const struct FGuid
 	params.CrewId = CrewId;
 	params.LostShipPos = LostShipPos;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33350,12 +25974,7 @@ void UMermaidServiceInterface::DebugEnableMermaidSpawning(bool Flag)
 	UMermaidServiceInterface_DebugEnableMermaidSpawning_Params params;
 	params.Flag = Flag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33371,12 +25990,7 @@ void AMermaidService::SetParams(const struct FMermaidServiceParams& P)
 	AMermaidService_SetParams_Params params;
 	params.P = P;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33393,12 +26007,7 @@ bool AMermaidService::IsMermaidActive(class AMermaid* M)
 	AMermaidService_IsMermaidActive_Params params;
 	params.M = M;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33415,12 +26024,7 @@ struct FMermaidServiceParams AMermaidService::GetParams()
 
 	AMermaidService_GetParams_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33437,12 +26041,7 @@ int AMermaidService::GetNumActiveMermaids()
 
 	AMermaidService_GetNumActiveMermaids_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33460,12 +26059,7 @@ void UMigrationActionStateId::STATIC_PushCharacterIntoMigrationActionState(class
 	UMigrationActionStateId_PushCharacterIntoMigrationActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33485,12 +26079,7 @@ void UMigrationUIComponent::OnTextCanvasUpdate(class UCanvas* Canvas, int Width,
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33503,12 +26092,7 @@ void AShovel::Server_RequestDigRPC()
 
 	AShovel_Server_RequestDigRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33526,12 +26110,7 @@ void AShovel::Multicast_DigRPC(TEnumAsByte<EShovelDigType> NewDigType, TEnumAsBy
 	params.NewDigType = NewDigType;
 	params.DigUnearthingType = DigUnearthingType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33546,12 +26125,7 @@ bool AShovel::GetShouldWielderBeLocked()
 
 	AShovel_GetShouldWielderBeLocked_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33568,12 +26142,7 @@ TEnumAsByte<EShovelDigType> AShovel::GetLastKnownDigTypeOnServer()
 
 	AShovel_GetLastKnownDigTypeOnServer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33590,12 +26159,7 @@ TEnumAsByte<EShovelDigType> AShovel::GetCurrentDigType()
 
 	AShovel_GetCurrentDigType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33620,12 +26184,7 @@ bool UMockTelemetryDispatcher::STATIC_ValidateGameEndTelemetryEvent(const struct
 	params.MinActiveDuration = MinActiveDuration;
 	params.MinVoiceChatDuration = MinVoiceChatDuration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -33643,12 +26202,7 @@ void UMockTelemetryDispatcher::SeamlessTravelTo(class AAthenaPlayerController* C
 	UMockTelemetryDispatcher_SeamlessTravelTo_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33664,11 +26218,7 @@ void UMockTelemetryDispatcher::OnUIScreenTransitionTelemetryEvent(const struct F
 	UMockTelemetryDispatcher_OnUIScreenTransitionTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33684,11 +26234,7 @@ void UMockTelemetryDispatcher::OnShovelTelemetryEvent(const struct FShovelTeleme
 	UMockTelemetryDispatcher_OnShovelTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33704,11 +26250,7 @@ void UMockTelemetryDispatcher::OnShipSpawnedTelemetryEvent(const struct FShipSpa
 	UMockTelemetryDispatcher_OnShipSpawnedTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33724,11 +26266,7 @@ void UMockTelemetryDispatcher::OnShipHeartbeatTelemetryEvent(const struct FShipH
 	UMockTelemetryDispatcher_OnShipHeartbeatTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33744,11 +26282,7 @@ void UMockTelemetryDispatcher::OnShipDestroyedTelemetryEvent(const struct FShipD
 	UMockTelemetryDispatcher_OnShipDestroyedTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33764,11 +26298,7 @@ void UMockTelemetryDispatcher::OnShipDamagedTelemetryEvent(const struct FShipDam
 	UMockTelemetryDispatcher_OnShipDamagedTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33784,11 +26314,7 @@ void UMockTelemetryDispatcher::OnPlayerSpawnTelemetryEvent(const struct FPlayerS
 	UMockTelemetryDispatcher_OnPlayerSpawnTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33804,11 +26330,7 @@ void UMockTelemetryDispatcher::OnPlayerObjectUsageStartTelemetryEvent(const stru
 	UMockTelemetryDispatcher_OnPlayerObjectUsageStartTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33824,11 +26346,7 @@ void UMockTelemetryDispatcher::OnPlayerObjectUsageEndTelemetryEvent(const struct
 	UMockTelemetryDispatcher_OnPlayerObjectUsageEndTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33844,11 +26362,7 @@ void UMockTelemetryDispatcher::OnPlayerItemRetrievalFromContainerTelemetryEvent(
 	UMockTelemetryDispatcher_OnPlayerItemRetrievalFromContainerTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33864,11 +26378,7 @@ void UMockTelemetryDispatcher::OnPlayerItemEquipTelemetryEvent(const struct FPla
 	UMockTelemetryDispatcher_OnPlayerItemEquipTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33884,11 +26394,7 @@ void UMockTelemetryDispatcher::OnPlayerHealthChangeTelemetryEvent(const struct F
 	UMockTelemetryDispatcher_OnPlayerHealthChangeTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33904,11 +26410,7 @@ void UMockTelemetryDispatcher::OnPlayerGameStartTelemetryEvent(const struct FPla
 	UMockTelemetryDispatcher_OnPlayerGameStartTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33924,11 +26426,7 @@ void UMockTelemetryDispatcher::OnPlayerGameEndTelemetryEvent(const struct FPlaye
 	UMockTelemetryDispatcher_OnPlayerGameEndTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33944,11 +26442,7 @@ void UMockTelemetryDispatcher::OnPlayerCapstanUsageStartTelemetryEvent(const str
 	UMockTelemetryDispatcher_OnPlayerCapstanUsageStartTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33964,11 +26458,7 @@ void UMockTelemetryDispatcher::OnPlayerCapstanUsageEndTelemetryEvent(const struc
 	UMockTelemetryDispatcher_OnPlayerCapstanUsageEndTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -33984,11 +26474,7 @@ void UMockTelemetryDispatcher::OnPlayerAttackTelemetryEvent(const struct FPlayer
 	UMockTelemetryDispatcher_OnPlayerAttackTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34004,11 +26490,7 @@ void UMockTelemetryDispatcher::OnPlayerActionTelemetryEvent(const struct FPlayer
 	UMockTelemetryDispatcher_OnPlayerActionTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34024,11 +26506,7 @@ void UMockTelemetryDispatcher::OnPlayerActionCannonTelemetryEvent(const struct F
 	UMockTelemetryDispatcher_OnPlayerActionCannonTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34044,11 +26522,7 @@ void UMockTelemetryDispatcher::OnLoadingTelemetryEvent(const struct FLoadingTele
 	UMockTelemetryDispatcher_OnLoadingTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34064,11 +26538,7 @@ void UMockTelemetryDispatcher::OnCrewPlayerLeftTelemetryEvent(const struct FCrew
 	UMockTelemetryDispatcher_OnCrewPlayerLeftTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34084,11 +26554,7 @@ void UMockTelemetryDispatcher::OnCrewPlayerJoinedTelemetryEvent(const struct FCr
 	UMockTelemetryDispatcher_OnCrewPlayerJoinedTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34104,11 +26570,7 @@ void UMockTelemetryDispatcher::OnCrewDestroyedTelemetryEvent(const struct FCrewD
 	UMockTelemetryDispatcher_OnCrewDestroyedTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34124,11 +26586,7 @@ void UMockTelemetryDispatcher::OnCrewCreatedTelemetryEvent(const struct FCrewCre
 	UMockTelemetryDispatcher_OnCrewCreatedTelemetryEvent_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34145,12 +26603,7 @@ bool UMockTelemetryDispatcher::IsHeartbeatValid(class AAthenaPlayerController* C
 	UMockTelemetryDispatcher_IsHeartbeatValid_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -34170,12 +26623,7 @@ void AArmoryChestInteraction::Server_ArmoryChestEquipWeapon(class UClass* InItem
 	params.InItemDesc = InItemDesc;
 	params.InIndex = InIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34191,12 +26639,7 @@ void AClothingChestInteraction::Server_ClothingChestUnequipItem(class UClass* In
 	AClothingChestInteraction_Server_ClothingChestUnequipItem_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34212,12 +26655,7 @@ void AClothingChestInteraction::Server_ClothingChestEquipItem(class UClass* InDe
 	AClothingChestInteraction_Server_ClothingChestEquipItem_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34235,12 +26673,7 @@ void AClothingChestInteraction::Server_ClothingChestChangeClothing(TArray<class 
 	params.InAdds = InAdds;
 	params.InRemoves = InRemoves;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34253,12 +26686,7 @@ void AClothingChestInteraction::OnRep_Loadout()
 
 	AClothingChestInteraction_OnRep_Loadout_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34274,12 +26702,7 @@ void AEquipmentChestInteraction::Server_EquipmentChestEquipItem(class UClass* In
 	AEquipmentChestInteraction_Server_EquipmentChestEquipItem_Params params;
 	params.InItemDesc = InItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34295,12 +26718,7 @@ void AShipCustomizationChestInteraction::Server_ShipCustomizationChestUnequipIte
 	AShipCustomizationChestInteraction_Server_ShipCustomizationChestUnequipItem_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34316,12 +26734,7 @@ void AShipCustomizationChestInteraction::Server_ShipCustomizationChestEquipItem(
 	AShipCustomizationChestInteraction_Server_ShipCustomizationChestEquipItem_Params params;
 	params.InDesc = InDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34337,12 +26750,7 @@ void AVoyageProposalContainerInteraction::Server_VoyageProposalSelected(const cl
 	AVoyageProposalContainerInteraction_Server_VoyageProposalSelected_Params params;
 	params.ProposalDescName = ProposalDescName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34360,12 +26768,7 @@ void UModalInteractionActionStateId::STATIC_PushCharacterIntoModalInteractionAct
 	params.Character = Character;
 	params.InInteractionProxy = InInteractionProxy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34380,19 +26783,27 @@ TEnumAsByte<EInputHandlerResult> UModalInteractionCompositeInputHandler::OnDisen
 
 	UModalInteractionCompositeInputHandler_OnDisengage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
 
 
-// Function Athena.MountpointComponent.OnRep_ReplicatedMountedItem
+// Function Athena.MountableComponent.OnRep_ReplicatedMountpoint
 // (Final, Native, Private)
+
+void UMountableComponent::OnRep_ReplicatedMountpoint()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MountableComponent.OnRep_ReplicatedMountpoint");
+
+	UMountableComponent_OnRep_ReplicatedMountpoint_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.MountpointComponent.OnRep_ReplicatedMountedItem
+// (Native, Protected)
 // Parameters:
 // class UObject*                 PrevReplicatedMountedItem      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34403,12 +26814,7 @@ void UMountpointComponent::OnRep_ReplicatedMountedItem(class UObject* PrevReplic
 	UMountpointComponent_OnRep_ReplicatedMountedItem_Params params;
 	params.PrevReplicatedMountedItem = PrevReplicatedMountedItem;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34423,12 +26829,7 @@ struct FVector UNameplateComponent::GetWorldPosition()
 
 	UNameplateComponent_GetWorldPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -34443,12 +26844,7 @@ void UAINameplateComponent::OnRep_DisplayName()
 
 	UAINameplateComponent_OnRep_DisplayName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34461,12 +26857,7 @@ void UAINameplateComponent::OnRep_DebugDisplayText()
 
 	UAINameplateComponent_OnRep_DebugDisplayText_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34484,12 +26875,7 @@ void UNetDormancyHelpers::STATIC_SetNetDormancy(class AActor* TargetActor, TEnum
 	params.TargetActor = TargetActor;
 	params.DormancyMode = DormancyMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34505,12 +26891,7 @@ void UNetDormancyHelpers::STATIC_FlushNetDormancy(class AActor* TargetActor)
 	UNetDormancyHelpers_FlushNetDormancy_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34523,12 +26904,7 @@ void ANetProxy::OnRep_OwningActor()
 
 	ANetProxy_OnRep_OwningActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34541,12 +26917,7 @@ void ANetProxy::OnOwningActorDestroyed()
 
 	ANetProxy_OnOwningActorDestroyed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34559,12 +26930,7 @@ void AShipNetProxy::OnRep_LanternBits()
 
 	AShipNetProxy_OnRep_LanternBits_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34577,12 +26943,7 @@ void AShipNetProxy::OnOwningActorDestroyed()
 
 	AShipNetProxy_OnOwningActorDestroyed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34598,11 +26959,7 @@ void AShipNetProxy::OnLanternStateChanged(unsigned char LanternStateBits)
 	AShipNetProxy_OnLanternStateChanged_Params params;
 	params.LanternStateBits = LanternStateBits;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34617,12 +26974,7 @@ unsigned char AShipNetProxy::GetLanternBits()
 
 	AShipNetProxy_GetLanternBits_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -34646,12 +26998,7 @@ void UNetworkTriggeredVFXComponent::Multicast_PlayVFXRPC(int VFXIndex, const str
 	params.Rotation = Rotation;
 	params.Owner = Owner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34669,12 +27016,7 @@ void UNPCAnimInstance::UseHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand,
 	params.SpawnHand = SpawnHand;
 	params.ObjectSlot = ObjectSlot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34690,12 +27032,7 @@ void UNPCAnimInstance::DetachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHa
 	UNPCAnimInstance_DetachHeldObject_Params params;
 	params.SpawnHand = SpawnHand;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34711,12 +27048,7 @@ void UNPCAnimInstance::DestroyHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnH
 	UNPCAnimInstance_DestroyHeldObject_Params params;
 	params.SpawnHand = SpawnHand;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34732,12 +27064,7 @@ void UNPCAnimInstance::AttachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHa
 	UNPCAnimInstance_AttachHeldObject_Params params;
 	params.SpawnHand = SpawnHand;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34753,12 +27080,7 @@ void URunnable::Run(class UObject* Runner)
 	URunnable_Run_Params params;
 	params.Runner = Runner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34778,12 +27100,7 @@ void UNPCReactionBound::OnActivationRegionOverlapEnd(class AActor* OtherActor, c
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34807,12 +27124,7 @@ void UNPCReactionBound::OnActivationRegionOverlapBegin(class AActor* Other, clas
 	params.bFromSweep = bFromSweep;
 	params.OverlapInfo = OverlapInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34829,12 +27141,7 @@ class UObject* UObjectUtilities::STATIC_GetDefaultObject(class UClass* Class)
 	UObjectUtilities_GetDefaultObject_Params params;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -34853,12 +27160,7 @@ class UObject* UObjectUtilities::STATIC_CreateObject(class UClass* Class)
 	UObjectUtilities_CreateObject_Params params;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -34888,12 +27190,7 @@ void UOffBottomTransitionLadderActionStateId::STATIC_PushCharacterIntoOffBottomT
 	params.LadderTransitionMode = LadderTransitionMode;
 	params.LadderDefinition = LadderDefinition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34921,12 +27218,7 @@ void UOffTopTransitionLadderActionStateId::STATIC_PushCharacterIntoOffTopTransit
 	params.LadderTransitionMode = LadderTransitionMode;
 	params.LadderDefinition = LadderDefinition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34954,12 +27246,7 @@ void UOnBottomTransitionLadderActionStateId::STATIC_PushCharacterIntoOnBottomTra
 	params.LadderTransitionMode = LadderTransitionMode;
 	params.LadderDefinition = LadderDefinition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -34987,12 +27274,7 @@ void UOnTopTransitionLadderActionStateId::STATIC_PushCharacterIntoOnTopTransitio
 	params.LadderTransitionMode = LadderTransitionMode;
 	params.LadderDefinition = LadderDefinition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35005,12 +27287,7 @@ void UPacingComponent::StopPacing()
 
 	UPacingComponent_StopPacing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35023,12 +27300,7 @@ void UPacingComponent::StartPacing()
 
 	UPacingComponent_StartPacing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35043,12 +27315,7 @@ bool UPacingComponent::IsPacing()
 
 	UPacingComponent_IsPacing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35068,12 +27335,7 @@ void UPartConnectionMock::Tick(class UObject* WorldContextObject, float DeltaSec
 	params.WorldContextObject = WorldContextObject;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35095,12 +27357,7 @@ void UPartConnectionMock::AddMultipleConnection(class UObject* WorldContextObjec
 	params.ActorFromList = ActorFromList;
 	params.ActorTo = ActorTo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35122,12 +27379,7 @@ void UPartConnectionMock::AddConnection(class UObject* WorldContextObject, TEnum
 	params.ActorFrom = ActorFrom;
 	params.ActorTo = ActorTo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35146,12 +27398,7 @@ bool UPhysicsCollisionFunctions::STATIC_IsWorldSpacePositionInsideVolume(class U
 	params.Volume = Volume;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35171,12 +27418,7 @@ void UPickupObjectActionStateId::STATIC_PushCharacterIntoPickupObjectActionState
 	params.InCharacter = InCharacter;
 	params.InPickupableObject = InPickupableObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35198,12 +27440,7 @@ void UPirateGeneratorServiceInterface::BakeFromDescriptionAsync(const struct FPi
 	params.Guid = Guid;
 	params.AsyncResult = AsyncResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35220,12 +27457,7 @@ class FString UPirateIdentityBlueprintFunctionLibrary::STATIC_GetServicesScopeId
 	UPirateIdentityBlueprintFunctionLibrary_GetServicesScopeId_Params params;
 	params.InPirateIdentity = InPirateIdentity;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35244,12 +27476,7 @@ struct FPirateIdentity UPirateIdentityBlueprintFunctionLibrary::STATIC_GetPirate
 	UPirateIdentityBlueprintFunctionLibrary_GetPirateIdentity_Params params;
 	params.InPawn = InPawn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35264,12 +27491,7 @@ void UPiratePreviewInterface::PreCreatePreview()
 
 	UPiratePreviewInterface_PreCreatePreview_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35282,12 +27504,7 @@ void UPirateSelector::WaitForTavernTimerTick()
 
 	UPirateSelector_WaitForTavernTimerTick_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35300,12 +27517,7 @@ void UPirateSelector::RequestOpenAccountPicker()
 
 	UPirateSelector_RequestOpenAccountPicker_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35318,12 +27530,7 @@ void UPirateSelector::QuitGame()
 
 	UPirateSelector_QuitGame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35336,12 +27543,7 @@ void UPirateSelector::OnPirateGenerateRequested()
 
 	UPirateSelector_OnPirateGenerateRequested_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35356,12 +27558,7 @@ bool UPirateSelector::IsSelectedPirateSet()
 
 	UPirateSelector_IsSelectedPirateSet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35378,12 +27575,7 @@ bool UPirateSelector::IsInPirateSelectionState()
 
 	UPirateSelector_IsInPirateSelectionState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35400,12 +27592,7 @@ TArray<class UClass*> UPirateSelector::GetSelectedPirateOutfit()
 
 	UPirateSelector_GetSelectedPirateOutfit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35422,12 +27609,7 @@ struct FPirateDescription UPirateSelector::GetSelectedPirateDescription()
 
 	UPirateSelector_GetSelectedPirateDescription_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35442,12 +27624,7 @@ void UPirateSelector::EndCelebration()
 
 	UPirateSelector_EndCelebration_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35465,12 +27642,7 @@ void UPirateSelector::ConfirmAndSavePirate(const struct FPirateDescription& Desc
 	params.Description = Description;
 	params.Outfit = Outfit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35487,12 +27659,7 @@ float UPlayerAtmosphericsAudioComponent::GetPoolDensityFactor(class UWwiseObject
 	UPlayerAtmosphericsAudioComponent_GetPoolDensityFactor_Params params;
 	params.PoolDensityWrapper = PoolDensityWrapper;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35511,12 +27678,7 @@ struct FVector UPlayerAtmosphericsAudioComponent::GetPoolDensityAveragePosition(
 	UPlayerAtmosphericsAudioComponent_GetPoolDensityAveragePosition_Params params;
 	params.PoolDensityWrapper = PoolDensityWrapper;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35533,12 +27695,7 @@ bool UPlayerAtmosphericsAudioComponent::GetIsWindAudioPlaying()
 
 	UPlayerAtmosphericsAudioComponent_GetIsWindAudioPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35558,12 +27715,7 @@ void UPlayerCrewComponent::Server_VoteOnSendPlayerToBrig(class AAthenaPlayerStat
 	params.PlayerState = PlayerState;
 	params.SendIn = SendIn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35579,12 +27731,7 @@ void UPlayerCrewComponent::Server_VoteOnScuttleShip(bool Scuttle)
 	UPlayerCrewComponent_Server_VoteOnScuttleShip_Params params;
 	params.Scuttle = Scuttle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35602,12 +27749,7 @@ void UPlayerCrewComponent::Server_VoteOnReleasePlayerFromBrig(class AAthenaPlaye
 	params.PlayerState = PlayerState;
 	params.Release = Release;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35623,12 +27765,7 @@ void UPlayerCrewComponent::Server_VoteOnChangeMatchmakingVisibility(bool Change)
 	UPlayerCrewComponent_Server_VoteOnChangeMatchmakingVisibility_Params params;
 	params.Change = Change;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35641,12 +27778,7 @@ void UPlayerCrewComponent::OnRep_CrewShip()
 
 	UPlayerCrewComponent_OnRep_CrewShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35659,12 +27791,7 @@ void UPlayerCrewComponent::OnRep_CrewMembers()
 
 	UPlayerCrewComponent_OnRep_CrewMembers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35677,12 +27804,7 @@ void UPlayerCrewComponent::OnRep_CrewMatchmakingVisibility()
 
 	UPlayerCrewComponent_OnRep_CrewMatchmakingVisibility_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35698,12 +27820,7 @@ void UPlayerCurseComponent::OnRep_ActiveCurseForFX(TEnumAsByte<EPlayerCurseTag> 
 	UPlayerCurseComponent_OnRep_ActiveCurseForFX_Params params;
 	params.PreviousValue = PreviousValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35723,12 +27840,7 @@ void UPlayerCurseComponent::OnMovementModeChanged(class ACharacter* Character, T
 	params.PrevMovementMode = PrevMovementMode;
 	params.PreviousCustomMode = PreviousCustomMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35747,12 +27859,7 @@ TArray<class UClass*> UPlayerEntitlementBlueprintFunctionLibrary::STATIC_GetEnti
 	params.InPlayerEntitlementViewInterface = InPlayerEntitlementViewInterface;
 	params.InEntitlementType = InEntitlementType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35770,12 +27877,7 @@ void UPlayerEntitlementComponent::ServerRequestEntitlements(TEnumAsByte<ERequest
 	UPlayerEntitlementComponent_ServerRequestEntitlements_Params params;
 	params.InBehaviour = InBehaviour;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35788,12 +27890,7 @@ void UPlayerEntitlementComponent::OnRep_Entitlements()
 
 	UPlayerEntitlementComponent_OnRep_Entitlements_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35811,12 +27908,7 @@ void UPlayerFunctionLibrary::STATIC_DebugRemoveLocalPlayer(class UObject* WorldC
 	params.WorldContextObject = WorldContextObject;
 	params.ControllerId = ControllerId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35834,12 +27926,7 @@ void UPlayerHeroStatsComponent::Client_UpdateValue(uint32_t PlayerStatId, uint64
 	params.PlayerStatId = PlayerStatId;
 	params.AbsoluteValue = AbsoluteValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35855,12 +27942,7 @@ void UPlayerNonVerbalComponent::Server_SendText(const struct FText& Message)
 	UPlayerNonVerbalComponent_Server_SendText_Params params;
 	params.Message = Message;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35876,12 +27958,7 @@ void UPlayerNonVerbalComponent::Server_SendPhrase(const class FString& PhraseKey
 	UPlayerNonVerbalComponent_Server_SendPhrase_Params params;
 	params.PhraseKey = PhraseKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35899,12 +27976,7 @@ void UPlayerNonVerbalComponent::Client_ReceiveText(class AAthenaPlayerState* Sen
 	params.SenderPlayerState = SenderPlayerState;
 	params.Message = Message;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35922,12 +27994,7 @@ void UPlayerNonVerbalComponent::Client_ReceivePhrase(class AAthenaPlayerState* S
 	params.SenderPlayerState = SenderPlayerState;
 	params.PhraseKey = PhraseKey;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -35942,12 +28009,7 @@ bool UPlayerOceanAudioComponent::GetIsUnderwater()
 
 	UPlayerOceanAudioComponent_GetIsUnderwater_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35964,12 +28026,7 @@ bool UPlayerOceanAudioComponent::GetIsPlaying()
 
 	UPlayerOceanAudioComponent_GetIsPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -35986,12 +28043,7 @@ bool UPlayerOceanAudioComponent::GetIsOnIsland()
 
 	UPlayerOceanAudioComponent_GetIsOnIsland_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36008,12 +28060,7 @@ struct FVector UPlayerOceanAudioComponent::GetEmitterPosition()
 
 	UPlayerOceanAudioComponent_GetEmitterPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36031,12 +28078,7 @@ void UTestPlayerPermissionsComponent::SetAllowExecuteOnServer(bool AllowAccess)
 	UTestPlayerPermissionsComponent_SetAllowExecuteOnServer_Params params;
 	params.AllowAccess = AllowAccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36052,12 +28094,7 @@ void UTestPlayerPermissionsComponent::SetAllowDebugMenuButtonShortcutsAccess(boo
 	UTestPlayerPermissionsComponent_SetAllowDebugMenuButtonShortcutsAccess_Params params;
 	params.AllowAccess = AllowAccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36073,12 +28110,7 @@ void UTestPlayerPermissionsComponent::SetAllowDebugMenuAccess(bool AllowAccess)
 	UTestPlayerPermissionsComponent_SetAllowDebugMenuAccess_Params params;
 	params.AllowAccess = AllowAccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36094,12 +28126,7 @@ void UTestPlayerPermissionsComponent::GrantDebugMenuPermissions(bool AllowAccess
 	UTestPlayerPermissionsComponent_GrantDebugMenuPermissions_Params params;
 	params.AllowAccess = AllowAccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36112,12 +28139,7 @@ void UPlayerWalletComponent::ServerRequestBalance()
 
 	UPlayerWalletComponent_ServerRequestBalance_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36130,12 +28152,7 @@ void UPlayerWalletComponent::OnRep_BalanceUpdated()
 
 	UPlayerWalletComponent_OnRep_BalanceUpdated_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36148,11 +28165,7 @@ void APosablePirate::OnEndGeneratingPirate()
 
 	APosablePirate_OnEndGeneratingPirate_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36165,11 +28178,7 @@ void APosablePirate::OnBeginGeneratingPirate()
 
 	APosablePirate_OnBeginGeneratingPirate_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36184,12 +28193,7 @@ bool APosablePirate::IsPirateLoaded()
 
 	APosablePirate_IsPirateLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36206,12 +28210,7 @@ TArray<class UClass*> APosablePirate::GetCurrentOutfit()
 
 	APosablePirate_GetCurrentOutfit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36228,12 +28227,7 @@ struct FPirateDescription APosablePirate::GetCurrentDescription()
 
 	APosablePirate_GetCurrentDescription_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36253,12 +28247,7 @@ void APosablePirate::BeginGeneratingPirate(const struct FPirateDescription& Desc
 	params.Desc = Desc;
 	params.Outfit = Outfit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36276,12 +28265,7 @@ void UPrimitiveComponentTestFunctionLibrary::STATIC_CheckWeldParentMatches(class
 	params.TestComponent = TestComponent;
 	params.ExpectedParentComponent = ExpectedParentComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36297,11 +28281,7 @@ void AProjectileWeapon::ScopeTick(float DeltaSeconds)
 	AProjectileWeapon_ScopeTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36314,11 +28294,7 @@ void AProjectileWeapon::ScopeOn()
 
 	AProjectileWeapon_ScopeOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36331,11 +28307,7 @@ void AProjectileWeapon::ScopeOffImmediate()
 
 	AProjectileWeapon_ScopeOffImmediate_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36348,11 +28320,7 @@ void AProjectileWeapon::ScopeOff()
 
 	AProjectileWeapon_ScopeOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36365,11 +28333,7 @@ void AProjectileWeapon::RadialBlurOn()
 
 	AProjectileWeapon_RadialBlurOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36382,11 +28346,7 @@ void AProjectileWeapon::RadialBlurOff()
 
 	AProjectileWeapon_RadialBlurOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36399,12 +28359,7 @@ void AProjectileWeapon::OnWeaponFired()
 
 	AProjectileWeapon_OnWeaponFired_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36417,12 +28372,7 @@ void AProjectileWeapon::OnRep_State()
 
 	AProjectileWeapon_OnRep_State_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36438,12 +28388,7 @@ void AProjectileWeapon::OnRep_AmmoLeft(int PreviousAmmo)
 	AProjectileWeapon_OnRep_AmmoLeft_Params params;
 	params.PreviousAmmo = PreviousAmmo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36459,12 +28404,7 @@ void AProjectileWeapon::Multicast_ReceiveFire(const struct FFireBroadcast& Broad
 	AProjectileWeapon_Multicast_ReceiveFire_Params params;
 	params.Broadcast = Broadcast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36477,12 +28417,7 @@ void AProjectileWeapon::Multicast_ReceiveDryFire()
 
 	AProjectileWeapon_Multicast_ReceiveDryFire_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36495,11 +28430,7 @@ void AProjectileWeapon::GlintOn()
 
 	AProjectileWeapon_GlintOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36512,11 +28443,7 @@ void AProjectileWeapon::GlintOff()
 
 	AProjectileWeapon_GlintOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36531,12 +28458,7 @@ int AProjectileWeapon::GetNumShotsLeftInClip()
 
 	AProjectileWeapon_GetNumShotsLeftInClip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36553,12 +28475,7 @@ struct FGuid AProjectileWeapon::GetLastAttackId()
 
 	AProjectileWeapon_GetLastAttackId_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36573,12 +28490,7 @@ void AProjectileWeapon::Client_RequestDenied()
 
 	AProjectileWeapon_Client_RequestDenied_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36594,12 +28506,7 @@ void AProjectileWeapon::Client_CorrectPredictedMiss(TArray<struct FHitResult> Co
 	AProjectileWeapon_Client_CorrectPredictedMiss_Params params;
 	params.CorrectedServerHits = CorrectedServerHits;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36614,12 +28521,7 @@ bool AProjectileWeapon::CanFire()
 
 	AProjectileWeapon_CanFire_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36639,12 +28541,7 @@ void AProjectileWeapon::AddBulletsToClip(int NumBullets, bool DoClipSizeCheck)
 	params.NumBullets = NumBullets;
 	params.DoClipSizeCheck = DoClipSizeCheck;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -36665,12 +28562,7 @@ struct FProjectileAim UProjectileWeaponValidationFunctionLibrary::STATIC_ClampAi
 	params.InAim = InAim;
 	params.RewindTime = RewindTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36687,12 +28579,7 @@ TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRad
 
 	UEmotesRadialCompositeInputHandler_OnEmotesRadialTriggerNextSetOfPhrases_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36709,12 +28596,7 @@ TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRad
 
 	UEmotesRadialCompositeInputHandler_OnEmotesRadialDeactivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36731,12 +28613,7 @@ TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRad
 
 	UEmotesRadialCompositeInputHandler_OnEmotesRadialDeactivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36753,12 +28630,7 @@ TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRad
 
 	UEmotesRadialCompositeInputHandler_OnEmotesRadialActivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36775,12 +28647,7 @@ TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRad
 
 	UEmotesRadialCompositeInputHandler_OnEmotesRadialActivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36797,12 +28664,7 @@ TEnumAsByte<EInputHandlerResult> UPhrasesRadialCompositeInputHandler::OnPhrasesR
 
 	UPhrasesRadialCompositeInputHandler_OnPhrasesRadialTriggerNextSetOfPhrases_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36819,12 +28681,7 @@ TEnumAsByte<EInputHandlerResult> UPhrasesRadialCompositeInputHandler::OnPhrasesR
 
 	UPhrasesRadialCompositeInputHandler_OnPhrasesRadialInventoryDeactivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36841,12 +28698,7 @@ TEnumAsByte<EInputHandlerResult> UPhrasesRadialCompositeInputHandler::OnPhrasesR
 
 	UPhrasesRadialCompositeInputHandler_OnPhrasesRadialInventoryDeactivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36863,12 +28715,7 @@ TEnumAsByte<EInputHandlerResult> UPhrasesRadialCompositeInputHandler::OnPhrasesR
 
 	UPhrasesRadialCompositeInputHandler_OnPhrasesRadialInventoryActivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36885,12 +28732,7 @@ TEnumAsByte<EInputHandlerResult> UPhrasesRadialCompositeInputHandler::OnPhrasesR
 
 	UPhrasesRadialCompositeInputHandler_OnPhrasesRadialInventoryActivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36907,12 +28749,7 @@ TEnumAsByte<EInputHandlerResult> UPhrasesRadialCompositeInputHandler::OnBlock()
 
 	UPhrasesRadialCompositeInputHandler_OnBlock_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36929,12 +28766,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnMapRad
 
 	URadialInventoryCompositeInputHandler_OnMapRadialInventoryDeactivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36951,12 +28783,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnMapRad
 
 	URadialInventoryCompositeInputHandler_OnMapRadialInventoryDeactivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36973,12 +28800,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnMapRad
 
 	URadialInventoryCompositeInputHandler_OnMapRadialInventoryActivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36995,12 +28817,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnMapRad
 
 	URadialInventoryCompositeInputHandler_OnMapRadialInventoryActivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37017,12 +28834,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnItemRa
 
 	URadialInventoryCompositeInputHandler_OnItemRadialTriggerNextSetOfItems_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37039,12 +28851,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnItemRa
 
 	URadialInventoryCompositeInputHandler_OnItemRadialInventoryDeactivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37061,12 +28868,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnItemRa
 
 	URadialInventoryCompositeInputHandler_OnItemRadialInventoryDeactivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37083,12 +28885,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnItemRa
 
 	URadialInventoryCompositeInputHandler_OnItemRadialInventoryActivatedKeyboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37105,12 +28902,7 @@ TEnumAsByte<EInputHandlerResult> URadialInventoryCompositeInputHandler::OnItemRa
 
 	URadialInventoryCompositeInputHandler_OnItemRadialInventoryActivatedGamepad_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37125,12 +28917,7 @@ void URendererSettingsFunctionLibrary::STATIC_UpdateRendererSettings()
 
 	URendererSettingsFunctionLibrary_UpdateRendererSettings_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37143,12 +28930,7 @@ void URepairableComponent::OnRep_DamageLevel()
 
 	URepairableComponent_OnRep_DamageLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37161,12 +28943,7 @@ void URepairableComponent::OnRep_AuthorityRepairableState()
 
 	URepairableComponent_OnRep_AuthorityRepairableState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37181,12 +28958,7 @@ struct FTransform URepairableComponent::GetMountLocationOffset()
 
 	URepairableComponent_GetMountLocationOffset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37204,12 +28976,7 @@ void URepairableComponent::ApplyDamage(int InAmount)
 	URepairableComponent_ApplyDamage_Params params;
 	params.InAmount = InAmount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37224,12 +28991,7 @@ class UClass* URepairingInterface::GetRepairType()
 
 	URepairingInterface_GetRepairType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37251,12 +29013,7 @@ void URepairObjectActionStateId::STATIC_PushCharacterIntoRepairObjectActionState
 	params.Character = Character;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37272,12 +29029,7 @@ void URepairObjectActionStateId::STATIC_PopCharacterOutOfRepairObjectActionState
 	URepairObjectActionStateId_PopCharacterOutOfRepairObjectActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37290,12 +29042,7 @@ void UReplenishableComponent::TestReplenish()
 
 	UReplenishableComponent_TestReplenish_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37311,12 +29058,7 @@ void UReplenishableComponent::SetShouldRefresh(bool InShouldRefresh)
 	UReplenishableComponent_SetShouldRefresh_Params params;
 	params.InShouldRefresh = InShouldRefresh;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37329,12 +29071,7 @@ void UReplenishableComponent::Replenish()
 
 	UReplenishableComponent_Replenish_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37347,12 +29084,7 @@ void UReplenishableComponent::RefreshFromSpawner()
 
 	UReplenishableComponent_RefreshFromSpawner_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37367,12 +29099,7 @@ bool UReplenishableComponent::IsAtMaxCapacity()
 
 	UReplenishableComponent_IsAtMaxCapacity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37389,12 +29116,7 @@ bool UReplenishableComponent::GetShouldRefresh()
 
 	UReplenishableComponent_GetShouldRefresh_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37412,12 +29134,7 @@ void UReplenishableComponent::FillWithDefaultDesc(TArray<struct FStorageContaine
 	UReplenishableComponent_FillWithDefaultDesc_Params params;
 	params.Nodes = Nodes;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37430,12 +29147,7 @@ void UReplenishableComponent::Deplete()
 
 	UReplenishableComponent_Deplete_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37450,12 +29162,7 @@ bool UReplenishableComponent::CanBeReplenished()
 
 	UReplenishableComponent_CanBeReplenished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37470,12 +29177,7 @@ void UReplenishableComponent::AddDefaultStockLevel()
 
 	UReplenishableComponent_AddDefaultStockLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37491,12 +29193,7 @@ void URewardComponent::Client_OnRewardRequestSucceededEvent(const struct FReward
 	URewardComponent_Client_OnRewardRequestSucceededEvent_Params params;
 	params.RewardRequestSucceededEvent = RewardRequestSucceededEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37512,12 +29209,7 @@ void URewardComponent::Client_OnRewardRequestFailedEvent(const struct FRewardReq
 	URewardComponent_Client_OnRewardRequestFailedEvent_Params params;
 	params.RewardRequestFailedEvent = RewardRequestFailedEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37533,12 +29225,7 @@ void ARudder::SetRudderAngleRatio(float InRudderAngleRatio)
 	ARudder_SetRudderAngleRatio_Params params;
 	params.InRudderAngleRatio = InRudderAngleRatio;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37553,12 +29240,7 @@ float ARudder::GetServerAngleRatio()
 
 	ARudder_GetServerAngleRatio_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37576,12 +29258,7 @@ void URumbleHandlerComponent::EventFired(const struct FName& InTag)
 	URumbleHandlerComponent_EventFired_Params params;
 	params.InTag = InTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37597,12 +29274,7 @@ void ASail::SetTurbulence(float InTurbulence)
 	ASail_SetTurbulence_Params params;
 	params.InTurbulence = InTurbulence;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37618,12 +29290,7 @@ void ASail::SetSailLoweredProportion(float Proportion)
 	ASail_SetSailLoweredProportion_Params params;
 	params.Proportion = Proportion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37639,12 +29306,7 @@ void ASail::SetSailAngleRatio(float AngleRatio)
 	ASail_SetSailAngleRatio_Params params;
 	params.AngleRatio = AngleRatio;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37660,12 +29322,7 @@ void ASail::SetForceScalarFromBPParams(float Scalar)
 	ASail_SetForceScalarFromBPParams_Params params;
 	params.Scalar = Scalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37681,12 +29338,7 @@ void ASail::SetDamageScalar(float Scalar)
 	ASail_SetDamageScalar_Params params;
 	params.Scalar = Scalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37702,12 +29354,7 @@ void ASail::SetBillowAmount(float InBillowingAmount)
 	ASail_SetBillowAmount_Params params;
 	params.InBillowingAmount = InBillowingAmount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37722,12 +29369,7 @@ float ASail::GetVisualBillowAmount()
 
 	ASail_GetVisualBillowAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37744,12 +29386,7 @@ float ASail::GetSailLoweredProportion()
 
 	ASail_GetSailLoweredProportion_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37766,12 +29403,7 @@ float ASail::GetSailAngleRatio()
 
 	ASail_GetSailAngleRatio_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37788,12 +29420,7 @@ float ASail::GetSailAngle()
 
 	ASail_GetSailAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37810,12 +29437,7 @@ float ASail::GetMaxRotation()
 
 	ASail_GetMaxRotation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37832,12 +29454,7 @@ float ASail::GetBillowAmount()
 
 	ASail_GetBillowAmount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37854,12 +29471,7 @@ float ASail::CalculateFurlValue()
 
 	ASail_CalculateFurlValue_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37887,12 +29499,7 @@ void USailAnimInterface::UpdateParameters(float Turning, float Billow, float Win
 	params.Falling = Falling;
 	params.FallingAnimation = FallingAnimation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37910,11 +29517,7 @@ void USailAnimInterface::InitialiseSail(float PlayRateMultiplier, bool MainSail)
 	params.PlayRateMultiplier = PlayRateMultiplier;
 	params.MainSail = MainSail;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37930,11 +29533,7 @@ void USailAnimInterface::InitialiseMast(float MastFallingLimit)
 	USailAnimInterface_InitialiseMast_Params params;
 	params.MastFallingLimit = MastFallingLimit;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -37955,12 +29554,7 @@ class ASailHoist* USailHoistTestFunctions::STATIC_SetupSailHoistServerSide(class
 	params.SpawnLocation = SpawnLocation;
 	params.SailHoistClass = SailHoistClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -37980,12 +29574,7 @@ void USailHoistTestFunctions::STATIC_SetupSailHoistClientSideWithProvidedHoist(c
 	params.WorldContextObject = WorldContextObject;
 	params.Hoist = Hoist;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38002,12 +29591,7 @@ class ASailHoist* USailHoistTestFunctions::STATIC_SetupSailHoistClientSide(class
 	USailHoistTestFunctions_SetupSailHoistClientSide_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38035,12 +29619,7 @@ void USailManipulatorBlueprintFunctions::STATIC_SetupHoistControl(class ASailHoi
 	params.RiggingLineGroup = RiggingLineGroup;
 	params.RiggingRopeIndex = RiggingRopeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38068,12 +29647,7 @@ void USailManipulatorBlueprintFunctions::STATIC_SetupAngleControl(class ASailAng
 	params.RiggingLeftRopeIndex = RiggingLeftRopeIndex;
 	params.RiggingRightRopeIndex = RiggingRightRopeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38086,12 +29660,7 @@ void ASeagulls::Multicast_DismissSeagulls()
 
 	ASeagulls_Multicast_DismissSeagulls_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38104,12 +29673,7 @@ void ASeagulls::FadeOut()
 
 	ASeagulls_FadeOut_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38122,12 +29686,7 @@ void ASeagulls::FadeIn()
 
 	ASeagulls_FadeIn_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38144,12 +29703,7 @@ bool UServiceProviderInterfaceTestFunctions::STATIC_TestRegisterAndGetService(cl
 	UServiceProviderInterfaceTestFunctions_TestRegisterAndGetService_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38168,12 +29722,7 @@ bool UServiceProviderInterfaceTestFunctions::STATIC_TestGetServiceUnregistered(c
 	UServiceProviderInterfaceTestFunctions_TestGetServiceUnregistered_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38191,12 +29740,7 @@ void AServiceStatusNotificationsService::OnRep_ActiveNotifications(TArray<struct
 	AServiceStatusNotificationsService_OnRep_ActiveNotifications_Params params;
 	params.LastActiveNotifications = LastActiveNotifications;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38212,12 +29756,7 @@ void ASharkPawn::SetAIStrategy(class UClass* InStrategy)
 	ASharkPawn_SetAIStrategy_Params params;
 	params.InStrategy = InStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38233,12 +29772,7 @@ void ASharkPawn::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
 	ASharkPawn_OnRep_CurrentAIStrategy_Params params;
 	params.OldAIStrategy = OldAIStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38256,12 +29790,7 @@ void ASharkPawn::Multicast_PlayMontageRPC(int AnimIndex, bool PlayAsDynamicMonta
 	params.AnimIndex = AnimIndex;
 	params.PlayAsDynamicMontage = PlayAsDynamicMontage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38274,12 +29803,7 @@ void ASharkPawn::Multicast_DespawnRPC()
 
 	ASharkPawn_Multicast_DespawnRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38294,12 +29818,7 @@ bool ASharkPawn::IsDoingQuickDeath()
 
 	ASharkPawn_IsDoingQuickDeath_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38318,12 +29837,7 @@ int ASharkPawn::GetIndexForMontage(class UObject* Montage)
 	ASharkPawn_GetIndexForMontage_Params params;
 	params.Montage = Montage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38340,12 +29854,7 @@ float ASharkPawn::GetCreatureDistanceFromWaterHeight()
 
 	ASharkPawn_GetCreatureDistanceFromWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38362,12 +29871,7 @@ class UClass* ASharkPawn::GetAIStrategy()
 
 	ASharkPawn_GetAIStrategy_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38387,12 +29891,7 @@ bool UShipDescConversionFunctions::STATIC_ShipDescToJson(const struct FShipDesc&
 	UShipDescConversionFunctions_ShipDescToJson_Params params;
 	params.ShipDesc = ShipDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (JsonString != nullptr)
 		*JsonString = params.JsonString;
@@ -38415,12 +29914,7 @@ bool UShipDescConversionFunctions::STATIC_ShipDescFromJson(const class FString& 
 	UShipDescConversionFunctions_ShipDescFromJson_Params params;
 	params.JsonString = JsonString;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ShipDesc != nullptr)
 		*ShipDesc = params.ShipDesc;
@@ -38440,12 +29934,7 @@ struct FShipDesc UShipDescGeneratorTestFunctionLibrary::STATIC_GenerateShipDescF
 
 	UShipDescGeneratorTestFunctionLibrary_GenerateShipDescForTestLargeShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38472,12 +29961,7 @@ class AActor* UShipFactory::SpawnSyncWithDatabase(class UObject* WorldContextObj
 	params.Position = Position;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38502,12 +29986,7 @@ class AActor* UShipFactory::SpawnSync(class UObject* WorldContextObject, const s
 	params.Position = Position;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38524,12 +30003,7 @@ class UShipFactory* UShipFactory::STATIC_MakeShipFactory()
 
 	UShipFactory_MakeShipFactory_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38547,12 +30021,7 @@ void UShipFactorySpawnCallbackCounter::OnSuccess(class AActor* InActor)
 	UShipFactorySpawnCallbackCounter_OnSuccess_Params params;
 	params.InActor = InActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38565,12 +30034,7 @@ void UShipFactorySpawnCallbackCounter::OnFailure()
 
 	UShipFactorySpawnCallbackCounter_OnFailure_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38589,12 +30053,7 @@ class AActor* UShipFunctionLibrary::STATIC_SpawnShip(const struct FVector& Pos, 
 	params.Pos = Pos;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38616,12 +30075,7 @@ void UShipFunctionLibrary::STATIC_SpawnFunctioningSmallShipWithCrewId(const stru
 	params.Rotation = Rotation;
 	params.CrewId = CrewId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38639,12 +30093,7 @@ void UShipFunctionLibrary::STATIC_SpawnFunctioningSmallShip(const struct FVector
 	params.Pos = Pos;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38662,12 +30111,7 @@ void UShipFunctionLibrary::STATIC_SpawnFunctioningLargeShip(const struct FVector
 	params.Pos = Pos;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38684,12 +30128,7 @@ TArray<class AWheel*> UShipFunctionLibrary::STATIC_GetWheels(class AActor* Actor
 	UShipFunctionLibrary_GetWheels_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38708,12 +30147,7 @@ TArray<class ASailHoist*> UShipFunctionLibrary::STATIC_GetSailHoists(class AActo
 	UShipFunctionLibrary_GetSailHoists_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38732,12 +30166,7 @@ TArray<class ASailAngle*> UShipFunctionLibrary::STATIC_GetSailAnglers(class AAct
 	UShipFunctionLibrary_GetSailAnglers_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38756,12 +30185,7 @@ TArray<class ALadder*> UShipFunctionLibrary::STATIC_GetLadders(class AActor* Act
 	UShipFunctionLibrary_GetLadders_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38782,12 +30206,7 @@ TArray<class AActor*> UShipFunctionLibrary::STATIC_GetInteractablesOfClass(class
 	params.Actor = Actor;
 	params.Class = Class;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38806,12 +30225,7 @@ TArray<class AActor*> UShipFunctionLibrary::STATIC_GetInteractables(class AActor
 	UShipFunctionLibrary_GetInteractables_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38830,12 +30244,7 @@ TArray<class ACannon*> UShipFunctionLibrary::STATIC_GetCannons(class AActor* Act
 	UShipFunctionLibrary_GetCannons_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38850,12 +30259,7 @@ void UShipHullCollisionComponent::StopShipImpactSfx_RPC()
 
 	UShipHullCollisionComponent_StopShipImpactSfx_RPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38868,12 +30272,7 @@ void UShipHullCollisionComponent::PlayShipImpactSfx_RPC()
 
 	UShipHullCollisionComponent_PlayShipImpactSfx_RPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38890,12 +30289,7 @@ bool UShipHullCollisionComponent::IsWorldSpacePositionInsideHull(const struct FV
 	UShipHullCollisionComponent_IsWorldSpacePositionInsideHull_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38914,12 +30308,7 @@ bool UShipHullCollisionComponent::IsWorldSpacePositionInsideCabin(const struct F
 	UShipHullCollisionComponent_IsWorldSpacePositionInsideCabin_Params params;
 	params.Position = Position;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38936,12 +30325,7 @@ bool UShipHullCollisionComponent::GetIsShipInContactWithSolidHits()
 
 	UShipHullCollisionComponent_GetIsShipInContactWithSolidHits_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38958,12 +30342,7 @@ bool UShipHullCollisionComponent::GetIsShipInContactWithLand()
 
 	UShipHullCollisionComponent_GetIsShipInContactWithLand_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -38978,12 +30357,7 @@ void UShipLightComponent::OnRep_OnLightStateChanged()
 
 	UShipLightComponent_OnRep_OnLightStateChanged_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38996,11 +30370,7 @@ void UShipLightComponent::LightStateChanged()
 
 	UShipLightComponent_LightStateChanged_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39015,12 +30385,7 @@ class UShipPartCustomization* UShipPartCustomization::STATIC_MakeSyncShipPartCus
 
 	UShipPartCustomization_MakeSyncShipPartCustomization_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39037,12 +30402,7 @@ class UShipPartCustomization* UShipPartCustomization::STATIC_MakeAsyncShipPartCu
 
 	UShipPartCustomization_MakeAsyncShipPartCustomization_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39066,12 +30426,7 @@ void UShipPartCustomization::Customize(class AShip* InShip, const struct FPartDe
 	params.OnSuccessCallback = OnSuccessCallback;
 	params.OnFailureCallback = OnFailureCallback;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39087,12 +30442,7 @@ void UShipPartCustomizationTestCallbacks::OnSuccess(class AActor* InActor)
 	UShipPartCustomizationTestCallbacks_OnSuccess_Params params;
 	params.InActor = InActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39108,12 +30458,7 @@ void UShipPartCustomizationTestCallbacks::OnFailure(TEnumAsByte<EShipPartCustomi
 	UShipPartCustomizationTestCallbacks_OnFailure_Params params;
 	params.InErrorCode = InErrorCode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39132,12 +30477,7 @@ bool UShipPartCustomizationTestLibrary::STATIC_ApplyCustomization(class UShipPar
 	params.CustomizationComponent = CustomizationComponent;
 	params.InPartDesc = InPartDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39156,12 +30496,7 @@ class AShip* AShipService::IsWorldPosInsideHull(const struct FVector& Pos)
 	AShipService_IsWorldPosInsideHull_Params params;
 	params.Pos = Pos;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39180,12 +30515,7 @@ class AShip* AShipService::IsWorldPosInsideCabin(const struct FVector& Pos)
 	AShipService_IsWorldPosInsideCabin_Params params;
 	params.Pos = Pos;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39202,12 +30532,7 @@ bool UShipStuckDetectionComponent::GetDoesShipAppearCurrentlyStuck()
 
 	UShipStuckDetectionComponent_GetDoesShipAppearCurrentlyStuck_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39225,12 +30550,7 @@ void UShipTelemetryComponent::SetShipHeartbeatInterval(float Interval)
 	UShipTelemetryComponent_SetShipHeartbeatInterval_Params params;
 	params.Interval = Interval;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39245,12 +30565,7 @@ struct FGuid UShipTelemetryComponent::GetShipIdForWebServices()
 
 	UShipTelemetryComponent_GetShipIdForWebServices_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39267,12 +30582,7 @@ bool UShipTrackerComponent::IsPlayerAbandoned()
 
 	UShipTrackerComponent_IsPlayerAbandoned_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39287,11 +30597,7 @@ void AShipwreck::OnResetTo()
 
 	AShipwreck_OnResetTo_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39311,12 +30617,7 @@ void AShipwreck::OnOverlapEnd(class AActor* Other, class UPrimitiveComponent* Ot
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39340,12 +30641,7 @@ void AShipwreck::OnOverlapBegin(class AActor* Other, class UPrimitiveComponent* 
 	params.bFromSweep = bFromSweep;
 	params.OverlapInfo = OverlapInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39358,12 +30654,7 @@ void AShipwreckSiteGeneratorSimulator::SetIslands()
 
 	AShipwreckSiteGeneratorSimulator_SetIslands_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39376,12 +30667,7 @@ void AShipwreckSiteGeneratorSimulator::ResetShipwrecks()
 
 	AShipwreckSiteGeneratorSimulator_ResetShipwrecks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39394,12 +30680,7 @@ void AShipwreckSiteGeneratorSimulator::ResetDebugDrawing()
 
 	AShipwreckSiteGeneratorSimulator_ResetDebugDrawing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39414,11 +30695,7 @@ TArray<struct FIsland> AShipwreckSiteGeneratorSimulator::GetIslands()
 
 	AShipwreckSiteGeneratorSimulator_GetIslands_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39433,12 +30710,7 @@ void AShipwreckSiteGeneratorSimulator::GenerateWreck()
 
 	AShipwreckSiteGeneratorSimulator_GenerateWreck_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39451,12 +30723,7 @@ void USinkingComponent::SinkShip()
 
 	USinkingComponent_SinkShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39472,12 +30739,7 @@ void USinkingComponent::SetSinkingParams(const struct FSinkingShipParams& Params
 	USinkingComponent_SetSinkingParams_Params params;
 	params.Params = Params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39493,12 +30755,7 @@ void USinkingComponent::SetDebugKeelOverConfigIndexOverride(int Index)
 	USinkingComponent_SetDebugKeelOverConfigIndexOverride_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39514,12 +30771,7 @@ void USinkingComponent::OnRep_ShipState(unsigned char PreviousState)
 	USinkingComponent_OnRep_ShipState_Params params;
 	params.PreviousState = PreviousState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39534,12 +30786,7 @@ bool USinkingComponent::IsSinking()
 
 	USinkingComponent_IsSinking_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39556,12 +30803,7 @@ bool USinkingComponent::IsKeeledOver()
 
 	USinkingComponent_IsKeeledOver_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39578,12 +30820,7 @@ bool USinkingComponent::IsDeepEnoughInWaterToSink()
 
 	USinkingComponent_IsDeepEnoughInWaterToSink_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39600,12 +30837,7 @@ struct FSinkingShipParams USinkingComponent::GetSinkingParams()
 
 	USinkingComponent_GetSinkingParams_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39622,12 +30854,7 @@ TEnumAsByte<EShipState> USinkingComponent::GetShipState()
 
 	USinkingComponent_GetShipState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39642,12 +30869,7 @@ void USinkingComponent::ForceSinkShip()
 
 	USinkingComponent_ForceSinkShip_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39660,12 +30882,7 @@ void USinkingComponent::BeginningToSinkRPC()
 
 	USinkingComponent_BeginningToSinkRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39687,12 +30904,7 @@ void USittingActionStateId::STATIC_PushCharacterIntoSittingActionState(TEnumAsBy
 	params.Character = Character;
 	params.SittingActionStateParams = SittingActionStateParams;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39705,12 +30917,7 @@ void ASkeletonThrone::Multicast_PlaySatOnStatFiredReactions()
 
 	ASkeletonThrone_Multicast_PlaySatOnStatFiredReactions_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39728,12 +30935,7 @@ void ASkellyFort::Multicast_OnWaveGroupSpawned(const struct FBountySpawnerNewWav
 	params.Ev = Ev;
 	params.AudioEvent = AudioEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39751,12 +30953,7 @@ void ASkellyFort::Multicast_OnFortComplete(const struct FVector& DeathLocation, 
 	params.DeathLocation = DeathLocation;
 	params.AudioEvent = AudioEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39774,12 +30971,7 @@ void UStaggerComponent::SetStaggerStrength(float UnaryStrength, TEnumAsByte<ESta
 	params.UnaryStrength = UnaryStrength;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39794,12 +30986,7 @@ class UStatusEffectComponent* UStatusEffectComponentProviderInterface::GetStatus
 
 	UStatusEffectComponentProviderInterface_GetStatusEffectComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39814,12 +31001,7 @@ void UStatusEffectComponent::OnRep_StatusEffect()
 
 	UStatusEffectComponent_OnRep_StatusEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39837,12 +31019,7 @@ void UStorageContainerInterface::TakeItem(class AActor* Player, int NodeIndex)
 	params.Player = Player;
 	params.NodeIndex = NodeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39857,12 +31034,7 @@ struct FText UStorageContainerInterface::GetContainerDisplayName()
 
 	UStorageContainerInterface_GetContainerDisplayName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39882,12 +31054,7 @@ void UStorageContainerInterface::AddItem(class AActor* Player, class UClass* InI
 	params.Player = Player;
 	params.InItemDesc = InItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39905,12 +31072,7 @@ void UStorageContainerComponent::TakeItem(class AActor* Player, int NodeIndex)
 	params.Player = Player;
 	params.NodeIndex = NodeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39926,12 +31088,7 @@ void UStorageContainerComponent::OnRep_ContentsChanged(const struct FStorageCont
 	UStorageContainerComponent_OnRep_ContentsChanged_Params params;
 	params.InOldItemCount = InOldItemCount;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39946,12 +31103,7 @@ struct FText UStorageContainerComponent::GetContainerDisplayName()
 
 	UStorageContainerComponent_GetContainerDisplayName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -39971,12 +31123,7 @@ void UStorageContainerComponent::AddItem(class AActor* Player, class UClass* InI
 	params.Player = Player;
 	params.InItemDesc = InItemDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39992,12 +31139,7 @@ void AStorm::Multicast_QueueLightning(const struct FLightningImpact& LightningIm
 	AStorm_Multicast_QueueLightning_Params params;
 	params.LightningImpact = LightningImpact;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40015,12 +31157,7 @@ void UStunnedActionStateId::STATIC_PushCharacterIntoStunnedActionState(class AAt
 	params.Character = Character;
 	params.Params = Params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40036,12 +31173,7 @@ void ASunkenCurseArtefact::Multicast_WasDefeated(class AActor* InInstigator)
 	ASunkenCurseArtefact_Multicast_WasDefeated_Params params;
 	params.InInstigator = InInstigator;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40059,12 +31191,7 @@ void USwallowedByKrakenActionStateId::STATIC_PushCharacterIntoSwallowedByKrakenA
 	params.Character = Character;
 	params.Tentacle = Tentacle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40080,12 +31207,7 @@ void USwallowedByKrakenActionStateId::STATIC_PopCharacterOutOfSwallowedByKrakenA
 	USwallowedByKrakenActionStateId_PopCharacterOutOfSwallowedByKrakenActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40100,12 +31222,7 @@ bool USwimmingCreatureAnimationInstance::RunningOnServer()
 
 	USwimmingCreatureAnimationInstance_RunningOnServer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40123,12 +31240,7 @@ void USwimmingCreatureMovementComponent::SetSwimmingMode(TEnumAsByte<ESwimmingMo
 	USwimmingCreatureMovementComponent_SetSwimmingMode_Params params;
 	params.InSwimmingMode = InSwimmingMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40141,12 +31253,7 @@ void USwimmingCreatureMovementComponent::OnRep_ReplicatedSwimmingMode()
 
 	USwimmingCreatureMovementComponent_OnRep_ReplicatedSwimmingMode_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40168,12 +31275,7 @@ void USwimmingCreatureMovementComponent::OnHasSolidHit(class AActor* OtherActor,
 	params.NormalImpulse = NormalImpulse;
 	params.Hit = Hit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40188,12 +31290,7 @@ TEnumAsByte<ESwimmingMode> USwimmingCreatureMovementComponent::GetSwimmingMode()
 
 	USwimmingCreatureMovementComponent_GetSwimmingMode_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40212,12 +31309,7 @@ struct FSwimmingCreatureAIStrategyMovementProperties USwimmingCreatureMovementCo
 	USwimmingCreatureMovementComponent_GetMovementPropertiesForAIStrategy_Params params;
 	params.AIStrategy = AIStrategy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40234,12 +31326,7 @@ float USwimmingCreatureMovementComponent::GetCurrentYawTurnRate()
 
 	USwimmingCreatureMovementComponent_GetCurrentYawTurnRate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40256,12 +31343,7 @@ float USwimmingCreatureMovementComponent::GetCurrentVelocity()
 
 	USwimmingCreatureMovementComponent_GetCurrentVelocity_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40278,37 +31360,9 @@ float USwimmingCreatureMovementComponent::GetComponentDistanceFromWaterHeight()
 
 	USwimmingCreatureMovementComponent_GetComponentDistanceFromWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function Athena.TalkToNPCActionStateId.PushCharIntoActionState
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNPCDialogComponent*     NPCDialogComp                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UTalkToNPCActionStateId::STATIC_PushCharIntoActionState(class UNPCDialogComponent* NPCDialogComp, class AActor* Character)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.TalkToNPCActionStateId.PushCharIntoActionState");
-
-	UTalkToNPCActionStateId_PushCharIntoActionState_Params params;
-	params.NPCDialogComp = NPCDialogComp;
-	params.Character = Character;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40326,12 +31380,7 @@ void UTalkToNPCActionStateId::STATIC_PopCharOutOfActionState(class UNPCDialogCom
 	params.NPCDialogComp = NPCDialogComp;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40347,12 +31396,7 @@ void ATavernStepsTrigger::OnRep_StepsState(TEnumAsByte<EStepsTriggerState> LastS
 	ATavernStepsTrigger_OnRep_StepsState_Params params;
 	params.LastState = LastState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40372,12 +31416,7 @@ void ATavernStepsTrigger::OnEndOverlapTavern(class AActor* OtherActor, class UPr
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40397,12 +31436,7 @@ void ATavernStepsTrigger::OnEndOverlapStepsListener(class AActor* OtherActor, cl
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40426,12 +31460,7 @@ void ATavernStepsTrigger::OnBeginOverlapTavern(class AActor* OtherActor, class U
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40455,12 +31484,7 @@ void ATavernStepsTrigger::OnBeginOverlapStepsListener(class AActor* OtherActor, 
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40473,12 +31497,7 @@ void ATavernStepsTrigger::Multicast_StartAnimatedStepsOpen()
 
 	ATavernStepsTrigger_Multicast_StartAnimatedStepsOpen_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40504,12 +31523,7 @@ void UTeleportActionStateId::STATIC_PushCharacterIntoTeleportActionStateWithCust
 	params.StreamOutLevelId = StreamOutLevelId;
 	params.StreamInLevelId = StreamInLevelId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40533,12 +31547,7 @@ void UTeleportActionStateId::STATIC_PushCharacterIntoTeleportActionState(class A
 	params.StreamOutLevelId = StreamOutLevelId;
 	params.StreamInLevelId = StreamInLevelId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40555,12 +31564,7 @@ void UTeleportFunctions::STATIC_SortTeleportLocationsByProximity(const struct FV
 	UTeleportFunctions_SortTeleportLocationsByProximity_Params params;
 	params.Pivot = Pivot;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Locations != nullptr)
 		*Locations = params.Locations;
@@ -40582,12 +31586,7 @@ TArray<struct FTeleportLocation> UTeleportFunctions::STATIC_GetTeleportLocations
 	params.InCharacter = InCharacter;
 	params.InShip = InShip;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40610,12 +31609,7 @@ TArray<struct FTeleportLocation> UTeleportFunctions::STATIC_GetTeleportLocations
 	params.InShip = InShip;
 	params.InDeck = InDeck;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40636,12 +31630,7 @@ struct FTeleportLocation UTeleportFunctions::STATIC_GetTeleportLocationOnShip(cl
 	params.InCharacter = InCharacter;
 	params.InShip = InShip;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40664,12 +31653,7 @@ struct FTeleportLocation UTeleportFunctions::STATIC_GetTeleportLocationAroundTar
 	params.InTarget = InTarget;
 	params.InDistanceFromTarget = InDistanceFromTarget;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40688,12 +31672,7 @@ struct FTeleportLocation UTeleportFunctions::STATIC_GetNearestTeleportLocationOn
 	UTeleportFunctions_GetNearestTeleportLocationOnLand_Params params;
 	params.InCharacter = InCharacter;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40717,12 +31696,7 @@ void UTestControlObjectActionStateId::STATIC_PushCharacterIntoTestControlObjectA
 	params.Character = Character;
 	params.DockTime = DockTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40740,12 +31714,7 @@ void UTestNetworkedEventsFunctionLibrary::STATIC_FireTestEventToServer(class AAt
 	params.PlayerController = PlayerController;
 	params.TestEventData = TestEventData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40763,12 +31732,7 @@ void UTestNetworkedEventsFunctionLibrary::STATIC_FireTestEventToClient(class AAt
 	params.PlayerController = PlayerController;
 	params.TestEventData = TestEventData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40781,12 +31745,7 @@ void ATestQuestProxy::Stop()
 
 	ATestQuestProxy_Stop_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40804,12 +31763,7 @@ void ATestQuestProxy::CreateXMarksTheSpotQuest(class UObject* WorldContext, cons
 	params.WorldContext = WorldContext;
 	params.QuestDesc = QuestDesc;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40825,12 +31779,7 @@ void ATestQuestProxy::AddParticipant(class AAthenaPlayerCharacter* Participant)
 	ATestQuestProxy_AddParticipant_Params params;
 	params.Participant = Participant;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40847,12 +31796,7 @@ class UTestReturnCompleteAfterTimeoutPlayerRelevancyService* UTestReturnComplete
 	UTestReturnCompleteAfterTimeoutPlayerRelevancyService_CreateTestReturnCompleteAfterTimeoutPlayerRelevancyService_Params params;
 	params.InTimeoutWanted = InTimeoutWanted;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40869,12 +31813,7 @@ class UTestShipAssetClassDatabase* UTestShipAssetClassDatabase::STATIC_MakeTestS
 
 	UTestShipAssetClassDatabase_MakeTestShipAssetClassDatabase_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40905,12 +31844,7 @@ void UTestStreamingTeleport::STATIC_GetTeleportPoints(class UObject* WorldContex
 	params.MinExtents = MinExtents;
 	params.MaxExtents = MaxExtents;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Points != nullptr)
 		*Points = params.Points;
@@ -40929,12 +31863,7 @@ void UTextureFeedbackComponent::SetInputTexture1(class UTextureRenderTarget2D* I
 	UTextureFeedbackComponent_SetInputTexture1_Params params;
 	params.InRenderTargetTexture = InRenderTargetTexture;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40950,12 +31879,7 @@ void UTextureFeedbackComponent::SetEffectActive(bool IsActive)
 	UTextureFeedbackComponent_SetEffectActive_Params params;
 	params.IsActive = IsActive;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40970,12 +31894,7 @@ class UTexture* UTextureFeedbackComponent::GetTexture()
 
 	UTextureFeedbackComponent_GetTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -40997,12 +31916,7 @@ void UTextureFeedbackComponent::CopyToTargetTexture(class UObject* WorldContextO
 	params.RenderTarget = RenderTarget;
 	params.SourceTexture = SourceTexture;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41018,12 +31932,7 @@ void UTextureFeedbackComponent::ClearTexture(const struct FLinearColor& ClearCol
 	UTextureFeedbackComponent_ClearTexture_Params params;
 	params.ClearColor = ClearColor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41041,12 +31950,7 @@ void UTinySharkDebugFunctionLibrary::STATIC_OverrideTinySharkExperienceRepositio
 	params.TinySharkExperience = TinySharkExperience;
 	params.InTime = InTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41062,12 +31966,7 @@ void UTrackedActorService::UnregisterActor(class AActor* Actor)
 	UTrackedActorService_UnregisterActor_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41080,12 +31979,7 @@ void ABountyMap::RefreshContents()
 
 	ABountyMap_RefreshContents_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41105,12 +31999,7 @@ void ABountyMap::OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Height
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41123,12 +32012,7 @@ void ABountyMap::OnRep_MapInventoryTexturePath()
 
 	ABountyMap_OnRep_MapInventoryTexturePath_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41144,12 +32028,56 @@ void ABountyMap::OnRep_Contents(const struct FBountyMapContents& InPreviousConte
 	ABountyMap_OnRep_Contents_Params params;
 	params.InPreviousContents = InPreviousContents;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.CargoRunMap.RefreshContents
+// (Final, Native, Public, BlueprintCallable)
+
+void ACargoRunMap::RefreshContents()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunMap.RefreshContents");
+
+	ACargoRunMap_RefreshContents_Params params;
 
 	UObject::ProcessEvent(fn, &params);
+}
 
-	fn->FunctionFlags = flags;
+
+// Function Athena.CargoRunMap.OnTextCanvasUpdate
+// (Final, Native, Private)
+// Parameters:
+// class UCanvas*                 Canvas                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Width                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void ACargoRunMap::OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Height)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunMap.OnTextCanvasUpdate");
+
+	ACargoRunMap_OnTextCanvasUpdate_Params params;
+	params.Canvas = Canvas;
+	params.Width = Width;
+	params.Height = Height;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.CargoRunMap.OnRep_Contents
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// struct FCargoRunMapContents    PreviousContents               (ConstParm, Parm, OutParm, ReferenceParm)
+
+void ACargoRunMap::OnRep_Contents(const struct FCargoRunMapContents& PreviousContents)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunMap.OnRep_Contents");
+
+	ACargoRunMap_OnRep_Contents_Params params;
+	params.PreviousContents = PreviousContents;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -41162,12 +32090,7 @@ void AMerchantMap::RefreshContents()
 
 	AMerchantMap_RefreshContents_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41187,12 +32110,7 @@ void AMerchantMap::OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Heig
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41208,12 +32126,7 @@ void AMerchantMap::OnRep_Contents(const struct FMerchantMapContents& InPreviousC
 	AMerchantMap_OnRep_Contents_Params params;
 	params.InPreviousContents = InPreviousContents;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41226,12 +32139,7 @@ void ARiddleMap::TriggerMagicGlow_RPC()
 
 	ARiddleMap_TriggerMagicGlow_RPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41244,12 +32152,7 @@ void ARiddleMap::StartMagicGlowEffect()
 
 	ARiddleMap_StartMagicGlowEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41262,12 +32165,7 @@ void ARiddleMap::RefreshContents()
 
 	ARiddleMap_RefreshContents_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41287,12 +32185,7 @@ void ARiddleMap::OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Height
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41305,12 +32198,7 @@ void ARiddleMap::OnRep_MapInventoryTexturePath()
 
 	ARiddleMap_OnRep_MapInventoryTexturePath_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41326,12 +32214,7 @@ void ARiddleMap::OnRep_Contents(const struct FRiddleMapContents& InPreviousConte
 	ARiddleMap_OnRep_Contents_Params params;
 	params.InPreviousContents = InPreviousContents;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41351,12 +32234,7 @@ void ARiddleMap::OnMaskCanvasUpdate(class UCanvas* Canvas, int Width, int Height
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41378,12 +32256,7 @@ void AXMarksTheSpotMap::SetMapData(TAssetPtr<class UTexture> InMapTextureAsset, 
 	params.InMarks = InMarks;
 	params.InRotation = InRotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41396,12 +32269,7 @@ void AXMarksTheSpotMap::OnRep_Marks()
 
 	AXMarksTheSpotMap_OnRep_Marks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41414,12 +32282,7 @@ void AXMarksTheSpotMap::OnRep_MapTexturePath()
 
 	AXMarksTheSpotMap_OnRep_MapTexturePath_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41432,12 +32295,7 @@ void AXMarksTheSpotMap::OnRep_MapInventoryTexturePath()
 
 	AXMarksTheSpotMap_OnRep_MapInventoryTexturePath_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41457,12 +32315,7 @@ void AXMarksTheSpotMap::OnCanvasUpdate(class UCanvas* Canvas, int Width, int Hei
 	params.Width = Width;
 	params.Height = Height;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41477,12 +32330,7 @@ bool AXMarksTheSpotMap::IsMapTextureLoaded()
 
 	AXMarksTheSpotMap_IsMapTextureLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41499,12 +32347,7 @@ class UCanvasRenderTarget2D* AXMarksTheSpotMap::GetRenderTarget()
 
 	AXMarksTheSpotMap_GetRenderTarget_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41521,12 +32364,7 @@ TArray<struct FXMarksTheSpotMapMark> AXMarksTheSpotMap::GetMarks()
 
 	AXMarksTheSpotMap_GetMarks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41543,12 +32381,7 @@ TAssetPtr<class UTexture> AXMarksTheSpotMap::GetMapTextureAsset()
 
 	AXMarksTheSpotMap_GetMapTextureAsset_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41565,12 +32398,7 @@ class UMaterialInstanceDynamic* AXMarksTheSpotMap::GetDynamicMaterialThird()
 
 	AXMarksTheSpotMap_GetDynamicMaterialThird_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41587,12 +32415,7 @@ class UMaterialInstanceDynamic* AXMarksTheSpotMap::GetDynamicMaterialFirst()
 
 	AXMarksTheSpotMap_GetDynamicMaterialFirst_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41610,12 +32433,7 @@ void ATriggerObject::Trigger(class AActor* InTriggeringActor)
 	ATriggerObject_Trigger_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41631,12 +32449,7 @@ void ATriggerObject::OnTriggerServer(class AActor* InTriggeringActor)
 	ATriggerObject_OnTriggerServer_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41652,12 +32465,7 @@ void ATriggerObject::OnTriggerClient(class AActor* InTriggeringActor)
 	ATriggerObject_OnTriggerClient_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41673,12 +32481,7 @@ void ATriggerObject::MulticastTrigger(class AActor* InTriggeringActor)
 	ATriggerObject_MulticastTrigger_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41695,12 +32498,7 @@ bool ATriggerObject::CanActorTrigger(class AActor* InTriggeringActor)
 	ATriggerObject_CanActorTrigger_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41718,12 +32516,7 @@ void ATeleportTriggerObject::OnTriggerTeleportServer(class AActor* InTriggeringA
 	ATeleportTriggerObject_OnTriggerTeleportServer_Params params;
 	params.InTriggeringActor = InTriggeringActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41736,12 +32529,7 @@ void UTutorialComponent::OnRep_HasBegun()
 
 	UTutorialComponent_OnRep_HasBegun_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41754,12 +32542,7 @@ void UUnifiedDelegateTestUnifiedDelegate::UnbindDelegate()
 
 	UUnifiedDelegateTestUnifiedDelegate_UnbindDelegate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41774,12 +32557,7 @@ class UUnifiedDelegateTestUnifiedDelegate* UUnifiedDelegateTestUnifiedDelegate::
 
 	UUnifiedDelegateTestUnifiedDelegate_MakeTestUnifiedDelegate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41796,12 +32574,7 @@ bool UUnifiedDelegateTestUnifiedDelegate::IsDelegateBound()
 
 	UUnifiedDelegateTestUnifiedDelegate_IsDelegateBound_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41819,12 +32592,7 @@ void UUnifiedDelegateTestUnifiedDelegate::BindDelegate(const struct FScriptDeleg
 	UUnifiedDelegateTestUnifiedDelegate_BindDelegate_Params params;
 	params.InDynamicDelegate = InDynamicDelegate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41844,12 +32612,7 @@ void UUnloadItemActionStateId::STATIC_PushCharacterIntoUnloadItemActionState(cla
 	params.UnloadableActor = UnloadableActor;
 	params.Interactable = Interactable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41865,12 +32628,7 @@ void UUnloadItemActionStateId::STATIC_PopCharacterOutOfUnloadItemActionState(cla
 	UUnloadItemActionStateId_PopCharacterOutOfUnloadItemActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41886,12 +32644,7 @@ void UUsableWieldableComponent::Server_TriggerOneShotUse(class UClass* InputID)
 	UUsableWieldableComponent_Server_TriggerOneShotUse_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41907,12 +32660,7 @@ void UUsableWieldableComponent::Multicast_TriggerOneShotUse(class UClass* InputI
 	UUsableWieldableComponent_Multicast_TriggerOneShotUse_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41932,12 +32680,7 @@ void UUseCannonActionStateId::STATIC_PushCharacterIntoUseCannonActionState(TEnum
 	params.CannonActor = CannonActor;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -41952,12 +32695,7 @@ TEnumAsByte<EInputHandlerResult> UUseCannonCompositeInputHandler::OnSecondaryInt
 
 	UUseCannonCompositeInputHandler_OnSecondaryInteractReleased_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41974,12 +32712,7 @@ TEnumAsByte<EInputHandlerResult> UUseCannonCompositeInputHandler::OnSecondaryInt
 
 	UUseCannonCompositeInputHandler_OnSecondaryInteract_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -41998,12 +32731,7 @@ TEnumAsByte<EInputHandlerResult> UUseCannonCompositeInputHandler::OnMoveYaw(floa
 	UUseCannonCompositeInputHandler_OnMoveYaw_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42022,12 +32750,7 @@ TEnumAsByte<EInputHandlerResult> UUseCannonCompositeInputHandler::OnMovePitch(fl
 	UUseCannonCompositeInputHandler_OnMovePitch_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42044,12 +32767,7 @@ TEnumAsByte<EInputHandlerResult> UUseCannonCompositeInputHandler::OnFireCannon()
 
 	UUseCannonCompositeInputHandler_OnFireCannon_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42071,12 +32789,7 @@ void UUseItemActionStateId::STATIC_PushCharacterIntoUseItemActionState(class AAc
 	params.Usable = Usable;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42092,12 +32805,7 @@ void UUseItemActionStateId::STATIC_PopCharacterOutOfUseItemActionState(class AAc
 	UUseItemActionStateId_PopCharacterOutOfUseItemActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42123,12 +32831,7 @@ void UUseLadderActionStateId::STATIC_PushCharacterIntoUseLadderActionState(TEnum
 	params.ClimbId = ClimbId;
 	params.LadderDefinition = LadderDefinition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42148,12 +32851,7 @@ void UUseMapTableActionStateId::STATIC_PushCharacterIntoUseMapTableActionState(T
 	params.MapTableActor = MapTableActor;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42170,12 +32868,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnZoomOut(fl
 	UUseMapTableCompositeInputHandler_OnZoomOut_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42194,12 +32887,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnZoomIn(flo
 	UUseMapTableCompositeInputHandler_OnZoomIn_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42216,12 +32904,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnTogglePin(
 
 	UUseMapTableCompositeInputHandler_OnTogglePin_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42240,12 +32923,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnPanY(float
 	UUseMapTableCompositeInputHandler_OnPanY_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42264,12 +32942,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnPanX(float
 	UUseMapTableCompositeInputHandler_OnPanX_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42288,12 +32961,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnMouseZoom(
 	UUseMapTableCompositeInputHandler_OnMouseZoom_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42312,12 +32980,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnMousePanY(
 	UUseMapTableCompositeInputHandler_OnMousePanY_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42336,12 +32999,7 @@ TEnumAsByte<EInputHandlerResult> UUseMapTableCompositeInputHandler::OnMousePanX(
 	UUseMapTableCompositeInputHandler_OnMousePanX_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42361,12 +33019,7 @@ void UVenomComponent::SprayVenomInDirection(const struct FVector& SourceLocation
 	params.SourceLocation = SourceLocation;
 	params.Direction = Direction;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42382,12 +33035,7 @@ void UVenomComponent::SprayVenomAtClosestTarget(const struct FVector& SourceLoca
 	UVenomComponent_SprayVenomAtClosestTarget_Params params;
 	params.SourceLocation = SourceLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42403,12 +33051,7 @@ void UVenomComponent::ApplyVenomToTarget(class AActor* Target)
 	UVenomComponent_ApplyVenomToTarget_Params params;
 	params.Target = Target;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42423,12 +33066,7 @@ void UVfxFunctionLibrary::STATIC_WithWorldOwner(struct FVfxSpawner* Spawner)
 
 	UVfxFunctionLibrary_WithWorldOwner_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42448,12 +33086,7 @@ void UVfxFunctionLibrary::STATIC_WithRelativeScale(const struct FVector& Scale3D
 	UVfxFunctionLibrary_WithRelativeScale_Params params;
 	params.Scale3D = Scale3D;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42477,12 +33110,7 @@ void UVfxFunctionLibrary::STATIC_WithOwner(class UObject* InOwner, bool InOwnerO
 	params.InOwnerOnlySee = InOwnerOnlySee;
 	params.InOwnerNoSee = InOwnerNoSee;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42504,12 +33132,7 @@ void UVfxFunctionLibrary::STATIC_WithEffect(class UObject* InEmitterTemplate, bo
 	params.InEmitterTemplate = InEmitterTemplate;
 	params.InAutoDestroy = InAutoDestroy;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42531,12 +33154,7 @@ void UVfxFunctionLibrary::STATIC_WithCustomLocalSpaceDelegateForCharacter(class 
 	params.AthenaPlayerCharacter = AthenaPlayerCharacter;
 	params.CustomLocalSpaceMode = CustomLocalSpaceMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42557,12 +33175,7 @@ class UParticleSystemComponent* UVfxFunctionLibrary::STATIC_Spawn(class UObject*
 	UVfxFunctionLibrary_Spawn_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42584,12 +33197,7 @@ void UVfxFunctionLibrary::STATIC_SetUnderwater(bool IsUnderwater, struct FVfxSpa
 	UVfxFunctionLibrary_SetUnderwater_Params params;
 	params.IsUnderwater = IsUnderwater;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42612,12 +33220,7 @@ void UVfxFunctionLibrary::STATIC_SetCustomLocalSpaceDelegateForCharacter(class U
 	params.AthenaCharacter = AthenaCharacter;
 	params.CustomLocalSpaceMode = CustomLocalSpaceMode;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42634,12 +33237,7 @@ void UVfxFunctionLibrary::STATIC_InVfxRegion(TEnumAsByte<EVfxRegion> InRegion, s
 	UVfxFunctionLibrary_InVfxRegion_Params params;
 	params.InRegion = InRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42663,12 +33261,7 @@ void UVfxFunctionLibrary::STATIC_AttachedToSocket(class USceneComponent* InAttac
 	params.InAttachPointName = InAttachPointName;
 	params.InLocationType = InLocationType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42690,12 +33283,7 @@ void UVfxFunctionLibrary::STATIC_AttachedToComponent(class USceneComponent* InAt
 	params.InAttachToComponent = InAttachToComponent;
 	params.InLocationType = InLocationType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42721,12 +33309,7 @@ void UVfxFunctionLibrary::STATIC_AtSocketLocation(class USceneComponent* InSocke
 	params.InLocation = InLocation;
 	params.InRotation = InRotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42748,12 +33331,7 @@ void UVfxFunctionLibrary::STATIC_AtLocation(const struct FVector& InLocation, co
 	params.InLocation = InLocation;
 	params.InRotation = InRotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Spawner != nullptr)
 		*Spawner = params.Spawner;
@@ -42793,12 +33371,7 @@ class UParticleSystemComponent* UVfxFunctionLibrary::STATIC_AthenaSpawnShipRelat
 	params.bIsUnderwater = bIsUnderwater;
 	params.VfxRegion = VfxRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42839,12 +33412,7 @@ class UParticleSystemComponent* UVfxFunctionLibrary::STATIC_AthenaSpawnEmitterAt
 	params.bIsUnderwater = bIsUnderwater;
 	params.VfxRegion = VfxRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42879,12 +33447,7 @@ class UParticleSystemComponent* UVfxFunctionLibrary::STATIC_AthenaSpawnEmitterAt
 	params.bIsUnderwater = bIsUnderwater;
 	params.VfxRegion = VfxRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42921,12 +33484,7 @@ class UParticleSystemComponent* UVfxFunctionLibrary::STATIC_AthenaSpawnEmitterAt
 	params.bIsUnderwater = bIsUnderwater;
 	params.VfxRegion = VfxRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42957,12 +33515,7 @@ class UParticleSystemComponent* UVfxFunctionLibrary::STATIC_AthenaSpawnEmitterAt
 	params.bIsUnderwater = bIsUnderwater;
 	params.VfxRegion = VfxRegion;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43005,12 +33558,7 @@ class UParticleSystemComponent* UVfxSelectorFunctionLibrary::STATIC_SelectUpdate
 	params.bOwnerNoSee = bOwnerNoSee;
 	params.bIsUnderwater = bIsUnderwater;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43051,12 +33599,7 @@ class UParticleSystemComponent* UVfxSelectorFunctionLibrary::STATIC_SelectSpawnV
 	params.bOwnerNoSee = bOwnerNoSee;
 	params.bIsUnderwater = bIsUnderwater;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43091,12 +33634,24 @@ class UParticleSystemComponent* UVfxSelectorFunctionLibrary::STATIC_SelectSpawnV
 	params.bOwnerNoSee = bOwnerNoSee;
 	params.bIsUnderwater = bIsUnderwater;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
 
-	fn->FunctionFlags = flags;
+	return params.ReturnValue;
+}
+
+
+// Function Athena.VisualHealthResponseComponent.GetMaterialInstance
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMaterialInstanceDynamic* UVisualHealthResponseComponent::GetMaterialInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.VisualHealthResponseComponent.GetMaterialInstance");
+
+	UVisualHealthResponseComponent_GetMaterialInstance_Params params;
+
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -43116,12 +33671,7 @@ void UVomitComponent::VomitActivate(const struct FName& VomitType, float Duratio
 	params.VomitType = VomitType;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43145,12 +33695,7 @@ void UVomitComponent::OnOverlapBegin(class AActor* Other, class UPrimitiveCompon
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43166,12 +33711,7 @@ void UVomitComponent::Multicast_VomitImpact(const struct FHitResult& Result)
 	UVomitComponent_Multicast_VomitImpact_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43189,12 +33729,7 @@ void UVomitComponent::Multicast_VomitActivate(const struct FName& VomitType, flo
 	params.VomitType = VomitType;
 	params.Duration = Duration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43209,12 +33744,7 @@ bool UVomitComponent::IsFaceCoveredWithVomit()
 
 	UVomitComponent_IsFaceCoveredWithVomit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43231,12 +33761,7 @@ bool UVomitComponent::DidVomitVFXSpawn()
 
 	UVomitComponent_DidVomitVFXSpawn_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43251,12 +33776,7 @@ void UVomitComponent::Client_VomitHit()
 
 	UVomitComponent_Client_VomitHit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43272,12 +33792,7 @@ void UVotableWithSessionComponent::SetVoteDataIndex(int InVoteDataIndex)
 	UVotableWithSessionComponent_SetVoteDataIndex_Params params;
 	params.InVoteDataIndex = InVoteDataIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43292,12 +33807,7 @@ bool UVotableWithSessionComponent::IsSessionLocked()
 
 	UVotableWithSessionComponent_IsSessionLocked_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43314,12 +33824,7 @@ int UVotableWithSessionComponent::GetVoteDataIndex()
 
 	UVotableWithSessionComponent_GetVoteDataIndex_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43334,12 +33839,7 @@ void UBindToParentShipCrewVotingSession::OnRep_Manifest()
 
 	UBindToParentShipCrewVotingSession_OnRep_Manifest_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43365,12 +33865,7 @@ void AVoyageGeneratorSim::SimulateVoyageChain(int Count, int Seed, int MaxHistor
 	params.Islands = Islands;
 	params.Recipe = Recipe;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43386,11 +33881,7 @@ void AVoyageGeneratorSim::ProcessSimulatedVoyage(class UVoyageGeneratorSimResult
 	AVoyageGeneratorSim_ProcessSimulatedVoyage_Params params;
 	params.Voyage = Voyage;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43403,11 +33894,7 @@ void AVoyageGeneratorSim::OnEndSimulationRun()
 
 	AVoyageGeneratorSim_OnEndSimulationRun_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43420,11 +33907,7 @@ void AVoyageGeneratorSim::OnBeginSimulationRun()
 
 	AVoyageGeneratorSim_OnBeginSimulationRun_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43440,12 +33923,7 @@ void UVoyageGeneratorSimBlackboardFunctions::STATIC_PrintBlackboard(const struct
 	UVoyageGeneratorSimBlackboardFunctions_PrintBlackboard_Params params;
 	params.Blackboard = Blackboard;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43464,12 +33942,7 @@ TArray<int> UVoyageGeneratorSimBlackboardFunctions::STATIC_GetValuesFromBlackboa
 	params.Blackboard = Blackboard;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43490,12 +33963,7 @@ TArray<class FString> UVoyageGeneratorSimBlackboardFunctions::STATIC_GetValuesFr
 	params.Blackboard = Blackboard;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43516,12 +33984,7 @@ struct FVoyageGeneratorSimBlackboard UVoyageGeneratorSimBlackboardFunctions::STA
 	params.A = A;
 	params.B = B;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43542,12 +34005,7 @@ struct FVector UVoyageGeneratorSimFunctions::STATIC_GetIslandLocation(TArray<str
 	params.Islands = Islands;
 	params.InName = InName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43574,12 +34032,7 @@ class UVoyageGeneratorSimResult* UVoyageGeneratorSimFunctions::STATIC_GenerateVo
 	params.Seed = Seed;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43600,12 +34053,7 @@ TArray<int> UVoyageGeneratorSimFunctions::STATIC_GenerateDistributionFromRecipe(
 	params.Recipe = Recipe;
 	params.Seed = Seed;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43624,12 +34072,7 @@ struct FVoyageGeneratorSimBlackboard UVoyageGeneratorSimResult::VisitChapter(int
 	UVoyageGeneratorSimResult_VisitChapter_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43646,12 +34089,7 @@ struct FVoyageGeneratorSimBlackboard UVoyageGeneratorSimResult::Visit()
 
 	UVoyageGeneratorSimResult_Visit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43668,12 +34106,7 @@ struct FText UVoyageGeneratorSimResult::GetTitle()
 
 	UVoyageGeneratorSimResult_GetTitle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43690,12 +34123,7 @@ int UVoyageGeneratorSimResult::GetNumQuests()
 
 	UVoyageGeneratorSimResult_GetNumQuests_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43712,12 +34140,7 @@ int UVoyageGeneratorSimResult::GetNumChapters()
 
 	UVoyageGeneratorSimResult_GetNumChapters_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43735,12 +34158,7 @@ void UWaitForDemoResetActionStateId::STATIC_PushCharacterIntoWaitForDemoResetAct
 	UWaitForDemoResetActionStateId_PushCharacterIntoWaitForDemoResetActionState_Params params;
 	params.Character = Character;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43751,9 +34169,11 @@ void UWaitForDemoResetActionStateId::STATIC_PushCharacterIntoWaitForDemoResetAct
 // class AActor*                  InStartSpot                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InReceiveLoadout               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InReceiveEntitlement           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InWaitForStreaming             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           InWaitForRelevancy             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            InStreamOutLevel               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            InStreamInLevel                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWaitingToSpawnActionStateId::STATIC_PushCharacterIntoWaitingToSpawnActionState(class AAthenaCharacter* InCharacter, class AActor* InStartSpot, bool InReceiveLoadout, bool InReceiveEntitlement, bool InWaitForStreaming)
+void UWaitingToSpawnActionStateId::STATIC_PushCharacterIntoWaitingToSpawnActionState(class AAthenaCharacter* InCharacter, class AActor* InStartSpot, bool InReceiveLoadout, bool InReceiveEntitlement, bool InWaitForRelevancy, int InStreamOutLevel, int InStreamInLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaitingToSpawnActionStateId.PushCharacterIntoWaitingToSpawnActionState");
 
@@ -43762,14 +34182,27 @@ void UWaitingToSpawnActionStateId::STATIC_PushCharacterIntoWaitingToSpawnActionS
 	params.InStartSpot = InStartSpot;
 	params.InReceiveLoadout = InReceiveLoadout;
 	params.InReceiveEntitlement = InReceiveEntitlement;
-	params.InWaitForStreaming = InWaitForStreaming;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	params.InWaitForRelevancy = InWaitForRelevancy;
+	params.InStreamOutLevel = InStreamOutLevel;
+	params.InStreamInLevel = InStreamInLevel;
 
 	UObject::ProcessEvent(fn, &params);
+}
 
-	fn->FunctionFlags = flags;
+
+// Function Athena.WaterExposureComponent.OnRepPriorState
+// (Final, Native, Private)
+// Parameters:
+// struct FWaterExposureState     OriginalState                  (Parm)
+
+void UWaterExposureComponent::OnRepPriorState(const struct FWaterExposureState& OriginalState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterExposureComponent.OnRepPriorState");
+
+	UWaterExposureComponent_OnRepPriorState_Params params;
+	params.OriginalState = OriginalState;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -43784,12 +34217,7 @@ bool UWaterHeightProviderInterface::HasValidWaterHeight()
 
 	UWaterHeightProviderInterface_HasValidWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43806,12 +34234,7 @@ float UWaterHeightProviderInterface::GetWaterHeight()
 
 	UWaterHeightProviderInterface_GetWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43829,12 +34252,7 @@ bool UWaterHeightProviderInterface::GetValidWaterHeightAtomic(float* OutWaterHei
 
 	UWaterHeightProviderInterface_GetValidWaterHeightAtomic_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutWaterHeight != nullptr)
 		*OutWaterHeight = params.OutWaterHeight;
@@ -43854,12 +34272,7 @@ bool UWaterHeightProviderComponent::HasValidWaterHeight()
 
 	UWaterHeightProviderComponent_HasValidWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43876,12 +34289,7 @@ float UWaterHeightProviderComponent::GetWaterHeight()
 
 	UWaterHeightProviderComponent_GetWaterHeight_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -43899,12 +34307,7 @@ bool UWaterHeightProviderComponent::GetValidWaterHeightAtomic(float* OutWaterHei
 
 	UWaterHeightProviderComponent_GetValidWaterHeightAtomic_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutWaterHeight != nullptr)
 		*OutWaterHeight = params.OutWaterHeight;
@@ -43925,12 +34328,7 @@ void UMurkWaterModifierZoneComponent::OnRep_State(TEnumAsByte<EMurkWaterModifier
 	UMurkWaterModifierZoneComponent_OnRep_State_Params params;
 	params.PreviousState = PreviousState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43943,11 +34341,7 @@ void UWaterSplashComponent::OnWaterSplashReachedDeepWaterDelegate__DelegateSigna
 
 	UWaterSplashComponent_OnWaterSplashReachedDeepWaterDelegate__DelegateSignature_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43960,11 +34354,7 @@ void UWaterSplashComponent::OnWaterSplashExitWaterDelegate__DelegateSignature()
 
 	UWaterSplashComponent_OnWaterSplashExitWaterDelegate__DelegateSignature_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43977,11 +34367,7 @@ void UWaterSplashComponent::OnWaterSplashEnterWaterDelegate__DelegateSignature()
 
 	UWaterSplashComponent_OnWaterSplashEnterWaterDelegate__DelegateSignature_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43999,12 +34385,7 @@ void AWaterVolume::RegisterComponents(class UFlatWaterMeshComponent* FlatWaterMe
 	params.FlatWaterMesh = FlatWaterMesh;
 	params.FlatWaterPlane = FlatWaterPlane;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44021,12 +34402,7 @@ bool UWeakActorHandleTestsFunctionLib::STATIC_TestCreatingWeakActorHandleFromCon
 	UWeakActorHandleTestsFunctionLib_TestCreatingWeakActorHandleFromConsoleStringWithValidNetGuidInvalidName_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44041,12 +34417,7 @@ void UWeepingComponent::OnRep_State()
 
 	UWeepingComponent_OnRep_State_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44064,12 +34435,7 @@ void UWetnessComponent::SetWet(const struct FVector& WorldSpaceWaterPos, bool Fu
 	params.WorldSpaceWaterPos = WorldSpaceWaterPos;
 	params.FullyWet = FullyWet;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44082,12 +34448,7 @@ void UWetnessComponent::OnRep_WetData()
 
 	UWetnessComponent_OnRep_WetData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44102,12 +34463,7 @@ float UWetnessComponent::GetWet()
 
 	UWetnessComponent_GetWet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44136,12 +34492,7 @@ struct FWheelAdditiveAlphaSets UWheelInteractableFunctionLib::STATIC_UpdateAddit
 	params.SetAdditiveBlendValues = SetAdditiveBlendValues;
 	params.WheelTurnType = WheelTurnType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44178,12 +34529,7 @@ struct FWheelArmIKBoolSets UWheelInteractableFunctionLib::STATIC_CharacterWheelA
 	params.WheelTurnType = WheelTurnType;
 	params.WithinRange = WithinRange;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (LeftHandTransform != nullptr)
 		*LeftHandTransform = params.LeftHandTransform;
@@ -44205,12 +34551,7 @@ float AWheelMock::GetNormalizedWheelPosition()
 
 	AWheelMock_GetNormalizedWheelPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44225,12 +34566,7 @@ void AMusicalInstrument::TriggerMagicGlow_Multicast_RPC()
 
 	AMusicalInstrument_TriggerMagicGlow_Multicast_RPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44243,12 +34579,7 @@ void AMusicalInstrument::StartMagicGlowEffect()
 
 	AMusicalInstrument_StartMagicGlowEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44264,12 +34595,7 @@ void ABucket::Server_OnThrow(const struct FProjectileAim& AimData)
 	ABucket_Server_OnThrow_Params params;
 	params.AimData = AimData;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44282,12 +34608,7 @@ void ABucket::OnRep_FillState()
 
 	ABucket_OnRep_FillState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44300,12 +34621,7 @@ void ABucket::Multicast_Throw()
 
 	ABucket_Multicast_Throw_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44318,12 +34634,7 @@ void ABucket::Multicast_Scoop()
 
 	ABucket_Multicast_Scoop_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44336,12 +34647,7 @@ void ABucket::FillWithVomit()
 
 	ABucket_FillWithVomit_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44356,12 +34662,7 @@ bool ABucket::CanBeVomitedInto()
 
 	ABucket_CanBeVomitedInto_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44378,12 +34679,7 @@ TEnumAsByte<EProjectileWeaponState> ATestProjectileWeapon::TestGetState()
 
 	ATestProjectileWeapon_TestGetState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44401,12 +34697,7 @@ void ATestProjectileWeapon::SpoofFireRequest(const struct FFireRequest& Request)
 	ATestProjectileWeapon_SpoofFireRequest_Params params;
 	params.Request = Request;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44422,12 +34713,7 @@ void ATestProjectileWeapon::RegisterAndWield(class AActor* TargetOwner)
 	ATestProjectileWeapon_RegisterAndWield_Params params;
 	params.TargetOwner = TargetOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44442,12 +34728,7 @@ TArray<struct FHitResult> ATestProjectileWeapon::GenerateAndFireProjectiles()
 
 	ATestProjectileWeapon_GenerateAndFireProjectiles_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44462,12 +34743,7 @@ void ATestProjectileWeapon::FireInstantly()
 
 	ATestProjectileWeapon_FireInstantly_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44480,11 +34756,7 @@ void ASpyglass::ScopeOn()
 
 	ASpyglass_ScopeOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44497,11 +34769,7 @@ void ASpyglass::ScopeOff()
 
 	ASpyglass_ScopeOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44514,11 +34782,7 @@ void ASpyglass::GlintOn()
 
 	ASpyglass_GlintOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44531,11 +34795,7 @@ void ASpyglass::GlintOff()
 
 	ASpyglass_GlintOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44548,11 +34808,7 @@ void ASpyglass::ForceScopeOff()
 
 	ASpyglass_ForceScopeOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44565,12 +34821,7 @@ void AFruit::Multicast_EatRPC()
 
 	AFruit_Multicast_EatRPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44583,11 +34834,7 @@ void ALantern::TriggerGlow()
 
 	ALantern_TriggerGlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44605,12 +34852,7 @@ void ALantern::Server_RequestChangeLight(bool InLightOn, bool Raised)
 	params.InLightOn = InLightOn;
 	params.Raised = Raised;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44626,12 +34868,7 @@ void ALantern::Server_ExternalLightFactorChange(float ExternalLightFactor)
 	ALantern_Server_ExternalLightFactorChange_Params params;
 	params.ExternalLightFactor = ExternalLightFactor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44644,11 +34881,7 @@ void ALantern::ReceiveWieldThirdPerson()
 
 	ALantern_ReceiveWieldThirdPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44661,11 +34894,7 @@ void ALantern::ReceiveWieldFirstPerson()
 
 	ALantern_ReceiveWieldFirstPerson_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44681,11 +34910,7 @@ void ALantern::ReceiveTurnOnOffOneshotFx(bool On)
 	ALantern_ReceiveTurnOnOffOneshotFx_Params params;
 	params.On = On;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44698,11 +34923,7 @@ void ALantern::ReceiveLightChange()
 
 	ALantern_ReceiveLightChange_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44715,11 +34936,7 @@ void ALantern::PreMeshChangedBPEvent()
 
 	ALantern_PreMeshChangedBPEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44732,11 +34949,7 @@ void ALantern::PostMeshChangedBPEvent()
 
 	ALantern_PostMeshChangedBPEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44749,12 +34962,7 @@ void ALantern::OnRep_Raised()
 
 	ALantern_OnRep_Raised_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44767,12 +34975,7 @@ void ALantern::OnRep_LightOn()
 
 	ALantern_OnRep_LightOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44788,12 +34991,7 @@ void ALantern::Multicast_PlayTurnOnOffOneshotFx(bool TurnOn)
 	ALantern_Multicast_PlayTurnOnOffOneshotFx_Params params;
 	params.TurnOn = TurnOn;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44808,12 +35006,7 @@ float ALantern::GetUnaryRaisedBlendFactor()
 
 	ALantern_GetUnaryRaisedBlendFactor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44830,12 +35023,7 @@ float ALantern::GetUnaryActiveBlendFactor()
 
 	ALantern_GetUnaryActiveBlendFactor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -44850,12 +35038,7 @@ void ALantern::FlareLight_Multicast_RPC()
 
 	ALantern_FlareLight_Multicast_RPC_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44873,12 +35056,7 @@ void AMeleeWeapon::Server_RequestAttack(TEnumAsByte<EMeleeWeaponAttackType> Type
 	params.Type = Type;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44894,12 +35072,7 @@ void AMeleeWeapon::OnBlockedAttack(const struct FEventBlocked& Event)
 	AMeleeWeapon_OnBlockedAttack_Params params;
 	params.Event = Event;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44917,12 +35090,7 @@ void AMeleeWeapon::Multicast_TriggerAttack(TEnumAsByte<EMeleeWeaponAttackType> T
 	params.Type = Type;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44938,12 +35106,7 @@ void AMeleeWeapon::Client_RequestAttackResponse(bool Accepted)
 	AMeleeWeapon_Client_RequestAttackResponse_Params params;
 	params.Accepted = Accepted;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44959,12 +35122,7 @@ void ATankard::SetLiquidLevel(float Level)
 	ATankard_SetLiquidLevel_Params params;
 	params.Level = Level;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44977,12 +35135,7 @@ void ATankard::OnRep_RemainingVolume()
 
 	ATankard_OnRep_RemainingVolume_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44997,12 +35150,7 @@ float ATankard::GetWantedLiquidLevel()
 
 	ATankard_GetWantedLiquidLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45019,12 +35167,7 @@ float ATankard::GetLiquidLevel()
 
 	ATankard_GetLiquidLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45039,12 +35182,7 @@ void AVoyageInAContainerWieldableItem::Multicast_Opened()
 
 	AVoyageInAContainerWieldableItem_Multicast_Opened_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45060,12 +35198,7 @@ void UWieldableItemAnimationInterface::TriggerOneShotAnimation(class UClass* Inp
 	UWieldableItemAnimationInterface_TriggerOneShotAnimation_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45078,12 +35211,7 @@ void UWieldableItemAnimationInterface::StartUnequipAnimation()
 
 	UWieldableItemAnimationInterface_StartUnequipAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45099,12 +35227,7 @@ void UWieldableItemAnimationInterface::StartOutOfContinuousUseAnimation(class UC
 	UWieldableItemAnimationInterface_StartOutOfContinuousUseAnimation_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45120,12 +35243,7 @@ void UWieldableItemAnimationInterface::StartIntoContinuousAnimation(class UClass
 	UWieldableItemAnimationInterface_StartIntoContinuousAnimation_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45138,12 +35256,7 @@ void UWieldableItemAnimationInterface::StartEquipAnimation()
 
 	UWieldableItemAnimationInterface_StartEquipAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45159,12 +35272,7 @@ void UWieldableItemAnimationInterface::StartContinuousAnimation(class UClass* In
 	UWieldableItemAnimationInterface_StartContinuousAnimation_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45177,12 +35285,7 @@ void UWieldableItemAnimationInterface::ReturnToIdle()
 
 	UWieldableItemAnimationInterface_ReturnToIdle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45197,12 +35300,7 @@ bool UWieldableItemAnimationInterface::IsEquipAnimationPlaying()
 
 	UWieldableItemAnimationInterface_IsEquipAnimationPlaying_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45220,11 +35318,7 @@ void UWieldableItemAnimationInstance::OnUseStopped(class UClass* InputID)
 	UWieldableItemAnimationInstance_OnUseStopped_Params params;
 	params.InputID = InputID;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45242,11 +35336,7 @@ void UWieldableItemAnimationInstance::OnUseStarted(class UClass* InputID, const 
 	params.InputID = InputID;
 	params.ActionVisuals = ActionVisuals;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45264,11 +35354,7 @@ void UWieldableItemAnimationInstance::OnOneShotUseTriggered(class UClass* InputI
 	params.InputID = InputID;
 	params.ActionVisuals = ActionVisuals;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45283,12 +35369,7 @@ struct FPetAnimationDataRoaming UWieldablePetAnimationInstance::GetPetRoamingAni
 
 	UWieldablePetAnimationInstance_GetPetRoamingAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45305,12 +35386,7 @@ struct FPetAnimationDataBeingHeld UWieldablePetAnimationInstance::GetPetHeldAnim
 
 	UWieldablePetAnimationInstance_GetPetHeldAnimations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45325,12 +35401,7 @@ void UWieldablePetAnimationInstance::AssignNewPetUniqueAnimation()
 
 	UWieldablePetAnimationInstance_AssignNewPetUniqueAnimation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45348,12 +35419,7 @@ void UWieldablePetAnimationInstance::AssignNewPetIdleAnimation(bool IsIdleA, TEn
 	params.IsIdleA = IsIdleA;
 	params.OverrideState = OverrideState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45369,12 +35435,7 @@ void UWieldablePetAnimationInstance::AssignNewPetCurrentRoamingState(TEnumAsByte
 	UWieldablePetAnimationInstance_AssignNewPetCurrentRoamingState_Params params;
 	params.WantedRoamingState = WantedRoamingState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45390,12 +35451,7 @@ void UWieldablePetAnimationInstance::AssignNewPetCurrentHeldState(TEnumAsByte<EA
 	UWieldablePetAnimationInstance_AssignNewPetCurrentHeldState_Params params;
 	params.WantedHeldState = WantedHeldState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45412,12 +35468,7 @@ bool UWieldableItemFunctionLibrary::STATIC_IsThirdPersonMeshComponentTickEnabled
 	UWieldableItemFunctionLibrary_IsThirdPersonMeshComponentTickEnabled_Params params;
 	params.InWieldable = InWieldable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45436,12 +35487,7 @@ bool UWieldableItemFunctionLibrary::STATIC_IsFirstPersonMeshComponentTickEnabled
 	UWieldableItemFunctionLibrary_IsFirstPersonMeshComponentTickEnabled_Params params;
 	params.InWieldable = InWieldable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45460,12 +35506,7 @@ bool UWieldableItemSetComponent::RemoveItem(class AActor* Item)
 	UWieldableItemSetComponent_RemoveItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45480,12 +35521,7 @@ void UWieldableItemSetComponent::OnRep_Items()
 
 	UWieldableItemSetComponent_OnRep_Items_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45501,12 +35537,7 @@ void UWieldableItemSetComponent::OnItemDestroyed(class AActor* Actor)
 	UWieldableItemSetComponent_OnItemDestroyed_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45523,12 +35554,7 @@ class UClass* UWieldableItemSetComponent::GetSlotForItem(int Index)
 	UWieldableItemSetComponent_GetSlotForItem_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45547,12 +35573,7 @@ int UWieldableItemSetComponent::GetNumItemsOfType(class UClass* Type)
 	UWieldableItemSetComponent_GetNumItemsOfType_Params params;
 	params.Type = Type;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45569,12 +35590,7 @@ int UWieldableItemSetComponent::GetNumItems()
 
 	UWieldableItemSetComponent_GetNumItems_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45593,12 +35609,7 @@ TArray<class AActor*> UWieldableItemSetComponent::GetItemsOfCategory(class UClas
 	UWieldableItemSetComponent_GetItemsOfCategory_Params params;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45619,12 +35630,7 @@ int UWieldableItemSetComponent::GetItemIndexInCategorySet(class AActor* Item, cl
 	params.Item = Item;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45643,12 +35649,7 @@ int UWieldableItemSetComponent::GetItemIndex(class AActor* Item)
 	UWieldableItemSetComponent_GetItemIndex_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45667,12 +35668,7 @@ class AActor* UWieldableItemSetComponent::GetItemFromSlot(class UClass* ItemCate
 	UWieldableItemSetComponent_GetItemFromSlot_Params params;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45691,12 +35687,7 @@ class AActor* UWieldableItemSetComponent::GetItem(int Index)
 	UWieldableItemSetComponent_GetItem_Params params;
 	params.Index = Index;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45715,12 +35706,7 @@ bool UWieldableItemSetComponent::ContainsItemOfType(class UClass* ItemType)
 	UWieldableItemSetComponent_ContainsItemOfType_Params params;
 	params.ItemType = ItemType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45739,12 +35725,7 @@ bool UWieldableItemSetComponent::Contains(class AActor* Item)
 	UWieldableItemSetComponent_Contains_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45765,12 +35746,7 @@ bool UWieldableItemSetComponent::AddItemToSlot(class AActor* Item, class UClass*
 	params.Item = Item;
 	params.ItemCategory = ItemCategory;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45789,12 +35765,7 @@ bool UWieldableItemSetComponent::AddItem(class AActor* Item)
 	UWieldableItemSetComponent_AddItem_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45814,12 +35785,7 @@ void UWieldableTestFunctions::STATIC_ChangeItemSize(class AWieldableItem* InWiel
 	params.InWieldable = InWieldable;
 	params.InNewSize = InNewSize;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45838,12 +35804,7 @@ TEnumAsByte<EWieldItemReturnCode> UWieldedItemComponent::WieldItem(const TScript
 	params.Item = Item;
 	params.Fast = Fast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45861,12 +35822,7 @@ void UWieldedItemComponent::UnstashItem(TEnumAsByte<EStashReason> Reason)
 	UWieldedItemComponent_UnstashItem_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45882,12 +35838,7 @@ void UWieldedItemComponent::StashItem(TEnumAsByte<EStashReason> Reason)
 	UWieldedItemComponent_StashItem_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45903,12 +35854,7 @@ void UWieldedItemComponent::SlowStashItem(TEnumAsByte<EStashReason> Reason)
 	UWieldedItemComponent_SlowStashItem_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45926,12 +35872,7 @@ void UWieldedItemComponent::Server_WieldRPC(class AActor* Item, int InEpochId)
 	params.Item = Item;
 	params.InEpochId = InEpochId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45944,12 +35885,7 @@ void UWieldedItemComponent::OnRep_HeldItem()
 
 	UWieldedItemComponent_OnRep_HeldItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45966,12 +35902,7 @@ bool UWieldedItemComponent::IsItemWielded(class AActor* ItemActor)
 	UWieldedItemComponent_IsItemWielded_Params params;
 	params.ItemActor = ItemActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45988,12 +35919,7 @@ bool UWieldedItemComponent::IsItemStashed()
 
 	UWieldedItemComponent_IsItemStashed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -46010,12 +35936,7 @@ TScriptInterface<class UWieldableInterface> UWieldedItemComponent::GetWieldedIte
 
 	UWieldedItemComponent_GetWieldedItemIfNotStashed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -46032,12 +35953,7 @@ TScriptInterface<class UWieldableInterface> UWieldedItemComponent::GetWieldedIte
 
 	UWieldedItemComponent_GetWieldedItem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -46055,12 +35971,7 @@ void UWieldedItemComponent::Client_WieldItemCorrectionRPC(class AActor* Item)
 	UWieldedItemComponent_Client_WieldItemCorrectionRPC_Params params;
 	params.Item = Item;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -46080,12 +35991,7 @@ void UWieldedItemComponent::Client_WieldItem(const struct FNetActorPtr& Item, in
 	params.InEpochId = InEpochId;
 	params.Fast = Fast;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -46102,12 +36008,7 @@ class UClass* UWorldRegionBlueprintFunctionLibrary::STATIC_GetSeaIdFromWorldSpac
 	UWorldRegionBlueprintFunctionLibrary_GetSeaIdFromWorldSpaceLocation_Params params;
 	params.InLocation = InLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

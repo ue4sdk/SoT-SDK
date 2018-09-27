@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,16 +27,16 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C");
 		return ptr;
 	}
 
 
 	void OnRepairMounted();
 	bool GetRepairMountLocation(class USceneComponent** MountLocation, struct FName* MountSocket);
-	bool ShouldDrawTooltipInWorldSpace(class AActor** InInteractor, struct FVector* DesiredTooltipWorldPosition);
+	bool ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition);
 	void UserConstructionScript();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_BaseInternalDamageZone(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CapstanArm.BP_CapstanArm_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_CapstanArm.BP_CapstanArm_C");
 		return ptr;
 	}
 
@@ -33,7 +33,7 @@ public:
 	struct FVector GetFrontFacingVector();
 	bool DoesRequireFacingFront();
 	struct FDockableInfo GetDockableInfo();
-	struct FVector GetClosestInteractionPoint(struct FVector* ReferencePosition, float* OutInteractionPointRadius);
+	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
 	struct FVector GetLookAtPos();
 	void UserConstructionScript();
 };

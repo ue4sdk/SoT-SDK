@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipBattlesDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipBattlesDataAsset");
 		return ptr;
 	}
 
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipObstacleServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipObstacleServiceInterface");
 		return ptr;
 	}
 
@@ -59,7 +59,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.BTTask_SailShipBesideTarget");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.BTTask_SailShipBesideTarget");
 		return ptr;
 	}
 
@@ -108,7 +108,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AthenaAIShipControllerParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AthenaAIShipControllerParamsDataAsset");
 		return ptr;
 	}
 
@@ -134,7 +134,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipContextDescDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipContextDescDataAsset");
 		return ptr;
 	}
 
@@ -174,7 +174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipContextParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipContextParamsDataAsset");
 		return ptr;
 	}
 
@@ -182,7 +182,7 @@ public:
 
 
 // Class AIShips.AIShipServiceDataAsset
-// 0x0138 (0x0160 - 0x0028)
+// 0x0158 (0x0180 - 0x0028)
 class UAIShipServiceDataAsset : public UDataAsset
 {
 public:
@@ -190,18 +190,20 @@ public:
 	struct FIntPoint                                   ObstacleBucketDimensions;                                 // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ShipwreckObstacleRadius;                                  // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FAIShipEncounterDescGenerationParams        EncounterGenerationParams;                                // 0x0040(0x0080) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           TimerBattleFirstRegenInterval;                            // 0x00C0(0x0030) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           TimerBattleRegenInterval;                                 // 0x00F0(0x0030) (Edit, DisableEditOnInstance)
-	float                                              TimerBattleFinderThrottle;                                // 0x0120(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0124(0x0004) MISSED OFFSET
-	struct FWeightedProbabilityRangeOfRanges           TimerBattleRetryRegenInterval;                            // 0x0128(0x0030) (Edit, DisableEditOnInstance)
-	float                                              TimerBattleMinActivationDistanceFromPlayers;              // 0x0158(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
+	struct FAIShipContextDescGenerationParams          ContextDescGenerationParams;                              // 0x0040(0x0060) (Edit, DisableEditOnInstance)
+	struct FAIShipEncounterDescGenerationParams        EncounterGenerationParams;                                // 0x00A0(0x0020) (Edit, DisableEditOnInstance)
+	struct FAIShipEncounterDescGenerationParams        AggressiveEncounterGenerationParams;                      // 0x00C0(0x0020) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimerBattleFirstRegenInterval;                            // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimerBattleRegenInterval;                                 // 0x0110(0x0030) (Edit, DisableEditOnInstance)
+	float                                              TimerBattleFinderThrottle;                                // 0x0140(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0144(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           TimerBattleRetryRegenInterval;                            // 0x0148(0x0030) (Edit, DisableEditOnInstance)
+	float                                              TimerBattleMinActivationDistanceFromPlayers;              // 0x0178(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x017C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipServiceDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipServiceDataAsset");
 		return ptr;
 	}
 
@@ -216,7 +218,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipDebugFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipDebugFunctionLibrary");
 		return ptr;
 	}
 
@@ -233,12 +235,15 @@ class UAIShipEncounterDesc : public UDataAsset
 public:
 	struct FVector2D                                   Location;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Radius;                                                   // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	bool                                               Moveable;                                                 // 0x0034(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShowRevealBanner;                                         // 0x0035(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShowCompleteBanner;                                       // 0x0036(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0037(0x0001) MISSED OFFSET
 	TArray<struct FAIShipEncounterWave>                Waves;                                                    // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipEncounterDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipEncounterDesc");
 		return ptr;
 	}
 
@@ -246,19 +251,21 @@ public:
 
 
 // Class AIShips.AIShipEncounterSpawnParamsDataAsset
-// 0x00B0 (0x00D8 - 0x0028)
+// 0x00B8 (0x00E0 - 0x0028)
 class UAIShipEncounterSpawnParamsDataAsset : public UDataAsset
 {
 public:
 	float                                              SpawnDepth;                                               // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Radius;                                                   // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinSafeSpawnDistanceFromOtherShips;                       // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TimeDelayBetweenWaves;                                    // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRelativeSpawnLocationGeneratorParams       RelativeSpawnLocationParams;                              // 0x0038(0x00A0) (Edit, DisableEditOnInstance)
+	float                                              RadiusForAggressive;                                      // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinSafeSpawnDistanceFromOtherShips;                       // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeDelayBetweenWaves;                                    // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	struct FRelativeSpawnLocationGeneratorParams       RelativeSpawnLocationParams;                              // 0x0040(0x00A0) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipEncounterSpawnParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipEncounterSpawnParamsDataAsset");
 		return ptr;
 	}
 
@@ -276,7 +283,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.ShipProxyPawn");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.ShipProxyPawn");
 		return ptr;
 	}
 
@@ -305,7 +312,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipEncounterParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipEncounterParamsDataAsset");
 		return ptr;
 	}
 
@@ -321,7 +328,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipObstacleService");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipObstacleService");
 		return ptr;
 	}
 
@@ -336,7 +343,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipServiceInterface");
 		return ptr;
 	}
 
@@ -344,17 +351,18 @@ public:
 
 
 // Class AIShips.AIShipService
-// 0x0120 (0x05B0 - 0x0490)
+// 0x0168 (0x05F8 - 0x0490)
 class AAIShipService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x110];                                     // 0x04A0(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x148];                                     // 0x04A0(0x0148) MISSED OFFSET
+	TArray<class UAIShipEncounterDesc*>                BattleEncounters;                                         // 0x05E8(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipService");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipService");
 		return ptr;
 	}
 
@@ -370,7 +378,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AIShipTelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AIShipTelemetryComponent");
 		return ptr;
 	}
 
@@ -388,7 +396,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.AthenaAIShipController");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.AthenaAIShipController");
 		return ptr;
 	}
 
@@ -409,7 +417,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.BTService_UpdateIfShipShouldBreakTracking");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.BTService_UpdateIfShipShouldBreakTracking");
 		return ptr;
 	}
 
@@ -427,7 +435,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.BTTask_AIShipSurface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.BTTask_AIShipSurface");
 		return ptr;
 	}
 
@@ -443,7 +451,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.BTTask_RamTargetShip");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.BTTask_RamTargetShip");
 		return ptr;
 	}
 
@@ -459,7 +467,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.BTTask_SailShipCircleTarget");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.BTTask_SailShipCircleTarget");
 		return ptr;
 	}
 
@@ -478,7 +486,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.BTTask_SailShipForward");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.BTTask_SailShipForward");
 		return ptr;
 	}
 
@@ -493,7 +501,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.CursedCrewCustomisationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.CursedCrewCustomisationInterface");
 		return ptr;
 	}
 
@@ -511,7 +519,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AIShips.CursedSailsCampaignDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class AIShips.CursedSailsCampaignDataAsset");
 		return ptr;
 	}
 

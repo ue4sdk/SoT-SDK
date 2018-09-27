@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystem.DefaultOnlineEnvironmentSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystem.DefaultOnlineEnvironmentSettings");
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
+		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystem.NamedInterfaces");
 		return ptr;
 	}
 
@@ -60,7 +60,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystem.TurnBasedMatchInterface");
 		return ptr;
 	}
 

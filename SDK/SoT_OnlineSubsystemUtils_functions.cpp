@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,7 @@ void UAchievementBlueprintLibrary::STATIC_GetCachedAchievementProgress(class UOb
 	params.PlayerController = PlayerController;
 	params.AchievementId = AchievementId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (bFoundID != nullptr)
 		*bFoundID = params.bFoundID;
@@ -65,12 +60,7 @@ void UAchievementBlueprintLibrary::STATIC_GetCachedAchievementDescription(class 
 	params.PlayerController = PlayerController;
 	params.AchievementId = AchievementId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (bFoundID != nullptr)
 		*bFoundID = params.bFoundID;
@@ -100,12 +90,7 @@ class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::STATIC_CreatePro
 	params.PlayerController = PlayerController;
 	params.ProductRequest = ProductRequest;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -126,12 +111,7 @@ class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::STATIC
 	params.PlayerController = PlayerController;
 	params.ProductIdentifiers = ProductIdentifiers;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -150,12 +130,7 @@ class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::ST
 	UInAppPurchaseRestoreCallbackProxy_CreateProxyObjectForInAppPurchaseRestore_Params params;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -178,12 +153,7 @@ bool ULeaderboardBlueprintLibrary::STATIC_WriteLeaderboardInteger(class APlayerC
 	params.StatName = StatName;
 	params.StatValue = StatValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -204,12 +174,7 @@ class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::STATIC_Cre
 	params.PlayerController = PlayerController;
 	params.SessionName = SessionName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -230,12 +195,7 @@ class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::STATIC_Cre
 	params.PlayerController = PlayerController;
 	params.StatName = StatName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -256,12 +216,7 @@ class ULogoutCallbackProxy* ULogoutCallbackProxy::STATIC_Logout(class UObject* W
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -276,12 +231,7 @@ void AOnlineBeaconClient::ClientOnConnected()
 
 	AOnlineBeaconClient_ClientOnConnected_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -299,12 +249,7 @@ void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& Ses
 	params.SessionId = SessionId;
 	params.ReservationUpdate = ReservationUpdate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -322,12 +267,7 @@ void APartyBeaconClient::ServerReservationRequest(const class FString& SessionId
 	params.SessionId = SessionId;
 	params.Reservation = Reservation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -343,12 +283,7 @@ void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetI
 	APartyBeaconClient_ServerCancelReservationRequest_Params params;
 	params.PartyLeader = PartyLeader;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -364,12 +299,7 @@ void APartyBeaconClient::ClientSendReservationUpdates(int NumRemainingReservatio
 	APartyBeaconClient_ClientSendReservationUpdates_Params params;
 	params.NumRemainingReservations = NumRemainingReservations;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -385,12 +315,7 @@ void APartyBeaconClient::ClientReservationResponse(TEnumAsByte<EPartyReservation
 	APartyBeaconClient_ClientReservationResponse_Params params;
 	params.ReservationResponse = ReservationResponse;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -403,12 +328,7 @@ void ATestBeaconClient::ServerPong()
 
 	ATestBeaconClient_ServerPong_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -421,12 +341,7 @@ void ATestBeaconClient::ClientPing()
 
 	ATestBeaconClient_ClientPing_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -439,12 +354,7 @@ void UOnlineBlueprintCallProxyBase::Activate()
 
 	UOnlineBlueprintCallProxyBase_Activate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -463,12 +373,7 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::STATIC_Cac
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -489,12 +394,7 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::STATIC_Cac
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -521,12 +421,7 @@ class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::STATIC_Wri
 	params.Progress = Progress;
 	params.UserTag = UserTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -547,12 +442,7 @@ class UConnectionCallbackProxy* UConnectionCallbackProxy::STATIC_ConnectToServic
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -577,12 +467,7 @@ class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::STATIC_CreateSes
 	params.PublicConnections = PublicConnections;
 	params.bUseLAN = bUseLAN;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -603,12 +488,7 @@ class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::STATIC_Destroy
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -637,12 +517,7 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::STATIC_EndMatch(class UObj
 	params.LocalPlayerOutcome = LocalPlayerOutcome;
 	params.OtherPlayersOutcome = OtherPlayersOutcome;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -667,12 +542,7 @@ class UEndTurnCallbackProxy* UEndTurnCallbackProxy::STATIC_EndTurn(class UObject
 	params.MatchID = MatchID;
 	params.TurnBasedMatchInterface = TurnBasedMatchInterface;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -691,12 +561,7 @@ class FString UFindSessionsCallbackProxy::STATIC_GetServerName(const struct FBlu
 	UFindSessionsCallbackProxy_GetServerName_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -715,12 +580,7 @@ int UFindSessionsCallbackProxy::STATIC_GetPingInMs(const struct FBlueprintSessio
 	UFindSessionsCallbackProxy_GetPingInMs_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -739,12 +599,7 @@ int UFindSessionsCallbackProxy::STATIC_GetMaxPlayers(const struct FBlueprintSess
 	UFindSessionsCallbackProxy_GetMaxPlayers_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -763,12 +618,7 @@ int UFindSessionsCallbackProxy::STATIC_GetCurrentPlayers(const struct FBlueprint
 	UFindSessionsCallbackProxy_GetCurrentPlayers_Params params;
 	params.Result = Result;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -793,12 +643,7 @@ class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::STATIC_FindSession
 	params.MaxResults = MaxResults;
 	params.bUseLAN = bUseLAN;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -829,12 +674,7 @@ class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::STATIC
 	params.PlayerGroup = PlayerGroup;
 	params.ShowExistingMatches = ShowExistingMatches;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -857,12 +697,7 @@ class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::STATIC_JoinSession(c
 	params.PlayerController = PlayerController;
 	params.SearchResult = SearchResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -889,12 +724,7 @@ class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::STATIC_QuitMatch(class U
 	params.Outcome = Outcome;
 	params.TurnTimeoutInSeconds = TurnTimeoutInSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -915,12 +745,7 @@ class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::STATIC_ShowExternalL
 	params.WorldContextObject = WorldContextObject;
 	params.InPlayerController = InPlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -942,12 +767,7 @@ void UTurnBasedBlueprintLibrary::STATIC_RegisterTurnBasedMatchInterfaceObject(cl
 	params.PlayerController = PlayerController;
 	params.Object = Object;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -970,12 +790,7 @@ void UTurnBasedBlueprintLibrary::STATIC_GetPlayerDisplayName(class UObject* Worl
 	params.MatchID = MatchID;
 	params.PlayerIndex = PlayerIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PlayerDisplayName != nullptr)
 		*PlayerDisplayName = params.PlayerDisplayName;
@@ -999,12 +814,7 @@ void UTurnBasedBlueprintLibrary::STATIC_GetMyPlayerIndex(class UObject* WorldCon
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (PlayerIndex != nullptr)
 		*PlayerIndex = params.PlayerIndex;
@@ -1028,12 +838,7 @@ void UTurnBasedBlueprintLibrary::STATIC_GetIsMyTurn(class UObject* WorldContextO
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (bIsMyTurn != nullptr)
 		*bIsMyTurn = params.bIsMyTurn;

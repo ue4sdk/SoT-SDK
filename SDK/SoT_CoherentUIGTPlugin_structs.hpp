@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -153,10 +153,8 @@ enum class ECoherentUIGTSettingsSeverity : uint8_t
 {
 	ECoherentUIGTSettingsSeverity__Trace = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECoherentUIGTSettingsSeverity__AssertFailure = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	ECoherentUIGTSettingsSeverity__AssertFailure = 2,
+	None01                         = 3
 };
 
 

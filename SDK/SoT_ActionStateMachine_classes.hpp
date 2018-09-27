@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateId");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -68,7 +68,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityActionState2Id");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.CustomClientValidityActionState2Id");
 		return ptr;
 	}
 
@@ -83,7 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.CustomClientValidityActionStateId");
 		return ptr;
 	}
 
@@ -98,7 +98,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.NullActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.NullActionStateId");
 		return ptr;
 	}
 
@@ -113,7 +113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateId");
 		return ptr;
 	}
 
@@ -128,7 +128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateId2");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateId2");
 		return ptr;
 	}
 
@@ -146,7 +146,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateMachineComponent");
 		return ptr;
 	}
 
@@ -172,7 +172,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateMachineComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateMachineComponent");
 		return ptr;
 	}
 
@@ -189,7 +189,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityCheckCallback");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.CustomClientValidityCheckCallback");
 		return ptr;
 	}
 
@@ -204,7 +204,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineComponentTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateMachineComponentTestFunctions");
 		return ptr;
 	}
 
@@ -234,7 +234,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateMachineInterface");
 		return ptr;
 	}
 
@@ -251,7 +251,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStatePriorityTableData");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStatePriorityTableData");
 		return ptr;
 	}
 
@@ -266,7 +266,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStatePriorityTableUtility");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStatePriorityTableUtility");
 		return ptr;
 	}
 
@@ -285,7 +285,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.RemoteValidationFailActionStateActor");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.RemoteValidationFailActionStateActor");
 		return ptr;
 	}
 
@@ -300,7 +300,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions");
 		return ptr;
 	}
 
@@ -326,7 +326,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestObjectWithActionStateMachine");
+		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestObjectWithActionStateMachine");
 		return ptr;
 	}
 

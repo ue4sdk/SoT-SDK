@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,11 +25,7 @@ void ABP_PlayerPirate_Ghost_C::GetAllMaterialParents(class UMaterialInstance* Ma
 	ABP_PlayerPirate_Ghost_C_GetAllMaterialParents_Params params;
 	params.MaterialInstance = MaterialInstance;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Parents != nullptr)
 		*Parents = params.Parents;
@@ -51,11 +47,7 @@ void ABP_PlayerPirate_Ghost_C::CheckBaseMaterial(class UMaterialInstance* Materi
 	params.MaterialInstance = MaterialInstance;
 	params.MaterialToCheck = MaterialToCheck;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Result != nullptr)
 		*Result = params.Result;
@@ -78,11 +70,7 @@ void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshCompone
 	params.Ghost_Fade_Parameter = Ghost_Fade_Parameter;
 	params.EnableDither = EnableDither;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -97,11 +85,7 @@ struct FVector ABP_PlayerPirate_Ghost_C::GetMouthPosition()
 
 	ABP_PlayerPirate_Ghost_C_GetMouthPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -116,11 +100,7 @@ void ABP_PlayerPirate_Ghost_C::UserConstructionScript()
 
 	ABP_PlayerPirate_Ghost_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -136,11 +116,7 @@ void ABP_PlayerPirate_Ghost_C::Update_Athena_Character(class AAthenaCharacter* A
 	ABP_PlayerPirate_Ghost_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -156,11 +132,7 @@ void ABP_PlayerPirate_Ghost_C::CapstanRotationSpeed(float RotationSpeed)
 	ABP_PlayerPirate_Ghost_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -176,11 +148,7 @@ void ABP_PlayerPirate_Ghost_C::DockingInterface(const struct FBP_Docking& Dockin
 	ABP_PlayerPirate_Ghost_C_DockingInterface_Params params;
 	params.Docking = Docking;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -202,11 +170,7 @@ void ABP_PlayerPirate_Ghost_C::CapstanForce(float IndividualForce, const struct 
 	params.RH_IK = RH_IK;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -224,11 +188,7 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName>
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -248,11 +208,7 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> Lim
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -272,11 +228,7 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> 
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -296,11 +248,7 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, b
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -320,11 +268,7 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Stretch(float ArmStretch, float SpineStre
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -337,11 +281,7 @@ void ABP_PlayerPirate_Ghost_C::ReceiveBeginPlay()
 
 	ABP_PlayerPirate_Ghost_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -354,11 +294,7 @@ void ABP_PlayerPirate_Ghost_C::OnMeshSet()
 
 	ABP_PlayerPirate_Ghost_C_OnMeshSet_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -374,11 +310,7 @@ void ABP_PlayerPirate_Ghost_C::ExecuteUbergraph_BP_PlayerPirate_Ghost(int EntryP
 	ABP_PlayerPirate_Ghost_C_ExecuteUbergraph_BP_PlayerPirate_Ghost_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ float UCalmWaterMappingInterface::GetDampeningFactor(const struct FVector2D& InP
 	UCalmWaterMappingInterface_GetDampeningFactor_Params params;
 	params.InPosition = InPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -49,12 +44,7 @@ float UCalmWaterMappingInterface::GetChoppinessFactor(const struct FVector2D& In
 	UCalmWaterMappingInterface_GetChoppinessFactor_Params params;
 	params.InPosition = InPosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -71,12 +61,7 @@ float UCalmWaterMappingService::STATIC_GetMaxWindSpeed()
 
 	UCalmWaterMappingService_GetMaxWindSpeed_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

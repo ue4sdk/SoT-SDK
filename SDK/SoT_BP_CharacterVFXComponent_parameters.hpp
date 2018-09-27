@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,13 +77,13 @@ struct UBP_CharacterVFXComponent_C_Play_Foot_Splash_Params
 // Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveEndPlay
 struct UBP_CharacterVFXComponent_C_ReceiveEndPlay_Params
 {
-	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveTick
 struct UBP_CharacterVFXComponent_C_ReceiveTick_Params
 {
-	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveBeginPlay

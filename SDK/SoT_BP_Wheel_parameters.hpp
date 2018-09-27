@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ struct ABP_Wheel_C_GetDockableInfo_Params
 // Function BP_Wheel.BP_Wheel_C.GetClosestInteractionPoint
 struct ABP_Wheel_C_GetClosestInteractionPoint_Params
 {
-	struct FVector*                                    ReferencePosition;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector                                     ReferencePosition;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              OutInteractionPointRadius;                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -124,13 +124,13 @@ struct ABP_Wheel_C_IK_Limb_Stretch_Params
 // Function BP_Wheel.BP_Wheel_C.RequestStateChange
 struct ABP_Wheel_C_RequestStateChange_Params
 {
-	class AActor**                                     Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded
 struct ABP_Wheel_C_OnWheelDescLoaded_Params
 {
-	class UWheelDescAsset**                            WheelDesc;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UWheelDescAsset*                             WheelDesc;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Wheel.BP_Wheel_C.ExecuteUbergraph_BP_Wheel

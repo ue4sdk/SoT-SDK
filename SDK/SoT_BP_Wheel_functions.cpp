@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ struct FDockableInfo ABP_Wheel_C::GetDockableInfo()
 
 	ABP_Wheel_C_GetDockableInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -36,22 +32,18 @@ struct FDockableInfo ABP_Wheel_C::GetDockableInfo()
 // Function BP_Wheel.BP_Wheel_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector*                ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_Wheel_C::GetClosestInteractionPoint(struct FVector* ReferencePosition, float* OutInteractionPointRadius)
+struct FVector ABP_Wheel_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetClosestInteractionPoint");
 
 	ABP_Wheel_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutInteractionPointRadius != nullptr)
 		*OutInteractionPointRadius = params.OutInteractionPointRadius;
@@ -71,11 +63,7 @@ class USkeletalMeshComponent* ABP_Wheel_C::GetWheelMesh()
 
 	ABP_Wheel_C_GetWheelMesh_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -90,11 +78,7 @@ void ABP_Wheel_C::UserConstructionScript()
 
 	ABP_Wheel_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -118,11 +102,7 @@ void ABP_Wheel_C::Receive_Animation_State(const struct FRotator& WheelRotation, 
 	params.Direction = Direction;
 	params.WheelRate = WheelRate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -138,11 +118,7 @@ void ABP_Wheel_C::StickInput(float StickInputX)
 	ABP_Wheel_C_StickInput_Params params;
 	params.StickInputX = StickInputX;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -158,11 +134,7 @@ void ABP_Wheel_C::Update_Athena_Character(class AAthenaCharacter* AthenaCharacte
 	ABP_Wheel_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -178,11 +150,7 @@ void ABP_Wheel_C::CapstanRotationSpeed(float RotationSpeed)
 	ABP_Wheel_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -198,11 +166,7 @@ void ABP_Wheel_C::DockingInterface(const struct FBP_Docking& Docking)
 	ABP_Wheel_C_DockingInterface_Params params;
 	params.Docking = Docking;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -224,11 +188,7 @@ void ABP_Wheel_C::CapstanForce(float IndividualForce, const struct FTransform& L
 	params.RH_IK = RH_IK;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -246,11 +206,7 @@ void ABP_Wheel_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbId, cons
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -270,11 +226,7 @@ void ABP_Wheel_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, float Bl
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -294,11 +246,7 @@ void ABP_Wheel_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId, float
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -318,11 +266,7 @@ void ABP_Wheel_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Active, T
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -342,51 +286,39 @@ void ABP_Wheel_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, float Le
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Wheel.BP_Wheel_C.RequestStateChange
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor**                 Controller                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wheel_C::RequestStateChange(class AActor** Controller)
+void ABP_Wheel_C::RequestStateChange(class AActor* Controller)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.RequestStateChange");
 
 	ABP_Wheel_C_RequestStateChange_Params params;
 	params.Controller = Controller;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UWheelDescAsset**        WheelDesc                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWheelDescAsset*         WheelDesc                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wheel_C::OnWheelDescLoaded(class UWheelDescAsset** WheelDesc)
+void ABP_Wheel_C::OnWheelDescLoaded(class UWheelDescAsset* WheelDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded");
 
 	ABP_Wheel_C_OnWheelDescLoaded_Params params;
 	params.WheelDesc = WheelDesc;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -402,11 +334,7 @@ void ABP_Wheel_C::ExecuteUbergraph_BP_Wheel(int EntryPoint)
 	ABP_Wheel_C_ExecuteUbergraph_BP_Wheel_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.TestablePlayerController");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.TestablePlayerController");
 		return ptr;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.TestLevelScriptActor");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.TestLevelScriptActor");
 		return ptr;
 	}
 
@@ -114,7 +114,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.ActorThatLogsErrorWhenTicked");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.ActorThatLogsErrorWhenTicked");
 		return ptr;
 	}
 
@@ -129,7 +129,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.AutomationBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.AutomationBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -187,7 +187,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.AutomationLatentActionCallback");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.AutomationLatentActionCallback");
 		return ptr;
 	}
 
@@ -204,7 +204,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.BPNamedObjectMock");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.BPNamedObjectMock");
 		return ptr;
 	}
 
@@ -219,7 +219,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.MapFixtureTestGameMode");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.MapFixtureTestGameMode");
 		return ptr;
 	}
 
@@ -234,7 +234,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.TestUObject");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.TestUObject");
 		return ptr;
 	}
 
@@ -249,7 +249,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.OtherTestUObject");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.OtherTestUObject");
 		return ptr;
 	}
 
@@ -264,7 +264,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.RunUnitTestsCommandlet");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.RunUnitTestsCommandlet");
 		return ptr;
 	}
 
@@ -279,7 +279,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StudiosAutomation.TestAbstractActor");
+		static auto ptr = UObject::FindObject<UClass>("Class StudiosAutomation.TestAbstractActor");
 		return ptr;
 	}
 

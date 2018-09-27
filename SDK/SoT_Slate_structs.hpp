@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ enum class ETextJustify : uint8_t
 {
 	ETextJustify__Left             = 0,
 	None                           = 1,
-	NoFading                       = 2
+	EThreePlayerSplitScreenType__FavorTop = 2
 };
 
 
@@ -71,8 +71,7 @@ enum class EProgressBarFillType : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EProgressBarFillType__BottomToTop = 3,
-	None01                         = 4,
-	EFontHinting__Default          = 5
+	None01                         = 4
 };
 
 

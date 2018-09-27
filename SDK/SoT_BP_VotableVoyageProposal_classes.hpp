@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_VotableVoyageProposal.BP_VotableVoyageProposal_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_VotableVoyageProposal.BP_VotableVoyageProposal_C");
 		return ptr;
 	}
 
@@ -44,8 +44,8 @@ public:
 	void Is_Session_Locked(bool* IsLocked);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void OnVoteAdded(TScriptInterface<class UVoterInterface>* Voter);
-	void OnVoteRemoved(TScriptInterface<class UVoterInterface>* Voter);
+	void OnVoteAdded(const TScriptInterface<class UVoterInterface>& Voter);
+	void OnVoteRemoved(const TScriptInterface<class UVoterInterface>& Voter);
 	void ExecuteUbergraph_BP_VotableVoyageProposal(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,10 +17,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct SimpleOverlaps.SimpleOverlapAggregateTickFunction
-// 0x0038 (0x0080 - 0x0048)
+// 0x0040 (0x0088 - 0x0048)
 struct FSimpleOverlapAggregateTickFunction : public FTickFunction
 {
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0048(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
 };
 
 // ScriptStruct SimpleOverlaps.SimpleOverlapInfo

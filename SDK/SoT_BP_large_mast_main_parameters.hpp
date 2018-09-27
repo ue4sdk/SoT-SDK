@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ struct ABP_large_mast_main_C_UserConstructionScript_Params
 // Function BP_large_mast_main.BP_large_mast_main_C.OnMastDescLoaded
 struct ABP_large_mast_main_C_OnMastDescLoaded_Params
 {
-	class UMastDescAsset**                             MastDesc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMastDescAsset*                              MastDesc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_large_mast_main.BP_large_mast_main_C.ExecuteUbergraph_BP_large_mast_main

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.EndPlayHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.EndPlayHandler");
 		return ptr;
 	}
 
@@ -40,7 +40,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkEndpointIdUtilities");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkEndpointIdUtilities");
 		return ptr;
 	}
 
@@ -61,7 +61,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkEndpointInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkEndpointInterface");
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkerComponent");
 		return ptr;
 	}
 
@@ -109,7 +109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkerInterface");
 		return ptr;
 	}
 

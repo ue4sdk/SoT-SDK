@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,11 +24,7 @@ void ABP_FlintlockPistol_C::SetScopeEffectOn(bool IsOn)
 	ABP_FlintlockPistol_C_SetScopeEffectOn_Params params;
 	params.IsOn = IsOn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43,11 +39,7 @@ void ABP_FlintlockPistol_C::determine_sfx_relationship(TEnumAsByte<EEmitterRelat
 
 	ABP_FlintlockPistol_C_determine_sfx_relationship_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Relationship != nullptr)
 		*Relationship = params.Relationship;
@@ -63,11 +55,7 @@ void ABP_FlintlockPistol_C::DoFireEffect()
 
 	ABP_FlintlockPistol_C_DoFireEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -80,11 +68,7 @@ void ABP_FlintlockPistol_C::UserConstructionScript()
 
 	ABP_FlintlockPistol_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -97,11 +81,7 @@ void ABP_FlintlockPistol_C::OnWeaponFired()
 
 	ABP_FlintlockPistol_C_OnWeaponFired_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -114,11 +94,7 @@ void ABP_FlintlockPistol_C::RadialBlurOn()
 
 	ABP_FlintlockPistol_C_RadialBlurOn_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -131,11 +107,7 @@ void ABP_FlintlockPistol_C::RadialBlurOff()
 
 	ABP_FlintlockPistol_C_RadialBlurOff_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -151,11 +123,7 @@ void ABP_FlintlockPistol_C::ExecuteUbergraph_BP_FlintlockPistol(int EntryPoint)
 	ABP_FlintlockPistol_C_ExecuteUbergraph_BP_FlintlockPistol_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

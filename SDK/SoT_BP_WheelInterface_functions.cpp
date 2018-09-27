@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,11 +32,7 @@ void UBP_WheelInterface_C::Receive_Animation_State(const struct FRotator& WheelR
 	params.Direction = Direction;
 	params.WheelRate = WheelRate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

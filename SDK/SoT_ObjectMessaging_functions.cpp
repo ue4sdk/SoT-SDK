@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UObjectMessagingFunctions::STATIC_UnregisterEventFromHandle(struct FObjectM
 
 	UObjectMessagingFunctions_UnregisterEventFromHandle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Dispatcher != nullptr)
 		*Dispatcher = params.Dispatcher;
@@ -50,12 +45,7 @@ void UObjectMessagingFunctions::STATIC_UnregisterEvent(struct FObjectMessagingDi
 
 	UObjectMessagingFunctions_UnregisterEvent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Dispatcher != nullptr)
 		*Dispatcher = params.Dispatcher;
@@ -82,12 +72,7 @@ void UObjectMessagingFunctions::STATIC_RegisterEventFromHandle(class UObject* Fu
 	params.FunctionName = FunctionName;
 	params.EventType = EventType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (MessageDispatcher != nullptr)
 		*MessageDispatcher = params.MessageDispatcher;
@@ -114,12 +99,7 @@ void UObjectMessagingFunctions::STATIC_RegisterEvent(class UObject* FunctionOwne
 	params.FunctionName = FunctionName;
 	params.EventType = EventType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (MessageDispatcher != nullptr)
 		*MessageDispatcher = params.MessageDispatcher;
@@ -140,12 +120,7 @@ bool UObjectMessagingFunctions::STATIC_IsObjectMessagingDispatcherValid(struct F
 
 	UObjectMessagingFunctions_IsObjectMessagingDispatcherValid_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Handle != nullptr)
 		*Handle = params.Handle;
@@ -166,12 +141,7 @@ bool UObjectMessagingFunctions::STATIC_IsHandleRegistered(struct FObjectMessagin
 
 	UObjectMessagingFunctions_IsHandleRegistered_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Handle != nullptr)
 		*Handle = params.Handle;
@@ -193,12 +163,7 @@ struct FObjectMessagingDispatcherHandle UObjectMessagingFunctions::STATIC_GetObj
 	UObjectMessagingFunctions_GetObjectMessagingDispatcherFromActor_Params params;
 	params.Object = Object;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -217,12 +182,7 @@ struct FObjectMessagingDispatcherHandle UObjectMessagingFunctions::STATIC_GetObj
 	UObjectMessagingFunctions_GetObjectMessagingDispatcher_Params params;
 	params.ObjectMessagingDispatcher = ObjectMessagingDispatcher;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -246,12 +206,7 @@ void UObjectMessagingFunctions::STATIC_FireEventWithDataFromHandle(class UStruct
 	params.Scope = Scope;
 	params.ScopeId = ScopeId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (MessageDispatcher != nullptr)
 		*MessageDispatcher = params.MessageDispatcher;
@@ -278,12 +233,7 @@ void UObjectMessagingFunctions::STATIC_FireEventWithData(class UStruct* EventDat
 	params.Scope = Scope;
 	params.ScopeId = ScopeId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (MessageDispatcher != nullptr)
 		*MessageDispatcher = params.MessageDispatcher;

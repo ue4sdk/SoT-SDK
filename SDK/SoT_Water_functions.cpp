@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UFFTWaterInterface::SetComponent(class UFFTWaterComponent* InFFTWaterCompon
 	UFFTWaterInterface_SetComponent_Params params;
 	params.InFFTWaterComponent = InFFTWaterComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,7 @@ void UFFTWaterInterface::SetActor(class AAthenaFFTWater* InFFTWaterActor)
 	UFFTWaterInterface_SetActor_Params params;
 	params.InFFTWaterActor = InFFTWaterActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -65,12 +55,7 @@ class UFFTWaterComponent* UFFTWaterInterface::GetComponent()
 
 	UFFTWaterInterface_GetComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -87,12 +72,7 @@ class AAthenaFFTWater* UFFTWaterInterface::GetActor()
 
 	UFFTWaterInterface_GetActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -109,12 +89,7 @@ bool UWaterInterface::IsReadyToBeQueried()
 
 	UWaterInterface_IsReadyToBeQueried_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -140,12 +115,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformationWithScaledCho
 	params.Actor = Actor;
 	params.ChoppynessScalar = ChoppynessScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Height != nullptr)
 		*Height = params.Height;
@@ -176,12 +146,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformationBatched(TArra
 	params.SamplePositions = SamplePositions;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Heights != nullptr)
 		*Heights = params.Heights;
@@ -212,12 +177,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformation(const struct
 	params.SamplePosition = SamplePosition;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Height != nullptr)
 		*Height = params.Height;
@@ -250,12 +210,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightWithScaledChoppyne
 	params.Interpolate = Interpolate;
 	params.ChoppynessScalar = ChoppynessScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Height != nullptr)
 		*Height = params.Height;
@@ -280,12 +235,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightsBatched(TArray<st
 	params.SamplePositions = SamplePositions;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Heights != nullptr)
 		*Heights = params.Heights;
@@ -312,12 +262,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeight(const struct FVec
 	params.Actor = Actor;
 	params.Interpolate = Interpolate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Height != nullptr)
 		*Height = params.Height;
@@ -339,12 +284,7 @@ struct FWaterSimPlane UWaterInterface::GetActorWaterPlane(class AActor* Actor)
 	UWaterInterface_GetActorWaterPlane_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -363,12 +303,7 @@ struct FWaterInformation UWaterInterface::GetActorWaterInformation(class AActor*
 	UWaterInterface_GetActorWaterInformation_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -383,12 +318,7 @@ void AFFTWaterService::OnRep_FFTWaterComponent()
 
 	AFFTWaterService_OnRep_FFTWaterComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -401,12 +331,7 @@ void AFFTWaterService::OnRep_FFTWaterActor()
 
 	AFFTWaterService_OnRep_FFTWaterActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -422,12 +347,7 @@ void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* Wate
 	UWaterInteractionComponent_LeaveWaterPlane_Params params;
 	params.WaterComponent = WaterComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -440,12 +360,7 @@ void UWaterInteractionComponent::LeaveWaterExclusionZone()
 
 	UWaterInteractionComponent_LeaveWaterExclusionZone_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -460,12 +375,7 @@ bool UWaterInteractionComponent::IsUsingNonDefaultWaterPlane()
 
 	UWaterInteractionComponent_IsUsingNonDefaultWaterPlane_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -482,12 +392,7 @@ bool UWaterInteractionComponent::IsInWaterExcludedZone()
 
 	UWaterInteractionComponent_IsInWaterExcludedZone_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -504,12 +409,7 @@ class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
 
 	UWaterInteractionComponent_GetWaterPlaneComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -526,12 +426,7 @@ unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
 
 	UWaterInteractionComponent_GetNumberOfWaterPlanes_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -549,12 +444,7 @@ void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* Wate
 	UWaterInteractionComponent_EnterWaterPlane_Params params;
 	params.WaterComponent = WaterComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -567,12 +457,7 @@ void UWaterInteractionComponent::EnterWaterExclusionZone()
 
 	UWaterInteractionComponent_EnterWaterExclusionZone_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -587,12 +472,7 @@ struct FFFTWaterPerformanceCountData AFFTWaterPerformanceCountService::EndScopeP
 
 	AFFTWaterPerformanceCountService_EndScopePerformanceCount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -607,12 +487,7 @@ void AFFTWaterPerformanceCountService::BeginScopePerformanceCount()
 
 	AFFTWaterPerformanceCountService_BeginScopePerformanceCount_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -628,12 +503,7 @@ void UFlatWaterPlaneComponent::OnActorLeaveWaterPlane(class AActor* Actor)
 	UFlatWaterPlaneComponent_OnActorLeaveWaterPlane_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -649,12 +519,7 @@ void UFlatWaterPlaneComponent::OnActorEnterWaterPlane(class AActor* Actor)
 	UFlatWaterPlaneComponent_OnActorEnterWaterPlane_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -671,12 +536,7 @@ struct FVector2D UFlatWaterPlaneComponent::ConvertToWaterSpace(const struct FVec
 	UFlatWaterPlaneComponent_ConvertToWaterSpace_Params params;
 	params.WorldSpacePosition = WorldSpacePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -702,12 +562,7 @@ float UWaterBuoyancyFunctionLibrary::STATIC_TickBuoyancy(class AActor* InOwner, 
 	params.InChoppinessScalar = InChoppinessScalar;
 	params.FakeZOffsetGeneratorScalar = FakeZOffsetGeneratorScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -729,12 +584,7 @@ void UWaterBuoyancyFunctionLibrary::STATIC_SetBuoyancySamplesZOffsetSymmetricalA
 	UWaterBuoyancyFunctionLibrary_SetBuoyancySamplesZOffsetSymmetricalAroundXAxis_Params params;
 	params.ZOffset = ZOffset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -754,12 +604,7 @@ void UWaterBuoyancyFunctionLibrary::STATIC_SetBuoyancyProbeCurveBlendDebugOverri
 	UWaterBuoyancyFunctionLibrary_SetBuoyancyProbeCurveBlendDebugOverride_Params params;
 	params.UnaryBlendOverride = UnaryBlendOverride;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -781,12 +626,7 @@ void UWaterBuoyancyFunctionLibrary::STATIC_SetBuoyancyProbeCurveBlend(float Blen
 	params.Blend = Blend;
 	params.BlendType = BlendType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -809,12 +649,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_TickLocalSampleMovement
 	params.InActor = InActor;
 	params.DeltaTime = DeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -837,12 +672,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSample
 	UWaterBuoyancySampleMovementFunctionLibrary_StartMovingVolumeSamplesLocallyByRandomConfigurationIndex_Params params;
 	params.InActor = InActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -867,12 +697,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSample
 	params.InActor = InActor;
 	params.ConfigurationIndex = ConfigurationIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -906,12 +731,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::STATIC_StartMovingVolumeSample
 	params.ProbeMovementCurve = ProbeMovementCurve;
 	params.MoveTime = MoveTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InWaterBuoyancy != nullptr)
 		*InWaterBuoyancy = params.InWaterBuoyancy;
@@ -938,12 +758,7 @@ void UWaterPlaneExclusionComponent::OnOverlapEnd(class AActor* OtherActor, class
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -967,12 +782,7 @@ void UWaterPlaneExclusionComponent::OnOverlapBegin(class AActor* OtherActor, cla
 	params.FromSweep = FromSweep;
 	params.SweepResult = SweepResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -991,12 +801,7 @@ void UWaterSplashProbeFunctionLibrary::STATIC_TickProbes(class AActor* InOwner, 
 	params.InOwner = InOwner;
 	params.InDeltaTime = InDeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InSplashProbes != nullptr)
 		*InSplashProbes = params.InSplashProbes;
@@ -1018,12 +823,7 @@ void UWaterSplashProbeFunctionLibrary::STATIC_TickProbe(class AActor* InOwner, f
 	params.InOwner = InOwner;
 	params.InDeltaTime = InDeltaTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InSplashProbe != nullptr)
 		*InSplashProbe = params.InSplashProbe;
@@ -1043,12 +843,7 @@ void UWaterSplashProbeFunctionLibrary::STATIC_SetSamplingTime(float SamplingTime
 	UWaterSplashProbeFunctionLibrary_SetSamplingTime_Params params;
 	params.SamplingTime = SamplingTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InSplashProbes != nullptr)
 		*InSplashProbes = params.InSplashProbes;
@@ -1069,12 +864,7 @@ struct FVector UWaterSplashProbeFunctionLibrary::STATIC_GetRelativeWaterHeightCh
 	UWaterSplashProbeFunctionLibrary_GetRelativeWaterHeightChangeSpd_Params params;
 	params.ProbeIndex = ProbeIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InSplashProbes != nullptr)
 		*InSplashProbes = params.InSplashProbes;

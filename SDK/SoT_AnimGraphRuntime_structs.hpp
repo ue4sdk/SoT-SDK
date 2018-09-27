@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,8 +45,7 @@ enum class EInterpolationBlend : uint8_t
 	None                           = 1,
 	EInterpolationBlend__EaseInOutExponent3 = 2,
 	None01                         = 3,
-	EInterpolationBlend__EInterpolationBlend_MAX = 4,
-	None02                         = 5
+	EInterpolationBlend__EInterpolationBlend_MAX = 4
 };
 
 

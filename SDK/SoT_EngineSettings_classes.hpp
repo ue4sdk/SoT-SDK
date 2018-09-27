@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.ConsoleSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.ConsoleSettings");
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GameMapsSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.GameMapsSettings");
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GameNetworkManagerSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.GameNetworkManagerSettings");
 		return ptr;
 	}
 
@@ -100,7 +100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GameSessionSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.GameSessionSettings");
 		return ptr;
 	}
 
@@ -115,7 +115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GeneralEngineSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.GeneralEngineSettings");
 		return ptr;
 	}
 
@@ -143,7 +143,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GeneralProjectSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.GeneralProjectSettings");
 		return ptr;
 	}
 
@@ -161,7 +161,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.HudSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class EngineSettings.HudSettings");
 		return ptr;
 	}
 

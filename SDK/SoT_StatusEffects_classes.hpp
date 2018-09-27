@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusBase");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusBase");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponse");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusResponse");
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface");
 		return ptr;
 	}
 
@@ -67,7 +67,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.MaterialStatusSusceptibilityInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityInterface");
 		return ptr;
 	}
 
@@ -82,7 +82,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
 		return ptr;
 	}
 
@@ -101,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.MaterialStatusSusceptibilityComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityComponent");
 		return ptr;
 	}
 
@@ -116,7 +116,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectRecipientInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectRecipientInterface");
 		return ptr;
 	}
 
@@ -131,7 +131,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectTicketDispenserInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectTicketDispenserInterface");
 		return ptr;
 	}
 
@@ -148,7 +148,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponseAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusResponseAsset");
 		return ptr;
 	}
 
@@ -165,7 +165,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusRecipientResponseList");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusRecipientResponseList");
 		return ptr;
 	}
 
@@ -183,7 +183,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectManagerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectManagerComponent");
 		return ptr;
 	}
 

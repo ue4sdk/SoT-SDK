@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindInterface");
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.DebugWindInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.DebugWindInterface");
 		return ptr;
 	}
 
@@ -70,7 +70,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.MockWindService");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.MockWindService");
 		return ptr;
 	}
 
@@ -86,7 +86,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.TestWindInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.TestWindInterface");
 		return ptr;
 	}
 
@@ -101,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindZoneInterface");
 		return ptr;
 	}
 
@@ -121,7 +121,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.TestWindZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.TestWindZone");
 		return ptr;
 	}
 
@@ -136,7 +136,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindFunctions");
 		return ptr;
 	}
 
@@ -161,7 +161,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindService");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindService");
 		return ptr;
 	}
 
@@ -181,7 +181,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.DebugWindService");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.DebugWindService");
 		return ptr;
 	}
 
@@ -196,7 +196,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindServiceParamsFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindServiceParamsFunctionLibrary");
 		return ptr;
 	}
 
@@ -206,18 +206,18 @@ public:
 
 
 // Class Wind.WindZoneComponent
-// 0x0090 (0x0330 - 0x02A0)
+// 0x0090 (0x0340 - 0x02B0)
 class UWindZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02A8(0x0070) (Edit, BlueprintVisible)
-	struct FWindZoneParams                             WindZoneParams;                                           // 0x0318(0x0010) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FWindTurbulenceParameters                   TurbulenceParams;                                         // 0x02B8(0x0070) (Edit, BlueprintVisible)
+	struct FWindZoneParams                             WindZoneParams;                                           // 0x0328(0x0010) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0338(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindZoneComponent");
 		return ptr;
 	}
 
@@ -225,14 +225,14 @@ public:
 
 
 // Class Wind.TestWindZoneComponent
-// 0x0000 (0x0330 - 0x0330)
+// 0x0000 (0x0340 - 0x0340)
 class UTestWindZoneComponent : public UWindZoneComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.TestWindZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Wind.TestWindZoneComponent");
 		return ptr;
 	}
 

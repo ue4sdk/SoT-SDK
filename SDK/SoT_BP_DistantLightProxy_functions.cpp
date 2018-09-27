@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,11 +26,7 @@ void ABP_DistantLightProxy_C::FindExistingLight(const class FString& Name, bool*
 	ABP_DistantLightProxy_C_FindExistingLight_Params params;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Result != nullptr)
 		*Result = params.Result;
@@ -48,11 +44,7 @@ void ABP_DistantLightProxy_C::Create_Lights()
 
 	ABP_DistantLightProxy_C_Create_Lights_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -65,11 +57,7 @@ void ABP_DistantLightProxy_C::UserConstructionScript()
 
 	ABP_DistantLightProxy_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -91,11 +79,7 @@ void ABP_DistantLightProxy_C::Add_Light(const struct FVector& Location, float Si
 	params.Material = Material;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -111,11 +95,7 @@ void ABP_DistantLightProxy_C::ExecuteUbergraph_BP_DistantLightProxy(int EntryPoi
 	ABP_DistantLightProxy_C_ExecuteUbergraph_BP_DistantLightProxy_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

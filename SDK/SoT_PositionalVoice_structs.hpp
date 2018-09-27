@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ enum class EVoiceChatState : uint8_t
 	EVoiceChatState__Silent        = 0,
 	None                           = 1,
 	EVoiceChatState__EVoiceChatState_MAX = 2,
-	DefaultRadiusTracker           = 3
+	ETinySharkActiveState__TrackingTarget = 3
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,6 +24,17 @@ struct AWatercraft_OnRigidBodyWake_Params
 struct AWatercraft_OnRigidBodySleep_Params
 {
 	struct FName                                       InBoneName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables
+struct ARowboat_SetAlwaysEnabledInteractables_Params
+{
+	TArray<class UChildActorComponent*>                InAlwaysEnabledInteractables;                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function Watercrafts.Rowboat.OnRep_IsSinking
+struct ARowboat_OnRep_IsSinking_Params
+{
 };
 
 // Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft

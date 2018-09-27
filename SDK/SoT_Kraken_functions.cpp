@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void AKrakenTentacle::OnDamageToTentacle(const struct FImpactDamageEvent& Impact
 	AKrakenTentacle_OnDamageToTentacle_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -42,12 +37,7 @@ void AKrakenShipWrappingTentacle::OnRep_CurrentServerAnimationState()
 
 	AKrakenShipWrappingTentacle_OnRep_CurrentServerAnimationState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -60,12 +50,7 @@ void AKraken::Multicast_OnTentacleTakenDamage()
 
 	AKraken_Multicast_OnTentacleTakenDamage_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -81,12 +66,7 @@ void AKraken::AddActorToKnownTargets(class AActor* Target)
 	AKraken_AddActorToKnownTargets_Params params;
 	params.Target = Target;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -104,12 +84,7 @@ void AKrakenService::RequestKrakenWithLocation(const struct FVector& SpawnLocati
 	params.SpawnLocation = SpawnLocation;
 	params.SpawnedForActor = SpawnedForActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -124,12 +99,7 @@ bool AKrakenService::IsServiceInitialized()
 
 	AKrakenService_IsServiceInitialized_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -146,12 +116,7 @@ bool AKrakenService::IsKrakenActive()
 
 	AKrakenService_IsKrakenActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -166,12 +131,7 @@ void AKrakenService::DismissKraken()
 
 	AKrakenService_DismissKraken_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

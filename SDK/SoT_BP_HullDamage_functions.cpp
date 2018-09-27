@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,11 +31,7 @@ void ABP_HullDamage_C::Apply_Hit(const struct FVector& HitPosition, const struct
 	params.HitStrength = HitStrength;
 	params.Has_Decal = Has_Decal;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Decal != nullptr)
 		*Decal = params.Decal;
@@ -56,11 +52,7 @@ void ABP_HullDamage_C::PlayHitSFX(const struct FVector& HitLocation, float HitSt
 	params.HitLocation = HitLocation;
 	params.HitStrenght = HitStrenght;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -83,11 +75,7 @@ void ABP_HullDamage_C::Apply_Visual_Hit(const struct FVector& HitPosition, const
 	params.HitStrength = HitStrength;
 	params.HasDecal = HasDecal;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Decal != nullptr)
 		*Decal = params.Decal;
@@ -114,11 +102,7 @@ void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVect
 	params.HitVelocity = HitVelocity;
 	params.NumDamageZones = NumDamageZones;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -140,11 +124,7 @@ void ABP_HullDamage_C::Scale_Hit_Strength_and_Get_Decal_Flag(const struct FVecto
 	params.Hit_Velocity = Hit_Velocity;
 	params.Hit_Strength = Hit_Strength;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Strength != nullptr)
 		*Strength = params.Strength;
@@ -164,11 +144,7 @@ void ABP_HullDamage_C::Get_Random_Deferred_Decal(class UMaterialInterface** Deca
 
 	ABP_HullDamage_C_Get_Random_Deferred_Decal_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Decal_Material != nullptr)
 		*Decal_Material = params.Decal_Material;
@@ -186,11 +162,7 @@ void ABP_HullDamage_C::Get_Random_Persistent_Decal(class UTexture2D** Decal_Text
 
 	ABP_HullDamage_C_Get_Random_Persistent_Decal_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Decal_Texture != nullptr)
 		*Decal_Texture = params.Decal_Texture;
@@ -219,11 +191,7 @@ void ABP_HullDamage_C::Add_Hit_To_HitList(const struct FVector& HitPosition, con
 	params.DamageZone = DamageZone;
 	params.HitLevel = HitLevel;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -238,11 +206,7 @@ void ABP_HullDamage_C::Initialize_Damage_Materials(TArray<class UStaticMeshCompo
 
 	ABP_HullDamage_C_Initialize_Damage_Materials_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (StaticMeshes != nullptr)
 		*StaticMeshes = params.StaticMeshes;
@@ -258,11 +222,7 @@ void ABP_HullDamage_C::UserConstructionScript()
 
 	ABP_HullDamage_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -275,11 +235,7 @@ void ABP_HullDamage_C::ReceiveBeginPlay()
 
 	ABP_HullDamage_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -295,11 +251,7 @@ void ABP_HullDamage_C::BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_
 	ABP_HullDamage_C_BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_ImpactDamageEventDelegate__DelegateSignature_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -315,11 +267,7 @@ void ABP_HullDamage_C::ExecuteUbergraph_BP_HullDamage(int EntryPoint)
 	ABP_HullDamage_C_ExecuteUbergraph_BP_HullDamage_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

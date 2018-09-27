@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,12 +23,7 @@ struct FGameTime UTimeInterface::GetTime()
 
 	UTimeInterface_GetTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45,12 +40,7 @@ struct FDateTime UTimeInterface::GetSmoothRealWorldTime()
 
 	UTimeInterface_GetSmoothRealWorldTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -67,12 +57,7 @@ struct FDateTime UTimeInterface::GetPreciseRealWorldTime()
 
 	UTimeInterface_GetPreciseRealWorldTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -91,12 +76,7 @@ struct FGameTime UTimeInterface::ConvertRealWorldTimeToGameWorldTime(const struc
 	UTimeInterface_ConvertRealWorldTimeToGameWorldTime_Params params;
 	params.RealWorldTime = RealWorldTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -115,12 +95,7 @@ struct FDateTime UTimeInterface::ConvertGameWorldTimeToRealWorldTime(const struc
 	UTimeInterface_ConvertGameWorldTimeToRealWorldTime_Params params;
 	params.GameWorldTime = GameWorldTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -138,12 +113,7 @@ void UDebugTimeInterface::SetTimeSlowdownScalar(float RequestedSlowdownScalar)
 	UDebugTimeInterface_SetTimeSlowdownScalar_Params params;
 	params.RequestedSlowdownScalar = RequestedSlowdownScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -159,12 +129,7 @@ void UDebugTimeInterface::SetTimeScalar(int RequestedTimeScalar)
 	UDebugTimeInterface_SetTimeScalar_Params params;
 	params.RequestedTimeScalar = RequestedTimeScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -180,12 +145,7 @@ void UDebugTimeInterface::SetTimeCatchupScalar(float RequestedCatchupScalar)
 	UDebugTimeInterface_SetTimeCatchupScalar_Params params;
 	params.RequestedCatchupScalar = RequestedCatchupScalar;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -201,12 +161,7 @@ void UDebugTimeInterface::SetSunset(float SunsetHours)
 	UDebugTimeInterface_SetSunset_Params params;
 	params.SunsetHours = SunsetHours;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -222,12 +177,7 @@ void UDebugTimeInterface::SetSunrise(float SunriseHours)
 	UDebugTimeInterface_SetSunrise_Params params;
 	params.SunriseHours = SunriseHours;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -243,12 +193,7 @@ void UDebugTimeInterface::SetGameWorldTime(const struct FGameTime& RequestedTime
 	UDebugTimeInterface_SetGameWorldTime_Params params;
 	params.RequestedTime = RequestedTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -263,12 +208,7 @@ float UDebugTimeInterface::GetTimeSlowdownScalar()
 
 	UDebugTimeInterface_GetTimeSlowdownScalar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -285,12 +225,7 @@ int UDebugTimeInterface::GetTimeScalar()
 
 	UDebugTimeInterface_GetTimeScalar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -307,12 +242,7 @@ float UDebugTimeInterface::GetTimeCatchupScalar()
 
 	UDebugTimeInterface_GetTimeCatchupScalar_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -330,12 +260,7 @@ void UDebugTimeInterface::EnableQueryServiceTime(bool Enable)
 	UDebugTimeInterface_EnableQueryServiceTime_Params params;
 	params.Enable = Enable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -352,12 +277,7 @@ struct FReplicatedDateTime UTimeBlueprintLibrary::STATIC_MakeReplicatedDateTimeF
 	UTimeBlueprintLibrary_MakeReplicatedDateTimeFromDateTime_Params params;
 	params.InDateTime = InDateTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -376,12 +296,7 @@ struct FDateTime UTimeBlueprintLibrary::STATIC_MakeDateTimeFromReplicatedDateTim
 	UTimeBlueprintLibrary_MakeDateTimeFromReplicatedDateTime_Params params;
 	params.InDateTime = InDateTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -412,12 +327,7 @@ struct FDateTime UTimeBlueprintLibrary::STATIC_MakeDateTimeFromRaw(int Year, int
 	params.Second = Second;
 	params.Millisecond = Millisecond;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -440,12 +350,7 @@ bool UTimeBlueprintLibrary::STATIC_DateTimesWithinTolerance(const struct FDateTi
 	params.SecondDateTime = SecondDateTime;
 	params.Tolerance = Tolerance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -460,12 +365,7 @@ void ATimeService::OnRep_ReplicatedServerTime()
 
 	ATimeService_OnRep_ReplicatedServerTime_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -481,12 +381,7 @@ void ATimeService::MulticastOnServiceTimeChangedRPC(int64_t ServiceTimeInTicks)
 	ATimeService_MulticastOnServiceTimeChangedRPC_Params params;
 	params.ServiceTimeInTicks = ServiceTimeInTicks;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -504,12 +399,7 @@ void ADebugTimeService::MulticastOnTimeScalarOffsetRPC(int Scalar, int64_t Offse
 	params.Scalar = Scalar;
 	params.Offset = Offset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -525,12 +415,7 @@ void ADebugTimeService::MulticastOnSynchronizeTimeSpeedupRateRPC(float Rate)
 	ADebugTimeService_MulticastOnSynchronizeTimeSpeedupRateRPC_Params params;
 	params.Rate = Rate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -546,12 +431,7 @@ void ADebugTimeService::MulticastOnSynchronizeTimeSlowdownRateRPC(float Rate)
 	ADebugTimeService_MulticastOnSynchronizeTimeSlowdownRateRPC_Params params;
 	params.Rate = Rate;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

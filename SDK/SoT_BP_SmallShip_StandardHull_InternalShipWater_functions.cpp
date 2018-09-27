@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,11 +28,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::GetLineIntersectionFromPlan
 	params.LineStart = LineStart;
 	params.LineEnd = LineEnd;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Intersect != nullptr)
 		*Intersect = params.Intersect;
@@ -52,11 +48,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::GetWaterLevel(float* WaterL
 
 	ABP_SmallShip_StandardHull_InternalShipWater_C_GetWaterLevel_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (WaterLevel != nullptr)
 		*WaterLevel = params.WaterLevel;
@@ -76,11 +68,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::GetDistanceFromPlane(const 
 	ABP_SmallShip_StandardHull_InternalShipWater_C_GetDistanceFromPlane_Params params;
 	params.Location = Location;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Distance != nullptr)
 		*Distance = params.Distance;
@@ -96,11 +84,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::UserConstructionScript()
 
 	ABP_SmallShip_StandardHull_InternalShipWater_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -116,11 +100,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::AddWater(float Water_Amount
 	ABP_SmallShip_StandardHull_InternalShipWater_C_AddWater_Params params;
 	params.Water_Amount = Water_Amount;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -133,11 +113,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::ReceiveBeginPlay()
 
 	ABP_SmallShip_StandardHull_InternalShipWater_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -153,11 +129,7 @@ void ABP_SmallShip_StandardHull_InternalShipWater_C::ExecuteUbergraph_BP_SmallSh
 	ABP_SmallShip_StandardHull_InternalShipWater_C_ExecuteUbergraph_BP_SmallShip_StandardHull_InternalShipWater_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

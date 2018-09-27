@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,21 +21,17 @@ void UBP_SailAnim_C::Set_Billow_Animation_Rate()
 
 	UBP_SailAnim_C_Set_Billow_Animation_Rate_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_SailAnim.BP_SailAnim_C.InitialiseSail
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float*                         PlayRateMultiplier             (Parm, ZeroConstructor, IsPlainOldData)
-// bool*                          MainSail                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          PlayRateMultiplier             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           MainSail                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_SailAnim_C::InitialiseSail(float* PlayRateMultiplier, bool* MainSail)
+void UBP_SailAnim_C::InitialiseSail(float PlayRateMultiplier, bool MainSail)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.InitialiseSail");
 
@@ -43,11 +39,7 @@ void UBP_SailAnim_C::InitialiseSail(float* PlayRateMultiplier, bool* MainSail)
 	params.PlayRateMultiplier = PlayRateMultiplier;
 	params.MainSail = MainSail;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -63,11 +55,7 @@ void UBP_SailAnim_C::ExecuteUbergraph_BP_SailAnim(int EntryPoint)
 	UBP_SailAnim_C_ExecuteUbergraph_BP_SailAnim_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

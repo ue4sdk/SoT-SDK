@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,7 @@ void UPathFollowingComponent::OnActorBump(class AActor* SelfActor, class AActor*
 	params.NormalImpulse = NormalImpulse;
 	params.Hit = Hit;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -50,12 +45,7 @@ struct FVector UPathFollowingComponent::GetPathDestination()
 
 	UPathFollowingComponent_GetPathDestination_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -72,12 +62,7 @@ TEnumAsByte<EPathFollowingAction> UPathFollowingComponent::GetPathActionType()
 
 	UPathFollowingComponent_GetPathActionType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -97,12 +82,7 @@ void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& Requ
 	params.RequestID = RequestID;
 	params.MovementResult = MovementResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -122,12 +102,7 @@ void UAIBlueprintHelperLibrary::STATIC_UnlockAIResourcesWithAnimation(class UAni
 	params.bUnlockMovement = bUnlockMovement;
 	params.UnlockAILogic = UnlockAILogic;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -154,12 +129,7 @@ class APawn* UAIBlueprintHelperLibrary::STATIC_SpawnAIFromClass(class UObject* W
 	params.Rotation = Rotation;
 	params.bNoCollisionFail = bNoCollisionFail;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -183,12 +153,7 @@ void UAIBlueprintHelperLibrary::STATIC_SendAIMessage(class APawn* Target, const 
 	params.MessageSource = MessageSource;
 	params.bSuccess = bSuccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -208,12 +173,7 @@ void UAIBlueprintHelperLibrary::STATIC_LockAIResourcesWithAnimation(class UAnimI
 	params.bLockMovement = bLockMovement;
 	params.LockAILogic = LockAILogic;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -230,12 +190,7 @@ bool UAIBlueprintHelperLibrary::STATIC_IsValidAIRotation(const struct FRotator& 
 	UAIBlueprintHelperLibrary_IsValidAIRotation_Params params;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -254,12 +209,7 @@ bool UAIBlueprintHelperLibrary::STATIC_IsValidAILocation(const struct FVector& L
 	UAIBlueprintHelperLibrary_IsValidAILocation_Params params;
 	params.Location = Location;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -278,12 +228,7 @@ bool UAIBlueprintHelperLibrary::STATIC_IsValidAIDirection(const struct FVector& 
 	UAIBlueprintHelperLibrary_IsValidAIDirection_Params params;
 	params.DirectionVector = DirectionVector;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -302,12 +247,7 @@ class UBlackboardComponent* UAIBlueprintHelperLibrary::STATIC_GetBlackboard(clas
 	UAIBlueprintHelperLibrary_GetBlackboard_Params params;
 	params.Target = Target;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -326,12 +266,7 @@ class AAIController* UAIBlueprintHelperLibrary::STATIC_GetAIController(class AAc
 	UAIBlueprintHelperLibrary_GetAIController_Params params;
 	params.ControlledActor = ControlledActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -360,12 +295,7 @@ class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::STATIC_CreateMoveTo
 	params.AcceptanceRadius = AcceptanceRadius;
 	params.bStopOnOverlap = bStopOnOverlap;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -388,12 +318,7 @@ bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, TEnumAsB
 	params.Priority = Priority;
 	params.Instigator = Instigator;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -416,12 +341,7 @@ bool UPawnActionsComponent::STATIC_K2_PerformAction(class APawn* Pawn, class UPa
 	params.Action = Action;
 	params.Priority = Priority;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -440,12 +360,7 @@ TEnumAsByte<EPawnActionAbortState> UPawnActionsComponent::K2_ForceAbortAction(cl
 	UPawnActionsComponent_K2_ForceAbortAction_Params params;
 	params.ActionToAbort = ActionToAbort;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -464,12 +379,7 @@ TEnumAsByte<EPawnActionAbortState> UPawnActionsComponent::K2_AbortAction(class U
 	UPawnActionsComponent_K2_AbortAction_Params params;
 	params.ActionToAbort = ActionToAbort;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -489,12 +399,7 @@ bool AAIController::UseBlackboard(class UBlackboardData* BlackboardAsset, class 
 	AAIController_UseBlackboard_Params params;
 	params.BlackboardAsset = BlackboardAsset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (BlackboardComponent != nullptr)
 		*BlackboardComponent = params.BlackboardComponent;
@@ -515,12 +420,7 @@ void AAIController::SetMoveBlockDetection(bool bEnable)
 	AAIController_SetMoveBlockDetection_Params params;
 	params.bEnable = bEnable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -537,12 +437,7 @@ bool AAIController::RunBehaviorTree(class UBehaviorTree* BTAsset)
 	AAIController_RunBehaviorTree_Params params;
 	params.BTAsset = BTAsset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -562,11 +457,7 @@ void AAIController::OnUsingBlackBoard(class UBlackboardComponent* BlackboardComp
 	params.BlackboardComp = BlackboardComp;
 	params.BlackboardAsset = BlackboardAsset;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -582,11 +473,7 @@ void AAIController::OnPossess(class APawn* PossessedPawn)
 	AAIController_OnPossess_Params params;
 	params.PossessedPawn = PossessedPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -604,12 +491,7 @@ void AAIController::OnGameplayTaskResourcesClaimed(const struct FGameplayResourc
 	params.NewlyClaimed = NewlyClaimed;
 	params.FreshlyReleased = FreshlyReleased;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -640,12 +522,7 @@ TEnumAsByte<EPathFollowingRequestResult> AAIController::MoveToLocation(const str
 	params.FilterClass = FilterClass;
 	params.bAllowPartialPath = bAllowPartialPath;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -676,12 +553,7 @@ TEnumAsByte<EPathFollowingRequestResult> AAIController::MoveToActor(class AActor
 	params.FilterClass = FilterClass;
 	params.bAllowPartialPath = bAllowPartialPath;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -699,12 +571,7 @@ void AAIController::K2_SetFocus(class AActor* NewFocus)
 	AAIController_K2_SetFocus_Params params;
 	params.NewFocus = NewFocus;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -720,12 +587,7 @@ void AAIController::K2_SetFocalPoint(const struct FVector& FP)
 	AAIController_K2_SetFocalPoint_Params params;
 	params.FP = FP;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -738,12 +600,7 @@ void AAIController::K2_ClearFocus()
 
 	AAIController_K2_ClearFocus_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -758,12 +615,7 @@ bool AAIController::HasPartialPath()
 
 	AAIController_HasPartialPath_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -780,12 +632,7 @@ class UPathFollowingComponent* AAIController::GetPathFollowingComponent()
 
 	AAIController_GetPathFollowingComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -802,12 +649,7 @@ TEnumAsByte<EPathFollowingStatus> AAIController::GetMoveStatus()
 
 	AAIController_GetMoveStatus_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -824,12 +666,7 @@ struct FVector AAIController::GetImmediateMoveDestination()
 
 	AAIController_GetImmediateMoveDestination_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -846,12 +683,7 @@ class AActor* AAIController::GetFocusActor()
 
 	AAIController_GetFocusActor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -870,12 +702,7 @@ struct FVector AAIController::GetFocalPointOnActor(class AActor* Actor)
 	AAIController_GetFocalPointOnActor_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -892,12 +719,7 @@ struct FVector AAIController::GetFocalPoint()
 
 	AAIController_GetFocalPoint_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -914,12 +736,7 @@ class UAIPerceptionComponent* AAIController::GetAIPerceptionComponent()
 
 	AAIController_GetAIPerceptionComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -934,12 +751,7 @@ void UAISystem::AILoggingVerbose()
 
 	UAISystem_AILoggingVerbose_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -952,12 +764,7 @@ void UAISystem::AIIgnorePlayers()
 
 	UAISystem_AIIgnorePlayers_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -975,12 +782,7 @@ void UAIPerceptionSystem::STATIC_ReportPerceptionEvent(class UObject* WorldConte
 	params.WorldContext = WorldContext;
 	params.PerceptionEvent = PerceptionEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -996,12 +798,7 @@ void UAIPerceptionSystem::ReportEvent(class UAISenseEvent* PerceptionEvent)
 	UAIPerceptionSystem_ReportEvent_Params params;
 	params.PerceptionEvent = PerceptionEvent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1022,12 +819,7 @@ bool UAIPerceptionSystem::STATIC_RegisterPerceptionStimuliSource(class UObject* 
 	params.Sense = Sense;
 	params.Target = Target;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1045,12 +837,7 @@ void UAIPerceptionSystem::OnPerceptionStimuliSourceEndPlay(TEnumAsByte<EEndPlayR
 	UAIPerceptionSystem_OnPerceptionStimuliSourceEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1069,12 +856,7 @@ class UClass* UAIPerceptionSystem::STATIC_GetSenseClassForStimulus(class UObject
 	params.WorldContext = WorldContext;
 	params.Stimulus = Stimulus;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1089,12 +871,7 @@ void UAIPerceptionComponent::RequestStimuliListenerUpdate()
 
 	UAIPerceptionComponent_RequestStimuliListenerUpdate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1110,12 +887,7 @@ void UAIPerceptionComponent::OnOwnerEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 	UAIPerceptionComponent_OnOwnerEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1132,12 +904,7 @@ bool UAIPerceptionComponent::IsIgnored(class AActor* Actor)
 	UAIPerceptionComponent_IsIgnored_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1154,12 +921,7 @@ void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* Ou
 
 	UAIPerceptionComponent_GetPerceivedHostileActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutActors != nullptr)
 		*OutActors = params.OutActors;
@@ -1179,12 +941,7 @@ void UAIPerceptionComponent::GetPerceivedActors(class UClass* SenseToUse, TArray
 	UAIPerceptionComponent_GetPerceivedActors_Params params;
 	params.SenseToUse = SenseToUse;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutActors != nullptr)
 		*OutActors = params.OutActors;
@@ -1205,12 +962,7 @@ bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FAc
 	UAIPerceptionComponent_GetActorsPerception_Params params;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Info != nullptr)
 		*Info = params.Info;
@@ -1231,12 +983,7 @@ void UAIPerceptionStimuliSourceComponent::UnregisterFromSense(class UClass* Sens
 	UAIPerceptionStimuliSourceComponent_UnregisterFromSense_Params params;
 	params.SenseClass = SenseClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1249,12 +996,7 @@ void UAIPerceptionStimuliSourceComponent::UnregisterFromPerceptionSystem()
 
 	UAIPerceptionStimuliSourceComponent_UnregisterFromPerceptionSystem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1267,12 +1009,7 @@ void UAIPerceptionStimuliSourceComponent::RegisterWithPerceptionSystem()
 
 	UAIPerceptionStimuliSourceComponent_RegisterWithPerceptionSystem_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1288,12 +1025,7 @@ void UAIPerceptionStimuliSourceComponent::RegisterForSense(class UClass* SenseCl
 	UAIPerceptionStimuliSourceComponent_RegisterForSense_Params params;
 	params.SenseClass = SenseClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1310,11 +1042,7 @@ float UAISense_Blueprint::OnUpdate(TArray<class UAISenseEvent*> EventsToProcess)
 	UAISense_Blueprint_OnUpdate_Params params;
 	params.EventsToProcess = EventsToProcess;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1334,11 +1062,7 @@ void UAISense_Blueprint::OnListenerUpdated(class AActor* ActorListener, class UA
 	params.ActorListener = ActorListener;
 	params.PerceptionComponent = PerceptionComponent;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1356,11 +1080,7 @@ void UAISense_Blueprint::OnListenerUnregistered(class AActor* ActorListener, cla
 	params.ActorListener = ActorListener;
 	params.PerceptionComponent = PerceptionComponent;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1378,11 +1098,7 @@ void UAISense_Blueprint::OnListenerRegistered(class AActor* ActorListener, class
 	params.ActorListener = ActorListener;
 	params.PerceptionComponent = PerceptionComponent;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1398,11 +1114,7 @@ void UAISense_Blueprint::K2_OnNewPawn(class APawn* NewPawn)
 	UAISense_Blueprint_K2_OnNewPawn_Params params;
 	params.NewPawn = NewPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1417,12 +1129,7 @@ void UAISense_Blueprint::GetAllListenerComponents(TArray<class UAIPerceptionComp
 
 	UAISense_Blueprint_GetAllListenerComponents_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ListenerComponents != nullptr)
 		*ListenerComponents = params.ListenerComponents;
@@ -1440,12 +1147,7 @@ void UAISense_Blueprint::GetAllListenerActors(TArray<class AActor*>* ListenerAct
 
 	UAISense_Blueprint_GetAllListenerActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ListenerActors != nullptr)
 		*ListenerActors = params.ListenerActors;
@@ -1474,12 +1176,7 @@ void UAISense_Damage::STATIC_ReportDamageEvent(class UObject* WorldContext, clas
 	params.EventLocation = EventLocation;
 	params.HitLocation = HitLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1505,12 +1202,7 @@ void UAISense_Hearing::STATIC_ReportNoiseEvent(class UObject* WorldContext, cons
 	params.MaxRange = MaxRange;
 	params.Tag = Tag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1530,12 +1222,7 @@ void UAISense_Prediction::STATIC_RequestPawnPredictionEvent(class APawn* Request
 	params.PredictedActor = PredictedActor;
 	params.PredictionTime = PredictionTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1555,12 +1242,7 @@ void UAISense_Prediction::STATIC_RequestControllerPredictionEvent(class AAIContr
 	params.PredictedActor = PredictedActor;
 	params.PredictionTime = PredictionTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1591,12 +1273,7 @@ class UAITask_MoveTo* UAITask_MoveTo::STATIC_AIMoveTo(class AAIController* Contr
 	params.bUsePathfinding = bUsePathfinding;
 	params.bLockAILogic = bLockAILogic;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1614,12 +1291,7 @@ void UBrainComponent::StopLogic(const class FString& Reason)
 	UBrainComponent_StopLogic_Params params;
 	params.Reason = Reason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1632,12 +1304,7 @@ void UBrainComponent::RestartLogic()
 
 	UBrainComponent_RestartLogic_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1655,12 +1322,7 @@ void UBehaviorTreeComponent::SetDynamicSubtree(const struct FGameplayTag& Inject
 	params.InjectTag = InjectTag;
 	params.BehaviorAsset = BehaviorAsset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1677,12 +1339,7 @@ float UBehaviorTreeComponent::GetTagCooldownEndTime(const struct FGameplayTag& C
 	UBehaviorTreeComponent_GetTagCooldownEndTime_Params params;
 	params.CooldownTag = CooldownTag;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1704,12 +1361,7 @@ void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& C
 	params.CooldownDuration = CooldownDuration;
 	params.bAddToExistingDuration = bAddToExistingDuration;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1727,12 +1379,7 @@ void UBlackboardComponent::SetValueAsVector(const struct FName& KeyName, const s
 	params.KeyName = KeyName;
 	params.VectorValue = VectorValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1750,12 +1397,7 @@ void UBlackboardComponent::SetValueAsString(const struct FName& KeyName, const c
 	params.KeyName = KeyName;
 	params.StringValue = StringValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1773,12 +1415,7 @@ void UBlackboardComponent::SetValueAsRotator(const struct FName& KeyName, const 
 	params.KeyName = KeyName;
 	params.VectorValue = VectorValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1796,12 +1433,7 @@ void UBlackboardComponent::SetValueAsObject(const struct FName& KeyName, class U
 	params.KeyName = KeyName;
 	params.ObjectValue = ObjectValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1819,12 +1451,7 @@ void UBlackboardComponent::SetValueAsName(const struct FName& KeyName, const str
 	params.KeyName = KeyName;
 	params.NameValue = NameValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1842,12 +1469,7 @@ void UBlackboardComponent::SetValueAsInt(const struct FName& KeyName, int IntVal
 	params.KeyName = KeyName;
 	params.IntValue = IntValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1865,12 +1487,7 @@ void UBlackboardComponent::SetValueAsFloat(const struct FName& KeyName, float Fl
 	params.KeyName = KeyName;
 	params.FloatValue = FloatValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1888,12 +1505,7 @@ void UBlackboardComponent::SetValueAsEnum(const struct FName& KeyName, unsigned 
 	params.KeyName = KeyName;
 	params.EnumValue = EnumValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1911,12 +1523,7 @@ void UBlackboardComponent::SetValueAsClass(const struct FName& KeyName, class UC
 	params.KeyName = KeyName;
 	params.ClassValue = ClassValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1934,12 +1541,7 @@ void UBlackboardComponent::SetValueAsBool(const struct FName& KeyName, bool Bool
 	params.KeyName = KeyName;
 	params.BoolValue = BoolValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1956,12 +1558,7 @@ bool UBlackboardComponent::IsVectorValueSet(const struct FName& KeyName)
 	UBlackboardComponent_IsVectorValueSet_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1980,12 +1577,7 @@ struct FVector UBlackboardComponent::GetValueAsVector(const struct FName& KeyNam
 	UBlackboardComponent_GetValueAsVector_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2004,12 +1596,7 @@ class FString UBlackboardComponent::GetValueAsString(const struct FName& KeyName
 	UBlackboardComponent_GetValueAsString_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2028,12 +1615,7 @@ struct FRotator UBlackboardComponent::GetValueAsRotator(const struct FName& KeyN
 	UBlackboardComponent_GetValueAsRotator_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2052,12 +1634,7 @@ class UObject* UBlackboardComponent::GetValueAsObject(const struct FName& KeyNam
 	UBlackboardComponent_GetValueAsObject_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2076,12 +1653,7 @@ struct FName UBlackboardComponent::GetValueAsName(const struct FName& KeyName)
 	UBlackboardComponent_GetValueAsName_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2100,12 +1672,7 @@ int UBlackboardComponent::GetValueAsInt(const struct FName& KeyName)
 	UBlackboardComponent_GetValueAsInt_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2124,12 +1691,7 @@ float UBlackboardComponent::GetValueAsFloat(const struct FName& KeyName)
 	UBlackboardComponent_GetValueAsFloat_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2148,12 +1710,7 @@ unsigned char UBlackboardComponent::GetValueAsEnum(const struct FName& KeyName)
 	UBlackboardComponent_GetValueAsEnum_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2172,12 +1729,7 @@ class UClass* UBlackboardComponent::GetValueAsClass(const struct FName& KeyName)
 	UBlackboardComponent_GetValueAsClass_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2196,12 +1748,7 @@ bool UBlackboardComponent::GetValueAsBool(const struct FName& KeyName)
 	UBlackboardComponent_GetValueAsBool_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2221,12 +1768,7 @@ bool UBlackboardComponent::GetRotationFromEntry(const struct FName& KeyName, str
 	UBlackboardComponent_GetRotationFromEntry_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ResultRotation != nullptr)
 		*ResultRotation = params.ResultRotation;
@@ -2249,12 +1791,7 @@ bool UBlackboardComponent::GetLocationFromEntry(const struct FName& KeyName, str
 	UBlackboardComponent_GetLocationFromEntry_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ResultLocation != nullptr)
 		*ResultLocation = params.ResultLocation;
@@ -2275,12 +1812,7 @@ void UBlackboardComponent::ClearValueAsVector(const struct FName& KeyName)
 	UBlackboardComponent_ClearValueAsVector_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2296,12 +1828,7 @@ void UBlackboardComponent::ClearValueAsRotator(const struct FName& KeyName)
 	UBlackboardComponent_ClearValueAsRotator_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2317,12 +1844,7 @@ void UBlackboardComponent::ClearValue(const struct FName& KeyName)
 	UBlackboardComponent_ClearValue_Params params;
 	params.KeyName = KeyName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2338,12 +1860,7 @@ void UBTFunctionLibrary::STATIC_StopUsingExternalEvent(class UBTNode* NodeOwner)
 	UBTFunctionLibrary_StopUsingExternalEvent_Params params;
 	params.NodeOwner = NodeOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2361,12 +1878,7 @@ void UBTFunctionLibrary::STATIC_StartUsingExternalEvent(class UBTNode* NodeOwner
 	params.NodeOwner = NodeOwner;
 	params.OwningActor = OwningActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2386,12 +1898,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsVector(class UBTNode* NodeOw
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2411,12 +1918,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsString(class UBTNode* NodeOw
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2436,12 +1938,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsRotator(class UBTNode* NodeO
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2461,12 +1958,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsObject(class UBTNode* NodeOw
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2486,12 +1978,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsName(class UBTNode* NodeOwne
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2511,12 +1998,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsInt(class UBTNode* NodeOwner
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2536,12 +2018,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsFloat(class UBTNode* NodeOwn
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2561,12 +2038,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsEnum(class UBTNode* NodeOwne
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2586,12 +2058,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsClass(class UBTNode* NodeOwn
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2611,12 +2078,7 @@ void UBTFunctionLibrary::STATIC_SetBlackboardValueAsBool(class UBTNode* NodeOwne
 	params.Key = Key;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2633,12 +2095,7 @@ class UBlackboardComponent* UBTFunctionLibrary::STATIC_GetOwnersBlackboard(class
 	UBTFunctionLibrary_GetOwnersBlackboard_Params params;
 	params.NodeOwner = NodeOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2657,12 +2114,7 @@ class UBehaviorTreeComponent* UBTFunctionLibrary::STATIC_GetOwnerComponent(class
 	UBTFunctionLibrary_GetOwnerComponent_Params params;
 	params.NodeOwner = NodeOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2683,12 +2135,7 @@ struct FVector UBTFunctionLibrary::STATIC_GetBlackboardValueAsVector(class UBTNo
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2709,12 +2156,7 @@ class FString UBTFunctionLibrary::STATIC_GetBlackboardValueAsString(class UBTNod
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2735,12 +2177,7 @@ struct FRotator UBTFunctionLibrary::STATIC_GetBlackboardValueAsRotator(class UBT
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2761,12 +2198,7 @@ class UObject* UBTFunctionLibrary::STATIC_GetBlackboardValueAsObject(class UBTNo
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2787,12 +2219,7 @@ struct FName UBTFunctionLibrary::STATIC_GetBlackboardValueAsName(class UBTNode* 
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2813,12 +2240,7 @@ int UBTFunctionLibrary::STATIC_GetBlackboardValueAsInt(class UBTNode* NodeOwner,
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2839,12 +2261,7 @@ float UBTFunctionLibrary::STATIC_GetBlackboardValueAsFloat(class UBTNode* NodeOw
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2865,12 +2282,7 @@ unsigned char UBTFunctionLibrary::STATIC_GetBlackboardValueAsEnum(class UBTNode*
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2891,12 +2303,7 @@ class UClass* UBTFunctionLibrary::STATIC_GetBlackboardValueAsClass(class UBTNode
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2917,12 +2324,7 @@ bool UBTFunctionLibrary::STATIC_GetBlackboardValueAsBool(class UBTNode* NodeOwne
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2943,12 +2345,7 @@ class AActor* UBTFunctionLibrary::STATIC_GetBlackboardValueAsActor(class UBTNode
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -2968,12 +2365,7 @@ void UBTFunctionLibrary::STATIC_ClearBlackboardValueAsVector(class UBTNode* Node
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2991,12 +2383,7 @@ void UBTFunctionLibrary::STATIC_ClearBlackboardValue(class UBTNode* NodeOwner, c
 	params.NodeOwner = NodeOwner;
 	params.Key = Key;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3016,11 +2403,7 @@ void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerControl
 	params.ControlledPawn = ControlledPawn;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3038,11 +2421,7 @@ void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float Del
 	params.OwnerActor = OwnerActor;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3060,11 +2439,7 @@ void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIControlle
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3080,11 +2455,7 @@ void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerA
 	UBTDecorator_BlueprintBase_ReceiveObserverDeactivated_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3102,11 +2473,7 @@ void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController*
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3122,11 +2489,7 @@ void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerAct
 	UBTDecorator_BlueprintBase_ReceiveObserverActivated_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3144,11 +2507,7 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* Ow
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3164,11 +2523,7 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
 	UBTDecorator_BlueprintBase_ReceiveExecutionStart_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3188,11 +2543,7 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* O
 	params.ControlledPawn = ControlledPawn;
 	params.NodeResult = NodeResult;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3210,11 +2561,7 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor
 	params.OwnerActor = OwnerActor;
 	params.NodeResult = NodeResult;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3230,11 +2577,7 @@ void UBTDecorator_BlueprintBase::ReceiveConditionCheck(class AActor* OwnerActor)
 	UBTDecorator_BlueprintBase_ReceiveConditionCheck_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3253,11 +2596,7 @@ bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* Ow
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3276,11 +2615,7 @@ bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
 	UBTDecorator_BlueprintBase_PerformConditionCheck_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3297,12 +2632,7 @@ bool UBTDecorator_BlueprintBase::IsDecoratorObserverActive()
 
 	UBTDecorator_BlueprintBase_IsDecoratorObserverActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3319,12 +2649,7 @@ bool UBTDecorator_BlueprintBase::IsDecoratorExecutionActive()
 
 	UBTDecorator_BlueprintBase_IsDecoratorExecutionActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3342,12 +2667,7 @@ void UBTDecorator_BlueprintBase::FinishConditionCheck(bool bAllowExecution)
 	UBTDecorator_BlueprintBase_FinishConditionCheck_Params params;
 	params.bAllowExecution = bAllowExecution;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3367,11 +2687,7 @@ void UBTService_BlueprintBase::ReceiveTickAI(class AAIController* OwnerControlle
 	params.ControlledPawn = ControlledPawn;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3389,11 +2705,7 @@ void UBTService_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float Delta
 	params.OwnerActor = OwnerActor;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3411,11 +2723,7 @@ void UBTService_BlueprintBase::ReceiveSearchStartAI(class AAIController* OwnerCo
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3431,11 +2739,7 @@ void UBTService_BlueprintBase::ReceiveSearchStart(class AActor* OwnerActor)
 	UBTService_BlueprintBase_ReceiveSearchStart_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3453,11 +2757,7 @@ void UBTService_BlueprintBase::ReceiveDeactivationAI(class AAIController* OwnerC
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3473,11 +2773,7 @@ void UBTService_BlueprintBase::ReceiveDeactivation(class AActor* OwnerActor)
 	UBTService_BlueprintBase_ReceiveDeactivation_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3495,11 +2791,7 @@ void UBTService_BlueprintBase::ReceiveActivationAI(class AAIController* OwnerCon
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3515,11 +2807,7 @@ void UBTService_BlueprintBase::ReceiveActivation(class AActor* OwnerActor)
 	UBTService_BlueprintBase_ReceiveActivation_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3534,12 +2822,7 @@ bool UBTService_BlueprintBase::IsServiceActive()
 
 	UBTService_BlueprintBase_IsServiceActive_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3559,12 +2842,7 @@ void UBTTask_BlueprintBase::SetFinishOnMessageWithId(const struct FName& Message
 	params.MessageName = MessageName;
 	params.RequestID = RequestID;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3580,12 +2858,7 @@ void UBTTask_BlueprintBase::SetFinishOnMessage(const struct FName& MessageName)
 	UBTTask_BlueprintBase_SetFinishOnMessage_Params params;
 	params.MessageName = MessageName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3605,11 +2878,7 @@ void UBTTask_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, 
 	params.ControlledPawn = ControlledPawn;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3627,11 +2896,7 @@ void UBTTask_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSec
 	params.OwnerActor = OwnerActor;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3649,11 +2914,7 @@ void UBTTask_BlueprintBase::ReceiveExecuteAI(class AAIController* OwnerControlle
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3669,11 +2930,7 @@ void UBTTask_BlueprintBase::ReceiveExecute(class AActor* OwnerActor)
 	UBTTask_BlueprintBase_ReceiveExecute_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3691,11 +2948,7 @@ void UBTTask_BlueprintBase::ReceiveAbortAI(class AAIController* OwnerController,
 	params.OwnerController = OwnerController;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3711,11 +2964,7 @@ void UBTTask_BlueprintBase::ReceiveAbort(class AActor* OwnerActor)
 	UBTTask_BlueprintBase_ReceiveAbort_Params params;
 	params.OwnerActor = OwnerActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3730,12 +2979,7 @@ bool UBTTask_BlueprintBase::IsTaskExecuting()
 
 	UBTTask_BlueprintBase_IsTaskExecuting_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3752,12 +2996,7 @@ bool UBTTask_BlueprintBase::IsTaskAborting()
 
 	UBTTask_BlueprintBase_IsTaskAborting_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3775,12 +3014,7 @@ void UBTTask_BlueprintBase::FinishExecute(bool bSuccess)
 	UBTTask_BlueprintBase_FinishExecute_Params params;
 	params.bSuccess = bSuccess;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3793,12 +3027,7 @@ void UBTTask_BlueprintBase::FinishAbort()
 
 	UBTTask_BlueprintBase_FinishAbort_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3813,12 +3042,7 @@ TEnumAsByte<EAIRequestPriority> UPawnAction::GetActionPriority()
 
 	UPawnAction_GetActionPriority_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3836,12 +3060,7 @@ void UPawnAction::Finish(TEnumAsByte<EPawnActionResult> WithResult)
 	UPawnAction_Finish_Params params;
 	params.WithResult = WithResult;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -3860,12 +3079,7 @@ class UPawnAction* UPawnAction::STATIC_CreateActionInstance(class UObject* World
 	params.WorldContextObject = WorldContextObject;
 	params.ActionClass = ActionClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -3884,11 +3098,7 @@ void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class AActor* Querier
 	UEnvQueryContext_BlueprintBase_ProvideSingleLocation_Params params;
 	params.QuerierActor = QuerierActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ResultingLocation != nullptr)
 		*ResultingLocation = params.ResultingLocation;
@@ -3908,11 +3118,7 @@ void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class AActor* QuerierAct
 	UEnvQueryContext_BlueprintBase_ProvideSingleActor_Params params;
 	params.QuerierActor = QuerierActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ResultingActor != nullptr)
 		*ResultingActor = params.ResultingActor;
@@ -3932,11 +3138,7 @@ void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class AActor* QuerierAc
 	UEnvQueryContext_BlueprintBase_ProvideLocationsSet_Params params;
 	params.QuerierActor = QuerierActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ResultingLocationSet != nullptr)
 		*ResultingLocationSet = params.ResultingLocationSet;
@@ -3956,11 +3158,7 @@ void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class AActor* QuerierActor
 	UEnvQueryContext_BlueprintBase_ProvideActorsSet_Params params;
 	params.QuerierActor = QuerierActor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ResultingActorsSet != nullptr)
 		*ResultingActorsSet = params.ResultingActorsSet;
@@ -3978,12 +3176,7 @@ TArray<struct FVector> UEnvQueryInstanceBlueprintWrapper::GetResultsAsLocations(
 
 	UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4000,12 +3193,7 @@ TArray<class AActor*> UEnvQueryInstanceBlueprintWrapper::GetResultsAsActors()
 
 	UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4024,12 +3212,7 @@ float UEnvQueryInstanceBlueprintWrapper::GetItemScore(int ItemIndex)
 	UEnvQueryInstanceBlueprintWrapper_GetItemScore_Params params;
 	params.ItemIndex = ItemIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4049,11 +3232,7 @@ void UEnvQueryInstanceBlueprintWrapper::EQSQueryDoneSignature__DelegateSignature
 	params.QueryInstance = QueryInstance;
 	params.QueryStatus = QueryStatus;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4078,12 +3257,7 @@ class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::STATIC_RunEQSQuery(cl
 	params.RunMode = RunMode;
 	params.WrapperClass = WrapperClass;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4100,12 +3274,7 @@ class UObject* UEnvQueryGenerator_BlueprintBase::GetQuerier()
 
 	UEnvQueryGenerator_BlueprintBase_GetQuerier_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4123,11 +3292,7 @@ void UEnvQueryGenerator_BlueprintBase::DoItemGeneration(TArray<struct FVector> C
 	UEnvQueryGenerator_BlueprintBase_DoItemGeneration_Params params;
 	params.ContextLocations = ContextLocations;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4143,12 +3308,7 @@ void UEnvQueryGenerator_BlueprintBase::AddGeneratedVector(const struct FVector& 
 	UEnvQueryGenerator_BlueprintBase_AddGeneratedVector_Params params;
 	params.GeneratedVector = GeneratedVector;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4164,12 +3324,7 @@ void UEnvQueryGenerator_BlueprintBase::AddGeneratedActor(class AActor* Generated
 	UEnvQueryGenerator_BlueprintBase_AddGeneratedActor_Params params;
 	params.GeneratedActor = GeneratedActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4185,12 +3340,7 @@ void UCrowdFollowingComponent::SuspendCrowdSteering(bool bSuspend)
 	UCrowdFollowingComponent_SuspendCrowdSteering_Params params;
 	params.bSuspend = bSuspend;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4208,11 +3358,7 @@ void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float De
 	params.ControlledPawn = ControlledPawn;
 	params.DeltaSeconds = DeltaSeconds;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4228,11 +3374,7 @@ void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
 	UPawnAction_BlueprintBase_ActionStart_Params params;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4248,11 +3390,7 @@ void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
 	UPawnAction_BlueprintBase_ActionResume_Params params;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4268,11 +3406,7 @@ void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
 	UPawnAction_BlueprintBase_ActionPause_Params params;
 	params.ControlledPawn = ControlledPawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4290,11 +3424,7 @@ void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, TEnu
 	params.ControlledPawn = ControlledPawn;
 	params.WithResult = WithResult;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4310,12 +3440,7 @@ void UPawnSensingComponent::SetSensingUpdatesEnabled(bool bEnabled)
 	UPawnSensingComponent_SetSensingUpdatesEnabled_Params params;
 	params.bEnabled = bEnabled;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4331,12 +3456,7 @@ void UPawnSensingComponent::SetSensingInterval(float NewSensingInterval)
 	UPawnSensingComponent_SetSensingInterval_Params params;
 	params.NewSensingInterval = NewSensingInterval;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4352,12 +3472,7 @@ void UPawnSensingComponent::SetPeripheralVisionAngle(float NewPeripheralVisionAn
 	UPawnSensingComponent_SetPeripheralVisionAngle_Params params;
 	params.NewPeripheralVisionAngle = NewPeripheralVisionAngle;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4373,11 +3488,7 @@ void UPawnSensingComponent::SeePawnDelegate__DelegateSignature(class APawn* Pawn
 	UPawnSensingComponent_SeePawnDelegate__DelegateSignature_Params params;
 	params.Pawn = Pawn;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4397,11 +3508,7 @@ void UPawnSensingComponent::HearNoiseDelegate__DelegateSignature(class APawn* In
 	params.Location = Location;
 	params.Volume = Volume;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -4416,12 +3523,7 @@ float UPawnSensingComponent::GetPeripheralVisionCosine()
 
 	UPawnSensingComponent_GetPeripheralVisionCosine_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -4438,12 +3540,7 @@ float UPawnSensingComponent::GetPeripheralVisionAngle()
 
 	UPawnSensingComponent_GetPeripheralVisionAngle_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,12 +26,7 @@ void UNetworkTestingBlueprintFunctionLibrary::STATIC_SwitchNetworkClusterForActo
 	params.TargetActor = TargetActor;
 	params.NewOwner = NewOwner;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -49,12 +44,7 @@ void UNetworkTestingBlueprintFunctionLibrary::STATIC_SetConnectionLastReceiveTim
 	params.PlayerController = PlayerController;
 	params.OffsetFromDriverTime = OffsetFromDriverTime;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -70,12 +60,7 @@ void UNetworkTestingBlueprintFunctionLibrary::STATIC_ResumePropertyTracking(clas
 	UNetworkTestingBlueprintFunctionLibrary_ResumePropertyTracking_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -91,12 +76,7 @@ void UNetworkTestingBlueprintFunctionLibrary::STATIC_PausePropertyTrackingOnNext
 	UNetworkTestingBlueprintFunctionLibrary_PausePropertyTrackingOnNextSend_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -115,12 +95,7 @@ bool UNetworkTestingBlueprintFunctionLibrary::STATIC_IsActorNetRelevantFor(class
 	params.TargetActor = TargetActor;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -139,12 +114,7 @@ bool UNetworkTestingBlueprintFunctionLibrary::STATIC_IsActorNetDormant(class AAc
 	UNetworkTestingBlueprintFunctionLibrary_IsActorNetDormant_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -163,12 +133,7 @@ int UNetworkTestingBlueprintFunctionLibrary::STATIC_GetReliableBufferBunchCount(
 	UNetworkTestingBlueprintFunctionLibrary_GetReliableBufferBunchCount_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -188,12 +153,7 @@ void UNetworkTestingBlueprintFunctionLibrary::STATIC_ClearRecentRelevanceTimerFo
 	params.TargetActor = TargetActor;
 	params.PlayerController = PlayerController;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -209,12 +169,7 @@ void UNetworkTestingBlueprintFunctionLibrary::STATIC_ClearRecentRelevanceTimer(c
 	UNetworkTestingBlueprintFunctionLibrary_ClearRecentRelevanceTimer_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -232,12 +187,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_WaitWhileMigrationInProgre
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -257,12 +207,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_WaitForPendingNetTraffic(c
 	params.LatentInfo = LatentInfo;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -280,12 +225,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_WaitForMigrationCompletedE
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -305,12 +245,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_WaitForClientsToHaveActorC
 	params.LatentInfo = LatentInfo;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -327,12 +262,7 @@ TArray<unsigned char> UServerMigrationBlueprintFunctionLibrary::STATIC_TestSeria
 	UServerMigrationBlueprintFunctionLibrary_TestSerialiseActorToBuffer_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -351,12 +281,7 @@ TArray<unsigned char> UServerMigrationBlueprintFunctionLibrary::STATIC_TestSeria
 	UServerMigrationBlueprintFunctionLibrary_TestSerialiseActorGroupToBuffer_Params params;
 	params.ActorGroup = ActorGroup;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -379,12 +304,7 @@ class AActor* UServerMigrationBlueprintFunctionLibrary::STATIC_TestDeserialiseAc
 	params.Buffer = Buffer;
 	params.Offset = Offset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -407,12 +327,7 @@ TArray<class AActor*> UServerMigrationBlueprintFunctionLibrary::STATIC_TestDeser
 	params.Buffer = Buffer;
 	params.Offset = Offset;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -433,12 +348,7 @@ TArray<class AActor*> UServerMigrationBlueprintFunctionLibrary::STATIC_TestDeser
 	params.WorldContextObject = WorldContextObject;
 	params.Buffer = Buffer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -459,12 +369,7 @@ class AActor* UServerMigrationBlueprintFunctionLibrary::STATIC_TestDeserialiseAc
 	params.WorldContextObject = WorldContextObject;
 	params.Buffer = Buffer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -484,12 +389,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_SetServerMigrationTestServ
 	params.WorldContextObject = WorldContextObject;
 	params.Settings = Settings;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -507,12 +407,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_SetServerMigrationTestClie
 	params.WorldContextObject = WorldContextObject;
 	params.Settings = Settings;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -534,12 +429,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_SetPacketSimulationSetting
 	params.PacketLagVariance = PacketLagVariance;
 	params.PacketLoss = PacketLoss;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -555,12 +445,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_ResumeReplication(class AA
 	UServerMigrationBlueprintFunctionLibrary_ResumeReplication_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -578,12 +463,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_RegisterPersistentDynamicA
 	params.TargetActor = TargetActor;
 	params.IdentificationName = IdentificationName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -601,12 +481,7 @@ void UServerMigrationBlueprintFunctionLibrary::STATIC_PauseReplication(class AAc
 	params.TargetActor = TargetActor;
 	params.bDropUnreliableRPCsWhilePaused = bDropUnreliableRPCsWhilePaused;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -623,12 +498,7 @@ bool UServerMigrationBlueprintFunctionLibrary::STATIC_HasActorChannelFromServer(
 	UServerMigrationBlueprintFunctionLibrary_HasActorChannelFromServer_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -647,12 +517,7 @@ bool UServerMigrationBlueprintFunctionLibrary::STATIC_ClientsHaveDormantActor(cl
 	UServerMigrationBlueprintFunctionLibrary_ClientsHaveDormantActor_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -671,12 +536,7 @@ bool UServerMigrationBlueprintFunctionLibrary::STATIC_ClientsHaveActorChannel(cl
 	UServerMigrationBlueprintFunctionLibrary_ClientsHaveActorChannel_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

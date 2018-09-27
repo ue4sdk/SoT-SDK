@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRendererInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatRendererInterface");
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.MockVoiceChatRenderer");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.MockVoiceChatRenderer");
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRendererRetreivalInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatRendererRetreivalInterface");
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.MockVoiceChatRendererRetriever");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.MockVoiceChatRendererRetriever");
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.PositionalVoiceTestFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.PositionalVoiceTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -103,7 +103,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatEmitterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatEmitterInterface");
 		return ptr;
 	}
 
@@ -123,7 +123,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.TestVoiceChatEmitter");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.TestVoiceChatEmitter");
 		return ptr;
 	}
 
@@ -150,7 +150,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRenderer");
+		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatRenderer");
 		return ptr;
 	}
 

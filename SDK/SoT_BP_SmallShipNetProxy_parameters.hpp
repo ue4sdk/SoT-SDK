@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ struct ABP_SmallShipNetProxy_C_ReceiveBeginPlay_Params
 // Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnLanternStateChanged
 struct ABP_SmallShipNetProxy_C_OnLanternStateChanged_Params
 {
-	unsigned char*                                     LanternStateBits;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      LanternStateBits;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.ExecuteUbergraph_BP_SmallShipNetProxy

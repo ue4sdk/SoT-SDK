@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,11 +26,7 @@ void ABP_LargeShipNetProxy_C::Set_Value_on_All_Materials(const struct FName& Var
 	params.Variable_Name = Variable_Name;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -46,11 +42,7 @@ void ABP_LargeShipNetProxy_C::Apply_Bits_to_Lanterns(unsigned char Lantern_Bits)
 	ABP_LargeShipNetProxy_C_Apply_Bits_to_Lanterns_Params params;
 	params.Lantern_Bits = Lantern_Bits;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -63,11 +55,7 @@ void ABP_LargeShipNetProxy_C::Create_Dynamic_Materials()
 
 	ABP_LargeShipNetProxy_C_Create_Dynamic_Materials_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -80,11 +68,7 @@ void ABP_LargeShipNetProxy_C::UserConstructionScript()
 
 	ABP_LargeShipNetProxy_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -97,31 +81,23 @@ void ABP_LargeShipNetProxy_C::ReceiveBeginPlay()
 
 	ABP_LargeShipNetProxy_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.OnLanternStateChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// unsigned char*                 LanternStateBits               (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char                  LanternStateBits               (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_LargeShipNetProxy_C::OnLanternStateChanged(unsigned char* LanternStateBits)
+void ABP_LargeShipNetProxy_C::OnLanternStateChanged(unsigned char LanternStateBits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.OnLanternStateChanged");
 
 	ABP_LargeShipNetProxy_C_OnLanternStateChanged_Params params;
 	params.LanternStateBits = LanternStateBits;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -137,11 +113,7 @@ void ABP_LargeShipNetProxy_C::ExecuteUbergraph_BP_LargeShipNetProxy(int EntryPoi
 	ABP_LargeShipNetProxy_C_ExecuteUbergraph_BP_LargeShipNetProxy_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

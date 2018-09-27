@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,13 +22,13 @@ struct ABP_Figurehead_C_UserConstructionScript_Params
 // Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded
 struct ABP_Figurehead_C_OnPartMeshLoaded_Params
 {
-	class UStaticMesh**                                Mesh;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 Mesh;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded
 struct ABP_Figurehead_C_OnPartDescLoaded_Params
 {
-	class UGenericPartDescAsset**                      Desc;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UGenericPartDescAsset*                       Desc;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead

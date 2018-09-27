@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskOwnerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTaskOwnerInterface");
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTask");
 		return ptr;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_SpawnActor");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTask_SpawnActor");
 		return ptr;
 	}
 
@@ -83,7 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTask_WaitDelay");
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTaskResource");
 		return ptr;
 	}
 
@@ -125,7 +125,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTasksComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTasksComponent");
 		return ptr;
 	}
 

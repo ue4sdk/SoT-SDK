@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void AWatercraft::OnRigidBodyWake(const struct FName& InBoneName)
 	AWatercraft_OnRigidBodyWake_Params params;
 	params.InBoneName = InBoneName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,36 @@ void AWatercraft::OnRigidBodySleep(const struct FName& InBoneName)
 	AWatercraft_OnRigidBodySleep_Params params;
 	params.InBoneName = InBoneName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables
+// (Final, Native, Protected, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<class UChildActorComponent*> InAlwaysEnabledInteractables   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void ARowboat::SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*> InAlwaysEnabledInteractables)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables");
+
+	ARowboat_SetAlwaysEnabledInteractables_Params params;
+	params.InAlwaysEnabledInteractables = InAlwaysEnabledInteractables;
 
 	UObject::ProcessEvent(fn, &params);
+}
 
-	fn->FunctionFlags = flags;
+
+// Function Watercrafts.Rowboat.OnRep_IsSinking
+// (Final, Native, Private)
+
+void ARowboat::OnRep_IsSinking()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.OnRep_IsSinking");
+
+	ARowboat_OnRep_IsSinking_Params params;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -73,12 +92,7 @@ class AWatercraft* UWatercraftBlueprintFunctionLibrary::STATIC_SpawnWatercraft(c
 	params.Location = Location;
 	params.Rotation = Rotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

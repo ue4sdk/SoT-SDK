@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ bool UGameplayTagAssetInterface::HasMatchingGameplayTag(const struct FGameplayTa
 	UGameplayTagAssetInterface_HasMatchingGameplayTag_Params params;
 	params.TagToCheck = TagToCheck;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -51,12 +46,7 @@ bool UGameplayTagAssetInterface::HasAnyMatchingGameplayTags(const struct FGamepl
 	params.TagContainer = TagContainer;
 	params.bCountEmptyAsMatch = bCountEmptyAsMatch;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -77,12 +67,7 @@ bool UGameplayTagAssetInterface::HasAllMatchingGameplayTags(const struct FGamepl
 	params.TagContainer = TagContainer;
 	params.bCountEmptyAsMatch = bCountEmptyAsMatch;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -99,12 +84,7 @@ void UGameplayTagAssetInterface::GetOwnedGameplayTags(struct FGameplayTagContain
 
 	UGameplayTagAssetInterface_GetOwnedGameplayTags_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (TagContainer != nullptr)
 		*TagContainer = params.TagContainer;
@@ -124,12 +104,7 @@ struct FGameplayTag UBlueprintGameplayTagLibrary::STATIC_MakeLiteralGameplayTag(
 	UBlueprintGameplayTagLibrary_MakeLiteralGameplayTag_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -148,12 +123,7 @@ struct FGameplayTagQuery UBlueprintGameplayTagLibrary::STATIC_MakeGameplayTagQue
 	UBlueprintGameplayTagLibrary_MakeGameplayTagQuery_Params params;
 	params.TagQuery = TagQuery;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -176,12 +146,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_HasAllMatchingGameplayTags(const TScri
 	params.OtherContainer = OtherContainer;
 	params.bCountEmptyAsMatch = bCountEmptyAsMatch;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -200,12 +165,7 @@ int UBlueprintGameplayTagLibrary::STATIC_GetNumGameplayTagsInContainer(const str
 	UBlueprintGameplayTagLibrary_GetNumGameplayTagsInContainer_Params params;
 	params.TagContainer = TagContainer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -230,12 +190,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_DoGameplayTagsMatch(const struct FGame
 	params.TagOneMatchType = TagOneMatchType;
 	params.TagTwoMatchType = TagTwoMatchType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -260,12 +215,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_DoesTagAssetInterfaceHaveTag(const TSc
 	params.Tag = Tag;
 	params.TagMatchType = TagMatchType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -286,12 +236,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_DoesContainerMatchTagQuery(const struc
 	params.TagContainer = TagContainer;
 	params.TagQuery = TagQuery;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -314,12 +259,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_DoesContainerMatchAnyTagsInContainer(c
 	params.OtherContainer = OtherContainer;
 	params.bCountEmptyAsMatch = bCountEmptyAsMatch;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -342,12 +282,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_DoesContainerMatchAllTagsInContainer(c
 	params.OtherContainer = OtherContainer;
 	params.bCountEmptyAsMatch = bCountEmptyAsMatch;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -372,12 +307,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_DoesContainerHaveTag(const struct FGam
 	params.Tag = Tag;
 	params.TagMatchType = TagMatchType;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -397,12 +327,7 @@ bool UBlueprintGameplayTagLibrary::STATIC_AppendGameplayTagContainers(const stru
 	UBlueprintGameplayTagLibrary_AppendGameplayTagContainers_Params params;
 	params.InTagContainer = InTagContainer;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InOutTagContainer != nullptr)
 		*InOutTagContainer = params.InOutTagContainer;
@@ -426,12 +351,7 @@ struct FGameplayTag UGameplayTagsManager::RequestGameplayTag(const struct FName&
 	params.TagName = TagName;
 	params.ErrorIfNotFound = ErrorIfNotFound;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

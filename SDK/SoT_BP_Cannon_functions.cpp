@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 
 	ABP_Cannon_C_GetDockableInfo_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42,31 +38,23 @@ void ABP_Cannon_C::UserConstructionScript()
 
 	ABP_Cannon_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UCannonDescAsset**       CannonDesc                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UCannonDescAsset*        CannonDesc                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Cannon_C::OnCannonDescLoaded(class UCannonDescAsset** CannonDesc)
+void ABP_Cannon_C::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded");
 
 	ABP_Cannon_C_OnCannonDescLoaded_Params params;
 	params.CannonDesc = CannonDesc;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -82,11 +70,7 @@ void ABP_Cannon_C::ExecuteUbergraph_BP_Cannon(int EntryPoint)
 	ABP_Cannon_C_ExecuteUbergraph_BP_Cannon_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

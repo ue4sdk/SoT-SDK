@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Foliage.FoliageInstancedStaticMeshComponent
-// 0x0020 (0x07C0 - 0x07A0)
+// 0x0020 (0x07D0 - 0x07B0)
 class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07A0(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x07A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x07B8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07B0(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x07B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.FoliageInstancedStaticMeshComponent");
 		return ptr;
 	}
 
@@ -40,7 +40,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageStatistics");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.FoliageStatistics");
 		return ptr;
 	}
 
@@ -146,7 +146,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageType");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.FoliageType");
 		return ptr;
 	}
 
@@ -164,7 +164,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageType_InstancedStaticMesh");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.FoliageType_InstancedStaticMesh");
 		return ptr;
 	}
 
@@ -180,7 +180,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.InstancedFoliageActor");
 		return ptr;
 	}
 
@@ -210,7 +210,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.InteractiveFoliageActor");
 		return ptr;
 	}
 
@@ -220,15 +220,15 @@ public:
 
 
 // Class Foliage.InteractiveFoliageComponent
-// 0x0010 (0x0630 - 0x0620)
+// 0x0010 (0x0640 - 0x0630)
 class UInteractiveFoliageComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0620(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.InteractiveFoliageComponent");
 		return ptr;
 	}
 
@@ -244,7 +244,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageBlockingVolume");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.ProceduralFoliageBlockingVolume");
 		return ptr;
 	}
 
@@ -264,7 +264,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.ProceduralFoliageComponent");
 		return ptr;
 	}
 
@@ -286,7 +286,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.ProceduralFoliageSpawner");
 		return ptr;
 	}
 
@@ -307,7 +307,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.ProceduralFoliageTile");
 		return ptr;
 	}
 
@@ -323,7 +323,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
+		static auto ptr = UObject::FindObject<UClass>("Class Foliage.ProceduralFoliageVolume");
 		return ptr;
 	}
 

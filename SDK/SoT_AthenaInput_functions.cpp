@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,12 +26,7 @@ void UCompositeInputHandler::SetNotificationInputHandler(class UClass* Id, const
 	params.Id = Id;
 	params.Handler = Handler;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -49,12 +44,7 @@ void UCompositeInputHandler::SetAnalogInputHandler(class UClass* Id, const struc
 	params.Id = Id;
 	params.Handler = Handler;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -70,12 +60,7 @@ void UInputBinder::SpoofNotificationInput(class UClass* Id)
 	UInputBinder_SpoofNotificationInput_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -93,12 +78,7 @@ void UInputBinder::SpoofAnalogInput(class UClass* Id, float Value)
 	params.Id = Id;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -115,12 +95,7 @@ bool UInputBinder::IsContinuousActionActive(class UClass* BeginNotificationInput
 	UInputBinder_IsContinuousActionActive_Params params;
 	params.BeginNotificationInputId = BeginNotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -138,12 +113,7 @@ void UInputBinder::IgnoreNonSpoofedInput(bool InShouldIgnore)
 	UInputBinder_IgnoreNonSpoofedInput_Params params;
 	params.InShouldIgnore = InShouldIgnore;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -160,12 +130,7 @@ TEnumAsByte<EInputHandlerResult> UInputHandlerInterface::HandleNotificationInput
 	UInputHandlerInterface_HandleNotificationInput_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -186,12 +151,7 @@ TEnumAsByte<EInputHandlerResult> UInputHandlerInterface::HandleAnalogInput(class
 	params.Id = Id;
 	params.Input = Input;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -208,12 +168,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 
 	UCompositeInputDelegatorTestsCallbackHelper_OnSecondNotificationHandler_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -232,12 +187,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 	UCompositeInputDelegatorTestsCallbackHelper_OnSecondHandler_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -254,12 +204,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 
 	UCompositeInputDelegatorTestsCallbackHelper_OnFirstNotificationHandler_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -278,12 +223,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 	UCompositeInputDelegatorTestsCallbackHelper_OnFirstHandler_Params params;
 	params.Value = Value;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -300,12 +240,7 @@ class UCompositeInputHandler* UInputHandlerFunctionLibrary::STATIC_MakeComposite
 
 	UInputHandlerFunctionLibrary_MakeCompositeInputHandler_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

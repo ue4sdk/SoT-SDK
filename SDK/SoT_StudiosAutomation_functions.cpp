@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,12 +21,7 @@ void ATestablePlayerController::YieldToServer()
 
 	ATestablePlayerController_YieldToServer_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -39,12 +34,7 @@ void ATestablePlayerController::PerformPostTestCleanup()
 
 	ATestablePlayerController_PerformPostTestCleanup_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -57,12 +47,7 @@ void ATestablePlayerController::DisconnectClientFromTest()
 
 	ATestablePlayerController_DisconnectClientFromTest_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -80,12 +65,7 @@ void ATestLevelScriptActor::STATIC_YieldToServer(class UObject* WorldContextObje
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -103,12 +83,7 @@ void ATestLevelScriptActor::YieldToOriginalServer(class UObject* WorldContextObj
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -128,12 +103,7 @@ void ATestLevelScriptActor::YieldToDynamicServer(class UObject* WorldContextObje
 	params.LatentInfo = LatentInfo;
 	params.ServerIndex = ServerIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -153,12 +123,7 @@ void ATestLevelScriptActor::STATIC_YieldToClient(class UObject* WorldContextObje
 	params.LatentInfo = LatentInfo;
 	params.ClientId = ClientId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -176,12 +141,7 @@ void ATestLevelScriptActor::STATIC_WaitForPossessionAcknowledgement(class UObjec
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -201,12 +161,7 @@ void ATestLevelScriptActor::WaitForOtherServers(class UObject* WorldContextObjec
 	params.LatentInfo = LatentInfo;
 	params.NumberOfServers = NumberOfServers;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -226,12 +181,7 @@ void ATestLevelScriptActor::STATIC_WaitForClients(class UObject* WorldContextObj
 	params.LatentInfo = LatentInfo;
 	params.NumberOfClients = NumberOfClients;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -249,12 +199,7 @@ void ATestLevelScriptActor::TestTriggerServerMigration(TArray<class AActor*> Act
 	params.ActorGroup = ActorGroup;
 	params.TargetServerIndex = TargetServerIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -278,12 +223,7 @@ void ATestLevelScriptActor::STATIC_SyncClientServer(class UObject* WorldContextO
 	params.RegisterPawnsForMPTesting = RegisterPawnsForMPTesting;
 	params.ClearPawnInputBindings = ClearPawnInputBindings;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -306,12 +246,7 @@ class AActor* ATestLevelScriptActor::STATIC_SpawnActorForMPTesting(class UObject
 	params.SpawnLocation = SpawnLocation;
 	params.SpawnRotation = SpawnRotation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -329,12 +264,7 @@ void ATestLevelScriptActor::SendServerMigrationTestValueInt32(int TestValue)
 	ATestLevelScriptActor_SendServerMigrationTestValueInt32_Params params;
 	params.TestValue = TestValue;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -350,12 +280,7 @@ void ATestLevelScriptActor::STATIC_RegisterPawnsForMPTesting(class UObject* Worl
 	ATestLevelScriptActor_RegisterPawnsForMPTesting_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -371,12 +296,7 @@ void ATestLevelScriptActor::RegisterActorForMPTestingRecursively(class AActor* T
 	ATestLevelScriptActor_RegisterActorForMPTestingRecursively_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -392,12 +312,7 @@ void ATestLevelScriptActor::RegisterActorForMPTesting(class AActor* TargetActor)
 	ATestLevelScriptActor_RegisterActorForMPTesting_Params params;
 	params.TargetActor = TargetActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -410,11 +325,7 @@ void ATestLevelScriptActor::PostTestCleanup()
 
 	ATestLevelScriptActor_PostTestCleanup_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -430,11 +341,7 @@ void ATestLevelScriptActor::OnServerMigrationTestValueInt32Received(int TestValu
 	ATestLevelScriptActor_OnServerMigrationTestValueInt32Received_Params params;
 	params.TestValue = TestValue;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -452,11 +359,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationStarted(const struct FGuid&
 	params.MigrationId = MigrationId;
 	params.Players = Players;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -472,11 +375,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationCompleted(const struct FGui
 	ATestLevelScriptActor_OnOutgoingServerMigrationCompleted_Params params;
 	params.MigrationId = MigrationId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -492,11 +391,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationAborted(const struct FGuid&
 	ATestLevelScriptActor_OnOutgoingServerMigrationAborted_Params params;
 	params.MigrationId = MigrationId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -514,11 +409,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationStarted(const struct FGuid&
 	params.MigrationId = MigrationId;
 	params.NumPlayers = NumPlayers;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -538,11 +429,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationCompleted(const struct FGui
 	params.Players = Players;
 	params.Actors = Actors;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -558,11 +445,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationAborted(const struct FGuid&
 	ATestLevelScriptActor_OnIncomingServerMigrationAborted_Params params;
 	params.MigrationId = MigrationId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -578,11 +461,7 @@ void ATestLevelScriptActor::OnClientServerMigrationStarted(const struct FGuid& M
 	ATestLevelScriptActor_OnClientServerMigrationStarted_Params params;
 	params.MigrationId = MigrationId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -598,11 +477,7 @@ void ATestLevelScriptActor::OnClientServerMigrationCompleted(const struct FGuid&
 	ATestLevelScriptActor_OnClientServerMigrationCompleted_Params params;
 	params.MigrationId = MigrationId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -618,11 +493,7 @@ void ATestLevelScriptActor::OnClientServerMigrationAborted(const struct FGuid& M
 	ATestLevelScriptActor_OnClientServerMigrationAborted_Params params;
 	params.MigrationId = MigrationId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -639,12 +510,7 @@ int ATestLevelScriptActor::GetServerIndex(class UObject* WorldContextObject)
 	ATestLevelScriptActor_GetServerIndex_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -663,12 +529,7 @@ class FString ATestLevelScriptActor::GetRemoteServerMigrationURL(int TargetServe
 	ATestLevelScriptActor_GetRemoteServerMigrationURL_Params params;
 	params.TargetServerIndex = TargetServerIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -687,12 +548,7 @@ int ATestLevelScriptActor::GetPlayerIndexFromClientId(int ClientId)
 	ATestLevelScriptActor_GetPlayerIndexFromClientId_Params params;
 	params.ClientId = ClientId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -709,12 +565,7 @@ int ATestLevelScriptActor::GetNumClientsForMultiplayerTest()
 
 	ATestLevelScriptActor_GetNumClientsForMultiplayerTest_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -731,12 +582,7 @@ int ATestLevelScriptActor::GetNumAutomationClients()
 
 	ATestLevelScriptActor_GetNumAutomationClients_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -757,12 +603,7 @@ class APawn* ATestLevelScriptActor::GetClientPawn(int ClientId, int SplitScreenI
 	params.ClientId = ClientId;
 	params.SplitScreenIndex = SplitScreenIndex;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -781,12 +622,7 @@ int ATestLevelScriptActor::GetClientId(bool ErrorOnFailure)
 	ATestLevelScriptActor_GetClientId_Params params;
 	params.ErrorOnFailure = ErrorOnFailure;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -801,12 +637,7 @@ void ATestLevelScriptActor::DoServerPostTestCleanup()
 
 	ATestLevelScriptActor_DoServerPostTestCleanup_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -822,12 +653,7 @@ void ATestLevelScriptActor::STATIC_ClearPawnInputBindings(class UObject* WorldCo
 	ATestLevelScriptActor_ClearPawnInputBindings_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -843,12 +669,7 @@ void ATestLevelScriptActor::AddServer(const class FString& Name)
 	ATestLevelScriptActor_AddServer_Params params;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -866,12 +687,7 @@ void ATestLevelScriptActor::AddClient(int Port, const class FString& Name)
 	params.Port = Port;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -887,12 +703,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_TestFinished(class UObject* Con
 	UAutomationBlueprintFunctionLibrary_TestFinished_Params params;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -910,12 +721,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_TestFailed(const class FString&
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -939,12 +745,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_TakeAutomationScreenshotAtCamer
 	params.NameOverride = NameOverride;
 	params.DelayBeforeScreenshotSeconds = DelayBeforeScreenshotSeconds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -964,12 +765,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_TakeAutomationScreenshot(class 
 	params.LatentInfo = LatentInfo;
 	params.Name = Name;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -985,12 +781,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_StepStarted(const class FString
 	UAutomationBlueprintFunctionLibrary_StepStarted_Params params;
 	params.StepName = StepName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1003,12 +794,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_StepFinished()
 
 	UAutomationBlueprintFunctionLibrary_StepFinished_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1024,12 +810,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_SetTestTimeoutAsFatal(bool Time
 	UAutomationBlueprintFunctionLibrary_SetTestTimeoutAsFatal_Params params;
 	params.TimeoutIsFatal = TimeoutIsFatal;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1051,12 +832,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_OpenLevelWithGameMode(class UOb
 	params.GameMode = GameMode;
 	params.Absolute = Absolute;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1073,12 +849,7 @@ bool UAutomationBlueprintFunctionLibrary::STATIC_IsTravelFinished(class UObject*
 	UAutomationBlueprintFunctionLibrary_IsTravelFinished_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1095,12 +866,7 @@ bool UAutomationBlueprintFunctionLibrary::STATIC_IsEditor()
 
 	UAutomationBlueprintFunctionLibrary_IsEditor_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1117,12 +883,7 @@ bool UAutomationBlueprintFunctionLibrary::STATIC_HasPerformanceDataBeenCaptured(
 
 	UAutomationBlueprintFunctionLibrary_HasPerformanceDataBeenCaptured_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1141,12 +902,7 @@ class ATestLevelScriptActor* UAutomationBlueprintFunctionLibrary::STATIC_GetTest
 	UAutomationBlueprintFunctionLibrary_GetTestLevelScriptActor_Params params;
 	params.ErrorOnFailure = ErrorOnFailure;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1165,12 +921,7 @@ int UAutomationBlueprintFunctionLibrary::STATIC_GetPlayerId(class APlayerState* 
 	UAutomationBlueprintFunctionLibrary_GetPlayerId_Params params;
 	params.State = State;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1189,12 +940,7 @@ class FString UAutomationBlueprintFunctionLibrary::STATIC_GetLevelUrl(class UObj
 	UAutomationBlueprintFunctionLibrary_GetLevelUrl_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1211,12 +957,7 @@ class FString UAutomationBlueprintFunctionLibrary::STATIC_GetCurrentMapTestName(
 
 	UAutomationBlueprintFunctionLibrary_GetCurrentMapTestName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -1234,12 +975,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_EndPerformanceCapture(bool Dump
 	UAutomationBlueprintFunctionLibrary_EndPerformanceCapture_Params params;
 	params.DumpMemReport = DumpMemReport;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1255,12 +991,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_DumpFullMemReportDelayed(int Fr
 	UAutomationBlueprintFunctionLibrary_DumpFullMemReportDelayed_Params params;
 	params.FrameDelay = FrameDelay;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1273,12 +1004,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_DumpFullMemReport()
 
 	UAutomationBlueprintFunctionLibrary_DumpFullMemReport_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1300,12 +1026,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_DelayForFramesWithDesc(class UO
 	params.NumFrames = NumFrames;
 	params.Description = Description;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1325,12 +1046,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_DelayForFrames(class UObject* W
 	params.LatentInfo = LatentInfo;
 	params.NumFrames = NumFrames;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1346,12 +1062,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_BlockAsyncLoading(bool EnableBl
 	UAutomationBlueprintFunctionLibrary_BlockAsyncLoading_Params params;
 	params.EnableBlock = EnableBlock;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1371,12 +1082,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_BeginPerformanceCapture(const c
 	params.DumpMemReport = DumpMemReport;
 	params.PreventGarbageCollection = PreventGarbageCollection;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1400,12 +1106,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertValue_Int(int Actual, TEn
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1429,12 +1130,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertValue_Float(float Actual,
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1458,12 +1154,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertValue_DateTime(const stru
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1483,12 +1174,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertTrue(bool Condition, cons
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1510,12 +1196,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_Vector(const str
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1537,12 +1218,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_Transform(const 
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1564,12 +1240,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_String(const cla
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1591,12 +1262,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_Rotator(const st
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1616,12 +1282,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertIsValid(class UObject* Ob
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1641,12 +1302,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertIsNotValid(class UObject*
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1666,12 +1322,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertFalse(bool Condition, con
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1687,12 +1338,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertErrorOccurred(const class
 	UAutomationBlueprintFunctionLibrary_AssertErrorOccurred_Params params;
 	params.ErrorMessage = ErrorMessage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1716,12 +1362,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Vector2D(const stru
 	params.Tolerance = Tolerance;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1745,12 +1386,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Vector(const struct
 	params.Tolerance = Tolerance;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1772,12 +1408,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Transform(const str
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1799,12 +1430,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_String(const class 
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1826,12 +1452,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Rotator(const struc
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1855,12 +1476,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Float(float Actual,
 	params.Tolerance = Tolerance;
 	params.ContextObject = ContextObject;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1876,12 +1492,7 @@ void UAutomationBlueprintFunctionLibrary::STATIC_AddExpectedError(const class FS
 	UAutomationBlueprintFunctionLibrary_AddExpectedError_Params params;
 	params.ErrorMessage = ErrorMessage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -1897,12 +1508,7 @@ void UAutomationLatentActionCallback::LatentCallback(int Linkage)
 	UAutomationLatentActionCallback_LatentCallback_Params params;
 	params.Linkage = Linkage;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

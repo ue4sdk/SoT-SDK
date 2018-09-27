@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,11 +24,7 @@ void ABP_VotableCancelVoyage_C::PlayShowTokenAnimation(class UPrimitiveComponent
 	ABP_VotableCancelVoyage_C_PlayShowTokenAnimation_Params params;
 	params.Token = Token;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43,11 +39,7 @@ void ABP_VotableCancelVoyage_C::Is_Session_Locked(bool* IsLocked)
 
 	ABP_VotableCancelVoyage_C_Is_Session_Locked_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (IsLocked != nullptr)
 		*IsLocked = params.IsLocked;
@@ -65,11 +57,7 @@ struct FText ABP_VotableCancelVoyage_C::GetObjectDisplayName()
 
 	ABP_VotableCancelVoyage_C_GetObjectDisplayName_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -84,11 +72,7 @@ void ABP_VotableCancelVoyage_C::UserConstructionScript()
 
 	ABP_VotableCancelVoyage_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -101,51 +85,39 @@ void ABP_VotableCancelVoyage_C::ReceiveBeginPlay()
 
 	ABP_VotableCancelVoyage_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteAdded
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UVoterInterface>* Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TScriptInterface<class UVoterInterface> Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ABP_VotableCancelVoyage_C::OnVoteAdded(TScriptInterface<class UVoterInterface>* Voter)
+void ABP_VotableCancelVoyage_C::OnVoteAdded(const TScriptInterface<class UVoterInterface>& Voter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteAdded");
 
 	ABP_VotableCancelVoyage_C_OnVoteAdded_Params params;
 	params.Voter = Voter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteRemoved
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UVoterInterface>* Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TScriptInterface<class UVoterInterface> Voter                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ABP_VotableCancelVoyage_C::OnVoteRemoved(TScriptInterface<class UVoterInterface>* Voter)
+void ABP_VotableCancelVoyage_C::OnVoteRemoved(const TScriptInterface<class UVoterInterface>& Voter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteRemoved");
 
 	ABP_VotableCancelVoyage_C_OnVoteRemoved_Params params;
 	params.Voter = Voter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -161,11 +133,7 @@ void ABP_VotableCancelVoyage_C::ExecuteUbergraph_BP_VotableCancelVoyage(int Entr
 	ABP_VotableCancelVoyage_C_ExecuteUbergraph_BP_VotableCancelVoyage_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

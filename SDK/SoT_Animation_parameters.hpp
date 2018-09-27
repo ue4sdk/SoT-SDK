@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,6 +90,7 @@ struct UDockerBlueprintFunctions_StartDockingWithActor_Params
 	class AActor*                                      Owner;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DockDuration;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DelayAfterDocking;                                        // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Animation.DockerBlueprintFunctions.IsFullyDocked

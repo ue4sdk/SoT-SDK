@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,12 +23,7 @@ class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
 
 	URenderToTextureSceneDetails_GetTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -45,12 +40,7 @@ class AActor* URenderToTextureSceneDetails::GetInstance()
 
 	URenderToTextureSceneDetails_GetInstance_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -65,12 +55,7 @@ void URenderToTextureSceneDetails::DestroyTexture()
 
 	URenderToTextureSceneDetails_DestroyTexture_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -87,12 +72,7 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::STATIC_GetR
 	URenderToTextureFunctionLibrary_GetRenderToTexture_Params params;
 	params.Identifier = Identifier;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -117,12 +97,7 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::STATIC_Crea
 	params.Resolution = Resolution;
 	params.bForceLinearGamma = bForceLinearGamma;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

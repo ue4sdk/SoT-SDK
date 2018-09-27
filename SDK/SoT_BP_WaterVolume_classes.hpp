@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_WaterVolume.BP_WaterVolume_C");
+		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_WaterVolume.BP_WaterVolume_C");
 		return ptr;
 	}
 
@@ -39,8 +39,8 @@ public:
 	void CollectRippleGenerators();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveActorBeginOverlap(class AActor** OtherActor);
-	void ReceiveActorEndOverlap(class AActor** OtherActor);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveActorEndOverlap(class AActor* OtherActor);
 	void ExecuteUbergraph_BP_WaterVolume(int EntryPoint);
 };
 

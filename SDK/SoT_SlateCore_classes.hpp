@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.FontBulkData");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateCore.FontBulkData");
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.FontProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateCore.FontProviderInterface");
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateTypes");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateCore.SlateTypes");
 		return ptr;
 	}
 
@@ -68,7 +68,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateCore.SlateWidgetStyleContainerInterface");
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerBase");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateCore.SlateWidgetStyleContainerBase");
 		return ptr;
 	}
 
@@ -100,7 +100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class SlateCore.SlateWidgetStyleAsset");
 		return ptr;
 	}
 

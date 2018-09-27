@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,7 @@ TArray<class ACapstanArm*> ABP_Base_Capstan_C::GetArms()
 
 	ABP_Base_Capstan_C_GetArms_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -42,11 +38,7 @@ void ABP_Base_Capstan_C::UserConstructionScript()
 
 	ABP_Base_Capstan_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -62,11 +54,7 @@ void ABP_Base_Capstan_C::Update_Athena_Character(class AAthenaCharacter* AthenaC
 	ABP_Base_Capstan_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -82,11 +70,7 @@ void ABP_Base_Capstan_C::CapstanRotationSpeed(float RotationSpeed)
 	ABP_Base_Capstan_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -102,11 +86,7 @@ void ABP_Base_Capstan_C::DockingInterface(const struct FBP_Docking& Docking)
 	ABP_Base_Capstan_C_DockingInterface_Params params;
 	params.Docking = Docking;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -128,11 +108,7 @@ void ABP_Base_Capstan_C::CapstanForce(float IndividualForce, const struct FTrans
 	params.RH_IK = RH_IK;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -150,11 +126,7 @@ void ABP_Base_Capstan_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbI
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -174,11 +146,7 @@ void ABP_Base_Capstan_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, f
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -198,11 +166,7 @@ void ABP_Base_Capstan_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -222,11 +186,7 @@ void ABP_Base_Capstan_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Ac
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -246,11 +206,7 @@ void ABP_Base_Capstan_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -263,11 +219,7 @@ void ABP_Base_Capstan_C::OnBodyMeshLoaded()
 
 	ABP_Base_Capstan_C_OnBodyMeshLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -280,31 +232,23 @@ void ABP_Base_Capstan_C::OnArmMeshLoaded()
 
 	ABP_Base_Capstan_C_OnArmMeshLoaded_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UCapstanDescAsset**      CapstanDesc                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UCapstanDescAsset*       CapstanDesc                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Base_Capstan_C::OnCapstanDescLoaded(class UCapstanDescAsset** CapstanDesc)
+void ABP_Base_Capstan_C::OnCapstanDescLoaded(class UCapstanDescAsset* CapstanDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded");
 
 	ABP_Base_Capstan_C_OnCapstanDescLoaded_Params params;
 	params.CapstanDesc = CapstanDesc;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -320,11 +264,7 @@ void ABP_Base_Capstan_C::ExecuteUbergraph_BP_Base_Capstan(int EntryPoint)
 	ABP_Base_Capstan_C_ExecuteUbergraph_BP_Base_Capstan_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

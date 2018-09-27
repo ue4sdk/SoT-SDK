@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,7 @@ struct FSocketId USocketIdTestFunctions::STATIC_MakeSocketIdWithInvalidName(cons
 	USocketIdTestFunctions_MakeSocketIdWithInvalidName_Params params;
 	params.InPath = InPath;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -49,12 +44,7 @@ struct FSocketId USocketIdTestFunctions::STATIC_MakeSocketIdWithEmptyPath(const 
 	USocketIdTestFunctions_MakeSocketIdWithEmptyPath_Params params;
 	params.InSocketName = InSocketName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -75,12 +65,7 @@ struct FSocketId USocketIdTestFunctions::STATIC_MakeSocketId(const class FString
 	params.InPath = InPath;
 	params.InSocketName = InSocketName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -100,12 +85,7 @@ bool USocketLookupCacheTestFunctions::STATIC_IsInCache(const struct FSocketId& I
 	USocketLookupCacheTestFunctions_IsInCache_Params params;
 	params.InSocketId = InSocketId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InCache != nullptr)
 		*InCache = params.InCache;
@@ -130,12 +110,7 @@ bool USocketLookupCacheTestFunctions::STATIC_AddToCache(const struct FSocketId& 
 	params.InSocketId = InSocketId;
 	params.InSceneComponent = InSceneComponent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (InCache != nullptr)
 		*InCache = params.InCache;
@@ -161,12 +136,7 @@ bool USocketLookupFunctions::STATIC_TryGetSocketTransformWithCache(class AActor*
 	params.InActor = InActor;
 	params.InSocketId = InSocketId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (Cache != nullptr)
 		*Cache = params.Cache;
@@ -195,12 +165,7 @@ bool USocketLookupFunctions::STATIC_TryGetSocketTransform(class AActor* InActor,
 	params.InSocketId = InSocketId;
 	params.Space = Space;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutTransform != nullptr)
 		*OutTransform = params.OutTransform;
@@ -227,12 +192,7 @@ bool USocketLookupFunctions::STATIC_TryGetRelativeSocketTransform(class AActor* 
 	params.InSocketId = InSocketId;
 	params.RelativeTo = RelativeTo;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutTransform != nullptr)
 		*OutTransform = params.OutTransform;
@@ -256,12 +216,7 @@ class USceneComponent* USocketLookupFunctions::STATIC_TryFindSocketOwner(class A
 	params.InActor = InActor;
 	params.InSocketId = InSocketId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -281,11 +236,7 @@ bool USocketLookupInterface::FindSocket(const struct FSocketId& InSocketId, stru
 	USocketLookupInterface_FindSocket_Params params;
 	params.InSocketId = InSocketId;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutTransform != nullptr)
 		*OutTransform = params.OutTransform;

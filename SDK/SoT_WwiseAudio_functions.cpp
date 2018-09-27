@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,12 +27,7 @@ bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FV
 	params.SoundPosition = SoundPosition;
 	params.ListenerPos = ListenerPos;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -49,12 +44,7 @@ float UWwiseEvent::GetMaxAttenuation()
 
 	UWwiseEvent_GetMaxAttenuation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -71,12 +61,7 @@ TEnumAsByte<EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 
 	UWwiseEvent_GetDurationType_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -93,12 +78,7 @@ float UWwiseEvent::GetDurationMin()
 
 	UWwiseEvent_GetDurationMin_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -115,12 +95,7 @@ float UWwiseEvent::GetDurationMax()
 
 	UWwiseEvent_GetDurationMax_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

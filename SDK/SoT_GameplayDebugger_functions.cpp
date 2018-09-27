@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,12 +26,7 @@ void UGameplayDebuggingComponent::ServerReplicateData(uint32_t InMessage, uint32
 	params.InMessage = InMessage;
 	params.DataView = DataView;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44,12 +39,7 @@ void UGameplayDebuggingComponent::ServerDiscardNavmeshData()
 
 	UGameplayDebuggingComponent_ServerDiscardNavmeshData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -65,12 +55,7 @@ void UGameplayDebuggingComponent::ServerCollectNavmeshData(const struct FVector_
 	UGameplayDebuggingComponent_ServerCollectNavmeshData_Params params;
 	params.TargetLocation = TargetLocation;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -83,12 +68,7 @@ void UGameplayDebuggingComponent::OnRep_UpdateNavmesh()
 
 	UGameplayDebuggingComponent_OnRep_UpdateNavmesh_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -101,12 +81,7 @@ void UGameplayDebuggingComponent::OnRep_UpdateEQS()
 
 	UGameplayDebuggingComponent_OnRep_UpdateEQS_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -119,12 +94,7 @@ void UGameplayDebuggingComponent::OnRep_UpdateBlackboard()
 
 	UGameplayDebuggingComponent_OnRep_UpdateBlackboard_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -137,12 +107,7 @@ void UGameplayDebuggingComponent::OnRep_PathCorridorData()
 
 	UGameplayDebuggingComponent_OnRep_PathCorridorData_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -155,12 +120,7 @@ void UGameplayDebuggingComponent::OnCycleDetailsView()
 
 	UGameplayDebuggingComponent_OnCycleDetailsView_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -176,12 +136,7 @@ void UGameplayDebuggingComponent::ClientEnableTargetSelection(bool bEnable)
 	UGameplayDebuggingComponent_ClientEnableTargetSelection_Params params;
 	params.bEnable = bEnable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -197,12 +152,7 @@ void AGameplayDebuggingReplicator::ServerSetActorToDebug(class AActor* InActor)
 	AGameplayDebuggingReplicator_ServerSetActorToDebug_Params params;
 	params.InActor = InActor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -222,12 +172,7 @@ void AGameplayDebuggingReplicator::ServerReplicateMessage(class AActor* Actor, u
 	params.InMessage = InMessage;
 	params.DataView = DataView;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -240,12 +185,7 @@ void AGameplayDebuggingReplicator::OnRep_AutoActivate()
 
 	AGameplayDebuggingReplicator_OnRep_AutoActivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -265,12 +205,7 @@ void AGameplayDebuggingReplicator::ClientReplicateMessage(class AActor* Actor, u
 	params.InMessage = InMessage;
 	params.DataView = DataView;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -288,12 +223,7 @@ void AGameplayDebuggingReplicator::ClientEnableTargetSelection(bool bEnable, cla
 	params.bEnable = bEnable;
 	params.Context = Context;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -306,12 +236,7 @@ void AGameplayDebuggingReplicator::ClientAutoActivate()
 
 	AGameplayDebuggingReplicator_ClientAutoActivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,8 @@ enum class EEarthquakeState : uint8_t
 {
 	EEarthquakeState__Dormant      = 0,
 	None                           = 1,
-	EEarthquakeState__EEarthquakeState_MAX = 2
+	EEarthquakeState__EEarthquakeState_MAX = 2,
+	DefaultRadiusTracker           = 3
 };
 
 
@@ -36,12 +37,38 @@ enum class EGeyserState : uint8_t
 };
 
 
+// Enum NaturalDisasters.EGeyserManagerState
+enum class EGeyserManagerState : uint8_t
+{
+	EGeyserManagerState__Dormant   = 0,
+	None                           = 1
+};
+
+
+// Enum NaturalDisasters.EVolcanoTargetHitType
+enum class EVolcanoTargetHitType : uint8_t
+{
+	EVolcanoTargetHitType__OnTarget = 0,
+	None                           = 1,
+	ETraceDirection__ItemToContext = 2
+};
+
+
+// Enum NaturalDisasters.EVolcanoTargetType
+enum class EVolcanoTargetType : uint8_t
+{
+	EVolcanoTargetType__Player     = 0,
+	None                           = 1,
+	EVolcanoState__Dormant         = 2
+};
+
+
 // Enum NaturalDisasters.EVolcanoState
 enum class EVolcanoState : uint8_t
 {
 	EVolcanoState__Dormant         = 0,
 	None                           = 1,
-	EGameplayEffectAttributeCaptureSource__Source = 2
+	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 2
 };
 
 
@@ -83,6 +110,18 @@ struct FGeyserSpawnAngleOption
 	float                                              Range;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct NaturalDisasters.VolcanoTargetChances
+// 0x0050
+struct FVolcanoTargetChances
+{
+	float                                              OnTarget;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              NearMiss;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Random;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRange                   OnTargetNumExtraShots;                                    // 0x0010(0x0020) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRange                   NearMissNumExtraShots;                                    // 0x0030(0x0020) (Edit, DisableEditOnInstance)
+};
+
 // ScriptStruct NaturalDisasters.WeightedVolcanoProjectile
 // 0x00C0
 struct FWeightedVolcanoProjectile
@@ -112,12 +151,25 @@ struct FVolcanoSetupDataEmbersEntry
 };
 
 // ScriptStruct NaturalDisasters.VolcanoStateData
-// 0x0008
+// 0x000C
 struct FVolcanoStateData
 {
 	TEnumAsByte<EVolcanoState>                         State;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              StateDuration;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              PercentageOfMaxTargetingRange;                            // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct NaturalDisasters.VolcanoTarget
+// 0x0018
+struct FVolcanoTarget
+{
+	TEnumAsByte<EVolcanoTargetType>                    Type;                                                     // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EVolcanoTargetHitType>                 HitType;                                                  // 0x0001(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0002(0x0006) MISSED OFFSET
+	class AActor*                                      Target;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                NumExtraShots;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 }

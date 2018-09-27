@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceLifecycleInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceLifecycleInterface");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceMapFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceMapFunctions");
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceProviderInterface");
 		return ptr;
 	}
 
@@ -76,7 +76,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceTickInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceTickInterface");
 		return ptr;
 	}
 

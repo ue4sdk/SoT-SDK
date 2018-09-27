@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,15 +22,15 @@ struct UBP_Anim_FlintlockPistol_C_AnimNotify_ExitedFire_Params
 // Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.OnOneShotUseTriggered
 struct UBP_Anim_FlintlockPistol_C_OnOneShotUseTriggered_Params
 {
-	class UClass**                                     InputID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FWieldableItemActionVisuals*                ActionVisuals;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UClass*                                      InputID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FWieldableItemActionVisuals                 ActionVisuals;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.OnUseStarted
 struct UBP_Anim_FlintlockPistol_C_OnUseStarted_Params
 {
-	class UClass**                                     InputID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FWieldableItemActionVisuals*                ActionVisuals;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UClass*                                      InputID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FWieldableItemActionVisuals                 ActionVisuals;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C.BlueprintInitializeAnimation

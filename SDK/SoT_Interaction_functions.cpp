@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UInteractableComponent::SetBoxOrigin(const struct FVector& IntBoxOrigin)
 	UInteractableComponent_SetBoxOrigin_Params params;
 	params.IntBoxOrigin = IntBoxOrigin;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -45,12 +40,7 @@ void UInteractableComponent::SetBoxExtent(const struct FVector& InBoxExtent)
 	UInteractableComponent_SetBoxExtent_Params params;
 	params.InBoxExtent = InBoxExtent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -65,12 +55,7 @@ class UInteractableArea* UInteractableComponent::GetInteractableArea()
 
 	UInteractableComponent_GetInteractableArea_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -87,12 +72,7 @@ struct FVector UInteractableComponent::GetBoxWorldOrigin()
 
 	UInteractableComponent_GetBoxWorldOrigin_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -109,12 +89,7 @@ float UInteractableComponent::GetBoxSphereRadius()
 
 	UInteractableComponent_GetBoxSphereRadius_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -131,12 +106,7 @@ struct FVector UInteractableComponent::GetBoxOrigin()
 
 	UInteractableComponent_GetBoxOrigin_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -153,12 +123,7 @@ struct FVector UInteractableComponent::GetBoxExtent()
 
 	UInteractableComponent_GetBoxExtent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -177,12 +142,7 @@ bool UCharacterInteractionComponent::IsInteractionValid(class UObject* InInterac
 	UCharacterInteractionComponent_IsInteractionValid_Params params;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -197,12 +157,7 @@ void UCharacterInteractionComponent::InvalidateOptimalObject()
 
 	UCharacterInteractionComponent_InvalidateOptimalObject_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -217,12 +172,7 @@ class UInteractableArea* UCharacterInteractionComponent::GetOptimalFocusObject()
 
 	UCharacterInteractionComponent_GetOptimalFocusObject_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -237,12 +187,7 @@ void UCharacterInteractionComponent::ClearAllPolicies()
 
 	UCharacterInteractionComponent_ClearAllPolicies_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -258,12 +203,7 @@ void UInteractableArea::SetParent(class AActor* InParent)
 	UInteractableArea_SetParent_Params params;
 	params.InParent = InParent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -279,12 +219,7 @@ void UInteractableArea::SetInteractable(class UObject* InInteractable)
 	UInteractableArea_SetInteractable_Params params;
 	params.InInteractable = InInteractable;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -300,12 +235,7 @@ void UInteractableArea::SetAreaName(const struct FName& InName)
 	UInteractableArea_SetAreaName_Params params;
 	params.InName = InName;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -321,12 +251,7 @@ void UInteractableArea::SetAreaBounds(const struct FBoxSphereBounds& InBounds)
 	UInteractableArea_SetAreaBounds_Params params;
 	params.InBounds = InBounds;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -341,12 +266,7 @@ class AActor* UInteractableArea::GetParent()
 
 	UInteractableArea_GetParent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -363,12 +283,7 @@ class UObject* UInteractableArea::GetInteractable()
 
 	UInteractableArea_GetInteractable_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -385,12 +300,7 @@ struct FName UInteractableArea::GetAreaName()
 
 	UInteractableArea_GetAreaName_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -407,12 +317,7 @@ struct FVector UInteractableArea::GetAreaLocation()
 
 	UInteractableArea_GetAreaLocation_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -429,12 +334,7 @@ struct FBoxSphereBounds UInteractableArea::GetAreaBounds()
 
 	UInteractableArea_GetAreaBounds_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -454,12 +354,7 @@ bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInter
 	UInteractableInterface_ShouldDrawTooltipInWorldSpace_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (DesiredTooltipWorldPosition != nullptr)
 		*DesiredTooltipWorldPosition = params.DesiredTooltipWorldPosition;
@@ -480,12 +375,7 @@ void UInteractableInterface::SetInteractionState(TEnumAsByte<EInteractableState>
 	UInteractableInterface_SetInteractionState_Params params;
 	params.InNewInteractableState = InNewInteractableState;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -500,12 +390,7 @@ bool UInteractableInterface::IsInteractableDisabled()
 
 	UInteractableInterface_IsInteractableDisabled_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -525,12 +410,7 @@ void UInteractableInterface::Interact(class AActor* InInteractor, class UClass* 
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -545,12 +425,7 @@ TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 
 	UInteractableInterface_GetInteractionState_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -567,12 +442,7 @@ struct FVector UInteractableInterface::GetFrontFacingVector()
 
 	UInteractableInterface_GetFrontFacingVector_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -592,12 +462,7 @@ struct FVector UInteractableInterface::GetClosestInteractionPoint(const struct F
 	UInteractableInterface_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutInteractionPointRadius != nullptr)
 		*OutInteractionPointRadius = params.OutInteractionPointRadius;
@@ -617,12 +482,7 @@ void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<clas
 
 	UInteractableInterface_GetActorsToIgnoreDuringOcclusionChecker_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (ActorsToIgnore != nullptr)
 		*ActorsToIgnore = params.ActorsToIgnore;
@@ -640,12 +500,7 @@ class UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
 
 	UInteractableInterface_GetActionRulesComponent_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -662,12 +517,7 @@ bool UInteractableInterface::DoesRequireNotBeingAirborne()
 
 	UInteractableInterface_DoesRequireNotBeingAirborne_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -684,12 +534,7 @@ bool UInteractableInterface::DoesRequireFacingFront()
 
 	UInteractableInterface_DoesRequireFacingFront_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -710,12 +555,7 @@ bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* In
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -732,12 +572,7 @@ bool UInteractableInterface::CanInteractionStatesBeSet()
 
 	UInteractableInterface_CanInteractionStatesBeSet_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -756,12 +591,7 @@ bool UInteractableInterface::CanInteract(class AActor* InInteractor)
 	UInteractableInterface_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

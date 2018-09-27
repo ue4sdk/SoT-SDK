@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,7 +43,7 @@ enum class EEmitterRenderModuleType : uint8_t
 	None                           = 1,
 	RMT_Meshes                     = 2,
 	None01                         = 3,
-	None02                         = 4
+	EGameplayTaskState__Uninitialized = 4
 };
 
 

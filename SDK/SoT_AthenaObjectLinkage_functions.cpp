@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UEndPlayHandler::OnEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 	UEndPlayHandler_OnEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -46,12 +41,7 @@ bool ULinkEndpointIdUtilities::STATIC_IsValid(const struct FLinkEndpointId& Id)
 	ULinkEndpointIdUtilities_IsValid_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -70,12 +60,7 @@ bool ULinkEndpointIdUtilities::STATIC_IsPathed(const struct FLinkEndpointId& Id)
 	ULinkEndpointIdUtilities_IsPathed_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -94,12 +79,7 @@ struct FLinkEndpointId ULinkEndpointIdUtilities::STATIC_CreateEndpointId(const c
 	ULinkEndpointIdUtilities_CreateEndpointId_Params params;
 	params.String = String;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -118,12 +98,7 @@ class FString ULinkEndpointIdUtilities::STATIC_Conv_LinkEndpointIdToString(const
 	ULinkEndpointIdUtilities_Conv_LinkEndpointIdToString_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -144,12 +119,7 @@ struct FLinkEndpointId ULinkEndpointIdUtilities::STATIC_CombineEndpointIds(const
 	params.Root = Root;
 	params.path = path;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -169,12 +139,7 @@ void ULinkEndpointInterface::ReceiveLink(const struct FLinkEndpointId& Id, class
 	params.Id = Id;
 	params.Instance = Instance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -190,12 +155,7 @@ void ULinkEndpointInterface::LoseLink(const struct FLinkEndpointId& Id)
 	ULinkEndpointInterface_LoseLink_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -213,12 +173,7 @@ void ULinkerComponent::UnregisterLink(const struct FLinkEndpointId& SourceId, co
 	params.SourceId = SourceId;
 	params.TargetId = TargetId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -234,12 +189,7 @@ void ULinkerComponent::UnregisterEndpoint(const struct FLinkEndpointId& Id)
 	ULinkerComponent_UnregisterEndpoint_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -255,12 +205,7 @@ void ULinkerComponent::SetParent(class AActor* Parent)
 	ULinkerComponent_SetParent_Params params;
 	params.Parent = Parent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -279,12 +224,7 @@ TEnumAsByte<EAddLinkResult> ULinkerComponent::RegisterLink(const struct FLinkEnd
 	params.SourceId = SourceId;
 	params.TargetId = TargetId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -305,12 +245,7 @@ TEnumAsByte<EAddEndpointResult> ULinkerComponent::RegisterEndpoint(const struct 
 	params.Id = Id;
 	params.Source = Source;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -330,12 +265,7 @@ void ULinkerComponent::OnEndpointRemovedFromChild(class AActor* Child, const str
 	params.Child = Child;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -355,12 +285,7 @@ void ULinkerComponent::OnEndpointAddedToChild(class AActor* Child, const struct 
 	params.Id = Id;
 	params.Instance = Instance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -377,12 +302,7 @@ class AActor* ULinkerComponent::LookupEndpoint(const struct FLinkEndpointId& Id)
 	ULinkerComponent_LookupEndpoint_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -399,12 +319,7 @@ int ULinkerComponent::GetNumSetLinks()
 
 	ULinkerComponent_GetNumSetLinks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -421,12 +336,7 @@ int ULinkerComponent::GetNumRegisteredLinks()
 
 	ULinkerComponent_GetNumRegisteredLinks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -443,12 +353,7 @@ int ULinkerComponent::GetNumRegisteredEndpoints()
 
 	ULinkerComponent_GetNumRegisteredEndpoints_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -465,12 +370,7 @@ int ULinkerComponent::GetNumPendingLinks()
 
 	ULinkerComponent_GetNumPendingLinks_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -488,12 +388,7 @@ void ULinkerInterface::SetParent(class AActor* Parent)
 	ULinkerInterface_SetParent_Params params;
 	params.Parent = Parent;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -511,12 +406,7 @@ void ULinkerInterface::RemoveLink(const struct FLinkEndpointId& SourceId, const 
 	params.SourceId = SourceId;
 	params.TargetId = TargetId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -532,12 +422,7 @@ void ULinkerInterface::RemoveEndpoint(const struct FLinkEndpointId& Id)
 	ULinkerInterface_RemoveEndpoint_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -555,12 +440,7 @@ void ULinkerInterface::OnEndpointRemovedFromChild(class AActor* Child, const str
 	params.Child = Child;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -580,12 +460,7 @@ void ULinkerInterface::OnEndpointAddedToChild(class AActor* Child, const struct 
 	params.Id = Id;
 	params.Instance = Instance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -602,12 +477,7 @@ class AActor* ULinkerInterface::LookupEndpoint(const struct FLinkEndpointId& Id)
 	ULinkerInterface_LookupEndpoint_Params params;
 	params.Id = Id;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -628,12 +498,7 @@ bool ULinkerInterface::AddLink(const struct FLinkEndpointId& SourceId, const str
 	params.SourceId = SourceId;
 	params.TargetId = TargetId;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -654,12 +519,7 @@ bool ULinkerInterface::AddEndpoint(const struct FLinkEndpointId& Id, class AActo
 	params.Id = Id;
 	params.Instance = Instance;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

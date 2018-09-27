@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,11 +24,7 @@ void ABP_PlayerPirate_C::TattoGlowDynamicMaterials(class UMeshComponent* Mesh)
 	ABP_PlayerPirate_C_TattoGlowDynamicMaterials_Params params;
 	params.Mesh = Mesh;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -43,11 +39,7 @@ struct FVector ABP_PlayerPirate_C::GetMouthPosition()
 
 	ABP_PlayerPirate_C_GetMouthPosition_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -62,11 +54,7 @@ void ABP_PlayerPirate_C::UserConstructionScript()
 
 	ABP_PlayerPirate_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -82,11 +70,7 @@ void ABP_PlayerPirate_C::Update_Athena_Character(class AAthenaCharacter* AthenaC
 	ABP_PlayerPirate_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -102,11 +86,7 @@ void ABP_PlayerPirate_C::CapstanRotationSpeed(float RotationSpeed)
 	ABP_PlayerPirate_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -122,11 +102,7 @@ void ABP_PlayerPirate_C::DockingInterface(const struct FBP_Docking& Docking)
 	ABP_PlayerPirate_C_DockingInterface_Params params;
 	params.Docking = Docking;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -148,11 +124,7 @@ void ABP_PlayerPirate_C::CapstanForce(float IndividualForce, const struct FTrans
 	params.RH_IK = RH_IK;
 	params.Actor = Actor;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -170,11 +142,7 @@ void ABP_PlayerPirate_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbI
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -194,11 +162,7 @@ void ABP_PlayerPirate_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, f
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -218,11 +182,7 @@ void ABP_PlayerPirate_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -242,11 +202,7 @@ void ABP_PlayerPirate_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Ac
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -266,11 +222,7 @@ void ABP_PlayerPirate_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -283,11 +235,7 @@ void ABP_PlayerPirate_C::ReceiveBeginPlay()
 
 	ABP_PlayerPirate_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -300,11 +248,7 @@ void ABP_PlayerPirate_C::TriggerTattooGlow()
 
 	ABP_PlayerPirate_C_TriggerTattooGlow_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -320,11 +264,7 @@ void ABP_PlayerPirate_C::ExecuteUbergraph_BP_PlayerPirate(int EntryPoint)
 	ABP_PlayerPirate_C_ExecuteUbergraph_BP_PlayerPirate_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

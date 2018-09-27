@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MetalAIFormComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MetalAIFormComponent");
 		return ptr;
 	}
 
@@ -76,7 +76,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlantAIFormComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlantAIFormComponent");
 		return ptr;
 	}
 
@@ -115,7 +115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShadowAIFormComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShadowAIFormComponent");
 		return ptr;
 	}
 
@@ -133,7 +133,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrimaryItemUsePressedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrimaryItemUsePressedNotificationInputId");
 		return ptr;
 	}
 
@@ -148,7 +148,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SecondaryItemUsePressedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SecondaryItemUsePressedNotificationInputId");
 		return ptr;
 	}
 
@@ -173,7 +173,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableBase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableBase");
 		return ptr;
 	}
 
@@ -198,7 +198,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableObject");
 		return ptr;
 	}
 
@@ -238,7 +238,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailManipulator");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailManipulator");
 		return ptr;
 	}
 
@@ -269,7 +269,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailHoist");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailHoist");
 		return ptr;
 	}
 
@@ -324,7 +324,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Mast");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Mast");
 		return ptr;
 	}
 
@@ -363,7 +363,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailAngle");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailAngle");
 		return ptr;
 	}
 
@@ -379,7 +379,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AchievementDefinitionDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AchievementDefinitionDataAsset");
 		return ptr;
 	}
 
@@ -394,7 +394,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActionRulesBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActionRulesBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -412,7 +412,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActionRulesProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActionRulesProviderInterface");
 		return ptr;
 	}
 
@@ -428,7 +428,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActionRulesComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActionRulesComponent");
 		return ptr;
 	}
 
@@ -444,7 +444,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActionRulesInteractableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActionRulesInteractableComponent");
 		return ptr;
 	}
 
@@ -460,7 +460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableInteractableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableInteractableComponent");
 		return ptr;
 	}
 
@@ -475,7 +475,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActionRuleTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActionRuleTestActor");
 		return ptr;
 	}
 
@@ -492,7 +492,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActorCoherentViewComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActorCoherentViewComponent");
 		return ptr;
 	}
 
@@ -509,7 +509,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActorFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActorFunctionLibrary");
 		return ptr;
 	}
 
@@ -538,7 +538,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActorInWaterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActorInWaterInterface");
 		return ptr;
 	}
 
@@ -553,7 +553,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActorRelevancyTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActorRelevancyTestFunctions");
 		return ptr;
 	}
 
@@ -572,7 +572,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AgitatedAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AgitatedAIStrategyId");
 		return ptr;
 	}
 
@@ -580,14 +580,14 @@ public:
 
 
 // Class Athena.AICharacterAudioComponent
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x02E0 - 0x02E0)
 class UAICharacterAudioComponent : public UWwiseEmitterComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AICharacterAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AICharacterAudioComponent");
 		return ptr;
 	}
 
@@ -607,7 +607,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAICharacterAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAICharacterAudioComponentParams");
 		return ptr;
 	}
 
@@ -615,17 +615,17 @@ public:
 
 
 // Class Athena.KrakenAICharacterAudioComponent
-// 0x0030 (0x0300 - 0x02D0)
+// 0x0030 (0x0310 - 0x02E0)
 class UKrakenAICharacterAudioComponent : public UAICharacterAudioComponent
 {
 public:
-	class UKrakenAICharacterAudioComponentParams*      AICharacterAudioParams;                                   // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWwiseEmitter                               KrakenBodyEmitter;                                        // 0x02D8(0x0020)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02F8(0x0008) MISSED OFFSET
+	class UKrakenAICharacterAudioComponentParams*      AICharacterAudioParams;                                   // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               KrakenBodyEmitter;                                        // 0x02E8(0x0020)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0308(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAICharacterAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAICharacterAudioComponent");
 		return ptr;
 	}
 
@@ -646,7 +646,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenShipWrappingTentacleAIAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenShipWrappingTentacleAIAudioComponentParams");
 		return ptr;
 	}
 
@@ -661,7 +661,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState");
 		return ptr;
 	}
 
@@ -676,7 +676,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_None");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_None");
 		return ptr;
 	}
 
@@ -691,7 +691,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Idle");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Idle");
 		return ptr;
 	}
 
@@ -706,7 +706,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_IdleActive");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_IdleActive");
 		return ptr;
 	}
 
@@ -721,7 +721,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_SuckingTell");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_SuckingTell");
 		return ptr;
 	}
 
@@ -736,7 +736,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Sucking");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Sucking");
 		return ptr;
 	}
 
@@ -751,7 +751,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Holding");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Holding");
 		return ptr;
 	}
 
@@ -766,7 +766,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_HoldingWaterDunk");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_HoldingWaterDunk");
 		return ptr;
 	}
 
@@ -781,7 +781,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_HoldingPowerSlam");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_HoldingPowerSlam");
 		return ptr;
 	}
 
@@ -796,7 +796,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_HoldingExpose");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_HoldingExpose");
 		return ptr;
 	}
 
@@ -811,7 +811,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_HoldingDisorientate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_HoldingDisorientate");
 		return ptr;
 	}
 
@@ -826,7 +826,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Ingesting");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Ingesting");
 		return ptr;
 	}
 
@@ -841,7 +841,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Ingesting_SwallowTarget");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Ingesting_SwallowTarget");
 		return ptr;
 	}
 
@@ -856,7 +856,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Ingesting_RegurgitateTarget");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Ingesting_RegurgitateTarget");
 		return ptr;
 	}
 
@@ -871,7 +871,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Throwing");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Throwing");
 		return ptr;
 	}
 
@@ -886,7 +886,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Despawning_Defeated");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Despawning_Defeated");
 		return ptr;
 	}
 
@@ -901,7 +901,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Despawning");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Despawning");
 		return ptr;
 	}
 
@@ -916,7 +916,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleState_Despawning_Panic");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleState_Despawning_Panic");
 		return ptr;
 	}
 
@@ -924,17 +924,17 @@ public:
 
 
 // Class Athena.KrakenShipWrappingTentacleAIAudioComponent
-// 0x0070 (0x0340 - 0x02D0)
+// 0x0070 (0x0350 - 0x02E0)
 class UKrakenShipWrappingTentacleAIAudioComponent : public UAICharacterAudioComponent
 {
 public:
-	class UKrakenShipWrappingTentacleAIAudioComponentParams* Params;                                                   // 0x02D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWwiseEmitter                               KrakenTentacleEmitter;                                    // 0x02D8(0x0020)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x02F8(0x0048) MISSED OFFSET
+	class UKrakenShipWrappingTentacleAIAudioComponentParams* Params;                                                   // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWwiseEmitter                               KrakenTentacleEmitter;                                    // 0x02E8(0x0020)
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0308(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenShipWrappingTentacleAIAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenShipWrappingTentacleAIAudioComponent");
 		return ptr;
 	}
 
@@ -966,7 +966,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenTentacleAIAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenTentacleAIAudioComponentParams");
 		return ptr;
 	}
 
@@ -974,19 +974,19 @@ public:
 
 
 // Class Athena.KrakenTentacleAIAudioComponent
-// 0x0270 (0x0540 - 0x02D0)
+// 0x0270 (0x0550 - 0x02E0)
 class UKrakenTentacleAIAudioComponent : public UAICharacterAudioComponent
 {
 public:
-	float                                              MouthHeightOffset;                                        // 0x02D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x02D4(0x0004) MISSED OFFSET
-	class UKrakenTentacleAIAudioComponentParams*       KrakenTentacleAudioParams;                                // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWwiseEmitter                               KrakenTentacleMouthEmitter;                               // 0x02E0(0x0020)
-	unsigned char                                      UnknownData01[0x240];                                     // 0x0300(0x0240) MISSED OFFSET
+	float                                              MouthHeightOffset;                                        // 0x02E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x02E4(0x0004) MISSED OFFSET
+	class UKrakenTentacleAIAudioComponentParams*       KrakenTentacleAudioParams;                                // 0x02E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               KrakenTentacleMouthEmitter;                               // 0x02F0(0x0020)
+	unsigned char                                      UnknownData01[0x240];                                     // 0x0310(0x0240) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenTentacleAIAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenTentacleAIAudioComponent");
 		return ptr;
 	}
 
@@ -1011,7 +1011,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SharkAICharacterAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SharkAICharacterAudioComponentParams");
 		return ptr;
 	}
 
@@ -1019,18 +1019,18 @@ public:
 
 
 // Class Athena.SharkAICharacterAudioComponent
-// 0x0140 (0x0410 - 0x02D0)
+// 0x0140 (0x0420 - 0x02E0)
 class USharkAICharacterAudioComponent : public UAICharacterAudioComponent
 {
 public:
-	class USharkAICharacterAudioComponentParams*       SharkAudioParams;                                         // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x120];                                     // 0x02D8(0x0120) MISSED OFFSET
-	class UClass*                                      CachedStrategyID;                                         // 0x03F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0400(0x0010) MISSED OFFSET
+	class USharkAICharacterAudioComponentParams*       SharkAudioParams;                                         // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x120];                                     // 0x02E8(0x0120) MISSED OFFSET
+	class UClass*                                      CachedStrategyID;                                         // 0x0408(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0410(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SharkAICharacterAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SharkAICharacterAudioComponent");
 		return ptr;
 	}
 
@@ -1049,7 +1049,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CategoryBase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CategoryBase");
 		return ptr;
 	}
 
@@ -1064,7 +1064,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToBucketNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToBucketNotificationInputId");
 		return ptr;
 	}
 
@@ -1079,7 +1079,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToCompassNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToCompassNotificationInputId");
 		return ptr;
 	}
 
@@ -1094,7 +1094,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToPocketWatchNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToPocketWatchNotificationInputId");
 		return ptr;
 	}
 
@@ -1109,7 +1109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToSpeakingTrumpetNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToSpeakingTrumpetNotificationInputId");
 		return ptr;
 	}
 
@@ -1124,7 +1124,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToInstrumentNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToInstrumentNotificationInputId");
 		return ptr;
 	}
 
@@ -1139,7 +1139,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToLanternNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToLanternNotificationInputId");
 		return ptr;
 	}
 
@@ -1154,7 +1154,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToTankardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToTankardNotificationInputId");
 		return ptr;
 	}
 
@@ -1169,7 +1169,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToFruitNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToFruitNotificationInputId");
 		return ptr;
 	}
 
@@ -1184,7 +1184,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToCannonballNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToCannonballNotificationInputId");
 		return ptr;
 	}
 
@@ -1199,7 +1199,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToWoodPlankNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToWoodPlankNotificationInputId");
 		return ptr;
 	}
 
@@ -1214,7 +1214,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToSpyglassNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToSpyglassNotificationInputId");
 		return ptr;
 	}
 
@@ -1229,7 +1229,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickCycleToShovelNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickCycleToShovelNotificationInputId");
 		return ptr;
 	}
 
@@ -1244,7 +1244,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickSwitchWeaponNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickSwitchWeaponNotificationInputId");
 		return ptr;
 	}
 
@@ -1260,7 +1260,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemCategory");
 		return ptr;
 	}
 
@@ -1275,7 +1275,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WeaponItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeaponItemCategory");
 		return ptr;
 	}
 
@@ -1290,7 +1290,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwordItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwordItemCategory");
 		return ptr;
 	}
 
@@ -1305,7 +1305,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BlunderbussItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BlunderbussItemCategory");
 		return ptr;
 	}
 
@@ -1320,7 +1320,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EyeOfReachItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EyeOfReachItemCategory");
 		return ptr;
 	}
 
@@ -1335,7 +1335,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FlintlockItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FlintlockItemCategory");
 		return ptr;
 	}
 
@@ -1350,7 +1350,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UnarmedCombatItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnarmedCombatItemCategory");
 		return ptr;
 	}
 
@@ -1365,7 +1365,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InstrumentItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InstrumentItemCategory");
 		return ptr;
 	}
 
@@ -1380,7 +1380,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ConcertinaItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ConcertinaItemCategory");
 		return ptr;
 	}
 
@@ -1395,7 +1395,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrumItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrumItemCategory");
 		return ptr;
 	}
 
@@ -1410,7 +1410,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HurdyGurdyItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HurdyGurdyItemCategory");
 		return ptr;
 	}
 
@@ -1425,7 +1425,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EquipmentItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EquipmentItemCategory");
 		return ptr;
 	}
 
@@ -1440,7 +1440,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BucketItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BucketItemCategory");
 		return ptr;
 	}
 
@@ -1455,7 +1455,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonballItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonballItemCategory");
 		return ptr;
 	}
 
@@ -1470,7 +1470,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompassItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompassItemCategory");
 		return ptr;
 	}
 
@@ -1485,7 +1485,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FruitItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FruitItemCategory");
 		return ptr;
 	}
 
@@ -1500,7 +1500,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LanternItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LanternItemCategory");
 		return ptr;
 	}
 
@@ -1515,7 +1515,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PocketWatchItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PocketWatchItemCategory");
 		return ptr;
 	}
 
@@ -1530,7 +1530,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SpeakingTrumpetItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SpeakingTrumpetItemCategory");
 		return ptr;
 	}
 
@@ -1545,7 +1545,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShovelItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShovelItemCategory");
 		return ptr;
 	}
 
@@ -1560,7 +1560,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SpyglassItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SpyglassItemCategory");
 		return ptr;
 	}
 
@@ -1575,7 +1575,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TankardItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TankardItemCategory");
 		return ptr;
 	}
 
@@ -1590,7 +1590,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WoodPlankItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WoodPlankItemCategory");
 		return ptr;
 	}
 
@@ -1605,7 +1605,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InvalidItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InvalidItemCategory");
 		return ptr;
 	}
 
@@ -1620,7 +1620,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DefaultItemCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DefaultItemCategory");
 		return ptr;
 	}
 
@@ -1635,7 +1635,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BootyCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BootyCategory");
 		return ptr;
 	}
 
@@ -1651,7 +1651,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletonAICharacterAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletonAICharacterAudioComponentParams");
 		return ptr;
 	}
 
@@ -1695,7 +1695,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterAudioFootfallControllerParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterAudioFootfallControllerParams");
 		return ptr;
 	}
 
@@ -1703,20 +1703,20 @@ public:
 
 
 // Class Athena.SkeletonAICharacterAudioComponent
-// 0x0040 (0x0310 - 0x02D0)
+// 0x0040 (0x0320 - 0x02E0)
 class USkeletonAICharacterAudioComponent : public UAICharacterAudioComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02D0(0x0008) MISSED OFFSET
-	class USkeletonAICharacterAudioComponentParams*    AICharacterAudioParams;                                   // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCharacterAudioFootfallControllerParams*     FootfallParams;                                           // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CachedStrategyID;                                         // 0x02E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CachedWieldedItemCategory;                                // 0x02F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x02F8(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02E0(0x0008) MISSED OFFSET
+	class USkeletonAICharacterAudioComponentParams*    AICharacterAudioParams;                                   // 0x02E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCharacterAudioFootfallControllerParams*     FootfallParams;                                           // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CachedStrategyID;                                         // 0x02F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CachedWieldedItemCategory;                                // 0x0300(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0308(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletonAICharacterAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletonAICharacterAudioComponent");
 		return ptr;
 	}
 
@@ -1731,7 +1731,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AICharacterEngageEnemyMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AICharacterEngageEnemyMethod");
 		return ptr;
 	}
 
@@ -1746,7 +1746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableAICharacterEngageEnemyMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableAICharacterEngageEnemyMethod");
 		return ptr;
 	}
 
@@ -1761,7 +1761,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LongRangeGunAICharacterEngageEnemyMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LongRangeGunAICharacterEngageEnemyMethod");
 		return ptr;
 	}
 
@@ -1776,7 +1776,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShortRangeGunAICharacterEngageEnemyMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShortRangeGunAICharacterEngageEnemyMethod");
 		return ptr;
 	}
 
@@ -1791,7 +1791,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeWeaponAICharacterEngageEnemyMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeWeaponAICharacterEngageEnemyMethod");
 		return ptr;
 	}
 
@@ -1806,7 +1806,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosiveAICharacterEngageEnemyMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosiveAICharacterEngageEnemyMethod");
 		return ptr;
 	}
 
@@ -1822,7 +1822,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AICharacterPartsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AICharacterPartsDesc");
 		return ptr;
 	}
 
@@ -1837,7 +1837,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AICharacterRecoverMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AICharacterRecoverMethod");
 		return ptr;
 	}
 
@@ -1852,7 +1852,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FleeAICharacterRecoverMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FleeAICharacterRecoverMethod");
 		return ptr;
 	}
 
@@ -1867,7 +1867,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HealAICharacterRecoverMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HealAICharacterRecoverMethod");
 		return ptr;
 	}
 
@@ -1882,7 +1882,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIKnockbackActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIKnockbackActionStateId");
 		return ptr;
 	}
 
@@ -1899,7 +1899,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AILocomotionCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AILocomotionCompositeInputHandler");
 		return ptr;
 	}
 
@@ -1922,7 +1922,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIPartCustomizationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIPartCustomizationInterface");
 		return ptr;
 	}
 
@@ -1940,7 +1940,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIPartsRetrievalComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIPartsRetrievalComponent");
 		return ptr;
 	}
 
@@ -1958,7 +1958,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CameraFunctionLib");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CameraFunctionLib");
 		return ptr;
 	}
 
@@ -1976,7 +1976,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LookAtOffsetComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LookAtOffsetComponent");
 		return ptr;
 	}
 
@@ -1993,7 +1993,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationLODInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationLODInterface");
 		return ptr;
 	}
 
@@ -2012,7 +2012,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemAnimationStoreId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemAnimationStoreId");
 		return ptr;
 	}
 
@@ -2027,7 +2027,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterAnimationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterAnimationInterface");
 		return ptr;
 	}
 
@@ -2048,7 +2048,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationLocomotionComponentFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationLocomotionComponentFunctions");
 		return ptr;
 	}
 
@@ -2076,7 +2076,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryItemInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryItemInterface");
 		return ptr;
 	}
 
@@ -2099,7 +2099,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WielderAnimationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WielderAnimationInterface");
 		return ptr;
 	}
 
@@ -2121,7 +2121,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NamedObjectInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NamedObjectInterface");
 		return ptr;
 	}
 
@@ -2138,7 +2138,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadableItemInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadableItemInterface");
 		return ptr;
 	}
 
@@ -2168,7 +2168,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemInfo");
 		return ptr;
 	}
 
@@ -2183,7 +2183,7 @@ public:
 
 
 // Class Athena.AthenaAnimationInstance
-// 0x18D0 (0x1D10 - 0x0440)
+// 0x1960 (0x1DA0 - 0x0440)
 class UAthenaAnimationInstance : public UAnimInstance
 {
 public:
@@ -2200,43 +2200,44 @@ public:
 	TEnumAsByte<EMeleeSpecialState>                    MeleeSpecialState;                                        // 0x0858(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0859(0x0003) MISSED OFFSET
 	float                                              DodgeDirection;                                           // 0x085C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationRowingBoatParams            RowboatParams;                                            // 0x0860(0x0048) (BlueprintVisible)
-	struct FAthenaAnimationRowing                      Rowing;                                                   // 0x08A8(0x00A0) (BlueprintVisible)
-	class AAthenaCharacter*                            AthenaCharacter;                                          // 0x0948(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationJumping                     JumpingAnimationParams;                                   // 0x0950(0x00D0) (BlueprintVisible)
-	struct FLimbIK                                     RightHandIK;                                              // 0x0A20(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     LeftHandIK;                                               // 0x0A80(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     RightFootIK;                                              // 0x0AE0(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     LeftFootIK;                                               // 0x0B40(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     HeadIK;                                                   // 0x0BA0(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     ChestIK;                                                  // 0x0C00(0x0060) (BlueprintVisible)
-	float                                              SpineBlendAlpha;                                          // 0x0C60(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               InDockingTransition;                                      // 0x0C64(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0C65(0x0003) MISSED OFFSET
-	float                                              DockingTransitionAlpha;                                   // 0x0C68(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // 0x0C6C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0C6D(0x0003) MISSED OFFSET
-	struct FDamageInstance                             KillingDamage;                                            // 0x0C70(0x0020) (BlueprintVisible)
-	struct FAthenaAnimationLODSettings                 AnimationLODSettings;                                     // 0x0C90(0x0003) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData05[0x1];                                       // 0x0C93(0x0001) MISSED OFFSET
-	struct FAthenaAnimationLocomotion                  Locomotion;                                               // 0x0C94(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x0CD4(0x0004) MISSED OFFSET
-	struct FAthenaAnimationWieldedItemStateMachine     WieldedItemStateMachine;                                  // 0x0CD8(0x0500) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      UnknownData07[0x8];                                       // 0x11D8(0x0008) MISSED OFFSET
-	struct FAthenaAnimationLoadObjectByID              ItemLoading;                                              // 0x11E0(0x08B0) (BlueprintVisible)
-	TEnumAsByte<EAthenaAnimationSocketGroup>           ControllableSocketGroup;                                  // 0x1A90(0x0001) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAthenaAnimationSocketGroupCharacterSize> ControllableSocketGroupCharacterSize;                     // 0x1A91(0x0001) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ELocomotionType>                       LocomotionState;                                          // 0x1A92(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationDebugTrackingParams         DebugTrackingParams;                                      // 0x1A93(0x0004) (BlueprintVisible)
-	bool                                               FaunaAddedToCrate;                                        // 0x1A97(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationWhisperingAnimations        WhisperingAnimations;                                     // 0x1A98(0x0068) (BlueprintVisible)
-	bool                                               IsWhispering;                                             // 0x1B00(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               WhisperingTransitionCompleted;                            // 0x1B01(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x20E];                                     // 0x1B02(0x020E) MISSED OFFSET
+	struct FAthenaAnimationRowboatParams               RowboatParams;                                            // 0x0860(0x00C0) (BlueprintVisible)
+	struct FAthenaAnimationRowing                      Rowing;                                                   // 0x0920(0x00B0) (BlueprintVisible)
+	class AAthenaCharacter*                            AthenaCharacter;                                          // 0x09D0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationJumping                     JumpingAnimationParams;                                   // 0x09D8(0x00D0) (BlueprintVisible)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0AA8(0x0008) MISSED OFFSET
+	struct FLimbIK                                     RightHandIK;                                              // 0x0AB0(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     LeftHandIK;                                               // 0x0B10(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     RightFootIK;                                              // 0x0B70(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     LeftFootIK;                                               // 0x0BD0(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     HeadIK;                                                   // 0x0C30(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     ChestIK;                                                  // 0x0C90(0x0060) (BlueprintVisible)
+	float                                              SpineBlendAlpha;                                          // 0x0CF0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               InDockingTransition;                                      // 0x0CF4(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0CF5(0x0003) MISSED OFFSET
+	float                                              DockingTransitionAlpha;                                   // 0x0CF8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // 0x0CFC(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0CFD(0x0003) MISSED OFFSET
+	struct FDamageInstance                             KillingDamage;                                            // 0x0D00(0x0020) (BlueprintVisible)
+	struct FAthenaAnimationLODSettings                 AnimationLODSettings;                                     // 0x0D20(0x0003) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData06[0x1];                                       // 0x0D23(0x0001) MISSED OFFSET
+	struct FAthenaAnimationLocomotion                  Locomotion;                                               // 0x0D24(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x0D64(0x0004) MISSED OFFSET
+	struct FAthenaAnimationWieldedItemStateMachine     WieldedItemStateMachine;                                  // 0x0D68(0x0500) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData08[0x8];                                       // 0x1268(0x0008) MISSED OFFSET
+	struct FAthenaAnimationLoadObjectByID              ItemLoading;                                              // 0x1270(0x08B0) (BlueprintVisible)
+	TEnumAsByte<EAthenaAnimationSocketGroup>           ControllableSocketGroup;                                  // 0x1B20(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAthenaAnimationSocketGroupCharacterSize> ControllableSocketGroupCharacterSize;                     // 0x1B21(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ELocomotionType>                       LocomotionState;                                          // 0x1B22(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationDebugTrackingParams         DebugTrackingParams;                                      // 0x1B23(0x0004) (BlueprintVisible)
+	bool                                               FaunaAddedToCrate;                                        // 0x1B27(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationWhisperingAnimations        WhisperingAnimations;                                     // 0x1B28(0x0068) (BlueprintVisible)
+	bool                                               IsWhispering;                                             // 0x1B90(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               WhisperingTransitionCompleted;                            // 0x1B91(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x20E];                                     // 0x1B92(0x020E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationInstance");
 		return ptr;
 	}
 
@@ -2288,6 +2289,7 @@ public:
 	class UAnimSequence* GetItemBlockingFeedbackSequence();
 	bool GetInDockingTransition();
 	class AActor* GetCurrentEqippedItem();
+	class AActor* GetCosmeticItem(TEnumAsByte<EWieldAnimationLocation> CosmeticLocation);
 	TEnumAsByte<EAthenaAnimationSocketGroupCharacterSize> GetControllableSocketGroupCharacterSize();
 	TEnumAsByte<EAthenaAnimationSocketGroup> GetControllableSocketGroup();
 	float GetAnimationLength(class UAnimSequence* Animation);
@@ -2304,7 +2306,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterInterface");
 		return ptr;
 	}
 
@@ -2321,7 +2323,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterFootImpactMeshInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterFootImpactMeshInterface");
 		return ptr;
 	}
 
@@ -2338,7 +2340,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterInertInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterInertInterface");
 		return ptr;
 	}
 
@@ -2357,7 +2359,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ObscuredVisionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ObscuredVisionInterface");
 		return ptr;
 	}
 
@@ -2372,7 +2374,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipTrackerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipTrackerInterface");
 		return ptr;
 	}
 
@@ -2387,7 +2389,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllerInterface");
 		return ptr;
 	}
 
@@ -2404,7 +2406,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerPrivilegeInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerPrivilegeInterface");
 		return ptr;
 	}
 
@@ -2419,7 +2421,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryManipulatorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryManipulatorInterface");
 		return ptr;
 	}
 
@@ -2430,7 +2432,7 @@ public:
 	void QuickSelectItemOfType(TEnumAsByte<EItemType> ItemType, int TypedItemIndex);
 	void QuickSelectItemOfCategory(class UClass* Category, int IndexIntoCategory);
 	void QuickSelectItem(int ItemIndex);
-	bool PickUpItem(class AItemInfo* Item, bool AndWield);
+	bool PickUpItem(class AItemInfo* Item, bool AndWield, bool ShouldNotifyClients);
 	int GetNumberOfItemsOfItemCategory(class UClass* ItemSlot);
 	TArray<class UClass*> GetItems();
 	int GetCurrentItemIndex();
@@ -2455,7 +2457,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldedItemInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldedItemInterface");
 		return ptr;
 	}
 
@@ -2478,7 +2480,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CloudDomeInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CloudDomeInterface");
 		return ptr;
 	}
 
@@ -2499,7 +2501,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CloudDome");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CloudDome");
 		return ptr;
 	}
 
@@ -2514,7 +2516,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TelemetrySubjectInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TelemetrySubjectInterface");
 		return ptr;
 	}
 
@@ -2585,7 +2587,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacter");
 		return ptr;
 	}
 
@@ -2639,7 +2641,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AttitudeSource");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AttitudeSource");
 		return ptr;
 	}
 
@@ -2654,7 +2656,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DeferredSpawnInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DeferredSpawnInterface");
 		return ptr;
 	}
 
@@ -2669,7 +2671,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerCharacterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerCharacterInterface");
 		return ptr;
 	}
 
@@ -2687,7 +2689,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageInstigatorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageInstigatorInterface");
 		return ptr;
 	}
 
@@ -2704,7 +2706,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosionReceiverInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosionReceiverInterface");
 		return ptr;
 	}
 
@@ -2719,7 +2721,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwimAttackableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwimAttackableInterface");
 		return ptr;
 	}
 
@@ -2734,7 +2736,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerManagerServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerManagerServiceInterface");
 		return ptr;
 	}
 
@@ -2757,7 +2759,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamagerType");
 		return ptr;
 	}
 
@@ -2772,7 +2774,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipSize");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipSize");
 		return ptr;
 	}
 
@@ -2787,7 +2789,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileId");
 		return ptr;
 	}
 
@@ -2802,7 +2804,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileWeaponFiringIntentionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileWeaponFiringIntentionInterface");
 		return ptr;
 	}
 
@@ -2817,7 +2819,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ObjectMeshRetrievalInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ObjectMeshRetrievalInterface");
 		return ptr;
 	}
 
@@ -2832,7 +2834,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableInterface");
 		return ptr;
 	}
 
@@ -2851,7 +2853,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemLoadoutViewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemLoadoutViewInterface");
 		return ptr;
 	}
 
@@ -2878,7 +2880,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialInventoryInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialInventoryInterface");
 		return ptr;
 	}
 
@@ -2904,7 +2906,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemSetInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemSetInterface");
 		return ptr;
 	}
 
@@ -2947,7 +2949,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialInventoryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialInventoryComponent");
 		return ptr;
 	}
 
@@ -2982,7 +2984,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhrasesRadialComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhrasesRadialComponent");
 		return ptr;
 	}
 
@@ -3002,7 +3004,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhrasesRadialDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhrasesRadialDataAsset");
 		return ptr;
 	}
 
@@ -3017,7 +3019,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialPhrasesAdjusterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialPhrasesAdjusterInterface");
 		return ptr;
 	}
 
@@ -3034,7 +3036,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TelemetryDescriptorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TelemetryDescriptorInterface");
 		return ptr;
 	}
 
@@ -3082,7 +3084,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItem");
 		return ptr;
 	}
 
@@ -3109,7 +3111,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TrackedActorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TrackedActorInterface");
 		return ptr;
 	}
 
@@ -3127,7 +3129,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialCompositeInputHandler");
 		return ptr;
 	}
 
@@ -3147,7 +3149,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialInventorySelectorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialInventorySelectorInterface");
 		return ptr;
 	}
 
@@ -3162,7 +3164,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CloudDomeServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CloudDomeServiceInterface");
 		return ptr;
 	}
 
@@ -3183,7 +3185,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageParticipantInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageParticipantInterface");
 		return ptr;
 	}
 
@@ -3251,18 +3253,19 @@ public:
 	struct FName                                       ReplicatedOverrideAnimationEntry;                         // 0x0E8C(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x4];                                       // 0x0E94(0x0004) MISSED OFFSET
 	class UClass*                                      FirstPersonAnimSetDataId;                                 // 0x0E98(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4D8];                                     // 0x0EA0(0x04D8) MISSED OFFSET
-	class AAthenaPlayerCharacterColdDataStore*         ColdDataStoreActor;                                       // 0x1378(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FAthenaPlayerCharacterModelSwap             PendingModelSwap;                                         // 0x1380(0x0028) (Transient)
-	unsigned char                                      UnknownData07[0x7];                                       // 0x13A8(0x0007) MISSED OFFSET
-	bool                                               ReplicatedEmoteExitAllowed;                               // 0x13AF(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x60];                                      // 0x13B0(0x0060) MISSED OFFSET
-	bool                                               FinishedWaitingForSpawn;                                  // 0x1410(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4F];                                      // 0x1411(0x004F) MISSED OFFSET
+	TEnumAsByte<ECharacterType>                        CharacterType;                                            // 0x0EA0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4DF];                                     // 0x0EA1(0x04DF) MISSED OFFSET
+	class AAthenaPlayerCharacterColdDataStore*         ColdDataStoreActor;                                       // 0x1380(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FAthenaPlayerCharacterModelSwap             PendingModelSwap;                                         // 0x1388(0x0028) (Transient)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x13B0(0x0007) MISSED OFFSET
+	bool                                               ReplicatedEmoteExitAllowed;                               // 0x13B7(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x60];                                      // 0x13B8(0x0060) MISSED OFFSET
+	bool                                               FinishedWaitingForSpawn;                                  // 0x1418(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x47];                                      // 0x1419(0x0047) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacter");
 		return ptr;
 	}
 
@@ -3306,7 +3309,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateIdentityInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateIdentityInterface");
 		return ptr;
 	}
 
@@ -3321,7 +3324,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoterInterface");
 		return ptr;
 	}
 
@@ -3346,7 +3349,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerState");
 		return ptr;
 	}
 
@@ -3363,7 +3366,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewServiceInterface");
 		return ptr;
 	}
 
@@ -3379,7 +3382,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIProximityPlayerTracker");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIProximityPlayerTracker");
 		return ptr;
 	}
 
@@ -3394,7 +3397,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIQuickDeathInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIQuickDeathInterface");
 		return ptr;
 	}
 
@@ -3409,7 +3412,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIShipCaptainActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipCaptainActionStateId");
 		return ptr;
 	}
 
@@ -3427,7 +3430,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIShipPlayerTracker");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipPlayerTracker");
 		return ptr;
 	}
 
@@ -3443,7 +3446,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIShipRegionPlayerTracker");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipRegionPlayerTracker");
 		return ptr;
 	}
 
@@ -3458,7 +3461,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIShipWheelAIInteractableType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipWheelAIInteractableType");
 		return ptr;
 	}
 
@@ -3473,7 +3476,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AISpawnActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AISpawnActionStateId");
 		return ptr;
 	}
 
@@ -3494,7 +3497,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PopUpAudioDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PopUpAudioDesc");
 		return ptr;
 	}
 
@@ -3522,7 +3525,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PopUpMessageDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PopUpMessageDesc");
 		return ptr;
 	}
 
@@ -3540,7 +3543,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AlliancePennantAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AlliancePennantAsset");
 		return ptr;
 	}
 
@@ -3555,7 +3558,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AllianceServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AllianceServiceInterface");
 		return ptr;
 	}
 
@@ -3570,7 +3573,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipServiceInterface");
 		return ptr;
 	}
 
@@ -3594,7 +3597,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AllianceService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AllianceService");
 		return ptr;
 	}
 
@@ -3612,7 +3615,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AllianceServiceTelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AllianceServiceTelemetryComponent");
 		return ptr;
 	}
 
@@ -3630,7 +3633,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Company");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Company");
 		return ptr;
 	}
 
@@ -3654,7 +3657,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EntitlementDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EntitlementDesc");
 		return ptr;
 	}
 
@@ -3669,7 +3672,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationCategory");
 		return ptr;
 	}
 
@@ -3684,7 +3687,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InvalidShipCustomizationCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InvalidShipCustomizationCategory");
 		return ptr;
 	}
 
@@ -3699,7 +3702,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartDescAsset");
 		return ptr;
 	}
 
@@ -3716,7 +3719,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationInfo");
 		return ptr;
 	}
 
@@ -3732,7 +3735,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationDesc");
 		return ptr;
 	}
 
@@ -3753,7 +3756,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AllianceSettingsAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AllianceSettingsAsset");
 		return ptr;
 	}
 
@@ -3768,7 +3771,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AmmoInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AmmoInterface");
 		return ptr;
 	}
 
@@ -3783,7 +3786,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDynamicsProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDynamicsProviderInterface");
 		return ptr;
 	}
 
@@ -3803,7 +3806,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Anchor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Anchor");
 		return ptr;
 	}
 
@@ -3823,7 +3826,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AnimatedStepsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AnimatedStepsComponent");
 		return ptr;
 	}
 
@@ -3857,7 +3860,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AnimNotify_AthenaPlayParticleEffect");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AnimNotify_AthenaPlayParticleEffect");
 		return ptr;
 	}
 
@@ -3872,7 +3875,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AnimNotify_WieldableAnimationInterruptPoint");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AnimNotify_WieldableAnimationInterruptPoint");
 		return ptr;
 	}
 
@@ -3880,15 +3883,15 @@ public:
 
 
 // Class Athena.AnimNotifyAdditionalEventsWwiseEmitterComponent
-// 0x0010 (0x0310 - 0x0300)
+// 0x0010 (0x0320 - 0x0310)
 class UAnimNotifyAdditionalEventsWwiseEmitterComponent : public UAnimNotifyWwiseEmitterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0310(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AnimNotifyAdditionalEventsWwiseEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AnimNotifyAdditionalEventsWwiseEmitterComponent");
 		return ptr;
 	}
 
@@ -3904,7 +3907,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AssetListDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AssetListDataAsset");
 		return ptr;
 	}
 
@@ -3927,7 +3930,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAIInteractableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAIInteractableComponent");
 		return ptr;
 	}
 
@@ -3948,7 +3951,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAIItemParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAIItemParamsDataAsset");
 		return ptr;
 	}
 
@@ -3963,7 +3966,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAITeamsServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAITeamsServiceInterface");
 		return ptr;
 	}
 
@@ -3979,7 +3982,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAITeamsService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAITeamsService");
 		return ptr;
 	}
 
@@ -3994,7 +3997,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationCapstanBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationCapstanBlueprintFunctions");
 		return ptr;
 	}
 
@@ -4006,31 +4009,31 @@ public:
 
 
 // Class Athena.FirstPersonAnimationInstance
-// 0x0040 (0x1D50 - 0x1D10)
+// 0x0040 (0x1DE0 - 0x1DA0)
 class UFirstPersonAnimationInstance : public UAthenaAnimationInstance
 {
 public:
-	float                                              SpineRotationTime;                                        // 0x1D10(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     RangedWeaponTargetingOffset;                              // 0x1D14(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RangedWeaponAlpha;                                        // 0x1D20(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationCamera                      CameraParams;                                             // 0x1D24(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
-	TEnumAsByte<ECameraLookatAnimationType>            CameraAdditiveBlendPoseType;                              // 0x1D3C(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1D3D(0x0003) MISSED OFFSET
-	unsigned char                                      UseAdditiveHandOverlay : 1;                               // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      CameraAttachmentTypeNotDefault : 1;                       // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      BlendUpperBodyAndArmOverlay : 1;                          // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UseArmOverlayJumpContinuous : 1;                          // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsDead : 1;                                               // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsSwimming : 1;                                           // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsOnLadder : 1;                                           // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsJumping : 1;                                            // 0x1D40(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsControllableObjectActive : 1;                           // 0x1D41(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsOnboardingAnimaticActive : 1;                           // 0x1D41(0x0001) (BlueprintVisible)
-	unsigned char                                      UnknownData01[0xE];                                       // 0x1D42(0x000E) MISSED OFFSET
+	float                                              SpineRotationTime;                                        // 0x1DA0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RangedWeaponTargetingOffset;                              // 0x1DA4(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RangedWeaponAlpha;                                        // 0x1DB0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationCamera                      CameraParams;                                             // 0x1DB4(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	TEnumAsByte<ECameraLookatAnimationType>            CameraAdditiveBlendPoseType;                              // 0x1DCC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x1DCD(0x0003) MISSED OFFSET
+	unsigned char                                      UseAdditiveHandOverlay : 1;                               // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      CameraAttachmentTypeNotDefault : 1;                       // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      BlendUpperBodyAndArmOverlay : 1;                          // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UseArmOverlayJumpContinuous : 1;                          // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsDead : 1;                                               // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsSwimming : 1;                                           // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsOnLadder : 1;                                           // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsJumping : 1;                                            // 0x1DD0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsControllableObjectActive : 1;                           // 0x1DD1(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsOnboardingAnimaticActive : 1;                           // 0x1DD1(0x0001) (BlueprintVisible)
+	unsigned char                                      UnknownData01[0xE];                                       // 0x1DD2(0x000E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FirstPersonAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FirstPersonAnimationInstance");
 		return ptr;
 	}
 
@@ -4040,106 +4043,107 @@ public:
 
 
 // Class Athena.ThirdPersonAnimationInstance
-// 0x10A0 (0x2DB0 - 0x1D10)
+// 0x1180 (0x2F20 - 0x1DA0)
 class UThirdPersonAnimationInstance : public UAthenaAnimationInstance
 {
 public:
-	unsigned char                                      IsItemAnimPaused : 1;                                     // 0x1D10(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1D11(0x0003) MISSED OFFSET
-	float                                              ItemAnimPausedTimeRemaining;                              // 0x1D14(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationIKLimbStretch               IKLimbStretchParams;                                      // 0x1D18(0x000C) (BlueprintVisible)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x1D24(0x0004) MISSED OFFSET
-	struct FAthenaAnimationLadder                      LadderAnimationParams;                                    // 0x1D28(0x0220) (BlueprintVisible)
-	struct FAthenaAnimationPitchControlStates          PitchTargetingControlStates;                              // 0x1F48(0x0168) (BlueprintVisible)
-	struct FAthenaAnimationObjectTargetingOptions      PitchTargetingParameters;                                 // 0x20B0(0x003C) (BlueprintVisible)
-	struct FAthenaAnimationObjectTargetingOptions      WantedPitchTargetingParameters;                           // 0x20EC(0x003C) (BlueprintVisible)
-	struct FAthenaAnimationPitchAlpha                  PitchTargetingAlpha;                                      // 0x2128(0x0014) (BlueprintVisible)
-	struct FAthenaAnimationPitchShoulders              PitchShoulderParams;                                      // 0x213C(0x001C) (BlueprintVisible)
-	struct FAthenaAnimationMountedWeapon               MountedWeaponAnimationParams;                             // 0x2158(0x00F8) (BlueprintVisible)
-	struct FAthenaAnimationFootPlanting                FootPlanting;                                             // 0x2250(0x0058) (BlueprintVisible)
-	TEnumAsByte<EStairAnimations>                      StairAnimationState;                                      // 0x22A8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x22A9(0x0007) MISSED OFFSET
-	struct FAthenaAnimationSailControl                 SailControlParams;                                        // 0x22B0(0x00A0) (BlueprintVisible)
-	struct FAthenaAnimationAI                          AIAnimationParams;                                        // 0x2350(0x02A0) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionDrunk;                                          // 0x25F0(0x0050) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionLimp;                                           // 0x2640(0x0050) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionPegLeg;                                         // 0x2690(0x0050) (BlueprintVisible)
-	unsigned char                                      ZeroLocomotionForced : 1;                                 // 0x26E0(0x0001) (BlueprintVisible)
-	unsigned char                                      ConcealedInLoadable : 1;                                  // 0x26E0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x26E1(0x0007) MISSED OFFSET
-	TArray<struct FAthenaAnimationSpawnBase>           AISpawnStruct;                                            // 0x26E8(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<struct FAthenaAnimationSkeletonFlee>        AIFleeLoadingStruct;                                      // 0x26F8(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FAthenaAnimationSkeletonFleeInGraph         AIFleePlayingStruct;                                      // 0x2708(0x0038) (BlueprintVisible)
-	struct FAthenaAnimationSkeletonScream              SkeletonScream;                                           // 0x2740(0x0008) (BlueprintVisible)
-	class UBlendSpace1D*                               PitchAnimationToPlay;                                     // 0x2748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationShopInteractionParams       ShopInteractionParams;                                    // 0x2750(0x0030) (BlueprintVisible)
-	struct FAthenaAnimationEmoteAnimgraphStructure     EmoteParams;                                              // 0x2780(0x00E0) (BlueprintVisible)
-	struct FAthenaAnimationSkeletonCurseAnimations     SkeletonCurseAnims;                                       // 0x2860(0x0028) (BlueprintVisible)
-	class UClass*                                      LoadedObjectType;                                         // 0x2888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationAIKnockback                 AIKnockbackStruct;                                        // 0x2890(0x0030) (BlueprintVisible)
-	bool                                               AIUseAlternateLocomotion;                                 // 0x28C0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x28C1(0x0007) MISSED OFFSET
-	struct FAthenaAnimationHitReactsAnimData           HitReactionsAnimationData;                                // 0x28C8(0x0040) (BlueprintVisible)
-	struct FAthenaAnimationHitReactsSelectedAnimations HitReactionsSelectedAnimationData;                        // 0x2908(0x0040) (BlueprintVisible)
-	struct FAthenaAnimationHitReactParams              HitReactionsAnimationParams;                              // 0x2948(0x002C) (BlueprintVisible)
-	unsigned char                                      EmoteIKIsOff : 1;                                         // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      InBlockingInto : 1;                                       // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      IsAI : 1;                                                 // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      IsLocallyControlled : 1;                                  // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      IsHit : 1;                                                // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      InRecover : 1;                                            // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      InWarmUp : 1;                                             // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingFullBodyAnimation : 1;                             // 0x2974(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingUpperBodyAnimation : 1;                            // 0x2975(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingRightArmOverlayAnimation : 1;                      // 0x2975(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingSpineOverlayAnimation : 1;                         // 0x2975(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingLeftArmOverlayAnimation : 1;                       // 0x2975(0x0001) (BlueprintVisible)
-	unsigned char                                      IsUsingAdditiveHandOverlayPose : 1;                       // 0x2975(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsUsingLocalIKPose : 1;                                   // 0x2975(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsRightShoulderActive : 1;                                // 0x2975(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsLeftShoulderActive : 1;                                 // 0x2975(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData05[0x2];                                       // 0x2976(0x0002) MISSED OFFSET
-	float                                              HitReactAdditiveBlendAmount;                              // 0x2978(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              WieldedItemPoseBlendTime;                                 // 0x297C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              UpperBodyPoseBlendTime;                                   // 0x2980(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              AimingAndPitchOverride;                                   // 0x2984(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              FacialOverlayBlendWeight;                                 // 0x2988(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    PitchShoulderRotation;                                    // 0x298C(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    PitchClavicleRotation;                                    // 0x2998(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RightArmPitchAlpha;                                       // 0x29A4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              LeftArmPitchAlpha;                                        // 0x29A8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SpineRotation;                                            // 0x29AC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EStunAnimationType>                    StunAnimType;                                             // 0x29B0(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x29B1(0x0003) MISSED OFFSET
-	unsigned char                                      ControllableObjectTypeHasValidTarget : 1;                 // 0x29B4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x29B5(0x0003) MISSED OFFSET
-	class UBlendSpace1D*                               HitReactItem;                                             // 0x29B8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              WorldDelta;                                               // 0x29C0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UseHandsAndFootplantingIK : 1;                            // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IKLODActive : 1;                                          // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      LODSolverActive : 1;                                      // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      ObjectPitchTargetingActive : 1;                           // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      ObjectOrIKEmoteActive : 1;                                // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      ObjectOrWheelCapstanAndNotDocking : 1;                    // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      HitReact1Active : 1;                                      // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      HitReact2Active : 1;                                      // 0x29C4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData08[0xB];                                       // 0x29C5(0x000B) MISSED OFFSET
-	struct FAthenaAnimationIKUpdateParams              IKLeftHandUpdateParams;                                   // 0x29D0(0x0040) (BlueprintVisible, BlueprintReadOnly)
-	struct FAthenaAnimationIKUpdateParams              IKRightHandUpdateParams;                                  // 0x2A10(0x0040) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      AthenaCharacterIsValid : 1;                               // 0x2A50(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x2A51(0x0003) MISSED OFFSET
-	float                                              CapstanAngularVelocityWanted;                             // 0x2A54(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      SailMovementForceNotZero : 1;                             // 0x2A58(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x2A59(0x0007) MISSED OFFSET
-	struct FAthenaAnimationPlayingFacialAnimations     PlayingFacialAnimations;                                  // 0x2A60(0x0038) (BlueprintVisible, BlueprintReadOnly)
-	struct FAthenaAnimationPlayingEquipAnimations      PlayingEquipAnimations;                                   // 0x2A98(0x0010) (BlueprintVisible, BlueprintReadOnly)
-	struct FName                                       RightHandIKSocketName;                                    // 0x2AA8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       LeftHandIKSocketName;                                     // 0x2AB0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x2F8];                                     // 0x2AB8(0x02F8) MISSED OFFSET
+	unsigned char                                      IsItemAnimPaused : 1;                                     // 0x1DA0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x1DA1(0x0003) MISSED OFFSET
+	float                                              ItemAnimPausedTimeRemaining;                              // 0x1DA4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationIKLimbStretch               IKLimbStretchParams;                                      // 0x1DA8(0x000C) (BlueprintVisible)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x1DB4(0x0004) MISSED OFFSET
+	struct FAthenaAnimationLadder                      LadderAnimationParams;                                    // 0x1DB8(0x02B0) (BlueprintVisible)
+	struct FAthenaAnimationPitchControlStates          PitchTargetingControlStates;                              // 0x2068(0x0168) (BlueprintVisible)
+	struct FAthenaAnimationObjectTargetingOptions      PitchTargetingParameters;                                 // 0x21D0(0x003C) (BlueprintVisible)
+	struct FAthenaAnimationObjectTargetingOptions      WantedPitchTargetingParameters;                           // 0x220C(0x003C) (BlueprintVisible)
+	struct FAthenaAnimationPitchAlpha                  PitchTargetingAlpha;                                      // 0x2248(0x0014) (BlueprintVisible)
+	struct FAthenaAnimationPitchShoulders              PitchShoulderParams;                                      // 0x225C(0x001C) (BlueprintVisible)
+	struct FAthenaAnimationMountedWeapon               MountedWeaponAnimationParams;                             // 0x2278(0x00F8) (BlueprintVisible)
+	struct FAthenaAnimationFootPlanting                FootPlanting;                                             // 0x2370(0x0058) (BlueprintVisible)
+	TEnumAsByte<EStairAnimations>                      StairAnimationState;                                      // 0x23C8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x23C9(0x0007) MISSED OFFSET
+	struct FAthenaAnimationSailControl                 SailControlParams;                                        // 0x23D0(0x00A0) (BlueprintVisible)
+	struct FAthenaAnimationAI                          AIAnimationParams;                                        // 0x2470(0x02A0) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionDrunk;                                          // 0x2710(0x0050) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionLimp;                                           // 0x2760(0x0050) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionPegLeg;                                         // 0x27B0(0x0050) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionHotCoals;                                       // 0x2800(0x0050) (BlueprintVisible)
+	unsigned char                                      ZeroLocomotionForced : 1;                                 // 0x2850(0x0001) (BlueprintVisible)
+	unsigned char                                      ConcealedInLoadable : 1;                                  // 0x2850(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x2851(0x0007) MISSED OFFSET
+	TArray<struct FAthenaAnimationSpawnBase>           AISpawnStruct;                                            // 0x2858(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<struct FAthenaAnimationSkeletonFlee>        AIFleeLoadingStruct;                                      // 0x2868(0x0010) (BlueprintVisible, ZeroConstructor)
+	struct FAthenaAnimationSkeletonFleeInGraph         AIFleePlayingStruct;                                      // 0x2878(0x0038) (BlueprintVisible)
+	struct FAthenaAnimationSkeletonScream              SkeletonScream;                                           // 0x28B0(0x0008) (BlueprintVisible)
+	class UBlendSpace1D*                               PitchAnimationToPlay;                                     // 0x28B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationShopInteractionParams       ShopInteractionParams;                                    // 0x28C0(0x0030) (BlueprintVisible)
+	struct FAthenaAnimationEmoteAnimgraphStructure     EmoteParams;                                              // 0x28F0(0x00E0) (BlueprintVisible)
+	struct FAthenaAnimationSkeletonCurseAnimations     SkeletonCurseAnims;                                       // 0x29D0(0x0028) (BlueprintVisible)
+	class UClass*                                      LoadedObjectType;                                         // 0x29F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationAIKnockback                 AIKnockbackStruct;                                        // 0x2A00(0x0030) (BlueprintVisible)
+	bool                                               AIUseAlternateLocomotion;                                 // 0x2A30(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x2A31(0x0007) MISSED OFFSET
+	struct FAthenaAnimationHitReactsAnimData           HitReactionsAnimationData;                                // 0x2A38(0x0040) (BlueprintVisible)
+	struct FAthenaAnimationHitReactsSelectedAnimations HitReactionsSelectedAnimationData;                        // 0x2A78(0x0040) (BlueprintVisible)
+	struct FAthenaAnimationHitReactParams              HitReactionsAnimationParams;                              // 0x2AB8(0x002C) (BlueprintVisible)
+	unsigned char                                      EmoteIKIsOff : 1;                                         // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      InBlockingInto : 1;                                       // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      IsAI : 1;                                                 // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      IsLocallyControlled : 1;                                  // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      IsHit : 1;                                                // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      InRecover : 1;                                            // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      InWarmUp : 1;                                             // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingFullBodyAnimation : 1;                             // 0x2AE4(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingUpperBodyAnimation : 1;                            // 0x2AE5(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingRightArmOverlayAnimation : 1;                      // 0x2AE5(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingSpineOverlayAnimation : 1;                         // 0x2AE5(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingLeftArmOverlayAnimation : 1;                       // 0x2AE5(0x0001) (BlueprintVisible)
+	unsigned char                                      IsUsingAdditiveHandOverlayPose : 1;                       // 0x2AE5(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsUsingLocalIKPose : 1;                                   // 0x2AE5(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsRightShoulderActive : 1;                                // 0x2AE5(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsLeftShoulderActive : 1;                                 // 0x2AE5(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData05[0x2];                                       // 0x2AE6(0x0002) MISSED OFFSET
+	float                                              HitReactAdditiveBlendAmount;                              // 0x2AE8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WieldedItemPoseBlendTime;                                 // 0x2AEC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              UpperBodyPoseBlendTime;                                   // 0x2AF0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              AimingAndPitchOverride;                                   // 0x2AF4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              FacialOverlayBlendWeight;                                 // 0x2AF8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    PitchShoulderRotation;                                    // 0x2AFC(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    PitchClavicleRotation;                                    // 0x2B08(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RightArmPitchAlpha;                                       // 0x2B14(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              LeftArmPitchAlpha;                                        // 0x2B18(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SpineRotation;                                            // 0x2B1C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EStunAnimationType>                    StunAnimType;                                             // 0x2B20(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x2B21(0x0003) MISSED OFFSET
+	unsigned char                                      ControllableObjectTypeHasValidTarget : 1;                 // 0x2B24(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x2B25(0x0003) MISSED OFFSET
+	class UBlendSpace1D*                               HitReactItem;                                             // 0x2B28(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WorldDelta;                                               // 0x2B30(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UseHandsAndFootplantingIK : 1;                            // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IKLODActive : 1;                                          // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      LODSolverActive : 1;                                      // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ObjectPitchTargetingActive : 1;                           // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ObjectOrIKEmoteActive : 1;                                // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ObjectOrWheelCapstanAndNotDocking : 1;                    // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      HitReact1Active : 1;                                      // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      HitReact2Active : 1;                                      // 0x2B34(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData08[0xB];                                       // 0x2B35(0x000B) MISSED OFFSET
+	struct FAthenaAnimationIKUpdateParams              IKLeftHandUpdateParams;                                   // 0x2B40(0x0040) (BlueprintVisible, BlueprintReadOnly)
+	struct FAthenaAnimationIKUpdateParams              IKRightHandUpdateParams;                                  // 0x2B80(0x0040) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      AthenaCharacterIsValid : 1;                               // 0x2BC0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x2BC1(0x0003) MISSED OFFSET
+	float                                              CapstanAngularVelocityWanted;                             // 0x2BC4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      SailMovementForceNotZero : 1;                             // 0x2BC8(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData10[0x7];                                       // 0x2BC9(0x0007) MISSED OFFSET
+	struct FAthenaAnimationPlayingFacialAnimations     PlayingFacialAnimations;                                  // 0x2BD0(0x0038) (BlueprintVisible, BlueprintReadOnly)
+	struct FAthenaAnimationPlayingEquipAnimations      PlayingEquipAnimations;                                   // 0x2C08(0x0010) (BlueprintVisible, BlueprintReadOnly)
+	struct FName                                       RightHandIKSocketName;                                    // 0x2C18(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       LeftHandIKSocketName;                                     // 0x2C20(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x2F8];                                     // 0x2C28(0x02F8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ThirdPersonAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ThirdPersonAnimationInstance");
 		return ptr;
 	}
 
@@ -4166,15 +4170,15 @@ public:
 
 
 // Class Athena.MockThirdPersonAnimationInstance
-// 0x0010 (0x2DC0 - 0x2DB0)
+// 0x0010 (0x2F30 - 0x2F20)
 class UMockThirdPersonAnimationInstance : public UThirdPersonAnimationInstance
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x2DB0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x2F20(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockThirdPersonAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockThirdPersonAnimationInstance");
 		return ptr;
 	}
 
@@ -4189,7 +4193,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationInstanceTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationInstanceTestFunctions");
 		return ptr;
 	}
 
@@ -4207,7 +4211,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationJumpingBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationJumpingBlueprintFunctions");
 		return ptr;
 	}
 
@@ -4230,7 +4234,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationLadderBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationLadderBlueprintFunctions");
 		return ptr;
 	}
 
@@ -4251,7 +4255,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationMountedWeaponBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationMountedWeaponBlueprintFunctions");
 		return ptr;
 	}
 
@@ -4268,7 +4272,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationWheelBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationWheelBlueprintFunctions");
 		return ptr;
 	}
 
@@ -4294,7 +4298,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationWieldedItemAnimationOverlayFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationWieldedItemAnimationOverlayFunctions");
 		return ptr;
 	}
 
@@ -4316,7 +4320,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAnimationWieldedItemFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAnimationWieldedItemFunctions");
 		return ptr;
 	}
 
@@ -4327,7 +4331,7 @@ public:
 
 
 // Class Athena.AthenaAssetSettings
-// 0x00C0 (0x00E8 - 0x0028)
+// 0x00E0 (0x0108 - 0x0028)
 class UAthenaAssetSettings : public UObject
 {
 public:
@@ -4341,12 +4345,14 @@ public:
 	TArray<struct FStringAssetReference>               PreGameLoadedAssets;                                      // 0x0098(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<struct FStringAssetReference>               PreGameLoadedClientOnlyBlueprints;                        // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<struct FStringAssetReference>               PreGameLoadedClientOnlyAssets;                            // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<class FString>                              PhysicsAuditBlueprintExceptions;                          // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FName>                               PhysicsAuditExemptedCollisionProfiles;                    // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               InGameLoadedClientOnlyBlueprints;                         // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               InGameLoadedClientOnlyAssets;                             // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<class FString>                              PhysicsAuditBlueprintExceptions;                          // 0x00E8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FName>                               PhysicsAuditExemptedCollisionProfiles;                    // 0x00F8(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAssetSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAssetSettings");
 		return ptr;
 	}
 
@@ -4354,23 +4360,23 @@ public:
 
 
 // Class Athena.AthenaCameraComponent
-// 0x0070 (0x0870 - 0x0800)
+// 0x0070 (0x0880 - 0x0810)
 class UAthenaCameraComponent : public UCameraComponent
 {
 public:
-	float                                              UnderWaterOffset;                                         // 0x0800(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SubmersionDistanceBeforeSurfacing;                        // 0x0804(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SubmersionDistanceBeforeUnderwater;                       // 0x0808(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SubmersionDistanceBeforeUnderwaterOnShip;                 // 0x080C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TAssetPtr<class UMaterialParameterCollection>      ScreenEffectsParameters;                                  // 0x0810(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               IsInsideShipHull;                                         // 0x0830(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0831(0x0003) MISSED OFFSET
-	float                                              CurrentCameraOffset;                                      // 0x0834(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x38];                                      // 0x0838(0x0038) MISSED OFFSET
+	float                                              UnderWaterOffset;                                         // 0x0810(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SubmersionDistanceBeforeSurfacing;                        // 0x0814(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SubmersionDistanceBeforeUnderwater;                       // 0x0818(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SubmersionDistanceBeforeUnderwaterOnShip;                 // 0x081C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TAssetPtr<class UMaterialParameterCollection>      ScreenEffectsParameters;                                  // 0x0820(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               IsInsideShipHull;                                         // 0x0840(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0841(0x0003) MISSED OFFSET
+	float                                              CurrentCameraOffset;                                      // 0x0844(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x38];                                      // 0x0848(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCameraComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCameraComponent");
 		return ptr;
 	}
 
@@ -4388,7 +4394,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DelayedMeshCharacterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DelayedMeshCharacterInterface");
 		return ptr;
 	}
 
@@ -4410,7 +4416,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemDesc");
 		return ptr;
 	}
 
@@ -4425,7 +4431,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemWithoutIconsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemWithoutIconsDesc");
 		return ptr;
 	}
 
@@ -4433,7 +4439,7 @@ public:
 
 
 // Class Athena.AthenaAICharacter
-// 0x0480 (0x10A0 - 0x0C20)
+// 0x0490 (0x10B0 - 0x0C20)
 class AAthenaAICharacter : public AAthenaCharacter
 {
 public:
@@ -4457,27 +4463,28 @@ public:
 	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0CD0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UPlayerCurseComponent*                       PlayerCurseComponent;                                     // 0x0CD8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UStatusEffectComponent*                      VenomStatusEffectComponent;                               // 0x0CE0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UObject*                                     KilledVfxTemplate;                                        // 0x0CE8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FItemLoadout                                AISpawnLoadout;                                           // 0x0CF0(0x0020) (Edit)
-	bool                                               KillOnFallingIntoWater;                                   // 0x0D10(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0D11(0x0007) MISSED OFFSET
-	class UClass*                                      MeleeAttackStrategyId;                                    // 0x0D18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      GunpowderKegAnimationStoreId;                             // 0x0D20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x48];                                      // 0x0D28(0x0048) MISSED OFFSET
-	class USkeletalMesh*                               AssignedMesh;                                             // 0x0D70(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UColorTexture*                               TeamColorTexture;                                         // 0x0D78(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AShip*                                       CurrentShip;                                              // 0x0D80(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x0D88(0x0008) MISSED OFFSET
-	class UClass*                                      CurrentAIStrategy;                                        // 0x0D90(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CurrentAnimationState;                                    // 0x0D98(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x278];                                     // 0x0DA0(0x0278) MISSED OFFSET
-	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x1018(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FAIEncounterSpecification                   PawnEncounterSpec;                                        // 0x1020(0x0058)
-	unsigned char                                      UnknownData06[0x28];                                      // 0x1078(0x0028) MISSED OFFSET
+	class UCapsuleComponent*                           ProjectileTraceHitVolume;                                 // 0x0CE8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UObject*                                     KilledVfxTemplate;                                        // 0x0CF0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FItemLoadout                                AISpawnLoadout;                                           // 0x0CF8(0x0020) (Edit)
+	bool                                               KillOnFallingIntoWater;                                   // 0x0D18(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0D19(0x0007) MISSED OFFSET
+	class UClass*                                      MeleeAttackStrategyId;                                    // 0x0D20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      GunpowderKegAnimationStoreId;                             // 0x0D28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x48];                                      // 0x0D30(0x0048) MISSED OFFSET
+	class USkeletalMesh*                               AssignedMesh;                                             // 0x0D78(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UColorTexture*                               TeamColorTexture;                                         // 0x0D80(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AShip*                                       CurrentShip;                                              // 0x0D88(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x8];                                       // 0x0D90(0x0008) MISSED OFFSET
+	class UClass*                                      CurrentAIStrategy;                                        // 0x0D98(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CurrentAnimationState;                                    // 0x0DA0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x278];                                     // 0x0DA8(0x0278) MISSED OFFSET
+	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x1020(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FAIEncounterSpecification                   PawnEncounterSpec;                                        // 0x1028(0x0058)
+	unsigned char                                      UnknownData06[0x30];                                      // 0x1080(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAICharacter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAICharacter");
 		return ptr;
 	}
 
@@ -4506,7 +4513,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterMock");
 		return ptr;
 	}
 
@@ -4521,7 +4528,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterMockWithProjectileHits");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterMockWithProjectileHits");
 		return ptr;
 	}
 
@@ -4533,13 +4540,13 @@ public:
 class AAthenaGhostPlayerCharacter : public AAthenaPlayerCharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x1460(0x0090) MISSED OFFSET
-	class AGhostShipTickManager*                       GhostShipTickManager;                                     // 0x14F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x14F8(0x0008) MISSED OFFSET
+	class UStreamingLocationComponent*                 StreamingLocationComponent;                               // 0x1460(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x90];                                      // 0x1468(0x0090) MISSED OFFSET
+	class AGhostShipTickManager*                       GhostShipTickManager;                                     // 0x14F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGhostPlayerCharacter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGhostPlayerCharacter");
 		return ptr;
 	}
 
@@ -4554,7 +4561,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGhostPlayerCharacterMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGhostPlayerCharacterMock");
 		return ptr;
 	}
 
@@ -4562,19 +4569,19 @@ public:
 
 
 // Class Athena.VoyageParticipantComponent
-// 0x0250 (0x0328 - 0x00D8)
+// 0x0270 (0x0348 - 0x00D8)
 class UVoyageParticipantComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0xA8];                                      // 0x00D8(0x00A8) MISSED OFFSET
 	class AActor*                                      OwningPlayer;                                             // 0x0180(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVoyageParticipantViewContainer             ViewContainer;                                            // 0x0188(0x00A0) (Net)
-	struct FVoyageParticipantViewContainer             PreviousViewContainer;                                    // 0x0228(0x00A0) (Transient)
-	unsigned char                                      UnknownData01[0x60];                                      // 0x02C8(0x0060) MISSED OFFSET
+	struct FVoyageParticipantViewContainer             ViewContainer;                                            // 0x0188(0x00B0) (Net)
+	struct FVoyageParticipantViewContainer             PreviousViewContainer;                                    // 0x0238(0x00B0) (Transient)
+	unsigned char                                      UnknownData01[0x60];                                      // 0x02E8(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageParticipantComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageParticipantComponent");
 		return ptr;
 	}
 
@@ -4584,14 +4591,16 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterMock
-// 0x0000 (0x1460 - 0x1460)
+// 0x0010 (0x1470 - 0x1460)
 class AAthenaPlayerCharacterMock : public AAthenaPlayerCharacter
 {
 public:
+	bool                                               AllowedToSwim;                                            // 0x1460(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x1461(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterMock");
 		return ptr;
 	}
 
@@ -4599,15 +4608,15 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterUnitTestMock
-// 0x00F0 (0x1550 - 0x1460)
+// 0x00F0 (0x1560 - 0x1470)
 class AAthenaPlayerCharacterUnitTestMock : public AAthenaPlayerCharacterMock
 {
 public:
-	unsigned char                                      UnknownData00[0xF0];                                      // 0x1460(0x00F0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xF0];                                      // 0x1470(0x00F0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterUnitTestMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterUnitTestMock");
 		return ptr;
 	}
 
@@ -4615,14 +4624,14 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterUnitTestMockWithTestInputHandler
-// 0x0000 (0x1550 - 0x1550)
+// 0x0000 (0x1560 - 0x1560)
 class AAthenaPlayerCharacterUnitTestMockWithTestInputHandler : public AAthenaPlayerCharacterUnitTestMock
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterUnitTestMockWithTestInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterUnitTestMockWithTestInputHandler");
 		return ptr;
 	}
 
@@ -4630,15 +4639,15 @@ public:
 
 
 // Class Athena.TestObscuredVisionActor
-// 0x0010 (0x1560 - 0x1550)
+// 0x0010 (0x1570 - 0x1560)
 class ATestObscuredVisionActor : public AAthenaPlayerCharacterUnitTestMock
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1550(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x1560(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestObscuredVisionActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestObscuredVisionActor");
 		return ptr;
 	}
 
@@ -4670,7 +4679,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterMovementUnderwater");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterMovementUnderwater");
 		return ptr;
 	}
 
@@ -4685,7 +4694,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocalDisturbanceFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocalDisturbanceFunctionLibrary");
 		return ptr;
 	}
 
@@ -4737,7 +4746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterMovementComponent");
 		return ptr;
 	}
 
@@ -4771,7 +4780,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterMovementComponent");
 		return ptr;
 	}
 
@@ -4789,7 +4798,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockAthenaPlayerCharacterMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockAthenaPlayerCharacterMovementComponent");
 		return ptr;
 	}
 
@@ -4797,14 +4806,14 @@ public:
 
 
 // Class Athena.MockAthenaPlayerCharacterWithAthenaPlayerCharacterMovementComponent
-// 0x0000 (0x1460 - 0x1460)
+// 0x0000 (0x1470 - 0x1470)
 class AMockAthenaPlayerCharacterWithAthenaPlayerCharacterMovementComponent : public AAthenaPlayerCharacterMock
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockAthenaPlayerCharacterWithAthenaPlayerCharacterMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockAthenaPlayerCharacterWithAthenaPlayerCharacterMovementComponent");
 		return ptr;
 	}
 
@@ -4812,14 +4821,16 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterWithTestInputHandler
-// 0x0000 (0x1460 - 0x1460)
+// 0x0010 (0x1470 - 0x1460)
 class AAthenaPlayerCharacterWithTestInputHandler : public AAthenaPlayerCharacter
 {
 public:
+	class UAthenaPlayerCharacterTestInputBinder*       TestInputBinder;                                          // 0x1460(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x1468(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterWithTestInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterWithTestInputHandler");
 		return ptr;
 	}
 
@@ -4834,7 +4845,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryCharacterMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryCharacterMock");
 		return ptr;
 	}
 
@@ -4849,12 +4860,12 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterDockingFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterDockingFunctions");
 		return ptr;
 	}
 
 
-	void STATIC_StartDockingCharacterWithActor(class AAthenaCharacter* Owner, class AActor* Target, float DockDuration, struct FDocker* Docker);
+	void STATIC_StartDockingCharacterWithActor(class AAthenaCharacter* Owner, class AActor* Target, float DockDuration, float DelayAfterDockDuration, struct FDocker* Docker);
 };
 
 
@@ -4869,7 +4880,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterDodgeComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterDodgeComponent");
 		return ptr;
 	}
 
@@ -4887,7 +4898,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterFunctions");
 		return ptr;
 	}
 
@@ -4906,7 +4917,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KnockbackInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KnockbackInterface");
 		return ptr;
 	}
 
@@ -4926,7 +4937,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterKnockbackComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterKnockbackComponent");
 		return ptr;
 	}
 
@@ -4945,7 +4956,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterKnockbackComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterKnockbackComponentMock");
 		return ptr;
 	}
 
@@ -4962,7 +4973,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterMovementCheatDetectionSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterMovementCheatDetectionSettings");
 		return ptr;
 	}
 
@@ -4987,7 +4998,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaAICharacterMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaAICharacterMovementComponent");
 		return ptr;
 	}
 
@@ -5008,7 +5019,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterMovementSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterMovementSettings");
 		return ptr;
 	}
 
@@ -5024,7 +5035,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterStateManagerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterStateManagerComponent");
 		return ptr;
 	}
 
@@ -5039,7 +5050,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaCharacterTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaCharacterTestFunctions");
 		return ptr;
 	}
 
@@ -5073,14 +5084,15 @@ public:
 
 
 // Class Athena.AthenaDebugMenuComponent
-// 0x0000 (0x0120 - 0x0120)
+// 0x0010 (0x0138 - 0x0128)
 class UAthenaDebugMenuComponent : public UDebugMenuComponent
 {
 public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0128(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaDebugMenuComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaDebugMenuComponent");
 		return ptr;
 	}
 
@@ -5088,17 +5100,17 @@ public:
 
 
 // Class Athena.AthenaGameEngine
-// 0x0028 (0x0B48 - 0x0B20)
+// 0x0028 (0x0B60 - 0x0B38)
 class UAthenaGameEngine : public URareGameEngine
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0B20(0x0008) MISSED OFFSET
-	class UAthenaGameEngineSettings*                   EngineSettings;                                           // 0x0B28(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0B30(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0B38(0x0008) MISSED OFFSET
+	class UAthenaGameEngineSettings*                   EngineSettings;                                           // 0x0B40(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0B48(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameEngine");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameEngine");
 		return ptr;
 	}
 
@@ -5113,7 +5125,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameEngineSettingsInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameEngineSettingsInterface");
 		return ptr;
 	}
 
@@ -5129,7 +5141,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameEngineSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameEngineSettings");
 		return ptr;
 	}
 
@@ -5145,7 +5157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameEngineSettingsUWP");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameEngineSettingsUWP");
 		return ptr;
 	}
 
@@ -5160,7 +5172,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaLocalPlayerRetrievalInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaLocalPlayerRetrievalInterface");
 		return ptr;
 	}
 
@@ -5175,7 +5187,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UserGameSettingsRetrievalInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UserGameSettingsRetrievalInterface");
 		return ptr;
 	}
 
@@ -5190,7 +5202,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TelemetryDispatcherRetrievalInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TelemetryDispatcherRetrievalInterface");
 		return ptr;
 	}
 
@@ -5213,7 +5225,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameInstance");
 		return ptr;
 	}
 
@@ -5231,7 +5243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ContainerAllowedItemsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ContainerAllowedItemsDataAsset");
 		return ptr;
 	}
 
@@ -5246,7 +5258,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReplenishableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReplenishableInterface");
 		return ptr;
 	}
 
@@ -5271,7 +5283,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HideoutServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HideoutServiceInterface");
 		return ptr;
 	}
 
@@ -5279,7 +5291,7 @@ public:
 
 
 // Class Athena.AthenaGameMode
-// 0x03C0 (0x0948 - 0x0588)
+// 0x0420 (0x09A8 - 0x0588)
 class AAthenaGameMode : public AGameMode
 {
 public:
@@ -5287,16 +5299,17 @@ public:
 	class UClass*                                      GhostShipPawnClass;                                       // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      ServerNetworkedEventsWhitelistDefinition;                 // 0x0598(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x178];                                     // 0x05A0(0x0178) MISSED OFFSET
-	struct FGhostShipCoordinator                       GhostShipCoordinator;                                     // 0x0718(0x0150)
-	struct FStorageContainerRefresher                  StorageContainerRefresher;                                // 0x0868(0x00C0)
-	class URiddleQuestDescGeneratorData*               RiddleQuestDescGeneratorData;                             // 0x0928(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RespawnTimer;                                             // 0x0930(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              StorageContainerRefreshInterval;                          // 0x0934(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0938(0x0010) MISSED OFFSET
+	TArray<class UVoiceChatComponent*>                 ChatComponents;                                           // 0x0718(0x0010) (ExportObject, ZeroConstructor)
+	struct FGhostShipCoordinator                       GhostShipCoordinator;                                     // 0x0728(0x01A0)
+	struct FStorageContainerRefresher                  StorageContainerRefresher;                                // 0x08C8(0x00C0)
+	class URiddleQuestDescGeneratorData*               RiddleQuestDescGeneratorData;                             // 0x0988(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RespawnTimer;                                             // 0x0990(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              StorageContainerRefreshInterval;                          // 0x0994(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0998(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameMode");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameMode");
 		return ptr;
 	}
 
@@ -5310,15 +5323,15 @@ public:
 
 
 // Class Athena.OnlineAthenaGameMode
-// 0x0110 (0x0A58 - 0x0948)
+// 0x0110 (0x0AB8 - 0x09A8)
 class AOnlineAthenaGameMode : public AAthenaGameMode
 {
 public:
-	unsigned char                                      UnknownData00[0x110];                                     // 0x0948(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x110];                                     // 0x09A8(0x0110) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnlineAthenaGameMode");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnlineAthenaGameMode");
 		return ptr;
 	}
 
@@ -5326,15 +5339,15 @@ public:
 
 
 // Class Athena.TestAthenaGameMode
-// 0x0008 (0x0950 - 0x0948)
+// 0x0008 (0x09B0 - 0x09A8)
 class ATestAthenaGameMode : public AAthenaGameMode
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0948(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x09A8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAthenaGameMode");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAthenaGameMode");
 		return ptr;
 	}
 
@@ -5342,14 +5355,14 @@ public:
 
 
 // Class Athena.TestAthenaGameModeWithHUD
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x09B0 - 0x09B0)
 class ATestAthenaGameModeWithHUD : public ATestAthenaGameMode
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAthenaGameModeWithHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAthenaGameModeWithHUD");
 		return ptr;
 	}
 
@@ -5357,14 +5370,14 @@ public:
 
 
 // Class Athena.TestInventoryAthenaGameMode
-// 0x0000 (0x0948 - 0x0948)
+// 0x0000 (0x09A8 - 0x09A8)
 class ATestInventoryAthenaGameMode : public AAthenaGameMode
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestInventoryAthenaGameMode");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestInventoryAthenaGameMode");
 		return ptr;
 	}
 
@@ -5372,17 +5385,17 @@ public:
 
 
 // Class Athena.AthenaGameplayDebuggingComponent
-// 0x0020 (0x07F0 - 0x07D0)
+// 0x0020 (0x0800 - 0x07E0)
 class UAthenaGameplayDebuggingComponent : public UGameplayDebuggingComponent
 {
 public:
-	TArray<class FString>                              CurrentServerActionStates;                                // 0x07D0(0x0010) (Net, ZeroConstructor)
-	class UClass*                                      CurrentAIStrategyId;                                      // 0x07E0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07E8(0x0008) MISSED OFFSET
+	TArray<class FString>                              CurrentServerActionStates;                                // 0x07E0(0x0010) (Net, ZeroConstructor)
+	class UClass*                                      CurrentAIStrategyId;                                      // 0x07F0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameplayDebuggingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameplayDebuggingComponent");
 		return ptr;
 	}
 
@@ -5397,7 +5410,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameplayDebuggingHUDComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameplayDebuggingHUDComponent");
 		return ptr;
 	}
 
@@ -5405,7 +5418,7 @@ public:
 
 
 // Class Athena.AthenaGameSettings
-// 0x0560 (0x0588 - 0x0028)
+// 0x0568 (0x0590 - 0x0028)
 class UAthenaGameSettings : public UObject
 {
 public:
@@ -5462,44 +5475,45 @@ public:
 	unsigned char                                      UnknownData02[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
 	struct FCrewServiceParams                          CrewServiceParams;                                        // 0x02D0(0x0050) (Edit, Config)
 	struct FSharedShovelParams                         SharedShovelParams;                                       // 0x0320(0x0050) (Edit, Config)
-	struct FMermaidServiceParams                       MermaidServiceParams;                                     // 0x0370(0x0064) (Edit, Config)
-	struct FMakeFriendsEmoteParams                     MakeFriendsEmoteParams;                                   // 0x03D4(0x000C) (Edit, Config)
-	struct FMermaidRespawnConfig                       MermaidRespawnConfiguration;                              // 0x03E0(0x0028) (Edit, Config)
-	struct FCharacterSocketCollisionServiceParams      CharacterSocketCollisionServiceParams;                    // 0x0408(0x0008) (Edit, Config)
-	struct FAthenaAICharacterParams                    AAthenaAICharacterParams;                                 // 0x0410(0x0008) (Edit, Config)
-	int                                                AssumedMaxFPSOnServer;                                    // 0x0418(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       WwiseObjectUnderwaterStateSwitchGroup;                    // 0x041C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       WwiseObjectUnderwaterSwitchDefaultState;                  // 0x0424(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       WwiseObjectUnderwaterSwitchUnderwaterState;               // 0x042C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       IslandTypeStateGroup;                                     // 0x0434(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       IslandTypeOutpost;                                        // 0x043C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              StormQuantisePrecision;                                   // 0x0444(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FItemProxyTTLParams                         ItemProxyTTLParams;                                       // 0x0448(0x0008) (Edit, Config, DisableEditOnInstance)
-	struct FStringAssetReference                       ShipLiveryCatalogueDataAssetLocation;                     // 0x0450(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       ShipPartsCatalogueDataAssetLocation;                      // 0x0460(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       RowboatSpawnParamsDataAssetLocation;                      // 0x0470(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       EmblemDefinitionAssetListLocation;                        // 0x0480(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       RewardDefinitionAssetListLocation;                        // 0x0490(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       RewardDistributionModelDataAssetLocation;                 // 0x04A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CatalogListDataAssetLocation;                             // 0x04B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       KrakenTentacleClassLocation;                              // 0x04C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       KrakenShipTentacleClassLocation;                          // 0x04D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       KrakenServiceParamsDataAssetLocation;                     // 0x04E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       TinySharkServiceParamsDataAssetLocation;                  // 0x04F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       AmbientTinySharkServiceParamsDataAssetLocation;           // 0x0500(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CompanyLevelDataListAssetLocation;                        // 0x0510(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CompanyDataListAssetLocation;                             // 0x0520(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       AchievementDefinitionDataAssetLocation;                   // 0x0530(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CategoryDefaults;                                         // 0x0540(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CoherentUIGTAssetRootLocation;                            // 0x0550(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CoherentUIGTPersistentDataAssetLocation;                  // 0x0560(0x0010) (Edit, ZeroConstructor, Config)
-	float                                              InteractionTimeThreshold;                                 // 0x0570(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              SinkingShipDestructionDistanceThreshold;                  // 0x0574(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FStringAssetReference                       DefaultItemsToBeDisplayedOnInventoryPanel;                // 0x0578(0x0010) (Edit, ZeroConstructor, Config)
+	struct FMermaidServiceParams                       MermaidServiceParams;                                     // 0x0370(0x0068) (Edit, Config)
+	struct FMakeFriendsEmoteParams                     MakeFriendsEmoteParams;                                   // 0x03D8(0x000C) (Edit, Config)
+	struct FMermaidRespawnConfig                       MermaidRespawnConfiguration;                              // 0x03E4(0x0028) (Edit, Config)
+	struct FCharacterSocketCollisionServiceParams      CharacterSocketCollisionServiceParams;                    // 0x040C(0x0008) (Edit, Config)
+	struct FAthenaAICharacterParams                    AAthenaAICharacterParams;                                 // 0x0414(0x0008) (Edit, Config)
+	int                                                AssumedMaxFPSOnServer;                                    // 0x041C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       WwiseObjectUnderwaterStateSwitchGroup;                    // 0x0420(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       WwiseObjectUnderwaterSwitchDefaultState;                  // 0x0428(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       WwiseObjectUnderwaterSwitchUnderwaterState;               // 0x0430(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       IslandTypeStateGroup;                                     // 0x0438(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       IslandTypeOutpost;                                        // 0x0440(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              StormQuantisePrecision;                                   // 0x0448(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FItemProxyTTLParams                         ItemProxyTTLParams;                                       // 0x044C(0x0008) (Edit, Config, DisableEditOnInstance)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0454(0x0004) MISSED OFFSET
+	struct FStringAssetReference                       ShipLiveryCatalogueDataAssetLocation;                     // 0x0458(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       ShipPartsCatalogueDataAssetLocation;                      // 0x0468(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       RowboatSpawnParamsDataAssetLocation;                      // 0x0478(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       EmblemDefinitionAssetListLocation;                        // 0x0488(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       RewardDefinitionAssetListLocation;                        // 0x0498(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       RewardDistributionModelDataAssetLocation;                 // 0x04A8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CatalogListDataAssetLocation;                             // 0x04B8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       KrakenTentacleClassLocation;                              // 0x04C8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       KrakenShipTentacleClassLocation;                          // 0x04D8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       KrakenServiceParamsDataAssetLocation;                     // 0x04E8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       TinySharkServiceParamsDataAssetLocation;                  // 0x04F8(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       AmbientTinySharkServiceParamsDataAssetLocation;           // 0x0508(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CompanyLevelDataListAssetLocation;                        // 0x0518(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CompanyDataListAssetLocation;                             // 0x0528(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       AchievementDefinitionDataAssetLocation;                   // 0x0538(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CategoryDefaults;                                         // 0x0548(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CoherentUIGTAssetRootLocation;                            // 0x0558(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CoherentUIGTPersistentDataAssetLocation;                  // 0x0568(0x0010) (Edit, ZeroConstructor, Config)
+	float                                              InteractionTimeThreshold;                                 // 0x0578(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              SinkingShipDestructionDistanceThreshold;                  // 0x057C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FStringAssetReference                       DefaultItemsToBeDisplayedOnInventoryPanel;                // 0x0580(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameSettings");
 		return ptr;
 	}
 
@@ -5516,7 +5530,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaUserSettingsDefaults");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaUserSettingsDefaults");
 		return ptr;
 	}
 
@@ -5542,7 +5556,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameUserSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameUserSettings");
 		return ptr;
 	}
 
@@ -5558,7 +5572,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameViewportClient");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameViewportClient");
 		return ptr;
 	}
 
@@ -5591,7 +5605,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaInputSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaInputSettings");
 		return ptr;
 	}
 
@@ -5607,7 +5621,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaLocalPlayer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaLocalPlayer");
 		return ptr;
 	}
 
@@ -5622,7 +5636,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaLocalPlayerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaLocalPlayerInterface");
 		return ptr;
 	}
 
@@ -5637,7 +5651,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoginOptionsProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoginOptionsProviderInterface");
 		return ptr;
 	}
 
@@ -5653,7 +5667,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaLocalPlayerManager");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaLocalPlayerManager");
 		return ptr;
 	}
 
@@ -5669,7 +5683,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaLocalPlayerReengage");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaLocalPlayerReengage");
 		return ptr;
 	}
 
@@ -5677,15 +5691,15 @@ public:
 
 
 // Class Athena.AthenaPlayerCameraManager
-// 0x0040 (0x1CD0 - 0x1C90)
+// 0x0040 (0x1D10 - 0x1CD0)
 class AAthenaPlayerCameraManager : public APlayerCameraManager
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x1C90(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x1CD0(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCameraManager");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCameraManager");
 		return ptr;
 	}
 
@@ -5703,7 +5717,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterColdDataStore");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterColdDataStore");
 		return ptr;
 	}
 
@@ -5718,7 +5732,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterTestFunctions");
 		return ptr;
 	}
 
@@ -5737,7 +5751,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableInterface");
 		return ptr;
 	}
 
@@ -5757,7 +5771,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountedWeaponInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountedWeaponInterface");
 		return ptr;
 	}
 
@@ -5776,7 +5790,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonDescAsset");
 		return ptr;
 	}
 
@@ -5813,7 +5827,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LaunchableProjectile");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LaunchableProjectile");
 		return ptr;
 	}
 
@@ -5844,7 +5858,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonProjectile");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonProjectile");
 		return ptr;
 	}
 
@@ -5859,7 +5873,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCategory");
 		return ptr;
 	}
 
@@ -5874,7 +5888,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipType");
 		return ptr;
 	}
 
@@ -5889,7 +5903,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartCustomizationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartCustomizationComponent");
 		return ptr;
 	}
 
@@ -5906,7 +5920,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReplicatedShipPartCustomizationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReplicatedShipPartCustomizationComponent");
 		return ptr;
 	}
 
@@ -5986,7 +6000,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Cannon");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Cannon");
 		return ptr;
 	}
 
@@ -6010,17 +6024,17 @@ public:
 
 
 // Class Athena.PlayerTelemetryComponent
-// 0x07A8 (0x0880 - 0x00D8)
+// 0x07F8 (0x08D0 - 0x00D8)
 class UPlayerTelemetryComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x38];                                      // 0x00D8(0x0038) MISSED OFFSET
 	float                                              HeartbeatInterval;                                        // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x76C];                                     // 0x0114(0x076C) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x7BC];                                     // 0x0114(0x07BC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerTelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerTelemetryComponent");
 		return ptr;
 	}
 
@@ -6035,7 +6049,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EncounterListenerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EncounterListenerInterface");
 		return ptr;
 	}
 
@@ -6050,7 +6064,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HUDProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HUDProviderInterface");
 		return ptr;
 	}
 
@@ -6058,7 +6072,7 @@ public:
 
 
 // Class Athena.AthenaPlayerController
-// 0x0990 (0x1110 - 0x0780)
+// 0x09A8 (0x1128 - 0x0780)
 class AAthenaPlayerController : public ATestablePlayerController
 {
 public:
@@ -6086,14 +6100,14 @@ public:
 	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0888(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     CinematicCameraControllerLocation;                        // 0x0890(0x000C) (Net, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    CinematicCameraControllerRotation;                        // 0x089C(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x800];                                     // 0x08A8(0x0800) MISSED OFFSET
-	struct FGuid                                       ClientSessionId;                                          // 0x10A8(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x10B8(0x0028) (Net)
-	unsigned char                                      UnknownData02[0x30];                                      // 0x10E0(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x818];                                     // 0x08A8(0x0818) MISSED OFFSET
+	struct FGuid                                       ClientSessionId;                                          // 0x10C0(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x10D0(0x0028) (Net)
+	unsigned char                                      UnknownData02[0x30];                                      // 0x10F8(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerController");
 		return ptr;
 	}
 
@@ -6109,18 +6123,18 @@ public:
 
 
 // Class Athena.OnlineAthenaPlayerController
-// 0x0040 (0x1150 - 0x1110)
+// 0x0040 (0x1168 - 0x1128)
 class AOnlineAthenaPlayerController : public AAthenaPlayerController
 {
 public:
-	struct FIdleTimeTracker                            IdleTimeTracker;                                          // 0x1110(0x0038) (Edit)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x1148(0x0001) MISSED OFFSET
-	bool                                               IdleDisconnectEnabled;                                    // 0x1149(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x114A(0x0006) MISSED OFFSET
+	struct FIdleTimeTracker                            IdleTimeTracker;                                          // 0x1128(0x0038) (Edit)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x1160(0x0001) MISSED OFFSET
+	bool                                               IdleDisconnectEnabled;                                    // 0x1161(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x1162(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnlineAthenaPlayerController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnlineAthenaPlayerController");
 		return ptr;
 	}
 
@@ -6130,14 +6144,14 @@ public:
 
 
 // Class Athena.TestOnlineAthenaPlayerControllerNoEvents
-// 0x0000 (0x1150 - 0x1150)
+// 0x0000 (0x1168 - 0x1168)
 class ATestOnlineAthenaPlayerControllerNoEvents : public AOnlineAthenaPlayerController
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestOnlineAthenaPlayerControllerNoEvents");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestOnlineAthenaPlayerControllerNoEvents");
 		return ptr;
 	}
 
@@ -6145,16 +6159,16 @@ public:
 
 
 // Class Athena.TestAthenaPlayerController
-// 0x0018 (0x1128 - 0x1110)
+// 0x0018 (0x1140 - 0x1128)
 class ATestAthenaPlayerController : public AAthenaPlayerController
 {
 public:
-	class UForceFeedbackEffect*                        LastReceivedForceFeedbackEffect;                          // 0x1110(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1118(0x0010) MISSED OFFSET
+	class UForceFeedbackEffect*                        LastReceivedForceFeedbackEffect;                          // 0x1128(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x1130(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAthenaPlayerController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAthenaPlayerController");
 		return ptr;
 	}
 
@@ -6174,7 +6188,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerRelevancyServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerRelevancyServiceInterface");
 		return ptr;
 	}
 
@@ -6182,16 +6196,16 @@ public:
 
 
 // Class Athena.TestPlayerRelevancyAthenaPlayerController
-// 0x0028 (0x1138 - 0x1110)
+// 0x0028 (0x1150 - 0x1128)
 class ATestPlayerRelevancyAthenaPlayerController : public AAthenaPlayerController
 {
 public:
-	struct FScriptMulticastDelegate                    OnQueryRelevancyCallback;                                 // 0x1110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x1120(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnQueryRelevancyCallback;                                 // 0x1128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x1138(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestPlayerRelevancyAthenaPlayerController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestPlayerRelevancyAthenaPlayerController");
 		return ptr;
 	}
 
@@ -6208,7 +6222,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerControllerTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerControllerTestFunctions");
 		return ptr;
 	}
 
@@ -6227,7 +6241,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAthenaPlayerState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAthenaPlayerState");
 		return ptr;
 	}
 
@@ -6245,7 +6259,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaServerIdentityManager");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaServerIdentityManager");
 		return ptr;
 	}
 
@@ -6283,7 +6297,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaSpringArmComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaSpringArmComponentParams");
 		return ptr;
 	}
 
@@ -6291,15 +6305,15 @@ public:
 
 
 // Class Athena.AthenaSpringArmComponent
-// 0x0070 (0x03A0 - 0x0330)
+// 0x0070 (0x03B0 - 0x0340)
 class UAthenaSpringArmComponent : public USpringArmComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0330(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0340(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaSpringArmComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaSpringArmComponent");
 		return ptr;
 	}
 
@@ -6307,16 +6321,17 @@ public:
 
 
 // Class Athena.AthenaStreamedLevelDataAsset
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UAthenaStreamedLevelDataAsset : public UDataAsset
 {
 public:
 	TArray<struct FStringAssetReference>               LevelsToLoad;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class FString                                      PackagePath;                                              // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       StreamingLevelFeature;                                    // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaStreamedLevelDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaStreamedLevelDataAsset");
 		return ptr;
 	}
 
@@ -6331,7 +6346,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaStreamedLevelServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaStreamedLevelServiceInterface");
 		return ptr;
 	}
 
@@ -6348,7 +6363,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaStreamedLevelService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaStreamedLevelService");
 		return ptr;
 	}
 
@@ -6363,7 +6378,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ObscuringItemInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ObscuringItemInterface");
 		return ptr;
 	}
 
@@ -6378,7 +6393,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletalMeshWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletalMeshWieldableItem");
 		return ptr;
 	}
 
@@ -6401,7 +6416,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMap");
 		return ptr;
 	}
 
@@ -6427,7 +6442,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaTextRender");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaTextRender");
 		return ptr;
 	}
 
@@ -6445,7 +6460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SeaRockDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SeaRockDataAsset");
 		return ptr;
 	}
 
@@ -6460,7 +6475,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldSafeRegion");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldSafeRegion");
 		return ptr;
 	}
 
@@ -6468,7 +6483,7 @@ public:
 
 
 // Class Athena.AthenaWorldSettings
-// 0x0098 (0x06D0 - 0x0638)
+// 0x00A0 (0x06D8 - 0x0638)
 class AAthenaWorldSettings : public AWorldSettings
 {
 public:
@@ -6487,13 +6502,14 @@ public:
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0682(0x0006) MISSED OFFSET
 	struct FAIShipWorldSettings                        AIShipParams;                                             // 0x0688(0x0018) (Edit, BlueprintVisible)
 	class UPrebakedIslandAsset*                        PrebakedIslandData;                                       // 0x06A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStormServiceAsset*                          StormServiceSettings;                                     // 0x06A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FWorldSafeZone>                      SafeZones;                                                // 0x06B0(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x06C0(0x0010) MISSED OFFSET
+	class UGameEventSchedulerSettingsAsset*            GameEventSchedulerSettings;                               // 0x06A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStormServiceAsset*                          StormServiceSettings;                                     // 0x06B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FWorldSafeZone>                      SafeZones;                                                // 0x06B8(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x06C8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaWorldSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaWorldSettings");
 		return ptr;
 	}
 
@@ -6508,7 +6524,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AtlasSlotRenderer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AtlasSlotRenderer");
 		return ptr;
 	}
 
@@ -6523,7 +6539,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AtmosphericPressureZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AtmosphericPressureZoneInterface");
 		return ptr;
 	}
 
@@ -6540,7 +6556,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AtmosphericPressureServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AtmosphericPressureServiceInterface");
 		return ptr;
 	}
 
@@ -6554,17 +6570,17 @@ public:
 
 
 // Class Athena.AtmosphericPressureZoneComponent
-// 0x0020 (0x02C0 - 0x02A0)
+// 0x0020 (0x02D0 - 0x02B0)
 class UAtmosphericPressureZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FAtmosphericPressureZoneParameters          PressureZoneParameters;                                   // 0x02A8(0x0014) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x02BC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FAtmosphericPressureZoneParameters          PressureZoneParameters;                                   // 0x02B8(0x0014) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AtmosphericPressureZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AtmosphericPressureZoneComponent");
 		return ptr;
 	}
 
@@ -6581,7 +6597,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AtmosphericPressureService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AtmosphericPressureService");
 		return ptr;
 	}
 
@@ -6589,17 +6605,17 @@ public:
 
 
 // Class Athena.BlendedAtmosphericPressureZoneComponent
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x02F0 - 0x02D0)
 class UBlendedAtmosphericPressureZoneComponent : public UAtmosphericPressureZoneComponent
 {
 public:
-	class UCurveFloat*                                 WeightFadeCurveNormalised;                                // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 RadiusFadeCurveNormalised;                                // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x02D0(0x0010) MISSED OFFSET
+	class UCurveFloat*                                 WeightFadeCurveNormalised;                                // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 RadiusFadeCurveNormalised;                                // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x02E0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BlendedAtmosphericPressureZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BlendedAtmosphericPressureZoneComponent");
 		return ptr;
 	}
 
@@ -6614,7 +6630,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AttackAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AttackAIStrategyId");
 		return ptr;
 	}
 
@@ -6629,7 +6645,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AudioEmitterInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AudioEmitterInterface");
 		return ptr;
 	}
 
@@ -6646,7 +6662,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AudioEmitterPoolSourceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AudioEmitterPoolSourceInterface");
 		return ptr;
 	}
 
@@ -6663,7 +6679,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AudioUtilities");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AudioUtilities");
 		return ptr;
 	}
 
@@ -6689,7 +6705,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BakedDecalComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BakedDecalComponent");
 		return ptr;
 	}
 
@@ -6712,7 +6728,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BallastStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BallastStatus");
 		return ptr;
 	}
 
@@ -6730,7 +6746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BarrelsOfPlentyDebugSpawnLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BarrelsOfPlentyDebugSpawnLocation");
 		return ptr;
 	}
 
@@ -6745,7 +6761,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseAnchorDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseAnchorDynamicsDesc");
 		return ptr;
 	}
 
@@ -6761,7 +6777,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StandardAnchorDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StandardAnchorDynamicsDesc");
 		return ptr;
 	}
 
@@ -6777,7 +6793,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAnchorDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAnchorDynamicsDesc");
 		return ptr;
 	}
 
@@ -6792,7 +6808,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseHullDragDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseHullDragDynamicsDesc");
 		return ptr;
 	}
 
@@ -6810,7 +6826,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StandardHullDragDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StandardHullDragDynamicsDesc");
 		return ptr;
 	}
 
@@ -6826,7 +6842,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestHullDragDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestHullDragDynamicsDesc");
 		return ptr;
 	}
 
@@ -6841,7 +6857,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseRudderDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseRudderDynamicsDesc");
 		return ptr;
 	}
 
@@ -6858,7 +6874,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StandardRudderDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StandardRudderDynamicsDesc");
 		return ptr;
 	}
 
@@ -6874,7 +6890,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestRudderDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestRudderDynamicsDesc");
 		return ptr;
 	}
 
@@ -6889,7 +6905,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseSailDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseSailDynamicsDesc");
 		return ptr;
 	}
 
@@ -6907,7 +6923,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StandardSailDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StandardSailDynamicsDesc");
 		return ptr;
 	}
 
@@ -6923,7 +6939,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestSailDynamicsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestSailDynamicsDesc");
 		return ptr;
 	}
 
@@ -6938,7 +6954,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseTooltipDescriptorId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseTooltipDescriptorId");
 		return ptr;
 	}
 
@@ -6953,7 +6969,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TooltipDescriptorId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TooltipDescriptorId");
 		return ptr;
 	}
 
@@ -6961,18 +6977,18 @@ public:
 
 
 // Class Athena.BlendedPostProcessingZoneComponentBase
-// 0x00C0 (0x08B0 - 0x07F0)
+// 0x00C0 (0x08C0 - 0x0800)
 class UBlendedPostProcessingZoneComponentBase : public UPostProcessComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F0(0x0010) MISSED OFFSET
-	class UCurveFloat*                                 FadeCurveNormalised;                                      // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BlendDistance;                                            // 0x0808(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA4];                                      // 0x080C(0x00A4) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0800(0x0010) MISSED OFFSET
+	class UCurveFloat*                                 FadeCurveNormalised;                                      // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BlendDistance;                                            // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA4];                                      // 0x081C(0x00A4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BlendedPostProcessingZoneComponentBase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BlendedPostProcessingZoneComponentBase");
 		return ptr;
 	}
 
@@ -6980,14 +6996,14 @@ public:
 
 
 // Class Athena.BlendedPostProcessingRainZoneComponent
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08C0 - 0x08C0)
 class UBlendedPostProcessingRainZoneComponent : public UBlendedPostProcessingZoneComponentBase
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BlendedPostProcessingRainZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BlendedPostProcessingRainZoneComponent");
 		return ptr;
 	}
 
@@ -7006,7 +7022,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BodyLightControllerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BodyLightControllerComponent");
 		return ptr;
 	}
 
@@ -7024,7 +7040,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BoilingStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BoilingStatus");
 		return ptr;
 	}
 
@@ -7040,7 +7056,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BoobyTrapSpawnerDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BoobyTrapSpawnerDataAsset");
 		return ptr;
 	}
 
@@ -7055,7 +7071,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BoogieStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BoogieStatus");
 		return ptr;
 	}
 
@@ -7070,7 +7086,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SpawnableItemMetadataInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SpawnableItemMetadataInterface");
 		return ptr;
 	}
 
@@ -7085,7 +7101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NonStorableItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NonStorableItemInfo");
 		return ptr;
 	}
 
@@ -7117,7 +7133,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BootyItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BootyItemInfo");
 		return ptr;
 	}
 
@@ -7133,7 +7149,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BootyItemInfoDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BootyItemInfoDataAsset");
 		return ptr;
 	}
 
@@ -7154,7 +7170,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BountyMapLayout");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BountyMapLayout");
 		return ptr;
 	}
 
@@ -7170,7 +7186,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuestBootyItemPopUpAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuestBootyItemPopUpAsset");
 		return ptr;
 	}
 
@@ -7192,7 +7208,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BountyQuestData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BountyQuestData");
 		return ptr;
 	}
 
@@ -7225,7 +7241,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BountyQuestDescData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BountyQuestDescData");
 		return ptr;
 	}
 
@@ -7248,7 +7264,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BowSplashContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BowSplashContainer");
 		return ptr;
 	}
 
@@ -7263,7 +7279,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BoxedRpcDispatcherInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BoxedRpcDispatcherInterface");
 		return ptr;
 	}
 
@@ -7279,7 +7295,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BoxedRpcDispatcherComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BoxedRpcDispatcherComponent");
 		return ptr;
 	}
 
@@ -7300,7 +7316,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTDecorator_ActorWieldedItemClass");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTDecorator_ActorWieldedItemClass");
 		return ptr;
 	}
 
@@ -7315,7 +7331,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTDecorator_CanBlock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTDecorator_CanBlock");
 		return ptr;
 	}
 
@@ -7331,7 +7347,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTDecorator_CanRepair");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTDecorator_CanRepair");
 		return ptr;
 	}
 
@@ -7346,7 +7362,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTDecorator_ShouldCurrentActionStatePauseBehavior");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTDecorator_ShouldCurrentActionStatePauseBehavior");
 		return ptr;
 	}
 
@@ -7362,7 +7378,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTService_DetermineEngageTarget");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTService_DetermineEngageTarget");
 		return ptr;
 	}
 
@@ -7381,7 +7397,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTService_DetermineRecoveryMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTService_DetermineRecoveryMethod");
 		return ptr;
 	}
 
@@ -7401,7 +7417,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTService_ObserveTargetMeleeAttacks");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTService_ObserveTargetMeleeAttacks");
 		return ptr;
 	}
 
@@ -7422,7 +7438,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTService_ObserveTargetReceivedDamage");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTService_ObserveTargetReceivedDamage");
 		return ptr;
 	}
 
@@ -7441,7 +7457,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_AthenaRunEQSQuery");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_AthenaRunEQSQuery");
 		return ptr;
 	}
 
@@ -7457,7 +7473,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_AthenaRunEQSQueryFromBlackboard");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_AthenaRunEQSQueryFromBlackboard");
 		return ptr;
 	}
 
@@ -7472,7 +7488,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_DoesEQSQuerySucceed");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_DoesEQSQuerySucceed");
 		return ptr;
 	}
 
@@ -7487,7 +7503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_CharacterRotateToFaceBBEntry");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_CharacterRotateToFaceBBEntry");
 		return ptr;
 	}
 
@@ -7503,7 +7519,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_SetRecoveryMethod");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_SetRecoveryMethod");
 		return ptr;
 	}
 
@@ -7520,7 +7536,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_WaitForWieldBase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_WaitForWieldBase");
 		return ptr;
 	}
 
@@ -7536,7 +7552,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_SpawnAndWieldItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_SpawnAndWieldItem");
 		return ptr;
 	}
 
@@ -7552,7 +7568,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_SpawnItemForAIInteractable");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_SpawnItemForAIInteractable");
 		return ptr;
 	}
 
@@ -7571,7 +7587,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_WieldItemByCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_WieldItemByCategory");
 		return ptr;
 	}
 
@@ -7588,7 +7604,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BTTask_WaitWeighted");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BTTask_WaitWeighted");
 		return ptr;
 	}
 
@@ -7603,7 +7619,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BuoyancyInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BuoyancyInterface");
 		return ptr;
 	}
 
@@ -7628,7 +7644,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BuoyancyComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BuoyancyComponent");
 		return ptr;
 	}
 
@@ -7646,16 +7662,16 @@ public:
 
 
 // Class Athena.ClusterStaticMeshComponent
-// 0x0010 (0x0630 - 0x0620)
+// 0x0010 (0x0640 - 0x0630)
 class UClusterStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	class UClass*                                      ItemToSpawn;                                              // 0x0620(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0628(0x0008) MISSED OFFSET
+	class UClass*                                      ItemToSpawn;                                              // 0x0630(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClusterStaticMeshComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClusterStaticMeshComponent");
 		return ptr;
 	}
 
@@ -7674,7 +7690,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Cluster");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Cluster");
 		return ptr;
 	}
 
@@ -7690,7 +7706,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClusterDescription");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClusterDescription");
 		return ptr;
 	}
 
@@ -7705,7 +7721,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ObjectMeshInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ObjectMeshInterface");
 		return ptr;
 	}
 
@@ -7720,7 +7736,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PickupableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PickupableInterface");
 		return ptr;
 	}
 
@@ -7741,7 +7757,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PickupableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PickupableObject");
 		return ptr;
 	}
 
@@ -7775,7 +7791,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemProxy");
 		return ptr;
 	}
 
@@ -7799,7 +7815,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipSpawnLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipSpawnLocation");
 		return ptr;
 	}
 
@@ -7815,7 +7831,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SeaId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SeaId");
 		return ptr;
 	}
 
@@ -7831,7 +7847,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrebakedIslandAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrebakedIslandAsset");
 		return ptr;
 	}
 
@@ -7846,7 +7862,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandServiceInterface");
 		return ptr;
 	}
 
@@ -7878,7 +7894,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandData");
 		return ptr;
 	}
 
@@ -7899,7 +7915,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemSpawnDistributionAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemSpawnDistributionAsset");
 		return ptr;
 	}
 
@@ -7907,31 +7923,31 @@ public:
 
 
 // Class Athena.ItemSpawnComponent
-// 0x0130 (0x03D0 - 0x02A0)
+// 0x0130 (0x03E0 - 0x02B0)
 class UItemSpawnComponent : public USceneComponent
 {
 public:
-	struct FItemSpawnParams                            SpawnParams;                                              // 0x02A0(0x0028) (Edit)
-	class UItemSpawnDistributionAsset*                 ReferencedSpawnDistribution;                              // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FItemSpawnDistribution                      SpawnDistribution;                                        // 0x02D0(0x0010) (Edit)
-	TArray<struct FItemSpawnTransform>                 SpawnTransforms;                                          // 0x02E0(0x0010) (Edit, ZeroConstructor)
-	struct FName                                       FeatureToggle;                                            // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ESpawnedItemSource>                    SpawnSource;                                              // 0x02F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x02F9(0x0003) MISSED OFFSET
-	float                                              SpawnRate;                                                // 0x02FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               DestroyProxiesOnEndPlay;                                  // 0x0300(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               SpawnWithPhysicsEnabled;                                  // 0x0301(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0302(0x0002) MISSED OFFSET
-	float                                              DebugVisualiserScale;                                     // 0x0304(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 DebugVisualiserMesh;                                      // 0x0308(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0310(0x0010) MISSED OFFSET
-	TArray<class ACluster*>                            Clusters;                                                 // 0x0320(0x0010) (ZeroConstructor, Transient)
-	int                                                NumberOfInteractablesToSpawn;                             // 0x0330(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x9C];                                      // 0x0334(0x009C) MISSED OFFSET
+	struct FItemSpawnParams                            SpawnParams;                                              // 0x02B0(0x0028) (Edit)
+	class UItemSpawnDistributionAsset*                 ReferencedSpawnDistribution;                              // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FItemSpawnDistribution                      SpawnDistribution;                                        // 0x02E0(0x0010) (Edit)
+	TArray<struct FItemSpawnTransform>                 SpawnTransforms;                                          // 0x02F0(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       FeatureToggle;                                            // 0x0300(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESpawnedItemSource>                    SpawnSource;                                              // 0x0308(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0309(0x0003) MISSED OFFSET
+	float                                              SpawnRate;                                                // 0x030C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               DestroyProxiesOnEndPlay;                                  // 0x0310(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SpawnWithPhysicsEnabled;                                  // 0x0311(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0312(0x0002) MISSED OFFSET
+	float                                              DebugVisualiserScale;                                     // 0x0314(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 DebugVisualiserMesh;                                      // 0x0318(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0320(0x0010) MISSED OFFSET
+	TArray<class ACluster*>                            Clusters;                                                 // 0x0330(0x0010) (ZeroConstructor, Transient)
+	int                                                NumberOfInteractablesToSpawn;                             // 0x0340(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x9C];                                      // 0x0344(0x009C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemSpawnComponent");
 		return ptr;
 	}
 
@@ -7946,7 +7962,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OneShotInteractableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OneShotInteractableInterface");
 		return ptr;
 	}
 
@@ -7966,7 +7982,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableObject");
 		return ptr;
 	}
 
@@ -7988,7 +8004,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StorageContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StorageContainer");
 		return ptr;
 	}
 
@@ -8014,7 +8030,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BuoyantStorageContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BuoyantStorageContainer");
 		return ptr;
 	}
 
@@ -8032,7 +8048,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BuoyantObjectSpawnParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BuoyantObjectSpawnParamsDataAsset");
 		return ptr;
 	}
 
@@ -8048,7 +8064,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BuoyantObjectSpawnProfileDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BuoyantObjectSpawnProfileDataAsset");
 		return ptr;
 	}
 
@@ -8072,7 +8088,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BurpComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BurpComponent");
 		return ptr;
 	}
 
@@ -8091,7 +8107,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BurpTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BurpTestActor");
 		return ptr;
 	}
 
@@ -8102,7 +8118,7 @@ public:
 	void QuickSelectItemOfType(TEnumAsByte<EItemType> ItemType, int TypedItemIndex);
 	void QuickSelectItemOfCategory(class UClass* Category, int IndexIntoCategory);
 	void QuickSelectItem(int ItemIndex);
-	bool PickUpItem(class AItemInfo* Item, bool AndWield);
+	bool PickUpItem(class AItemInfo* Item, bool AndWield, bool ShouldNotifyClients);
 	int GetNumberOfItemsOfItemCategory(class UClass* ItemSlot);
 	int GetCurrentItemIndex();
 	void CycleItemUp();
@@ -8123,7 +8139,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CalmAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CalmAIStrategyId");
 		return ptr;
 	}
 
@@ -8138,7 +8154,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CameraFadeManagerTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CameraFadeManagerTestFunctions");
 		return ptr;
 	}
 
@@ -8158,7 +8174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CameraPitchModifier");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CameraPitchModifier");
 		return ptr;
 	}
 
@@ -8174,7 +8190,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CameraRollModifier");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CameraRollModifier");
 		return ptr;
 	}
 
@@ -8210,7 +8226,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Campfire");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Campfire");
 		return ptr;
 	}
 
@@ -8227,7 +8243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonAIInteractableType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonAIInteractableType");
 		return ptr;
 	}
 
@@ -8242,7 +8258,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonAnimInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonAnimInterface");
 		return ptr;
 	}
 
@@ -8265,7 +8281,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonAnimInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonAnimInstance");
 		return ptr;
 	}
 
@@ -8282,7 +8298,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonPitchRateAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonPitchRateAnalogInputId");
 		return ptr;
 	}
 
@@ -8297,7 +8313,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonRotationStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonRotationStatus");
 		return ptr;
 	}
 
@@ -8312,7 +8328,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonYawRateAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonYawRateAnalogInputId");
 		return ptr;
 	}
 
@@ -8329,7 +8345,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IterativeCanvasRenderTarget2D");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IterativeCanvasRenderTarget2D");
 		return ptr;
 	}
 
@@ -8393,7 +8409,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CanvasWorldMapComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CanvasWorldMapComponent");
 		return ptr;
 	}
 
@@ -8410,7 +8426,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanInterface");
 		return ptr;
 	}
 
@@ -8433,7 +8449,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanDescAsset");
 		return ptr;
 	}
 
@@ -8468,7 +8484,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Capstan");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Capstan");
 		return ptr;
 	}
 
@@ -8487,7 +8503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanArmInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanArmInterface");
 		return ptr;
 	}
 
@@ -8510,7 +8526,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanEventDispatcherMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanEventDispatcherMock");
 		return ptr;
 	}
 
@@ -8525,7 +8541,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanTestFunctions");
 		return ptr;
 	}
 
@@ -8546,7 +8562,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CaptainRammingAnimationStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CaptainRammingAnimationStateId");
 		return ptr;
 	}
 
@@ -8561,7 +8577,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CaptainTauntAnimationStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CaptainTauntAnimationStateId");
 		return ptr;
 	}
 
@@ -8576,7 +8592,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapturedByKrakenActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapturedByKrakenActionStateId");
 		return ptr;
 	}
 
@@ -8594,7 +8610,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunCrateInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunCrateInterface");
 		return ptr;
 	}
 
@@ -8602,7 +8618,7 @@ public:
 
 
 // Class Athena.CargoRunCrateComponent
-// 0x0060 (0x0138 - 0x00D8)
+// 0x0068 (0x0140 - 0x00D8)
 class UCargoRunCrateComponent : public UActorComponent
 {
 public:
@@ -8611,11 +8627,12 @@ public:
 	class UCargoRunCrateCustomData*                    CargoRunCrateCustomData;                                  // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FCargoRunItemDropOffData                    DropOffData;                                              // 0x00F0(0x0018) (Net)
 	TWeakObjectPtr<class UNPCDialogComponent>          NPCDialogComponent;                                       // 0x0108(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x0110(0x0028) MISSED OFFSET
+	TEnumAsByte<EHasBeenWieldedState>                  WieldedState;                                             // 0x0110(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2F];                                      // 0x0111(0x002F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunCrateComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunCrateComponent");
 		return ptr;
 	}
 
@@ -8625,17 +8642,19 @@ public:
 
 
 // Class Athena.CargoRunCrateCustomData
-// 0x0030 (0x0058 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UCargoRunCrateCustomData : public UDataAsset
 {
 public:
 	TArray<struct FText>                               CrateNames;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FRewardId>                           OnTimeRewards;                                            // 0x0038(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FRewardId>                           LateRewards;                                              // 0x0048(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       StatsSubString;                                           // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FPlayerStat>                         StatsToFireUponPerfectOnTimeHandIn;                       // 0x0060(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunCrateCustomData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunCrateCustomData");
 		return ptr;
 	}
 
@@ -8658,7 +8677,44 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunCrateData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunCrateData");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.CargoRunMapLayout
+// 0x0080 (0x00A8 - 0x0028)
+class UCargoRunMapLayout : public UDataAsset
+{
+public:
+	struct FTreasureMapWidgetText                      NPCNameDescription;                                       // 0x0028(0x0020) (Edit, BlueprintVisible)
+	struct FTreasureMapWidgetText                      IslandNameDescription;                                    // 0x0048(0x0020) (Edit, BlueprintVisible)
+	struct FTreasureMapWidgetText                      NumOfItemsDescription;                                    // 0x0068(0x0020) (Edit, BlueprintVisible)
+	TArray<struct FTreasureMapWidgetLocalisedText>     GeneralText;                                              // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FTreasureMapWidgetTexture>           Images;                                                   // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunMapLayout");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.CargoRunMapData
+// 0x0018 (0x0040 - 0x0028)
+class UCargoRunMapData : public UDataAsset
+{
+public:
+	TArray<class UClass*>                              Companies;                                                // 0x0028(0x0010) (Edit, ZeroConstructor)
+	class UCargoRunMapLayout*                          Layout;                                                   // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunMapData");
 		return ptr;
 	}
 
@@ -8673,7 +8729,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunParticipantInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunParticipantInterface");
 		return ptr;
 	}
 
@@ -8681,16 +8737,17 @@ public:
 
 
 // Class Athena.CargoRunParticipantComponent
-// 0x0060 (0x0138 - 0x00D8)
+// 0x00E0 (0x01B8 - 0x00D8)
 class UCargoRunParticipantComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00D8(0x0050) MISSED OFFSET
-	TArray<struct FGuid>                               CrewsWithPickUpData;                                      // 0x0128(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x98];                                      // 0x00D8(0x0098) MISSED OFFSET
+	TArray<struct FGuid>                               CrewsWithPickUpData;                                      // 0x0170(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x38];                                      // 0x0180(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunParticipantComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunParticipantComponent");
 		return ptr;
 	}
 
@@ -8698,16 +8755,18 @@ public:
 
 
 // Class Athena.CargoRunQuestData
-// 0x0018 (0x0040 - 0x0028)
+// 0x0030 (0x0058 - 0x0028)
 class UCargoRunQuestData : public UDataAsset
 {
 public:
 	TArray<class UClass*>                              Crates;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor)
 	class UCargoRunCrateData*                          DefaultCargoRunCrateData;                                 // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCargoRunMapData*                            DefaultCargoRunMapData;                                   // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FText>                               CargoItemsDeliveryNotePluralisation;                      // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunQuestData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunQuestData");
 		return ptr;
 	}
 
@@ -8723,7 +8782,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunQuestRandomRequiredItemsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunQuestRandomRequiredItemsDataAsset");
 		return ptr;
 	}
 
@@ -8743,7 +8802,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingCategory");
 		return ptr;
 	}
 
@@ -8758,7 +8817,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InvalidClothingCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InvalidClothingCategory");
 		return ptr;
 	}
 
@@ -8774,7 +8833,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingDesc");
 		return ptr;
 	}
 
@@ -8789,7 +8848,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CarouselPirateDescConversion");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CarouselPirateDescConversion");
 		return ptr;
 	}
 
@@ -8807,7 +8866,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CarouselPirateGenerator");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CarouselPirateGenerator");
 		return ptr;
 	}
 
@@ -8827,7 +8886,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CarouselPirateGeneratorParamsAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CarouselPirateGeneratorParamsAsset");
 		return ptr;
 	}
 
@@ -8845,7 +8904,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CatalogOfferDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CatalogOfferDataAsset");
 		return ptr;
 	}
 
@@ -8866,7 +8925,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CatalogDiscountDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CatalogDiscountDataAsset");
 		return ptr;
 	}
 
@@ -8887,7 +8946,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CatalogDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CatalogDataAsset");
 		return ptr;
 	}
 
@@ -8903,7 +8962,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CatalogListDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CatalogListDataAsset");
 		return ptr;
 	}
 
@@ -8918,7 +8977,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TitleCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TitleCategory");
 		return ptr;
 	}
 
@@ -8933,7 +8992,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BootyItemDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BootyItemDesc");
 		return ptr;
 	}
 
@@ -8949,7 +9008,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateItemInfo");
 		return ptr;
 	}
 
@@ -8964,7 +9023,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountpointInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountpointInterface");
 		return ptr;
 	}
 
@@ -8986,7 +9045,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FloatingItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FloatingItemProxy");
 		return ptr;
 	}
 
@@ -9004,7 +9063,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BootyProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BootyProxy");
 		return ptr;
 	}
 
@@ -9022,7 +9081,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseMerchantCrateItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseMerchantCrateItemProxy");
 		return ptr;
 	}
 
@@ -9037,7 +9096,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateItemProxy");
 		return ptr;
 	}
 
@@ -9052,7 +9111,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaticMerchantCrateItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaticMerchantCrateItemProxy");
 		return ptr;
 	}
 
@@ -9067,7 +9126,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaticMeshWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaticMeshWieldableItem");
 		return ptr;
 	}
 
@@ -9083,7 +9142,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrate");
 		return ptr;
 	}
 
@@ -9100,7 +9159,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaticMerchantCrate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaticMerchantCrate");
 		return ptr;
 	}
 
@@ -9115,7 +9174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockMerchantCrateItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockMerchantCrateItemProxy");
 		return ptr;
 	}
 
@@ -9130,7 +9189,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateCategoryMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateCategoryMock");
 		return ptr;
 	}
 
@@ -9146,7 +9205,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateItemInfoMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateItemInfoMock");
 		return ptr;
 	}
 
@@ -9161,7 +9220,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CommonMerchantCrateItemInfoMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CommonMerchantCrateItemInfoMock");
 		return ptr;
 	}
 
@@ -9176,7 +9235,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RareMerchantCrateItemInfoMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RareMerchantCrateItemInfoMock");
 		return ptr;
 	}
 
@@ -9191,7 +9250,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LegendaryMerchantCrateItemInfoMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LegendaryMerchantCrateItemInfoMock");
 		return ptr;
 	}
 
@@ -9206,7 +9265,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MythicalMerchantCrateItemInfoMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MythicalMerchantCrateItemInfoMock");
 		return ptr;
 	}
 
@@ -9221,7 +9280,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateItemDescMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateItemDescMock");
 		return ptr;
 	}
 
@@ -9236,7 +9295,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureChestItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureChestItemInfo");
 		return ptr;
 	}
 
@@ -9251,7 +9310,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureChestCategoryMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureChestCategoryMock");
 		return ptr;
 	}
 
@@ -9267,7 +9326,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureChestItemInfoMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureChestItemInfoMock");
 		return ptr;
 	}
 
@@ -9282,7 +9341,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureChestItemDescMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureChestItemDescMock");
 		return ptr;
 	}
 
@@ -9297,7 +9356,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateLegendCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateLegendCategory");
 		return ptr;
 	}
 
@@ -9312,7 +9371,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShantyUnlockDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShantyUnlockDesc");
 		return ptr;
 	}
 
@@ -9327,7 +9386,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShantyCategory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShantyCategory");
 		return ptr;
 	}
 
@@ -9347,7 +9406,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShantyListDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShantyListDataAsset");
 		return ptr;
 	}
 
@@ -9363,7 +9422,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CategoryDefaults");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CategoryDefaults");
 		return ptr;
 	}
 
@@ -9386,7 +9445,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterMovementAINoiseEventComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterMovementAINoiseEventComponentParams");
 		return ptr;
 	}
 
@@ -9405,7 +9464,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterAINoiseEventComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterAINoiseEventComponent");
 		return ptr;
 	}
 
@@ -9435,7 +9494,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterAudioComponent");
 		return ptr;
 	}
 
@@ -9503,7 +9562,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterAudioComponentParams");
 		return ptr;
 	}
 
@@ -9522,7 +9581,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterAudioEventControllerParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterAudioEventControllerParams");
 		return ptr;
 	}
 
@@ -9541,7 +9600,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterFootImpactComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterFootImpactComponent");
 		return ptr;
 	}
 
@@ -9557,7 +9616,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterHitReactionDamagerTypeToAnimTypeLayer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterHitReactionDamagerTypeToAnimTypeLayer");
 		return ptr;
 	}
 
@@ -9573,7 +9632,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterInputBinder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterInputBinder");
 		return ptr;
 	}
 
@@ -9592,7 +9651,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaPlayerCharacterTestInputBinder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaPlayerCharacterTestInputBinder");
 		return ptr;
 	}
 
@@ -9607,7 +9666,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterInteractionComponentTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterInteractionComponentTestFunctions");
 		return ptr;
 	}
 
@@ -9616,6 +9675,21 @@ public:
 	bool STATIC_CharacterInteractionComponentWithoutInteractors_WhenPolicyIsAdded_PolicyIsntCalled(class UCharacterInteractionComponent* InCharacterInteractionComponent);
 	bool STATIC_CharacterInteractionComponentWithInteractors_WhenPolicyIsAdded_PolicyIsCalled(class UCharacterInteractionComponent* InCharacterInteractionComponent);
 	bool STATIC_CharacterInteractionComponentWithInteractor_TwoPolicies_HighestPriorityFirst(class UCharacterInteractionComponent* InCharacterInteractionComponent);
+};
+
+
+// Class Athena.CharacterMovementBaseNotificationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCharacterMovementBaseNotificationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterMovementBaseNotificationInterface");
+		return ptr;
+	}
+
 };
 
 
@@ -9628,7 +9702,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterPossessedEventTestComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterPossessedEventTestComponent");
 		return ptr;
 	}
 
@@ -9645,7 +9719,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterSocketCollisionDelegate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterSocketCollisionDelegate");
 		return ptr;
 	}
 
@@ -9660,7 +9734,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterSocketCollisionFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterSocketCollisionFunctionLibrary");
 		return ptr;
 	}
 
@@ -9679,7 +9753,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterSocketCollisionServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterSocketCollisionServiceInterface");
 		return ptr;
 	}
 
@@ -9699,7 +9773,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterSocketCollisionService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterSocketCollisionService");
 		return ptr;
 	}
 
@@ -9714,7 +9788,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterVfxComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterVfxComponent");
 		return ptr;
 	}
 
@@ -9730,7 +9804,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ChatboxCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ChatboxCompositeInputHandler");
 		return ptr;
 	}
 
@@ -9747,7 +9821,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CheerAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CheerAIStrategyId");
 		return ptr;
 	}
 
@@ -9762,7 +9836,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CheerAnimationStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CheerAnimationStateId");
 		return ptr;
 	}
 
@@ -9778,7 +9852,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CinematicCameraController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CinematicCameraController");
 		return ptr;
 	}
 
@@ -9796,12 +9870,12 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClamberActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClamberActionStateId");
 		return ptr;
 	}
 
 
-	void STATIC_PushCharacterIntoClamberActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ClamberActor, class AActor* Character, float NormalisedInteractionWidth, unsigned char ClimbId);
+	void STATIC_PushCharacterIntoClamberActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ClamberActor, class AActor* Character, float NormalisedInteractionWidth, unsigned char ClimbId, const struct FLadderBlendParams& ClamberBlendParams);
 };
 
 
@@ -9813,7 +9887,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClientNotificationsServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClientNotificationsServiceInterface");
 		return ptr;
 	}
 
@@ -9829,7 +9903,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClientNotificationsService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClientNotificationsService");
 		return ptr;
 	}
 
@@ -9844,7 +9918,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClimbLadderAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClimbLadderAnalogInputId");
 		return ptr;
 	}
 
@@ -9859,7 +9933,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingLoadoutControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingLoadoutControlInterface");
 		return ptr;
 	}
 
@@ -9878,7 +9952,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingLoadoutViewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingLoadoutViewInterface");
 		return ptr;
 	}
 
@@ -9895,7 +9969,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TitleLoadoutControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TitleLoadoutControlInterface");
 		return ptr;
 	}
 
@@ -9912,7 +9986,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TitleLoadoutViewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TitleLoadoutViewInterface");
 		return ptr;
 	}
 
@@ -9929,7 +10003,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerEntitlementViewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerEntitlementViewInterface");
 		return ptr;
 	}
 
@@ -9948,7 +10022,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingLoadoutComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingLoadoutComponent");
 		return ptr;
 	}
 
@@ -9967,7 +10041,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CloudDomeService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CloudDomeService");
 		return ptr;
 	}
 
@@ -9999,7 +10073,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CloudSystem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CloudSystem");
 		return ptr;
 	}
 
@@ -10016,13 +10090,14 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoastInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoastInterface");
 		return ptr;
 	}
 
 
 	void UnregisterCoast(const struct FBlueprintableIntegerHandle& CoastHandle);
 	struct FBlueprintableIntegerHandle RegisterCoast(class USplineComponent* CoastalSpline, class USplineComponent* InnerSpline, const struct FVector& SplineOrigin);
+	bool GetClosestPointOnClosestCoast(const struct FVector& LookupPosition, struct FVector* OutClosestPoint, bool* OutIsOnIsland);
 	struct FName GetClosestIslandNameOfCoastlineForPointAndTolerance(const struct FVector& Pos, float MaxDistFromCoast, float* OutClosestDistToShore);
 	TArray<struct FCoastObject> GetClosestCoastObjects(const struct FVector& LookupPosition);
 };
@@ -10037,7 +10112,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoastService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoastService");
 		return ptr;
 	}
 
@@ -10053,7 +10128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentBaseHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentBaseHUD");
 		return ptr;
 	}
 
@@ -10070,7 +10145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemLoadoutControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemLoadoutControlInterface");
 		return ptr;
 	}
 
@@ -10093,7 +10168,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickInventoryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickInventoryComponent");
 		return ptr;
 	}
 
@@ -10140,7 +10215,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaHUD");
 		return ptr;
 	}
 
@@ -10166,7 +10241,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTInstancedComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTInstancedComponent");
 		return ptr;
 	}
 
@@ -10195,7 +10270,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentBaseHUDComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentBaseHUDComponent");
 		return ptr;
 	}
 
@@ -10215,7 +10290,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FrontendHudComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FrontendHudComponent");
 		return ptr;
 	}
 
@@ -10235,7 +10310,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UIInputForwardComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UIInputForwardComponent");
 		return ptr;
 	}
 
@@ -10266,7 +10341,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FrontendHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FrontendHUD");
 		return ptr;
 	}
 
@@ -10287,7 +10362,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentToWwiseEventDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentToWwiseEventDataAsset");
 		return ptr;
 	}
 
@@ -10310,7 +10385,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentToWwiseEventComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentToWwiseEventComponent");
 		return ptr;
 	}
 
@@ -10329,7 +10404,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTAssetContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTAssetContainer");
 		return ptr;
 	}
 
@@ -10337,18 +10412,18 @@ public:
 
 
 // Class Athena.CoherentUIGTHUDComponent
-// 0x0940 (0x0ED0 - 0x0590)
+// 0x0960 (0x0EF0 - 0x0590)
 class UCoherentUIGTHUDComponent : public UCoherentBaseHUDComponent
 {
 public:
 	class UShipNamesDataAsset*                         ShipNames;                                                // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x40];                                      // 0x0598(0x0040) MISSED OFFSET
 	struct FHealthUI                                   HealthUI;                                                 // 0x05D8(0x0128) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x7D0];                                     // 0x0700(0x07D0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x7F0];                                     // 0x0700(0x07F0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTHUDComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTHUDComponent");
 		return ptr;
 	}
 
@@ -10367,7 +10442,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTInGameMenusComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTInGameMenusComponent");
 		return ptr;
 	}
 
@@ -10387,7 +10462,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTAtlasComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTAtlasComponent");
 		return ptr;
 	}
 
@@ -10409,7 +10484,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTNameplateComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTNameplateComponent");
 		return ptr;
 	}
 
@@ -10427,7 +10502,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTTooltipComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTTooltipComponent");
 		return ptr;
 	}
 
@@ -10443,7 +10518,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTTooltipDetailedComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTTooltipDetailedComponent");
 		return ptr;
 	}
 
@@ -10459,7 +10534,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTPersistentDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTPersistentDataAsset");
 		return ptr;
 	}
 
@@ -10480,7 +10555,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CoherentUIGTRootDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CoherentUIGTRootDataAsset");
 		return ptr;
 	}
 
@@ -10497,7 +10572,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RankDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RankDesc");
 		return ptr;
 	}
 
@@ -10539,7 +10614,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyData");
 		return ptr;
 	}
 
@@ -10555,7 +10630,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyDataList");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyDataList");
 		return ptr;
 	}
 
@@ -10572,7 +10647,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyLevelData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyLevelData");
 		return ptr;
 	}
 
@@ -10588,7 +10663,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyLevelDataList");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyLevelDataList");
 		return ptr;
 	}
 
@@ -10603,7 +10678,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyNPCInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyNPCInterface");
 		return ptr;
 	}
 
@@ -10624,7 +10699,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyNPCComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyNPCComponent");
 		return ptr;
 	}
 
@@ -10639,7 +10714,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyServiceInterface");
 		return ptr;
 	}
 
@@ -10657,7 +10732,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyService");
 		return ptr;
 	}
 
@@ -10673,7 +10748,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyValidationAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyValidationAsset");
 		return ptr;
 	}
 
@@ -10699,7 +10774,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompassSpinComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompassSpinComponent");
 		return ptr;
 	}
 
@@ -10714,7 +10789,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompositeQuickSwitchWeaponSecondaryInteractNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompositeQuickSwitchWeaponSecondaryInteractNotificationInputId");
 		return ptr;
 	}
 
@@ -10729,7 +10804,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompositeQuickSwitchWeaponSecondaryInteractReleasedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompositeQuickSwitchWeaponSecondaryInteractReleasedNotificationInputId");
 		return ptr;
 	}
 
@@ -10744,7 +10819,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ConcealingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ConcealingInterface");
 		return ptr;
 	}
 
@@ -10759,7 +10834,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ConsumableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ConsumableInterface");
 		return ptr;
 	}
 
@@ -10775,7 +10850,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ConsumableWieldableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ConsumableWieldableComponent");
 		return ptr;
 	}
 
@@ -10790,7 +10865,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControlCapstanArmActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControlCapstanArmActionStateId");
 		return ptr;
 	}
 
@@ -10810,7 +10885,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableJIPTestFixture");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableJIPTestFixture");
 		return ptr;
 	}
 
@@ -10825,7 +10900,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableMessagesInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableMessagesInterface");
 		return ptr;
 	}
 
@@ -10852,7 +10927,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableMock");
 		return ptr;
 	}
 
@@ -10867,7 +10942,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableObjectFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableObjectFunctionLibrary");
 		return ptr;
 	}
 
@@ -10886,7 +10961,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControlObjectActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControlObjectActionStateId");
 		return ptr;
 	}
 
@@ -10903,7 +10978,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControlSailManipulatorActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControlSailManipulatorActionStateId");
 		return ptr;
 	}
 
@@ -10920,7 +10995,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControlWheelActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControlWheelActionStateId");
 		return ptr;
 	}
 
@@ -10937,7 +11012,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewFunctions");
 		return ptr;
 	}
 
@@ -10967,7 +11042,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewMemberInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewMemberInterface");
 		return ptr;
 	}
 
@@ -10982,7 +11057,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewMembershipInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewMembershipInterface");
 		return ptr;
 	}
 
@@ -11006,7 +11081,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewOwnershipComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewOwnershipComponent");
 		return ptr;
 	}
 
@@ -11024,7 +11099,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewService");
 		return ptr;
 	}
 
@@ -11039,7 +11114,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugCrewServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugCrewServiceInterface");
 		return ptr;
 	}
 
@@ -11055,7 +11130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugCrewService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugCrewService");
 		return ptr;
 	}
 
@@ -11072,7 +11147,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewSessionConfig");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewSessionConfig");
 		return ptr;
 	}
 
@@ -11087,7 +11162,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationLoadoutControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationLoadoutControlInterface");
 		return ptr;
 	}
 
@@ -11108,7 +11183,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationLoadoutViewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationLoadoutViewInterface");
 		return ptr;
 	}
 
@@ -11132,7 +11207,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationLoadoutComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationLoadoutComponent");
 		return ptr;
 	}
 
@@ -11161,7 +11236,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewShipManifest");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewShipManifest");
 		return ptr;
 	}
 
@@ -11199,7 +11274,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewSpawnLocationVariablesListAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewSpawnLocationVariablesListAsset");
 		return ptr;
 	}
 
@@ -11214,7 +11289,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewSpawnLocationsInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewSpawnLocationsInterface");
 		return ptr;
 	}
 
@@ -11235,7 +11310,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewSpawnLocations");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewSpawnLocations");
 		return ptr;
 	}
 
@@ -11253,7 +11328,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CrewVoyageParticipant");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CrewVoyageParticipant");
 		return ptr;
 	}
 
@@ -11272,7 +11347,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CursedCannonballData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CursedCannonballData");
 		return ptr;
 	}
 
@@ -11287,7 +11362,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CurseStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CurseStatus");
 		return ptr;
 	}
 
@@ -11303,7 +11378,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocatorContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocatorContainer");
 		return ptr;
 	}
 
@@ -11318,7 +11393,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LauncherParentInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LauncherParentInterface");
 		return ptr;
 	}
 
@@ -11348,7 +11423,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCurseComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCurseComponent");
 		return ptr;
 	}
 
@@ -11367,7 +11442,22 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDynamicsTargetInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDynamicsTargetInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RammerInterface
+// 0x0000 (0x0028 - 0x0028)
+class URammerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RammerInterface");
 		return ptr;
 	}
 
@@ -11383,7 +11473,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipLiveryDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipLiveryDescAsset");
 		return ptr;
 	}
 
@@ -11400,7 +11490,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipLiveryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipLiveryComponent");
 		return ptr;
 	}
 
@@ -11415,7 +11505,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TeleportLocationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TeleportLocationInterface");
 		return ptr;
 	}
 
@@ -11433,7 +11523,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RainZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RainZoneInterface");
 		return ptr;
 	}
 
@@ -11451,7 +11541,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RainZoneServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RainZoneServiceInterface");
 		return ptr;
 	}
 
@@ -11467,30 +11557,30 @@ public:
 
 
 // Class Athena.SurfaceWaterComponent
-// 0x0090 (0x0630 - 0x05A0)
+// 0x0090 (0x0640 - 0x05B0)
 class USurfaceWaterComponent : public UPrimitiveComponent
 {
 public:
-	struct FVector                                     BoxExtent;                                                // 0x05A0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              UpdateCullDistance;                                       // 0x05AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  AddWaterMaskTexture;                                      // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  BaseHeightTexture;                                        // 0x05B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                TextureSizeX;                                             // 0x05C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                TextureSizeY;                                             // 0x05C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WetnessPerStrength;                                       // 0x05C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WetnessDecayRate;                                         // 0x05CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05D0(0x0020) MISSED OFFSET
-	struct FVector4                                    SplatData;                                                // 0x05F0(0x0010) (Net, ZeroConstructor, IsPlainOldData)
-	class UTextureRenderTarget2D*                      WaterHeightTexture;                                       // 0x0600(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      WaterHeightTexturePingPong;                               // 0x0608(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      NormalTexture;                                            // 0x0610(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      OutflowTexture;                                           // 0x0618(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      OutflowTexturePingPong;                                   // 0x0620(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0628(0x0008) MISSED OFFSET
+	struct FVector                                     BoxExtent;                                                // 0x05B0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              UpdateCullDistance;                                       // 0x05BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  AddWaterMaskTexture;                                      // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  BaseHeightTexture;                                        // 0x05C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                TextureSizeX;                                             // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                TextureSizeY;                                             // 0x05D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WetnessPerStrength;                                       // 0x05D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WetnessDecayRate;                                         // 0x05DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05E0(0x0020) MISSED OFFSET
+	struct FVector4                                    SplatData;                                                // 0x0600(0x0010) (Net, ZeroConstructor, IsPlainOldData)
+	class UTextureRenderTarget2D*                      WaterHeightTexture;                                       // 0x0610(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      WaterHeightTexturePingPong;                               // 0x0618(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      NormalTexture;                                            // 0x0620(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      OutflowTexture;                                           // 0x0628(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      OutflowTexturePingPong;                                   // 0x0630(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SurfaceWaterComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SurfaceWaterComponent");
 		return ptr;
 	}
 
@@ -11536,7 +11626,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrowningComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrowningComponentParams");
 		return ptr;
 	}
 
@@ -11551,7 +11641,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneInterface");
 		return ptr;
 	}
 
@@ -11569,7 +11659,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneServiceInterface");
 		return ptr;
 	}
 
@@ -11588,102 +11678,102 @@ public:
 
 
 // Class Athena.Ship
-// 0x0CB0 (0x1140 - 0x0490)
+// 0x0CC0 (0x1150 - 0x0490)
 class AShip : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0490(0x0048) MISSED OFFSET
-	struct FShipPartConnections                        PartConnections;                                          // 0x04D8(0x0098) (Edit)
-	class UStaticMeshComponent*                        BoatCollision;                                            // 0x0570(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBasisComponent*                             BoatBasis;                                                // 0x0578(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        OverlapHit;                                               // 0x0580(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        BelowDeckVolume;                                          // 0x0588(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        CabinVolume;                                              // 0x0590(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FObjectMessagingDispatcher                  ObjectMessageDispatcher;                                  // 0x0598(0x00A0) (BlueprintVisible)
-	class UTeleportLocationRetrievalComponent*         TeleportLocationRetrievalComponent;                       // 0x0638(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        ShipInternalWaterComponent;                               // 0x0640(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USinkingComponent*                           SinkingComponent;                                         // 0x0648(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShipHullCollisionComponent*                 HullCollisionComponent;                                   // 0x0650(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShipStuckDetectionComponent*                StuckDetectionComponent;                                  // 0x0658(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0660(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShipCurseComponent*                         ShipCurseComponent;                                       // 0x0668(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FWaterBuoyancy                              Buoyancy;                                                 // 0x0670(0x00B8) (Edit, BlueprintVisible)
-	class UCrewOwnershipComponent*                     CrewOwnershipComponent;                                   // 0x0728(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UOnboardCharacterTrackerComponent*           OnboardCharacterTrackerComponent;                         // 0x0730(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class URewindComponent*                            RewindComponent;                                          // 0x0738(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UShipLiveryComponent*                        LiveryComponent;                                          // 0x0740(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UReplicatedShipPartCustomizationComponent*   HullLiveryCustomizationComponent;                         // 0x0748(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UReplicatedShipPartCustomizationComponent*   SailsLiveryCustomizationComponent;                        // 0x0750(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UGroupedInteractableAreaComponent*           GroupedInteractableAreaComponent;                         // 0x0758(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FShipConfigurationSettings                  ShipConfigurationSettings;                                // 0x0760(0x0014)
-	float                                              RainFillRate;                                             // 0x0774(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RainTimePerDrop;                                          // 0x0778(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RainDropScale;                                            // 0x077C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RainDropRadius;                                           // 0x0780(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0784(0x0004) MISSED OFFSET
-	TArray<struct FVector>                             AITargetVisibilityPoints;                                 // 0x0788(0x0010) (Edit, ZeroConstructor)
-	struct FAchievementSinkAnotherCrewsShip            AchievementSinkOtherCrewsShip;                            // 0x0798(0x0018) (Edit)
-	struct FAchievementSailThroughStormAtNightWithLightsOff AchievementSailThroughStormAtNightWithLightsOff;          // 0x07B0(0x0080) (Edit)
-	struct FAchievementSailCloseToShipWithoutFiring    AchievementSailCloseToShipWithoutFiring;                  // 0x0830(0x0018) (Edit)
-	struct FAchievementSailFullyWithTheWind            AchievementSailFullyIntoTheWind;                          // 0x0848(0x0008) (Edit)
-	class UImpulseThrottlerComponent*                  ImpulseThrottlerComponent;                                // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FShipDynamics                               ShipDynamics;                                             // 0x0858(0x00C8) (Edit, BlueprintVisible)
-	struct FRigidBodyErrorCorrection                   PhysicsErrorCorrection;                                   // 0x0920(0x001C) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x093C(0x0004) MISSED OFFSET
-	struct FBuoyancySampleMovement                     BuoyancySampleMovement;                                   // 0x0940(0x0068) (Edit, BlueprintVisible)
-	struct FBuoyancySampleMovement                     SurfacingBuoyancySampleMovement;                          // 0x09A8(0x0068) (Edit, BlueprintVisible)
-	struct FBuoyancySampleMovement                     DivingBuoyancySampleMovement;                             // 0x0A10(0x0068) (Edit, BlueprintVisible)
-	class UShipNosediveBrake*                          NosediveBrake;                                            // 0x0A78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UShipRolloverCorrector*                      RolloverCorrector;                                        // 0x0A80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBowSplashContainer*                         BowSplashContainer;                                       // 0x0A88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBowSplashContainer*                         SurfacingBowSplashContainer;                              // 0x0A90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBowSplashContainer*                         DivingBowSplashContainer;                                 // 0x0A98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULocatorContainer*                           ShipLocators;                                             // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LocalSailForceApplicationOffset;                          // 0x0AA8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0AB4(0x0004) MISSED OFFSET
-	class UCurveFloat*                                 ShipSpeedToChoppinessScalarCurve;                         // 0x0AB8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 HullSubmergedValueRemapping;                              // 0x0AC0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FakeBuoyancyZOffsetScalarSpringAccel;                     // 0x0AC8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PositionSamplerTimeWindow;                                // 0x0ACC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ClientConvexHullCollisionProfile;                         // 0x0AD0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EmpiricalMaxSpeedInMPS;                                   // 0x0AD8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x0ADC(0x0004) MISSED OFFSET
-	struct FTransform                                  BrigSpawnLocation;                                        // 0x0AE0(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              WaterStrengthThresholdForStormDamage;                     // 0x0B10(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x34];                                      // 0x0B14(0x0034) MISSED OFFSET
-	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0B48(0x000C) (Edit, DisableEditOnInstance)
-	struct FEncounterParams                            CloseProximityEncounterParams;                            // 0x0B54(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData06[0x10];                                      // 0x0B60(0x0010) MISSED OFFSET
-	class UClass*                                      ShipCategoryObject;                                       // 0x0B70(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ShipSizeObject;                                           // 0x0B78(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ShipTypeObject;                                           // 0x0B80(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ACrewShipManifest*                           CrewShipManifest;                                         // 0x0B88(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x50];                                      // 0x0B90(0x0050) MISSED OFFSET
-	class UObject*                                     HullDamage;                                               // 0x0BE0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class USurfaceWaterComponent*                      DeckWater;                                                // 0x0BE8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x0BF0(0x0070) (Net)
-	unsigned char                                      UnknownData08[0xD0];                                      // 0x0C60(0x00D0) MISSED OFFSET
-	float                                              StormStrainWeight;                                        // 0x0D30(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              WorldEdgeWeight;                                          // 0x0D34(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	struct FStrainDamage                               StormStrainDamage;                                        // 0x0D38(0x0028) (Edit)
-	struct FStrainDamage                               WorldEdgeDamage;                                          // 0x0D60(0x0028) (Edit)
-	struct FStrainDamage                               ScuttleDamage;                                            // 0x0D88(0x0028) (Edit)
-	struct FVector2D                                   WorldEdgeDamageRange;                                     // 0x0DB0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ScuttleForceSinkTime;                                     // 0x0DB8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x0DBC(0x0004) MISSED OFFSET
-	class UClass*                                      ProxyClass;                                               // 0x0DC0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x1];                                       // 0x0DC8(0x0001) MISSED OFFSET
-	bool                                               HasEverStartedSailing;                                    // 0x0DC9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EShipSurfacingState>                   SurfacingState;                                           // 0x0DCA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x5];                                       // 0x0DCB(0x0005) MISSED OFFSET
-	TArray<class UMobileInstancedStaticMeshComponent*> InstancedMeshes;                                          // 0x0DD0(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData12[0x340];                                     // 0x0DE0(0x0340) MISSED OFFSET
-	float                                              ScuttleTime;                                              // 0x1120(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x1C];                                      // 0x1124(0x001C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0490(0x0050) MISSED OFFSET
+	struct FShipPartConnections                        PartConnections;                                          // 0x04E0(0x0098) (Edit)
+	class UStaticMeshComponent*                        BoatCollision;                                            // 0x0578(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBasisComponent*                             BoatBasis;                                                // 0x0580(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        OverlapHit;                                               // 0x0588(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        BelowDeckVolume;                                          // 0x0590(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        CabinVolume;                                              // 0x0598(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FObjectMessagingDispatcher                  ObjectMessageDispatcher;                                  // 0x05A0(0x00A0) (BlueprintVisible)
+	class UTeleportLocationRetrievalComponent*         TeleportLocationRetrievalComponent;                       // 0x0640(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        ShipInternalWaterComponent;                               // 0x0648(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USinkingComponent*                           SinkingComponent;                                         // 0x0650(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShipHullCollisionComponent*                 HullCollisionComponent;                                   // 0x0658(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShipStuckDetectionComponent*                StuckDetectionComponent;                                  // 0x0660(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0668(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShipCurseComponent*                         ShipCurseComponent;                                       // 0x0670(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FWaterBuoyancy                              Buoyancy;                                                 // 0x0678(0x00B8) (Edit, BlueprintVisible)
+	class UCrewOwnershipComponent*                     CrewOwnershipComponent;                                   // 0x0730(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UOnboardCharacterTrackerComponent*           OnboardCharacterTrackerComponent;                         // 0x0738(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class URewindComponent*                            RewindComponent;                                          // 0x0740(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UShipLiveryComponent*                        LiveryComponent;                                          // 0x0748(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UReplicatedShipPartCustomizationComponent*   HullLiveryCustomizationComponent;                         // 0x0750(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UReplicatedShipPartCustomizationComponent*   SailsLiveryCustomizationComponent;                        // 0x0758(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UGroupedInteractableAreaComponent*           GroupedInteractableAreaComponent;                         // 0x0760(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FShipConfigurationSettings                  ShipConfigurationSettings;                                // 0x0768(0x0014)
+	float                                              RainFillRate;                                             // 0x077C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RainTimePerDrop;                                          // 0x0780(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RainDropScale;                                            // 0x0784(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RainDropRadius;                                           // 0x0788(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x078C(0x0004) MISSED OFFSET
+	TArray<struct FVector>                             AITargetVisibilityPoints;                                 // 0x0790(0x0010) (Edit, ZeroConstructor)
+	struct FAchievementSinkAnotherCrewsShip            AchievementSinkOtherCrewsShip;                            // 0x07A0(0x0018) (Edit)
+	struct FAchievementSailThroughStormAtNightWithLightsOff AchievementSailThroughStormAtNightWithLightsOff;          // 0x07B8(0x0080) (Edit)
+	struct FAchievementSailCloseToShipWithoutFiring    AchievementSailCloseToShipWithoutFiring;                  // 0x0838(0x0018) (Edit)
+	struct FAchievementSailFullyWithTheWind            AchievementSailFullyIntoTheWind;                          // 0x0850(0x0008) (Edit)
+	class UImpulseThrottlerComponent*                  ImpulseThrottlerComponent;                                // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FShipDynamics                               ShipDynamics;                                             // 0x0860(0x00C8) (Edit, BlueprintVisible)
+	struct FRigidBodyErrorCorrection                   PhysicsErrorCorrection;                                   // 0x0928(0x001C) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0944(0x0004) MISSED OFFSET
+	struct FBuoyancySampleMovement                     BuoyancySampleMovement;                                   // 0x0948(0x0068) (Edit, BlueprintVisible)
+	struct FBuoyancySampleMovement                     SurfacingBuoyancySampleMovement;                          // 0x09B0(0x0068) (Edit, BlueprintVisible)
+	struct FBuoyancySampleMovement                     DivingBuoyancySampleMovement;                             // 0x0A18(0x0068) (Edit, BlueprintVisible)
+	class UShipNosediveBrake*                          NosediveBrake;                                            // 0x0A80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UShipRolloverCorrector*                      RolloverCorrector;                                        // 0x0A88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBowSplashContainer*                         BowSplashContainer;                                       // 0x0A90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBowSplashContainer*                         SurfacingBowSplashContainer;                              // 0x0A98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBowSplashContainer*                         DivingBowSplashContainer;                                 // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULocatorContainer*                           ShipLocators;                                             // 0x0AA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LocalSailForceApplicationOffset;                          // 0x0AB0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0ABC(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 ShipSpeedToChoppinessScalarCurve;                         // 0x0AC0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 HullSubmergedValueRemapping;                              // 0x0AC8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FakeBuoyancyZOffsetScalarSpringAccel;                     // 0x0AD0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PositionSamplerTimeWindow;                                // 0x0AD4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ClientConvexHullCollisionProfile;                         // 0x0AD8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EmpiricalMaxSpeedInMPS;                                   // 0x0AE0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0xC];                                       // 0x0AE4(0x000C) MISSED OFFSET
+	struct FTransform                                  BrigSpawnLocation;                                        // 0x0AF0(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              WaterStrengthThresholdForStormDamage;                     // 0x0B20(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x34];                                      // 0x0B24(0x0034) MISSED OFFSET
+	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0B58(0x000C) (Edit, DisableEditOnInstance)
+	struct FEncounterParams                            CloseProximityEncounterParams;                            // 0x0B64(0x000C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData06[0x10];                                      // 0x0B70(0x0010) MISSED OFFSET
+	class UClass*                                      ShipCategoryObject;                                       // 0x0B80(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ShipSizeObject;                                           // 0x0B88(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ShipTypeObject;                                           // 0x0B90(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ACrewShipManifest*                           CrewShipManifest;                                         // 0x0B98(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x50];                                      // 0x0BA0(0x0050) MISSED OFFSET
+	class UObject*                                     HullDamage;                                               // 0x0BF0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class USurfaceWaterComponent*                      DeckWater;                                                // 0x0BF8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x0C00(0x0070) (Net)
+	unsigned char                                      UnknownData08[0xD0];                                      // 0x0C70(0x00D0) MISSED OFFSET
+	float                                              StormStrainWeight;                                        // 0x0D40(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              WorldEdgeWeight;                                          // 0x0D44(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	struct FStrainDamage                               StormStrainDamage;                                        // 0x0D48(0x0028) (Edit)
+	struct FStrainDamage                               WorldEdgeDamage;                                          // 0x0D70(0x0028) (Edit)
+	struct FStrainDamage                               ScuttleDamage;                                            // 0x0D98(0x0028) (Edit)
+	struct FVector2D                                   WorldEdgeDamageRange;                                     // 0x0DC0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ScuttleForceSinkTime;                                     // 0x0DC8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x4];                                       // 0x0DCC(0x0004) MISSED OFFSET
+	class UClass*                                      ProxyClass;                                               // 0x0DD0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x1];                                       // 0x0DD8(0x0001) MISSED OFFSET
+	bool                                               HasEverStartedSailing;                                    // 0x0DD9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EShipSurfacingState>                   SurfacingState;                                           // 0x0DDA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x5];                                       // 0x0DDB(0x0005) MISSED OFFSET
+	TArray<class UMobileInstancedStaticMeshComponent*> InstancedMeshes;                                          // 0x0DE0(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData12[0x340];                                     // 0x0DF0(0x0340) MISSED OFFSET
+	float                                              ScuttleTime;                                              // 0x1130(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x1C];                                      // 0x1134(0x001C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Ship");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Ship");
 		return ptr;
 	}
 
@@ -11741,7 +11831,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CustomisationPreviewShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CustomisationPreviewShip");
 		return ptr;
 	}
 
@@ -11763,7 +11853,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageableInterface");
 		return ptr;
 	}
 
@@ -11786,7 +11876,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageableActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageableActor");
 		return ptr;
 	}
 
@@ -11802,7 +11892,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageableVulnerabilityLayer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageableVulnerabilityLayer");
 		return ptr;
 	}
 
@@ -11821,7 +11911,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageableComponent");
 		return ptr;
 	}
 
@@ -11839,7 +11929,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ActorDamageableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ActorDamageableComponent");
 		return ptr;
 	}
 
@@ -11856,7 +11946,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDamageableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDamageableComponent");
 		return ptr;
 	}
 
@@ -11873,7 +11963,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -11894,7 +11984,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BlunderbussDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BlunderbussDamagerType");
 		return ptr;
 	}
 
@@ -11909,7 +11999,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonDamagerType");
 		return ptr;
 	}
 
@@ -11924,7 +12014,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonSplashDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonSplashDamagerType");
 		return ptr;
 	}
 
@@ -11939,7 +12029,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CutlassDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CutlassDamagerType");
 		return ptr;
 	}
 
@@ -11954,7 +12044,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosionDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosionDamagerType");
 		return ptr;
 	}
 
@@ -11969,7 +12059,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EyeOfReachDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EyeOfReachDamagerType");
 		return ptr;
 	}
 
@@ -11984,7 +12074,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FlintlockDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FlintlockDamagerType");
 		return ptr;
 	}
 
@@ -11999,7 +12089,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenTentacleDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenTentacleDamagerType");
 		return ptr;
 	}
 
@@ -12014,7 +12104,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandscapeDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandscapeDamagerType");
 		return ptr;
 	}
 
@@ -12029,7 +12119,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightningDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightningDamagerType");
 		return ptr;
 	}
 
@@ -12044,7 +12134,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OffworldStrainDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OffworldStrainDamagerType");
 		return ptr;
 	}
 
@@ -12059,7 +12149,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ScuttleDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ScuttleDamagerType");
 		return ptr;
 	}
 
@@ -12074,7 +12164,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDamagerType");
 		return ptr;
 	}
 
@@ -12089,7 +12179,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SingleBulletGunDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SingleBulletGunDamagerType");
 		return ptr;
 	}
 
@@ -12104,7 +12194,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StrainDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StrainDamagerType");
 		return ptr;
 	}
 
@@ -12119,7 +12209,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwimmingCreatureDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwimmingCreatureDamagerType");
 		return ptr;
 	}
 
@@ -12134,7 +12224,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TinySharkDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TinySharkDamagerType");
 		return ptr;
 	}
 
@@ -12149,7 +12239,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UnarmedCombatDamagerType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnarmedCombatDamagerType");
 		return ptr;
 	}
 
@@ -12164,7 +12254,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageZoneAIInteractableType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageZoneAIInteractableType");
 		return ptr;
 	}
 
@@ -12179,7 +12269,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DeadActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DeadActionStateId");
 		return ptr;
 	}
 
@@ -12196,7 +12286,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugFlyingActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugFlyingActionStateId");
 		return ptr;
 	}
 
@@ -12214,7 +12304,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugFlyingCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugFlyingCompositeInputHandler");
 		return ptr;
 	}
 
@@ -12242,7 +12332,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugLandmarkLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugLandmarkLocation");
 		return ptr;
 	}
 
@@ -12259,7 +12349,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugShipControlActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugShipControlActionStateId");
 		return ptr;
 	}
 
@@ -12276,7 +12366,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugShipControlCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugShipControlCompositeInputHandler");
 		return ptr;
 	}
 
@@ -12296,7 +12386,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugShipFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugShipFunctionLibrary");
 		return ptr;
 	}
 
@@ -12325,7 +12415,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugShipInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugShipInterface");
 		return ptr;
 	}
 
@@ -12342,7 +12432,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugShipService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugShipService");
 		return ptr;
 	}
 
@@ -12357,7 +12447,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugSuperSailorActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugSuperSailorActionStateId");
 		return ptr;
 	}
 
@@ -12375,7 +12465,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugSuperSailorCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugSuperSailorCompositeInputHandler");
 		return ptr;
 	}
 
@@ -12398,7 +12488,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugTreasureLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugTreasureLocation");
 		return ptr;
 	}
 
@@ -12417,7 +12507,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OpinionatedNameplateAttitudeTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OpinionatedNameplateAttitudeTestActor");
 		return ptr;
 	}
 
@@ -12433,7 +12523,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DeferredNameplateAttitudeTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DeferredNameplateAttitudeTestActor");
 		return ptr;
 	}
 
@@ -12448,7 +12538,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DisableShipContainersStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DisableShipContainersStatus");
 		return ptr;
 	}
 
@@ -12463,7 +12553,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DisengageNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DisengageNotificationInputId");
 		return ptr;
 	}
 
@@ -12483,7 +12573,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DitherComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DitherComponent");
 		return ptr;
 	}
 
@@ -12502,7 +12592,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DitherFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DitherFunctionLibrary");
 		return ptr;
 	}
 
@@ -12519,7 +12609,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DockedToInteractableAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DockedToInteractableAIStrategyId");
 		return ptr;
 	}
 
@@ -12535,7 +12625,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DockToObjectCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DockToObjectCompositeInputHandler");
 		return ptr;
 	}
 
@@ -12552,7 +12642,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrawDebugServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrawDebugServiceInterface");
 		return ptr;
 	}
 
@@ -12575,7 +12665,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrawDebugService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrawDebugService");
 		return ptr;
 	}
 
@@ -12592,7 +12682,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DropLargeWieldedItemNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DropLargeWieldedItemNotificationInputId");
 		return ptr;
 	}
 
@@ -12615,7 +12705,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrowningComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrowningComponent");
 		return ptr;
 	}
 
@@ -12656,7 +12746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrunkennessComponentPublicData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrunkennessComponentPublicData");
 		return ptr;
 	}
 
@@ -12678,7 +12768,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrunkennessComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrunkennessComponent");
 		return ptr;
 	}
 
@@ -12703,13 +12793,13 @@ class UDrunkenChestComponent : public UActorComponent
 public:
 	class UWwiseEvent*                                 OnPickedUpLocalPlayerOnlyEvent;                           // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UDrunkennessComponent*                       DrunkennessComponent;                                     // 0x00E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class AActor*                                      Wielder;                                                  // 0x00E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      Wielder;                                                  // 0x00E8(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              TargetDrunkenness;                                        // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xAC];                                      // 0x00F4(0x00AC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrunkenChestComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrunkenChestComponent");
 		return ptr;
 	}
 
@@ -12724,7 +12814,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DrunkStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DrunkStatus");
 		return ptr;
 	}
 
@@ -12732,31 +12822,31 @@ public:
 
 
 // Class Athena.DynamicFlowComponent
-// 0x0090 (0x06B0 - 0x0620)
+// 0x0090 (0x06C0 - 0x0630)
 class UDynamicFlowComponent : public UStaticMeshComponent
 {
 public:
-	class UTexture2D*                                  FlowTexture;                                              // 0x0620(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                TextureSizeX;                                             // 0x0628(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                TextureSizeY;                                             // 0x062C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              UpdateCullDistance;                                       // 0x0630(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   FlowUVScrollSpeed;                                        // 0x0634(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x063C(0x0004) MISSED OFFSET
-	struct FVector4                                    WaterDepthDistances;                                      // 0x0640(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearFadeStart;                                            // 0x0650(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearFadeRange;                                            // 0x0654(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   FlowScale;                                                // 0x0658(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   FlowBias;                                                 // 0x0660(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0668(0x0008) MISSED OFFSET
-	struct FVector4                                    BlurCentreWeights;                                        // 0x0670(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector4                                    BlurEdgeWeights;                                          // 0x0680(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector4                                    FadeWeights;                                              // 0x0690(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTextureRenderTarget2D*                      RenderTargetTexture;                                      // 0x06A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      RenderTargetTexturePingPong;                              // 0x06A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTexture2D*                                  FlowTexture;                                              // 0x0630(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                TextureSizeX;                                             // 0x0638(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                TextureSizeY;                                             // 0x063C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              UpdateCullDistance;                                       // 0x0640(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   FlowUVScrollSpeed;                                        // 0x0644(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x064C(0x0004) MISSED OFFSET
+	struct FVector4                                    WaterDepthDistances;                                      // 0x0650(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearFadeStart;                                            // 0x0660(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearFadeRange;                                            // 0x0664(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   FlowScale;                                                // 0x0668(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   FlowBias;                                                 // 0x0670(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0678(0x0008) MISSED OFFSET
+	struct FVector4                                    BlurCentreWeights;                                        // 0x0680(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector4                                    BlurEdgeWeights;                                          // 0x0690(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector4                                    FadeWeights;                                              // 0x06A0(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTextureRenderTarget2D*                      RenderTargetTexture;                                      // 0x06B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      RenderTargetTexturePingPong;                              // 0x06B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DynamicFlowComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DynamicFlowComponent");
 		return ptr;
 	}
 
@@ -12775,7 +12865,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EatingAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EatingAIStrategyId");
 		return ptr;
 	}
 
@@ -12791,7 +12881,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmblemComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmblemComponent");
 		return ptr;
 	}
 
@@ -12807,7 +12897,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmblemDefinitionAssetList");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmblemDefinitionAssetList");
 		return ptr;
 	}
 
@@ -12825,7 +12915,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmblemDefinitionDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmblemDefinitionDataAsset");
 		return ptr;
 	}
 
@@ -12840,7 +12930,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmblemServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmblemServiceInterface");
 		return ptr;
 	}
 
@@ -12859,7 +12949,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmblemService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmblemService");
 		return ptr;
 	}
 
@@ -12874,7 +12964,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmoteActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmoteActionStateId");
 		return ptr;
 	}
 
@@ -12893,7 +12983,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmoteCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmoteCompositeInputHandler");
 		return ptr;
 	}
 
@@ -12920,7 +13010,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemRadialInventoryActivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemRadialInventoryActivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -12935,7 +13025,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemRadialInventoryDeactivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemRadialInventoryDeactivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -12950,7 +13040,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemRadialInventoryActivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemRadialInventoryActivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -12965,7 +13055,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemRadialInventoryDeactivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemRadialInventoryDeactivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -12980,7 +13070,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapRadialInventoryActivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapRadialInventoryActivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -12995,7 +13085,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapRadialInventoryDeactivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapRadialInventoryDeactivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -13010,7 +13100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapRadialInventoryActivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapRadialInventoryActivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -13025,7 +13115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapRadialInventoryDeactivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapRadialInventoryDeactivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -13040,7 +13130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhraseRadialInventoryActivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhraseRadialInventoryActivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -13055,7 +13145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhraseRadialInventoryDeactivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhraseRadialInventoryDeactivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -13070,7 +13160,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhraseRadialInventoryActivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhraseRadialInventoryActivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -13085,7 +13175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhraseRadialInventoryDeactivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhraseRadialInventoryDeactivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -13100,7 +13190,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhraseRadialInventoryNextSetNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhraseRadialInventoryNextSetNotificationInputId");
 		return ptr;
 	}
 
@@ -13115,7 +13205,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialActivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialActivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -13130,7 +13220,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialDeactivatedGamepadNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialDeactivatedGamepadNotificationInputId");
 		return ptr;
 	}
 
@@ -13145,7 +13235,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialActivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialActivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -13160,7 +13250,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialDeactivatedKeyboardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialDeactivatedKeyboardNotificationInputId");
 		return ptr;
 	}
 
@@ -13176,7 +13266,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialDataAsset");
 		return ptr;
 	}
 
@@ -13193,7 +13283,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialComponent");
 		return ptr;
 	}
 
@@ -13212,7 +13302,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmoteZoomInAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmoteZoomInAnalogInputId");
 		return ptr;
 	}
 
@@ -13227,7 +13317,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmoteZoomMouseAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmoteZoomMouseAnalogInputId");
 		return ptr;
 	}
 
@@ -13242,7 +13332,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmoteZoomOutAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmoteZoomOutAnalogInputId");
 		return ptr;
 	}
 
@@ -13259,7 +13349,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EncounterListenerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EncounterListenerComponent");
 		return ptr;
 	}
 
@@ -13274,7 +13364,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EncounterServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EncounterServiceInterface");
 		return ptr;
 	}
 
@@ -13297,7 +13387,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EncounterService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EncounterService");
 		return ptr;
 	}
 
@@ -13323,7 +13413,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Ensemble");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Ensemble");
 		return ptr;
 	}
 
@@ -13344,7 +13434,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TitleDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TitleDesc");
 		return ptr;
 	}
 
@@ -13359,7 +13449,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapItemInfo");
 		return ptr;
 	}
 
@@ -13374,7 +13464,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapItemDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapItemDesc");
 		return ptr;
 	}
 
@@ -13389,7 +13479,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UsableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UsableInterface");
 		return ptr;
 	}
 
@@ -13413,7 +13503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestUsable");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestUsable");
 		return ptr;
 	}
 
@@ -13428,7 +13518,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestUsableItemDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestUsableItemDesc");
 		return ptr;
 	}
 
@@ -13443,7 +13533,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NamedNotificationInputInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NamedNotificationInputInterface");
 		return ptr;
 	}
 
@@ -13468,7 +13558,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryItemComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryItemComponent");
 		return ptr;
 	}
 
@@ -13486,17 +13576,17 @@ public:
 
 
 // Class Athena.TestWieldableItem
-// 0x0060 (0x0848 - 0x07E8)
+// 0x0078 (0x0860 - 0x07E8)
 class ATestWieldableItem : public AStaticMeshWieldableItem
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x07E8(0x0008) MISSED OFFSET
 	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x07F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x07F8(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x68];                                      // 0x07F8(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestWieldableItem");
 		return ptr;
 	}
 
@@ -13504,14 +13594,14 @@ public:
 
 
 // Class Athena.TestWieldableItemLarge
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x0860 - 0x0860)
 class ATestWieldableItemLarge : public ATestWieldableItem
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestWieldableItemLarge");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestWieldableItemLarge");
 		return ptr;
 	}
 
@@ -13526,7 +13616,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestWieldableItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestWieldableItemInfo");
 		return ptr;
 	}
 
@@ -13541,7 +13631,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestWieldableItemDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestWieldableItemDesc");
 		return ptr;
 	}
 
@@ -13556,7 +13646,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NullEntitlementDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NullEntitlementDesc");
 		return ptr;
 	}
 
@@ -13571,7 +13661,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateLegendDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateLegendDesc");
 		return ptr;
 	}
 
@@ -13587,7 +13677,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageRewardDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageRewardDataAsset");
 		return ptr;
 	}
 
@@ -13603,7 +13693,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WeightedTreasureChestDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeightedTreasureChestDescAsset");
 		return ptr;
 	}
 
@@ -13619,7 +13709,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantQuestRandomRequiredItemsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantQuestRandomRequiredItemsDataAsset");
 		return ptr;
 	}
 
@@ -13635,7 +13725,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageLocationOnlyNamedIslandListDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageLocationOnlyNamedIslandListDataAsset");
 		return ptr;
 	}
 
@@ -13643,15 +13733,15 @@ public:
 
 
 // Class Athena.VoyageRecipeDataAsset
-// 0x0118 (0x0140 - 0x0028)
+// 0x0130 (0x0158 - 0x0028)
 class UVoyageRecipeDataAsset : public UDataAsset
 {
 public:
-	struct FVoyageRecipe                               Recipe;                                                   // 0x0028(0x0118) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FVoyageRecipe                               Recipe;                                                   // 0x0028(0x0130) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageRecipeDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageRecipeDataAsset");
 		return ptr;
 	}
 
@@ -13659,7 +13749,7 @@ public:
 
 
 // Class Athena.VoyageProposalDesc
-// 0x0050 (0x0128 - 0x00D8)
+// 0x0060 (0x0138 - 0x00D8)
 class UVoyageProposalDesc : public UEntitlementDesc
 {
 public:
@@ -13671,12 +13761,13 @@ public:
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
 	struct FStringAssetReference                       TooltipBackgroundImageUrl;                                // 0x00F0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class UVoyageRecipeDataAsset*                      VoyageRecipe;                                             // 0x0100(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FStringAssetReference                       OverrideOpenVoyageProposalMesh;                           // 0x0108(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0118(0x0010) MISSED OFFSET
+	struct FStringAssetReference                       OverrideVotingTableVoyageProposalMesh;                    // 0x0108(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       OverrideOpenVoyageProposalMesh;                           // 0x0118(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0128(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageProposalDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageProposalDesc");
 		return ptr;
 	}
 
@@ -13692,7 +13783,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EntitlementMapDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EntitlementMapDataAsset");
 		return ptr;
 	}
 
@@ -13708,7 +13799,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EntitlementsAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EntitlementsAsset");
 		return ptr;
 	}
 
@@ -13728,7 +13819,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EntitlementSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EntitlementSettings");
 		return ptr;
 	}
 
@@ -13743,7 +13834,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryContext_AllPlayerCharactersOnIsland");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryContext_AllPlayerCharactersOnIsland");
 		return ptr;
 	}
 
@@ -13758,7 +13849,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryContext_NamedActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryContext_NamedActor");
 		return ptr;
 	}
 
@@ -13773,7 +13864,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryContext_NamedActorOnIsland");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryContext_NamedActorOnIsland");
 		return ptr;
 	}
 
@@ -13788,7 +13879,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryContext_OccupiedPositionsOnIsland");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryContext_OccupiedPositionsOnIsland");
 		return ptr;
 	}
 
@@ -13803,7 +13894,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryContext_TargetPosition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryContext_TargetPosition");
 		return ptr;
 	}
 
@@ -13818,7 +13909,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryContext_Threat");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryContext_Threat");
 		return ptr;
 	}
 
@@ -13833,7 +13924,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryGenerator_IslandAISpawnLocations");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryGenerator_IslandAISpawnLocations");
 		return ptr;
 	}
 
@@ -13857,7 +13948,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_FacingAwayFromActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_FacingAwayFromActor");
 		return ptr;
 	}
 
@@ -13874,7 +13965,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InIslandSafeZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InIslandSafeZone");
 		return ptr;
 	}
 
@@ -13891,7 +13982,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InKrakenZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InKrakenZone");
 		return ptr;
 	}
 
@@ -13908,7 +13999,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InSeaRockZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InSeaRockZone");
 		return ptr;
 	}
 
@@ -13925,7 +14016,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InShipwreckZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InShipwreckZone");
 		return ptr;
 	}
 
@@ -13942,7 +14033,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InsideTinySharkExperience");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InsideTinySharkExperience");
 		return ptr;
 	}
 
@@ -13959,7 +14050,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InsideWorldBounds");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InsideWorldBounds");
 		return ptr;
 	}
 
@@ -13974,7 +14065,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldEventZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldEventZoneInterface");
 		return ptr;
 	}
 
@@ -13989,7 +14080,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldEventZoneServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldEventZoneServiceInterface");
 		return ptr;
 	}
 
@@ -14006,7 +14097,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_InWorldEventZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_InWorldEventZone");
 		return ptr;
 	}
 
@@ -14024,7 +14115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EnvQueryTest_TraceByProfile");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EnvQueryTest_TraceByProfile");
 		return ptr;
 	}
 
@@ -14039,7 +14130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExhumableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExhumableInterface");
 		return ptr;
 	}
 
@@ -14054,7 +14145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosionInterface");
 		return ptr;
 	}
 
@@ -14097,7 +14188,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosionComponent");
 		return ptr;
 	}
 
@@ -14112,7 +14203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosiveComponentInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosiveComponentInterface");
 		return ptr;
 	}
 
@@ -14127,7 +14218,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FuseTargetInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FuseTargetInterface");
 		return ptr;
 	}
 
@@ -14142,7 +14233,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HitReactionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HitReactionInterface");
 		return ptr;
 	}
 
@@ -14187,7 +14278,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExplosiveComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExplosiveComponent");
 		return ptr;
 	}
 
@@ -14204,7 +14295,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ExtentEstimationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ExtentEstimationInterface");
 		return ptr;
 	}
 
@@ -14228,7 +14319,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaceTargetComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaceTargetComponent");
 		return ptr;
 	}
 
@@ -14246,7 +14337,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaunaAnimationData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaunaAnimationData");
 		return ptr;
 	}
 
@@ -14261,7 +14352,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaunaBreed");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaunaBreed");
 		return ptr;
 	}
 
@@ -14276,7 +14367,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaunaSpecies");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaunaSpecies");
 		return ptr;
 	}
 
@@ -14358,31 +14449,32 @@ public:
 	bool                                               ShouldTurn;                                               // 0x08B0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x08B1(0x0007) MISSED OFFSET
 	class UActionRulesComponent*                       ActionRulesComponent;                                     // 0x08B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFaunaMovementComponent*                     FaunaMovementComponent;                                   // 0x08C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x50];                                      // 0x08C8(0x0050) MISSED OFFSET
-	float                                              TimeUntilDrowned;                                         // 0x0918(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0xC];                                       // 0x091C(0x000C) MISSED OFFSET
-	bool                                               Drowned;                                                  // 0x0928(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x2];                                       // 0x0929(0x0002) MISSED OFFSET
-	TEnumAsByte<EFaunaCratedState>                     CratedState;                                              // 0x092B(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EFaunaInWaterState>                    InWaterState;                                             // 0x092C(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x092D(0x0003) MISSED OFFSET
-	class AActor*                                      Crate;                                                    // 0x0930(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    BreathBubblesParticleSystemComponent;                     // 0x0938(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      CurrentAIStrategy;                                        // 0x0940(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x8];                                       // 0x0948(0x0008) MISSED OFFSET
-	float                                              DrowningDeathTime;                                        // 0x0950(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               IsPlayingStarvingAnim;                                    // 0x0954(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsAgitated;                                               // 0x0955(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsCalm;                                                   // 0x0956(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x1];                                       // 0x0957(0x0001) MISSED OFFSET
-	float                                              TargetTurnAngle;                                          // 0x0958(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x22C];                                     // 0x095C(0x022C) MISSED OFFSET
+	class UFeedingComponent*                           FeedingComponent;                                         // 0x08C0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UFaunaMovementComponent*                     FaunaMovementComponent;                                   // 0x08C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x50];                                      // 0x08D0(0x0050) MISSED OFFSET
+	float                                              TimeUntilDrowned;                                         // 0x0920(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0xC];                                       // 0x0924(0x000C) MISSED OFFSET
+	bool                                               Drowned;                                                  // 0x0930(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x2];                                       // 0x0931(0x0002) MISSED OFFSET
+	TEnumAsByte<EFaunaCratedState>                     CratedState;                                              // 0x0933(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EFaunaInWaterState>                    InWaterState;                                             // 0x0934(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x0935(0x0003) MISSED OFFSET
+	class AActor*                                      Crate;                                                    // 0x0938(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    BreathBubblesParticleSystemComponent;                     // 0x0940(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass*                                      CurrentAIStrategy;                                        // 0x0948(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x8];                                       // 0x0950(0x0008) MISSED OFFSET
+	float                                              DrowningDeathTime;                                        // 0x0958(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               IsPlayingStarvingAnim;                                    // 0x095C(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsAgitated;                                               // 0x095D(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsCalm;                                                   // 0x095E(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x1];                                       // 0x095F(0x0001) MISSED OFFSET
+	float                                              TargetTurnAngle;                                          // 0x0960(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x224];                                     // 0x0964(0x0224) MISSED OFFSET
 	class UVenomComponent*                             VenomComponent;                                           // 0x0B88(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Fauna");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Fauna");
 		return ptr;
 	}
 
@@ -14414,7 +14506,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaunaAnimationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaunaAnimationInterface");
 		return ptr;
 	}
 
@@ -14463,7 +14555,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaunaAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaunaAnimationInstance");
 		return ptr;
 	}
 
@@ -14541,7 +14633,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FaunaMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FaunaMovementComponent");
 		return ptr;
 	}
 
@@ -14556,7 +14648,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FeedingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FeedingInterface");
 		return ptr;
 	}
 
@@ -14578,7 +14670,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FeedingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FeedingComponent");
 		return ptr;
 	}
 
@@ -14595,7 +14687,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FireCannonNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FireCannonNotificationInputId");
 		return ptr;
 	}
 
@@ -14610,7 +14702,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FiredFromActorActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FiredFromActorActionStateId");
 		return ptr;
 	}
 
@@ -14628,7 +14720,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FiredFromCannonActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FiredFromCannonActionStateId");
 		return ptr;
 	}
 
@@ -14646,7 +14738,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FireStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FireStatus");
 		return ptr;
 	}
 
@@ -14661,7 +14753,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FleeAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FleeAIStrategyId");
 		return ptr;
 	}
 
@@ -14685,7 +14777,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FlyingCreature");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FlyingCreature");
 		return ptr;
 	}
 
@@ -14700,7 +14792,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FollowShipAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FollowShipAIStrategyId");
 		return ptr;
 	}
 
@@ -14715,7 +14807,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FOVHandlerFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FOVHandlerFunctions");
 		return ptr;
 	}
 
@@ -14731,16 +14823,16 @@ public:
 
 
 // Class Athena.FragileComponent
-// 0x0058 (0x0130 - 0x00D8)
+// 0x00C0 (0x0198 - 0x00D8)
 class UFragileComponent : public UActorComponent
 {
 public:
 	class UFragileComponentDataAsset*                  FragileComponentDataAsset;                                // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00E0(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x00E0(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FragileComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FragileComponent");
 		return ptr;
 	}
 
@@ -14748,7 +14840,7 @@ public:
 
 
 // Class Athena.FragileComponentDataAsset
-// 0x0148 (0x0170 - 0x0028)
+// 0x0160 (0x0188 - 0x0028)
 class UFragileComponentDataAsset : public UDataAsset
 {
 public:
@@ -14758,15 +14850,18 @@ public:
 	class UCurveFloat*                                 FallSpeedToDamageCurve;                                   // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseEvent*                                 DamageSound;                                              // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseObjectPoolWrapper*                     FragileComponentEmitterPool;                              // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TMap<class UClass*, float>                         ShipDamageTypeMappings;                                   // 0x0050(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x00A0(0x00A0) MISSED OFFSET
-	TArray<struct FFragileComponentShipDamageTypeEntry> ShipDamageTypeValues;                                     // 0x0140(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FFragileComponentHealthScalarEntry>  DamageTypeScalars;                                        // 0x0150(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<TEnumAsByte<EHealthChangedReason>>          BlockedHealthChangedReasons;                              // 0x0160(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       ObjectDamageRTPCName;                                     // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     DamageVfx;                                                // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       DamageVfxSocketName;                                      // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TMap<class UClass*, float>                         ShipDamageTypeMappings;                                   // 0x0068(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x00B8(0x00A0) MISSED OFFSET
+	TArray<struct FFragileComponentShipDamageTypeEntry> ShipDamageTypeValues;                                     // 0x0158(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FFragileComponentHealthScalarEntry>  DamageTypeScalars;                                        // 0x0168(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<TEnumAsByte<EHealthChangedReason>>          BlockedHealthChangedReasons;                              // 0x0178(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FragileComponentDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FragileComponentDataAsset");
 		return ptr;
 	}
 
@@ -14788,7 +14883,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FrontendCameraComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FrontendCameraComponent");
 		return ptr;
 	}
 
@@ -14807,7 +14902,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FrontendGameMode");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FrontendGameMode");
 		return ptr;
 	}
 
@@ -14824,7 +14919,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OneShotUsable");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OneShotUsable");
 		return ptr;
 	}
 
@@ -14855,7 +14950,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FuseComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FuseComponent");
 		return ptr;
 	}
 
@@ -14874,7 +14969,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GameAudioInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameAudioInterface");
 		return ptr;
 	}
 
@@ -14895,7 +14990,149 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GameAudioService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameAudioService");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.GameEventType
+// 0x0000 (0x0028 - 0x0028)
+class UGameEventType : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameEventType");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.GameEventSchedulerSettingsAsset
+// 0x0020 (0x0048 - 0x0028)
+class UGameEventSchedulerSettingsAsset : public UDataAsset
+{
+public:
+	TArray<struct FGameEventSettings>                  EventSettings;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FGameEventSchedulerConfiguration>    Configs;                                                  // 0x0038(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameEventSchedulerSettingsAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.GameEventSchedulerServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UGameEventSchedulerServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameEventSchedulerServiceInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.GameEventSchedulerService
+// 0x0060 (0x0088 - 0x0028)
+class UGameEventSchedulerService : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UGameEventSchedulerSettingsAsset*            Settings;                                                 // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
+	TArray<struct FGameEventCount>                     PermittedEventTypes;                                      // 0x0040(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData02[0x38];                                      // 0x0050(0x0038) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameEventSchedulerService");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AIShipBattleGameEventType
+// 0x0000 (0x0028 - 0x0028)
+class UAIShipBattleGameEventType : public UGameEventType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipBattleGameEventType");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AIShipPassiveGameEventType
+// 0x0000 (0x0028 - 0x0028)
+class UAIShipPassiveGameEventType : public UGameEventType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipPassiveGameEventType");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AIShipAggressiveGameEventType
+// 0x0000 (0x0028 - 0x0028)
+class UAIShipAggressiveGameEventType : public UGameEventType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipAggressiveGameEventType");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.KrakenGameEventType
+// 0x0000 (0x0028 - 0x0028)
+class UKrakenGameEventType : public UGameEventType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenGameEventType");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SkellyFortGameEventType
+// 0x0000 (0x0028 - 0x0028)
+class USkellyFortGameEventType : public UGameEventType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkellyFortGameEventType");
 		return ptr;
 	}
 
@@ -14923,7 +15160,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GameplayEventSignal");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameplayEventSignal");
 		return ptr;
 	}
 
@@ -14941,7 +15178,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GameplayLODSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameplayLODSettings");
 		return ptr;
 	}
 
@@ -14956,7 +15193,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GameStateFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GameStateFunctionLibrary");
 		return ptr;
 	}
 
@@ -14977,7 +15214,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GarbageGenerator");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GarbageGenerator");
 		return ptr;
 	}
 
@@ -14995,7 +15232,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GarbageObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GarbageObject");
 		return ptr;
 	}
 
@@ -15010,7 +15247,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GatedHealthInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GatedHealthInterface");
 		return ptr;
 	}
 
@@ -15026,7 +15263,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GeneratedLocationsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GeneratedLocationsDataAsset");
 		return ptr;
 	}
 
@@ -15041,7 +15278,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BuriedTreasureDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BuriedTreasureDataAsset");
 		return ptr;
 	}
 
@@ -15057,7 +15294,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandItemDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandItemDataAsset");
 		return ptr;
 	}
 
@@ -15072,7 +15309,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SunkenItemDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SunkenItemDataAsset");
 		return ptr;
 	}
 
@@ -15087,7 +15324,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WashedUpItemDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WashedUpItemDataAsset");
 		return ptr;
 	}
 
@@ -15103,7 +15340,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GenericPart");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GenericPart");
 		return ptr;
 	}
 
@@ -15121,7 +15358,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GetIntoAttackPositionAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GetIntoAttackPositionAIStrategyId");
 		return ptr;
 	}
 
@@ -15139,7 +15376,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GhostCharacterAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GhostCharacterAudioComponentParams");
 		return ptr;
 	}
 
@@ -15164,7 +15401,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GhostCharacterAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GhostCharacterAudioComponent");
 		return ptr;
 	}
 
@@ -15191,7 +15428,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GhostShipDoor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GhostShipDoor");
 		return ptr;
 	}
 
@@ -15210,7 +15447,22 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GhostShipPlayerSpawnLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GhostShipPlayerSpawnLocation");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.GhostShipStreamingProbe
+// 0x0000 (0x0490 - 0x0490)
+class AGhostShipStreamingProbe : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GhostShipStreamingProbe");
 		return ptr;
 	}
 
@@ -15226,7 +15478,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GhostShipTickManager");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GhostShipTickManager");
 		return ptr;
 	}
 
@@ -15243,7 +15495,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GlobalEmitterServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GlobalEmitterServiceInterface");
 		return ptr;
 	}
 
@@ -15260,7 +15512,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GlobalEmitterService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GlobalEmitterService");
 		return ptr;
 	}
 
@@ -15275,7 +15527,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HandlesFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HandlesFunctionLibrary");
 		return ptr;
 	}
 
@@ -15287,19 +15539,19 @@ public:
 
 
 // Class Athena.HangerComponent
-// 0x0040 (0x02E0 - 0x02A0)
+// 0x0040 (0x02F0 - 0x02B0)
 class UHangerComponent : public USceneComponent
 {
 public:
-	float                                              Mass;                                                     // 0x02A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LimitConeAngle;                                           // 0x02A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              XAxisMotionScale;                                         // 0x02A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              YAxisMotionScale;                                         // 0x02AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x30];                                      // 0x02B0(0x0030) MISSED OFFSET
+	float                                              Mass;                                                     // 0x02B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LimitConeAngle;                                           // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              XAxisMotionScale;                                         // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              YAxisMotionScale;                                         // 0x02BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x30];                                      // 0x02C0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HangerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HangerComponent");
 		return ptr;
 	}
 
@@ -15314,7 +15566,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HealthInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HealthInterface");
 		return ptr;
 	}
 
@@ -15336,7 +15588,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HealthComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HealthComponent");
 		return ptr;
 	}
 
@@ -15349,6 +15601,7 @@ public:
 	void ResetToMaxHealth();
 	void PreventAdjustmentFromHealthChangeReason(TEnumAsByte<EPreventDamageTypeLockReasons> LockReason, TEnumAsByte<EHealthChangedReason> HealthChangeReason);
 	void PredictHealthChange(float Change, TEnumAsByte<EHealthChangedReason> Reason);
+	void OnRep_CurrentHealth(float PrevCurrentHealth);
 	void OnRep_ContinuousHealthChangeSources(TArray<struct FContinuousHealthChange> PrevContinuousDamageSources);
 	void Multicast_SetHealthOnClients(const struct FHealthChange& Instance);
 	bool IsGodModeActive();
@@ -15364,17 +15617,17 @@ public:
 
 
 // Class Athena.GatedHealthComponent
-// 0x0028 (0x01C8 - 0x01A0)
+// 0x0050 (0x01F0 - 0x01A0)
 class UGatedHealthComponent : public UHealthComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x01A0(0x0008) MISSED OFFSET
 	uint32_t                                           NumOfGates;                                               // 0x01A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1C];                                      // 0x01AC(0x001C) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x44];                                      // 0x01AC(0x0044) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GatedHealthComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GatedHealthComponent");
 		return ptr;
 	}
 
@@ -15389,7 +15642,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HealthTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HealthTestFunctions");
 		return ptr;
 	}
 
@@ -15406,7 +15659,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HideInObjectActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HideInObjectActionStateId");
 		return ptr;
 	}
 
@@ -15426,7 +15679,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HideInObjectCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HideInObjectCompositeInputHandler");
 		return ptr;
 	}
 
@@ -15449,7 +15702,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Hideout");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Hideout");
 		return ptr;
 	}
 
@@ -15467,7 +15720,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SpawnLocation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SpawnLocation");
 		return ptr;
 	}
 
@@ -15485,7 +15738,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HideoutEntrance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HideoutEntrance");
 		return ptr;
 	}
 
@@ -15504,7 +15757,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HideoutExit");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HideoutExit");
 		return ptr;
 	}
 
@@ -15524,7 +15777,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HideoutService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HideoutService");
 		return ptr;
 	}
 
@@ -15539,7 +15792,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HitDetectionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HitDetectionInterface");
 		return ptr;
 	}
 
@@ -15555,7 +15808,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HitDetectionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HitDetectionComponent");
 		return ptr;
 	}
 
@@ -15575,7 +15828,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HitReactionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HitReactionComponent");
 		return ptr;
 	}
 
@@ -15595,7 +15848,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CharacterHitReactionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CharacterHitReactionComponent");
 		return ptr;
 	}
 
@@ -15613,7 +15866,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockHitReactionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockHitReactionComponent");
 		return ptr;
 	}
 
@@ -15634,7 +15887,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockHitReactionActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockHitReactionActor");
 		return ptr;
 	}
 
@@ -15655,7 +15908,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Hole");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Hole");
 		return ptr;
 	}
 
@@ -15679,7 +15932,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShovelHole");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShovelHole");
 		return ptr;
 	}
 
@@ -15701,7 +15954,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HoleDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HoleDataAsset");
 		return ptr;
 	}
 
@@ -15716,7 +15969,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HoleServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HoleServiceInterface");
 		return ptr;
 	}
 
@@ -15736,7 +15989,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HoleService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HoleService");
 		return ptr;
 	}
 
@@ -15751,7 +16004,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HotFootStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HotFootStatus");
 		return ptr;
 	}
 
@@ -15769,7 +16022,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Hull");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Hull");
 		return ptr;
 	}
 
@@ -15784,7 +16037,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartInterface");
 		return ptr;
 	}
 
@@ -15803,7 +16056,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LeakableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LeakableInterface");
 		return ptr;
 	}
 
@@ -15822,7 +16075,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RepairTypeId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RepairTypeId");
 		return ptr;
 	}
 
@@ -15837,7 +16090,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RepairableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RepairableInterface");
 		return ptr;
 	}
 
@@ -15923,7 +16176,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DamageZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DamageZone");
 		return ptr;
 	}
 
@@ -15963,7 +16216,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HullDamageInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HullDamageInterface");
 		return ptr;
 	}
 
@@ -15989,7 +16242,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HullDamage");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HullDamage");
 		return ptr;
 	}
 
@@ -16030,7 +16283,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipInternalWater");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipInternalWater");
 		return ptr;
 	}
 
@@ -16060,7 +16313,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestHullDamage");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestHullDamage");
 		return ptr;
 	}
 
@@ -16068,32 +16321,32 @@ public:
 
 
 // Class Athena.LeakerComponent
-// 0x00B0 (0x0350 - 0x02A0)
+// 0x00B0 (0x0360 - 0x02B0)
 class ULeakerComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	class UParticleSystem*                             ParticleSystem_WaterLeakAboveWater;                       // 0x02A8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             ParticleSystem_WaterLeakBelowWater;                       // 0x02B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             ParticleSystem_RepairLeakAboveWater;                      // 0x02B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             ParticleSystem_RepairLeakBelowWater;                      // 0x02C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WaterLeakSfx_Play;                                        // 0x02C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WaterLeakSfx_Stop;                                        // 0x02D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WaterLeakRepairSfx_Play;                                  // 0x02D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WaterLeakRepairSfx_Stop;                                  // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       WaterLeakUnderwaterSwitchGroup;                           // 0x02E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       WaterLeakUnderwaterSwitchDefaultAboveWater;               // 0x02F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       WaterLeakUnderwaterSwitchUnderwater;                      // 0x02F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WaterLeakFadeTime;                                        // 0x0300(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       WaterLeakEmitterName;                                     // 0x0304(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x030C(0x0004) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     WaterLeakWisePool;                                        // 0x0310(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FLeak>                               Leaks;                                                    // 0x0318(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x28];                                      // 0x0328(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	class UParticleSystem*                             ParticleSystem_WaterLeakAboveWater;                       // 0x02B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             ParticleSystem_WaterLeakBelowWater;                       // 0x02C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             ParticleSystem_RepairLeakAboveWater;                      // 0x02C8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             ParticleSystem_RepairLeakBelowWater;                      // 0x02D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakSfx_Play;                                        // 0x02D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakSfx_Stop;                                        // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakRepairSfx_Play;                                  // 0x02E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakRepairSfx_Stop;                                  // 0x02F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       WaterLeakUnderwaterSwitchGroup;                           // 0x02F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       WaterLeakUnderwaterSwitchDefaultAboveWater;               // 0x0300(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       WaterLeakUnderwaterSwitchUnderwater;                      // 0x0308(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WaterLeakFadeTime;                                        // 0x0310(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       WaterLeakEmitterName;                                     // 0x0314(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x031C(0x0004) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     WaterLeakWisePool;                                        // 0x0320(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FLeak>                               Leaks;                                                    // 0x0328(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x28];                                      // 0x0338(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LeakerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LeakerComponent");
 		return ptr;
 	}
 
@@ -16105,20 +16358,20 @@ public:
 
 
 // Class Athena.ShipLeakerComponent
-// 0x00E0 (0x0430 - 0x0350)
+// 0x00E0 (0x0440 - 0x0360)
 class UShipLeakerComponent : public ULeakerComponent
 {
 public:
-	int                                                TickInterval;                                             // 0x0350(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0354(0x0004) MISSED OFFSET
-	class AShip*                                       Ship;                                                     // 0x0358(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AShipInternalWater*                          InternalWater;                                            // 0x0360(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<struct FShipLeak>                           ShipLeaks;                                                // 0x0368(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x0378(0x00B8) MISSED OFFSET
+	int                                                TickInterval;                                             // 0x0360(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0364(0x0004) MISSED OFFSET
+	class AShip*                                       Ship;                                                     // 0x0368(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AShipInternalWater*                          InternalWater;                                            // 0x0370(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<struct FShipLeak>                           ShipLeaks;                                                // 0x0378(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x0388(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipLeakerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipLeakerComponent");
 		return ptr;
 	}
 
@@ -16166,7 +16419,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HullDamage2");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HullDamage2");
 		return ptr;
 	}
 
@@ -16191,7 +16444,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HullDamagePointProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HullDamagePointProxy");
 		return ptr;
 	}
 
@@ -16201,46 +16454,45 @@ public:
 
 
 // Class Athena.HumanoidActionStateCreatorDefinition
-// 0x02E0 (0x0770 - 0x0490)
+// 0x0308 (0x0798 - 0x0490)
 class AHumanoidActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
 	struct FDebugSuperSailorActionStateParams          DebugSuperSailorParams;                                   // 0x0490(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FControlWheelActionStateParams              ControlWheelParams;                                       // 0x04A0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FControlCapstanArmActionStateParams         ControlCapstanArmParams;                                  // 0x04C8(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FControlSailManipulatorActionStateParams    ControlSailManipulatorParams;                             // 0x04F0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FUseLadderActionStateParams                 UseLadderParams;                                          // 0x0518(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FClamberActionStateParams                   ClamberParams;                                            // 0x0560(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x058C(0x0004) MISSED OFFSET
-	struct FUseCannonActionStateParams                 UseCannonParams;                                          // 0x0590(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FUseMapTableActionStateParams               UseMapTableParams;                                        // 0x05B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLinearTransitionLadderActionStateParams    OffBottomTransitionLadderParams;                          // 0x05C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLinearTransitionLadderActionStateParams    OnBottomTransitionLadderParams;                           // 0x05D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FSplineTransitionLadderActionStateParams    OffTopTransitionLadderParams;                             // 0x05E8(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FSplineTransitionLadderActionStateParams    OnTopTransitionLadderParams;                              // 0x05F4(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FTeleportActionStateParams                  TeleportParams;                                           // 0x0600(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FWaitingToSpawnActionStateParams            WaitingToSpawnParams;                                     // 0x062C(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FRepairObjectActionStateParams              RepairObjectParams;                                       // 0x0640(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FUseItemActionStateParams                   UseItemParams;                                            // 0x0644(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0645(0x0003) MISSED OFFSET
-	struct FDeadActionStateParams                      DeadParams;                                               // 0x0648(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FHideInObjectActionStateParams              HideInObjectParams;                                       // 0x066C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLeaveGhostShipActionStateParams            LeaveGhostShipParams;                                     // 0x0678(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x069C(0x0004) MISSED OFFSET
-	struct FShovelDigActionStateParams                 ShovelDigParams;                                          // 0x06A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FMigrationActionStateParams                 MigrationParams;                                          // 0x06B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FFiredFromActorActionStateParams            FiredFromCannonParams;                                    // 0x06B4(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FFiredFromActorActionStateParams            LaunchedFromKrakenParams;                                 // 0x06DC(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FWaitForDemoResetActionStateParams          WaitForDemoResetParams;                                   // 0x0704(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0705(0x0003) MISSED OFFSET
-	struct FCapturedByKrakenActionStateParams          CapturedByKrakenParams;                                   // 0x0708(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FIngestedByKrakenActionStateParams          IngestedByKrakenParams;                                   // 0x0748(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FSwallowedByKrakenActionStateParams         SwallowedByKrakenParams;                                  // 0x074C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData04[0x1C];                                      // 0x0754(0x001C) MISSED OFFSET
+	struct FControlWheelActionStateParams              ControlWheelParams;                                       // 0x04A0(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FControlCapstanArmActionStateParams         ControlCapstanArmParams;                                  // 0x04CC(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FControlSailManipulatorActionStateParams    ControlSailManipulatorParams;                             // 0x04F8(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FUseLadderActionStateParams                 UseLadderParams;                                          // 0x0524(0x004C) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FClamberActionStateParams                   ClamberParams;                                            // 0x0570(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FUseCannonActionStateParams                 UseCannonParams;                                          // 0x05A0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FUseMapTableActionStateParams               UseMapTableParams;                                        // 0x05C8(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLinearTransitionLadderActionStateParams    OffBottomTransitionLadderParams;                          // 0x05DC(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLinearTransitionLadderActionStateParams    OnBottomTransitionLadderParams;                           // 0x05F0(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FSplineTransitionLadderActionStateParams    OffTopTransitionLadderParams;                             // 0x0604(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FSplineTransitionLadderActionStateParams    OnTopTransitionLadderParams;                              // 0x0614(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FTeleportActionStateParams                  TeleportParams;                                           // 0x0624(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FWaitingToSpawnActionStateParams            WaitingToSpawnParams;                                     // 0x0650(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FRepairObjectActionStateParams              RepairObjectParams;                                       // 0x0664(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FUseItemActionStateParams                   UseItemParams;                                            // 0x0668(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0669(0x0003) MISSED OFFSET
+	struct FDeadActionStateParams                      DeadParams;                                               // 0x066C(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FHideInObjectActionStateParams              HideInObjectParams;                                       // 0x0690(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLeaveGhostShipActionStateParams            LeaveGhostShipParams;                                     // 0x06A0(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x06C4(0x0004) MISSED OFFSET
+	struct FShovelDigActionStateParams                 ShovelDigParams;                                          // 0x06C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FMigrationActionStateParams                 MigrationParams;                                          // 0x06D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FFiredFromActorActionStateParams            FiredFromCannonParams;                                    // 0x06DC(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FFiredFromActorActionStateParams            LaunchedFromKrakenParams;                                 // 0x0704(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FWaitForDemoResetActionStateParams          WaitForDemoResetParams;                                   // 0x072C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x072D(0x0003) MISSED OFFSET
+	struct FCapturedByKrakenActionStateParams          CapturedByKrakenParams;                                   // 0x0730(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FIngestedByKrakenActionStateParams          IngestedByKrakenParams;                                   // 0x0770(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FSwallowedByKrakenActionStateParams         SwallowedByKrakenParams;                                  // 0x0774(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x1C];                                      // 0x077C(0x001C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HumanoidActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HumanoidActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -16255,7 +16507,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShantyInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShantyInterface");
 		return ptr;
 	}
 
@@ -16282,7 +16534,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HungeringDeep");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HungeringDeep");
 		return ptr;
 	}
 
@@ -16297,7 +16549,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IdleCircleAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IdleCircleAIStrategyId");
 		return ptr;
 	}
 
@@ -16312,7 +16564,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactDecalParamModifier");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactDecalParamModifier");
 		return ptr;
 	}
 
@@ -16343,7 +16595,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactDataAsset");
 		return ptr;
 	}
 
@@ -16361,7 +16613,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactListDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactListDataAsset");
 		return ptr;
 	}
 
@@ -16376,7 +16628,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactDecalParamModifierTime");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactDecalParamModifierTime");
 		return ptr;
 	}
 
@@ -16393,7 +16645,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactDecalParamModifierVomit");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactDecalParamModifierVomit");
 		return ptr;
 	}
 
@@ -16410,7 +16662,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactFunctionLibrary");
 		return ptr;
 	}
 
@@ -16425,7 +16677,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactMeleeAttackId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactMeleeAttackId");
 		return ptr;
 	}
 
@@ -16440,7 +16692,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball");
 		return ptr;
 	}
 
@@ -16455,7 +16707,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Boogie");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Boogie");
 		return ptr;
 	}
 
@@ -16470,7 +16722,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Grog");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Grog");
 		return ptr;
 	}
 
@@ -16485,7 +16737,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Limp");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Limp");
 		return ptr;
 	}
 
@@ -16500,7 +16752,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Anchor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Anchor");
 		return ptr;
 	}
 
@@ -16515,7 +16767,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Ballast");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Ballast");
 		return ptr;
 	}
 
@@ -16530,7 +16782,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Barrel");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Barrel");
 		return ptr;
 	}
 
@@ -16545,7 +16797,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Passive");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Passive");
 		return ptr;
 	}
 
@@ -16560,7 +16812,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Rigging");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Rigging");
 		return ptr;
 	}
 
@@ -16575,7 +16827,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Rudder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Ship_Rudder");
 		return ptr;
 	}
 
@@ -16590,7 +16842,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Silence");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Silence");
 		return ptr;
 	}
 
@@ -16605,7 +16857,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Snake");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Snake");
 		return ptr;
 	}
 
@@ -16620,7 +16872,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdCannonball_Cur_Snooze");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdCannonball_Cur_Snooze");
 		return ptr;
 	}
 
@@ -16635,7 +16887,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdLightning");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdLightning");
 		return ptr;
 	}
 
@@ -16650,7 +16902,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdSmallShot");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdSmallShot");
 		return ptr;
 	}
 
@@ -16665,7 +16917,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdSmallShotScatter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdSmallShotScatter");
 		return ptr;
 	}
 
@@ -16680,7 +16932,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVolcanoRockLarge");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdVolcanoRockLarge");
 		return ptr;
 	}
 
@@ -16695,7 +16947,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVolcanoRockMedium");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdVolcanoRockMedium");
 		return ptr;
 	}
 
@@ -16710,7 +16962,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVolcanoRockMini");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdVolcanoRockMini");
 		return ptr;
 	}
 
@@ -16725,7 +16977,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVolcanoRockSmall");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdVolcanoRockSmall");
 		return ptr;
 	}
 
@@ -16740,7 +16992,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdVomit");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdVomit");
 		return ptr;
 	}
 
@@ -16755,7 +17007,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactProjectileIdWater");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactProjectileIdWater");
 		return ptr;
 	}
 
@@ -16771,7 +17023,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpactSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpactSettings");
 		return ptr;
 	}
 
@@ -16786,7 +17038,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpulseThrottlerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpulseThrottlerInterface");
 		return ptr;
 	}
 
@@ -16805,7 +17057,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ImpulseThrottlerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ImpulseThrottlerComponent");
 		return ptr;
 	}
 
@@ -16820,7 +17072,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InactivityDetectionServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InactivityDetectionServiceInterface");
 		return ptr;
 	}
 
@@ -16836,7 +17088,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InactivityDetectionService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InactivityDetectionService");
 		return ptr;
 	}
 
@@ -16851,7 +17103,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IngestedByKrakenActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IngestedByKrakenActionStateId");
 		return ptr;
 	}
 
@@ -16871,7 +17123,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IngestedByKrakenCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IngestedByKrakenCompositeInputHandler");
 		return ptr;
 	}
 
@@ -16889,7 +17141,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InstrumentInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InstrumentInterface");
 		return ptr;
 	}
 
@@ -16911,7 +17163,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IntentCombinerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IntentCombinerComponent");
 		return ptr;
 	}
 
@@ -16931,7 +17183,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IntentComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IntentComponent");
 		return ptr;
 	}
 
@@ -16954,7 +17206,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClimbingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClimbingComponent");
 		return ptr;
 	}
 
@@ -16975,7 +17227,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControllableIntentComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControllableIntentComponent");
 		return ptr;
 	}
 
@@ -16995,7 +17247,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FixedIntentComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FixedIntentComponent");
 		return ptr;
 	}
 
@@ -17018,7 +17270,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanMock");
 		return ptr;
 	}
 
@@ -17044,7 +17296,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClamberSpot");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClamberSpot");
 		return ptr;
 	}
 
@@ -17063,7 +17315,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIDockableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIDockableObject");
 		return ptr;
 	}
 
@@ -17078,7 +17330,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIDockableWheel");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIDockableWheel");
 		return ptr;
 	}
 
@@ -17096,7 +17348,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockCannon");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockCannon");
 		return ptr;
 	}
 
@@ -17114,7 +17366,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanArm");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanArm");
 		return ptr;
 	}
 
@@ -17133,7 +17385,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugShipController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugShipController");
 		return ptr;
 	}
 
@@ -17158,7 +17410,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTableControlPoint");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTableControlPoint");
 		return ptr;
 	}
 
@@ -17180,7 +17432,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerLoadingInteractionPoint");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerLoadingInteractionPoint");
 		return ptr;
 	}
 
@@ -17200,7 +17452,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailManipulatorAudioParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailManipulatorAudioParams");
 		return ptr;
 	}
 
@@ -17215,7 +17467,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailManipulatorInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailManipulatorInterface");
 		return ptr;
 	}
 
@@ -17237,7 +17489,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailAngleInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailAngleInterface");
 		return ptr;
 	}
 
@@ -17255,7 +17507,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailHoistInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailHoistInterface");
 		return ptr;
 	}
 
@@ -17266,22 +17518,23 @@ public:
 
 
 // Class Athena.Seat
-// 0x00B0 (0x0680 - 0x05D0)
+// 0x00B8 (0x0688 - 0x05D0)
 class ASeat : public AControllableObject
 {
 public:
-	struct FSittingActionStateParams                   SittingStateParams;                                       // 0x05D0(0x002C) (Edit)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x05FC(0x0004) MISSED OFFSET
+	struct FSittingActionStateParams                   SittingStateParams;                                       // 0x05D0(0x0030) (Edit)
 	class UInteractableComponent*                      InteractableComponent;                                    // 0x0600(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FName                                       SocketName;                                               // 0x0608(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FText                                       InteractionVerb;                                          // 0x0610(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0610(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0610(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FText                                       InteractionDisplayName;                                   // 0x0648(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0648(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0648(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	float                                              CosCameraAngleToTurnOffFirstPersonMesh;                   // 0x0680(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0684(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Seat");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Seat");
 		return ptr;
 	}
 
@@ -17289,29 +17542,33 @@ public:
 
 
 // Class Athena.RowingSeat
-// 0x0130 (0x07B0 - 0x0680)
+// 0x0168 (0x07F0 - 0x0688)
 class ARowingSeat : public ASeat
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0680(0x0008) MISSED OFFSET
-	struct FOarParams                                  OarParams;                                                // 0x0688(0x0038) (Edit)
-	float                                              StrokeSynchronisationWindow;                              // 0x06C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x06C4(0x0004) MISSED OFFSET
-	class UStaticMeshComponent*                        LeftOarMesh;                                              // 0x06C8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        RightOarMesh;                                             // 0x06D0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FOar                                        LeftOar;                                                  // 0x06D8(0x0058)
-	struct FOar                                        RightOar;                                                 // 0x0730(0x0058)
-	unsigned char                                      UnknownData02[0x28];                                      // 0x0788(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0688(0x0008) MISSED OFFSET
+	struct FOarParams                                  OarParams;                                                // 0x0690(0x0038) (Edit)
+	float                                              StrokeSynchronisationWindow;                              // 0x06C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x06CC(0x0004) MISSED OFFSET
+	class UForceFeedbackEffect*                        ForceFeedbackForLeftStrokeEnd;                            // 0x06D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UForceFeedbackEffect*                        ForceFeedbackForRightStrokeEnd;                           // 0x06D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       PaddleSocketName;                                         // 0x06E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        LeftOarMesh;                                              // 0x06E8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        RightOarMesh;                                             // 0x06F0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<TEnumAsByte<EOarInputState>>                OarInputStates;                                           // 0x06F8(0x0010) (Net, ZeroConstructor)
+	struct FOar                                        LeftOar;                                                  // 0x0708(0x0060)
+	struct FOar                                        RightOar;                                                 // 0x0768(0x0060)
+	unsigned char                                      UnknownData02[0x28];                                      // 0x07C8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowingSeat");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowingSeat");
 		return ptr;
 	}
 
 
 	void Server_SetOarInputState(int InOarIndex, TEnumAsByte<EOarInputState> InOarState);
-	void Multicast_SetOarInputState(int InOarIndex, TEnumAsByte<EOarInputState> InOarState);
+	void OnRep_OarInputStates(TArray<TEnumAsByte<EOarInputState>> OldInputStates);
 };
 
 
@@ -17325,7 +17582,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestControllableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestControllableObject");
 		return ptr;
 	}
 
@@ -17343,7 +17600,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WheelInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WheelInterface");
 		return ptr;
 	}
 
@@ -17367,7 +17624,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WheelDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WheelDescAsset");
 		return ptr;
 	}
 
@@ -17411,7 +17668,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Wheel");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Wheel");
 		return ptr;
 	}
 
@@ -17437,7 +17694,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestDamageZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestDamageZone");
 		return ptr;
 	}
 
@@ -17477,7 +17734,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Bell");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Bell");
 		return ptr;
 	}
 
@@ -17498,7 +17755,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CapstanRelease");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CapstanRelease");
 		return ptr;
 	}
 
@@ -17506,22 +17763,23 @@ public:
 
 
 // Class Athena.ForceSpot
-// 0x00F8 (0x0628 - 0x0530)
+// 0x0100 (0x0630 - 0x0530)
 class AForceSpot : public AInteractableObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0530(0x0008) MISSED OFFSET
 	class UInteractableComponent*                      InteractableComponent;                                    // 0x0538(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              ForceScalar;                                              // 0x0540(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0544(0x0004) MISSED OFFSET
-	struct FText                                       InteractionDisplayName;                                   // 0x0548(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0544(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	float                                              InteractionRadius;                                        // 0x0580(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xA4];                                      // 0x0584(0x00A4) MISSED OFFSET
+	class USplineComponent*                            InteractionSplineComponent;                               // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              ForceScalar;                                              // 0x0548(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x054C(0x0004) MISSED OFFSET
+	struct FText                                       InteractionDisplayName;                                   // 0x0550(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x20];                                      // 0x054C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	float                                              InteractionRadius;                                        // 0x0588(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xA4];                                      // 0x058C(0x00A4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ForceSpot");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ForceSpot");
 		return ptr;
 	}
 
@@ -17540,7 +17798,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableLightParameters");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableLightParameters");
 		return ptr;
 	}
 
@@ -17565,7 +17823,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableLight");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableLight");
 		return ptr;
 	}
 
@@ -17584,7 +17842,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableLightMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableLightMock");
 		return ptr;
 	}
 
@@ -17607,7 +17865,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipInteractableLight");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipInteractableLight");
 		return ptr;
 	}
 
@@ -17622,7 +17880,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipInteractableLightMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipInteractableLightMock");
 		return ptr;
 	}
 
@@ -17687,7 +17945,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Mermaid");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Mermaid");
 		return ptr;
 	}
 
@@ -17704,19 +17962,37 @@ public:
 
 
 // Class Athena.MountpointActor
-// 0x0038 (0x0568 - 0x0530)
+// 0x01E0 (0x0710 - 0x0530)
 class AMountpointActor : public AInteractableObject
 {
 public:
-	class UMountpointComponent*                        MountpointComponent;                                      // 0x0530(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UOverlapTriggerComponent*                    OverlapTriggerComponent;                                  // 0x0538(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UInteractableComponent*                      InteractableComponent;                                    // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UClass*                                      MountNotificationInputId;                                 // 0x0548(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0550(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0530(0x0010) MISSED OFFSET
+	class UInterpolatingMountpointComponent*           MountpointComponent;                                      // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UOverlapTriggerComponent*                    OverlapTriggerComponent;                                  // 0x0548(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UInteractableComponent*                      InteractableComponent;                                    // 0x0550(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        MountedMeshComponent;                                     // 0x0558(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UClass*                                      PressedNotificationInputId;                               // 0x0560(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ReleasedNotificationInputId;                              // 0x0568(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InputHoldTime;                                            // 0x0570(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0574(0x0004) MISSED OFFSET
+	struct FText                                       MountVerb;                                                // 0x0578(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x20];                                      // 0x0574(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       UnmountVerb;                                              // 0x05B0(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData03[0x20];                                      // 0x05B0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	bool                                               IsNothingToMountTooltipEnabled;                           // 0x05E8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x05E9(0x0007) MISSED OFFSET
+	struct FText                                       NothingToMountDescription;                                // 0x05F0(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData05[0x20];                                      // 0x05E9(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	TArray<struct FVector>                             DetachInteractionPoints;                                  // 0x0628(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              DetachInteractionPointRadius;                             // 0x0638(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DetachInteractionMaxDistance;                             // 0x063C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AttachInteractionMaxDistance;                             // 0x0640(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UnmountIfOwnerShipSinks;                                  // 0x0644(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0xCB];                                      // 0x0645(0x00CB) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountpointActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountpointActor");
 		return ptr;
 	}
 
@@ -17739,7 +18015,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MusicBox");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MusicBox");
 		return ptr;
 	}
 
@@ -17768,7 +18044,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwrightOneShot");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwrightOneShot");
 		return ptr;
 	}
 
@@ -17789,7 +18065,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionInterface");
 		return ptr;
 	}
 
@@ -17808,7 +18084,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionActor");
 		return ptr;
 	}
 
@@ -17842,7 +18118,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletonFortDoor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletonFortDoor");
 		return ptr;
 	}
 
@@ -17861,7 +18137,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestInteractableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestInteractableObject");
 		return ptr;
 	}
 
@@ -17876,7 +18152,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LadderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LadderInterface");
 		return ptr;
 	}
 
@@ -17904,7 +18180,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Ladder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Ladder");
 		return ptr;
 	}
 
@@ -17922,7 +18198,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestDerivedLadder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestDerivedLadder");
 		return ptr;
 	}
 
@@ -17937,7 +18213,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestDerivedLadderInitialised");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestDerivedLadderInitialised");
 		return ptr;
 	}
 
@@ -17953,7 +18229,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ModalInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ModalInteraction");
 		return ptr;
 	}
 
@@ -17979,7 +18255,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ModalInteractionProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ModalInteractionProxy");
 		return ptr;
 	}
 
@@ -17994,7 +18270,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MermaidInteractionProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MermaidInteractionProxy");
 		return ptr;
 	}
 
@@ -18009,7 +18285,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCInterface");
 		return ptr;
 	}
 
@@ -18027,7 +18303,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPC");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPC");
 		return ptr;
 	}
 
@@ -18045,7 +18321,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyShopkeeper");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyShopkeeper");
 		return ptr;
 	}
 
@@ -18061,7 +18337,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Shipwright");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Shipwright");
 		return ptr;
 	}
 
@@ -18076,7 +18352,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Shopkeeper");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Shopkeeper");
 		return ptr;
 	}
 
@@ -18098,7 +18374,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PossessionsChest");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PossessionsChest");
 		return ptr;
 	}
 
@@ -18116,7 +18392,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationChest");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationChest");
 		return ptr;
 	}
 
@@ -18133,7 +18409,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipFlagCustomizationChest");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipFlagCustomizationChest");
 		return ptr;
 	}
 
@@ -18148,7 +18424,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageProposalContainerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageProposalContainerInterface");
 		return ptr;
 	}
 
@@ -18171,7 +18447,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageProposalContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageProposalContainer");
 		return ptr;
 	}
 
@@ -18181,17 +18457,18 @@ public:
 
 
 // Class Athena.CargoRunCrateItemProxy
-// 0x0018 (0x08D0 - 0x08B8)
+// 0x0020 (0x08D8 - 0x08B8)
 class ACargoRunCrateItemProxy : public AMerchantCrateItemProxy
 {
 public:
 	class UCargoRunCrateComponent*                     CargoRunCrateComponent;                                   // 0x08B8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UNPCDialogComponent*                         NPCDialogComponent;                                       // 0x08C0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UGatedHealthComponent*                       GatedHealthComponent;                                     // 0x08C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UVisualHealthResponseComponent*              VisualHealthResponseComponent;                            // 0x08D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunCrateItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunCrateItemProxy");
 		return ptr;
 	}
 
@@ -18206,7 +18483,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BaseSimpleBootyItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BaseSimpleBootyItemProxy");
 		return ptr;
 	}
 
@@ -18221,7 +18498,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SimpleBootyItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SimpleBootyItemProxy");
 		return ptr;
 	}
 
@@ -18236,7 +18513,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaticSimpleBootyItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaticSimpleBootyItemProxy");
 		return ptr;
 	}
 
@@ -18255,7 +18532,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BountyRewardItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BountyRewardItemProxy");
 		return ptr;
 	}
 
@@ -18292,7 +18569,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureChestItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureChestItemProxy");
 		return ptr;
 	}
 
@@ -18312,7 +18589,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockTreasureChestItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockTreasureChestItemProxy");
 		return ptr;
 	}
 
@@ -18329,7 +18606,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MessageInABottleItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MessageInABottleItemProxy");
 		return ptr;
 	}
 
@@ -18346,7 +18623,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StrongholdKeyProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StrongholdKeyProxy");
 		return ptr;
 	}
 
@@ -18361,7 +18638,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaticMeshItemProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaticMeshItemProxy");
 		return ptr;
 	}
 
@@ -18377,7 +18654,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PickupableMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PickupableMock");
 		return ptr;
 	}
 
@@ -18392,7 +18669,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TooltipDetailedEventProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TooltipDetailedEventProviderInterface");
 		return ptr;
 	}
 
@@ -18414,7 +18691,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VotableObjectView");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VotableObjectView");
 		return ptr;
 	}
 
@@ -18438,7 +18715,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableMock");
 		return ptr;
 	}
 
@@ -18446,7 +18723,7 @@ public:
 
 
 // Class Athena.InteractableMockActor
-// 0x0068 (0x04F8 - 0x0490)
+// 0x0078 (0x0508 - 0x0490)
 class AInteractableMockActor : public AActor
 {
 public:
@@ -18459,11 +18736,11 @@ public:
 	class UActionRulesComponent*                       ActionRulesComponent;                                     // 0x04E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<EInteractableState>                    CurrentInteractionState;                                  // 0x04F0(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               CanSetInteractionState;                                   // 0x04F1(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x04F2(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x16];                                      // 0x04F2(0x0016) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableMockActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableMockActor");
 		return ptr;
 	}
 
@@ -18478,7 +18755,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractablesTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractablesTestFunctions");
 		return ptr;
 	}
 
@@ -18499,7 +18776,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractableStorageContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractableStorageContainer");
 		return ptr;
 	}
 
@@ -18517,7 +18794,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractionCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractionCompositeInputHandler");
 		return ptr;
 	}
 
@@ -18537,7 +18814,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractionPoliciesTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractionPoliciesTestFunctions");
 		return ptr;
 	}
 
@@ -18567,7 +18844,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractionSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractionSettings");
 		return ptr;
 	}
 
@@ -18582,7 +18859,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractObjectActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractObjectActionStateId");
 		return ptr;
 	}
 
@@ -18599,7 +18876,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractOrDisengageNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractOrDisengageNotificationInputId");
 		return ptr;
 	}
 
@@ -18614,7 +18891,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractOrDisengageReleasedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractOrDisengageReleasedNotificationInputId");
 		return ptr;
 	}
 
@@ -18633,7 +18910,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InteractorTestProxyObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InteractorTestProxyObject");
 		return ptr;
 	}
 
@@ -18656,7 +18933,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InterpolatingItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InterpolatingItem");
 		return ptr;
 	}
 
@@ -18672,7 +18949,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryItemCategoryToSlotRemappingAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryItemCategoryToSlotRemappingAsset");
 		return ptr;
 	}
 
@@ -18688,7 +18965,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryListenerMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryListenerMock");
 		return ptr;
 	}
 
@@ -18704,7 +18981,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableMock");
 		return ptr;
 	}
 
@@ -18730,7 +19007,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryManipulatorComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryManipulatorComponent");
 		return ptr;
 	}
 
@@ -18743,7 +19020,7 @@ public:
 	void QuickSelectItemOfType(TEnumAsByte<EItemType> ItemType, int TypedItemIndex);
 	void QuickSelectItemOfCategory(class UClass* Category, int IndexIntoCategory);
 	void QuickSelectItem(int ItemIndex);
-	bool PickUpItem(class AItemInfo* ItemInfo, bool AndWield);
+	bool PickUpItem(class AItemInfo* ItemInfo, bool AndWield, bool ShouldNotifyClients);
 	void Multicast_ItemPickedUpRPC(TEnumAsByte<EWieldableItemSize> ItemSize, bool WasEmptyHanded);
 	void Multicast_CurrentItemActorIndexChangedRPC(int NewIndex);
 	bool IsIdle();
@@ -18772,7 +19049,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.InventoryManipulatorComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InventoryManipulatorComponentMock");
 		return ptr;
 	}
 
@@ -18790,7 +19067,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServiceProviderGameState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServiceProviderGameState");
 		return ptr;
 	}
 
@@ -18798,7 +19075,7 @@ public:
 
 
 // Class Athena.AthenaGameState
-// 0x02D0 (0x08B8 - 0x05E8)
+// 0x02D8 (0x08C0 - 0x05E8)
 class AAthenaGameState : public AServiceProviderGameState
 {
 public:
@@ -18827,25 +19104,26 @@ public:
 	class AAIManagerService*                           AIManagerService;                                         // 0x06F0(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AAIEncounterService*                         AIEncounterService;                                       // 0x06F8(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AAIEncounterGenerationService*               AIEncounterGenerationService;                             // 0x0700(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UHideoutService*                             HideoutService;                                           // 0x0708(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAthenaStreamedLevelService*                 StreamedLevelService;                                     // 0x0710(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ULocationProviderService*                    LocationProviderService;                                  // 0x0718(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AHoleService*                                HoleService;                                              // 0x0720(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ULoadoutService*                             LoadoutService;                                           // 0x0728(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAthenaAITeamsService*                       AthenaAITeamsService;                                     // 0x0730(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AAllianceService*                            AllianceService;                                          // 0x0738(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AReapersMarkService*                         ReapersMarkService;                                       // 0x0740(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AServiceStatusNotificationsService*          ServiceStatusNotificationsService;                        // 0x0748(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UMigrationService*                           MigrationService;                                         // 0x0750(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UServerUpdateReportingService*               ServerUpdateReportingService;                             // 0x0758(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UShipFactory*                                ShipFactory;                                              // 0x0760(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x128];                                     // 0x0768(0x0128) MISSED OFFSET
-	struct FGameServiceCoordinator                     ServiceCoordinator;                                       // 0x0890(0x0010)
-	unsigned char                                      UnknownData02[0x18];                                      // 0x08A0(0x0018) MISSED OFFSET
+	class UGameEventSchedulerService*                  GameEventSchedulerService;                                // 0x0708(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UHideoutService*                             HideoutService;                                           // 0x0710(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAthenaStreamedLevelService*                 StreamedLevelService;                                     // 0x0718(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ULocationProviderService*                    LocationProviderService;                                  // 0x0720(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AHoleService*                                HoleService;                                              // 0x0728(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ULoadoutService*                             LoadoutService;                                           // 0x0730(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAthenaAITeamsService*                       AthenaAITeamsService;                                     // 0x0738(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AAllianceService*                            AllianceService;                                          // 0x0740(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AReapersMarkService*                         ReapersMarkService;                                       // 0x0748(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AServiceStatusNotificationsService*          ServiceStatusNotificationsService;                        // 0x0750(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UMigrationService*                           MigrationService;                                         // 0x0758(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UServerUpdateReportingService*               ServerUpdateReportingService;                             // 0x0760(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UShipFactory*                                ShipFactory;                                              // 0x0768(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x128];                                     // 0x0770(0x0128) MISSED OFFSET
+	struct FGameServiceCoordinator                     ServiceCoordinator;                                       // 0x0898(0x0010)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x08A8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaGameState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaGameState");
 		return ptr;
 	}
 
@@ -18877,7 +19155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PointOfInterestTrackerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PointOfInterestTrackerInterface");
 		return ptr;
 	}
 
@@ -18896,7 +19174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PointOfInterestTrackerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PointOfInterestTrackerComponent");
 		return ptr;
 	}
 
@@ -18913,7 +19191,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandAnnouncementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandAnnouncementComponent");
 		return ptr;
 	}
 
@@ -18921,14 +19199,14 @@ public:
 
 
 // Class Athena.IslandBoundsComponent
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05E0 - 0x05E0)
 class UIslandBoundsComponent : public USphereComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandBoundsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandBoundsComponent");
 		return ptr;
 	}
 
@@ -18944,7 +19222,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkTreasureLocationsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkTreasureLocationsDataAsset");
 		return ptr;
 	}
 
@@ -18962,7 +19240,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandMaterialStatusZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandMaterialStatusZone");
 		return ptr;
 	}
 
@@ -18982,7 +19260,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandDataDefaultAssetEntry");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandDataDefaultAssetEntry");
 		return ptr;
 	}
 
@@ -18999,7 +19277,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FortIslandDataDefaultAssetEntry");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FortIslandDataDefaultAssetEntry");
 		return ptr;
 	}
 
@@ -19031,7 +19309,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandDataAssetEntry");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandDataAssetEntry");
 		return ptr;
 	}
 
@@ -19051,7 +19329,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandDataAsset");
 		return ptr;
 	}
 
@@ -19070,7 +19348,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandFaunaSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandFaunaSettings");
 		return ptr;
 	}
 
@@ -19085,7 +19363,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandLocationVerifierInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandLocationVerifierInterface");
 		return ptr;
 	}
 
@@ -19095,18 +19373,18 @@ public:
 
 
 // Class Athena.IslandItemSpawnComponent
-// 0x00C0 (0x0490 - 0x03D0)
+// 0x00C0 (0x04A0 - 0x03E0)
 class UIslandItemSpawnComponent : public UItemSpawnComponent
 {
 public:
-	float                                              RespawnTime;                                              // 0x03D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x03D4(0x0004) MISSED OFFSET
-	class AIslandData*                                 IslandData;                                               // 0x03D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB0];                                      // 0x03E0(0x00B0) MISSED OFFSET
+	float                                              RespawnTime;                                              // 0x03E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x03E4(0x0004) MISSED OFFSET
+	class AIslandData*                                 IslandData;                                               // 0x03E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x03F0(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandItemSpawnComponent");
 		return ptr;
 	}
 
@@ -19114,25 +19392,25 @@ public:
 
 
 // Class Athena.SalvageItemSpawnComponent
-// 0x0060 (0x04F0 - 0x0490)
+// 0x0060 (0x0500 - 0x04A0)
 class USalvageItemSpawnComponent : public UIslandItemSpawnComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	float                                              GlobalIslandChanceToSpawn;                                // 0x0498(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinimumZOffSet;                                           // 0x049C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumZOffset;                                           // 0x04A0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinimumRoll;                                              // 0x04A4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumRoll;                                              // 0x04A8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinimumPitch;                                             // 0x04AC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumPitch;                                             // 0x04B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04B4(0x0004) MISSED OFFSET
-	class UClass*                                      SpawnLocationType;                                        // 0x04B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           SpawnedContainerContents;                                 // 0x04C0(0x0030) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
+	float                                              GlobalIslandChanceToSpawn;                                // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinimumZOffSet;                                           // 0x04AC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumZOffset;                                           // 0x04B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinimumRoll;                                              // 0x04B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumRoll;                                              // 0x04B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinimumPitch;                                             // 0x04BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumPitch;                                             // 0x04C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04C4(0x0004) MISSED OFFSET
+	class UClass*                                      SpawnLocationType;                                        // 0x04C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           SpawnedContainerContents;                                 // 0x04D0(0x0030) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SalvageItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SalvageItemSpawnComponent");
 		return ptr;
 	}
 
@@ -19148,7 +19426,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandSalvageSpawnerCollection");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandSalvageSpawnerCollection");
 		return ptr;
 	}
 
@@ -19172,7 +19450,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandSalvageSpawnerManager");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandSalvageSpawnerManager");
 		return ptr;
 	}
 
@@ -19194,7 +19472,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandService");
 		return ptr;
 	}
 
@@ -19213,7 +19491,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemBlockingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemBlockingInterface");
 		return ptr;
 	}
 
@@ -19228,7 +19506,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemFactoryFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemFactoryFunctions");
 		return ptr;
 	}
 
@@ -19247,7 +19525,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FruitItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FruitItemInfo");
 		return ptr;
 	}
 
@@ -19262,7 +19540,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WeepingChestItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeepingChestItemInfo");
 		return ptr;
 	}
 
@@ -19278,7 +19556,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StrongholdKeyItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StrongholdKeyItemInfo");
 		return ptr;
 	}
 
@@ -19293,7 +19571,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestUsableItemInfo");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestUsableItemInfo");
 		return ptr;
 	}
 
@@ -19308,7 +19586,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemLoaderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemLoaderInterface");
 		return ptr;
 	}
 
@@ -19324,7 +19602,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemLoaderComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemLoaderComponent");
 		return ptr;
 	}
 
@@ -19346,7 +19624,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemLoadoutComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemLoadoutComponent");
 		return ptr;
 	}
 
@@ -19364,7 +19642,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemPickupBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemPickupBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -19373,17 +19651,33 @@ public:
 };
 
 
-// Class Athena.AIShipItemSpawnComponent
-// 0x0050 (0x0420 - 0x03D0)
-class UAIShipItemSpawnComponent : public UItemSpawnComponent
+// Class Athena.AIItemSpawnComponent
+// 0x00A0 (0x0480 - 0x03E0)
+class UAIItemSpawnComponent : public UItemSpawnComponent
 {
 public:
-	bool                                               SpawnOnlyForFinalShip;                                    // 0x03D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4F];                                      // 0x03D1(0x004F) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA0];                                      // 0x03E0(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AIShipItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIItemSpawnComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AIShipItemSpawnComponent
+// 0x0050 (0x0430 - 0x03E0)
+class UAIShipItemSpawnComponent : public UItemSpawnComponent
+{
+public:
+	bool                                               SpawnOnlyForFinalShip;                                    // 0x03E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4F];                                      // 0x03E1(0x004F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AIShipItemSpawnComponent");
 		return ptr;
 	}
 
@@ -19391,14 +19685,14 @@ public:
 
 
 // Class Athena.FortItemSpawnComponent
-// 0x0000 (0x03D0 - 0x03D0)
+// 0x0000 (0x03E0 - 0x03E0)
 class UFortItemSpawnComponent : public UItemSpawnComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FortItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FortItemSpawnComponent");
 		return ptr;
 	}
 
@@ -19406,15 +19700,15 @@ public:
 
 
 // Class Athena.IslandFaunaSpawnComponent
-// 0x0010 (0x04A0 - 0x0490)
+// 0x0010 (0x04B0 - 0x04A0)
 class UIslandFaunaSpawnComponent : public UIslandItemSpawnComponent
 {
 public:
-	TArray<class UAIFaunaSpawner*>                     FaunaSpawners;                                            // 0x0490(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TArray<class UAIFaunaSpawner*>                     FaunaSpawners;                                            // 0x04A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandFaunaSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandFaunaSpawnComponent");
 		return ptr;
 	}
 
@@ -19422,14 +19716,14 @@ public:
 
 
 // Class Athena.IslandItemSpawnComponentMock
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x04A0 - 0x04A0)
 class UIslandItemSpawnComponentMock : public UIslandItemSpawnComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandItemSpawnComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandItemSpawnComponentMock");
 		return ptr;
 	}
 
@@ -19437,16 +19731,16 @@ public:
 
 
 // Class Athena.PersistentSalvageItemSpawnComponent
-// 0x0030 (0x0520 - 0x04F0)
+// 0x0030 (0x0530 - 0x0500)
 class UPersistentSalvageItemSpawnComponent : public USalvageItemSpawnComponent
 {
 public:
-	float                                              RefreshItemsRate;                                         // 0x04F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2C];                                      // 0x04F4(0x002C) MISSED OFFSET
+	float                                              RefreshItemsRate;                                         // 0x0500(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2C];                                      // 0x0504(0x002C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PersistentSalvageItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PersistentSalvageItemSpawnComponent");
 		return ptr;
 	}
 
@@ -19454,14 +19748,14 @@ public:
 
 
 // Class Athena.PersistentSalvageItemSpawnComponentMock
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0530 - 0x0530)
 class UPersistentSalvageItemSpawnComponentMock : public UPersistentSalvageItemSpawnComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PersistentSalvageItemSpawnComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PersistentSalvageItemSpawnComponentMock");
 		return ptr;
 	}
 
@@ -19469,14 +19763,14 @@ public:
 
 
 // Class Athena.SalvageItemSpawnComponentMock
-// 0x0000 (0x04F0 - 0x04F0)
+// 0x0000 (0x0500 - 0x0500)
 class USalvageItemSpawnComponentMock : public USalvageItemSpawnComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SalvageItemSpawnComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SalvageItemSpawnComponentMock");
 		return ptr;
 	}
 
@@ -19484,14 +19778,14 @@ public:
 
 
 // Class Athena.UnmanagedSalvageItemSpawnComponent
-// 0x0000 (0x04F0 - 0x04F0)
+// 0x0000 (0x0500 - 0x0500)
 class UUnmanagedSalvageItemSpawnComponent : public USalvageItemSpawnComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UnmanagedSalvageItemSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnmanagedSalvageItemSpawnComponent");
 		return ptr;
 	}
 
@@ -19499,15 +19793,17 @@ public:
 
 
 // Class Athena.IslandWatercraftSpawnComponent
-// 0x0020 (0x0510 - 0x04F0)
+// 0x0040 (0x0540 - 0x0500)
 class UIslandWatercraftSpawnComponent : public UUnmanagedSalvageItemSpawnComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x04F0(0x0020) MISSED OFFSET
+	float                                              MinMaxYawOffset;                                          // 0x0500(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinDistanceToNearestWatercraftInMetres;                   // 0x0504(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0508(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandWatercraftSpawnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandWatercraftSpawnComponent");
 		return ptr;
 	}
 
@@ -19515,15 +19811,15 @@ public:
 
 
 // Class Athena.UnmanagedSalvageItemSpawnComponentMock
-// 0x0010 (0x0500 - 0x04F0)
+// 0x0010 (0x0510 - 0x0500)
 class UUnmanagedSalvageItemSpawnComponentMock : public UUnmanagedSalvageItemSpawnComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04F0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0500(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UnmanagedSalvageItemSpawnComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnmanagedSalvageItemSpawnComponentMock");
 		return ptr;
 	}
 
@@ -19538,7 +19834,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.JumpNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.JumpNotificationInputId");
 		return ptr;
 	}
 
@@ -19665,7 +19961,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacle");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacle");
 		return ptr;
 	}
 
@@ -19697,7 +19993,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenShipWrappingTellAnimatedTentacle");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenShipWrappingTellAnimatedTentacle");
 		return ptr;
 	}
 
@@ -19718,7 +20014,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleAnimationInstance");
 		return ptr;
 	}
 
@@ -19739,7 +20035,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenAnimatedTentacleRecordingAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenAnimatedTentacleRecordingAnimationInstance");
 		return ptr;
 	}
 
@@ -19756,7 +20052,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenDebugFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenDebugFunctionLibrary");
 		return ptr;
 	}
 
@@ -19779,7 +20075,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenGooStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenGooStatus");
 		return ptr;
 	}
 
@@ -19794,7 +20090,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LadderBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LadderBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -19804,15 +20100,15 @@ public:
 
 
 // Class Athena.OverlapTriggerComponent
-// 0x0030 (0x0600 - 0x05D0)
+// 0x0030 (0x0610 - 0x05E0)
 class UOverlapTriggerComponent : public UCapsuleComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x05D0(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x05E0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OverlapTriggerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OverlapTriggerComponent");
 		return ptr;
 	}
 
@@ -19851,7 +20147,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Landmark");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Landmark");
 		return ptr;
 	}
 
@@ -19869,7 +20165,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkSphere");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkSphere");
 		return ptr;
 	}
 
@@ -19885,7 +20181,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkBox");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkBox");
 		return ptr;
 	}
 
@@ -19901,7 +20197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkCapsule");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkCapsule");
 		return ptr;
 	}
 
@@ -19916,7 +20212,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEvent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEvent");
 		return ptr;
 	}
 
@@ -19932,7 +20228,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventCallFunction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventCallFunction");
 		return ptr;
 	}
 
@@ -19950,7 +20246,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventCallInterfaceStartReaction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventCallInterfaceStartReaction");
 		return ptr;
 	}
 
@@ -19968,7 +20264,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventCallInterfaceStopReaction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventCallInterfaceStopReaction");
 		return ptr;
 	}
 
@@ -19985,7 +20281,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventPlayAudio");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventPlayAudio");
 		return ptr;
 	}
 
@@ -20003,7 +20299,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventPlayForceFeedback");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventPlayForceFeedback");
 		return ptr;
 	}
 
@@ -20023,7 +20319,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventStartCameraShake");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventStartCameraShake");
 		return ptr;
 	}
 
@@ -20045,7 +20341,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventStartParticleSystem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventStartParticleSystem");
 		return ptr;
 	}
 
@@ -20067,7 +20363,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionEventStopParticleSystem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionEventStopParticleSystem");
 		return ptr;
 	}
 
@@ -20086,7 +20382,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LandmarkReactionPlayer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LandmarkReactionPlayer");
 		return ptr;
 	}
 
@@ -20108,7 +20404,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LiquidProjectile");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LiquidProjectile");
 		return ptr;
 	}
 
@@ -20126,7 +20422,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VomitProjectile");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VomitProjectile");
 		return ptr;
 	}
 
@@ -20145,7 +20441,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LaunchedFromKrakenActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LaunchedFromKrakenActionStateId");
 		return ptr;
 	}
 
@@ -20164,7 +20460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LauncherParentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LauncherParentMock");
 		return ptr;
 	}
 
@@ -20172,15 +20468,15 @@ public:
 
 
 // Class Athena.SimpleLeakerComponent
-// 0x0020 (0x0370 - 0x0350)
+// 0x0020 (0x0380 - 0x0360)
 class USimpleLeakerComponent : public ULeakerComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0350(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0360(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SimpleLeakerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SimpleLeakerComponent");
 		return ptr;
 	}
 
@@ -20197,7 +20493,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LeaveGhostShipActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LeaveGhostShipActionStateId");
 		return ptr;
 	}
 
@@ -20313,7 +20609,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightingControllerSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightingControllerSettings");
 		return ptr;
 	}
 
@@ -20330,7 +20626,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightingZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightingZoneInterface");
 		return ptr;
 	}
 
@@ -20386,7 +20682,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightingController");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightingController");
 		return ptr;
 	}
 
@@ -20399,17 +20695,17 @@ public:
 
 
 // Class Athena.LightingZoneComponent
-// 0x0020 (0x02C0 - 0x02A0)
+// 0x0020 (0x02D0 - 0x02B0)
 class ULightingZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FLightingZoneParameters                     LightingZoneParameters;                                   // 0x02A8(0x0014) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x02BC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FLightingZoneParameters                     LightingZoneParameters;                                   // 0x02B8(0x0014) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightingZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightingZoneComponent");
 		return ptr;
 	}
 
@@ -20417,16 +20713,16 @@ public:
 
 
 // Class Athena.BlendedLightingZoneComponent
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x02F0 - 0x02D0)
 class UBlendedLightingZoneComponent : public ULightingZoneComponent
 {
 public:
-	class UCurveFloat*                                 FadeCurveNormalised;                                      // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x02C8(0x0018) MISSED OFFSET
+	class UCurveFloat*                                 FadeCurveNormalised;                                      // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x02D8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BlendedLightingZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BlendedLightingZoneComponent");
 		return ptr;
 	}
 
@@ -20441,7 +20737,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightingZoneServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightingZoneServiceInterface");
 		return ptr;
 	}
 
@@ -20464,7 +20760,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LightingZoneService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LightingZoneService");
 		return ptr;
 	}
 
@@ -20506,7 +20802,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LimpingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LimpingComponent");
 		return ptr;
 	}
 
@@ -20533,7 +20829,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LimpingTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LimpingTestActor");
 		return ptr;
 	}
 
@@ -20548,7 +20844,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LimpStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LimpStatus");
 		return ptr;
 	}
 
@@ -20563,7 +20859,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LiquidContainerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LiquidContainerInterface");
 		return ptr;
 	}
 
@@ -20592,7 +20888,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LiquidContainerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LiquidContainerComponent");
 		return ptr;
 	}
 
@@ -20612,7 +20908,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LiquidContainerTestMaterial");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LiquidContainerTestMaterial");
 		return ptr;
 	}
 
@@ -20627,7 +20923,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadableInterface");
 		return ptr;
 	}
 
@@ -20656,7 +20952,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadableComponent");
 		return ptr;
 	}
 
@@ -20673,7 +20969,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadItemActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadItemActionStateId");
 		return ptr;
 	}
 
@@ -20693,7 +20989,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadoutAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadoutAsset");
 		return ptr;
 	}
 
@@ -20709,7 +21005,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AILoadoutWithNonStoreableAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AILoadoutWithNonStoreableAsset");
 		return ptr;
 	}
 
@@ -20724,7 +21020,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadoutControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadoutControlInterface");
 		return ptr;
 	}
 
@@ -20741,7 +21037,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadoutServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadoutServiceInterface");
 		return ptr;
 	}
 
@@ -20760,7 +21056,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadoutComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadoutComponent");
 		return ptr;
 	}
 
@@ -20778,7 +21074,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadoutService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadoutService");
 		return ptr;
 	}
 
@@ -20797,7 +21093,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadoutSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadoutSettings");
 		return ptr;
 	}
 
@@ -20812,7 +21108,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LoadPlayerActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LoadPlayerActionStateId");
 		return ptr;
 	}
 
@@ -20829,7 +21125,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocationProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocationProviderInterface");
 		return ptr;
 	}
 
@@ -20844,7 +21140,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocationType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocationType");
 		return ptr;
 	}
 
@@ -20859,7 +21155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.KrakenLocationType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.KrakenLocationType");
 		return ptr;
 	}
 
@@ -20874,7 +21170,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocationProviderServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocationProviderServiceInterface");
 		return ptr;
 	}
 
@@ -20890,7 +21186,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocationProviderService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocationProviderService");
 		return ptr;
 	}
 
@@ -20911,7 +21207,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LockOnCameraModifier");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LockOnCameraModifier");
 		return ptr;
 	}
 
@@ -20947,7 +21243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LockOnCameraModifierSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LockOnCameraModifierSettings");
 		return ptr;
 	}
 
@@ -20962,7 +21258,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LockWheelStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LockWheelStatus");
 		return ptr;
 	}
 
@@ -20977,7 +21273,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocomotionActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocomotionActionStateId");
 		return ptr;
 	}
 
@@ -20999,7 +21295,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LocomotionCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LocomotionCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21051,7 +21347,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LookAtOffsetCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LookAtOffsetCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21074,7 +21370,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControlIntentCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControlIntentCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21094,7 +21390,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ControlWheelCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ControlWheelCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21114,7 +21410,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowingCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowingCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21137,7 +21433,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseLadderCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseLadderCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21154,7 +21450,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LookAtOffsetFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LookAtOffsetFunctions");
 		return ptr;
 	}
 
@@ -21176,7 +21472,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LookUpAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LookUpAnalogInputId");
 		return ptr;
 	}
 
@@ -21191,7 +21487,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LookUpRateAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LookUpRateAnalogInputId");
 		return ptr;
 	}
 
@@ -21206,7 +21502,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LookUpRateWithFixedSensitivityAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LookUpRateWithFixedSensitivityAnalogInputId");
 		return ptr;
 	}
 
@@ -21221,7 +21517,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LostTargetAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LostTargetAIStrategyId");
 		return ptr;
 	}
 
@@ -21236,7 +21532,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LPVReferenceFrameAdaptationFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LPVReferenceFrameAdaptationFunctionLibrary");
 		return ptr;
 	}
 
@@ -21293,7 +21589,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTable");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTable");
 		return ptr;
 	}
 
@@ -21306,7 +21602,7 @@ public:
 	void OnRep_TrackedShips();
 	void OnRep_MapPins();
 	void OnRep_CentreLocation();
-	void OnMapMove(const struct FVector2D& CentreLocation, float ZoomLevel);
+	void OnMapMove(const struct FVector2D& CentreLocation, const struct FVector2D& ZoomLevel);
 	void OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* Texture);
 };
 
@@ -21319,7 +21615,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTablePanXAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTablePanXAnalogInputId");
 		return ptr;
 	}
 
@@ -21334,7 +21630,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTablePanYAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTablePanYAnalogInputId");
 		return ptr;
 	}
 
@@ -21349,7 +21645,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTableZoomInAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTableZoomInAnalogInputId");
 		return ptr;
 	}
 
@@ -21364,7 +21660,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTableZoomOutAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTableZoomOutAnalogInputId");
 		return ptr;
 	}
 
@@ -21379,7 +21675,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTablePanXMouseInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTablePanXMouseInputId");
 		return ptr;
 	}
 
@@ -21394,7 +21690,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTablePanYMouseInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTablePanYMouseInputId");
 		return ptr;
 	}
 
@@ -21409,7 +21705,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTableZoomMouseInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTableZoomMouseInputId");
 		return ptr;
 	}
 
@@ -21424,7 +21720,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTableTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTableTestFunctions");
 		return ptr;
 	}
 
@@ -21452,7 +21748,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapTableTogglePinNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapTableTogglePinNotificationInputId");
 		return ptr;
 	}
 
@@ -21480,7 +21776,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MastAudioParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MastAudioParams");
 		return ptr;
 	}
 
@@ -21496,7 +21792,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MastDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MastDescAsset");
 		return ptr;
 	}
 
@@ -21511,7 +21807,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MastAnimInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MastAnimInterface");
 		return ptr;
 	}
 
@@ -21529,7 +21825,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MaterialInformationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MaterialInformationInterface");
 		return ptr;
 	}
 
@@ -21549,7 +21845,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MaterialInformationService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MaterialInformationService");
 		return ptr;
 	}
 
@@ -21564,7 +21860,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MaterialInformationServiceBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MaterialInformationServiceBlueprintFunctions");
 		return ptr;
 	}
 
@@ -21584,7 +21880,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MatineeUtility");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MatineeUtility");
 		return ptr;
 	}
 
@@ -21662,7 +21958,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeAttackDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeAttackDataAsset");
 		return ptr;
 	}
 
@@ -21677,7 +21973,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeAttackFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeAttackFunctionLibrary");
 		return ptr;
 	}
 
@@ -21699,7 +21995,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeAttackLockOnComponentSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeAttackLockOnComponentSettings");
 		return ptr;
 	}
 
@@ -21720,7 +22016,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeAttackLockOnComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeAttackLockOnComponent");
 		return ptr;
 	}
 
@@ -21742,7 +22038,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeAttackProcessorComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeAttackProcessorComponent");
 		return ptr;
 	}
 
@@ -21760,7 +22056,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeAttackProcessorComponentMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeAttackProcessorComponentMock");
 		return ptr;
 	}
 
@@ -21775,7 +22071,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeBlockingActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeBlockingActionStateId");
 		return ptr;
 	}
 
@@ -21795,7 +22091,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeBlockingCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeBlockingCompositeInputHandler");
 		return ptr;
 	}
 
@@ -21813,7 +22109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeWeaponMovementSpeedConfig");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeWeaponMovementSpeedConfig");
 		return ptr;
 	}
 
@@ -21844,7 +22140,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeWeaponDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeWeaponDataAsset");
 		return ptr;
 	}
 
@@ -21859,7 +22155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeWeaponFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeWeaponFunctionLibrary");
 		return ptr;
 	}
 
@@ -21876,7 +22172,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MemoryTestPawn");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MemoryTestPawn");
 		return ptr;
 	}
 
@@ -21895,7 +22191,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MenuInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MenuInputHandler");
 		return ptr;
 	}
 
@@ -21913,7 +22209,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateProviderInterface");
 		return ptr;
 	}
 
@@ -21931,7 +22227,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantCrateProviderComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantCrateProviderComponent");
 		return ptr;
 	}
 
@@ -21953,7 +22249,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantMapLayout");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantMapLayout");
 		return ptr;
 	}
 
@@ -21970,7 +22266,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantQuestData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantQuestData");
 		return ptr;
 	}
 
@@ -21995,7 +22291,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantQuestDescData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantQuestDescData");
 		return ptr;
 	}
 
@@ -22020,7 +22316,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantQuestItemData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantQuestItemData");
 		return ptr;
 	}
 
@@ -22036,7 +22332,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantQuestItemPluralisationData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantQuestItemPluralisationData");
 		return ptr;
 	}
 
@@ -22052,7 +22348,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantQuestRequiredItemsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantQuestRequiredItemsDataAsset");
 		return ptr;
 	}
 
@@ -22070,7 +22366,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MermaidPartsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MermaidPartsDesc");
 		return ptr;
 	}
 
@@ -22085,7 +22381,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MermaidServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MermaidServiceInterface");
 		return ptr;
 	}
 
@@ -22096,18 +22392,18 @@ public:
 
 
 // Class Athena.MermaidService
-// 0x0130 (0x05C0 - 0x0490)
+// 0x0158 (0x05E8 - 0x0490)
 class AMermaidService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 	class UClass*                                      MermaidBP;                                                // 0x0498(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UAIPartsCategory*                            MermaidPartsCategory;                                     // 0x04A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x118];                                     // 0x04A8(0x0118) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x140];                                     // 0x04A8(0x0140) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MermaidService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MermaidService");
 		return ptr;
 	}
 
@@ -22132,7 +22428,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MetalAIFormDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MetalAIFormDataAsset");
 		return ptr;
 	}
 
@@ -22147,7 +22443,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MigrationActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MigrationActionStateId");
 		return ptr;
 	}
 
@@ -22164,7 +22460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MigrationCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MigrationCompositeInputHandler");
 		return ptr;
 	}
 
@@ -22179,7 +22475,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MigrationServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MigrationServiceInterface");
 		return ptr;
 	}
 
@@ -22187,7 +22483,7 @@ public:
 
 
 // Class Athena.MigrationService
-// 0x0390 (0x03B8 - 0x0028)
+// 0x03E0 (0x0408 - 0x0028)
 class UMigrationService : public UObject
 {
 public:
@@ -22196,11 +22492,11 @@ public:
 	float                                              MigrationSetupRequestTimeoutInSeconds;                    // 0x005C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
 	TArray<class UClass*>                              BeaconActorClasses;                                       // 0x0060(0x0010) (ZeroConstructor, Config)
 	TArray<class UClass*>                              CollectedActorClasses;                                    // 0x0070(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData01[0x338];                                     // 0x0080(0x0338) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x388];                                     // 0x0080(0x0388) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MigrationService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MigrationService");
 		return ptr;
 	}
 
@@ -22229,7 +22525,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MigrationUIContentsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MigrationUIContentsDataAsset");
 		return ptr;
 	}
 
@@ -22249,7 +22545,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MigrationUIComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MigrationUIComponent");
 		return ptr;
 	}
 
@@ -22267,7 +22563,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockCharacterWithAthenaPlayerCharacterMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockCharacterWithAthenaPlayerCharacterMovementComponent");
 		return ptr;
 	}
 
@@ -22283,7 +22579,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockControllerWithSubjectInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockControllerWithSubjectInterface");
 		return ptr;
 	}
 
@@ -22299,7 +22595,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockInventoryItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockInventoryItem");
 		return ptr;
 	}
 
@@ -22315,7 +22611,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockObjectWithSubjectInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockObjectWithSubjectInterface");
 		return ptr;
 	}
 
@@ -22331,7 +22627,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockTelemetryDescriptorComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockTelemetryDescriptorComponent");
 		return ptr;
 	}
 
@@ -22361,7 +22657,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Shovel");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Shovel");
 		return ptr;
 	}
 
@@ -22382,7 +22678,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockTelemetryDispatcher");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockTelemetryDispatcher");
 		return ptr;
 	}
 
@@ -22427,7 +22723,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PossessionsChestInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PossessionsChestInteraction");
 		return ptr;
 	}
 
@@ -22445,7 +22741,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ArmoryChestInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ArmoryChestInteraction");
 		return ptr;
 	}
 
@@ -22468,7 +22764,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingChestInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingChestInteraction");
 		return ptr;
 	}
 
@@ -22491,7 +22787,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EquipmentChestInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EquipmentChestInteraction");
 		return ptr;
 	}
 
@@ -22511,7 +22807,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationChestInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationChestInteraction");
 		return ptr;
 	}
 
@@ -22529,7 +22825,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwrightInteractionProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwrightInteractionProxy");
 		return ptr;
 	}
 
@@ -22546,7 +22842,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShopkeeperInteractionProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShopkeeperInteractionProxy");
 		return ptr;
 	}
 
@@ -22562,7 +22858,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageProposalContainerInteraction");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageProposalContainerInteraction");
 		return ptr;
 	}
 
@@ -22579,7 +22875,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ModalInteractionActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ModalInteractionActionStateId");
 		return ptr;
 	}
 
@@ -22597,7 +22893,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ModalInteractionCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ModalInteractionCompositeInputHandler");
 		return ptr;
 	}
 
@@ -22614,7 +22910,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountableInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountableInterface");
 		return ptr;
 	}
 
@@ -22629,7 +22925,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountableType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountableType");
 		return ptr;
 	}
 
@@ -22637,7 +22933,7 @@ public:
 
 
 // Class Athena.MountableComponent
-// 0x0050 (0x0128 - 0x00D8)
+// 0x0070 (0x0148 - 0x00D8)
 class UMountableComponent : public UActorComponent
 {
 public:
@@ -22647,36 +22943,68 @@ public:
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
 	struct FText                                       Description;                                              // 0x00F0(0x0018) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData02[0x20];                                      // 0x00E9(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData03[0x18];                                      // 0x0128(0x0018) MISSED OFFSET
+	class UObject*                                     ReplicatedMountpoint;                                     // 0x0140(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountableComponent");
 		return ptr;
 	}
 
+
+	void OnRep_ReplicatedMountpoint();
 };
 
 
 // Class Athena.MountpointComponent
-// 0x0080 (0x0320 - 0x02A0)
+// 0x0070 (0x0320 - 0x02B0)
 class UMountpointComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	TArray<class UClass*>                              AcceptedMountableTypes;                                   // 0x02A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<TEnumAsByte<ECollisionChannel>>             MountedItemIgnoreCollisionChannelsWhenMounted;            // 0x02B8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x02C8(0x0010) MISSED OFFSET
-	class UObject*                                     ReplicatedMountedItem;                                    // 0x02D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x40];                                      // 0x02E0(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	TArray<class UClass*>                              AcceptedMountableTypes;                                   // 0x02B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FRotator                                    DetachForwardDirectionRotator;                            // 0x02C8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DetachOffset;                                             // 0x02D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UseOverrideMountedCollisionProfile;                       // 0x02D8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x02D9(0x0003) MISSED OFFSET
+	struct FCollisionProfileName                       OverrideMountedCollisionProfileName;                      // 0x02DC(0x0008) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x14];                                      // 0x02E4(0x0014) MISSED OFFSET
+	class UObject*                                     ReplicatedMountedItem;                                    // 0x02F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
+	bool                                               IsMountingDisabled;                                       // 0x0310(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               MountedItemHadSimulatePhysicsEnabled;                     // 0x0311(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x0312(0x0002) MISSED OFFSET
+	struct FName                                       MountedItemPremountCollisionProfileName;                  // 0x0314(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x031C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MountpointComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MountpointComponent");
 		return ptr;
 	}
 
 
 	void OnRep_ReplicatedMountedItem(class UObject* PrevReplicatedMountedItem);
+};
+
+
+// Class Athena.InterpolatingMountpointComponent
+// 0x0060 (0x0380 - 0x0320)
+class UInterpolatingMountpointComponent : public UMountpointComponent
+{
+public:
+	float                                              InterpolateSpeed;                                         // 0x0320(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumDistance;                                          // 0x0324(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     RelativeSnapLocation;                                     // 0x0328(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4C];                                      // 0x0334(0x004C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.InterpolatingMountpointComponent");
+		return ptr;
+	}
+
 };
 
 
@@ -22688,7 +23016,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MoveableObjectInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MoveableObjectInterface");
 		return ptr;
 	}
 
@@ -22703,7 +23031,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MoveForwardAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MoveForwardAnalogInputId");
 		return ptr;
 	}
 
@@ -22718,7 +23046,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MoveRightAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MoveRightAnalogInputId");
 		return ptr;
 	}
 
@@ -22733,7 +23061,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MoveUpAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MoveUpAnalogInputId");
 		return ptr;
 	}
 
@@ -22750,7 +23078,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NamedNotificationInputComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NamedNotificationInputComponent");
 		return ptr;
 	}
 
@@ -22766,7 +23094,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NamedObjectMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NamedObjectMock");
 		return ptr;
 	}
 
@@ -22774,16 +23102,16 @@ public:
 
 
 // Class Athena.NameplateComponent
-// 0x0030 (0x02D0 - 0x02A0)
+// 0x0030 (0x02E0 - 0x02B0)
 class UNameplateComponent : public USceneComponent
 {
 public:
-	float                                              FadeTime;                                                 // 0x02A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2C];                                      // 0x02A4(0x002C) MISSED OFFSET
+	float                                              FadeTime;                                                 // 0x02B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2C];                                      // 0x02B4(0x002C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NameplateComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NameplateComponent");
 		return ptr;
 	}
 
@@ -22793,19 +23121,19 @@ public:
 
 
 // Class Athena.AINameplateComponent
-// 0x00D0 (0x03A0 - 0x02D0)
+// 0x00D0 (0x03B0 - 0x02E0)
 class UAINameplateComponent : public UNameplateComponent
 {
 public:
-	float                                              VisibleAfterDeathDuration;                                // 0x02D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x02D4(0x0004) MISSED OFFSET
-	class FString                                      DisplayName;                                              // 0x02D8(0x0010) (Net, ZeroConstructor)
-	class FString                                      DebugDisplayText;                                         // 0x02E8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0xA8];                                      // 0x02F8(0x00A8) MISSED OFFSET
+	float                                              VisibleAfterDeathDuration;                                // 0x02E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x02E4(0x0004) MISSED OFFSET
+	class FString                                      DisplayName;                                              // 0x02E8(0x0010) (Net, ZeroConstructor)
+	class FString                                      DebugDisplayText;                                         // 0x02F8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0xA8];                                      // 0x0308(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AINameplateComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AINameplateComponent");
 		return ptr;
 	}
 
@@ -22816,18 +23144,18 @@ public:
 
 
 // Class Athena.PlayerNameplateComponent
-// 0x0070 (0x0340 - 0x02D0)
+// 0x0070 (0x0350 - 0x02E0)
 class UPlayerNameplateComponent : public UNameplateComponent
 {
 public:
-	float                                              VisibleFromWorldDistance;                                 // 0x02D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VisibleUntilWorldDistanceCrew;                            // 0x02D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VisibleUntilWorldDistanceNonCrew;                         // 0x02D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x64];                                      // 0x02DC(0x0064) MISSED OFFSET
+	float                                              VisibleFromWorldDistance;                                 // 0x02E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VisibleUntilWorldDistanceCrew;                            // 0x02E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VisibleUntilWorldDistanceNonCrew;                         // 0x02E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x64];                                      // 0x02EC(0x0064) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerNameplateComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerNameplateComponent");
 		return ptr;
 	}
 
@@ -22842,7 +23170,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NameplateServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NameplateServiceInterface");
 		return ptr;
 	}
 
@@ -22858,7 +23186,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NameplateService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NameplateService");
 		return ptr;
 	}
 
@@ -22873,7 +23201,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NervousAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NervousAIStrategyId");
 		return ptr;
 	}
 
@@ -22888,7 +23216,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NetDormancyHelpers");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NetDormancyHelpers");
 		return ptr;
 	}
 
@@ -22910,7 +23238,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NetProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NetProxy");
 		return ptr;
 	}
 
@@ -22932,7 +23260,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipNetProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipNetProxy");
 		return ptr;
 	}
 
@@ -22952,7 +23280,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NetworkedEventsWhitelistDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NetworkedEventsWhitelistDefinition");
 		return ptr;
 	}
 
@@ -22968,7 +23296,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServerNetworkedEventsWhitelistDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServerNetworkedEventsWhitelistDefinition");
 		return ptr;
 	}
 
@@ -22983,7 +23311,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestNeverAllowedServerNetworkedEventsWhitelistDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestNeverAllowedServerNetworkedEventsWhitelistDefinition");
 		return ptr;
 	}
 
@@ -22999,7 +23327,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestServerNetworkedEventsWhitelistDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestServerNetworkedEventsWhitelistDefinition");
 		return ptr;
 	}
 
@@ -23016,7 +23344,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NetworkTriggeredVFXComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NetworkTriggeredVFXComponent");
 		return ptr;
 	}
 
@@ -23042,7 +23370,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NoiseMakerComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NoiseMakerComponentParams");
 		return ptr;
 	}
 
@@ -23050,16 +23378,16 @@ public:
 
 
 // Class Athena.NoiseMakerComponent
-// 0x0040 (0x0310 - 0x02D0)
+// 0x0040 (0x0320 - 0x02E0)
 class UNoiseMakerComponent : public UWwiseEmitterComponent
 {
 public:
-	class UNoiseMakerComponentParams*                  NoiseMakerComponentParams;                                // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x02D8(0x0038) MISSED OFFSET
+	class UNoiseMakerComponentParams*                  NoiseMakerComponentParams;                                // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x38];                                      // 0x02E8(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NoiseMakerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NoiseMakerComponent");
 		return ptr;
 	}
 
@@ -23077,7 +23405,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NoiseMakerControllerParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NoiseMakerControllerParams");
 		return ptr;
 	}
 
@@ -23085,17 +23413,17 @@ public:
 
 
 // Class Athena.NonVagueNonUniqueLandmarkComponent
-// 0x0010 (0x02B0 - 0x02A0)
+// 0x0010 (0x02C0 - 0x02B0)
 class UNonVagueNonUniqueLandmarkComponent : public USceneComponent
 {
 public:
-	struct FName                                       DescriptionPhraseId;                                      // 0x02A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ExtraRadius;                                              // 0x02A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x02AC(0x0004) MISSED OFFSET
+	struct FName                                       DescriptionPhraseId;                                      // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ExtraRadius;                                              // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x02BC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NonVagueNonUniqueLandmarkComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NonVagueNonUniqueLandmarkComponent");
 		return ptr;
 	}
 
@@ -23110,7 +23438,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCAnimationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCAnimationInterface");
 		return ptr;
 	}
 
@@ -23131,7 +23459,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCHeldObjectData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCHeldObjectData");
 		return ptr;
 	}
 
@@ -23153,7 +23481,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCAnimInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCAnimInstance");
 		return ptr;
 	}
 
@@ -23191,7 +23519,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogComponent");
 		return ptr;
 	}
 
@@ -23208,7 +23536,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogConditional");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogConditional");
 		return ptr;
 	}
 
@@ -23224,7 +23552,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HasRanksNPCDialogConditional");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HasRanksNPCDialogConditional");
 		return ptr;
 	}
 
@@ -23240,7 +23568,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HasEntitlementsNPCDialogConditional");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HasEntitlementsNPCDialogConditional");
 		return ptr;
 	}
 
@@ -23259,7 +23587,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FiniteUseNPCDialogConditional");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FiniteUseNPCDialogConditional");
 		return ptr;
 	}
 
@@ -23275,7 +23603,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.FeatureToggleNPCDialogConditional");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.FeatureToggleNPCDialogConditional");
 		return ptr;
 	}
 
@@ -23292,7 +23620,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.HasEmblemNPCDialogConditional");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.HasEmblemNPCDialogConditional");
 		return ptr;
 	}
 
@@ -23307,7 +23635,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogHeader");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogHeader");
 		return ptr;
 	}
 
@@ -23324,7 +23652,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogHeaderSimple");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogHeaderSimple");
 		return ptr;
 	}
 
@@ -23342,7 +23670,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogHeaderByRank");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogHeaderByRank");
 		return ptr;
 	}
 
@@ -23359,7 +23687,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogHeaderStorageContainer");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogHeaderStorageContainer");
 		return ptr;
 	}
 
@@ -23374,7 +23702,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Runnable");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Runnable");
 		return ptr;
 	}
 
@@ -23396,7 +23724,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOption");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOption");
 		return ptr;
 	}
 
@@ -23413,7 +23741,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionClose");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionClose");
 		return ptr;
 	}
 
@@ -23432,7 +23760,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionDialogSelect");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionDialogSelect");
 		return ptr;
 	}
 
@@ -23454,7 +23782,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionGiveMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionGiveMap");
 		return ptr;
 	}
 
@@ -23475,7 +23803,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionGiveReward");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionGiveReward");
 		return ptr;
 	}
 
@@ -23497,7 +23825,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionNoUIPurchase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionNoUIPurchase");
 		return ptr;
 	}
 
@@ -23516,7 +23844,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionRefillTankard");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionRefillTankard");
 		return ptr;
 	}
 
@@ -23533,7 +23861,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionSellBooty");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionSellBooty");
 		return ptr;
 	}
 
@@ -23553,7 +23881,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionShop");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionShop");
 		return ptr;
 	}
 
@@ -23574,7 +23902,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionStorageContainerStore");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionStorageContainerStore");
 		return ptr;
 	}
 
@@ -23595,7 +23923,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogOptionStorageContainerTake");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogOptionStorageContainerTake");
 		return ptr;
 	}
 
@@ -23611,7 +23939,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCDialogTreeData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCDialogTreeData");
 		return ptr;
 	}
 
@@ -23619,15 +23947,15 @@ public:
 
 
 // Class Athena.NPCReactionBound
-// 0x0010 (0x05E0 - 0x05D0)
+// 0x0010 (0x05F0 - 0x05E0)
 class UNPCReactionBound : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05D0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05E0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCReactionBound");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCReactionBound");
 		return ptr;
 	}
 
@@ -23645,7 +23973,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCServiceInterface");
 		return ptr;
 	}
 
@@ -23663,7 +23991,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NPCService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NPCService");
 		return ptr;
 	}
 
@@ -23679,7 +24007,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NullItemInventoryTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NullItemInventoryTestActor");
 		return ptr;
 	}
 
@@ -23694,7 +24022,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ObjectUtilities");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ObjectUtilities");
 		return ptr;
 	}
 
@@ -23712,7 +24040,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OffBottomTransitionLadderActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OffBottomTransitionLadderActionStateId");
 		return ptr;
 	}
 
@@ -23729,7 +24057,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OffTopTransitionLadderActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OffTopTransitionLadderActionStateId");
 		return ptr;
 	}
 
@@ -23746,7 +24074,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnboardCharacterTrackerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnboardCharacterTrackerInterface");
 		return ptr;
 	}
 
@@ -23763,7 +24091,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnboardCharacterTrackerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnboardCharacterTrackerComponent");
 		return ptr;
 	}
 
@@ -23771,15 +24099,15 @@ public:
 
 
 // Class Athena.OnboardingIntroLocationComponent
-// 0x0030 (0x02D0 - 0x02A0)
+// 0x0030 (0x02E0 - 0x02B0)
 class UOnboardingIntroLocationComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x02A0(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x02B0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnboardingIntroLocationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnboardingIntroLocationComponent");
 		return ptr;
 	}
 
@@ -23794,7 +24122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnBottomTransitionLadderActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnBottomTransitionLadderActionStateId");
 		return ptr;
 	}
 
@@ -23812,7 +24140,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OneShotUsableMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OneShotUsableMock");
 		return ptr;
 	}
 
@@ -23827,7 +24155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OnTopTransitionLadderActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OnTopTransitionLadderActionStateId");
 		return ptr;
 	}
 
@@ -23844,7 +24172,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OpenChatboxNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OpenChatboxNotificationInputId");
 		return ptr;
 	}
 
@@ -23859,7 +24187,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OpenEscapeMenuNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OpenEscapeMenuNotificationInputId");
 		return ptr;
 	}
 
@@ -23874,7 +24202,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OpenQuickMenuNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OpenQuickMenuNotificationInputId");
 		return ptr;
 	}
 
@@ -23890,7 +24218,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.OwnerMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.OwnerMock");
 		return ptr;
 	}
 
@@ -23916,7 +24244,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PacingComponentPublicData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PacingComponentPublicData");
 		return ptr;
 	}
 
@@ -23935,7 +24263,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PacingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PacingComponent");
 		return ptr;
 	}
 
@@ -23955,7 +24283,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PartConnectionMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PartConnectionMock");
 		return ptr;
 	}
 
@@ -23975,7 +24303,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ParticleSystemPickerAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ParticleSystemPickerAsset");
 		return ptr;
 	}
 
@@ -23991,7 +24319,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PetsAnimationData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PetsAnimationData");
 		return ptr;
 	}
 
@@ -24006,7 +24334,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhysicsCollisionFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhysicsCollisionFunctions");
 		return ptr;
 	}
 
@@ -24029,7 +24357,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PickupableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PickupableComponent");
 		return ptr;
 	}
 
@@ -24045,7 +24373,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PickupActorMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PickupActorMock");
 		return ptr;
 	}
 
@@ -24060,7 +24388,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PickupObjectActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PickupObjectActionStateId");
 		return ptr;
 	}
 
@@ -24077,7 +24405,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateGeneratorServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateGeneratorServiceInterface");
 		return ptr;
 	}
 
@@ -24101,7 +24429,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateGeneratorService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateGeneratorService");
 		return ptr;
 	}
 
@@ -24116,7 +24444,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateIdentityBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateIdentityBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -24147,7 +24475,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PiratePreviewActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PiratePreviewActor");
 		return ptr;
 	}
 
@@ -24162,7 +24490,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PiratePreviewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PiratePreviewInterface");
 		return ptr;
 	}
 
@@ -24172,7 +24500,7 @@ public:
 
 
 // Class Athena.PiratePreviewComponent
-// 0x00F0 (0x0200 - 0x0110)
+// 0x0130 (0x0240 - 0x0110)
 class UPiratePreviewComponent : public UCoherentUIGTRenderToTextureLiveView
 {
 public:
@@ -24183,13 +24511,13 @@ public:
 	class URenderToTextureSceneDetails*                Details;                                                  // 0x0130(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	struct FClothingLoadout                            ClothingLoadout;                                          // 0x0138(0x0010) (Transient)
 	TArray<class UClass*>                              CurrentlySuppressedCategories;                            // 0x0148(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x0158(0x0088) MISSED OFFSET
-	struct FPiratePreviewView                          CurrentView;                                              // 0x01E0(0x0018) (Transient)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x01F8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x98];                                      // 0x0158(0x0098) MISSED OFFSET
+	struct FPiratePreviewView                          CurrentView;                                              // 0x01F0(0x0018) (Transient)
+	unsigned char                                      UnknownData02[0x38];                                      // 0x0208(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PiratePreviewComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PiratePreviewComponent");
 		return ptr;
 	}
 
@@ -24216,7 +24544,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PirateSelector");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PirateSelector");
 		return ptr;
 	}
 
@@ -24235,14 +24563,14 @@ public:
 
 
 // Class Athena.PlanarReflectionPlaneComponent
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0000 (0x02B0 - 0x02B0)
 class UPlanarReflectionPlaneComponent : public USceneComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlanarReflectionPlaneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlanarReflectionPlaneComponent");
 		return ptr;
 	}
 
@@ -24263,7 +24591,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlantAIFormDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlantAIFormDataAsset");
 		return ptr;
 	}
 
@@ -24291,7 +24619,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerAtmosphericsAudioComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerAtmosphericsAudioComponentParams");
 		return ptr;
 	}
 
@@ -24299,19 +24627,19 @@ public:
 
 
 // Class Athena.PlayerAtmosphericsAudioComponent
-// 0x0110 (0x03E0 - 0x02D0)
+// 0x0110 (0x03F0 - 0x02E0)
 class UPlayerAtmosphericsAudioComponent : public UWwiseEmitterComponent
 {
 public:
-	class UPlayerAtmosphericsAudioComponentParams*     AtmosphericParams;                                        // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FNoiseMakerController                       NoiseMakerController;                                     // 0x02D8(0x0040) (Edit)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0318(0x0010) MISSED OFFSET
-	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0328(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB0];                                      // 0x0330(0x00B0) MISSED OFFSET
+	class UPlayerAtmosphericsAudioComponentParams*     AtmosphericParams;                                        // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FNoiseMakerController                       NoiseMakerController;                                     // 0x02E8(0x0040) (Edit)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0328(0x0010) MISSED OFFSET
+	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0338(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x0340(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerAtmosphericsAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerAtmosphericsAudioComponent");
 		return ptr;
 	}
 
@@ -24330,7 +24658,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerCompanyControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerCompanyControlInterface");
 		return ptr;
 	}
 
@@ -24345,7 +24673,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerCompanyViewInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerCompanyViewInterface");
 		return ptr;
 	}
 
@@ -24363,7 +24691,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerCompanyComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerCompanyComponent");
 		return ptr;
 	}
 
@@ -24378,7 +24706,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerMuteInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerMuteInterface");
 		return ptr;
 	}
 
@@ -24398,7 +24726,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerCrewComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerCrewComponent");
 		return ptr;
 	}
 
@@ -24432,7 +24760,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerCurseComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerCurseComponent");
 		return ptr;
 	}
 
@@ -24450,7 +24778,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerEntitlementBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerEntitlementBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -24467,7 +24795,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerEntitlementControlInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerEntitlementControlInterface");
 		return ptr;
 	}
 
@@ -24488,7 +24816,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerEntitlementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerEntitlementComponent");
 		return ptr;
 	}
 
@@ -24506,7 +24834,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerFunctionLibrary");
 		return ptr;
 	}
 
@@ -24526,7 +24854,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerHeroStatsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerHeroStatsComponent");
 		return ptr;
 	}
 
@@ -24546,7 +24874,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerManagerService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerManagerService");
 		return ptr;
 	}
 
@@ -24562,7 +24890,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerMigratableStatusComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerMigratableStatusComponent");
 		return ptr;
 	}
 
@@ -24696,7 +25024,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerMusicControllerParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerMusicControllerParams");
 		return ptr;
 	}
 
@@ -24712,7 +25040,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerMuteComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerMuteComponent");
 		return ptr;
 	}
 
@@ -24727,7 +25055,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerNameplateLocationOverrideInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerNameplateLocationOverrideInterface");
 		return ptr;
 	}
 
@@ -24746,7 +25074,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerNameplateLocationOverrideComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerNameplateLocationOverrideComponent");
 		return ptr;
 	}
 
@@ -24761,7 +25089,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServerNotificationsServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServerNotificationsServiceInterface");
 		return ptr;
 	}
 
@@ -24777,7 +25105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServerNotificationsService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServerNotificationsService");
 		return ptr;
 	}
 
@@ -24793,7 +25121,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerNonVerbalComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerNonVerbalComponent");
 		return ptr;
 	}
 
@@ -24806,30 +25134,30 @@ public:
 
 
 // Class Athena.PlayerOceanAudioComponent
-// 0x0190 (0x0460 - 0x02D0)
+// 0x0190 (0x0470 - 0x02E0)
 class UPlayerOceanAudioComponent : public UWwiseEmitterComponent
 {
 public:
-	class UWwiseEvent*                                 WaterAudioEvent;                                          // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WaterAudioStopEvent;                                      // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WaterEmergeAudioEvent;                                    // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WaterSubmergeAudioEvent;                                  // 0x02E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ShorelineRtpc;                                            // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       StateUnderwater;                                          // 0x02F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ChoppinessRtpc;                                           // 0x0300(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxValidDistanceBetweenCoastAndInnerSpline;               // 0x0308(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxCoastAttenuation;                                      // 0x030C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDistanceForAccurateSplineCheck;                        // 0x0310(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SuperheatedWaterStateGroup;                               // 0x0314(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SwitchSuperheatedWaterOff;                                // 0x031C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SwitchSuperheatedWaterOn;                                 // 0x0324(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x032C(0x0004) MISSED OFFSET
-	class AAthenaPlayerCharacter*                      PlayerCharacter;                                          // 0x0330(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x128];                                     // 0x0338(0x0128) MISSED OFFSET
+	class UWwiseEvent*                                 WaterAudioEvent;                                          // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WaterAudioStopEvent;                                      // 0x02E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WaterEmergeAudioEvent;                                    // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WaterSubmergeAudioEvent;                                  // 0x02F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ShorelineRtpc;                                            // 0x0300(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       StateUnderwater;                                          // 0x0308(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ChoppinessRtpc;                                           // 0x0310(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxValidDistanceBetweenCoastAndInnerSpline;               // 0x0318(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxCoastAttenuation;                                      // 0x031C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDistanceForAccurateSplineCheck;                        // 0x0320(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SuperheatedWaterStateGroup;                               // 0x0324(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SwitchSuperheatedWaterOff;                                // 0x032C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SwitchSuperheatedWaterOn;                                 // 0x0334(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x033C(0x0004) MISSED OFFSET
+	class AAthenaPlayerCharacter*                      PlayerCharacter;                                          // 0x0340(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x128];                                     // 0x0348(0x0128) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerOceanAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerOceanAudioComponent");
 		return ptr;
 	}
 
@@ -24854,7 +25182,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerPermissionsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerPermissionsComponent");
 		return ptr;
 	}
 
@@ -24869,7 +25197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestPlayerPermissionsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestPlayerPermissionsComponent");
 		return ptr;
 	}
 
@@ -24890,7 +25218,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerPermissionsTestActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerPermissionsTestActor");
 		return ptr;
 	}
 
@@ -24907,7 +25235,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerRelevancyService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerRelevancyService");
 		return ptr;
 	}
 
@@ -24923,7 +25251,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerStatsComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerStatsComponent");
 		return ptr;
 	}
 
@@ -24931,15 +25259,15 @@ public:
 
 
 // Class Athena.MockPlayerTelemetryComponent
-// 0x0018 (0x0898 - 0x0880)
+// 0x0018 (0x08E8 - 0x08D0)
 class UMockPlayerTelemetryComponent : public UPlayerTelemetryComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0880(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x08D0(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MockPlayerTelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MockPlayerTelemetryComponent");
 		return ptr;
 	}
 
@@ -24947,14 +25275,14 @@ public:
 
 
 // Class Athena.TestPlayerTelemetryComponentNoEvents
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x08D0 - 0x08D0)
 class UTestPlayerTelemetryComponentNoEvents : public UPlayerTelemetryComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestPlayerTelemetryComponentNoEvents");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestPlayerTelemetryComponentNoEvents");
 		return ptr;
 	}
 
@@ -24969,7 +25297,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WalletComponentInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WalletComponentInterface");
 		return ptr;
 	}
 
@@ -24987,7 +25315,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PlayerWalletComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PlayerWalletComponent");
 		return ptr;
 	}
 
@@ -25007,7 +25335,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PopUpNotificationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PopUpNotificationComponent");
 		return ptr;
 	}
 
@@ -25028,7 +25356,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PosablePirate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PosablePirate");
 		return ptr;
 	}
 
@@ -25050,7 +25378,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrimaryInteractNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrimaryInteractNotificationInputId");
 		return ptr;
 	}
 
@@ -25065,7 +25393,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrimaryInteractReleasedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrimaryInteractReleasedNotificationInputId");
 		return ptr;
 	}
 
@@ -25080,7 +25408,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrimaryItemUseHeldNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrimaryItemUseHeldNotificationInputId");
 		return ptr;
 	}
 
@@ -25095,7 +25423,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrimaryItemUseReleasedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrimaryItemUseReleasedNotificationInputId");
 		return ptr;
 	}
 
@@ -25110,7 +25438,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PrimitiveComponentTestFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PrimitiveComponentTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -25127,7 +25455,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileServiceInterface");
 		return ptr;
 	}
 
@@ -25146,7 +25474,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileService");
 		return ptr;
 	}
 
@@ -25168,7 +25496,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileServiceDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileServiceDataAsset");
 		return ptr;
 	}
 
@@ -25183,7 +25511,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileWeaponFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileWeaponFunctionLibrary");
 		return ptr;
 	}
 
@@ -25208,7 +25536,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileWeapon");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileWeapon");
 		return ptr;
 	}
 
@@ -25245,7 +25573,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ProjectileWeaponValidationFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ProjectileWeaponValidationFunctionLibrary");
 		return ptr;
 	}
 
@@ -25262,7 +25590,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PursuitAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PursuitAIStrategyId");
 		return ptr;
 	}
 
@@ -25277,7 +25605,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PursuitCircleAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PursuitCircleAIStrategyId");
 		return ptr;
 	}
 
@@ -25285,7 +25613,7 @@ public:
 
 
 // Class Athena.QuestsConfig
-// 0x01D0 (0x01F8 - 0x0028)
+// 0x01D8 (0x0200 - 0x0028)
 class UQuestsConfig : public UDataAsset
 {
 public:
@@ -25307,39 +25635,40 @@ public:
 	class UMerchantQuestData*                          MerchantQuestData;                                        // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      MerchantMapItemInfoDescClass;                             // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UCargoRunQuestData*                          CargoRunQuestData;                                        // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UVoyageProposalAssetSelector*                VoyageProposalAssetData;                                  // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 VoyageSelectionVoteCompletedSound;                        // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FBuriedTreasureChestParams                  BuriedTreasureChestParams;                                // 0x00C0(0x0048) (Edit)
-	TArray<struct FVoyageProposalOverride>             VoyageProposalOverrides;                                  // 0x0108(0x0010) (Edit, ZeroConstructor)
-	class UClass*                                      VoyageProposal;                                           // 0x0118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      VoyageProposal2;                                          // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      VoyageProposal3;                                          // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      VoyageProposal4;                                          // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              AllTreasureArtifactsItemInfoDescs;                        // 0x0138(0x0010) (Edit, ZeroConstructor)
-	TArray<class UClass*>                              AllMessageInBottles;                                      // 0x0148(0x0010) (Edit, ZeroConstructor)
-	TArray<class UClass*>                              DefaultSeas;                                              // 0x0158(0x0010) (Edit, ZeroConstructor)
-	struct FStringAssetReference                       MessageInABottleMapsDiscoveredBackgroundImage;            // 0x0168(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FStringAssetReference>               MessageInABottleMapsDiscoveredImages;                     // 0x0178(0x0010) (Edit, ZeroConstructor)
-	class UBootyItemInfoDataAsset*                     BootyItemInfoAsset;                                       // 0x0188(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 TutorialStepStartSfx;                                     // 0x0190(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    TutorialCutsceneSpawnpointRotation;                       // 0x0198(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     TutorialCutsceneFirstPersonMeshOffset;                    // 0x01A4(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              TutorialCutsceneCharacterModelReplacedEventTimeout;       // 0x01B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              TutorialCutsceneTimeBeforeFadeIn;                         // 0x01B4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              TutorialCutsceneFadeInDuration;                           // 0x01B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01BC(0x0004) MISSED OFFSET
-	class UClass*                                      FoodToAddToInventoryInEatingTutorial;                     // 0x01C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              TutorialStartingHealth;                                   // 0x01C8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x01CC(0x0004) MISSED OFFSET
-	class UClass*                                      MapToAddToInventoryInTutorial;                            // 0x01D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           TutorialBuyVoyagePopupDesc;                               // 0x01D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           PlaceVoyageOnCaptainTablePopupDesc;                       // 0x01E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           ReturnBootyToTraderPopupDesc;                             // 0x01E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           MermaidTutorialPopupDesc;                                 // 0x01F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CargoRunMapItemInfoDescClass;                             // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UVoyageProposalAssetSelector*                VoyageProposalAssetData;                                  // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 VoyageSelectionVoteCompletedSound;                        // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FBuriedTreasureChestParams                  BuriedTreasureChestParams;                                // 0x00C8(0x0048) (Edit)
+	TArray<struct FVoyageProposalOverride>             VoyageProposalOverrides;                                  // 0x0110(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      VoyageProposal;                                           // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      VoyageProposal2;                                          // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      VoyageProposal3;                                          // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      VoyageProposal4;                                          // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              AllTreasureArtifactsItemInfoDescs;                        // 0x0140(0x0010) (Edit, ZeroConstructor)
+	TArray<class UClass*>                              AllMessageInBottles;                                      // 0x0150(0x0010) (Edit, ZeroConstructor)
+	TArray<class UClass*>                              DefaultSeas;                                              // 0x0160(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       MessageInABottleMapsDiscoveredBackgroundImage;            // 0x0170(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FStringAssetReference>               MessageInABottleMapsDiscoveredImages;                     // 0x0180(0x0010) (Edit, ZeroConstructor)
+	class UBootyItemInfoDataAsset*                     BootyItemInfoAsset;                                       // 0x0190(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 TutorialStepStartSfx;                                     // 0x0198(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    TutorialCutsceneSpawnpointRotation;                       // 0x01A0(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TutorialCutsceneFirstPersonMeshOffset;                    // 0x01AC(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              TutorialCutsceneCharacterModelReplacedEventTimeout;       // 0x01B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              TutorialCutsceneTimeBeforeFadeIn;                         // 0x01BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              TutorialCutsceneFadeInDuration;                           // 0x01C0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x01C4(0x0004) MISSED OFFSET
+	class UClass*                                      FoodToAddToInventoryInEatingTutorial;                     // 0x01C8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              TutorialStartingHealth;                                   // 0x01D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x01D4(0x0004) MISSED OFFSET
+	class UClass*                                      MapToAddToInventoryInTutorial;                            // 0x01D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialBuyVoyagePopupDesc;                               // 0x01E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           PlaceVoyageOnCaptainTablePopupDesc;                       // 0x01E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           ReturnBootyToTraderPopupDesc;                             // 0x01F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           MermaidTutorialPopupDesc;                                 // 0x01F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuestsConfig");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuestsConfig");
 		return ptr;
 	}
 
@@ -25354,7 +25683,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickSwitchPrimaryWeaponNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickSwitchPrimaryWeaponNotificationInputId");
 		return ptr;
 	}
 
@@ -25369,7 +25698,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.QuickSwitchSecondaryWeaponNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.QuickSwitchSecondaryWeaponNotificationInputId");
 		return ptr;
 	}
 
@@ -25385,7 +25714,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EmotesRadialCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EmotesRadialCompositeInputHandler");
 		return ptr;
 	}
 
@@ -25407,7 +25736,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PhrasesRadialCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PhrasesRadialCompositeInputHandler");
 		return ptr;
 	}
 
@@ -25430,7 +25759,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialInventoryCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialInventoryCompositeInputHandler");
 		return ptr;
 	}
 
@@ -25455,7 +25784,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ItemRadialInventoryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ItemRadialInventoryComponent");
 		return ptr;
 	}
 
@@ -25470,7 +25799,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MapRadialInventoryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MapRadialInventoryComponent");
 		return ptr;
 	}
 
@@ -25485,7 +25814,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialInventorySelectionXAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialInventorySelectionXAnalogInputId");
 		return ptr;
 	}
 
@@ -25500,7 +25829,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RadialInventorySelectionYAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RadialInventorySelectionYAnalogInputId");
 		return ptr;
 	}
 
@@ -25508,17 +25837,17 @@ public:
 
 
 // Class Athena.RainZoneComponent
-// 0x0020 (0x02C0 - 0x02A0)
+// 0x0020 (0x02D0 - 0x02B0)
 class URainZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FRainZoneParameters                         RainZoneParameters;                                       // 0x02A8(0x000C) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x02B4(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FRainZoneParameters                         RainZoneParameters;                                       // 0x02B8(0x000C) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x02C4(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RainZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RainZoneComponent");
 		return ptr;
 	}
 
@@ -25535,7 +25864,107 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RainZoneService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RainZoneService");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ShipSpeedBand
+// 0x0008 (0x0030 - 0x0028)
+class UShipSpeedBand : public UObject
+{
+public:
+	float                                              MinimumSpeed;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipSpeedBand");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ShipHullDamageDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UShipHullDamageDataAsset : public UDataAsset
+{
+public:
+	struct FShipHullDamageParams                       DamageParams;                                             // 0x0028(0x0010) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipHullDamageDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RammableDamageDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class URammableDamageDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FRammableDamageSpeedEntry>           DamageSpeedParams;                                        // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RammableDamageDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RammableInterface
+// 0x0000 (0x0028 - 0x0028)
+class URammableInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RammableInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SampledMovementInterface
+// 0x0000 (0x0028 - 0x0028)
+class USampledMovementInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SampledMovementInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RammableComponent
+// 0x0038 (0x0110 - 0x00D8)
+class URammableComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
+	class URammableDamageDataAsset*                    DamageSettings;                                           // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinIntervalBetweenRamDamage;                              // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
+	TScriptInterface<class UDamageableInterface>       OwnerDamageable;                                          // 0x00F0(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	TScriptInterface<class USampledMovementInterface>  OwnerMovement;                                            // 0x0100(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RammableComponent");
 		return ptr;
 	}
 
@@ -25550,7 +25979,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReapersMarkServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReapersMarkServiceInterface");
 		return ptr;
 	}
 
@@ -25568,7 +25997,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReapersMarkService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReapersMarkService");
 		return ptr;
 	}
 
@@ -25588,7 +26017,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReapersMarkSettingsAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReapersMarkSettingsAsset");
 		return ptr;
 	}
 
@@ -25603,7 +26032,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RegistrablePartTestInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RegistrablePartTestInterface");
 		return ptr;
 	}
 
@@ -25618,7 +26047,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RegistrablePartTestObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RegistrablePartTestObject");
 		return ptr;
 	}
 
@@ -25634,7 +26063,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RegistrablePartTestObjectWithInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RegistrablePartTestObjectWithInterface");
 		return ptr;
 	}
 
@@ -25649,7 +26078,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RendererSettingsFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RendererSettingsFunctionLibrary");
 		return ptr;
 	}
 
@@ -25659,32 +26088,37 @@ public:
 
 
 // Class Athena.RepairableComponent
-// 0x0118 (0x0240 - 0x0128)
+// 0x0148 (0x0270 - 0x0128)
 class URepairableComponent : public UInteractableComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0128(0x0010) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnRepairableStateChanged;                                 // 0x0138(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnDamageLevelChanged;                                     // 0x0148(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnRepairMounted;                                          // 0x0158(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	float                                              InteractionPointDepthOffset;                              // 0x0168(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumRepairAngleToRepairer;                             // 0x016C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumRepairDistance;                                    // 0x0170(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RepairTime;                                               // 0x0174(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      RepairType;                                               // 0x0178(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  RepairMountLocation;                                      // 0x0180(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
-	int                                                MaxDamageLevel;                                           // 0x01B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01B4(0x0004) MISSED OFFSET
-	struct FRepairableAuthoritiveRepairState           AuthorityRepairableState;                                 // 0x01B8(0x0018) (Net)
-	TEnumAsByte<ERepairableState>                      RepairableState;                                          // 0x01D0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x01D1(0x0003) MISSED OFFSET
-	int                                                DamageLevel;                                              // 0x01D4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EInteractableState>                    InteractionState;                                         // 0x01D8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x67];                                      // 0x01D9(0x0067) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0128(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnRepairableStateChanged;                                 // 0x0140(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnDamageLevelChanged;                                     // 0x0150(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnRepairMounted;                                          // 0x0160(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	float                                              InteractionPointDepthOffset;                              // 0x0170(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumRepairAngleToRepairer;                             // 0x0174(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumRepairDistance;                                    // 0x0178(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RepairTime;                                               // 0x017C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      RepairType;                                               // 0x0180(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             RepairMountParent;                                        // 0x0188(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FTransform                                  RepairMountOffset;                                        // 0x0190(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FName                                       RepairMountSocket;                                        // 0x01C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxDamageLevel;                                           // 0x01C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x01CC(0x0004) MISSED OFFSET
+	class UClass*                                      AIInteractionType;                                        // 0x01D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     AIInteractionOffset;                                      // 0x01D8(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x01E4(0x0004) MISSED OFFSET
+	struct FRepairableAuthoritiveRepairState           AuthorityRepairableState;                                 // 0x01E8(0x0018) (Net)
+	TEnumAsByte<ERepairableState>                      RepairableState;                                          // 0x0200(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0201(0x0003) MISSED OFFSET
+	int                                                DamageLevel;                                              // 0x0204(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EInteractableState>                    InteractionState;                                         // 0x0208(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x67];                                      // 0x0209(0x0067) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RepairableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RepairableComponent");
 		return ptr;
 	}
 
@@ -25704,7 +26138,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RepairingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RepairingInterface");
 		return ptr;
 	}
 
@@ -25721,7 +26155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RepairObjectActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RepairObjectActionStateId");
 		return ptr;
 	}
 
@@ -25739,7 +26173,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAnotherRepairTypeId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAnotherRepairTypeId");
 		return ptr;
 	}
 
@@ -25754,7 +26188,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestRepairTypeId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestRepairTypeId");
 		return ptr;
 	}
 
@@ -25769,7 +26203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WoodRepairTypeId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WoodRepairTypeId");
 		return ptr;
 	}
 
@@ -25791,7 +26225,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReplenishableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReplenishableComponent");
 		return ptr;
 	}
 
@@ -25819,7 +26253,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ResourceCache");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ResourceCache");
 		return ptr;
 	}
 
@@ -25834,7 +26268,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ResourceProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ResourceProviderInterface");
 		return ptr;
 	}
 
@@ -25850,7 +26284,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ResourceProviderComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ResourceProviderComponent");
 		return ptr;
 	}
 
@@ -25867,7 +26301,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CachedResourceProviderComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CachedResourceProviderComponent");
 		return ptr;
 	}
 
@@ -25883,7 +26317,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UncachedResourceProviderComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UncachedResourceProviderComponent");
 		return ptr;
 	}
 
@@ -25898,7 +26332,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ReturnToCirclingAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ReturnToCirclingAIStrategyId");
 		return ptr;
 	}
 
@@ -25914,7 +26348,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewardComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewardComponent");
 		return ptr;
 	}
 
@@ -25933,7 +26367,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewardDefinitionAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewardDefinitionAsset");
 		return ptr;
 	}
 
@@ -25950,7 +26384,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewardDefinitionAssetList");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewardDefinitionAssetList");
 		return ptr;
 	}
 
@@ -25966,7 +26400,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewardDistributionModelDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewardDistributionModelDataAsset");
 		return ptr;
 	}
 
@@ -25981,7 +26415,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewardServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewardServiceInterface");
 		return ptr;
 	}
 
@@ -25999,7 +26433,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewardService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewardService");
 		return ptr;
 	}
 
@@ -26016,7 +26450,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewindComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewindComponent");
 		return ptr;
 	}
 
@@ -26031,7 +26465,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewindPhysicsServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewindPhysicsServiceInterface");
 		return ptr;
 	}
 
@@ -26051,7 +26485,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RewindPhysicsService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RewindPhysicsService");
 		return ptr;
 	}
 
@@ -26069,7 +26503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RiddleQuestData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RiddleQuestData");
 		return ptr;
 	}
 
@@ -26090,7 +26524,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RiddleQuestDescGeneratorData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RiddleQuestDescGeneratorData");
 		return ptr;
 	}
 
@@ -26120,7 +26554,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RiddleQuestValidLocationGeneratorData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RiddleQuestValidLocationGeneratorData");
 		return ptr;
 	}
 
@@ -26136,7 +26570,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RiddleTextPhrasebookDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RiddleTextPhrasebookDataAsset");
 		return ptr;
 	}
 
@@ -26152,7 +26586,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RiddleTextPhraseDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RiddleTextPhraseDataAsset");
 		return ptr;
 	}
 
@@ -26167,7 +26601,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RightTriggerAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RightTriggerAnalogInputId");
 		return ptr;
 	}
 
@@ -26190,7 +26624,65 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RotatingAudioSourceComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RotatingAudioSourceComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RowboatAudioComponent
+// 0x00F0 (0x03A0 - 0x02B0)
+class URowboatAudioComponent : public USceneComponent
+{
+public:
+	class URowboatAudioComponentParams*                Params;                                                   // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class ARowboat*                                    ParentRowboat;                                            // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xE0];                                      // 0x02C0(0x00E0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatAudioComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RowboatAudioComponentParams
+// 0x00B0 (0x00D8 - 0x0028)
+class URowboatAudioComponentParams : public UDataAsset
+{
+public:
+	class UWwiseObjectPoolWrapper*                     RowboatObjectPool;                                        // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RowboatWakeStart;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RowboatWakeStop;                                          // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RowboatSpeedRtpcName;                                     // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RowboatMaxSpeedRtpc;                                      // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 RowboatLaunch;                                            // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RowboatImpactAndScrapeStart;                              // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RowboatImpactAndScrapeStop;                               // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RowboatStrainStart;                                       // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RowboatStrainStop;                                        // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RowboatStrainRtpcName;                                    // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RowboatMaxStrainRtpc;                                     // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 RowboatTakenDamage;                                       // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DamageAmountRequiredForNoiseToPlay;                       // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     WwiseOarEmitterPool;                                      // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayOarInOarLayer;                                        // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayOarInWaterLayer;                                      // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayOarOutOarLayer;                                       // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayOarOutWaterLayer;                                     // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayOarBrakingLoop;                                       // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopOarBrakingLoop;                                       // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayOarPullFinished;                                      // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatAudioComponentParams");
 		return ptr;
 	}
 
@@ -26205,7 +26697,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsLeftForwardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsLeftForwardNotificationInputId");
 		return ptr;
 	}
 
@@ -26220,7 +26712,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsLeftForwardDeactivatedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsLeftForwardDeactivatedNotificationInputId");
 		return ptr;
 	}
 
@@ -26235,7 +26727,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsRightForwardNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsRightForwardNotificationInputId");
 		return ptr;
 	}
 
@@ -26250,7 +26742,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsRightForwardDeactivatedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsRightForwardDeactivatedNotificationInputId");
 		return ptr;
 	}
 
@@ -26265,7 +26757,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsLeftBrakingActivatedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsLeftBrakingActivatedNotificationInputId");
 		return ptr;
 	}
 
@@ -26280,7 +26772,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsLeftBrakingDeactivatedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsLeftBrakingDeactivatedNotificationInputId");
 		return ptr;
 	}
 
@@ -26295,7 +26787,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsRightBrakingActivatedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsRightBrakingActivatedNotificationInputId");
 		return ptr;
 	}
 
@@ -26310,7 +26802,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowboatOarsRightBrakingDeactivatedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowboatOarsRightBrakingDeactivatedNotificationInputId");
 		return ptr;
 	}
 
@@ -26325,7 +26817,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RowingActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RowingActionStateId");
 		return ptr;
 	}
 
@@ -26349,7 +26841,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Rudder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Rudder");
 		return ptr;
 	}
 
@@ -26369,7 +26861,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RumbleHandlerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RumbleHandlerComponent");
 		return ptr;
 	}
 
@@ -26391,7 +26883,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CinematicQuestRunnable");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CinematicQuestRunnable");
 		return ptr;
 	}
 
@@ -26423,7 +26915,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Sail");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Sail");
 		return ptr;
 	}
 
@@ -26452,7 +26944,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailAngleAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailAngleAnalogInputId");
 		return ptr;
 	}
 
@@ -26467,7 +26959,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailAnimInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailAnimInterface");
 		return ptr;
 	}
 
@@ -26509,7 +27001,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailAnimInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailAnimInstance");
 		return ptr;
 	}
 
@@ -26524,7 +27016,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailHeightStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailHeightStatus");
 		return ptr;
 	}
 
@@ -26539,7 +27031,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailHoistAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailHoistAnalogInputId");
 		return ptr;
 	}
 
@@ -26554,7 +27046,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailHoistTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailHoistTestFunctions");
 		return ptr;
 	}
 
@@ -26573,7 +27065,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SailManipulatorBlueprintFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SailManipulatorBlueprintFunctions");
 		return ptr;
 	}
 
@@ -26608,7 +27100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ScreenSpaceVFXComponentParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ScreenSpaceVFXComponentParams");
 		return ptr;
 	}
 
@@ -26625,7 +27117,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ScreenSpaceVfxComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ScreenSpaceVfxComponent");
 		return ptr;
 	}
 
@@ -26640,7 +27132,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Seagulls");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Seagulls");
 		return ptr;
 	}
 
@@ -26660,7 +27152,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SeaIdValidationDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SeaIdValidationDataAsset");
 		return ptr;
 	}
 
@@ -26675,7 +27167,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SecondaryInteractNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SecondaryInteractNotificationInputId");
 		return ptr;
 	}
 
@@ -26690,7 +27182,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SecondaryInteractReleasedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SecondaryInteractReleasedNotificationInputId");
 		return ptr;
 	}
 
@@ -26705,7 +27197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SecondaryItemUseHeldNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SecondaryItemUseHeldNotificationInputId");
 		return ptr;
 	}
 
@@ -26720,7 +27212,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SecondaryItemUseReleasedNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SecondaryItemUseReleasedNotificationInputId");
 		return ptr;
 	}
 
@@ -26735,7 +27227,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SenseInitialReactionAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SenseInitialReactionAIStrategyId");
 		return ptr;
 	}
 
@@ -26750,7 +27242,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SenseSearchingAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SenseSearchingAIStrategyId");
 		return ptr;
 	}
 
@@ -26765,7 +27257,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServerUpdateReportingServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServerUpdateReportingServiceInterface");
 		return ptr;
 	}
 
@@ -26773,15 +27265,15 @@ public:
 
 
 // Class Athena.ServerUpdateReportingService
-// 0x0310 (0x0338 - 0x0028)
+// 0x0330 (0x0358 - 0x0028)
 class UServerUpdateReportingService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x310];                                     // 0x0028(0x0310) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x330];                                     // 0x0028(0x0330) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServerUpdateReportingService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServerUpdateReportingService");
 		return ptr;
 	}
 
@@ -26796,7 +27288,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServiceProviderInterfaceTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServiceProviderInterfaceTestFunctions");
 		return ptr;
 	}
 
@@ -26814,7 +27306,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServiceStatusNotificationsServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServiceStatusNotificationsServiceInterface");
 		return ptr;
 	}
 
@@ -26832,7 +27324,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ServiceStatusNotificationsService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ServiceStatusNotificationsService");
 		return ptr;
 	}
 
@@ -26855,7 +27347,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShadowAIFormDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShadowAIFormDataAsset");
 		return ptr;
 	}
 
@@ -26871,7 +27363,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShadowAIFormProximityPlayerTracker");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShadowAIFormProximityPlayerTracker");
 		return ptr;
 	}
 
@@ -26890,7 +27382,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShantyService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShantyService");
 		return ptr;
 	}
 
@@ -26911,7 +27403,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShantyZone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShantyZone");
 		return ptr;
 	}
 
@@ -26929,7 +27421,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SharkActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SharkActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -26945,7 +27437,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SharkPartsDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SharkPartsDesc");
 		return ptr;
 	}
 
@@ -26960,7 +27452,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwimmingCreatureMovementInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwimmingCreatureMovementInterface");
 		return ptr;
 	}
 
@@ -27006,7 +27498,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SharkPawn");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SharkPawn");
 		return ptr;
 	}
 
@@ -27034,7 +27526,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TinyShark");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TinyShark");
 		return ptr;
 	}
 
@@ -27049,7 +27541,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShelteredInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShelteredInterface");
 		return ptr;
 	}
 
@@ -27069,7 +27561,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShelteredComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShelteredComponent");
 		return ptr;
 	}
 
@@ -27077,14 +27569,14 @@ public:
 
 
 // Class Athena.DebugRegisterDynamicsShip
-// 0x0000 (0x1140 - 0x1140)
+// 0x0000 (0x1150 - 0x1150)
 class ADebugRegisterDynamicsShip : public AShip
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.DebugRegisterDynamicsShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.DebugRegisterDynamicsShip");
 		return ptr;
 	}
 
@@ -27092,15 +27584,15 @@ public:
 
 
 // Class Athena.ShipErrorOnNonAuthorityPhysicsChange
-// 0x0020 (0x1160 - 0x1140)
+// 0x0020 (0x1170 - 0x1150)
 class AShipErrorOnNonAuthorityPhysicsChange : public AShip
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x1140(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x1150(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipErrorOnNonAuthorityPhysicsChange");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipErrorOnNonAuthorityPhysicsChange");
 		return ptr;
 	}
 
@@ -27108,15 +27600,15 @@ public:
 
 
 // Class Athena.TestShipActorPhysicsErrorCorrection
-// 0x0010 (0x1150 - 0x1140)
+// 0x0010 (0x1160 - 0x1150)
 class ATestShipActorPhysicsErrorCorrection : public AShip
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1140(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x1150(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestShipActorPhysicsErrorCorrection");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestShipActorPhysicsErrorCorrection");
 		return ptr;
 	}
 
@@ -27131,7 +27623,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipAssetClassDatabaseInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipAssetClassDatabaseInterface");
 		return ptr;
 	}
 
@@ -27148,7 +27640,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipAssetClassDatabaseService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipAssetClassDatabaseService");
 		return ptr;
 	}
 
@@ -27166,7 +27658,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipAudio");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipAudio");
 		return ptr;
 	}
 
@@ -27174,21 +27666,21 @@ public:
 
 
 // Class Athena.ShipAudioEmitterComponent
-// 0x0010 (0x02E0 - 0x02D0)
+// 0x0010 (0x02F0 - 0x02E0)
 class UShipAudioEmitterComponent : public UWwiseEmitterComponent
 {
 public:
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               ShipSinkingExceededRollThreshold;                         // 0x02D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               SetRTPC_Pitch;                                            // 0x02D9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               SetRTPC_Roll;                                             // 0x02DA(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               SetRTPC_Velocity;                                         // 0x02DB(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               SetRTPC_Strain;                                           // 0x02DC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x02DD(0x0003) MISSED OFFSET
+	class UWwiseEvent*                                 WwiseEvent;                                               // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               ShipSinkingExceededRollThreshold;                         // 0x02E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SetRTPC_Pitch;                                            // 0x02E9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SetRTPC_Roll;                                             // 0x02EA(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SetRTPC_Velocity;                                         // 0x02EB(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SetRTPC_Strain;                                           // 0x02EC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x02ED(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipAudioEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipAudioEmitterComponent");
 		return ptr;
 	}
 
@@ -27225,7 +27717,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipHullAudio");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipHullAudio");
 		return ptr;
 	}
 
@@ -27243,7 +27735,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipBuilder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipBuilder");
 		return ptr;
 	}
 
@@ -27258,7 +27750,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCategoryA");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCategoryA");
 		return ptr;
 	}
 
@@ -27273,7 +27765,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCategoryB");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCategoryB");
 		return ptr;
 	}
 
@@ -27288,7 +27780,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCategoryC");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCategoryC");
 		return ptr;
 	}
 
@@ -27303,7 +27795,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCategoryD");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCategoryD");
 		return ptr;
 	}
 
@@ -27318,7 +27810,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCategoryS");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCategoryS");
 		return ptr;
 	}
 
@@ -27337,7 +27829,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCompass");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCompass");
 		return ptr;
 	}
 
@@ -27353,7 +27845,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDescAsset");
 		return ptr;
 	}
 
@@ -27368,7 +27860,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDescConversionFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDescConversionFunctions");
 		return ptr;
 	}
 
@@ -27386,7 +27878,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDescGeneratorTestFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDescGeneratorTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -27404,7 +27896,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipDynamicsProviderActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipDynamicsProviderActor");
 		return ptr;
 	}
 
@@ -27419,7 +27911,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipEmbedToken");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipEmbedToken");
 		return ptr;
 	}
 
@@ -27434,7 +27926,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipFactoryInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipFactoryInterface");
 		return ptr;
 	}
 
@@ -27451,7 +27943,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipFactory");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipFactory");
 		return ptr;
 	}
 
@@ -27471,7 +27963,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipFactorySpawnCallbackCounter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipFactorySpawnCallbackCounter");
 		return ptr;
 	}
 
@@ -27489,7 +27981,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipFunctionLibrary");
 		return ptr;
 	}
 
@@ -27505,39 +27997,6 @@ public:
 	TArray<class AActor*> STATIC_GetInteractablesOfClass(class AActor* Actor, class UClass* Class);
 	TArray<class AActor*> STATIC_GetInteractables(class AActor* Actor);
 	TArray<class ACannon*> STATIC_GetCannons(class AActor* Actor);
-};
-
-
-// Class Athena.ShipSpeedBand
-// 0x0008 (0x0030 - 0x0028)
-class UShipSpeedBand : public UObject
-{
-public:
-	float                                              MinimumSpeed;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipSpeedBand");
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ShipHullDamageDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class UShipHullDamageDataAsset : public UDataAsset
-{
-public:
-	struct FShipHullDamageParams                       DamageParams;                                             // 0x0028(0x0010) (Edit, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipHullDamageDataAsset");
-		return ptr;
-	}
-
 };
 
 
@@ -27572,7 +28031,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipHullCollisionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipHullCollisionComponent");
 		return ptr;
 	}
 
@@ -27606,7 +28065,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipLightComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipLightComponent");
 		return ptr;
 	}
 
@@ -27625,7 +28084,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipLiveryCatalogueDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipLiveryCatalogueDataAsset");
 		return ptr;
 	}
 
@@ -27641,7 +28100,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipNamesDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipNamesDataAsset");
 		return ptr;
 	}
 
@@ -27661,7 +28120,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipNosediveBrake");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipNosediveBrake");
 		return ptr;
 	}
 
@@ -27677,7 +28136,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartCustomization");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartCustomization");
 		return ptr;
 	}
 
@@ -27697,7 +28156,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartCustomizationTestCallbacks");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartCustomizationTestCallbacks");
 		return ptr;
 	}
 
@@ -27715,7 +28174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartCustomizationTestLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartCustomizationTestLibrary");
 		return ptr;
 	}
 
@@ -27733,7 +28192,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GenericPartDescAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GenericPartDescAsset");
 		return ptr;
 	}
 
@@ -27749,7 +28208,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPartsCatalogueDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPartsCatalogueDataAsset");
 		return ptr;
 	}
 
@@ -27757,22 +28216,22 @@ public:
 
 
 // Class Athena.ShipPointParticleComponent
-// 0x0090 (0x08F0 - 0x0860)
+// 0x0090 (0x0900 - 0x0870)
 class UShipPointParticleComponent : public UParticleSystemComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0860(0x0008) MISSED OFFSET
-	TArray<struct FVector>                             SpawnPts;                                                 // 0x0868(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FName                                       SpawnRateParam;                                           // 0x0878(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ParamValueRange;                                          // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   TimePerEmitMin;                                           // 0x0888(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   TimePerEmitMax;                                           // 0x0890(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EShipParticleParam>                    ParamType;                                                // 0x0898(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x57];                                      // 0x0899(0x0057) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0870(0x0008) MISSED OFFSET
+	TArray<struct FVector>                             SpawnPts;                                                 // 0x0878(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName                                       SpawnRateParam;                                           // 0x0888(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ParamValueRange;                                          // 0x0890(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   TimePerEmitMin;                                           // 0x0898(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   TimePerEmitMax;                                           // 0x08A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EShipParticleParam>                    ParamType;                                                // 0x08A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x57];                                      // 0x08A9(0x0057) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipPointParticleComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipPointParticleComponent");
 		return ptr;
 	}
 
@@ -27791,7 +28250,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipRolloverCorrector");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipRolloverCorrector");
 		return ptr;
 	}
 
@@ -27811,7 +28270,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipService");
 		return ptr;
 	}
 
@@ -27829,7 +28288,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AILargeShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AILargeShip");
 		return ptr;
 	}
 
@@ -27844,7 +28303,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AISmallShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AISmallShip");
 		return ptr;
 	}
 
@@ -27859,7 +28318,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LargeShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LargeShip");
 		return ptr;
 	}
 
@@ -27874,7 +28333,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MediumShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MediumShip");
 		return ptr;
 	}
 
@@ -27889,7 +28348,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SmallShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SmallShip");
 		return ptr;
 	}
 
@@ -27912,7 +28371,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipStuckDetectionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipStuckDetectionComponent");
 		return ptr;
 	}
 
@@ -27930,7 +28389,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipTelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipTelemetryComponent");
 		return ptr;
 	}
 
@@ -27951,7 +28410,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipTrackerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipTrackerComponent");
 		return ptr;
 	}
 
@@ -27968,7 +28427,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.GuildShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.GuildShip");
 		return ptr;
 	}
 
@@ -27983,7 +28442,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RentalShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RentalShip");
 		return ptr;
 	}
 
@@ -27998,7 +28457,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SoloShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SoloShip");
 		return ptr;
 	}
 
@@ -28025,7 +28484,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Shipwreck");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Shipwreck");
 		return ptr;
 	}
 
@@ -28044,7 +28503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckNameGeneratorAbstract");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckNameGeneratorAbstract");
 		return ptr;
 	}
 
@@ -28061,7 +28520,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckNameGeneratorDefault");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckNameGeneratorDefault");
 		return ptr;
 	}
 
@@ -28076,7 +28535,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckServiceInterface");
 		return ptr;
 	}
 
@@ -28102,7 +28561,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckService");
 		return ptr;
 	}
 
@@ -28117,7 +28576,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckSiteGeneratorComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckSiteGeneratorComponent");
 		return ptr;
 	}
 
@@ -28132,7 +28591,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckSiteGeneratorNoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckSiteGeneratorNoneComponent");
 		return ptr;
 	}
 
@@ -28149,7 +28608,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckSiteGeneratorRandomComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckSiteGeneratorRandomComponent");
 		return ptr;
 	}
 
@@ -28172,7 +28631,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckSiteGeneratorRandomEditorComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckSiteGeneratorRandomEditorComponent");
 		return ptr;
 	}
 
@@ -28197,7 +28656,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckSiteGeneratorRandom");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckSiteGeneratorRandom");
 		return ptr;
 	}
 
@@ -28213,7 +28672,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckSiteGeneratorSimulator");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckSiteGeneratorSimulator");
 		return ptr;
 	}
 
@@ -28234,7 +28693,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckTrackerServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckTrackerServiceInterface");
 		return ptr;
 	}
 
@@ -28250,7 +28709,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwreckTrackerService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwreckTrackerService");
 		return ptr;
 	}
 
@@ -28265,7 +28724,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwrightServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwrightServiceInterface");
 		return ptr;
 	}
 
@@ -28284,7 +28743,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipwrightService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipwrightService");
 		return ptr;
 	}
 
@@ -28308,7 +28767,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShopDesc");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShopDesc");
 		return ptr;
 	}
 
@@ -28333,7 +28792,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShopDialogue");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShopDialogue");
 		return ptr;
 	}
 
@@ -28353,7 +28812,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShopViewModelComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShopViewModelComponent");
 		return ptr;
 	}
 
@@ -28368,7 +28827,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShovelDigActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShovelDigActionStateId");
 		return ptr;
 	}
 
@@ -28384,7 +28843,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShovelDigInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShovelDigInputHandler");
 		return ptr;
 	}
 
@@ -28399,7 +28858,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SilenceStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SilenceStatus");
 		return ptr;
 	}
 
@@ -28420,7 +28879,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SinkingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SinkingComponent");
 		return ptr;
 	}
 
@@ -28447,7 +28906,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SittingActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SittingActionStateId");
 		return ptr;
 	}
 
@@ -28471,7 +28930,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletonActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletonActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -28489,7 +28948,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletonFortAIToggler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletonFortAIToggler");
 		return ptr;
 	}
 
@@ -28512,7 +28971,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkeletonThrone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkeletonThrone");
 		return ptr;
 	}
 
@@ -28529,7 +28988,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MultiCrewSkeletonThrone");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MultiCrewSkeletonThrone");
 		return ptr;
 	}
 
@@ -28548,14 +29007,14 @@ public:
 	unsigned char                                      UnknownData01[0x58];                                      // 0x04B8(0x0058) MISSED OFFSET
 	struct FWwiseEmitter                               SkellyFortEmitter;                                        // 0x0510(0x0020)
 	float                                              ServerMigrationExclusionRadius;                           // 0x0530(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0534(0x0004) MISSED OFFSET
-	class UAIBountySpawner*                            Spawner;                                                  // 0x0538(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x150];                                     // 0x0540(0x0150) MISSED OFFSET
-	class AGameplayEventSignal*                        SkullCloud;                                               // 0x0690(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UFortItemSpawnComponent*>             Rewards;                                                  // 0x0698(0x0010) (ExportObject, ZeroConstructor)
-	TArray<struct FAIBountySpawnerWaveLocation>        WaveSpawnerLocations;                                     // 0x06A8(0x0010) (Edit, ZeroConstructor)
-	struct FVector                                     SkullCloudLoc;                                            // 0x06B8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SkullCloudCloseProximityRotation;                         // 0x06C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SkullCloudLoc;                                            // 0x0534(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SkullCloudCloseProximityRotation;                         // 0x0540(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0544(0x0004) MISSED OFFSET
+	class UAIBountySpawner*                            Spawner;                                                  // 0x0548(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x150];                                     // 0x0550(0x0150) MISSED OFFSET
+	class AGameplayEventSignal*                        SkullCloud;                                               // 0x06A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UFortItemSpawnComponent*>             Rewards;                                                  // 0x06A8(0x0010) (ExportObject, ZeroConstructor)
+	TArray<struct FAIBountySpawnerWaveLocation>        WaveSpawnerLocations;                                     // 0x06B8(0x0010) (Edit, ZeroConstructor)
 	float                                              SkullCloudMaxPitch;                                       // 0x06C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FEncounterParams                            SightingEncounterParams;                                  // 0x06CC(0x000C) (Edit, DisableEditOnInstance)
 	struct FEncounterParams                            CloseEncounterParams;                                     // 0x06D8(0x000C) (Edit, DisableEditOnInstance)
@@ -28572,7 +29031,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkellyFort");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkellyFort");
 		return ptr;
 	}
 
@@ -28615,7 +29074,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkellyFortDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkellyFortDataAsset");
 		return ptr;
 	}
 
@@ -28630,7 +29089,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkellyFortServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkellyFortServiceInterface");
 		return ptr;
 	}
 
@@ -28638,20 +29097,20 @@ public:
 
 
 // Class Athena.SkellyFortService
-// 0x00F0 (0x0580 - 0x0490)
+// 0x0120 (0x05B0 - 0x0490)
 class ASkellyFortService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 	TArray<class ASkellyFort*>                         SkellyForts;                                              // 0x0498(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x60];                                      // 0x04A8(0x0060) MISSED OFFSET
-	class USkellyFortDataAsset*                        FortData;                                                 // 0x0508(0x0008) (ZeroConstructor, IsPlainOldData)
-	class USkeletonFortAIToggler*                      FortAIToggler;                                            // 0x0510(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x68];                                      // 0x0518(0x0068) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x90];                                      // 0x04A8(0x0090) MISSED OFFSET
+	class USkellyFortDataAsset*                        FortData;                                                 // 0x0538(0x0008) (ZeroConstructor, IsPlainOldData)
+	class USkeletonFortAIToggler*                      FortAIToggler;                                            // 0x0540(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x68];                                      // 0x0548(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SkellyFortService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SkellyFortService");
 		return ptr;
 	}
 
@@ -28666,7 +29125,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SleepStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SleepStatus");
 		return ptr;
 	}
 
@@ -28681,7 +29140,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SnakeVenomStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SnakeVenomStatus");
 		return ptr;
 	}
 
@@ -28696,7 +29155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SoberStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SoberStatus");
 		return ptr;
 	}
 
@@ -28712,7 +29171,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SpawnLocationKeywordPriorityListAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SpawnLocationKeywordPriorityListAsset");
 		return ptr;
 	}
 
@@ -28720,19 +29179,19 @@ public:
 
 
 // Class Athena.SplineWithEmitterComponent
-// 0x0030 (0x0650 - 0x0620)
+// 0x0030 (0x0660 - 0x0630)
 class USplineWithEmitterComponent : public USplineComponent
 {
 public:
-	class UWwiseObjectPoolWrapper*                     SplineAudioPool;                                          // 0x0620(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 LoopingSoundPlayEvent;                                    // 0x0628(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 LoopingSoundStopEvent;                                    // 0x0630(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEmitterComponent*                      WwiseEmitterComponent;                                    // 0x0638(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0640(0x0010) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     SplineAudioPool;                                          // 0x0630(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 LoopingSoundPlayEvent;                                    // 0x0638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 LoopingSoundStopEvent;                                    // 0x0640(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEmitterComponent*                      WwiseEmitterComponent;                                    // 0x0648(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0650(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SplineWithEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SplineWithEmitterComponent");
 		return ptr;
 	}
 
@@ -28747,7 +29206,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SprintActivationNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SprintActivationNotificationInputId");
 		return ptr;
 	}
 
@@ -28755,7 +29214,7 @@ public:
 
 
 // Class Athena.StaggerComponent
-// 0x0138 (0x0210 - 0x00D8)
+// 0x0148 (0x0220 - 0x00D8)
 class UStaggerComponent : public UActorComponent
 {
 public:
@@ -28773,11 +29232,12 @@ public:
 	float                                              InterferenceScalarOnLadderMoving;                         // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              MaxStickDeflectionOnLadderToConsiderStationary;           // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              StickDeflectionForMaxScalingOnLadder;                     // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF8];                                      // 0x0118(0x00F8) MISSED OFFSET
+	TArray<struct FStaggerModifiersEntry>              StaggerModifierEntries;                                   // 0x0118(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0xF8];                                      // 0x0128(0x00F8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaggerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaggerComponent");
 		return ptr;
 	}
 
@@ -28794,7 +29254,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StartledAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StartledAIStrategyId");
 		return ptr;
 	}
 
@@ -28809,7 +29269,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StarvingInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StarvingInterface");
 		return ptr;
 	}
 
@@ -28833,7 +29293,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StarvingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StarvingComponent");
 		return ptr;
 	}
 
@@ -28848,7 +29308,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusEffectComponentProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusEffectComponentProviderInterface");
 		return ptr;
 	}
 
@@ -28867,7 +29327,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VenomSource");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VenomSource");
 		return ptr;
 	}
 
@@ -28885,7 +29345,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusEffectComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusEffectComponent");
 		return ptr;
 	}
 
@@ -28903,7 +29363,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseActivateAudioState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseActivateAudioState");
 		return ptr;
 	}
 
@@ -28920,7 +29380,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseAIShipClampMaxTurnAngle");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseAIShipClampMaxTurnAngle");
 		return ptr;
 	}
 
@@ -28937,7 +29397,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseAIShipSetMaxSpeedMultiplier");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseAIShipSetMaxSpeedMultiplier");
 		return ptr;
 	}
 
@@ -28957,7 +29417,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseApplyStatusPlayerCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseApplyStatusPlayerCurse");
 		return ptr;
 	}
 
@@ -28977,7 +29437,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseApplyStatusShipCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseApplyStatusShipCurse");
 		return ptr;
 	}
 
@@ -28994,7 +29454,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseBallast");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseBallast");
 		return ptr;
 	}
 
@@ -29011,7 +29471,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseBoogieCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseBoogieCurse");
 		return ptr;
 	}
 
@@ -29028,7 +29488,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseCampfire");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseCampfire");
 		return ptr;
 	}
 
@@ -29047,7 +29507,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseChangeCannonRotation");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseChangeCannonRotation");
 		return ptr;
 	}
 
@@ -29064,7 +29524,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseChangeSailHeight");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseChangeSailHeight");
 		return ptr;
 	}
 
@@ -29081,7 +29541,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseDrunkCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseDrunkCurse");
 		return ptr;
 	}
 
@@ -29097,7 +29557,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseEmote");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseEmote");
 		return ptr;
 	}
 
@@ -29113,7 +29573,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseForceFeedback");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseForceFeedback");
 		return ptr;
 	}
 
@@ -29131,7 +29591,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseHealthChange");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseHealthChange");
 		return ptr;
 	}
 
@@ -29149,7 +29609,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseHealthChangeOverTime");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseHealthChangeOverTime");
 		return ptr;
 	}
 
@@ -29164,7 +29624,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseLimping");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseLimping");
 		return ptr;
 	}
 
@@ -29181,7 +29641,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseLimpingCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseLimpingCurse");
 		return ptr;
 	}
 
@@ -29198,7 +29658,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponsePlayAudioLoopOnLocalClient");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponsePlayAudioLoopOnLocalClient");
 		return ptr;
 	}
 
@@ -29214,7 +29674,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseScreenSpaceParticles");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseScreenSpaceParticles");
 		return ptr;
 	}
 
@@ -29236,7 +29696,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseScreenSpaceVFX");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseScreenSpaceVFX");
 		return ptr;
 	}
 
@@ -29251,7 +29711,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseSendBrokenLegEvent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseSendBrokenLegEvent");
 		return ptr;
 	}
 
@@ -29269,7 +29729,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseSetAICharacterMoveSpeedModifier");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseSetAICharacterMoveSpeedModifier");
 		return ptr;
 	}
 
@@ -29287,7 +29747,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseShipAddAnchor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseShipAddAnchor");
 		return ptr;
 	}
 
@@ -29305,7 +29765,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseShipCurseFX");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseShipCurseFX");
 		return ptr;
 	}
 
@@ -29323,7 +29783,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseShipPreventServerMigrationCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseShipPreventServerMigrationCurse");
 		return ptr;
 	}
 
@@ -29340,7 +29800,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseSleepCurse");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseSleepCurse");
 		return ptr;
 	}
 
@@ -29358,7 +29818,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseStun");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseStun");
 		return ptr;
 	}
 
@@ -29375,7 +29835,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseToggleCapstan");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseToggleCapstan");
 		return ptr;
 	}
 
@@ -29394,7 +29854,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseToggleInteractionPoint");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseToggleInteractionPoint");
 		return ptr;
 	}
 
@@ -29414,7 +29874,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseToggleWheelLock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseToggleWheelLock");
 		return ptr;
 	}
 
@@ -29432,7 +29892,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseTriggerDrunkenness");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseTriggerDrunkenness");
 		return ptr;
 	}
 
@@ -29449,7 +29909,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StatusResponseVenom");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StatusResponseVenom");
 		return ptr;
 	}
 
@@ -29464,7 +29924,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SteamImpactStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SteamImpactStatus");
 		return ptr;
 	}
 
@@ -29479,7 +29939,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StorageContainerInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StorageContainerInterface");
 		return ptr;
 	}
 
@@ -29491,7 +29951,7 @@ public:
 
 
 // Class Athena.StorageContainerComponent
-// 0x0148 (0x0220 - 0x00D8)
+// 0x0138 (0x0210 - 0x00D8)
 class UStorageContainerComponent : public UActorComponent
 {
 public:
@@ -29509,14 +29969,13 @@ public:
 	class UWwiseObjectPoolWrapper*                     SfxPool;                                                  // 0x01B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x20];                                      // 0x01B8(0x0020) MISSED OFFSET
 	TArray<class AActor*>                              AttachedPlayers;                                          // 0x01D8(0x0010) (ZeroConstructor)
-	TArray<struct FIInventoryItemDescription>          UIDescriptions;                                           // 0x01E8(0x0010) (ZeroConstructor)
-	TArray<struct FIInventoryItem>                     InventoryItemsUIView;                                     // 0x01F8(0x0010) (ZeroConstructor)
-	TArray<struct FIInventoryItem>                     BarrelItemsUIView;                                        // 0x0208(0x0010) (ZeroConstructor)
-	class UObject*                                     Aggregator;                                               // 0x0218(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x18];                                      // 0x01E8(0x0018) MISSED OFFSET
+	class UObject*                                     Aggregator;                                               // 0x0200(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x8];                                       // 0x0208(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StorageContainerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StorageContainerComponent");
 		return ptr;
 	}
 
@@ -29537,7 +29996,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StorageContainerContentSpawner");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StorageContainerContentSpawner");
 		return ptr;
 	}
 
@@ -29556,7 +30015,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StorageContainerContentTypeSelector");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StorageContainerContentTypeSelector");
 		return ptr;
 	}
 
@@ -29579,7 +30038,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StormParams");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StormParams");
 		return ptr;
 	}
 
@@ -29619,7 +30078,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Storm");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Storm");
 		return ptr;
 	}
 
@@ -29636,7 +30095,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StormServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StormServiceInterface");
 		return ptr;
 	}
 
@@ -29652,7 +30111,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StormServiceAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StormServiceAsset");
 		return ptr;
 	}
 
@@ -29669,7 +30128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StormService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StormService");
 		return ptr;
 	}
 
@@ -29684,7 +30143,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StreamingLocationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StreamingLocationInterface");
 		return ptr;
 	}
 
@@ -29698,11 +30157,12 @@ class UStreamingLocationComponent : public UActorComponent
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
 	struct FVector                                     StreamingLocationOverride;                                // 0x00E0(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
+	bool                                               StreamingLocationActive;                                  // 0x00EC(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00ED(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StreamingLocationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StreamingLocationComponent");
 		return ptr;
 	}
 
@@ -29717,7 +30177,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StunnedActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StunnedActionStateId");
 		return ptr;
 	}
 
@@ -29748,7 +30208,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SunkenCurseArtefact");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SunkenCurseArtefact");
 		return ptr;
 	}
 
@@ -29771,7 +30231,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SunkenCurseArtefactAudioComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SunkenCurseArtefactAudioComponent");
 		return ptr;
 	}
 
@@ -29796,7 +30256,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SunkenCurseArtefactDynamicMaterialComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SunkenCurseArtefactDynamicMaterialComponent");
 		return ptr;
 	}
 
@@ -29819,7 +30279,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SunkenCurseArtefactRadialDamageComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SunkenCurseArtefactRadialDamageComponent");
 		return ptr;
 	}
 
@@ -29847,7 +30307,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SunkenCurseArtefactVfxComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SunkenCurseArtefactVfxComponent");
 		return ptr;
 	}
 
@@ -29862,7 +30322,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwallowedByKrakenActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwallowedByKrakenActionStateId");
 		return ptr;
 	}
 
@@ -29907,7 +30367,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwimmingCreatureAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwimmingCreatureAnimationInstance");
 		return ptr;
 	}
 
@@ -29951,7 +30411,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwimmingCreatureMovementComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwimmingCreatureMovementComponent");
 		return ptr;
 	}
 
@@ -29975,7 +30435,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SwimToSurfaceAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SwimToSurfaceAIStrategyId");
 		return ptr;
 	}
 
@@ -29990,7 +30450,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TakeControlActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TakeControlActionStateId");
 		return ptr;
 	}
 
@@ -30005,12 +30465,11 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TalkToNPCActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TalkToNPCActionStateId");
 		return ptr;
 	}
 
 
-	void STATIC_PushCharIntoActionState(class UNPCDialogComponent* NPCDialogComp, class AActor* Character);
 	void STATIC_PopCharOutOfActionState(class UNPCDialogComponent* NPCDialogComp, class AActor* Character);
 };
 
@@ -30023,7 +30482,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TankardInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TankardInterface");
 		return ptr;
 	}
 
@@ -30044,7 +30503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TankardRefillerComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TankardRefillerComponent");
 		return ptr;
 	}
 
@@ -30059,7 +30518,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TauntAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TauntAIStrategyId");
 		return ptr;
 	}
 
@@ -30074,7 +30533,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TauntAnimationStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TauntAnimationStateId");
 		return ptr;
 	}
 
@@ -30106,7 +30565,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TavernStepsTrigger");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TavernStepsTrigger");
 		return ptr;
 	}
 
@@ -30129,7 +30588,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TelemetryDescriptorMockActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TelemetryDescriptorMockActor");
 		return ptr;
 	}
 
@@ -30147,7 +30606,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TelemetrySubjectComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TelemetrySubjectComponent");
 		return ptr;
 	}
 
@@ -30162,7 +30621,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.IslandTelemetrySubjectComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.IslandTelemetrySubjectComponent");
 		return ptr;
 	}
 
@@ -30179,7 +30638,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipTelemetrySubjectComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipTelemetrySubjectComponent");
 		return ptr;
 	}
 
@@ -30194,7 +30653,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TeleportActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TeleportActionStateId");
 		return ptr;
 	}
 
@@ -30212,7 +30671,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TeleportFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TeleportFunctions");
 		return ptr;
 	}
 
@@ -30227,16 +30686,16 @@ public:
 
 
 // Class Athena.TeleportLocationComponent
-// 0x0030 (0x02D0 - 0x02A0)
+// 0x0030 (0x02E0 - 0x02B0)
 class UTeleportLocationComponent : public USceneComponent
 {
 public:
-	struct FTeleportLocation                           TeleportLocation;                                         // 0x02A0(0x0028) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02C8(0x0008) MISSED OFFSET
+	struct FTeleportLocation                           TeleportLocation;                                         // 0x02B0(0x0028) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02D8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TeleportLocationComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TeleportLocationComponent");
 		return ptr;
 	}
 
@@ -30253,7 +30712,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TeleportLocationRetrievalComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TeleportLocationRetrievalComponent");
 		return ptr;
 	}
 
@@ -30271,7 +30730,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestActionControlStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestActionControlStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -30287,7 +30746,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestAthenaGameModeWithLoopBackServiceEndpoint");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestAthenaGameModeWithLoopBackServiceEndpoint");
 		return ptr;
 	}
 
@@ -30305,7 +30764,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestClimbingActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestClimbingActor");
 		return ptr;
 	}
 
@@ -30321,7 +30780,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestDockingActorWithPhrases");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestDockingActorWithPhrases");
 		return ptr;
 	}
 
@@ -30336,7 +30795,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestControlObjectActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestControlObjectActionStateId");
 		return ptr;
 	}
 
@@ -30354,7 +30813,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestDelayedMeshCharacter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestDelayedMeshCharacter");
 		return ptr;
 	}
 
@@ -30375,7 +30834,24 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestDockableObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestDockableObject");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TestGameInstanceWithObjectMessagingDispatcher
+// 0x00A8 (0x0130 - 0x0088)
+class UTestGameInstanceWithObjectMessagingDispatcher : public UGameInstance
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+	struct FObjectMessagingDispatcher                  EventDispatcher;                                          // 0x0090(0x00A0)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestGameInstanceWithObjectMessagingDispatcher");
 		return ptr;
 	}
 
@@ -30390,7 +30866,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestServiceInterface");
 		return ptr;
 	}
 
@@ -30398,14 +30874,15 @@ public:
 
 
 // Class Athena.TestGameModeWithServiceProviderGameState
-// 0x0000 (0x0588 - 0x0588)
+// 0x00A8 (0x0630 - 0x0588)
 class ATestGameModeWithServiceProviderGameState : public AGameMode
 {
 public:
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0588(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestGameModeWithServiceProviderGameState");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestGameModeWithServiceProviderGameState");
 		return ptr;
 	}
 
@@ -30421,7 +30898,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestGameStateWithObjectMessagingDispatcher");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestGameStateWithObjectMessagingDispatcher");
 		return ptr;
 	}
 
@@ -30437,7 +30914,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestGameStateWithObjectMessagingServiceProvider");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestGameStateWithObjectMessagingServiceProvider");
 		return ptr;
 	}
 
@@ -30457,7 +30934,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestLadderActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestLadderActor");
 		return ptr;
 	}
 
@@ -30475,7 +30952,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestMountedWeapon");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestMountedWeapon");
 		return ptr;
 	}
 
@@ -30490,7 +30967,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestNetworkedEventsFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestNetworkedEventsFunctionLibrary");
 		return ptr;
 	}
 
@@ -30509,7 +30986,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestQuestProxy");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestQuestProxy");
 		return ptr;
 	}
 
@@ -30532,7 +31009,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestRepairableActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestRepairableActor");
 		return ptr;
 	}
 
@@ -30550,7 +31027,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestRepairActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestRepairActor");
 		return ptr;
 	}
 
@@ -30566,7 +31043,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestReturnCompleteAfterTimeoutPlayerRelevancyService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestReturnCompleteAfterTimeoutPlayerRelevancyService");
 		return ptr;
 	}
 
@@ -30584,7 +31061,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestService");
 		return ptr;
 	}
 
@@ -30602,7 +31079,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestShipAssetClassDatabase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestShipAssetClassDatabase");
 		return ptr;
 	}
 
@@ -30620,7 +31097,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestShipDynamicsTarget");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestShipDynamicsTarget");
 		return ptr;
 	}
 
@@ -30638,7 +31115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestShipPart");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestShipPart");
 		return ptr;
 	}
 
@@ -30653,7 +31130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestShipPartThatDestroysItsShip");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestShipPartThatDestroysItsShip");
 		return ptr;
 	}
 
@@ -30668,7 +31145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestStreamingTeleport");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestStreamingTeleport");
 		return ptr;
 	}
 
@@ -30693,7 +31170,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TextureFeedbackComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TextureFeedbackComponent");
 		return ptr;
 	}
 
@@ -30714,7 +31191,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TinySharkDebugFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TinySharkDebugFunctionLibrary");
 		return ptr;
 	}
 
@@ -30731,7 +31208,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ToggleCapstanStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ToggleCapstanStatus");
 		return ptr;
 	}
 
@@ -30746,7 +31223,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ToggleItemNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ToggleItemNotificationInputId");
 		return ptr;
 	}
 
@@ -30761,7 +31238,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TrackedActorServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TrackedActorServiceInterface");
 		return ptr;
 	}
 
@@ -30779,7 +31256,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TrackedActorService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TrackedActorService");
 		return ptr;
 	}
 
@@ -30809,7 +31286,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BountyMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BountyMap");
 		return ptr;
 	}
 
@@ -30818,6 +31295,36 @@ public:
 	void OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Height);
 	void OnRep_MapInventoryTexturePath();
 	void OnRep_Contents(const struct FBountyMapContents& InPreviousContents);
+};
+
+
+// Class Athena.CargoRunMap
+// 0x01B0 (0x0A18 - 0x0868)
+class ACargoRunMap : public ATreasureMap
+{
+public:
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0868(0x0030) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0898(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x089C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UFont*                                       Font;                                                     // 0x08A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontScale;                                                // 0x08A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontLineSpacingScale;                                     // 0x08AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x08B0(0x0020) MISSED OFFSET
+	class UCargoRunMapLayout*                          CargoRunMapLayout;                                        // 0x08D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FCargoRunMapContents                        Contents;                                                 // 0x08D8(0x0018) (Net)
+	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x08F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x120];                                     // 0x08F8(0x0120) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunMap");
+		return ptr;
+	}
+
+
+	void RefreshContents();
+	void OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Height);
+	void OnRep_Contents(const struct FCargoRunMapContents& PreviousContents);
 };
 
 
@@ -30839,7 +31346,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MerchantMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MerchantMap");
 		return ptr;
 	}
 
@@ -30890,7 +31397,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.RiddleMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.RiddleMap");
 		return ptr;
 	}
 
@@ -30913,7 +31420,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapCollectionInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapCollectionInterface");
 		return ptr;
 	}
 
@@ -30945,7 +31452,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.XMarksTheSpotMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.XMarksTheSpotMap");
 		return ptr;
 	}
 
@@ -30965,7 +31472,7 @@ public:
 
 
 // Class Athena.TreasureMapCollectionComponent
-// 0x00A8 (0x0180 - 0x00D8)
+// 0x00B0 (0x0188 - 0x00D8)
 class UTreasureMapCollectionComponent : public UActorComponent
 {
 public:
@@ -30974,13 +31481,14 @@ public:
 	class UClass*                                      RiddleMapType;                                            // 0x0138(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UClass*                                      BountyMapType;                                            // 0x0140(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UClass*                                      MerchantMapType;                                          // 0x0148(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class ATreasureMap*>                        TreasureMaps;                                             // 0x0150(0x0010) (ZeroConstructor, Transient)
-	TArray<struct FName>                               TreasureMapDestinationIslands;                            // 0x0160(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0170(0x0010) MISSED OFFSET
+	class UClass*                                      CargoRunMapType;                                          // 0x0150(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class ATreasureMap*>                        TreasureMaps;                                             // 0x0158(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FName>                               TreasureMapDestinationIslands;                            // 0x0168(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0178(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapCollectionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapCollectionComponent");
 		return ptr;
 	}
 
@@ -30998,7 +31506,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapDataAsset");
 		return ptr;
 	}
 
@@ -31013,7 +31521,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapServiceInterface");
 		return ptr;
 	}
 
@@ -31031,7 +31539,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureMapService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureMapService");
 		return ptr;
 	}
 
@@ -31046,7 +31554,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TriggerObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TriggerObject");
 		return ptr;
 	}
 
@@ -31072,7 +31580,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TeleportTriggerObject");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TeleportTriggerObject");
 		return ptr;
 	}
 
@@ -31089,7 +31597,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TurnAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TurnAnalogInputId");
 		return ptr;
 	}
 
@@ -31104,7 +31612,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TurnOnTheSpotAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TurnOnTheSpotAIStrategyId");
 		return ptr;
 	}
 
@@ -31119,7 +31627,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TurnRateAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TurnRateAnalogInputId");
 		return ptr;
 	}
 
@@ -31134,7 +31642,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TurnRateWithFixedSensitivityAnalogInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TurnRateWithFixedSensitivityAnalogInputId");
 		return ptr;
 	}
 
@@ -31152,7 +31660,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TutorialComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TutorialComponent");
 		return ptr;
 	}
 
@@ -31170,7 +31678,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.AthenaTutorialComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.AthenaTutorialComponent");
 		return ptr;
 	}
 
@@ -31186,7 +31694,44 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UITelemetryComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UITelemetryComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.UnderwaterEffectsComponent
+// 0x0030 (0x0310 - 0x02E0)
+class UUnderwaterEffectsComponent : public UWwiseEmitterComponent
+{
+public:
+	class UUnderwaterEffectsDataAsset*                 UnderwaterEffectsData;                                    // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystemComponent*                    SpawnedVfx;                                               // 0x02E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x02F0(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnderwaterEffectsComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.UnderwaterEffectsDataAsset
+// 0x0020 (0x0048 - 0x0028)
+class UUnderwaterEffectsDataAsset : public UDataAsset
+{
+public:
+	class UWwiseEvent*                                 StartUnderwaterSfx;                                       // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StopUnderwaterSfx;                                        // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     UnderwaterVfx;                                            // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       UnderwaterVfxSocketName;                                  // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnderwaterEffectsDataAsset");
 		return ptr;
 	}
 
@@ -31202,7 +31747,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UnifiedDelegateTestUnifiedDelegate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnifiedDelegateTestUnifiedDelegate");
 		return ptr;
 	}
 
@@ -31222,7 +31767,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UnloadItemActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UnloadItemActionStateId");
 		return ptr;
 	}
 
@@ -31244,7 +31789,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UsableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UsableComponent");
 		return ptr;
 	}
 
@@ -31260,7 +31805,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestUsableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestUsableComponent");
 		return ptr;
 	}
 
@@ -31279,7 +31824,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UsableWieldableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UsableWieldableComponent");
 		return ptr;
 	}
 
@@ -31297,7 +31842,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseCannonActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseCannonActionStateId");
 		return ptr;
 	}
 
@@ -31317,7 +31862,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseCannonCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseCannonCompositeInputHandler");
 		return ptr;
 	}
 
@@ -31338,7 +31883,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseConcealingObjectNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseConcealingObjectNotificationInputId");
 		return ptr;
 	}
 
@@ -31353,7 +31898,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseItemActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseItemActionStateId");
 		return ptr;
 	}
 
@@ -31371,7 +31916,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseLadderActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseLadderActionStateId");
 		return ptr;
 	}
 
@@ -31388,7 +31933,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseMapTableActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseMapTableActionStateId");
 		return ptr;
 	}
 
@@ -31407,7 +31952,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.UseMapTableCompositeInputHandler");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.UseMapTableCompositeInputHandler");
 		return ptr;
 	}
 
@@ -31439,7 +31984,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VenomComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VenomComponent");
 		return ptr;
 	}
 
@@ -31458,7 +32003,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VfxFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VfxFunctionLibrary");
 		return ptr;
 	}
 
@@ -31495,7 +32040,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VfxSelectorDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VfxSelectorDataAsset");
 		return ptr;
 	}
 
@@ -31510,7 +32055,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VfxSelectorFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VfxSelectorFunctionLibrary");
 		return ptr;
 	}
 
@@ -31530,7 +32075,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ViewModelComponentBase");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ViewModelComponentBase");
 		return ptr;
 	}
 
@@ -31548,7 +32093,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PossessionsChestViewModel");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PossessionsChestViewModel");
 		return ptr;
 	}
 
@@ -31567,7 +32112,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ArmoryChestViewModelComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ArmoryChestViewModelComponent");
 		return ptr;
 	}
 
@@ -31591,7 +32136,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ClothingChestViewModelComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ClothingChestViewModelComponent");
 		return ptr;
 	}
 
@@ -31610,7 +32155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.EquipmentChestViewModelComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.EquipmentChestViewModelComponent");
 		return ptr;
 	}
 
@@ -31634,7 +32179,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.ShipCustomizationChestViewModelComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.ShipCustomizationChestViewModelComponent");
 		return ptr;
 	}
 
@@ -31650,26 +32195,49 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageInventoryViewModelComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageInventoryViewModelComponent");
 		return ptr;
 	}
 
 };
 
 
-// Class Athena.VoiceChatComponent
-// 0x0180 (0x0420 - 0x02A0)
-class UVoiceChatComponent : public USceneComponent
+// Class Athena.VisualHealthResponseComponent
+// 0x0090 (0x0168 - 0x00D8)
+class UVisualHealthResponseComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FWwiseEmitter                               Emitter;                                                  // 0x02A8(0x0020) (BlueprintVisible, BlueprintReadOnly)
-	struct FName                                       MouthSocketNameOnCharacterMesh;                           // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x150];                                     // 0x02D0(0x0150) MISSED OFFSET
+	float                                              SignificantHealthChangeNormalised;                        // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       HealthPropertyName;                                       // 0x00DC(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ItemDamagePropertyName;                                   // 0x00E4(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
+	class UMaterialInstanceDynamic*                    HealthResponseMaterial;                                   // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x70];                                      // 0x00F8(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoiceChatComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VisualHealthResponseComponent");
+		return ptr;
+	}
+
+
+	class UMaterialInstanceDynamic* GetMaterialInstance();
+};
+
+
+// Class Athena.VoiceChatComponent
+// 0x0180 (0x0430 - 0x02B0)
+class UVoiceChatComponent : public USceneComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FWwiseEmitter                               Emitter;                                                  // 0x02B8(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	struct FName                                       MouthSocketNameOnCharacterMesh;                           // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x150];                                     // 0x02E0(0x0150) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoiceChatComponent");
 		return ptr;
 	}
 
@@ -31688,7 +32256,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VomitBoutData");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VomitBoutData");
 		return ptr;
 	}
 
@@ -31696,29 +32264,29 @@ public:
 
 
 // Class Athena.VomitComponent
-// 0x0290 (0x0860 - 0x05D0)
+// 0x0290 (0x0870 - 0x05E0)
 class UVomitComponent : public UCapsuleComponent
 {
 public:
-	struct FVomitVFX                                   VomitVFX;                                                 // 0x05D0(0x0120) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	struct FVomitSFX                                   VomitSFX;                                                 // 0x06F0(0x0030) (Edit, DisableEditOnInstance)
-	struct FVomitSFX                                   VomitIntoBucketSfx;                                       // 0x0720(0x0030) (Edit, DisableEditOnInstance)
-	struct FVomitScreenFX                              VomitScreenFX;                                            // 0x0750(0x002C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x077C(0x0004) MISSED OFFSET
-	struct FVomitProjectiles                           VomitProjectiles;                                         // 0x0780(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	float                                              ImmunityAgainstContractingAfterVomiting;                  // 0x07C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ChanceForContractingVomitingIfBeingVomitedOn;             // 0x07CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 ContractedVomitingSpewDuration;                           // 0x07D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 ContractedVomitingSpewDelay;                              // 0x07E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ContractedVomitVFXType;                                   // 0x07F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DebugInterval;                                            // 0x07F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x07FC(0x0004) MISSED OFFSET
-	class UVomitBoutData*                              BoutData;                                                 // 0x0800(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x58];                                      // 0x0808(0x0058) MISSED OFFSET
+	struct FVomitVFX                                   VomitVFX;                                                 // 0x05E0(0x0120) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FVomitSFX                                   VomitSFX;                                                 // 0x0700(0x0030) (Edit, DisableEditOnInstance)
+	struct FVomitSFX                                   VomitIntoBucketSfx;                                       // 0x0730(0x0030) (Edit, DisableEditOnInstance)
+	struct FVomitScreenFX                              VomitScreenFX;                                            // 0x0760(0x002C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x078C(0x0004) MISSED OFFSET
+	struct FVomitProjectiles                           VomitProjectiles;                                         // 0x0790(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	float                                              ImmunityAgainstContractingAfterVomiting;                  // 0x07D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ChanceForContractingVomitingIfBeingVomitedOn;             // 0x07DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFloatRange                                 ContractedVomitingSpewDuration;                           // 0x07E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFloatRange                                 ContractedVomitingSpewDelay;                              // 0x07F0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ContractedVomitVFXType;                                   // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DebugInterval;                                            // 0x0808(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x080C(0x0004) MISSED OFFSET
+	class UVomitBoutData*                              BoutData;                                                 // 0x0810(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x58];                                      // 0x0818(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VomitComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VomitComponent");
 		return ptr;
 	}
 
@@ -31741,7 +32309,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VomitStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VomitStatus");
 		return ptr;
 	}
 
@@ -31756,7 +32324,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VotableBaseComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VotableBaseComponent");
 		return ptr;
 	}
 
@@ -31777,7 +32345,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VotableWithSessionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VotableWithSessionComponent");
 		return ptr;
 	}
 
@@ -31802,7 +32370,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VotableVoyageProposalComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VotableVoyageProposalComponent");
 		return ptr;
 	}
 
@@ -31817,7 +32385,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CancelVoyageVotableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CancelVoyageVotableComponent");
 		return ptr;
 	}
 
@@ -31837,7 +32405,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoteOnVoyageVotableComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoteOnVoyageVotableComponent");
 		return ptr;
 	}
 
@@ -31852,7 +32420,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VotingSessionBinder");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VotingSessionBinder");
 		return ptr;
 	}
 
@@ -31870,7 +32438,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BindToParentShipCrewVotingSession");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BindToParentShipCrewVotingSession");
 		return ptr;
 	}
 
@@ -31887,7 +32455,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BindToParentShipCrewVoyageCancelVotingSession");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BindToParentShipCrewVoyageCancelVotingSession");
 		return ptr;
 	}
 
@@ -31902,7 +32470,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BindToParentShipCrewVoyageProposalVotingSession");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BindToParentShipCrewVoyageProposalVotingSession");
 		return ptr;
 	}
 
@@ -31917,7 +32485,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageGeneratorSim");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageGeneratorSim");
 		return ptr;
 	}
 
@@ -31937,7 +32505,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageGeneratorSimBlackboardFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageGeneratorSimBlackboardFunctions");
 		return ptr;
 	}
 
@@ -31957,7 +32525,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageGeneratorSimFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageGeneratorSimFunctions");
 		return ptr;
 	}
 
@@ -31969,17 +32537,17 @@ public:
 
 
 // Class Athena.VoyageGeneratorSimResult
-// 0x00A0 (0x00C8 - 0x0028)
+// 0x00B8 (0x00E0 - 0x0028)
 class UVoyageGeneratorSimResult : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0028(0x0090) MISSED OFFSET
-	struct FVector                                     StartingLocation;                                         // 0x00B8(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
+	struct FVector                                     StartingLocation;                                         // 0x00D0(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageGeneratorSimResult");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageGeneratorSimResult");
 		return ptr;
 	}
 
@@ -32001,7 +32569,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageProposalAssetSelector");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageProposalAssetSelector");
 		return ptr;
 	}
 
@@ -32021,7 +32589,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageRecipesDebugMenuEntryGenerator");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageRecipesDebugMenuEntryGenerator");
 		return ptr;
 	}
 
@@ -32038,7 +32606,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageSettings");
 		return ptr;
 	}
 
@@ -32053,7 +32621,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaitForDemoResetActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaitForDemoResetActionStateId");
 		return ptr;
 	}
 
@@ -32070,12 +32638,12 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaitingToSpawnActionStateId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaitingToSpawnActionStateId");
 		return ptr;
 	}
 
 
-	void STATIC_PushCharacterIntoWaitingToSpawnActionState(class AAthenaCharacter* InCharacter, class AActor* InStartSpot, bool InReceiveLoadout, bool InReceiveEntitlement, bool InWaitForStreaming);
+	void STATIC_PushCharacterIntoWaitingToSpawnActionState(class AAthenaCharacter* InCharacter, class AActor* InStartSpot, bool InReceiveLoadout, bool InReceiveEntitlement, bool InWaitForRelevancy, int InStreamOutLevel, int InStreamInLevel);
 };
 
 
@@ -32087,7 +32655,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WalkActivationNotificationInputId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WalkActivationNotificationInputId");
 		return ptr;
 	}
 
@@ -32110,7 +32678,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WallClock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WallClock");
 		return ptr;
 	}
 
@@ -32125,10 +32693,30 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WanderAIStrategyId");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WanderAIStrategyId");
 		return ptr;
 	}
 
+};
+
+
+// Class Athena.WaterExposureComponent
+// 0x0010 (0x00E8 - 0x00D8)
+class UWaterExposureComponent : public UActorComponent
+{
+public:
+	struct FVector                                     FullySubmergedOffset;                                     // 0x00D8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWaterExposureState                         PriorState;                                               // 0x00E4(0x0002) (Net)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x00E6(0x0002) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterExposureComponent");
+		return ptr;
+	}
+
+
+	void OnRepPriorState(const struct FWaterExposureState& OriginalState);
 };
 
 
@@ -32140,7 +32728,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterHeightProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterHeightProviderInterface");
 		return ptr;
 	}
 
@@ -32160,7 +32748,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterHeightProviderComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterHeightProviderComponent");
 		return ptr;
 	}
 
@@ -32180,7 +32768,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WatermarkComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WatermarkComponent");
 		return ptr;
 	}
 
@@ -32195,7 +32783,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneType");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneType");
 		return ptr;
 	}
 
@@ -32210,7 +32798,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneType_Default");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneType_Default");
 		return ptr;
 	}
 
@@ -32225,7 +32813,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneType_Murk");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneType_Murk");
 		return ptr;
 	}
 
@@ -32233,16 +32821,17 @@ public:
 
 
 // Class Athena.WaterModifierZoneComponent
-// 0x0070 (0x0310 - 0x02A0)
+// 0x0080 (0x0330 - 0x02B0)
 class UWaterModifierZoneComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
-	struct FWaterModifierZoneParameters                WaterModifierZoneParameters;                              // 0x02A8(0x0068) (Edit)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	struct FWaterModifierZoneParameters                WaterModifierZoneParameters;                              // 0x02B8(0x0070) (Edit)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneComponent");
 		return ptr;
 	}
 
@@ -32250,21 +32839,19 @@ public:
 
 
 // Class Athena.MurkWaterModifierZoneComponent
-// 0x0030 (0x0340 - 0x0310)
+// 0x0020 (0x0350 - 0x0330)
 class UMurkWaterModifierZoneComponent : public UWaterModifierZoneComponent
 {
 public:
-	float                                              MaximumInnerRadius;                                       // 0x0310(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumOuterRadius;                                       // 0x0314(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 ActivationCurve;                                          // 0x0318(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 DeactivationCurve;                                        // 0x0320(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DeactivateActorWhenInactive;                              // 0x0328(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EMurkWaterModifierZoneState>           State;                                                    // 0x0329(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x16];                                      // 0x032A(0x0016) MISSED OFFSET
+	class UCurveFloat*                                 ActivationCurve;                                          // 0x0330(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 DeactivationCurve;                                        // 0x0338(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DeactivateActorWhenInactive;                              // 0x0340(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EMurkWaterModifierZoneState>           State;                                                    // 0x0341(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xE];                                       // 0x0342(0x000E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MurkWaterModifierZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MurkWaterModifierZoneComponent");
 		return ptr;
 	}
 
@@ -32283,7 +32870,23 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterModifierZoneService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterModifierZoneService");
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.WaterSensitiveComponent
+// 0x0008 (0x00E0 - 0x00D8)
+class UWaterSensitiveComponent : public UActorComponent
+{
+public:
+	class UWaterSensitiveComponentDataAsset*           WaterSensitiveData;                                       // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterSensitiveComponent");
 		return ptr;
 	}
 
@@ -32302,7 +32905,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterSensitiveComponentDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterSensitiveComponentDataAsset");
 		return ptr;
 	}
 
@@ -32337,7 +32940,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterSplashComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterSplashComponent");
 		return ptr;
 	}
 
@@ -32356,7 +32959,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterStatus");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterStatus");
 		return ptr;
 	}
 
@@ -32378,7 +32981,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WaterVolume");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WaterVolume");
 		return ptr;
 	}
 
@@ -32395,12 +32998,27 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WeakActorHandleTestsFunctionLib");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeakActorHandleTestsFunctionLib");
 		return ptr;
 	}
 
 
 	bool STATIC_TestCreatingWeakActorHandleFromConsoleStringWithValidNetGuidInvalidName(class AActor* Actor);
+};
+
+
+// Class Athena.WeakBoilingStatus
+// 0x0000 (0x0028 - 0x0028)
+class UWeakBoilingStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeakBoilingStatus");
+		return ptr;
+	}
+
 };
 
 
@@ -32435,7 +33053,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WeepingComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeepingComponent");
 		return ptr;
 	}
 
@@ -32453,7 +33071,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WeightedRewardTableAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WeightedRewardTableAsset");
 		return ptr;
 	}
 
@@ -32477,7 +33095,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WetnessComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WetnessComponent");
 		return ptr;
 	}
 
@@ -32508,7 +33126,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WheelAnimInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WheelAnimInstance");
 		return ptr;
 	}
 
@@ -32523,7 +33141,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WheelInteractableFunctionLib");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WheelInteractableFunctionLib");
 		return ptr;
 	}
 
@@ -32544,7 +33162,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WheelMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WheelMock");
 		return ptr;
 	}
 
@@ -32578,7 +33196,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MusicalInstrument");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MusicalInstrument");
 		return ptr;
 	}
 
@@ -32596,7 +33214,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MusicalInstrumentStaticMesh");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MusicalInstrumentStaticMesh");
 		return ptr;
 	}
 
@@ -32611,7 +33229,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MusicalInstrumentSkeletalMesh");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MusicalInstrumentSkeletalMesh");
 		return ptr;
 	}
 
@@ -32626,7 +33244,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PoseableMeshWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PoseableMeshWieldableItem");
 		return ptr;
 	}
 
@@ -32650,7 +33268,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Compass");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Compass");
 		return ptr;
 	}
 
@@ -32698,7 +33316,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Bucket");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Bucket");
 		return ptr;
 	}
 
@@ -32713,16 +33331,17 @@ public:
 
 
 // Class Athena.CargoRunCrate
-// 0x0010 (0x0818 - 0x0808)
+// 0x0018 (0x0820 - 0x0808)
 class ACargoRunCrate : public AMerchantCrate
 {
 public:
 	class UCargoRunCrateComponent*                     CargoRunCrateComponent;                                   // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UGatedHealthComponent*                       GatedHealthComponent;                                     // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UVisualHealthResponseComponent*              VisualHealthResponseComponent;                            // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CargoRunCrate");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CargoRunCrate");
 		return ptr;
 	}
 
@@ -32752,7 +33371,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PocketWatch");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PocketWatch");
 		return ptr;
 	}
 
@@ -32782,7 +33401,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestProjectileWeapon");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestProjectileWeapon");
 		return ptr;
 	}
 
@@ -32803,7 +33422,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SimpleBootyWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SimpleBootyWieldableItem");
 		return ptr;
 	}
 
@@ -32818,7 +33437,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StaticSimpleBootyWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StaticSimpleBootyWieldableItem");
 		return ptr;
 	}
 
@@ -32843,7 +33462,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Spyglass");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Spyglass");
 		return ptr;
 	}
 
@@ -32865,7 +33484,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestSkeletalWieldableInventoryItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestSkeletalWieldableInventoryItem");
 		return ptr;
 	}
 
@@ -32880,7 +33499,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TreasureChest");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TreasureChest");
 		return ptr;
 	}
 
@@ -32895,7 +33514,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TutorialMap");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TutorialMap");
 		return ptr;
 	}
 
@@ -32910,7 +33529,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.BountyReward");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.BountyReward");
 		return ptr;
 	}
 
@@ -32927,7 +33546,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CannonBall");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CannonBall");
 		return ptr;
 	}
 
@@ -32951,7 +33570,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Fruit");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Fruit");
 		return ptr;
 	}
 
@@ -32984,7 +33603,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Lantern");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Lantern");
 		return ptr;
 	}
 
@@ -33025,7 +33644,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.MeleeWeapon");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.MeleeWeapon");
 		return ptr;
 	}
 
@@ -33052,7 +33671,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SpeakingTrumpet");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SpeakingTrumpet");
 		return ptr;
 	}
 
@@ -33067,7 +33686,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.StrongholdKey");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.StrongholdKey");
 		return ptr;
 	}
 
@@ -33096,7 +33715,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.Tankard");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.Tankard");
 		return ptr;
 	}
 
@@ -33121,7 +33740,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TaxiHorn");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TaxiHorn");
 		return ptr;
 	}
 
@@ -33137,7 +33756,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestObscuringItemActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestObscuringItemActor");
 		return ptr;
 	}
 
@@ -33153,7 +33772,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestStaticWieldableInventoryItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestStaticWieldableInventoryItem");
 		return ptr;
 	}
 
@@ -33171,7 +33790,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.VoyageInAContainerWieldableItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.VoyageInAContainerWieldableItem");
 		return ptr;
 	}
 
@@ -33191,7 +33810,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableMockActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableMockActor");
 		return ptr;
 	}
 
@@ -33206,7 +33825,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.LargeWieldableMockActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.LargeWieldableMockActor");
 		return ptr;
 	}
 
@@ -33222,7 +33841,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableOtherMockActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableOtherMockActor");
 		return ptr;
 	}
 
@@ -33237,7 +33856,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableNonStowableMockItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableNonStowableMockItem");
 		return ptr;
 	}
 
@@ -33253,7 +33872,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableWeaponMock");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableWeaponMock");
 		return ptr;
 	}
 
@@ -33270,7 +33889,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WoodPlank");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WoodPlank");
 		return ptr;
 	}
 
@@ -33286,7 +33905,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestRepairingActor");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestRepairingActor");
 		return ptr;
 	}
 
@@ -33302,7 +33921,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.TestWieldableInventoryItem");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.TestWieldableInventoryItem");
 		return ptr;
 	}
 
@@ -33317,7 +33936,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemAnimationInterface");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemAnimationInterface");
 		return ptr;
 	}
 
@@ -33354,7 +33973,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemAnimationInstance");
 		return ptr;
 	}
 
@@ -33375,7 +33994,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.PocketWatchAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.PocketWatchAnimationInstance");
 		return ptr;
 	}
 
@@ -33391,7 +34010,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldablePetAnimationInstance");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldablePetAnimationInstance");
 		return ptr;
 	}
 
@@ -33413,7 +34032,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemFunctionLibrary");
 		return ptr;
 	}
 
@@ -33434,7 +34053,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemSetComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemSetComponent");
 		return ptr;
 	}
 
@@ -33465,7 +34084,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.NullItemTestWieldableItemSetComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.NullItemTestWieldableItemSetComponent");
 		return ptr;
 	}
 
@@ -33480,7 +34099,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemSetMockCharacter");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemSetMockCharacter");
 		return ptr;
 	}
 
@@ -33496,7 +34115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableItemVfxComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableItemVfxComponent");
 		return ptr;
 	}
 
@@ -33511,7 +34130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldableTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldableTestFunctions");
 		return ptr;
 	}
 
@@ -33521,22 +34140,22 @@ public:
 
 
 // Class Athena.WieldedItemComponent
-// 0x0130 (0x03D0 - 0x02A0)
+// 0x0130 (0x03E0 - 0x02B0)
 class UWieldedItemComponent : public USceneComponent
 {
 public:
-	class UWieldableItemSetComponent*                  WieldableItemSetComponent;                                // 0x02A0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class AActor*                                      ReplicatedCurrentlyWieldedItem;                           // 0x02A8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      CurrentlyWieldedItem;                                     // 0x02B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xE0];                                      // 0x02B8(0x00E0) MISSED OFFSET
-	int                                                EpochId;                                                  // 0x0398(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x039C(0x000C) MISSED OFFSET
-	struct FServerWieldSet                             PendingServerWieldSet;                                    // 0x03A8(0x001C)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x03C4(0x000C) MISSED OFFSET
+	class UWieldableItemSetComponent*                  WieldableItemSetComponent;                                // 0x02B0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class AActor*                                      ReplicatedCurrentlyWieldedItem;                           // 0x02B8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      CurrentlyWieldedItem;                                     // 0x02C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xE0];                                      // 0x02C8(0x00E0) MISSED OFFSET
+	int                                                EpochId;                                                  // 0x03A8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x03AC(0x000C) MISSED OFFSET
+	struct FServerWieldSet                             PendingServerWieldSet;                                    // 0x03B8(0x001C)
+	unsigned char                                      UnknownData02[0xC];                                       // 0x03D4(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WieldedItemComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WieldedItemComponent");
 		return ptr;
 	}
 
@@ -33565,7 +34184,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldEventZoneService");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldEventZoneService");
 		return ptr;
 	}
 
@@ -33584,7 +34203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldMapIslandDataAsset");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldMapIslandDataAsset");
 		return ptr;
 	}
 
@@ -33599,7 +34218,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldRegionBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldRegionBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -33609,17 +34228,17 @@ public:
 
 
 // Class Athena.WorldRegionComponent
-// 0x0040 (0x02E0 - 0x02A0)
+// 0x0040 (0x02F0 - 0x02B0)
 class UWorldRegionComponent : public USceneComponent
 {
 public:
-	struct FName                                       WorldRegionName;                                          // 0x02A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WorldRegionRadius;                                        // 0x02A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x34];                                      // 0x02AC(0x0034) MISSED OFFSET
+	struct FName                                       WorldRegionName;                                          // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WorldRegionRadius;                                        // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x34];                                      // 0x02BC(0x0034) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.WorldRegionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.WorldRegionComponent");
 		return ptr;
 	}
 
@@ -33627,14 +34246,14 @@ public:
 
 
 // Class Athena.CompanyRegionComponent
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x02F0 - 0x02F0)
 class UCompanyRegionComponent : public UWorldRegionComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.CompanyRegionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.CompanyRegionComponent");
 		return ptr;
 	}
 
@@ -33642,14 +34261,14 @@ public:
 
 
 // Class Athena.SeaRegionComponent
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x02F0 - 0x02F0)
 class USeaRegionComponent : public UWorldRegionComponent
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Athena.SeaRegionComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class Athena.SeaRegionComponent");
 		return ptr;
 	}
 

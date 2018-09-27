@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,12 +35,7 @@ TEnumAsByte<EOcclusionTypes> UOcclusionFunctionLibrary::STATIC_IsActorOccludedFr
 	params.InteractionPointRadius = InteractionPointRadius;
 	params.AdditionalIgnoredActors = AdditionalIgnoredActors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -69,12 +64,7 @@ TEnumAsByte<EOcclusionTypes> UOcclusionInterface::IsActorOccludedFromActor(class
 	params.CollisionChannel = CollisionChannel;
 	params.AdditionalIgnoredActors = AdditionalIgnoredActors;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }

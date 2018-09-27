@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_BountyRewardSkullItemInfo_Legendary_DVR_C::UserConstructionScript()
 
 	ABP_BountyRewardSkullItemInfo_Legendary_DVR_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -38,11 +34,7 @@ void ABP_BountyRewardSkullItemInfo_Legendary_DVR_C::ReceiveBeginPlay()
 
 	ABP_BountyRewardSkullItemInfo_Legendary_DVR_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -58,11 +50,7 @@ void ABP_BountyRewardSkullItemInfo_Legendary_DVR_C::ExecuteUbergraph_BP_BountyRe
 	ABP_BountyRewardSkullItemInfo_Legendary_DVR_C_ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Legendary_DVR_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

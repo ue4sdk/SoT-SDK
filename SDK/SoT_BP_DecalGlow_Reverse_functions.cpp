@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,11 +21,7 @@ void ABP_DecalGlow_Reverse_C::StartGlowEffect()
 
 	ABP_DecalGlow_Reverse_C_StartGlowEffect_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -40,11 +36,7 @@ bool ABP_DecalGlow_Reverse_C::StartReaction()
 
 	ABP_DecalGlow_Reverse_C_StartReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -61,11 +53,7 @@ bool ABP_DecalGlow_Reverse_C::StopReaction()
 
 	ABP_DecalGlow_Reverse_C_StopReaction_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -80,11 +68,7 @@ void ABP_DecalGlow_Reverse_C::CollectDecalMaterials()
 
 	ABP_DecalGlow_Reverse_C_CollectDecalMaterials_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -97,11 +81,7 @@ void ABP_DecalGlow_Reverse_C::UserConstructionScript()
 
 	ABP_DecalGlow_Reverse_C_UserConstructionScript_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -114,11 +94,7 @@ void ABP_DecalGlow_Reverse_C::ReceiveBeginPlay()
 
 	ABP_DecalGlow_Reverse_C_ReceiveBeginPlay_Params params;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -134,11 +110,7 @@ void ABP_DecalGlow_Reverse_C::ExecuteUbergraph_BP_DecalGlow_Reverse(int EntryPoi
 	ABP_DecalGlow_Reverse_C_ExecuteUbergraph_BP_DecalGlow_Reverse_Params params;
 	params.EntryPoint = EntryPoint;
 
-	auto flags = fn->FunctionFlags;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

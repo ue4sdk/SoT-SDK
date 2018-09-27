@@ -1,4 +1,4 @@
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,7 @@ void UHitchDiagnosisBlueprintFunctionLibrary::STATIC_SetHitchThreshold(int InThr
 	UHitchDiagnosisBlueprintFunctionLibrary_SetHitchThreshold_Params params;
 	params.InThreshold = InThreshold;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -44,12 +39,7 @@ class FString UHitchDiagnosisBlueprintFunctionLibrary::STATIC_GetMaxHitchNameThi
 
 	UHitchDiagnosisBlueprintFunctionLibrary_GetMaxHitchNameThisFrame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -66,12 +56,7 @@ int UHitchDiagnosisBlueprintFunctionLibrary::STATIC_GetMaxHitchLengthThisFrameMs
 
 	UHitchDiagnosisBlueprintFunctionLibrary_GetMaxHitchLengthThisFrameMs_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -86,12 +71,7 @@ void UHitchDiagnosisBlueprintFunctionLibrary::STATIC_DumpThisFramesHitchesToLog(
 
 	UHitchDiagnosisBlueprintFunctionLibrary_DumpThisFramesHitchesToLog_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -106,12 +86,7 @@ bool UHitchDiagnosisBlueprintFunctionLibrary::STATIC_DidHitchOccurThisFrame()
 
 	UHitchDiagnosisBlueprintFunctionLibrary_DidHitchOccurThisFrame_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -126,12 +101,7 @@ void UStallDetector::Deactivate()
 
 	UStallDetector_Deactivate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -150,12 +120,7 @@ class UStallDetector* UStallDetector::STATIC_CreateStallDetector(float Delay, bo
 	params.Delay = Delay;
 	params.CreateActive = CreateActive;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -170,12 +135,7 @@ void UStallDetector::Activate()
 
 	UStallDetector_Activate_Params params;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -196,12 +156,7 @@ void UStaticMeshActorBlueprintLibrary::STATIC_FindAllStaticMeshComponents(class 
 	params.MeshFilter = MeshFilter;
 	params.RestrictToLevel = RestrictToLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutComponentLists != nullptr)
 		*OutComponentLists = params.OutComponentLists;
@@ -225,12 +180,7 @@ void UStaticMeshActorBlueprintLibrary::STATIC_FindAllStaticMeshActors(class UObj
 	params.MeshFilter = MeshFilter;
 	params.RestrictToLevel = RestrictToLevel;
 
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 
 	if (OutActorLists != nullptr)
 		*OutActorLists = params.OutActorLists;

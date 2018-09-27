@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.1.6) SDK
+// Sea of Thieves (1.2.6) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTBaseComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTBaseComponent");
 		return ptr;
 	}
 
@@ -94,7 +94,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTComponent");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTComponent");
 		return ptr;
 	}
 
@@ -112,7 +112,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTLiveView");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTLiveView");
 		return ptr;
 	}
 
@@ -130,7 +130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTRenderToTextureLiveView");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTRenderToTextureLiveView");
 		return ptr;
 	}
 
@@ -145,7 +145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTAssetReferencer");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTAssetReferencer");
 		return ptr;
 	}
 
@@ -161,7 +161,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTSystem");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTSystem");
 		return ptr;
 	}
 
@@ -177,7 +177,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTJSEvent");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTJSEvent");
 		return ptr;
 	}
 
@@ -203,7 +203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTJSPayload");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTJSPayload");
 		return ptr;
 	}
 
@@ -224,7 +224,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTEventHelpers");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTEventHelpers");
 		return ptr;
 	}
 
@@ -243,7 +243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTHUD");
 		return ptr;
 	}
 
@@ -258,7 +258,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -288,7 +288,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTGameHUD");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTGameHUD");
 		return ptr;
 	}
 
@@ -310,7 +310,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTInputActor");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTInputActor");
 		return ptr;
 	}
 
@@ -357,7 +357,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTSettings");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTSettings");
 		return ptr;
 	}
 
@@ -403,7 +403,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTWidget");
+		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTWidget");
 		return ptr;
 	}
 
