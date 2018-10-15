@@ -21,8 +21,7 @@ enum class EOcclusionTypes : uint8_t
 {
 	EOcclusionTypes__Visible       = 0,
 	None                           = 1,
-	EOcclusionTypes__EOcclusionTypes_MAX = 2,
-	ObjectProperty                 = 3
+	EOcclusionTypes__EOcclusionTypes_MAX = 2
 };
 
 

@@ -1141,7 +1141,7 @@ public:
 
 	void SetDynamicSubtree(const struct FGameplayTag& InjectTag, class UBehaviorTree* BehaviorAsset);
 	float GetTagCooldownEndTime(const struct FGameplayTag& CooldownTag);
-	void AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CooldownDuration, bool bAddToExistingDuration);
+	void AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CoolDownDuration, bool bAddToExistingDuration);
 };
 
 
@@ -1787,7 +1787,7 @@ class UBTDecorator_SetTagCooldown : public UBTDecorator
 {
 public:
 	struct FGameplayTag                                CooldownTag;                                              // 0x0068(0x0008) (Edit)
-	float                                              CooldownDuration;                                         // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CoolDownDuration;                                         // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               bAddToExistingDuration;                                   // 0x0074(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0075(0x0003) MISSED OFFSET
 
@@ -1806,7 +1806,7 @@ class UBTDecorator_TagCooldown : public UBTDecorator
 {
 public:
 	struct FGameplayTag                                CooldownTag;                                              // 0x0068(0x0008) (Edit)
-	float                                              CooldownDuration;                                         // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CoolDownDuration;                                         // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               bAddToExistingDuration;                                   // 0x0074(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               bActivatesCooldown;                                       // 0x0075(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0076(0x0002) MISSED OFFSET
@@ -2212,7 +2212,7 @@ public:
 	struct FGameplayTag                                CooldownTag;                                              // 0x0060(0x0008) (Edit)
 	bool                                               bAddToExistingDuration;                                   // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0069(0x0003) MISSED OFFSET
-	float                                              CooldownDuration;                                         // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CoolDownDuration;                                         // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

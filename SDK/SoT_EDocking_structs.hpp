@@ -18,8 +18,7 @@ namespace SDK
 enum class EDocking : uint8_t
 {
 	EDocking__NewEnumerator2       = 0,
-	None                           = 1,
-	ClassProperty                  = 2
+	None                           = 1
 };
 
 

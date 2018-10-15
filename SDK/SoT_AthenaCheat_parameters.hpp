@@ -509,6 +509,26 @@ struct UAthenaCheatManager_SpawnKraken_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocationWithDormancy
+struct UAthenaCheatManager_SpawnGeyserAtPlayerLocationWithDormancy_Params
+{
+	float                                              Dormancy;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocation
+struct UAthenaCheatManager_SpawnGeyserAtPlayerLocation_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtLocation
+struct UAthenaCheatManager_SpawnGeyserAtLocation_Params
+{
+	float                                              LocationX;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              LocationY;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              LocationZ;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Dormancy;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AthenaCheat.AthenaCheatManager.SpawnCursedCannonball
 struct UAthenaCheatManager_SpawnCursedCannonball_Params
 {

@@ -1298,6 +1298,57 @@ void UAthenaCheatManager::SpawnKraken()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocationWithDormancy
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          Dormancy                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocationWithDormancy");
+
+	UAthenaCheatManager_SpawnGeyserAtPlayerLocationWithDormancy_Params params;
+	params.Dormancy = Dormancy;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocation
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SpawnGeyserAtPlayerLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocation");
+
+	UAthenaCheatManager_SpawnGeyserAtPlayerLocation_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtLocation
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          LocationX                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LocationY                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LocationZ                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Dormancy                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtLocation");
+
+	UAthenaCheatManager_SpawnGeyserAtLocation_Params params;
+	params.LocationX = LocationX;
+	params.LocationY = LocationY;
+	params.LocationZ = LocationZ;
+	params.Dormancy = Dormancy;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnCursedCannonball
 // (Final, Exec, Native, Public)
 // Parameters:

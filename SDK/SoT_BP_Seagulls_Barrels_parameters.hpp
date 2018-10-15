@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Seagulls_Barrels.BP_Seagulls_Barrels_C.UserConstructionScript
+struct ABP_Seagulls_Barrels_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

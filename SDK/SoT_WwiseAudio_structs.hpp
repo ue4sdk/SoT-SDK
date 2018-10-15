@@ -33,9 +33,7 @@ enum class EWwiseLanguageOrder : uint8_t
 	EWwiseLanguageOrder__Spanish   = 2,
 	None01                         = 3,
 	EWwiseLanguageOrder__Japanese  = 4,
-	None02                         = 5,
-	PSA_FacingCameraPosition       = 6,
-	None03                         = 7
+	None02                         = 5
 };
 
 
@@ -59,7 +57,7 @@ enum class EWwiseEventDurationType : uint8_t
 	EWwiseEventDurationType__OneShot = 0,
 	None                           = 1,
 	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 2,
-	UDSS_UpToDate                  = 3
+	EWwiseAsyncIOPriorityDisplay__Low = 3
 };
 
 

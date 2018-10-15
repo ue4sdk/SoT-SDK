@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_lantern_oos_01_c_Wieldable.BP_cmp_lantern_oos_01_c_Wieldable_C
-// 0x0000 (0x096C - 0x096C)
+// 0x0000 (0x0974 - 0x0974)
 class ABP_cmp_lantern_oos_01_c_Wieldable_C : public ABP_Lantern_C
 {
 public:

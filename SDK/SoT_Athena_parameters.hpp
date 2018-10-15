@@ -1981,12 +1981,6 @@ struct AWieldableItem_GetLastKnownWielder_Params
 	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Athena.WieldableItem.GetItemSfxEmitter
-struct AWieldableItem_GetItemSfxEmitter_Params
-{
-	struct FWwiseEmitter                               ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
 // Function Athena.WieldableItem.GetIsFirstPerson
 struct AWieldableItem_GetIsFirstPerson_Params
 {
@@ -3572,12 +3566,6 @@ struct UAtmosphericPressureServiceInterface_GetAtmosphericPressureZone_Params
 struct UAtmosphericPressureServiceInterface_GetAllAtmosphericPressureZones_Params
 {
 	TArray<struct FAtmosphericPressureZoneParametersAndLocation> ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Athena.AudioEmitterInterface.GetAudioEmitter
-struct UAudioEmitterInterface_GetAudioEmitter_Params
-{
-	struct FWwiseEmitter                               ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function Athena.AudioEmitterPoolSourceInterface.GetAudioEmitterPool
@@ -8457,6 +8445,12 @@ struct UIslandLocationVerifierInterface_VerifyLocation_Params
 	struct FIslandLocationVerifierResult               ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function Athena.IslandSalvageSpawnerManager.SetAllowNewSpawnRequests
+struct AIslandSalvageSpawnerManager_SetAllowNewSpawnRequests_Params
+{
+	bool                                               InAllowNewSpawnRequests;                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Athena.IslandService.OnRep_ReplicatedIslandArray
 struct AIslandService_OnRep_ReplicatedIslandArray_Params
 {
@@ -12774,10 +12768,16 @@ struct UWaitingToSpawnActionStateId_PushCharacterIntoWaitingToSpawnActionState_P
 	int                                                InStreamInLevel;                                          // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Athena.WaterExposureComponent.OnRepPriorState
-struct UWaterExposureComponent_OnRepPriorState_Params
+// Function Athena.WaterExposureComponent.OnRep_SubmergedState
+struct UWaterExposureComponent_OnRep_SubmergedState_Params
 {
-	struct FWaterExposureState                         OriginalState;                                            // (Parm)
+	TEnumAsByte<ESubmergedState>                       OriginalSubmergedState;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Athena.WaterExposureComponent.OnRep_InRain
+struct UWaterExposureComponent_OnRep_InRain_Params
+{
+	bool                                               OriginalInRain;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Athena.WaterHeightProviderInterface.HasValidWaterHeight

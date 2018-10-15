@@ -21,8 +21,8 @@ enum class EObjectTargetingStates : uint8_t
 	None                           = 1,
 	EObjectTargetingStates__NewEnumerator4 = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	_Game_Animation_FirstPerson_items_pistol_action2_female_1st_item_action_pistol_action2_reload_female_2H = 5
+	None02                         = 4,
+	None03                         = 5
 };
 
 

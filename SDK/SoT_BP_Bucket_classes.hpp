@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bucket.BP_Bucket_C
-// 0x0000 (0x0900 - 0x0900)
+// 0x0000 (0x0908 - 0x0908)
 class ABP_Bucket_C : public ABucket
 {
 public:

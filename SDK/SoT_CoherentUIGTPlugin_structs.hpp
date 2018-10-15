@@ -85,21 +85,12 @@ enum class ECoherentUIGTKeys : uint8_t
 	None34                         = 62,
 	IntProperty                    = 63,
 	None35                         = 64,
-	None36                         = 65,
-	None37                         = 66,
-	None38                         = 67,
-	None39                         = 68,
-	None40                         = 69,
-	None41                         = 70,
-	None42                         = 71,
-	None43                         = 72,
-	None44                         = 73,
-	ByteProperty                   = 74,
-	None45                         = 75,
-	None46                         = 76,
-	None47                         = 77,
-	ByteProperty01                 = 78,
-	None48                         = 79
+	FloatProperty                  = 65,
+	ClassProperty                  = 66,
+	BoolProperty                   = 67,
+	None36                         = 68,
+	InterfaceProperty              = 69,
+	VectorProperty                 = 70
 };
 
 
@@ -153,8 +144,10 @@ enum class ECoherentUIGTSettingsSeverity : uint8_t
 {
 	ECoherentUIGTSettingsSeverity__Trace = 0,
 	None                           = 1,
-	ECoherentUIGTSettingsSeverity__AssertFailure = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	ECoherentUIGTSettingsSeverity__AssertFailure = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

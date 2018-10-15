@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
@@ -41,8 +41,10 @@ enum class ESkellyFormIconType : uint8_t
 {
 	ESkellyFormIconType__Normal    = 0,
 	None                           = 1,
-	ESkellyFormIconType__None      = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	ESkellyFormIconType__None      = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

@@ -5377,23 +5377,6 @@ class AActor* AWieldableItem::GetLastKnownWielder()
 }
 
 
-// Function Athena.WieldableItem.GetItemSfxEmitter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FWwiseEmitter           ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWwiseEmitter AWieldableItem::GetItemSfxEmitter()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WieldableItem.GetItemSfxEmitter");
-
-	AWieldableItem_GetItemSfxEmitter_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.WieldableItem.GetIsFirstPerson
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -9616,23 +9599,6 @@ TArray<struct FAtmosphericPressureZoneParametersAndLocation> UAtmosphericPressur
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AtmosphericPressureServiceInterface.GetAllAtmosphericPressureZones");
 
 	UAtmosphericPressureServiceInterface_GetAllAtmosphericPressureZones_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.AudioEmitterInterface.GetAudioEmitter
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FWwiseEmitter           ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWwiseEmitter UAudioEmitterInterface::GetAudioEmitter()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AudioEmitterInterface.GetAudioEmitter");
-
-	UAudioEmitterInterface_GetAudioEmitter_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -22741,6 +22707,22 @@ struct FIslandLocationVerifierResult UIslandLocationVerifierInterface::VerifyLoc
 }
 
 
+// Function Athena.IslandSalvageSpawnerManager.SetAllowNewSpawnRequests
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InAllowNewSpawnRequests        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AIslandSalvageSpawnerManager::SetAllowNewSpawnRequests(bool InAllowNewSpawnRequests)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.IslandSalvageSpawnerManager.SetAllowNewSpawnRequests");
+
+	AIslandSalvageSpawnerManager_SetAllowNewSpawnRequests_Params params;
+	params.InAllowNewSpawnRequests = InAllowNewSpawnRequests;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.IslandService.OnRep_ReplicatedIslandArray
 // (Final, Native, Private)
 
@@ -34190,17 +34172,33 @@ void UWaitingToSpawnActionStateId::STATIC_PushCharacterIntoWaitingToSpawnActionS
 }
 
 
-// Function Athena.WaterExposureComponent.OnRepPriorState
+// Function Athena.WaterExposureComponent.OnRep_SubmergedState
 // (Final, Native, Private)
 // Parameters:
-// struct FWaterExposureState     OriginalState                  (Parm)
+// TEnumAsByte<ESubmergedState>   OriginalSubmergedState         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWaterExposureComponent::OnRepPriorState(const struct FWaterExposureState& OriginalState)
+void UWaterExposureComponent::OnRep_SubmergedState(TEnumAsByte<ESubmergedState> OriginalSubmergedState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterExposureComponent.OnRepPriorState");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterExposureComponent.OnRep_SubmergedState");
 
-	UWaterExposureComponent_OnRepPriorState_Params params;
-	params.OriginalState = OriginalState;
+	UWaterExposureComponent_OnRep_SubmergedState_Params params;
+	params.OriginalSubmergedState = OriginalSubmergedState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.WaterExposureComponent.OnRep_InRain
+// (Final, Native, Private)
+// Parameters:
+// bool                           OriginalInRain                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWaterExposureComponent::OnRep_InRain(bool OriginalInRain)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.WaterExposureComponent.OnRep_InRain");
+
+	UWaterExposureComponent_OnRep_InRain_Params params;
+	params.OriginalInRain = OriginalInRain;
 
 	UObject::ProcessEvent(fn, &params);
 }

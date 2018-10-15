@@ -114,6 +114,9 @@ public:
 	void SpawnKrakenAtCurrentLocationWithNumTentacles(uint32_t NumTentacles);
 	void SpawnKrakenAtCurrentLocation();
 	void SpawnKraken();
+	void SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy);
+	void SpawnGeyserAtPlayerLocation();
+	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);

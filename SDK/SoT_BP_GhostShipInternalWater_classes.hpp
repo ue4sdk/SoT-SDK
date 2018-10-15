@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GhostShipInternalWater.BP_GhostShipInternalWater_C
-// 0x0000 (0x0668 - 0x0668)
+// 0x0000 (0x0670 - 0x0670)
 class ABP_GhostShipInternalWater_C : public AShipInternalWater
 {
 public:

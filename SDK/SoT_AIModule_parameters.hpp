@@ -526,7 +526,7 @@ struct UBehaviorTreeComponent_GetTagCooldownEndTime_Params
 struct UBehaviorTreeComponent_AddCooldownTagDuration_Params
 {
 	struct FGameplayTag                                CooldownTag;                                              // (Parm)
-	float                                              CooldownDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CoolDownDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAddToExistingDuration;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

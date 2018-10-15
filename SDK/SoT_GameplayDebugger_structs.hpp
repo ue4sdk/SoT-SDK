@@ -36,8 +36,10 @@ enum class EDebugComponentMessage : uint8_t
 {
 	EDebugComponentMessage__EnableExtendedView = 0,
 	None                           = 1,
-	EDebugComponentMessage__ActivateDataView = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EDebugComponentMessage__ActivateDataView = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

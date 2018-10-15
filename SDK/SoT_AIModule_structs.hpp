@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -178,7 +178,8 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3
+	None01                         = 3,
+	EBTDecoratorLogic__Invalid     = 4
 };
 
 
@@ -266,7 +267,7 @@ enum class EEnvQueryTestClamping : uint8_t
 {
 	EEnvQueryTestClamping__None    = 0,
 	None                           = 1,
-	TRAVEL_Absolute                = 2
+	SMF_None                       = 2
 };
 
 
@@ -404,8 +405,7 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EEnvQueryHightlightMode__All   = 3
+	EEnvQueryHightlightMode__All   = 2
 };
 
 
@@ -413,7 +413,8 @@ enum class EEnvTestDistance : uint8_t
 enum class EEnvTestDot : uint8_t
 {
 	EEnvTestDot__Dot3D             = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

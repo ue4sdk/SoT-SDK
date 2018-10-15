@@ -72,7 +72,7 @@ enum class EUnit : uint8_t
 	None12                         = 33,
 	None13                         = 34,
 	None14                         = 35,
-	_Game_Blueprints_GameObjects_Items_MerchantCrates_BP_CargoRunCrate_Cloth_Desc = 36
+	_Game_DataAssets_Catalog_Offers_GoldHoarderOffers_OpenBeta_Rank09_Offer_CatchAll_Chapters_Rank09_000 = 36
 };
 
 
@@ -86,8 +86,7 @@ enum class EMouseCursor : uint8_t
 	EMouseCursor__Crosshairs       = 4,
 	None02                         = 5,
 	EMouseCursor__SlashedCircle    = 6,
-	None03                         = 7,
-	TextProperty                   = 8
+	None03                         = 7
 };
 
 
@@ -125,8 +124,7 @@ enum class EPixelFormat : uint8_t
 	PF_BC7                         = 28,
 	None14                         = 29,
 	PF_R32G32_SINT                 = 30,
-	None15                         = 31,
-	None16                         = 32
+	None15                         = 31
 };
 
 

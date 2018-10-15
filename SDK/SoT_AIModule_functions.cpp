@@ -1349,16 +1349,16 @@ float UBehaviorTreeComponent::GetTagCooldownEndTime(const struct FGameplayTag& C
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // struct FGameplayTag            CooldownTag                    (Parm)
-// float                          CooldownDuration               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CoolDownDuration               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAddToExistingDuration         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CooldownDuration, bool bAddToExistingDuration)
+void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CoolDownDuration, bool bAddToExistingDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration");
 
 	UBehaviorTreeComponent_AddCooldownTagDuration_Params params;
 	params.CooldownTag = CooldownTag;
-	params.CooldownDuration = CooldownDuration;
+	params.CoolDownDuration = CoolDownDuration;
 	params.bAddToExistingDuration = bAddToExistingDuration;
 
 	UObject::ProcessEvent(fn, &params);

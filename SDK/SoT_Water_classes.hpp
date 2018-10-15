@@ -272,6 +272,37 @@ public:
 };
 
 
+// Class Water.WaterExclusionSurfaceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWaterExclusionSurfaceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterExclusionSurfaceInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Water.MockWaterExclusionSurfaceComponent
+// 0x0010 (0x00E8 - 0x00D8)
+class UMockWaterExclusionSurfaceComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterExclusionSurfaceComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class Water.MockWaterInterface
 // 0x0010 (0x0038 - 0x0028)
 class UMockWaterInterface : public UObject

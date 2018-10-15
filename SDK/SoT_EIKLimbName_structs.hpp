@@ -21,8 +21,7 @@ enum class EIKLimbName : uint8_t
 	None                           = 1,
 	EIKLimbName__NewEnumerator4    = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	BoolProperty                   = 5
+	NameProperty                   = 4
 };
 
 

@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
@@ -25,8 +25,10 @@ enum class EAIDebugColour : uint8_t
 {
 	EAIDebugColour__Red            = 0,
 	None                           = 1,
-	EAIDebugColour__Yellow         = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EAIDebugColour__Yellow         = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -45,8 +47,10 @@ enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
 	None                           = 1,
-	AISpawnRequestState__WaitForLocationCheck = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	AISpawnRequestState__WaitForLocationCheck = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -99,7 +103,8 @@ enum class EAIThreatLevel : uint8_t
 {
 	EAIThreatLevel__NoDanger       = 0,
 	None                           = 1,
-	EAIThreatLevel__EAIThreatLevel_MAX = 2
+	EAIThreatLevel__EAIThreatLevel_MAX = 2,
+	UDSS_UpToDate                  = 3
 };
 
 
@@ -134,9 +139,10 @@ enum class EBlackboardValueComparisonType : uint8_t
 {
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	EBlackboardValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	IntProperty                    = 2,
+	EBlackboardValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -145,8 +151,10 @@ enum class EFloatValueComparisonType : uint8_t
 {
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	EFloatValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EFloatValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 
@@ -155,8 +163,7 @@ enum class ESwimmingLineOfSightTest : uint8_t
 {
 	ESwimmingLineOfSightTest__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ESwimmingSyncMode__Synchronous = 3
+	ESwimmingSyncMode__Synchronous = 2
 };
 
 
@@ -219,7 +226,7 @@ enum class ETinySharkState : uint8_t
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
 	None01                         = 3,
-	CameraFacing_NoneUP            = 4
+	EWaterSplashProbeType__ThresholdedRateOfChange = 4
 };
 
 
@@ -228,8 +235,10 @@ enum class EAISpawnRequestResult : uint8_t
 {
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
-	AISpawnRequestResult__FailedNoValidPos = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	AISpawnRequestResult__FailedNoValidPos = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

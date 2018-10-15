@@ -21,8 +21,10 @@ enum class EAddLinkResult : uint8_t
 {
 	EAddLinkResult__Success_Set    = 0,
 	None                           = 1,
-	EAddLinkResult__Failed_CoincidentEndpointIds = 2,
-	None01                         = 3
+	IntProperty                    = 2,
+	EAddLinkResult__Failed_CoincidentEndpointIds = 3,
+	None01                         = 4,
+	NameProperty                   = 5
 };
 
 

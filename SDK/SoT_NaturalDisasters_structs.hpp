@@ -10,8 +10,8 @@
 #include "SoT_Kraken_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -111,7 +111,7 @@ struct FGeyserSpawnAngleOption
 };
 
 // ScriptStruct NaturalDisasters.VolcanoTargetChances
-// 0x0050
+// 0x0058
 struct FVolcanoTargetChances
 {
 	float                                              OnTarget;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -120,6 +120,8 @@ struct FVolcanoTargetChances
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	struct FWeightedProbabilityRange                   OnTargetNumExtraShots;                                    // 0x0010(0x0020) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRange                   NearMissNumExtraShots;                                    // 0x0030(0x0020) (Edit, DisableEditOnInstance)
+	float                                              CoolDownDuration;                                         // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct NaturalDisasters.WeightedVolcanoProjectile
@@ -170,6 +172,14 @@ struct FVolcanoTarget
 	class AActor*                                      Target;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                NumExtraShots;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct NaturalDisasters.VolcanoTargetCoolDown
+// 0x0010
+struct FVolcanoTargetCoolDown
+{
+	class AActor*                                      Target;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 };
 
 }
