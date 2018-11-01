@@ -23,7 +23,7 @@ enum class EWaterQueryResult : uint8_t
 	EWaterQueryResult__Success     = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	ETimeOfDay__Day                = 3
+	EBuoyancySampleType__Spherical = 3
 };
 
 
@@ -41,7 +41,7 @@ enum class EBuoyancySampleType : uint8_t
 {
 	EBuoyancySampleType__Spherical = 0,
 	None                           = 1,
-	ECustomAiEventDuringDeathEnum__None = 2
+	EBuoyancyDragSampleType__Spherical = 2
 };
 
 
@@ -187,6 +187,20 @@ struct FWaterSplashProbesContainer
 	TArray<struct FWaterSplashProbe>                   Probes;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              ProbeSamplingTime;                                        // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Water.EventLeftWaterExclusionZone
+// 0x0001
+struct FEventLeftWaterExclusionZone
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Water.EventEnteredWaterExclusionZone
+// 0x0001
+struct FEventEnteredWaterExclusionZone
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Water.FFTWaterQueryResult

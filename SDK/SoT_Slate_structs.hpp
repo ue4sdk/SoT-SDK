@@ -31,7 +31,7 @@ enum class ETableViewMode : uint8_t
 {
 	ETableViewMode__List           = 0,
 	None                           = 1,
-	EButtonPressMethod__DownAndUp  = 2
+	EButtonTouchMethod__DownAndUp  = 2
 };
 
 
@@ -51,7 +51,8 @@ enum class EStretch : uint8_t
 	EStretch__None                 = 0,
 	None                           = 1,
 	EStretch__ScaleToFitY          = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -60,7 +61,7 @@ enum class EStretchDirection : uint8_t
 {
 	EStretchDirection__Both        = 0,
 	None                           = 1,
-	ETextJustify__Left             = 2
+	ETableViewMode__List           = 2
 };
 
 
@@ -69,9 +70,9 @@ enum class EProgressBarFillType : uint8_t
 {
 	EProgressBarFillType__LeftToRight = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EProgressBarFillType__BottomToTop = 3,
-	None01                         = 4
+	EProgressBarFillType__BottomToTop = 2,
+	None01                         = 3,
+	EFontHinting__Default          = 4
 };
 
 

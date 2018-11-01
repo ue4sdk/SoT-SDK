@@ -168,6 +168,19 @@ void ABP_Lantern_C::PostMeshChangedBPEvent()
 }
 
 
+// Function BP_Lantern.BP_Lantern_C.ReceiveFlameChange
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Lantern_C::ReceiveFlameChange()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveFlameChange");
+
+	ABP_Lantern_C_ReceiveFlameChange_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern
 // ()
 // Parameters:

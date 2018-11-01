@@ -1066,6 +1066,44 @@ bool UVectorMaths::STATIC_LineIntersectsSphere(const struct FVector& LineStart, 
 }
 
 
+// Function Maths.VectorMaths.LineIntersectsCircleWithExitPoint
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector2D               LineOrigin                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               LineDir                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               CircleOrigin                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CircleRadius                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               OutClosestIntersectionPoint    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               OutSecondaryIntersectionPoint  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutClosestIntersectionDistance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutSecondaryIntersectionDistance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVectorMaths::STATIC_LineIntersectsCircleWithExitPoint(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, struct FVector2D* OutSecondaryIntersectionPoint, float* OutClosestIntersectionDistance, float* OutSecondaryIntersectionDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsCircleWithExitPoint");
+
+	UVectorMaths_LineIntersectsCircleWithExitPoint_Params params;
+	params.LineOrigin = LineOrigin;
+	params.LineDir = LineDir;
+	params.CircleOrigin = CircleOrigin;
+	params.CircleRadius = CircleRadius;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutClosestIntersectionPoint != nullptr)
+		*OutClosestIntersectionPoint = params.OutClosestIntersectionPoint;
+	if (OutSecondaryIntersectionPoint != nullptr)
+		*OutSecondaryIntersectionPoint = params.OutSecondaryIntersectionPoint;
+	if (OutClosestIntersectionDistance != nullptr)
+		*OutClosestIntersectionDistance = params.OutClosestIntersectionDistance;
+	if (OutSecondaryIntersectionDistance != nullptr)
+		*OutSecondaryIntersectionDistance = params.OutSecondaryIntersectionDistance;
+
+	return params.ReturnValue;
+}
+
+
 // Function Maths.VectorMaths.LineIntersectsCircle
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:

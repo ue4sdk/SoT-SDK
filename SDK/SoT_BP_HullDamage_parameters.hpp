@@ -49,6 +49,7 @@ struct ABP_HullDamage_C_Process_Hit_Params
 	struct FVector                                     HitNormal;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                NumDamageZones;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                LevelOfDamage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_HullDamage.BP_HullDamage_C.Scale Hit Strength and Get Decal Flag

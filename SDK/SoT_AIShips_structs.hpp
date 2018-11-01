@@ -31,8 +31,7 @@ enum class ECannonballIconType : uint8_t
 	None02                         = 5,
 	ECannonballIconType__Snooze    = 6,
 	None03                         = 7,
-	TextProperty                   = 8,
-	None04                         = 9
+	None04                         = 8
 };
 
 
@@ -41,10 +40,9 @@ enum class ESkellyFormIconType : uint8_t
 {
 	ESkellyFormIconType__Normal    = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ESkellyFormIconType__None      = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	ESkellyFormIconType__None      = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -61,7 +59,8 @@ enum class EAIShipPlayerTrackerType : uint8_t
 {
 	DefaultRadiusTracker           = 0,
 	None                           = 1,
-	EAIShipPlayerTrackerType_MAX   = 2
+	EAIShipPlayerTrackerType_MAX   = 2,
+	EAIThreatLevel__NoDanger       = 3
 };
 
 
@@ -298,11 +297,13 @@ struct FAIShipEncounterBattleDesc
 };
 
 // ScriptStruct AIShips.AIShipEncounterDescGenerationParams
-// 0x0020
+// 0x0028
 struct FAIShipEncounterDescGenerationParams
 {
-	TArray<struct FFeatureLockedAIShipEncounterBattleGenerationParams> BattleGenerationParams;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FAIShipEncounterBattleDesc>          BattleDescs;                                              // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	bool                                               EnableHardShip;                                           // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	TArray<struct FFeatureLockedAIShipEncounterBattleGenerationParams> BattleGenerationParams;                                   // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FAIShipEncounterBattleDesc>          BattleDescs;                                              // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct AIShips.AIShipEncounterWave

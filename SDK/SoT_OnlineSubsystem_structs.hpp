@@ -20,10 +20,9 @@ enum class EInAppPurchaseState : uint8_t
 {
 	EInAppPurchaseState__Success   = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EInAppPurchaseState__NotAllowed = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EInAppPurchaseState__NotAllowed = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

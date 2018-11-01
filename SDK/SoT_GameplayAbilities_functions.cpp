@@ -500,14 +500,14 @@ void UGameplayAbility::K2_AddGameplayCue(const struct FGameplayTag& GameplayCueT
 // Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData      eventData                      (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayEventData      EventData                      (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UGameplayAbility::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& eventData)
+void UGameplayAbility::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent");
 
 	UGameplayAbility_K2_ActivateAbilityFromEvent_Params params;
-	params.eventData = eventData;
+	params.EventData = EventData;
 
 	UObject::ProcessEvent(fn, &params);
 }

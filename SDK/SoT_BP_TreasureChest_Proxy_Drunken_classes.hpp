@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Drunken.BP_TreasureChest_Proxy_Drunken_C
-// 0x0008 (0x0A68 - 0x0A60)
+// 0x0008 (0x0A10 - 0x0A08)
 class ABP_TreasureChest_Proxy_Drunken_C : public ABP_TreasureChestProxy_C
 {
 public:
-	class UTankardRefillerComponent*                   TankardRefiller;                                          // 0x0A60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTankardRefillerComponent*                   TankardRefiller;                                          // 0x0A08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

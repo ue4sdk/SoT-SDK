@@ -29,6 +29,11 @@ struct ABP_InteractableShipLantern_C_LightStateChanged_Params
 {
 };
 
+// Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.FlameStateChanged
+struct ABP_InteractableShipLantern_C_FlameStateChanged_Params
+{
+};
+
 // Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ExecuteUbergraph_BP_InteractableShipLantern
 struct ABP_InteractableShipLantern_C_ExecuteUbergraph_BP_InteractableShipLantern_Params
 {

@@ -2602,6 +2602,23 @@ public:
 };
 
 
+// Class Engine.FogVolume
+// 0x0010 (0x04A0 - 0x0490)
+class AFogVolume : public AActor
+{
+public:
+	class USphereComponent*                            SphereComponent;                                          // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFogVolumeComponent*                         FogVolumeComponent;                                       // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Engine.FogVolume");
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.NavigationObjectBase
 // 0x0028 (0x04B8 - 0x0490)
 class ANavigationObjectBase : public AActor
@@ -2837,6 +2854,7 @@ public:
 	unsigned char                                      UnknownData04[0x10];                                      // 0x0828(0x0010) MISSED OFFSET
 	struct FScalarMaterialInput                        PixelDepthOffset;                                         // 0x0838(0x0040)
 	unsigned char                                      bTranslucentBeforeTranslucency : 1;                       // 0x0878(0x0001) (Edit)
+	unsigned char                                      bTranslucentBeforeVolumeFog : 1;                          // 0x0878(0x0001) (Edit)
 	unsigned char                                      bEnableSeparateTranslucency : 1;                          // 0x0878(0x0001) (Edit)
 	unsigned char                                      bEnableResponsiveAA : 1;                                  // 0x0878(0x0001) (Edit)
 	unsigned char                                      bScreenSpaceReflections : 1;                              // 0x0878(0x0001) (Edit)
@@ -4692,23 +4710,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class Engine.EmitterCameraLensEffectBase");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.FogVolume
-// 0x0010 (0x04A0 - 0x0490)
-class AFogVolume : public AActor
-{
-public:
-	class USphereComponent*                            SphereComponent;                                          // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFogVolumeComponent*                         FogVolumeComponent;                                       // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class Engine.FogVolume");
 		return ptr;
 	}
 
@@ -7691,6 +7692,8 @@ public:
 		return ptr;
 	}
 
+
+	void SetMurkyRegion(const struct FMurkyRegion& MurkyRegion);
 };
 
 
@@ -7984,8 +7987,9 @@ public:
 	bool                                               bDisplayMergedInEditor;                                   // 0x0630(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0631(0x0007) MISSED OFFSET
 	TArray<float>                                      LODScreenSizes;                                           // 0x0638(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bMergeVertexColours;                                      // 0x0648(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0649(0x0007) MISSED OFFSET
+	int                                                LODForCollision;                                          // 0x0648(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bMergeVertexColours;                                      // 0x064C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x064D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8172,6 +8176,7 @@ public:
 	unsigned char                                      UnknownData04[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 	TArray<struct FParticleSystemLOD>                  LODSettings;                                              // 0x0088(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      bIgnoreBoundsRotation : 1;                                // 0x0098(0x0001) (Edit)
+	unsigned char                                      bBoostParticleAggregationPriority : 1;                    // 0x0098(0x0001) (Edit)
 	unsigned char                                      bUseFixedRelativeBoundingBox : 1;                         // 0x0098(0x0001) (Edit)
 	unsigned char                                      UnknownData05[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
 	struct FBox                                        FixedRelativeBoundingBox;                                 // 0x009C(0x001C) (Edit, ZeroConstructor, IsPlainOldData)
@@ -16502,11 +16507,11 @@ public:
 
 
 // Class Engine.PackageMapClient
-// 0x01A0 (0x01F0 - 0x0050)
+// 0x01A8 (0x01F8 - 0x0050)
 class UPackageMapClient : public UPackageMap
 {
 public:
-	unsigned char                                      UnknownData00[0x1A0];                                     // 0x0050(0x01A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1A8];                                     // 0x0050(0x01A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16534,7 +16539,9 @@ public:
 	float                                              MediumDetailSpawnRateScale;                               // 0x0054(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              QualityLevelSpawnRateScale;                               // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EDetailMode>                           DetailMode;                                               // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
+	TEnumAsByte<EEmitterQuality>                       MaxEmitterQuality;                                        // 0x005D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEmitterQuality>                       MinEmitterQuality;                                        // 0x005E(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x005F(0x0001) MISSED OFFSET
 	unsigned char                                      bIsSoloing : 1;                                           // 0x0060(0x0001) (Transient)
 	unsigned char                                      bCookedOut : 1;                                           // 0x0060(0x0001)
 	unsigned char                                      bDisabledLODsKeepEmitterAlive : 1;                        // 0x0060(0x0001) (Edit)

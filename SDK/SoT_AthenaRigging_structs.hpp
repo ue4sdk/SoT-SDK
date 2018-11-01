@@ -26,11 +26,10 @@ enum class EInstancedRopeParameterType : uint8_t
 	None01                         = 3,
 	RPT_WindAmount                 = 4,
 	None02                         = 5,
-	StructProperty                 = 6,
-	RPT_CatenaryXYDistance         = 7,
-	None03                         = 8,
-	ECannonballIconType__Normal    = 9,
-	None04                         = 10
+	RPT_CatenaryXYDistance         = 6,
+	None03                         = 7,
+	ECannonballIconType__Normal    = 8,
+	None04                         = 9
 };
 
 

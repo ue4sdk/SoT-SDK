@@ -276,12 +276,14 @@ public:
 
 
 // Class PirateGenerator.TextureSwitch
-// 0x00D8 (0x0218 - 0x0140)
+// 0x00E0 (0x0220 - 0x0140)
 class UTextureSwitch : public UTextureProxy
 {
 public:
 	unsigned char                                      UnknownData00[0x80];                                      // 0x0140(0x0080) MISSED OFFSET
-	struct FTextureSwitchParameters                    DefaultParameters;                                        // 0x01C0(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
+	bool                                               bDuplicated;                                              // 0x01C0(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x01C1(0x0007) MISSED OFFSET
+	struct FTextureSwitchParameters                    DefaultParameters;                                        // 0x01C8(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
@@ -293,16 +295,16 @@ public:
 
 
 // Class PirateGenerator.TextureSwitchBySeed
-// 0x0038 (0x0250 - 0x0218)
+// 0x0038 (0x0258 - 0x0220)
 class UTextureSwitchBySeed : public UTextureSwitch
 {
 public:
-	struct FName                                       HashSource;                                               // 0x0218(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              FallbackProbability;                                      // 0x0220(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FallbackReferenceName;                                    // 0x0224(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x022C(0x0004) MISSED OFFSET
-	struct FStringAssetReference                       FallbackTexture;                                          // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FTextureSwitchSeedEntry>             Entries;                                                  // 0x0240(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FName                                       HashSource;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              FallbackProbability;                                      // 0x0228(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FallbackReferenceName;                                    // 0x022C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0234(0x0004) MISSED OFFSET
+	struct FStringAssetReference                       FallbackTexture;                                          // 0x0238(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchSeedEntry>             Entries;                                                  // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -314,11 +316,11 @@ public:
 
 
 // Class PirateGenerator.TextureSwitchByGender
-// 0x0010 (0x0228 - 0x0218)
+// 0x0010 (0x0230 - 0x0220)
 class UTextureSwitchByGender : public UTextureSwitch
 {
 public:
-	TArray<struct FTextureSwitchGenderEntry>           Entries;                                                  // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchGenderEntry>           Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -330,11 +332,11 @@ public:
 
 
 // Class PirateGenerator.TextureSwitchByEthnicity
-// 0x0010 (0x0228 - 0x0218)
+// 0x0010 (0x0230 - 0x0220)
 class UTextureSwitchByEthnicity : public UTextureSwitch
 {
 public:
-	TArray<struct FTextureSwitchEthnicityEntry>        Entries;                                                  // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchEthnicityEntry>        Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -346,11 +348,11 @@ public:
 
 
 // Class PirateGenerator.TextureSwitchByBodyShape
-// 0x0010 (0x0228 - 0x0218)
+// 0x0010 (0x0230 - 0x0220)
 class UTextureSwitchByBodyShape : public UTextureSwitch
 {
 public:
-	TArray<struct FTextureSwitchBodyShapeEntry>        Entries;                                                  // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchBodyShapeEntry>        Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -362,12 +364,12 @@ public:
 
 
 // Class PirateGenerator.TextureSwitchByItem
-// 0x0020 (0x0238 - 0x0218)
+// 0x0020 (0x0240 - 0x0220)
 class UTextureSwitchByItem : public UTextureSwitch
 {
 public:
-	struct FStringAssetReference                       FallbackTexture;                                          // 0x0218(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FTextureSwitchItemEntry>             Entries;                                                  // 0x0228(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FStringAssetReference                       FallbackTexture;                                          // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTextureSwitchItemEntry>             Entries;                                                  // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -379,12 +381,12 @@ public:
 
 
 // Class PirateGenerator.ColorTextureSwitchBySeed
-// 0x0018 (0x0230 - 0x0218)
+// 0x0018 (0x0238 - 0x0220)
 class UColorTextureSwitchBySeed : public UTextureSwitch
 {
 public:
-	struct FName                                       HashSource;                                               // 0x0218(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FColorTextureSwitchSeedEntry>        Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FName                                       HashSource;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FColorTextureSwitchSeedEntry>        Entries;                                                  // 0x0228(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

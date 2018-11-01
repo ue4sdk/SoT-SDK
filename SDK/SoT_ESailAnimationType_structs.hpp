@@ -18,8 +18,7 @@ namespace SDK
 enum class ESailAnimationType : uint8_t
 {
 	ESailAnimationType__NewEnumerator0 = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

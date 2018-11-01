@@ -34,11 +34,7 @@ enum class EObjectAnimationState : uint8_t
 	LazyObjectProperty             = 14,
 	EObjectAnimationState__NewEnumerator20 = 15,
 	None05                         = 16,
-	UInt16Property                 = 17,
-	BlurAmount                     = 18,
-	None06                         = 19,
-	RefractionDepthBias            = 20,
-	EObjectAnimationState__NewEnumerator001 = 21
+	UInt16Property                 = 17
 };
 
 

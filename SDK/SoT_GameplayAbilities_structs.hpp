@@ -40,8 +40,7 @@ enum class EGameplayAbilityActivationMode : uint8_t
 {
 	EGameplayAbilityActivationMode__Authority = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 3
+	EGameplayAbilityActivationMode__EGameplayAbilityActivationMode_MAX = 2
 };
 
 
@@ -71,7 +70,8 @@ enum class EGameplayCueEvent : uint8_t
 {
 	EGameplayCueEvent__OnActive    = 0,
 	None                           = 1,
-	EGameplayCueEvent__EGameplayCueEvent_MAX = 2
+	EGameplayCueEvent__EGameplayCueEvent_MAX = 2,
+	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 3
 };
 
 
@@ -80,7 +80,8 @@ enum class EGameplayEffectStackingType : uint8_t
 {
 	EGameplayEffectStackingType__None = 0,
 	None                           = 1,
-	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 2
+	IntProperty                    = 2,
+	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 3
 };
 
 
@@ -179,8 +180,7 @@ enum class EGameplayAbilityNetExecutionPolicy : uint8_t
 {
 	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 0,
 	None                           = 1,
-	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2,
-	EGameplayTargetingConfirmation__Instant = 3
+	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 2
 };
 
 
@@ -189,8 +189,7 @@ enum class EGameplayAbilityInstancingPolicy : uint8_t
 {
 	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ETargetDataFilterSelf__TDFS_Any = 3
+	ETargetDataFilterSelf__TDFS_Any = 2
 };
 
 
@@ -208,7 +207,7 @@ enum class EAbilityTaskNetSyncType : uint8_t
 {
 	EAbilityTaskNetSyncType__BothWait = 0,
 	None                           = 1,
-	ETargetAbilitySelfSelection__TASS_Permit = 2
+	EGameplayCuePayloadType__EffectContext = 2
 };
 
 
@@ -240,7 +239,7 @@ enum class ETargetAbilitySelfSelection : uint8_t
 {
 	ETargetAbilitySelfSelection__TASS_Permit = 0,
 	None                           = 1,
-	EGameplayCuePayloadType__EffectContext = 2
+	GTInputLineTrace_Single        = 2
 };
 
 
@@ -249,7 +248,7 @@ enum class EGameplayCuePayloadType : uint8_t
 {
 	EGameplayCuePayloadType__EffectContext = 0,
 	None                           = 1,
-	GTInputLineTrace_Single        = 2
+	ETargetAbilitySelfSelection__TASS_Permit = 2
 };
 
 

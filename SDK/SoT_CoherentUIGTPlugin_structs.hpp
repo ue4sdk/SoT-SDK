@@ -75,22 +75,7 @@ enum class ECoherentUIGTKeys : uint8_t
 	ECoherentUIGTKeys__Slash       = 52,
 	None26                         = 53,
 	ECoherentUIGTKeys__RightBracket = 54,
-	None27                         = 55,
-	None28                         = 56,
-	None29                         = 57,
-	None30                         = 58,
-	None31                         = 59,
-	None32                         = 60,
-	None33                         = 61,
-	None34                         = 62,
-	IntProperty                    = 63,
-	None35                         = 64,
-	FloatProperty                  = 65,
-	ClassProperty                  = 66,
-	BoolProperty                   = 67,
-	None36                         = 68,
-	InterfaceProperty              = 69,
-	VectorProperty                 = 70
+	None27                         = 55
 };
 
 
@@ -99,8 +84,7 @@ enum class ECoherentUIGTInputPropagationBehaviour : uint8_t
 {
 	ECoherentUIGTInputPropagationBehaviour__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 3
+	ECoherentUIGTInputPropagationBehaviour__ECoherentUIGTInputPropagationBehaviour_MAX = 2
 };
 
 
@@ -109,7 +93,7 @@ enum class EGamepadBehaviourOnFocusLost : uint8_t
 {
 	ResetState                     = 0,
 	None                           = 1,
-	RaycastQuality_Fast            = 2
+	IntProperty                    = 2
 };
 
 
@@ -117,8 +101,7 @@ enum class EGamepadBehaviourOnFocusLost : uint8_t
 enum class EGTInputWidgetLineTraceMode : uint8_t
 {
 	GTInputLineTrace_Single        = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -144,10 +127,9 @@ enum class ECoherentUIGTSettingsSeverity : uint8_t
 {
 	ECoherentUIGTSettingsSeverity__Trace = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	ECoherentUIGTSettingsSeverity__AssertFailure = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	ECoherentUIGTSettingsSeverity__AssertFailure = 2,
+	None01                         = 3,
+	OnTriggerTeleportServer        = 4
 };
 
 

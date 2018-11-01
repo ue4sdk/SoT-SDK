@@ -742,8 +742,8 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 {
 };
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_BlendListByEnum_80226AD44EB3E055BE57D89E0DF32B88
-struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_BlendListByEnum_80226AD44EB3E055BE57D89E0DF32B88_Params
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_BlendListByBool_EBBE7C1346D638D91655E6A61FB7F0ED
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_BlendListByBool_EBBE7C1346D638D91655E6A61FB7F0ED_Params
 {
 };
 
@@ -4475,28 +4475,23 @@ struct UBP_Humanoid_ThirdPerson_C_AnimNotify_ClearIKFlag_Params
 {
 };
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SpawnBothOars
-struct UBP_Humanoid_ThirdPerson_C_AnimNotify_SpawnBothOars_Params
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_HideBothOars
+struct UBP_Humanoid_ThirdPerson_C_AnimNotify_HideBothOars_Params
 {
 };
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_DespawnBothOars
-struct UBP_Humanoid_ThirdPerson_C_AnimNotify_DespawnBothOars_Params
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_ShowRightOar
+struct UBP_Humanoid_ThirdPerson_C_AnimNotify_ShowRightOar_Params
+{
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_ShowLeftOar
+struct UBP_Humanoid_ThirdPerson_C_AnimNotify_ShowLeftOar_Params
 {
 };
 
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IsSeated
 struct UBP_Humanoid_ThirdPerson_C_AnimNotify_IsSeated_Params
-{
-};
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SpawnRightOar
-struct UBP_Humanoid_ThirdPerson_C_AnimNotify_SpawnRightOar_Params
-{
-};
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SpawnLeftOar
-struct UBP_Humanoid_ThirdPerson_C_AnimNotify_SpawnLeftOar_Params
 {
 };
 
@@ -4507,11 +4502,6 @@ struct UBP_Humanoid_ThirdPerson_C_AnimNotify_ResetRowboatTransition_Params
 
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_CanTransition
 struct UBP_Humanoid_ThirdPerson_C_AnimNotify_CanTransition_Params
-{
-};
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_DespawnOars3
-struct UBP_Humanoid_ThirdPerson_C_AnimNotify_DespawnOars3_Params
 {
 };
 

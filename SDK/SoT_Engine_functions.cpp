@@ -21812,6 +21812,22 @@ void UFFTWaterComponent::SetAmbientColour(const struct FLinearColor& AmbientColo
 }
 
 
+// Function Engine.FFTWaterExtendedPlaneComponent.SetMurkyRegion
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FMurkyRegion            MurkyRegion                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UFFTWaterExtendedPlaneComponent::SetMurkyRegion(const struct FMurkyRegion& MurkyRegion)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.FFTWaterExtendedPlaneComponent.SetMurkyRegion");
+
+	UFFTWaterExtendedPlaneComponent_SetMurkyRegion_Params params;
+	params.MurkyRegion = MurkyRegion;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.BillboardComponent.SetUV
 // (Native, Public, BlueprintCallable)
 // Parameters:

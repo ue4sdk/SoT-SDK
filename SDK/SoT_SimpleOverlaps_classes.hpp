@@ -63,13 +63,13 @@ public:
 
 
 // Class SimpleOverlaps.TestOverlapBroadcasterActor
-// 0x00C0 (0x0550 - 0x0490)
+// 0x0120 (0x05B0 - 0x0490)
 class ATestOverlapBroadcasterActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0490(0x0018) MISSED OFFSET
-	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x04B0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0490(0x0030) MISSED OFFSET
+	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xE8];                                      // 0x04C8(0x00E8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

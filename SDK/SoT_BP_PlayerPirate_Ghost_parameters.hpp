@@ -35,6 +35,7 @@ struct ABP_PlayerPirate_Ghost_C_Set_Up_Ghost_Materials_Params
 	class USkeletalMeshComponent*                      Input_Mesh;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Ghost_Fade_Parameter;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               EnableDither;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FirstPersonMesh;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.GetMouthPosition

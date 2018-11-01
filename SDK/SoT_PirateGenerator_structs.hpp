@@ -32,7 +32,7 @@ enum class EIPGGender : uint8_t
 	EIPGGender__UNSPECIFIED        = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EConsoleForGamepadLabels__None = 3
+	EIPGPirateType__PLAYER         = 3
 };
 
 

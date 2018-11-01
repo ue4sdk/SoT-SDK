@@ -12,6 +12,19 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_GhostShipCaptain.BP_GhostShipCaptain_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_GhostShipCaptain_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GhostShipCaptain.BP_GhostShipCaptain_C.UserConstructionScript");
+
+	ABP_GhostShipCaptain_C_UserConstructionScript_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

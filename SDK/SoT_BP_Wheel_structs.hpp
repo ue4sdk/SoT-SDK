@@ -10,11 +10,11 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_EIKLimbName_classes.hpp"
-#include "SoT_EWheel_classes.hpp"
 #include "SoT_Animation_classes.hpp"
-#include "SoT_BP_Docking_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_EIKLimbName_classes.hpp"
+#include "SoT_BP_Docking_classes.hpp"
+#include "SoT_EWheel_classes.hpp"
 #include "SoT_ObjectMessaging_classes.hpp"
 
 namespace SDK

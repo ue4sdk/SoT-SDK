@@ -21,7 +21,7 @@ enum class ELandscapeGizmoType : uint8_t
 {
 	LGT_None                       = 0,
 	None                           = 1,
-	ELandscapeLayerPaintingRestriction__None = 2
+	LSMO_XUp                       = 2
 };
 
 
@@ -38,7 +38,7 @@ enum class ELandscapeLayerPaintingRestriction : uint8_t
 {
 	ELandscapeLayerPaintingRestriction__None = 0,
 	None                           = 1,
-	ELandscapeLODFalloff__Linear   = 2
+	LB_WeightBlend                 = 2
 };
 
 
@@ -74,8 +74,7 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_None                      = 0,
 	None                           = 1,
 	LCCT_WeightMapUV               = 2,
-	None01                         = 3,
-	MSKI_Auto                      = 4
+	None01                         = 3
 };
 
 

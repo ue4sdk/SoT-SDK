@@ -46,9 +46,11 @@ public:
 	void UnlockAllEmblemsAndAchievements();
 	void TriggerRewardNotification(struct FName* Identifier);
 	void TriggerLandmarkReaction(int ActionType);
+	void TriggerFogManagerAtNearestIsland();
 	void TriggerEmblemUnlockedMessage(const class FString& EmblemFriendlyName);
 	void TriggerControllerConnectionChange(bool IsConnect, int UserId, int ControllerId);
 	void TriggerAIShipTimerBattle();
+	void TriggerAIShipPassive();
 	void TriggerAIShipEncounter();
 	void TriggerAIShipAggressive();
 	void ToggleVideprinter(const class FString& Id);
@@ -90,6 +92,7 @@ public:
 	void StartNearestGeysers();
 	void StartNearestEarthquake();
 	void StartDemoSession();
+	void StartAllVolcanos();
 	void StartAllCrewVoyages();
 	void SpinShip(float YawSpdInDegreesPerSecond);
 	void SpawnWatercraft(const class FString& WatercraftClassString);
@@ -117,6 +120,7 @@ public:
 	void SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy);
 	void SpawnGeyserAtPlayerLocation();
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
+	void SpawnFogAtPlayerPosition();
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);
@@ -160,9 +164,11 @@ public:
 	void SetPlayerInvisibleToAI();
 	void SetPhotoMode(bool Enabled);
 	void SetNonCrewChatSpatialisation(bool Enabled);
+	void SetKnockbackDisabled(bool Disabled);
 	void SetIdleDisconnectEnabled(bool Enabled);
 	void SetGrogSecondary(bool InValue);
 	void SetFOV(float InNewFOV);
+	void SetFlameOfFateColour(int InFlameOfFateType);
 	void SetDebugCameraUseProjectileCollisionChannel(bool bUseProjectileChannel);
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetCapstanPosition(float Position);
@@ -172,6 +178,8 @@ public:
 	void ScuttleShip();
 	void ScreenFadeStart();
 	void ScreenFadeEnd();
+	void SchedulerSkipToNext();
+	void SchedulerAdvance(float Time);
 	void SailShip();
 	void RewindPhysicsSceneBy(float SecondsToRewindBy);
 	void ResurfaceShipByActorId(const class FString& ShipActorIdString);
@@ -189,6 +197,7 @@ public:
 	void RepairShipAndClearInternalWater();
 	void RenameTreasure(const class FString& InVendorName);
 	void RemoveItemInSlot(int SlotIndex);
+	void RemoveAllFog();
 	void PushShip(float FwdSpdInMetersPerSecond);
 	void PullLatestEmblemProgress();
 	void PrintTime();
@@ -233,6 +242,7 @@ public:
 	void Fly();
 	void FloodShipWithKeelOverIndex(float NormalisedWaterAmount, int KeelOverConfigIndex);
 	void FloodShip(float NormalisedWaterAmount);
+	void FakeMigrateBountyQuests();
 	void EquipPirateTitle(const class FString& PirateTitleType);
 	void EquipCompassInLoadout();
 	void EndDemoSession();
@@ -275,6 +285,7 @@ public:
 	void DeleteVoyageHistory();
 	void DeleteAllMermaids();
 	void DebugIslandDelta();
+	void DeactivateSkellyFort(const class FString& FortName);
 	void DamageShipFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
 	void DamageShip(float Strength);
 	void DamagePlayerFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
@@ -296,6 +307,7 @@ public:
 	void CancelAllCrewVoyages();
 	void CancelActiveAIShipEncounters();
 	void BreakLeg();
+	void BlockMigrationForPlayer(bool Enabled);
 	void ApplyVenomWithParams(float InitialDamage, float DamagePerSecond, float DamageOverTimeDuration);
 	void ApplyVenom();
 	void ApplyDamageToAllDamageZones(float Damage);

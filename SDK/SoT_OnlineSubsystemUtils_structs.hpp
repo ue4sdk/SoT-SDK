@@ -22,8 +22,7 @@ enum class EBeaconConnectionState : uint8_t
 {
 	EBeaconConnectionState__Invalid = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EBeaconConnectionState__EBeaconConnectionState_MAX = 3
+	EBeaconConnectionState__EBeaconConnectionState_MAX = 2
 };
 
 
@@ -37,7 +36,8 @@ enum class EPartyReservationResult : uint8_t
 	EPartyReservationResult__ReservationAccepted = 4,
 	None02                         = 5,
 	EPartyReservationResult__ReservationInvalid = 6,
-	None03                         = 7
+	None03                         = 7,
+	TextProperty                   = 8
 };
 
 
@@ -46,10 +46,9 @@ enum class EClientRequestType : uint8_t
 {
 	EClientRequestType__NonePending = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EClientRequestType__ChangeWorldRequest = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EClientRequestType__ChangeWorldRequest = 2,
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

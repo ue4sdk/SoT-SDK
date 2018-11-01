@@ -22,7 +22,7 @@ enum class EInteractionBlockReason : uint8_t
 {
 	EInteractionBlockReason__None  = 0,
 	None                           = 1,
-	EInputHandlerResult__Handled   = 2
+	EWaterQueryResult__Success     = 2
 };
 
 

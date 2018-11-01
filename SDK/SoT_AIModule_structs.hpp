@@ -88,8 +88,7 @@ enum class EPawnActionAbortState : uint8_t
 	EPawnActionAbortState__NeverStarted = 0,
 	None                           = 1,
 	EPawnActionAbortState__AbortDone = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -98,8 +97,7 @@ enum class EAIOptionFlag : uint8_t
 {
 	EAIOptionFlag__Default         = 0,
 	None                           = 1,
-	EAIOptionFlag__EAIOptionFlag_MAX = 2,
-	EBTFlowAbortMode__None         = 3
+	EAIOptionFlag__EAIOptionFlag_MAX = 2
 };
 
 
@@ -109,7 +107,7 @@ enum class EPathFollowingRequestResult : uint8_t
 	EPathFollowingRequestResult__Failed = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	ESimulationQuery__CollisionOverlap = 3
+	EEnvQueryParam__Float          = 3
 };
 
 
@@ -120,7 +118,7 @@ enum class EPathFollowingAction : uint8_t
 	None                           = 1,
 	EPathFollowingAction__PathToGoal = 2,
 	None01                         = 3,
-	EAITaskPriority__Lowest        = 4
+	EBTDecoratorLogic__Invalid     = 4
 };
 
 
@@ -139,7 +137,8 @@ enum class EBTFlowAbortMode : uint8_t
 {
 	EBTFlowAbortMode__None         = 0,
 	None                           = 1,
-	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 2
+	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 2,
+	EPathFollowingStatus__Idle     = 3
 };
 
 
@@ -159,7 +158,7 @@ enum class ETeamAttitude : uint8_t
 	ETeamAttitude__Friendly        = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EBasicKeyOperation__Set        = 3
+	EAISenseNotifyType__OnEveryPerception = 3
 };
 
 
@@ -178,8 +177,7 @@ enum class EAITaskPriority : uint8_t
 	EAITaskPriority__Lowest        = 0,
 	None                           = 1,
 	EAITaskPriority__Ultimate      = 2,
-	None01                         = 3,
-	EBTDecoratorLogic__Invalid     = 4
+	None01                         = 3
 };
 
 
@@ -189,7 +187,8 @@ enum class EBTDecoratorLogic : uint8_t
 	EBTDecoratorLogic__Invalid     = 0,
 	None                           = 1,
 	EBTDecoratorLogic__Not         = 2,
-	None01                         = 3
+	None01                         = 3,
+	EAITaskPriority__Lowest        = 4
 };
 
 
@@ -207,7 +206,7 @@ enum class ETextKeyOperation : uint8_t
 	ETextKeyOperation__Equal       = 0,
 	None                           = 1,
 	ETextKeyOperation__ETextKeyOperation_MAX = 2,
-	EEnvQueryRunMode__SingleResult = 3
+	EEnvTraceShape__Line           = 3
 };
 
 
@@ -250,7 +249,7 @@ enum class EPathExistanceQueryType : uint8_t
 {
 	EPathExistanceQueryType__NavmeshRaycast2D = 0,
 	None                           = 1,
-	EBlackBoardEntryComparison__Equal = 2
+	EEnvTestScoreOperator__AverageScore = 2
 };
 
 
@@ -267,7 +266,7 @@ enum class EEnvQueryTestClamping : uint8_t
 {
 	EEnvQueryTestClamping__None    = 0,
 	None                           = 1,
-	SMF_None                       = 2
+	EEnvDirection__TwoPoints       = 2
 };
 
 
@@ -285,7 +284,7 @@ enum class EEnvTraceShape : uint8_t
 	EEnvTraceShape__Line           = 0,
 	None                           = 1,
 	EEnvTraceShape__EEnvTraceShape_MAX = 2,
-	EEnvQueryTrace__None           = 3
+	EBTFlowAbortMode__None         = 3
 };
 
 
@@ -295,7 +294,7 @@ enum class EEnvQueryTrace : uint8_t
 	EEnvQueryTrace__None           = 0,
 	None                           = 1,
 	EEnvQueryTrace__EEnvQueryTrace_MAX = 2,
-	ETextKeyOperation__Equal       = 3
+	EEnvQueryRunMode__SingleResult = 3
 };
 
 
@@ -304,7 +303,7 @@ enum class EEnvQueryParam : uint8_t
 {
 	EEnvQueryParam__Float          = 0,
 	None                           = 1,
-	EBTChildIndex__FirstNode       = 2
+	EBlackBoardEntryComparison__Equal = 2
 };
 
 
@@ -314,7 +313,7 @@ enum class EEnvQueryRunMode : uint8_t
 	EEnvQueryRunMode__SingleResult = 0,
 	None                           = 1,
 	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 2,
-	EPathFollowingStatus__Idle     = 3
+	ETextKeyOperation__Equal       = 3
 };
 
 
@@ -323,7 +322,7 @@ enum class EEnvTestScoreOperator : uint8_t
 {
 	EEnvTestScoreOperator__AverageScore = 0,
 	None                           = 1,
-	EEnvTestCost__Low              = 2
+	EBTParallelMode__AbortBackground = 2
 };
 
 
@@ -340,7 +339,7 @@ enum class EEnvTestCost : uint8_t
 {
 	EEnvTestCost__Low              = 0,
 	None                           = 1,
-	EPawnActionFailHandling__RequireSuccess = 2
+	EEnvTestPurpose__Filter        = 2
 };
 
 
@@ -349,10 +348,8 @@ enum class EEnvTestWeight : uint8_t
 {
 	EEnvTestWeight__None           = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EEnvTestWeight__Constant       = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EEnvTestWeight__Constant       = 2,
+	None01                         = 3
 };
 
 
@@ -362,7 +359,7 @@ enum class EEnvTestScoreEquation : uint8_t
 	EEnvTestScoreEquation__Linear  = 0,
 	None                           = 1,
 	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 2,
-	EEnvTraceShape__Line           = 3
+	EEnvQueryTrace__None           = 3
 };
 
 
@@ -371,7 +368,8 @@ enum class EEnvTestFilterType : uint8_t
 {
 	EEnvTestFilterType__Minimum    = 0,
 	None                           = 1,
-	EEnvTestFilterType__EEnvTestFilterType_MAX = 2
+	EEnvTestFilterType__EEnvTestFilterType_MAX = 2,
+	EEnvTestScoreEquation__Linear  = 3
 };
 
 
@@ -380,7 +378,7 @@ enum class EEnvTestPurpose : uint8_t
 {
 	EEnvTestPurpose__Filter        = 0,
 	None                           = 1,
-	EPawnSubActionTriggeringPolicy__CopyBeforeTriggering = 2
+	EPawnActionFailHandling__RequireSuccess = 2
 };
 
 
@@ -405,7 +403,7 @@ enum class EEnvTestDistance : uint8_t
 {
 	EEnvTestDistance__Distance3D   = 0,
 	None                           = 1,
-	EEnvQueryHightlightMode__All   = 2
+	ACM_Free                       = 2
 };
 
 
@@ -413,8 +411,7 @@ enum class EEnvTestDistance : uint8_t
 enum class EEnvTestDot : uint8_t
 {
 	EEnvTestDot__Dot3D             = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -423,7 +420,7 @@ enum class EEnvTestPathfinding : uint8_t
 {
 	EEnvTestPathfinding__PathExist = 0,
 	None                           = 1,
-	EDrivenBoneModificationMode__AddToInput = 2
+	EEnvQueryHightlightMode__All   = 2
 };
 
 
@@ -432,7 +429,7 @@ enum class EEnvQueryHightlightMode : uint8_t
 {
 	EEnvQueryHightlightMode__All   = 0,
 	None                           = 1,
-	EEnvTestDot__Dot3D             = 2
+	BMM_Ignore                     = 2
 };
 
 

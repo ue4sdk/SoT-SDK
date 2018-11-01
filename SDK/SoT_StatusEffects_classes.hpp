@@ -90,14 +90,14 @@ public:
 
 
 // Class StatusEffects.MaterialStatusSusceptibilityComponent
-// 0x0040 (0x0118 - 0x00D8)
+// 0x0030 (0x0108 - 0x00D8)
 class UMaterialStatusSusceptibilityComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
 	class UPhysicalMaterial*                           CurrentSurfaceMaterial;                                   // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TScriptInterface<class USurfaceMaterialStatusZoneInterface> CurrentMaterialStatusZone;                                // 0x00E8(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x10];                                      // 0x00F8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

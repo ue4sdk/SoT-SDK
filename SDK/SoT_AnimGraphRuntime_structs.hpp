@@ -21,7 +21,7 @@ enum class EDrivenBoneModificationMode : uint8_t
 {
 	EDrivenBoneModificationMode__AddToInput = 0,
 	None                           = 1,
-	EPawnActionMoveMode__UsePathfinding = 2
+	BA_X                           = 2
 };
 
 
@@ -32,11 +32,10 @@ enum class EComponentType : uint8_t
 	None                           = 1,
 	EComponentType__RotationX      = 2,
 	None01                         = 3,
-	EComponentType__ScaleX         = 4,
-	None02                         = 5,
-	None03                         = 6,
-	EMPMatchOutcome__None          = 7,
-	None04                         = 8
+	NameProperty                   = 4,
+	EComponentType__ScaleX         = 5,
+	None02                         = 6,
+	None03                         = 7
 };
 
 
@@ -56,10 +55,8 @@ enum class EAxisOption : uint8_t
 {
 	EAxisOption__X                 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EAxisOption__Y_Neg             = 3,
-	None01                         = 4,
-	NameProperty                   = 5
+	EAxisOption__Y_Neg             = 2,
+	None01                         = 3
 };
 
 
@@ -68,7 +65,7 @@ enum class EBoneModificationMode : uint8_t
 {
 	BMM_Ignore                     = 0,
 	None                           = 1,
-	BA_X                           = 2
+	EDrivenBoneModificationMode__AddToInput = 2
 };
 
 

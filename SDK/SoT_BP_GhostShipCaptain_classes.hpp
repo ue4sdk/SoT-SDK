@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GhostShipCaptain.BP_GhostShipCaptain_C
-// 0x0000 (0x0578 - 0x0578)
+// 0x0008 (0x0580 - 0x0578)
 class ABP_GhostShipCaptain_C : public ANPC
 {
 public:
+	class UNPCDialogComponent*                         NPCDialog;                                                // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

@@ -21,8 +21,7 @@ enum class EMovieSceneKeyInterpolation : uint8_t
 	MSKI_Auto                      = 0,
 	None                           = 1,
 	MSKI_Constant                  = 2,
-	None01                         = 3,
-	ESlateVisibility__Visible      = 4
+	None01                         = 3
 };
 
 

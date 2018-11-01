@@ -48,15 +48,15 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromObject(class UObject* M
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
 // class FString                  Name                           (Parm, ZeroConstructor)
-// class UCoherentUIGTJSEvent*    eventData                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UCoherentUIGTJSEvent*    EventData                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBaseComponent::TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* eventData)
+void UCoherentUIGTBaseComponent::TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* EventData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.TriggerJSEvent");
 
 	UCoherentUIGTBaseComponent_TriggerJSEvent_Params params;
 	params.Name = Name;
-	params.eventData = eventData;
+	params.EventData = EventData;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1087,15 +1087,15 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromObject(class UObject* Model)
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
 // class FString                  Name                           (Parm, ZeroConstructor)
-// class UCoherentUIGTJSEvent*    eventData                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UCoherentUIGTJSEvent*    EventData                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTWidget::TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* eventData)
+void UCoherentUIGTWidget::TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* EventData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.TriggerJSEvent");
 
 	UCoherentUIGTWidget_TriggerJSEvent_Params params;
 	params.Name = Name;
-	params.eventData = eventData;
+	params.EventData = EventData;
 
 	UObject::ProcessEvent(fn, &params);
 }

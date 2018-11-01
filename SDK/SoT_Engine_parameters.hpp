@@ -8239,6 +8239,12 @@ struct UFFTWaterComponent_SetAmbientColour_Params
 	struct FLinearColor                                AmbientColour;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
+// Function Engine.FFTWaterExtendedPlaneComponent.SetMurkyRegion
+struct UFFTWaterExtendedPlaneComponent_SetMurkyRegion_Params
+{
+	struct FMurkyRegion                                MurkyRegion;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
 // Function Engine.BillboardComponent.SetUV
 struct UBillboardComponent_SetUV_Params
 {

@@ -20,7 +20,7 @@ enum class ERefChangeFadPhase : uint8_t
 	NoFading                       = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	ETwoPlayerSplitScreenType__Horizontal = 3
+	ETextJustify__Left             = 3
 };
 
 

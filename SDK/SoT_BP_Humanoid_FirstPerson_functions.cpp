@@ -5577,53 +5577,40 @@ void UBP_Humanoid_FirstPerson_C::AnimNotify_FaunaAddedToCrate()
 }
 
 
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_DespawnBothOars
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_HideBothOars
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Humanoid_FirstPerson_C::AnimNotify_DespawnBothOars()
+void UBP_Humanoid_FirstPerson_C::AnimNotify_HideBothOars()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_DespawnBothOars");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_HideBothOars");
 
-	UBP_Humanoid_FirstPerson_C_AnimNotify_DespawnBothOars_Params params;
+	UBP_Humanoid_FirstPerson_C_AnimNotify_HideBothOars_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_SpawnRightOar
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_ShowLeftOar
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Humanoid_FirstPerson_C::AnimNotify_SpawnRightOar()
+void UBP_Humanoid_FirstPerson_C::AnimNotify_ShowLeftOar()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_SpawnRightOar");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_ShowLeftOar");
 
-	UBP_Humanoid_FirstPerson_C_AnimNotify_SpawnRightOar_Params params;
+	UBP_Humanoid_FirstPerson_C_AnimNotify_ShowLeftOar_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_SpawnLeftOar
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_ShowRightOar
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Humanoid_FirstPerson_C::AnimNotify_SpawnLeftOar()
+void UBP_Humanoid_FirstPerson_C::AnimNotify_ShowRightOar()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_SpawnLeftOar");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_ShowRightOar");
 
-	UBP_Humanoid_FirstPerson_C_AnimNotify_SpawnLeftOar_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_DeSpawnOars
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_FirstPerson_C::AnimNotify_DeSpawnOars()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_DeSpawnOars");
-
-	UBP_Humanoid_FirstPerson_C_AnimNotify_DeSpawnOars_Params params;
+	UBP_Humanoid_FirstPerson_C_AnimNotify_ShowRightOar_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

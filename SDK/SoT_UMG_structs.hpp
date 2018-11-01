@@ -28,7 +28,8 @@ enum class ESlateVisibility : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	ESlateVisibility__SelfHitTestInvisible = 3,
-	None01                         = 4
+	None01                         = 4,
+	MSKI_Auto                      = 5
 };
 
 
@@ -61,7 +62,7 @@ enum class EWidgetDesignFlags : uint8_t
 {
 	EWidgetDesignFlags__None       = 0,
 	None                           = 1,
-	EUMGSequencePlayMode__Forward  = 2
+	EGameplayTagMatchType__Explicit = 2
 };
 
 
@@ -81,7 +82,7 @@ enum class EUMGSequencePlayMode : uint8_t
 {
 	EUMGSequencePlayMode__Forward  = 0,
 	None                           = 1,
-	EBindingKind__Function         = 2
+	EWidgetDesignFlags__None       = 2
 };
 
 
@@ -98,7 +99,7 @@ enum class EWidgetBlendMode : uint8_t
 {
 	EWidgetBlendMode__Opaque       = 0,
 	None                           = 1,
-	EWidgetSpace__World            = 2
+	EGameplayContainerMatchType__Any = 2
 };
 
 

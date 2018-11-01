@@ -54,7 +54,7 @@ public:
 
 	void UpdateWholeDataModelFromStruct(class UStructProperty* Arg);
 	void UpdateWholeDataModelFromObject(class UObject* Model);
-	void TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* eventData);
+	void TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* EventData);
 	void SynchronizeModels();
 	void ShowPaintRects(bool show);
 	void SetClickThroughAlphaThreshold(float Threshold);
@@ -410,7 +410,7 @@ public:
 
 	void UpdateWholeDataModelFromStruct(class UStructProperty* Arg);
 	void UpdateWholeDataModelFromObject(class UObject* Model);
-	void TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* eventData);
+	void TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* EventData);
 	void SynchronizeModels();
 	void ShowPaintRects(bool show);
 	void SetClickThroughAlphaThreshold(float Threshold);

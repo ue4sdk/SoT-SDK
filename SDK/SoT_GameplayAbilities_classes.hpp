@@ -175,7 +175,7 @@ public:
 	TArray<struct FActiveGameplayEffectHandle> K2_ApplyGameplayEffectSpecToTarget(const struct FGameplayEffectSpecHandle& EffectSpecHandle, const struct FGameplayAbilityTargetDataHandle& TargetData);
 	struct FActiveGameplayEffectHandle K2_ApplyGameplayEffectSpecToOwner(const struct FGameplayEffectSpecHandle& EffectSpecHandle);
 	void K2_AddGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayEffectContextHandle& Context, bool bRemoveOnAbilityEnd);
-	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& eventData);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
 	void K2_ActivateAbility();
 	class USkeletalMeshComponent* GetOwningComponentFromActorInfo();
 	class AActor* GetOwningActorFromActorInfo();

@@ -24,7 +24,7 @@ enum class EFoliageScaling : uint8_t
 	IntProperty                    = 2,
 	EFoliageScaling__LockYZ        = 3,
 	None01                         = 4,
-	EProgressBarFillType__LeftToRight = 5
+	ETestArea__None                = 5
 };
 
 
@@ -53,7 +53,7 @@ enum class ESimulationOverlap : uint8_t
 {
 	ESimulationOverlap__CollisionOverlap = 0,
 	None                           = 1,
-	ESlateBrushImageType__NoImage  = 2
+	ETwoPlayerSplitScreenType__Horizontal = 2
 };
 
 

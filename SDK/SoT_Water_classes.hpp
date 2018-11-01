@@ -74,8 +74,10 @@ public:
 	}
 
 
+	void SetExtendedPlaneComponent(class UFFTWaterExtendedPlaneComponent* InFFTWaterComponent);
 	void SetComponent(class UFFTWaterComponent* InFFTWaterComponent);
 	void SetActor(class AAthenaFFTWater* InFFTWaterActor);
+	class UFFTWaterExtendedPlaneComponent* GetExtendedPlaneComponent();
 	class UFFTWaterComponent* GetComponent();
 	class AAthenaFFTWater* GetActor();
 };
@@ -123,15 +125,16 @@ public:
 
 
 // Class Water.FFTWaterService
-// 0x0078 (0x0508 - 0x0490)
+// 0x0080 (0x0510 - 0x0490)
 class AFFTWaterService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
 	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x04A0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x04A8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x04B0(0x0050) MISSED OFFSET
-	double                                             ReplicatedServerCreationTime;                             // 0x0500(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                   // 0x04B0(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x04B8(0x0050) MISSED OFFSET
+	double                                             ReplicatedServerCreationTime;                             // 0x0508(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -142,6 +145,7 @@ public:
 
 	void OnRep_FFTWaterComponent();
 	void OnRep_FFTWaterActor();
+	void OnRep_ExtendedPlaneComponent();
 };
 
 
@@ -217,11 +221,11 @@ public:
 
 
 // Class Water.FFTWaterPerformanceCountService
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0518 - 0x0510)
 class AFFTWaterPerformanceCountService : public AFFTWaterService
 {
 public:
-	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0508(0x0008)
+	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0510(0x0008)
 
 	static UClass* StaticClass()
 	{
@@ -236,12 +240,12 @@ public:
 
 
 // Class Water.FFTWaterServiceFixedWaterHeight
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0518 - 0x0510)
 class AFFTWaterServiceFixedWaterHeight : public AFFTWaterService
 {
 public:
-	float                                              RequiredWaterHeight;                                      // 0x0508(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x050C(0x0004) MISSED OFFSET
+	float                                              RequiredWaterHeight;                                      // 0x0510(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0514(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

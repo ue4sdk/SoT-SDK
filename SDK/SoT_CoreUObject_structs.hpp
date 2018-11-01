@@ -29,7 +29,7 @@ enum class ERangeBoundTypes : uint8_t
 {
 	ERangeBoundTypes__Exclusive    = 0,
 	None                           = 1,
-	EMoveComponentAction__Move     = 2
+	ERotatorQuantization__ByteComponents = 2
 };
 
 
@@ -72,7 +72,7 @@ enum class EUnit : uint8_t
 	None12                         = 33,
 	None13                         = 34,
 	None14                         = 35,
-	_Game_DataAssets_Catalog_Offers_GoldHoarderOffers_OpenBeta_Rank09_Offer_CatchAll_Chapters_Rank09_000 = 36
+	_Game_Textures_Props_Tools_tls_shovel_01_c_di = 36
 };
 
 
@@ -124,7 +124,8 @@ enum class EPixelFormat : uint8_t
 	PF_BC7                         = 28,
 	None14                         = 29,
 	PF_R32G32_SINT                 = 30,
-	None15                         = 31
+	None15                         = 31,
+	Color                          = 32
 };
 
 
@@ -143,7 +144,7 @@ enum class ELogTimes : uint8_t
 {
 	ELogTimes__None                = 0,
 	None                           = 1,
-	ESearchDir__FromStart          = 2
+	EIPGTestEnum__RANDOM           = 2
 };
 
 

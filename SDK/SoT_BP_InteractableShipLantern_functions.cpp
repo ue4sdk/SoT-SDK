@@ -51,6 +51,19 @@ void ABP_InteractableShipLantern_C::LightStateChanged()
 }
 
 
+// Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.FlameStateChanged
+// (Event, Public, BlueprintEvent)
+
+void ABP_InteractableShipLantern_C::FlameStateChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.FlameStateChanged");
+
+	ABP_InteractableShipLantern_C_FlameStateChanged_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ExecuteUbergraph_BP_InteractableShipLantern
 // ()
 // Parameters:

@@ -44,6 +44,23 @@ public:
 };
 
 
+// Class AthenaEngine.NestedWorldRootDataAsset
+// 0x0020 (0x0048 - 0x0028)
+class UNestedWorldRootDataAsset : public UDataAsset
+{
+public:
+	TArray<TAssetPtr<class UWorld>>                    WorldRoots;                                               // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.NestedWorldRootDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaEngine.StringToAssetClassMap
 // 0x0028 (0x0050 - 0x0028)
 class UStringToAssetClassMap : public UDataAsset

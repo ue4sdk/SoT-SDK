@@ -30,7 +30,7 @@ struct UCoherentUIGTBaseComponent_UpdateWholeDataModelFromObject_Params
 struct UCoherentUIGTBaseComponent_TriggerJSEvent_Params
 {
 	class FString                                      Name;                                                     // (Parm, ZeroConstructor)
-	class UCoherentUIGTJSEvent*                        eventData;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCoherentUIGTJSEvent*                        EventData;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SynchronizeModels
@@ -422,7 +422,7 @@ struct UCoherentUIGTWidget_UpdateWholeDataModelFromObject_Params
 struct UCoherentUIGTWidget_TriggerJSEvent_Params
 {
 	class FString                                      Name;                                                     // (Parm, ZeroConstructor)
-	class UCoherentUIGTJSEvent*                        eventData;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCoherentUIGTJSEvent*                        EventData;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CoherentUIGTPlugin.CoherentUIGTWidget.SynchronizeModels

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HullDamage.BP_HullDamage_C
-// 0x0094 (0x0674 - 0x05E0)
+// 0x0090 (0x0670 - 0x05E0)
 class ABP_HullDamage_C : public AHullDamage
 {
 public:
@@ -35,7 +35,6 @@ public:
 	float                                              TEST_PenetrationThreshold;                                // 0x0644(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AShip*                                       ParentShip;                                               // 0x0648(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	struct FWwiseEmitter                               CannonballHitEmitter;                                     // 0x0650(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	int                                                TEST_HitLevel;                                            // 0x0670(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -47,7 +46,7 @@ public:
 	void Apply_Hit(const struct FVector& HitPosition, const struct FVector& HitNormal, float HitStrength, bool Has_Decal, class UDecalComponent** Decal);
 	void PlayHitSFX(const struct FVector& HitLocation, float HitStrenght);
 	void Apply_Visual_Hit(const struct FVector& HitPosition, const struct FVector& HitNormal, float HitStrength, bool HasDecal, class UDecalComponent** Decal);
-	void Process_Hit(class UClass* DamagerType, const struct FVector& HitPosition, const struct FVector& HitNormal, const struct FVector& HitVelocity, int NumDamageZones);
+	void Process_Hit(class UClass* DamagerType, const struct FVector& HitPosition, const struct FVector& HitNormal, const struct FVector& HitVelocity, int NumDamageZones, int LevelOfDamage);
 	void Scale_Hit_Strength_and_Get_Decal_Flag(const struct FVector& Hit_Normal, const struct FVector& Hit_Velocity, float Hit_Strength, float* Strength, bool* HasDecal);
 	void Get_Random_Deferred_Decal(class UMaterialInterface** Decal_Material);
 	void Get_Random_Persistent_Decal(class UTexture2D** Decal_Texture);

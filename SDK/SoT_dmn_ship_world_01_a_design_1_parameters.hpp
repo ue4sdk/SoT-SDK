@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function dmn_ship_world_01_a_design_1.dmn_ship_world_01_a_design_C.ReceiveBeginPlay
+struct Admn_ship_world_01_a_design_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function dmn_ship_world_01_a_design_1.dmn_ship_world_01_a_design_C.ExecuteUbergraph_dmn_ship_world_01_a_design
+struct Admn_ship_world_01_a_design_C_ExecuteUbergraph_dmn_ship_world_01_a_design_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

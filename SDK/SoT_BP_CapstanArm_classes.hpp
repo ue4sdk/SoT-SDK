@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CapstanArm.BP_CapstanArm_C
-// 0x0010 (0x05F8 - 0x05E8)
+// 0x0010 (0x0618 - 0x0608)
 class ABP_CapstanArm_C : public ACapstanArm
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             LookAtPos;                                                // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0608(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             LookAtPos;                                                // 0x0610(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

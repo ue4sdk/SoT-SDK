@@ -98,6 +98,25 @@ class AWatercraft* UWatercraftBlueprintFunctionLibrary::STATIC_SpawnWatercraft(c
 }
 
 
+// Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AAthenaCharacter*        AthenaCharacter                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWatercraftBlueprintFunctionLibrary::STATIC_IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft");
+
+	UWatercraftBlueprintFunctionLibrary_IsCharacterOnWatercraft_Params params;
+	params.AthenaCharacter = AthenaCharacter;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 }
 
 #ifdef _MSC_VER

@@ -19,8 +19,7 @@ namespace SDK
 enum class EThreePlayerSplitScreenType : uint8_t
 {
 	EThreePlayerSplitScreenType__FavorTop = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

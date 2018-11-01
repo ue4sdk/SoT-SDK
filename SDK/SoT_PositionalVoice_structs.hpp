@@ -22,8 +22,7 @@ enum class EVoiceChatState : uint8_t
 {
 	EVoiceChatState__Silent        = 0,
 	None                           = 1,
-	EVoiceChatState__EVoiceChatState_MAX = 2,
-	ETinySharkActiveState__TrackingTarget = 3
+	EVoiceChatState__EVoiceChatState_MAX = 2
 };
 
 

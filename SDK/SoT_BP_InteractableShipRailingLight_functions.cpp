@@ -51,6 +51,19 @@ void ABP_InteractableShipRailingLight_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.FlameStateChanged
+// (Event, Public, BlueprintEvent)
+
+void ABP_InteractableShipRailingLight_C::FlameStateChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.FlameStateChanged");
+
+	ABP_InteractableShipRailingLight_C_FlameStateChanged_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ExecuteUbergraph_BP_InteractableShipRailingLight
 // ()
 // Parameters:

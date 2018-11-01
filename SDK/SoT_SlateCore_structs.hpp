@@ -23,7 +23,7 @@ enum class EFontHinting : uint8_t
 	IntProperty                    = 2,
 	EFontHinting__None             = 3,
 	None01                         = 4,
-	ETestArea__None                = 5
+	EFoliageScaling__Uniform       = 5
 };
 
 
@@ -110,7 +110,7 @@ enum class EButtonPressMethod : uint8_t
 	EButtonPressMethod__DownAndUp  = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EButtonTouchMethod__DownAndUp  = 3
+	EControllerHand__Left          = 3
 };
 
 
@@ -156,7 +156,7 @@ enum class ESlateBrushMirrorType : uint8_t
 	ESlateBrushMirrorType__NoMirror = 0,
 	None                           = 1,
 	ESlateBrushMirrorType__ESlateBrushMirrorType_MAX = 2,
-	ESlateBrushDrawType__NoDrawType = 3
+	ESlateColorStylingMode__UseColor_Specified = 3
 };
 
 
@@ -176,7 +176,7 @@ enum class ESlateBrushDrawType : uint8_t
 	ESlateBrushDrawType__NoDrawType = 0,
 	None                           = 1,
 	ESlateBrushDrawType__ESlateBrushDrawType_MAX = 2,
-	ESlateColorStylingMode__UseColor_Specified = 3
+	ESelectionMode__None           = 3
 };
 
 
@@ -185,7 +185,7 @@ enum class ECheckBoxState : uint8_t
 {
 	ECheckBoxState__Unchecked      = 0,
 	None                           = 1,
-	Orient_Horizontal              = 2
+	ESlateBrushImageType__NoImage  = 2
 };
 
 

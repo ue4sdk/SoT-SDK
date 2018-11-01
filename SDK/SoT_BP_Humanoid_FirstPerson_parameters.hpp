@@ -2154,23 +2154,18 @@ struct UBP_Humanoid_FirstPerson_C_AnimNotify_FaunaAddedToCrate_Params
 {
 };
 
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_DespawnBothOars
-struct UBP_Humanoid_FirstPerson_C_AnimNotify_DespawnBothOars_Params
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_HideBothOars
+struct UBP_Humanoid_FirstPerson_C_AnimNotify_HideBothOars_Params
 {
 };
 
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_SpawnRightOar
-struct UBP_Humanoid_FirstPerson_C_AnimNotify_SpawnRightOar_Params
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_ShowLeftOar
+struct UBP_Humanoid_FirstPerson_C_AnimNotify_ShowLeftOar_Params
 {
 };
 
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_SpawnLeftOar
-struct UBP_Humanoid_FirstPerson_C_AnimNotify_SpawnLeftOar_Params
-{
-};
-
-// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_DeSpawnOars
-struct UBP_Humanoid_FirstPerson_C_AnimNotify_DeSpawnOars_Params
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.AnimNotify_ShowRightOar
+struct UBP_Humanoid_FirstPerson_C_AnimNotify_ShowRightOar_Params
 {
 };
 

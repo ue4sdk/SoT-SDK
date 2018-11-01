@@ -210,32 +210,6 @@ void ABP_Base_Capstan_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 }
 
 
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnBodyMeshLoaded
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Base_Capstan_C::OnBodyMeshLoaded()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.OnBodyMeshLoaded");
-
-	ABP_Base_Capstan_C_OnBodyMeshLoaded_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnArmMeshLoaded
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Base_Capstan_C::OnArmMeshLoaded()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.OnArmMeshLoaded");
-
-	ABP_Base_Capstan_C_OnArmMeshLoaded_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
 // (Event, Public, BlueprintEvent)
 // Parameters:

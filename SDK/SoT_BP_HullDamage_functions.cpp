@@ -90,8 +90,9 @@ void ABP_HullDamage_C::Apply_Visual_Hit(const struct FVector& HitPosition, const
 // struct FVector                 HitNormal                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitVelocity                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumDamageZones                 (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LevelOfDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVector& HitPosition, const struct FVector& HitNormal, const struct FVector& HitVelocity, int NumDamageZones)
+void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVector& HitPosition, const struct FVector& HitNormal, const struct FVector& HitVelocity, int NumDamageZones, int LevelOfDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Process Hit");
 
@@ -101,6 +102,7 @@ void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVect
 	params.HitNormal = HitNormal;
 	params.HitVelocity = HitVelocity;
 	params.NumDamageZones = NumDamageZones;
+	params.LevelOfDamage = LevelOfDamage;
 
 	UObject::ProcessEvent(fn, &params);
 }

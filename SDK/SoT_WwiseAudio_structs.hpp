@@ -21,7 +21,8 @@ enum class EWwiseAsyncIOPriorityDisplay : uint8_t
 {
 	EWwiseAsyncIOPriorityDisplay__Low = 0,
 	None                           = 1,
-	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 2
+	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 2,
+	EWwiseEventDurationType__OneShot = 3
 };
 
 
@@ -57,7 +58,7 @@ enum class EWwiseEventDurationType : uint8_t
 	EWwiseEventDurationType__OneShot = 0,
 	None                           = 1,
 	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 2,
-	EWwiseAsyncIOPriorityDisplay__Low = 3
+	EMovieCaptureType__AVI         = 3
 };
 
 

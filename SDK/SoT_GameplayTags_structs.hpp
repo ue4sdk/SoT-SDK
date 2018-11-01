@@ -22,7 +22,8 @@ enum class EGameplayTagQueryExprType : uint8_t
 	EGameplayTagQueryExprType__Undefined = 0,
 	None                           = 1,
 	EGameplayTagQueryExprType__AnyExprMatch = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

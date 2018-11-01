@@ -23,8 +23,7 @@ enum class EOarState : uint8_t
 	EOarState__Idle                = 0,
 	None                           = 1,
 	EOarState__Braking             = 2,
-	None01                         = 3,
-	EKrakenDespawnReason__Invalid  = 4
+	None01                         = 3
 };
 
 
@@ -32,8 +31,7 @@ enum class EOarState : uint8_t
 enum class EOarIdentifier : uint8_t
 {
 	EOarIdentifier__Left           = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -41,6 +39,17 @@ enum class EOarIdentifier : uint8_t
 enum class EWatercraftDespawnReason : uint8_t
 {
 	EWatercraftDespawnReason__Unknown = 0,
+	None                           = 1,
+	EWatercraftDespawnReason__WorldEnding = 2,
+	None01                         = 3,
+	EOarState__Idle                = 4
+};
+
+
+// Enum Watercrafts.ERowboatActionTelemetry
+enum class ERowboatActionTelemetry : uint8_t
+{
+	ERowboatActionTelemetry__None  = 0,
 	None                           = 1,
 	EOarInputState__Inactive       = 2
 };
@@ -51,7 +60,7 @@ enum class EOarInputState : uint8_t
 {
 	EOarInputState__Inactive       = 0,
 	None                           = 1,
-	EGeyserState__Dormant          = 2
+	EKrakenDynamicsStateEvent__Damage = 2
 };
 
 
@@ -101,26 +110,37 @@ struct FRowboatStrainDamageData
 	float                                              MaxWorldEdgeDamageFrequencyInSeconds;                     // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
-// ScriptStruct Watercrafts.BaseWatercraftTelemetryEvent
-// 0x0010
-struct FBaseWatercraftTelemetryEvent
+// ScriptStruct Watercrafts.RowboatAudioAggregateTickFunction
+// 0x0018 (0x0060 - 0x0048)
+struct FRowboatAudioAggregateTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
+};
+
+// ScriptStruct Watercrafts.RowboatMountStateTelemetryEvent
+// 0x0014
+struct FRowboatMountStateTelemetryEvent
 {
 	struct FGuid                                       WatercraftId;                                             // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ERowboatActionTelemetry>               ActionName;                                               // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Watercrafts.WatercraftDespawnTelemetryEvent
-// 0x0010 (0x0020 - 0x0010)
-struct FWatercraftDespawnTelemetryEvent : public FBaseWatercraftTelemetryEvent
+// 0x0020
+struct FWatercraftDespawnTelemetryEvent
 {
+	struct FGuid                                       WatercraftId;                                             // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EWatercraftDespawnReason>              DespawnReason;                                            // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Watercrafts.WatercraftSpawnTelemetryEvent
-// 0x0028 (0x0038 - 0x0010)
-struct FWatercraftSpawnTelemetryEvent : public FBaseWatercraftTelemetryEvent
+// 0x0038
+struct FWatercraftSpawnTelemetryEvent
 {
+	struct FGuid                                       WatercraftId;                                             // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	class FString                                      WatercraftType;                                           // 0x0010(0x0010) (ZeroConstructor)
 	struct FVector                                     Location;                                                 // 0x0020(0x000C) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Forward;                                                  // 0x002C(0x000C) (ZeroConstructor, IsPlainOldData)

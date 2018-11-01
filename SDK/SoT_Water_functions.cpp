@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Water.FFTWaterInterface.SetExtendedPlaneComponent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UFFTWaterExtendedPlaneComponent* InFFTWaterComponent            (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UFFTWaterInterface::SetExtendedPlaneComponent(class UFFTWaterExtendedPlaneComponent* InFFTWaterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.SetExtendedPlaneComponent");
+
+	UFFTWaterInterface_SetExtendedPlaneComponent_Params params;
+	params.InFFTWaterComponent = InFFTWaterComponent;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Water.FFTWaterInterface.SetComponent
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -41,6 +57,23 @@ void UFFTWaterInterface::SetActor(class AAthenaFFTWater* InFFTWaterActor)
 	params.InFFTWaterActor = InFFTWaterActor;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Water.FFTWaterInterface.GetExtendedPlaneComponent
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFFTWaterExtendedPlaneComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UFFTWaterExtendedPlaneComponent* UFFTWaterInterface::GetExtendedPlaneComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.GetExtendedPlaneComponent");
+
+	UFFTWaterInterface_GetExtendedPlaneComponent_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -330,6 +363,19 @@ void AFFTWaterService::OnRep_FFTWaterActor()
 	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterService.OnRep_FFTWaterActor");
 
 	AFFTWaterService_OnRep_FFTWaterActor_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Water.FFTWaterService.OnRep_ExtendedPlaneComponent
+// (Final, Native, Public)
+
+void AFFTWaterService::OnRep_ExtendedPlaneComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterService.OnRep_ExtendedPlaneComponent");
+
+	AFFTWaterService_OnRep_ExtendedPlaneComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

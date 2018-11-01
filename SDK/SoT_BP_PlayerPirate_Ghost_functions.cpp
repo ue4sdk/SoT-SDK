@@ -60,8 +60,9 @@ void ABP_PlayerPirate_Ghost_C::CheckBaseMaterial(class UMaterialInstance* Materi
 // class USkeletalMeshComponent*  Input_Mesh                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Ghost_Fade_Parameter           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           EnableDither                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FirstPersonMesh                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshComponent* Input_Mesh, float Ghost_Fade_Parameter, bool EnableDither)
+void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshComponent* Input_Mesh, float Ghost_Fade_Parameter, bool EnableDither, bool FirstPersonMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.Set Up Ghost Materials");
 
@@ -69,6 +70,7 @@ void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshCompone
 	params.Input_Mesh = Input_Mesh;
 	params.Ghost_Fade_Parameter = Ghost_Fade_Parameter;
 	params.EnableDither = EnableDither;
+	params.FirstPersonMesh = FirstPersonMesh;
 
 	UObject::ProcessEvent(fn, &params);
 }

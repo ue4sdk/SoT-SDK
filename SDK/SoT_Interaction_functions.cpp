@@ -506,6 +506,23 @@ class UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
 }
 
 
+// Function Interaction.InteractableInterface.DoesRequireNotSwimming
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UInteractableInterface::DoesRequireNotSwimming()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireNotSwimming");
+
+	UInteractableInterface_DoesRequireNotSwimming_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Interaction.InteractableInterface.DoesRequireNotBeingAirborne
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:

@@ -91,16 +91,6 @@ struct ABP_Base_Capstan_C_IK_Limb_Stretch_Params
 	float                                              LegStretch;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnBodyMeshLoaded
-struct ABP_Base_Capstan_C_OnBodyMeshLoaded_Params
-{
-};
-
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnArmMeshLoaded
-struct ABP_Base_Capstan_C_OnArmMeshLoaded_Params
-{
-};
-
 // Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
 struct ABP_Base_Capstan_C_OnCapstanDescLoaded_Params
 {

@@ -199,7 +199,7 @@ struct UGameplayAbility_K2_AddGameplayCue_Params
 // Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent
 struct UGameplayAbility_K2_ActivateAbilityFromEvent_Params
 {
-	struct FGameplayEventData                          eventData;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FGameplayEventData                          EventData;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function GameplayAbilities.GameplayAbility.K2_ActivateAbility

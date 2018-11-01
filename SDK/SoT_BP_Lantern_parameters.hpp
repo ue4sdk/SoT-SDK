@@ -74,6 +74,11 @@ struct ABP_Lantern_C_PostMeshChangedBPEvent_Params
 {
 };
 
+// Function BP_Lantern.BP_Lantern_C.ReceiveFlameChange
+struct ABP_Lantern_C_ReceiveFlameChange_Params
+{
+};
+
 // Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern
 struct ABP_Lantern_C_ExecuteUbergraph_BP_Lantern_Params
 {

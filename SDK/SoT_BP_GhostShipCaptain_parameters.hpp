@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_GhostShipCaptain.BP_GhostShipCaptain_C.UserConstructionScript
+struct ABP_GhostShipCaptain_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

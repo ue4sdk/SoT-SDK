@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Water.FFTWaterInterface.SetExtendedPlaneComponent
+struct UFFTWaterInterface_SetExtendedPlaneComponent_Params
+{
+	class UFFTWaterExtendedPlaneComponent*             InFFTWaterComponent;                                      // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // Function Water.FFTWaterInterface.SetComponent
 struct UFFTWaterInterface_SetComponent_Params
 {
@@ -24,6 +30,12 @@ struct UFFTWaterInterface_SetComponent_Params
 struct UFFTWaterInterface_SetActor_Params
 {
 	class AAthenaFFTWater*                             InFFTWaterActor;                                          // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Water.FFTWaterInterface.GetExtendedPlaneComponent
+struct UFFTWaterInterface_GetExtendedPlaneComponent_Params
+{
+	class UFFTWaterExtendedPlaneComponent*             ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Water.FFTWaterInterface.GetComponent
@@ -129,6 +141,11 @@ struct AFFTWaterService_OnRep_FFTWaterComponent_Params
 
 // Function Water.FFTWaterService.OnRep_FFTWaterActor
 struct AFFTWaterService_OnRep_FFTWaterActor_Params
+{
+};
+
+// Function Water.FFTWaterService.OnRep_ExtendedPlaneComponent
+struct AFFTWaterService_OnRep_ExtendedPlaneComponent_Params
 {
 };
 

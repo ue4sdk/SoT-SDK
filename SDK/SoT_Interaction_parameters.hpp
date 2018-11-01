@@ -192,6 +192,12 @@ struct UInteractableInterface_GetActionRulesComponent_Params
 	class UActionRulesComponent*                       ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function Interaction.InteractableInterface.DoesRequireNotSwimming
+struct UInteractableInterface_DoesRequireNotSwimming_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Interaction.InteractableInterface.DoesRequireNotBeingAirborne
 struct UInteractableInterface_DoesRequireNotBeingAirborne_Params
 {

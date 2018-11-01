@@ -30,7 +30,8 @@ public:
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0111(0x0003) MISSED OFFSET
 	bool                                               RequiresFacingFront;                                      // 0x0114(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               RequiresNotAirborne;                                      // 0x0115(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x0116(0x0002) MISSED OFFSET
+	bool                                               RequiresNotSwimming;                                      // 0x0116(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x1];                                       // 0x0117(0x0001) MISSED OFFSET
 	class UInteractableArea*                           InteractableArea;                                         // 0x0118(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TEnumAsByte<EInteractableState>                    CurrentInteractionState;                                  // 0x0120(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
@@ -141,6 +142,7 @@ public:
 	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
 	void GetActorsToIgnoreDuringOcclusionChecker(TArray<class AActor*>* ActorsToIgnore);
 	class UActionRulesComponent* GetActionRulesComponent();
+	bool DoesRequireNotSwimming();
 	bool DoesRequireNotBeingAirborne();
 	bool DoesRequireFacingFront();
 	bool CanInteractWithNotificationInputId(class AActor* InInteractor, class UClass* NotificationInputId);
@@ -238,28 +240,12 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 	class UObject*                                     FocusedInteractable;                                      // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UObject*                                     InteractedObject;                                         // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04A8(0x0010) MISSED OFFSET
+	class UClass*                                      InteractNotificationType;                                 // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockInteractorActor");
-		return ptr;
-	}
-
-};
-
-
-// Class Interaction.TestActorWithInteractableComponent
-// 0x0010 (0x04A0 - 0x0490)
-class ATestActorWithInteractableComponent : public AActor
-{
-public:
-	class USceneComponent*                             SceneRootComponent;                                       // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UInteractableComponent*                      InteractableComponent;                                    // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.TestActorWithInteractableComponent");
 		return ptr;
 	}
 

@@ -22,7 +22,8 @@ enum class ENiagaraDataType : uint8_t
 {
 	ENiagaraDataType__Scalar       = 0,
 	None                           = 1,
-	ENiagaraDataType__ENiagaraDataType_MAX = 2
+	ENiagaraDataType__ENiagaraDataType_MAX = 2,
+	StructProperty                 = 3
 };
 
 
@@ -31,8 +32,7 @@ enum class EUnusedAttributeBehaviour : uint8_t
 {
 	EUnusedAttributeBehaviour__Copy = 0,
 	None                           = 1,
-	EUnusedAttributeBehaviour__EUnusedAttributeBehaviour_MAX = 2,
-	ENiagaraDataType__Scalar       = 3
+	EUnusedAttributeBehaviour__EUnusedAttributeBehaviour_MAX = 2
 };
 
 

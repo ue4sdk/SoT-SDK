@@ -47,6 +47,13 @@ struct UWatercraftBlueprintFunctionLibrary_SpawnWatercraft_Params
 	class AWatercraft*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft
+struct UWatercraftBlueprintFunctionLibrary_IsCharacterOnWatercraft_Params
+{
+	class AAthenaCharacter*                            AthenaCharacter;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

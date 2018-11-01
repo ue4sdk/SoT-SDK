@@ -28,8 +28,7 @@ enum class EMemoryUsageVisualiserInstanceType : uint8_t
 enum class EMemoryGatheringMode : uint8_t
 {
 	EMemoryGatheringMode__Exclusive = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 

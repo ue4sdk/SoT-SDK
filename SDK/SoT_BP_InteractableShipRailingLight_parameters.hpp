@@ -29,6 +29,11 @@ struct ABP_InteractableShipRailingLight_C_ReceiveBeginPlay_Params
 {
 };
 
+// Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.FlameStateChanged
+struct ABP_InteractableShipRailingLight_C_FlameStateChanged_Params
+{
+};
+
 // Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ExecuteUbergraph_BP_InteractableShipRailingLight
 struct ABP_InteractableShipRailingLight_C_ExecuteUbergraph_BP_InteractableShipRailingLight_Params
 {
