@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ enum class EFoliageScaling : uint8_t
 	IntProperty                    = 2,
 	EFoliageScaling__LockYZ        = 3,
 	None01                         = 4,
-	ETestArea__None                = 5
+	LCCT_None                      = 5
 };
 
 
@@ -34,8 +34,7 @@ enum class EFoliageVertexColorMask : uint8_t
 	FOLIAGEVERTEXCOLORMASK_Disabled = 0,
 	None                           = 1,
 	FOLIAGEVERTEXCOLORMASK_Alpha   = 2,
-	None01                         = 3,
-	LCCT_None                      = 4
+	None01                         = 3
 };
 
 

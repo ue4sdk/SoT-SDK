@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,23 +15,21 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Wheel.BP_Wheel_C
-// 0x0139 (0x0971 - 0x0838)
+// 0x0129 (0x0A41 - 0x0918)
 class ABP_Wheel_C : public AWheel
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0838(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UInteractableComponent*                      Interactable;                                             // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               Box;                                                      // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        WheelMountComponent;                                      // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        WheelMeshComponent;                                       // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      Wheel;                                                    // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            WheelBounds;                                              // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FObjectMessagingHandle                      Wheel_Centered;                                           // 0x0878(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Wheel_Movement_Started;                                   // 0x08C0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Wheel_Movement_Stopped;                                   // 0x0908(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FWwiseEmitter                               AudioEmitter;                                             // 0x0950(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               ShipWheelTurning;                                         // 0x0970(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0918(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UInteractableComponent*                      Interactable;                                             // 0x0920(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      Wheel;                                                    // 0x0928(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               PlayerCollision;                                          // 0x0930(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            ProjectileCollision;                                      // 0x0938(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Scene;                                                    // 0x0940(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      Wheel_Centered;                                           // 0x0948(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Wheel_Movement_Started;                                   // 0x0990(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Wheel_Movement_Stopped;                                   // 0x09D8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FWwiseEmitter                               AudioEmitter;                                             // 0x0A20(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               ShipWheelTurning;                                         // 0x0A40(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

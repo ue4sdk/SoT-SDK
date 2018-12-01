@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,7 +74,8 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_None                      = 0,
 	None                           = 1,
 	LCCT_WeightMapUV               = 2,
-	None01                         = 3
+	None01                         = 3,
+	MSKI_Auto                      = 4
 };
 
 

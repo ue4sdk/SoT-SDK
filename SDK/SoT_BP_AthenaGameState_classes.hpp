@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaGameState.BP_AthenaGameState_C
-// 0x0008 (0x08E0 - 0x08D8)
+// 0x0008 (0x0900 - 0x08F8)
 class ABP_AthenaGameState_C : public AAthenaGameState
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x08D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

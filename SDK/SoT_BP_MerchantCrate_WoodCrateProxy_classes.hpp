@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_WoodCrateProxy.BP_MerchantCrate_WoodCrateProxy_C
-// 0x0018 (0x08D0 - 0x08B8)
+// 0x0018 (0x0840 - 0x0828)
 class ABP_MerchantCrate_WoodCrateProxy_C : public AMerchantCrateItemProxy
 {
 public:
-	class UAddOpenContainerActionRuleComponent*        AddOpenContainerActionRule;                               // 0x08B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainer;                                         // 0x08C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x08C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAddOpenContainerActionRuleComponent*        AddOpenContainerActionRule;                               // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

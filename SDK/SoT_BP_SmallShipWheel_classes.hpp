@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipWheel.BP_SmallShipWheel_C
-// 0x0000 (0x0971 - 0x0971)
+// 0x0000 (0x0A41 - 0x0A41)
 class ABP_SmallShipWheel_C : public ABP_Wheel_C
 {
 public:

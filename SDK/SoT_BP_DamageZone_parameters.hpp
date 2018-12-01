@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,6 +18,12 @@ namespace SDK
 struct ABP_DamageZone_C_GetNumExternalHits_Params
 {
 	int                                                NumExternalHits;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_DamageZone.BP_DamageZone_C.GetOrCreateDecalMID
+struct ABP_DamageZone_C_GetOrCreateDecalMID_Params
+{
+	class UMaterialInstanceDynamic*                    DecalMID;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DamageZone.BP_DamageZone_C.Initialise
@@ -99,6 +105,13 @@ struct ABP_DamageZone_C_OnRepairableStateUpdate_Params
 // Function BP_DamageZone.BP_DamageZone_C.OnInitialise
 struct ABP_DamageZone_C_OnInitialise_Params
 {
+};
+
+// Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated
+struct ABP_DamageZone_C_OnDecalMaterialUpdated_Params
+{
+	class UMaterialInterface*                          NewMaterial;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ERepairableState>                      RepairableState;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DamageZone.BP_DamageZone_C.ExecuteUbergraph_BP_DamageZone

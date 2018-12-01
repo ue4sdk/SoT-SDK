@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -4994,9 +4994,9 @@ void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 // class UWidgetAnimation*        InAnimation                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartAtTime                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumLoopsToPlay                 (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EUMGSequencePlayMode> PlayMode                       (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EUMGSequencePlayMode> PLAYMODE                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PlayMode)
+void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PLAYMODE)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimation");
 
@@ -5004,7 +5004,7 @@ void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float Start
 	params.InAnimation = InAnimation;
 	params.StartAtTime = StartAtTime;
 	params.NumLoopsToPlay = NumLoopsToPlay;
-	params.PlayMode = PlayMode;
+	params.PLAYMODE = PLAYMODE;
 
 	UObject::ProcessEvent(fn, &params);
 }

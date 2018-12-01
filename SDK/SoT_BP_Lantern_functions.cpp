@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -168,14 +168,17 @@ void ABP_Lantern_C::PostMeshChangedBPEvent()
 }
 
 
-// Function BP_Lantern.BP_Lantern_C.ReceiveFlameChange
+// Function BP_Lantern.BP_Lantern_C.ReceiveFlameData
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                           WantChangeAnimation            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Lantern_C::ReceiveFlameChange()
+void ABP_Lantern_C::ReceiveFlameData(bool WantChangeAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveFlameChange");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveFlameData");
 
-	ABP_Lantern_C_ReceiveFlameChange_Params params;
+	ABP_Lantern_C_ReceiveFlameData_Params params;
+	params.WantChangeAnimation = WantChangeAnimation;
 
 	UObject::ProcessEvent(fn, &params);
 }

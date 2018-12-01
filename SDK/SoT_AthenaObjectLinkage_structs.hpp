@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,8 @@ enum class EAddLinkResult : uint8_t
 	EAddLinkResult__Success_Set    = 0,
 	None                           = 1,
 	EAddLinkResult__Failed_CoincidentEndpointIds = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -32,8 +33,7 @@ enum class EAddEndpointResult : uint8_t
 	EAddEndpointResult__Success    = 0,
 	None                           = 1,
 	EAddEndpointResult__Failed_DoesntImplementEndpointInterface = 2,
-	None01                         = 3,
-	EWatercraftDespawnReason__Unknown = 4
+	None01                         = 3
 };
 
 

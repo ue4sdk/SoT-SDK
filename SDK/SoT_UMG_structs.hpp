@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,10 +9,10 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_SlateCore_classes.hpp"
-#include "SoT_MovieSceneTracks_classes.hpp"
-#include "SoT_MovieScene_classes.hpp"
 #include "SoT_Slate_classes.hpp"
+#include "SoT_SlateCore_classes.hpp"
+#include "SoT_MovieScene_classes.hpp"
+#include "SoT_MovieSceneTracks_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
 
 namespace SDK
@@ -28,8 +28,7 @@ enum class ESlateVisibility : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	ESlateVisibility__SelfHitTestInvisible = 3,
-	None01                         = 4,
-	MSKI_Auto                      = 5
+	None01                         = 4
 };
 
 
@@ -41,11 +40,8 @@ enum class EDragPivot : uint8_t
 	IntProperty                    = 2,
 	EDragPivot__CenterLeft         = 3,
 	None01                         = 4,
-	NameProperty                   = 5,
-	EDragPivot__BottomCenter       = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9
+	EDragPivot__BottomCenter       = 5,
+	None02                         = 6
 };
 
 
@@ -62,7 +58,7 @@ enum class EWidgetDesignFlags : uint8_t
 {
 	EWidgetDesignFlags__None       = 0,
 	None                           = 1,
-	EGameplayTagMatchType__Explicit = 2
+	ETeamAttitude__Friendly        = 2
 };
 
 
@@ -72,8 +68,7 @@ enum class EDesignPreviewSizeMode : uint8_t
 	EDesignPreviewSizeMode__FillScreen = 0,
 	None                           = 1,
 	EDesignPreviewSizeMode__DesiredOnScreen = 2,
-	None01                         = 3,
-	RMT_None                       = 4
+	None01                         = 3
 };
 
 
@@ -99,7 +94,7 @@ enum class EWidgetBlendMode : uint8_t
 {
 	EWidgetBlendMode__Opaque       = 0,
 	None                           = 1,
-	EGameplayContainerMatchType__Any = 2
+	EGameplayTagMatchType__Explicit = 2
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,11 +23,8 @@ enum class ETouchIndex : uint8_t
 	IntProperty                    = 2,
 	ETouchIndex__Touch5            = 3,
 	None01                         = 4,
-	NameProperty                   = 5,
-	ETouchIndex__Touch9            = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9
+	ETouchIndex__Touch9            = 5,
+	None02                         = 6
 };
 
 
@@ -39,7 +36,7 @@ enum class ETouchType : uint8_t
 	IntProperty                    = 2,
 	ETouchType__NumTypes           = 3,
 	None01                         = 4,
-	EProgressBarFillType__LeftToRight = 5
+	EFontHinting__Default          = 5
 };
 
 

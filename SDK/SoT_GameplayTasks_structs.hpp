@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,8 @@ enum class EGameplayTaskState : uint8_t
 	EGameplayTaskState__Uninitialized = 0,
 	None                           = 1,
 	EGameplayTaskState__Finished   = 2,
-	None01                         = 3
+	None01                         = 3,
+	EGameplayTaskRunResult__Error  = 4
 };
 
 

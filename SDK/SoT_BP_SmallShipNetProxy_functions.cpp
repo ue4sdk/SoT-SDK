@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,24 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Colour on All Materials
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_SmallShipNetProxy_C::Set_Colour_on_All_Materials(const struct FName& ParameterName, const struct FLinearColor& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Colour on All Materials");
+
+	ABP_SmallShipNetProxy_C_Set_Colour_on_All_Materials_Params params;
+	params.ParameterName = ParameterName;
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Value on All Materials
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -33,14 +51,14 @@ void ABP_SmallShipNetProxy_C::Set_Value_on_All_Materials(const struct FName& Var
 // Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Apply Bits to Lanterns
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// unsigned char                  byte                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Bits                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SmallShipNetProxy_C::Apply_Bits_to_Lanterns(unsigned char byte)
+void ABP_SmallShipNetProxy_C::Apply_Bits_to_Lanterns(int Bits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Apply Bits to Lanterns");
 
 	ABP_SmallShipNetProxy_C_Apply_Bits_to_Lanterns_Params params;
-	params.byte = byte;
+	params.Bits = Bits;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -88,9 +106,9 @@ void ABP_SmallShipNetProxy_C::ReceiveBeginPlay()
 // Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnLanternStateChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// unsigned char                  LanternStateBits               (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LanternStateBits               (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SmallShipNetProxy_C::OnLanternStateChanged(unsigned char LanternStateBits)
+void ABP_SmallShipNetProxy_C::OnLanternStateChanged(int LanternStateBits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnLanternStateChanged");
 

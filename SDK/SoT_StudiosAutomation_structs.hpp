@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,8 @@ enum class ETestArea : uint8_t
 	ETestArea__None                = 0,
 	None                           = 1,
 	ETestArea__Art                 = 2,
-	None01                         = 3
+	None01                         = 3,
+	EProgressBarFillType__LeftToRight = 4
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
@@ -24,7 +24,8 @@ enum class EKrakenBehaviourType : uint8_t
 {
 	EKrakenBehaviourType__Idle     = 0,
 	None                           = 1,
-	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2
+	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2,
+	EActionDisplayPriority__Primary = 3
 };
 
 
@@ -35,7 +36,9 @@ enum class EKrakenShipWrappingTentacleState : uint8_t
 	None                           = 1,
 	EKrakenShipWrappingTentacleState__ShakeAttack = 2,
 	None01                         = 3,
-	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 4
+	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 4,
+	CVD_NormalVision               = 5,
+	None02                         = 6
 };
 
 
@@ -47,13 +50,22 @@ enum class EKrakenDynamicsStateEvent : uint8_t
 };
 
 
+// Enum Kraken.EKrakenEQSLockReason
+enum class EKrakenEQSLockReason : uint8_t
+{
+	EKrakenEQSLockReason__Spawning = 0,
+	None                           = 1
+};
+
+
 // Enum Kraken.EKrakenDespawnReason
 enum class EKrakenDespawnReason : uint8_t
 {
 	EKrakenDespawnReason__Invalid  = 0,
 	None                           = 1,
 	EKrakenDespawnReason__Dismissed = 2,
-	None01                         = 3
+	None01                         = 3,
+	EAddEndpointResult__Success    = 4
 };
 
 
@@ -62,7 +74,7 @@ enum class EKrakenState : uint8_t
 {
 	EKrakenState__Spawning         = 0,
 	None                           = 1,
-	ETinySharkDespawnReason__Invalid = 2
+	EAIShipType__Normal            = 2
 };
 
 
@@ -71,7 +83,7 @@ enum class EKrakenTentacleBehaviourDamageActions : uint8_t
 {
 	EKrakenTentacleBehaviourDamageActions__StayActive = 0,
 	None                           = 1,
-	EAIShipType__Normal            = 2
+	ETinySharkDespawnReason__Invalid = 2
 };
 
 
@@ -117,7 +129,7 @@ struct FKrakenShipWrappingTentacleVFXParams
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingTentacleParams
-// 0x00E8
+// 0x00F0
 struct FKrakenShipWrappingTentacleParams
 {
 	struct FKrakenShipWrappingTentacleAnimationPhaseCollection AnimationStates;                                          // 0x0000(0x0080) (Edit, DisableEditOnInstance)
@@ -125,17 +137,19 @@ struct FKrakenShipWrappingTentacleParams
 	float                                              TimeIntoUnwrappingToEnableInteractables;                  // 0x0084(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TimeIntoWrappingToEnableCollisions;                       // 0x0088(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TimeIntoUnwrappingToDisableCollisions;                    // 0x008C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              HighDetailAnimationStreamingDistance;                     // 0x0090(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
-	struct FKrakenShipWrappingTentacleVFXParams        WrappingOutOfWaterSplashVFX;                              // 0x0098(0x0028) (Edit, DisableEditOnInstance)
-	struct FKrakenShipWrappingTentacleVFXParams        WrappingIntoWaterSplashVFX;                               // 0x00C0(0x0028) (Edit, DisableEditOnInstance)
+	float                                              TimeIntoEnteringShakeAttackToEnableCollisions;            // 0x0090(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeIntoExitingShakeAttackToDisableCollisions;            // 0x0094(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HighDetailAnimationStreamingDistance;                     // 0x0098(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	struct FKrakenShipWrappingTentacleVFXParams        WrappingOutOfWaterSplashVFX;                              // 0x00A0(0x0028) (Edit, DisableEditOnInstance)
+	struct FKrakenShipWrappingTentacleVFXParams        WrappingIntoWaterSplashVFX;                               // 0x00C8(0x0028) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingTentacleAnimationState
 // 0x0010
 struct FKrakenShipWrappingTentacleAnimationState
 {
-	uint32_t                                           EpochId;                                                  // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	uint32_t                                           EpochID;                                                  // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 	TEnumAsByte<EKrakenShipWrappingTentacleState>      State;                                                    // 0x0004(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 	double                                             EndTime;                                                  // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
@@ -160,6 +174,15 @@ struct FKrakenTentacleParams
 	float                                              ChanceOfInactiveToActiveTentacle;                         // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ChanceOfInactiveToActiveTentacleOnDeathOrFlee;            // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Kraken.KrakenWeightedBehaviour
+// 0x0008
+struct FKrakenWeightedBehaviour
+{
+	int                                                Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EKrakenBehaviourType>                  BehaviourType;                                            // 0x0004(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingBehaviourParamsCollection
@@ -191,29 +214,29 @@ struct FKrakenBehaviourParams
 };
 
 // ScriptStruct Kraken.KrakenParams
-// 0x0158
+// 0x0160
 struct FKrakenParams
 {
-	class UClass*                                      KrakenType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      MurkClass;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UGeneratedLocationsDataAsset*                PotentialTentacleSpawnLocations;                          // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWeightedProbabilityRange                   NumberOfTentaclesToSpawn;                                 // 0x0018(0x0020) (Edit, DisableEditOnInstance)
-	TArray<struct FKrakenTentaclesChanceParams>        TentaclesRequiredToDismissKraken;                         // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              TickFrequencyToLookForNewBehaviours;                      // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OperatingAreaRadius;                                      // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinimumOperatingAreaMovementDeltaToInvalidateLocations;   // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RadiusToleranceBeforeOperatingAreaDespawn;                // 0x0054(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FKrakenTentaclesChanceParams>        NumTentacleInstancesToAssignToShip;                       // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              GlobalPlayRateScale;                                      // 0x0068(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 NewTargetTimeout;                                         // 0x006C(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 UnavailableTargetTimeout;                                 // 0x007C(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
-	struct FKrakenTentacleParams                       TentacleParams;                                           // 0x0090(0x0050) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           DismissTimeoutWhenNoTargets;                              // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           DismissTimeoutWithNewTarget;                              // 0x0110(0x0030) (Edit, DisableEditOnInstance)
-	TArray<struct FKrakenBehaviourParams>              Behaviours;                                               // 0x0140(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              DamageAmountToTriggerAudioComponentNotification;          // 0x0150(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0154(0x0004) MISSED OFFSET
+	class UClass*                                      MurkClass;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UGeneratedLocationsDataAsset*                PotentialTentacleSpawnLocations;                          // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRange                   NumberOfTentaclesToSpawn;                                 // 0x0010(0x0020) (Edit, DisableEditOnInstance)
+	TArray<struct FKrakenTentaclesChanceParams>        TentaclesRequiredToDismissKraken;                         // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              TickFrequencyToLookForNewBehaviours;                      // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              OperatingAreaRadius;                                      // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinimumOperatingAreaMovementDeltaToInvalidateLocations;   // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RadiusToleranceBeforeOperatingAreaDespawn;                // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FKrakenTentaclesChanceParams>        NumTentacleInstancesToAssignToShip;                       // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              GlobalPlayRateScale;                                      // 0x0060(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFloatRange                                 NewTargetTimeout;                                         // 0x0064(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFloatRange                                 UnavailableTargetTimeout;                                 // 0x0074(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	struct FKrakenTentacleParams                       TentacleParams;                                           // 0x0088(0x0050) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           DismissTimeoutWhenNoTargets;                              // 0x00D8(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           DismissTimeoutWithNewTarget;                              // 0x0108(0x0030) (Edit, DisableEditOnInstance)
+	TArray<struct FKrakenWeightedBehaviour>            ShipInteractingBehaviourWeights;                          // 0x0138(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FKrakenBehaviourParams>              Behaviours;                                               // 0x0148(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              DamageAmountToTriggerAudioComponentNotification;          // 0x0158(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.KrakenAnimatedTentacleAnimationBoneFrame
@@ -317,12 +340,16 @@ struct FKrakenPlayerGrabbingHoldingStateTransitionChance
 };
 
 // ScriptStruct Kraken.KrakenPlayerGrabbingBehaviourParams
-// 0x0018 (0x00D8 - 0x00C0)
+// 0x0028 (0x00E8 - 0x00C0)
 struct FKrakenPlayerGrabbingBehaviourParams : public FKrakenTentacleBehaviourParams
 {
 	float                                              MinUnsuccessfulTargetTimeout;                             // 0x00C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxUnsuccessfulTargetTimeout;                             // 0x00C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FKrakenPlayerGrabbingHoldingStateTransitionChance> HoldingTransitionChances;                                 // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              MinTargetHoldingTime;                                     // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxTargetHoldingTime;                                     // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TargetThrowingSpeed;                                      // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.KrakenServiceSpawnParams
@@ -340,27 +367,38 @@ struct FKrakenServiceSpawnParams
 	class UEnvQuery*                                   SpawnLocationQuery;                                       // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct Kraken.KrakenServiceShipParams
+// 0x0020
+struct FKrakenServiceShipParams
+{
+	struct FName                                       Feature;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              ValidShipTypes;                                           // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UKrakenParamsDataAsset*                      KrakenParams;                                             // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct Kraken.KrakenServiceParams
-// 0x0090
+// 0x00A0
 struct FKrakenServiceParams
 {
-	int                                                MaxNumberOfKrakenInstances;                               // 0x0000(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UClass*                                      KrakenType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FKrakenServiceSpawnParams                   SpawnParams;                                              // 0x0008(0x0080) (Edit, DisableEditOnInstance)
-	class UKrakenParamsDataAsset*                      KrakenParams;                                             // 0x0088(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UKrakenParamsDataAsset*                      DefaultKrakenParams;                                      // 0x0088(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FKrakenServiceShipParams>            KrakenParams;                                             // 0x0090(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Kraken.KrakenShipHittingBehaviourImpactParams
-// 0x0090
+// 0x00A0
 struct FKrakenShipHittingBehaviourImpactParams
 {
-	struct FTransform                                  TentacleTransform;                                        // 0x0000(0x0030) (Edit, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     ImpactLocation;                                           // 0x0030(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     ImpactForce;                                              // 0x003C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     DamageLocation;                                           // 0x0048(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
-	struct FWeightedProbabilityRangeOfRanges           NumZonesToDamage;                                         // 0x0058(0x0030) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+	int                                                Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0004(0x000C) MISSED OFFSET
+	struct FTransform                                  TentacleTransform;                                        // 0x0010(0x0030) (Edit, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ImpactLocation;                                           // 0x0040(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ImpactForce;                                              // 0x004C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     DamageLocation;                                           // 0x0058(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           NumZonesToDamage;                                         // 0x0068(0x0030) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.KrakenShipHittingBehaviourParams

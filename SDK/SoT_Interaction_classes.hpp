@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,21 +20,20 @@ class UInteractableComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
-	unsigned char                                      ProxyForActorInteraction : 1;                             // 0x00E0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x00E1(0x0003) MISSED OFFSET
-	struct FName                                       FeatureFlag;                                              // 0x00E4(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     BoxExtent;                                                // 0x00EC(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     BoxOrigin;                                                // 0x00F8(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    BoxRotation;                                              // 0x0104(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MayBeGrouped : 1;                                         // 0x0110(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0111(0x0003) MISSED OFFSET
-	bool                                               RequiresFacingFront;                                      // 0x0114(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               RequiresNotAirborne;                                      // 0x0115(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               RequiresNotSwimming;                                      // 0x0116(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x1];                                       // 0x0117(0x0001) MISSED OFFSET
+	struct FName                                       FeatureFlag;                                              // 0x00E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     BoxExtent;                                                // 0x00E8(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     BoxOrigin;                                                // 0x00F4(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    BoxRotation;                                              // 0x0100(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      MayBeGrouped : 1;                                         // 0x010C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ProxyForActorInteraction : 1;                             // 0x010C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x010D(0x0003) MISSED OFFSET
+	bool                                               RequiresFacingFront;                                      // 0x0110(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               RequiresNotAirborne;                                      // 0x0111(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               RequiresNotSwimming;                                      // 0x0112(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x5];                                       // 0x0113(0x0005) MISSED OFFSET
 	class UInteractableArea*                           InteractableArea;                                         // 0x0118(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TEnumAsByte<EInteractableState>                    CurrentInteractionState;                                  // 0x0120(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

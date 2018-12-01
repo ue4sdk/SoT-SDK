@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1861,7 +1861,7 @@ struct UUserWidget_PlayAnimation_Params
 	class UWidgetAnimation*                            InAnimation;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              StartAtTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                NumLoopsToPlay;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EUMGSequencePlayMode>                  PlayMode;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EUMGSequencePlayMode>                  PLAYMODE;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.UserWidget.PauseAnimation

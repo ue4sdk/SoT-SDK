@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -351,6 +351,37 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterPlaneComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Water.WaterVolumeInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWaterVolumeInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterVolumeInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class Water.MockWaterVolumeComponent
+// 0x0010 (0x00E8 - 0x00D8)
+class UMockWaterVolumeComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterVolumeComponent");
 		return ptr;
 	}
 

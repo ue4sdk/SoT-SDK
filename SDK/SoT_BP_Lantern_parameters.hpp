@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,9 +74,10 @@ struct ABP_Lantern_C_PostMeshChangedBPEvent_Params
 {
 };
 
-// Function BP_Lantern.BP_Lantern_C.ReceiveFlameChange
-struct ABP_Lantern_C_ReceiveFlameChange_Params
+// Function BP_Lantern.BP_Lantern_C.ReceiveFlameData
+struct ABP_Lantern_C_ReceiveFlameData_Params
 {
+	bool                                               WantChangeAnimation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern

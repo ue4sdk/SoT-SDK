@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,7 +82,8 @@ public:
 class UTestWindInterface : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0028(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	TArray<TScriptInterface<class UWindZoneInterface>> WindZones;                                                // 0x0050(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

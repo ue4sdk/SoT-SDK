@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ struct FEventExitedSurfaceMaterialStatusZone
 // 0x0010
 struct FEventEnteredSurfaceMaterialStatusZone
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+	TScriptInterface<class USurfaceMaterialStatusZoneInterface> EnteredZone;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 }

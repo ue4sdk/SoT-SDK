@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,6 +91,12 @@ struct UAthenaCheatManager_UnlockAllEntitlements_Params
 // Function AthenaCheat.AthenaCheatManager.UnlockAllEmblemsAndAchievements
 struct UAthenaCheatManager_UnlockAllEmblemsAndAchievements_Params
 {
+};
+
+// Function AthenaCheat.AthenaCheatManager.TutorialAction
+struct UAthenaCheatManager_TutorialAction_Params
+{
+	class FString                                      ActionTypeString;                                         // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.TriggerRewardNotification
@@ -406,12 +412,14 @@ struct UAthenaCheatManager_SpawnTinySharkAtLocation_Params
 	float                                              X;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Y;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Z;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                PartIndex;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaCheat.AthenaCheatManager.SpawnTinySharkAtCurrentLocation
 struct UAthenaCheatManager_SpawnTinySharkAtCurrentLocation_Params
 {
 	int                                                ControllerParamIndex;                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                PartIndex;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaCheat.AthenaCheatManager.SpawnStrongholdKey
@@ -439,12 +447,23 @@ struct UAthenaCheatManager_SpawnSkeletonAtNearestAISpawnPoint_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.SpawnShipOfType
+struct UAthenaCheatManager_SpawnShipOfType_Params
+{
+	float                                              SpawnLocationX;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              SpawnLocationY;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              SpawnLocationZ;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              SpawnYaw;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      TypeString;                                               // (Parm, ZeroConstructor)
+};
+
 // Function AthenaCheat.AthenaCheatManager.SpawnShipInFrontOfNearestAIInteractable
 struct UAthenaCheatManager_SpawnShipInFrontOfNearestAIInteractable_Params
 {
 	float                                              XProportion;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              YProportion;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Yaw;                                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      TypeString;                                               // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.SpawnShipFromDesc
@@ -519,11 +538,6 @@ struct UAthenaCheatManager_SpawnKrakenAtCurrentLocation_Params
 {
 };
 
-// Function AthenaCheat.AthenaCheatManager.SpawnKraken
-struct UAthenaCheatManager_SpawnKraken_Params
-{
-};
-
 // Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocationWithDormancy
 struct UAthenaCheatManager_SpawnGeyserAtPlayerLocationWithDormancy_Params
 {
@@ -570,6 +584,12 @@ struct UAthenaCheatManager_SpawnBountyReward_Params
 // Function AthenaCheat.AthenaCheatManager.SpawnBarrelGroup
 struct UAthenaCheatManager_SpawnBarrelGroup_Params
 {
+};
+
+// Function AthenaCheat.AthenaCheatManager.SpawnAndEquipDebugWieldable
+struct UAthenaCheatManager_SpawnAndEquipDebugWieldable_Params
+{
+	class FString                                      DebugWieldableTypeString;                                 // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.SpawnAINoTrigger
@@ -643,6 +663,11 @@ struct UAthenaCheatManager_SinkAllAIShips_Params
 
 // Function AthenaCheat.AthenaCheatManager.ShowRandomCrewMemberGamerCard
 struct UAthenaCheatManager_ShowRandomCrewMemberGamerCard_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.ShowAllWelds
+struct UAthenaCheatManager_ShowAllWelds_Params
 {
 };
 
@@ -724,6 +749,11 @@ struct UAthenaCheatManager_SetUnattenuatedChatMixingMethodToUseWwise_Params
 
 // Function AthenaCheat.AthenaCheatManager.SetUnattenuatedChatMixingMethodToUsePlatform
 struct UAthenaCheatManager_SetUnattenuatedChatMixingMethodToUsePlatform_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetTinySharkToOneHealth
+struct UAthenaCheatManager_SetTinySharkToOneHealth_Params
 {
 };
 
@@ -1079,6 +1109,11 @@ struct UAthenaCheatManager_LaunchPlayer_Params
 	float                                              Angle;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.KrakenSetTentaclesToOneHealth
+struct UAthenaCheatManager_KrakenSetTentaclesToOneHealth_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.KrakenAnimatedTentacleThrowPlayer
 struct UAthenaCheatManager_KrakenAnimatedTentacleThrowPlayer_Params
 {
@@ -1308,6 +1343,11 @@ struct UAthenaCheatManager_EnableBeaconOnAllMermaids_Params
 	int                                                Enable;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.EnableAIBehaviour
+struct UAthenaCheatManager_EnableAIBehaviour_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.DrawVideprinter
 struct UAthenaCheatManager_DrawVideprinter_Params
 {
@@ -1413,6 +1453,11 @@ struct UAthenaCheatManager_DisplayDrunkenness_Params
 
 // Function AthenaCheat.AthenaCheatManager.DisableCinematicCamera
 struct UAthenaCheatManager_DisableCinematicCamera_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.DisableAIBehaviour
+struct UAthenaCheatManager_DisableAIBehaviour_Params
 {
 };
 
@@ -1591,6 +1636,11 @@ struct UAthenaCheatManager_CapsizeShip_Params
 
 // Function AthenaCheat.AthenaCheatManager.CancelVoyage
 struct UAthenaCheatManager_CancelVoyage_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.CancelEmergentVoyages
+struct UAthenaCheatManager_CancelEmergentVoyages_Params
 {
 };
 

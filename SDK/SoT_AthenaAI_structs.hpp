@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,9 +9,9 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -37,7 +37,7 @@ enum class EAISpawnLocationSearchResult : uint8_t
 	None                           = 1,
 	AISpawnLocationSearchResult__Cancelled = 2,
 	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	ERadialInventoryType__None     = 4
 };
 
 
@@ -56,7 +56,7 @@ enum class EBountySpawnerAudioState : uint8_t
 {
 	EBountySpawnerAudioState__None = 0,
 	None                           = 1,
-	EBountySpawnerType__Default    = 2
+	EBountyTargetRank__Captain     = 2
 };
 
 
@@ -65,7 +65,7 @@ enum class EBountySpawnerType : uint8_t
 {
 	EBountySpawnerType__Default    = 0,
 	None                           = 1,
-	EBountyTargetRank__Captain     = 2
+	ECanAddItemQueryResult__Success = 2
 };
 
 
@@ -91,7 +91,7 @@ enum class EAITargetWeaponFiringArcResult : uint8_t
 {
 	LeftOfArc                      = 0,
 	None                           = 1,
-	EBountySpawnerAudioState__None = 2
+	EOarIdentifier__Left           = 2
 };
 
 
@@ -101,7 +101,7 @@ enum class EAIThreatLevel : uint8_t
 	EAIThreatLevel__NoDanger       = 0,
 	None                           = 1,
 	EAIThreatLevel__EAIThreatLevel_MAX = 2,
-	EKrakenBehaviourType__Idle     = 3
+	EItemType__Weapon              = 3
 };
 
 
@@ -137,9 +137,7 @@ enum class EBlackboardValueComparisonType : uint8_t
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
 	EBlackboardValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EFloatValueComparisonType__NearlyEqual = 5
+	None01                         = 3
 };
 
 
@@ -149,7 +147,8 @@ enum class EFloatValueComparisonType : uint8_t
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
 	EFloatValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3
+	None01                         = 3,
+	EBlackboardValueComparisonType__NearlyEqual = 4
 };
 
 
@@ -201,7 +200,7 @@ enum class ETinySharkDespawnReason : uint8_t
 {
 	ETinySharkDespawnReason__Invalid = 0,
 	None                           = 1,
-	EOarIdentifier__Left           = 2
+	EKrakenDynamicsStateEvent__Damage = 2
 };
 
 
@@ -211,7 +210,7 @@ enum class ETinySharkActiveState : uint8_t
 	ETinySharkActiveState__TrackingTarget = 0,
 	None                           = 1,
 	ETinySharkActiveState__ETinySharkActiveState_MAX = 2,
-	EMaxConcurrentResolutionRule__PreventNew = 3
+	EAIThreatLevel__NoDanger       = 3
 };
 
 
@@ -221,7 +220,8 @@ enum class ETinySharkState : uint8_t
 	ETinySharkState__Inactive      = 0,
 	None                           = 1,
 	ETinySharkState__Despawning    = 2,
-	None01                         = 3
+	None01                         = 3,
+	EWatercraftDespawnReason__Unknown = 4
 };
 
 
@@ -231,8 +231,7 @@ enum class EAISpawnRequestResult : uint8_t
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
 	AISpawnRequestResult__FailedNoValidPos = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -784,7 +783,7 @@ struct FAIEncounterSpecification
 	class ULoadoutAsset*                               Loadout;                                                  // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UAthenaAIFormDataAsset*                      Form;                                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      AIClass;                                                  // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AIClass;                                                  // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	class UAIPartsCategory*                            PartsCategory;                                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                TeamColorIndex;                                           // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
@@ -989,8 +988,8 @@ struct FEventOwnedPawnStartedDying
 struct FEventVisualAppearanceSelected
 {
 	class UAIPartsCategory*                            PartsCategory;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                ColorTextureIndex;                                        // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	int                                                PartsIndexToUse;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                ColorTextureIndex;                                        // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.EventAILoadoutSelected

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,7 +72,7 @@ enum class EUnit : uint8_t
 	None12                         = 33,
 	None13                         = 34,
 	None14                         = 35,
-	_Game_Textures_Props_Tools_tls_shovel_01_c_di = 36
+	_Game_Textures_Props_Weapons_wpn_sniper_rifle_pol_01_a_no = 36
 };
 
 
@@ -86,7 +86,8 @@ enum class EMouseCursor : uint8_t
 	EMouseCursor__Crosshairs       = 4,
 	None02                         = 5,
 	EMouseCursor__SlashedCircle    = 6,
-	None03                         = 7
+	None03                         = 7,
+	TextProperty                   = 8
 };
 
 

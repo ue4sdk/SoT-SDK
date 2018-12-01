@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,8 +20,7 @@ enum class EJumping : uint8_t
 	EJumping__NewEnumerator0       = 0,
 	None                           = 1,
 	EJumping__NewEnumerator4       = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 

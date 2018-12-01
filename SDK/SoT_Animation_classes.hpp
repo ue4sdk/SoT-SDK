@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,21 +13,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
-
-// Class Animation.AnimationDataStoreId
-// 0x0000 (0x0028 - 0x0028)
-class UAnimationDataStoreId : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataStoreId");
-		return ptr;
-	}
-
-};
-
 
 // Class Animation.AnimationData
 // 0x0000 (0x0028 - 0x0028)
@@ -95,6 +80,21 @@ public:
 	class UAnimationData* STATIC_MakeAnimationData(class UClass* Class);
 	struct FAnimDataEntryStructWrapper STATIC_GetAnimDataEntryStructAsStructWrapper(class UAnimationData* AnimationDataObject, class UScriptStruct* TheClass);
 	void STATIC_CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs(class UClass* InClass);
+};
+
+
+// Class Animation.AnimationDataStoreId
+// 0x0000 (0x0028 - 0x0028)
+class UAnimationDataStoreId : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.AnimationDataStoreId");
+		return ptr;
+	}
+
 };
 
 

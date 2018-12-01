@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,15 +109,15 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x0050 (0x03D0 - 0x0380)
+// 0x0050 (0x0420 - 0x03D0)
 class UIpNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      LogPortUnreach : 1;                                       // 0x0380(0x0001) (Config)
-	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0380(0x0001) (Config)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0381(0x0003) MISSED OFFSET
-	uint32_t                                           MaxPortCountToTry;                                        // 0x0384(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0388(0x0048) MISSED OFFSET
+	unsigned char                                      LogPortUnreach : 1;                                       // 0x03D0(0x0001) (Config)
+	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x03D0(0x0001) (Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x03D1(0x0003) MISSED OFFSET
+	uint32_t                                           MaxPortCountToTry;                                        // 0x03D4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x03D8(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -590,13 +590,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.JoinSessionCallbackProxy
-// 0x0118 (0x0140 - 0x0028)
+// 0x0120 (0x0148 - 0x0028)
 class UJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0xF8];                                      // 0x0048(0x00F8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x100];                                     // 0x0048(0x0100) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -630,14 +630,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineSessionClient
-// 0x0138 (0x0160 - 0x0028)
+// 0x0140 (0x0168 - 0x0028)
 class UOnlineSessionClient : public UOnlineSession
 {
 public:
-	unsigned char                                      UnknownData00[0x130];                                     // 0x0028(0x0130) MISSED OFFSET
-	bool                                               bIsFromInvite;                                            // 0x0158(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               bHandlingDisconnect;                                      // 0x0159(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x015A(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x138];                                     // 0x0028(0x0138) MISSED OFFSET
+	bool                                               bIsFromInvite;                                            // 0x0160(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               bHandlingDisconnect;                                      // 0x0161(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x0162(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

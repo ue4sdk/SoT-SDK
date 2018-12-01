@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,8 +36,7 @@ enum class EPartyReservationResult : uint8_t
 	EPartyReservationResult__ReservationAccepted = 4,
 	None02                         = 5,
 	EPartyReservationResult__ReservationInvalid = 6,
-	None03                         = 7,
-	TextProperty                   = 8
+	None03                         = 7
 };
 
 
@@ -47,8 +46,7 @@ enum class EClientRequestType : uint8_t
 	EClientRequestType__NonePending = 0,
 	None                           = 1,
 	EClientRequestType__ChangeWorldRequest = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -78,10 +76,10 @@ struct FPartyReservation
 };
 
 // ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
-// 0x00D8
+// 0x00E0
 struct FBlueprintSessionResult
 {
-	unsigned char                                      UnknownData00[0xD8];                                      // 0x0000(0x00D8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xE0];                                      // 0x0000(0x00E0) MISSED OFFSET
 };
 
 }

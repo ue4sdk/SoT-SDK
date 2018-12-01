@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,19 +46,6 @@ void ABP_InteractableShipRailingLight_C::ReceiveBeginPlay()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ReceiveBeginPlay");
 
 	ABP_InteractableShipRailingLight_C_ReceiveBeginPlay_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.FlameStateChanged
-// (Event, Public, BlueprintEvent)
-
-void ABP_InteractableShipRailingLight_C::FlameStateChanged()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.FlameStateChanged");
-
-	ABP_InteractableShipRailingLight_C_FlameStateChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

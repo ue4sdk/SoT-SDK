@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -23,7 +23,7 @@ enum class EGameplayEffectGrantedAbilityRemovePolicy : uint8_t
 {
 	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 0,
 	None                           = 1,
-	EGameplayTagEventType__NewOrRemoved = 2
+	EVolcanoState__Dormant         = 2
 };
 
 
@@ -80,8 +80,7 @@ enum class EGameplayEffectStackingType : uint8_t
 {
 	EGameplayEffectStackingType__None = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 3
+	EGameplayAbilityTargetingLocationType__LiteralTransform = 2
 };
 
 
@@ -100,7 +99,7 @@ enum class EGameplayAbilityTargetingLocationType : uint8_t
 {
 	EGameplayAbilityTargetingLocationType__LiteralTransform = 0,
 	None                           = 1,
-	EGameplayEffectStackingType__None = 2
+	EGameplayEffectStackingPeriodPolicy__ResetOnSuccessfulApplication = 2
 };
 
 
@@ -171,7 +170,8 @@ enum class EGameplayAbilityTriggerSource : uint8_t
 enum class EGameplayAbilityReplicationPolicy : uint8_t
 {
 	EGameplayAbilityReplicationPolicy__ReplicateNo = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -189,7 +189,8 @@ enum class EGameplayAbilityInstancingPolicy : uint8_t
 {
 	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
 	None                           = 1,
-	ETargetDataFilterSelf__TDFS_Any = 2
+	IntProperty                    = 2,
+	ETargetDataFilterSelf__TDFS_Any = 3
 };
 
 
@@ -198,7 +199,8 @@ enum class ETargetDataFilterSelf : uint8_t
 {
 	ETargetDataFilterSelf__TDFS_Any = 0,
 	None                           = 1,
-	EAbilityTaskNetSyncType__BothWait = 2
+	IntProperty                    = 2,
+	EAbilityTaskNetSyncType__BothWait = 3
 };
 
 
@@ -207,7 +209,8 @@ enum class EAbilityTaskNetSyncType : uint8_t
 {
 	EAbilityTaskNetSyncType__BothWait = 0,
 	None                           = 1,
-	EGameplayCuePayloadType__EffectContext = 2
+	IntProperty                    = 2,
+	EGameplayCuePayloadType__EffectContext = 3
 };
 
 
@@ -239,7 +242,7 @@ enum class ETargetAbilitySelfSelection : uint8_t
 {
 	ETargetAbilitySelfSelection__TASS_Permit = 0,
 	None                           = 1,
-	GTInputLineTrace_Single        = 2
+	ResetState                     = 2
 };
 
 

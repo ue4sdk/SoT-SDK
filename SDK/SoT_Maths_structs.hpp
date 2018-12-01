@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ enum class EPlaneLineIntersectionType : uint8_t
 {
 	EPlaneLineIntersectionType__IntersectionWithinLineSegment = 0,
 	None                           = 1,
-	EInputHandlerResult__Handled   = 2
+	EInteractableState__Interactable = 2
 };
 
 

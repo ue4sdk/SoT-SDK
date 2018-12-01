@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,7 +58,8 @@ enum class EIPGSetMode : uint8_t
 	EIPGSetMode__RANDOM            = 0,
 	None                           = 1,
 	EIPGSetMode__NONE              = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -69,11 +70,8 @@ enum class EIPGBlendType : uint8_t
 	None                           = 1,
 	EIPGBlendType__POSNEG          = 2,
 	None01                         = 3,
-	NameProperty                   = 4,
-	EIPGBlendType__ONOFF_BIAS      = 5,
-	None02                         = 6,
-	StructProperty                 = 7,
-	None03                         = 8
+	EIPGBlendType__ONOFF_BIAS      = 4,
+	None02                         = 5
 };
 
 
@@ -83,7 +81,10 @@ enum class EPirateBakeFlags : uint8_t
 	EPirateBakeFlags__None         = 0,
 	None                           = 1,
 	EPirateBakeFlags__StripTopLOD  = 2,
-	None01                         = 3
+	None01                         = 3,
+	EPirateBakeFlags__EPirateBakeFlags_MAX = 4,
+	MenuPlacement_BelowAnchor      = 5,
+	None02                         = 6
 };
 
 
@@ -206,7 +207,8 @@ struct FTextureSwitchParameters
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	bool                                               bAsync;                                                   // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	bool                                               bHighPriority;                                            // 0x0009(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
 	int                                                Seed;                                                     // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EIPGGender>                            SelectedGender;                                           // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EIPGEthnicity>                         SelectedEthnicity;                                        // 0x0011(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

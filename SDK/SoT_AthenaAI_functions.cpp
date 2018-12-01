@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -180,6 +180,45 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 
 	AAIEncounterService_RegisterLoadedEncounter_Params params;
 	params.Encounter = Encounter;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  ItemDesc                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AItemInfo*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AItemInfo* UAIManagerBlueprintFunctionLibrary::STATIC_SpawnItemFromAI(class APawn* Pawn, class UClass* ItemDesc)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI");
+
+	UAIManagerBlueprintFunctionLibrary_SpawnItemFromAI_Params params;
+	params.Pawn = Pawn;
+	params.ItemDesc = ItemDesc;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// class FString                  DisplayName                    (Parm, ZeroConstructor)
+
+void UAIManagerBlueprintFunctionLibrary::STATIC_AddNameplateToAI(class AActor* Actor, const class FString& DisplayName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI");
+
+	UAIManagerBlueprintFunctionLibrary_AddNameplateToAI_Params params;
+	params.Actor = Actor;
+	params.DisplayName = DisplayName;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1328,15 +1367,17 @@ TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
 // Parameters:
 // class AShip*                   InTrackedShip                  (Parm, ZeroConstructor, IsPlainOldData)
 // int                            OverrideControllerParamIndex   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            PartIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex)
+bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex, int PartIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithShip");
 
 	ATinySharkService_RequestTinySharkWithShip_Params params;
 	params.InTrackedShip = InTrackedShip;
 	params.OverrideControllerParamIndex = OverrideControllerParamIndex;
+	params.PartIndex = PartIndex;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1348,14 +1389,16 @@ bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector                 SpawnLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            PartIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation)
+bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation, int PartIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation");
 
 	ATinySharkService_RequestTinySharkWithLocation_Params params;
 	params.SpawnLocation = SpawnLocation;
+	params.PartIndex = PartIndex;
 
 	UObject::ProcessEvent(fn, &params);
 

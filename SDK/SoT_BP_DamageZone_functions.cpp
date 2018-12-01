@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,6 +27,24 @@ void ABP_DamageZone_C::GetNumExternalHits(int* NumExternalHits)
 
 	if (NumExternalHits != nullptr)
 		*NumExternalHits = params.NumExternalHits;
+}
+
+
+// Function BP_DamageZone.BP_DamageZone_C.GetOrCreateDecalMID
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic* DecalMID                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DamageZone_C::GetOrCreateDecalMID(class UMaterialInstanceDynamic** DecalMID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.GetOrCreateDecalMID");
+
+	ABP_DamageZone_C_GetOrCreateDecalMID_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (DecalMID != nullptr)
+		*DecalMID = params.DecalMID;
 }
 
 
@@ -240,6 +258,24 @@ void ABP_DamageZone_C::OnInitialise()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnInitialise");
 
 	ABP_DamageZone_C_OnInitialise_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMaterialInterface*      NewMaterial                    (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERepairableState>  RepairableState                (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DamageZone_C::OnDecalMaterialUpdated(class UMaterialInterface* NewMaterial, TEnumAsByte<ERepairableState> RepairableState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated");
+
+	ABP_DamageZone_C_OnDecalMaterialUpdated_Params params;
+	params.NewMaterial = NewMaterial;
+	params.RepairableState = RepairableState;
 
 	UObject::ProcessEvent(fn, &params);
 }

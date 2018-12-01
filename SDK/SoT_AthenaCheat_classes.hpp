@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,6 +44,7 @@ public:
 	void Vomit();
 	void UnlockAllEntitlements(int TrueFalse);
 	void UnlockAllEmblemsAndAchievements();
+	void TutorialAction(const class FString& ActionTypeString);
 	void TriggerRewardNotification(struct FName* Identifier);
 	void TriggerLandmarkReaction(int ActionType);
 	void TriggerFogManagerAtNearestIsland();
@@ -98,13 +99,14 @@ public:
 	void SpawnWatercraft(const class FString& WatercraftClassString);
 	void SpawnTreasureChestOfType(class FString* ChestTypeString);
 	void SpawnTreasureArtifact(const class FString& TypeString);
-	void SpawnTinySharkAtLocation(float X, float Y, float Z);
-	void SpawnTinySharkAtCurrentLocation(int ControllerParamIndex);
+	void SpawnTinySharkAtLocation(float X, float Y, float Z, int PartIndex);
+	void SpawnTinySharkAtCurrentLocation(int ControllerParamIndex, int PartIndex);
 	void SpawnStrongholdKey();
 	void SpawnSmallShipAtIsland(const class FString& IslandName);
 	void SpawnSmallShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnSkeletonAtNearestAISpawnPoint();
-	void SpawnShipInFrontOfNearestAIInteractable(float XProportion, float YProportion, float Yaw);
+	void SpawnShipOfType(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw, const class FString& TypeString);
+	void SpawnShipInFrontOfNearestAIInteractable(float XProportion, float YProportion, float Yaw, const class FString& TypeString);
 	void SpawnShipFromDesc(const class FString& InShipDescAssetString, float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnShipAtIsland(const class FString& IslandName);
 	void SpawnShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
@@ -116,7 +118,6 @@ public:
 	void SpawnMerchantCargo(const class FString& MerchantCargoTypeString);
 	void SpawnKrakenAtCurrentLocationWithNumTentacles(uint32_t NumTentacles);
 	void SpawnKrakenAtCurrentLocation();
-	void SpawnKraken();
 	void SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy);
 	void SpawnGeyserAtPlayerLocation();
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
@@ -125,6 +126,7 @@ public:
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);
 	void SpawnBarrelGroup();
+	void SpawnAndEquipDebugWieldable(const class FString& DebugWieldableTypeString);
 	void SpawnAINoTrigger(const class FString& AIDescString);
 	void SpawnAIAtNearestAISpawnPoint(const class FString& AIDescString);
 	void SpawnAIAtLocationDelayed(const class FString& AITypeString, float LocationX, float LocationY, float LocationZ, float Yaw, float Delay);
@@ -137,6 +139,7 @@ public:
 	void SinkAllBarrels();
 	void SinkAllAIShips();
 	void ShowRandomCrewMemberGamerCard();
+	void ShowAllWelds();
 	void ShowAllItemsInRadialInventory();
 	void ShowAllianceStatus(const class FString& CrewId);
 	void ShipwrecksSpawnOne(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ);
@@ -151,6 +154,7 @@ public:
 	void SetVoiceChatEndpointWwise();
 	void SetUnattenuatedChatMixingMethodToUseWwise();
 	void SetUnattenuatedChatMixingMethodToUsePlatform();
+	void SetTinySharkToOneHealth();
 	void SetTimeScalar(float TimeScalar);
 	void SetTimeHoursAndMinutes(int Hours, int Minutes);
 	void SetTime(int Hours);
@@ -213,6 +217,7 @@ public:
 	void LocallyUnBreakLeg();
 	void LeaveAlliance(const class FString& CrewId);
 	void LaunchPlayer(float Velocity, float Angle);
+	void KrakenSetTentaclesToOneHealth();
 	void KrakenAnimatedTentacleThrowPlayer();
 	void KrakenAnimatedTentacleTakeDamage(float Damage);
 	void KrakenAnimatedTentacleSwallowPlayer();
@@ -254,6 +259,7 @@ public:
 	void EnableHeadphoneMixing(bool Enabled);
 	void EnableCinematicCamera();
 	void EnableBeaconOnAllMermaids(int Enable);
+	void EnableAIBehaviour();
 	void DrawVideprinter(const class FString& Id, bool Active);
 	void DrawTreasureDebug(int Enabled);
 	void DrawTemporaryLandmarkDebug(bool Enabled);
@@ -273,6 +279,7 @@ public:
 	void DisplayFallDamageDebug(int Enable);
 	void DisplayDrunkenness(bool Flag);
 	void DisableCinematicCamera();
+	void DisableAIBehaviour();
 	void DestroyShip(const class FString& ShipActorIdConsoleString);
 	void DestroyMyShip();
 	void DestroyKraken();
@@ -304,6 +311,7 @@ public:
 	void CheckLandmarkRelativeToIslandCalculation();
 	void CapsizeShip();
 	void CancelVoyage();
+	void CancelEmergentVoyages();
 	void CancelAllCrewVoyages();
 	void CancelActiveAIShipEncounters();
 	void BreakLeg();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,8 @@ enum class ECoherentUIGTKeys : uint8_t
 	ECoherentUIGTKeys__Slash       = 52,
 	None26                         = 53,
 	ECoherentUIGTKeys__RightBracket = 54,
-	None27                         = 55
+	None27                         = 55,
+	None28                         = 56
 };
 
 
@@ -93,7 +94,7 @@ enum class EGamepadBehaviourOnFocusLost : uint8_t
 {
 	ResetState                     = 0,
 	None                           = 1,
-	IntProperty                    = 2
+	GTInputLineTrace_Single        = 2
 };
 
 
@@ -129,7 +130,7 @@ enum class ECoherentUIGTSettingsSeverity : uint8_t
 	None                           = 1,
 	ECoherentUIGTSettingsSeverity__AssertFailure = 2,
 	None01                         = 3,
-	OnTriggerTeleportServer        = 4
+	NameProperty                   = 4
 };
 
 

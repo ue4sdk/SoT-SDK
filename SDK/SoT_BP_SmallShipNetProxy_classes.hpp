@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,12 +29,13 @@ public:
 	}
 
 
+	void Set_Colour_on_All_Materials(const struct FName& ParameterName, const struct FLinearColor& Value);
 	void Set_Value_on_All_Materials(const struct FName& Variable_Name, float Value);
-	void Apply_Bits_to_Lanterns(unsigned char byte);
+	void Apply_Bits_to_Lanterns(int Bits);
 	void Create_Dynamic_Materials();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void OnLanternStateChanged(unsigned char LanternStateBits);
+	void OnLanternStateChanged(int LanternStateBits);
 	void ExecuteUbergraph_BP_SmallShipNetProxy(int EntryPoint);
 };
 

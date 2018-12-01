@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,19 +46,6 @@ void ABP_Lantern_Rowboat_Front_C::LightStateChanged()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.LightStateChanged");
 
 	ABP_Lantern_Rowboat_Front_C_LightStateChanged_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.FlameStateChanged
-// (Event, Public, BlueprintEvent)
-
-void ABP_Lantern_Rowboat_Front_C::FlameStateChanged()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.FlameStateChanged");
-
-	ABP_Lantern_Rowboat_Front_C_FlameStateChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

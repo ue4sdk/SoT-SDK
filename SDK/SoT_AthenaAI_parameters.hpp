@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,6 +77,21 @@ struct AAIEncounterService_RegisterLoadedForm_Params
 struct AAIEncounterService_RegisterLoadedEncounter_Params
 {
 	TAssetPtr<class UAIEncounterSettings>              Encounter;                                                // (Parm)
+};
+
+// Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI
+struct UAIManagerBlueprintFunctionLibrary_SpawnItemFromAI_Params
+{
+	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ItemDesc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class AItemInfo*                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI
+struct UAIManagerBlueprintFunctionLibrary_AddNameplateToAI_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      DisplayName;                                              // (Parm, ZeroConstructor)
 };
 
 // Function AthenaAI.AIManagerServiceInterface.StartDespawnAI
@@ -513,6 +528,7 @@ struct ATinySharkService_RequestTinySharkWithShip_Params
 {
 	class AShip*                                       InTrackedShip;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                OverrideControllerParamIndex;                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                PartIndex;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -520,6 +536,7 @@ struct ATinySharkService_RequestTinySharkWithShip_Params
 struct ATinySharkService_RequestTinySharkWithLocation_Params
 {
 	struct FVector                                     SpawnLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	int                                                PartIndex;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

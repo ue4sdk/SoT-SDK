@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_FogBank.BP_FogBank_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FogBank_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FogBank.BP_FogBank_C.UserConstructionScript");
+
+	ABP_FogBank_C_UserConstructionScript_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 }
 

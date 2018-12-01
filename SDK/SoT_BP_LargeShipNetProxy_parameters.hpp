@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.Set Colour on All Materials
+struct ABP_LargeShipNetProxy_C_Set_Colour_on_All_Materials_Params
+{
+	struct FName                                       Variable_Name;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.Set Value on All Materials
 struct ABP_LargeShipNetProxy_C_Set_Value_on_All_Materials_Params
 {
@@ -24,7 +31,7 @@ struct ABP_LargeShipNetProxy_C_Set_Value_on_All_Materials_Params
 // Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.Apply Bits to Lanterns
 struct ABP_LargeShipNetProxy_C_Apply_Bits_to_Lanterns_Params
 {
-	unsigned char                                      Lantern_Bits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Lantern_Bits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.Create Dynamic Materials
@@ -45,7 +52,7 @@ struct ABP_LargeShipNetProxy_C_ReceiveBeginPlay_Params
 // Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.OnLanternStateChanged
 struct ABP_LargeShipNetProxy_C_OnLanternStateChanged_Params
 {
-	unsigned char                                      LanternStateBits;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                LanternStateBits;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_LargeShipNetProxy.BP_LargeShipNetProxy_C.ExecuteUbergraph_BP_LargeShipNetProxy

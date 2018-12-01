@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,6 +55,39 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.NestedWorldRootDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaEngine.NetDormancyHelpers
+// 0x0000 (0x0028 - 0x0028)
+class UNetDormancyHelpers : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.NetDormancyHelpers");
+		return ptr;
+	}
+
+
+	void STATIC_SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode);
+	void STATIC_FlushNetDormancy(class AActor* TargetActor);
+};
+
+
+// Class AthenaEngine.ResourceProviderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UResourceProviderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.ResourceProviderInterface");
 		return ptr;
 	}
 

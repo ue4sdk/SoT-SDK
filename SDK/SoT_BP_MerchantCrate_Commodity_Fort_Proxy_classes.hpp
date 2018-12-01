@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_Commodity_Fort_Proxy.BP_MerchantCrate_Commodity_Fort_Proxy_C
-// 0x0008 (0x08C0 - 0x08B8)
-class ABP_MerchantCrate_Commodity_Fort_Proxy_C : public AMerchantCrateItemProxy
+// 0x0008 (0x0838 - 0x0830)
+class ABP_MerchantCrate_Commodity_Fort_Proxy_C : public ABP_MerchantCrate_Commodity_Base_Proxy_C
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x08B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

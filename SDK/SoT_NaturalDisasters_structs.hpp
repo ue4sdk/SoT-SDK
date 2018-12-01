@@ -1,17 +1,17 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Kraken_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_Kraken_classes.hpp"
 
 namespace SDK
 {
@@ -33,8 +33,7 @@ enum class EEarthquakeState : uint8_t
 enum class EGeyserState : uint8_t
 {
 	EGeyserState__Dormant          = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	None                           = 1
 };
 
 
@@ -51,7 +50,7 @@ enum class EVolcanoTargetHitType : uint8_t
 {
 	EVolcanoTargetHitType__OnTarget = 0,
 	None                           = 1,
-	EGameplayEffectAttributeCaptureSource__Source = 2
+	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 2
 };
 
 
@@ -68,8 +67,7 @@ enum class EVolcanoTargetType : uint8_t
 enum class EVolcanoState : uint8_t
 {
 	EVolcanoState__Dormant         = 0,
-	None                           = 1,
-	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 2
+	None                           = 1
 };
 
 

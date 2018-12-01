@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -226,21 +226,20 @@ public:
 	class UCurveFloat*                                 LinearDampingOverTimeWhileBeachedScalarCurve;             // 0x0890(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UCurveFloat*                                 AngularDampingOverTimeWhileBeachedScalarCurve;            // 0x0898(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FRowboatDamageEffectData                    DamageEffectData;                                         // 0x08A0(0x0018) (Edit, DisableEditOnInstance)
-	struct FRowboatStrainDamageData                    StrainDamageData;                                         // 0x08B8(0x001C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x08D4(0x0004) MISSED OFFSET
+	struct FRowboatStrainDamageData                    StrainDamageData;                                         // 0x08B8(0x0020) (Edit, DisableEditOnInstance)
 	TArray<class UChildActorComponent*>                AlwaysEnabledInteractables;                               // 0x08D8(0x0010) (ExportObject, ZeroConstructor)
 	bool                                               IsBeingLaunched;                                          // 0x08E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	bool                                               IsSinking;                                                // 0x08E9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x08EA(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x2];                                       // 0x08EA(0x0002) MISSED OFFSET
 	float                                              MaxPushingAngle;                                          // 0x08EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CurrentStrainAmount;                                      // 0x08F0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	bool                                               IsDocked;                                                 // 0x08F4(0x0001) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECollisionChannel>                     CoverCollisionChannel;                                    // 0x08F5(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2];                                       // 0x08F6(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x2];                                       // 0x08F6(0x0002) MISSED OFFSET
 	float                                              UnderCoverCheckInterval;                                  // 0x08F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              UnderCoverHeight;                                         // 0x08FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FVector>                             RelativeUnderCoverProbeRoots;                             // 0x0900(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData05[0x120];                                     // 0x0910(0x0120) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x120];                                     // 0x0910(0x0120) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

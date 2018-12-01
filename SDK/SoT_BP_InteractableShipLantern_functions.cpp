@@ -1,4 +1,4 @@
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,19 +46,6 @@ void ABP_InteractableShipLantern_C::LightStateChanged()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.LightStateChanged");
 
 	ABP_InteractableShipLantern_C_LightStateChanged_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.FlameStateChanged
-// (Event, Public, BlueprintEvent)
-
-void ABP_InteractableShipLantern_C::FlameStateChanged()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.FlameStateChanged");
-
-	ABP_InteractableShipLantern_C_FlameStateChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

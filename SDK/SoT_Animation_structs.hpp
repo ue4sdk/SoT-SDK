@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,7 @@ enum class ELimbIKSpace : uint8_t
 {
 	ELimbIKSpace__Local            = 0,
 	None                           = 1,
-	EBuoyancyBlend__PrimaryToSecondary = 2
+	EInputHandlerResult__Handled   = 2
 };
 
 

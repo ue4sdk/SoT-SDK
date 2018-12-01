@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.2.6) SDK
+// Sea of Thieves (1.4) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
 {
@@ -67,7 +67,8 @@ enum class EPawnActionEventType : uint8_t
 	EPawnActionEventType__Invalid  = 0,
 	None                           = 1,
 	EPawnActionEventType__FinishedExecution = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -158,7 +159,7 @@ enum class ETeamAttitude : uint8_t
 	ETeamAttitude__Friendly        = 0,
 	None                           = 1,
 	IntProperty                    = 2,
-	EAISenseNotifyType__OnEveryPerception = 3
+	EWidgetBlendMode__Opaque       = 3
 };
 
 
