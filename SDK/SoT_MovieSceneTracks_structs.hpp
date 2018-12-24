@@ -23,7 +23,8 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 	MovieScene3DPathSection_Axis__X = 0,
 	None                           = 1,
 	MovieScene3DPathSection_Axis__NEG_Y = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

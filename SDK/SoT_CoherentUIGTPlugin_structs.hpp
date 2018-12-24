@@ -76,7 +76,16 @@ enum class ECoherentUIGTKeys : uint8_t
 	None26                         = 53,
 	ECoherentUIGTKeys__RightBracket = 54,
 	None27                         = 55,
-	None28                         = 56
+	None28                         = 56,
+	None29                         = 57,
+	None30                         = 58,
+	None31                         = 59,
+	None32                         = 60,
+	None33                         = 61,
+	ByteProperty                   = 62,
+	None34                         = 63,
+	None35                         = 64,
+	None36                         = 65
 };
 
 
@@ -129,8 +138,7 @@ enum class ECoherentUIGTSettingsSeverity : uint8_t
 	ECoherentUIGTSettingsSeverity__Trace = 0,
 	None                           = 1,
 	ECoherentUIGTSettingsSeverity__AssertFailure = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 

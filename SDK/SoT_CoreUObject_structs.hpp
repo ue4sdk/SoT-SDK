@@ -47,32 +47,37 @@ enum class EUnit : uint8_t
 	StructProperty                 = 8,
 	EUnit__MetersPerSecond         = 9,
 	None03                         = 10,
-	TextProperty                   = 11,
-	EUnit__Farenheit               = 12,
-	None04                         = 13,
-	LazyObjectProperty             = 14,
-	EUnit__Grams                   = 15,
-	None05                         = 16,
-	UInt16Property                 = 17,
-	EUnit__Pounds                  = 18,
-	None06                         = 19,
-	Int8Property                   = 20,
-	EUnit__KilogramsForce          = 21,
-	None07                         = 22,
-	Core                           = 23,
-	EUnit__Gigahertz               = 24,
-	None08                         = 25,
-	EUnit__Megabytes               = 26,
-	None09                         = 27,
-	EUnit__Milliseconds            = 28,
-	None10                         = 29,
-	EUnit__Days                    = 30,
-	None11                         = 31,
-	EUnit__EUnit_MAX               = 32,
-	None12                         = 33,
-	None13                         = 34,
-	None14                         = 35,
-	_Game_Textures_Props_Weapons_wpn_sniper_rifle_pol_01_a_no = 36
+	EUnit__Farenheit               = 11,
+	None04                         = 12,
+	LazyObjectProperty             = 13,
+	EUnit__Grams                   = 14,
+	None05                         = 15,
+	UInt16Property                 = 16,
+	EUnit__Pounds                  = 17,
+	None06                         = 18,
+	EUnit__KilogramsForce          = 19,
+	None07                         = 20,
+	Core                           = 21,
+	EUnit__Gigahertz               = 22,
+	None08                         = 23,
+	EUnit__Megabytes               = 24,
+	None09                         = 25,
+	EUnit__Milliseconds            = 26,
+	None10                         = 27,
+	EUnit__Days                    = 28,
+	None11                         = 29,
+	EUnit__EUnit_MAX               = 30,
+	None12                         = 31,
+	None13                         = 32,
+	None14                         = 33,
+	None15                         = 34,
+	Vector                         = 35,
+	None16                         = 36,
+	None17                         = 37,
+	None18                         = 38,
+	None19                         = 39,
+	None20                         = 40,
+	None21                         = 41
 };
 
 
@@ -85,9 +90,10 @@ enum class EMouseCursor : uint8_t
 	None01                         = 3,
 	EMouseCursor__Crosshairs       = 4,
 	None02                         = 5,
-	EMouseCursor__SlashedCircle    = 6,
-	None03                         = 7,
-	TextProperty                   = 8
+	StructProperty                 = 6,
+	EMouseCursor__SlashedCircle    = 7,
+	None03                         = 8,
+	TextProperty                   = 9
 };
 
 
@@ -136,7 +142,7 @@ enum class EAxis : uint8_t
 	EAxis__None                    = 0,
 	None                           = 1,
 	EAxis__EAxis_MAX               = 2,
-	ETextCommit__Default           = 3
+	None01                         = 3
 };
 
 

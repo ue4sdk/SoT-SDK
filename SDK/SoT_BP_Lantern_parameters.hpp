@@ -72,6 +72,7 @@ struct ABP_Lantern_C_TriggerGlow_Params
 // Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent
 struct ABP_Lantern_C_PostMeshChangedBPEvent_Params
 {
+	bool                                               SkipFlameColourTransition;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Lantern.BP_Lantern_C.ReceiveFlameData

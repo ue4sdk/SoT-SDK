@@ -378,14 +378,14 @@ public:
 
 
 // Class AIShips.AIShipService
-// 0x0350 (0x07E0 - 0x0490)
+// 0x0368 (0x07F8 - 0x0490)
 class AAIShipService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	class UAIShipServiceDataAsset*                     Params;                                                   // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x330];                                     // 0x04A0(0x0330) MISSED OFFSET
-	TArray<class UAIShipEncounterDesc*>                BattleEncounters;                                         // 0x07D0(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0490(0x0020) MISSED OFFSET
+	class UAIShipServiceDataAsset*                     Params;                                                   // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x330];                                     // 0x04B8(0x0330) MISSED OFFSET
+	TArray<class UAIShipEncounterDesc*>                BattleEncounters;                                         // 0x07E8(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

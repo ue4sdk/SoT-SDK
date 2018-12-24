@@ -36,7 +36,7 @@ public:
 	class UMergedStaticMeshComponent*                  MergedStaticMesh;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UChildActorComponent*                        BP_SmallShip_StandardHull_Art_Interior_Lower_Deck;        // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMeshComponent*                        shp_small_stairs_01_a;                                    // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        shp_galleon_main_deck_01_a;                               // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_small_main_deck_01_a;                                 // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

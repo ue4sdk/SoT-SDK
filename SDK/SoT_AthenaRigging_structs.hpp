@@ -28,8 +28,9 @@ enum class EInstancedRopeParameterType : uint8_t
 	None02                         = 5,
 	RPT_CatenaryXYDistance         = 6,
 	None03                         = 7,
-	ECannonballIconType__Normal    = 8,
-	None04                         = 9
+	TextProperty                   = 8,
+	ECannonballIconType__Normal    = 9,
+	None04                         = 10
 };
 
 

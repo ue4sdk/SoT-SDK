@@ -21,7 +21,7 @@ enum class EExecutionTarget : uint8_t
 {
 	EExecutionTarget__OldServer    = 0,
 	None                           = 1,
-	EEmitterRelationship__Audio_Remote = 2
+	EActionPredictionType__Predicted = 2
 };
 
 

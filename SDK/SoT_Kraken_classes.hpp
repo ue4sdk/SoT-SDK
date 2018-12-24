@@ -389,7 +389,7 @@ public:
 
 
 // Class Kraken.KrakenService
-// 0x0210 (0x06A0 - 0x0490)
+// 0x0220 (0x06B0 - 0x0490)
 class AKrakenService : public AActor
 {
 public:
@@ -397,7 +397,7 @@ public:
 	struct FKrakenServiceParams                        KrakenServiceParams;                                      // 0x0498(0x00A0) (Transient)
 	unsigned char                                      UnknownData01[0xA0];                                      // 0x0538(0x00A0) MISSED OFFSET
 	class AKraken*                                     Kraken;                                                   // 0x05D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC0];                                      // 0x05E0(0x00C0) MISSED OFFSET
+	unsigned char                                      UnknownData02[0xD0];                                      // 0x05E0(0x00D0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

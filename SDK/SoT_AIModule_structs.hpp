@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -24,7 +24,8 @@ enum class EPathFollowingResult : uint8_t
 	EPathFollowingResult__Success  = 0,
 	None                           = 1,
 	EPathFollowingResult__Skipped  = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -67,8 +68,7 @@ enum class EPawnActionEventType : uint8_t
 	EPawnActionEventType__Invalid  = 0,
 	None                           = 1,
 	EPawnActionEventType__FinishedExecution = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	None01                         = 3
 };
 
 
@@ -89,7 +89,8 @@ enum class EPawnActionAbortState : uint8_t
 	EPawnActionAbortState__NeverStarted = 0,
 	None                           = 1,
 	EPawnActionAbortState__AbortDone = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -98,7 +99,8 @@ enum class EAIOptionFlag : uint8_t
 {
 	EAIOptionFlag__Default         = 0,
 	None                           = 1,
-	EAIOptionFlag__EAIOptionFlag_MAX = 2
+	EAIOptionFlag__EAIOptionFlag_MAX = 2,
+	EBTNodeResult__Succeeded       = 3
 };
 
 
@@ -129,7 +131,7 @@ enum class EPathFollowingStatus : uint8_t
 	EPathFollowingStatus__Idle     = 0,
 	None                           = 1,
 	EPathFollowingStatus__EPathFollowingStatus_MAX = 2,
-	EBTNodeResult__Succeeded       = 3
+	EBTFlowAbortMode__None         = 3
 };
 
 
@@ -139,7 +141,7 @@ enum class EBTFlowAbortMode : uint8_t
 	EBTFlowAbortMode__None         = 0,
 	None                           = 1,
 	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 2,
-	EPathFollowingStatus__Idle     = 3
+	EEnvTraceShape__Line           = 3
 };
 
 
@@ -149,7 +151,7 @@ enum class EBTNodeResult : uint8_t
 	EBTNodeResult__Succeeded       = 0,
 	None                           = 1,
 	EBTNodeResult__EBTNodeResult_MAX = 2,
-	EAIOptionFlag__Default         = 3
+	EPathFollowingStatus__Idle     = 3
 };
 
 
@@ -188,8 +190,7 @@ enum class EBTDecoratorLogic : uint8_t
 	EBTDecoratorLogic__Invalid     = 0,
 	None                           = 1,
 	EBTDecoratorLogic__Not         = 2,
-	None01                         = 3,
-	EAITaskPriority__Lowest        = 4
+	None01                         = 3
 };
 
 
@@ -207,7 +208,7 @@ enum class ETextKeyOperation : uint8_t
 	ETextKeyOperation__Equal       = 0,
 	None                           = 1,
 	ETextKeyOperation__ETextKeyOperation_MAX = 2,
-	EEnvTraceShape__Line           = 3
+	EEnvQueryRunMode__SingleResult = 3
 };
 
 
@@ -285,7 +286,7 @@ enum class EEnvTraceShape : uint8_t
 	EEnvTraceShape__Line           = 0,
 	None                           = 1,
 	EEnvTraceShape__EEnvTraceShape_MAX = 2,
-	EBTFlowAbortMode__None         = 3
+	ETextKeyOperation__Equal       = 3
 };
 
 
@@ -295,7 +296,7 @@ enum class EEnvQueryTrace : uint8_t
 	EEnvQueryTrace__None           = 0,
 	None                           = 1,
 	EEnvQueryTrace__EEnvQueryTrace_MAX = 2,
-	EEnvQueryRunMode__SingleResult = 3
+	EEnvTestScoreEquation__Linear  = 3
 };
 
 
@@ -314,7 +315,7 @@ enum class EEnvQueryRunMode : uint8_t
 	EEnvQueryRunMode__SingleResult = 0,
 	None                           = 1,
 	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 2,
-	ETextKeyOperation__Equal       = 3
+	EEnvQueryTrace__None           = 3
 };
 
 
@@ -350,7 +351,8 @@ enum class EEnvTestWeight : uint8_t
 	EEnvTestWeight__None           = 0,
 	None                           = 1,
 	EEnvTestWeight__Constant       = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -360,7 +362,7 @@ enum class EEnvTestScoreEquation : uint8_t
 	EEnvTestScoreEquation__Linear  = 0,
 	None                           = 1,
 	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 2,
-	EEnvQueryTrace__None           = 3
+	EEnvTestFilterType__Minimum    = 3
 };
 
 
@@ -370,7 +372,7 @@ enum class EEnvTestFilterType : uint8_t
 	EEnvTestFilterType__Minimum    = 0,
 	None                           = 1,
 	EEnvTestFilterType__EEnvTestFilterType_MAX = 2,
-	EEnvTestScoreEquation__Linear  = 3
+	EMovieCaptureType__AVI         = 3
 };
 
 

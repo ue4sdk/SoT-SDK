@@ -101,6 +101,13 @@ struct UInputHandlerFunctionLibrary_MakeCompositeInputHandler_Params
 	class UCompositeInputHandler*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName
+struct UNamedNotificationInputInterface_GetNotificationInputDisplayName_Params
+{
+	class UClass*                                      InputID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 }
 
 #ifdef _MSC_VER

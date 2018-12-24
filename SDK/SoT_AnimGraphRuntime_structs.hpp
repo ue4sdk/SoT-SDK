@@ -35,8 +35,7 @@ enum class EComponentType : uint8_t
 	NameProperty                   = 4,
 	EComponentType__ScaleX         = 5,
 	None02                         = 6,
-	EMPMatchOutcome__None          = 7,
-	None03                         = 8
+	None03                         = 7
 };
 
 

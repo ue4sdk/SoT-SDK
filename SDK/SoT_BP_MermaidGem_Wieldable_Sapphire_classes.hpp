@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidGem_Wieldable_Sapphire.BP_MermaidGem_Wieldable_Sapphire_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0808 - 0x0808)
 class ABP_MermaidGem_Wieldable_Sapphire_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:

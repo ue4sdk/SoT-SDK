@@ -23,7 +23,7 @@ enum class EMovieCaptureType : uint8_t
 	EMovieCaptureType__AVI         = 0,
 	None                           = 1,
 	EMovieCaptureType__EMovieCaptureType_MAX = 2,
-	EEnvTestFilterType__Minimum    = 3
+	EWwiseEventDurationType__OneShot = 3
 };
 
 

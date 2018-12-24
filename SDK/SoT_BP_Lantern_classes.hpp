@@ -55,7 +55,7 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveLightChange();
 	void TriggerGlow();
-	void PostMeshChangedBPEvent();
+	void PostMeshChangedBPEvent(bool SkipFlameColourTransition);
 	void ReceiveFlameData(bool WantChangeAnimation);
 	void ExecuteUbergraph_BP_Lantern(int EntryPoint);
 };

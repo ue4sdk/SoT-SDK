@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Slate_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
-#include "SoT_MovieScene_classes.hpp"
 #include "SoT_MovieSceneTracks_classes.hpp"
+#include "SoT_MovieScene_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
 
 namespace SDK
@@ -40,8 +40,11 @@ enum class EDragPivot : uint8_t
 	IntProperty                    = 2,
 	EDragPivot__CenterLeft         = 3,
 	None01                         = 4,
-	EDragPivot__BottomCenter       = 5,
-	None02                         = 6
+	NameProperty                   = 5,
+	EDragPivot__BottomCenter       = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9
 };
 
 
@@ -102,7 +105,8 @@ enum class EWidgetBlendMode : uint8_t
 enum class EWidgetSpace : uint8_t
 {
 	EWidgetSpace__World            = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 

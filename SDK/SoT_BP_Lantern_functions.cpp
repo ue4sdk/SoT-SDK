@@ -157,12 +157,15 @@ void ABP_Lantern_C::TriggerGlow()
 
 // Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                           SkipFlameColourTransition      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Lantern_C::PostMeshChangedBPEvent()
+void ABP_Lantern_C::PostMeshChangedBPEvent(bool SkipFlameColourTransition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent");
 
 	ABP_Lantern_C_PostMeshChangedBPEvent_Params params;
+	params.SkipFlameColourTransition = SkipFlameColourTransition;
 
 	UObject::ProcessEvent(fn, &params);
 }

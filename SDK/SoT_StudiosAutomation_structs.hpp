@@ -22,7 +22,8 @@ enum class EComparisonMethod : uint8_t
 	EComparisonMethod__Equal_To    = 0,
 	None                           = 1,
 	EComparisonMethod__Greater_Than = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 

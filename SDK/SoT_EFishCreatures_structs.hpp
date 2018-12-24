@@ -23,7 +23,8 @@ enum class EFishCreatures : uint8_t
 	EFishCreatures__NewEnumerator5 = 3,
 	None01                         = 4,
 	NameProperty                   = 5,
-	EFishCreatures__EFishCreatures_MAX = 6
+	EFishCreatures__EFishCreatures_MAX = 6,
+	KrakenAnimatedTentacleState_IdleActive = 7
 };
 
 

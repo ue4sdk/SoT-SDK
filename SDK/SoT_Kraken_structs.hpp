@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -25,7 +25,7 @@ enum class EKrakenBehaviourType : uint8_t
 	EKrakenBehaviourType__Idle     = 0,
 	None                           = 1,
 	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2,
-	EActionDisplayPriority__Primary = 3
+	EItemType__Weapon              = 3
 };
 
 
@@ -36,9 +36,7 @@ enum class EKrakenShipWrappingTentacleState : uint8_t
 	None                           = 1,
 	EKrakenShipWrappingTentacleState__ShakeAttack = 2,
 	None01                         = 3,
-	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 4,
-	CVD_NormalVision               = 5,
-	None02                         = 6
+	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 4
 };
 
 
@@ -64,8 +62,7 @@ enum class EKrakenDespawnReason : uint8_t
 	EKrakenDespawnReason__Invalid  = 0,
 	None                           = 1,
 	EKrakenDespawnReason__Dismissed = 2,
-	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	None01                         = 3
 };
 
 
@@ -83,7 +80,7 @@ enum class EKrakenTentacleBehaviourDamageActions : uint8_t
 {
 	EKrakenTentacleBehaviourDamageActions__StayActive = 0,
 	None                           = 1,
-	ETinySharkDespawnReason__Invalid = 2
+	EOarInputState__Inactive       = 2
 };
 
 
@@ -627,10 +624,11 @@ struct FEventKrakenDespawned
 };
 
 // ScriptStruct Kraken.EventKrakenSpawned
-// 0x0008
+// 0x0018
 struct FEventKrakenSpawned
 {
 	class AShip*                                       PrimaryShipTarget;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       ConfigSpawnId;                                            // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Kraken.EventKrakenShipWrappingTentacleStateChanged
@@ -665,10 +663,11 @@ struct FKrakenDespawnTelemetryEvent
 };
 
 // ScriptStruct Kraken.KrakenSpawnTelemetryEvent
-// 0x0010
+// 0x0020
 struct FKrakenSpawnTelemetryEvent
 {
 	class FString                                      KrakenId;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FGuid                                       ConfigSpawnId;                                            // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 }

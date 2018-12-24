@@ -236,11 +236,6 @@ struct ADebugAIManagerService_SetCharacterNetRelevancy_Params
 	float                                              InCloseByCharactersRadius;                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
-struct UAIFaunaSpawner_SpawnFaunaGroup_Params
-{
-};
-
 // Function AthenaAI.AIPerPlayerSpawner.PlayerDeath
 struct UAIPerPlayerSpawner_PlayerDeath_Params
 {
@@ -374,30 +369,6 @@ struct AAthenaAICharacterController_SetItemSpecificNamedControllerParam_Params
 // Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies
 struct AAthenaAICharacterController_ClearOverridePrioritiseInteractablesBeforeEnemies_Params
 {
-};
-
-// Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed
-struct AAthenaFaunaAIController_LeaderDestroyed_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AthenaAI.AthenaFaunaAIController.GetLeader
-struct AAthenaFaunaAIController_GetLeader_Params
-{
-	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AthenaAI.AthenaFaunaAIController.GetCourage
-struct AAthenaFaunaAIController_GetCourage_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp
-struct AAthenaFaunaAIController_GetAthenaAICharPathFollowingComp_Params
-{
-	class UAthenaAICharacterPathFollowingComponent*    ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings
@@ -549,6 +520,147 @@ struct ATinySharkService_DismissAllTinySharks_Params
 struct ATinySharkService_CanSpawnTinySharkExperience_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.AICreatureCharacter.SetAIStrategy
+struct AAICreatureCharacter_SetAIStrategy_Params
+{
+	class UClass*                                      InStrategy;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy
+struct AAICreatureCharacter_OnRep_CurrentAIStrategy_Params
+{
+	class UClass*                                      OldAIStrategy;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC
+struct AAICreatureCharacter_Multicast_DespawnRPC_Params
+{
+};
+
+// Function AthenaAI.AICreatureCharacter.GetAIStrategy
+struct AAICreatureCharacter_GetAIStrategy_Params
+{
+	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
+struct UAIFaunaSpawner_SpawnFaunaGroup_Params
+{
+};
+
+// Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed
+struct AAthenaFaunaAIController_LeaderDestroyed_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.AthenaFaunaAIController.GetLeader
+struct AAthenaFaunaAIController_GetLeader_Params
+{
+	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.AthenaFaunaAIController.GetCourage
+struct AAthenaFaunaAIController_GetCourage_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp
+struct AAthenaFaunaAIController_GetAthenaAICharPathFollowingComp_Params
+{
+	class UAthenaAICharacterPathFollowingComponent*    ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.TestingSetWaterState
+struct AFauna_TestingSetWaterState_Params
+{
+	TEnumAsByte<EFaunaInWaterState>                    NewInState;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.SetAIStrategy
+struct AFauna_SetAIStrategy_Params
+{
+	class UClass*                                      InStrategy;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.OnRep_TargetTurnAngle
+struct AFauna_OnRep_TargetTurnAngle_Params
+{
+};
+
+// Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim
+struct AFauna_OnRep_IsPlayingStarvingAnim_Params
+{
+};
+
+// Function AthenaAI.Fauna.OnRep_IsCalm
+struct AFauna_OnRep_IsCalm_Params
+{
+};
+
+// Function AthenaAI.Fauna.OnRep_IsAgitated
+struct AFauna_OnRep_IsAgitated_Params
+{
+};
+
+// Function AthenaAI.Fauna.OnRep_InWaterState
+struct AFauna_OnRep_InWaterState_Params
+{
+};
+
+// Function AthenaAI.Fauna.OnRep_CurrentAIStrategy
+struct AFauna_OnRep_CurrentAIStrategy_Params
+{
+	class UClass*                                      OldAIStrategy;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.OnRep_CratedState
+struct AFauna_OnRep_CratedState_Params
+{
+	TEnumAsByte<EFaunaCratedState>                     PreviousCratedState;                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC
+struct AFauna_Multicast_PlayPutInCrateEffectsRPC_Params
+{
+	class AActor*                                      Crate;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.Multicast_JustBeenFedRPC
+struct AFauna_Multicast_JustBeenFedRPC_Params
+{
+	class AActor*                                      FedBy;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.Multicast_HightlightLeader
+struct AFauna_Multicast_HightlightLeader_Params
+{
+	bool                                               bIsLeader;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.Multicast_DespawnRPC
+struct AFauna_Multicast_DespawnRPC_Params
+{
+};
+
+// Function AthenaAI.Fauna.GetAIStrategy
+struct AFauna_GetAIStrategy_Params
+{
+	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed
+struct AFauna_GenerateNewRandomAnimationSeed_Params
+{
+};
+
+// Function AthenaAI.Fauna.ActivateResponseRPC
+struct AFauna_ActivateResponseRPC_Params
+{
+	float                                              InTargetTurnAngle;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

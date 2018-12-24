@@ -7,11 +7,11 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Kraken_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Kraken_classes.hpp"
 
 namespace SDK
 {
@@ -24,8 +24,7 @@ enum class EEarthquakeState : uint8_t
 {
 	EEarthquakeState__Dormant      = 0,
 	None                           = 1,
-	EEarthquakeState__EEarthquakeState_MAX = 2,
-	DefaultRadiusTracker           = 3
+	EEarthquakeState__EEarthquakeState_MAX = 2
 };
 
 
@@ -50,7 +49,7 @@ enum class EVolcanoTargetHitType : uint8_t
 {
 	EVolcanoTargetHitType__OnTarget = 0,
 	None                           = 1,
-	EGameplayEffectGrantedAbilityRemovePolicy__CancelAbilityImmediately = 2
+	ECharacterType__Ghost          = 2
 };
 
 

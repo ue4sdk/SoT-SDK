@@ -52,7 +52,7 @@ enum class EWaterSplashProbeType : uint8_t
 	None                           = 1,
 	EWaterSplashProbeType__Continuous = 2,
 	None01                         = 3,
-	AISpawnLocationSearchResult__Incomplete = 4
+	NM_PreserveSmoothingGroups     = 4
 };
 
 

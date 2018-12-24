@@ -29,6 +29,15 @@ enum class EInputHandlerResult : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AthenaInput.NotificationInputDisplayName
+// 0x0040
+struct FNotificationInputDisplayName
+{
+	class UClass*                                      InputID;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FText                                       Name;                                                     // 0x0008(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+};
+
 // ScriptStruct AthenaInput.IdleTimeTracker
 // 0x0038
 struct FIdleTimeTracker

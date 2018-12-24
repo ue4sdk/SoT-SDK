@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaCheat.AthenaCheatManager
-// 0x0030 (0x00A8 - 0x0078)
+// 0x0038 (0x00B0 - 0x0078)
 class UAthenaCheatManager : public UCheatManager
 {
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      CinematicCameraControllerClass;                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0088(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0088(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -63,6 +63,7 @@ public:
 	void ToggleDisplayCannonAISpawnerZones();
 	void ToggleDebugFlying();
 	void ToggleDeathCamera();
+	void ToggleContestScoreDebug();
 	void ToggleCinematicCamera();
 	void ToggleAttributeOverride();
 	void TestCrashDumpCreationOnRunnableThread();
@@ -123,6 +124,7 @@ public:
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
 	void SpawnFogAtPlayerPosition();
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
+	void SpawnCollectorsChestOfType(class FString* ChestTypeString);
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);
 	void SpawnBarrelGroup();
@@ -159,7 +161,12 @@ public:
 	void SetTimeHoursAndMinutes(int Hours, int Minutes);
 	void SetTime(int Hours);
 	void SetShipYaw(float Yaw);
+	void SetShipWheelFullyRepaired();
+	void SetShipWheelFullyDamaged();
 	void SetShipRoll(float Roll);
+	void SetShipFullyDamaged();
+	void SetShipCapstanFullyRepaired();
+	void SetShipCapstanFullyDamaged();
 	void SetShipBuoyancyBlend(float UnaryBlend);
 	void SetSailLoweredProportions(float Proportion);
 	void SetSailAngles(float Angle);
@@ -173,12 +180,14 @@ public:
 	void SetGrogSecondary(bool InValue);
 	void SetFOV(float InNewFOV);
 	void SetFlameOfFateColour(int InFlameOfFateType);
+	void SetDebugItemSource(const class FString& Source);
 	void SetDebugCameraUseProjectileCollisionChannel(bool bUseProjectileChannel);
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetCapstanPosition(float Position);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
 	void SendStatEvent(const class FString& StatName, uint64_t StatValue);
 	void SendRewardRequestEvent(const class FString& CompanyNameAndRewardIdSeparatedByColon);
+	void SelectTale(const class FString& SourceAssetName);
 	void ScuttleShip();
 	void ScreenFadeStart();
 	void ScreenFadeEnd();

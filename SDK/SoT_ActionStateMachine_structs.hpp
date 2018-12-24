@@ -180,11 +180,41 @@ struct FTestActionStateConstructionInfoWithObjPointers : public FActionStateCons
 	TArray<class UObject*>                             Array;                                                    // 0x0038(0x0010) (ZeroConstructor)
 };
 
+// ScriptStruct ActionStateMachine.ActionStateMessage
+// 0x0010
+struct FActionStateMessage
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class UScriptStruct*                               Type;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+};
+
+// ScriptStruct ActionStateMachine.SerialisedActionStateMessage
+// 0x0018
+struct FSerialisedActionStateMessage
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+};
+
 // ScriptStruct ActionStateMachine.NullActionStateConstructionInfo
 // 0x0000 (0x0030 - 0x0030)
 struct FNullActionStateConstructionInfo : public FActorActionStateConstructionInfo
 {
 
+};
+
+// ScriptStruct ActionStateMachine.TestActionStateMessage2
+// 0x0000 (0x0010 - 0x0010)
+struct FTestActionStateMessage2 : public FActionStateMessage
+{
+
+};
+
+// ScriptStruct ActionStateMachine.TestActionStateMessage
+// 0x0008 (0x0018 - 0x0010)
+struct FTestActionStateMessage : public FActionStateMessage
+{
+	int                                                TestProperty;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ActionStateMachine.TestActorActionStateConstructionInfo

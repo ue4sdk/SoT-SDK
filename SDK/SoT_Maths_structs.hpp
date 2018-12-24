@@ -29,7 +29,7 @@ enum class EPlaneLineIntersectionType : uint8_t
 {
 	EPlaneLineIntersectionType__IntersectionWithinLineSegment = 0,
 	None                           = 1,
-	EInteractableState__Interactable = 2
+	EInputHandlerResult__Handled   = 2
 };
 
 

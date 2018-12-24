@@ -8,11 +8,12 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -69,7 +70,7 @@ enum class EAIShipPlayerTrackerType : uint8_t
 	DefaultRadiusTracker           = 0,
 	None                           = 1,
 	EAIShipPlayerTrackerType_MAX   = 2,
-	ETinySharkActiveState__TrackingTarget = 3
+	EEarthquakeState__Dormant      = 3
 };
 
 
@@ -403,14 +404,15 @@ struct FAIShipDespawnedEvent
 };
 
 // ScriptStruct AIShips.AIShipSpawnedEvent
-// 0x0030
+// 0x0040
 struct FAIShipSpawnedEvent
 {
 	class AShip*                                       Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FGuid                                       SpawningCrew;                                             // 0x0008(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FGuid                                       SpawningEventId;                                          // 0x0018(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                Wave;                                                     // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	struct FGuid                                       SpawnConfigId;                                            // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                Wave;                                                     // 0x0038(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AIShips.AIShipSinkNetworkEvent
@@ -505,16 +507,17 @@ struct FAIShipDespawnTelemetryEvent
 };
 
 // ScriptStruct AIShips.AIShipSpawnTelemetryEvent
-// 0x0058
+// 0x0068
 struct FAIShipSpawnTelemetryEvent
 {
 	class FString                                      AIShipId;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	class FString                                      SpawningCrewId;                                           // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	class FString                                      AIShipBattleId;                                           // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	class FString                                      AIShipType;                                               // 0x0030(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class FString                                      AIShipSize;                                               // 0x0040(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	int                                                AIShipWaveIndex;                                          // 0x0050(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
+	struct FGuid                                       SpawnConfigId;                                            // 0x0040(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class FString                                      AIShipSize;                                               // 0x0050(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int                                                AIShipWaveIndex;                                          // 0x0060(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 };
 
 }

@@ -196,6 +196,11 @@ struct UAthenaCheatManager_ToggleDeathCamera_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.ToggleContestScoreDebug
+struct UAthenaCheatManager_ToggleContestScoreDebug_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ToggleCinematicCamera
 struct UAthenaCheatManager_ToggleCinematicCamera_Params
 {
@@ -569,6 +574,12 @@ struct UAthenaCheatManager_SpawnCursedCannonball_Params
 	class FString                                      CannonballTypeString;                                     // (Parm, ZeroConstructor)
 };
 
+// Function AthenaCheat.AthenaCheatManager.SpawnCollectorsChestOfType
+struct UAthenaCheatManager_SpawnCollectorsChestOfType_Params
+{
+	class FString                                      ChestTypeString;                                          // (Parm, OutParm, ZeroConstructor)
+};
+
 // Function AthenaCheat.AthenaCheatManager.SpawnCargoRunCrate
 struct UAthenaCheatManager_SpawnCargoRunCrate_Params
 {
@@ -782,10 +793,35 @@ struct UAthenaCheatManager_SetShipYaw_Params
 	float                                              Yaw;                                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.SetShipWheelFullyRepaired
+struct UAthenaCheatManager_SetShipWheelFullyRepaired_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetShipWheelFullyDamaged
+struct UAthenaCheatManager_SetShipWheelFullyDamaged_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.SetShipRoll
 struct UAthenaCheatManager_SetShipRoll_Params
 {
 	float                                              Roll;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetShipFullyDamaged
+struct UAthenaCheatManager_SetShipFullyDamaged_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetShipCapstanFullyRepaired
+struct UAthenaCheatManager_SetShipCapstanFullyRepaired_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetShipCapstanFullyDamaged
+struct UAthenaCheatManager_SetShipCapstanFullyDamaged_Params
+{
 };
 
 // Function AthenaCheat.AthenaCheatManager.SetShipBuoyancyBlend
@@ -864,6 +900,12 @@ struct UAthenaCheatManager_SetFlameOfFateColour_Params
 	int                                                InFlameOfFateType;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.SetDebugItemSource
+struct UAthenaCheatManager_SetDebugItemSource_Params
+{
+	class FString                                      Source;                                                   // (Parm, ZeroConstructor)
+};
+
 // Function AthenaCheat.AthenaCheatManager.SetDebugCameraUseProjectileCollisionChannel
 struct UAthenaCheatManager_SetDebugCameraUseProjectileCollisionChannel_Params
 {
@@ -901,6 +943,12 @@ struct UAthenaCheatManager_SendStatEvent_Params
 struct UAthenaCheatManager_SendRewardRequestEvent_Params
 {
 	class FString                                      CompanyNameAndRewardIdSeparatedByColon;                   // (Parm, ZeroConstructor)
+};
+
+// Function AthenaCheat.AthenaCheatManager.SelectTale
+struct UAthenaCheatManager_SelectTale_Params
+{
+	class FString                                      SourceAssetName;                                          // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.ScuttleShip

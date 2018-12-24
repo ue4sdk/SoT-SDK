@@ -174,6 +174,40 @@ public:
 };
 
 
+// Class AthenaInput.NamedNotificationInputInterface
+// 0x0000 (0x0028 - 0x0028)
+class UNamedNotificationInputInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaInput.NamedNotificationInputInterface");
+		return ptr;
+	}
+
+
+	struct FText GetNotificationInputDisplayName(class UClass* InputID);
+};
+
+
+// Class AthenaInput.NamedNotificationInputComponent
+// 0x0018 (0x00F0 - 0x00D8)
+class UNamedNotificationInputComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
+	TArray<struct FNotificationInputDisplayName>       NotificationInputDisplayNames;                            // 0x00E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaInput.NamedNotificationInputComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaInput.PressedNotificationInputId
 // 0x0000 (0x0038 - 0x0038)
 class UPressedNotificationInputId : public UNotificationInputId

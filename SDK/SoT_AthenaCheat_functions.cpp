@@ -489,6 +489,19 @@ void UAthenaCheatManager::ToggleDeathCamera()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.ToggleContestScoreDebug
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ToggleContestScoreDebug()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ToggleContestScoreDebug");
+
+	UAthenaCheatManager_ToggleContestScoreDebug_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ToggleCinematicCamera
 // (Final, Exec, Native, Public)
 
@@ -1450,6 +1463,24 @@ void UAthenaCheatManager::SpawnCursedCannonball(const class FString& CannonballT
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnCollectorsChestOfType
+// (Final, Exec, Native, Public, HasOutParms)
+// Parameters:
+// class FString                  ChestTypeString                (Parm, OutParm, ZeroConstructor)
+
+void UAthenaCheatManager::SpawnCollectorsChestOfType(class FString* ChestTypeString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SpawnCollectorsChestOfType");
+
+	UAthenaCheatManager_SpawnCollectorsChestOfType_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (ChestTypeString != nullptr)
+		*ChestTypeString = params.ChestTypeString;
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnCargoRunCrate
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -2006,6 +2037,32 @@ void UAthenaCheatManager::SetShipYaw(float Yaw)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SetShipWheelFullyRepaired
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SetShipWheelFullyRepaired()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetShipWheelFullyRepaired");
+
+	UAthenaCheatManager_SetShipWheelFullyRepaired_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetShipWheelFullyDamaged
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SetShipWheelFullyDamaged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetShipWheelFullyDamaged");
+
+	UAthenaCheatManager_SetShipWheelFullyDamaged_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SetShipRoll
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -2017,6 +2074,45 @@ void UAthenaCheatManager::SetShipRoll(float Roll)
 
 	UAthenaCheatManager_SetShipRoll_Params params;
 	params.Roll = Roll;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetShipFullyDamaged
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SetShipFullyDamaged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetShipFullyDamaged");
+
+	UAthenaCheatManager_SetShipFullyDamaged_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetShipCapstanFullyRepaired
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SetShipCapstanFullyRepaired()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetShipCapstanFullyRepaired");
+
+	UAthenaCheatManager_SetShipCapstanFullyRepaired_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetShipCapstanFullyDamaged
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SetShipCapstanFullyDamaged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetShipCapstanFullyDamaged");
+
+	UAthenaCheatManager_SetShipCapstanFullyDamaged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2224,6 +2320,22 @@ void UAthenaCheatManager::SetFlameOfFateColour(int InFlameOfFateType)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SetDebugItemSource
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  Source                         (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SetDebugItemSource(const class FString& Source)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SetDebugItemSource");
+
+	UAthenaCheatManager_SetDebugItemSource_Params params;
+	params.Source = Source;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SetDebugCameraUseProjectileCollisionChannel
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -2321,6 +2433,22 @@ void UAthenaCheatManager::SendRewardRequestEvent(const class FString& CompanyNam
 
 	UAthenaCheatManager_SendRewardRequestEvent_Params params;
 	params.CompanyNameAndRewardIdSeparatedByColon = CompanyNameAndRewardIdSeparatedByColon;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SelectTale
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SourceAssetName                (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SelectTale(const class FString& SourceAssetName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SelectTale");
+
+	UAthenaCheatManager_SelectTale_Params params;
+	params.SourceAssetName = SourceAssetName;
 
 	UObject::ProcessEvent(fn, &params);
 }

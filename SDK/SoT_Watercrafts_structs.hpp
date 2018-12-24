@@ -24,7 +24,7 @@ enum class EOarState : uint8_t
 	None                           = 1,
 	EOarState__Braking             = 2,
 	None01                         = 3,
-	EKrakenDespawnReason__Invalid  = 4
+	EAddEndpointResult__Success    = 4
 };
 
 
@@ -32,7 +32,8 @@ enum class EOarState : uint8_t
 enum class EOarIdentifier : uint8_t
 {
 	EOarIdentifier__Left           = 0,
-	None                           = 1
+	None                           = 1,
+	IntProperty                    = 2
 };
 
 
@@ -52,7 +53,7 @@ enum class ERowboatActionTelemetry : uint8_t
 {
 	ERowboatActionTelemetry__None  = 0,
 	None                           = 1,
-	EOarInputState__Inactive       = 2
+	EKrakenTentacleBehaviourDamageActions__StayActive = 2
 };
 
 

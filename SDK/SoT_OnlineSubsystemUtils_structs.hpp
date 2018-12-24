@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_OnlineSubsystem_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_OnlineSubsystem_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,8 @@ enum class EBeaconConnectionState : uint8_t
 {
 	EBeaconConnectionState__Invalid = 0,
 	None                           = 1,
-	EBeaconConnectionState__EBeaconConnectionState_MAX = 2
+	EBeaconConnectionState__EBeaconConnectionState_MAX = 2,
+	EAutoPossessAI__Disabled       = 3
 };
 
 
@@ -35,8 +36,10 @@ enum class EPartyReservationResult : uint8_t
 	None01                         = 3,
 	EPartyReservationResult__ReservationAccepted = 4,
 	None02                         = 5,
-	EPartyReservationResult__ReservationInvalid = 6,
-	None03                         = 7
+	StructProperty                 = 6,
+	EPartyReservationResult__ReservationInvalid = 7,
+	None03                         = 8,
+	TextProperty                   = 9
 };
 
 

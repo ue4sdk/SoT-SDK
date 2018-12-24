@@ -41,7 +41,7 @@ enum class ESelectionMode : uint8_t
 	ESelectionMode__None           = 0,
 	None                           = 1,
 	ESelectionMode__ESelectionMode_MAX = 2,
-	ESlateBrushTileType__NoTile    = 3
+	ESlateBrushDrawType__NoDrawType = 3
 };
 
 
@@ -51,7 +51,8 @@ enum class EStretch : uint8_t
 	EStretch__None                 = 0,
 	None                           = 1,
 	EStretch__ScaleToFitY          = 2,
-	None01                         = 3
+	None01                         = 3,
+	NameProperty                   = 4
 };
 
 
@@ -70,8 +71,7 @@ enum class EProgressBarFillType : uint8_t
 	EProgressBarFillType__LeftToRight = 0,
 	None                           = 1,
 	EProgressBarFillType__BottomToTop = 2,
-	None01                         = 3,
-	FOLIAGEVERTEXCOLORMASK_Disabled = 4
+	None01                         = 3
 };
 
 

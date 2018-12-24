@@ -195,6 +195,21 @@ public:
 };
 
 
+// Class Animation.CustomAnimationInstanceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCustomAnimationInstanceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Animation.CustomAnimationInstanceInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.DockableInterface
 // 0x0000 (0x0028 - 0x0028)
 class UDockableInterface : public UInterface

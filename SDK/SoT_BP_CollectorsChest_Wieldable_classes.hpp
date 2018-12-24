@@ -15,14 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_Wieldable.BP_CollectorsChest_Wieldable_C
-// 0x0020 (0x0820 - 0x0800)
+// 0x0030 (0x0838 - 0x0808)
 class ABP_CollectorsChest_Wieldable_C : public ACollectorsChestWieldableItem
 {
 public:
-	class UPickupableComponent*                        Pickupable;                                               // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInput;                                   // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_3;                                   // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

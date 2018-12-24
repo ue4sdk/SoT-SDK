@@ -246,6 +246,25 @@ class UCompositeInputHandler* UInputHandlerFunctionLibrary::STATIC_MakeComposite
 }
 
 
+// Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  InputID                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UNamedNotificationInputInterface::GetNotificationInputDisplayName(class UClass* InputID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName");
+
+	UNamedNotificationInputInterface_GetNotificationInputDisplayName_Params params;
+	params.InputID = InputID;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 }
 
 #ifdef _MSC_VER

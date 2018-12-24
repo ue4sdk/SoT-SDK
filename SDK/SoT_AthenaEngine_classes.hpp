@@ -29,6 +29,21 @@ public:
 };
 
 
+// Class AthenaEngine.BoxedRpcDispatcherInterface
+// 0x0000 (0x0028 - 0x0028)
+class UBoxedRpcDispatcherInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.BoxedRpcDispatcherInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaEngine.EmptyObject
 // 0x0000 (0x0028 - 0x0028)
 class UEmptyObject : public UObject
