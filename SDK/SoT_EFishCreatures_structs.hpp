@@ -19,12 +19,13 @@ enum class EFishCreatures : uint8_t
 {
 	EFishCreatures__NewEnumerator8 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
+	__UNKNOWN_NAME__               = 2,
 	EFishCreatures__NewEnumerator5 = 3,
 	None01                         = 4,
 	NameProperty                   = 5,
 	EFishCreatures__EFishCreatures_MAX = 6,
-	KrakenAnimatedTentacleState_IdleActive = 7
+	__UNKNOWN_NAME__01             = 7,
+	__UNKNOWN_NAME__02             = 8
 };
 
 

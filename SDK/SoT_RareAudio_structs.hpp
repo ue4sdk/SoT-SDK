@@ -24,7 +24,8 @@ enum class EEmitterRelationship : uint8_t
 {
 	EEmitterRelationship__Audio_Remote = 0,
 	None                           = 1,
-	EActionStatePriority__Overrides = 2
+	__UNKNOWN_NAME__               = 2,
+	EActionStatePriority__Overrides = 3
 };
 
 

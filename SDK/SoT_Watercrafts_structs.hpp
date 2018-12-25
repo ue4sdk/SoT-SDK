@@ -22,9 +22,10 @@ enum class EOarState : uint8_t
 {
 	EOarState__Idle                = 0,
 	None                           = 1,
-	EOarState__Braking             = 2,
-	None01                         = 3,
-	EAddEndpointResult__Success    = 4
+	__UNKNOWN_NAME__               = 2,
+	EOarState__Braking             = 3,
+	None01                         = 4,
+	EAddEndpointResult__Success    = 5
 };
 
 
@@ -42,9 +43,10 @@ enum class EWatercraftDespawnReason : uint8_t
 {
 	EWatercraftDespawnReason__Unknown = 0,
 	None                           = 1,
-	EWatercraftDespawnReason__WorldEnding = 2,
-	None01                         = 3,
-	EOarState__Idle                = 4
+	__UNKNOWN_NAME__               = 2,
+	EWatercraftDespawnReason__WorldEnding = 3,
+	None01                         = 4,
+	EOarState__Idle                = 5
 };
 
 
@@ -53,7 +55,8 @@ enum class ERowboatActionTelemetry : uint8_t
 {
 	ERowboatActionTelemetry__None  = 0,
 	None                           = 1,
-	EKrakenTentacleBehaviourDamageActions__StayActive = 2
+	__UNKNOWN_NAME__               = 2,
+	EKrakenTentacleBehaviourDamageActions__StayActive = 3
 };
 
 
@@ -62,7 +65,8 @@ enum class EOarInputState : uint8_t
 {
 	EOarInputState__Inactive       = 0,
 	None                           = 1,
-	EKrakenState__Spawning         = 2
+	__UNKNOWN_NAME__               = 2,
+	EKrakenState__Spawning         = 3
 };
 
 

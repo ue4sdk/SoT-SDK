@@ -19,9 +19,12 @@ enum class EObjectTargetingStates : uint8_t
 {
 	EObjectTargetingStates__NewEnumerator0 = 0,
 	None                           = 1,
-	EObjectTargetingStates__NewEnumerator4 = 2,
-	None01                         = 3,
-	GameThread                     = 4
+	__UNKNOWN_NAME__               = 2,
+	EObjectTargetingStates__NewEnumerator4 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	NavCollision_X                 = 6,
+	__UNKNOWN_NAME__01             = 7
 };
 
 

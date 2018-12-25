@@ -21,8 +21,12 @@ enum class EGameplayTagQueryExprType : uint8_t
 {
 	EGameplayTagQueryExprType__Undefined = 0,
 	None                           = 1,
-	EGameplayTagQueryExprType__AnyExprMatch = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EGameplayTagQueryExprType__AnyExprMatch = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -30,7 +34,8 @@ enum class EGameplayTagQueryExprType : uint8_t
 enum class EGameplayContainerMatchType : uint8_t
 {
 	EGameplayContainerMatchType__Any = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -38,7 +43,8 @@ enum class EGameplayContainerMatchType : uint8_t
 enum class EGameplayTagMatchType : uint8_t
 {
 	EGameplayTagMatchType__Explicit = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

@@ -21,7 +21,8 @@ enum class ELandscapeGizmoType : uint8_t
 {
 	LGT_None                       = 0,
 	None                           = 1,
-	LSMO_XUp                       = 2
+	__UNKNOWN_NAME__               = 2,
+	LSMO_XUp                       = 3
 };
 
 
@@ -29,7 +30,8 @@ enum class ELandscapeGizmoType : uint8_t
 enum class ELandscapeLODFalloff : uint8_t
 {
 	ELandscapeLODFalloff__Linear   = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -38,7 +40,8 @@ enum class ELandscapeLayerPaintingRestriction : uint8_t
 {
 	ELandscapeLayerPaintingRestriction__None = 0,
 	None                           = 1,
-	LB_WeightBlend                 = 2
+	__UNKNOWN_NAME__               = 2,
+	LB_WeightBlend                 = 3
 };
 
 
@@ -47,7 +50,9 @@ enum class ELandscapeSetupErrors : uint8_t
 {
 	LSE_None                       = 0,
 	None                           = 1,
-	LSE_MAX                        = 2
+	__UNKNOWN_NAME__               = 2,
+	LSE_MAX                        = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -55,7 +60,8 @@ enum class ELandscapeSetupErrors : uint8_t
 enum class ELandscapeSplineMeshOrientation : uint8_t
 {
 	LSMO_XUp                       = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -64,7 +70,8 @@ enum class ELandscapeLayerBlendType : uint8_t
 {
 	LB_WeightBlend                 = 0,
 	None                           = 1,
-	EParticleKey__Active           = 2
+	__UNKNOWN_NAME__               = 2,
+	EParticleKey__Active           = 3
 };
 
 
@@ -73,9 +80,10 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 {
 	LCCT_None                      = 0,
 	None                           = 1,
-	LCCT_WeightMapUV               = 2,
-	None01                         = 3,
-	MSKI_Auto                      = 4
+	__UNKNOWN_NAME__               = 2,
+	LCCT_WeightMapUV               = 3,
+	None01                         = 4,
+	MSKI_Auto                      = 5
 };
 
 
@@ -84,7 +92,9 @@ enum class ETerrainCoordMappingType : uint8_t
 {
 	TCMT_Auto                      = 0,
 	None                           = 1,
-	TCMT_MAX                       = 2
+	__UNKNOWN_NAME__               = 2,
+	TCMT_MAX                       = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 

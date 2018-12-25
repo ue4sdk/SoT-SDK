@@ -22,12 +22,18 @@ enum class EAIDebugDrawDataView : uint8_t
 {
 	EAIDebugDrawDataView__Empty    = 0,
 	None                           = 1,
-	EAIDebugDrawDataView__EQS      = 2,
-	None01                         = 3,
-	EAIDebugDrawDataView__GameView3 = 4,
-	None02                         = 5,
-	EAIDebugDrawDataView__MAX      = 6,
-	None03                         = 7
+	__UNKNOWN_NAME__               = 2,
+	EAIDebugDrawDataView__EQS      = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EAIDebugDrawDataView__GameView3 = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EAIDebugDrawDataView__MAX      = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	__UNKNOWN_NAME__04             = 12,
+	__UNKNOWN_NAME__05             = 13
 };
 
 
@@ -36,8 +42,12 @@ enum class EDebugComponentMessage : uint8_t
 {
 	EDebugComponentMessage__EnableExtendedView = 0,
 	None                           = 1,
-	EDebugComponentMessage__ActivateDataView = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EDebugComponentMessage__ActivateDataView = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 

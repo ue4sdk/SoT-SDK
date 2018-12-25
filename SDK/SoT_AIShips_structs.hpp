@@ -26,7 +26,8 @@ enum class EAIShipEncounterType : uint8_t
 {
 	EAIShipEncounterType__Battle   = 0,
 	None                           = 1,
-	EAIShipDestructionReason__Defeated = 2
+	__UNKNOWN_NAME__               = 2,
+	EAIShipDestructionReason__Defeated = 3
 };
 
 
@@ -35,14 +36,20 @@ enum class ECannonballIconType : uint8_t
 {
 	ECannonballIconType__Normal    = 0,
 	None                           = 1,
-	ECannonballIconType__Boogie    = 2,
-	None01                         = 3,
-	ECannonballIconType__Rigging   = 4,
-	None02                         = 5,
-	ECannonballIconType__Snooze    = 6,
-	None03                         = 7,
-	TextProperty                   = 8,
-	None04                         = 9
+	__UNKNOWN_NAME__               = 2,
+	ECannonballIconType__Boogie    = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	ECannonballIconType__Rigging   = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	ECannonballIconType__Snooze    = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	__UNKNOWN_NAME__03             = 12,
+	__UNKNOWN_NAME__04             = 13,
+	__UNKNOWN_NAME__05             = 14,
+	None04                         = 15
 };
 
 
@@ -51,8 +58,11 @@ enum class ESkellyFormIconType : uint8_t
 {
 	ESkellyFormIconType__Normal    = 0,
 	None                           = 1,
-	ESkellyFormIconType__None      = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	ESkellyFormIconType__None      = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -60,7 +70,8 @@ enum class ESkellyFormIconType : uint8_t
 enum class EAIShipType : uint8_t
 {
 	EAIShipType__Normal            = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -69,8 +80,9 @@ enum class EAIShipPlayerTrackerType : uint8_t
 {
 	DefaultRadiusTracker           = 0,
 	None                           = 1,
-	EAIShipPlayerTrackerType_MAX   = 2,
-	EEarthquakeState__Dormant      = 3
+	__UNKNOWN_NAME__               = 2,
+	EAIShipPlayerTrackerType_MAX   = 3,
+	EEarthquakeState__Dormant      = 4
 };
 
 
@@ -78,7 +90,8 @@ enum class EAIShipPlayerTrackerType : uint8_t
 enum class EAIShipDestructionReason : uint8_t
 {
 	EAIShipDestructionReason__Defeated = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

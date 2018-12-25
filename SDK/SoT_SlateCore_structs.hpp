@@ -32,7 +32,9 @@ enum class ESelectInfo : uint8_t
 {
 	ESelectInfo__OnKeyPress        = 0,
 	None                           = 1,
-	ESelectInfo__ESelectInfo_MAX   = 2
+	__UNKNOWN_NAME__               = 2,
+	ESelectInfo__ESelectInfo_MAX   = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -41,8 +43,9 @@ enum class ETextCommit : uint8_t
 {
 	ETextCommit__Default           = 0,
 	None                           = 1,
-	ETextCommit__ETextCommit_MAX   = 2,
-	EAxis__None                    = 3
+	__UNKNOWN_NAME__               = 2,
+	ETextCommit__ETextCommit_MAX   = 3,
+	EAxis__None                    = 4
 };
 
 
@@ -50,7 +53,8 @@ enum class ETextCommit : uint8_t
 enum class EScrollDirection : uint8_t
 {
 	Scroll_Down                    = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -58,7 +62,8 @@ enum class EScrollDirection : uint8_t
 enum class EOrientation : uint8_t
 {
 	Orient_Horizontal              = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -67,11 +72,13 @@ enum class EMenuPlacement : uint8_t
 {
 	MenuPlacement_BelowAnchor      = 0,
 	None                           = 1,
-	MenuPlacement_MenuRight        = 2,
-	None01                         = 3,
-	MenuPlacement_MAX              = 4,
-	EPirateBakeFlags__None         = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	MenuPlacement_MenuRight        = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	MenuPlacement_MAX              = 6,
+	EPirateBakeFlags__None         = 7,
+	None02                         = 8
 };
 
 
@@ -80,8 +87,9 @@ enum class EVerticalAlignment : uint8_t
 {
 	VAlign_Fill                    = 0,
 	None                           = 1,
-	VAlign_MAX                     = 2,
-	ESlateColorStylingMode__UseColor_Specified = 3
+	__UNKNOWN_NAME__               = 2,
+	VAlign_MAX                     = 3,
+	ESlateColorStylingMode__UseColor_Specified = 4
 };
 
 
@@ -90,8 +98,9 @@ enum class EHorizontalAlignment : uint8_t
 {
 	HAlign_Fill                    = 0,
 	None                           = 1,
-	HAlign_MAX                     = 2,
-	VAlign_Fill                    = 3
+	__UNKNOWN_NAME__               = 2,
+	HAlign_MAX                     = 3,
+	VAlign_Fill                    = 4
 };
 
 
@@ -100,12 +109,13 @@ enum class EUINavigation : uint8_t
 {
 	EUINavigation__Left            = 0,
 	None                           = 1,
-	EUINavigation__Next            = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EUINavigation__EUINavigation_MAX = 5,
-	MenuPlacement_BelowAnchor      = 6,
-	None02                         = 7
+	__UNKNOWN_NAME__               = 2,
+	EUINavigation__Next            = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EUINavigation__EUINavigation_MAX = 6,
+	MenuPlacement_BelowAnchor      = 7,
+	None02                         = 8
 };
 
 
@@ -123,7 +133,8 @@ enum class EButtonPressMethod : uint8_t
 enum class EButtonTouchMethod : uint8_t
 {
 	EButtonTouchMethod__DownAndUp  = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -132,7 +143,9 @@ enum class EButtonClickMethod : uint8_t
 {
 	EButtonClickMethod__DownAndUp  = 0,
 	None                           = 1,
-	EButtonClickMethod__EButtonClickMethod_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EButtonClickMethod__EButtonClickMethod_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -141,8 +154,9 @@ enum class ESlateColorStylingMode : uint8_t
 {
 	ESlateColorStylingMode__UseColor_Specified = 0,
 	None                           = 1,
-	ESlateColorStylingMode__UseColor_MAX = 2,
-	ESlateBrushMirrorType__NoMirror = 3
+	__UNKNOWN_NAME__               = 2,
+	ESlateColorStylingMode__UseColor_MAX = 3,
+	ESlateBrushMirrorType__NoMirror = 4
 };
 
 
@@ -151,7 +165,8 @@ enum class ESlateBrushImageType : uint8_t
 {
 	ESlateBrushImageType__NoImage  = 0,
 	None                           = 1,
-	ESlateCheckBoxType__CheckBox   = 2
+	__UNKNOWN_NAME__               = 2,
+	ESlateCheckBoxType__CheckBox   = 3
 };
 
 
@@ -160,8 +175,9 @@ enum class ESlateBrushMirrorType : uint8_t
 {
 	ESlateBrushMirrorType__NoMirror = 0,
 	None                           = 1,
-	ESlateBrushMirrorType__ESlateBrushMirrorType_MAX = 2,
-	ESlateBrushTileType__NoTile    = 3
+	__UNKNOWN_NAME__               = 2,
+	ESlateBrushMirrorType__ESlateBrushMirrorType_MAX = 3,
+	ESlateBrushTileType__NoTile    = 4
 };
 
 
@@ -170,8 +186,9 @@ enum class ESlateBrushTileType : uint8_t
 {
 	ESlateBrushTileType__NoTile    = 0,
 	None                           = 1,
-	ESlateBrushTileType__ESlateBrushTileType_MAX = 2,
-	ESelectionMode__None           = 3
+	__UNKNOWN_NAME__               = 2,
+	ESlateBrushTileType__ESlateBrushTileType_MAX = 3,
+	ESelectionMode__None           = 4
 };
 
 
@@ -180,7 +197,9 @@ enum class ESlateBrushDrawType : uint8_t
 {
 	ESlateBrushDrawType__NoDrawType = 0,
 	None                           = 1,
-	ESlateBrushDrawType__ESlateBrushDrawType_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	ESlateBrushDrawType__ESlateBrushDrawType_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -189,7 +208,8 @@ enum class ECheckBoxState : uint8_t
 {
 	ECheckBoxState__Unchecked      = 0,
 	None                           = 1,
-	ESlateBrushImageType__NoImage  = 2
+	__UNKNOWN_NAME__               = 2,
+	ESlateBrushImageType__NoImage  = 3
 };
 
 
@@ -197,7 +217,8 @@ enum class ECheckBoxState : uint8_t
 enum class ESlateCheckBoxType : uint8_t
 {
 	ESlateCheckBoxType__CheckBox   = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -205,7 +226,8 @@ enum class ESlateCheckBoxType : uint8_t
 enum class EConsumeMouseWheel : uint8_t
 {
 	EConsumeMouseWheel__WhenScrollingPossible = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -214,9 +236,11 @@ enum class EFocusCause : uint8_t
 {
 	EFocusCause__Mouse             = 0,
 	None                           = 1,
-	EFocusCause__OtherWidgetLostFocus = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EFocusCause__OtherWidgetLostFocus = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -225,9 +249,11 @@ enum class EUINavigationRule : uint8_t
 {
 	EUINavigationRule__Escape      = 0,
 	None                           = 1,
-	EUINavigationRule__Custom      = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EUINavigationRule__Custom      = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 

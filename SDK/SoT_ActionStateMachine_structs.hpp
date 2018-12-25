@@ -24,7 +24,9 @@ enum class EActionStateMachineTrackId : uint8_t
 	IntProperty                    = 2,
 	EActionStateMachineTrackId__Migration = 3,
 	None01                         = 4,
-	NameProperty                   = 5
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__               = 6,
+	__UNKNOWN_NAME__01             = 7
 };
 
 
@@ -32,7 +34,8 @@ enum class EActionStateMachineTrackId : uint8_t
 enum class EActionPredictionType : uint8_t
 {
 	EActionPredictionType__Predicted = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -40,7 +43,8 @@ enum class EActionPredictionType : uint8_t
 enum class EActionStatePriority : uint8_t
 {
 	EActionStatePriority__Overrides = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

@@ -22,7 +22,8 @@ enum class EInteractionBlockReason : uint8_t
 {
 	EInteractionBlockReason__None  = 0,
 	None                           = 1,
-	EWaterQueryResult__Success     = 2
+	__UNKNOWN_NAME__               = 2,
+	EWaterQueryResult__Success     = 3
 };
 
 

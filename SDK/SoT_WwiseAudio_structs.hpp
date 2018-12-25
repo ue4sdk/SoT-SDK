@@ -21,7 +21,9 @@ enum class EWwiseAsyncIOPriorityDisplay : uint8_t
 {
 	EWwiseAsyncIOPriorityDisplay__Low = 0,
 	None                           = 1,
-	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -30,10 +32,14 @@ enum class EWwiseLanguageOrder : uint8_t
 {
 	EWwiseLanguageOrder__English   = 0,
 	None                           = 1,
-	EWwiseLanguageOrder__Spanish   = 2,
-	None01                         = 3,
-	EWwiseLanguageOrder__Japanese  = 4,
-	None02                         = 5
+	__UNKNOWN_NAME__               = 2,
+	EWwiseLanguageOrder__Spanish   = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EWwiseLanguageOrder__Japanese  = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	__UNKNOWN_NAME__03             = 9
 };
 
 
@@ -42,12 +48,14 @@ enum class EWwise7Point1Order : uint8_t
 {
 	EWwise7Point1Order__Front_Left = 0,
 	None                           = 1,
-	EWwise7Point1Order__Right_Surround = 2,
-	None01                         = 3,
-	EWwise7Point1Order__Null_Channel = 4,
-	None02                         = 5,
-	EWwiseLanguageOrder__English   = 6,
-	None03                         = 7
+	__UNKNOWN_NAME__               = 2,
+	EWwise7Point1Order__Right_Surround = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EWwise7Point1Order__Null_Channel = 6,
+	None02                         = 7,
+	EWwiseLanguageOrder__English   = 8,
+	None03                         = 9
 };
 
 
@@ -56,8 +64,9 @@ enum class EWwiseEventDurationType : uint8_t
 {
 	EWwiseEventDurationType__OneShot = 0,
 	None                           = 1,
-	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 2,
-	EWwiseAsyncIOPriorityDisplay__Low = 3
+	__UNKNOWN_NAME__               = 2,
+	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 3,
+	EWwiseAsyncIOPriorityDisplay__Low = 4
 };
 
 

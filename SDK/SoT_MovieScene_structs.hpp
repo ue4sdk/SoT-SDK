@@ -20,8 +20,10 @@ enum class EMovieSceneKeyInterpolation : uint8_t
 {
 	MSKI_Auto                      = 0,
 	None                           = 1,
-	MSKI_Constant                  = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	MSKI_Constant                  = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 

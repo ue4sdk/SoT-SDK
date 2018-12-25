@@ -20,9 +20,12 @@ enum class EInAppPurchaseState : uint8_t
 {
 	EInAppPurchaseState__Success   = 0,
 	None                           = 1,
-	EInAppPurchaseState__NotAllowed = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EInAppPurchaseState__NotAllowed = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 
@@ -31,13 +34,15 @@ enum class EMPMatchOutcome : uint8_t
 {
 	EMPMatchOutcome__None          = 0,
 	None                           = 1,
-	EMPMatchOutcome__Tied          = 2,
-	None01                         = 3,
-	EMPMatchOutcome__Third         = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	None03                         = 7,
-	EComponentType__None           = 8
+	__UNKNOWN_NAME__               = 2,
+	EMPMatchOutcome__Tied          = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EMPMatchOutcome__Third         = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9,
+	EComponentType__None           = 10
 };
 
 

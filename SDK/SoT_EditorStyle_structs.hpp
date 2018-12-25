@@ -20,11 +20,13 @@ enum class EColorVisionDeficiency : uint8_t
 {
 	CVD_NormalVision               = 0,
 	None                           = 1,
-	CVD_Protanopia                 = 2,
-	None01                         = 3,
-	CVD_MAX                        = 4,
-	EKrakenShipWrappingTentacleState__Dormant = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	CVD_Protanopia                 = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	CVD_MAX                        = 6,
+	EKrakenShipWrappingTentacleState__Dormant = 7,
+	None02                         = 8
 };
 
 

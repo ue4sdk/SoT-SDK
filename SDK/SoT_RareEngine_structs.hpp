@@ -20,7 +20,8 @@ namespace SDK
 enum class EMemoryUsageVisualiserInstanceType : uint8_t
 {
 	EMemoryUsageVisualiserInstanceType__Server = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -28,7 +29,8 @@ enum class EMemoryUsageVisualiserInstanceType : uint8_t
 enum class EMemoryGatheringMode : uint8_t
 {
 	EMemoryGatheringMode__Exclusive = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

@@ -22,7 +22,9 @@ enum class EVoiceChatState : uint8_t
 {
 	EVoiceChatState__Silent        = 0,
 	None                           = 1,
-	EVoiceChatState__EVoiceChatState_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EVoiceChatState__EVoiceChatState_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 

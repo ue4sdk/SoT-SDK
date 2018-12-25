@@ -27,7 +27,8 @@ enum class ETouchIndex : uint8_t
 	ETouchIndex__Touch9            = 6,
 	None02                         = 7,
 	StructProperty                 = 8,
-	None03                         = 9
+	None03                         = 9,
+	__UNKNOWN_NAME__               = 10
 };
 
 
@@ -57,7 +58,8 @@ enum class EConsoleForGamepadLabels : uint8_t
 enum class EControllerHand : uint8_t
 {
 	EControllerHand__Left          = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

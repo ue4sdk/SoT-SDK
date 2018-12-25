@@ -25,8 +25,11 @@ enum class EAIDebugColour : uint8_t
 {
 	EAIDebugColour__Red            = 0,
 	None                           = 1,
-	EAIDebugColour__Yellow         = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EAIDebugColour__Yellow         = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -35,9 +38,10 @@ enum class EAISpawnLocationSearchResult : uint8_t
 {
 	AISpawnLocationSearchResult__Incomplete = 0,
 	None                           = 1,
-	AISpawnLocationSearchResult__Cancelled = 2,
-	None01                         = 3,
-	EWatercraftDespawnReason__Unknown = 4
+	__UNKNOWN_NAME__               = 2,
+	AISpawnLocationSearchResult__Cancelled = 3,
+	None01                         = 4,
+	EWatercraftDespawnReason__Unknown = 5
 };
 
 
@@ -46,8 +50,11 @@ enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
 	None                           = 1,
-	AISpawnRequestState__WaitForLocationCheck = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	AISpawnRequestState__WaitForLocationCheck = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -56,7 +63,8 @@ enum class EBountySpawnerAudioState : uint8_t
 {
 	EBountySpawnerAudioState__None = 0,
 	None                           = 1,
-	EBountyTargetRank__Captain     = 2
+	__UNKNOWN_NAME__               = 2,
+	EBountyTargetRank__Captain     = 3
 };
 
 
@@ -65,7 +73,8 @@ enum class EBountySpawnerType : uint8_t
 {
 	EBountySpawnerType__Default    = 0,
 	None                           = 1,
-	ECanAddItemQueryResult__Success = 2
+	__UNKNOWN_NAME__               = 2,
+	ECanAddItemQueryResult__Success = 3
 };
 
 
@@ -73,7 +82,8 @@ enum class EBountySpawnerType : uint8_t
 enum class EBountyTargetRank : uint8_t
 {
 	EBountyTargetRank__Captain     = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -91,7 +101,8 @@ enum class EAITargetWeaponFiringArcResult : uint8_t
 {
 	LeftOfArc                      = 0,
 	None                           = 1,
-	EFaunaInWaterState__NotInWater = 2
+	__UNKNOWN_NAME__               = 2,
+	EFaunaInWaterState__NotInWater = 3
 };
 
 
@@ -100,7 +111,8 @@ enum class EAIKnockbackStrengthType : uint8_t
 {
 	EAIKnockbackStrengthType__Low  = 0,
 	None                           = 1,
-	EBlackboardValueCompositeType__And = 2
+	__UNKNOWN_NAME__               = 2,
+	EBlackboardValueCompositeType__And = 3
 };
 
 
@@ -109,7 +121,8 @@ enum class ECustomAiEventDuringDeathEnum : uint8_t
 {
 	ECustomAiEventDuringDeathEnum__None = 0,
 	None                           = 1,
-	EAIKnockbackStrengthType__Low  = 2
+	__UNKNOWN_NAME__               = 2,
+	EAIKnockbackStrengthType__Low  = 3
 };
 
 
@@ -117,7 +130,8 @@ enum class ECustomAiEventDuringDeathEnum : uint8_t
 enum class EBlackboardValueCompositeType : uint8_t
 {
 	EBlackboardValueCompositeType__And = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -126,8 +140,11 @@ enum class EBlackboardValueComparisonType : uint8_t
 {
 	EBlackboardValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	EBlackboardValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EBlackboardValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -136,9 +153,11 @@ enum class EFloatValueComparisonType : uint8_t
 {
 	EFloatValueComparisonType__NearlyEqual = 0,
 	None                           = 1,
-	EFloatValueComparisonType__GreaterThanEquals = 2,
-	None01                         = 3,
-	EBlackboardValueComparisonType__NearlyEqual = 4
+	__UNKNOWN_NAME__               = 2,
+	EFloatValueComparisonType__GreaterThanEquals = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EBlackboardValueComparisonType__NearlyEqual = 6
 };
 
 
@@ -147,7 +166,8 @@ enum class ESwimmingLineOfSightTest : uint8_t
 {
 	ESwimmingLineOfSightTest__None = 0,
 	None                           = 1,
-	ESwimmingSyncMode__Synchronous = 2
+	__UNKNOWN_NAME__               = 2,
+	ESwimmingSyncMode__Synchronous = 3
 };
 
 
@@ -155,7 +175,8 @@ enum class ESwimmingLineOfSightTest : uint8_t
 enum class ESwimmingSyncMode : uint8_t
 {
 	ESwimmingSyncMode__Synchronous = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -181,7 +202,8 @@ enum class ESwimmingGoalCheckMode : uint8_t
 enum class ETraceDirection : uint8_t
 {
 	ETraceDirection__ItemToContext = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -190,7 +212,8 @@ enum class ETinySharkDespawnReason : uint8_t
 {
 	ETinySharkDespawnReason__Invalid = 0,
 	None                           = 1,
-	EKrakenDynamicsStateEvent__Damage = 2
+	__UNKNOWN_NAME__               = 2,
+	EKrakenDynamicsStateEvent__Damage = 3
 };
 
 
@@ -199,8 +222,9 @@ enum class ETinySharkActiveState : uint8_t
 {
 	ETinySharkActiveState__TrackingTarget = 0,
 	None                           = 1,
-	ETinySharkActiveState__ETinySharkActiveState_MAX = 2,
-	EAIThreatLevel__NoDanger       = 3
+	__UNKNOWN_NAME__               = 2,
+	ETinySharkActiveState__ETinySharkActiveState_MAX = 3,
+	EAIThreatLevel__NoDanger       = 4
 };
 
 
@@ -209,9 +233,10 @@ enum class ETinySharkState : uint8_t
 {
 	ETinySharkState__Inactive      = 0,
 	None                           = 1,
-	ETinySharkState__Despawning    = 2,
-	None01                         = 3,
-	AISpawnLocationSearchResult__Incomplete = 4
+	__UNKNOWN_NAME__               = 2,
+	ETinySharkState__Despawning    = 3,
+	None01                         = 4,
+	AISpawnLocationSearchResult__Incomplete = 5
 };
 
 
@@ -220,8 +245,12 @@ enum class EAISpawnRequestResult : uint8_t
 {
 	AISpawnRequestResult__Incomplete = 0,
 	None                           = 1,
-	AISpawnRequestResult__FailedNoValidPos = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	AISpawnRequestResult__FailedNoValidPos = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -230,8 +259,9 @@ enum class EAIThreatLevel : uint8_t
 {
 	EAIThreatLevel__NoDanger       = 0,
 	None                           = 1,
-	EAIThreatLevel__EAIThreatLevel_MAX = 2,
-	DefaultRadiusTracker           = 3
+	__UNKNOWN_NAME__               = 2,
+	EAIThreatLevel__EAIThreatLevel_MAX = 3,
+	DefaultRadiusTracker           = 4
 };
 
 
@@ -240,7 +270,8 @@ enum class EFaunaInWaterState : uint8_t
 {
 	EFaunaInWaterState__NotInWater = 0,
 	None                           = 1,
-	EBountySpawnerAudioState__None = 2
+	__UNKNOWN_NAME__               = 2,
+	EBountySpawnerAudioState__None = 3
 };
 
 
@@ -249,7 +280,8 @@ enum class EFaunaCratedState : uint8_t
 {
 	EFaunaCratedState__NotInCrate  = 0,
 	None                           = 1,
-	ERowboatActionTelemetry__None  = 2
+	__UNKNOWN_NAME__               = 2,
+	ERowboatActionTelemetry__None  = 3
 };
 
 

@@ -21,7 +21,8 @@ enum class ELimbIKSpace : uint8_t
 {
 	ELimbIKSpace__Local            = 0,
 	None                           = 1,
-	EBuoyancyBlend__PrimaryToSecondary = 2
+	__UNKNOWN_NAME__               = 2,
+	EBuoyancyBlend__PrimaryToSecondary = 3
 };
 
 

@@ -28,7 +28,8 @@ enum class ESlateVisibility : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	ESlateVisibility__SelfHitTestInvisible = 3,
-	None01                         = 4
+	None01                         = 4,
+	__UNKNOWN_NAME__               = 5
 };
 
 
@@ -44,7 +45,8 @@ enum class EDragPivot : uint8_t
 	EDragPivot__BottomCenter       = 6,
 	None02                         = 7,
 	StructProperty                 = 8,
-	None03                         = 9
+	None03                         = 9,
+	__UNKNOWN_NAME__               = 10
 };
 
 
@@ -52,7 +54,8 @@ enum class EDragPivot : uint8_t
 enum class ESlateSizeRule : uint8_t
 {
 	ESlateSizeRule__Automatic      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -61,7 +64,8 @@ enum class EWidgetDesignFlags : uint8_t
 {
 	EWidgetDesignFlags__None       = 0,
 	None                           = 1,
-	ETeamAttitude__Friendly        = 2
+	__UNKNOWN_NAME__               = 2,
+	ETeamAttitude__Friendly        = 3
 };
 
 
@@ -70,8 +74,10 @@ enum class EDesignPreviewSizeMode : uint8_t
 {
 	EDesignPreviewSizeMode__FillScreen = 0,
 	None                           = 1,
-	EDesignPreviewSizeMode__DesiredOnScreen = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EDesignPreviewSizeMode__DesiredOnScreen = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 
@@ -80,7 +86,8 @@ enum class EUMGSequencePlayMode : uint8_t
 {
 	EUMGSequencePlayMode__Forward  = 0,
 	None                           = 1,
-	EWidgetDesignFlags__None       = 2
+	__UNKNOWN_NAME__               = 2,
+	EWidgetDesignFlags__None       = 3
 };
 
 
@@ -88,7 +95,8 @@ enum class EUMGSequencePlayMode : uint8_t
 enum class EBindingKind : uint8_t
 {
 	EBindingKind__Function         = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -97,7 +105,8 @@ enum class EWidgetBlendMode : uint8_t
 {
 	EWidgetBlendMode__Opaque       = 0,
 	None                           = 1,
-	EGameplayTagMatchType__Explicit = 2
+	__UNKNOWN_NAME__               = 2,
+	EGameplayTagMatchType__Explicit = 3
 };
 
 

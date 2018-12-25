@@ -20,7 +20,8 @@ namespace SDK
 enum class EInputHandlerResult : uint8_t
 {
 	EInputHandlerResult__Handled   = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

@@ -21,9 +21,11 @@ enum class EComparisonMethod : uint8_t
 {
 	EComparisonMethod__Equal_To    = 0,
 	None                           = 1,
-	EComparisonMethod__Greater_Than = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EComparisonMethod__Greater_Than = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -32,7 +34,9 @@ enum class EPerformanceCaptureType : uint8_t
 {
 	EPerformanceCaptureType__None  = 0,
 	None                           = 1,
-	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -41,9 +45,10 @@ enum class ETestArea : uint8_t
 {
 	ETestArea__None                = 0,
 	None                           = 1,
-	ETestArea__Art                 = 2,
-	None01                         = 3,
-	EProgressBarFillType__LeftToRight = 4
+	__UNKNOWN_NAME__               = 2,
+	ETestArea__Art                 = 3,
+	None01                         = 4,
+	EProgressBarFillType__LeftToRight = 5
 };
 
 
@@ -52,8 +57,11 @@ enum class ETestCategory : uint8_t
 {
 	ETestCategory__Unit            = 0,
 	None                           = 1,
-	ETestCategory__Soak            = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	ETestCategory__Soak            = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 

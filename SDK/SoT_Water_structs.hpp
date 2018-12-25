@@ -41,7 +41,8 @@ enum class EBuoyancySampleType : uint8_t
 {
 	EBuoyancySampleType__Spherical = 0,
 	None                           = 1,
-	EBuoyancyDragSampleType__Spherical = 2
+	__UNKNOWN_NAME__               = 2,
+	EBuoyancyDragSampleType__Spherical = 3
 };
 
 
@@ -50,9 +51,10 @@ enum class EWaterSplashProbeType : uint8_t
 {
 	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
 	None                           = 1,
-	EWaterSplashProbeType__Continuous = 2,
-	None01                         = 3,
-	NM_PreserveSmoothingGroups     = 4
+	__UNKNOWN_NAME__               = 2,
+	EWaterSplashProbeType__Continuous = 3,
+	None01                         = 4,
+	NM_PreserveSmoothingGroups     = 5
 };
 
 

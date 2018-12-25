@@ -24,8 +24,9 @@ enum class EKrakenBehaviourType : uint8_t
 {
 	EKrakenBehaviourType__Idle     = 0,
 	None                           = 1,
-	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 2,
-	EItemType__Weapon              = 3
+	__UNKNOWN_NAME__               = 2,
+	EKrakenBehaviourType__EKrakenBehaviourType_MAX = 3,
+	EItemType__Weapon              = 4
 };
 
 
@@ -34,9 +35,13 @@ enum class EKrakenShipWrappingTentacleState : uint8_t
 {
 	EKrakenShipWrappingTentacleState__Dormant = 0,
 	None                           = 1,
-	EKrakenShipWrappingTentacleState__ShakeAttack = 2,
-	None01                         = 3,
-	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 4
+	__UNKNOWN_NAME__               = 2,
+	EKrakenShipWrappingTentacleState__ShakeAttack = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EKrakenShipWrappingTentacleState__EKrakenShipWrappingTentacleState_MAX = 6,
+	__UNKNOWN_NAME__02             = 7,
+	__UNKNOWN_NAME__03             = 8
 };
 
 
@@ -44,7 +49,8 @@ enum class EKrakenShipWrappingTentacleState : uint8_t
 enum class EKrakenDynamicsStateEvent : uint8_t
 {
 	EKrakenDynamicsStateEvent__Damage = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -61,8 +67,10 @@ enum class EKrakenDespawnReason : uint8_t
 {
 	EKrakenDespawnReason__Invalid  = 0,
 	None                           = 1,
-	EKrakenDespawnReason__Dismissed = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EKrakenDespawnReason__Dismissed = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 
@@ -71,7 +79,8 @@ enum class EKrakenState : uint8_t
 {
 	EKrakenState__Spawning         = 0,
 	None                           = 1,
-	EAIShipType__Normal            = 2
+	__UNKNOWN_NAME__               = 2,
+	EAIShipType__Normal            = 3
 };
 
 
@@ -80,7 +89,8 @@ enum class EKrakenTentacleBehaviourDamageActions : uint8_t
 {
 	EKrakenTentacleBehaviourDamageActions__StayActive = 0,
 	None                           = 1,
-	EOarInputState__Inactive       = 2
+	__UNKNOWN_NAME__               = 2,
+	EOarInputState__Inactive       = 3
 };
 
 

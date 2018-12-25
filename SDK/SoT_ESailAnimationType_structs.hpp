@@ -19,7 +19,7 @@ enum class ESailAnimationType : uint8_t
 {
 	ESailAnimationType__NewEnumerator0 = 0,
 	None                           = 1,
-	_Game_Materials_Instances_Characters_IPG_Wardrobe_Hats_ipg_hat_npc_arena_rep_01_M_ipg_hat_npc_arena_rep_01 = 2
+	_Game_Models_Characters_NPCs_npc_gold_hoarder_wsp_npc_gold_hoarder_wsp_03_Materials = 2
 };
 
 

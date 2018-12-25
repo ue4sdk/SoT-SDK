@@ -21,7 +21,8 @@ enum class EDrivenBoneModificationMode : uint8_t
 {
 	EDrivenBoneModificationMode__AddToInput = 0,
 	None                           = 1,
-	BA_X                           = 2
+	__UNKNOWN_NAME__               = 2,
+	BA_X                           = 3
 };
 
 
@@ -30,12 +31,16 @@ enum class EComponentType : uint8_t
 {
 	EComponentType__None           = 0,
 	None                           = 1,
-	EComponentType__RotationX      = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EComponentType__ScaleX         = 5,
-	None02                         = 6,
-	None03                         = 7
+	__UNKNOWN_NAME__               = 2,
+	EComponentType__RotationX      = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EComponentType__ScaleX         = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__01             = 8,
+	None03                         = 9,
+	__UNKNOWN_NAME__02             = 10,
+	__UNKNOWN_NAME__03             = 11
 };
 
 
@@ -44,9 +49,13 @@ enum class EInterpolationBlend : uint8_t
 {
 	EInterpolationBlend__Linear    = 0,
 	None                           = 1,
-	EInterpolationBlend__EaseInOutExponent3 = 2,
-	None01                         = 3,
-	EInterpolationBlend__EInterpolationBlend_MAX = 4
+	__UNKNOWN_NAME__               = 2,
+	EInterpolationBlend__EaseInOutExponent3 = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EInterpolationBlend__EInterpolationBlend_MAX = 6,
+	__UNKNOWN_NAME__02             = 7,
+	__UNKNOWN_NAME__03             = 8
 };
 
 
@@ -55,9 +64,11 @@ enum class EAxisOption : uint8_t
 {
 	EAxisOption__X                 = 0,
 	None                           = 1,
-	EAxisOption__Y_Neg             = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EAxisOption__Y_Neg             = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -66,7 +77,8 @@ enum class EBoneModificationMode : uint8_t
 {
 	BMM_Ignore                     = 0,
 	None                           = 1,
-	EDrivenBoneModificationMode__AddToInput = 2
+	__UNKNOWN_NAME__               = 2,
+	EDrivenBoneModificationMode__AddToInput = 3
 };
 
 
@@ -75,7 +87,8 @@ enum class EBoneAxis : uint8_t
 {
 	BA_X                           = 0,
 	None                           = 1,
-	ETestEnum__Value0              = 2
+	__UNKNOWN_NAME__               = 2,
+	ETestEnum__Value0              = 3
 };
 
 

@@ -19,8 +19,11 @@ enum class EInterpCurveMode : uint8_t
 {
 	CIM_Linear                     = 0,
 	None                           = 1,
-	CIM_CurveBreak                 = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	CIM_CurveBreak                 = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -29,7 +32,8 @@ enum class ERangeBoundTypes : uint8_t
 {
 	ERangeBoundTypes__Exclusive    = 0,
 	None                           = 1,
-	ERotatorQuantization__ByteComponents = 2
+	__UNKNOWN_NAME__               = 2,
+	ERotatorQuantization__ByteComponents = 3
 };
 
 
@@ -47,37 +51,44 @@ enum class EUnit : uint8_t
 	StructProperty                 = 8,
 	EUnit__MetersPerSecond         = 9,
 	None03                         = 10,
-	EUnit__Farenheit               = 11,
-	None04                         = 12,
-	LazyObjectProperty             = 13,
-	EUnit__Grams                   = 14,
-	None05                         = 15,
-	UInt16Property                 = 16,
-	EUnit__Pounds                  = 17,
-	None06                         = 18,
-	EUnit__KilogramsForce          = 19,
-	None07                         = 20,
-	Core                           = 21,
-	EUnit__Gigahertz               = 22,
-	None08                         = 23,
-	EUnit__Megabytes               = 24,
-	None09                         = 25,
-	EUnit__Milliseconds            = 26,
-	None10                         = 27,
-	EUnit__Days                    = 28,
-	None11                         = 29,
-	EUnit__EUnit_MAX               = 30,
-	None12                         = 31,
-	None13                         = 32,
-	None14                         = 33,
-	None15                         = 34,
-	Vector                         = 35,
-	None16                         = 36,
-	None17                         = 37,
-	None18                         = 38,
-	None19                         = 39,
-	None20                         = 40,
-	None21                         = 41
+	__UNKNOWN_NAME__               = 11,
+	EUnit__Farenheit               = 12,
+	None04                         = 13,
+	LazyObjectProperty             = 14,
+	EUnit__Grams                   = 15,
+	None05                         = 16,
+	UInt16Property                 = 17,
+	EUnit__Pounds                  = 18,
+	None06                         = 19,
+	__UNKNOWN_NAME__01             = 20,
+	EUnit__KilogramsForce          = 21,
+	None07                         = 22,
+	Core                           = 23,
+	EUnit__Gigahertz               = 24,
+	None08                         = 25,
+	__UNKNOWN_NAME__02             = 26,
+	EUnit__Megabytes               = 27,
+	None09                         = 28,
+	__UNKNOWN_NAME__03             = 29,
+	EUnit__Milliseconds            = 30,
+	None10                         = 31,
+	__UNKNOWN_NAME__04             = 32,
+	EUnit__Days                    = 33,
+	None11                         = 34,
+	__UNKNOWN_NAME__05             = 35,
+	EUnit__EUnit_MAX               = 36,
+	None12                         = 37,
+	None13                         = 38,
+	None14                         = 39,
+	None15                         = 40,
+	__UNKNOWN_NAME__06             = 41,
+	Vector                         = 42,
+	None16                         = 43,
+	None17                         = 44,
+	None18                         = 45,
+	None19                         = 46,
+	None20                         = 47,
+	None21                         = 48
 };
 
 
@@ -86,14 +97,19 @@ enum class EMouseCursor : uint8_t
 {
 	EMouseCursor__None             = 0,
 	None                           = 1,
-	EMouseCursor__ResizeUpDown     = 2,
-	None01                         = 3,
-	EMouseCursor__Crosshairs       = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	EMouseCursor__SlashedCircle    = 7,
-	None03                         = 8,
-	TextProperty                   = 9
+	__UNKNOWN_NAME__               = 2,
+	EMouseCursor__ResizeUpDown     = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EMouseCursor__Crosshairs       = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	EMouseCursor__SlashedCircle    = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	__UNKNOWN_NAME__02             = 12,
+	__UNKNOWN_NAME__03             = 13,
+	__UNKNOWN_NAME__04             = 14
 };
 
 
@@ -102,37 +118,68 @@ enum class EPixelFormat : uint8_t
 {
 	PF_Unknown                     = 0,
 	None                           = 1,
-	PF_G16                         = 2,
-	None01                         = 3,
-	PF_UYVY                        = 4,
-	None02                         = 5,
-	PF_ShadowDepth                 = 6,
-	None03                         = 7,
-	PF_G16R16F_FILTER              = 8,
-	None04                         = 9,
-	PF_D24                         = 10,
-	None05                         = 11,
-	PF_V8U8                        = 12,
-	None06                         = 13,
-	PF_R32_UINT                    = 14,
-	None07                         = 15,
-	PF_R16_UINT                    = 16,
-	None08                         = 17,
-	PF_R5G6B5_UNORM                = 18,
-	None09                         = 19,
-	PF_R8G8                        = 20,
-	None10                         = 21,
-	PF_X24_G8                      = 22,
-	None11                         = 23,
-	PF_R32G32B32A32_UINT           = 24,
-	None12                         = 25,
-	PF_ASTC_8x8                    = 26,
-	None13                         = 27,
-	PF_BC7                         = 28,
-	None14                         = 29,
-	PF_R32G32_SINT                 = 30,
-	None15                         = 31,
-	Color                          = 32
+	__UNKNOWN_NAME__               = 2,
+	PF_G16                         = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	PF_UYVY                        = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	PF_ShadowDepth                 = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	PF_G16R16F_FILTER              = 12,
+	None04                         = 13,
+	__UNKNOWN_NAME__04             = 14,
+	PF_D24                         = 15,
+	None05                         = 16,
+	__UNKNOWN_NAME__05             = 17,
+	PF_V8U8                        = 18,
+	None06                         = 19,
+	__UNKNOWN_NAME__06             = 20,
+	PF_R32_UINT                    = 21,
+	None07                         = 22,
+	__UNKNOWN_NAME__07             = 23,
+	PF_R16_UINT                    = 24,
+	None08                         = 25,
+	__UNKNOWN_NAME__08             = 26,
+	PF_R5G6B5_UNORM                = 27,
+	None09                         = 28,
+	__UNKNOWN_NAME__09             = 29,
+	PF_R8G8                        = 30,
+	None10                         = 31,
+	__UNKNOWN_NAME__10             = 32,
+	PF_X24_G8                      = 33,
+	None11                         = 34,
+	__UNKNOWN_NAME__11             = 35,
+	PF_R32G32B32A32_UINT           = 36,
+	None12                         = 37,
+	__UNKNOWN_NAME__12             = 38,
+	PF_ASTC_8x8                    = 39,
+	None13                         = 40,
+	__UNKNOWN_NAME__13             = 41,
+	PF_BC7                         = 42,
+	None14                         = 43,
+	__UNKNOWN_NAME__14             = 44,
+	PF_R32G32_SINT                 = 45,
+	None15                         = 46,
+	Color                          = 47,
+	__UNKNOWN_NAME__15             = 48,
+	__UNKNOWN_NAME__16             = 49,
+	__UNKNOWN_NAME__17             = 50,
+	__UNKNOWN_NAME__18             = 51,
+	__UNKNOWN_NAME__19             = 52,
+	__UNKNOWN_NAME__20             = 53,
+	__UNKNOWN_NAME__21             = 54,
+	__UNKNOWN_NAME__22             = 55,
+	__UNKNOWN_NAME__23             = 56,
+	__UNKNOWN_NAME__24             = 57,
+	__UNKNOWN_NAME__25             = 58,
+	__UNKNOWN_NAME__26             = 59,
+	__UNKNOWN_NAME__27             = 60,
+	__UNKNOWN_NAME__28             = 61,
+	__UNKNOWN_NAME__29             = 62,
+	__UNKNOWN_NAME__30             = 63
 };
 
 
@@ -141,8 +188,9 @@ enum class EAxis : uint8_t
 {
 	EAxis__None                    = 0,
 	None                           = 1,
-	EAxis__EAxis_MAX               = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EAxis__EAxis_MAX               = 3,
+	IntProperty                    = 4
 };
 
 
@@ -151,7 +199,8 @@ enum class ELogTimes : uint8_t
 {
 	ELogTimes__None                = 0,
 	None                           = 1,
-	EIPGTestEnum__RANDOM           = 2
+	__UNKNOWN_NAME__               = 2,
+	EIPGTestEnum__RANDOM           = 3
 };
 
 
@@ -159,7 +208,8 @@ enum class ELogTimes : uint8_t
 enum class ESearchDir : uint8_t
 {
 	ESearchDir__FromStart          = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -167,7 +217,8 @@ enum class ESearchDir : uint8_t
 enum class ESearchCase : uint8_t
 {
 	ESearchCase__CaseSensitive     = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

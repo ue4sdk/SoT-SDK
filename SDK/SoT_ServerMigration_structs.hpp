@@ -21,7 +21,8 @@ enum class EExecutionTarget : uint8_t
 {
 	EExecutionTarget__OldServer    = 0,
 	None                           = 1,
-	EActionPredictionType__Predicted = 2
+	__UNKNOWN_NAME__               = 2,
+	EActionPredictionType__Predicted = 3
 };
 
 

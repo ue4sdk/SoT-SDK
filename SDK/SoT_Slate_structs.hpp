@@ -22,7 +22,8 @@ enum class ETextJustify : uint8_t
 {
 	ETextJustify__Left             = 0,
 	None                           = 1,
-	EThreePlayerSplitScreenType__FavorTop = 2
+	__UNKNOWN_NAME__               = 2,
+	EThreePlayerSplitScreenType__FavorTop = 3
 };
 
 
@@ -31,7 +32,8 @@ enum class ETableViewMode : uint8_t
 {
 	ETableViewMode__List           = 0,
 	None                           = 1,
-	EButtonTouchMethod__DownAndUp  = 2
+	__UNKNOWN_NAME__               = 2,
+	EButtonTouchMethod__DownAndUp  = 3
 };
 
 
@@ -40,8 +42,9 @@ enum class ESelectionMode : uint8_t
 {
 	ESelectionMode__None           = 0,
 	None                           = 1,
-	ESelectionMode__ESelectionMode_MAX = 2,
-	ESlateBrushDrawType__NoDrawType = 3
+	__UNKNOWN_NAME__               = 2,
+	ESelectionMode__ESelectionMode_MAX = 3,
+	ESlateBrushDrawType__NoDrawType = 4
 };
 
 
@@ -50,9 +53,12 @@ enum class EStretch : uint8_t
 {
 	EStretch__None                 = 0,
 	None                           = 1,
-	EStretch__ScaleToFitY          = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EStretch__ScaleToFitY          = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 
@@ -61,7 +67,8 @@ enum class EStretchDirection : uint8_t
 {
 	EStretchDirection__Both        = 0,
 	None                           = 1,
-	ETableViewMode__List           = 2
+	__UNKNOWN_NAME__               = 2,
+	ETableViewMode__List           = 3
 };
 
 
@@ -70,8 +77,10 @@ enum class EProgressBarFillType : uint8_t
 {
 	EProgressBarFillType__LeftToRight = 0,
 	None                           = 1,
-	EProgressBarFillType__BottomToTop = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EProgressBarFillType__BottomToTop = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 

@@ -24,7 +24,9 @@ enum class EEarthquakeState : uint8_t
 {
 	EEarthquakeState__Dormant      = 0,
 	None                           = 1,
-	EEarthquakeState__EEarthquakeState_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EEarthquakeState__EEarthquakeState_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -32,7 +34,8 @@ enum class EEarthquakeState : uint8_t
 enum class EGeyserState : uint8_t
 {
 	EGeyserState__Dormant          = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -40,7 +43,8 @@ enum class EGeyserState : uint8_t
 enum class EGeyserManagerState : uint8_t
 {
 	EGeyserManagerState__Dormant   = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -49,7 +53,8 @@ enum class EVolcanoTargetHitType : uint8_t
 {
 	EVolcanoTargetHitType__OnTarget = 0,
 	None                           = 1,
-	ECharacterType__Ghost          = 2
+	__UNKNOWN_NAME__               = 2,
+	ECharacterType__Ghost          = 3
 };
 
 
@@ -58,7 +63,8 @@ enum class EVolcanoTargetType : uint8_t
 {
 	EVolcanoTargetType__Player     = 0,
 	None                           = 1,
-	EVolcanoTargetHitType__OnTarget = 2
+	__UNKNOWN_NAME__               = 2,
+	EVolcanoTargetHitType__OnTarget = 3
 };
 
 
@@ -66,7 +72,9 @@ enum class EVolcanoTargetType : uint8_t
 enum class EVolcanoState : uint8_t
 {
 	EVolcanoState__Dormant         = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2,
+	__UNKNOWN_NAME__01             = 3
 };
 
 

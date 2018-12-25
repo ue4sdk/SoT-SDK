@@ -19,9 +19,11 @@ enum class EJumping : uint8_t
 {
 	EJumping__NewEnumerator0       = 0,
 	None                           = 1,
-	EJumping__NewEnumerator4       = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EJumping__NewEnumerator4       = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 

@@ -21,9 +21,11 @@ enum class EAddLinkResult : uint8_t
 {
 	EAddLinkResult__Success_Set    = 0,
 	None                           = 1,
-	EAddLinkResult__Failed_CoincidentEndpointIds = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EAddLinkResult__Failed_CoincidentEndpointIds = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -32,8 +34,10 @@ enum class EAddEndpointResult : uint8_t
 {
 	EAddEndpointResult__Success    = 0,
 	None                           = 1,
-	EAddEndpointResult__Failed_DoesntImplementEndpointInterface = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EAddEndpointResult__Failed_DoesntImplementEndpointInterface = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 

@@ -19,22 +19,27 @@ enum class EObjectAnimationState : uint8_t
 {
 	EObjectAnimationState__NewEnumerator0 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
+	__UNKNOWN_NAME__               = 2,
 	EObjectAnimationState__NewEnumerator4 = 3,
 	None01                         = 4,
-	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 5,
 	EObjectAnimationState__NewEnumerator8 = 6,
 	None02                         = 7,
-	StructProperty                 = 8,
+	__UNKNOWN_NAME__02             = 8,
 	EObjectAnimationState__NewEnumerator12 = 9,
 	None03                         = 10,
-	TextProperty                   = 11,
+	__UNKNOWN_NAME__03             = 11,
 	EObjectAnimationState__NewEnumerator16 = 12,
 	None04                         = 13,
-	LazyObjectProperty             = 14,
+	__UNKNOWN_NAME__04             = 14,
 	EObjectAnimationState__NewEnumerator20 = 15,
 	None05                         = 16,
-	UInt16Property                 = 17
+	UInt16Property                 = 17,
+	__UNKNOWN_NAME__05             = 18,
+	None06                         = 19,
+	BoolProperty                   = 20,
+	None07                         = 21,
+	__UNKNOWN_NAME__06             = 22
 };
 
 

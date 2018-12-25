@@ -19,11 +19,14 @@ enum class ECreatureNumbers : uint8_t
 {
 	ECreatureNumbers__NewEnumerator0 = 0,
 	None                           = 1,
-	ECreatureNumbers__NewEnumerator4 = 2,
-	None01                         = 3,
-	ECreatureNumbers__NewEnumerator8 = 4,
-	None02                         = 5,
-	None03                         = 6
+	__UNKNOWN_NAME__               = 2,
+	ECreatureNumbers__NewEnumerator4 = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	ECreatureNumbers__NewEnumerator8 = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	__UNKNOWN_NAME__03             = 9
 };
 
 

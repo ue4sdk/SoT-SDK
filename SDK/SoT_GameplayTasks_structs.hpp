@@ -20,7 +20,8 @@ namespace SDK
 enum class ETaskResourceOverlapPolicy : uint8_t
 {
 	ETaskResourceOverlapPolicy__StartOnTop = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -29,9 +30,10 @@ enum class EGameplayTaskState : uint8_t
 {
 	EGameplayTaskState__Uninitialized = 0,
 	None                           = 1,
-	EGameplayTaskState__Finished   = 2,
-	None01                         = 3,
-	EGameplayTaskRunResult__Error  = 4
+	__UNKNOWN_NAME__               = 2,
+	EGameplayTaskState__Finished   = 3,
+	None01                         = 4,
+	EGameplayTaskRunResult__Error  = 5
 };
 
 
@@ -40,8 +42,10 @@ enum class EGameplayTaskRunResult : uint8_t
 {
 	EGameplayTaskRunResult__Error  = 0,
 	None                           = 1,
-	EGameplayTaskRunResult__Success_Finished = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EGameplayTaskRunResult__Success_Finished = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 

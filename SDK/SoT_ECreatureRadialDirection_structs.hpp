@@ -19,8 +19,8 @@ enum class ECreatureRadialDirection : uint8_t
 {
 	ECreatureRadialDirection__NewEnumerator0 = 0,
 	None                           = 1,
-	IntProperty                    = 2,
-	Matrix                         = 3
+	__UNKNOWN_NAME__               = 2,
+	None01                         = 3
 };
 
 

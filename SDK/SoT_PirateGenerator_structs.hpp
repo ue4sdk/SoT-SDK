@@ -21,7 +21,9 @@ enum class EIPGEthnicity : uint8_t
 {
 	EIPGEthnicity__UNSPECIFIED     = 0,
 	None                           = 1,
-	EIPGEthnicity__EIPGEthnicity_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EIPGEthnicity__EIPGEthnicity_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -39,7 +41,8 @@ enum class EIPGGender : uint8_t
 enum class EIPGPirateType : uint8_t
 {
 	EIPGPirateType__PLAYER         = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -47,7 +50,8 @@ enum class EIPGPirateType : uint8_t
 enum class EIPGTestEnum : uint8_t
 {
 	EIPGTestEnum__RANDOM           = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -56,9 +60,11 @@ enum class EIPGSetMode : uint8_t
 {
 	EIPGSetMode__RANDOM            = 0,
 	None                           = 1,
-	EIPGSetMode__NONE              = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EIPGSetMode__NONE              = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -67,13 +73,15 @@ enum class EIPGBlendType : uint8_t
 {
 	EIPGBlendType__NIX             = 0,
 	None                           = 1,
-	EIPGBlendType__POSNEG          = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EIPGBlendType__ONOFF_BIAS      = 5,
-	None02                         = 6,
-	StructProperty                 = 7,
-	None03                         = 8
+	__UNKNOWN_NAME__               = 2,
+	EIPGBlendType__POSNEG          = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EIPGBlendType__ONOFF_BIAS      = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9,
+	__UNKNOWN_NAME__01             = 10
 };
 
 
@@ -82,10 +90,13 @@ enum class EPirateBakeFlags : uint8_t
 {
 	EPirateBakeFlags__None         = 0,
 	None                           = 1,
-	EPirateBakeFlags__StripTopLOD  = 2,
-	None01                         = 3,
-	Editor                         = 4,
-	EPirateBakeFlags__EPirateBakeFlags_MAX = 5
+	__UNKNOWN_NAME__               = 2,
+	EPirateBakeFlags__StripTopLOD  = 3,
+	None01                         = 4,
+	Editor                         = 5,
+	EPirateBakeFlags__EPirateBakeFlags_MAX = 6,
+	__UNKNOWN_NAME__01             = 7,
+	__UNKNOWN_NAME__02             = 8
 };
 
 
@@ -93,7 +104,8 @@ enum class EPirateBakeFlags : uint8_t
 enum class EFileAccessAsyncResult : uint8_t
 {
 	EFileAccessAsyncResult__Succeeded = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

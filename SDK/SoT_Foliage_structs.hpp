@@ -23,7 +23,8 @@ enum class EFoliageScaling : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	EFoliageScaling__LockYZ        = 3,
-	None01                         = 4
+	None01                         = 4,
+	__UNKNOWN_NAME__               = 5
 };
 
 
@@ -32,9 +33,10 @@ enum class EFoliageVertexColorMask : uint8_t
 {
 	FOLIAGEVERTEXCOLORMASK_Disabled = 0,
 	None                           = 1,
-	FOLIAGEVERTEXCOLORMASK_Alpha   = 2,
-	None01                         = 3,
-	LCCT_None                      = 4
+	__UNKNOWN_NAME__               = 2,
+	FOLIAGEVERTEXCOLORMASK_Alpha   = 3,
+	None01                         = 4,
+	LCCT_None                      = 5
 };
 
 
@@ -43,7 +45,8 @@ enum class ESimulationQuery : uint8_t
 {
 	ESimulationQuery__CollisionOverlap = 0,
 	None                           = 1,
-	LGT_None                       = 2
+	__UNKNOWN_NAME__               = 2,
+	LGT_None                       = 3
 };
 
 
@@ -52,7 +55,8 @@ enum class ESimulationOverlap : uint8_t
 {
 	ESimulationOverlap__CollisionOverlap = 0,
 	None                           = 1,
-	ETwoPlayerSplitScreenType__Horizontal = 2
+	__UNKNOWN_NAME__               = 2,
+	ETwoPlayerSplitScreenType__Horizontal = 3
 };
 
 

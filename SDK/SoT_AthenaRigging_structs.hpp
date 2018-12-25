@@ -22,15 +22,19 @@ enum class EInstancedRopeParameterType : uint8_t
 {
 	RPT_Start                      = 0,
 	None                           = 1,
-	RPT_UVScale                    = 2,
-	None01                         = 3,
-	RPT_WindAmount                 = 4,
-	None02                         = 5,
-	RPT_CatenaryXYDistance         = 6,
-	None03                         = 7,
-	TextProperty                   = 8,
-	ECannonballIconType__Normal    = 9,
-	None04                         = 10
+	__UNKNOWN_NAME__               = 2,
+	RPT_UVScale                    = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	RPT_WindAmount                 = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	RPT_CatenaryXYDistance         = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	ECannonballIconType__Normal    = 12,
+	None04                         = 13,
+	__UNKNOWN_NAME__03             = 14
 };
 
 

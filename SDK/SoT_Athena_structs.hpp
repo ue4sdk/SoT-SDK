@@ -51,27 +51,43 @@ enum class EHealthChangedReason : uint8_t
 {
 	EHealthChangedReason__NoChange = 0,
 	None                           = 1,
-	EHealthChangedReason__CannonBallSplashDamage = 2,
-	None01                         = 3,
-	EHealthChangedReason__DamagedBySwimmingCreature = 4,
-	None02                         = 5,
-	EHealthChangedReason__EyeOfReach_Default = 6,
-	None03                         = 7,
-	TextProperty                   = 8,
-	EHealthChangedReason__PowerSlammedByKrakenTentacle = 9,
-	None04                         = 10,
-	EHealthChangedReason__Fire     = 11,
-	None05                         = 12,
-	EHealthChangedReason__SunkenCurseDamage = 13,
-	None06                         = 14,
-	EHealthChangedReason__StateTransfer = 15,
-	None07                         = 16,
-	EHealthChangedReason__LiquidProjectile = 17,
-	None08                         = 18,
-	EHealthChangedReason__VolcanicRock = 19,
-	None09                         = 20,
-	None10                         = 21,
-	Vector2D                       = 22
+	__UNKNOWN_NAME__               = 2,
+	EHealthChangedReason__CannonBallSplashDamage = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EHealthChangedReason__DamagedBySwimmingCreature = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EHealthChangedReason__EyeOfReach_Default = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	EHealthChangedReason__PowerSlammedByKrakenTentacle = 12,
+	None04                         = 13,
+	__UNKNOWN_NAME__03             = 14,
+	EHealthChangedReason__Fire     = 15,
+	None05                         = 16,
+	__UNKNOWN_NAME__04             = 17,
+	EHealthChangedReason__SunkenCurseDamage = 18,
+	None06                         = 19,
+	__UNKNOWN_NAME__05             = 20,
+	EHealthChangedReason__StateTransfer = 21,
+	None07                         = 22,
+	__UNKNOWN_NAME__06             = 23,
+	EHealthChangedReason__LiquidProjectile = 24,
+	None08                         = 25,
+	__UNKNOWN_NAME__07             = 26,
+	EHealthChangedReason__VolcanicRock = 27,
+	None09                         = 28,
+	__UNKNOWN_NAME__08             = 29,
+	__UNKNOWN_NAME__09             = 30,
+	None10                         = 31,
+	__UNKNOWN_NAME__10             = 32,
+	__UNKNOWN_NAME__11             = 33,
+	__UNKNOWN_NAME__12             = 34,
+	__UNKNOWN_NAME__13             = 35,
+	__UNKNOWN_NAME__14             = 36,
+	Vector2D                       = 37,
+	__UNKNOWN_NAME__15             = 38
 };
 
 
@@ -80,7 +96,9 @@ enum class ERepairableState : uint8_t
 {
 	ERepairableState__NeverDamaged = 0,
 	None                           = 1,
-	ERepairableState__ERepairableState_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	ERepairableState__ERepairableState_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -93,7 +111,9 @@ enum class EShipPartCustomizationErrorCode : uint8_t
 	EShipPartCustomizationErrorCode__FailedToFindCustomizationComponent = 3,
 	None01                         = 4,
 	NameProperty                   = 5,
-	EShipPartCustomizationErrorCode__EShipPartCustomizationErrorCode_MAX = 6
+	EShipPartCustomizationErrorCode__EShipPartCustomizationErrorCode_MAX = 6,
+	__UNKNOWN_NAME__               = 7,
+	__UNKNOWN_NAME__01             = 8
 };
 
 
@@ -104,7 +124,8 @@ enum class ERequestState : uint8_t
 	None                           = 1,
 	IntProperty                    = 2,
 	ERequestState__Cancelled       = 3,
-	None01                         = 4
+	None01                         = 4,
+	__UNKNOWN_NAME__               = 5
 };
 
 
@@ -113,7 +134,7 @@ enum class ECharacterDeathType : uint8_t
 {
 	ECharacterDeathType__Invalid   = 0,
 	None                           = 1,
-	IntProperty                    = 2,
+	__UNKNOWN_NAME__               = 2,
 	ECharacterDeathType__ECharacterDeathType_MAX = 3,
 	ESkeletonShipCaptainDockedAnimationState__None = 4
 };
@@ -124,12 +145,16 @@ enum class EAthenaAITeam : uint8_t
 {
 	Players                        = 0,
 	None                           = 1,
-	Fauna_Snakes                   = 2,
-	None01                         = 3,
-	Kraken                         = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	None03                         = 7
+	__UNKNOWN_NAME__               = 2,
+	Fauna_Snakes                   = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	Kraken                         = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9,
+	__UNKNOWN_NAME__02             = 10,
+	__UNKNOWN_NAME__03             = 11
 };
 
 
@@ -144,8 +169,12 @@ enum class EControllableObjectType : uint8_t
 	NameProperty                   = 5,
 	EControllableObjectType__Ladder = 6,
 	None02                         = 7,
-	EControllableObjectType__HarpoonLauncher = 8,
-	None03                         = 9
+	__UNKNOWN_NAME__               = 8,
+	EControllableObjectType__HarpoonLauncher = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__01             = 11,
+	__UNKNOWN_NAME__02             = 12,
+	__UNKNOWN_NAME__03             = 13
 };
 
 
@@ -154,8 +183,12 @@ enum class ECameraLookatAnimationType : uint8_t
 {
 	ECameraLookatAnimationType__Default = 0,
 	None                           = 1,
-	ECameraLookatAnimationType__Tentacle = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	ECameraLookatAnimationType__Tentacle = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -163,7 +196,8 @@ enum class ECameraLookatAnimationType : uint8_t
 enum class ELookAtRotationType : uint8_t
 {
 	ELookAtRotationType__Rate      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -171,7 +205,8 @@ enum class ELookAtRotationType : uint8_t
 enum class EIKFootPlantingState : uint8_t
 {
 	EIKFootPlantingState__On       = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -179,7 +214,8 @@ enum class EIKFootPlantingState : uint8_t
 enum class EIKSolverType : uint8_t
 {
 	EIKSolverType__NormalSolver    = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -197,7 +233,8 @@ enum class EAthenaAnimationSocketGroupCharacterSize : uint8_t
 {
 	EAthenaAnimationSocketGroupCharacterSize__Default = 0,
 	None                           = 1,
-	EIKSolverType__NormalSolver    = 2
+	__UNKNOWN_NAME__               = 2,
+	EIKSolverType__NormalSolver    = 3
 };
 
 
@@ -215,10 +252,14 @@ enum class EWieldedItemAnimationState : uint8_t
 {
 	EWieldedItemAnimationState__Equipping = 0,
 	None                           = 1,
-	EWieldedItemAnimationState__ContinuousUse = 2,
-	None01                         = 3,
-	EWieldedItemAnimationState__Blocking = 4,
-	None02                         = 5
+	__UNKNOWN_NAME__               = 2,
+	EWieldedItemAnimationState__ContinuousUse = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EWieldedItemAnimationState__Blocking = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	__UNKNOWN_NAME__03             = 9
 };
 
 
@@ -227,8 +268,9 @@ enum class ERowBraking : uint8_t
 {
 	ERowBraking__None              = 0,
 	None                           = 1,
-	ERowBraking__ERowBraking_MAX   = 2,
-	ECharacterDeathType__Invalid   = 3
+	__UNKNOWN_NAME__               = 2,
+	ERowBraking__ERowBraking_MAX   = 3,
+	ECharacterDeathType__Invalid   = 4
 };
 
 
@@ -237,8 +279,9 @@ enum class ESkeletonShipCaptainDockedAnimationState : uint8_t
 {
 	ESkeletonShipCaptainDockedAnimationState__None = 0,
 	None                           = 1,
-	ESkeletonShipCaptainDockedAnimationState__ESkeletonShipCaptainDockedAnimationState_MAX = 2,
-	EStairAnimations__UpLeft       = 3
+	__UNKNOWN_NAME__               = 2,
+	ESkeletonShipCaptainDockedAnimationState__ESkeletonShipCaptainDockedAnimationState_MAX = 3,
+	EStairAnimations__UpLeft       = 4
 };
 
 
@@ -247,7 +290,8 @@ enum class ECharacterHitReactionAnimType : uint8_t
 {
 	ECharacterHitReactionAnimType__Full = 0,
 	None                           = 1,
-	EAthenaAnimationSocketGroupCharacterSize__Default = 2
+	__UNKNOWN_NAME__               = 2,
+	EAthenaAnimationSocketGroupCharacterSize__Default = 3
 };
 
 
@@ -264,7 +308,8 @@ enum class EKnockbackAnimDirection : uint8_t
 enum class ESkeletonActiveAnimSystem : uint8_t
 {
 	ESkeletonActiveAnimSystem__Sensing = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -273,7 +318,8 @@ enum class ESkeletonEmoteActionState : uint8_t
 {
 	ESkeletonEmoteActionState__None = 0,
 	None                           = 1,
-	ESkeletonActiveAnimSystem__Sensing = 2
+	__UNKNOWN_NAME__               = 2,
+	ESkeletonActiveAnimSystem__Sensing = 3
 };
 
 
@@ -282,9 +328,10 @@ enum class ESkeletonSensingState : uint8_t
 {
 	ESkeletonSensingState__None    = 0,
 	None                           = 1,
-	ESkeletonSensingState__Pursuit = 2,
-	None01                         = 3,
-	ELadderTransitionMode__OnTop   = 4
+	__UNKNOWN_NAME__               = 2,
+	ESkeletonSensingState__Pursuit = 3,
+	None01                         = 4,
+	ELadderTransitionMode__OnTop   = 5
 };
 
 
@@ -293,8 +340,9 @@ enum class EInteractionObject : uint8_t
 {
 	EInteractionObject__None       = 0,
 	None                           = 1,
-	EInteractionObject__EInteractionObject_MAX = 2,
-	EItemBlockingSubState__None    = 3
+	__UNKNOWN_NAME__               = 2,
+	EInteractionObject__EInteractionObject_MAX = 3,
+	EItemBlockingSubState__None    = 4
 };
 
 
@@ -303,8 +351,11 @@ enum class EMeleeSpecialState : uint8_t
 {
 	EMeleeSpecialState__None       = 0,
 	None                           = 1,
-	EMeleeSpecialState__Dodge      = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EMeleeSpecialState__Dodge      = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -312,7 +363,8 @@ enum class EMeleeSpecialState : uint8_t
 enum class EEmoteSequenceType : uint8_t
 {
 	EEmoteSequenceType__Continuous = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -321,8 +373,11 @@ enum class EArmOverlayFlags : uint8_t
 {
 	EArmOverlayFlags__RightArmOnly = 0,
 	None                           = 1,
-	EArmOverlayFlags__UpperBodyRight = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EArmOverlayFlags__UpperBodyRight = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -331,8 +386,12 @@ enum class ELocomotionType : uint8_t
 {
 	ELocomotionType__Standard      = 0,
 	None                           = 1,
-	ELocomotionType__Combat        = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	ELocomotionType__Combat        = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -341,8 +400,10 @@ enum class EItemPassiveState : uint8_t
 {
 	EItemPassiveState__Idle        = 0,
 	None                           = 1,
-	EItemPassiveState__Swimming    = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EItemPassiveState__Swimming    = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 
@@ -351,8 +412,9 @@ enum class EFacialPriority : uint8_t
 {
 	EFacialPriority__Low           = 0,
 	None                           = 1,
-	EFacialPriority__EFacialPriority_MAX = 2,
-	EInteractionObject__None       = 3
+	__UNKNOWN_NAME__               = 2,
+	EFacialPriority__EFacialPriority_MAX = 3,
+	EInteractionObject__None       = 4
 };
 
 
@@ -361,8 +423,9 @@ enum class EStairAnimations : uint8_t
 {
 	EStairAnimations__UpLeft       = 0,
 	None                           = 1,
-	EStairAnimations__EStairAnimations_MAX = 2,
-	EFacialPriority__Low           = 3
+	__UNKNOWN_NAME__               = 2,
+	EStairAnimations__EStairAnimations_MAX = 3,
+	EFacialPriority__Low           = 4
 };
 
 
@@ -370,7 +433,8 @@ enum class EStairAnimations : uint8_t
 enum class EContinuousUseID : uint8_t
 {
 	EContinuousUseID__In           = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -379,7 +443,8 @@ enum class EContinuousUseOverride : uint8_t
 {
 	EContinuousUseOverride__None   = 0,
 	None                           = 1,
-	EKnockbackAnimDirection__Forwards = 2
+	__UNKNOWN_NAME__               = 2,
+	EKnockbackAnimDirection__Forwards = 3
 };
 
 
@@ -388,8 +453,12 @@ enum class EObjectPitchTargetingStates : uint8_t
 {
 	EObjectPitchTargetingStates__None = 0,
 	None                           = 1,
-	EObjectPitchTargetingStates__Action_1_Water = 2,
-	BoolProperty                   = 3
+	__UNKNOWN_NAME__               = 2,
+	EObjectPitchTargetingStates__Action_1_Water = 3,
+	BoolProperty                   = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -398,8 +467,9 @@ enum class EObjectPitchTargetingLimbs : uint8_t
 {
 	EObjectPitchTargetingLimbs__None = 0,
 	None                           = 1,
-	EObjectPitchTargetingLimbs__EObjectPitchTargetingLimbs_MAX = 2,
-	EAimSensitivitySettingCategory__Invalid = 3
+	__UNKNOWN_NAME__               = 2,
+	EObjectPitchTargetingLimbs__EObjectPitchTargetingLimbs_MAX = 3,
+	EAimSensitivitySettingCategory__Invalid = 4
 };
 
 
@@ -407,7 +477,8 @@ enum class EObjectPitchTargetingLimbs : uint8_t
 enum class EWieldAnimationGraph : uint8_t
 {
 	EWieldAnimationGraph__ThirdPerson = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -416,11 +487,13 @@ enum class EWieldAnimationLocation : uint8_t
 {
 	EWieldAnimationLocation__Left  = 0,
 	None                           = 1,
-	EWieldAnimationLocation__RT_CAMERA_IK_HAND__Skeleton = 2,
-	None01                         = 3,
-	EWieldAnimationLocation__EWieldAnimationLocation_MAX = 4,
-	ECrewSessionType__Invalid      = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	EWieldAnimationLocation__RT_CAMERA_IK_HAND__Skeleton = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EWieldAnimationLocation__EWieldAnimationLocation_MAX = 6,
+	ECrewSessionType__Invalid      = 7,
+	None02                         = 8
 };
 
 
@@ -429,8 +502,9 @@ enum class EItemBlockingSubState : uint8_t
 {
 	EItemBlockingSubState__None    = 0,
 	None                           = 1,
-	EItemBlockingSubState__EItemBlockingSubState_MAX = 2,
-	EObjectPitchTargetingLimbs__None = 3
+	__UNKNOWN_NAME__               = 2,
+	EItemBlockingSubState__EItemBlockingSubState_MAX = 3,
+	EObjectPitchTargetingLimbs__None = 4
 };
 
 
@@ -439,9 +513,10 @@ enum class EComplexOneShotSubState : uint8_t
 {
 	EComplexOneShotSubState__WarmUp = 0,
 	None                           = 1,
-	EComplexOneShotSubState__HeavyAttackStun = 2,
-	None01                         = 3,
-	ESkeletonSensingState__None    = 4
+	__UNKNOWN_NAME__               = 2,
+	EComplexOneShotSubState__HeavyAttackStun = 3,
+	None01                         = 4,
+	ESkeletonSensingState__None    = 5
 };
 
 
@@ -450,7 +525,8 @@ enum class EAthenaAnimationCapstanState : uint8_t
 {
 	EAthenaAnimationCapstanState__Neutral = 0,
 	None                           = 1,
-	EWieldAnimationGraph__ThirdPerson = 2
+	__UNKNOWN_NAME__               = 2,
+	EWieldAnimationGraph__ThirdPerson = 3
 };
 
 
@@ -459,8 +535,11 @@ enum class EAthenaAnimationJumpingState : uint8_t
 {
 	EAthenaAnimationJumpingState__None = 0,
 	None                           = 1,
-	EAthenaAnimationJumpingState__JumpFinished = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EAthenaAnimationJumpingState__JumpFinished = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -469,7 +548,8 @@ enum class EAthenaAnimationWheelState : uint8_t
 {
 	EAthenaAnimationWheelState__Neutral = 0,
 	None                           = 1,
-	ESessionVisibility__Invalid    = 2
+	__UNKNOWN_NAME__               = 2,
+	ESessionVisibility__Invalid    = 3
 };
 
 
@@ -478,9 +558,10 @@ enum class EWheelAnimationType : uint8_t
 {
 	EWheelAnimationType__SmallTurn = 0,
 	None                           = 1,
-	EWheelAnimationType__RightTurnFast = 2,
-	None01                         = 3,
-	ELeakEffectState__Off          = 4
+	__UNKNOWN_NAME__               = 2,
+	EWheelAnimationType__RightTurnFast = 3,
+	None01                         = 4,
+	ELeakEffectState__Off          = 5
 };
 
 
@@ -489,7 +570,8 @@ enum class EItemUseSpeed : uint8_t
 {
 	EItemUseSpeed__Default         = 0,
 	IntProperty                    = 1,
-	EAttitudeTowardActor__Friendly = 2
+	__UNKNOWN_NAME__               = 2,
+	EAttitudeTowardActor__Friendly = 3
 };
 
 
@@ -498,14 +580,18 @@ enum class EShipRegion : uint8_t
 {
 	EShipRegion__None              = 0,
 	None                           = 1,
-	EShipRegion__TopDeck_CaptainsCabin = 2,
-	None01                         = 3,
-	EShipRegion__MapDeck_Table     = 4,
-	None02                         = 5,
-	EShipRegion__BrigDeck_InsideBrig = 6,
-	None03                         = 7,
-	EControllableObjectType__None  = 8,
-	None04                         = 9
+	__UNKNOWN_NAME__               = 2,
+	EShipRegion__TopDeck_CaptainsCabin = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EShipRegion__MapDeck_Table     = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EShipRegion__BrigDeck_InsideBrig = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	EControllableObjectType__None  = 12,
+	None04                         = 13
 };
 
 
@@ -524,9 +610,12 @@ enum class EMaxMoveSpeedScalarReason : uint8_t
 {
 	EMaxMoveSpeedScalarReason__Digging = 0,
 	None                           = 1,
-	EMaxMoveSpeedScalarReason__MeleeBlocking = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EMaxMoveSpeedScalarReason__MeleeBlocking = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 
@@ -534,7 +623,8 @@ enum class EMaxMoveSpeedScalarReason : uint8_t
 enum class EProjectileCollisionResponse : uint8_t
 {
 	EProjectileCollisionResponse__Ignore = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -543,7 +633,8 @@ enum class EAttitudeTowardActor : uint8_t
 {
 	EAttitudeTowardActor__Friendly = 0,
 	None                           = 1,
-	EProjectileCollisionResponse__Ignore = 2
+	__UNKNOWN_NAME__               = 2,
+	EProjectileCollisionResponse__Ignore = 3
 };
 
 
@@ -551,7 +642,8 @@ enum class EAttitudeTowardActor : uint8_t
 enum class ESprintLockReason : uint8_t
 {
 	ESprintLockReason__WieldedItem = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -570,7 +662,8 @@ enum class ESwimAttackableType : uint8_t
 {
 	ESwimAttackableType__TakesDamage = 0,
 	None                           = 1,
-	EInputControllerType__GamePad  = 2
+	__UNKNOWN_NAME__               = 2,
+	EInputControllerType__GamePad  = 3
 };
 
 
@@ -578,7 +671,8 @@ enum class ESwimAttackableType : uint8_t
 enum class EInputControllerType : uint8_t
 {
 	EInputControllerType__GamePad  = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -587,8 +681,9 @@ enum class EAimSensitivitySettingCategory : uint8_t
 {
 	EAimSensitivitySettingCategory__Invalid = 0,
 	None                           = 1,
-	EAimSensitivitySettingCategory__EAimSensitivitySettingCategory_MAX = 2,
-	EBrigState__Unbriggable        = 3
+	__UNKNOWN_NAME__               = 2,
+	EAimSensitivitySettingCategory__EAimSensitivitySettingCategory_MAX = 3,
+	EBrigState__Unbriggable        = 4
 };
 
 
@@ -637,8 +732,9 @@ enum class ETelemetryPlatformId : uint8_t
 {
 	ETelemetryPlatformId__Undefined = 0,
 	None                           = 1,
-	ETelemetryPlatformId__ETelemetryPlatformId_MAX = 2,
-	EAudioGameState__None          = 3
+	__UNKNOWN_NAME__               = 2,
+	ETelemetryPlatformId__ETelemetryPlatformId_MAX = 3,
+	EAudioGameState__None          = 4
 };
 
 
@@ -647,9 +743,13 @@ enum class ECrewSessionType : uint8_t
 {
 	ECrewSessionType__Invalid      = 0,
 	None                           = 1,
-	ECrewSessionType__SmallShip    = 2,
-	None01                         = 3,
-	ECrewSessionType__ECrewSessionType_MAX = 4
+	__UNKNOWN_NAME__               = 2,
+	ECrewSessionType__SmallShip    = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	ECrewSessionType__ECrewSessionType_MAX = 6,
+	__UNKNOWN_NAME__02             = 7,
+	__UNKNOWN_NAME__03             = 8
 };
 
 
@@ -658,7 +758,8 @@ enum class ESessionVisibility : uint8_t
 {
 	ESessionVisibility__Invalid    = 0,
 	None                           = 1,
-	EShipDeck__BottomDeck          = 2
+	__UNKNOWN_NAME__               = 2,
+	EShipDeck__BottomDeck          = 3
 };
 
 
@@ -666,7 +767,8 @@ enum class ESessionVisibility : uint8_t
 enum class EMatchmakingVisibilityState : uint8_t
 {
 	EMatchmakingVisibilityState__Public = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -674,7 +776,8 @@ enum class EMatchmakingVisibilityState : uint8_t
 enum class EScuttleState : uint8_t
 {
 	EScuttleState__Scuttled        = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -683,8 +786,9 @@ enum class EBrigState : uint8_t
 {
 	EBrigState__Unbriggable        = 0,
 	None                           = 1,
-	EBrigState__EBrigState_MAX     = 2,
-	ETelemetryPlatformId__Undefined = 3
+	__UNKNOWN_NAME__               = 2,
+	EBrigState__EBrigState_MAX     = 3,
+	ETelemetryPlatformId__Undefined = 4
 };
 
 
@@ -693,8 +797,11 @@ enum class EAllianceNotificationType : uint8_t
 {
 	EAllianceNotificationType__Joined = 0,
 	None                           = 1,
-	EAllianceNotificationType__OtherCrewJoined = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EAllianceNotificationType__OtherCrewJoined = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -703,7 +810,8 @@ enum class EAllianceJoinStatus : uint8_t
 {
 	EAllianceJoinStatus__CannotJoinAlliance = 0,
 	None                           = 1,
-	ESprintLockReason__WieldedItem = 2
+	__UNKNOWN_NAME__               = 2,
+	ESprintLockReason__WieldedItem = 3
 };
 
 
@@ -711,7 +819,8 @@ enum class EAllianceJoinStatus : uint8_t
 enum class EAllianceStatus : uint8_t
 {
 	EAllianceStatus__IsInAlliance  = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -720,8 +829,9 @@ enum class EVfxCustomLocalSpaceMode : uint8_t
 {
 	EVfxCustomLocalSpaceMode__Default = 0,
 	None                           = 1,
-	EVfxCustomLocalSpaceMode__EVfxCustomLocalSpaceMode_MAX = 2,
-	ELadderType__Generic           = 3
+	__UNKNOWN_NAME__               = 2,
+	EVfxCustomLocalSpaceMode__EVfxCustomLocalSpaceMode_MAX = 3,
+	ELadderType__Generic           = 4
 };
 
 
@@ -730,7 +840,8 @@ enum class EAnimNotifyUnderwaterMode : uint8_t
 {
 	EAnimNotifyUnderwaterMode__AutoDetect = 0,
 	None                           = 1,
-	EVoyageChangeReason__Unknown   = 2
+	__UNKNOWN_NAME__               = 2,
+	EVoyageChangeReason__Unknown   = 3
 };
 
 
@@ -739,8 +850,9 @@ enum class EAthenaAnimationLadderState : uint8_t
 {
 	EAthenaAnimationLadderState__None = 0,
 	None                           = 1,
-	EAthenaAnimationLadderState__EAthenaAnimationLadderState_MAX = 2,
-	EVfxCustomLocalSpaceMode__Default = 3
+	__UNKNOWN_NAME__               = 2,
+	EAthenaAnimationLadderState__EAthenaAnimationLadderState_MAX = 3,
+	EVfxCustomLocalSpaceMode__Default = 4
 };
 
 
@@ -749,7 +861,8 @@ enum class EAthenaAnimationLadderTransitionState : uint8_t
 {
 	EAthenaAnimationLadderTransitionState__None = 0,
 	None                           = 1,
-	EAllianceStatus__IsInAlliance  = 2
+	__UNKNOWN_NAME__               = 2,
+	EAllianceStatus__IsInAlliance  = 3
 };
 
 
@@ -758,8 +871,9 @@ enum class ELadderType : uint8_t
 {
 	ELadderType__Generic           = 0,
 	None                           = 1,
-	ELadderType__ELadderType_MAX   = 2,
-	EPlayMode__Adventure           = 3
+	__UNKNOWN_NAME__               = 2,
+	ELadderType__ELadderType_MAX   = 3,
+	EPlayMode__Adventure           = 4
 };
 
 
@@ -768,9 +882,10 @@ enum class ELadderTransitionMode : uint8_t
 {
 	ELadderTransitionMode__OnTop   = 0,
 	None                           = 1,
-	ELadderTransitionMode__Max     = 2,
-	None01                         = 3,
-	EBucketState__Idle             = 4
+	__UNKNOWN_NAME__               = 2,
+	ELadderTransitionMode__Max     = 3,
+	None01                         = 4,
+	EBucketState__Idle             = 5
 };
 
 
@@ -779,8 +894,11 @@ enum class EStunAnimationType : uint8_t
 {
 	EStunAnimationType__None       = 0,
 	None                           = 1,
-	EStunAnimationType__SkeletonDance = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EStunAnimationType__SkeletonDance = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -795,18 +913,27 @@ enum class EArmOverlayState : uint8_t
 	NameProperty                   = 5,
 	EArmOverlayState__Equipping    = 6,
 	None02                         = 7,
-	EArmOverlayState__ContinuousActionCycle = 8,
-	None03                         = 9,
-	EArmOverlayState__ContinuousActionJumpCycle = 10,
-	None04                         = 11,
-	EArmOverlayState__ComplexOneShotWarmUp = 12,
-	None05                         = 13,
-	EArmOverlayState__BlockingLocomotion = 14,
-	None06                         = 15,
-	Int8Property                   = 16,
-	EArmOverlayState__EArmOverlayState_MAX = 17,
-	None07                         = 18,
-	None08                         = 19
+	__UNKNOWN_NAME__               = 8,
+	EArmOverlayState__ContinuousActionCycle = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__01             = 11,
+	EArmOverlayState__ContinuousActionJumpCycle = 12,
+	None04                         = 13,
+	__UNKNOWN_NAME__02             = 14,
+	EArmOverlayState__ComplexOneShotWarmUp = 15,
+	None05                         = 16,
+	__UNKNOWN_NAME__03             = 17,
+	EArmOverlayState__BlockingLocomotion = 18,
+	None06                         = 19,
+	Int8Property                   = 20,
+	EArmOverlayState__EArmOverlayState_MAX = 21,
+	None07                         = 22,
+	None08                         = 23,
+	__UNKNOWN_NAME__04             = 24,
+	__UNKNOWN_NAME__05             = 25,
+	__UNKNOWN_NAME__06             = 26,
+	__UNKNOWN_NAME__07             = 27,
+	__UNKNOWN_NAME__08             = 28
 };
 
 
@@ -815,7 +942,8 @@ enum class EVoyageChangeReason : uint8_t
 {
 	EVoyageChangeReason__Unknown   = 0,
 	None                           = 1,
-	FVsyncOptions__Off             = 2
+	__UNKNOWN_NAME__               = 2,
+	FVsyncOptions__Off             = 3
 };
 
 
@@ -824,7 +952,8 @@ enum class ECharacterSwimmingMode : uint8_t
 {
 	ECharacterSwimmingMode__Surface = 0,
 	None                           = 1,
-	EEncounterMobility__Static     = 2
+	__UNKNOWN_NAME__               = 2,
+	EEncounterMobility__Static     = 3
 };
 
 
@@ -833,7 +962,8 @@ enum class EAICharacterMaxSpeedModificationReason : uint8_t
 {
 	EAICharacterMaxSpeedModificationReason__SkeletonFormsConstant = 0,
 	None                           = 1,
-	EMatchmakingVisibilityState__Public = 2
+	__UNKNOWN_NAME__               = 2,
+	EMatchmakingVisibilityState__Public = 3
 };
 
 
@@ -842,8 +972,9 @@ enum class EAudioGameState : uint8_t
 {
 	EAudioGameState__None          = 0,
 	None                           = 1,
-	EAudioGameState__EAudioGameState_MAX = 2,
-	EAthenaAnimationLadderState__None = 3
+	__UNKNOWN_NAME__               = 2,
+	EAudioGameState__EAudioGameState_MAX = 3,
+	EAthenaAnimationLadderState__None = 4
 };
 
 
@@ -852,8 +983,9 @@ enum class EPlayMode : uint8_t
 {
 	EPlayMode__Adventure           = 0,
 	None                           = 1,
-	EPlayMode__EPlayMode_MAX       = 2,
-	EShovelDigType__Success        = 3
+	__UNKNOWN_NAME__               = 2,
+	EPlayMode__EPlayMode_MAX       = 3,
+	EShovelDigType__Success        = 4
 };
 
 
@@ -862,8 +994,9 @@ enum class EShovelDigType : uint8_t
 {
 	EShovelDigType__Success        = 0,
 	None                           = 1,
-	EShovelDigType__EShovelDigType_MAX = 2,
-	EEncounterListenerType__None   = 3
+	__UNKNOWN_NAME__               = 2,
+	EShovelDigType__EShovelDigType_MAX = 3,
+	EEncounterListenerType__None   = 4
 };
 
 
@@ -872,8 +1005,9 @@ enum class EEncounterListenerType : uint8_t
 {
 	EEncounterListenerType__None   = 0,
 	None                           = 1,
-	EEncounterListenerType__EEncounterListenerType_MAX = 2,
-	EEntitlementStatus__Unknown    = 3
+	__UNKNOWN_NAME__               = 2,
+	EEncounterListenerType__EEncounterListenerType_MAX = 3,
+	EEntitlementStatus__Unknown    = 4
 };
 
 
@@ -881,7 +1015,8 @@ enum class EEncounterListenerType : uint8_t
 enum class EEncounterMobility : uint8_t
 {
 	EEncounterMobility__Static     = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -889,7 +1024,8 @@ enum class EEncounterMobility : uint8_t
 enum class EEncounterDimensions : uint8_t
 {
 	EEncounterDimensions__ThreeDimensions = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -898,17 +1034,22 @@ enum class EEncounterType : uint8_t
 {
 	EEncounterType__None           = 0,
 	None                           = 1,
-	EEncounterType__ShipEncounter  = 2,
-	None01                         = 3,
-	EEncounterType__SkellyFortEncounter = 4,
-	None02                         = 5,
-	EEncounterType__TinySharkEncounter = 6,
-	None03                         = 7,
-	EEncounterType__Count          = 8,
-	None04                         = 9,
-	ECompassDirections__North      = 10,
-	None05                         = 11,
-	ECompassDirections__East       = 12
+	__UNKNOWN_NAME__               = 2,
+	EEncounterType__ShipEncounter  = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EEncounterType__SkellyFortEncounter = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EEncounterType__TinySharkEncounter = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	EEncounterType__Count          = 12,
+	None04                         = 13,
+	ECompassDirections__North      = 14,
+	None05                         = 15,
+	__UNKNOWN_NAME__04             = 16,
+	ECompassDirections__East       = 17
 };
 
 
@@ -917,8 +1058,9 @@ enum class EFPerformanceCounterOptions : uint8_t
 {
 	FPerformanceCounterOptions__None = 0,
 	None                           = 1,
-	FPerformanceCounterOptions__FPerformanceCounterOptions_MAX = 2,
-	ECharacterFootImpactType__None = 3
+	__UNKNOWN_NAME__               = 2,
+	FPerformanceCounterOptions__FPerformanceCounterOptions_MAX = 3,
+	ECharacterFootImpactType__None = 4
 };
 
 
@@ -927,7 +1069,8 @@ enum class EFVsyncOptions : uint8_t
 {
 	FVsyncOptions__Off             = 0,
 	None                           = 1,
-	ECharacterSwimmingMode__Surface = 2
+	__UNKNOWN_NAME__               = 2,
+	ECharacterSwimmingMode__Surface = 3
 };
 
 
@@ -936,9 +1079,12 @@ enum class EFPersistentUserGameSettingsDetail : uint8_t
 {
 	FPersistentUserGameSettingsDetail__Min = 0,
 	None                           = 1,
-	FPersistentUserGameSettingsDetail__Ultra = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	FPersistentUserGameSettingsDetail__Ultra = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 
@@ -956,11 +1102,13 @@ enum class EFlameOfFateType : uint8_t
 {
 	EFlameOfFateType__Default      = 0,
 	None                           = 1,
-	EFlameOfFateType__DiedByLightning = 2,
-	None01                         = 3,
-	EFlameOfFateType__EFlameOfFateType_MAX = 4,
-	EShipState__PlainSailing       = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	EFlameOfFateType__DiedByLightning = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EFlameOfFateType__EFlameOfFateType_MAX = 6,
+	EShipState__PlainSailing       = 7,
+	None02                         = 8
 };
 
 
@@ -969,7 +1117,8 @@ enum class EWheelFractureLabel : uint8_t
 {
 	EWheelFractureLabel__West      = 0,
 	None                           = 1,
-	EMastType__Front               = 2
+	__UNKNOWN_NAME__               = 2,
+	EMastType__Front               = 3
 };
 
 
@@ -978,7 +1127,8 @@ enum class EMastType : uint8_t
 {
 	EMastType__Front               = 0,
 	None                           = 1,
-	ETreasureMapVerticalAlignment__Top = 2
+	__UNKNOWN_NAME__               = 2,
+	ETreasureMapVerticalAlignment__Top = 3
 };
 
 
@@ -996,19 +1146,22 @@ enum class EShipLocation : uint8_t
 	StructProperty                 = 8,
 	EShipLocation__MAP_DECK_FRONT_PLANE = 9,
 	None03                         = 10,
-	EShipLocation__BRIG_DECK_STAIRS_PLANE = 11,
-	None04                         = 12,
-	LazyObjectProperty             = 13,
-	EShipLocation__AITARGET_ABOVE_DECK_EXTENTS = 14,
-	None05                         = 15,
-	UInt16Property                 = 16,
-	EShipLocation__AITARGET_LOWER_DECK_EXTENTS = 17,
-	None06                         = 18,
-	WeakObjectProperty             = 19,
-	None07                         = 20,
-	EArmOverlayState__Idle         = 21,
-	None08                         = 22,
-	IntProperty01                  = 23
+	__UNKNOWN_NAME__               = 11,
+	EShipLocation__BRIG_DECK_STAIRS_PLANE = 12,
+	None04                         = 13,
+	LazyObjectProperty             = 14,
+	EShipLocation__AITARGET_ABOVE_DECK_EXTENTS = 15,
+	None05                         = 16,
+	UInt16Property                 = 17,
+	EShipLocation__AITARGET_LOWER_DECK_EXTENTS = 18,
+	None06                         = 19,
+	__UNKNOWN_NAME__01             = 20,
+	__UNKNOWN_NAME__02             = 21,
+	WeakObjectProperty             = 22,
+	None07                         = 23,
+	EArmOverlayState__Idle         = 24,
+	None08                         = 25,
+	IntProperty01                  = 26
 };
 
 
@@ -1026,7 +1179,8 @@ enum class EOverlapType : uint8_t
 enum class ETreasureMapVerticalAlignment : uint8_t
 {
 	ETreasureMapVerticalAlignment__Top = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1035,7 +1189,8 @@ enum class ETreasureMapHorizontalAlignment : uint8_t
 {
 	ETreasureMapHorizontalAlignment__Left = 0,
 	None                           = 1,
-	EHasBeenWieldedState__InitialState = 2
+	__UNKNOWN_NAME__               = 2,
+	EHasBeenWieldedState__InitialState = 3
 };
 
 
@@ -1044,8 +1199,9 @@ enum class EBlendedFadeState : uint8_t
 {
 	EBlendedFadeState__FadingIn    = 0,
 	None                           = 1,
-	EBlendedFadeState__EBlendedFadeState_MAX = 2,
-	EProgressStyle__Circle         = 3
+	__UNKNOWN_NAME__               = 2,
+	EBlendedFadeState__EBlendedFadeState_MAX = 3,
+	EProgressStyle__Circle         = 4
 };
 
 
@@ -1054,8 +1210,9 @@ enum class ECharacterFootImpactType : uint8_t
 {
 	ECharacterFootImpactType__None = 0,
 	None                           = 1,
-	ECharacterFootImpactType__ECharacterFootImpactType_MAX = 2,
-	EBlendedFadeState__FadingIn    = 3
+	__UNKNOWN_NAME__               = 2,
+	ECharacterFootImpactType__ECharacterFootImpactType_MAX = 3,
+	EBlendedFadeState__FadingIn    = 4
 };
 
 
@@ -1063,7 +1220,8 @@ enum class ECharacterFootImpactType : uint8_t
 enum class ETaleQuestStepBeginMode : uint8_t
 {
 	ETaleQuestStepBeginMode__Cold  = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1072,7 +1230,8 @@ enum class ETaleQuestStepState : uint8_t
 {
 	ETaleQuestStepState__Inactive  = 0,
 	None                           = 1,
-	EShipAlignmentType__None       = 2
+	__UNKNOWN_NAME__               = 2,
+	EShipAlignmentType__None       = 3
 };
 
 
@@ -1081,12 +1240,15 @@ enum class ESpawnedItemSource : uint8_t
 {
 	ESpawnedItemSource__None       = 0,
 	None                           = 1,
-	ESpawnedItemSource__Island     = 2,
-	None01                         = 3,
-	ESpawnedItemSource__KrakenTentacle = 4,
-	None02                         = 5,
-	None03                         = 6,
-	Players                        = 7
+	__UNKNOWN_NAME__               = 2,
+	ESpawnedItemSource__Island     = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	ESpawnedItemSource__KrakenTentacle = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	None03                         = 9,
+	Players                        = 10
 };
 
 
@@ -1095,14 +1257,16 @@ enum class EBootyTypes : uint8_t
 {
 	EBootyTypes__Invalid           = 0,
 	None                           = 1,
-	EBootyTypes__TreasureArtifact  = 2,
-	None01                         = 3,
-	EBootyTypes__CargoRunCrate     = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	None03                         = 7,
-	ESpawnedItemSource__None       = 8,
-	None04                         = 9
+	__UNKNOWN_NAME__               = 2,
+	EBootyTypes__TreasureArtifact  = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EBootyTypes__CargoRunCrate     = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9,
+	ESpawnedItemSource__None       = 10,
+	None04                         = 11
 };
 
 
@@ -1111,7 +1275,8 @@ enum class EShipAlignmentType : uint8_t
 {
 	EShipAlignmentType__None       = 0,
 	None                           = 1,
-	EBrigReleaseReason__VoteToRelease = 2
+	__UNKNOWN_NAME__               = 2,
+	EBrigReleaseReason__VoteToRelease = 3
 };
 
 
@@ -1120,11 +1285,13 @@ enum class EShipState : uint8_t
 {
 	EShipState__PlainSailing       = 0,
 	None                           = 1,
-	EShipState__KeelingOver        = 2,
-	None01                         = 3,
-	EShipState__EShipState_MAX     = 4,
-	EWieldAnimationLocation__Left  = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	EShipState__KeelingOver        = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EShipState__EShipState_MAX     = 6,
+	EWieldAnimationLocation__Left  = 7,
+	None02                         = 8
 };
 
 
@@ -1133,9 +1300,10 @@ enum class EContainerType : uint8_t
 {
 	EContainerType__None           = 0,
 	None                           = 1,
-	EContainerType__Total          = 2,
-	None01                         = 3,
-	EWheelAnimationType__SmallTurn = 4
+	__UNKNOWN_NAME__               = 2,
+	EContainerType__Total          = 3,
+	None01                         = 4,
+	EWheelAnimationType__SmallTurn = 5
 };
 
 
@@ -1144,8 +1312,9 @@ enum class EThrowableLiquidType : uint8_t
 {
 	EThrowableLiquidType__Empty    = 0,
 	None                           = 1,
-	EThrowableLiquidType__EThrowableLiquidType_MAX = 2,
-	EContestState__Idle            = 3
+	__UNKNOWN_NAME__               = 2,
+	EThrowableLiquidType__EThrowableLiquidType_MAX = 3,
+	EContestState__Idle            = 4
 };
 
 
@@ -1154,9 +1323,10 @@ enum class EBucketState : uint8_t
 {
 	EBucketState__Idle             = 0,
 	None                           = 1,
-	EBucketState__Pad              = 2,
-	None01                         = 3,
-	EContainerType__None           = 4
+	__UNKNOWN_NAME__               = 2,
+	EBucketState__Pad              = 3,
+	None01                         = 4,
+	EContainerType__None           = 5
 };
 
 
@@ -1165,13 +1335,15 @@ enum class EIslandType : uint8_t
 {
 	EIslandType__Resource          = 0,
 	None                           = 1,
-	EIslandType__Large             = 2,
-	None01                         = 3,
-	EIslandType__None              = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	None03                         = 7,
-	EBootyTypes__Invalid           = 8
+	__UNKNOWN_NAME__               = 2,
+	EIslandType__Large             = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EIslandType__None              = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9,
+	EBootyTypes__Invalid           = 10
 };
 
 
@@ -1180,7 +1352,8 @@ enum class EBrigReleaseReason : uint8_t
 {
 	EBrigReleaseReason__VoteToRelease = 0,
 	None                           = 1,
-	EWalletCurrencyId__Undefined   = 2
+	__UNKNOWN_NAME__               = 2,
+	EWalletCurrencyId__Undefined   = 3
 };
 
 
@@ -1189,9 +1362,12 @@ enum class ELocationGeneratorSampleType : uint8_t
 {
 	ELocationGeneratorSampleType__None = 0,
 	None                           = 1,
-	ELocationGeneratorSampleType__Unusable_Proximity = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	ELocationGeneratorSampleType__Unusable_Proximity = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 
@@ -1200,7 +1376,8 @@ enum class EHasBeenWieldedState : uint8_t
 {
 	EHasBeenWieldedState__InitialState = 0,
 	None                           = 1,
-	ETaleQuestStepBeginMode__Cold  = 2
+	__UNKNOWN_NAME__               = 2,
+	ETaleQuestStepBeginMode__Cold  = 3
 };
 
 
@@ -1209,10 +1386,14 @@ enum class ECarouselPirateBodyshapeDirection : uint8_t
 {
 	ECarouselPirateBodyshapeDirection__None = 0,
 	None                           = 1,
-	ECarouselPirateBodyshapeDirection__SW = 2,
-	None01                         = 3,
-	ECarouselPirateBodyshapeDirection__NE = 4,
-	None02                         = 5
+	__UNKNOWN_NAME__               = 2,
+	ECarouselPirateBodyshapeDirection__SW = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	ECarouselPirateBodyshapeDirection__NE = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	__UNKNOWN_NAME__03             = 9
 };
 
 
@@ -1221,7 +1402,8 @@ enum class EWalletCurrencyId : uint8_t
 {
 	EWalletCurrencyId__Undefined   = 0,
 	None                           = 1,
-	EUIInputFocusType__None        = 2
+	__UNKNOWN_NAME__               = 2,
+	EUIInputFocusType__None        = 3
 };
 
 
@@ -1230,17 +1412,23 @@ enum class EPlayerMusicState : uint8_t
 {
 	EPlayerMusicState__InCave      = 0,
 	None                           = 1,
-	EPlayerMusicState__SkellyShipEncounter = 2,
-	None01                         = 3,
-	EPlayerMusicState__OnBountyQuestAction = 4,
-	None02                         = 5,
-	EPlayerMusicState__OnIsland    = 6,
-	None03                         = 7,
-	TextProperty                   = 8,
-	EPlayerMusicState__Shipwreck   = 9,
-	None04                         = 10,
-	LazyObjectProperty             = 11,
-	Int8Property                   = 12
+	__UNKNOWN_NAME__               = 2,
+	EPlayerMusicState__SkellyShipEncounter = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EPlayerMusicState__OnBountyQuestAction = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EPlayerMusicState__OnIsland    = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	EPlayerMusicState__Shipwreck   = 12,
+	None04                         = 13,
+	LazyObjectProperty             = 14,
+	Actor                          = 15,
+	__UNKNOWN_NAME__03             = 16,
+	__UNKNOWN_NAME__04             = 17,
+	Sphere                         = 18
 };
 
 
@@ -1249,7 +1437,8 @@ enum class ECharacterSocketCollisionResultType : uint8_t
 {
 	CollisionsOnly                 = 0,
 	None                           = 1,
-	EContestScoreId__Undefined     = 2
+	__UNKNOWN_NAME__               = 2,
+	EContestScoreId__Undefined     = 3
 };
 
 
@@ -1258,9 +1447,11 @@ enum class ECharacterSocketCollisionTraceType : uint8_t
 {
 	WorldUp                        = 0,
 	None                           = 1,
-	TravelForwards                 = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	TravelForwards                 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -1279,8 +1470,9 @@ enum class EEntitlementStatus : uint8_t
 {
 	EEntitlementStatus__Unknown    = 0,
 	None                           = 1,
-	EEntitlementStatus__EEntitlementStatus_MAX = 2,
-	FPerformanceCounterOptions__None = 3
+	__UNKNOWN_NAME__               = 2,
+	EEntitlementStatus__EEntitlementStatus_MAX = 3,
+	FPerformanceCounterOptions__None = 4
 };
 
 
@@ -1289,7 +1481,8 @@ enum class EUIInputFocusType : uint8_t
 {
 	EUIInputFocusType__None        = 0,
 	None                           = 1,
-	ELeftStickScalarReason__Limping = 2
+	__UNKNOWN_NAME__               = 2,
+	ELeftStickScalarReason__Limping = 3
 };
 
 
@@ -1306,7 +1499,8 @@ enum class EItemLoadoutDestroyBehaviour : uint8_t
 enum class EInventoryAction : uint8_t
 {
 	InventoryAction__Take          = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1314,7 +1508,8 @@ enum class EInventoryAction : uint8_t
 enum class EInventoryItemState : uint8_t
 {
 	InventoryItemState__Default    = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1323,8 +1518,9 @@ enum class EProgressStyle : uint8_t
 {
 	EProgressStyle__Circle         = 0,
 	None                           = 1,
-	EProgressStyle__EProgressStyle_MAX = 2,
-	EThrowableLiquidType__Empty    = 3
+	__UNKNOWN_NAME__               = 2,
+	EProgressStyle__EProgressStyle_MAX = 3,
+	EThrowableLiquidType__Empty    = 4
 };
 
 
@@ -1333,8 +1529,9 @@ enum class EContestState : uint8_t
 {
 	EContestState__Idle            = 0,
 	None                           = 1,
-	EContestState__EContestState_MAX = 2,
-	EAthenaNPCObjectSlot__Slot     = 3
+	__UNKNOWN_NAME__               = 2,
+	EContestState__EContestState_MAX = 3,
+	EAthenaNPCObjectSlot__Slot     = 4
 };
 
 
@@ -1352,7 +1549,8 @@ enum class EQuestDistributionMethod : uint8_t
 {
 	EQuestDistributionMethod__AllAtOnce = 0,
 	None                           = 1,
-	EBindingSet__ActionBindings    = 2
+	__UNKNOWN_NAME__               = 2,
+	EBindingSet__ActionBindings    = 3
 };
 
 
@@ -1361,8 +1559,12 @@ enum class EQuestMapIcon : uint8_t
 {
 	EQuestMapIcon__Unknown         = 0,
 	None                           = 1,
-	EQuestMapIcon__Merchant        = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EQuestMapIcon__Merchant        = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -1371,13 +1573,16 @@ enum class EQuestType : uint8_t
 {
 	EQuestType__Unknown            = 0,
 	None                           = 1,
-	EQuestType__Merchant           = 2,
-	None01                         = 3,
-	EQuestType__EmergantVoyage     = 4,
-	None02                         = 5,
-	None03                         = 6,
-	EIslandType__Resource          = 7,
-	None04                         = 8
+	__UNKNOWN_NAME__               = 2,
+	EQuestType__Merchant           = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EQuestType__EmergantVoyage     = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	None03                         = 9,
+	EIslandType__Resource          = 10,
+	None04                         = 11
 };
 
 
@@ -1385,7 +1590,8 @@ enum class EQuestType : uint8_t
 enum class EVoyageLocationType : uint8_t
 {
 	EVoyageLocationType__Fixed     = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1393,7 +1599,8 @@ enum class EVoyageLocationType : uint8_t
 enum class EQuestLocationSelectionMethod : uint8_t
 {
 	EQuestLocationSelectionMethod__NoRepetitionWithinVoyage = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1401,7 +1608,8 @@ enum class EQuestLocationSelectionMethod : uint8_t
 enum class EQuestPoolSelectionMethod : uint8_t
 {
 	EQuestPoolSelectionMethod__Sequential = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1409,7 +1617,8 @@ enum class EQuestPoolSelectionMethod : uint8_t
 enum class ECrewOwnershipState : uint8_t
 {
 	ECrewOwnershipState__Neutral   = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1418,9 +1627,12 @@ enum class EShipCurseTag : uint8_t
 {
 	EShipCurseTag__None            = 0,
 	None                           = 1,
-	EShipCurseTag__Helm            = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	EShipCurseTag__Helm            = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 
@@ -1429,9 +1641,11 @@ enum class ECurseTag : uint8_t
 {
 	ECurseTag__None                = 0,
 	None                           = 1,
-	ECurseTag__ToggleInteractionsForShipCannons = 2,
-	None01                         = 3,
-	NameProperty                   = 4
+	__UNKNOWN_NAME__               = 2,
+	ECurseTag__ToggleInteractionsForShipCannons = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6
 };
 
 
@@ -1450,7 +1664,8 @@ enum class EShipSurfacingState : uint8_t
 {
 	EShipSurfacingState__Sailing   = 0,
 	None                           = 1,
-	DrowningState__NotDrowning     = 2
+	__UNKNOWN_NAME__               = 2,
+	DrowningState__NotDrowning     = 3
 };
 
 
@@ -1458,7 +1673,8 @@ enum class EShipSurfacingState : uint8_t
 enum class EDamageTargetType : uint8_t
 {
 	EDamageTargetType__Player      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1486,7 +1702,8 @@ enum class EDrunkennessType : uint8_t
 enum class ETargetUpdateReason : uint8_t
 {
 	ETargetUpdateReason__Update    = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1495,13 +1712,15 @@ enum class EMusicalInstrumentType : uint8_t
 {
 	EMusicalInstrumentType__Banjo  = 0,
 	None                           = 1,
-	EMusicalInstrumentType__HurdyGurdy = 2,
-	None01                         = 3,
-	EMusicalInstrumentType__VoiceBox = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	None03                         = 7,
-	EQuestType__Unknown            = 8
+	__UNKNOWN_NAME__               = 2,
+	EMusicalInstrumentType__HurdyGurdy = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EMusicalInstrumentType__VoiceBox = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	None03                         = 9,
+	EQuestType__Unknown            = 10
 };
 
 
@@ -1509,7 +1728,8 @@ enum class EMusicalInstrumentType : uint8_t
 enum class EConeWeightingMethod : uint8_t
 {
 	EConeWeightingMethod__Weighted = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1517,7 +1737,8 @@ enum class EConeWeightingMethod : uint8_t
 enum class EShipHullDamageType : uint8_t
 {
 	EShipHullDamageType__Landscape = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1525,7 +1746,8 @@ enum class EShipHullDamageType : uint8_t
 enum class EFaunaAnimationSnakeAttackDirection : uint8_t
 {
 	EFaunaAnimationSnakeAttackDirection__Forwards = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1534,7 +1756,8 @@ enum class EFaunaAnimationStartledLevel : uint8_t
 {
 	EFaunaAnimationStartledLevel__None = 0,
 	None                           = 1,
-	EMeleeAttackInterruptReason__Stopping = 2
+	__UNKNOWN_NAME__               = 2,
+	EMeleeAttackInterruptReason__Stopping = 3
 };
 
 
@@ -1543,7 +1766,8 @@ enum class EFaunaAnimationLocation : uint8_t
 {
 	EFaunaAnimationLocation__Land  = 0,
 	None                           = 1,
-	EFaunaAnimationSnakeAttackDirection__Forwards = 2
+	__UNKNOWN_NAME__               = 2,
+	EFaunaAnimationSnakeAttackDirection__Forwards = 3
 };
 
 
@@ -1552,8 +1776,11 @@ enum class EFaunaAnimationState : uint8_t
 {
 	EFaunaAnimationState__Idle     = 0,
 	None                           = 1,
-	EFaunaAnimationState__Death    = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EFaunaAnimationState__Death    = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -1562,7 +1789,8 @@ enum class ETreasureChestProxyState : uint8_t
 {
 	ETreasureChestProxyState__Idle = 0,
 	None                           = 1,
-	ETargetUpdateReason__Update    = 2
+	__UNKNOWN_NAME__               = 2,
+	ETargetUpdateReason__Update    = 3
 };
 
 
@@ -1571,8 +1799,9 @@ enum class EFogState : uint8_t
 {
 	EFogState__NotSetUpYet         = 0,
 	None                           = 1,
-	EFogState__EFogState_MAX       = 2,
-	EDoorState__Closed             = 3
+	__UNKNOWN_NAME__               = 2,
+	EFogState__EFogState_MAX       = 3,
+	EDoorState__Closed             = 4
 };
 
 
@@ -1581,7 +1810,8 @@ enum class EFruitState : uint8_t
 {
 	EFruitState__Idle              = 0,
 	None                           = 1,
-	ELeakState__Open               = 2
+	__UNKNOWN_NAME__               = 2,
+	ELeakState__Open               = 3
 };
 
 
@@ -1600,7 +1830,8 @@ enum class EGameplayEventSignalType : uint8_t
 {
 	EGameplayEventSignalType__SkellyFort = 0,
 	None                           = 1,
-	EGlintCondition__OnShip        = 2
+	__UNKNOWN_NAME__               = 2,
+	EGlintCondition__OnShip        = 3
 };
 
 
@@ -1609,7 +1840,8 @@ enum class EGlintCondition : uint8_t
 {
 	EGlintCondition__OnShip        = 0,
 	None                           = 1,
-	EHoleState__Alive              = 2
+	__UNKNOWN_NAME__               = 2,
+	EHoleState__Alive              = 3
 };
 
 
@@ -1625,7 +1857,8 @@ enum class EPreventDamageTypeLockReasons : uint8_t
 enum class EHoleState : uint8_t
 {
 	EHoleState__Alive              = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1643,7 +1876,8 @@ enum class EBuriedItemType : uint8_t
 enum class EHullDamageDeck : uint8_t
 {
 	EHullDamageDeck__Bottom        = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1652,9 +1886,10 @@ enum class ELeakEffectState : uint8_t
 {
 	ELeakEffectState__Off          = 0,
 	None                           = 1,
-	ELeakEffectState__LeakingBubblesPlugged = 2,
-	None01                         = 3,
-	EBootflowErrorPriority__High   = 4
+	__UNKNOWN_NAME__               = 2,
+	ELeakEffectState__LeakingBubblesPlugged = 3,
+	None01                         = 4,
+	EBootflowErrorPriority__High   = 5
 };
 
 
@@ -1662,7 +1897,8 @@ enum class ELeakEffectState : uint8_t
 enum class ELeakState : uint8_t
 {
 	ELeakState__Open               = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1670,7 +1906,8 @@ enum class ELeakState : uint8_t
 enum class EShipLeakerUpdateType : uint8_t
 {
 	EShipLeakerUpdateType__Iterative = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1678,7 +1915,8 @@ enum class EShipLeakerUpdateType : uint8_t
 enum class EShantyEnsembleOption : uint8_t
 {
 	EShantyEnsembleOption__TryToJoinExistingNearbyEnsemble = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1687,7 +1925,8 @@ enum class EMermaidState : uint8_t
 {
 	EMermaidState__Rising          = 0,
 	None                           = 1,
-	EDiggingState__Idle            = 2
+	__UNKNOWN_NAME__               = 2,
+	EDiggingState__Idle            = 3
 };
 
 
@@ -1696,9 +1935,10 @@ enum class ERiddleActions : uint8_t
 {
 	ERiddleActions__RaiseLanternAnyone = 0,
 	None                           = 1,
-	ERiddleActions__NumActions     = 2,
-	None01                         = 3,
-	ELocalGameChatStatus__Undefined = 4
+	__UNKNOWN_NAME__               = 2,
+	ERiddleActions__NumActions     = 3,
+	None01                         = 4,
+	ELocalGameChatStatus__Undefined = 5
 };
 
 
@@ -1706,7 +1946,8 @@ enum class ERiddleActions : uint8_t
 enum class ERiddleActionLocationOffsets : uint8_t
 {
 	ERiddleActionLocationOffsets__PerformActionAtLocation = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1715,8 +1956,10 @@ enum class ERiddleLocations : uint8_t
 {
 	ERiddleLocations__NotOnIsland  = 0,
 	None                           = 1,
-	ERiddleLocations__Island       = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	ERiddleLocations__Island       = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 
@@ -1725,8 +1968,9 @@ enum class EDoorState : uint8_t
 {
 	EDoorState__Closed             = 0,
 	None                           = 1,
-	EDoorState__EDoorState_MAX     = 2,
-	EWorldMapShipType__None        = 3
+	__UNKNOWN_NAME__               = 2,
+	EDoorState__EDoorState_MAX     = 3,
+	EWorldMapShipType__None        = 4
 };
 
 
@@ -1735,7 +1979,8 @@ enum class EDiggingState : uint8_t
 {
 	EDiggingState__Idle            = 0,
 	None                           = 1,
-	EEventRunLocation__Client      = 2
+	__UNKNOWN_NAME__               = 2,
+	EEventRunLocation__Client      = 3
 };
 
 
@@ -1744,18 +1989,22 @@ enum class ECompassDirections : uint8_t
 {
 	ECompassDirections__North      = 0,
 	None                           = 1,
-	ECompassDirections__East       = 2,
-	None01                         = 3,
-	ECompassDirections__South      = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	ECompassDirections__West       = 7,
-	None03                         = 8,
-	ECompassDirections__NumDirections = 9,
-	None04                         = 10,
-	EAthenaAnimationPetRoamingState__Idle = 11,
-	None05                         = 12,
-	EAthenaAnimationPetRoamingState__FlyCannon = 13
+	__UNKNOWN_NAME__               = 2,
+	ECompassDirections__East       = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	ECompassDirections__South      = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	ECompassDirections__West       = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__02             = 11,
+	ECompassDirections__NumDirections = 12,
+	None04                         = 13,
+	EAthenaAnimationPetRoamingState__Idle = 14,
+	None05                         = 15,
+	__UNKNOWN_NAME__03             = 16,
+	EAthenaAnimationPetRoamingState__FlyCannon = 17
 };
 
 
@@ -1763,7 +2012,8 @@ enum class ECompassDirections : uint8_t
 enum class ELandmarkUniqueness : uint8_t
 {
 	ELandmarkUniqueness__Unique    = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1771,7 +2021,8 @@ enum class ELandmarkUniqueness : uint8_t
 enum class ELandmarkVagueness : uint8_t
 {
 	ELandmarkVagueness__Vague      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1780,7 +2031,8 @@ enum class EEventRunLocation : uint8_t
 {
 	EEventRunLocation__Client      = 0,
 	None                           = 1,
-	ELandmarkUniqueness__Unique    = 2
+	__UNKNOWN_NAME__               = 2,
+	ELandmarkUniqueness__Unique    = 3
 };
 
 
@@ -1798,8 +2050,9 @@ enum class ELoadableState : uint8_t
 {
 	ELoadableState__Unloaded       = 0,
 	None                           = 1,
-	ELoadableState__ELoadableState_MAX = 2,
-	EFogState__NotSetUpYet         = 3
+	__UNKNOWN_NAME__               = 2,
+	ELoadableState__ELoadableState_MAX = 3,
+	EFogState__NotSetUpYet         = 4
 };
 
 
@@ -1807,7 +2060,8 @@ enum class ELoadableState : uint8_t
 enum class ELoadoutPersistence : uint8_t
 {
 	ELoadoutPersistence__Temporary = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1816,7 +2070,8 @@ enum class ELPVAdaptationType : uint8_t
 {
 	ELPVAdaptationType__Full       = 0,
 	None                           = 1,
-	EMeleeWeaponAttackType__Combo  = 2
+	__UNKNOWN_NAME__               = 2,
+	EMeleeWeaponAttackType__Combo  = 3
 };
 
 
@@ -1825,8 +2080,9 @@ enum class EWorldMapShipType : uint8_t
 {
 	EWorldMapShipType__None        = 0,
 	None                           = 1,
-	EWorldMapShipType__EWorldMapShipType_MAX = 2,
-	EProjectileWeaponState__Idle   = 3
+	__UNKNOWN_NAME__               = 2,
+	EWorldMapShipType__EWorldMapShipType_MAX = 3,
+	EProjectileWeaponState__Idle   = 4
 };
 
 
@@ -1835,7 +2091,8 @@ enum class EMeleeWeaponMovementSpeed : uint8_t
 {
 	EMeleeWeaponMovementSpeed__Default = 0,
 	None                           = 1,
-	EMockShipConnectionPartType__HoistToMast = 2
+	__UNKNOWN_NAME__               = 2,
+	EMockShipConnectionPartType__HoistToMast = 3
 };
 
 
@@ -1852,7 +2109,8 @@ enum class EMeleeAttackInterruptReason : uint8_t
 enum class EMeleeWeaponAttackType : uint8_t
 {
 	EMeleeWeaponAttackType__Combo  = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1861,11 +2119,13 @@ enum class EPlayerAbandonedReason : uint8_t
 {
 	EPlayerAbandonedReason__None   = 0,
 	None                           = 1,
-	EPlayerAbandonedReason__OnShip = 2,
-	None01                         = 3,
-	EPlayerAbandonedReason__EPlayerAbandonedReason_MAX = 4,
-	EFlameOfFateType__Default      = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	EPlayerAbandonedReason__OnShip = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EPlayerAbandonedReason__EPlayerAbandonedReason_MAX = 6,
+	EFlameOfFateType__Default      = 7,
+	None02                         = 8
 };
 
 
@@ -1874,7 +2134,8 @@ enum class EPlayerAbandoned : uint8_t
 {
 	EPlayerAbandoned__Yes          = 0,
 	None                           = 1,
-	ELPVAdaptationType__Full       = 2
+	__UNKNOWN_NAME__               = 2,
+	ELPVAdaptationType__Full       = 3
 };
 
 
@@ -1882,7 +2143,8 @@ enum class EPlayerAbandoned : uint8_t
 enum class EShovelState : uint8_t
 {
 	EShovelState__Idle             = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1891,8 +2153,12 @@ enum class EPossessionsChestType : uint8_t
 {
 	EPossessionsChestType__Unknown = 0,
 	None                           = 1,
-	EPossessionsChestType__ArmoryChest = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EPossessionsChestType__ArmoryChest = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -1901,8 +2167,9 @@ enum class EAthenaNPCObjectSlot : uint8_t
 {
 	EAthenaNPCObjectSlot__Slot     = 0,
 	BoolProperty                   = 1,
-	EAthenaNPCObjectSlot__Slot_MAX = 2,
-	ELoadableState__Unloaded       = 3
+	__UNKNOWN_NAME__               = 2,
+	EAthenaNPCObjectSlot__Slot_MAX = 3,
+	ELoadableState__Unloaded       = 4
 };
 
 
@@ -1910,7 +2177,8 @@ enum class EAthenaNPCObjectSlot : uint8_t
 enum class EAthenaNPCSpawnHand : uint8_t
 {
 	EAthenaNPCSpawnHand__Left      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1918,7 +2186,8 @@ enum class EAthenaNPCSpawnHand : uint8_t
 enum class EOpenableItemState : uint8_t
 {
 	EOpenableItemState__Open       = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1927,7 +2196,8 @@ enum class EMockShipConnectionPartType : uint8_t
 {
 	EMockShipConnectionPartType__HoistToMast = 0,
 	None                           = 1,
-	EAthenaNPCSpawnHand__Left      = 2
+	__UNKNOWN_NAME__               = 2,
+	EAthenaNPCSpawnHand__Left      = 3
 };
 
 
@@ -1936,7 +2206,8 @@ enum class ECompanyStatus : uint8_t
 {
 	ECompanyStatus__Invalid        = 0,
 	None                           = 1,
-	ERequestEntitlementBehaviour__Default = 2
+	__UNKNOWN_NAME__               = 2,
+	ERequestEntitlementBehaviour__Default = 3
 };
 
 
@@ -1945,11 +2216,13 @@ enum class EMuteState : uint8_t
 {
 	EMuteState__NotMuted           = 0,
 	None                           = 1,
-	EMuteState__NonVerbalMuted     = 2,
-	None01                         = 3,
-	EMuteState__EMuteState_MAX     = 4,
-	EPlayerAbandonedReason__None   = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	EMuteState__NonVerbalMuted     = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EMuteState__EMuteState_MAX     = 6,
+	EPlayerAbandonedReason__None   = 7,
+	None02                         = 8
 };
 
 
@@ -1958,12 +2231,13 @@ enum class EPlayerCurseTag : uint8_t
 {
 	EPlayerCurseTag__None          = 0,
 	None                           = 1,
-	EPlayerCurseTag__Silenced      = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	EPlayerCurseTag__EPlayerCurseTag_MAX = 5,
-	EMuteState__NotMuted           = 6,
-	None02                         = 7
+	__UNKNOWN_NAME__               = 2,
+	EPlayerCurseTag__Silenced      = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	EPlayerCurseTag__EPlayerCurseTag_MAX = 6,
+	EMuteState__NotMuted           = 7,
+	None02                         = 8
 };
 
 
@@ -1971,7 +2245,8 @@ enum class EPlayerCurseTag : uint8_t
 enum class ERequestEntitlementBehaviour : uint8_t
 {
 	ERequestEntitlementBehaviour__Default = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -1980,7 +2255,8 @@ enum class EEntitlementConsumptionState : uint8_t
 {
 	EEntitlementConsumptionState__Failed = 0,
 	None                           = 1,
-	ECompanyStatus__Invalid        = 2
+	__UNKNOWN_NAME__               = 2,
+	ECompanyStatus__Invalid        = 3
 };
 
 
@@ -1989,7 +2265,8 @@ enum class EStickinessType : uint8_t
 {
 	EStickinessType__DontStick     = 0,
 	None                           = 1,
-	EProjectileWeaponFireType__Aiming = 2
+	__UNKNOWN_NAME__               = 2,
+	EProjectileWeaponFireType__Aiming = 3
 };
 
 
@@ -1997,7 +2274,8 @@ enum class EStickinessType : uint8_t
 enum class ENotificationType : uint8_t
 {
 	ENotificationType__Chat        = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2015,7 +2293,8 @@ enum class EProjectileWeaponFireType : uint8_t
 {
 	EProjectileWeaponFireType__Aiming = 0,
 	None                           = 1,
-	ENotificationType__Chat        = 2
+	__UNKNOWN_NAME__               = 2,
+	ENotificationType__Chat        = 3
 };
 
 
@@ -2024,8 +2303,9 @@ enum class EProjectileWeaponType : uint8_t
 {
 	EProjectileWeaponType__Pistol  = 0,
 	None                           = 1,
-	EProjectileWeaponType__EProjectileWeaponType_MAX = 2,
-	EShipPartCustomizationState__Idle = 3
+	__UNKNOWN_NAME__               = 2,
+	EProjectileWeaponType__EProjectileWeaponType_MAX = 3,
+	EShipPartCustomizationState__Idle = 4
 };
 
 
@@ -2034,8 +2314,9 @@ enum class EProjectileWeaponState : uint8_t
 {
 	EProjectileWeaponState__Idle   = 0,
 	None                           = 1,
-	EProjectileWeaponState__EProjectileWeaponState_MAX = 2,
-	EShipParticleParam__None       = 3
+	__UNKNOWN_NAME__               = 2,
+	EProjectileWeaponState__EProjectileWeaponState_MAX = 3,
+	EShipParticleParam__None       = 4
 };
 
 
@@ -2044,7 +2325,8 @@ enum class EReapersMarkTrackedVoyageType : uint8_t
 {
 	EReapersMarkTrackedVoyageType__None = 0,
 	None                           = 1,
-	ERewardRequestFailureReason__FailedToProcess = 2
+	__UNKNOWN_NAME__               = 2,
+	ERewardRequestFailureReason__FailedToProcess = 3
 };
 
 
@@ -2063,7 +2345,8 @@ enum class EShadowAIFormState : uint8_t
 {
 	EShadowAIFormState__Invalid    = 0,
 	None                           = 1,
-	EStaggerReason__Drunk          = 2
+	__UNKNOWN_NAME__               = 2,
+	EStaggerReason__Drunk          = 3
 };
 
 
@@ -2072,7 +2355,8 @@ enum class EShipBuilderState : uint8_t
 {
 	EShipBuilderState__Idle        = 0,
 	None                           = 1,
-	EStunnedActionStateDurationType__Definite = 2
+	__UNKNOWN_NAME__               = 2,
+	EStunnedActionStateDurationType__Definite = 3
 };
 
 
@@ -2081,11 +2365,13 @@ enum class EShipBuilderErrorCode : uint8_t
 {
 	EShipBuilderErrorCode__AlreadyInProgress = 0,
 	None                           = 1,
-	EShipBuilderErrorCode__InvalidParameter = 2,
-	None01                         = 3,
-	EShipBuilderErrorCode__EShipBuilderErrorCode_MAX = 4,
-	EPlayerCurseTag__None          = 5,
-	None02                         = 6
+	__UNKNOWN_NAME__               = 2,
+	EShipBuilderErrorCode__InvalidParameter = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EShipBuilderErrorCode__EShipBuilderErrorCode_MAX = 6,
+	EPlayerCurseTag__None          = 7,
+	None02                         = 8
 };
 
 
@@ -2094,8 +2380,9 @@ enum class EShipPartCustomizationState : uint8_t
 {
 	EShipPartCustomizationState__Idle = 0,
 	None                           = 1,
-	EShipPartCustomizationState__EShipPartCustomizationState_MAX = 2,
-	EConsumeEntitlementFailureReason__ServiceUnavailable = 3
+	__UNKNOWN_NAME__               = 2,
+	EShipPartCustomizationState__EShipPartCustomizationState_MAX = 3,
+	EConsumeEntitlementFailureReason__ServiceUnavailable = 4
 };
 
 
@@ -2104,8 +2391,9 @@ enum class EShipParticleParam : uint8_t
 {
 	EShipParticleParam__None       = 0,
 	None                           = 1,
-	EShipParticleParam__EShipParticleParam_MAX = 2,
-	EProjectileWeaponType__Pistol  = 3
+	__UNKNOWN_NAME__               = 2,
+	EShipParticleParam__EShipParticleParam_MAX = 3,
+	EProjectileWeaponType__Pistol  = 4
 };
 
 
@@ -2114,9 +2402,10 @@ enum class EPurchaseRequestFailureReason : uint8_t
 {
 	EPurchaseRequestFailureReason__ServiceUnavailable = 0,
 	None                           = 1,
-	EPurchaseRequestFailureReason__PurchaseAlreadyPending = 2,
-	None01                         = 3,
-	ERiddleActions__RaiseLanternAnyone = 4
+	__UNKNOWN_NAME__               = 2,
+	EPurchaseRequestFailureReason__PurchaseAlreadyPending = 3,
+	None01                         = 4,
+	ERiddleActions__RaiseLanternAnyone = 5
 };
 
 
@@ -2125,8 +2414,10 @@ enum class EShopOfferAvailability : uint8_t
 {
 	EShopOfferAvailability__Available = 0,
 	None                           = 1,
-	EShopOfferAvailability__Hide   = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EShopOfferAvailability__Hide   = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 
@@ -2134,7 +2425,8 @@ enum class EShopOfferAvailability : uint8_t
 enum class ESkellyFortDestructionReason : uint8_t
 {
 	ESkellyFortDestructionReason__Defeated = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2143,7 +2435,8 @@ enum class EStaggerReason : uint8_t
 {
 	EStaggerReason__Drunk          = 0,
 	None                           = 1,
-	EShipBuilderState__Idle        = 2
+	__UNKNOWN_NAME__               = 2,
+	EShipBuilderState__Idle        = 3
 };
 
 
@@ -2151,7 +2444,8 @@ enum class EStaggerReason : uint8_t
 enum class EStunnedActionStateItemWielding : uint8_t
 {
 	EStunnedActionStateItemWielding__Allowed = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2159,7 +2453,8 @@ enum class EStunnedActionStateItemWielding : uint8_t
 enum class EStunnedActionStateDurationType : uint8_t
 {
 	EStunnedActionStateDurationType__Definite = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2168,8 +2463,11 @@ enum class ELightningHitTarget : uint8_t
 {
 	ELightningHitTarget__RandomLocation = 0,
 	None                           = 1,
-	ELightningHitTarget__ShipNearMiss = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	ELightningHitTarget__ShipNearMiss = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -2178,7 +2476,8 @@ enum class ESwimmingMode : uint8_t
 {
 	ESwimmingMode__SwimmingMode_None = 0,
 	None                           = 1,
-	ESubmergedState__Surfaced      = 2
+	__UNKNOWN_NAME__               = 2,
+	ESubmergedState__Surfaced      = 3
 };
 
 
@@ -2187,7 +2486,8 @@ enum class ESwimmingCreatureType : uint8_t
 {
 	ESwimmingCreatureType__SwimmingCreature = 0,
 	None                           = 1,
-	EStunnedActionStateItemWielding__Allowed = 2
+	__UNKNOWN_NAME__               = 2,
+	EStunnedActionStateItemWielding__Allowed = 3
 };
 
 
@@ -2196,7 +2496,8 @@ enum class EStepsTriggerState : uint8_t
 {
 	EStepsTriggerState__Closed     = 0,
 	None                           = 1,
-	ETeleportActionStateConditions__AllConditions = 2
+	__UNKNOWN_NAME__               = 2,
+	ETeleportActionStateConditions__AllConditions = 3
 };
 
 
@@ -2204,7 +2505,8 @@ enum class EStepsTriggerState : uint8_t
 enum class ETeleportActionStateConditions : uint8_t
 {
 	ETeleportActionStateConditions__AllConditions = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2212,7 +2514,8 @@ enum class ETeleportActionStateConditions : uint8_t
 enum class ETeleportActionStateFadeType : uint8_t
 {
 	ETeleportActionStateFadeType__Fade = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2221,7 +2524,8 @@ enum class ESubmergedState : uint8_t
 {
 	ESubmergedState__Surfaced      = 0,
 	None                           = 1,
-	EStepsTriggerState__Closed     = 2
+	__UNKNOWN_NAME__               = 2,
+	EStepsTriggerState__Closed     = 3
 };
 
 
@@ -2230,8 +2534,9 @@ enum class EChestEntitlementActionType : uint8_t
 {
 	EChestEntitlementActionType__Equip = 0,
 	None                           = 1,
-	EChestEntitlementActionType__EChestEntitlementActionType_MAX = 2,
-	EContestType__Race             = 3
+	__UNKNOWN_NAME__               = 2,
+	EChestEntitlementActionType__EChestEntitlementActionType_MAX = 3,
+	EContestType__Race             = 4
 };
 
 
@@ -2239,7 +2544,8 @@ enum class EChestEntitlementActionType : uint8_t
 enum class EVoyageDisplayState : uint8_t
 {
 	Default                        = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2247,7 +2553,8 @@ enum class EVoyageDisplayState : uint8_t
 enum class EVoyageChapterProgressionType : uint8_t
 {
 	EVoyageChapterProgressionType__DrivenByAnyQuestCompletion = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2256,7 +2563,9 @@ enum class EContestType : uint8_t
 {
 	EContestType__Race             = 0,
 	None                           = 1,
-	EContestType__EContestType_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EContestType__EContestType_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -2274,8 +2583,9 @@ enum class EMurkWaterModifierZoneState : uint8_t
 {
 	EMurkWaterModifierZoneState__Active = 0,
 	None                           = 1,
-	EMurkWaterModifierZoneState__EMurkWaterModifierZoneState_MAX = 2,
-	EChestEntitlementActionType__Equip = 3
+	__UNKNOWN_NAME__               = 2,
+	EMurkWaterModifierZoneState__EMurkWaterModifierZoneState_MAX = 3,
+	EChestEntitlementActionType__Equip = 4
 };
 
 
@@ -2283,7 +2593,8 @@ enum class EMurkWaterModifierZoneState : uint8_t
 enum class EWeepingState : uint8_t
 {
 	EWeepingState__Weeping         = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2292,17 +2603,22 @@ enum class EAthenaAnimationPetRoamingState : uint8_t
 {
 	EAthenaAnimationPetRoamingState__Idle = 0,
 	None                           = 1,
-	EAthenaAnimationPetRoamingState__FlyCannon = 2,
-	None01                         = 3,
-	EAthenaAnimationPetRoamingState__Happy = 4,
-	None02                         = 5,
-	EAthenaAnimationPetRoamingState__Cleaning = 6,
-	None03                         = 7,
-	EAthenaAnimationPetRoamingState__Inactive = 8,
-	None04                         = 9,
-	TC_Default                     = 10,
-	None05                         = 11,
-	TC_Displacementmap             = 12
+	__UNKNOWN_NAME__               = 2,
+	EAthenaAnimationPetRoamingState__FlyCannon = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EAthenaAnimationPetRoamingState__Happy = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EAthenaAnimationPetRoamingState__Cleaning = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	EAthenaAnimationPetRoamingState__Inactive = 12,
+	None04                         = 13,
+	TC_Default                     = 14,
+	None05                         = 15,
+	__UNKNOWN_NAME__04             = 16,
+	TC_Displacementmap             = 17
 };
 
 
@@ -2311,10 +2627,14 @@ enum class EAthenaAnimationPetHeldState : uint8_t
 {
 	EAthenaAnimationPetHeldState__Idle = 0,
 	None                           = 1,
-	EAthenaAnimationPetHeldState__Angry = 2,
-	None01                         = 3,
-	EAthenaAnimationPetHeldState__Inactive = 4,
-	None02                         = 5
+	__UNKNOWN_NAME__               = 2,
+	EAthenaAnimationPetHeldState__Angry = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EAthenaAnimationPetHeldState__Inactive = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	__UNKNOWN_NAME__03             = 9
 };
 
 
@@ -2343,9 +2663,10 @@ enum class ELocalGameChatStatus : uint8_t
 {
 	ELocalGameChatStatus__Undefined = 0,
 	None                           = 1,
-	ELocalGameChatStatus__Ready    = 2,
-	None01                         = 3,
-	ERiddleLocations__NotOnIsland  = 4
+	__UNKNOWN_NAME__               = 2,
+	ELocalGameChatStatus__Ready    = 3,
+	None01                         = 4,
+	ERiddleLocations__NotOnIsland  = 5
 };
 
 
@@ -2354,7 +2675,8 @@ enum class EVoiceChatAudioDevice : uint8_t
 {
 	EVoiceChatAudioDevice__None    = 0,
 	None                           = 1,
-	ESwimmingMode__SwimmingMode_None = 2
+	__UNKNOWN_NAME__               = 2,
+	ESwimmingMode__SwimmingMode_None = 3
 };
 
 
@@ -2363,60 +2685,95 @@ enum class EBootflowError : uint8_t
 {
 	EBootflowError__None           = 0,
 	None                           = 1,
-	EBootflowError__AthenaGameInstanceActiveConnectionToServerTimedOut = 2,
-	None01                         = 3,
-	EBootflowError__AthenaGameInstanceGameVersionMismatch = 4,
-	None02                         = 5,
-	EBootflowError__AthenaGameInstanceRPCSpamDetected = 6,
-	None03                         = 7,
-	EBootflowError__ClientBootflowPrimaryPlayerSignedOut = 8,
-	None04                         = 9,
-	EBootflowError__ClientEvicted  = 10,
-	None05                         = 11,
-	EBootflowError__ClientInGameStateStopMatchmakingFailed = 12,
-	None06                         = 13,
-	EBootflowError__CrewMatchmakingStateUnableToObtainLocalPlayerInterface = 14,
-	None07                         = 15,
-	EBootflowError__CrewSessionStateFailedToCreateCrewSession = 16,
-	None08                         = 17,
-	EBootflowError__EmblemDefinitionRetrievalFailed = 18,
-	None09                         = 19,
-	EBootflowError__EntryLevelStateFailed = 20,
-	None10                         = 21,
-	EBootflowError__LoginTokenExchangeFailed = 22,
-	None11                         = 23,
-	EBootflowError__LoginTokenExchangeFailedPlayerBannedPerm = 24,
-	None12                         = 25,
-	EBootflowError__SelectUserStateNotConnectedToLive = 26,
-	None13                         = 27,
-	EBootflowError__SelectUserStateUserIsGuest = 28,
-	None14                         = 29,
-	EBootflowError__ServerMatchmakingStateUnableToObtainCrewId = 30,
-	None15                         = 31,
-	EBootflowError__ServerMatchmakingStateInvalidMatchmakingResponse = 32,
-	None16                         = 33,
-	EBootflowError__ServerMatchmakingStateJoinRefused = 34,
-	None17                         = 35,
-	EBootflowError__SetupServiceBridgeStateFailed = 36,
-	None18                         = 37,
-	EBootflowError__CrewSessionHandlerJoinFailedAsCouldNotRetrieveAddress = 38,
-	None19                         = 39,
-	EBootflowError__PirateSelectionStateUnableToCreatePirate = 40,
-	None20                         = 41,
-	EBootflowError__InviteSessionFull = 42,
-	None21                         = 43,
-	EBootflowError__TestNetworkError = 44,
-	None22                         = 45,
-	DrawDebugPlane                 = 46,
-	TextProperty                   = 47,
-	None23                         = 48,
-	None24                         = 49,
-	AddControllerPitchInput        = 50,
-	AddControllerYawInput          = 51,
-	ConsumeMovementInputVector     = 52,
-	GetBaseAimRotation             = 53,
-	GetControlRotation             = 54,
-	GetMovementBaseActor           = 55
+	__UNKNOWN_NAME__               = 2,
+	EBootflowError__AthenaGameInstanceActiveConnectionToServerTimedOut = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EBootflowError__AthenaGameInstanceGameVersionMismatch = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EBootflowError__AthenaGameInstanceRPCSpamDetected = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	EBootflowError__ClientBootflowPrimaryPlayerSignedOut = 12,
+	None04                         = 13,
+	__UNKNOWN_NAME__04             = 14,
+	EBootflowError__ClientEvicted  = 15,
+	None05                         = 16,
+	__UNKNOWN_NAME__05             = 17,
+	EBootflowError__ClientInGameStateStopMatchmakingFailed = 18,
+	None06                         = 19,
+	__UNKNOWN_NAME__06             = 20,
+	EBootflowError__CrewMatchmakingStateUnableToObtainLocalPlayerInterface = 21,
+	None07                         = 22,
+	__UNKNOWN_NAME__07             = 23,
+	EBootflowError__CrewSessionStateFailedToCreateCrewSession = 24,
+	None08                         = 25,
+	__UNKNOWN_NAME__08             = 26,
+	EBootflowError__EmblemDefinitionRetrievalFailed = 27,
+	None09                         = 28,
+	__UNKNOWN_NAME__09             = 29,
+	EBootflowError__EntryLevelStateFailed = 30,
+	None10                         = 31,
+	__UNKNOWN_NAME__10             = 32,
+	EBootflowError__LoginTokenExchangeFailed = 33,
+	None11                         = 34,
+	__UNKNOWN_NAME__11             = 35,
+	EBootflowError__LoginTokenExchangeFailedPlayerBannedPerm = 36,
+	None12                         = 37,
+	__UNKNOWN_NAME__12             = 38,
+	EBootflowError__SelectUserStateNotConnectedToLive = 39,
+	None13                         = 40,
+	__UNKNOWN_NAME__13             = 41,
+	EBootflowError__SelectUserStateUserIsGuest = 42,
+	None14                         = 43,
+	__UNKNOWN_NAME__14             = 44,
+	EBootflowError__ServerMatchmakingStateUnableToObtainCrewId = 45,
+	None15                         = 46,
+	__UNKNOWN_NAME__15             = 47,
+	EBootflowError__ServerMatchmakingStateInvalidMatchmakingResponse = 48,
+	None16                         = 49,
+	__UNKNOWN_NAME__16             = 50,
+	EBootflowError__ServerMatchmakingStateJoinRefused = 51,
+	None17                         = 52,
+	__UNKNOWN_NAME__17             = 53,
+	EBootflowError__SetupServiceBridgeStateFailed = 54,
+	None18                         = 55,
+	__UNKNOWN_NAME__18             = 56,
+	EBootflowError__CrewSessionHandlerJoinFailedAsCouldNotRetrieveAddress = 57,
+	None19                         = 58,
+	__UNKNOWN_NAME__19             = 59,
+	EBootflowError__PirateSelectionStateUnableToCreatePirate = 60,
+	None20                         = 61,
+	__UNKNOWN_NAME__20             = 62,
+	EBootflowError__InviteSessionFull = 63,
+	None21                         = 64,
+	__UNKNOWN_NAME__21             = 65,
+	EBootflowError__TestNetworkError = 66,
+	None22                         = 67,
+	__UNKNOWN_NAME__22             = 68,
+	DrawDebugPlane                 = 69,
+	TextProperty                   = 70,
+	None23                         = 71,
+	None24                         = 72,
+	AddControllerPitchInput        = 73,
+	__UNKNOWN_NAME__23             = 74,
+	__UNKNOWN_NAME__24             = 75,
+	AddControllerYawInput          = 76,
+	__UNKNOWN_NAME__25             = 77,
+	__UNKNOWN_NAME__26             = 78,
+	ConsumeMovementInputVector     = 79,
+	__UNKNOWN_NAME__27             = 80,
+	__UNKNOWN_NAME__28             = 81,
+	GetBaseAimRotation             = 82,
+	__UNKNOWN_NAME__29             = 83,
+	__UNKNOWN_NAME__30             = 84,
+	GetControlRotation             = 85,
+	__UNKNOWN_NAME__31             = 86,
+	__UNKNOWN_NAME__32             = 87,
+	GetMovementBaseActor           = 88,
+	__UNKNOWN_NAME__33             = 89,
+	__UNKNOWN_NAME__34             = 90
 };
 
 
@@ -2425,9 +2782,10 @@ enum class EBootflowErrorPriority : uint8_t
 {
 	EBootflowErrorPriority__High   = 0,
 	None                           = 1,
-	EBootflowErrorPriority__Low    = 2,
-	None01                         = 3,
-	EPurchaseRequestFailureReason__ServiceUnavailable = 4
+	__UNKNOWN_NAME__               = 2,
+	EBootflowErrorPriority__Low    = 3,
+	None01                         = 4,
+	EPurchaseRequestFailureReason__ServiceUnavailable = 5
 };
 
 
@@ -2436,14 +2794,18 @@ enum class EStoreAsyncResult : uint8_t
 {
 	EStoreAsyncResult__Unknown     = 0,
 	None                           = 1,
-	EStoreAsyncResult__GetAccessTokenFailure = 2,
-	None01                         = 3,
-	EStoreAsyncResult__PostPurchaseRedemptionTokenInvalidHttpRequest = 4,
-	None02                         = 5,
-	EStoreAsyncResult__Success     = 6,
-	None03                         = 7,
-	EShipRegion__None              = 8,
-	None04                         = 9
+	__UNKNOWN_NAME__               = 2,
+	EStoreAsyncResult__GetAccessTokenFailure = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EStoreAsyncResult__PostPurchaseRedemptionTokenInvalidHttpRequest = 6,
+	None02                         = 7,
+	__UNKNOWN_NAME__02             = 8,
+	EStoreAsyncResult__Success     = 9,
+	None03                         = 10,
+	__UNKNOWN_NAME__03             = 11,
+	EShipRegion__None              = 12,
+	None04                         = 13
 };
 
 
@@ -2452,8 +2814,10 @@ enum class EWaitForLoadingScreenSubState : uint8_t
 {
 	EWaitForLoadingScreenSubState__Invalid = 0,
 	None                           = 1,
-	EWaitForLoadingScreenSubState__Complete = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EWaitForLoadingScreenSubState__Complete = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5
 };
 
 
@@ -2461,7 +2825,8 @@ enum class EWaitForLoadingScreenSubState : uint8_t
 enum class EMeleeAttackMoveCorrectionReason : uint8_t
 {
 	EMeleeAttackMoveCorrectionReason__NotSpecified = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2489,7 +2854,8 @@ enum class EServerTeleportAckReason : uint8_t
 {
 	EServerTeleportAckReason__Invalid = 0,
 	None                           = 1,
-	EServerCameraFadeAckReason__Invalid = 2
+	__UNKNOWN_NAME__               = 2,
+	EServerCameraFadeAckReason__Invalid = 3
 };
 
 
@@ -2498,7 +2864,8 @@ enum class EServerCameraFadeAckReason : uint8_t
 {
 	EServerCameraFadeAckReason__Invalid = 0,
 	None                           = 1,
-	ERewardDestinationType__Player = 2
+	__UNKNOWN_NAME__               = 2,
+	ERewardDestinationType__Player = 3
 };
 
 
@@ -2507,8 +2874,9 @@ enum class EConsumeEntitlementFailureReason : uint8_t
 {
 	EConsumeEntitlementFailureReason__ServiceUnavailable = 0,
 	None                           = 1,
-	EConsumeEntitlementFailureReason__EConsumeEntitlementFailureReason_MAX = 2,
-	EMurkWaterModifierZoneState__Active = 3
+	__UNKNOWN_NAME__               = 2,
+	EConsumeEntitlementFailureReason__EConsumeEntitlementFailureReason_MAX = 3,
+	EMurkWaterModifierZoneState__Active = 4
 };
 
 
@@ -2517,7 +2885,8 @@ enum class ERewardDestinationType : uint8_t
 {
 	ERewardDestinationType__Player = 0,
 	None                           = 1,
-	EIPGGender__UNSPECIFIED        = 2
+	__UNKNOWN_NAME__               = 2,
+	EIPGGender__UNSPECIFIED        = 3
 };
 
 
@@ -2525,7 +2894,8 @@ enum class ERewardDestinationType : uint8_t
 enum class ECrewDestroyedReason : uint8_t
 {
 	ECrewDestroyedReason__AllCrewMembersRemoved = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2534,7 +2904,8 @@ enum class EQuestGenAssetSuffix : uint8_t
 {
 	EQuestGenAssetSuffix__Default  = 0,
 	None                           = 1,
-	EPurchaseOfferFailureReason__ServiceUnavailable = 2
+	__UNKNOWN_NAME__               = 2,
+	EPurchaseOfferFailureReason__ServiceUnavailable = 3
 };
 
 
@@ -2543,7 +2914,8 @@ enum class EPurchaseOfferFailureReason : uint8_t
 {
 	EPurchaseOfferFailureReason__ServiceUnavailable = 0,
 	None                           = 1,
-	EIPGPirateType__PLAYER         = 2
+	__UNKNOWN_NAME__               = 2,
+	EIPGPirateType__PLAYER         = 3
 };
 
 
@@ -2552,8 +2924,9 @@ enum class EWalletBalanceRequestFailureReason : uint8_t
 {
 	EWalletBalanceRequestFailureReason__ServiceUnavailable = 0,
 	None                           = 1,
-	EWalletBalanceRequestFailureReason__EWalletBalanceRequestFailureReason_MAX = 2,
-	EServerMatchmakingFailureReason__NoServersAvailable = 3
+	__UNKNOWN_NAME__               = 2,
+	EWalletBalanceRequestFailureReason__EWalletBalanceRequestFailureReason_MAX = 3,
+	EServerMatchmakingFailureReason__NoServersAvailable = 4
 };
 
 
@@ -2562,8 +2935,9 @@ enum class EServerMatchmakingFailureReason : uint8_t
 {
 	EServerMatchmakingFailureReason__NoServersAvailable = 0,
 	None                           = 1,
-	EServerMatchmakingFailureReason__EServerMatchmakingFailureReason_MAX = 2,
-	EQuestStatus__Pending          = 3
+	__UNKNOWN_NAME__               = 2,
+	EServerMatchmakingFailureReason__EServerMatchmakingFailureReason_MAX = 3,
+	EQuestStatus__Pending          = 4
 };
 
 
@@ -2572,9 +2946,11 @@ enum class EStoreRemoteServiceFutureStatus : uint8_t
 {
 	EStoreRemoteServiceFutureStatus__Unknown = 0,
 	None                           = 1,
-	EStoreRemoteServiceFutureStatus__Cancelled = 2,
-	None01                         = 3,
-	EPreLoginDeniedReason__None    = 4
+	__UNKNOWN_NAME__               = 2,
+	EStoreRemoteServiceFutureStatus__Cancelled = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EPreLoginDeniedReason__None    = 6
 };
 
 
@@ -2583,8 +2959,12 @@ enum class EPreLoginDeniedReason : uint8_t
 {
 	EPreLoginDeniedReason__None    = 0,
 	None                           = 1,
-	EPreLoginDeniedReason__CrewNoLongerOnServer = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EPreLoginDeniedReason__CrewNoLongerOnServer = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6,
+	__UNKNOWN_NAME__03             = 7
 };
 
 
@@ -2593,7 +2973,8 @@ enum class ETestTelemetryJsonSchemaWriterUEnum : uint8_t
 {
 	ETestTelemetryJsonSchemaWriterUEnum__None = 0,
 	None                           = 1,
-	EServerAsyncLoadingAckReason__Invalid = 2
+	__UNKNOWN_NAME__               = 2,
+	EServerAsyncLoadingAckReason__Invalid = 3
 };
 
 
@@ -2610,7 +2991,8 @@ enum class EQuestResultFromDig : uint8_t
 {
 	EQuestResultFromDig__None      = 0,
 	None                           = 1,
-	ESearchDir__FromStart          = 2
+	__UNKNOWN_NAME__               = 2,
+	ESearchDir__FromStart          = 3
 };
 
 
@@ -2619,7 +3001,9 @@ enum class EQuestStatus : uint8_t
 {
 	EQuestStatus__Pending          = 0,
 	None                           = 1,
-	EQuestStatus__EQuestStatus_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EQuestStatus__EQuestStatus_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -2628,9 +3012,10 @@ enum class ERewardType : uint8_t
 {
 	ERewardType__XP                = 0,
 	None                           = 1,
-	ERewardType__Level             = 2,
-	None01                         = 3,
-	EWieldItemReturnCode__Success  = 4
+	__UNKNOWN_NAME__               = 2,
+	ERewardType__Level             = 3,
+	None01                         = 4,
+	EWieldItemReturnCode__Success  = 5
 };
 
 
@@ -2639,7 +3024,9 @@ enum class EPlayerStatsOperator : uint8_t
 {
 	EPlayerStatsOperator__Sum      = 0,
 	None                           = 1,
-	EPlayerStatsOperator__EPlayerStatsOperator_MAX = 2
+	__UNKNOWN_NAME__               = 2,
+	EPlayerStatsOperator__EPlayerStatsOperator_MAX = 3,
+	__UNKNOWN_NAME__01             = 4
 };
 
 
@@ -2647,7 +3034,8 @@ enum class EPlayerStatsOperator : uint8_t
 enum class EPlayerStatsType : uint8_t
 {
 	EPlayerStatsType__Int          = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2655,7 +3043,8 @@ enum class EPlayerStatsType : uint8_t
 enum class EEmblemUnlockCriteriaAggregationType : uint8_t
 {
 	EEmblemUnlockCriteriaAggregationType__None = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2664,8 +3053,9 @@ enum class EActionDisplayPriority : uint8_t
 {
 	EActionDisplayPriority__Primary = 0,
 	None                           = 1,
-	EActionDisplayPriority__EActionDisplayPriority_MAX = 2,
-	EKrakenBehaviourType__Idle     = 3
+	__UNKNOWN_NAME__               = 2,
+	EActionDisplayPriority__EActionDisplayPriority_MAX = 3,
+	EKrakenBehaviourType__Idle     = 4
 };
 
 
@@ -2674,7 +3064,8 @@ enum class EInteractableState : uint8_t
 {
 	EInteractableState__Interactable = 0,
 	None                           = 1,
-	EEmitterRelationship__Audio_Remote = 2
+	__UNKNOWN_NAME__               = 2,
+	EEmitterRelationship__Audio_Remote = 3
 };
 
 
@@ -2683,7 +3074,8 @@ enum class ETooltipHighlightType : uint8_t
 {
 	ETooltipHighlightType__Active  = 0,
 	None                           = 1,
-	ERadialMenuInputModality__None = 2
+	__UNKNOWN_NAME__               = 2,
+	ERadialMenuInputModality__None = 3
 };
 
 
@@ -2691,7 +3083,8 @@ enum class ETooltipHighlightType : uint8_t
 enum class ETooltipSpinnerType : uint8_t
 {
 	ETooltipSpinnerType__None      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2700,7 +3093,8 @@ enum class EVfxRegion : uint8_t
 {
 	EVfxRegion__None               = 0,
 	None                           = 1,
-	EInteractionBlockReason__None  = 2
+	__UNKNOWN_NAME__               = 2,
+	EInteractionBlockReason__None  = 3
 };
 
 
@@ -2709,8 +3103,9 @@ enum class EBuoyantObjectState : uint8_t
 {
 	EBuoyantObjectState__Rising    = 0,
 	None                           = 1,
-	EBuoyantObjectState__EBuoyantObjectState_MAX = 2,
-	EActionDisplayPriority__Primary = 3
+	__UNKNOWN_NAME__               = 2,
+	EBuoyantObjectState__EBuoyantObjectState_MAX = 3,
+	EActionDisplayPriority__Primary = 4
 };
 
 
@@ -2719,8 +3114,9 @@ enum class EItemType : uint8_t
 {
 	EItemType__Weapon              = 0,
 	None                           = 1,
-	EItemType__EItemType_MAX       = 2,
-	ETinySharkActiveState__TrackingTarget = 3
+	__UNKNOWN_NAME__               = 2,
+	EItemType__EItemType_MAX       = 3,
+	ETinySharkActiveState__TrackingTarget = 4
 };
 
 
@@ -2739,9 +3135,10 @@ enum class EWieldItemReturnCode : uint8_t
 {
 	EWieldItemReturnCode__Success  = 0,
 	None                           = 1,
-	EWieldItemReturnCode__WaitingForUnstash = 2,
-	None01                         = 3,
-	ERadialInventoryType__None     = 4
+	__UNKNOWN_NAME__               = 2,
+	EWieldItemReturnCode__WaitingForUnstash = 3,
+	None01                         = 4,
+	ERadialInventoryType__None     = 5
 };
 
 
@@ -2750,7 +3147,8 @@ enum class EDropItemReturnCode : uint8_t
 {
 	EDropItemReturnCode__NothingToDrop = 0,
 	None                           = 1,
-	EStowMethod__Unequip           = 2
+	__UNKNOWN_NAME__               = 2,
+	EStowMethod__Unequip           = 3
 };
 
 
@@ -2758,7 +3156,8 @@ enum class EDropItemReturnCode : uint8_t
 enum class EStowMethod : uint8_t
 {
 	EStowMethod__Unequip           = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2767,9 +3166,13 @@ enum class EStashReason : uint8_t
 {
 	EStashReason__Locomotion       = 0,
 	None                           = 1,
-	EStashReason__Dead             = 2,
-	None01                         = 3,
-	EStashReason__EStashReason_MAX = 4
+	__UNKNOWN_NAME__               = 2,
+	EStashReason__Dead             = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EStashReason__EStashReason_MAX = 6,
+	__UNKNOWN_NAME__02             = 7,
+	__UNKNOWN_NAME__03             = 8
 };
 
 
@@ -2778,7 +3181,8 @@ enum class ECanAddItemQueryResult : uint8_t
 {
 	ECanAddItemQueryResult__Success = 0,
 	None                           = 1,
-	EDropItemReturnCode__NothingToDrop = 2
+	__UNKNOWN_NAME__               = 2,
+	EDropItemReturnCode__NothingToDrop = 3
 };
 
 
@@ -2786,7 +3190,8 @@ enum class ECanAddItemQueryResult : uint8_t
 enum class EItemLifetimeManagement : uint8_t
 {
 	EItemLifetimeManagement__Automatic = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2795,7 +3200,8 @@ enum class EItemRepresentation : uint8_t
 {
 	EItemRepresentation__None      = 0,
 	None                           = 1,
-	EWieldableItemSize__Small      = 2
+	__UNKNOWN_NAME__               = 2,
+	EWieldableItemSize__Small      = 3
 };
 
 
@@ -2803,7 +3209,8 @@ enum class EItemRepresentation : uint8_t
 enum class EWieldableItemSize : uint8_t
 {
 	EWieldableItemSize__Small      = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2812,8 +3219,11 @@ enum class EWieldableItemAnimVariant : uint8_t
 {
 	EWieldableItemAnimVariant__Default = 0,
 	None                           = 1,
-	EWieldableItemAnimVariant__Variant4 = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EWieldableItemAnimVariant__Variant4 = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
@@ -2821,7 +3231,8 @@ enum class EWieldableItemAnimVariant : uint8_t
 enum class EWieldableItemBlockingAnimState : uint8_t
 {
 	EWieldableItemBlockingAnimState__Main = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2829,7 +3240,8 @@ enum class EWieldableItemBlockingAnimState : uint8_t
 enum class EWieldableItemComplexOneShotAnimType : uint8_t
 {
 	EWieldableItemComplexOneShotAnimType__MeleeComboAttack = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2838,7 +3250,8 @@ enum class EWieldableItemVisibilityReason : uint8_t
 {
 	EWieldableItemVisibilityReason__Animation = 0,
 	None                           = 1,
-	EWieldableItemComplexOneShotAnimType__MeleeComboAttack = 2
+	__UNKNOWN_NAME__               = 2,
+	EWieldableItemComplexOneShotAnimType__MeleeComboAttack = 3
 };
 
 
@@ -2846,7 +3259,8 @@ enum class EWieldableItemVisibilityReason : uint8_t
 enum class EPerspectiveTypes : uint8_t
 {
 	EPerspectiveTypes__FirstPerson = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 
@@ -2855,9 +3269,10 @@ enum class ERadialInventoryType : uint8_t
 {
 	ERadialInventoryType__None     = 0,
 	None                           = 1,
-	ERadialInventoryType__Emotes   = 2,
-	None01                         = 3,
-	ETinySharkState__Inactive      = 4
+	__UNKNOWN_NAME__               = 2,
+	ERadialInventoryType__Emotes   = 3,
+	None01                         = 4,
+	ETinySharkState__Inactive      = 5
 };
 
 
@@ -2865,7 +3280,8 @@ enum class ERadialInventoryType : uint8_t
 enum class ECharacterType : uint8_t
 {
 	ECharacterType__Ghost          = 0,
-	None                           = 1
+	None                           = 1,
+	__UNKNOWN_NAME__               = 2
 };
 
 

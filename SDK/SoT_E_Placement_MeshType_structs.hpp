@@ -19,10 +19,12 @@ enum class E_Placement_MeshType : uint8_t
 {
 	E_Placement_MeshType__NewEnumerator5 = 0,
 	None                           = 1,
-	E_Placement_MeshType__NewEnumerator3 = 2,
-	None01                         = 3,
-	NameProperty                   = 4,
-	Diffuse                        = 5
+	__UNKNOWN_NAME__               = 2,
+	E_Placement_MeshType__NewEnumerator3 = 3,
+	None01                         = 4,
+	NameProperty                   = 5,
+	__UNKNOWN_NAME__01             = 6,
+	__UNKNOWN_NAME__02             = 7
 };
 
 

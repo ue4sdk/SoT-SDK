@@ -22,8 +22,9 @@ enum class EBeaconConnectionState : uint8_t
 {
 	EBeaconConnectionState__Invalid = 0,
 	None                           = 1,
-	EBeaconConnectionState__EBeaconConnectionState_MAX = 2,
-	EAutoPossessAI__Disabled       = 3
+	__UNKNOWN_NAME__               = 2,
+	EBeaconConnectionState__EBeaconConnectionState_MAX = 3,
+	EAutoPossessAI__Disabled       = 4
 };
 
 
@@ -32,14 +33,19 @@ enum class EPartyReservationResult : uint8_t
 {
 	EPartyReservationResult__NoResult = 0,
 	None                           = 1,
-	EPartyReservationResult__IncorrectPlayerCount = 2,
-	None01                         = 3,
-	EPartyReservationResult__ReservationAccepted = 4,
-	None02                         = 5,
-	StructProperty                 = 6,
-	EPartyReservationResult__ReservationInvalid = 7,
-	None03                         = 8,
-	TextProperty                   = 9
+	__UNKNOWN_NAME__               = 2,
+	EPartyReservationResult__IncorrectPlayerCount = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	EPartyReservationResult__ReservationAccepted = 6,
+	None02                         = 7,
+	StructProperty                 = 8,
+	EPartyReservationResult__ReservationInvalid = 9,
+	None03                         = 10,
+	TextProperty                   = 11,
+	__UNKNOWN_NAME__02             = 12,
+	__UNKNOWN_NAME__03             = 13,
+	__UNKNOWN_NAME__04             = 14
 };
 
 
@@ -48,8 +54,11 @@ enum class EClientRequestType : uint8_t
 {
 	EClientRequestType__NonePending = 0,
 	None                           = 1,
-	EClientRequestType__ChangeWorldRequest = 2,
-	None01                         = 3
+	__UNKNOWN_NAME__               = 2,
+	EClientRequestType__ChangeWorldRequest = 3,
+	None01                         = 4,
+	__UNKNOWN_NAME__01             = 5,
+	__UNKNOWN_NAME__02             = 6
 };
 
 
