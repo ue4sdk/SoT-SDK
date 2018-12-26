@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CS_CannonFire_parameters.hpp"
+#include "SoT_CS_CannonFire_classes.hpp"
 
 namespace SDK
 {

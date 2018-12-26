@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SpyglassItemCategory_parameters.hpp"
+#include "SoT_SpyglassItemCategory_classes.hpp"
 
 namespace SDK
 {

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BucketItemCategory_parameters.hpp"
+#include "SoT_BucketItemCategory_classes.hpp"
 
 namespace SDK
 {

@@ -20,11 +20,11 @@ namespace SDK
 enum class EFoliageScaling : uint8_t
 {
 	EFoliageScaling__Uniform       = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	EFoliageScaling__LockYZ        = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__               = 5
+	EFoliageScaling__Free          = 1,
+	EFoliageScaling__LockXY        = 2,
+	EFoliageScaling__LockXZ        = 3,
+	EFoliageScaling__LockYZ        = 4,
+	EFoliageScaling__EFoliageScaling_MAX = 5
 };
 
 
@@ -32,11 +32,11 @@ enum class EFoliageScaling : uint8_t
 enum class EFoliageVertexColorMask : uint8_t
 {
 	FOLIAGEVERTEXCOLORMASK_Disabled = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	FOLIAGEVERTEXCOLORMASK_Alpha   = 3,
-	None01                         = 4,
-	LCCT_None                      = 5
+	FOLIAGEVERTEXCOLORMASK_Red     = 1,
+	FOLIAGEVERTEXCOLORMASK_Green   = 2,
+	FOLIAGEVERTEXCOLORMASK_Blue    = 3,
+	FOLIAGEVERTEXCOLORMASK_Alpha   = 4,
+	FOLIAGEVERTEXCOLORMASK_MAX     = 5
 };
 
 
@@ -44,9 +44,9 @@ enum class EFoliageVertexColorMask : uint8_t
 enum class ESimulationQuery : uint8_t
 {
 	ESimulationQuery__CollisionOverlap = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	LGT_None                       = 3
+	ESimulationQuery__ShadeOverlap = 1,
+	ESimulationQuery__AnyOverlap   = 2,
+	ESimulationQuery__ESimulationQuery_MAX = 3
 };
 
 
@@ -54,9 +54,9 @@ enum class ESimulationQuery : uint8_t
 enum class ESimulationOverlap : uint8_t
 {
 	ESimulationOverlap__CollisionOverlap = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	ETwoPlayerSplitScreenType__Horizontal = 3
+	ESimulationOverlap__ShadeOverlap = 1,
+	ESimulationOverlap__None       = 2,
+	ESimulationOverlap__ESimulationOverlap_MAX = 3
 };
 
 

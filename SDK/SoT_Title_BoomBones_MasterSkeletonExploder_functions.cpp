@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_BoomBones_MasterSkeletonExploder_parameters.hpp"
+#include "SoT_Title_BoomBones_MasterSkeletonExploder_classes.hpp"
 
 namespace SDK
 {

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShipwreckStorageBarrel_Cannonball_parameters.hpp"
+#include "SoT_BP_ShipwreckStorageBarrel_Cannonball_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_ShipwreckStorageBarrel_Cannonball_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Cannonball.BP_ShipwreckStorageBarrel_Cannonball_C.UserConstructionScript");
 
-	ABP_ShipwreckStorageBarrel_Cannonball_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallMapTable_parameters.hpp"
+#include "SoT_BP_SmallMapTable_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_SmallMapTable_C::UpdateBlurEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.UpdateBlurEffect");
 
-	ABP_SmallMapTable_C_UpdateBlurEffect_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -36,7 +39,13 @@ struct FVector ABP_SmallMapTable_C::GetClosestInteractionPoint(const struct FVec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.GetClosestInteractionPoint");
 
-	ABP_SmallMapTable_C_GetClosestInteractionPoint_Params params;
+	struct
+	{
+		struct FVector                 ReferencePosition;
+		float                          OutInteractionPointRadius;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,7 +64,10 @@ void ABP_SmallMapTable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.UserConstructionScript");
 
-	ABP_SmallMapTable_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -68,7 +80,10 @@ void ABP_SmallMapTable_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.ReceiveBeginPlay");
 
-	ABP_SmallMapTable_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -81,7 +96,10 @@ void ABP_SmallMapTable_C::SetEffectActiveWhenClose()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.SetEffectActiveWhenClose");
 
-	ABP_SmallMapTable_C_SetEffectActiveWhenClose_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -97,7 +115,12 @@ void ABP_SmallMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapActivate");
 
-	ABP_SmallMapTable_C_OnMapActivate_Params params;
+	struct
+	{
+		bool                           IsMapActive;
+		class UTextureRenderTarget2D*  Texture;
+	} params;
+
 	params.IsMapActive = IsMapActive;
 	params.Texture = Texture;
 
@@ -115,7 +138,12 @@ void ABP_SmallMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, cons
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapMove");
 
-	ABP_SmallMapTable_C_OnMapMove_Params params;
+	struct
+	{
+		struct FVector2D               CentreLocation;
+		struct FVector2D               ZoomLevel;
+	} params;
+
 	params.CentreLocation = CentreLocation;
 	params.ZoomLevel = ZoomLevel;
 
@@ -132,7 +160,11 @@ void ABP_SmallMapTable_C::ExecuteUbergraph_BP_SmallMapTable(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.ExecuteUbergraph_BP_SmallMapTable");
 
-	ABP_SmallMapTable_C_ExecuteUbergraph_BP_SmallMapTable_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

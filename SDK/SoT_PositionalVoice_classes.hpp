@@ -89,9 +89,9 @@ public:
 	}
 
 
-	int STATIC_GetNumberOfUnmutedRemotePlayers(class APlayerController* CurrentPlayer);
-	int STATIC_GetNumberOfRegisteredChatEmitters(class UObject* WorldContextObject, class UClass* VoiceChatRendererClass);
-	int STATIC_GetMaxNumberOfAudibleChatEmitters();
+	static int GetNumberOfUnmutedRemotePlayers(class APlayerController* CurrentPlayer);
+	static int GetNumberOfRegisteredChatEmitters(class UObject* WorldContextObject, class UClass* VoiceChatRendererClass);
+	static int GetMaxNumberOfAudibleChatEmitters();
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BlueSeaOfPlenty_parameters.hpp"
+#include "SoT_BlueSeaOfPlenty_classes.hpp"
 
 namespace SDK
 {

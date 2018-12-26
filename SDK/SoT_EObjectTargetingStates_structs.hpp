@@ -18,13 +18,13 @@ namespace SDK
 enum class EObjectTargetingStates : uint8_t
 {
 	EObjectTargetingStates__NewEnumerator0 = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EObjectTargetingStates__NewEnumerator4 = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	NavCollision_X                 = 6,
-	__UNKNOWN_NAME__01             = 7
+	EObjectTargetingStates__NewEnumerator1 = 1,
+	EObjectTargetingStates__NewEnumerator2 = 2,
+	EObjectTargetingStates__NewEnumerator3 = 3,
+	EObjectTargetingStates__NewEnumerator4 = 4,
+	EObjectTargetingStates__NewEnumerator5 = 5,
+	EObjectTargetingStates__NewEnumerator6 = 6,
+	EObjectTargetingStates__EObjectTargetingStates_MAX = 7
 };
 
 

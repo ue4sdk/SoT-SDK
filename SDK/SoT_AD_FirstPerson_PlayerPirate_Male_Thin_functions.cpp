@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AD_FirstPerson_PlayerPirate_Male_Thin_parameters.hpp"
+#include "SoT_AD_FirstPerson_PlayerPirate_Male_Thin_classes.hpp"
 
 namespace SDK
 {

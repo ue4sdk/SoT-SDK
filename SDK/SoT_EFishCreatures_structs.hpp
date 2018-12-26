@@ -18,14 +18,14 @@ namespace SDK
 enum class EFishCreatures : uint8_t
 {
 	EFishCreatures__NewEnumerator8 = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EFishCreatures__NewEnumerator5 = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	EFishCreatures__EFishCreatures_MAX = 6,
-	__UNKNOWN_NAME__01             = 7,
-	__UNKNOWN_NAME__02             = 8
+	EFishCreatures__NewEnumerator6 = 1,
+	EFishCreatures__NewEnumerator7 = 2,
+	EFishCreatures__NewEnumerator4 = 3,
+	EFishCreatures__NewEnumerator5 = 4,
+	EFishCreatures__NewEnumerator10 = 5,
+	EFishCreatures__NewEnumerator11 = 6,
+	EFishCreatures__NewEnumerator13 = 7,
+	EFishCreatures__EFishCreatures_MAX = 8
 };
 
 

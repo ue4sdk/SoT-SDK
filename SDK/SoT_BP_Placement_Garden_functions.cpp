@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Placement_Garden_parameters.hpp"
+#include "SoT_BP_Placement_Garden_classes.hpp"
 
 namespace SDK
 {
@@ -23,7 +23,13 @@ void ABP_Placement_Garden_C::Set_Garden_Parameters(float Radius, int Int, bool* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Set Garden Parameters");
 
-	ABP_Placement_Garden_C_Set_Garden_Parameters_Params params;
+	struct
+	{
+		float                          Radius;
+		int                            Int;
+		bool                           Instances_Created;
+	} params;
+
 	params.Radius = Radius;
 	params.Int = Int;
 
@@ -41,7 +47,10 @@ void ABP_Placement_Garden_C::Create_Garden()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Create Garden");
 
-	ABP_Placement_Garden_C_Create_Garden_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -54,7 +63,10 @@ void ABP_Placement_Garden_C::Initialise_Instances()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Initialise Instances");
 
-	ABP_Placement_Garden_C_Initialise_Instances_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,7 +79,10 @@ void ABP_Placement_Garden_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.UserConstructionScript");
 
-	ABP_Placement_Garden_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -80,7 +95,10 @@ void ABP_Placement_Garden_C::Force_Create_Garden()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Force Create Garden");
 
-	ABP_Placement_Garden_C_Force_Create_Garden_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -95,7 +113,11 @@ void ABP_Placement_Garden_C::ExecuteUbergraph_BP_Placement_Garden(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.ExecuteUbergraph_BP_Placement_Garden");
 
-	ABP_Placement_Garden_C_ExecuteUbergraph_BP_Placement_Garden_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SOT_World_layout_2_World_Regions_parameters.hpp"
+#include "SoT_SOT_World_layout_2_World_Regions_classes.hpp"
 
 namespace SDK
 {

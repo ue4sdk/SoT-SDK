@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Proposal_Merchant_Rank06Reward_007_parameters.hpp"
+#include "SoT_Proposal_Merchant_Rank06Reward_007_classes.hpp"
 
 namespace SDK
 {

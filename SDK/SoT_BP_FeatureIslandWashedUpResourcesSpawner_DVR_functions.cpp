@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FeatureIslandWashedUpResourcesSpawner_DVR_parameters.hpp"
+#include "SoT_BP_FeatureIslandWashedUpResourcesSpawner_DVR_classes.hpp"
 
 namespace SDK
 {

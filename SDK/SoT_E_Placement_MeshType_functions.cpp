@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_E_Placement_MeshType_parameters.hpp"
+#include "SoT_E_Placement_MeshType_classes.hpp"
 
 namespace SDK
 {

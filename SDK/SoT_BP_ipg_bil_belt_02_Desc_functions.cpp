@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ipg_bil_belt_02_Desc_parameters.hpp"
+#include "SoT_BP_ipg_bil_belt_02_Desc_classes.hpp"
 
 namespace SDK
 {

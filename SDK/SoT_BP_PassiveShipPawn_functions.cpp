@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PassiveShipPawn_parameters.hpp"
+#include "SoT_BP_PassiveShipPawn_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_PassiveShipPawn_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PassiveShipPawn.BP_PassiveShipPawn_C.UserConstructionScript");
 
-	ABP_PassiveShipPawn_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -18,10 +18,10 @@ namespace SDK
 enum class EFlyingCreatures : uint8_t
 {
 	EFlyingCreatures__NewEnumerator8 = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	EFlyingCreatures__EFlyingCreatures_MAX = 3,
-	__UNKNOWN_NAME__               = 4
+	EFlyingCreatures__NewEnumerator6 = 1,
+	EFlyingCreatures__NewEnumerator7 = 2,
+	EFlyingCreatures__NewEnumerator4 = 3,
+	EFlyingCreatures__EFlyingCreatures_MAX = 4
 };
 
 

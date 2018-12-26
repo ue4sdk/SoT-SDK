@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_JsonUtilities_parameters.hpp"
+#include "SoT_JsonUtilities_classes.hpp"
 
 namespace SDK
 {
@@ -19,14 +19,21 @@ namespace SDK
 // class FString                  OutJsonString                  (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJsonUtilitiesBlueprintHelperLibrary::STATIC_UStructToJsonObjectString(const struct FGenericStruct& Struct, class FString* OutJsonString)
+bool UJsonUtilitiesBlueprintHelperLibrary::UStructToJsonObjectString(const struct FGenericStruct& Struct, class FString* OutJsonString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.UStructToJsonObjectString");
 
-	UJsonUtilitiesBlueprintHelperLibrary_UStructToJsonObjectString_Params params;
+	struct
+	{
+		struct FGenericStruct          Struct;
+		class FString                  OutJsonString;
+		bool                           ReturnValue;
+	} params;
+
 	params.Struct = Struct;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	if (OutJsonString != nullptr)
 		*OutJsonString = params.OutJsonString;
@@ -42,15 +49,22 @@ bool UJsonUtilitiesBlueprintHelperLibrary::STATIC_UStructToJsonObjectString(cons
 // struct FGenericStruct          Struct                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJsonUtilitiesBlueprintHelperLibrary::STATIC_JsonObjectStringToUStruct(const class FString& InJsonString, const struct FGenericStruct& Struct)
+bool UJsonUtilitiesBlueprintHelperLibrary::JsonObjectStringToUStruct(const class FString& InJsonString, const struct FGenericStruct& Struct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.JsonObjectStringToUStruct");
 
-	UJsonUtilitiesBlueprintHelperLibrary_JsonObjectStringToUStruct_Params params;
+	struct
+	{
+		class FString                  InJsonString;
+		struct FGenericStruct          Struct;
+		bool                           ReturnValue;
+	} params;
+
 	params.InJsonString = InJsonString;
 	params.Struct = Struct;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

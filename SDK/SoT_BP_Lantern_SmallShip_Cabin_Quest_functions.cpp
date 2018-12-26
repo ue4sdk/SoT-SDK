@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Lantern_SmallShip_Cabin_Quest_parameters.hpp"
+#include "SoT_BP_Lantern_SmallShip_Cabin_Quest_classes.hpp"
 
 namespace SDK
 {

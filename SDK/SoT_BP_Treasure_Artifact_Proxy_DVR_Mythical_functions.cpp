@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Treasure_Artifact_Proxy_DVR_Mythical_parameters.hpp"
+#include "SoT_BP_Treasure_Artifact_Proxy_DVR_Mythical_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_Treasure_Artifact_Proxy_DVR_Mythical_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Treasure_Artifact_Proxy_DVR_Mythical.BP_Treasure_Artifact_Proxy_DVR_Mythical_C.UserConstructionScript");
 
-	ABP_Treasure_Artifact_Proxy_DVR_Mythical_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -19,11 +19,11 @@ namespace SDK
 enum class EMovieSceneKeyInterpolation : uint8_t
 {
 	MSKI_Auto                      = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	MSKI_Constant                  = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5
+	MSKI_User                      = 1,
+	MSKI_Break                     = 2,
+	MSKI_Linear                    = 3,
+	MSKI_Constant                  = 4,
+	MSKI_MAX                       = 5
 };
 
 

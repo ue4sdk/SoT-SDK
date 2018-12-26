@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_TinyShark_Defeated_parameters.hpp"
+#include "SoT_Title_TinyShark_Defeated_classes.hpp"
 
 namespace SDK
 {

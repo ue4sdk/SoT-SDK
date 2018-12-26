@@ -20,9 +20,9 @@ namespace SDK
 enum class EDrivenBoneModificationMode : uint8_t
 {
 	EDrivenBoneModificationMode__AddToInput = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	BA_X                           = 3
+	EDrivenBoneModificationMode__ReplaceComponent = 1,
+	EDrivenBoneModificationMode__AddToRefPose = 2,
+	EDrivenBoneModificationMode__EDrivenBoneModificationMode_MAX = 3
 };
 
 
@@ -30,17 +30,17 @@ enum class EDrivenBoneModificationMode : uint8_t
 enum class EComponentType : uint8_t
 {
 	EComponentType__None           = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EComponentType__RotationX      = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	EComponentType__ScaleX         = 6,
-	None02                         = 7,
-	__UNKNOWN_NAME__01             = 8,
-	None03                         = 9,
-	__UNKNOWN_NAME__02             = 10,
-	__UNKNOWN_NAME__03             = 11
+	EComponentType__TranslationX   = 1,
+	EComponentType__TranslationY   = 2,
+	EComponentType__TranslationZ   = 3,
+	EComponentType__RotationX      = 4,
+	EComponentType__RotationY      = 5,
+	EComponentType__RotationZ      = 6,
+	EComponentType__Scale          = 7,
+	EComponentType__ScaleX         = 8,
+	EComponentType__ScaleY         = 9,
+	EComponentType__ScaleZ         = 10,
+	EComponentType__EComponentType_MAX = 11
 };
 
 
@@ -48,14 +48,14 @@ enum class EComponentType : uint8_t
 enum class EInterpolationBlend : uint8_t
 {
 	EInterpolationBlend__Linear    = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EInterpolationBlend__EaseInOutExponent3 = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	EInterpolationBlend__EInterpolationBlend_MAX = 6,
-	__UNKNOWN_NAME__02             = 7,
-	__UNKNOWN_NAME__03             = 8
+	EInterpolationBlend__Cubic     = 1,
+	EInterpolationBlend__Sinusoidal = 2,
+	EInterpolationBlend__EaseInOutExponent2 = 3,
+	EInterpolationBlend__EaseInOutExponent3 = 4,
+	EInterpolationBlend__EaseInOutExponent4 = 5,
+	EInterpolationBlend__EaseInOutExponent5 = 6,
+	EInterpolationBlend__MAX       = 7,
+	EInterpolationBlend__EInterpolationBlend_MAX = 8
 };
 
 
@@ -63,12 +63,12 @@ enum class EInterpolationBlend : uint8_t
 enum class EAxisOption : uint8_t
 {
 	EAxisOption__X                 = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EAxisOption__Y_Neg             = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	__UNKNOWN_NAME__01             = 6
+	EAxisOption__Y                 = 1,
+	EAxisOption__Z                 = 2,
+	EAxisOption__X_Neg             = 3,
+	EAxisOption__Y_Neg             = 4,
+	EAxisOption__Z_Neg             = 5,
+	EAxisOption__EAxisOption_MAX   = 6
 };
 
 
@@ -76,9 +76,9 @@ enum class EAxisOption : uint8_t
 enum class EBoneModificationMode : uint8_t
 {
 	BMM_Ignore                     = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EDrivenBoneModificationMode__AddToInput = 3
+	BMM_Replace                    = 1,
+	BMM_Additive                   = 2,
+	BMM_MAX                        = 3
 };
 
 
@@ -86,9 +86,9 @@ enum class EBoneModificationMode : uint8_t
 enum class EBoneAxis : uint8_t
 {
 	BA_X                           = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	ETestEnum__Value0              = 3
+	BA_Y                           = 1,
+	BA_Z                           = 2,
+	BA_MAX                         = 3
 };
 
 

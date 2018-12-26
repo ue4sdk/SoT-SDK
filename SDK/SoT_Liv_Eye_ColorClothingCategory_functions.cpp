@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Liv_Eye_ColorClothingCategory_parameters.hpp"
+#include "SoT_Liv_Eye_ColorClothingCategory_classes.hpp"
 
 namespace SDK
 {

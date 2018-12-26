@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_wsp_Garden_shells_parameters.hpp"
+#include "SoT_BP_wsp_Garden_shells_classes.hpp"
 
 namespace SDK
 {

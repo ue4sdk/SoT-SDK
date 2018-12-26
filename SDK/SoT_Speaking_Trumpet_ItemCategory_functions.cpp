@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Speaking_Trumpet_ItemCategory_parameters.hpp"
+#include "SoT_Speaking_Trumpet_ItemCategory_classes.hpp"
 
 namespace SDK
 {

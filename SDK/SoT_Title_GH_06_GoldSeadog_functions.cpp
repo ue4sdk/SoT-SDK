@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_GH_06_GoldSeadog_parameters.hpp"
+#include "SoT_Title_GH_06_GoldSeadog_classes.hpp"
 
 namespace SDK
 {

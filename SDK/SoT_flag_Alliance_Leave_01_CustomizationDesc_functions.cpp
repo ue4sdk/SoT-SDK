@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_flag_Alliance_Leave_01_CustomizationDesc_parameters.hpp"
+#include "SoT_flag_Alliance_Leave_01_CustomizationDesc_classes.hpp"
 
 namespace SDK
 {

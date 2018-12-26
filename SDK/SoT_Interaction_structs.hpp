@@ -21,9 +21,9 @@ namespace SDK
 enum class EInteractionBlockReason : uint8_t
 {
 	EInteractionBlockReason__None  = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EWaterQueryResult__Success     = 3
+	EInteractionBlockReason__Radial = 1,
+	EInteractionBlockReason__Other = 2,
+	EInteractionBlockReason__EInteractionBlockReason_MAX = 3
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShipwreckStorageBarrel_Grog_parameters.hpp"
+#include "SoT_BP_ShipwreckStorageBarrel_Grog_classes.hpp"
 
 namespace SDK
 {
@@ -23,7 +23,13 @@ struct FVector ABP_ShipwreckStorageBarrel_Grog_C::GetClosestInteractionPoint(con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.GetClosestInteractionPoint");
 
-	ABP_ShipwreckStorageBarrel_Grog_C_GetClosestInteractionPoint_Params params;
+	struct
+	{
+		struct FVector                 ReferencePosition;
+		float                          OutInteractionPointRadius;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -46,7 +52,13 @@ bool ABP_ShipwreckStorageBarrel_Grog_C::ShouldDrawTooltipInWorldSpace(class AAct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.ShouldDrawTooltipInWorldSpace");
 
-	ABP_ShipwreckStorageBarrel_Grog_C_ShouldDrawTooltipInWorldSpace_Params params;
+	struct
+	{
+		class AActor*                  InInteractor;
+		struct FVector                 DesiredTooltipWorldPosition;
+		bool                           ReturnValue;
+	} params;
+
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -65,7 +77,10 @@ void ABP_ShipwreckStorageBarrel_Grog_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.UserConstructionScript");
 
-	ABP_ShipwreckStorageBarrel_Grog_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

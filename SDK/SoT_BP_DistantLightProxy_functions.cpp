@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_DistantLightProxy_parameters.hpp"
+#include "SoT_BP_DistantLightProxy_classes.hpp"
 
 namespace SDK
 {
@@ -23,7 +23,13 @@ void ABP_DistantLightProxy_C::FindExistingLight(const class FString& Name, bool*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.FindExistingLight");
 
-	ABP_DistantLightProxy_C_FindExistingLight_Params params;
+	struct
+	{
+		class FString                  Name;
+		bool                           Result;
+		int                            Index;
+	} params;
+
 	params.Name = Name;
 
 	UObject::ProcessEvent(fn, &params);
@@ -42,7 +48,10 @@ void ABP_DistantLightProxy_C::Create_Lights()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Create Lights");
 
-	ABP_DistantLightProxy_C_Create_Lights_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55,7 +64,10 @@ void ABP_DistantLightProxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.UserConstructionScript");
 
-	ABP_DistantLightProxy_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -73,7 +85,14 @@ void ABP_DistantLightProxy_C::Add_Light(const struct FVector& Location, float Si
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Add Light");
 
-	ABP_DistantLightProxy_C_Add_Light_Params params;
+	struct
+	{
+		struct FVector                 Location;
+		float                          Size;
+		class UMaterialInterface*      Material;
+		class FString                  Name;
+	} params;
+
 	params.Location = Location;
 	params.Size = Size;
 	params.Material = Material;
@@ -92,7 +111,11 @@ void ABP_DistantLightProxy_C::ExecuteUbergraph_BP_DistantLightProxy(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.ExecuteUbergraph_BP_DistantLightProxy");
 
-	ABP_DistantLightProxy_C_ExecuteUbergraph_BP_DistantLightProxy_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

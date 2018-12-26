@@ -21,9 +21,9 @@ namespace SDK
 enum class EWaterQueryResult : uint8_t
 {
 	EWaterQueryResult__Success     = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	ETimeOfDay__Day                = 3
+	EWaterQueryResult__Failed      = 1,
+	EWaterQueryResult__NoWater     = 2,
+	EWaterQueryResult__EWaterQueryResult_MAX = 3
 };
 
 
@@ -31,8 +31,8 @@ enum class EWaterQueryResult : uint8_t
 enum class EBuoyancyDragSampleType : uint8_t
 {
 	EBuoyancyDragSampleType__Spherical = 0,
-	None                           = 1,
-	IntProperty                    = 2
+	EBuoyancyDragSampleType__Planar = 1,
+	EBuoyancyDragSampleType__EBuoyancyDragSampleType_MAX = 2
 };
 
 
@@ -40,9 +40,9 @@ enum class EBuoyancyDragSampleType : uint8_t
 enum class EBuoyancySampleType : uint8_t
 {
 	EBuoyancySampleType__Spherical = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EBuoyancyDragSampleType__Spherical = 3
+	EBuoyancySampleType__Cuboidal  = 1,
+	EBuoyancySampleType__ProbeCurve = 2,
+	EBuoyancySampleType__EBuoyancySampleType_MAX = 3
 };
 
 
@@ -50,11 +50,11 @@ enum class EBuoyancySampleType : uint8_t
 enum class EWaterSplashProbeType : uint8_t
 {
 	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EWaterSplashProbeType__Continuous = 3,
-	None01                         = 4,
-	NM_PreserveSmoothingGroups     = 5
+	EWaterSplashProbeType__StateChangeWaterToAir = 1,
+	EWaterSplashProbeType__StateChangeAirToWater = 2,
+	EWaterSplashProbeType__StateChangeAny = 3,
+	EWaterSplashProbeType__Continuous = 4,
+	EWaterSplashProbeType__EWaterSplashProbeType_MAX = 5
 };
 
 

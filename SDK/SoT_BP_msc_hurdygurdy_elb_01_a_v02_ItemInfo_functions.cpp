@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_msc_hurdygurdy_elb_01_a_v02_ItemInfo_parameters.hpp"
+#include "SoT_BP_msc_hurdygurdy_elb_01_a_v02_ItemInfo_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_msc_hurdygurdy_elb_01_a_v02_ItemInfo_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_msc_hurdygurdy_elb_01_a_v02_ItemInfo.BP_msc_hurdygurdy_elb_01_a_v02_ItemInfo_C.UserConstructionScript");
 
-	ABP_msc_hurdygurdy_elb_01_a_v02_ItemInfo_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

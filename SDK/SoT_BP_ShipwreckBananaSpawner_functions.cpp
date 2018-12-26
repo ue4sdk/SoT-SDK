@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShipwreckBananaSpawner_parameters.hpp"
+#include "SoT_BP_ShipwreckBananaSpawner_classes.hpp"
 
 namespace SDK
 {

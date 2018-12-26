@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Wind_parameters.hpp"
+#include "SoT_Wind_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void UWindInterface::UnregisterWindZone(const TScriptInterface<class UWindZoneIn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.UnregisterWindZone");
 
-	UWindInterface_UnregisterWindZone_Params params;
+	struct
+	{
+		TScriptInterface<class UWindZoneInterface> InWindZone;
+	} params;
+
 	params.InWindZone = InWindZone;
 
 	UObject::ProcessEvent(fn, &params);
@@ -37,7 +41,11 @@ void UWindInterface::TriggerChange(bool ChangeInstantly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.TriggerChange");
 
-	UWindInterface_TriggerChange_Params params;
+	struct
+	{
+		bool                           ChangeInstantly;
+	} params;
+
 	params.ChangeInstantly = ChangeInstantly;
 
 	UObject::ProcessEvent(fn, &params);
@@ -53,7 +61,11 @@ void UWindInterface::SetParams(const struct FWindServiceParams& Params)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetParams");
 
-	UWindInterface_SetParams_Params params;
+	struct
+	{
+		struct FWindServiceParams      Params;
+	} params;
+
 	params.Params = Params;
 
 	UObject::ProcessEvent(fn, &params);
@@ -69,7 +81,11 @@ void UWindInterface::SetGlobalWindVector(const struct FVector& InWindVector)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindVector");
 
-	UWindInterface_SetGlobalWindVector_Params params;
+	struct
+	{
+		struct FVector                 InWindVector;
+	} params;
+
 	params.InWindVector = InWindVector;
 
 	UObject::ProcessEvent(fn, &params);
@@ -85,7 +101,11 @@ void UWindInterface::SetGlobalWindMagnitude(float InWindMagnitude)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindMagnitude");
 
-	UWindInterface_SetGlobalWindMagnitude_Params params;
+	struct
+	{
+		float                          InWindMagnitude;
+	} params;
+
 	params.InWindMagnitude = InWindMagnitude;
 
 	UObject::ProcessEvent(fn, &params);
@@ -101,7 +121,11 @@ void UWindInterface::SetGlobalWindDirection(const struct FVector& InWindDirectio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindDirection");
 
-	UWindInterface_SetGlobalWindDirection_Params params;
+	struct
+	{
+		struct FVector                 InWindDirection;
+	} params;
+
 	params.InWindDirection = InWindDirection;
 
 	UObject::ProcessEvent(fn, &params);
@@ -117,7 +141,11 @@ void UWindInterface::SetGlobalWindAngle(float InAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindAngle");
 
-	UWindInterface_SetGlobalWindAngle_Params params;
+	struct
+	{
+		float                          InAngle;
+	} params;
+
 	params.InAngle = InAngle;
 
 	UObject::ProcessEvent(fn, &params);
@@ -133,7 +161,11 @@ void UWindInterface::RegisterWindZone(const TScriptInterface<class UWindZoneInte
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.RegisterWindZone");
 
-	UWindInterface_RegisterWindZone_Params params;
+	struct
+	{
+		TScriptInterface<class UWindZoneInterface> InWindZone;
+	} params;
+
 	params.InWindZone = InWindZone;
 
 	UObject::ProcessEvent(fn, &params);
@@ -150,7 +182,12 @@ TScriptInterface<class UWindZoneInterface> UWindInterface::GetWindZoneAtLocation
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindZoneAtLocation");
 
-	UWindInterface_GetWindZoneAtLocation_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		TScriptInterface<class UWindZoneInterface> ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -169,7 +206,12 @@ struct FVector UWindInterface::GetWindVector(const struct FVector& SamplePositio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindVector");
 
-	UWindInterface_GetWindVector_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -188,7 +230,12 @@ float UWindInterface::GetWindMagnitude(const struct FVector& SamplePosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindMagnitude");
 
-	UWindInterface_GetWindMagnitude_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		float                          ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -207,7 +254,12 @@ struct FVector UWindInterface::GetWindDirection(const struct FVector& SamplePosi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindDirection");
 
-	UWindInterface_GetWindDirection_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -226,7 +278,12 @@ float UWindInterface::GetWindAngle(const struct FVector& SamplePosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindAngle");
 
-	UWindInterface_GetWindAngle_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		float                          ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -245,7 +302,12 @@ struct FWindZoneTurbulence UWindInterface::GetTurbulenceForTrees(const struct FV
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetTurbulenceForTrees");
 
-	UWindInterface_GetTurbulenceForTrees_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		struct FWindZoneTurbulence     ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -264,7 +326,12 @@ struct FWindZoneTurbulence UWindInterface::GetTurbulence(const struct FVector& S
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetTurbulence");
 
-	UWindInterface_GetTurbulence_Params params;
+	struct
+	{
+		struct FVector                 SamplePosition;
+		struct FWindZoneTurbulence     ReturnValue;
+	} params;
+
 	params.SamplePosition = SamplePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -282,7 +349,11 @@ float UWindInterface::GetMaxWindMagnitude()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetMaxWindMagnitude");
 
-	UWindInterface_GetMaxWindMagnitude_Params params;
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +370,11 @@ struct FWindZoneParams UWindZoneInterface::GetWindZoneParams()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindZoneInterface.GetWindZoneParams");
 
-	UWindZoneInterface_GetWindZoneParams_Params params;
+	struct
+	{
+		struct FWindZoneParams         ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -316,7 +391,11 @@ struct FVector2D UWindZoneInterface::GetWindZoneLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindZoneInterface.GetWindZoneLocation");
 
-	UWindZoneInterface_GetWindZoneLocation_Params params;
+	struct
+	{
+		struct FVector2D               ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -334,7 +413,12 @@ struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVecto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindZoneInterface.GetTurbulence");
 
-	UWindZoneInterface_GetTurbulence_Params params;
+	struct
+	{
+		struct FVector                 Location;
+		struct FWindZoneTurbulence     ReturnValue;
+	} params;
+
 	params.Location = Location;
 
 	UObject::ProcessEvent(fn, &params);
@@ -348,14 +432,19 @@ struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVecto
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWindFunctions::STATIC_SetDefaultWindBlowingNorth(class UObject* WorldContextObject)
+void UWindFunctions::SetDefaultWindBlowingNorth(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindFunctions.SetDefaultWindBlowingNorth");
 
-	UWindFunctions_SetDefaultWindBlowingNorth_Params params;
+	struct
+	{
+		class UObject*                 WorldContextObject;
+	} params;
+
 	params.WorldContextObject = WorldContextObject;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -366,15 +455,22 @@ void UWindFunctions::STATIC_SetDefaultWindBlowingNorth(class UObject* WorldConte
 // struct FVector                 WorldPosition                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UWindFunctions::STATIC_GetWindAtLocation(class UObject* WorldContextObject, const struct FVector& WorldPosition)
+struct FVector UWindFunctions::GetWindAtLocation(class UObject* WorldContextObject, const struct FVector& WorldPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindFunctions.GetWindAtLocation");
 
-	UWindFunctions_GetWindAtLocation_Params params;
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		struct FVector                 WorldPosition;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.WorldContextObject = WorldContextObject;
 	params.WorldPosition = WorldPosition;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -387,7 +483,10 @@ void AWindService::OnRep_WindMagnitude()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindService.OnRep_WindMagnitude");
 
-	AWindService_OnRep_WindMagnitude_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -400,7 +499,10 @@ void AWindService::OnRep_WindAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindService.OnRep_WindAngle");
 
-	AWindService_OnRep_WindAngle_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -415,7 +517,11 @@ struct FWindServiceParams AWindService::GetWindParams()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindService.GetWindParams");
 
-	AWindService_GetWindParams_Params params;
+	struct
+	{
+		struct FWindServiceParams      ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -430,15 +536,22 @@ struct FWindServiceParams AWindService::GetWindParams()
 // struct FWindServiceParams      Params2                        (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWindServiceParamsFunctionLibrary::STATIC_AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2)
+bool UWindServiceParamsFunctionLibrary::AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindServiceParamsFunctionLibrary.AreWindServiceParamsEqual");
 
-	UWindServiceParamsFunctionLibrary_AreWindServiceParamsEqual_Params params;
+	struct
+	{
+		struct FWindServiceParams      Params1;
+		struct FWindServiceParams      Params2;
+		bool                           ReturnValue;
+	} params;
+
 	params.Params1 = Params1;
 	params.Params2 = Params2;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

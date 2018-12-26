@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ALK_WieldableObject_Pet_Monkey_parameters.hpp"
+#include "SoT_ALK_WieldableObject_Pet_Monkey_classes.hpp"
 
 namespace SDK
 {

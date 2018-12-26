@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ipg_con_peg_01_s03_Desc_parameters.hpp"
+#include "SoT_BP_ipg_con_peg_01_s03_Desc_classes.hpp"
 
 namespace SDK
 {

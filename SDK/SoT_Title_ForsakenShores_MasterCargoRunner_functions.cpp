@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_ForsakenShores_MasterCargoRunner_parameters.hpp"
+#include "SoT_Title_ForsakenShores_MasterCargoRunner_classes.hpp"
 
 namespace SDK
 {

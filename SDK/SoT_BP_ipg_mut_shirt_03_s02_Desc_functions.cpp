@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ipg_mut_shirt_03_s02_Desc_parameters.hpp"
+#include "SoT_BP_ipg_mut_shirt_03_s02_Desc_classes.hpp"
 
 namespace SDK
 {

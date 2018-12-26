@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sailslivery_mutiny_01_CutomizationDesc_parameters.hpp"
+#include "SoT_sailslivery_mutiny_01_CutomizationDesc_classes.hpp"
 
 namespace SDK
 {

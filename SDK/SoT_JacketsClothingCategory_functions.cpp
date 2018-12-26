@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_JacketsClothingCategory_parameters.hpp"
+#include "SoT_JacketsClothingCategory_classes.hpp"
 
 namespace SDK
 {

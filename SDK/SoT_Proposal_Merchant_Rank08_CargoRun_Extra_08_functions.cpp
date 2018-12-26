@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Proposal_Merchant_Rank08_CargoRun_Extra_08_parameters.hpp"
+#include "SoT_Proposal_Merchant_Rank08_CargoRun_Extra_08_classes.hpp"
 
 namespace SDK
 {

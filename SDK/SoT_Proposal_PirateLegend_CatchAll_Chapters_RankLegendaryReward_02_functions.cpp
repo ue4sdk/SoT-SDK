@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_02_parameters.hpp"
+#include "SoT_Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_02_classes.hpp"
 
 namespace SDK
 {

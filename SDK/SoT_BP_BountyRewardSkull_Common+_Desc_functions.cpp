@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BountyRewardSkull_Common+_Desc_parameters.hpp"
+#include "SoT_BP_BountyRewardSkull_Common+_Desc_classes.hpp"
 
 namespace SDK
 {

@@ -18,15 +18,15 @@ namespace SDK
 enum class ECreatureNumbers : uint8_t
 {
 	ECreatureNumbers__NewEnumerator0 = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	ECreatureNumbers__NewEnumerator4 = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	ECreatureNumbers__NewEnumerator8 = 6,
-	None02                         = 7,
-	__UNKNOWN_NAME__02             = 8,
-	__UNKNOWN_NAME__03             = 9
+	ECreatureNumbers__NewEnumerator1 = 1,
+	ECreatureNumbers__NewEnumerator2 = 2,
+	ECreatureNumbers__NewEnumerator3 = 3,
+	ECreatureNumbers__NewEnumerator4 = 4,
+	ECreatureNumbers__NewEnumerator5 = 5,
+	ECreatureNumbers__NewEnumerator6 = 6,
+	ECreatureNumbers__NewEnumerator7 = 7,
+	ECreatureNumbers__NewEnumerator8 = 8,
+	ECreatureNumbers__ECreatureNumbers_MAX = 9
 };
 
 

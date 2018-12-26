@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_OOS_HunterOfSkulls_parameters.hpp"
+#include "SoT_Title_OOS_HunterOfSkulls_classes.hpp"
 
 namespace SDK
 {

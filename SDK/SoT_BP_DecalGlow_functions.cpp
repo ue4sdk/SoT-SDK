@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_DecalGlow_parameters.hpp"
+#include "SoT_BP_DecalGlow_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_DecalGlow_C::StartGlowEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.StartGlowEffect");
 
-	ABP_DecalGlow_C_StartGlowEffect_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -34,7 +37,11 @@ bool ABP_DecalGlow_C::StartReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.StartReaction");
 
-	ABP_DecalGlow_C_StartReaction_Params params;
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +58,11 @@ bool ABP_DecalGlow_C::StopReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.StopReaction");
 
-	ABP_DecalGlow_C_StopReaction_Params params;
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,7 +77,10 @@ void ABP_DecalGlow_C::CollectDecalMaterials()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.CollectDecalMaterials");
 
-	ABP_DecalGlow_C_CollectDecalMaterials_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -79,7 +93,10 @@ void ABP_DecalGlow_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.UserConstructionScript");
 
-	ABP_DecalGlow_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -92,7 +109,10 @@ void ABP_DecalGlow_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.ReceiveBeginPlay");
 
-	ABP_DecalGlow_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -107,7 +127,11 @@ void ABP_DecalGlow_C::ExecuteUbergraph_BP_DecalGlow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow.BP_DecalGlow_C.ExecuteUbergraph_BP_DecalGlow");
 
-	ABP_DecalGlow_C_ExecuteUbergraph_BP_DecalGlow_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

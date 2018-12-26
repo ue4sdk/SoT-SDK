@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_wpn_sniper_rifle_bot_01_a_Wieldable_parameters.hpp"
+#include "SoT_BP_wpn_sniper_rifle_bot_01_a_Wieldable_classes.hpp"
 
 namespace SDK
 {

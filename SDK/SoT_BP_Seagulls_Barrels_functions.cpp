@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Seagulls_Barrels_parameters.hpp"
+#include "SoT_BP_Seagulls_Barrels_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_Seagulls_Barrels_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagulls_Barrels.BP_Seagulls_Barrels_C.UserConstructionScript");
 
-	ABP_Seagulls_Barrels_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

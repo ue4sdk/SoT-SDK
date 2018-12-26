@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ActorMacros_parameters.hpp"
+#include "SoT_ActorMacros_classes.hpp"
 
 namespace SDK
 {

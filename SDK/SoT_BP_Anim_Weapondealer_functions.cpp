@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_Weapondealer_parameters.hpp"
+#include "SoT_BP_Anim_Weapondealer_classes.hpp"
 
 namespace SDK
 {

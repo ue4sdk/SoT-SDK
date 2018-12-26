@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Shipwreck_01_a_parameters.hpp"
+#include "SoT_BP_Shipwreck_01_a_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_Shipwreck_01_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.UserConstructionScript");
 
-	ABP_Shipwreck_01_a_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -32,7 +35,10 @@ void ABP_Shipwreck_01_a_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ReceiveBeginPlay");
 
-	ABP_Shipwreck_01_a_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,7 +53,11 @@ void ABP_Shipwreck_01_a_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ReceiveEndPlay");
 
-	ABP_Shipwreck_01_a_C_ReceiveEndPlay_Params params;
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -61,7 +71,10 @@ void ABP_Shipwreck_01_a_C::OnResetTo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.OnResetTo");
 
-	ABP_Shipwreck_01_a_C_OnResetTo_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -76,7 +89,11 @@ void ABP_Shipwreck_01_a_C::ExecuteUbergraph_BP_Shipwreck_01_a(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ExecuteUbergraph_BP_Shipwreck_01_a");
 
-	ABP_Shipwreck_01_a_C_ExecuteUbergraph_BP_Shipwreck_01_a_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

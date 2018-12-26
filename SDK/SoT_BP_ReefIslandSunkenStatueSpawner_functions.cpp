@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ReefIslandSunkenStatueSpawner_parameters.hpp"
+#include "SoT_BP_ReefIslandSunkenStatueSpawner_classes.hpp"
 
 namespace SDK
 {

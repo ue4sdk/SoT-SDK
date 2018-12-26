@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AD_ThirdPerson_Skeleton_Captain_parameters.hpp"
+#include "SoT_AD_ThirdPerson_Skeleton_Captain_classes.hpp"
 
 namespace SDK
 {

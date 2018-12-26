@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ADS_WhisperingNative_parameters.hpp"
+#include "SoT_ADS_WhisperingNative_classes.hpp"
 
 namespace SDK
 {

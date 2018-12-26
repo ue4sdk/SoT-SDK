@@ -21,19 +21,19 @@ namespace SDK
 enum class EAIDebugDrawDataView : uint8_t
 {
 	EAIDebugDrawDataView__Empty    = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EAIDebugDrawDataView__EQS      = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	EAIDebugDrawDataView__GameView3 = 6,
-	None02                         = 7,
-	__UNKNOWN_NAME__02             = 8,
-	EAIDebugDrawDataView__MAX      = 9,
-	None03                         = 10,
-	__UNKNOWN_NAME__03             = 11,
-	__UNKNOWN_NAME__04             = 12,
-	__UNKNOWN_NAME__05             = 13
+	EAIDebugDrawDataView__OverHead = 1,
+	EAIDebugDrawDataView__Basic    = 2,
+	EAIDebugDrawDataView__BehaviorTree = 3,
+	EAIDebugDrawDataView__EQS      = 4,
+	EAIDebugDrawDataView__Perception = 5,
+	EAIDebugDrawDataView__GameView1 = 6,
+	EAIDebugDrawDataView__GameView2 = 7,
+	EAIDebugDrawDataView__GameView3 = 8,
+	EAIDebugDrawDataView__GameView4 = 9,
+	EAIDebugDrawDataView__GameView5 = 10,
+	EAIDebugDrawDataView__NavMesh  = 11,
+	EAIDebugDrawDataView__MAX      = 12,
+	EAIDebugDrawDataView__EAIDebugDrawDataView_MAX = 13
 };
 
 
@@ -41,13 +41,13 @@ enum class EAIDebugDrawDataView : uint8_t
 enum class EDebugComponentMessage : uint8_t
 {
 	EDebugComponentMessage__EnableExtendedView = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EDebugComponentMessage__ActivateDataView = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	__UNKNOWN_NAME__02             = 6,
-	__UNKNOWN_NAME__03             = 7
+	EDebugComponentMessage__DisableExtendedView = 1,
+	EDebugComponentMessage__ActivateReplication = 2,
+	EDebugComponentMessage__DeactivateReplilcation = 3,
+	EDebugComponentMessage__ActivateDataView = 4,
+	EDebugComponentMessage__DeactivateDataView = 5,
+	EDebugComponentMessage__SetMultipleDataViews = 6,
+	EDebugComponentMessage__EDebugComponentMessage_MAX = 7
 };
 
 

@@ -21,20 +21,20 @@ namespace SDK
 enum class EInstancedRopeParameterType : uint8_t
 {
 	RPT_Start                      = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	RPT_UVScale                    = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	RPT_WindAmount                 = 6,
-	None02                         = 7,
-	__UNKNOWN_NAME__02             = 8,
-	RPT_CatenaryXYDistance         = 9,
-	None03                         = 10,
-	TextProperty                   = 11,
-	ECannonballIconType__Normal    = 12,
-	None04                         = 13,
-	__UNKNOWN_NAME__03             = 14
+	RPT_End                        = 1,
+	RPT_Roughness                  = 2,
+	RPT_Thickness                  = 3,
+	RPT_UVScale                    = 4,
+	RPT_UVOffset                   = 5,
+	RPT_Length                     = 6,
+	RPT_SwingTime                  = 7,
+	RPT_WindAmount                 = 8,
+	RPT_CatenaryScale              = 9,
+	RPT_CatenaryX0                 = 10,
+	RPT_CatenaryY0                 = 11,
+	RPT_CatenaryXYDistance         = 12,
+	RPT_IsCatenary                 = 13,
+	RPT_MAX                        = 14
 };
 
 

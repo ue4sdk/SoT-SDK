@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_cmp_telescope_mrh_01_c_ItemDesc_parameters.hpp"
+#include "SoT_BP_cmp_telescope_mrh_01_c_ItemDesc_classes.hpp"
 
 namespace SDK
 {

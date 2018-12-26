@@ -59,11 +59,11 @@ public:
 	}
 
 
-	void STATIC_SetHitchThreshold(int InThreshold);
-	class FString STATIC_GetMaxHitchNameThisFrame();
-	int STATIC_GetMaxHitchLengthThisFrameMs();
-	void STATIC_DumpThisFramesHitchesToLog();
-	bool STATIC_DidHitchOccurThisFrame();
+	static void SetHitchThreshold(int InThreshold);
+	static class FString GetMaxHitchNameThisFrame();
+	static int GetMaxHitchLengthThisFrameMs();
+	static void DumpThisFramesHitchesToLog();
+	static bool DidHitchOccurThisFrame();
 };
 
 
@@ -115,7 +115,7 @@ public:
 
 
 	void Deactivate();
-	class UStallDetector* STATIC_CreateStallDetector(float Delay, bool CreateActive);
+	static class UStallDetector* CreateStallDetector(float Delay, bool CreateActive);
 	void Activate();
 };
 
@@ -133,8 +133,8 @@ public:
 	}
 
 
-	void STATIC_FindAllStaticMeshComponents(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshComponentList>* OutComponentLists);
-	void STATIC_FindAllStaticMeshActors(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshActorList>* OutActorLists);
+	static void FindAllStaticMeshComponents(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshComponentList>* OutComponentLists);
+	static void FindAllStaticMeshActors(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshActorList>* OutActorLists);
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureArtifact_Wieldable_goblet_01_a_parameters.hpp"
+#include "SoT_BP_TreasureArtifact_Wieldable_goblet_01_a_classes.hpp"
 
 namespace SDK
 {

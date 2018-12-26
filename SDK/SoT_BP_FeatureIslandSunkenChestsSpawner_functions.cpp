@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FeatureIslandSunkenChestsSpawner_parameters.hpp"
+#include "SoT_BP_FeatureIslandSunkenChestsSpawner_classes.hpp"
 
 namespace SDK
 {

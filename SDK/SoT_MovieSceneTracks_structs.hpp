@@ -21,12 +21,12 @@ namespace SDK
 enum class EMovieScene3DPathSection_Axis : uint8_t
 {
 	MovieScene3DPathSection_Axis__X = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	MovieScene3DPathSection_Axis__NEG_Y = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	__UNKNOWN_NAME__01             = 6
+	MovieScene3DPathSection_Axis__Y = 1,
+	MovieScene3DPathSection_Axis__Z = 2,
+	MovieScene3DPathSection_Axis__NEG_X = 3,
+	MovieScene3DPathSection_Axis__NEG_Y = 4,
+	MovieScene3DPathSection_Axis__NEG_Z = 5,
+	MovieScene3DPathSection_Axis__MovieScene3DPathSection_MAX = 6
 };
 
 
@@ -34,8 +34,8 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 enum class EParticleKey : uint8_t
 {
 	EParticleKey__Active           = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2
+	EParticleKey__Inactive         = 1,
+	EParticleKey__EParticleKey_MAX = 2
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_AF_MysticalLegendOfTheStrongholds_parameters.hpp"
+#include "SoT_Title_AF_MysticalLegendOfTheStrongholds_classes.hpp"
 
 namespace SDK
 {

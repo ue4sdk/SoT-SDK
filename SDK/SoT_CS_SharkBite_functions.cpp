@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CS_SharkBite_parameters.hpp"
+#include "SoT_CS_SharkBite_classes.hpp"
 
 namespace SDK
 {

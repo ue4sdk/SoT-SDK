@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_NaturalDisasters_parameters.hpp"
+#include "SoT_NaturalDisasters_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void AEarthquake::OnRep_EarthquakeState(TEnumAsByte<EEarthquakeState> OldEarthqu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Earthquake.OnRep_EarthquakeState");
 
-	AEarthquake_OnRep_EarthquakeState_Params params;
+	struct
+	{
+		TEnumAsByte<EEarthquakeState>  OldEarthquakeState;
+	} params;
+
 	params.OldEarthquakeState = OldEarthquakeState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,7 +39,10 @@ void AGeyser::OnRep_GeyserState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Geyser.OnRep_GeyserState");
 
-	AGeyser_OnRep_GeyserState_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -48,7 +55,10 @@ void AGeyser::Multicast_TriggerExplosion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Geyser.Multicast_TriggerExplosion");
 
-	AGeyser_Multicast_TriggerExplosion_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -63,7 +73,11 @@ void ALavaZone::OnRep_ActorsInZone(TArray<class AActor*> PreviousActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.LavaZone.OnRep_ActorsInZone");
 
-	ALavaZone_OnRep_ActorsInZone_Params params;
+	struct
+	{
+		TArray<class AActor*>          PreviousActors;
+	} params;
+
 	params.PreviousActors = PreviousActors;
 
 	UObject::ProcessEvent(fn, &params);
@@ -77,7 +91,10 @@ void ALavaZone::OnRep_Active()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.LavaZone.OnRep_Active");
 
-	ALavaZone_OnRep_Active_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -90,7 +107,10 @@ void ASuperheatedWater::OnRep_PlayersInZone()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone");
 
-	ASuperheatedWater_OnRep_PlayersInZone_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -105,7 +125,11 @@ void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoStat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.OnRep_VolcanoState");
 
-	AVolcano_OnRep_VolcanoState_Params params;
+	struct
+	{
+		struct FVolcanoStateData       OldVolcanoState;
+	} params;
+
 	params.OldVolcanoState = OldVolcanoState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -126,7 +150,16 @@ void AVolcano::Multicast_FireProjectile(class UClass* ProjectileType, const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.Multicast_FireProjectile");
 
-	AVolcano_Multicast_FireProjectile_Params params;
+	struct
+	{
+		class UClass*                  ProjectileType;
+		struct FVector                 AuthoritySpawnLocation;
+		struct FVector                 LaunchVelocity;
+		struct FVector                 RotationRate;
+		float                          ProjectileGravityScale;
+		class UWwiseEvent*             LaunchAudioPlayEvent;
+	} params;
+
 	params.ProjectileType = ProjectileType;
 	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
 	params.LaunchVelocity = LaunchVelocity;

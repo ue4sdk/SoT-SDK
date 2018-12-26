@@ -20,8 +20,8 @@ namespace SDK
 enum class ETimeOfDay : uint8_t
 {
 	ETimeOfDay__Day                = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2
+	ETimeOfDay__Night              = 1,
+	ETimeOfDay__ETimeOfDay_MAX     = 2
 };
 
 

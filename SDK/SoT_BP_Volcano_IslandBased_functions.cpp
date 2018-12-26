@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Volcano_IslandBased_parameters.hpp"
+#include "SoT_BP_Volcano_IslandBased_classes.hpp"
 
 namespace SDK
 {

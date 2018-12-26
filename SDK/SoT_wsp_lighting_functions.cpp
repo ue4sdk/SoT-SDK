@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_lighting_parameters.hpp"
+#include "SoT_wsp_lighting_classes.hpp"
 
 namespace SDK
 {

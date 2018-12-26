@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_StatusEffects_parameters.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void UStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveSta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects");
 
-	UStatusEffectManagerComponent_OnRep_ActiveEffects_Params params;
+	struct
+	{
+		TArray<struct FActiveStatusEffect> OldEffects;
+	} params;
+
 	params.OldEffects = OldEffects;
 
 	UObject::ProcessEvent(fn, &params);

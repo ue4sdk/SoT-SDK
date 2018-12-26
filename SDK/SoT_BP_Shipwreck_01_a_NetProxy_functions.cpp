@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Shipwreck_01_a_NetProxy_parameters.hpp"
+#include "SoT_BP_Shipwreck_01_a_NetProxy_classes.hpp"
 
 namespace SDK
 {

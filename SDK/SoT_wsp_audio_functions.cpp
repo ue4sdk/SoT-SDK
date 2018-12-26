@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_audio_parameters.hpp"
+#include "SoT_wsp_audio_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void Awsp_audio_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ReceiveTick");
 
-	Awsp_audio_C_ReceiveTick_Params params;
+	struct
+	{
+		float                          DeltaSeconds;
+	} params;
+
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,7 +39,10 @@ void Awsp_audio_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ReceiveBeginPlay");
 
-	Awsp_audio_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -50,7 +57,11 @@ void Awsp_audio_C::ExecuteUbergraph_wsp_audio(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ExecuteUbergraph_wsp_audio");
 
-	Awsp_audio_C_ExecuteUbergraph_wsp_audio_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

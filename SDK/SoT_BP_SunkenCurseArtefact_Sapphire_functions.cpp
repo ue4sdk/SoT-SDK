@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SunkenCurseArtefact_Sapphire_parameters.hpp"
+#include "SoT_BP_SunkenCurseArtefact_Sapphire_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_SunkenCurseArtefact_Sapphire_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C.UserConstructionScript");
 
-	ABP_SunkenCurseArtefact_Sapphire_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

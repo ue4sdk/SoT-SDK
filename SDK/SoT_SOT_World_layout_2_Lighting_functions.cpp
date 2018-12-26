@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SOT_World_layout_2_Lighting_parameters.hpp"
+#include "SoT_SOT_World_layout_2_Lighting_classes.hpp"
 
 namespace SDK
 {

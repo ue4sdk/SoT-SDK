@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ShovelItemCategory_parameters.hpp"
+#include "SoT_ShovelItemCategory_classes.hpp"
 
 namespace SDK
 {

@@ -18,10 +18,10 @@ namespace SDK
 enum class ELadderState : uint8_t
 {
 	ELadderState__NewEnumerator5   = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	ELadderState__ELadderState_MAX = 3,
-	__UNKNOWN_NAME__               = 4
+	ELadderState__NewEnumerator6   = 1,
+	ELadderState__NewEnumerator7   = 2,
+	ELadderState__NewEnumerator8   = 3,
+	ELadderState__ELadderState_MAX = 4
 };
 
 

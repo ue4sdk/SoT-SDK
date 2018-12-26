@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_RankCategory_parameters.hpp"
+#include "SoT_RankCategory_classes.hpp"
 
 namespace SDK
 {

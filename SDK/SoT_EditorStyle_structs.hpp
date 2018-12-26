@@ -19,14 +19,14 @@ namespace SDK
 enum class EColorVisionDeficiency : uint8_t
 {
 	CVD_NormalVision               = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	CVD_Protanopia                 = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	CVD_MAX                        = 6,
-	EKrakenShipWrappingTentacleState__Dormant = 7,
-	None02                         = 8
+	CVD_Deuteranomly               = 1,
+	CVD_Deuteranopia               = 2,
+	CVD_Protanomly                 = 3,
+	CVD_Protanopia                 = 4,
+	CVD_Tritanomaly                = 5,
+	CVD_Tritanopia                 = 6,
+	CVD_Achromatopsia              = 7,
+	CVD_MAX                        = 8
 };
 
 

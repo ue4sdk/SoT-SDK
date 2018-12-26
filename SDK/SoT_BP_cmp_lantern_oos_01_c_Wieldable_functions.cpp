@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_cmp_lantern_oos_01_c_Wieldable_parameters.hpp"
+#include "SoT_BP_cmp_lantern_oos_01_c_Wieldable_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_cmp_lantern_oos_01_c_Wieldable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_cmp_lantern_oos_01_c_Wieldable.BP_cmp_lantern_oos_01_c_Wieldable_C.UserConstructionScript");
 
-	ABP_cmp_lantern_oos_01_c_Wieldable_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

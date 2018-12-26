@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_CursedCrews_BearerOfTheReapersMask_parameters.hpp"
+#include "SoT_Title_CursedCrews_BearerOfTheReapersMask_classes.hpp"
 
 namespace SDK
 {

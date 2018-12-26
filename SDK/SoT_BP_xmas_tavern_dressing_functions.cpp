@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_xmas_tavern_dressing_parameters.hpp"
+#include "SoT_BP_xmas_tavern_dressing_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_xmas_tavern_dressing_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_xmas_tavern_dressing.BP_xmas_tavern_dressing_C.UserConstructionScript");
 
-	ABP_xmas_tavern_dressing_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

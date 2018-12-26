@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FeatureandResourceIslandWashedUpBoxofSecretsSpawner_parameters.hpp"
+#include "SoT_BP_FeatureandResourceIslandWashedUpBoxofSecretsSpawner_classes.hpp"
 
 namespace SDK
 {

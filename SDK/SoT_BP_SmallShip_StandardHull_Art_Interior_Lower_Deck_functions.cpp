@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShip_StandardHull_Art_Interior_Lower_Deck_parameters.hpp"
+#include "SoT_BP_SmallShip_StandardHull_Art_Interior_Lower_Deck_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C::UserConstructionScrip
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_StandardHull_Art_Interior_Lower_Deck.BP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C.UserConstructionScript");
 
-	ABP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

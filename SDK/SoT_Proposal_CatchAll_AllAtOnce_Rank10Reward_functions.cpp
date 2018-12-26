@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Proposal_CatchAll_AllAtOnce_Rank10Reward_parameters.hpp"
+#include "SoT_Proposal_CatchAll_AllAtOnce_Rank10Reward_classes.hpp"
 
 namespace SDK
 {

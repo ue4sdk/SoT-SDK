@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_wpn_flintlock_pistol_shd_01_a_v01_ItemDesc_parameters.hpp"
+#include "SoT_BP_wpn_flintlock_pistol_shd_01_a_v01_ItemDesc_classes.hpp"
 
 namespace SDK
 {

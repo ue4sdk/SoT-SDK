@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_VenomSource_Snake_parameters.hpp"
+#include "SoT_VenomSource_Snake_classes.hpp"
 
 namespace SDK
 {

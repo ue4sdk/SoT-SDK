@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_CollectorsChest_parameters.hpp"
+#include "SoT_BP_Anim_CollectorsChest_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void UBP_Anim_CollectorsChest_C::ExecuteUbergraph_BP_Anim_CollectorsChest(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_CollectorsChest.BP_Anim_CollectorsChest_C.ExecuteUbergraph_BP_Anim_CollectorsChest");
 
-	UBP_Anim_CollectorsChest_C_ExecuteUbergraph_BP_Anim_CollectorsChest_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

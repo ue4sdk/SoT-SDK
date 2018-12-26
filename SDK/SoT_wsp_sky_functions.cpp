@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_sky_parameters.hpp"
+#include "SoT_wsp_sky_classes.hpp"
 
 namespace SDK
 {

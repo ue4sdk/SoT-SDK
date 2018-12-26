@@ -19,16 +19,16 @@ namespace SDK
 enum class ETouchIndex : uint8_t
 {
 	ETouchIndex__Touch1            = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	ETouchIndex__Touch5            = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	ETouchIndex__Touch9            = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9,
-	__UNKNOWN_NAME__               = 10
+	ETouchIndex__Touch2            = 1,
+	ETouchIndex__Touch3            = 2,
+	ETouchIndex__Touch4            = 3,
+	ETouchIndex__Touch5            = 4,
+	ETouchIndex__Touch6            = 5,
+	ETouchIndex__Touch7            = 6,
+	ETouchIndex__Touch8            = 7,
+	ETouchIndex__Touch9            = 8,
+	ETouchIndex__Touch10           = 9,
+	ETouchIndex__ETouchIndex_MAX   = 10
 };
 
 
@@ -36,11 +36,11 @@ enum class ETouchIndex : uint8_t
 enum class ETouchType : uint8_t
 {
 	ETouchType__Began              = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	ETouchType__NumTypes           = 3,
-	None01                         = 4,
-	EFontHinting__Default          = 5
+	ETouchType__Moved              = 1,
+	ETouchType__Stationary         = 2,
+	ETouchType__Ended              = 3,
+	ETouchType__NumTypes           = 4,
+	ETouchType__ETouchType_MAX     = 5
 };
 
 
@@ -48,9 +48,9 @@ enum class ETouchType : uint8_t
 enum class EConsoleForGamepadLabels : uint8_t
 {
 	EConsoleForGamepadLabels__None = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	ESearchCase__CaseSensitive     = 3
+	EConsoleForGamepadLabels__XBoxOne = 1,
+	EConsoleForGamepadLabels__PS4  = 2,
+	EConsoleForGamepadLabels__EConsoleForGamepadLabels_MAX = 3
 };
 
 
@@ -58,8 +58,8 @@ enum class EConsoleForGamepadLabels : uint8_t
 enum class EControllerHand : uint8_t
 {
 	EControllerHand__Left          = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2
+	EControllerHand__Right         = 1,
+	EControllerHand__EControllerHand_MAX = 2
 };
 
 

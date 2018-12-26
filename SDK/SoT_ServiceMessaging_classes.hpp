@@ -57,8 +57,8 @@ public:
 	}
 
 
-	struct FObjectMessagingDispatcherHandle STATIC_GetServiceMessagingDispatcherFromActor(class UObject* Object);
-	struct FObjectMessagingDispatcherHandle STATIC_GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher);
+	static struct FObjectMessagingDispatcherHandle GetServiceMessagingDispatcherFromActor(class UObject* Object);
+	static struct FObjectMessagingDispatcherHandle GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher);
 };
 
 

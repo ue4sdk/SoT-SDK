@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_GH_04_GoldHauler_parameters.hpp"
+#include "SoT_Title_GH_04_GoldHauler_classes.hpp"
 
 namespace SDK
 {

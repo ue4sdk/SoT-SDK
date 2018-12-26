@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Instance_Struct_parameters.hpp"
+#include "SoT_Instance_Struct_classes.hpp"
 
 namespace SDK
 {

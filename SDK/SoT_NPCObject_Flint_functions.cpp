@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_NPCObject_Flint_parameters.hpp"
+#include "SoT_NPCObject_Flint_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ANPCObject_Flint_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPCObject_Flint.NPCObject_Flint_C.UserConstructionScript");
 
-	ANPCObject_Flint_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

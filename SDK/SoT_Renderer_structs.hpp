@@ -18,9 +18,9 @@ namespace SDK
 enum class ERefChangeFadPhase : uint8_t
 {
 	NoFading                       = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	ETextJustify__Left             = 3
+	FadeOut                        = 1,
+	FadeIn                         = 2,
+	ERefChangeFadPhase_MAX         = 3
 };
 
 

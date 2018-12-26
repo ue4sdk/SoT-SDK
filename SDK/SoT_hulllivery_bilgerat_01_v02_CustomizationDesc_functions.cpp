@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_hulllivery_bilgerat_01_v02_CustomizationDesc_parameters.hpp"
+#include "SoT_hulllivery_bilgerat_01_v02_CustomizationDesc_classes.hpp"
 
 namespace SDK
 {

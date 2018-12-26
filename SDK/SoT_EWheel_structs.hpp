@@ -18,14 +18,14 @@ namespace SDK
 enum class EWheel : uint8_t
 {
 	EWheel__NewEnumerator0         = 0,
-	None                           = 1,
-	IntProperty                    = 2,
-	EWheel__NewEnumerator4         = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	EWheel__EWheel_MAX             = 6,
-	__UNKNOWN_NAME__               = 7,
-	__UNKNOWN_NAME__01             = 8
+	EWheel__NewEnumerator1         = 1,
+	EWheel__NewEnumerator2         = 2,
+	EWheel__NewEnumerator3         = 3,
+	EWheel__NewEnumerator4         = 4,
+	EWheel__NewEnumerator8         = 5,
+	EWheel__NewEnumerator9         = 6,
+	EWheel__NewEnumerator10        = 7,
+	EWheel__EWheel_MAX             = 8
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ReefIslandSunkenTreasureArtifactsSpawner_parameters.hpp"
+#include "SoT_BP_ReefIslandSunkenTreasureArtifactsSpawner_classes.hpp"
 
 namespace SDK
 {

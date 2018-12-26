@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_gmp_compass_elb_01_a_v02_Wieldable_parameters.hpp"
+#include "SoT_BP_gmp_compass_elb_01_a_v02_Wieldable_classes.hpp"
 
 namespace SDK
 {

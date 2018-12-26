@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_HumanoidGhostActionStateCreatorDefinition_parameters.hpp"
+#include "SoT_BP_HumanoidGhostActionStateCreatorDefinition_classes.hpp"
 
 namespace SDK
 {

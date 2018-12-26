@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ALK_ThirdPerson_Male_Athletic_parameters.hpp"
+#include "SoT_ALK_ThirdPerson_Male_Athletic_classes.hpp"
 
 namespace SDK
 {

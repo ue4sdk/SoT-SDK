@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Liv_Makeup_ShopClothingCategory_parameters.hpp"
+#include "SoT_Liv_Makeup_ShopClothingCategory_classes.hpp"
 
 namespace SDK
 {

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_BilgeRat1_parameters.hpp"
+#include "SoT_BP_Anim_BilgeRat1_classes.hpp"
 
 namespace SDK
 {

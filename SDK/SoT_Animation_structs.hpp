@@ -20,9 +20,9 @@ namespace SDK
 enum class ELimbIKSpace : uint8_t
 {
 	ELimbIKSpace__Local            = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EBuoyancyBlend__PrimaryToSecondary = 3
+	ELimbIKSpace__World            = 1,
+	ELimbIKSpace__Character        = 2,
+	ELimbIKSpace__ELimbIKSpace_MAX = 3
 };
 
 

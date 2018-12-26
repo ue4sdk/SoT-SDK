@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Landscape_parameters.hpp"
+#include "SoT_Landscape_classes.hpp"
 
 namespace SDK
 {
@@ -31,7 +31,21 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorApplySpline");
 
-	ALandscapeProxy_EditorApplySpline_Params params;
+	struct
+	{
+		class USplineComponent*        InSplineComponent;
+		float                          StartWidth;
+		float                          EndWidth;
+		float                          StartSideFalloff;
+		float                          EndSideFalloff;
+		float                          StartRoll;
+		float                          EndRoll;
+		int                            NumSubdivisions;
+		bool                           bRaiseHeights;
+		bool                           bLowerHeights;
+		class ULandscapeLayerInfoObject* PaintLayer;
+	} params;
+
 	params.InSplineComponent = InSplineComponent;
 	params.StartWidth = StartWidth;
 	params.EndWidth = EndWidth;
@@ -57,7 +71,11 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor");
 
-	ALandscapeProxy_ChangeLODDistanceFactor_Params params;
+	struct
+	{
+		float                          InLODDistanceFactor;
+	} params;
+
 	params.InLODDistanceFactor = InLODDistanceFactor;
 
 	UObject::ProcessEvent(fn, &params);

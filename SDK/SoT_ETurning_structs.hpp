@@ -18,10 +18,10 @@ namespace SDK
 enum class ETurning : uint8_t
 {
 	ETurning__NewEnumerator0       = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	ETurning__ETurning_MAX         = 3,
-	__UNKNOWN_NAME__01             = 4
+	ETurning__NewEnumerator1       = 1,
+	ETurning__NewEnumerator2       = 2,
+	ETurning__NewEnumerator3       = 3,
+	ETurning__ETurning_MAX         = 4
 };
 
 

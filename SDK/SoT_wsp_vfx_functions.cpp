@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_vfx_parameters.hpp"
+#include "SoT_wsp_vfx_classes.hpp"
 
 namespace SDK
 {

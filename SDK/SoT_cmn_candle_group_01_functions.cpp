@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_cmn_candle_group_01_parameters.hpp"
+#include "SoT_cmn_candle_group_01_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void Acmn_candle_group_01_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function cmn_candle_group_01.cmn_candle_group_01_C.UserConstructionScript");
 
-	Acmn_candle_group_01_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

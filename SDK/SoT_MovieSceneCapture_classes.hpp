@@ -101,8 +101,8 @@ public:
 	}
 
 
-	int STATIC_GetCaptureFrameNumber();
-	float STATIC_GetCaptureElapsedTime();
+	static int GetCaptureFrameNumber();
+	static float GetCaptureElapsedTime();
 };
 
 

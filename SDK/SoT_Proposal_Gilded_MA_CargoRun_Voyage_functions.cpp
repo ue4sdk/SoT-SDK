@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Proposal_Gilded_MA_CargoRun_Voyage_parameters.hpp"
+#include "SoT_Proposal_Gilded_MA_CargoRun_Voyage_classes.hpp"
 
 namespace SDK
 {

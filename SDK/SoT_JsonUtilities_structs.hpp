@@ -20,8 +20,8 @@ namespace SDK
 enum class ETestEnum : uint8_t
 {
 	ETestEnum__Value0              = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2
+	ETestEnum__Value1              = 1,
+	ETestEnum__ETestEnum_MAX       = 2
 };
 
 

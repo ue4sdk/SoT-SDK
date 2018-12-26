@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_Orderofsouls_parameters.hpp"
+#include "SoT_BP_Anim_Orderofsouls_classes.hpp"
 
 namespace SDK
 {

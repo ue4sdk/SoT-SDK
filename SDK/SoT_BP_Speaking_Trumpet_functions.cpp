@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Speaking_Trumpet_parameters.hpp"
+#include "SoT_BP_Speaking_Trumpet_classes.hpp"
 
 namespace SDK
 {

@@ -19,13 +19,13 @@ namespace SDK
 enum class EInAppPurchaseState : uint8_t
 {
 	EInAppPurchaseState__Success   = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EInAppPurchaseState__NotAllowed = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	__UNKNOWN_NAME__01             = 6,
-	__UNKNOWN_NAME__02             = 7
+	EInAppPurchaseState__Failed    = 1,
+	EInAppPurchaseState__Cancelled = 2,
+	EInAppPurchaseState__Invalid   = 3,
+	EInAppPurchaseState__NotAllowed = 4,
+	EInAppPurchaseState__Restored  = 5,
+	EInAppPurchaseState__Unknown   = 6,
+	EInAppPurchaseState__EInAppPurchaseState_MAX = 7
 };
 
 
@@ -33,16 +33,16 @@ enum class EInAppPurchaseState : uint8_t
 enum class EMPMatchOutcome : uint8_t
 {
 	EMPMatchOutcome__None          = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EMPMatchOutcome__Tied          = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	EMPMatchOutcome__Third         = 6,
-	None02                         = 7,
-	StructProperty                 = 8,
-	None03                         = 9,
-	EComponentType__None           = 10
+	EMPMatchOutcome__Quit          = 1,
+	EMPMatchOutcome__Won           = 2,
+	EMPMatchOutcome__Lost          = 3,
+	EMPMatchOutcome__Tied          = 4,
+	EMPMatchOutcome__TimeExpired   = 5,
+	EMPMatchOutcome__First         = 6,
+	EMPMatchOutcome__Second        = 7,
+	EMPMatchOutcome__Third         = 8,
+	EMPMatchOutcome__Fourth        = 9,
+	EMPMatchOutcome__EMPMatchOutcome_MAX = 10
 };
 
 

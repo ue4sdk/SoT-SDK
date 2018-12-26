@@ -21,10 +21,10 @@ namespace SDK
 enum class EVoiceChatState : uint8_t
 {
 	EVoiceChatState__Silent        = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EVoiceChatState__EVoiceChatState_MAX = 3,
-	__UNKNOWN_NAME__01             = 4
+	EVoiceChatState__Talking       = 1,
+	EVoiceChatState__Muted         = 2,
+	EVoiceChatState__Deafened      = 3,
+	EVoiceChatState__EVoiceChatState_MAX = 4
 };
 
 

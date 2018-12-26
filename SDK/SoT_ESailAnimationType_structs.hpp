@@ -18,8 +18,8 @@ namespace SDK
 enum class ESailAnimationType : uint8_t
 {
 	ESailAnimationType__NewEnumerator0 = 0,
-	None                           = 1,
-	_Game_Models_Characters_NPCs_npc_gold_hoarder_wsp_npc_gold_hoarder_wsp_03_Materials = 2
+	ESailAnimationType__NewEnumerator1 = 1,
+	ESailAnimationType__ESailAnimationType_MAX = 2
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BarrelItemTypes_Cannonball_parameters.hpp"
+#include "SoT_BarrelItemTypes_Cannonball_classes.hpp"
 
 namespace SDK
 {

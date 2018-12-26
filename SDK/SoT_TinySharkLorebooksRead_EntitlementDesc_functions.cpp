@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_TinySharkLorebooksRead_EntitlementDesc_parameters.hpp"
+#include "SoT_TinySharkLorebooksRead_EntitlementDesc_classes.hpp"
 
 namespace SDK
 {

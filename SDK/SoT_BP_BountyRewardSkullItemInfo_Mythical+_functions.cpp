@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BountyRewardSkullItemInfo_Mythical+_parameters.hpp"
+#include "SoT_BP_BountyRewardSkullItemInfo_Mythical+_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_BountyRewardSkullItemInfo_Mythical__C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Mythical+.BP_BountyRewardSkullItemInfo_Mythical+_C.UserConstructionScript");
 
-	ABP_BountyRewardSkullItemInfo_Mythical__C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -32,7 +35,10 @@ void ABP_BountyRewardSkullItemInfo_Mythical__C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Mythical+.BP_BountyRewardSkullItemInfo_Mythical+_C.ReceiveBeginPlay");
 
-	ABP_BountyRewardSkullItemInfo_Mythical__C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,7 +53,11 @@ void ABP_BountyRewardSkullItemInfo_Mythical__C::ExecuteUbergraph_BP_BountyReward
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Mythical+.BP_BountyRewardSkullItemInfo_Mythical+_C.ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Mythical+");
 
-	ABP_BountyRewardSkullItemInfo_Mythical__C_ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Mythical__Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

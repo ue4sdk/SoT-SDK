@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_cmp_lantern_oos_01_d_ItemDesc_parameters.hpp"
+#include "SoT_BP_cmp_lantern_oos_01_d_ItemDesc_classes.hpp"
 
 namespace SDK
 {

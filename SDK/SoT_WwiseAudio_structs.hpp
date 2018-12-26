@@ -20,10 +20,10 @@ namespace SDK
 enum class EWwiseAsyncIOPriorityDisplay : uint8_t
 {
 	EWwiseAsyncIOPriorityDisplay__Low = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 3,
-	__UNKNOWN_NAME__01             = 4
+	EWwiseAsyncIOPriorityDisplay__BelowNormal = 1,
+	EWwiseAsyncIOPriorityDisplay__Normal = 2,
+	EWwiseAsyncIOPriorityDisplay__High = 3,
+	EWwiseAsyncIOPriorityDisplay__EWwiseAsyncIOPriorityDisplay_MAX = 4
 };
 
 
@@ -31,15 +31,15 @@ enum class EWwiseAsyncIOPriorityDisplay : uint8_t
 enum class EWwiseLanguageOrder : uint8_t
 {
 	EWwiseLanguageOrder__English   = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EWwiseLanguageOrder__Spanish   = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	EWwiseLanguageOrder__Japanese  = 6,
-	None02                         = 7,
-	__UNKNOWN_NAME__02             = 8,
-	__UNKNOWN_NAME__03             = 9
+	EWwiseLanguageOrder__French    = 1,
+	EWwiseLanguageOrder__Italian   = 2,
+	EWwiseLanguageOrder__German    = 3,
+	EWwiseLanguageOrder__Spanish   = 4,
+	EWwiseLanguageOrder__Mexican   = 5,
+	EWwiseLanguageOrder__Brazil    = 6,
+	EWwiseLanguageOrder__Russian   = 7,
+	EWwiseLanguageOrder__Japanese  = 8,
+	EWwiseLanguageOrder__EWwiseLanguageOrder_MAX = 9
 };
 
 
@@ -47,15 +47,15 @@ enum class EWwiseLanguageOrder : uint8_t
 enum class EWwise7Point1Order : uint8_t
 {
 	EWwise7Point1Order__Front_Left = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EWwise7Point1Order__Right_Surround = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	EWwise7Point1Order__Null_Channel = 6,
-	None02                         = 7,
-	EWwiseLanguageOrder__English   = 8,
-	None03                         = 9
+	EWwise7Point1Order__Front_Right = 1,
+	EWwise7Point1Order__Center     = 2,
+	EWwise7Point1Order__Left_Surround = 3,
+	EWwise7Point1Order__Right_Surround = 4,
+	EWwise7Point1Order__Left_Side  = 5,
+	EWwise7Point1Order__Right_Side = 6,
+	EWwise7Point1Order__LFE        = 7,
+	EWwise7Point1Order__Null_Channel = 8,
+	EWwise7Point1Order__EWwise7Point1Order_MAX = 9
 };
 
 
@@ -63,10 +63,10 @@ enum class EWwise7Point1Order : uint8_t
 enum class EWwiseEventDurationType : uint8_t
 {
 	EWwiseEventDurationType__OneShot = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 3,
-	EWwiseAsyncIOPriorityDisplay__Low = 4
+	EWwiseEventDurationType__Mixed = 1,
+	EWwiseEventDurationType__Infinite = 2,
+	EWwiseEventDurationType__Unknown = 3,
+	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 4
 };
 
 

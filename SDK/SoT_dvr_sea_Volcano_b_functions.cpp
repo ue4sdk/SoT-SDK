@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_dvr_sea_Volcano_b_parameters.hpp"
+#include "SoT_dvr_sea_Volcano_b_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void Advr_sea_Volcano_b_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function dvr_sea_Volcano_b.dvr_sea_Volcano_b_C.UserConstructionScript");
 
-	Advr_sea_Volcano_b_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

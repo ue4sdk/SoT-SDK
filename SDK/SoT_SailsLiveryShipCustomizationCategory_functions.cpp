@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SailsLiveryShipCustomizationCategory_parameters.hpp"
+#include "SoT_SailsLiveryShipCustomizationCategory_classes.hpp"
 
 namespace SDK
 {

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_cmp_tankard_oos_03_a_Wieldable_parameters.hpp"
+#include "SoT_BP_cmp_tankard_oos_03_a_Wieldable_classes.hpp"
 
 namespace SDK
 {

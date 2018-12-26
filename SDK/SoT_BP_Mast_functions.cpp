@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Mast_parameters.hpp"
+#include "SoT_BP_Mast_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,12 @@ void ABP_Mast_C::Customise_Static_Mesh(class UStaticMesh* New_Static_Mesh, class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.Customise Static Mesh");
 
-	ABP_Mast_C_Customise_Static_Mesh_Params params;
+	struct
+	{
+		class UStaticMesh*             New_Static_Mesh;
+		class UStaticMeshComponent*    Static_Mesh_Component;
+	} params;
+
 	params.New_Static_Mesh = New_Static_Mesh;
 	params.Static_Mesh_Component = Static_Mesh_Component;
 
@@ -40,7 +45,12 @@ void ABP_Mast_C::Trim_Array_Func(int Size, TArray<class UObject*>* TargetArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.Trim Array Func");
 
-	ABP_Mast_C_Trim_Array_Func_Params params;
+	struct
+	{
+		TArray<class UObject*>         TargetArray;
+		int                            Size;
+	} params;
+
 	params.Size = Size;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,7 +67,10 @@ void ABP_Mast_C::Initialise_Sail_Parameters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.Initialise Sail Parameters");
 
-	ABP_Mast_C_Initialise_Sail_Parameters_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -70,7 +83,10 @@ void ABP_Mast_C::Populate_Lists_of_Yards_and_Sails()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.Populate Lists of Yards and Sails");
 
-	ABP_Mast_C_Populate_Lists_of_Yards_and_Sails_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -85,7 +101,11 @@ void ABP_Mast_C::Cull_Excess_Components(TArray<class UActorComponent*>* TargetAr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.Cull Excess Components");
 
-	ABP_Mast_C_Cull_Excess_Components_Params params;
+	struct
+	{
+		TArray<class UActorComponent*> TargetArray;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +121,10 @@ void ABP_Mast_C::Initialise_Sails()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.Initialise Sails");
 
-	ABP_Mast_C_Initialise_Sails_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -114,7 +137,10 @@ void ABP_Mast_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.UserConstructionScript");
 
-	ABP_Mast_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -129,7 +155,11 @@ void ABP_Mast_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.OnMastDescLoaded");
 
-	ABP_Mast_C_OnMastDescLoaded_Params params;
+	struct
+	{
+		class UMastDescAsset*          MastDesc;
+	} params;
+
 	params.MastDesc = MastDesc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -145,7 +175,11 @@ void ABP_Mast_C::ExecuteUbergraph_BP_Mast(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.ExecuteUbergraph_BP_Mast");
 
-	ABP_Mast_C_ExecuteUbergraph_BP_Mast_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

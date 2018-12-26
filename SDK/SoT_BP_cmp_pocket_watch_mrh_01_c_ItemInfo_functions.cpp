@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_cmp_pocket_watch_mrh_01_c_ItemInfo_parameters.hpp"
+#include "SoT_BP_cmp_pocket_watch_mrh_01_c_ItemInfo_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_cmp_pocket_watch_mrh_01_c_ItemInfo_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_cmp_pocket_watch_mrh_01_c_ItemInfo.BP_cmp_pocket_watch_mrh_01_c_ItemInfo_C.UserConstructionScript");
 
-	ABP_cmp_pocket_watch_mrh_01_c_ItemInfo_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

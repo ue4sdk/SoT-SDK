@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PlayerPirate_Ghost_parameters.hpp"
+#include "SoT_BP_PlayerPirate_Ghost_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,12 @@ void ABP_PlayerPirate_Ghost_C::GetAllMaterialParents(class UMaterialInstance* Ma
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.GetAllMaterialParents");
 
-	ABP_PlayerPirate_Ghost_C_GetAllMaterialParents_Params params;
+	struct
+	{
+		class UMaterialInstance*       MaterialInstance;
+		TArray<class UMaterialInstance*> Parents;
+	} params;
+
 	params.MaterialInstance = MaterialInstance;
 
 	UObject::ProcessEvent(fn, &params);
@@ -43,7 +48,13 @@ void ABP_PlayerPirate_Ghost_C::CheckBaseMaterial(class UMaterialInstance* Materi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.CheckBaseMaterial");
 
-	ABP_PlayerPirate_Ghost_C_CheckBaseMaterial_Params params;
+	struct
+	{
+		class UMaterialInstance*       MaterialInstance;
+		class UMaterial*               MaterialToCheck;
+		bool                           Result;
+	} params;
+
 	params.MaterialInstance = MaterialInstance;
 	params.MaterialToCheck = MaterialToCheck;
 
@@ -66,7 +77,14 @@ void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshCompone
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.Set Up Ghost Materials");
 
-	ABP_PlayerPirate_Ghost_C_Set_Up_Ghost_Materials_Params params;
+	struct
+	{
+		class USkeletalMeshComponent*  Input_Mesh;
+		float                          Ghost_Fade_Parameter;
+		bool                           EnableDither;
+		bool                           FirstPersonMesh;
+	} params;
+
 	params.Input_Mesh = Input_Mesh;
 	params.Ghost_Fade_Parameter = Ghost_Fade_Parameter;
 	params.EnableDither = EnableDither;
@@ -85,7 +103,11 @@ struct FVector ABP_PlayerPirate_Ghost_C::GetMouthPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.GetMouthPosition");
 
-	ABP_PlayerPirate_Ghost_C_GetMouthPosition_Params params;
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,7 +122,10 @@ void ABP_PlayerPirate_Ghost_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.UserConstructionScript");
 
-	ABP_PlayerPirate_Ghost_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,7 +140,11 @@ void ABP_PlayerPirate_Ghost_C::Update_Athena_Character(class AAthenaCharacter* A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.Update Athena Character");
 
-	ABP_PlayerPirate_Ghost_C_Update_Athena_Character_Params params;
+	struct
+	{
+		class AAthenaCharacter*        AthenaCharacter;
+	} params;
+
 	params.AthenaCharacter = AthenaCharacter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -131,7 +160,11 @@ void ABP_PlayerPirate_Ghost_C::CapstanRotationSpeed(float RotationSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.CapstanRotationSpeed");
 
-	ABP_PlayerPirate_Ghost_C_CapstanRotationSpeed_Params params;
+	struct
+	{
+		float                          RotationSpeed;
+	} params;
+
 	params.RotationSpeed = RotationSpeed;
 
 	UObject::ProcessEvent(fn, &params);
@@ -147,7 +180,11 @@ void ABP_PlayerPirate_Ghost_C::DockingInterface(const struct FBP_Docking& Dockin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.DockingInterface");
 
-	ABP_PlayerPirate_Ghost_C_DockingInterface_Params params;
+	struct
+	{
+		struct FBP_Docking             Docking;
+	} params;
+
 	params.Docking = Docking;
 
 	UObject::ProcessEvent(fn, &params);
@@ -166,7 +203,14 @@ void ABP_PlayerPirate_Ghost_C::CapstanForce(float IndividualForce, const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.CapstanForce");
 
-	ABP_PlayerPirate_Ghost_C_CapstanForce_Params params;
+	struct
+	{
+		float                          IndividualForce;
+		struct FTransform              LH_IK;
+		struct FTransform              RH_IK;
+		class AActor*                  Actor;
+	} params;
+
 	params.IndividualForce = IndividualForce;
 	params.LH_IK = LH_IK;
 	params.RH_IK = RH_IK;
@@ -186,7 +230,12 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName>
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.IK Limb Update Transform");
 
-	ABP_PlayerPirate_Ghost_C_IK_Limb_Update_Transform_Params params;
+	struct
+	{
+		TEnumAsByte<EIKLimbName>       LimbId;
+		struct FTransform              TransformUpdate;
+	} params;
+
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
@@ -205,7 +254,13 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> Lim
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.IK Limb Blend Timing");
 
-	ABP_PlayerPirate_Ghost_C_IK_Limb_Blend_Timing_Params params;
+	struct
+	{
+		TEnumAsByte<EIKLimbName>       LimbId;
+		float                          BlendIn;
+		float                          BlendOut;
+	} params;
+
 	params.LimbId = LimbId;
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
@@ -225,7 +280,13 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.IK Limb Update Strength");
 
-	ABP_PlayerPirate_Ghost_C_IK_Limb_Update_Strength_Params params;
+	struct
+	{
+		TEnumAsByte<EIKLimbName>       LimbId;
+		float                          LocationStrength;
+		float                          RotationStrength;
+	} params;
+
 	params.LimbId = LimbId;
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
@@ -245,7 +306,13 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.IK Limb Active");
 
-	ABP_PlayerPirate_Ghost_C_IK_Limb_Active_Params params;
+	struct
+	{
+		TEnumAsByte<EIKLimbName>       LimbId;
+		bool                           Active;
+		TEnumAsByte<ELimbIKSpace>      CoordinateSpace;
+	} params;
+
 	params.LimbId = LimbId;
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
@@ -265,7 +332,13 @@ void ABP_PlayerPirate_Ghost_C::IK_Limb_Stretch(float ArmStretch, float SpineStre
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.IK Limb Stretch");
 
-	ABP_PlayerPirate_Ghost_C_IK_Limb_Stretch_Params params;
+	struct
+	{
+		float                          ArmStretch;
+		float                          SpineStretch;
+		float                          LegStretch;
+	} params;
+
 	params.ArmStretch = ArmStretch;
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
@@ -281,7 +354,10 @@ void ABP_PlayerPirate_Ghost_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.ReceiveBeginPlay");
 
-	ABP_PlayerPirate_Ghost_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -294,7 +370,10 @@ void ABP_PlayerPirate_Ghost_C::OnMeshSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.OnMeshSet");
 
-	ABP_PlayerPirate_Ghost_C_OnMeshSet_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -309,7 +388,11 @@ void ABP_PlayerPirate_Ghost_C::ExecuteUbergraph_BP_PlayerPirate_Ghost(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.ExecuteUbergraph_BP_PlayerPirate_Ghost");
 
-	ABP_PlayerPirate_Ghost_C_ExecuteUbergraph_BP_PlayerPirate_Ghost_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

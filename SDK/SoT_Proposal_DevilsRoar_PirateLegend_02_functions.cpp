@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Proposal_DevilsRoar_PirateLegend_02_parameters.hpp"
+#include "SoT_Proposal_DevilsRoar_PirateLegend_02_classes.hpp"
 
 namespace SDK
 {

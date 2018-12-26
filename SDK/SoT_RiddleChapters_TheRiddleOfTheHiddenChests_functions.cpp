@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_RiddleChapters_TheRiddleOfTheHiddenChests_parameters.hpp"
+#include "SoT_RiddleChapters_TheRiddleOfTheHiddenChests_classes.hpp"
 
 namespace SDK
 {

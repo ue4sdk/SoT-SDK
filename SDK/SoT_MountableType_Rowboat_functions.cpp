@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MountableType_Rowboat_parameters.hpp"
+#include "SoT_MountableType_Rowboat_classes.hpp"
 
 namespace SDK
 {

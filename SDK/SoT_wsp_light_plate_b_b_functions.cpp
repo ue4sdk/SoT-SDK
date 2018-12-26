@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_light_plate_b_b_parameters.hpp"
+#include "SoT_wsp_light_plate_b_b_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void Awsp_light_plate_b_b_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_light_plate_b_b.wsp_light_plate_b_b_C.UserConstructionScript");
 
-	Awsp_light_plate_b_b_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

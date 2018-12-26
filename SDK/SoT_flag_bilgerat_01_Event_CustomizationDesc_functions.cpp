@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_flag_bilgerat_01_Event_CustomizationDesc_parameters.hpp"
+#include "SoT_flag_bilgerat_01_Event_CustomizationDesc_classes.hpp"
 
 namespace SDK
 {

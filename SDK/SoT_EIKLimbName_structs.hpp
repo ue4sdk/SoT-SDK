@@ -18,12 +18,12 @@ namespace SDK
 enum class EIKLimbName : uint8_t
 {
 	EIKLimbName__NewEnumerator0    = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EIKLimbName__NewEnumerator4    = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	BoolProperty                   = 6
+	EIKLimbName__NewEnumerator1    = 1,
+	EIKLimbName__NewEnumerator2    = 2,
+	EIKLimbName__NewEnumerator3    = 3,
+	EIKLimbName__NewEnumerator4    = 4,
+	EIKLimbName__NewEnumerator5    = 5,
+	EIKLimbName__EIKLimbName_MAX   = 6
 };
 
 

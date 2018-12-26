@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_AF_LegendofTheSeaofThieves_parameters.hpp"
+#include "SoT_Title_AF_LegendofTheSeaofThieves_classes.hpp"
 
 namespace SDK
 {

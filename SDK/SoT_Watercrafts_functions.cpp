@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Watercrafts_parameters.hpp"
+#include "SoT_Watercrafts_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void AWatercraft::OnRigidBodyWake(const struct FName& InBoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodyWake");
 
-	AWatercraft_OnRigidBodyWake_Params params;
+	struct
+	{
+		struct FName                   InBoneName;
+	} params;
+
 	params.InBoneName = InBoneName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -37,7 +41,11 @@ void AWatercraft::OnRigidBodySleep(const struct FName& InBoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodySleep");
 
-	AWatercraft_OnRigidBodySleep_Params params;
+	struct
+	{
+		struct FName                   InBoneName;
+	} params;
+
 	params.InBoneName = InBoneName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -53,7 +61,11 @@ void ARowboat::SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*>
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables");
 
-	ARowboat_SetAlwaysEnabledInteractables_Params params;
+	struct
+	{
+		TArray<class UChildActorComponent*> InAlwaysEnabledInteractables;
+	} params;
+
 	params.InAlwaysEnabledInteractables = InAlwaysEnabledInteractables;
 
 	UObject::ProcessEvent(fn, &params);
@@ -67,7 +79,10 @@ void ARowboat::OnRep_IsSinking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.OnRep_IsSinking");
 
-	ARowboat_OnRep_IsSinking_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -82,17 +97,26 @@ void ARowboat::OnRep_IsSinking()
 // struct FRotator                Rotation                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class AWatercraft*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AWatercraft* UWatercraftBlueprintFunctionLibrary::STATIC_SpawnWatercraft(class UObject* WorldContextObject, class UClass* WatercraftClass, const struct FVector& Location, const struct FRotator& Rotation)
+class AWatercraft* UWatercraftBlueprintFunctionLibrary::SpawnWatercraft(class UObject* WorldContextObject, class UClass* WatercraftClass, const struct FVector& Location, const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft");
 
-	UWatercraftBlueprintFunctionLibrary_SpawnWatercraft_Params params;
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		class UClass*                  WatercraftClass;
+		struct FVector                 Location;
+		struct FRotator                Rotation;
+		class AWatercraft*             ReturnValue;
+	} params;
+
 	params.WorldContextObject = WorldContextObject;
 	params.WatercraftClass = WatercraftClass;
 	params.Location = Location;
 	params.Rotation = Rotation;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -104,14 +128,20 @@ class AWatercraft* UWatercraftBlueprintFunctionLibrary::STATIC_SpawnWatercraft(c
 // class AAthenaCharacter*        AthenaCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWatercraftBlueprintFunctionLibrary::STATIC_IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter)
+bool UWatercraftBlueprintFunctionLibrary::IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft");
 
-	UWatercraftBlueprintFunctionLibrary_IsCharacterOnWatercraft_Params params;
+	struct
+	{
+		class AAthenaCharacter*        AthenaCharacter;
+		bool                           ReturnValue;
+	} params;
+
 	params.AthenaCharacter = AthenaCharacter;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

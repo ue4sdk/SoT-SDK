@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CS_MeleeHit_parameters.hpp"
+#include "SoT_CS_MeleeHit_classes.hpp"
 
 namespace SDK
 {

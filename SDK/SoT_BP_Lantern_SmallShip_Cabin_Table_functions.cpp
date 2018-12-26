@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Lantern_SmallShip_Cabin_Table_parameters.hpp"
+#include "SoT_BP_Lantern_SmallShip_Cabin_Table_classes.hpp"
 
 namespace SDK
 {

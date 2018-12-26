@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureChest_ItemInfo_Mythical_parameters.hpp"
+#include "SoT_BP_TreasureChest_ItemInfo_Mythical_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_TreasureChest_ItemInfo_Mythical_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureChest_ItemInfo_Mythical.BP_TreasureChest_ItemInfo_Mythical_C.UserConstructionScript");
 
-	ABP_TreasureChest_ItemInfo_Mythical_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

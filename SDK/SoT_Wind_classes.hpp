@@ -142,8 +142,8 @@ public:
 	}
 
 
-	void STATIC_SetDefaultWindBlowingNorth(class UObject* WorldContextObject);
-	struct FVector STATIC_GetWindAtLocation(class UObject* WorldContextObject, const struct FVector& WorldPosition);
+	static void SetDefaultWindBlowingNorth(class UObject* WorldContextObject);
+	static struct FVector GetWindAtLocation(class UObject* WorldContextObject, const struct FVector& WorldPosition);
 };
 
 
@@ -202,7 +202,7 @@ public:
 	}
 
 
-	bool STATIC_AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2);
+	static bool AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2);
 };
 
 

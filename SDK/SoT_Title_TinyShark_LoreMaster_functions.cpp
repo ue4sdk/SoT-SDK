@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_TinyShark_LoreMaster_parameters.hpp"
+#include "SoT_Title_TinyShark_LoreMaster_classes.hpp"
 
 namespace SDK
 {

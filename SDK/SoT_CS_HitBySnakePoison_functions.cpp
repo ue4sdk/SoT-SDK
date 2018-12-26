@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CS_HitBySnakePoison_parameters.hpp"
+#include "SoT_CS_HitBySnakePoison_classes.hpp"
 
 namespace SDK
 {

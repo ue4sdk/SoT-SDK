@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Spyglass_parameters.hpp"
+#include "SoT_BP_Spyglass_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_Spyglass_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.UserConstructionScript");
 
-	ABP_Spyglass_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -34,7 +37,11 @@ void ABP_Spyglass_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.ReceiveTick");
 
-	ABP_Spyglass_C_ReceiveTick_Params params;
+	struct
+	{
+		float                          DeltaSeconds;
+	} params;
+
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -48,7 +55,10 @@ void ABP_Spyglass_C::ScopeOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.ScopeOn");
 
-	ABP_Spyglass_C_ScopeOn_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -61,7 +71,10 @@ void ABP_Spyglass_C::ScopeOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.ScopeOff");
 
-	ABP_Spyglass_C_ScopeOff_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -74,7 +87,10 @@ void ABP_Spyglass_C::GlintOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.GlintOn");
 
-	ABP_Spyglass_C_GlintOn_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -87,7 +103,10 @@ void ABP_Spyglass_C::GlintOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.GlintOff");
 
-	ABP_Spyglass_C_GlintOff_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -100,7 +119,10 @@ void ABP_Spyglass_C::ForceScopeOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.ForceScopeOff");
 
-	ABP_Spyglass_C_ForceScopeOff_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,7 +137,11 @@ void ABP_Spyglass_C::ExecuteUbergraph_BP_Spyglass(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spyglass.BP_Spyglass_C.ExecuteUbergraph_BP_Spyglass");
 
-	ABP_Spyglass_C_ExecuteUbergraph_BP_Spyglass_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_gmp_repair_wood_02_a_ItemDesc_parameters.hpp"
+#include "SoT_BP_gmp_repair_wood_02_a_ItemDesc_classes.hpp"
 
 namespace SDK
 {

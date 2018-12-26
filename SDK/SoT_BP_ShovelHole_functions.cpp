@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShovelHole_parameters.hpp"
+#include "SoT_BP_ShovelHole_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void ABP_ShovelHole_C::SetFadeInParameters(float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeInParameters");
 
-	ABP_ShovelHole_C_SetFadeInParameters_Params params;
+	struct
+	{
+		float                          FadeTime;
+	} params;
+
 	params.FadeTime = FadeTime;
 
 	UObject::ProcessEvent(fn, &params);
@@ -37,7 +41,11 @@ void ABP_ShovelHole_C::SetFadeOutParameters(float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeOutParameters");
 
-	ABP_ShovelHole_C_SetFadeOutParameters_Params params;
+	struct
+	{
+		float                          FadeTime;
+	} params;
+
 	params.FadeTime = FadeTime;
 
 	UObject::ProcessEvent(fn, &params);
@@ -51,7 +59,10 @@ void ABP_ShovelHole_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.UserConstructionScript");
 
-	ABP_ShovelHole_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -66,7 +77,11 @@ void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged");
 
-	ABP_ShovelHole_C_OnStateChanged_Params params;
+	struct
+	{
+		TEnumAsByte<EHoleState>        InState;
+	} params;
+
 	params.InState = InState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -80,7 +95,10 @@ void ABP_ShovelHole_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ReceiveBeginPlay");
 
-	ABP_ShovelHole_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -95,7 +113,11 @@ void ABP_ShovelHole_C::ExecuteUbergraph_BP_ShovelHole(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ExecuteUbergraph_BP_ShovelHole");
 
-	ABP_ShovelHole_C_ExecuteUbergraph_BP_ShovelHole_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

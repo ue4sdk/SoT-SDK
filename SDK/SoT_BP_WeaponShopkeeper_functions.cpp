@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_WeaponShopkeeper_parameters.hpp"
+#include "SoT_BP_WeaponShopkeeper_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_WeaponShopkeeper_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponShopkeeper.BP_WeaponShopkeeper_C.UserConstructionScript");
 
-	ABP_WeaponShopkeeper_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -20,10 +20,10 @@ namespace SDK
 enum class EOcclusionTypes : uint8_t
 {
 	EOcclusionTypes__Visible       = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EOcclusionTypes__EOcclusionTypes_MAX = 3,
-	__UNKNOWN_NAME__01             = 4
+	EOcclusionTypes__Occluded      = 1,
+	EOcclusionTypes__Unknown       = 2,
+	EOcclusionTypes__MAX           = 3,
+	EOcclusionTypes__EOcclusionTypes_MAX = 4
 };
 
 

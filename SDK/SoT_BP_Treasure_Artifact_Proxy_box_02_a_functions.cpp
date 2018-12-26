@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Treasure_Artifact_Proxy_box_02_a_parameters.hpp"
+#include "SoT_BP_Treasure_Artifact_Proxy_box_02_a_classes.hpp"
 
 namespace SDK
 {

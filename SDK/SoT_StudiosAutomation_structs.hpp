@@ -20,12 +20,12 @@ namespace SDK
 enum class EComparisonMethod : uint8_t
 {
 	EComparisonMethod__Equal_To    = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EComparisonMethod__Greater_Than = 3,
-	None01                         = 4,
-	NameProperty                   = 5,
-	__UNKNOWN_NAME__01             = 6
+	EComparisonMethod__Not_Equal_To = 1,
+	EComparisonMethod__Greater_Than_Or_Equal_To = 2,
+	EComparisonMethod__Less_Than_Or_Equal_To = 3,
+	EComparisonMethod__Greater_Than = 4,
+	EComparisonMethod__Less_Than   = 5,
+	EComparisonMethod__EComparisonMethod_MAX = 6
 };
 
 
@@ -33,10 +33,10 @@ enum class EComparisonMethod : uint8_t
 enum class EPerformanceCaptureType : uint8_t
 {
 	EPerformanceCaptureType__None  = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 3,
-	__UNKNOWN_NAME__01             = 4
+	EPerformanceCaptureType__FrameTime = 1,
+	EPerformanceCaptureType__StreamingMemory = 2,
+	EPerformanceCaptureType__StreamingPositional = 3,
+	EPerformanceCaptureType__EPerformanceCaptureType_MAX = 4
 };
 
 
@@ -44,11 +44,11 @@ enum class EPerformanceCaptureType : uint8_t
 enum class ETestArea : uint8_t
 {
 	ETestArea__None                = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	ETestArea__Art                 = 3,
-	None01                         = 4,
-	EProgressBarFillType__LeftToRight = 5
+	ETestArea__Rendering           = 1,
+	ETestArea__UserInterface       = 2,
+	ETestArea__UserInterfaceInitialization = 3,
+	ETestArea__Art                 = 4,
+	ETestArea__ETestArea_MAX       = 5
 };
 
 
@@ -56,12 +56,12 @@ enum class ETestArea : uint8_t
 enum class ETestCategory : uint8_t
 {
 	ETestCategory__Unit            = 0,
-	None                           = 1,
-	__UNKNOWN_NAME__               = 2,
-	ETestCategory__Soak            = 3,
-	None01                         = 4,
-	__UNKNOWN_NAME__01             = 5,
-	__UNKNOWN_NAME__02             = 6
+	ETestCategory__Integration     = 1,
+	ETestCategory__Acceptance      = 2,
+	ETestCategory__Stress          = 3,
+	ETestCategory__Soak            = 4,
+	ETestCategory__Performance     = 5,
+	ETestCategory__ETestCategory_MAX = 6
 };
 
 
