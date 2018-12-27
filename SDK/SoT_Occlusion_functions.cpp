@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Occlusion_classes.hpp"
+#include "SoT_Occlusion_parameters.hpp"
 
 namespace SDK
 {
@@ -23,21 +23,11 @@ namespace SDK
 // TArray<class AActor*>          AdditionalIgnoredActors        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TEnumAsByte<EOcclusionTypes>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EOcclusionTypes> UOcclusionFunctionLibrary::IsActorOccludedFromActor(class UObject* WorldContextObject, class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float InteractionPointRadius, TArray<class AActor*> AdditionalIgnoredActors)
+TEnumAsByte<EOcclusionTypes> UOcclusionFunctionLibrary::STATIC_IsActorOccludedFromActor(class UObject* WorldContextObject, class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float InteractionPointRadius, TArray<class AActor*> AdditionalIgnoredActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionFunctionLibrary.IsActorOccludedFromActor");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class AActor*                  Observer;
-		class AActor*                  Target;
-		struct FVector                 TargetPosition;
-		float                          InteractionPointRadius;
-		TArray<class AActor*>          AdditionalIgnoredActors;
-		TEnumAsByte<EOcclusionTypes>   ReturnValue;
-	} params;
-
+	UOcclusionFunctionLibrary_IsActorOccludedFromActor_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.Observer = Observer;
 	params.Target = Target;
@@ -45,8 +35,7 @@ TEnumAsByte<EOcclusionTypes> UOcclusionFunctionLibrary::IsActorOccludedFromActor
 	params.InteractionPointRadius = InteractionPointRadius;
 	params.AdditionalIgnoredActors = AdditionalIgnoredActors;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -67,17 +56,7 @@ TEnumAsByte<EOcclusionTypes> UOcclusionInterface::IsActorOccludedFromActor(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionInterface.IsActorOccludedFromActor");
 
-	struct
-	{
-		class AActor*                  Observer;
-		class AActor*                  Target;
-		struct FVector                 TargetPosition;
-		float                          Tolerance;
-		TEnumAsByte<ECollisionChannel> CollisionChannel;
-		TArray<class AActor*>          AdditionalIgnoredActors;
-		TEnumAsByte<EOcclusionTypes>   ReturnValue;
-	} params;
-
+	UOcclusionInterface_IsActorOccludedFromActor_Params params;
 	params.Observer = Observer;
 	params.Target = Target;
 	params.TargetPosition = TargetPosition;

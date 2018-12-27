@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_VotableCancelVoyage_classes.hpp"
+#include "SoT_BP_VotableCancelVoyage_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void ABP_VotableCancelVoyage_C::PlayShowTokenAnimation(class UPrimitiveComponent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.PlayShowTokenAnimation");
 
-	struct
-	{
-		class UPrimitiveComponent*     Token;
-	} params;
-
+	ABP_VotableCancelVoyage_C_PlayShowTokenAnimation_Params params;
 	params.Token = Token;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ void ABP_VotableCancelVoyage_C::Is_Session_Locked(bool* IsLocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.Is Session Locked");
 
-	struct
-	{
-		bool                           IsLocked;
-	} params;
-
+	ABP_VotableCancelVoyage_C_Is_Session_Locked_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,11 +55,7 @@ struct FText ABP_VotableCancelVoyage_C::GetObjectDisplayName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.GetObjectDisplayName");
 
-	struct
-	{
-		struct FText                   ReturnValue;
-	} params;
-
+	ABP_VotableCancelVoyage_C_GetObjectDisplayName_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,10 +70,7 @@ void ABP_VotableCancelVoyage_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_VotableCancelVoyage_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -98,10 +83,7 @@ void ABP_VotableCancelVoyage_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_VotableCancelVoyage_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -116,11 +98,7 @@ void ABP_VotableCancelVoyage_C::OnVoteAdded(const TScriptInterface<class UVoterI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteAdded");
 
-	struct
-	{
-		TScriptInterface<class UVoterInterface> Voter;
-	} params;
-
+	ABP_VotableCancelVoyage_C_OnVoteAdded_Params params;
 	params.Voter = Voter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -136,11 +114,7 @@ void ABP_VotableCancelVoyage_C::OnVoteRemoved(const TScriptInterface<class UVote
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteRemoved");
 
-	struct
-	{
-		TScriptInterface<class UVoterInterface> Voter;
-	} params;
-
+	ABP_VotableCancelVoyage_C_OnVoteRemoved_Params params;
 	params.Voter = Voter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -156,11 +130,7 @@ void ABP_VotableCancelVoyage_C::ExecuteUbergraph_BP_VotableCancelVoyage(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ExecuteUbergraph_BP_VotableCancelVoyage");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_VotableCancelVoyage_C_ExecuteUbergraph_BP_VotableCancelVoyage_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

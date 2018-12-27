@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MathAndTrigAnimation_classes.hpp"
+#include "SoT_BP_MathAndTrigAnimation_parameters.hpp"
 
 namespace SDK
 {
@@ -19,23 +19,16 @@ namespace SDK
 // float                          Size                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MathAndTrigAnimation_C::DisplayAllCharacterSockets(class AAthenaCharacter* Athena_Character, float Size, class UObject* __WorldContext)
+void UBP_MathAndTrigAnimation_C::STATIC_DisplayAllCharacterSockets(class AAthenaCharacter* Athena_Character, float Size, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.DisplayAllCharacterSockets");
 
-	struct
-	{
-		class AAthenaCharacter*        Athena_Character;
-		float                          Size;
-		class UObject*                 __WorldContext;
-	} params;
-
+	UBP_MathAndTrigAnimation_C_DisplayAllCharacterSockets_Params params;
 	params.Athena_Character = Athena_Character;
 	params.Size = Size;
 	params.__WorldContext = __WorldContext;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -46,22 +39,15 @@ void UBP_MathAndTrigAnimation_C::DisplayAllCharacterSockets(class AAthenaCharact
 // float                          DecrementValue                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MathAndTrigAnimation_C::DecrementFloat(float DecrementValue, class UObject* __WorldContext, float* Float)
+void UBP_MathAndTrigAnimation_C::STATIC_DecrementFloat(float DecrementValue, class UObject* __WorldContext, float* Float)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.DecrementFloat");
 
-	struct
-	{
-		float                          Float;
-		float                          DecrementValue;
-		class UObject*                 __WorldContext;
-	} params;
-
+	UBP_MathAndTrigAnimation_C_DecrementFloat_Params params;
 	params.DecrementValue = DecrementValue;
 	params.__WorldContext = __WorldContext;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Float != nullptr)
 		*Float = params.Float;
@@ -75,22 +61,15 @@ void UBP_MathAndTrigAnimation_C::DecrementFloat(float DecrementValue, class UObj
 // float                          Incement_Value                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MathAndTrigAnimation_C::Increment_Float(float Incement_Value, class UObject* __WorldContext, float* Float)
+void UBP_MathAndTrigAnimation_C::STATIC_Increment_Float(float Incement_Value, class UObject* __WorldContext, float* Float)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Increment Float");
 
-	struct
-	{
-		float                          Float;
-		float                          Incement_Value;
-		class UObject*                 __WorldContext;
-	} params;
-
+	UBP_MathAndTrigAnimation_C_Increment_Float_Params params;
 	params.Incement_Value = Incement_Value;
 	params.__WorldContext = __WorldContext;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Float != nullptr)
 		*Float = params.Float;
@@ -105,24 +84,16 @@ void UBP_MathAndTrigAnimation_C::Increment_Float(float Incement_Value, class UOb
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              CombinedTransform              (Parm, OutParm, IsPlainOldData)
 
-void UBP_MathAndTrigAnimation_C::Apply_Relative_Transform(const struct FTransform& RelativeTransform, const struct FTransform& BaseTransform, class UObject* __WorldContext, struct FTransform* CombinedTransform)
+void UBP_MathAndTrigAnimation_C::STATIC_Apply_Relative_Transform(const struct FTransform& RelativeTransform, const struct FTransform& BaseTransform, class UObject* __WorldContext, struct FTransform* CombinedTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Apply Relative Transform");
 
-	struct
-	{
-		struct FTransform              RelativeTransform;
-		struct FTransform              BaseTransform;
-		class UObject*                 __WorldContext;
-		struct FTransform              CombinedTransform;
-	} params;
-
+	UBP_MathAndTrigAnimation_C_Apply_Relative_Transform_Params params;
 	params.RelativeTransform = RelativeTransform;
 	params.BaseTransform = BaseTransform;
 	params.__WorldContext = __WorldContext;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (CombinedTransform != nullptr)
 		*CombinedTransform = params.CombinedTransform;
@@ -137,24 +108,16 @@ void UBP_MathAndTrigAnimation_C::Apply_Relative_Transform(const struct FTransfor
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              RealtiveOffsetTransform        (Parm, OutParm, IsPlainOldData)
 
-void UBP_MathAndTrigAnimation_C::Calculate_Relative_Transform(const struct FTransform& RelativeObjectsWorldTransform, const struct FTransform& BaseObjectsWorldTransform, class UObject* __WorldContext, struct FTransform* RealtiveOffsetTransform)
+void UBP_MathAndTrigAnimation_C::STATIC_Calculate_Relative_Transform(const struct FTransform& RelativeObjectsWorldTransform, const struct FTransform& BaseObjectsWorldTransform, class UObject* __WorldContext, struct FTransform* RealtiveOffsetTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Calculate Relative Transform");
 
-	struct
-	{
-		struct FTransform              RelativeObjectsWorldTransform;
-		struct FTransform              BaseObjectsWorldTransform;
-		class UObject*                 __WorldContext;
-		struct FTransform              RealtiveOffsetTransform;
-	} params;
-
+	UBP_MathAndTrigAnimation_C_Calculate_Relative_Transform_Params params;
 	params.RelativeObjectsWorldTransform = RelativeObjectsWorldTransform;
 	params.BaseObjectsWorldTransform = BaseObjectsWorldTransform;
 	params.__WorldContext = __WorldContext;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (RealtiveOffsetTransform != nullptr)
 		*RealtiveOffsetTransform = params.RealtiveOffsetTransform;

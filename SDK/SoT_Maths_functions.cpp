@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Maths_classes.hpp"
+#include "SoT_Maths_parameters.hpp"
 
 namespace SDK
 {
@@ -19,22 +19,15 @@ namespace SDK
 // float                          ToAngle                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UAngleMaths::CalculateEulerAngle(float FromAngle, float ToAngle)
+float UAngleMaths::STATIC_CalculateEulerAngle(float FromAngle, float ToAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.CalculateEulerAngle");
 
-	struct
-	{
-		float                          FromAngle;
-		float                          ToAngle;
-		float                          ReturnValue;
-	} params;
-
+	UAngleMaths_CalculateEulerAngle_Params params;
 	params.FromAngle = FromAngle;
 	params.ToAngle = ToAngle;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -48,24 +41,16 @@ float UAngleMaths::CalculateEulerAngle(float FromAngle, float ToAngle)
 // float                          Rate                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UAngleMaths::AngleMoveTowardsMod180(float Angle, float TargetAngle, float Rate)
+float UAngleMaths::STATIC_AngleMoveTowardsMod180(float Angle, float TargetAngle, float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleMoveTowardsMod180");
 
-	struct
-	{
-		float                          Angle;
-		float                          TargetAngle;
-		float                          Rate;
-		float                          ReturnValue;
-	} params;
-
+	UAngleMaths_AngleMoveTowardsMod180_Params params;
 	params.Angle = Angle;
 	params.TargetAngle = TargetAngle;
 	params.Rate = Rate;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -77,20 +62,14 @@ float UAngleMaths::AngleMoveTowardsMod180(float Angle, float TargetAngle, float 
 // float                          Angle                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UAngleMaths::AngleMod360(float Angle)
+float UAngleMaths::STATIC_AngleMod360(float Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleMod360");
 
-	struct
-	{
-		float                          Angle;
-		float                          ReturnValue;
-	} params;
-
+	UAngleMaths_AngleMod360_Params params;
 	params.Angle = Angle;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -102,20 +81,14 @@ float UAngleMaths::AngleMod360(float Angle)
 // float                          Angle                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UAngleMaths::AngleMod180(float Angle)
+float UAngleMaths::STATIC_AngleMod180(float Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleMod180");
 
-	struct
-	{
-		float                          Angle;
-		float                          ReturnValue;
-	} params;
-
+	UAngleMaths_AngleMod180_Params params;
 	params.Angle = Angle;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -129,24 +102,16 @@ float UAngleMaths::AngleMod180(float Angle)
 // float                          Amount                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UAngleMaths::AngleLerpShortest(float Start, float End, float Amount)
+float UAngleMaths::STATIC_AngleLerpShortest(float Start, float End, float Amount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleLerpShortest");
 
-	struct
-	{
-		float                          Start;
-		float                          End;
-		float                          Amount;
-		float                          ReturnValue;
-	} params;
-
+	UAngleMaths_AngleLerpShortest_Params params;
 	params.Start = Start;
 	params.End = End;
 	params.Amount = Amount;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -160,24 +125,16 @@ float UAngleMaths::AngleLerpShortest(float Start, float End, float Amount)
 // float                          InGravity                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBuoyancyMaths::CalculateMagnitude(float InSubmersedVolume, float InFluidDensity, float InGravity)
+float UBuoyancyMaths::STATIC_CalculateMagnitude(float InSubmersedVolume, float InFluidDensity, float InGravity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.BuoyancyMaths.CalculateMagnitude");
 
-	struct
-	{
-		float                          InSubmersedVolume;
-		float                          InFluidDensity;
-		float                          InGravity;
-		float                          ReturnValue;
-	} params;
-
+	UBuoyancyMaths_CalculateMagnitude_Params params;
 	params.InSubmersedVolume = InSubmersedVolume;
 	params.InFluidDensity = InFluidDensity;
 	params.InGravity = InGravity;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -194,21 +151,11 @@ float UBuoyancyMaths::CalculateMagnitude(float InSubmersedVolume, float InFluidD
 // TEnumAsByte<EBuoyancyBlend>    BlendType                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBuoyancyMaths::CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBuoyancyCurve, class UCurveFloat* SecondaryBuoyancyCurve, class UCurveFloat* TertiaryBuoyancyCurve, float UnaryDistUnderwater, float Blend, TEnumAsByte<EBuoyancyBlend> BlendType)
+float UBuoyancyMaths::STATIC_CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBuoyancyCurve, class UCurveFloat* SecondaryBuoyancyCurve, class UCurveFloat* TertiaryBuoyancyCurve, float UnaryDistUnderwater, float Blend, TEnumAsByte<EBuoyancyBlend> BlendType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.BuoyancyMaths.CalcBlendedProbeCurveBuoyancy");
 
-	struct
-	{
-		class UCurveFloat*             PrimaryBuoyancyCurve;
-		class UCurveFloat*             SecondaryBuoyancyCurve;
-		class UCurveFloat*             TertiaryBuoyancyCurve;
-		float                          UnaryDistUnderwater;
-		float                          Blend;
-		TEnumAsByte<EBuoyancyBlend>    BlendType;
-		float                          ReturnValue;
-	} params;
-
+	UBuoyancyMaths_CalcBlendedProbeCurveBuoyancy_Params params;
 	params.PrimaryBuoyancyCurve = PrimaryBuoyancyCurve;
 	params.SecondaryBuoyancyCurve = SecondaryBuoyancyCurve;
 	params.TertiaryBuoyancyCurve = TertiaryBuoyancyCurve;
@@ -216,8 +163,7 @@ float UBuoyancyMaths::CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBu
 	params.Blend = Blend;
 	params.BlendType = BlendType;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -231,24 +177,16 @@ float UBuoyancyMaths::CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBu
 // float                          IgnoredFraction                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UCircleMaths::ConvertAngleToCircleSectorIndex(float AngleInDegrees, int NumberOfSectors, float IgnoredFraction)
+int UCircleMaths::STATIC_ConvertAngleToCircleSectorIndex(float AngleInDegrees, int NumberOfSectors, float IgnoredFraction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CircleMaths.ConvertAngleToCircleSectorIndex");
 
-	struct
-	{
-		float                          AngleInDegrees;
-		int                            NumberOfSectors;
-		float                          IgnoredFraction;
-		int                            ReturnValue;
-	} params;
-
+	UCircleMaths_ConvertAngleToCircleSectorIndex_Params params;
 	params.AngleInDegrees = AngleInDegrees;
 	params.NumberOfSectors = NumberOfSectors;
 	params.IgnoredFraction = IgnoredFraction;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -260,20 +198,14 @@ int UCircleMaths::ConvertAngleToCircleSectorIndex(float AngleInDegrees, int Numb
 // float                          InRadius                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UCircleMaths::Area(float InRadius)
+float UCircleMaths::STATIC_Area(float InRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CircleMaths.Area");
 
-	struct
-	{
-		float                          InRadius;
-		float                          ReturnValue;
-	} params;
-
+	UCircleMaths_Area_Params params;
 	params.InRadius = InRadius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -286,22 +218,15 @@ float UCircleMaths::Area(float InRadius)
 // class USplineComponent*        Spline                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UCurveMaths::GetDistanceSquaredToCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
+float UCurveMaths::STATIC_GetDistanceSquaredToCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetDistanceSquaredToCurve");
 
-	struct
-	{
-		struct FVector                 WorldSpacePos;
-		class USplineComponent*        Spline;
-		float                          ReturnValue;
-	} params;
-
+	UCurveMaths_GetDistanceSquaredToCurve_Params params;
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -314,22 +239,15 @@ float UCurveMaths::GetDistanceSquaredToCurve(const struct FVector& WorldSpacePos
 // class USplineComponent*        Spline                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UCurveMaths::GetClosestTimeOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
+float UCurveMaths::STATIC_GetClosestTimeOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetClosestTimeOnCurve");
 
-	struct
-	{
-		struct FVector                 WorldSpacePos;
-		class USplineComponent*        Spline;
-		float                          ReturnValue;
-	} params;
-
+	UCurveMaths_GetClosestTimeOnCurve_Params params;
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -342,22 +260,15 @@ float UCurveMaths::GetClosestTimeOnCurve(const struct FVector& WorldSpacePos, cl
 // class USplineComponent*        Spline                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UCurveMaths::GetClosestPositionOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
+struct FVector UCurveMaths::STATIC_GetClosestPositionOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetClosestPositionOnCurve");
 
-	struct
-	{
-		struct FVector                 WorldSpacePos;
-		class USplineComponent*        Spline;
-		struct FVector                 ReturnValue;
-	} params;
-
+	UCurveMaths_GetClosestPositionOnCurve_Params params;
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -370,22 +281,15 @@ struct FVector UCurveMaths::GetClosestPositionOnCurve(const struct FVector& Worl
 // class USplineComponent*        Spline                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UCurveMaths::GetClosestPointOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
+float UCurveMaths::STATIC_GetClosestPointOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetClosestPointOnCurve");
 
-	struct
-	{
-		struct FVector                 WorldSpacePos;
-		class USplineComponent*        Spline;
-		float                          ReturnValue;
-	} params;
-
+	UCurveMaths_GetClosestPointOnCurve_Params params;
 	params.WorldSpacePos = WorldSpacePos;
 	params.Spline = Spline;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -397,20 +301,14 @@ float UCurveMaths::GetClosestPointOnCurve(const struct FVector& WorldSpacePos, c
 // class USplineComponent*        Spline                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UCurveMaths::GetCentre(class USplineComponent* Spline)
+struct FVector UCurveMaths::STATIC_GetCentre(class USplineComponent* Spline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetCentre");
 
-	struct
-	{
-		class USplineComponent*        Spline;
-		struct FVector                 ReturnValue;
-	} params;
-
+	UCurveMaths_GetCentre_Params params;
 	params.Spline = Spline;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -421,18 +319,13 @@ struct FVector UCurveMaths::GetCentre(class USplineComponent* Spline)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDensity::Water()
+float UDensity::STATIC_Water()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Water");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDensity_Water_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -443,18 +336,13 @@ float UDensity::Water()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDensity::SeaWater()
+float UDensity::STATIC_SeaWater()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.SeaWater");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDensity_SeaWater_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -465,18 +353,13 @@ float UDensity::SeaWater()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDensity::Min()
+float UDensity::STATIC_Min()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Min");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDensity_Min_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -487,18 +370,13 @@ float UDensity::Min()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDensity::Max()
+float UDensity::STATIC_Max()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Max");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDensity_Max_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -510,20 +388,14 @@ float UDensity::Max()
 // float                          InValue                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDensity::IsValid(float InValue)
+bool UDensity::STATIC_IsValid(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.IsValid");
 
-	struct
-	{
-		float                          InValue;
-		bool                           ReturnValue;
-	} params;
-
+	UDensity_IsValid_Params params;
 	params.InValue = InValue;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -534,18 +406,13 @@ bool UDensity::IsValid(float InValue)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDensity::Air()
+float UDensity::STATIC_Air()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Air");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDensity_Air_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -556,18 +423,13 @@ float UDensity::Air()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragCoefficients::Sphere()
+float UDragCoefficients::STATIC_Sphere()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Sphere");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDragCoefficients_Sphere_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -578,18 +440,13 @@ float UDragCoefficients::Sphere()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragCoefficients::PlanePerpendicularToFlow()
+float UDragCoefficients::STATIC_PlanePerpendicularToFlow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.PlanePerpendicularToFlow");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDragCoefficients_PlanePerpendicularToFlow_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -600,18 +457,13 @@ float UDragCoefficients::PlanePerpendicularToFlow()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragCoefficients::PlaneParallelToFlow()
+float UDragCoefficients::STATIC_PlaneParallelToFlow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.PlaneParallelToFlow");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDragCoefficients_PlaneParallelToFlow_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -622,18 +474,13 @@ float UDragCoefficients::PlaneParallelToFlow()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragCoefficients::Min()
+float UDragCoefficients::STATIC_Min()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Min");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDragCoefficients_Min_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -644,18 +491,13 @@ float UDragCoefficients::Min()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragCoefficients::Max()
+float UDragCoefficients::STATIC_Max()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Max");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDragCoefficients_Max_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -667,20 +509,14 @@ float UDragCoefficients::Max()
 // float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDragCoefficients::IsValid(float Value)
+bool UDragCoefficients::STATIC_IsValid(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.IsValid");
 
-	struct
-	{
-		float                          Value;
-		bool                           ReturnValue;
-	} params;
-
+	UDragCoefficients_IsValid_Params params;
 	params.Value = Value;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -691,18 +527,13 @@ bool UDragCoefficients::IsValid(float Value)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragCoefficients::Cube()
+float UDragCoefficients::STATIC_Cube()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Cube");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UDragCoefficients_Cube_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -717,26 +548,17 @@ float UDragCoefficients::Cube()
 // float                          InFluidDensity                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UDragMaths::CalculateMagnitude(float InSurfaceArea, float InSpeedReltaiveToFluid, float InDragCoefficient, float InFluidDensity)
+float UDragMaths::STATIC_CalculateMagnitude(float InSurfaceArea, float InSpeedReltaiveToFluid, float InDragCoefficient, float InFluidDensity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragMaths.CalculateMagnitude");
 
-	struct
-	{
-		float                          InSurfaceArea;
-		float                          InSpeedReltaiveToFluid;
-		float                          InDragCoefficient;
-		float                          InFluidDensity;
-		float                          ReturnValue;
-	} params;
-
+	UDragMaths_CalculateMagnitude_Params params;
 	params.InSurfaceArea = InSurfaceArea;
 	params.InSpeedReltaiveToFluid = InSpeedReltaiveToFluid;
 	params.InDragCoefficient = InDragCoefficient;
 	params.InFluidDensity = InFluidDensity;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -750,24 +572,16 @@ float UDragMaths::CalculateMagnitude(float InSurfaceArea, float InSpeedReltaiveT
 // float                          UpperLimit                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::WrapToRange(float Input, float LowerLimit, float UpperLimit)
+float UFloatMaths::STATIC_WrapToRange(float Input, float LowerLimit, float UpperLimit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapToRange");
 
-	struct
-	{
-		float                          Input;
-		float                          LowerLimit;
-		float                          UpperLimit;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_WrapToRange_Params params;
 	params.Input = Input;
 	params.LowerLimit = LowerLimit;
 	params.UpperLimit = UpperLimit;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -780,22 +594,15 @@ float UFloatMaths::WrapToRange(float Input, float LowerLimit, float UpperLimit)
 // float                          UpperLimit                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::WrapToPositiveRange(float Input, float UpperLimit)
+float UFloatMaths::STATIC_WrapToPositiveRange(float Input, float UpperLimit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapToPositiveRange");
 
-	struct
-	{
-		float                          Input;
-		float                          UpperLimit;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_WrapToPositiveRange_Params params;
 	params.Input = Input;
 	params.UpperLimit = UpperLimit;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -809,24 +616,16 @@ float UFloatMaths::WrapToPositiveRange(float Input, float UpperLimit)
 // float                          Range                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::WrapAroundPivot(float Input, float Pivot, float Range)
+float UFloatMaths::STATIC_WrapAroundPivot(float Input, float Pivot, float Range)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapAroundPivot");
 
-	struct
-	{
-		float                          Input;
-		float                          Pivot;
-		float                          Range;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_WrapAroundPivot_Params params;
 	params.Input = Input;
 	params.Pivot = Pivot;
 	params.Range = Range;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -841,26 +640,17 @@ float UFloatMaths::WrapAroundPivot(float Input, float Pivot, float Range)
 // float                          Time                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::MoveTowards(float From, float To, float Speed, float Time)
+float UFloatMaths::STATIC_MoveTowards(float From, float To, float Speed, float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.MoveTowards");
 
-	struct
-	{
-		float                          From;
-		float                          To;
-		float                          Speed;
-		float                          Time;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_MoveTowards_Params params;
 	params.From = From;
 	params.To = To;
 	params.Speed = Speed;
 	params.Time = Time;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -877,21 +667,11 @@ float UFloatMaths::MoveTowards(float From, float To, float Speed, float Time)
 // bool                           Clamp                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::Map(float ValueToMapFrom, float FromRangeStart, float FromRangeEnd, float ToRangeStart, float ToRangeEnd, bool Clamp)
+float UFloatMaths::STATIC_Map(float ValueToMapFrom, float FromRangeStart, float FromRangeEnd, float ToRangeStart, float ToRangeEnd, bool Clamp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.Map");
 
-	struct
-	{
-		float                          ValueToMapFrom;
-		float                          FromRangeStart;
-		float                          FromRangeEnd;
-		float                          ToRangeStart;
-		float                          ToRangeEnd;
-		bool                           Clamp;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_Map_Params params;
 	params.ValueToMapFrom = ValueToMapFrom;
 	params.FromRangeStart = FromRangeStart;
 	params.FromRangeEnd = FromRangeEnd;
@@ -899,8 +679,7 @@ float UFloatMaths::Map(float ValueToMapFrom, float FromRangeStart, float FromRan
 	params.ToRangeEnd = ToRangeEnd;
 	params.Clamp = Clamp;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -914,23 +693,15 @@ float UFloatMaths::Map(float ValueToMapFrom, float FromRangeStart, float FromRan
 // float                          CounterMax                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UFloatMaths::IncrementCounter(float Delta, float CounterMax, float* Counter)
+bool UFloatMaths::STATIC_IncrementCounter(float Delta, float CounterMax, float* Counter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.IncrementCounter");
 
-	struct
-	{
-		float                          Counter;
-		float                          Delta;
-		float                          CounterMax;
-		bool                           ReturnValue;
-	} params;
-
+	UFloatMaths_IncrementCounter_Params params;
 	params.Delta = Delta;
 	params.CounterMax = CounterMax;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Counter != nullptr)
 		*Counter = params.Counter;
@@ -948,26 +719,17 @@ bool UFloatMaths::IncrementCounter(float Delta, float CounterMax, float* Counter
 // float                          UpperLimit                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::FindMidpointInWrappedRange(float Value1, float Value2, float LowerLimit, float UpperLimit)
+float UFloatMaths::STATIC_FindMidpointInWrappedRange(float Value1, float Value2, float LowerLimit, float UpperLimit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.FindMidpointInWrappedRange");
 
-	struct
-	{
-		float                          Value1;
-		float                          Value2;
-		float                          LowerLimit;
-		float                          UpperLimit;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_FindMidpointInWrappedRange_Params params;
 	params.Value1 = Value1;
 	params.Value2 = Value2;
 	params.LowerLimit = LowerLimit;
 	params.UpperLimit = UpperLimit;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -981,24 +743,16 @@ float UFloatMaths::FindMidpointInWrappedRange(float Value1, float Value2, float 
 // float                          Bound2                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UFloatMaths::Bound(float ValueToBound, float Bound1, float Bound2)
+float UFloatMaths::STATIC_Bound(float ValueToBound, float Bound1, float Bound2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.Bound");
 
-	struct
-	{
-		float                          ValueToBound;
-		float                          Bound1;
-		float                          Bound2;
-		float                          ReturnValue;
-	} params;
-
+	UFloatMaths_Bound_Params params;
 	params.ValueToBound = ValueToBound;
 	params.Bound1 = Bound1;
 	params.Bound2 = Bound2;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1009,18 +763,13 @@ float UFloatMaths::Bound(float ValueToBound, float Bound1, float Bound2)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UGravity::Earth()
+float UGravity::STATIC_Earth()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.Gravity.Earth");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UGravity_Earth_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1037,21 +786,11 @@ float UGravity::Earth()
 // int                            InRNGSeed                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FVector> UPoissonDiscSampling::GeneratePoissonDiscDistributionAcrossPlane(const struct FVector& InCenter, const struct FQuat& InOrientation, float InWidth, float InHeight, float InMinDistance, int InRNGSeed)
+TArray<struct FVector> UPoissonDiscSampling::STATIC_GeneratePoissonDiscDistributionAcrossPlane(const struct FVector& InCenter, const struct FQuat& InOrientation, float InWidth, float InHeight, float InMinDistance, int InRNGSeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.PoissonDiscSampling.GeneratePoissonDiscDistributionAcrossPlane");
 
-	struct
-	{
-		struct FVector                 InCenter;
-		struct FQuat                   InOrientation;
-		float                          InWidth;
-		float                          InHeight;
-		float                          InMinDistance;
-		int                            InRNGSeed;
-		TArray<struct FVector>         ReturnValue;
-	} params;
-
+	UPoissonDiscSampling_GeneratePoissonDiscDistributionAcrossPlane_Params params;
 	params.InCenter = InCenter;
 	params.InOrientation = InOrientation;
 	params.InWidth = InWidth;
@@ -1059,8 +798,7 @@ TArray<struct FVector> UPoissonDiscSampling::GeneratePoissonDiscDistributionAcro
 	params.InMinDistance = InMinDistance;
 	params.InRNGSeed = InRNGSeed;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1075,26 +813,17 @@ TArray<struct FVector> UPoissonDiscSampling::GeneratePoissonDiscDistributionAcro
 // bool                           LockFinalOrientation           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform URotationMaths::TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation)
+struct FTransform URotationMaths::STATIC_TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.RotationMaths.TransformAroundArbitraryPivot");
 
-	struct
-	{
-		struct FTransform              TargetTransform;
-		struct FTransform              BaseTransform;
-		struct FTransform              TransformToApply;
-		bool                           LockFinalOrientation;
-		struct FTransform              ReturnValue;
-	} params;
-
+	URotationMaths_TransformAroundArbitraryPivot_Params params;
 	params.TargetTransform = TargetTransform;
 	params.BaseTransform = BaseTransform;
 	params.TransformToApply = TransformToApply;
 	params.LockFinalOrientation = LockFinalOrientation;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1106,20 +835,14 @@ struct FTransform URotationMaths::TransformAroundArbitraryPivot(const struct FTr
 // struct FRotator                Rotation                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FQuat                   ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
+struct FQuat URotationMaths::STATIC_RotatorToQuat(const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.RotationMaths.RotatorToQuat");
 
-	struct
-	{
-		struct FRotator                Rotation;
-		struct FQuat                   ReturnValue;
-	} params;
-
+	URotationMaths_RotatorToQuat_Params params;
 	params.Rotation = Rotation;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1131,20 +854,14 @@ struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 // float                          InRadius                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float USphereMaths::VolumeFromRadius(float InRadius)
+float USphereMaths::STATIC_VolumeFromRadius(float InRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphereMaths.VolumeFromRadius");
 
-	struct
-	{
-		float                          InRadius;
-		float                          ReturnValue;
-	} params;
-
+	USphereMaths_VolumeFromRadius_Params params;
 	params.InRadius = InRadius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1156,20 +873,14 @@ float USphereMaths::VolumeFromRadius(float InRadius)
 // float                          InRadius                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float USphereMaths::SurfaceAreaFromRadius(float InRadius)
+float USphereMaths::STATIC_SurfaceAreaFromRadius(float InRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphereMaths.SurfaceAreaFromRadius");
 
-	struct
-	{
-		float                          InRadius;
-		float                          ReturnValue;
-	} params;
-
+	USphereMaths_SurfaceAreaFromRadius_Params params;
 	params.InRadius = InRadius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1182,22 +893,15 @@ float USphereMaths::SurfaceAreaFromRadius(float InRadius)
 // float                          InHeight                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float USphericalCapMaths::Volume(float InRadius, float InHeight)
+float USphericalCapMaths::STATIC_Volume(float InRadius, float InHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphericalCapMaths.Volume");
 
-	struct
-	{
-		float                          InRadius;
-		float                          InHeight;
-		float                          ReturnValue;
-	} params;
-
+	USphericalCapMaths_Volume_Params params;
 	params.InRadius = InRadius;
 	params.InHeight = InHeight;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1210,22 +914,15 @@ float USphericalCapMaths::Volume(float InRadius, float InHeight)
 // float                          InHeight                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float USphericalCapMaths::CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid(float InRadius, float InHeight)
+float USphericalCapMaths::STATIC_CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid(float InRadius, float InHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphericalCapMaths.CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid");
 
-	struct
-	{
-		float                          InRadius;
-		float                          InHeight;
-		float                          ReturnValue;
-	} params;
-
+	USphericalCapMaths_CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid_Params params;
 	params.InRadius = InRadius;
 	params.InHeight = InHeight;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1238,22 +935,15 @@ float USphericalCapMaths::CalculateGeometricCentroidOffsetRelativeToBoundingSphe
 // float                          InHeight                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float USphericalCapMaths::BaseRadius(float InRadius, float InHeight)
+float USphericalCapMaths::STATIC_BaseRadius(float InRadius, float InHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphericalCapMaths.BaseRadius");
 
-	struct
-	{
-		float                          InRadius;
-		float                          InHeight;
-		float                          ReturnValue;
-	} params;
-
+	USphericalCapMaths_BaseRadius_Params params;
 	params.InRadius = InRadius;
 	params.InHeight = InHeight;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1266,22 +956,15 @@ float USphericalCapMaths::BaseRadius(float InRadius, float InHeight)
 // float                          DeltaTime                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTimedBufferFunctionLibrary::UpdateInterval(float DeltaTime, float Value, struct FTimedBuffer* TimedBuffer)
+void UTimedBufferFunctionLibrary::STATIC_UpdateInterval(float DeltaTime, float Value, struct FTimedBuffer* TimedBuffer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimedBufferFunctionLibrary.UpdateInterval");
 
-	struct
-	{
-		struct FTimedBuffer            TimedBuffer;
-		float                          DeltaTime;
-		float                          Value;
-	} params;
-
+	UTimedBufferFunctionLibrary_UpdateInterval_Params params;
 	params.DeltaTime = DeltaTime;
 	params.Value = Value;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (TimedBuffer != nullptr)
 		*TimedBuffer = params.TimedBuffer;
@@ -1296,22 +979,14 @@ void UTimedBufferFunctionLibrary::UpdateInterval(float DeltaTime, float Value, s
 // float                          ValueRange                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UTimedBufferFunctionLibrary::GetValueRange(float MinWindowLength, struct FTimedBuffer* TimedBuffer, float* ValueRange)
+bool UTimedBufferFunctionLibrary::STATIC_GetValueRange(float MinWindowLength, struct FTimedBuffer* TimedBuffer, float* ValueRange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimedBufferFunctionLibrary.GetValueRange");
 
-	struct
-	{
-		struct FTimedBuffer            TimedBuffer;
-		float                          MinWindowLength;
-		float                          ValueRange;
-		bool                           ReturnValue;
-	} params;
-
+	UTimedBufferFunctionLibrary_GetValueRange_Params params;
 	params.MinWindowLength = MinWindowLength;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (TimedBuffer != nullptr)
 		*TimedBuffer = params.TimedBuffer;
@@ -1328,20 +1003,14 @@ bool UTimedBufferFunctionLibrary::GetValueRange(float MinWindowLength, struct FT
 // float                          WindowLength                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FTimedBuffer            ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FTimedBuffer UTimedBufferFunctionLibrary::CreateTimedBuffer(float WindowLength)
+struct FTimedBuffer UTimedBufferFunctionLibrary::STATIC_CreateTimedBuffer(float WindowLength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimedBufferFunctionLibrary.CreateTimedBuffer");
 
-	struct
-	{
-		float                          WindowLength;
-		struct FTimedBuffer            ReturnValue;
-	} params;
-
+	UTimedBufferFunctionLibrary_CreateTimedBuffer_Params params;
 	params.WindowLength = WindowLength;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1354,22 +1023,15 @@ struct FTimedBuffer UTimedBufferFunctionLibrary::CreateTimedBuffer(float WindowL
 // struct FDateTime               B                              (Parm, ZeroConstructor)
 // struct FTimespan               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FTimespan UTimeMaths::GetDifference(const struct FDateTime& A, const struct FDateTime& B)
+struct FTimespan UTimeMaths::STATIC_GetDifference(const struct FDateTime& A, const struct FDateTime& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimeMaths.GetDifference");
 
-	struct
-	{
-		struct FDateTime               A;
-		struct FDateTime               B;
-		struct FTimespan               ReturnValue;
-	} params;
-
+	UTimeMaths_GetDifference_Params params;
 	params.A = A;
 	params.B = B;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1385,27 +1047,17 @@ struct FTimespan UTimeMaths::GetDifference(const struct FDateTime& A, const stru
 // struct FVector                 ClosestIntersectionPoint       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UVectorMaths::LineIntersectsSphere(const struct FVector& LineStart, const struct FVector& LineDir, const struct FVector& SphereCentre, float SphereRadius, struct FVector* ClosestIntersectionPoint)
+bool UVectorMaths::STATIC_LineIntersectsSphere(const struct FVector& LineStart, const struct FVector& LineDir, const struct FVector& SphereCentre, float SphereRadius, struct FVector* ClosestIntersectionPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsSphere");
 
-	struct
-	{
-		struct FVector                 LineStart;
-		struct FVector                 LineDir;
-		struct FVector                 SphereCentre;
-		float                          SphereRadius;
-		struct FVector                 ClosestIntersectionPoint;
-		bool                           ReturnValue;
-	} params;
-
+	UVectorMaths_LineIntersectsSphere_Params params;
 	params.LineStart = LineStart;
 	params.LineDir = LineDir;
 	params.SphereCentre = SphereCentre;
 	params.SphereRadius = SphereRadius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (ClosestIntersectionPoint != nullptr)
 		*ClosestIntersectionPoint = params.ClosestIntersectionPoint;
@@ -1427,30 +1079,17 @@ bool UVectorMaths::LineIntersectsSphere(const struct FVector& LineStart, const s
 // float                          OutSecondaryIntersectionDistance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UVectorMaths::LineIntersectsCircleWithExitPoint(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, struct FVector2D* OutSecondaryIntersectionPoint, float* OutClosestIntersectionDistance, float* OutSecondaryIntersectionDistance)
+bool UVectorMaths::STATIC_LineIntersectsCircleWithExitPoint(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, struct FVector2D* OutSecondaryIntersectionPoint, float* OutClosestIntersectionDistance, float* OutSecondaryIntersectionDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsCircleWithExitPoint");
 
-	struct
-	{
-		struct FVector2D               LineOrigin;
-		struct FVector2D               LineDir;
-		struct FVector2D               CircleOrigin;
-		float                          CircleRadius;
-		struct FVector2D               OutClosestIntersectionPoint;
-		struct FVector2D               OutSecondaryIntersectionPoint;
-		float                          OutClosestIntersectionDistance;
-		float                          OutSecondaryIntersectionDistance;
-		bool                           ReturnValue;
-	} params;
-
+	UVectorMaths_LineIntersectsCircleWithExitPoint_Params params;
 	params.LineOrigin = LineOrigin;
 	params.LineDir = LineDir;
 	params.CircleOrigin = CircleOrigin;
 	params.CircleRadius = CircleRadius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutClosestIntersectionPoint != nullptr)
 		*OutClosestIntersectionPoint = params.OutClosestIntersectionPoint;
@@ -1476,28 +1115,17 @@ bool UVectorMaths::LineIntersectsCircleWithExitPoint(const struct FVector2D& Lin
 // float                          OutIntersectionDistance        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UVectorMaths::LineIntersectsCircle(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance)
+bool UVectorMaths::STATIC_LineIntersectsCircle(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsCircle");
 
-	struct
-	{
-		struct FVector2D               LineOrigin;
-		struct FVector2D               LineDir;
-		struct FVector2D               CircleOrigin;
-		float                          CircleRadius;
-		struct FVector2D               OutClosestIntersectionPoint;
-		float                          OutIntersectionDistance;
-		bool                           ReturnValue;
-	} params;
-
+	UVectorMaths_LineIntersectsCircle_Params params;
 	params.LineOrigin = LineOrigin;
 	params.LineDir = LineDir;
 	params.CircleOrigin = CircleOrigin;
 	params.CircleRadius = CircleRadius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutClosestIntersectionPoint != nullptr)
 		*OutClosestIntersectionPoint = params.OutClosestIntersectionPoint;
@@ -1520,30 +1148,18 @@ bool UVectorMaths::LineIntersectsCircle(const struct FVector2D& LineOrigin, cons
 // float                          NormalisedIntersectionTOnLineSegment (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPlaneLineIntersectionType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EPlaneLineIntersectionType> UVectorMaths::IntersectLineSegmentWithPlane(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FVector& PlanePos, const struct FVector& PlaneNormal, float PlaneThickness, struct FVector* IntersectionPos, float* NormalisedIntersectionTOnLineSegment)
+TEnumAsByte<EPlaneLineIntersectionType> UVectorMaths::STATIC_IntersectLineSegmentWithPlane(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FVector& PlanePos, const struct FVector& PlaneNormal, float PlaneThickness, struct FVector* IntersectionPos, float* NormalisedIntersectionTOnLineSegment)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.IntersectLineSegmentWithPlane");
 
-	struct
-	{
-		struct FVector                 LineStart;
-		struct FVector                 LineEnd;
-		struct FVector                 PlanePos;
-		struct FVector                 PlaneNormal;
-		float                          PlaneThickness;
-		struct FVector                 IntersectionPos;
-		float                          NormalisedIntersectionTOnLineSegment;
-		TEnumAsByte<EPlaneLineIntersectionType> ReturnValue;
-	} params;
-
+	UVectorMaths_IntersectLineSegmentWithPlane_Params params;
 	params.LineStart = LineStart;
 	params.LineEnd = LineEnd;
 	params.PlanePos = PlanePos;
 	params.PlaneNormal = PlaneNormal;
 	params.PlaneThickness = PlaneThickness;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (IntersectionPos != nullptr)
 		*IntersectionPos = params.IntersectionPos;
@@ -1561,22 +1177,15 @@ TEnumAsByte<EPlaneLineIntersectionType> UVectorMaths::IntersectLineSegmentWithPl
 // struct FVector                 B                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UVectorMaths::Distance(const struct FVector& A, const struct FVector& B)
+float UVectorMaths::STATIC_Distance(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.Distance");
 
-	struct
-	{
-		struct FVector                 A;
-		struct FVector                 B;
-		float                          ReturnValue;
-	} params;
-
+	UVectorMaths_Distance_Params params;
 	params.A = A;
 	params.B = B;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1589,22 +1198,15 @@ float UVectorMaths::Distance(const struct FVector& A, const struct FVector& B)
 // struct FVector2D               B                              (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UVectorMaths::Cross_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B)
+float UVectorMaths::STATIC_Cross_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.Cross_Vector2DVector2D");
 
-	struct
-	{
-		struct FVector2D               A;
-		struct FVector2D               B;
-		float                          ReturnValue;
-	} params;
-
+	UVectorMaths_Cross_Vector2DVector2D_Params params;
 	params.A = A;
 	params.B = B;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

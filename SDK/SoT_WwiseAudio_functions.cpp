@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_WwiseAudio_classes.hpp"
+#include "SoT_WwiseAudio_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FV
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.IsAudible");
 
-	struct
-	{
-		struct FVector                 SoundPosition;
-		struct FVector                 ListenerPos;
-		bool                           ReturnValue;
-	} params;
-
+	UWwiseEvent_IsAudible_Params params;
 	params.SoundPosition = SoundPosition;
 	params.ListenerPos = ListenerPos;
 
@@ -48,11 +42,7 @@ float UWwiseEvent::GetMaxAttenuation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetMaxAttenuation");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UWwiseEvent_GetMaxAttenuation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,11 +59,7 @@ TEnumAsByte<EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationType");
 
-	struct
-	{
-		TEnumAsByte<EWwiseEventDurationType> ReturnValue;
-	} params;
-
+	UWwiseEvent_GetDurationType_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,11 +76,7 @@ float UWwiseEvent::GetDurationMin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMin");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UWwiseEvent_GetDurationMin_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,11 +93,7 @@ float UWwiseEvent::GetDurationMax()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMax");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UWwiseEvent_GetDurationMax_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

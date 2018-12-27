@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_IslandStorageBarrel_Outpost_classes.hpp"
+#include "SoT_BP_IslandStorageBarrel_Outpost_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_IslandStorageBarrel_Outpost_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_IslandStorageBarrel_Outpost.BP_IslandStorageBarrel_Outpost_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_IslandStorageBarrel_Outpost_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

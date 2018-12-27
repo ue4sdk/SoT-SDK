@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_OutpostCrate_bld_shop_wood_box_02_a_classes.hpp"
+#include "SoT_BP_OutpostCrate_bld_shop_wood_box_02_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_OutpostCrate_bld_shop_wood_box_02_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OutpostCrate_bld_shop_wood_box_02_a.BP_OutpostCrate_bld_shop_wood_box_02_a_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_OutpostCrate_bld_shop_wood_box_02_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_Concertina_classes.hpp"
+#include "SoT_BP_Anim_Concertina_parameters.hpp"
 
 namespace SDK
 {
@@ -22,12 +22,7 @@ void UBP_Anim_Concertina_C::OnUseStarted(class UClass* InputID, const struct FWi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Concertina.BP_Anim_Concertina_C.OnUseStarted");
 
-	struct
-	{
-		class UClass*                  InputID;
-		struct FWieldableItemActionVisuals ActionVisuals;
-	} params;
-
+	UBP_Anim_Concertina_C_OnUseStarted_Params params;
 	params.InputID = InputID;
 	params.ActionVisuals = ActionVisuals;
 
@@ -44,11 +39,7 @@ void UBP_Anim_Concertina_C::OnUseStopped(class UClass* InputID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Concertina.BP_Anim_Concertina_C.OnUseStopped");
 
-	struct
-	{
-		class UClass*                  InputID;
-	} params;
-
+	UBP_Anim_Concertina_C_OnUseStopped_Params params;
 	params.InputID = InputID;
 
 	UObject::ProcessEvent(fn, &params);
@@ -64,11 +55,7 @@ void UBP_Anim_Concertina_C::ExecuteUbergraph_BP_Anim_Concertina(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Concertina.BP_Anim_Concertina_C.ExecuteUbergraph_BP_Anim_Concertina");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_Concertina_C_ExecuteUbergraph_BP_Anim_Concertina_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

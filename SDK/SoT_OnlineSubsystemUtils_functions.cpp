@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_OnlineSubsystemUtils_classes.hpp"
+#include "SoT_OnlineSubsystemUtils_parameters.hpp"
 
 namespace SDK
 {
@@ -21,25 +21,16 @@ namespace SDK
 // bool                           bFoundID                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Progress                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementId, bool* bFoundID, float* Progress)
+void UAchievementBlueprintLibrary::STATIC_GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementId, bool* bFoundID, float* Progress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		struct FName                   AchievementId;
-		bool                           bFoundID;
-		float                          Progress;
-	} params;
-
+	UAchievementBlueprintLibrary_GetCachedAchievementProgress_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.AchievementId = AchievementId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (bFoundID != nullptr)
 		*bFoundID = params.bFoundID;
@@ -60,28 +51,16 @@ void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* W
 // struct FText                   UnlockedDescription            (Parm, OutParm)
 // bool                           bHidden                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementId, bool* bFoundID, struct FText* Title, struct FText* LockedDescription, struct FText* UnlockedDescription, bool* bHidden)
+void UAchievementBlueprintLibrary::STATIC_GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementId, bool* bFoundID, struct FText* Title, struct FText* LockedDescription, struct FText* UnlockedDescription, bool* bHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		struct FName                   AchievementId;
-		bool                           bFoundID;
-		struct FText                   Title;
-		struct FText                   LockedDescription;
-		struct FText                   UnlockedDescription;
-		bool                           bHidden;
-	} params;
-
+	UAchievementBlueprintLibrary_GetCachedAchievementDescription_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.AchievementId = AchievementId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (bFoundID != nullptr)
 		*bFoundID = params.bFoundID;
@@ -103,22 +82,15 @@ void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject
 // struct FInAppPurchaseProductRequest ProductRequest                 (ConstParm, Parm, OutParm, ReferenceParm)
 // class UInAppPurchaseCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest)
+class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::STATIC_CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase");
 
-	struct
-	{
-		class APlayerController*       PlayerController;
-		struct FInAppPurchaseProductRequest ProductRequest;
-		class UInAppPurchaseCallbackProxy* ReturnValue;
-	} params;
-
+	UInAppPurchaseCallbackProxy_CreateProxyObjectForInAppPurchase_Params params;
 	params.PlayerController = PlayerController;
 	params.ProductRequest = ProductRequest;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -131,22 +103,15 @@ class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjec
 // TArray<class FString>          ProductIdentifiers             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UInAppPurchaseQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
+class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::STATIC_CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery");
 
-	struct
-	{
-		class APlayerController*       PlayerController;
-		TArray<class FString>          ProductIdentifiers;
-		class UInAppPurchaseQueryCallbackProxy* ReturnValue;
-	} params;
-
+	UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Params params;
 	params.PlayerController = PlayerController;
 	params.ProductIdentifiers = ProductIdentifiers;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -158,20 +123,14 @@ class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::Create
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UInAppPurchaseRestoreCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::CreateProxyObjectForInAppPurchaseRestore(class APlayerController* PlayerController)
+class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::STATIC_CreateProxyObjectForInAppPurchaseRestore(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore");
 
-	struct
-	{
-		class APlayerController*       PlayerController;
-		class UInAppPurchaseRestoreCallbackProxy* ReturnValue;
-	} params;
-
+	UInAppPurchaseRestoreCallbackProxy_CreateProxyObjectForInAppPurchaseRestore_Params params;
 	params.PlayerController = PlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -185,24 +144,16 @@ class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::Cr
 // int                            StatValue                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(class APlayerController* PlayerController, const struct FName& StatName, int StatValue)
+bool ULeaderboardBlueprintLibrary::STATIC_WriteLeaderboardInteger(class APlayerController* PlayerController, const struct FName& StatName, int StatValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger");
 
-	struct
-	{
-		class APlayerController*       PlayerController;
-		struct FName                   StatName;
-		int                            StatValue;
-		bool                           ReturnValue;
-	} params;
-
+	ULeaderboardBlueprintLibrary_WriteLeaderboardInteger_Params params;
 	params.PlayerController = PlayerController;
 	params.StatName = StatName;
 	params.StatValue = StatValue;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -215,22 +166,15 @@ bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(class APlayerControll
 // struct FName                   SessionName                    (Parm, ZeroConstructor, IsPlainOldData)
 // class ULeaderboardFlushCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(class APlayerController* PlayerController, const struct FName& SessionName)
+class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::STATIC_CreateProxyObjectForFlush(class APlayerController* PlayerController, const struct FName& SessionName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush");
 
-	struct
-	{
-		class APlayerController*       PlayerController;
-		struct FName                   SessionName;
-		class ULeaderboardFlushCallbackProxy* ReturnValue;
-	} params;
-
+	ULeaderboardFlushCallbackProxy_CreateProxyObjectForFlush_Params params;
 	params.PlayerController = PlayerController;
 	params.SessionName = SessionName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -243,22 +187,15 @@ class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProx
 // struct FName                   StatName                       (Parm, ZeroConstructor, IsPlainOldData)
 // class ULeaderboardQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const struct FName& StatName)
+class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::STATIC_CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const struct FName& StatName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery");
 
-	struct
-	{
-		class APlayerController*       PlayerController;
-		struct FName                   StatName;
-		class ULeaderboardQueryCallbackProxy* ReturnValue;
-	} params;
-
+	ULeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery_Params params;
 	params.PlayerController = PlayerController;
 	params.StatName = StatName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -271,22 +208,15 @@ class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProx
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class ULogoutCallbackProxy*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
+class ULogoutCallbackProxy* ULogoutCallbackProxy::STATIC_Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class ULogoutCallbackProxy*    ReturnValue;
-	} params;
-
+	ULogoutCallbackProxy_Logout_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -299,10 +229,7 @@ void AOnlineBeaconClient::ClientOnConnected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected");
 
-	struct
-	{
-	} params;
-
+	AOnlineBeaconClient_ClientOnConnected_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -318,12 +245,7 @@ void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& Ses
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest");
 
-	struct
-	{
-		class FString                  SessionId;
-		struct FPartyReservation       ReservationUpdate;
-	} params;
-
+	APartyBeaconClient_ServerUpdateReservationRequest_Params params;
 	params.SessionId = SessionId;
 	params.ReservationUpdate = ReservationUpdate;
 
@@ -341,12 +263,7 @@ void APartyBeaconClient::ServerReservationRequest(const class FString& SessionId
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest");
 
-	struct
-	{
-		class FString                  SessionId;
-		struct FPartyReservation       Reservation;
-	} params;
-
+	APartyBeaconClient_ServerReservationRequest_Params params;
 	params.SessionId = SessionId;
 	params.Reservation = Reservation;
 
@@ -363,11 +280,7 @@ void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest");
 
-	struct
-	{
-		struct FUniqueNetIdRepl        PartyLeader;
-	} params;
-
+	APartyBeaconClient_ServerCancelReservationRequest_Params params;
 	params.PartyLeader = PartyLeader;
 
 	UObject::ProcessEvent(fn, &params);
@@ -383,11 +296,7 @@ void APartyBeaconClient::ClientSendReservationUpdates(int NumRemainingReservatio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates");
 
-	struct
-	{
-		int                            NumRemainingReservations;
-	} params;
-
+	APartyBeaconClient_ClientSendReservationUpdates_Params params;
 	params.NumRemainingReservations = NumRemainingReservations;
 
 	UObject::ProcessEvent(fn, &params);
@@ -403,11 +312,7 @@ void APartyBeaconClient::ClientReservationResponse(TEnumAsByte<EPartyReservation
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse");
 
-	struct
-	{
-		TEnumAsByte<EPartyReservationResult> ReservationResponse;
-	} params;
-
+	APartyBeaconClient_ClientReservationResponse_Params params;
 	params.ReservationResponse = ReservationResponse;
 
 	UObject::ProcessEvent(fn, &params);
@@ -421,10 +326,7 @@ void ATestBeaconClient::ServerPong()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TestBeaconClient.ServerPong");
 
-	struct
-	{
-	} params;
-
+	ATestBeaconClient_ServerPong_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -437,10 +339,7 @@ void ATestBeaconClient::ClientPing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TestBeaconClient.ClientPing");
 
-	struct
-	{
-	} params;
-
+	ATestBeaconClient_ClientPing_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -453,10 +352,7 @@ void UOnlineBlueprintCallProxyBase::Activate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.OnlineBlueprintCallProxyBase.Activate");
 
-	struct
-	{
-	} params;
-
+	UOnlineBlueprintCallProxyBase_Activate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -469,22 +365,15 @@ void UOnlineBlueprintCallProxyBase::Activate()
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UAchievementQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
+class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::STATIC_CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class UAchievementQueryCallbackProxy* ReturnValue;
-	} params;
-
+	UAchievementQueryCallbackProxy_CacheAchievements_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -497,22 +386,15 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchie
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UAchievementQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
+class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::STATIC_CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class UAchievementQueryCallbackProxy* ReturnValue;
-	} params;
-
+	UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -528,28 +410,18 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchie
 // int                            UserTag                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UAchievementWriteCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementName, float Progress, int UserTag)
+class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::STATIC_WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementName, float Progress, int UserTag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		struct FName                   AchievementName;
-		float                          Progress;
-		int                            UserTag;
-		class UAchievementWriteCallbackProxy* ReturnValue;
-	} params;
-
+	UAchievementWriteCallbackProxy_WriteAchievementProgress_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.AchievementName = AchievementName;
 	params.Progress = Progress;
 	params.UserTag = UserTag;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -562,22 +434,15 @@ class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchie
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UConnectionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
+class UConnectionCallbackProxy* UConnectionCallbackProxy::STATIC_ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class UConnectionCallbackProxy* ReturnValue;
-	} params;
-
+	UConnectionCallbackProxy_ConnectToService_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -592,26 +457,17 @@ class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class
 // bool                           bUseLAN                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UCreateSessionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int PublicConnections, bool bUseLAN)
+class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::STATIC_CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int PublicConnections, bool bUseLAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		int                            PublicConnections;
-		bool                           bUseLAN;
-		class UCreateSessionCallbackProxy* ReturnValue;
-	} params;
-
+	UCreateSessionCallbackProxy_CreateSession_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.PublicConnections = PublicConnections;
 	params.bUseLAN = bUseLAN;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -624,22 +480,15 @@ class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(cl
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UDestroySessionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController)
+class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::STATIC_DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class UDestroySessionCallbackProxy* ReturnValue;
-	} params;
-
+	UDestroySessionCallbackProxy_DestroySession_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -656,21 +505,11 @@ class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession
 // TEnumAsByte<EMPMatchOutcome>   OtherPlayersOutcome            (Parm, ZeroConstructor, IsPlainOldData)
 // class UEndMatchCallbackProxy*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const class FString& MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome)
+class UEndMatchCallbackProxy* UEndMatchCallbackProxy::STATIC_EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const class FString& MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		TScriptInterface<class UTurnBasedMatchInterface> MatchActor;
-		class FString                  MatchID;
-		TEnumAsByte<EMPMatchOutcome>   LocalPlayerOutcome;
-		TEnumAsByte<EMPMatchOutcome>   OtherPlayersOutcome;
-		class UEndMatchCallbackProxy*  ReturnValue;
-	} params;
-
+	UEndMatchCallbackProxy_EndMatch_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchActor = MatchActor;
@@ -678,8 +517,7 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* Wo
 	params.LocalPlayerOutcome = LocalPlayerOutcome;
 	params.OtherPlayersOutcome = OtherPlayersOutcome;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -694,26 +532,17 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* Wo
 // TScriptInterface<class UTurnBasedMatchInterface> TurnBasedMatchInterface        (Parm, ZeroConstructor, IsPlainOldData)
 // class UEndTurnCallbackProxy*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface)
+class UEndTurnCallbackProxy* UEndTurnCallbackProxy::STATIC_EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class FString                  MatchID;
-		TScriptInterface<class UTurnBasedMatchInterface> TurnBasedMatchInterface;
-		class UEndTurnCallbackProxy*   ReturnValue;
-	} params;
-
+	UEndTurnCallbackProxy_EndTurn_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 	params.TurnBasedMatchInterface = TurnBasedMatchInterface;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -725,20 +554,14 @@ class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* World
 // struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintSessionResult& Result)
+class FString UFindSessionsCallbackProxy::STATIC_GetServerName(const struct FBlueprintSessionResult& Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName");
 
-	struct
-	{
-		struct FBlueprintSessionResult Result;
-		class FString                  ReturnValue;
-	} params;
-
+	UFindSessionsCallbackProxy_GetServerName_Params params;
 	params.Result = Result;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -750,20 +573,14 @@ class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintS
 // struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult& Result)
+int UFindSessionsCallbackProxy::STATIC_GetPingInMs(const struct FBlueprintSessionResult& Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs");
 
-	struct
-	{
-		struct FBlueprintSessionResult Result;
-		int                            ReturnValue;
-	} params;
-
+	UFindSessionsCallbackProxy_GetPingInMs_Params params;
 	params.Result = Result;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -775,20 +592,14 @@ int UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult
 // struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResult& Result)
+int UFindSessionsCallbackProxy::STATIC_GetMaxPlayers(const struct FBlueprintSessionResult& Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers");
 
-	struct
-	{
-		struct FBlueprintSessionResult Result;
-		int                            ReturnValue;
-	} params;
-
+	UFindSessionsCallbackProxy_GetMaxPlayers_Params params;
 	params.Result = Result;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -800,20 +611,14 @@ int UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResu
 // struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessionResult& Result)
+int UFindSessionsCallbackProxy::STATIC_GetCurrentPlayers(const struct FBlueprintSessionResult& Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers");
 
-	struct
-	{
-		struct FBlueprintSessionResult Result;
-		int                            ReturnValue;
-	} params;
-
+	UFindSessionsCallbackProxy_GetCurrentPlayers_Params params;
 	params.Result = Result;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -828,26 +633,17 @@ int UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSession
 // bool                           bUseLAN                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UFindSessionsCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int MaxResults, bool bUseLAN)
+class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::STATIC_FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int MaxResults, bool bUseLAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		int                            MaxResults;
-		bool                           bUseLAN;
-		class UFindSessionsCallbackProxy* ReturnValue;
-	} params;
-
+	UFindSessionsCallbackProxy_FindSessions_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MaxResults = MaxResults;
 	params.bUseLAN = bUseLAN;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -865,22 +661,11 @@ class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class
 // bool                           ShowExistingMatches            (Parm, ZeroConstructor, IsPlainOldData)
 // class UFindTurnBasedMatchCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, int MinPlayers, int MaxPlayers, int PlayerGroup, bool ShowExistingMatches)
+class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::STATIC_FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, int MinPlayers, int MaxPlayers, int PlayerGroup, bool ShowExistingMatches)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		TScriptInterface<class UTurnBasedMatchInterface> MatchActor;
-		int                            MinPlayers;
-		int                            MaxPlayers;
-		int                            PlayerGroup;
-		bool                           ShowExistingMatches;
-		class UFindTurnBasedMatchCallbackProxy* ReturnValue;
-	} params;
-
+	UFindTurnBasedMatchCallbackProxy_FindTurnBasedMatch_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchActor = MatchActor;
@@ -889,8 +674,7 @@ class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTu
 	params.PlayerGroup = PlayerGroup;
 	params.ShowExistingMatches = ShowExistingMatches;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -904,24 +688,16 @@ class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTu
 // struct FBlueprintSessionResult SearchResult                   (ConstParm, Parm, OutParm, ReferenceParm)
 // class UJoinSessionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult)
+class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::STATIC_JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		struct FBlueprintSessionResult SearchResult;
-		class UJoinSessionCallbackProxy* ReturnValue;
-	} params;
-
+	UJoinSessionCallbackProxy_JoinSession_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.SearchResult = SearchResult;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -937,28 +713,18 @@ class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UO
 // int                            TurnTimeoutInSeconds           (Parm, ZeroConstructor, IsPlainOldData)
 // class UQuitMatchCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds)
+class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::STATIC_QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class FString                  MatchID;
-		TEnumAsByte<EMPMatchOutcome>   Outcome;
-		int                            TurnTimeoutInSeconds;
-		class UQuitMatchCallbackProxy* ReturnValue;
-	} params;
-
+	UQuitMatchCallbackProxy_QuitMatch_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 	params.Outcome = Outcome;
 	params.TurnTimeoutInSeconds = TurnTimeoutInSeconds;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -971,22 +737,15 @@ class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject*
 // class APlayerController*       InPlayerController             (Parm, ZeroConstructor, IsPlainOldData)
 // class UShowLoginUICallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
+class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::STATIC_ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       InPlayerController;
-		class UShowLoginUICallbackProxy* ReturnValue;
-	} params;
-
+	UShowLoginUICallbackProxy_ShowExternalLoginUI_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.InPlayerController = InPlayerController;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -999,23 +758,16 @@ class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object)
+void UTurnBasedBlueprintLibrary::STATIC_RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class UObject*                 Object;
-	} params;
-
+	UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.Object = Object;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1028,26 +780,17 @@ void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UOb
 // int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  PlayerDisplayName              (Parm, OutParm, ZeroConstructor)
 
-void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int PlayerIndex, class FString* PlayerDisplayName)
+void UTurnBasedBlueprintLibrary::STATIC_GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int PlayerIndex, class FString* PlayerDisplayName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class FString                  MatchID;
-		int                            PlayerIndex;
-		class FString                  PlayerDisplayName;
-	} params;
-
+	UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 	params.PlayerIndex = PlayerIndex;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (PlayerDisplayName != nullptr)
 		*PlayerDisplayName = params.PlayerDisplayName;
@@ -1062,24 +805,16 @@ void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContex
 // class FString                  MatchID                        (Parm, ZeroConstructor)
 // int                            PlayerIndex                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int* PlayerIndex)
+void UTurnBasedBlueprintLibrary::STATIC_GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int* PlayerIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class FString                  MatchID;
-		int                            PlayerIndex;
-	} params;
-
+	UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (PlayerIndex != nullptr)
 		*PlayerIndex = params.PlayerIndex;
@@ -1094,24 +829,16 @@ void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObj
 // class FString                  MatchID                        (Parm, ZeroConstructor)
 // bool                           bIsMyTurn                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTurnBasedBlueprintLibrary::GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, bool* bIsMyTurn)
+void UTurnBasedBlueprintLibrary::STATIC_GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, bool* bIsMyTurn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class APlayerController*       PlayerController;
-		class FString                  MatchID;
-		bool                           bIsMyTurn;
-	} params;
-
+	UTurnBasedBlueprintLibrary_GetIsMyTurn_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchID = MatchID;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (bIsMyTurn != nullptr)
 		*bIsMyTurn = params.bIsMyTurn;

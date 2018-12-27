@@ -7,23 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_ESailAnimationType_enums.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// UserDefinedEnum ESailAnimationType.ESailAnimationType
-enum class ESailAnimationType : uint8_t
-{
-	ESailAnimationType__NewEnumerator0 = 0,
-	ESailAnimationType__NewEnumerator1 = 1,
-	ESailAnimationType__ESailAnimationType_MAX = 2
-};
-
-
-
 }
 
 #ifdef _MSC_VER

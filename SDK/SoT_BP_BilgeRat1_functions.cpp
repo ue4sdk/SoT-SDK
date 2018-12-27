@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BilgeRat1_classes.hpp"
+#include "SoT_BP_BilgeRat1_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_BilgeRat1_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BilgeRat1.BP_BilgeRat1_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_BilgeRat1_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

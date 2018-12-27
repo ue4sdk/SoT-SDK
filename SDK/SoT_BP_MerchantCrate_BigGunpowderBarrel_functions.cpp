@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MerchantCrate_BigGunpowderBarrel_classes.hpp"
+#include "SoT_BP_MerchantCrate_BigGunpowderBarrel_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MerchantCrate_BigGunpowderBarrel_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_MerchantCrate_BigGunpowderBarrel_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_MerchantCrate_BigGunpowderBarrel_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_MerchantCrate_BigGunpowderBarrel_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_MerchantCrate_BigGunpowderBarrel_C::ExecuteUbergraph_BP_MerchantCrate_B
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.ExecuteUbergraph_BP_MerchantCrate_BigGunpowderBarrel");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_MerchantCrate_BigGunpowderBarrel_C_ExecuteUbergraph_BP_MerchantCrate_BigGunpowderBarrel_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

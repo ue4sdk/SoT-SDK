@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_cave_rocks_13_classes.hpp"
+#include "SoT_wsp_cave_rocks_13_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_cave_rocks_12_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_cave_rocks_13.wsp_cave_rocks_12_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Awsp_cave_rocks_12_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

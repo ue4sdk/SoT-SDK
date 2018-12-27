@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Kraken_classes.hpp"
+#include "SoT_Kraken_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void AKrakenTentacle::OnDamageToTentacle(const struct FImpactDamageEvent& Impact
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenTentacle.OnDamageToTentacle");
 
-	struct
-	{
-		struct FImpactDamageEvent      ImpactDamageEvent;
-	} params;
-
+	AKrakenTentacle_OnDamageToTentacle_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,10 +35,7 @@ void AKrakenShipWrappingTentacle::OnRep_CurrentServerAnimationState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenShipWrappingTentacle.OnRep_CurrentServerAnimationState");
 
-	struct
-	{
-	} params;
-
+	AKrakenShipWrappingTentacle_OnRep_CurrentServerAnimationState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55,10 +48,7 @@ void AKraken::Multicast_OnTentacleTakenDamage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.Kraken.Multicast_OnTentacleTakenDamage");
 
-	struct
-	{
-	} params;
-
+	AKraken_Multicast_OnTentacleTakenDamage_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -73,11 +63,7 @@ void AKraken::AddActorToKnownTargets(class AActor* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.Kraken.AddActorToKnownTargets");
 
-	struct
-	{
-		class AActor*                  Target;
-	} params;
-
+	AKraken_AddActorToKnownTargets_Params params;
 	params.Target = Target;
 
 	UObject::ProcessEvent(fn, &params);
@@ -94,12 +80,7 @@ void AKrakenService::RequestKrakenWithLocation(const struct FVector& SpawnLocati
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.RequestKrakenWithLocation");
 
-	struct
-	{
-		struct FVector                 SpawnLocation;
-		class AActor*                  SpawnedForActor;
-	} params;
-
+	AKrakenService_RequestKrakenWithLocation_Params params;
 	params.SpawnLocation = SpawnLocation;
 	params.SpawnedForActor = SpawnedForActor;
 
@@ -116,11 +97,7 @@ bool AKrakenService::IsServiceInitialized()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.IsServiceInitialized");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	AKrakenService_IsServiceInitialized_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,11 +114,7 @@ bool AKrakenService::IsKrakenActive()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.IsKrakenActive");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	AKrakenService_IsKrakenActive_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,10 +129,7 @@ void AKrakenService::DismissKraken()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.DismissKraken");
 
-	struct
-	{
-	} params;
-
+	AKrakenService_DismissKraken_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CollectorsChest_Proxy_classes.hpp"
+#include "SoT_BP_CollectorsChest_Proxy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_CollectorsChest_Proxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

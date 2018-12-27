@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MovieSceneCapture_classes.hpp"
+#include "SoT_MovieSceneCapture_parameters.hpp"
 
 namespace SDK
 {
@@ -17,18 +17,13 @@ namespace SDK
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
+int UMovieSceneCaptureEnvironment::STATIC_GetCaptureFrameNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
+	UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -39,18 +34,13 @@ int UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UMovieSceneCaptureEnvironment::GetCaptureElapsedTime()
+float UMovieSceneCaptureEnvironment::STATIC_GetCaptureElapsedTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
+	UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

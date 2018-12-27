@@ -7,34 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_RareEngine_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum RareEngine.EMemoryUsageVisualiserInstanceType
-enum class EMemoryUsageVisualiserInstanceType : uint8_t
-{
-	EMemoryUsageVisualiserInstanceType__Server = 0,
-	EMemoryUsageVisualiserInstanceType__Client = 1,
-	EMemoryUsageVisualiserInstanceType__EMemoryUsageVisualiserInstanceType_MAX = 2
-};
-
-
-// Enum RareEngine.EMemoryGatheringMode
-enum class EMemoryGatheringMode : uint8_t
-{
-	EMemoryGatheringMode__Exclusive = 0,
-	EMemoryGatheringMode__Inclusive = 1,
-	EMemoryGatheringMode__EMemoryGatheringMode_MAX = 2
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

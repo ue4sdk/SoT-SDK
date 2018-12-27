@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MediaAssets_classes.hpp"
+#include "SoT_MediaAssets_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ bool UMediaPlayer::SupportsSeeking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsSeeking");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_SupportsSeeking_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,11 +38,7 @@ bool UMediaPlayer::SupportsScrubbing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsScrubbing");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_SupportsScrubbing_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,13 +57,7 @@ bool UMediaPlayer::SupportsRate(float Rate, bool Unthinned)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsRate");
 
-	struct
-	{
-		float                          Rate;
-		bool                           Unthinned;
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_SupportsRate_Params params;
 	params.Rate = Rate;
 	params.Unthinned = Unthinned;
 
@@ -91,12 +77,7 @@ bool UMediaPlayer::SetRate(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetRate");
 
-	struct
-	{
-		float                          Rate;
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_SetRate_Params params;
 	params.Rate = Rate;
 
 	UObject::ProcessEvent(fn, &params);
@@ -115,12 +96,7 @@ bool UMediaPlayer::SetLooping(bool InLooping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetLooping");
 
-	struct
-	{
-		bool                           InLooping;
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_SetLooping_Params params;
 	params.InLooping = InLooping;
 
 	UObject::ProcessEvent(fn, &params);
@@ -139,12 +115,7 @@ bool UMediaPlayer::Seek(const struct FTimespan& InTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Seek");
 
-	struct
-	{
-		struct FTimespan               InTime;
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_Seek_Params params;
 	params.InTime = InTime;
 
 	UObject::ProcessEvent(fn, &params);
@@ -162,11 +133,7 @@ bool UMediaPlayer::Rewind()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Rewind");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_Rewind_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,11 +150,7 @@ bool UMediaPlayer::Play()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Play");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_Play_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,11 +167,7 @@ bool UMediaPlayer::Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Pause");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_Pause_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,12 +185,7 @@ bool UMediaPlayer::OpenUrl(const class FString& NewUrl)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenUrl");
 
-	struct
-	{
-		class FString                  NewUrl;
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_OpenUrl_Params params;
 	params.NewUrl = NewUrl;
 
 	UObject::ProcessEvent(fn, &params);
@@ -249,11 +203,7 @@ bool UMediaPlayer::IsStopped()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsStopped");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_IsStopped_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -270,11 +220,7 @@ bool UMediaPlayer::IsPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPlaying");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_IsPlaying_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -291,11 +237,7 @@ bool UMediaPlayer::IsPaused()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPaused");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_IsPaused_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -312,11 +254,7 @@ bool UMediaPlayer::IsLooping()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsLooping");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_IsLooping_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,11 +271,7 @@ class FString UMediaPlayer::GetUrl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetUrl");
 
-	struct
-	{
-		class FString                  ReturnValue;
-	} params;
-
+	UMediaPlayer_GetUrl_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,11 +288,7 @@ struct FTimespan UMediaPlayer::GetTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTime");
 
-	struct
-	{
-		struct FTimespan               ReturnValue;
-	} params;
-
+	UMediaPlayer_GetTime_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -375,11 +305,7 @@ float UMediaPlayer::GetRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetRate");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UMediaPlayer_GetRate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -396,11 +322,7 @@ struct FTimespan UMediaPlayer::GetDuration()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetDuration");
 
-	struct
-	{
-		struct FTimespan               ReturnValue;
-	} params;
-
+	UMediaPlayer_GetDuration_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -415,10 +337,7 @@ void UMediaPlayer::Close()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Close");
 
-	struct
-	{
-	} params;
-
+	UMediaPlayer_Close_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -433,11 +352,7 @@ bool UMediaPlayer::CanPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPlay");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_CanPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -454,11 +369,7 @@ bool UMediaPlayer::CanPause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPause");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMediaPlayer_CanPause_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -475,11 +386,7 @@ void UMediaSoundWave::SetMediaPlayer(class UMediaPlayer* InMediaPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundWave.SetMediaPlayer");
 
-	struct
-	{
-		class UMediaPlayer*            InMediaPlayer;
-	} params;
-
+	UMediaSoundWave_SetMediaPlayer_Params params;
 	params.InMediaPlayer = InMediaPlayer;
 
 	UObject::ProcessEvent(fn, &params);
@@ -495,11 +402,7 @@ void UMediaTexture::SetMediaPlayer(class UMediaPlayer* InMediaPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.SetMediaPlayer");
 
-	struct
-	{
-		class UMediaPlayer*            InMediaPlayer;
-	} params;
-
+	UMediaTexture_SetMediaPlayer_Params params;
 	params.InMediaPlayer = InMediaPlayer;
 
 	UObject::ProcessEvent(fn, &params);

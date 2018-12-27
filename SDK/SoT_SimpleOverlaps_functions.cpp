@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SimpleOverlaps_classes.hpp"
+#include "SoT_SimpleOverlaps_parameters.hpp"
 
 namespace SDK
 {

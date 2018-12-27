@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Animation_classes.hpp"
+#include "SoT_Animation_parameters.hpp"
 
 namespace SDK
 {
@@ -20,23 +20,15 @@ namespace SDK
 // struct FGenericStruct          Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimationDataFunctionLib::UnwrapAnimDataEntryStruct(const struct FAnimDataEntryStructWrapper& Wrapper, class UScriptStruct* DestinationStruct, struct FGenericStruct* Value)
+bool UAnimationDataFunctionLib::STATIC_UnwrapAnimDataEntryStruct(const struct FAnimDataEntryStructWrapper& Wrapper, class UScriptStruct* DestinationStruct, struct FGenericStruct* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.UnwrapAnimDataEntryStruct");
 
-	struct
-	{
-		struct FAnimDataEntryStructWrapper Wrapper;
-		class UScriptStruct*           DestinationStruct;
-		struct FGenericStruct          Value;
-		bool                           ReturnValue;
-	} params;
-
+	UAnimationDataFunctionLib_UnwrapAnimDataEntryStruct_Params params;
 	params.Wrapper = Wrapper;
 	params.DestinationStruct = DestinationStruct;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Value != nullptr)
 		*Value = params.Value;
@@ -51,20 +43,14 @@ bool UAnimationDataFunctionLib::UnwrapAnimDataEntryStruct(const struct FAnimData
 // class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimationData*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimationData* UAnimationDataFunctionLib::MakeAnimationData(class UClass* Class)
+class UAnimationData* UAnimationDataFunctionLib::STATIC_MakeAnimationData(class UClass* Class)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.MakeAnimationData");
 
-	struct
-	{
-		class UClass*                  Class;
-		class UAnimationData*          ReturnValue;
-	} params;
-
+	UAnimationDataFunctionLib_MakeAnimationData_Params params;
 	params.Class = Class;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -77,22 +63,15 @@ class UAnimationData* UAnimationDataFunctionLib::MakeAnimationData(class UClass*
 // class UScriptStruct*           TheClass                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FAnimDataEntryStructWrapper ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FAnimDataEntryStructWrapper UAnimationDataFunctionLib::GetAnimDataEntryStructAsStructWrapper(class UAnimationData* AnimationDataObject, class UScriptStruct* TheClass)
+struct FAnimDataEntryStructWrapper UAnimationDataFunctionLib::STATIC_GetAnimDataEntryStructAsStructWrapper(class UAnimationData* AnimationDataObject, class UScriptStruct* TheClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.GetAnimDataEntryStructAsStructWrapper");
 
-	struct
-	{
-		class UAnimationData*          AnimationDataObject;
-		class UScriptStruct*           TheClass;
-		struct FAnimDataEntryStructWrapper ReturnValue;
-	} params;
-
+	UAnimationDataFunctionLib_GetAnimDataEntryStructAsStructWrapper_Params params;
 	params.AnimationDataObject = AnimationDataObject;
 	params.TheClass = TheClass;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -103,19 +82,14 @@ struct FAnimDataEntryStructWrapper UAnimationDataFunctionLib::GetAnimDataEntrySt
 // Parameters:
 // class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnimationDataFunctionLib::CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs(class UClass* InClass)
+void UAnimationDataFunctionLib::STATIC_CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs(class UClass* InClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs");
 
-	struct
-	{
-		class UClass*                  InClass;
-	} params;
-
+	UAnimationDataFunctionLib_CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs_Params params;
 	params.InClass = InClass;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -129,12 +103,7 @@ class UAnimationData* UAnimationDataStoreAsset::LookupAnimationData(class UClass
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreAsset.LookupAnimationData");
 
-	struct
-	{
-		class UClass*                  AnimDataId;
-		class UAnimationData*          ReturnValue;
-	} params;
-
+	UAnimationDataStoreAsset_LookupAnimationData_Params params;
 	params.AnimDataId = AnimDataId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -149,19 +118,13 @@ class UAnimationData* UAnimationDataStoreAsset::LookupAnimationData(class UClass
 // struct FAnimationDataStoreAssetEntry Entry                          (Parm, OutParm, ReferenceParm)
 // class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClass* UAnimationDataStoreAsset::GetAnimationDataClass(struct FAnimationDataStoreAssetEntry* Entry)
+class UClass* UAnimationDataStoreAsset::STATIC_GetAnimationDataClass(struct FAnimationDataStoreAssetEntry* Entry)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreAsset.GetAnimationDataClass");
 
-	struct
-	{
-		struct FAnimationDataStoreAssetEntry Entry;
-		class UClass*                  ReturnValue;
-	} params;
+	UAnimationDataStoreAsset_GetAnimationDataClass_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Entry != nullptr)
 		*Entry = params.Entry;
@@ -180,12 +143,7 @@ class UAnimationData* UAnimationDataStoreInterface::GetAnimationDataForId(class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreInterface.GetAnimationDataForId");
 
-	struct
-	{
-		class UClass*                  AnimDataId;
-		class UAnimationData*          ReturnValue;
-	} params;
-
+	UAnimationDataStoreInterface_GetAnimationDataForId_Params params;
 	params.AnimDataId = AnimDataId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -201,10 +159,7 @@ void UDockableInterface::HandleDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockableInterface.HandleDestroy");
 
-	struct
-	{
-	} params;
-
+	UDockableInterface_HandleDestroy_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -219,11 +174,7 @@ struct FDockableInfo UDockableInterface::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockableInterface.GetDockableInfo");
 
-	struct
-	{
-		struct FDockableInfo           ReturnValue;
-	} params;
-
+	UDockableInterface_GetDockableInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,20 +188,14 @@ struct FDockableInfo UDockableInterface::GetDockableInfo()
 // struct FDocker                 Docker                         (Parm, OutParm, ReferenceParm)
 // float                          DeltaTime                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UDockerBlueprintFunctions::UpdateDock(float DeltaTime, struct FDocker* Docker)
+void UDockerBlueprintFunctions::STATIC_UpdateDock(float DeltaTime, struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.UpdateDock");
 
-	struct
-	{
-		struct FDocker                 Docker;
-		float                          DeltaTime;
-	} params;
-
+	UDockerBlueprintFunctions_UpdateDock_Params params;
 	params.DeltaTime = DeltaTime;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -266,26 +211,17 @@ void UDockerBlueprintFunctions::UpdateDock(float DeltaTime, struct FDocker* Dock
 // float                          DockDuration                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DelayAfterDocking              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UDockerBlueprintFunctions::StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, float DelayAfterDocking, struct FDocker* Docker)
+void UDockerBlueprintFunctions::STATIC_StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, float DelayAfterDocking, struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.StartDockingWithActor");
 
-	struct
-	{
-		struct FDocker                 Docker;
-		class AActor*                  Owner;
-		class AActor*                  Target;
-		float                          DockDuration;
-		float                          DelayAfterDocking;
-	} params;
-
+	UDockerBlueprintFunctions_StartDockingWithActor_Params params;
 	params.Owner = Owner;
 	params.Target = Target;
 	params.DockDuration = DockDuration;
 	params.DelayAfterDocking = DelayAfterDocking;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -298,19 +234,13 @@ void UDockerBlueprintFunctions::StartDockingWithActor(class AActor* Owner, class
 // struct FDocker                 Docker                         (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDockerBlueprintFunctions::IsFullyDocked(struct FDocker* Docker)
+bool UDockerBlueprintFunctions::STATIC_IsFullyDocked(struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.IsFullyDocked");
 
-	struct
-	{
-		struct FDocker                 Docker;
-		bool                           ReturnValue;
-	} params;
+	UDockerBlueprintFunctions_IsFullyDocked_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -325,19 +255,13 @@ bool UDockerBlueprintFunctions::IsFullyDocked(struct FDocker* Docker)
 // struct FDocker                 Docker                         (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDockerBlueprintFunctions::IsDocking(struct FDocker* Docker)
+bool UDockerBlueprintFunctions::STATIC_IsDocking(struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.IsDocking");
 
-	struct
-	{
-		struct FDocker                 Docker;
-		bool                           ReturnValue;
-	} params;
+	UDockerBlueprintFunctions_IsDocking_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -352,20 +276,14 @@ bool UDockerBlueprintFunctions::IsDocking(struct FDocker* Docker)
 // struct FDocker                 Docker                         (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UDockerBlueprintFunctions::GetTargetLocalOffset(const struct FDocker& Docker)
+struct FVector UDockerBlueprintFunctions::STATIC_GetTargetLocalOffset(const struct FDocker& Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.GetTargetLocalOffset");
 
-	struct
-	{
-		struct FDocker                 Docker;
-		struct FVector                 ReturnValue;
-	} params;
-
+	UDockerBlueprintFunctions_GetTargetLocalOffset_Params params;
 	params.Docker = Docker;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -376,18 +294,13 @@ struct FVector UDockerBlueprintFunctions::GetTargetLocalOffset(const struct FDoc
 // Parameters:
 // struct FDocker                 Docker                         (Parm, OutParm, ReferenceParm)
 
-void UDockerBlueprintFunctions::EndDock(struct FDocker* Docker)
+void UDockerBlueprintFunctions::STATIC_EndDock(struct FDocker* Docker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.EndDock");
 
-	struct
-	{
-		struct FDocker                 Docker;
-	} params;
+	UDockerBlueprintFunctions_EndDock_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Docker != nullptr)
 		*Docker = params.Docker;
@@ -400,20 +313,14 @@ void UDockerBlueprintFunctions::EndDock(struct FDocker* Docker)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          InRotationStrength             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetTranslationStrength(float InRotationStrength, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetTranslationStrength(float InRotationStrength, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetTranslationStrength");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          InRotationStrength;
-	} params;
-
+	ULimbIKFunctionLibrary_SetTranslationStrength_Params params;
 	params.InRotationStrength = InRotationStrength;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -426,20 +333,14 @@ void ULimbIKFunctionLibrary::SetTranslationStrength(float InRotationStrength, st
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // struct FTransform              InTransform                    (ConstParm, Parm, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetTransform(const struct FTransform& InTransform, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetTransform(const struct FTransform& InTransform, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetTransform");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		struct FTransform              InTransform;
-	} params;
-
+	ULimbIKFunctionLibrary_SetTransform_Params params;
 	params.InTransform = InTransform;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -452,20 +353,14 @@ void ULimbIKFunctionLibrary::SetTransform(const struct FTransform& InTransform, 
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          InRotationStrength             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetRotationStrength(float InRotationStrength, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetRotationStrength(float InRotationStrength, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetRotationStrength");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          InRotationStrength;
-	} params;
-
+	ULimbIKFunctionLibrary_SetRotationStrength_Params params;
 	params.InRotationStrength = InRotationStrength;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -478,20 +373,14 @@ void ULimbIKFunctionLibrary::SetRotationStrength(float InRotationStrength, struc
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // struct FName                   Bone                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetParentBone(const struct FName& Bone, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetParentBone(const struct FName& Bone, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetParentBone");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		struct FName                   Bone;
-	} params;
-
+	ULimbIKFunctionLibrary_SetParentBone_Params params;
 	params.Bone = Bone;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -504,20 +393,14 @@ void ULimbIKFunctionLibrary::SetParentBone(const struct FName& Bone, struct FLim
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // TEnumAsByte<ELimbIKSpace>      IKSpace                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetIKSpace(TEnumAsByte<ELimbIKSpace> IKSpace, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetIKSpace(TEnumAsByte<ELimbIKSpace> IKSpace, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetIKSpace");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		TEnumAsByte<ELimbIKSpace>      IKSpace;
-	} params;
-
+	ULimbIKFunctionLibrary_SetIKSpace_Params params;
 	params.IKSpace = IKSpace;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -532,24 +415,16 @@ void ULimbIKFunctionLibrary::SetIKSpace(TEnumAsByte<ELimbIKSpace> IKSpace, struc
 // TEnumAsByte<ELimbIKSpace>      IKSpace                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ParentBone                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetEnabled(bool Enabled, TEnumAsByte<ELimbIKSpace> IKSpace, const struct FName& ParentBone, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetEnabled(bool Enabled, TEnumAsByte<ELimbIKSpace> IKSpace, const struct FName& ParentBone, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetEnabled");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		bool                           Enabled;
-		TEnumAsByte<ELimbIKSpace>      IKSpace;
-		struct FName                   ParentBone;
-	} params;
-
+	ULimbIKFunctionLibrary_SetEnabled_Params params;
 	params.Enabled = Enabled;
 	params.IKSpace = IKSpace;
 	params.ParentBone = ParentBone;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -562,20 +437,14 @@ void ULimbIKFunctionLibrary::SetEnabled(bool Enabled, TEnumAsByte<ELimbIKSpace> 
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          BlendOutSpeed                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetBlendOutSpeed(float BlendOutSpeed, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetBlendOutSpeed(float BlendOutSpeed, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetBlendOutSpeed");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          BlendOutSpeed;
-	} params;
-
+	ULimbIKFunctionLibrary_SetBlendOutSpeed_Params params;
 	params.BlendOutSpeed = BlendOutSpeed;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -588,20 +457,14 @@ void ULimbIKFunctionLibrary::SetBlendOutSpeed(float BlendOutSpeed, struct FLimbI
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          BlendInSpeed                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetBlendInSpeed(float BlendInSpeed, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetBlendInSpeed(float BlendInSpeed, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetBlendInSpeed");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          BlendInSpeed;
-	} params;
-
+	ULimbIKFunctionLibrary_SetBlendInSpeed_Params params;
 	params.BlendInSpeed = BlendInSpeed;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -614,20 +477,14 @@ void ULimbIKFunctionLibrary::SetBlendInSpeed(float BlendInSpeed, struct FLimbIK*
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // bool                           AnimationOverride              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetAnimationOverride(bool AnimationOverride, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetAnimationOverride(bool AnimationOverride, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetAnimationOverride");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		bool                           AnimationOverride;
-	} params;
-
+	ULimbIKFunctionLibrary_SetAnimationOverride_Params params;
 	params.AnimationOverride = AnimationOverride;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -640,20 +497,14 @@ void ULimbIKFunctionLibrary::SetAnimationOverride(bool AnimationOverride, struct
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          AlphaTarget                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULimbIKFunctionLibrary::SetAlphaTarget(float AlphaTarget, struct FLimbIK* LimbIK)
+void ULimbIKFunctionLibrary::STATIC_SetAlphaTarget(float AlphaTarget, struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetAlphaTarget");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          AlphaTarget;
-	} params;
-
+	ULimbIKFunctionLibrary_SetAlphaTarget_Params params;
 	params.AlphaTarget = AlphaTarget;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -666,19 +517,13 @@ void ULimbIKFunctionLibrary::SetAlphaTarget(float AlphaTarget, struct FLimbIK* L
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULimbIKFunctionLibrary::IsEnabled(struct FLimbIK* LimbIK)
+bool ULimbIKFunctionLibrary::STATIC_IsEnabled(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.IsEnabled");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		bool                           ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_IsEnabled_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -693,19 +538,13 @@ bool ULimbIKFunctionLibrary::IsEnabled(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULimbIKFunctionLibrary::GetTranslationStrength(struct FLimbIK* LimbIK)
+float ULimbIKFunctionLibrary::STATIC_GetTranslationStrength(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetTranslationStrength");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetTranslationStrength_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -720,19 +559,13 @@ float ULimbIKFunctionLibrary::GetTranslationStrength(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform ULimbIKFunctionLibrary::GetTransform(struct FLimbIK* LimbIK)
+struct FTransform ULimbIKFunctionLibrary::STATIC_GetTransform(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetTransform");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		struct FTransform              ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetTransform_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -747,19 +580,13 @@ struct FTransform ULimbIKFunctionLibrary::GetTransform(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULimbIKFunctionLibrary::GetRotationStrength(struct FLimbIK* LimbIK)
+float ULimbIKFunctionLibrary::STATIC_GetRotationStrength(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetRotationStrength");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetRotationStrength_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -774,19 +601,13 @@ float ULimbIKFunctionLibrary::GetRotationStrength(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // struct FName                   ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName ULimbIKFunctionLibrary::GetParentBone(struct FLimbIK* LimbIK)
+struct FName ULimbIKFunctionLibrary::STATIC_GetParentBone(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetParentBone");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		struct FName                   ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetParentBone_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -801,19 +622,13 @@ struct FName ULimbIKFunctionLibrary::GetParentBone(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // TEnumAsByte<ELimbIKSpace>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<ELimbIKSpace> ULimbIKFunctionLibrary::GetIKSpace(struct FLimbIK* LimbIK)
+TEnumAsByte<ELimbIKSpace> ULimbIKFunctionLibrary::STATIC_GetIKSpace(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetIKSpace");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		TEnumAsByte<ELimbIKSpace>      ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetIKSpace_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -828,19 +643,13 @@ TEnumAsByte<ELimbIKSpace> ULimbIKFunctionLibrary::GetIKSpace(struct FLimbIK* Lim
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULimbIKFunctionLibrary::GetCurrentAlpha(struct FLimbIK* LimbIK)
+float ULimbIKFunctionLibrary::STATIC_GetCurrentAlpha(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetCurrentAlpha");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetCurrentAlpha_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -855,19 +664,13 @@ float ULimbIKFunctionLibrary::GetCurrentAlpha(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULimbIKFunctionLibrary::GetAnimationOverride(struct FLimbIK* LimbIK)
+bool ULimbIKFunctionLibrary::STATIC_GetAnimationOverride(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetAnimationOverride");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		bool                           ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetAnimationOverride_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -882,19 +685,13 @@ bool ULimbIKFunctionLibrary::GetAnimationOverride(struct FLimbIK* LimbIK)
 // struct FLimbIK                 LimbIK                         (Parm, OutParm, ReferenceParm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULimbIKFunctionLibrary::GetAlphaTarget(struct FLimbIK* LimbIK)
+float ULimbIKFunctionLibrary::STATIC_GetAlphaTarget(struct FLimbIK* LimbIK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetAlphaTarget");
 
-	struct
-	{
-		struct FLimbIK                 LimbIK;
-		float                          ReturnValue;
-	} params;
+	ULimbIKFunctionLibrary_GetAlphaTarget_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (LimbIK != nullptr)
 		*LimbIK = params.LimbIK;
@@ -909,20 +706,14 @@ float ULimbIKFunctionLibrary::GetAlphaTarget(struct FLimbIK* LimbIK)
 // bool                           InBool                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULimbIKFunctionLibrary::ConvertBoolToAlpha(bool InBool)
+float ULimbIKFunctionLibrary::STATIC_ConvertBoolToAlpha(bool InBool)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.ConvertBoolToAlpha");
 
-	struct
-	{
-		bool                           InBool;
-		float                          ReturnValue;
-	} params;
-
+	ULimbIKFunctionLibrary_ConvertBoolToAlpha_Params params;
 	params.InBool = InBool;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -936,24 +727,16 @@ float ULimbIKFunctionLibrary::ConvertBoolToAlpha(bool InBool)
 // float                          AngleSpeedMin                  (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULocomotionFunctionLib::UpdateControllerSpineRotation(const struct FRotator& CharacterRotation, float AngleSpeedMax, float AngleSpeedMin)
+float ULocomotionFunctionLib::STATIC_UpdateControllerSpineRotation(const struct FRotator& CharacterRotation, float AngleSpeedMax, float AngleSpeedMin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LocomotionFunctionLib.UpdateControllerSpineRotation");
 
-	struct
-	{
-		struct FRotator                CharacterRotation;
-		float                          AngleSpeedMax;
-		float                          AngleSpeedMin;
-		float                          ReturnValue;
-	} params;
-
+	ULocomotionFunctionLib_UpdateControllerSpineRotation_Params params;
 	params.CharacterRotation = CharacterRotation;
 	params.AngleSpeedMax = AngleSpeedMax;
 	params.AngleSpeedMin = AngleSpeedMin;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -970,21 +753,11 @@ float ULocomotionFunctionLib::UpdateControllerSpineRotation(const struct FRotato
 // bool                           IsSwimming                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FActorVelocityData      ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const struct FVector& Velocity, float CurrentMaxWalkSpeed, float WantedMovementSpeed, float BaseMaxWalkSpeed, float SpeedBlendValue, bool IsSwimming)
+struct FActorVelocityData ULocomotionFunctionLib::STATIC_UpdateCharacterSpeed(const struct FVector& Velocity, float CurrentMaxWalkSpeed, float WantedMovementSpeed, float BaseMaxWalkSpeed, float SpeedBlendValue, bool IsSwimming)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LocomotionFunctionLib.UpdateCharacterSpeed");
 
-	struct
-	{
-		struct FVector                 Velocity;
-		float                          CurrentMaxWalkSpeed;
-		float                          WantedMovementSpeed;
-		float                          BaseMaxWalkSpeed;
-		float                          SpeedBlendValue;
-		bool                           IsSwimming;
-		struct FActorVelocityData      ReturnValue;
-	} params;
-
+	ULocomotionFunctionLib_UpdateCharacterSpeed_Params params;
 	params.Velocity = Velocity;
 	params.CurrentMaxWalkSpeed = CurrentMaxWalkSpeed;
 	params.WantedMovementSpeed = WantedMovementSpeed;
@@ -992,8 +765,7 @@ struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const str
 	params.SpeedBlendValue = SpeedBlendValue;
 	params.IsSwimming = IsSwimming;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1008,25 +780,16 @@ struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const str
 // float                          DeltaSeconds                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ULocomotionFunctionLib::UpdateCalculateRateAndCurrentYaw(const struct FRotator& CharacterRotation, float LargeRate, float DeltaSeconds, float* CurrentCharacterYaw)
+float ULocomotionFunctionLib::STATIC_UpdateCalculateRateAndCurrentYaw(const struct FRotator& CharacterRotation, float LargeRate, float DeltaSeconds, float* CurrentCharacterYaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.LocomotionFunctionLib.UpdateCalculateRateAndCurrentYaw");
 
-	struct
-	{
-		struct FRotator                CharacterRotation;
-		float                          LargeRate;
-		float                          CurrentCharacterYaw;
-		float                          DeltaSeconds;
-		float                          ReturnValue;
-	} params;
-
+	ULocomotionFunctionLib_UpdateCalculateRateAndCurrentYaw_Params params;
 	params.CharacterRotation = CharacterRotation;
 	params.LargeRate = LargeRate;
 	params.DeltaSeconds = DeltaSeconds;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (CurrentCharacterYaw != nullptr)
 		*CurrentCharacterYaw = params.CurrentCharacterYaw;
@@ -1042,10 +805,7 @@ void UNetworkSyncedAnimationComponent::OnRep_PlayingAnimationIndex()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.NetworkSyncedAnimationComponent.OnRep_PlayingAnimationIndex");
 
-	struct
-	{
-	} params;
-
+	UNetworkSyncedAnimationComponent_OnRep_PlayingAnimationIndex_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1058,10 +818,7 @@ void UNetworkSyncedAnimationComponent::OnRep_AnimationProgression()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.NetworkSyncedAnimationComponent.OnRep_AnimationProgression");
 
-	struct
-	{
-	} params;
-
+	UNetworkSyncedAnimationComponent_OnRep_AnimationProgression_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1079,29 +836,17 @@ void UNetworkSyncedAnimationComponent::OnRep_AnimationProgression()
 // bool                           TurningLeft                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UTurningFunctionLib::TurningUpdate(float DeltaSeconds, bool CharacterMoving, float TurnRate, float CounterMax, bool* DeadZone, float* DelayedCounter, bool* TurningLeft)
+bool UTurningFunctionLib::STATIC_TurningUpdate(float DeltaSeconds, bool CharacterMoving, float TurnRate, float CounterMax, bool* DeadZone, float* DelayedCounter, bool* TurningLeft)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.TurningFunctionLib.TurningUpdate");
 
-	struct
-	{
-		float                          DeltaSeconds;
-		bool                           CharacterMoving;
-		bool                           DeadZone;
-		float                          TurnRate;
-		float                          DelayedCounter;
-		float                          CounterMax;
-		bool                           TurningLeft;
-		bool                           ReturnValue;
-	} params;
-
+	UTurningFunctionLib_TurningUpdate_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 	params.CharacterMoving = CharacterMoving;
 	params.TurnRate = TurnRate;
 	params.CounterMax = CounterMax;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (DeadZone != nullptr)
 		*DeadZone = params.DeadZone;
@@ -1123,11 +868,7 @@ void UWaitForAnimationStateEntryProxy::OnEnteredState(const struct FName& path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateEntryProxy.OnEnteredState");
 
-	struct
-	{
-		struct FName                   path;
-	} params;
-
+	UWaitForAnimationStateEntryProxy_OnEnteredState_Params params;
 	params.path = path;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1141,10 +882,7 @@ void UWaitForAnimationStateEntryProxy::OnAnimationUpdated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateEntryProxy.OnAnimationUpdated");
 
-	struct
-	{
-	} params;
-
+	UWaitForAnimationStateEntryProxy_OnAnimationUpdated_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1157,22 +895,15 @@ void UWaitForAnimationStateEntryProxy::OnAnimationUpdated()
 // struct FName                   TargetPath                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UWaitForAnimationStateEntryProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UWaitForAnimationStateEntryProxy* UWaitForAnimationStateEntryProxy::CreateProxy(class UAnimInstance* AnimInstance, const struct FName& TargetPath)
+class UWaitForAnimationStateEntryProxy* UWaitForAnimationStateEntryProxy::STATIC_CreateProxy(class UAnimInstance* AnimInstance, const struct FName& TargetPath)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateEntryProxy.CreateProxy");
 
-	struct
-	{
-		class UAnimInstance*           AnimInstance;
-		struct FName                   TargetPath;
-		class UWaitForAnimationStateEntryProxy* ReturnValue;
-	} params;
-
+	UWaitForAnimationStateEntryProxy_CreateProxy_Params params;
 	params.AnimInstance = AnimInstance;
 	params.TargetPath = TargetPath;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1187,11 +918,7 @@ void UWaitForAnimationStateExitProxy::OnExitState(const struct FName& path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateExitProxy.OnExitState");
 
-	struct
-	{
-		struct FName                   path;
-	} params;
-
+	UWaitForAnimationStateExitProxy_OnExitState_Params params;
 	params.path = path;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1205,10 +932,7 @@ void UWaitForAnimationStateExitProxy::OnAnimationUpdated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateExitProxy.OnAnimationUpdated");
 
-	struct
-	{
-	} params;
-
+	UWaitForAnimationStateExitProxy_OnAnimationUpdated_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1221,22 +945,15 @@ void UWaitForAnimationStateExitProxy::OnAnimationUpdated()
 // struct FName                   TargetPath                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UWaitForAnimationStateExitProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UWaitForAnimationStateExitProxy* UWaitForAnimationStateExitProxy::CreateProxy(class UAnimInstance* AnimInstance, const struct FName& TargetPath)
+class UWaitForAnimationStateExitProxy* UWaitForAnimationStateExitProxy::STATIC_CreateProxy(class UAnimInstance* AnimInstance, const struct FName& TargetPath)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateExitProxy.CreateProxy");
 
-	struct
-	{
-		class UAnimInstance*           AnimInstance;
-		struct FName                   TargetPath;
-		class UWaitForAnimationStateExitProxy* ReturnValue;
-	} params;
-
+	UWaitForAnimationStateExitProxy_CreateProxy_Params params;
 	params.AnimInstance = AnimInstance;
 	params.TargetPath = TargetPath;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

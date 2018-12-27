@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaDebug_classes.hpp"
+#include "SoT_AthenaDebug_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ADrawDebugService::OnRep_ReplicatedItems()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.OnRep_ReplicatedItems");
 
-	struct
-	{
-	} params;
-
+	ADrawDebugService_OnRep_ReplicatedItems_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

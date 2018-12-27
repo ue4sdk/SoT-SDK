@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AILargeShipNetProxy_classes.hpp"
+#include "SoT_BP_AILargeShipNetProxy_parameters.hpp"
 
 namespace SDK
 {
@@ -22,12 +22,7 @@ void ABP_AILargeShipNetProxy_C::Set_Value_on_All_Materials(const struct FName& V
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.Set Value on All Materials");
 
-	struct
-	{
-		struct FName                   Variable_Name;
-		float                          Value;
-	} params;
-
+	ABP_AILargeShipNetProxy_C_Set_Value_on_All_Materials_Params params;
 	params.Variable_Name = Variable_Name;
 	params.Value = Value;
 
@@ -44,11 +39,7 @@ void ABP_AILargeShipNetProxy_C::Apply_Bits_to_Lanterns(int Lantern_Bits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.Apply Bits to Lanterns");
 
-	struct
-	{
-		int                            Lantern_Bits;
-	} params;
-
+	ABP_AILargeShipNetProxy_C_Apply_Bits_to_Lanterns_Params params;
 	params.Lantern_Bits = Lantern_Bits;
 
 	UObject::ProcessEvent(fn, &params);
@@ -62,10 +53,7 @@ void ABP_AILargeShipNetProxy_C::Create_Dynamic_Materials()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.Create Dynamic Materials");
 
-	struct
-	{
-	} params;
-
+	ABP_AILargeShipNetProxy_C_Create_Dynamic_Materials_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -78,10 +66,7 @@ void ABP_AILargeShipNetProxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_AILargeShipNetProxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -94,10 +79,7 @@ void ABP_AILargeShipNetProxy_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_AILargeShipNetProxy_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -112,11 +94,7 @@ void ABP_AILargeShipNetProxy_C::OnLanternStateChanged(int LanternStateBits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.OnLanternStateChanged");
 
-	struct
-	{
-		int                            LanternStateBits;
-	} params;
-
+	ABP_AILargeShipNetProxy_C_OnLanternStateChanged_Params params;
 	params.LanternStateBits = LanternStateBits;
 
 	UObject::ProcessEvent(fn, &params);
@@ -132,11 +110,7 @@ void ABP_AILargeShipNetProxy_C::ExecuteUbergraph_BP_AILargeShipNetProxy(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AILargeShipNetProxy.BP_AILargeShipNetProxy_C.ExecuteUbergraph_BP_AILargeShipNetProxy");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_AILargeShipNetProxy_C_ExecuteUbergraph_BP_AILargeShipNetProxy_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

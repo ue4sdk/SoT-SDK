@@ -7,27 +7,11 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_MovieScene_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum MovieScene.EMovieSceneKeyInterpolation
-enum class EMovieSceneKeyInterpolation : uint8_t
-{
-	MSKI_Auto                      = 0,
-	MSKI_User                      = 1,
-	MSKI_Break                     = 2,
-	MSKI_Linear                    = 3,
-	MSKI_Constant                  = 4,
-	MSKI_MAX                       = 5
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

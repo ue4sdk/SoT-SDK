@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MerchantCrate_BananaCrateProxy_classes.hpp"
+#include "SoT_BP_MerchantCrate_BananaCrateProxy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MerchantCrate_BananaCrateProxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BananaCrateProxy.BP_MerchantCrate_BananaCrateProxy_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_MerchantCrate_BananaCrateProxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

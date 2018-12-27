@@ -43,15 +43,15 @@ public:
 	}
 
 
-	static void SwitchNetworkClusterForActor(class AActor* TargetActor, class AActor* NewOwner);
-	static void SetConnectionLastReceiveTime(class APlayerController* PlayerController, float OffsetFromDriverTime);
-	static void ResumePropertyTracking(class AActor* TargetActor);
-	static void PausePropertyTrackingOnNextSend(class AActor* TargetActor);
-	static bool IsActorNetRelevantFor(class AActor* TargetActor, class APlayerController* PlayerController);
-	static bool IsActorNetDormant(class AActor* TargetActor);
-	static int GetReliableBufferBunchCount(class AActor* TargetActor);
-	static void ClearRecentRelevanceTimerForPlayer(class AActor* TargetActor, class APlayerController* PlayerController);
-	static void ClearRecentRelevanceTimer(class AActor* TargetActor);
+	void STATIC_SwitchNetworkClusterForActor(class AActor* TargetActor, class AActor* NewOwner);
+	void STATIC_SetConnectionLastReceiveTime(class APlayerController* PlayerController, float OffsetFromDriverTime);
+	void STATIC_ResumePropertyTracking(class AActor* TargetActor);
+	void STATIC_PausePropertyTrackingOnNextSend(class AActor* TargetActor);
+	bool STATIC_IsActorNetRelevantFor(class AActor* TargetActor, class APlayerController* PlayerController);
+	bool STATIC_IsActorNetDormant(class AActor* TargetActor);
+	int STATIC_GetReliableBufferBunchCount(class AActor* TargetActor);
+	void STATIC_ClearRecentRelevanceTimerForPlayer(class AActor* TargetActor, class APlayerController* PlayerController);
+	void STATIC_ClearRecentRelevanceTimer(class AActor* TargetActor);
 };
 
 
@@ -68,25 +68,25 @@ public:
 	}
 
 
-	static void WaitWhileMigrationInProgress(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
-	static void WaitForPendingNetTraffic(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* TargetActor);
-	static void WaitForMigrationCompletedEvent(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
-	static void WaitForClientsToHaveActorChannel(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* TargetActor);
-	static TArray<unsigned char> TestSerialiseActorToBuffer(class AActor* TargetActor);
-	static TArray<unsigned char> TestSerialiseActorGroupToBuffer(TArray<class AActor*> ActorGroup);
-	static class AActor* TestDeserialiseActorWithOffsetFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer, const struct FVector& Offset);
-	static TArray<class AActor*> TestDeserialiseActorGroupWithOffsetFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer, const struct FVector& Offset);
-	static TArray<class AActor*> TestDeserialiseActorGroupFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer);
-	static class AActor* TestDeserialiseActorFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer);
-	static void SetServerMigrationTestServerSettings(class UObject* WorldContextObject, const struct FServerSettings& Settings);
-	static void SetServerMigrationTestClientSettings(class UObject* WorldContextObject, const struct FClientSettings& Settings);
-	static void SetPacketSimulationSettings(class UObject* WorldContextObject, int PacketLag, int PacketLagVariance, int PacketLoss);
-	static void ResumeReplication(class AActor* TargetActor);
-	static void RegisterPersistentDynamicActor(class AActor* TargetActor, const class FString& IdentificationName);
-	static void PauseReplication(class AActor* TargetActor, bool bDropUnreliableRPCsWhilePaused);
-	static bool HasActorChannelFromServer(class AActor* TargetActor);
-	static bool ClientsHaveDormantActor(class AActor* TargetActor);
-	static bool ClientsHaveActorChannel(class AActor* TargetActor);
+	void STATIC_WaitWhileMigrationInProgress(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
+	void STATIC_WaitForPendingNetTraffic(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* TargetActor);
+	void STATIC_WaitForMigrationCompletedEvent(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
+	void STATIC_WaitForClientsToHaveActorChannel(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* TargetActor);
+	TArray<unsigned char> STATIC_TestSerialiseActorToBuffer(class AActor* TargetActor);
+	TArray<unsigned char> STATIC_TestSerialiseActorGroupToBuffer(TArray<class AActor*> ActorGroup);
+	class AActor* STATIC_TestDeserialiseActorWithOffsetFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer, const struct FVector& Offset);
+	TArray<class AActor*> STATIC_TestDeserialiseActorGroupWithOffsetFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer, const struct FVector& Offset);
+	TArray<class AActor*> STATIC_TestDeserialiseActorGroupFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer);
+	class AActor* STATIC_TestDeserialiseActorFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer);
+	void STATIC_SetServerMigrationTestServerSettings(class UObject* WorldContextObject, const struct FServerSettings& Settings);
+	void STATIC_SetServerMigrationTestClientSettings(class UObject* WorldContextObject, const struct FClientSettings& Settings);
+	void STATIC_SetPacketSimulationSettings(class UObject* WorldContextObject, int PacketLag, int PacketLagVariance, int PacketLoss);
+	void STATIC_ResumeReplication(class AActor* TargetActor);
+	void STATIC_RegisterPersistentDynamicActor(class AActor* TargetActor, const class FString& IdentificationName);
+	void STATIC_PauseReplication(class AActor* TargetActor, bool bDropUnreliableRPCsWhilePaused);
+	bool STATIC_HasActorChannelFromServer(class AActor* TargetActor);
+	bool STATIC_ClientsHaveDormantActor(class AActor* TargetActor);
+	bool STATIC_ClientsHaveActorChannel(class AActor* TargetActor);
 };
 
 

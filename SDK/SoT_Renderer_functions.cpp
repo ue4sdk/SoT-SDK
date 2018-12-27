@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Renderer_classes.hpp"
+#include "SoT_Renderer_parameters.hpp"
 
 namespace SDK
 {

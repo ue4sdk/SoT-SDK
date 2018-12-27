@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_ActionStateMachine_parameters.hpp"
 
 namespace SDK
 {
@@ -24,14 +24,7 @@ void UActionStateMachineComponent::Server_RequestAction(const struct FActionStat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Server_RequestAction");
 
-	struct
-	{
-		struct FActionStateChangeRequestId InEpochId;
-		struct FActionStateChangeRequestId InRequestId;
-		struct FSerialisedActionStateInfo InSerialisedActionStateConstructionInfo;
-		TEnumAsByte<EActionPredictionType> ClientPredicted;
-	} params;
-
+	UActionStateMachineComponent_Server_RequestAction_Params params;
 	params.InEpochId = InEpochId;
 	params.InRequestId = InRequestId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
@@ -48,10 +41,7 @@ void UActionStateMachineComponent::PostNetInit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.PostNetInit");
 
-	struct
-	{
-	} params;
-
+	UActionStateMachineComponent_PostNetInit_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -64,10 +54,7 @@ void UActionStateMachineComponent::OnNetOwnershipChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.OnNetOwnershipChanged");
 
-	struct
-	{
-	} params;
-
+	UActionStateMachineComponent_OnNetOwnershipChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,12 +70,7 @@ void UActionStateMachineComponent::Multicast_PushSerialisableData(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushSerialisableData");
 
-	struct
-	{
-		struct FActionStateChangeRequestId InEpochId;
-		struct FSerialisedActionStateInfo InSerialisedActionStateSerialisationStateInfo;
-	} params;
-
+	UActionStateMachineComponent_Multicast_PushSerialisableData_Params params;
 	params.InEpochId = InEpochId;
 	params.InSerialisedActionStateSerialisationStateInfo = InSerialisedActionStateSerialisationStateInfo;
 
@@ -106,12 +88,7 @@ void UActionStateMachineComponent::Multicast_PushActionFromRequest(const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushActionFromRequest");
 
-	struct
-	{
-		struct FActionStateChangeRequestId InEpochId;
-		struct FSerialisedActionStateInfo InSerialisedActionStateConstructionInfo;
-	} params;
-
+	UActionStateMachineComponent_Multicast_PushActionFromRequest_Params params;
 	params.InEpochId = InEpochId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
 
@@ -129,12 +106,7 @@ void UActionStateMachineComponent::Multicast_PushAction(const struct FActionStat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushAction");
 
-	struct
-	{
-		struct FActionStateChangeRequestId InEpochId;
-		struct FSerialisedActionStateInfo InSerialisedActionStateConstructionInfo;
-	} params;
-
+	UActionStateMachineComponent_Multicast_PushAction_Params params;
 	params.InEpochId = InEpochId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
 
@@ -149,10 +121,7 @@ void UActionStateMachineComponent::End()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.End");
 
-	struct
-	{
-	} params;
-
+	UActionStateMachineComponent_End_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -167,11 +136,7 @@ void UActionStateMachineComponent::Client_ResetStateMachine(const struct FResetS
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Client_ResetStateMachine");
 
-	struct
-	{
-		struct FResetStateMachineRpc   Rpc;
-	} params;
-
+	UActionStateMachineComponent_Client_ResetStateMachine_Params params;
 	params.Rpc = Rpc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -189,13 +154,7 @@ void UActionStateMachineComponent::Client_CorrectAction(const struct FActionStat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Client_CorrectAction");
 
-	struct
-	{
-		struct FActionStateChangeRequestId InEpochId;
-		struct FActionStateChangeRequestId InRequestId;
-		struct FSerialisedActionStateInfo InSerialisedActionStateConstructionInfo;
-	} params;
-
+	UActionStateMachineComponent_Client_CorrectAction_Params params;
 	params.InEpochId = InEpochId;
 	params.InRequestId = InRequestId;
 	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
@@ -211,22 +170,15 @@ void UActionStateMachineComponent::Client_CorrectAction(const struct FActionStat
 // class UClass*                  StateId                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysPassesExceptForId(class UActionStateMachineComponent* InComponent, class UClass* StateId)
+bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateValidatorThatAlwaysPassesExceptForId(class UActionStateMachineComponent* InComponent, class UClass* StateId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysPassesExceptForId");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		class UClass*                  StateId;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_SetTestStateValidatorThatAlwaysPassesExceptForId_Params params;
 	params.InComponent = InComponent;
 	params.StateId = StateId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -238,20 +190,14 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysP
 // class UActionStateMachineComponent* InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysPasses(class UActionStateMachineComponent* InComponent)
+bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateValidatorThatAlwaysPasses(class UActionStateMachineComponent* InComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysPasses");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_SetTestStateValidatorThatAlwaysPasses_Params params;
 	params.InComponent = InComponent;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -263,20 +209,14 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysP
 // class UActionStateMachineComponent* InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysFails(class UActionStateMachineComponent* InComponent)
+bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateValidatorThatAlwaysFails(class UActionStateMachineComponent* InComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysFails");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_SetTestStateValidatorThatAlwaysFails_Params params;
 	params.InComponent = InComponent;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -288,20 +228,14 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysF
 // class UActionStateMachineComponent* InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::SetTestStateFactoryChangeToNullOnUpdate(class UActionStateMachineComponent* InComponent)
+bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateFactoryChangeToNullOnUpdate(class UActionStateMachineComponent* InComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateFactoryChangeToNullOnUpdate");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_SetTestStateFactoryChangeToNullOnUpdate_Params params;
 	params.InComponent = InComponent;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -313,20 +247,14 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateFactoryChangeToNullO
 // class UActionStateMachineComponent* InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::SetTestStateFactory(class UActionStateMachineComponent* InComponent)
+bool UActionStateMachineComponentTestFunctions::STATIC_SetTestStateFactory(class UActionStateMachineComponent* InComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateFactory");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_SetTestStateFactory_Params params;
 	params.InComponent = InComponent;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -339,22 +267,15 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateFactory(class UActio
 // class UCustomClientValidityCheckCallback* InCallback                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::SetCustomClientValidationTestStateFactory(class UActionStateMachineComponent* InComponent, class UCustomClientValidityCheckCallback* InCallback)
+bool UActionStateMachineComponentTestFunctions::STATIC_SetCustomClientValidationTestStateFactory(class UActionStateMachineComponent* InComponent, class UCustomClientValidityCheckCallback* InCallback)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetCustomClientValidationTestStateFactory");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		class UCustomClientValidityCheckCallback* InCallback;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_SetCustomClientValidationTestStateFactory_Params params;
 	params.InComponent = InComponent;
 	params.InCallback = InCallback;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -369,26 +290,17 @@ bool UActionStateMachineComponentTestFunctions::SetCustomClientValidationTestSta
 // class UClass*                  ServerStateId                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::RequestUnpredictedTestActionStateWithIdOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* ClientStateId, class UClass* ServerStateId)
+bool UActionStateMachineComponentTestFunctions::STATIC_RequestUnpredictedTestActionStateWithIdOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* ClientStateId, class UClass* ServerStateId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestUnpredictedTestActionStateWithIdOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		class UClass*                  ClientStateId;
-		class UClass*                  ServerStateId;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_RequestUnpredictedTestActionStateWithIdOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 	params.ClientStateId = ClientStateId;
 	params.ServerStateId = ServerStateId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -402,24 +314,16 @@ bool UActionStateMachineComponentTestFunctions::RequestUnpredictedTestActionStat
 // class UClass*                  StateId                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::RequestTestActionStateWithIdOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId)
+bool UActionStateMachineComponentTestFunctions::STATIC_RequestTestActionStateWithIdOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestTestActionStateWithIdOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		class UClass*                  StateId;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_RequestTestActionStateWithIdOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 	params.StateId = StateId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -432,22 +336,15 @@ bool UActionStateMachineComponentTestFunctions::RequestTestActionStateWithIdOnTr
 // TEnumAsByte<EActionStateMachineTrackId> TrackId                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::RequestNullActionStateOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId)
+bool UActionStateMachineComponentTestFunctions::STATIC_RequestNullActionStateOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestNullActionStateOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_RequestNullActionStateOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -461,25 +358,17 @@ bool UActionStateMachineComponentTestFunctions::RequestNullActionStateOnTrack(cl
 // class UClass*                  StateId                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            DataValue                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UActionStateMachineComponentTestFunctions::PushTestActionStateSerialisableDataOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId, int DataValue)
+void UActionStateMachineComponentTestFunctions::STATIC_PushTestActionStateSerialisableDataOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId, int DataValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.PushTestActionStateSerialisableDataOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		class UClass*                  StateId;
-		int                            DataValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_PushTestActionStateSerialisableDataOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 	params.StateId = StateId;
 	params.DataValue = DataValue;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -491,24 +380,16 @@ void UActionStateMachineComponentTestFunctions::PushTestActionStateSerialisableD
 // class UClass*                  StateId                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::IsActionStateTypeActiveOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId)
+bool UActionStateMachineComponentTestFunctions::STATIC_IsActionStateTypeActiveOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.IsActionStateTypeActiveOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		class UClass*                  StateId;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_IsActionStateTypeActiveOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 	params.StateId = StateId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -521,22 +402,15 @@ bool UActionStateMachineComponentTestFunctions::IsActionStateTypeActiveOnTrack(c
 // TEnumAsByte<EActionStateMachineTrackId> TrackId                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClass* UActionStateMachineComponentTestFunctions::GetTypeOfActionStateActiveOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId)
+class UClass* UActionStateMachineComponentTestFunctions::STATIC_GetTypeOfActionStateActiveOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.GetTypeOfActionStateActiveOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		class UClass*                  ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_GetTypeOfActionStateActiveOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -550,23 +424,15 @@ class UClass* UActionStateMachineComponentTestFunctions::GetTypeOfActionStateAct
 // struct FTestActionStateSerialisableData Data                           (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UActionStateMachineComponentTestFunctions::GetTestActionStateSerialisableDataOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, struct FTestActionStateSerialisableData* Data)
+bool UActionStateMachineComponentTestFunctions::STATIC_GetTestActionStateSerialisableDataOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, struct FTestActionStateSerialisableData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.GetTestActionStateSerialisableDataOnTrack");
 
-	struct
-	{
-		class UActionStateMachineComponent* InComponent;
-		TEnumAsByte<EActionStateMachineTrackId> TrackId;
-		struct FTestActionStateSerialisableData Data;
-		bool                           ReturnValue;
-	} params;
-
+	UActionStateMachineComponentTestFunctions_GetTestActionStateSerialisableDataOnTrack_Params params;
 	params.InComponent = InComponent;
 	params.TrackId = TrackId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Data != nullptr)
 		*Data = params.Data;
@@ -580,18 +446,13 @@ bool UActionStateMachineComponentTestFunctions::GetTestActionStateSerialisableDa
 // Parameters:
 // class UCustomClientValidityCheckCallback* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCustomClientValidityCheckCallback* UActionStateMachineComponentTestFunctions::CreateCustomClientValidityCheckCallback()
+class UCustomClientValidityCheckCallback* UActionStateMachineComponentTestFunctions::STATIC_CreateCustomClientValidityCheckCallback()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.CreateCustomClientValidityCheckCallback");
 
-	struct
-	{
-		class UCustomClientValidityCheckCallback* ReturnValue;
-	} params;
+	UActionStateMachineComponentTestFunctions_CreateCustomClientValidityCheckCallback_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -605,23 +466,15 @@ class UCustomClientValidityCheckCallback* UActionStateMachineComponentTestFuncti
 // class UClass*                  InStateB                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EActionStatePriority> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EActionStatePriority> UActionStatePriorityTableUtility::GetPriority(class UClass* InStateA, class UClass* InStateB, struct FActionStatePriorityTable* PriorityTable)
+TEnumAsByte<EActionStatePriority> UActionStatePriorityTableUtility::STATIC_GetPriority(class UClass* InStateA, class UClass* InStateB, struct FActionStatePriorityTable* PriorityTable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStatePriorityTableUtility.GetPriority");
 
-	struct
-	{
-		struct FActionStatePriorityTable PriorityTable;
-		class UClass*                  InStateA;
-		class UClass*                  InStateB;
-		TEnumAsByte<EActionStatePriority> ReturnValue;
-	} params;
-
+	UActionStatePriorityTableUtility_GetPriority_Params params;
 	params.InStateA = InStateA;
 	params.InStateB = InStateB;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (PriorityTable != nullptr)
 		*PriorityTable = params.PriorityTable;
@@ -636,20 +489,14 @@ TEnumAsByte<EActionStatePriority> UActionStatePriorityTableUtility::GetPriority(
 // class UActionStatePriorityTableData* Data                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FActionStatePriorityTable ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FActionStatePriorityTable UActionStatePriorityTableUtility::CreatePriorityTable(class UActionStatePriorityTableData* Data)
+struct FActionStatePriorityTable UActionStatePriorityTableUtility::STATIC_CreatePriorityTable(class UActionStatePriorityTableData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStatePriorityTableUtility.CreatePriorityTable");
 
-	struct
-	{
-		class UActionStatePriorityTableData* Data;
-		struct FActionStatePriorityTable ReturnValue;
-	} params;
-
+	UActionStatePriorityTableUtility_CreatePriorityTable_Params params;
 	params.Data = Data;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -661,20 +508,14 @@ struct FActionStatePriorityTable UActionStatePriorityTableUtility::CreatePriorit
 // struct FSerialisedActionStateInfo TestStruct                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USerialisedActionStateConstructionInfoTestFunctions::IsValid(const struct FSerialisedActionStateInfo& TestStruct)
+bool USerialisedActionStateConstructionInfoTestFunctions::STATIC_IsValid(const struct FSerialisedActionStateInfo& TestStruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.IsValid");
 
-	struct
-	{
-		struct FSerialisedActionStateInfo TestStruct;
-		bool                           ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_IsValid_Params params;
 	params.TestStruct = TestStruct;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -686,20 +527,14 @@ bool USerialisedActionStateConstructionInfoTestFunctions::IsValid(const struct F
 // struct FSerialisedActionStateInfo TestStruct                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInfoWithInner(const struct FSerialisedActionStateInfo& TestStruct)
+bool USerialisedActionStateConstructionInfoTestFunctions::STATIC_HasTestConstructionInfoWithInner(const struct FSerialisedActionStateInfo& TestStruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.HasTestConstructionInfoWithInner");
 
-	struct
-	{
-		struct FSerialisedActionStateInfo TestStruct;
-		bool                           ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_HasTestConstructionInfoWithInner_Params params;
 	params.TestStruct = TestStruct;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -711,20 +546,14 @@ bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInf
 // struct FSerialisedActionStateInfo TestStruct                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInfo(const struct FSerialisedActionStateInfo& TestStruct)
+bool USerialisedActionStateConstructionInfoTestFunctions::STATIC_HasTestConstructionInfo(const struct FSerialisedActionStateInfo& TestStruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.HasTestConstructionInfo");
 
-	struct
-	{
-		struct FSerialisedActionStateInfo TestStruct;
-		bool                           ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_HasTestConstructionInfo_Params params;
 	params.TestStruct = TestStruct;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -736,20 +565,14 @@ bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInf
 // struct FSerialisedActionStateInfo TestStruct                     (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FTestActionStateConstructionInfoWithInner ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FTestActionStateConstructionInfoWithInner USerialisedActionStateConstructionInfoTestFunctions::GetTestConstructionInfoWithInner(const struct FSerialisedActionStateInfo& TestStruct)
+struct FTestActionStateConstructionInfoWithInner USerialisedActionStateConstructionInfoTestFunctions::STATIC_GetTestConstructionInfoWithInner(const struct FSerialisedActionStateInfo& TestStruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.GetTestConstructionInfoWithInner");
 
-	struct
-	{
-		struct FSerialisedActionStateInfo TestStruct;
-		struct FTestActionStateConstructionInfoWithInner ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_GetTestConstructionInfoWithInner_Params params;
 	params.TestStruct = TestStruct;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -761,20 +584,14 @@ struct FTestActionStateConstructionInfoWithInner USerialisedActionStateConstruct
 // struct FSerialisedActionStateInfo TestStruct                     (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FTestActionStateConstructionInfo ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FTestActionStateConstructionInfo USerialisedActionStateConstructionInfoTestFunctions::GetTestConstructionInfo(const struct FSerialisedActionStateInfo& TestStruct)
+struct FTestActionStateConstructionInfo USerialisedActionStateConstructionInfoTestFunctions::STATIC_GetTestConstructionInfo(const struct FSerialisedActionStateInfo& TestStruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.GetTestConstructionInfo");
 
-	struct
-	{
-		struct FSerialisedActionStateInfo TestStruct;
-		struct FTestActionStateConstructionInfo ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_GetTestConstructionInfo_Params params;
 	params.TestStruct = TestStruct;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -787,22 +604,15 @@ struct FTestActionStateConstructionInfo USerialisedActionStateConstructionInfoTe
 // int                            IntProp                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FSerialisedActionStateInfo ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::CreateTestSerialisableData(class UClass* Id, int IntProp)
+struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::STATIC_CreateTestSerialisableData(class UClass* Id, int IntProp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestSerialisableData");
 
-	struct
-	{
-		class UClass*                  Id;
-		int                            IntProp;
-		struct FSerialisedActionStateInfo ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_CreateTestSerialisableData_Params params;
 	params.Id = Id;
 	params.IntProp = IntProp;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -817,26 +627,17 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 // class FString                  StringProp                     (Parm, ZeroConstructor)
 // struct FSerialisedActionStateInfo ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::CreateTestConstructionInfoWithInner(class UClass* Id, float FloatProp, bool BoolProp, const class FString& StringProp)
+struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::STATIC_CreateTestConstructionInfoWithInner(class UClass* Id, float FloatProp, bool BoolProp, const class FString& StringProp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestConstructionInfoWithInner");
 
-	struct
-	{
-		class UClass*                  Id;
-		float                          FloatProp;
-		bool                           BoolProp;
-		class FString                  StringProp;
-		struct FSerialisedActionStateInfo ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_CreateTestConstructionInfoWithInner_Params params;
 	params.Id = Id;
 	params.FloatProp = FloatProp;
 	params.BoolProp = BoolProp;
 	params.StringProp = StringProp;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -849,22 +650,15 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 // int                            IntProp                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FSerialisedActionStateInfo ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::CreateTestConstructionInfo(class UClass* Id, int IntProp)
+struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::STATIC_CreateTestConstructionInfo(class UClass* Id, int IntProp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestConstructionInfo");
 
-	struct
-	{
-		class UClass*                  Id;
-		int                            IntProp;
-		struct FSerialisedActionStateInfo ReturnValue;
-	} params;
-
+	USerialisedActionStateConstructionInfoTestFunctions_CreateTestConstructionInfo_Params params;
 	params.Id = Id;
 	params.IntProp = IntProp;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

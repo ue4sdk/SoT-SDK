@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AncientChest_Wieldable_classes.hpp"
+#include "SoT_BP_AncientChest_Wieldable_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_AncientChest_Wieldable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AncientChest_Wieldable.BP_AncientChest_Wieldable_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_AncientChest_Wieldable_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

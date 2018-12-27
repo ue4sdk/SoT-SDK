@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Rudder_SmallShip_classes.hpp"
+#include "SoT_BP_Rudder_SmallShip_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Rudder_SmallShip_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rudder_SmallShip.BP_Rudder_SmallShip_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_Rudder_SmallShip_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

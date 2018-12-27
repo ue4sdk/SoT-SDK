@@ -7,25 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_EFlyingCreatures_enums.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// UserDefinedEnum EFlyingCreatures.EFlyingCreatures
-enum class EFlyingCreatures : uint8_t
-{
-	EFlyingCreatures__NewEnumerator8 = 0,
-	EFlyingCreatures__NewEnumerator6 = 1,
-	EFlyingCreatures__NewEnumerator7 = 2,
-	EFlyingCreatures__NewEnumerator4 = 3,
-	EFlyingCreatures__EFlyingCreatures_MAX = 4
-};
-
-
-
 }
 
 #ifdef _MSC_VER

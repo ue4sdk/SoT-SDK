@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_HullDamage_classes.hpp"
+#include "SoT_BP_HullDamage_parameters.hpp"
 
 namespace SDK
 {
@@ -25,15 +25,7 @@ void ABP_HullDamage_C::Apply_Hit(const struct FVector& HitPosition, const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Apply Hit");
 
-	struct
-	{
-		struct FVector                 HitPosition;
-		struct FVector                 HitNormal;
-		float                          HitStrength;
-		bool                           Has_Decal;
-		class UDecalComponent*         Decal;
-	} params;
-
+	ABP_HullDamage_C_Apply_Hit_Params params;
 	params.HitPosition = HitPosition;
 	params.HitNormal = HitNormal;
 	params.HitStrength = HitStrength;
@@ -56,12 +48,7 @@ void ABP_HullDamage_C::PlayHitSFX(const struct FVector& HitLocation, float HitSt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.PlayHitSFX");
 
-	struct
-	{
-		struct FVector                 HitLocation;
-		float                          HitStrenght;
-	} params;
-
+	ABP_HullDamage_C_PlayHitSFX_Params params;
 	params.HitLocation = HitLocation;
 	params.HitStrenght = HitStrenght;
 
@@ -82,15 +69,7 @@ void ABP_HullDamage_C::Apply_Visual_Hit(const struct FVector& HitPosition, const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Apply Visual Hit");
 
-	struct
-	{
-		struct FVector                 HitPosition;
-		struct FVector                 HitNormal;
-		float                          HitStrength;
-		bool                           HasDecal;
-		class UDecalComponent*         Decal;
-	} params;
-
+	ABP_HullDamage_C_Apply_Visual_Hit_Params params;
 	params.HitPosition = HitPosition;
 	params.HitNormal = HitNormal;
 	params.HitStrength = HitStrength;
@@ -117,16 +96,7 @@ void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVect
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Process Hit");
 
-	struct
-	{
-		class UClass*                  DamagerType;
-		struct FVector                 HitPosition;
-		struct FVector                 HitNormal;
-		struct FVector                 HitVelocity;
-		int                            NumDamageZones;
-		int                            LevelOfDamage;
-	} params;
-
+	ABP_HullDamage_C_Process_Hit_Params params;
 	params.DamagerType = DamagerType;
 	params.HitPosition = HitPosition;
 	params.HitNormal = HitNormal;
@@ -151,15 +121,7 @@ void ABP_HullDamage_C::Scale_Hit_Strength_and_Get_Decal_Flag(const struct FVecto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Scale Hit Strength and Get Decal Flag");
 
-	struct
-	{
-		struct FVector                 Hit_Normal;
-		struct FVector                 Hit_Velocity;
-		float                          Hit_Strength;
-		float                          Strength;
-		bool                           HasDecal;
-	} params;
-
+	ABP_HullDamage_C_Scale_Hit_Strength_and_Get_Decal_Flag_Params params;
 	params.Hit_Normal = Hit_Normal;
 	params.Hit_Velocity = Hit_Velocity;
 	params.Hit_Strength = Hit_Strength;
@@ -182,11 +144,7 @@ void ABP_HullDamage_C::Get_Random_Deferred_Decal(class UMaterialInterface** Deca
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Get Random Deferred Decal");
 
-	struct
-	{
-		class UMaterialInterface*      Decal_Material;
-	} params;
-
+	ABP_HullDamage_C_Get_Random_Deferred_Decal_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,11 +162,7 @@ void ABP_HullDamage_C::Get_Random_Persistent_Decal(class UTexture2D** Decal_Text
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Get Random Persistent Decal");
 
-	struct
-	{
-		class UTexture2D*              Decal_Texture;
-	} params;
-
+	ABP_HullDamage_C_Get_Random_Persistent_Decal_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,16 +185,7 @@ void ABP_HullDamage_C::Add_Hit_To_HitList(const struct FVector& HitPosition, con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Add Hit To HitList");
 
-	struct
-	{
-		struct FVector                 HitPosition;
-		struct FVector                 Hit_Normal;
-		float                          HitStrength;
-		bool                           HasDecal;
-		class AActor*                  DamageZone;
-		int                            HitLevel;
-	} params;
-
+	ABP_HullDamage_C_Add_Hit_To_HitList_Params params;
 	params.HitPosition = HitPosition;
 	params.Hit_Normal = Hit_Normal;
 	params.HitStrength = HitStrength;
@@ -261,11 +206,7 @@ void ABP_HullDamage_C::Initialize_Damage_Materials(TArray<class UStaticMeshCompo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Initialize Damage Materials");
 
-	struct
-	{
-		TArray<class UStaticMeshComponent*> StaticMeshes;
-	} params;
-
+	ABP_HullDamage_C_Initialize_Damage_Materials_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -281,10 +222,7 @@ void ABP_HullDamage_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_HullDamage_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -297,10 +235,7 @@ void ABP_HullDamage_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_HullDamage_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -315,11 +250,7 @@ void ABP_HullDamage_C::BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_ImpactDamageEventDelegate__DelegateSignature");
 
-	struct
-	{
-		struct FImpactDamageEvent      ImpactDamageEvent;
-	} params;
-
+	ABP_HullDamage_C_BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_ImpactDamageEventDelegate__DelegateSignature_Params params;
 	params.ImpactDamageEvent = ImpactDamageEvent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -335,11 +266,7 @@ void ABP_HullDamage_C::ExecuteUbergraph_BP_HullDamage(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.ExecuteUbergraph_BP_HullDamage");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_HullDamage_C_ExecuteUbergraph_BP_HullDamage_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

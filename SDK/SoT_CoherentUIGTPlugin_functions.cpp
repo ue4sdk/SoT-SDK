@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CoherentUIGTPlugin_classes.hpp"
+#include "SoT_CoherentUIGTPlugin_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromStruct(class UStructPro
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.UpdateWholeDataModelFromStruct");
 
-	struct
-	{
-		class UStructProperty*         Arg;
-	} params;
-
+	UCoherentUIGTBaseComponent_UpdateWholeDataModelFromStruct_Params params;
 	params.Arg = Arg;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromObject(class UObject* M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.UpdateWholeDataModelFromObject");
 
-	struct
-	{
-		class UObject*                 Model;
-	} params;
-
+	UCoherentUIGTBaseComponent_UpdateWholeDataModelFromObject_Params params;
 	params.Model = Model;
 
 	UObject::ProcessEvent(fn, &params);
@@ -62,12 +54,7 @@ void UCoherentUIGTBaseComponent::TriggerJSEvent(const class FString& Name, class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.TriggerJSEvent");
 
-	struct
-	{
-		class FString                  Name;
-		class UCoherentUIGTJSEvent*    EventData;
-	} params;
-
+	UCoherentUIGTBaseComponent_TriggerJSEvent_Params params;
 	params.Name = Name;
 	params.EventData = EventData;
 
@@ -82,10 +69,7 @@ void UCoherentUIGTBaseComponent::SynchronizeModels()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SynchronizeModels");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTBaseComponent_SynchronizeModels_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -100,11 +84,7 @@ void UCoherentUIGTBaseComponent::ShowPaintRects(bool show)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.ShowPaintRects");
 
-	struct
-	{
-		bool                           show;
-	} params;
-
+	UCoherentUIGTBaseComponent_ShowPaintRects_Params params;
 	params.show = show;
 
 	UObject::ProcessEvent(fn, &params);
@@ -120,11 +100,7 @@ void UCoherentUIGTBaseComponent::SetClickThroughAlphaThreshold(float Threshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SetClickThroughAlphaThreshold");
 
-	struct
-	{
-		float                          Threshold;
-	} params;
-
+	UCoherentUIGTBaseComponent_SetClickThroughAlphaThreshold_Params params;
 	params.Threshold = Threshold;
 
 	UObject::ProcessEvent(fn, &params);
@@ -141,12 +117,7 @@ void UCoherentUIGTBaseComponent::Resize(int Width, int Height)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Resize");
 
-	struct
-	{
-		int                            Width;
-		int                            Height;
-	} params;
-
+	UCoherentUIGTBaseComponent_Resize_Params params;
 	params.Width = Width;
 	params.Height = Height;
 
@@ -161,10 +132,7 @@ void UCoherentUIGTBaseComponent::Reload()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Reload");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTBaseComponent_Reload_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -177,10 +145,7 @@ void UCoherentUIGTBaseComponent::Redraw()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Redraw");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTBaseComponent_Redraw_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -195,11 +160,7 @@ void UCoherentUIGTBaseComponent::Load(const class FString& path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Load");
 
-	struct
-	{
-		class FString                  path;
-	} params;
-
+	UCoherentUIGTBaseComponent_Load_Params params;
 	params.path = path;
 
 	UObject::ProcessEvent(fn, &params);
@@ -215,11 +176,7 @@ bool UCoherentUIGTBaseComponent::IsTransparent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsTransparent");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_IsTransparent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,11 +193,7 @@ bool UCoherentUIGTBaseComponent::IsReadyToCreateView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyToCreateView");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_IsReadyToCreateView_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,11 +210,7 @@ bool UCoherentUIGTBaseComponent::IsReadyForBindings()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyForBindings");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_IsReadyForBindings_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,11 +227,7 @@ bool UCoherentUIGTBaseComponent::IsDocumentReady()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsDocumentReady");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_IsDocumentReady_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,11 +244,7 @@ bool UCoherentUIGTBaseComponent::HasRequestedView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.HasRequestedView");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_HasRequestedView_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,11 +261,7 @@ float UCoherentUIGTBaseComponent::GetClickThroughAlphaThreshold()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.GetClickThroughAlphaThreshold");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_GetClickThroughAlphaThreshold_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,10 +276,7 @@ void UCoherentUIGTBaseComponent::EndDebugFrameSave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EndDebugFrameSave");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTBaseComponent_EndDebugFrameSave_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -357,11 +291,7 @@ void UCoherentUIGTBaseComponent::EnableDelayedUpdate(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EnableDelayedUpdate");
 
-	struct
-	{
-		bool                           bEnabled;
-	} params;
-
+	UCoherentUIGTBaseComponent_EnableDelayedUpdate_Params params;
 	params.bEnabled = bEnabled;
 
 	UObject::ProcessEvent(fn, &params);
@@ -375,10 +305,7 @@ void UCoherentUIGTBaseComponent::DebugSaveNextFrame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.DebugSaveNextFrame");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTBaseComponent_DebugSaveNextFrame_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -393,11 +320,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBaseComponent::CreateJSEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateJSEvent");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    ReturnValue;
-	} params;
-
+	UCoherentUIGTBaseComponent_CreateJSEvent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -415,12 +338,7 @@ void UCoherentUIGTBaseComponent::CreateDataModelFromStruct(const class FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateDataModelFromStruct");
 
-	struct
-	{
-		class FString                  Name;
-		class UStructProperty*         Arg;
-	} params;
-
+	UCoherentUIGTBaseComponent_CreateDataModelFromStruct_Params params;
 	params.Name = Name;
 	params.Arg = Arg;
 
@@ -438,12 +356,7 @@ void UCoherentUIGTBaseComponent::CreateDataModelFromObject(const class FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateDataModelFromObject");
 
-	struct
-	{
-		class FString                  Name;
-		class UObject*                 Model;
-	} params;
-
+	UCoherentUIGTBaseComponent_CreateDataModelFromObject_Params params;
 	params.Name = Name;
 	params.Model = Model;
 
@@ -458,10 +371,7 @@ void UCoherentUIGTBaseComponent::BeginDebugFrameSave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.BeginDebugFrameSave");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTBaseComponent_BeginDebugFrameSave_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -479,14 +389,7 @@ void UCoherentUIGTLiveView::OnLiveViewSizeRequest(class UCoherentUIGTBaseCompone
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTLiveView.OnLiveViewSizeRequest");
 
-	struct
-	{
-		class UCoherentUIGTBaseComponent* BaseComponent;
-		class FString                  Name;
-		int                            Width;
-		int                            Height;
-	} params;
-
+	UCoherentUIGTLiveView_OnLiveViewSizeRequest_Params params;
 	params.BaseComponent = BaseComponent;
 	params.Name = Name;
 
@@ -508,11 +411,7 @@ void UCoherentUIGTJSEvent::AddStructArg(class UStructProperty* Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddStructArg");
 
-	struct
-	{
-		class UStructProperty*         Arg;
-	} params;
-
+	UCoherentUIGTJSEvent_AddStructArg_Params params;
 	params.Arg = Arg;
 
 	UObject::ProcessEvent(fn, &params);
@@ -528,11 +427,7 @@ void UCoherentUIGTJSEvent::AddString(const class FString& Str)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddString");
 
-	struct
-	{
-		class FString                  Str;
-	} params;
-
+	UCoherentUIGTJSEvent_AddString_Params params;
 	params.Str = Str;
 
 	UObject::ProcessEvent(fn, &params);
@@ -548,11 +443,7 @@ void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddObject");
 
-	struct
-	{
-		class UObject*                 Object;
-	} params;
-
+	UCoherentUIGTJSEvent_AddObject_Params params;
 	params.Object = Object;
 
 	UObject::ProcessEvent(fn, &params);
@@ -568,11 +459,7 @@ void UCoherentUIGTJSEvent::AddInt32(int integer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddInt32");
 
-	struct
-	{
-		int                            integer;
-	} params;
-
+	UCoherentUIGTJSEvent_AddInt32_Params params;
 	params.integer = integer;
 
 	UObject::ProcessEvent(fn, &params);
@@ -588,11 +475,7 @@ void UCoherentUIGTJSEvent::AddFloat(float fl)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddFloat");
 
-	struct
-	{
-		float                          fl;
-	} params;
-
+	UCoherentUIGTJSEvent_AddFloat_Params params;
 	params.fl = fl;
 
 	UObject::ProcessEvent(fn, &params);
@@ -608,11 +491,7 @@ void UCoherentUIGTJSEvent::AddByte(unsigned char byte)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddByte");
 
-	struct
-	{
-		unsigned char                  byte;
-	} params;
-
+	UCoherentUIGTJSEvent_AddByte_Params params;
 	params.byte = byte;
 
 	UObject::ProcessEvent(fn, &params);
@@ -628,11 +507,7 @@ void UCoherentUIGTJSEvent::AddBool(bool B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddBool");
 
-	struct
-	{
-		bool                           B;
-	} params;
-
+	UCoherentUIGTJSEvent_AddBool_Params params;
 	params.B = B;
 
 	UObject::ProcessEvent(fn, &params);
@@ -648,11 +523,7 @@ void UCoherentUIGTJSEvent::AddArray(TArray<int> Array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddArray");
 
-	struct
-	{
-		TArray<int>                    Array;
-	} params;
-
+	UCoherentUIGTJSEvent_AddArray_Params params;
 	params.Array = Array;
 
 	UObject::ProcessEvent(fn, &params);
@@ -669,12 +540,7 @@ void UCoherentUIGTJSPayload::ReadObject(int Index, class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.ReadObject");
 
-	struct
-	{
-		int                            Index;
-		class UObject*                 Object;
-	} params;
-
+	UCoherentUIGTJSPayload_ReadObject_Params params;
 	params.Index = Index;
 	params.Object = Object;
 
@@ -692,12 +558,7 @@ class FString UCoherentUIGTJSPayload::GetString(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetString");
 
-	struct
-	{
-		int                            Index;
-		class FString                  ReturnValue;
-	} params;
-
+	UCoherentUIGTJSPayload_GetString_Params params;
 	params.Index = Index;
 
 	UObject::ProcessEvent(fn, &params);
@@ -716,12 +577,7 @@ float UCoherentUIGTJSPayload::GetNumber(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetNumber");
 
-	struct
-	{
-		int                            Index;
-		float                          ReturnValue;
-	} params;
-
+	UCoherentUIGTJSPayload_GetNumber_Params params;
 	params.Index = Index;
 
 	UObject::ProcessEvent(fn, &params);
@@ -740,12 +596,7 @@ int UCoherentUIGTJSPayload::GetInt32(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetInt32");
 
-	struct
-	{
-		int                            Index;
-		int                            ReturnValue;
-	} params;
-
+	UCoherentUIGTJSPayload_GetInt32_Params params;
 	params.Index = Index;
 
 	UObject::ProcessEvent(fn, &params);
@@ -764,12 +615,7 @@ bool UCoherentUIGTJSPayload::GetBool(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetBool");
 
-	struct
-	{
-		int                            Index;
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTJSPayload_GetBool_Params params;
 	params.Index = Index;
 
 	UObject::ProcessEvent(fn, &params);
@@ -785,23 +631,16 @@ bool UCoherentUIGTJSPayload::GetBool(int Index)
 // class FString                  EventName                      (Parm, ZeroConstructor)
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::TriggerJSEvent(class UCoherentUIGTBaseComponent* Component, const class FString& EventName, class UCoherentUIGTJSEvent* JSEvent)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_TriggerJSEvent(class UCoherentUIGTBaseComponent* Component, const class FString& EventName, class UCoherentUIGTJSEvent* JSEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.TriggerJSEvent");
 
-	struct
-	{
-		class UCoherentUIGTBaseComponent* Component;
-		class FString                  EventName;
-		class UCoherentUIGTJSEvent*    JSEvent;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_TriggerJSEvent_Params params;
 	params.Component = Component;
 	params.EventName = EventName;
 	params.JSEvent = JSEvent;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -811,21 +650,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::TriggerJSEvent(class UCoherentUIGTBa
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FCoherentUIGTLoadingScreenSettings Settings                       (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UCoherentUIGTBlueprintFunctionLibrary::SetupLoadingScreen(class UObject* WorldContextObject, const struct FCoherentUIGTLoadingScreenSettings& Settings)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_SetupLoadingScreen(class UObject* WorldContextObject, const struct FCoherentUIGTLoadingScreenSettings& Settings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.SetupLoadingScreen");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FCoherentUIGTLoadingScreenSettings Settings;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_SetupLoadingScreen_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.Settings = Settings;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -835,20 +668,14 @@ void UCoherentUIGTBlueprintFunctionLibrary::SetupLoadingScreen(class UObject* Wo
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class UCoherentUIGTJSEvent*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::CreateJSEvent(class UObject* WorldContextObject)
+class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::STATIC_CreateJSEvent(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.CreateJSEvent");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UCoherentUIGTJSEvent*    ReturnValue;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_CreateJSEvent_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -860,21 +687,15 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::CreateJSEvent
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UStructProperty*         Arg                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddStructArg(class UCoherentUIGTJSEvent* JSEvent, class UStructProperty* Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddStructArg(class UCoherentUIGTJSEvent* JSEvent, class UStructProperty* Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddStructArg");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		class UStructProperty*         Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddStructArg_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -884,21 +705,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddStructArg(class UCoherentUIGTJSEv
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  Arg                            (Parm, ZeroConstructor)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddString(class UCoherentUIGTJSEvent* JSEvent, const class FString& Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddString(class UCoherentUIGTJSEvent* JSEvent, const class FString& Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddString");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		class FString                  Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddString_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -908,21 +723,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddString(class UCoherentUIGTJSEvent
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Arg                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddObject(class UCoherentUIGTJSEvent* JSEvent, class UObject* Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddObject(class UCoherentUIGTJSEvent* JSEvent, class UObject* Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddObject");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		class UObject*                 Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddObject_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -932,21 +741,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddObject(class UCoherentUIGTJSEvent
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Arg                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddInt32(class UCoherentUIGTJSEvent* JSEvent, int Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddInt32(class UCoherentUIGTJSEvent* JSEvent, int Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddInt32");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		int                            Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddInt32_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -956,21 +759,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddInt32(class UCoherentUIGTJSEvent*
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Arg                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddFloat(class UCoherentUIGTJSEvent* JSEvent, float Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddFloat(class UCoherentUIGTJSEvent* JSEvent, float Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddFloat");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		float                          Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddFloat_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -980,21 +777,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddFloat(class UCoherentUIGTJSEvent*
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  Arg                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddByte(class UCoherentUIGTJSEvent* JSEvent, unsigned char Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddByte(class UCoherentUIGTJSEvent* JSEvent, unsigned char Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddByte");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		unsigned char                  Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddByte_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1004,21 +795,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddByte(class UCoherentUIGTJSEvent* 
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Arg                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddBool(class UCoherentUIGTJSEvent* JSEvent, bool Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddBool(class UCoherentUIGTJSEvent* JSEvent, bool Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddBool");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		bool                           Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddBool_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1028,21 +813,15 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddBool(class UCoherentUIGTJSEvent* 
 // class UCoherentUIGTJSEvent*    JSEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    Arg                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddArrayOfStructs(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArrayOfStructs(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArrayOfStructs");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		TArray<int>                    Arg;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddArrayOfStructs_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1053,23 +832,16 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddArrayOfStructs(class UCoherentUIG
 // TArray<int>                    Arg                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            ArrayType                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCoherentUIGTBlueprintFunctionLibrary::AddArray(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg, int ArrayType)
+void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArray(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg, int ArrayType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArray");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    JSEvent;
-		TArray<int>                    Arg;
-		int                            ArrayType;
-	} params;
-
+	UCoherentUIGTBlueprintFunctionLibrary_AddArray_Params params;
 	params.JSEvent = JSEvent;
 	params.Arg = Arg;
 	params.ArrayType = ArrayType;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1086,15 +858,7 @@ void ACoherentUIGTGameHUD::SetupUIGTView(const class FString& PageUrl, bool bIsT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTGameHUD.SetupUIGTView");
 
-	struct
-	{
-		class FString                  PageUrl;
-		bool                           bIsTransparent;
-		float                          ClickThroughAlphaThreshold;
-		float                          AnimationFrameDefer;
-		bool                           bDelayedUpdate;
-	} params;
-
+	ACoherentUIGTGameHUD_SetupUIGTView_Params params;
 	params.PageUrl = PageUrl;
 	params.bIsTransparent = bIsTransparent;
 	params.ClickThroughAlphaThreshold = ClickThroughAlphaThreshold;
@@ -1112,10 +876,7 @@ void ACoherentUIGTInputActor::ToggleCoherentUIGTInputFocus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.ToggleCoherentUIGTInputFocus");
 
-	struct
-	{
-	} params;
-
+	ACoherentUIGTInputActor_ToggleCoherentUIGTInputFocus_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1130,11 +891,7 @@ void ACoherentUIGTInputActor::SetLineTraceMode(TEnumAsByte<EGTInputWidgetLineTra
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetLineTraceMode");
 
-	struct
-	{
-		TEnumAsByte<EGTInputWidgetLineTraceMode> Mode;
-	} params;
-
+	ACoherentUIGTInputActor_SetLineTraceMode_Params params;
 	params.Mode = Mode;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1150,11 +907,7 @@ void ACoherentUIGTInputActor::SetInputPropagationBehaviour(TEnumAsByte<ECoherent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetInputPropagationBehaviour");
 
-	struct
-	{
-		TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> Propagation;
-	} params;
-
+	ACoherentUIGTInputActor_SetInputPropagationBehaviour_Params params;
 	params.Propagation = Propagation;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1170,11 +923,7 @@ void ACoherentUIGTInputActor::SetCoherentUIGTViewFocus(class UCoherentUIGTBaseCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTViewFocus");
 
-	struct
-	{
-		class UCoherentUIGTBaseComponent* NewFocusedView;
-	} params;
-
+	ACoherentUIGTInputActor_SetCoherentUIGTViewFocus_Params params;
 	params.NewFocusedView = NewFocusedView;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1190,11 +939,7 @@ void ACoherentUIGTInputActor::SetCoherentUIGTInputFocus(bool FocusUI)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTInputFocus");
 
-	struct
-	{
-		bool                           FocusUI;
-	} params;
-
+	ACoherentUIGTInputActor_SetCoherentUIGTInputFocus_Params params;
 	params.FocusUI = FocusUI;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1210,11 +955,7 @@ bool ACoherentUIGTInputActor::IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATE
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ACoherentUIGTInputActor_IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1231,11 +972,7 @@ bool ACoherentUIGTInputActor::IsCoherentUIGTFocused()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsCoherentUIGTFocused");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ACoherentUIGTInputActor_IsCoherentUIGTFocused_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1255,14 +992,7 @@ void ACoherentUIGTInputActor::Initialize(TEnumAsByte<ECollisionChannel> Collisio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.Initialize");
 
-	struct
-	{
-		TEnumAsByte<ECollisionChannel> CollisionChannel;
-		TEnumAsByte<ETextureAddress>   AddressMode;
-		TEnumAsByte<EGTInputWidgetRaycastQuality> RaycastQuality;
-		int                            UVChannel;
-	} params;
-
+	ACoherentUIGTInputActor_Initialize_Params params;
 	params.CollisionChannel = CollisionChannel;
 	params.AddressMode = AddressMode;
 	params.RaycastQuality = RaycastQuality;
@@ -1281,11 +1011,7 @@ TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> ACoherentUIGTInputActor::Get
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.GetInputPropagationBehaviour");
 
-	struct
-	{
-		TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> ReturnValue;
-	} params;
-
+	ACoherentUIGTInputActor_GetInputPropagationBehaviour_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1302,11 +1028,7 @@ void ACoherentUIGTInputActor::AlwaysAcceptMouseInput(bool bAccept)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.AlwaysAcceptMouseInput");
 
-	struct
-	{
-		bool                           bAccept;
-	} params;
-
+	ACoherentUIGTInputActor_AlwaysAcceptMouseInput_Params params;
 	params.bAccept = bAccept;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1322,11 +1044,7 @@ void ACoherentUIGTInputActor::AllowJoystickInputWhileUIGTIsFocused_DEPRECATED(bo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.AllowJoystickInputWhileUIGTIsFocused_DEPRECATED");
 
-	struct
-	{
-		bool                           bAllow;
-	} params;
-
+	ACoherentUIGTInputActor_AllowJoystickInputWhileUIGTIsFocused_DEPRECATED_Params params;
 	params.bAllow = bAllow;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1342,11 +1060,7 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromStruct(class UStructProperty* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.UpdateWholeDataModelFromStruct");
 
-	struct
-	{
-		class UStructProperty*         Arg;
-	} params;
-
+	UCoherentUIGTWidget_UpdateWholeDataModelFromStruct_Params params;
 	params.Arg = Arg;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1362,11 +1076,7 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromObject(class UObject* Model)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.UpdateWholeDataModelFromObject");
 
-	struct
-	{
-		class UObject*                 Model;
-	} params;
-
+	UCoherentUIGTWidget_UpdateWholeDataModelFromObject_Params params;
 	params.Model = Model;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1383,12 +1093,7 @@ void UCoherentUIGTWidget::TriggerJSEvent(const class FString& Name, class UCoher
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.TriggerJSEvent");
 
-	struct
-	{
-		class FString                  Name;
-		class UCoherentUIGTJSEvent*    EventData;
-	} params;
-
+	UCoherentUIGTWidget_TriggerJSEvent_Params params;
 	params.Name = Name;
 	params.EventData = EventData;
 
@@ -1403,10 +1108,7 @@ void UCoherentUIGTWidget::SynchronizeModels()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.SynchronizeModels");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTWidget_SynchronizeModels_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1421,11 +1123,7 @@ void UCoherentUIGTWidget::ShowPaintRects(bool show)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.ShowPaintRects");
 
-	struct
-	{
-		bool                           show;
-	} params;
-
+	UCoherentUIGTWidget_ShowPaintRects_Params params;
 	params.show = show;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1441,11 +1139,7 @@ void UCoherentUIGTWidget::SetClickThroughAlphaThreshold(float Threshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.SetClickThroughAlphaThreshold");
 
-	struct
-	{
-		float                          Threshold;
-	} params;
-
+	UCoherentUIGTWidget_SetClickThroughAlphaThreshold_Params params;
 	params.Threshold = Threshold;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1459,10 +1153,7 @@ void UCoherentUIGTWidget::Reload()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Reload");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTWidget_Reload_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1475,10 +1166,7 @@ void UCoherentUIGTWidget::Redraw()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Redraw");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTWidget_Redraw_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1493,11 +1181,7 @@ void UCoherentUIGTWidget::Load(const class FString& path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Load");
 
-	struct
-	{
-		class FString                  path;
-	} params;
-
+	UCoherentUIGTWidget_Load_Params params;
 	params.path = path;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1513,11 +1197,7 @@ bool UCoherentUIGTWidget::IsTransparent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsTransparent");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_IsTransparent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1534,11 +1214,7 @@ bool UCoherentUIGTWidget::IsReadyToCreateView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyToCreateView");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_IsReadyToCreateView_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1555,11 +1231,7 @@ bool UCoherentUIGTWidget::IsReadyForBindings()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyForBindings");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_IsReadyForBindings_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1576,11 +1248,7 @@ bool UCoherentUIGTWidget::IsDocumentReady()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsDocumentReady");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_IsDocumentReady_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1597,11 +1265,7 @@ bool UCoherentUIGTWidget::HasRequestedView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.HasRequestedView");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_HasRequestedView_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1618,11 +1282,7 @@ float UCoherentUIGTWidget::GetClickThroughAlphaThreshold()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.GetClickThroughAlphaThreshold");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_GetClickThroughAlphaThreshold_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1637,10 +1297,7 @@ void UCoherentUIGTWidget::EndDebugFrameSave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.EndDebugFrameSave");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTWidget_EndDebugFrameSave_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1653,10 +1310,7 @@ void UCoherentUIGTWidget::DebugSaveNextFrame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.DebugSaveNextFrame");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTWidget_DebugSaveNextFrame_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1671,11 +1325,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTWidget::CreateJSEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateJSEvent");
 
-	struct
-	{
-		class UCoherentUIGTJSEvent*    ReturnValue;
-	} params;
-
+	UCoherentUIGTWidget_CreateJSEvent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1693,12 +1343,7 @@ void UCoherentUIGTWidget::CreateDataModelFromStruct(const class FString& Name, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateDataModelFromStruct");
 
-	struct
-	{
-		class FString                  Name;
-		class UStructProperty*         Arg;
-	} params;
-
+	UCoherentUIGTWidget_CreateDataModelFromStruct_Params params;
 	params.Name = Name;
 	params.Arg = Arg;
 
@@ -1716,12 +1361,7 @@ void UCoherentUIGTWidget::CreateDataModelFromObject(const class FString& Name, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateDataModelFromObject");
 
-	struct
-	{
-		class FString                  Name;
-		class UObject*                 Model;
-	} params;
-
+	UCoherentUIGTWidget_CreateDataModelFromObject_Params params;
 	params.Name = Name;
 	params.Model = Model;
 
@@ -1736,10 +1376,7 @@ void UCoherentUIGTWidget::BeginDebugFrameSave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.BeginDebugFrameSave");
 
-	struct
-	{
-	} params;
-
+	UCoherentUIGTWidget_BeginDebugFrameSave_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

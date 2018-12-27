@@ -7,25 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_ETurning_enums.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// UserDefinedEnum ETurning.ETurning
-enum class ETurning : uint8_t
-{
-	ETurning__NewEnumerator0       = 0,
-	ETurning__NewEnumerator1       = 1,
-	ETurning__NewEnumerator2       = 2,
-	ETurning__NewEnumerator3       = 3,
-	ETurning__ETurning_MAX         = 4
-};
-
-
-
 }
 
 #ifdef _MSC_VER

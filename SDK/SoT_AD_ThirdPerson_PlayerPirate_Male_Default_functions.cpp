@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AD_ThirdPerson_PlayerPirate_Male_Default_classes.hpp"
+#include "SoT_AD_ThirdPerson_PlayerPirate_Male_Default_parameters.hpp"
 
 namespace SDK
 {

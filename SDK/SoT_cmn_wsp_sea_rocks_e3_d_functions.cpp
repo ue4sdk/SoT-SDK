@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_cmn_wsp_sea_rocks_e3_d_classes.hpp"
+#include "SoT_cmn_wsp_sea_rocks_e3_d_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Acmn_wsp_sea_rocks_e3_d_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function cmn_wsp_sea_rocks_e3_d.cmn_wsp_sea_rocks_e3_d_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Acmn_wsp_sea_rocks_e3_d_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

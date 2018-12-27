@@ -7,25 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_ELadderState_enums.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// UserDefinedEnum ELadderState.ELadderState
-enum class ELadderState : uint8_t
-{
-	ELadderState__NewEnumerator5   = 0,
-	ELadderState__NewEnumerator6   = 1,
-	ELadderState__NewEnumerator7   = 2,
-	ELadderState__NewEnumerator8   = 3,
-	ELadderState__ELadderState_MAX = 4
-};
-
-
-
 }
 
 #ifdef _MSC_VER

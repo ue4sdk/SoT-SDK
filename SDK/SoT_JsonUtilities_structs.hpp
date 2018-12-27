@@ -7,25 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_JsonUtilities_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum JsonUtilities.ETestEnum
-enum class ETestEnum : uint8_t
-{
-	ETestEnum__Value0              = 0,
-	ETestEnum__Value1              = 1,
-	ETestEnum__ETestEnum_MAX       = 2
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

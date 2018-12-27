@@ -170,7 +170,7 @@ public:
 	}
 
 
-	static class UCompositeInputHandler* MakeCompositeInputHandler();
+	class UCompositeInputHandler* STATIC_MakeCompositeInputHandler();
 };
 
 

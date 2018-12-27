@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_onboarding_intro_tavern_table_classes.hpp"
+#include "SoT_BP_onboarding_intro_tavern_table_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_onboarding_intro_tavern_table_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_onboarding_intro_tavern_table.BP_onboarding_intro_tavern_table_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_onboarding_intro_tavern_table_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -7,28 +7,13 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_MovieSceneCapture_enums.hpp"
 #include "SoT_LevelSequence_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum MovieSceneCapture.EMovieCaptureType
-enum class EMovieCaptureType : uint8_t
-{
-	EMovieCaptureType__AVI         = 0,
-	EMovieCaptureType__BMP         = 1,
-	EMovieCaptureType__PNG         = 2,
-	EMovieCaptureType__JPEG        = 3,
-	EMovieCaptureType__EMovieCaptureType_MAX = 4
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

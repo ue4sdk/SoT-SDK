@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShip_StandardHull_Damage_classes.hpp"
+#include "SoT_BP_SmallShip_StandardHull_Damage_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_SmallShip_StandardHull_Damage_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_StandardHull_Damage.BP_SmallShip_StandardHull_Damage_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShip_StandardHull_Damage_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

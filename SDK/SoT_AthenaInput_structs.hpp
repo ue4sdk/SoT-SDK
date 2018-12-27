@@ -7,25 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_AthenaInput_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum AthenaInput.EInputHandlerResult
-enum class EInputHandlerResult : uint8_t
-{
-	EInputHandlerResult__Handled   = 0,
-	EInputHandlerResult__Unhandled = 1,
-	EInputHandlerResult__EInputHandlerResult_MAX = 2
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaRigging_classes.hpp"
+#include "SoT_AthenaRigging_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UInstancedRopeComponent::SetUnderwater(bool Underwater)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.InstancedRopeComponent.SetUnderwater");
 
-	struct
-	{
-		bool                           Underwater;
-	} params;
-
+	UInstancedRopeComponent_SetUnderwater_Params params;
 	params.Underwater = Underwater;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ void UInstancedRopeComponent::SetRopes(TArray<struct FInstancedRopeParams> InRop
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.InstancedRopeComponent.SetRopes");
 
-	struct
-	{
-		TArray<struct FInstancedRopeParams> InRopes;
-	} params;
-
+	UInstancedRopeComponent_SetRopes_Params params;
 	params.InRopes = InRopes;
 
 	UObject::ProcessEvent(fn, &params);
@@ -61,11 +53,7 @@ void URiggingSystemComponent::SetSocketLookupSource(class AActor* InSocketSource
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.SetSocketLookupSource");
 
-	struct
-	{
-		class AActor*                  InSocketSource;
-	} params;
-
+	URiggingSystemComponent_SetSocketLookupSource_Params params;
 	params.InSocketSource = InSocketSource;
 
 	UObject::ProcessEvent(fn, &params);
@@ -83,13 +71,7 @@ int URiggingSystemComponent::ConvertLineToRopeIndex(const struct FName& InLineGr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.ConvertLineToRopeIndex");
 
-	struct
-	{
-		struct FName                   InLineGroupName;
-		int                            InLineOffset;
-		int                            ReturnValue;
-	} params;
-
+	URiggingSystemComponent_ConvertLineToRopeIndex_Params params;
 	params.InLineGroupName = InLineGroupName;
 	params.InLineOffset = InLineOffset;
 
@@ -108,11 +90,7 @@ void URopeInterface::SetRopeUVOffset(float InUVOffset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RopeInterface.SetRopeUVOffset");
 
-	struct
-	{
-		float                          InUVOffset;
-	} params;
-
+	URopeInterface_SetRopeUVOffset_Params params;
 	params.InUVOffset = InUVOffset;
 
 	UObject::ProcessEvent(fn, &params);
@@ -129,12 +107,7 @@ void URopeInterface::SetRopeEndpoints(const struct FVector& InWorldSpaceStart, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RopeInterface.SetRopeEndpoints");
 
-	struct
-	{
-		struct FVector                 InWorldSpaceStart;
-		struct FVector                 InWorldSpaceEnd;
-	} params;
-
+	URopeInterface_SetRopeEndpoints_Params params;
 	params.InWorldSpaceStart = InWorldSpaceStart;
 	params.InWorldSpaceEnd = InWorldSpaceEnd;
 

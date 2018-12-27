@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AnimatedStepsComponent_classes.hpp"
+#include "SoT_BP_AnimatedStepsComponent_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_AnimatedStepsComponent_C::StartOpeningSteps()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpeningSteps");
 
-	struct
-	{
-	} params;
-
+	UBP_AnimatedStepsComponent_C_StartOpeningSteps_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -38,12 +35,7 @@ void UBP_AnimatedStepsComponent_C::SetAllStepsZs(bool OpeningOrClosing, TArray<f
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.SetAllStepsZs");
 
-	struct
-	{
-		TArray<float>                  TargetZOffsets;
-		bool                           OpeningOrClosing;
-	} params;
-
+	UBP_AnimatedStepsComponent_C_SetAllStepsZs_Params params;
 	params.OpeningOrClosing = OpeningOrClosing;
 
 	UObject::ProcessEvent(fn, &params);
@@ -66,15 +58,7 @@ void UBP_AnimatedStepsComponent_C::UpdateStep(int BoneIndex, float TargetZ, floa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.UpdateStep");
 
-	struct
-	{
-		int                            BoneIndex;
-		float                          TargetZ;
-		float                          MovementDelay;
-		class UBoxComponent*           AttachedBox;
-		struct FVector                 BoxOrigin;
-	} params;
-
+	UBP_AnimatedStepsComponent_C_UpdateStep_Params params;
 	params.BoneIndex = BoneIndex;
 	params.TargetZ = TargetZ;
 	params.MovementDelay = MovementDelay;
@@ -94,11 +78,7 @@ void UBP_AnimatedStepsComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick");
 
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
+	UBP_AnimatedStepsComponent_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -112,10 +92,7 @@ void UBP_AnimatedStepsComponent_C::StartOpening()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpening");
 
-	struct
-	{
-	} params;
-
+	UBP_AnimatedStepsComponent_C_StartOpening_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -128,10 +105,7 @@ void UBP_AnimatedStepsComponent_C::OpenImmediate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.OpenImmediate");
 
-	struct
-	{
-	} params;
-
+	UBP_AnimatedStepsComponent_C_OpenImmediate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -144,10 +118,7 @@ void UBP_AnimatedStepsComponent_C::Close()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.Close");
 
-	struct
-	{
-	} params;
-
+	UBP_AnimatedStepsComponent_C_Close_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -162,11 +133,7 @@ void UBP_AnimatedStepsComponent_C::ExecuteUbergraph_BP_AnimatedStepsComponent(in
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ExecuteUbergraph_BP_AnimatedStepsComponent");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_AnimatedStepsComponent_C_ExecuteUbergraph_BP_AnimatedStepsComponent_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

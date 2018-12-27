@@ -27,11 +27,11 @@ public:
 	}
 
 
-	static void DisplayAllCharacterSockets(class AAthenaCharacter* Athena_Character, float Size, class UObject* __WorldContext);
-	static void DecrementFloat(float DecrementValue, class UObject* __WorldContext, float* Float);
-	static void Increment_Float(float Incement_Value, class UObject* __WorldContext, float* Float);
-	static void Apply_Relative_Transform(const struct FTransform& RelativeTransform, const struct FTransform& BaseTransform, class UObject* __WorldContext, struct FTransform* CombinedTransform);
-	static void Calculate_Relative_Transform(const struct FTransform& RelativeObjectsWorldTransform, const struct FTransform& BaseObjectsWorldTransform, class UObject* __WorldContext, struct FTransform* RealtiveOffsetTransform);
+	void STATIC_DisplayAllCharacterSockets(class AAthenaCharacter* Athena_Character, float Size, class UObject* __WorldContext);
+	void STATIC_DecrementFloat(float DecrementValue, class UObject* __WorldContext, float* Float);
+	void STATIC_Increment_Float(float Incement_Value, class UObject* __WorldContext, float* Float);
+	void STATIC_Apply_Relative_Transform(const struct FTransform& RelativeTransform, const struct FTransform& BaseTransform, class UObject* __WorldContext, struct FTransform* CombinedTransform);
+	void STATIC_Calculate_Relative_Transform(const struct FTransform& RelativeObjectsWorldTransform, const struct FTransform& BaseObjectsWorldTransform, class UObject* __WorldContext, struct FTransform* RealtiveOffsetTransform);
 };
 
 

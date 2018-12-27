@@ -7,26 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_ServerMigration_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum ServerMigration.EExecutionTarget
-enum class EExecutionTarget : uint8_t
-{
-	EExecutionTarget__OldServer    = 0,
-	EExecutionTarget__NewServer    = 1,
-	EExecutionTarget__Client       = 2,
-	EExecutionTarget__EExecutionTarget_MAX = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

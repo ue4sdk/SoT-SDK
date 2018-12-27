@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BountyRewardSkullItemInfo_Common_classes.hpp"
+#include "SoT_BP_BountyRewardSkullItemInfo_Common_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_BountyRewardSkullItemInfo_Common_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Common.BP_BountyRewardSkullItemInfo_Common_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_BountyRewardSkullItemInfo_Common_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_BountyRewardSkullItemInfo_Common_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Common.BP_BountyRewardSkullItemInfo_Common_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_BountyRewardSkullItemInfo_Common_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_BountyRewardSkullItemInfo_Common_C::ExecuteUbergraph_BP_BountyRewardSku
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Common.BP_BountyRewardSkullItemInfo_Common_C.ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Common");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_BountyRewardSkullItemInfo_Common_C_ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Common_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

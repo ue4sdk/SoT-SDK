@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_EyeOfReach_classes.hpp"
+#include "SoT_BP_EyeOfReach_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void ABP_EyeOfReach_C::determine_sfx_relationship(TEnumAsByte<EEmitterRelationsh
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.determine sfx relationship");
 
-	struct
-	{
-		TEnumAsByte<EEmitterRelationship> Relationship;
-	} params;
-
+	ABP_EyeOfReach_C_determine_sfx_relationship_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -41,10 +37,7 @@ void ABP_EyeOfReach_C::DoFireEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.DoFireEffect");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_DoFireEffect_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -57,10 +50,7 @@ void ABP_EyeOfReach_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -73,10 +63,7 @@ void ABP_EyeOfReach_C::OnWeaponFired()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.OnWeaponFired");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_OnWeaponFired_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -89,10 +76,7 @@ void ABP_EyeOfReach_C::ScopeOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOn");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_ScopeOn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -105,10 +89,7 @@ void ABP_EyeOfReach_C::ScopeOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOff");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_ScopeOff_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -123,11 +104,7 @@ void ABP_EyeOfReach_C::ScopeTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeTick");
 
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
+	ABP_EyeOfReach_C_ScopeTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -141,10 +118,7 @@ void ABP_EyeOfReach_C::ScopeOffImmediate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOffImmediate");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_ScopeOffImmediate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -157,10 +131,7 @@ void ABP_EyeOfReach_C::GlintOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.GlintOn");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_GlintOn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -173,10 +144,7 @@ void ABP_EyeOfReach_C::GlintOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.GlintOff");
 
-	struct
-	{
-	} params;
-
+	ABP_EyeOfReach_C_GlintOff_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -191,11 +159,7 @@ void ABP_EyeOfReach_C::ExecuteUbergraph_BP_EyeOfReach(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ExecuteUbergraph_BP_EyeOfReach");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_EyeOfReach_C_ExecuteUbergraph_BP_EyeOfReach_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

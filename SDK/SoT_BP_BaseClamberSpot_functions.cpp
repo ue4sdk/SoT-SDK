@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BaseClamberSpot_classes.hpp"
+#include "SoT_BP_BaseClamberSpot_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_BaseClamberSpot_C::SetupClamberSpline()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseClamberSpot.BP_BaseClamberSpot_C.SetupClamberSpline");
 
-	struct
-	{
-	} params;
-
+	ABP_BaseClamberSpot_C_SetupClamberSpline_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_BaseClamberSpot_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseClamberSpot.BP_BaseClamberSpot_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_BaseClamberSpot_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

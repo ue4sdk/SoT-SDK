@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_LevelSequence_classes.hpp"
+#include "SoT_LevelSequence_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ULevelSequencePlayer::Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.Stop");
 
-	struct
-	{
-	} params;
-
+	ULevelSequencePlayer_Stop_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ULevelSequencePlayer::SetPlayRate(float PlayRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.SetPlayRate");
 
-	struct
-	{
-		float                          PlayRate;
-	} params;
-
+	ULevelSequencePlayer_SetPlayRate_Params params;
 	params.PlayRate = PlayRate;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void ULevelSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.SetPlaybackPosition");
 
-	struct
-	{
-		float                          NewPlaybackPosition;
-	} params;
-
+	ULevelSequencePlayer_SetPlaybackPosition_Params params;
 	params.NewPlaybackPosition = NewPlaybackPosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -77,11 +66,7 @@ void ULevelSequencePlayer::PlayLooping(int NumLoops)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.PlayLooping");
 
-	struct
-	{
-		int                            NumLoops;
-	} params;
-
+	ULevelSequencePlayer_PlayLooping_Params params;
 	params.NumLoops = NumLoops;
 
 	UObject::ProcessEvent(fn, &params);
@@ -95,10 +80,7 @@ void ULevelSequencePlayer::Play()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.Play");
 
-	struct
-	{
-	} params;
-
+	ULevelSequencePlayer_Play_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -111,10 +93,7 @@ void ULevelSequencePlayer::Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.Pause");
 
-	struct
-	{
-	} params;
-
+	ULevelSequencePlayer_Pause_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -129,11 +108,7 @@ bool ULevelSequencePlayer::IsPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.IsPlaying");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ULevelSequencePlayer_IsPlaying_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,11 +125,7 @@ float ULevelSequencePlayer::GetPlayRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetPlayRate");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULevelSequencePlayer_GetPlayRate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,11 +142,7 @@ float ULevelSequencePlayer::GetPlaybackPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetPlaybackPosition");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULevelSequencePlayer_GetPlaybackPosition_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,11 +159,7 @@ float ULevelSequencePlayer::GetLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetLength");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULevelSequencePlayer_GetLength_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,24 +175,16 @@ float ULevelSequencePlayer::GetLength()
 // struct FLevelSequencePlaybackSettings Settings                       (Parm)
 // class ULevelSequencePlayer*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ULevelSequencePlayer* ULevelSequencePlayer::CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FLevelSequencePlaybackSettings& Settings)
+class ULevelSequencePlayer* ULevelSequencePlayer::STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FLevelSequencePlaybackSettings& Settings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class ULevelSequence*          LevelSequence;
-		struct FLevelSequencePlaybackSettings Settings;
-		class ULevelSequencePlayer*    ReturnValue;
-	} params;
-
+	ULevelSequencePlayer_CreateLevelSequencePlayer_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LevelSequence = LevelSequence;
 	params.Settings = Settings;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -244,11 +199,7 @@ void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetSequence");
 
-	struct
-	{
-		class ULevelSequence*          InSequence;
-	} params;
-
+	ALevelSequenceActor_SetSequence_Params params;
 	params.InSequence = InSequence;
 
 	UObject::ProcessEvent(fn, &params);

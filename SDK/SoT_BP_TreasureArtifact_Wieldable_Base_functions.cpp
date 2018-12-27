@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureArtifact_Wieldable_Base_classes.hpp"
+#include "SoT_BP_TreasureArtifact_Wieldable_Base_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_TreasureArtifact_Wieldable_Base_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureArtifact_Wieldable_Base.BP_TreasureArtifact_Wieldable_Base_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_TreasureArtifact_Wieldable_Base_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

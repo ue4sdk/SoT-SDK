@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShipStorageBarrel_Food_classes.hpp"
+#include "SoT_BP_SmallShipStorageBarrel_Food_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_SmallShipStorageBarrel_Food_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipStorageBarrel_Food.BP_SmallShipStorageBarrel_Food_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShipStorageBarrel_Food_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

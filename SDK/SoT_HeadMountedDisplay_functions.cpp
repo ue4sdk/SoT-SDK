@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_HeadMountedDisplay_classes.hpp"
+#include "SoT_HeadMountedDisplay_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ bool UMotionControllerComponent::IsTracked()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.IsTracked");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMotionControllerComponent_IsTracked_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

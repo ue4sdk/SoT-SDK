@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Beacon_classes.hpp"
+#include "SoT_BP_Beacon_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Beacon_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_Beacon_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

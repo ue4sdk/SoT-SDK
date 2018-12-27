@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShip_QuestTable_classes.hpp"
+#include "SoT_BP_SmallShip_QuestTable_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_SmallShip_QuestTable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShip_QuestTable_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

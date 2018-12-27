@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Serialisation_classes.hpp"
+#include "SoT_Serialisation_parameters.hpp"
 
 namespace SDK
 {

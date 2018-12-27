@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LargeShipLadder_classes.hpp"
+#include "SoT_BP_LargeShipLadder_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ struct FDockableInfo ABP_LargeShipLadder_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipLadder.BP_LargeShipLadder_C.GetDockableInfo");
 
-	struct
-	{
-		struct FDockableInfo           ReturnValue;
-	} params;
-
+	ABP_LargeShipLadder_C_GetDockableInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -43,12 +39,7 @@ void ABP_LargeShipLadder_C::Setup_Spline(class USplineComponent* Spline, TArray<
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipLadder.BP_LargeShipLadder_C.Setup Spline");
 
-	struct
-	{
-		class USplineComponent*        Spline;
-		TArray<struct FVector>         Positions;
-	} params;
-
+	ABP_LargeShipLadder_C_Setup_Spline_Params params;
 	params.Spline = Spline;
 
 	UObject::ProcessEvent(fn, &params);
@@ -68,12 +59,7 @@ bool ABP_LargeShipLadder_C::CanInteract(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipLadder.BP_LargeShipLadder_C.CanInteract");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		bool                           ReturnValue;
-	} params;
-
+	ABP_LargeShipLadder_C_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -89,10 +75,7 @@ void ABP_LargeShipLadder_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipLadder.BP_LargeShipLadder_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_LargeShipLadder_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

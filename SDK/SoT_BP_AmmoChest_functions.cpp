@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AmmoChest_classes.hpp"
+#include "SoT_BP_AmmoChest_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ struct FText ABP_AmmoChest_C::GetObjectDisplayName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.GetObjectDisplayName");
 
-	struct
-	{
-		struct FText                   ReturnValue;
-	} params;
-
+	ABP_AmmoChest_C_GetObjectDisplayName_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -44,13 +40,7 @@ struct FVector ABP_AmmoChest_C::GetClosestInteractionPoint(const struct FVector&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.GetClosestInteractionPoint");
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_AmmoChest_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -69,10 +59,7 @@ void ABP_AmmoChest_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_AmmoChest_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -85,10 +72,7 @@ void ABP_AmmoChest_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_AmmoChest_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -103,11 +87,7 @@ void ABP_AmmoChest_C::Blueprint_OnInteract_Client(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Client");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-	} params;
-
+	ABP_AmmoChest_C_Blueprint_OnInteract_Client_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -123,11 +103,7 @@ void ABP_AmmoChest_C::Blueprint_OnInteract_Server(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Server");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-	} params;
-
+	ABP_AmmoChest_C_Blueprint_OnInteract_Server_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -143,11 +119,7 @@ void ABP_AmmoChest_C::ExecuteUbergraph_BP_AmmoChest(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.ExecuteUbergraph_BP_AmmoChest");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_AmmoChest_C_ExecuteUbergraph_BP_AmmoChest_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

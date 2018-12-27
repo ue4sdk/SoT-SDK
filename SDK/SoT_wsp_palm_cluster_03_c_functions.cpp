@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_palm_cluster_03_c_classes.hpp"
+#include "SoT_wsp_palm_cluster_03_c_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_palm_cluster_03_c_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_palm_cluster_03_c.wsp_palm_cluster_03_c_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Awsp_palm_cluster_03_c_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_DebugMenu_classes.hpp"
+#include "SoT_DebugMenu_parameters.hpp"
 
 namespace SDK
 {
@@ -18,20 +18,14 @@ namespace SDK
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDebugMenuTestFunctions::IsDebugMenuReady(class UObject* WorldContextObject)
+bool UDebugMenuTestFunctions::STATIC_IsDebugMenuReady(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		bool                           ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_IsDebugMenuReady_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -43,20 +37,14 @@ bool UDebugMenuTestFunctions::IsDebugMenuReady(class UObject* WorldContextObject
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDebugMenuTestFunctions::IsDebugMenuOpen(class UObject* WorldContextObject)
+bool UDebugMenuTestFunctions::STATIC_IsDebugMenuOpen(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		bool                           ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_IsDebugMenuOpen_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -67,18 +55,13 @@ bool UDebugMenuTestFunctions::IsDebugMenuOpen(class UObject* WorldContextObject)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDebugMenuTestFunctions::IsDebugMenuAvailable()
+bool UDebugMenuTestFunctions::STATIC_IsDebugMenuAvailable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuAvailable");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
+	UDebugMenuTestFunctions_IsDebugMenuAvailable_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -89,18 +72,13 @@ bool UDebugMenuTestFunctions::IsDebugMenuAvailable()
 // Parameters:
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
+struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleKeyComboBetaKeyboard()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard");
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
+	UDebugMenuTestFunctions_GetDebugMenuToggleKeyComboBetaKeyboard_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -111,18 +89,13 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
 // Parameters:
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
+struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleKeyComboAlphaKeyboard()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard");
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
+	UDebugMenuTestFunctions_GetDebugMenuToggleKeyComboAlphaKeyboard_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -133,18 +106,13 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
 // Parameters:
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
+struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleButtonComboBetaGamepad()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad");
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
+	UDebugMenuTestFunctions_GetDebugMenuToggleButtonComboBetaGamepad_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -155,18 +123,13 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
 // Parameters:
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboAlphaGamepad()
+struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleButtonComboAlphaGamepad()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad");
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
+	UDebugMenuTestFunctions_GetDebugMenuToggleButtonComboAlphaGamepad_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

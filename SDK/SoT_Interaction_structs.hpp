@@ -7,27 +7,13 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Interaction_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum Interaction.EInteractionBlockReason
-enum class EInteractionBlockReason : uint8_t
-{
-	EInteractionBlockReason__None  = 0,
-	EInteractionBlockReason__Radial = 1,
-	EInteractionBlockReason__Other = 2,
-	EInteractionBlockReason__EInteractionBlockReason_MAX = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

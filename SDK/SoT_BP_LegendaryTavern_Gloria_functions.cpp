@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LegendaryTavern_Gloria_classes.hpp"
+#include "SoT_BP_LegendaryTavern_Gloria_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_LegendaryTavern_Gloria_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LegendaryTavern_Gloria.BP_LegendaryTavern_Gloria_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_LegendaryTavern_Gloria_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

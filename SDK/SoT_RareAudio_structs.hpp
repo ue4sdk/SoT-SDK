@@ -7,6 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_RareAudio_enums.hpp"
 #include "SoT_RareEngine_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
@@ -15,21 +16,6 @@
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum RareAudio.EEmitterRelationship
-enum class EEmitterRelationship : uint8_t
-{
-	EEmitterRelationship__Audio_Remote = 0,
-	EEmitterRelationship__Audio_Local = 1,
-	EEmitterRelationship__Audio_Default = 2,
-	EEmitterRelationship__Audio_MAX = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

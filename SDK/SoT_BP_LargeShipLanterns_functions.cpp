@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LargeShipLanterns_classes.hpp"
+#include "SoT_BP_LargeShipLanterns_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_LargeShipLanterns_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipLanterns.BP_LargeShipLanterns_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_LargeShipLanterns_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

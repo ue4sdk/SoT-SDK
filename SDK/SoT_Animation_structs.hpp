@@ -7,26 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Animation_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum Animation.ELimbIKSpace
-enum class ELimbIKSpace : uint8_t
-{
-	ELimbIKSpace__Local            = 0,
-	ELimbIKSpace__World            = 1,
-	ELimbIKSpace__Character        = 2,
-	ELimbIKSpace__ELimbIKSpace_MAX = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

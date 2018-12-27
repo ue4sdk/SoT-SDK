@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_prem_shop_wsp_closed_01_a_classes.hpp"
+#include "SoT_BP_prem_shop_wsp_closed_01_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_prem_shop_wsp_closed_01_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_prem_shop_wsp_closed_01_a.BP_prem_shop_wsp_closed_01_a_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_prem_shop_wsp_closed_01_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

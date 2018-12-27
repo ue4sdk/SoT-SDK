@@ -67,7 +67,7 @@ public:
 	}
 
 
-	static class UGameplayTask_SpawnActor* SpawnActor(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority);
+	class UGameplayTask_SpawnActor* STATIC_SpawnActor(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority);
 	void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);
 	bool BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor);
 };
@@ -88,7 +88,7 @@ public:
 	}
 
 
-	static class UGameplayTask_WaitDelay* TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time);
+	class UGameplayTask_WaitDelay* STATIC_TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time);
 	void TaskDelayDelegate__DelegateSignature();
 };
 
@@ -131,7 +131,7 @@ public:
 
 
 	void OnRep_SimulatedTasks();
-	static TEnumAsByte<EGameplayTaskRunResult> K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources);
+	TEnumAsByte<EGameplayTaskRunResult> STATIC_K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources);
 };
 
 

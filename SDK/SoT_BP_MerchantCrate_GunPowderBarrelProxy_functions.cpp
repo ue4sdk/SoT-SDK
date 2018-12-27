@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MerchantCrate_GunPowderBarrelProxy_classes.hpp"
+#include "SoT_BP_MerchantCrate_GunPowderBarrelProxy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MerchantCrate_GunpowderBarrelProxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_MerchantCrate_GunpowderBarrelProxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

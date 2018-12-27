@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MerchantCrate_Commodity_Gemstones_Wieldable_classes.hpp"
+#include "SoT_BP_MerchantCrate_Commodity_Gemstones_Wieldable_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MerchantCrate_Commodity_Gemstones_Wieldable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_Commodity_Gemstones_Wieldable.BP_MerchantCrate_Commodity_Gemstones_Wieldable_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_MerchantCrate_Commodity_Gemstones_Wieldable_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

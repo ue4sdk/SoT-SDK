@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_NPCObject_Sword_classes.hpp"
+#include "SoT_NPCObject_Sword_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ANPCObject_Sword_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPCObject_Sword.NPCObject_Sword_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ANPCObject_Sword_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -111,13 +111,13 @@ public:
 	}
 
 
-	static bool IsDebugMenuReady(class UObject* WorldContextObject);
-	static bool IsDebugMenuOpen(class UObject* WorldContextObject);
-	static bool IsDebugMenuAvailable();
-	static struct FKey GetDebugMenuToggleKeyComboBetaKeyboard();
-	static struct FKey GetDebugMenuToggleKeyComboAlphaKeyboard();
-	static struct FKey GetDebugMenuToggleButtonComboBetaGamepad();
-	static struct FKey GetDebugMenuToggleButtonComboAlphaGamepad();
+	bool STATIC_IsDebugMenuReady(class UObject* WorldContextObject);
+	bool STATIC_IsDebugMenuOpen(class UObject* WorldContextObject);
+	bool STATIC_IsDebugMenuAvailable();
+	struct FKey STATIC_GetDebugMenuToggleKeyComboBetaKeyboard();
+	struct FKey STATIC_GetDebugMenuToggleKeyComboAlphaKeyboard();
+	struct FKey STATIC_GetDebugMenuToggleButtonComboBetaGamepad();
+	struct FKey STATIC_GetDebugMenuToggleButtonComboAlphaGamepad();
 };
 
 

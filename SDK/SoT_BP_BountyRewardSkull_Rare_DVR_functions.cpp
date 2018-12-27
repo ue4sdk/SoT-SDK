@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BountyRewardSkull_Rare_DVR_classes.hpp"
+#include "SoT_BP_BountyRewardSkull_Rare_DVR_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_BountyRewardSkull_Rare_DVR_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkull_Rare_DVR.BP_BountyRewardSkull_Rare_DVR_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_BountyRewardSkull_Rare_DVR_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

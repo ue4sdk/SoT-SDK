@@ -27,7 +27,7 @@ public:
 	}
 
 
-	static TEnumAsByte<EOcclusionTypes> IsActorOccludedFromActor(class UObject* WorldContextObject, class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float InteractionPointRadius, TArray<class AActor*> AdditionalIgnoredActors);
+	TEnumAsByte<EOcclusionTypes> STATIC_IsActorOccludedFromActor(class UObject* WorldContextObject, class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float InteractionPointRadius, TArray<class AActor*> AdditionalIgnoredActors);
 };
 
 

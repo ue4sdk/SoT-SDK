@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_DecalGlow_Reverse_classes.hpp"
+#include "SoT_BP_DecalGlow_Reverse_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_DecalGlow_Reverse_C::StartGlowEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StartGlowEffect");
 
-	struct
-	{
-	} params;
-
+	ABP_DecalGlow_Reverse_C_StartGlowEffect_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ bool ABP_DecalGlow_Reverse_C::StartReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StartReaction");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ABP_DecalGlow_Reverse_C_StartReaction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +51,7 @@ bool ABP_DecalGlow_Reverse_C::StopReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StopReaction");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ABP_DecalGlow_Reverse_C_StopReaction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,10 +66,7 @@ void ABP_DecalGlow_Reverse_C::CollectDecalMaterials()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.CollectDecalMaterials");
 
-	struct
-	{
-	} params;
-
+	ABP_DecalGlow_Reverse_C_CollectDecalMaterials_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -93,10 +79,7 @@ void ABP_DecalGlow_Reverse_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_DecalGlow_Reverse_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,10 +92,7 @@ void ABP_DecalGlow_Reverse_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_DecalGlow_Reverse_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -127,11 +107,7 @@ void ABP_DecalGlow_Reverse_C::ExecuteUbergraph_BP_DecalGlow_Reverse(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.ExecuteUbergraph_BP_DecalGlow_Reverse");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_DecalGlow_Reverse_C_ExecuteUbergraph_BP_DecalGlow_Reverse_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

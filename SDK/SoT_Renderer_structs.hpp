@@ -7,24 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Renderer_enums.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum Renderer.ERefChangeFadPhase
-enum class ERefChangeFadPhase : uint8_t
-{
-	NoFading                       = 0,
-	FadeOut                        = 1,
-	FadeIn                         = 2,
-	ERefChangeFadPhase_MAX         = 3
-};
-
-
-
 }
 
 #ifdef _MSC_VER

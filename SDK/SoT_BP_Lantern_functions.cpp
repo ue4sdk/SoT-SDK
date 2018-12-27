@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Lantern_classes.hpp"
+#include "SoT_BP_Lantern_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Lantern_C::CreateLanternDynamicMaterial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.CreateLanternDynamicMaterial");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_CreateLanternDynamicMaterial_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_Lantern_C::OnAttachThirdPerson()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.OnAttachThirdPerson");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_OnAttachThirdPerson_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_Lantern_C::OnAttachFirstPerson()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.OnAttachFirstPerson");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_OnAttachFirstPerson_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +58,7 @@ void ABP_Lantern_C::TurnOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.TurnOff");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_TurnOff_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,10 +71,7 @@ void ABP_Lantern_C::TurnOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.TurnOn");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_TurnOn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -99,10 +84,7 @@ void ABP_Lantern_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,10 +97,7 @@ void ABP_Lantern_C::ReceiveWieldFirstPerson()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveWieldFirstPerson");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_ReceiveWieldFirstPerson_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -131,10 +110,7 @@ void ABP_Lantern_C::ReceiveWieldThirdPerson()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveWieldThirdPerson");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_ReceiveWieldThirdPerson_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -147,10 +123,7 @@ void ABP_Lantern_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveBeginPlay");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -163,10 +136,7 @@ void ABP_Lantern_C::ReceiveLightChange()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveLightChange");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_ReceiveLightChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -179,10 +149,7 @@ void ABP_Lantern_C::TriggerGlow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.TriggerGlow");
 
-	struct
-	{
-	} params;
-
+	ABP_Lantern_C_TriggerGlow_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -197,11 +164,7 @@ void ABP_Lantern_C::PostMeshChangedBPEvent(bool SkipFlameColourTransition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent");
 
-	struct
-	{
-		bool                           SkipFlameColourTransition;
-	} params;
-
+	ABP_Lantern_C_PostMeshChangedBPEvent_Params params;
 	params.SkipFlameColourTransition = SkipFlameColourTransition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -217,11 +180,7 @@ void ABP_Lantern_C::ReceiveFlameData(bool WantChangeAnimation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveFlameData");
 
-	struct
-	{
-		bool                           WantChangeAnimation;
-	} params;
-
+	ABP_Lantern_C_ReceiveFlameData_Params params;
 	params.WantChangeAnimation = WantChangeAnimation;
 
 	UObject::ProcessEvent(fn, &params);
@@ -237,11 +196,7 @@ void ABP_Lantern_C::ExecuteUbergraph_BP_Lantern(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_Lantern_C_ExecuteUbergraph_BP_Lantern_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_CoreUObject_parameters.hpp"
 
 namespace SDK
 {
@@ -72,11 +72,7 @@ void UObject::ExecuteUbergraph(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UObject_ExecuteUbergraph_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

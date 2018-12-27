@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShipwreckStorageBarrel_Wood_classes.hpp"
+#include "SoT_BP_ShipwreckStorageBarrel_Wood_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ bool ABP_ShipwreckStorageBarrel_Wood_C::ShouldDrawTooltipInWorldSpace(class AAct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Wood.BP_ShipwreckStorageBarrel_Wood_C.ShouldDrawTooltipInWorldSpace");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		struct FVector                 DesiredTooltipWorldPosition;
-		bool                           ReturnValue;
-	} params;
-
+	ABP_ShipwreckStorageBarrel_Wood_C_ShouldDrawTooltipInWorldSpace_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -48,10 +42,7 @@ void ABP_ShipwreckStorageBarrel_Wood_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Wood.BP_ShipwreckStorageBarrel_Wood_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_ShipwreckStorageBarrel_Wood_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

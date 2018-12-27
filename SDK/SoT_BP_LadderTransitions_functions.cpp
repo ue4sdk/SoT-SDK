@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LadderTransitions_classes.hpp"
+#include "SoT_BP_LadderTransitions_parameters.hpp"
 
 namespace SDK
 {

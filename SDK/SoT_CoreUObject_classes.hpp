@@ -27,6 +27,12 @@ public:
 	FName                                              Name;                                                     // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	class UObject*                                     Outer;                                                    // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class CoreUObject.Object");
+		return ptr;
+	}
+
 	static inline TUObjectArray& GetGlobalObjects()
 	{
 		return GObjects->ObjObjects;
@@ -68,12 +74,6 @@ public:
 	}
 
 	bool IsA(UClass* cmp) const;
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoreUObject.Object");
-		return ptr;
-	}
 
 	inline void ProcessEvent(class UFunction* function, void* parms)
 	{
@@ -207,16 +207,16 @@ class UClass : public UStruct
 public:
 	unsigned char                                      UnknownData00[0x110];                                     // 0x0088(0x0110) MISSED OFFSET
 
-	template<typename T>
-	inline T* CreateDefaultObject()
-	{
-		return static_cast<T*>(CreateDefaultObject());
-	}
-
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class CoreUObject.Class");
 		return ptr;
+	}
+
+	template<typename T>
+	inline T* CreateDefaultObject()
+	{
+		return static_cast<T*>(CreateDefaultObject());
 	}
 
 };

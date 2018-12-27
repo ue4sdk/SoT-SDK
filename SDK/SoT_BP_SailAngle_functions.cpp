@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SailAngle_classes.hpp"
+#include "SoT_BP_SailAngle_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ struct FDockableInfo ABP_SailAngle_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAngle.BP_SailAngle_C.GetDockableInfo");
 
-	struct
-	{
-		struct FDockableInfo           ReturnValue;
-	} params;
-
+	ABP_SailAngle_C_GetDockableInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,10 +36,7 @@ void ABP_SailAngle_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAngle.BP_SailAngle_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_SailAngle_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

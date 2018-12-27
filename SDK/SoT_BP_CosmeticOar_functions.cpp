@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CosmeticOar_classes.hpp"
+#include "SoT_BP_CosmeticOar_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_CosmeticOar_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CosmeticOar.BP_CosmeticOar_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_CosmeticOar_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

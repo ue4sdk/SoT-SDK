@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CapstanRelease_classes.hpp"
+#include "SoT_BP_CapstanRelease_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ struct FVector ABP_CapstanRelease_C::GetClosestInteractionPoint(const struct FVe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanRelease.BP_CapstanRelease_C.GetClosestInteractionPoint");
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_CapstanRelease_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -48,10 +42,7 @@ void ABP_CapstanRelease_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanRelease.BP_CapstanRelease_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_CapstanRelease_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

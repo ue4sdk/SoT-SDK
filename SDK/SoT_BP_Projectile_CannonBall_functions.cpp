@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Projectile_CannonBall_classes.hpp"
+#include "SoT_BP_Projectile_CannonBall_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Projectile_CannonBall_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Projectile_CannonBall.BP_Projectile_CannonBall_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_Projectile_CannonBall_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

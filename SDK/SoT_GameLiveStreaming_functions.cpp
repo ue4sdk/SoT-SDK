@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_GameLiveStreaming_classes.hpp"
+#include "SoT_GameLiveStreaming_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame
 // (Final, Native, Static, Public, BlueprintCallable)
 
-void UGameLiveStreamingFunctionLibrary::StopBroadcastingGame()
+void UGameLiveStreamingFunctionLibrary::STATIC_StopBroadcastingGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame");
 
-	struct
-	{
-	} params;
+	UGameLiveStreamingFunctionLibrary_StopBroadcastingGame_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -42,23 +38,11 @@ void UGameLiveStreamingFunctionLibrary::StopBroadcastingGame()
 // bool                           bCaptureAudioFromMicrophone    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDrawSimpleWebCamVideo         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UGameLiveStreamingFunctionLibrary::StartBroadcastingGame(int FrameRate, float ScreenScaling, bool bEnableWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, bool bDrawSimpleWebCamVideo)
+void UGameLiveStreamingFunctionLibrary::STATIC_StartBroadcastingGame(int FrameRate, float ScreenScaling, bool bEnableWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, bool bDrawSimpleWebCamVideo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartBroadcastingGame");
 
-	struct
-	{
-		int                            FrameRate;
-		float                          ScreenScaling;
-		bool                           bEnableWebCam;
-		int                            DesiredWebCamWidth;
-		int                            DesiredWebCamHeight;
-		bool                           bMirrorWebCamImage;
-		bool                           bCaptureAudioFromComputer;
-		bool                           bCaptureAudioFromMicrophone;
-		bool                           bDrawSimpleWebCamVideo;
-	} params;
-
+	UGameLiveStreamingFunctionLibrary_StartBroadcastingGame_Params params;
 	params.FrameRate = FrameRate;
 	params.ScreenScaling = ScreenScaling;
 	params.bEnableWebCam = bEnableWebCam;
@@ -69,8 +53,7 @@ void UGameLiveStreamingFunctionLibrary::StartBroadcastingGame(int FrameRate, flo
 	params.bCaptureAudioFromMicrophone = bCaptureAudioFromMicrophone;
 	params.bDrawSimpleWebCamVideo = bDrawSimpleWebCamVideo;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -79,18 +62,13 @@ void UGameLiveStreamingFunctionLibrary::StartBroadcastingGame(int FrameRate, flo
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UGameLiveStreamingFunctionLibrary::IsBroadcastingGame()
+bool UGameLiveStreamingFunctionLibrary::STATIC_IsBroadcastingGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsBroadcastingGame");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
+	UGameLiveStreamingFunctionLibrary_IsBroadcastingGame_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -102,20 +80,14 @@ bool UGameLiveStreamingFunctionLibrary::IsBroadcastingGame()
 // class FString                  GameName                       (Parm, ZeroConstructor)
 // class UQueryLiveStreamsCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UQueryLiveStreamsCallbackProxy* UQueryLiveStreamsCallbackProxy::QueryLiveStreams(const class FString& GameName)
+class UQueryLiveStreamsCallbackProxy* UQueryLiveStreamsCallbackProxy::STATIC_QueryLiveStreams(const class FString& GameName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.QueryLiveStreamsCallbackProxy.QueryLiveStreams");
 
-	struct
-	{
-		class FString                  GameName;
-		class UQueryLiveStreamsCallbackProxy* ReturnValue;
-	} params;
-
+	UQueryLiveStreamsCallbackProxy_QueryLiveStreams_Params params;
 	params.GameName = GameName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

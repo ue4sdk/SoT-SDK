@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_StudiosAutomation_classes.hpp"
+#include "SoT_StudiosAutomation_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ATestablePlayerController::YieldToServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestablePlayerController.YieldToServer");
 
-	struct
-	{
-	} params;
-
+	ATestablePlayerController_YieldToServer_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ATestablePlayerController::PerformPostTestCleanup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestablePlayerController.PerformPostTestCleanup");
 
-	struct
-	{
-	} params;
-
+	ATestablePlayerController_PerformPostTestCleanup_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ATestablePlayerController::DisconnectClientFromTest()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestablePlayerController.DisconnectClientFromTest");
 
-	struct
-	{
-	} params;
-
+	ATestablePlayerController_DisconnectClientFromTest_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -66,21 +57,15 @@ void ATestablePlayerController::DisconnectClientFromTest()
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 
-void ATestLevelScriptActor::YieldToServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
+void ATestLevelScriptActor::STATIC_YieldToServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToServer");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-	} params;
-
+	ATestLevelScriptActor_YieldToServer_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -94,12 +79,7 @@ void ATestLevelScriptActor::YieldToOriginalServer(class UObject* WorldContextObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToOriginalServer");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-	} params;
-
+	ATestLevelScriptActor_YieldToOriginalServer_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
@@ -118,13 +98,7 @@ void ATestLevelScriptActor::YieldToDynamicServer(class UObject* WorldContextObje
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToDynamicServer");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            ServerIndex;
-	} params;
-
+	ATestLevelScriptActor_YieldToDynamicServer_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.ServerIndex = ServerIndex;
@@ -140,23 +114,16 @@ void ATestLevelScriptActor::YieldToDynamicServer(class UObject* WorldContextObje
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 // int                            ClientId                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATestLevelScriptActor::YieldToClient(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int ClientId)
+void ATestLevelScriptActor::STATIC_YieldToClient(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int ClientId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToClient");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            ClientId;
-	} params;
-
+	ATestLevelScriptActor_YieldToClient_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.ClientId = ClientId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -166,21 +133,15 @@ void ATestLevelScriptActor::YieldToClient(class UObject* WorldContextObject, con
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 
-void ATestLevelScriptActor::WaitForPossessionAcknowledgement(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
+void ATestLevelScriptActor::STATIC_WaitForPossessionAcknowledgement(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.WaitForPossessionAcknowledgement");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-	} params;
-
+	ATestLevelScriptActor_WaitForPossessionAcknowledgement_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -195,13 +156,7 @@ void ATestLevelScriptActor::WaitForOtherServers(class UObject* WorldContextObjec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.WaitForOtherServers");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            NumberOfServers;
-	} params;
-
+	ATestLevelScriptActor_WaitForOtherServers_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.NumberOfServers = NumberOfServers;
@@ -217,23 +172,16 @@ void ATestLevelScriptActor::WaitForOtherServers(class UObject* WorldContextObjec
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 // int                            NumberOfClients                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATestLevelScriptActor::WaitForClients(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumberOfClients)
+void ATestLevelScriptActor::STATIC_WaitForClients(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumberOfClients)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.WaitForClients");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            NumberOfClients;
-	} params;
-
+	ATestLevelScriptActor_WaitForClients_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.NumberOfClients = NumberOfClients;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -247,12 +195,7 @@ void ATestLevelScriptActor::TestTriggerServerMigration(TArray<class AActor*> Act
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.TestTriggerServerMigration");
 
-	struct
-	{
-		TArray<class AActor*>          ActorGroup;
-		int                            TargetServerIndex;
-	} params;
-
+	ATestLevelScriptActor_TestTriggerServerMigration_Params params;
 	params.ActorGroup = ActorGroup;
 	params.TargetServerIndex = TargetServerIndex;
 
@@ -269,27 +212,18 @@ void ATestLevelScriptActor::TestTriggerServerMigration(TArray<class AActor*> Act
 // bool                           RegisterPawnsForMPTesting      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ClearPawnInputBindings         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATestLevelScriptActor::SyncClientServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumClients, bool RegisterPawnsForMPTesting, bool ClearPawnInputBindings)
+void ATestLevelScriptActor::STATIC_SyncClientServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumClients, bool RegisterPawnsForMPTesting, bool ClearPawnInputBindings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.SyncClientServer");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            NumClients;
-		bool                           RegisterPawnsForMPTesting;
-		bool                           ClearPawnInputBindings;
-	} params;
-
+	ATestLevelScriptActor_SyncClientServer_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.NumClients = NumClients;
 	params.RegisterPawnsForMPTesting = RegisterPawnsForMPTesting;
 	params.ClearPawnInputBindings = ClearPawnInputBindings;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -302,26 +236,17 @@ void ATestLevelScriptActor::SyncClientServer(class UObject* WorldContextObject, 
 // struct FRotator                SpawnRotation                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* ATestLevelScriptActor::SpawnActorForMPTesting(class UObject* WorldContextObject, class UClass* ActorClass, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
+class AActor* ATestLevelScriptActor::STATIC_SpawnActorForMPTesting(class UObject* WorldContextObject, class UClass* ActorClass, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.SpawnActorForMPTesting");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UClass*                  ActorClass;
-		struct FVector                 SpawnLocation;
-		struct FRotator                SpawnRotation;
-		class AActor*                  ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_SpawnActorForMPTesting_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.ActorClass = ActorClass;
 	params.SpawnLocation = SpawnLocation;
 	params.SpawnRotation = SpawnRotation;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -336,11 +261,7 @@ void ATestLevelScriptActor::SendServerMigrationTestValueInt32(int TestValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.SendServerMigrationTestValueInt32");
 
-	struct
-	{
-		int                            TestValue;
-	} params;
-
+	ATestLevelScriptActor_SendServerMigrationTestValueInt32_Params params;
 	params.TestValue = TestValue;
 
 	UObject::ProcessEvent(fn, &params);
@@ -352,19 +273,14 @@ void ATestLevelScriptActor::SendServerMigrationTestValueInt32(int TestValue)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATestLevelScriptActor::RegisterPawnsForMPTesting(class UObject* WorldContextObject)
+void ATestLevelScriptActor::STATIC_RegisterPawnsForMPTesting(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.RegisterPawnsForMPTesting");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-	} params;
-
+	ATestLevelScriptActor_RegisterPawnsForMPTesting_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -377,11 +293,7 @@ void ATestLevelScriptActor::RegisterActorForMPTestingRecursively(class AActor* T
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.RegisterActorForMPTestingRecursively");
 
-	struct
-	{
-		class AActor*                  TargetActor;
-	} params;
-
+	ATestLevelScriptActor_RegisterActorForMPTestingRecursively_Params params;
 	params.TargetActor = TargetActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -397,11 +309,7 @@ void ATestLevelScriptActor::RegisterActorForMPTesting(class AActor* TargetActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.RegisterActorForMPTesting");
 
-	struct
-	{
-		class AActor*                  TargetActor;
-	} params;
-
+	ATestLevelScriptActor_RegisterActorForMPTesting_Params params;
 	params.TargetActor = TargetActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -415,10 +323,7 @@ void ATestLevelScriptActor::PostTestCleanup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.PostTestCleanup");
 
-	struct
-	{
-	} params;
-
+	ATestLevelScriptActor_PostTestCleanup_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -433,11 +338,7 @@ void ATestLevelScriptActor::OnServerMigrationTestValueInt32Received(int TestValu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnServerMigrationTestValueInt32Received");
 
-	struct
-	{
-		int                            TestValue;
-	} params;
-
+	ATestLevelScriptActor_OnServerMigrationTestValueInt32Received_Params params;
 	params.TestValue = TestValue;
 
 	UObject::ProcessEvent(fn, &params);
@@ -454,12 +355,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationStarted(const struct FGuid&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationStarted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-		TArray<class APlayerController*> Players;
-	} params;
-
+	ATestLevelScriptActor_OnOutgoingServerMigrationStarted_Params params;
 	params.MigrationId = MigrationId;
 	params.Players = Players;
 
@@ -476,11 +372,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationCompleted(const struct FGui
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationCompleted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-	} params;
-
+	ATestLevelScriptActor_OnOutgoingServerMigrationCompleted_Params params;
 	params.MigrationId = MigrationId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -496,11 +388,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationAborted(const struct FGuid&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationAborted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-	} params;
-
+	ATestLevelScriptActor_OnOutgoingServerMigrationAborted_Params params;
 	params.MigrationId = MigrationId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -517,12 +405,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationStarted(const struct FGuid&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationStarted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-		int                            NumPlayers;
-	} params;
-
+	ATestLevelScriptActor_OnIncomingServerMigrationStarted_Params params;
 	params.MigrationId = MigrationId;
 	params.NumPlayers = NumPlayers;
 
@@ -541,13 +424,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationCompleted(const struct FGui
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationCompleted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-		TArray<class APlayerController*> Players;
-		TArray<class AActor*>          Actors;
-	} params;
-
+	ATestLevelScriptActor_OnIncomingServerMigrationCompleted_Params params;
 	params.MigrationId = MigrationId;
 	params.Players = Players;
 	params.Actors = Actors;
@@ -565,11 +442,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationAborted(const struct FGuid&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationAborted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-	} params;
-
+	ATestLevelScriptActor_OnIncomingServerMigrationAborted_Params params;
 	params.MigrationId = MigrationId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -585,11 +458,7 @@ void ATestLevelScriptActor::OnClientServerMigrationStarted(const struct FGuid& M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationStarted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-	} params;
-
+	ATestLevelScriptActor_OnClientServerMigrationStarted_Params params;
 	params.MigrationId = MigrationId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -605,11 +474,7 @@ void ATestLevelScriptActor::OnClientServerMigrationCompleted(const struct FGuid&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationCompleted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-	} params;
-
+	ATestLevelScriptActor_OnClientServerMigrationCompleted_Params params;
 	params.MigrationId = MigrationId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -625,11 +490,7 @@ void ATestLevelScriptActor::OnClientServerMigrationAborted(const struct FGuid& M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationAborted");
 
-	struct
-	{
-		struct FGuid                   MigrationId;
-	} params;
-
+	ATestLevelScriptActor_OnClientServerMigrationAborted_Params params;
 	params.MigrationId = MigrationId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -646,12 +507,7 @@ int ATestLevelScriptActor::GetServerIndex(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetServerIndex");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		int                            ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetServerIndex_Params params;
 	params.WorldContextObject = WorldContextObject;
 
 	UObject::ProcessEvent(fn, &params);
@@ -670,12 +526,7 @@ class FString ATestLevelScriptActor::GetRemoteServerMigrationURL(int TargetServe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetRemoteServerMigrationURL");
 
-	struct
-	{
-		int                            TargetServerIndex;
-		class FString                  ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetRemoteServerMigrationURL_Params params;
 	params.TargetServerIndex = TargetServerIndex;
 
 	UObject::ProcessEvent(fn, &params);
@@ -694,12 +545,7 @@ int ATestLevelScriptActor::GetPlayerIndexFromClientId(int ClientId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetPlayerIndexFromClientId");
 
-	struct
-	{
-		int                            ClientId;
-		int                            ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetPlayerIndexFromClientId_Params params;
 	params.ClientId = ClientId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -717,11 +563,7 @@ int ATestLevelScriptActor::GetNumClientsForMultiplayerTest()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetNumClientsForMultiplayerTest");
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetNumClientsForMultiplayerTest_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -738,11 +580,7 @@ int ATestLevelScriptActor::GetNumAutomationClients()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetNumAutomationClients");
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetNumAutomationClients_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -761,13 +599,7 @@ class APawn* ATestLevelScriptActor::GetClientPawn(int ClientId, int SplitScreenI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetClientPawn");
 
-	struct
-	{
-		int                            ClientId;
-		int                            SplitScreenIndex;
-		class APawn*                   ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetClientPawn_Params params;
 	params.ClientId = ClientId;
 	params.SplitScreenIndex = SplitScreenIndex;
 
@@ -787,12 +619,7 @@ int ATestLevelScriptActor::GetClientId(bool ErrorOnFailure)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetClientId");
 
-	struct
-	{
-		bool                           ErrorOnFailure;
-		int                            ReturnValue;
-	} params;
-
+	ATestLevelScriptActor_GetClientId_Params params;
 	params.ErrorOnFailure = ErrorOnFailure;
 
 	UObject::ProcessEvent(fn, &params);
@@ -808,10 +635,7 @@ void ATestLevelScriptActor::DoServerPostTestCleanup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.DoServerPostTestCleanup");
 
-	struct
-	{
-	} params;
-
+	ATestLevelScriptActor_DoServerPostTestCleanup_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -822,19 +646,14 @@ void ATestLevelScriptActor::DoServerPostTestCleanup()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATestLevelScriptActor::ClearPawnInputBindings(class UObject* WorldContextObject)
+void ATestLevelScriptActor::STATIC_ClearPawnInputBindings(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.ClearPawnInputBindings");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-	} params;
-
+	ATestLevelScriptActor_ClearPawnInputBindings_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -847,11 +666,7 @@ void ATestLevelScriptActor::AddServer(const class FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.AddServer");
 
-	struct
-	{
-		class FString                  Name;
-	} params;
-
+	ATestLevelScriptActor_AddServer_Params params;
 	params.Name = Name;
 
 	UObject::ProcessEvent(fn, &params);
@@ -868,12 +683,7 @@ void ATestLevelScriptActor::AddClient(int Port, const class FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.AddClient");
 
-	struct
-	{
-		int                            Port;
-		class FString                  Name;
-	} params;
-
+	ATestLevelScriptActor_AddClient_Params params;
 	params.Port = Port;
 	params.Name = Name;
 
@@ -886,19 +696,14 @@ void ATestLevelScriptActor::AddClient(int Port, const class FString& Name)
 // Parameters:
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::TestFinished(class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_TestFinished(class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFinished");
 
-	struct
-	{
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_TestFinished_Params params;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -908,21 +713,15 @@ void UAutomationBlueprintFunctionLibrary::TestFinished(class UObject* ContextObj
 // class FString                  Message                        (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::TestFailed(const class FString& Message, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_TestFailed(const class FString& Message, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFailed");
 
-	struct
-	{
-		class FString                  Message;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_TestFailed_Params params;
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -935,27 +734,18 @@ void UAutomationBlueprintFunctionLibrary::TestFailed(const class FString& Messag
 // class FString                  NameOverride                   (Parm, ZeroConstructor)
 // float                          DelayBeforeScreenshotSeconds   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshotAtCamera(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class ACameraActor* Camera, const class FString& NameOverride, float DelayBeforeScreenshotSeconds)
+void UAutomationBlueprintFunctionLibrary::STATIC_TakeAutomationScreenshotAtCamera(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class ACameraActor* Camera, const class FString& NameOverride, float DelayBeforeScreenshotSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TakeAutomationScreenshotAtCamera");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		class ACameraActor*            Camera;
-		class FString                  NameOverride;
-		float                          DelayBeforeScreenshotSeconds;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_TakeAutomationScreenshotAtCamera_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.Camera = Camera;
 	params.NameOverride = NameOverride;
 	params.DelayBeforeScreenshotSeconds = DelayBeforeScreenshotSeconds;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -966,23 +756,16 @@ void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshotAtCamera(class
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 // class FString                  Name                           (Parm, ZeroConstructor)
 
-void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshot(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, const class FString& Name)
+void UAutomationBlueprintFunctionLibrary::STATIC_TakeAutomationScreenshot(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, const class FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TakeAutomationScreenshot");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		class FString                  Name;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_TakeAutomationScreenshot_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.Name = Name;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -991,36 +774,27 @@ void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshot(class UObject
 // Parameters:
 // class FString                  StepName                       (Parm, ZeroConstructor)
 
-void UAutomationBlueprintFunctionLibrary::StepStarted(const class FString& StepName)
+void UAutomationBlueprintFunctionLibrary::STATIC_StepStarted(const class FString& StepName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepStarted");
 
-	struct
-	{
-		class FString                  StepName;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_StepStarted_Params params;
 	params.StepName = StepName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepFinished
 // (Final, Native, Static, Public, BlueprintCallable)
 
-void UAutomationBlueprintFunctionLibrary::StepFinished()
+void UAutomationBlueprintFunctionLibrary::STATIC_StepFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepFinished");
 
-	struct
-	{
-	} params;
+	UAutomationBlueprintFunctionLibrary_StepFinished_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1029,19 +803,14 @@ void UAutomationBlueprintFunctionLibrary::StepFinished()
 // Parameters:
 // bool                           TimeoutIsFatal                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::SetTestTimeoutAsFatal(bool TimeoutIsFatal)
+void UAutomationBlueprintFunctionLibrary::STATIC_SetTestTimeoutAsFatal(bool TimeoutIsFatal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.SetTestTimeoutAsFatal");
 
-	struct
-	{
-		bool                           TimeoutIsFatal;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_SetTestTimeoutAsFatal_Params params;
 	params.TimeoutIsFatal = TimeoutIsFatal;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1053,25 +822,17 @@ void UAutomationBlueprintFunctionLibrary::SetTestTimeoutAsFatal(bool TimeoutIsFa
 // class UClass*                  GameMode                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Absolute                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::OpenLevelWithGameMode(class UObject* WorldContextObject, const struct FName& LevelName, class UClass* GameMode, bool Absolute)
+void UAutomationBlueprintFunctionLibrary::STATIC_OpenLevelWithGameMode(class UObject* WorldContextObject, const struct FName& LevelName, class UClass* GameMode, bool Absolute)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.OpenLevelWithGameMode");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FName                   LevelName;
-		class UClass*                  GameMode;
-		bool                           Absolute;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_OpenLevelWithGameMode_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LevelName = LevelName;
 	params.GameMode = GameMode;
 	params.Absolute = Absolute;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1081,20 +842,14 @@ void UAutomationBlueprintFunctionLibrary::OpenLevelWithGameMode(class UObject* W
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAutomationBlueprintFunctionLibrary::IsTravelFinished(class UObject* WorldContextObject)
+bool UAutomationBlueprintFunctionLibrary::STATIC_IsTravelFinished(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsTravelFinished");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		bool                           ReturnValue;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_IsTravelFinished_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1105,18 +860,13 @@ bool UAutomationBlueprintFunctionLibrary::IsTravelFinished(class UObject* WorldC
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAutomationBlueprintFunctionLibrary::IsEditor()
+bool UAutomationBlueprintFunctionLibrary::STATIC_IsEditor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsEditor");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
+	UAutomationBlueprintFunctionLibrary_IsEditor_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1127,18 +877,13 @@ bool UAutomationBlueprintFunctionLibrary::IsEditor()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAutomationBlueprintFunctionLibrary::HasPerformanceDataBeenCaptured()
+bool UAutomationBlueprintFunctionLibrary::STATIC_HasPerformanceDataBeenCaptured()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.HasPerformanceDataBeenCaptured");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
+	UAutomationBlueprintFunctionLibrary_HasPerformanceDataBeenCaptured_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1150,20 +895,14 @@ bool UAutomationBlueprintFunctionLibrary::HasPerformanceDataBeenCaptured()
 // bool                           ErrorOnFailure                 (Parm, ZeroConstructor, IsPlainOldData)
 // class ATestLevelScriptActor*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ATestLevelScriptActor* UAutomationBlueprintFunctionLibrary::GetTestLevelScriptActor(bool ErrorOnFailure)
+class ATestLevelScriptActor* UAutomationBlueprintFunctionLibrary::STATIC_GetTestLevelScriptActor(bool ErrorOnFailure)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetTestLevelScriptActor");
 
-	struct
-	{
-		bool                           ErrorOnFailure;
-		class ATestLevelScriptActor*   ReturnValue;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_GetTestLevelScriptActor_Params params;
 	params.ErrorOnFailure = ErrorOnFailure;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1175,20 +914,14 @@ class ATestLevelScriptActor* UAutomationBlueprintFunctionLibrary::GetTestLevelSc
 // class APlayerState*            State                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAutomationBlueprintFunctionLibrary::GetPlayerId(class APlayerState* State)
+int UAutomationBlueprintFunctionLibrary::STATIC_GetPlayerId(class APlayerState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetPlayerId");
 
-	struct
-	{
-		class APlayerState*            State;
-		int                            ReturnValue;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_GetPlayerId_Params params;
 	params.State = State;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1200,20 +933,14 @@ int UAutomationBlueprintFunctionLibrary::GetPlayerId(class APlayerState* State)
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UAutomationBlueprintFunctionLibrary::GetLevelUrl(class UObject* WorldContextObject)
+class FString UAutomationBlueprintFunctionLibrary::STATIC_GetLevelUrl(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetLevelUrl");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class FString                  ReturnValue;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_GetLevelUrl_Params params;
 	params.WorldContextObject = WorldContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1224,18 +951,13 @@ class FString UAutomationBlueprintFunctionLibrary::GetLevelUrl(class UObject* Wo
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UAutomationBlueprintFunctionLibrary::GetCurrentMapTestName()
+class FString UAutomationBlueprintFunctionLibrary::STATIC_GetCurrentMapTestName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetCurrentMapTestName");
 
-	struct
-	{
-		class FString                  ReturnValue;
-	} params;
+	UAutomationBlueprintFunctionLibrary_GetCurrentMapTestName_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1246,19 +968,14 @@ class FString UAutomationBlueprintFunctionLibrary::GetCurrentMapTestName()
 // Parameters:
 // bool                           DumpMemReport                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::EndPerformanceCapture(bool DumpMemReport)
+void UAutomationBlueprintFunctionLibrary::STATIC_EndPerformanceCapture(bool DumpMemReport)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.EndPerformanceCapture");
 
-	struct
-	{
-		bool                           DumpMemReport;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_EndPerformanceCapture_Params params;
 	params.DumpMemReport = DumpMemReport;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1267,36 +984,27 @@ void UAutomationBlueprintFunctionLibrary::EndPerformanceCapture(bool DumpMemRepo
 // Parameters:
 // int                            FrameDelay                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::DumpFullMemReportDelayed(int FrameDelay)
+void UAutomationBlueprintFunctionLibrary::STATIC_DumpFullMemReportDelayed(int FrameDelay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReportDelayed");
 
-	struct
-	{
-		int                            FrameDelay;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_DumpFullMemReportDelayed_Params params;
 	params.FrameDelay = FrameDelay;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReport
 // (Final, Native, Static, Public, BlueprintCallable)
 
-void UAutomationBlueprintFunctionLibrary::DumpFullMemReport()
+void UAutomationBlueprintFunctionLibrary::STATIC_DumpFullMemReport()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReport");
 
-	struct
-	{
-	} params;
+	UAutomationBlueprintFunctionLibrary_DumpFullMemReport_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1308,25 +1016,17 @@ void UAutomationBlueprintFunctionLibrary::DumpFullMemReport()
 // int                            NumFrames                      (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  Description                    (Parm, ZeroConstructor)
 
-void UAutomationBlueprintFunctionLibrary::DelayForFramesWithDesc(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames, const class FString& Description)
+void UAutomationBlueprintFunctionLibrary::STATIC_DelayForFramesWithDesc(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames, const class FString& Description)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DelayForFramesWithDesc");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            NumFrames;
-		class FString                  Description;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_DelayForFramesWithDesc_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.NumFrames = NumFrames;
 	params.Description = Description;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1337,23 +1037,16 @@ void UAutomationBlueprintFunctionLibrary::DelayForFramesWithDesc(class UObject* 
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 // int                            NumFrames                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::DelayForFrames(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames)
+void UAutomationBlueprintFunctionLibrary::STATIC_DelayForFrames(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DelayForFrames");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FLatentActionInfo       LatentInfo;
-		int                            NumFrames;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_DelayForFrames_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.LatentInfo = LatentInfo;
 	params.NumFrames = NumFrames;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1362,19 +1055,14 @@ void UAutomationBlueprintFunctionLibrary::DelayForFrames(class UObject* WorldCon
 // Parameters:
 // bool                           EnableBlock                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::BlockAsyncLoading(bool EnableBlock)
+void UAutomationBlueprintFunctionLibrary::STATIC_BlockAsyncLoading(bool EnableBlock)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading");
 
-	struct
-	{
-		bool                           EnableBlock;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_BlockAsyncLoading_Params params;
 	params.EnableBlock = EnableBlock;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1385,23 +1073,16 @@ void UAutomationBlueprintFunctionLibrary::BlockAsyncLoading(bool EnableBlock)
 // bool                           DumpMemReport                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PreventGarbageCollection       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::BeginPerformanceCapture(const class FString& FolderName, bool DumpMemReport, bool PreventGarbageCollection)
+void UAutomationBlueprintFunctionLibrary::STATIC_BeginPerformanceCapture(const class FString& FolderName, bool DumpMemReport, bool PreventGarbageCollection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BeginPerformanceCapture");
 
-	struct
-	{
-		class FString                  FolderName;
-		bool                           DumpMemReport;
-		bool                           PreventGarbageCollection;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_BeginPerformanceCapture_Params params;
 	params.FolderName = FolderName;
 	params.DumpMemReport = DumpMemReport;
 	params.PreventGarbageCollection = PreventGarbageCollection;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1414,27 +1095,18 @@ void UAutomationBlueprintFunctionLibrary::BeginPerformanceCapture(const class FS
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertValue_Int(int Actual, TEnumAsByte<EComparisonMethod> ShouldBe, int Expected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertValue_Int(int Actual, TEnumAsByte<EComparisonMethod> ShouldBe, int Expected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_Int");
 
-	struct
-	{
-		int                            Actual;
-		TEnumAsByte<EComparisonMethod> ShouldBe;
-		int                            Expected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertValue_Int_Params params;
 	params.Actual = Actual;
 	params.ShouldBe = ShouldBe;
 	params.Expected = Expected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1447,27 +1119,18 @@ void UAutomationBlueprintFunctionLibrary::AssertValue_Int(int Actual, TEnumAsByt
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertValue_Float(float Actual, TEnumAsByte<EComparisonMethod> ShouldBe, float Expected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertValue_Float(float Actual, TEnumAsByte<EComparisonMethod> ShouldBe, float Expected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_Float");
 
-	struct
-	{
-		float                          Actual;
-		TEnumAsByte<EComparisonMethod> ShouldBe;
-		float                          Expected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertValue_Float_Params params;
 	params.Actual = Actual;
 	params.ShouldBe = ShouldBe;
 	params.Expected = Expected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1480,27 +1143,18 @@ void UAutomationBlueprintFunctionLibrary::AssertValue_Float(float Actual, TEnumA
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertValue_DateTime(const struct FDateTime& Actual, TEnumAsByte<EComparisonMethod> ShouldBe, const struct FDateTime& Expected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertValue_DateTime(const struct FDateTime& Actual, TEnumAsByte<EComparisonMethod> ShouldBe, const struct FDateTime& Expected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_DateTime");
 
-	struct
-	{
-		struct FDateTime               Actual;
-		TEnumAsByte<EComparisonMethod> ShouldBe;
-		struct FDateTime               Expected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertValue_DateTime_Params params;
 	params.Actual = Actual;
 	params.ShouldBe = ShouldBe;
 	params.Expected = Expected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1511,23 +1165,16 @@ void UAutomationBlueprintFunctionLibrary::AssertValue_DateTime(const struct FDat
 // class FString                  Message                        (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertTrue(bool Condition, const class FString& Message, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertTrue(bool Condition, const class FString& Message, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertTrue");
 
-	struct
-	{
-		bool                           Condition;
-		class FString                  Message;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertTrue_Params params;
 	params.Condition = Condition;
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1539,25 +1186,17 @@ void UAutomationBlueprintFunctionLibrary::AssertTrue(bool Condition, const class
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Vector(const struct FVector& Actual, const struct FVector& NotExpected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_Vector(const struct FVector& Actual, const struct FVector& NotExpected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Vector");
 
-	struct
-	{
-		struct FVector                 Actual;
-		struct FVector                 NotExpected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertNotEqual_Vector_Params params;
 	params.Actual = Actual;
 	params.NotExpected = NotExpected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1569,25 +1208,17 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Vector(const struct FVe
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Transform(const struct FTransform& Actual, const struct FTransform& NotExpected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_Transform(const struct FTransform& Actual, const struct FTransform& NotExpected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Transform");
 
-	struct
-	{
-		struct FTransform              Actual;
-		struct FTransform              NotExpected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertNotEqual_Transform_Params params;
 	params.Actual = Actual;
 	params.NotExpected = NotExpected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1599,25 +1230,17 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Transform(const struct 
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertNotEqual_String(const class FString& Actual, const class FString& NotExpected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_String(const class FString& Actual, const class FString& NotExpected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_String");
 
-	struct
-	{
-		class FString                  Actual;
-		class FString                  NotExpected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertNotEqual_String_Params params;
 	params.Actual = Actual;
 	params.NotExpected = NotExpected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1629,25 +1252,17 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_String(const class FStr
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Rotator(const struct FRotator& Actual, const struct FRotator& NotExpected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertNotEqual_Rotator(const struct FRotator& Actual, const struct FRotator& NotExpected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Rotator");
 
-	struct
-	{
-		struct FRotator                Actual;
-		struct FRotator                NotExpected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertNotEqual_Rotator_Params params;
 	params.Actual = Actual;
 	params.NotExpected = NotExpected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1658,23 +1273,16 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Rotator(const struct FR
 // class FString                  Message                        (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertIsValid(class UObject* Object, const class FString& Message, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertIsValid(class UObject* Object, const class FString& Message, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertIsValid");
 
-	struct
-	{
-		class UObject*                 Object;
-		class FString                  Message;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertIsValid_Params params;
 	params.Object = Object;
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1685,23 +1293,16 @@ void UAutomationBlueprintFunctionLibrary::AssertIsValid(class UObject* Object, c
 // class FString                  Message                        (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertIsNotValid(class UObject* Object, const class FString& Message, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertIsNotValid(class UObject* Object, const class FString& Message, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertIsNotValid");
 
-	struct
-	{
-		class UObject*                 Object;
-		class FString                  Message;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertIsNotValid_Params params;
 	params.Object = Object;
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1712,23 +1313,16 @@ void UAutomationBlueprintFunctionLibrary::AssertIsNotValid(class UObject* Object
 // class FString                  Message                        (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertFalse(bool Condition, const class FString& Message, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertFalse(bool Condition, const class FString& Message, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertFalse");
 
-	struct
-	{
-		bool                           Condition;
-		class FString                  Message;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertFalse_Params params;
 	params.Condition = Condition;
 	params.Message = Message;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1737,19 +1331,14 @@ void UAutomationBlueprintFunctionLibrary::AssertFalse(bool Condition, const clas
 // Parameters:
 // class FString                  ErrorMessage                   (Parm, ZeroConstructor)
 
-void UAutomationBlueprintFunctionLibrary::AssertErrorOccurred(const class FString& ErrorMessage)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertErrorOccurred(const class FString& ErrorMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertErrorOccurred");
 
-	struct
-	{
-		class FString                  ErrorMessage;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertErrorOccurred_Params params;
 	params.ErrorMessage = ErrorMessage;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1762,27 +1351,18 @@ void UAutomationBlueprintFunctionLibrary::AssertErrorOccurred(const class FStrin
 // float                          Tolerance                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector2D(const struct FVector2D& Actual, const struct FVector2D& Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Vector2D(const struct FVector2D& Actual, const struct FVector2D& Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Vector2D");
 
-	struct
-	{
-		struct FVector2D               Actual;
-		struct FVector2D               Expected;
-		class FString                  What;
-		float                          Tolerance;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertEqual_Vector2D_Params params;
 	params.Actual = Actual;
 	params.Expected = Expected;
 	params.What = What;
 	params.Tolerance = Tolerance;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1795,27 +1375,18 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector2D(const struct FVec
 // float                          Tolerance                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector(const struct FVector& Actual, const struct FVector& Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Vector(const struct FVector& Actual, const struct FVector& Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Vector");
 
-	struct
-	{
-		struct FVector                 Actual;
-		struct FVector                 Expected;
-		class FString                  What;
-		float                          Tolerance;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertEqual_Vector_Params params;
 	params.Actual = Actual;
 	params.Expected = Expected;
 	params.What = What;
 	params.Tolerance = Tolerance;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1827,25 +1398,17 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector(const struct FVecto
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertEqual_Transform(const struct FTransform& Actual, const struct FTransform& Expected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Transform(const struct FTransform& Actual, const struct FTransform& Expected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Transform");
 
-	struct
-	{
-		struct FTransform              Actual;
-		struct FTransform              Expected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertEqual_Transform_Params params;
 	params.Actual = Actual;
 	params.Expected = Expected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1857,25 +1420,17 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Transform(const struct FTr
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertEqual_String(const class FString& Actual, const class FString& Expected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_String(const class FString& Actual, const class FString& Expected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_String");
 
-	struct
-	{
-		class FString                  Actual;
-		class FString                  Expected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertEqual_String_Params params;
 	params.Actual = Actual;
 	params.Expected = Expected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1887,25 +1442,17 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_String(const class FString
 // class FString                  What                           (Parm, ZeroConstructor)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertEqual_Rotator(const struct FRotator& Actual, const struct FRotator& Expected, const class FString& What, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Rotator(const struct FRotator& Actual, const struct FRotator& Expected, const class FString& What, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Rotator");
 
-	struct
-	{
-		struct FRotator                Actual;
-		struct FRotator                Expected;
-		class FString                  What;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertEqual_Rotator_Params params;
 	params.Actual = Actual;
 	params.Expected = Expected;
 	params.What = What;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1918,27 +1465,18 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Rotator(const struct FRota
 // float                          Tolerance                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAutomationBlueprintFunctionLibrary::AssertEqual_Float(float Actual, float Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
+void UAutomationBlueprintFunctionLibrary::STATIC_AssertEqual_Float(float Actual, float Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Float");
 
-	struct
-	{
-		float                          Actual;
-		float                          Expected;
-		class FString                  What;
-		float                          Tolerance;
-		class UObject*                 ContextObject;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AssertEqual_Float_Params params;
 	params.Actual = Actual;
 	params.Expected = Expected;
 	params.What = What;
 	params.Tolerance = Tolerance;
 	params.ContextObject = ContextObject;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1947,19 +1485,14 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Float(float Actual, float 
 // Parameters:
 // class FString                  ErrorMessage                   (Parm, ZeroConstructor)
 
-void UAutomationBlueprintFunctionLibrary::AddExpectedError(const class FString& ErrorMessage)
+void UAutomationBlueprintFunctionLibrary::STATIC_AddExpectedError(const class FString& ErrorMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AddExpectedError");
 
-	struct
-	{
-		class FString                  ErrorMessage;
-	} params;
-
+	UAutomationBlueprintFunctionLibrary_AddExpectedError_Params params;
 	params.ErrorMessage = ErrorMessage;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -1972,11 +1505,7 @@ void UAutomationLatentActionCallback::LatentCallback(int Linkage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationLatentActionCallback.LatentCallback");
 
-	struct
-	{
-		int                            Linkage;
-	} params;
-
+	UAutomationLatentActionCallback_LatentCallback_Params params;
 	params.Linkage = Linkage;
 
 	UObject::ProcessEvent(fn, &params);

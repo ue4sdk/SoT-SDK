@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_RareEngine_classes.hpp"
+#include "SoT_RareEngine_parameters.hpp"
 
 namespace SDK
 {
@@ -17,19 +17,14 @@ namespace SDK
 // Parameters:
 // int                            InThreshold                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHitchDiagnosisBlueprintFunctionLibrary::SetHitchThreshold(int InThreshold)
+void UHitchDiagnosisBlueprintFunctionLibrary::STATIC_SetHitchThreshold(int InThreshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.HitchDiagnosisBlueprintFunctionLibrary.SetHitchThreshold");
 
-	struct
-	{
-		int                            InThreshold;
-	} params;
-
+	UHitchDiagnosisBlueprintFunctionLibrary_SetHitchThreshold_Params params;
 	params.InThreshold = InThreshold;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -38,18 +33,13 @@ void UHitchDiagnosisBlueprintFunctionLibrary::SetHitchThreshold(int InThreshold)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UHitchDiagnosisBlueprintFunctionLibrary::GetMaxHitchNameThisFrame()
+class FString UHitchDiagnosisBlueprintFunctionLibrary::STATIC_GetMaxHitchNameThisFrame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.HitchDiagnosisBlueprintFunctionLibrary.GetMaxHitchNameThisFrame");
 
-	struct
-	{
-		class FString                  ReturnValue;
-	} params;
+	UHitchDiagnosisBlueprintFunctionLibrary_GetMaxHitchNameThisFrame_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -60,18 +50,13 @@ class FString UHitchDiagnosisBlueprintFunctionLibrary::GetMaxHitchNameThisFrame(
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UHitchDiagnosisBlueprintFunctionLibrary::GetMaxHitchLengthThisFrameMs()
+int UHitchDiagnosisBlueprintFunctionLibrary::STATIC_GetMaxHitchLengthThisFrameMs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.HitchDiagnosisBlueprintFunctionLibrary.GetMaxHitchLengthThisFrameMs");
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
+	UHitchDiagnosisBlueprintFunctionLibrary_GetMaxHitchLengthThisFrameMs_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -80,17 +65,13 @@ int UHitchDiagnosisBlueprintFunctionLibrary::GetMaxHitchLengthThisFrameMs()
 // Function RareEngine.HitchDiagnosisBlueprintFunctionLibrary.DumpThisFramesHitchesToLog
 // (Final, Native, Static, Public, BlueprintCallable)
 
-void UHitchDiagnosisBlueprintFunctionLibrary::DumpThisFramesHitchesToLog()
+void UHitchDiagnosisBlueprintFunctionLibrary::STATIC_DumpThisFramesHitchesToLog()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.HitchDiagnosisBlueprintFunctionLibrary.DumpThisFramesHitchesToLog");
 
-	struct
-	{
-	} params;
+	UHitchDiagnosisBlueprintFunctionLibrary_DumpThisFramesHitchesToLog_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -99,18 +80,13 @@ void UHitchDiagnosisBlueprintFunctionLibrary::DumpThisFramesHitchesToLog()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHitchDiagnosisBlueprintFunctionLibrary::DidHitchOccurThisFrame()
+bool UHitchDiagnosisBlueprintFunctionLibrary::STATIC_DidHitchOccurThisFrame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.HitchDiagnosisBlueprintFunctionLibrary.DidHitchOccurThisFrame");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
+	UHitchDiagnosisBlueprintFunctionLibrary_DidHitchOccurThisFrame_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -123,10 +99,7 @@ void UStallDetector::Deactivate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.StallDetector.Deactivate");
 
-	struct
-	{
-	} params;
-
+	UStallDetector_Deactivate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -139,22 +112,15 @@ void UStallDetector::Deactivate()
 // bool                           CreateActive                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UStallDetector*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UStallDetector* UStallDetector::CreateStallDetector(float Delay, bool CreateActive)
+class UStallDetector* UStallDetector::STATIC_CreateStallDetector(float Delay, bool CreateActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.StallDetector.CreateStallDetector");
 
-	struct
-	{
-		float                          Delay;
-		bool                           CreateActive;
-		class UStallDetector*          ReturnValue;
-	} params;
-
+	UStallDetector_CreateStallDetector_Params params;
 	params.Delay = Delay;
 	params.CreateActive = CreateActive;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -167,10 +133,7 @@ void UStallDetector::Activate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.StallDetector.Activate");
 
-	struct
-	{
-	} params;
-
+	UStallDetector_Activate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -184,24 +147,16 @@ void UStallDetector::Activate()
 // TArray<struct FStaticMeshComponentList> OutComponentLists              (Parm, OutParm, ZeroConstructor)
 // class ULevel*                  RestrictToLevel                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UStaticMeshActorBlueprintLibrary::FindAllStaticMeshComponents(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshComponentList>* OutComponentLists)
+void UStaticMeshActorBlueprintLibrary::STATIC_FindAllStaticMeshComponents(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshComponentList>* OutComponentLists)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.StaticMeshActorBlueprintLibrary.FindAllStaticMeshComponents");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		TArray<class UStaticMesh*>     MeshFilter;
-		TArray<struct FStaticMeshComponentList> OutComponentLists;
-		class ULevel*                  RestrictToLevel;
-	} params;
-
+	UStaticMeshActorBlueprintLibrary_FindAllStaticMeshComponents_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.MeshFilter = MeshFilter;
 	params.RestrictToLevel = RestrictToLevel;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutComponentLists != nullptr)
 		*OutComponentLists = params.OutComponentLists;
@@ -216,24 +171,16 @@ void UStaticMeshActorBlueprintLibrary::FindAllStaticMeshComponents(class UObject
 // TArray<struct FStaticMeshActorList> OutActorLists                  (Parm, OutParm, ZeroConstructor)
 // class ULevel*                  RestrictToLevel                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UStaticMeshActorBlueprintLibrary::FindAllStaticMeshActors(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshActorList>* OutActorLists)
+void UStaticMeshActorBlueprintLibrary::STATIC_FindAllStaticMeshActors(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshActorList>* OutActorLists)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RareEngine.StaticMeshActorBlueprintLibrary.FindAllStaticMeshActors");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		TArray<class UStaticMesh*>     MeshFilter;
-		TArray<struct FStaticMeshActorList> OutActorLists;
-		class ULevel*                  RestrictToLevel;
-	} params;
-
+	UStaticMeshActorBlueprintLibrary_FindAllStaticMeshActors_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.MeshFilter = MeshFilter;
 	params.RestrictToLevel = RestrictToLevel;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutActorLists != nullptr)
 		*OutActorLists = params.OutActorLists;

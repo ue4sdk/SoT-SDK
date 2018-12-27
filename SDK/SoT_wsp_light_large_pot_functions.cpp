@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_light_large_pot_classes.hpp"
+#include "SoT_wsp_light_large_pot_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_light_large_pot_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_light_large_pot.wsp_light_large_pot_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Awsp_light_large_pot_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

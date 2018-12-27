@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SunkenCurseArtefact_Emerald_classes.hpp"
+#include "SoT_BP_SunkenCurseArtefact_Emerald_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_SunkenCurseArtefact_Emerald_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SunkenCurseArtefact_Emerald.BP_SunkenCurseArtefact_Emerald_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_SunkenCurseArtefact_Emerald_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

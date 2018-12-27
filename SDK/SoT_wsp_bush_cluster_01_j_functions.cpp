@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_bush_cluster_01_j_classes.hpp"
+#include "SoT_wsp_bush_cluster_01_j_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_bush_cluster_01_j_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_bush_cluster_01_j.wsp_bush_cluster_01_j_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Awsp_bush_cluster_01_j_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

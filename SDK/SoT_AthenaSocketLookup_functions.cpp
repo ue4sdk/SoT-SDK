@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaSocketLookup_classes.hpp"
+#include "SoT_AthenaSocketLookup_parameters.hpp"
 
 namespace SDK
 {
@@ -18,20 +18,14 @@ namespace SDK
 // class FString                  InPath                         (Parm, ZeroConstructor)
 // struct FSocketId               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSocketId USocketIdTestFunctions::MakeSocketIdWithInvalidName(const class FString& InPath)
+struct FSocketId USocketIdTestFunctions::STATIC_MakeSocketIdWithInvalidName(const class FString& InPath)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketIdWithInvalidName");
 
-	struct
-	{
-		class FString                  InPath;
-		struct FSocketId               ReturnValue;
-	} params;
-
+	USocketIdTestFunctions_MakeSocketIdWithInvalidName_Params params;
 	params.InPath = InPath;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -43,20 +37,14 @@ struct FSocketId USocketIdTestFunctions::MakeSocketIdWithInvalidName(const class
 // struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FSocketId               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSocketId USocketIdTestFunctions::MakeSocketIdWithEmptyPath(const struct FName& InSocketName)
+struct FSocketId USocketIdTestFunctions::STATIC_MakeSocketIdWithEmptyPath(const struct FName& InSocketName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketIdWithEmptyPath");
 
-	struct
-	{
-		struct FName                   InSocketName;
-		struct FSocketId               ReturnValue;
-	} params;
-
+	USocketIdTestFunctions_MakeSocketIdWithEmptyPath_Params params;
 	params.InSocketName = InSocketName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -69,22 +57,15 @@ struct FSocketId USocketIdTestFunctions::MakeSocketIdWithEmptyPath(const struct 
 // struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FSocketId               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSocketId USocketIdTestFunctions::MakeSocketId(const class FString& InPath, const struct FName& InSocketName)
+struct FSocketId USocketIdTestFunctions::STATIC_MakeSocketId(const class FString& InPath, const struct FName& InSocketName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketId");
 
-	struct
-	{
-		class FString                  InPath;
-		struct FName                   InSocketName;
-		struct FSocketId               ReturnValue;
-	} params;
-
+	USocketIdTestFunctions_MakeSocketId_Params params;
 	params.InPath = InPath;
 	params.InSocketName = InSocketName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -97,21 +78,14 @@ struct FSocketId USocketIdTestFunctions::MakeSocketId(const class FString& InPat
 // struct FSocketId               InSocketId                     (ConstParm, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USocketLookupCacheTestFunctions::IsInCache(const struct FSocketId& InSocketId, struct FSocketLookupCache* InCache)
+bool USocketLookupCacheTestFunctions::STATIC_IsInCache(const struct FSocketId& InSocketId, struct FSocketLookupCache* InCache)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupCacheTestFunctions.IsInCache");
 
-	struct
-	{
-		struct FSocketLookupCache      InCache;
-		struct FSocketId               InSocketId;
-		bool                           ReturnValue;
-	} params;
-
+	USocketLookupCacheTestFunctions_IsInCache_Params params;
 	params.InSocketId = InSocketId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (InCache != nullptr)
 		*InCache = params.InCache;
@@ -128,23 +102,15 @@ bool USocketLookupCacheTestFunctions::IsInCache(const struct FSocketId& InSocket
 // class USceneComponent*         InSceneComponent               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USocketLookupCacheTestFunctions::AddToCache(const struct FSocketId& InSocketId, class USceneComponent* InSceneComponent, struct FSocketLookupCache* InCache)
+bool USocketLookupCacheTestFunctions::STATIC_AddToCache(const struct FSocketId& InSocketId, class USceneComponent* InSceneComponent, struct FSocketLookupCache* InCache)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupCacheTestFunctions.AddToCache");
 
-	struct
-	{
-		struct FSocketLookupCache      InCache;
-		struct FSocketId               InSocketId;
-		class USceneComponent*         InSceneComponent;
-		bool                           ReturnValue;
-	} params;
-
+	USocketLookupCacheTestFunctions_AddToCache_Params params;
 	params.InSocketId = InSocketId;
 	params.InSceneComponent = InSceneComponent;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (InCache != nullptr)
 		*InCache = params.InCache;
@@ -162,24 +128,15 @@ bool USocketLookupCacheTestFunctions::AddToCache(const struct FSocketId& InSocke
 // struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USocketLookupFunctions::TryGetSocketTransformWithCache(class AActor* InActor, const struct FSocketId& InSocketId, struct FSocketLookupCache* Cache, struct FTransform* OutTransform)
+bool USocketLookupFunctions::STATIC_TryGetSocketTransformWithCache(class AActor* InActor, const struct FSocketId& InSocketId, struct FSocketLookupCache* Cache, struct FTransform* OutTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryGetSocketTransformWithCache");
 
-	struct
-	{
-		struct FSocketLookupCache      Cache;
-		class AActor*                  InActor;
-		struct FSocketId               InSocketId;
-		struct FTransform              OutTransform;
-		bool                           ReturnValue;
-	} params;
-
+	USocketLookupFunctions_TryGetSocketTransformWithCache_Params params;
 	params.InActor = InActor;
 	params.InSocketId = InSocketId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Cache != nullptr)
 		*Cache = params.Cache;
@@ -199,25 +156,16 @@ bool USocketLookupFunctions::TryGetSocketTransformWithCache(class AActor* InActo
 // TEnumAsByte<ERelativeTransformSpace> Space                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USocketLookupFunctions::TryGetSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, TEnumAsByte<ERelativeTransformSpace> Space, struct FTransform* OutTransform)
+bool USocketLookupFunctions::STATIC_TryGetSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, TEnumAsByte<ERelativeTransformSpace> Space, struct FTransform* OutTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryGetSocketTransform");
 
-	struct
-	{
-		class AActor*                  InActor;
-		struct FSocketId               InSocketId;
-		struct FTransform              OutTransform;
-		TEnumAsByte<ERelativeTransformSpace> Space;
-		bool                           ReturnValue;
-	} params;
-
+	USocketLookupFunctions_TryGetSocketTransform_Params params;
 	params.InActor = InActor;
 	params.InSocketId = InSocketId;
 	params.Space = Space;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutTransform != nullptr)
 		*OutTransform = params.OutTransform;
@@ -235,25 +183,16 @@ bool USocketLookupFunctions::TryGetSocketTransform(class AActor* InActor, const 
 // struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USocketLookupFunctions::TryGetRelativeSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, class USceneComponent* RelativeTo, struct FTransform* OutTransform)
+bool USocketLookupFunctions::STATIC_TryGetRelativeSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, class USceneComponent* RelativeTo, struct FTransform* OutTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryGetRelativeSocketTransform");
 
-	struct
-	{
-		class AActor*                  InActor;
-		struct FSocketId               InSocketId;
-		class USceneComponent*         RelativeTo;
-		struct FTransform              OutTransform;
-		bool                           ReturnValue;
-	} params;
-
+	USocketLookupFunctions_TryGetRelativeSocketTransform_Params params;
 	params.InActor = InActor;
 	params.InSocketId = InSocketId;
 	params.RelativeTo = RelativeTo;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutTransform != nullptr)
 		*OutTransform = params.OutTransform;
@@ -269,22 +208,15 @@ bool USocketLookupFunctions::TryGetRelativeSocketTransform(class AActor* InActor
 // struct FSocketId               InSocketId                     (ConstParm, Parm, OutParm, ReferenceParm)
 // class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class USceneComponent* USocketLookupFunctions::TryFindSocketOwner(class AActor* InActor, const struct FSocketId& InSocketId)
+class USceneComponent* USocketLookupFunctions::STATIC_TryFindSocketOwner(class AActor* InActor, const struct FSocketId& InSocketId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryFindSocketOwner");
 
-	struct
-	{
-		class AActor*                  InActor;
-		struct FSocketId               InSocketId;
-		class USceneComponent*         ReturnValue;
-	} params;
-
+	USocketLookupFunctions_TryFindSocketOwner_Params params;
 	params.InActor = InActor;
 	params.InSocketId = InSocketId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -301,13 +233,7 @@ bool USocketLookupInterface::FindSocket(const struct FSocketId& InSocketId, stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupInterface.FindSocket");
 
-	struct
-	{
-		struct FSocketId               InSocketId;
-		struct FTransform              OutTransform;
-		bool                           ReturnValue;
-	} params;
-
+	USocketLookupInterface_FindSocket_Params params;
 	params.InSocketId = InSocketId;
 
 	UObject::ProcessEvent(fn, &params);

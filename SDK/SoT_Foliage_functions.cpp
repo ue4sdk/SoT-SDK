@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Foliage_classes.hpp"
+#include "SoT_Foliage_parameters.hpp"
 
 namespace SDK
 {
@@ -21,26 +21,17 @@ namespace SDK
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
+int UFoliageStatistics::STATIC_FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UStaticMesh*             StaticMesh;
-		struct FVector                 CenterPosition;
-		float                          Radius;
-		int                            ReturnValue;
-	} params;
-
+	UFoliageStatistics_FoliageOverlappingSphereCount_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.StaticMesh = StaticMesh;
 	params.CenterPosition = CenterPosition;
 	params.Radius = Radius;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -54,24 +45,16 @@ int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContex
 // struct FBox                    Box                            (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
+int UFoliageStatistics::STATIC_FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UStaticMesh*             StaticMesh;
-		struct FBox                    Box;
-		int                            ReturnValue;
-	} params;
-
+	UFoliageStatistics_FoliageOverlappingBoxCount_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.StaticMesh = StaticMesh;
 	params.Box = Box;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -90,15 +73,7 @@ void AInteractiveFoliageActor::CapsuleTouched(class AActor* Other, class UPrimit
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
 
-	struct
-	{
-		class AActor*                  Other;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              OverlapInfo;
-	} params;
-
+	AInteractiveFoliageActor_CapsuleTouched_Params params;
 	params.Other = Other;
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
@@ -118,11 +93,7 @@ void UProceduralFoliageSpawner::Simulate(int NumSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
 
-	struct
-	{
-		int                            NumSteps;
-	} params;
-
+	UProceduralFoliageSpawner_Simulate_Params params;
 	params.NumSteps = NumSteps;
 
 	UObject::ProcessEvent(fn, &params);

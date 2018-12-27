@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_beach_rocks_03_classes.hpp"
+#include "SoT_wsp_beach_rocks_03_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_beach_rocks_03_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_beach_rocks_03.wsp_beach_rocks_03_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Awsp_beach_rocks_03_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_PirateGenerator_classes.hpp"
+#include "SoT_PirateGenerator_parameters.hpp"
 
 namespace SDK
 {
@@ -22,12 +22,7 @@ class UClass* UAnimationSwitchDataAsset::GetAnimSetIdForDesc(const struct FPirat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.AnimationSwitchDataAsset.GetAnimSetIdForDesc");
 
-	struct
-	{
-		struct FPirateDescription      Desc;
-		class UClass*                  ReturnValue;
-	} params;
-
+	UAnimationSwitchDataAsset_GetAnimSetIdForDesc_Params params;
 	params.Desc = Desc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -42,21 +37,15 @@ class UClass* UAnimationSwitchDataAsset::GetAnimSetIdForDesc(const struct FPirat
 // class UCharacterMeshBakeSpecification* CharacterMeshSpecification     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FScriptDelegate         AsyncResult                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UCharacterMeshBakeFunctionLibrary::BakeCharacterMeshAsync(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, const struct FScriptDelegate& AsyncResult)
+void UCharacterMeshBakeFunctionLibrary::STATIC_BakeCharacterMeshAsync(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, const struct FScriptDelegate& AsyncResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.BakeCharacterMeshAsync");
 
-	struct
-	{
-		class UCharacterMeshBakeSpecification* CharacterMeshSpecification;
-		struct FScriptDelegate         AsyncResult;
-	} params;
-
+	UCharacterMeshBakeFunctionLibrary_BakeCharacterMeshAsync_Params params;
 	params.CharacterMeshSpecification = CharacterMeshSpecification;
 	params.AsyncResult = AsyncResult;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -66,20 +55,14 @@ void UCharacterMeshBakeFunctionLibrary::BakeCharacterMeshAsync(class UCharacterM
 // class UCharacterMeshBakeSpecification* CharacterMeshSpecification     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class USkeletalMesh* UCharacterMeshBakeFunctionLibrary::BakeCharacterMesh(class UCharacterMeshBakeSpecification* CharacterMeshSpecification)
+class USkeletalMesh* UCharacterMeshBakeFunctionLibrary::STATIC_BakeCharacterMesh(class UCharacterMeshBakeSpecification* CharacterMeshSpecification)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.BakeCharacterMesh");
 
-	struct
-	{
-		class UCharacterMeshBakeSpecification* CharacterMeshSpecification;
-		class USkeletalMesh*           ReturnValue;
-	} params;
-
+	UCharacterMeshBakeFunctionLibrary_BakeCharacterMesh_Params params;
 	params.CharacterMeshSpecification = CharacterMeshSpecification;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -94,11 +77,7 @@ void UCharacterMeshBakeFunctionLibrary::AsyncBakeResultDynamic__DelegateSignatur
 {
 	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PirateGenerator.CharacterMeshBakeFunctionLibrary.AsyncBakeResultDynamic__DelegateSignature");
 
-	struct
-	{
-		class USkeletalMesh*           Mesh;
-	} params;
-
+	UCharacterMeshBakeFunctionLibrary_AsyncBakeResultDynamic__DelegateSignature_Params params;
 	params.Mesh = Mesh;
 
 	UObject::ProcessEvent(fn, &params);
@@ -111,21 +90,15 @@ void UCharacterMeshBakeFunctionLibrary::AsyncBakeResultDynamic__DelegateSignatur
 // class UCharacterMeshBakeSpecification* CharacterMeshSpecification     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FIPGBlendShape>  BlendShapes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UCharacterMeshBakeFunctionLibrary::AppendCharacterBlendShapes(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, TArray<struct FIPGBlendShape> BlendShapes)
+void UCharacterMeshBakeFunctionLibrary::STATIC_AppendCharacterBlendShapes(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, TArray<struct FIPGBlendShape> BlendShapes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.AppendCharacterBlendShapes");
 
-	struct
-	{
-		class UCharacterMeshBakeSpecification* CharacterMeshSpecification;
-		TArray<struct FIPGBlendShape>  BlendShapes;
-	} params;
-
+	UCharacterMeshBakeFunctionLibrary_AppendCharacterBlendShapes_Params params;
 	params.CharacterMeshSpecification = CharacterMeshSpecification;
 	params.BlendShapes = BlendShapes;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -134,18 +107,13 @@ void UCharacterMeshBakeFunctionLibrary::AppendCharacterBlendShapes(class UCharac
 // Parameters:
 // class UCharacterMeshBakeSpecification* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCharacterMeshBakeSpecification* UCharacterMeshBakeTestFunctionLibrary::MakeCharacterMeshSpecification()
+class UCharacterMeshBakeSpecification* UCharacterMeshBakeTestFunctionLibrary::STATIC_MakeCharacterMeshSpecification()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.MakeCharacterMeshSpecification");
 
-	struct
-	{
-		class UCharacterMeshBakeSpecification* ReturnValue;
-	} params;
+	UCharacterMeshBakeTestFunctionLibrary_MakeCharacterMeshSpecification_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -160,26 +128,17 @@ class UCharacterMeshBakeSpecification* UCharacterMeshBakeTestFunctionLibrary::Ma
 // TArray<float>                  MeshPatchAssetWeights          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class USkeletalMesh*           TargetMesh                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMeshBakeTestFunctionLibrary::BlendMeshWithMeshPatchAssets(class USkeletalMesh* BaseMesh, float BaseMeshWeight, TArray<class UMeshPatchAsset*> MeshPatchAssets, TArray<float> MeshPatchAssetWeights, class USkeletalMesh** TargetMesh)
+void UCharacterMeshBakeTestFunctionLibrary::STATIC_BlendMeshWithMeshPatchAssets(class USkeletalMesh* BaseMesh, float BaseMeshWeight, TArray<class UMeshPatchAsset*> MeshPatchAssets, TArray<float> MeshPatchAssetWeights, class USkeletalMesh** TargetMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.BlendMeshWithMeshPatchAssets");
 
-	struct
-	{
-		class USkeletalMesh*           BaseMesh;
-		float                          BaseMeshWeight;
-		TArray<class UMeshPatchAsset*> MeshPatchAssets;
-		TArray<float>                  MeshPatchAssetWeights;
-		class USkeletalMesh*           TargetMesh;
-	} params;
-
+	UCharacterMeshBakeTestFunctionLibrary_BlendMeshWithMeshPatchAssets_Params params;
 	params.BaseMesh = BaseMesh;
 	params.BaseMeshWeight = BaseMeshWeight;
 	params.MeshPatchAssets = MeshPatchAssets;
 	params.MeshPatchAssetWeights = MeshPatchAssetWeights;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (TargetMesh != nullptr)
 		*TargetMesh = params.TargetMesh;
@@ -192,20 +151,14 @@ void UCharacterMeshBakeTestFunctionLibrary::BlendMeshWithMeshPatchAssets(class U
 // class UClass*                  CharacterMeshBakeSpecificationClass (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class USkeletalMesh* UCharacterMeshBakeTestFunctionLibrary::BakeCharacterMeshFromClassDefault(class UClass* CharacterMeshBakeSpecificationClass)
+class USkeletalMesh* UCharacterMeshBakeTestFunctionLibrary::STATIC_BakeCharacterMeshFromClassDefault(class UClass* CharacterMeshBakeSpecificationClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.BakeCharacterMeshFromClassDefault");
 
-	struct
-	{
-		class UClass*                  CharacterMeshBakeSpecificationClass;
-		class USkeletalMesh*           ReturnValue;
-	} params;
-
+	UCharacterMeshBakeTestFunctionLibrary_BakeCharacterMeshFromClassDefault_Params params;
 	params.CharacterMeshBakeSpecificationClass = CharacterMeshBakeSpecificationClass;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -218,22 +171,15 @@ class USkeletalMesh* UCharacterMeshBakeTestFunctionLibrary::BakeCharacterMeshFro
 // class USkeletalMesh*           MeshB                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCharacterMeshBakeTestFunctionLibrary::AreMeshesEquivalentByMeshPatchCriteria(class USkeletalMesh* MeshA, class USkeletalMesh* MeshB)
+bool UCharacterMeshBakeTestFunctionLibrary::STATIC_AreMeshesEquivalentByMeshPatchCriteria(class USkeletalMesh* MeshA, class USkeletalMesh* MeshB)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.AreMeshesEquivalentByMeshPatchCriteria");
 
-	struct
-	{
-		class USkeletalMesh*           MeshA;
-		class USkeletalMesh*           MeshB;
-		bool                           ReturnValue;
-	} params;
-
+	UCharacterMeshBakeTestFunctionLibrary_AreMeshesEquivalentByMeshPatchCriteria_Params params;
 	params.MeshA = MeshA;
 	params.MeshB = MeshB;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -246,22 +192,15 @@ bool UCharacterMeshBakeTestFunctionLibrary::AreMeshesEquivalentByMeshPatchCriter
 // class FString                  TypeName                       (Parm, ZeroConstructor)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UFileAccessFunctionLibrary::GetMeshPatchAssetPathFromMeshPathAndTypeName(const class FString& MeshPath, const class FString& TypeName)
+class FString UFileAccessFunctionLibrary::STATIC_GetMeshPatchAssetPathFromMeshPathAndTypeName(const class FString& MeshPath, const class FString& TypeName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.FileAccessFunctionLibrary.GetMeshPatchAssetPathFromMeshPathAndTypeName");
 
-	struct
-	{
-		class FString                  MeshPath;
-		class FString                  TypeName;
-		class FString                  ReturnValue;
-	} params;
-
+	UFileAccessFunctionLibrary_GetMeshPatchAssetPathFromMeshPathAndTypeName_Params params;
 	params.MeshPath = MeshPath;
 	params.TypeName = TypeName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -274,22 +213,15 @@ class FString UFileAccessFunctionLibrary::GetMeshPatchAssetPathFromMeshPathAndTy
 // class FString                  TypeName                       (Parm, ZeroConstructor)
 // class UMeshPatchAsset*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UMeshPatchAsset* UFileAccessFunctionLibrary::GetMeshPatchAssetForMeshFromTypeName(class USkeletalMesh* Mesh, const class FString& TypeName)
+class UMeshPatchAsset* UFileAccessFunctionLibrary::STATIC_GetMeshPatchAssetForMeshFromTypeName(class USkeletalMesh* Mesh, const class FString& TypeName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.FileAccessFunctionLibrary.GetMeshPatchAssetForMeshFromTypeName");
 
-	struct
-	{
-		class USkeletalMesh*           Mesh;
-		class FString                  TypeName;
-		class UMeshPatchAsset*         ReturnValue;
-	} params;
-
+	UFileAccessFunctionLibrary_GetMeshPatchAssetForMeshFromTypeName_Params params;
 	params.Mesh = Mesh;
 	params.TypeName = TypeName;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -304,26 +236,17 @@ class UMeshPatchAsset* UFileAccessFunctionLibrary::GetMeshPatchAssetForMeshFromT
 // float                          Threshold                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPirateBodyShapeFunctionLibrary::GetHighestWeighted(float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights, float Threshold)
+class FString UPirateBodyShapeFunctionLibrary::STATIC_GetHighestWeighted(float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights, float Threshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.GetHighestWeighted");
 
-	struct
-	{
-		float                          BaseMeshBlendWeight;
-		TArray<class FString>          BodyShapeBlendNames;
-		TArray<float>                  BodyShapeBlendWeights;
-		float                          Threshold;
-		class FString                  ReturnValue;
-	} params;
-
+	UPirateBodyShapeFunctionLibrary_GetHighestWeighted_Params params;
 	params.BaseMeshBlendWeight = BaseMeshBlendWeight;
 	params.BodyShapeBlendNames = BodyShapeBlendNames;
 	params.BodyShapeBlendWeights = BodyShapeBlendWeights;
 	params.Threshold = Threshold;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -339,25 +262,15 @@ class FString UPirateBodyShapeFunctionLibrary::GetHighestWeighted(float BaseMesh
 // TArray<float>                  BodyShapeBlendWeights          (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPirateBodyShapeFunctionLibrary::FindBodyBlendsFromBodyShapeWheelRadialCoordinate(TEnumAsByte<EIPGGender> Gender, const struct FRadialCoordinate& BodyShapeWheelRadialCoordinate, float* BaseMeshBlendWeight, TArray<class FString>* BodyShapeBlendNames, TArray<float>* BodyShapeBlendWeights)
+bool UPirateBodyShapeFunctionLibrary::STATIC_FindBodyBlendsFromBodyShapeWheelRadialCoordinate(TEnumAsByte<EIPGGender> Gender, const struct FRadialCoordinate& BodyShapeWheelRadialCoordinate, float* BaseMeshBlendWeight, TArray<class FString>* BodyShapeBlendNames, TArray<float>* BodyShapeBlendWeights)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.FindBodyBlendsFromBodyShapeWheelRadialCoordinate");
 
-	struct
-	{
-		TEnumAsByte<EIPGGender>        Gender;
-		struct FRadialCoordinate       BodyShapeWheelRadialCoordinate;
-		float                          BaseMeshBlendWeight;
-		TArray<class FString>          BodyShapeBlendNames;
-		TArray<float>                  BodyShapeBlendWeights;
-		bool                           ReturnValue;
-	} params;
-
+	UPirateBodyShapeFunctionLibrary_FindBodyBlendsFromBodyShapeWheelRadialCoordinate_Params params;
 	params.Gender = Gender;
 	params.BodyShapeWheelRadialCoordinate = BodyShapeWheelRadialCoordinate;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (BaseMeshBlendWeight != nullptr)
 		*BaseMeshBlendWeight = params.BaseMeshBlendWeight;
@@ -376,20 +289,14 @@ bool UPirateBodyShapeFunctionLibrary::FindBodyBlendsFromBodyShapeWheelRadialCoor
 // struct FVector2D               UV                             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRadialCoordinate       ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FRadialCoordinate UPirateBodyShapeFunctionLibrary::ConvertToRadialCoordinate(const struct FVector2D& UV)
+struct FRadialCoordinate UPirateBodyShapeFunctionLibrary::STATIC_ConvertToRadialCoordinate(const struct FVector2D& UV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.ConvertToRadialCoordinate");
 
-	struct
-	{
-		struct FVector2D               UV;
-		struct FRadialCoordinate       ReturnValue;
-	} params;
-
+	UPirateBodyShapeFunctionLibrary_ConvertToRadialCoordinate_Params params;
 	params.UV = UV;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -401,20 +308,14 @@ struct FRadialCoordinate UPirateBodyShapeFunctionLibrary::ConvertToRadialCoordin
 // struct FRadialCoordinate       Coord                          (Parm)
 // struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector2D UPirateBodyShapeFunctionLibrary::ConvertFromRadialCoordinate(const struct FRadialCoordinate& Coord)
+struct FVector2D UPirateBodyShapeFunctionLibrary::STATIC_ConvertFromRadialCoordinate(const struct FRadialCoordinate& Coord)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.ConvertFromRadialCoordinate");
 
-	struct
-	{
-		struct FRadialCoordinate       Coord;
-		struct FVector2D               ReturnValue;
-	} params;
-
+	UPirateBodyShapeFunctionLibrary_ConvertFromRadialCoordinate_Params params;
 	params.Coord = Coord;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -427,22 +328,15 @@ struct FVector2D UPirateBodyShapeFunctionLibrary::ConvertFromRadialCoordinate(co
 // struct FPirateDescription      InDesc                         (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPirateGeneratorFunctionLibrary::SavePirateDescription(const class FString& RelativePath, const struct FPirateDescription& InDesc)
+bool UPirateGeneratorFunctionLibrary::STATIC_SavePirateDescription(const class FString& RelativePath, const struct FPirateDescription& InDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.SavePirateDescription");
 
-	struct
-	{
-		class FString                  RelativePath;
-		struct FPirateDescription      InDesc;
-		bool                           ReturnValue;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_SavePirateDescription_Params params;
 	params.RelativePath = RelativePath;
 	params.InDesc = InDesc;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -454,20 +348,14 @@ bool UPirateGeneratorFunctionLibrary::SavePirateDescription(const class FString&
 // int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRadialCoordinate       ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FRadialCoordinate UPirateGeneratorFunctionLibrary::RandomBodyShape(int Seed)
+struct FRadialCoordinate UPirateGeneratorFunctionLibrary::STATIC_RandomBodyShape(int Seed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.RandomBodyShape");
 
-	struct
-	{
-		int                            Seed;
-		struct FRadialCoordinate       ReturnValue;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_RandomBodyShape_Params params;
 	params.Seed = Seed;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -480,21 +368,14 @@ struct FRadialCoordinate UPirateGeneratorFunctionLibrary::RandomBodyShape(int Se
 // struct FPirateDescription      OutDesc                        (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPirateGeneratorFunctionLibrary::LoadPirateDescription(const class FString& RelativePath, struct FPirateDescription* OutDesc)
+bool UPirateGeneratorFunctionLibrary::STATIC_LoadPirateDescription(const class FString& RelativePath, struct FPirateDescription* OutDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.LoadPirateDescription");
 
-	struct
-	{
-		class FString                  RelativePath;
-		struct FPirateDescription      OutDesc;
-		bool                           ReturnValue;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_LoadPirateDescription_Params params;
 	params.RelativePath = RelativePath;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutDesc != nullptr)
 		*OutDesc = params.OutDesc;
@@ -511,23 +392,15 @@ bool UPirateGeneratorFunctionLibrary::LoadPirateDescription(const class FString&
 // class USkeletalMesh*           OutMesh                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FPirateDescription      OutDesc                        (Parm, OutParm)
 
-void UPirateGeneratorFunctionLibrary::K2_BakeFromDescriptionGameThread(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, class USkeletalMesh** OutMesh, struct FPirateDescription* OutDesc)
+void UPirateGeneratorFunctionLibrary::STATIC_K2_BakeFromDescriptionGameThread(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, class USkeletalMesh** OutMesh, struct FPirateDescription* OutDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.K2_BakeFromDescriptionGameThread");
 
-	struct
-	{
-		struct FPirateDescription      Desc;
-		TEnumAsByte<EPirateBakeFlags>  Flags;
-		class USkeletalMesh*           OutMesh;
-		struct FPirateDescription      OutDesc;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_K2_BakeFromDescriptionGameThread_Params params;
 	params.Desc = Desc;
 	params.Flags = Flags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutMesh != nullptr)
 		*OutMesh = params.OutMesh;
@@ -541,18 +414,13 @@ void UPirateGeneratorFunctionLibrary::K2_BakeFromDescriptionGameThread(const str
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UPirateGeneratorFunctionLibrary::IPGLatestVersion()
+int UPirateGeneratorFunctionLibrary::STATIC_IPGLatestVersion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.IPGLatestVersion");
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
+	UPirateGeneratorFunctionLibrary_IPGLatestVersion_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -565,22 +433,15 @@ int UPirateGeneratorFunctionLibrary::IPGLatestVersion()
 // class FString                  Str                            (Parm, ZeroConstructor)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UPirateGeneratorFunctionLibrary::GetSeedFromString(const class FString& RefName, const class FString& Str)
+int UPirateGeneratorFunctionLibrary::STATIC_GetSeedFromString(const class FString& RefName, const class FString& Str)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetSeedFromString");
 
-	struct
-	{
-		class FString                  RefName;
-		class FString                  Str;
-		int                            ReturnValue;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_GetSeedFromString_Params params;
 	params.RefName = RefName;
 	params.Str = Str;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -592,20 +453,14 @@ int UPirateGeneratorFunctionLibrary::GetSeedFromString(const class FString& RefN
 // class USkeletalMesh*           Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FPirateGeneratorTextureReference> OutReferences                  (Parm, OutParm, ZeroConstructor)
 
-void UPirateGeneratorFunctionLibrary::GetAllTextureReferences(class USkeletalMesh* Mesh, TArray<struct FPirateGeneratorTextureReference>* OutReferences)
+void UPirateGeneratorFunctionLibrary::STATIC_GetAllTextureReferences(class USkeletalMesh* Mesh, TArray<struct FPirateGeneratorTextureReference>* OutReferences)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllTextureReferences");
 
-	struct
-	{
-		class USkeletalMesh*           Mesh;
-		TArray<struct FPirateGeneratorTextureReference> OutReferences;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_GetAllTextureReferences_Params params;
 	params.Mesh = Mesh;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (OutReferences != nullptr)
 		*OutReferences = params.OutReferences;
@@ -617,18 +472,13 @@ void UPirateGeneratorFunctionLibrary::GetAllTextureReferences(class USkeletalMes
 // Parameters:
 // TArray<class FString>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<class FString> UPirateGeneratorFunctionLibrary::GetAllDescriptions()
+TArray<class FString> UPirateGeneratorFunctionLibrary::STATIC_GetAllDescriptions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllDescriptions");
 
-	struct
-	{
-		TArray<class FString>          ReturnValue;
-	} params;
+	UPirateGeneratorFunctionLibrary_GetAllDescriptions_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -648,24 +498,11 @@ TArray<class FString> UPirateGeneratorFunctionLibrary::GetAllDescriptions()
 // TArray<struct FIPGScalarParameter> ScalarParameters               (Parm, ZeroConstructor)
 // struct FPirateDescription      ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirateWithVersion(int Seed, int Version, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
+struct FPirateDescription UPirateGeneratorFunctionLibrary::STATIC_GenerateRandomPirateWithVersion(int Seed, int Version, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirateWithVersion");
 
-	struct
-	{
-		int                            Seed;
-		int                            Version;
-		bool                           bOverrideBodyShape;
-		struct FRadialCoordinate       BodyShapeOverride;
-		TEnumAsByte<EIPGGender>        SpecificGender;
-		TEnumAsByte<EIPGEthnicity>     SpecificEthnicity;
-		TArray<struct FIPGDynamicSlider> DynamicSliders;
-		TArray<struct FName>           TextureReferences;
-		TArray<struct FIPGScalarParameter> ScalarParameters;
-		struct FPirateDescription      ReturnValue;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_GenerateRandomPirateWithVersion_Params params;
 	params.Seed = Seed;
 	params.Version = Version;
 	params.bOverrideBodyShape = bOverrideBodyShape;
@@ -676,8 +513,7 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirateW
 	params.TextureReferences = TextureReferences;
 	params.ScalarParameters = ScalarParameters;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -696,23 +532,11 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirateW
 // TArray<struct FIPGScalarParameter> ScalarParameters               (Parm, ZeroConstructor)
 // struct FPirateDescription      ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirate(int Seed, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
+struct FPirateDescription UPirateGeneratorFunctionLibrary::STATIC_GenerateRandomPirate(int Seed, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirate");
 
-	struct
-	{
-		int                            Seed;
-		bool                           bOverrideBodyShape;
-		struct FRadialCoordinate       BodyShapeOverride;
-		TEnumAsByte<EIPGGender>        SpecificGender;
-		TEnumAsByte<EIPGEthnicity>     SpecificEthnicity;
-		TArray<struct FIPGDynamicSlider> DynamicSliders;
-		TArray<struct FName>           TextureReferences;
-		TArray<struct FIPGScalarParameter> ScalarParameters;
-		struct FPirateDescription      ReturnValue;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_GenerateRandomPirate_Params params;
 	params.Seed = Seed;
 	params.bOverrideBodyShape = bOverrideBodyShape;
 	params.BodyShapeOverride = BodyShapeOverride;
@@ -722,8 +546,7 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirate(
 	params.TextureReferences = TextureReferences;
 	params.ScalarParameters = ScalarParameters;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -736,23 +559,16 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirate(
 // TEnumAsByte<EPirateBakeFlags>  Flags                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FScriptDelegate         AsyncResult                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UPirateGeneratorFunctionLibrary::BakeFromDescriptionAsync(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, const struct FScriptDelegate& AsyncResult)
+void UPirateGeneratorFunctionLibrary::STATIC_BakeFromDescriptionAsync(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, const struct FScriptDelegate& AsyncResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.BakeFromDescriptionAsync");
 
-	struct
-	{
-		struct FPirateDescription      Desc;
-		TEnumAsByte<EPirateBakeFlags>  Flags;
-		struct FScriptDelegate         AsyncResult;
-	} params;
-
+	UPirateGeneratorFunctionLibrary_BakeFromDescriptionAsync_Params params;
 	params.Desc = Desc;
 	params.Flags = Flags;
 	params.AsyncResult = AsyncResult;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -767,21 +583,11 @@ void UPirateGeneratorFunctionLibrary::BakeFromDescriptionAsync(const struct FPir
 // TArray<class FString>          BodyShapeBlendNames            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  BodyShapeBlendWeights          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UPreparePirateMeshBakeTestFunctionLibrary::PopulateSkeletonBlendsInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, class USkeletalMesh* MeshWithBaseSkeleton, class USkeletonsDataAsset* SkeletonsDataAsset, const class FString& MeshTypeSkeletonFileFormat, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights)
+void UPreparePirateMeshBakeTestFunctionLibrary::STATIC_PopulateSkeletonBlendsInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, class USkeletalMesh* MeshWithBaseSkeleton, class USkeletonsDataAsset* SkeletonsDataAsset, const class FString& MeshTypeSkeletonFileFormat, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary.PopulateSkeletonBlendsInCharacterMeshBakeSpecification");
 
-	struct
-	{
-		class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification;
-		class USkeletalMesh*           MeshWithBaseSkeleton;
-		class USkeletonsDataAsset*     SkeletonsDataAsset;
-		class FString                  MeshTypeSkeletonFileFormat;
-		float                          BaseMeshBlendWeight;
-		TArray<class FString>          BodyShapeBlendNames;
-		TArray<float>                  BodyShapeBlendWeights;
-	} params;
-
+	UPreparePirateMeshBakeTestFunctionLibrary_PopulateSkeletonBlendsInCharacterMeshBakeSpecification_Params params;
 	params.CharacterMeshBakeSpecification = CharacterMeshBakeSpecification;
 	params.MeshWithBaseSkeleton = MeshWithBaseSkeleton;
 	params.SkeletonsDataAsset = SkeletonsDataAsset;
@@ -790,8 +596,7 @@ void UPreparePirateMeshBakeTestFunctionLibrary::PopulateSkeletonBlendsInCharacte
 	params.BodyShapeBlendNames = BodyShapeBlendNames;
 	params.BodyShapeBlendWeights = BodyShapeBlendWeights;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -804,27 +609,18 @@ void UPreparePirateMeshBakeTestFunctionLibrary::PopulateSkeletonBlendsInCharacte
 // TArray<class FString>          BodyShapeBlendNames            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  BodyShapeBlendWeights          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UPreparePirateMeshBakeTestFunctionLibrary::PopulateBlendedSubMeshesInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, TArray<class USkeletalMesh*> SubMeshes, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights)
+void UPreparePirateMeshBakeTestFunctionLibrary::STATIC_PopulateBlendedSubMeshesInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, TArray<class USkeletalMesh*> SubMeshes, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary.PopulateBlendedSubMeshesInCharacterMeshBakeSpecification");
 
-	struct
-	{
-		class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification;
-		TArray<class USkeletalMesh*>   SubMeshes;
-		float                          BaseMeshBlendWeight;
-		TArray<class FString>          BodyShapeBlendNames;
-		TArray<float>                  BodyShapeBlendWeights;
-	} params;
-
+	UPreparePirateMeshBakeTestFunctionLibrary_PopulateBlendedSubMeshesInCharacterMeshBakeSpecification_Params params;
 	params.CharacterMeshBakeSpecification = CharacterMeshBakeSpecification;
 	params.SubMeshes = SubMeshes;
 	params.BaseMeshBlendWeight = BaseMeshBlendWeight;
 	params.BodyShapeBlendNames = BodyShapeBlendNames;
 	params.BodyShapeBlendWeights = BodyShapeBlendWeights;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -838,12 +634,7 @@ float UWardrobeOutfitDataAsset::GetBiasForCategory(const struct FName& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeOutfitDataAsset.GetBiasForCategory");
 
-	struct
-	{
-		struct FName                   Name;
-		float                          ReturnValue;
-	} params;
-
+	UWardrobeOutfitDataAsset_GetBiasForCategory_Params params;
 	params.Name = Name;
 
 	UObject::ProcessEvent(fn, &params);
@@ -861,27 +652,18 @@ float UWardrobeOutfitDataAsset::GetBiasForCategory(const struct FName& Name)
 // TEnumAsByte<EIPGGender>        Gender                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FScriptDelegate         AsyncResult                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UWardrobeFunctionLibrary::PickOutfitAsync(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, const struct FScriptDelegate& AsyncResult)
+void UWardrobeFunctionLibrary::STATIC_PickOutfitAsync(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, const struct FScriptDelegate& AsyncResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.PickOutfitAsync");
 
-	struct
-	{
-		TArray<struct FName>           ClothingItemNames;
-		TArray<struct FName>           Tags;
-		TEnumAsByte<EIPGPirateType>    PirateType;
-		TEnumAsByte<EIPGGender>        Gender;
-		struct FScriptDelegate         AsyncResult;
-	} params;
-
+	UWardrobeFunctionLibrary_PickOutfitAsync_Params params;
 	params.ClothingItemNames = ClothingItemNames;
 	params.Tags = Tags;
 	params.PirateType = PirateType;
 	params.Gender = Gender;
 	params.AsyncResult = AsyncResult;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -895,27 +677,17 @@ void UWardrobeFunctionLibrary::PickOutfitAsync(TArray<struct FName> ClothingItem
 // struct FWardrobeOutfitResult   Result                         (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWardrobeFunctionLibrary::PickOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, struct FWardrobeOutfitResult* Result)
+bool UWardrobeFunctionLibrary::STATIC_PickOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, struct FWardrobeOutfitResult* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.PickOutfit");
 
-	struct
-	{
-		TArray<struct FName>           ClothingItemNames;
-		TArray<struct FName>           Tags;
-		TEnumAsByte<EIPGPirateType>    PirateType;
-		TEnumAsByte<EIPGGender>        Gender;
-		struct FWardrobeOutfitResult   Result;
-		bool                           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_PickOutfit_Params params;
 	params.ClothingItemNames = ClothingItemNames;
 	params.Tags = Tags;
 	params.PirateType = PirateType;
 	params.Gender = Gender;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	if (Result != nullptr)
 		*Result = params.Result;
@@ -932,24 +704,16 @@ bool UWardrobeFunctionLibrary::PickOutfit(TArray<struct FName> ClothingItemNames
 // TArray<struct FWardrobeOutfitCategoryBias> BiasPerCategory                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItemsWithBias(int Seed, TArray<struct FName> InputItems, TArray<struct FWardrobeOutfitCategoryBias> BiasPerCategory)
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetRandomWardrobeItemsWithBias(int Seed, TArray<struct FName> InputItems, TArray<struct FWardrobeOutfitCategoryBias> BiasPerCategory)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomWardrobeItemsWithBias");
 
-	struct
-	{
-		int                            Seed;
-		TArray<struct FName>           InputItems;
-		TArray<struct FWardrobeOutfitCategoryBias> BiasPerCategory;
-		TArray<struct FName>           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_GetRandomWardrobeItemsWithBias_Params params;
 	params.Seed = Seed;
 	params.InputItems = InputItems;
 	params.BiasPerCategory = BiasPerCategory;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -962,22 +726,15 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItemsWithBias(in
 // TArray<struct FName>           InputItems                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItems(int Seed, TArray<struct FName> InputItems)
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetRandomWardrobeItems(int Seed, TArray<struct FName> InputItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomWardrobeItems");
 
-	struct
-	{
-		int                            Seed;
-		TArray<struct FName>           InputItems;
-		TArray<struct FName>           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_GetRandomWardrobeItems_Params params;
 	params.Seed = Seed;
 	params.InputItems = InputItems;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -991,24 +748,16 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItems(int Seed, 
 // TEnumAsByte<EIPGGender>        Gender                         (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::GetRandomOutfit(class UWardrobeOutfitDataAsset* Outfit, int Seed, TEnumAsByte<EIPGGender> Gender)
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetRandomOutfit(class UWardrobeOutfitDataAsset* Outfit, int Seed, TEnumAsByte<EIPGGender> Gender)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomOutfit");
 
-	struct
-	{
-		class UWardrobeOutfitDataAsset* Outfit;
-		int                            Seed;
-		TEnumAsByte<EIPGGender>        Gender;
-		TArray<struct FName>           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_GetRandomOutfit_Params params;
 	params.Outfit = Outfit;
 	params.Seed = Seed;
 	params.Gender = Gender;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1019,18 +768,13 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetRandomOutfit(class UWardrobeOu
 // Parameters:
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeTypes()
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeTypes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeTypes");
 
-	struct
-	{
-		TArray<struct FName>           ReturnValue;
-	} params;
+	UWardrobeFunctionLibrary_GetAllWardrobeTypes_Params params;
 
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1044,24 +788,16 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeTypes()
 // bool                           bWithExclusions                (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions)
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItemsForType");
 
-	struct
-	{
-		class FString                  TypeName;
-		TEnumAsByte<EIPGPirateType>    PirateType;
-		bool                           bWithExclusions;
-		TArray<struct FName>           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_GetAllWardrobeItemsForType_Params params;
 	params.TypeName = TypeName;
 	params.PirateType = PirateType;
 	params.bWithExclusions = bWithExclusions;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1073,20 +809,14 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItemsForType(const 
 // TEnumAsByte<EIPGPirateType>    PirateType                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItems(TEnumAsByte<EIPGPirateType> PirateType)
+TArray<struct FName> UWardrobeFunctionLibrary::STATIC_GetAllWardrobeItems(TEnumAsByte<EIPGPirateType> PirateType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItems");
 
-	struct
-	{
-		TEnumAsByte<EIPGPirateType>    PirateType;
-		TArray<struct FName>           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_GetAllWardrobeItems_Params params;
 	params.PirateType = PirateType;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1101,26 +831,17 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItems(TEnumAsByte<E
 // TEnumAsByte<EIPGGender>        Gender                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWardrobeFunctionLibrary::CanLoadOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender)
+bool UWardrobeFunctionLibrary::STATIC_CanLoadOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.CanLoadOutfit");
 
-	struct
-	{
-		TArray<struct FName>           ClothingItemNames;
-		TArray<struct FName>           Tags;
-		TEnumAsByte<EIPGPirateType>    PirateType;
-		TEnumAsByte<EIPGGender>        Gender;
-		bool                           ReturnValue;
-	} params;
-
+	UWardrobeFunctionLibrary_CanLoadOutfit_Params params;
 	params.ClothingItemNames = ClothingItemNames;
 	params.Tags = Tags;
 	params.PirateType = PirateType;
 	params.Gender = Gender;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1136,12 +857,7 @@ void UWardrobeFunctionLibrary::AsyncOutfitResultDynamic__DelegateSignature(bool 
 {
 	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PirateGenerator.WardrobeFunctionLibrary.AsyncOutfitResultDynamic__DelegateSignature");
 
-	struct
-	{
-		bool                           Success;
-		TArray<class USkeletalMesh*>   Meshes;
-	} params;
-
+	UWardrobeFunctionLibrary_AsyncOutfitResultDynamic__DelegateSignature_Params params;
 	params.Success = Success;
 	params.Meshes = Meshes;
 

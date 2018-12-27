@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Rowboat_classes.hpp"
+#include "SoT_BP_Rowboat_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Rowboat_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rowboat.BP_Rowboat_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_Rowboat_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

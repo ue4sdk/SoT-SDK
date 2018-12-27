@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishCreature_classes.hpp"
+#include "SoT_BP_FishCreature_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishCreature_C::CreateCreature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.CreateCreature");
 
-	struct
-	{
-	} params;
-
+	ABP_FishCreature_C_CreateCreature_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_FishCreature_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_FishCreature_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

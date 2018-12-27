@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AIShips_classes.hpp"
+#include "SoT_AIShips_parameters.hpp"
 
 namespace SDK
 {
@@ -18,21 +18,15 @@ namespace SDK
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FGuid                   CrewId                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAIShipDebugFunctionLibrary::RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId)
+void UAIShipDebugFunctionLibrary::STATIC_RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.RequestAIShipForCrew");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		struct FGuid                   CrewId;
-	} params;
-
+	UAIShipDebugFunctionLibrary_RequestAIShipForCrew_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.CrewId = CrewId;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -43,22 +37,15 @@ void UAIShipDebugFunctionLibrary::RequestAIShipForCrew(class UObject* WorldConte
 // class UAIShipServiceDataAsset* ServiceParams                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FAIShipEncounterBattleDesc ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::GenerateAIShipBattleDesc(class UObject* WorldContextObject, class UAIShipServiceDataAsset* ServiceParams)
+struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::STATIC_GenerateAIShipBattleDesc(class UObject* WorldContextObject, class UAIShipServiceDataAsset* ServiceParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.GenerateAIShipBattleDesc");
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UAIShipServiceDataAsset* ServiceParams;
-		struct FAIShipEncounterBattleDesc ReturnValue;
-	} params;
-
+	UAIShipDebugFunctionLibrary_GenerateAIShipBattleDesc_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.ServiceParams = ServiceParams;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -73,11 +60,7 @@ void UCursedCrewCustomisationInterface::SetCursedCrewCustomisationProperties(con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties");
 
-	struct
-	{
-		struct FAIShipSailData         SailData;
-	} params;
-
+	UCursedCrewCustomisationInterface_SetCursedCrewCustomisationProperties_Params params;
 	params.SailData = SailData;
 
 	UObject::ProcessEvent(fn, &params);

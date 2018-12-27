@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FlyingCreature_classes.hpp"
+#include "SoT_BP_FlyingCreature_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FlyingCreature_C::CreateCreature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.CreateCreature");
 
-	struct
-	{
-	} params;
-
+	ABP_FlyingCreature_C_CreateCreature_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_FlyingCreature_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_FlyingCreature_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

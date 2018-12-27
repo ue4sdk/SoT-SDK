@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MessageInABottleProxy_classes.hpp"
+#include "SoT_BP_MessageInABottleProxy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MessageInABottleProxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MessageInABottleProxy.BP_MessageInABottleProxy_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_MessageInABottleProxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

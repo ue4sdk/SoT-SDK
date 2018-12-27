@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_UdpMessaging_classes.hpp"
+#include "SoT_UdpMessaging_parameters.hpp"
 
 namespace SDK
 {

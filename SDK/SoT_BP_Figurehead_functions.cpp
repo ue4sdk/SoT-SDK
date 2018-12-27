@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Figurehead_classes.hpp"
+#include "SoT_BP_Figurehead_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Figurehead_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_Figurehead_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ABP_Figurehead_C::OnPartMeshLoaded(class UStaticMesh* Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded");
 
-	struct
-	{
-		class UStaticMesh*             Mesh;
-	} params;
-
+	ABP_Figurehead_C_OnPartMeshLoaded_Params params;
 	params.Mesh = Mesh;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void ABP_Figurehead_C::OnPartDescLoaded(class UGenericPartDescAsset* Desc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded");
 
-	struct
-	{
-		class UGenericPartDescAsset*   Desc;
-	} params;
-
+	ABP_Figurehead_C_OnPartDescLoaded_Params params;
 	params.Desc = Desc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -77,11 +66,7 @@ void ABP_Figurehead_C::ExecuteUbergraph_BP_Figurehead(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead");
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_Figurehead_C_ExecuteUbergraph_BP_Figurehead_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

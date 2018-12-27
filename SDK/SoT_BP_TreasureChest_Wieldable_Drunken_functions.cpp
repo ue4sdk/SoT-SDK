@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureChest_Wieldable_Drunken_classes.hpp"
+#include "SoT_BP_TreasureChest_Wieldable_Drunken_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_TreasureChest_Wieldable_Drunken_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureChest_Wieldable_Drunken.BP_TreasureChest_Wieldable_Drunken_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	ABP_TreasureChest_Wieldable_Drunken_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

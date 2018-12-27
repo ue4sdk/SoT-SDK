@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CharacterInterface_classes.hpp"
+#include "SoT_BP_CharacterInterface_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ void UBP_CharacterInterface_C::IK_Limb_Stretch(float ArmStretch, float SpineStre
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Stretch");
 
-	struct
-	{
-		float                          ArmStretch;
-		float                          SpineStretch;
-		float                          LegStretch;
-	} params;
-
+	UBP_CharacterInterface_C_IK_Limb_Stretch_Params params;
 	params.ArmStretch = ArmStretch;
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
@@ -49,13 +43,7 @@ void UBP_CharacterInterface_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Active");
 
-	struct
-	{
-		TEnumAsByte<EIKLimbName>       LimbId;
-		bool                           Active;
-		TEnumAsByte<ELimbIKSpace>      CoordinateSpace;
-	} params;
-
+	UBP_CharacterInterface_C_IK_Limb_Active_Params params;
 	params.LimbId = LimbId;
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
@@ -75,13 +63,7 @@ void UBP_CharacterInterface_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Update Strength");
 
-	struct
-	{
-		TEnumAsByte<EIKLimbName>       LimbId;
-		float                          LocationStrength;
-		float                          RotationStrength;
-	} params;
-
+	UBP_CharacterInterface_C_IK_Limb_Update_Strength_Params params;
 	params.LimbId = LimbId;
 	params.LocationStrength = LocationStrength;
 	params.RotationStrength = RotationStrength;
@@ -101,13 +83,7 @@ void UBP_CharacterInterface_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> Lim
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Blend Timing");
 
-	struct
-	{
-		TEnumAsByte<EIKLimbName>       LimbId;
-		float                          BlendIn;
-		float                          BlendOut;
-	} params;
-
+	UBP_CharacterInterface_C_IK_Limb_Blend_Timing_Params params;
 	params.LimbId = LimbId;
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
@@ -126,12 +102,7 @@ void UBP_CharacterInterface_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName>
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Update Transform");
 
-	struct
-	{
-		TEnumAsByte<EIKLimbName>       LimbId;
-		struct FTransform              TransformUpdate;
-	} params;
-
+	UBP_CharacterInterface_C_IK_Limb_Update_Transform_Params params;
 	params.LimbId = LimbId;
 	params.TransformUpdate = TransformUpdate;
 
@@ -151,14 +122,7 @@ void UBP_CharacterInterface_C::CapstanForce(float IndividualForce, const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.CapstanForce");
 
-	struct
-	{
-		float                          IndividualForce;
-		struct FTransform              LH_IK;
-		struct FTransform              RH_IK;
-		class AActor*                  Actor;
-	} params;
-
+	UBP_CharacterInterface_C_CapstanForce_Params params;
 	params.IndividualForce = IndividualForce;
 	params.LH_IK = LH_IK;
 	params.RH_IK = RH_IK;
@@ -177,11 +141,7 @@ void UBP_CharacterInterface_C::DockingInterface(const struct FBP_Docking& Dockin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.DockingInterface");
 
-	struct
-	{
-		struct FBP_Docking             Docking;
-	} params;
-
+	UBP_CharacterInterface_C_DockingInterface_Params params;
 	params.Docking = Docking;
 
 	UObject::ProcessEvent(fn, &params);
@@ -197,11 +157,7 @@ void UBP_CharacterInterface_C::CapstanRotationSpeed(float RotationSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.CapstanRotationSpeed");
 
-	struct
-	{
-		float                          RotationSpeed;
-	} params;
-
+	UBP_CharacterInterface_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
 
 	UObject::ProcessEvent(fn, &params);
@@ -217,11 +173,7 @@ void UBP_CharacterInterface_C::Update_Athena_Character(class AAthenaCharacter* A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.Update Athena Character");
 
-	struct
-	{
-		class AAthenaCharacter*        AthenaCharacter;
-	} params;
-
+	UBP_CharacterInterface_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
 
 	UObject::ProcessEvent(fn, &params);

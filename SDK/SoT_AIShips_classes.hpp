@@ -238,8 +238,8 @@ public:
 	}
 
 
-	static void RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId);
-	static struct FAIShipEncounterBattleDesc GenerateAIShipBattleDesc(class UObject* WorldContextObject, class UAIShipServiceDataAsset* ServiceParams);
+	void STATIC_RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId);
+	struct FAIShipEncounterBattleDesc STATIC_GenerateAIShipBattleDesc(class UObject* WorldContextObject, class UAIShipServiceDataAsset* ServiceParams);
 };
 
 

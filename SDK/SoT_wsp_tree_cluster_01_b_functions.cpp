@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_tree_cluster_01_b_classes.hpp"
+#include "SoT_wsp_tree_cluster_01_b_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_tree_cluster_01_b_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_tree_cluster_01_b.wsp_tree_cluster_01_b_C.UserConstructionScript");
 
-	struct
-	{
-	} params;
-
+	Awsp_tree_cluster_01_b_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

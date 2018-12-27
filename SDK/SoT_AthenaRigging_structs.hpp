@@ -7,38 +7,13 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_AthenaRigging_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AthenaSocketLookup_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum AthenaRigging.EInstancedRopeParameterType
-enum class EInstancedRopeParameterType : uint8_t
-{
-	RPT_Start                      = 0,
-	RPT_End                        = 1,
-	RPT_Roughness                  = 2,
-	RPT_Thickness                  = 3,
-	RPT_UVScale                    = 4,
-	RPT_UVOffset                   = 5,
-	RPT_Length                     = 6,
-	RPT_SwingTime                  = 7,
-	RPT_WindAmount                 = 8,
-	RPT_CatenaryScale              = 9,
-	RPT_CatenaryX0                 = 10,
-	RPT_CatenaryY0                 = 11,
-	RPT_CatenaryXYDistance         = 12,
-	RPT_IsCatenary                 = 13,
-	RPT_MAX                        = 14
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

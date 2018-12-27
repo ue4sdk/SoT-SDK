@@ -7,27 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Occlusion_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum Occlusion.EOcclusionTypes
-enum class EOcclusionTypes : uint8_t
-{
-	EOcclusionTypes__Visible       = 0,
-	EOcclusionTypes__Occluded      = 1,
-	EOcclusionTypes__Unknown       = 2,
-	EOcclusionTypes__MAX           = 3,
-	EOcclusionTypes__EOcclusionTypes_MAX = 4
-};
-
-
-
 }
 
 #ifdef _MSC_VER

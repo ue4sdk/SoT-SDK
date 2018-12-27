@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Interaction_classes.hpp"
+#include "SoT_Interaction_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UInteractableComponent::SetBoxOrigin(const struct FVector& IntBoxOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.SetBoxOrigin");
 
-	struct
-	{
-		struct FVector                 IntBoxOrigin;
-	} params;
-
+	UInteractableComponent_SetBoxOrigin_Params params;
 	params.IntBoxOrigin = IntBoxOrigin;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ void UInteractableComponent::SetBoxExtent(const struct FVector& InBoxExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.SetBoxExtent");
 
-	struct
-	{
-		struct FVector                 InBoxExtent;
-	} params;
-
+	UInteractableComponent_SetBoxExtent_Params params;
 	params.InBoxExtent = InBoxExtent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -61,11 +53,7 @@ class UInteractableArea* UInteractableComponent::GetInteractableArea()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetInteractableArea");
 
-	struct
-	{
-		class UInteractableArea*       ReturnValue;
-	} params;
-
+	UInteractableComponent_GetInteractableArea_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,11 +70,7 @@ struct FVector UInteractableComponent::GetBoxWorldOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxWorldOrigin");
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxWorldOrigin_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,11 +87,7 @@ float UInteractableComponent::GetBoxSphereRadius()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxSphereRadius");
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxSphereRadius_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,11 +104,7 @@ struct FVector UInteractableComponent::GetBoxOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxOrigin");
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxOrigin_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,11 +121,7 @@ struct FVector UInteractableComponent::GetBoxExtent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxExtent");
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxExtent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,12 +139,7 @@ bool UCharacterInteractionComponent::IsInteractionValid(class UObject* InInterac
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.IsInteractionValid");
 
-	struct
-	{
-		class UObject*                 InInteractable;
-		bool                           ReturnValue;
-	} params;
-
+	UCharacterInteractionComponent_IsInteractionValid_Params params;
 	params.InInteractable = InInteractable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -188,10 +155,7 @@ void UCharacterInteractionComponent::InvalidateOptimalObject()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.InvalidateOptimalObject");
 
-	struct
-	{
-	} params;
-
+	UCharacterInteractionComponent_InvalidateOptimalObject_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -206,11 +170,7 @@ class UInteractableArea* UCharacterInteractionComponent::GetOptimalFocusObject()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.GetOptimalFocusObject");
 
-	struct
-	{
-		class UInteractableArea*       ReturnValue;
-	} params;
-
+	UCharacterInteractionComponent_GetOptimalFocusObject_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,10 +185,7 @@ void UCharacterInteractionComponent::ClearAllPolicies()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.ClearAllPolicies");
 
-	struct
-	{
-	} params;
-
+	UCharacterInteractionComponent_ClearAllPolicies_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -243,11 +200,7 @@ void UInteractableArea::SetParent(class AActor* InParent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetParent");
 
-	struct
-	{
-		class AActor*                  InParent;
-	} params;
-
+	UInteractableArea_SetParent_Params params;
 	params.InParent = InParent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -263,11 +216,7 @@ void UInteractableArea::SetInteractable(class UObject* InInteractable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetInteractable");
 
-	struct
-	{
-		class UObject*                 InInteractable;
-	} params;
-
+	UInteractableArea_SetInteractable_Params params;
 	params.InInteractable = InInteractable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -283,11 +232,7 @@ void UInteractableArea::SetAreaName(const struct FName& InName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetAreaName");
 
-	struct
-	{
-		struct FName                   InName;
-	} params;
-
+	UInteractableArea_SetAreaName_Params params;
 	params.InName = InName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -303,11 +248,7 @@ void UInteractableArea::SetAreaBounds(const struct FBoxSphereBounds& InBounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetAreaBounds");
 
-	struct
-	{
-		struct FBoxSphereBounds        InBounds;
-	} params;
-
+	UInteractableArea_SetAreaBounds_Params params;
 	params.InBounds = InBounds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -323,11 +264,7 @@ class AActor* UInteractableArea::GetParent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetParent");
 
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
+	UInteractableArea_GetParent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -344,11 +281,7 @@ class UObject* UInteractableArea::GetInteractable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetInteractable");
 
-	struct
-	{
-		class UObject*                 ReturnValue;
-	} params;
-
+	UInteractableArea_GetInteractable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,11 +298,7 @@ struct FName UInteractableArea::GetAreaName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaName");
 
-	struct
-	{
-		struct FName                   ReturnValue;
-	} params;
-
+	UInteractableArea_GetAreaName_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -386,11 +315,7 @@ struct FVector UInteractableArea::GetAreaLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaLocation");
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableArea_GetAreaLocation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -407,11 +332,7 @@ struct FBoxSphereBounds UInteractableArea::GetAreaBounds()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaBounds");
 
-	struct
-	{
-		struct FBoxSphereBounds        ReturnValue;
-	} params;
-
+	UInteractableArea_GetAreaBounds_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -430,13 +351,7 @@ bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInter
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.ShouldDrawTooltipInWorldSpace");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		struct FVector                 DesiredTooltipWorldPosition;
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_ShouldDrawTooltipInWorldSpace_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -457,11 +372,7 @@ void UInteractableInterface::SetInteractionState(TEnumAsByte<EInteractableState>
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.SetInteractionState");
 
-	struct
-	{
-		TEnumAsByte<EInteractableState> InNewInteractableState;
-	} params;
-
+	UInteractableInterface_SetInteractionState_Params params;
 	params.InNewInteractableState = InNewInteractableState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -477,11 +388,7 @@ bool UInteractableInterface::IsInteractableDisabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.IsInteractableDisabled");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_IsInteractableDisabled_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,12 +406,7 @@ void UInteractableInterface::Interact(class AActor* InInteractor, class UClass* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.Interact");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		class UClass*                  NotificationInputId;
-	} params;
-
+	UInteractableInterface_Interact_Params params;
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
 
@@ -521,11 +423,7 @@ TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetInteractionState");
 
-	struct
-	{
-		TEnumAsByte<EInteractableState> ReturnValue;
-	} params;
-
+	UInteractableInterface_GetInteractionState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,11 +440,7 @@ struct FVector UInteractableInterface::GetFrontFacingVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetFrontFacingVector");
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableInterface_GetFrontFacingVector_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -565,13 +459,7 @@ struct FVector UInteractableInterface::GetClosestInteractionPoint(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetClosestInteractionPoint");
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableInterface_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -592,11 +480,7 @@ void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetActorsToIgnoreDuringOcclusionChecker");
 
-	struct
-	{
-		TArray<class AActor*>          ActorsToIgnore;
-	} params;
-
+	UInteractableInterface_GetActorsToIgnoreDuringOcclusionChecker_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -614,11 +498,7 @@ class UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetActionRulesComponent");
 
-	struct
-	{
-		class UActionRulesComponent*   ReturnValue;
-	} params;
-
+	UInteractableInterface_GetActionRulesComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -635,11 +515,7 @@ bool UInteractableInterface::DoesRequireNotSwimming()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireNotSwimming");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_DoesRequireNotSwimming_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -656,11 +532,7 @@ bool UInteractableInterface::DoesRequireNotBeingAirborne()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireNotBeingAirborne");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_DoesRequireNotBeingAirborne_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -677,11 +549,7 @@ bool UInteractableInterface::DoesRequireFacingFront()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireFacingFront");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_DoesRequireFacingFront_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -700,13 +568,7 @@ bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteractWithNotificationInputId");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		class UClass*                  NotificationInputId;
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_CanInteractWithNotificationInputId_Params params;
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
 
@@ -725,11 +587,7 @@ bool UInteractableInterface::CanInteractionStatesBeSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteractionStatesBeSet");
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_CanInteractionStatesBeSet_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -747,12 +605,7 @@ bool UInteractableInterface::CanInteract(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteract");
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
