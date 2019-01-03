@@ -341,6 +341,117 @@ void AMast::UpdateSailsAngleBasedOnIntent(float AngleIntent)
 }
 
 
+// Function Athena.Mast.UpdateHingeTransform
+// (Final, Native, Public, BlueprintCallable)
+
+void AMast::UpdateHingeTransform()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.UpdateHingeTransform");
+
+	AMast_UpdateHingeTransform_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ToggleRepairPlankVisibility
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// class URepairableComponent*    InRepairableComponent          (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           ShouldBeVisible                (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::ToggleRepairPlankVisibility(class URepairableComponent* InRepairableComponent, bool ShouldBeVisible)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ToggleRepairPlankVisibility");
+
+	AMast_ToggleRepairPlankVisibility_Params params;
+	params.InRepairableComponent = InRepairableComponent;
+	params.ShouldBeVisible = ShouldBeVisible;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.SetMastFallingProportion
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InProportion                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::SetMastFallingProportion(float InProportion)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.SetMastFallingProportion");
+
+	AMast_SetMastFallingProportion_Params params;
+	params.InProportion = InProportion;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ReactToDamageLevelChangedThird
+// (Final, Native, Private)
+// Parameters:
+// int                            DamageLevel                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::ReactToDamageLevelChangedThird(int DamageLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ReactToDamageLevelChangedThird");
+
+	AMast_ReactToDamageLevelChangedThird_Params params;
+	params.DamageLevel = DamageLevel;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ReactToDamageLevelChangedSecond
+// (Final, Native, Private)
+// Parameters:
+// int                            DamageLevel                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::ReactToDamageLevelChangedSecond(int DamageLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ReactToDamageLevelChangedSecond");
+
+	AMast_ReactToDamageLevelChangedSecond_Params params;
+	params.DamageLevel = DamageLevel;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ReactToDamageLevelChangedFirst
+// (Final, Native, Private)
+// Parameters:
+// int                            DamageLevel                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::ReactToDamageLevelChangedFirst(int DamageLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ReactToDamageLevelChangedFirst");
+
+	AMast_ReactToDamageLevelChangedFirst_Params params;
+	params.DamageLevel = DamageLevel;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ReactToDamage
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// struct FImpactDamageEvent      ImpactDamageEvent              (ConstParm, Parm, OutParm, ReferenceParm)
+
+void AMast::ReactToDamage(const struct FImpactDamageEvent& ImpactDamageEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ReactToDamage");
+
+	AMast_ReactToDamage_Params params;
+	params.ImpactDamageEvent = ImpactDamageEvent;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.Mast.OnRep_IsCursed
 // (Final, Native, Private)
 
@@ -349,6 +460,24 @@ void AMast::OnRep_IsCursed()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.OnRep_IsCursed");
 
 	AMast_OnRep_IsCursed_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.OnMastMeshSwapRequested
+// (Native, Event, Protected, BlueprintEvent)
+// Parameters:
+// class UStaticMesh*             NewMeshBottom                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh*             NewMeshTop                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::OnMastMeshSwapRequested(class UStaticMesh* NewMeshBottom, class UStaticMesh* NewMeshTop)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.OnMastMeshSwapRequested");
+
+	AMast_OnMastMeshSwapRequested_Params params;
+	params.NewMeshBottom = NewMeshBottom;
+	params.NewMeshTop = NewMeshTop;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -401,6 +530,91 @@ void AMast::OnAngleChanged(float Angle, float DeltaTime)
 	AMast_OnAngleChanged_Params params;
 	params.Angle = Angle;
 	params.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.Multicast_PlayMastDamageEffectsRPC
+// (Final, Net, Native, Event, NetMulticast, Private)
+// Parameters:
+// TArray<int>                    RepairableComponentIndices     (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int                            NewDamageLevel                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::Multicast_PlayMastDamageEffectsRPC(TArray<int> RepairableComponentIndices, int NewDamageLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.Multicast_PlayMastDamageEffectsRPC");
+
+	AMast_Multicast_PlayMastDamageEffectsRPC_Params params;
+	params.RepairableComponentIndices = RepairableComponentIndices;
+	params.NewDamageLevel = NewDamageLevel;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.IsMastVisuallyFractured
+// (Native, Event, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMast::IsMastVisuallyFractured()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.IsMastVisuallyFractured");
+
+	AMast_IsMastVisuallyFractured_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Mast.IsMastFullyDamaged
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMast::IsMastFullyDamaged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.IsMastFullyDamaged");
+
+	AMast_IsMastFullyDamaged_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Mast.IsExpandedDamageFeatureEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMast::IsExpandedDamageFeatureEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.IsExpandedDamageFeatureEnabled");
+
+	AMast_IsExpandedDamageFeatureEnabled_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Mast.HingeTransformChanged
+// (Final, Native, Public, HasDefaults)
+// Parameters:
+// struct FTransform              NewTansform                    (Parm, IsPlainOldData)
+
+void AMast::HingeTransformChanged(const struct FTransform& NewTansform)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.HingeTransformChanged");
+
+	AMast_HingeTransformChanged_Params params;
+	params.NewTansform = NewTansform;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -491,6 +705,23 @@ float AMast::GetSailAngleRatio()
 }
 
 
+// Function Athena.Mast.GetMastDamageState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EMastDamageState>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EMastDamageState> AMast::GetMastDamageState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.GetMastDamageState");
+
+	AMast_GetMastDamageState_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.Mast.GetMastAngleBoneTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -525,6 +756,40 @@ struct FVector AMast::GetLookAtPos()
 }
 
 
+// Function Athena.Mast.GetFallingImpactLocation
+// (Final, Native, Protected, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AMast::GetFallingImpactLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.GetFallingImpactLocation");
+
+	AMast_GetFallingImpactLocation_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Mast.GetDamageLevel
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int AMast::GetDamageLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.GetDamageLevel");
+
+	AMast_GetDamageLevel_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.Mast.FinaliseSails
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -536,6 +801,38 @@ void AMast::FinaliseSails(TArray<class ASail*> InSails)
 
 	AMast_FinaliseSails_Params params;
 	params.InSails = InSails;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ApplyMastFallingAngle
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// float                          InAngle                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMast::ApplyMastFallingAngle(float InAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ApplyMastFallingAngle");
+
+	AMast_ApplyMastFallingAngle_Params params;
+	params.InAngle = InAngle;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Mast.ApplyDamage
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// struct FImpactDamageEvent      ImpactDamageEvent              (ConstParm, Parm, OutParm, ReferenceParm)
+
+void AMast::ApplyDamage(const struct FImpactDamageEvent& ImpactDamageEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.Mast.ApplyDamage");
+
+	AMast_ApplyDamage_Params params;
+	params.ImpactDamageEvent = ImpactDamageEvent;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2887,29 +3184,12 @@ class USkeletalMeshComponent* AAthenaCharacter::GetFirstPersonMeshComponent()
 }
 
 
-// Function Athena.AthenaCharacter.GetCurrentShipAsActor
+// Function Athena.AthenaCharacter.GetCurrentShip
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* AAthenaCharacter::GetCurrentShipAsActor()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCharacter.GetCurrentShipAsActor");
-
-	AAthenaCharacter_GetCurrentShipAsActor_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.AthenaCharacter.GetCurrentShip
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AShip*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AShip* AAthenaCharacter::GetCurrentShip()
+class AActor* AAthenaCharacter::GetCurrentShip()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaCharacter.GetCurrentShip");
 
@@ -5152,6 +5432,22 @@ void UAthenaCameraComponent::Activate(bool bReset)
 
 	UAthenaCameraComponent_Activate_Params params;
 	params.bReset = bReset;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.CustomAnimationHandlerComponent.SetLoadedCustomAnimationDataAsset
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAthenaAnimationCustomSkeletonAnimationData* InCurrentCustomAnimationData   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomAnimationHandlerComponent::SetLoadedCustomAnimationDataAsset(class UAthenaAnimationCustomSkeletonAnimationData* InCurrentCustomAnimationData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CustomAnimationHandlerComponent.SetLoadedCustomAnimationDataAsset");
+
+	UCustomAnimationHandlerComponent_SetLoadedCustomAnimationDataAsset_Params params;
+	params.InCurrentCustomAnimationData = InCurrentCustomAnimationData;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -7798,6 +8094,100 @@ float UIntentCombinerComponent::GetCombinedIntent(bool IsMoving)
 }
 
 
+// Function Athena.MastHinge.SetHingeTransform
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FTransform              NewTransform                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void UMastHinge::SetHingeTransform(const struct FTransform& NewTransform)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MastHinge.SetHingeTransform");
+
+	UMastHinge_SetHingeTransform_Params params;
+	params.NewTransform = NewTransform;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.MastHinge.RotateTransformAroundTheHinge
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FTransform              TransformToRotate              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float                          PitchAngle                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform UMastHinge::RotateTransformAroundTheHinge(const struct FTransform& TransformToRotate, float PitchAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MastHinge.RotateTransformAroundTheHinge");
+
+	UMastHinge_RotateTransformAroundTheHinge_Params params;
+	params.TransformToRotate = TransformToRotate;
+	params.PitchAngle = PitchAngle;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.MastHinge.GetTransformRelativeToTheHinge
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FTransform              TransformToMakeRelative        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform UMastHinge::GetTransformRelativeToTheHinge(const struct FTransform& TransformToMakeRelative)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MastHinge.GetTransformRelativeToTheHinge");
+
+	UMastHinge_GetTransformRelativeToTheHinge_Params params;
+	params.TransformToMakeRelative = TransformToMakeRelative;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.MastHinge.GetHingeTransformBP
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
+
+void UMastHinge::GetHingeTransformBP(struct FTransform* OutTransform)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MastHinge.GetHingeTransformBP");
+
+	UMastHinge_GetHingeTransformBP_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutTransform != nullptr)
+		*OutTransform = params.OutTransform;
+}
+
+
+// Function Athena.MastHinge.CreateAndSetHingeTransform
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// float                          HingeHeight                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          DistanceFromCentre             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          DirectionAngle                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UMastHinge::CreateAndSetHingeTransform(float HingeHeight, float DistanceFromCentre, float DirectionAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MastHinge.CreateAndSetHingeTransform");
+
+	UMastHinge_CreateAndSetHingeTransform_Params params;
+	params.HingeHeight = HingeHeight;
+	params.DistanceFromCentre = DistanceFromCentre;
+	params.DirectionAngle = DirectionAngle;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.LeakableInterface.GetLeakAmount
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -8282,6 +8672,24 @@ bool AHullDamage::ShouldHitGenerateDecal(const struct FVector& HitNormal, const 
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.HullDamage.SetRepairPlankInstanceTransform
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class URepairableComponent*    InRepairable                   (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FTransform              InPlankWorldTransform          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void AHullDamage::SetRepairPlankInstanceTransform(class URepairableComponent* InRepairable, const struct FTransform& InPlankWorldTransform)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.HullDamage.SetRepairPlankInstanceTransform");
+
+	AHullDamage_SetRepairPlankInstanceTransform_Params params;
+	params.InRepairable = InRepairable;
+	params.InPlankWorldTransform = InPlankWorldTransform;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -12914,6 +13322,19 @@ void AContestZone::OnRep_ContestZoneBoundary()
 }
 
 
+// Function Athena.ContestZone.OnRep_ContestSafeRegion
+// (Final, Native, Private)
+
+void AContestZone::OnRep_ContestSafeRegion()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.ContestZone.OnRep_ContestSafeRegion");
+
+	AContestZone_OnRep_ContestSafeRegion_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.ContestZoneService.SelectAndInitialiseContestZone
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -13010,19 +13431,6 @@ void AContestManagerService::PopupNotifyEveryParticipant(class UPopUpMessageDesc
 
 	AContestManagerService_PopupNotifyEveryParticipant_Params params;
 	params.InPopup = InPopup;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ContestManagerService.OnRep_TavernStreaming
-// (Final, Native, Protected)
-
-void AContestManagerService::OnRep_TavernStreaming()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.ContestManagerService.OnRep_TavernStreaming");
-
-	AContestManagerService_OnRep_TavernStreaming_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -14221,6 +14629,19 @@ void ACrewShipManifest::OnRep_VoyageCancelVoteData()
 }
 
 
+// Function Athena.CrewShipManifest.OnRep_TaleSelectionVoteData
+// (Final, Native, Protected)
+
+void ACrewShipManifest::OnRep_TaleSelectionVoteData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CrewShipManifest.OnRep_TaleSelectionVoteData");
+
+	ACrewShipManifest_OnRep_TaleSelectionVoteData_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.CrewShipManifest.OnRep_ProposedVoyages
 // (Final, Native, Protected)
 
@@ -14229,6 +14650,19 @@ void ACrewShipManifest::OnRep_ProposedVoyages()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.CrewShipManifest.OnRep_ProposedVoyages");
 
 	ACrewShipManifest_OnRep_ProposedVoyages_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.CrewShipManifest.OnRep_ProposedTales
+// (Final, Native, Protected)
+
+void ACrewShipManifest::OnRep_ProposedTales()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CrewShipManifest.OnRep_ProposedTales");
+
+	ACrewShipManifest_OnRep_ProposedTales_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -19497,16 +19931,16 @@ void UHealthComponent::PredictHealthChange(float Change, TEnumAsByte<EHealthChan
 }
 
 
-// Function Athena.HealthComponent.OnRep_CurrentHealth
+// Function Athena.HealthComponent.OnRep_CurrentHealthInfo
 // (Final, Native, Private)
 // Parameters:
-// float                          PrevCurrentHealth              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCurrentHealthInfo      PrevCurrentHealth              (Parm)
 
-void UHealthComponent::OnRep_CurrentHealth(float PrevCurrentHealth)
+void UHealthComponent::OnRep_CurrentHealthInfo(const struct FCurrentHealthInfo& PrevCurrentHealth)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.HealthComponent.OnRep_CurrentHealth");
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.HealthComponent.OnRep_CurrentHealthInfo");
 
-	UHealthComponent_OnRep_CurrentHealth_Params params;
+	UHealthComponent_OnRep_CurrentHealthInfo_Params params;
 	params.PrevCurrentHealth = PrevCurrentHealth;
 
 	UObject::ProcessEvent(fn, &params);
@@ -19524,22 +19958,6 @@ void UHealthComponent::OnRep_ContinuousHealthChangeSources(TArray<struct FContin
 
 	UHealthComponent_OnRep_ContinuousHealthChangeSources_Params params;
 	params.PrevContinuousDamageSources = PrevContinuousDamageSources;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.HealthComponent.Multicast_SetHealthOnClients
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// struct FHealthChange           Instance                       (ConstParm, Parm)
-
-void UHealthComponent::Multicast_SetHealthOnClients(const struct FHealthChange& Instance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.HealthComponent.Multicast_SetHealthOnClients");
-
-	UHealthComponent_Multicast_SetHealthOnClients_Params params;
-	params.Instance = Instance;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -22467,6 +22885,19 @@ void AAthenaGameState::OnRep_ReplicatedAllianceService()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaGameState.OnRep_ReplicatedAllianceService");
 
 	AAthenaGameState_OnRep_ReplicatedAllianceService_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.AthenaGameState.OnRep_GenericMarkerService
+// (Final, Native, Private)
+
+void AAthenaGameState::OnRep_GenericMarkerService()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.AthenaGameState.OnRep_GenericMarkerService");
+
+	AAthenaGameState_OnRep_GenericMarkerService_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -25419,6 +25850,22 @@ void ULPVReferenceFrameAdaptationFunctionLibrary::STATIC_InitializeLPVAdaptation
 }
 
 
+// Function Athena.MapTable.SetMaterialInstanceDynamic
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInstanceDynamic* InMID                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AMapTable::SetMaterialInstanceDynamic(class UMaterialInstanceDynamic* InMID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MapTable.SetMaterialInstanceDynamic");
+
+	AMapTable_SetMaterialInstanceDynamic_Params params;
+	params.InMID = InMID;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.MapTable.Server_SetPins
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
@@ -25532,6 +25979,35 @@ void AMapTable::OnRep_CentreLocation()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.MapTable.OnRep_CentreLocation");
 
 	AMapTable_OnRep_CentreLocation_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.MapTable.OnRep_BoundaryData
+// (Final, Native, Public)
+
+void AMapTable::OnRep_BoundaryData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MapTable.OnRep_BoundaryData");
+
+	AMapTable_OnRep_BoundaryData_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.MapTable.OnParentDestroyed
+// (Final, Native, Public)
+// Parameters:
+// class AActor*                  InParentActor                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMapTable::OnParentDestroyed(class AActor* InParentActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MapTable.OnParentDestroyed");
+
+	AMapTable_OnParentDestroyed_Params params;
+	params.InParentActor = InParentActor;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -26192,6 +26668,23 @@ bool AMemoryTestPawn::IsFinished()
 	static auto fn = UObject::FindObject<UFunction>("Function Athena.MemoryTestPawn.IsFinished");
 
 	AMemoryTestPawn_IsFinished_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.MenuInputHandler.OnTogglePhotoMode
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> UMenuInputHandler::OnTogglePhotoMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MenuInputHandler.OnTogglePhotoMode");
+
+	UMenuInputHandler_OnTogglePhotoMode_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -27251,6 +27744,54 @@ bool AMusicalInstrument::IsEmitterPlaying()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.MyBellSwitch.OnOverlapEnd
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void AMyBellSwitch::OnOverlapEnd(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MyBellSwitch.OnOverlapEnd");
+
+	AMyBellSwitch_OnOverlapEnd_Params params;
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+	params.bFromSweep = bFromSweep;
+	params.SweepResult = SweepResult;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.MyBellSwitch.OnOverlapBegin
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void AMyBellSwitch::OnOverlapBegin(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.MyBellSwitch.OnOverlapBegin");
+
+	AMyBellSwitch_OnOverlapBegin_Params params;
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+	params.bFromSweep = bFromSweep;
+	params.SweepResult = SweepResult;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -28371,6 +28912,24 @@ void UPlayerNonVerbalComponent::Client_ReceivePhrase(class AAthenaPlayerState* S
 	UPlayerNonVerbalComponent_Client_ReceivePhrase_Params params;
 	params.SenderPlayerState = SenderPlayerState;
 	params.PhraseKey = PhraseKey;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.PlayerNonVerbalComponent.Client_ReceiveNPCText
+// (Final, Net, NetReliable, Native, Event, Private, NetClient)
+// Parameters:
+// class FString                  SenderNameKey                  (Parm, ZeroConstructor)
+// class FString                  TextKey                        (Parm, ZeroConstructor)
+
+void UPlayerNonVerbalComponent::Client_ReceiveNPCText(const class FString& SenderNameKey, const class FString& TextKey)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.PlayerNonVerbalComponent.Client_ReceiveNPCText");
+
+	UPlayerNonVerbalComponent_Client_ReceiveNPCText_Params params;
+	params.SenderNameKey = SenderNameKey;
+	params.TextKey = TextKey;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35962,23 +36521,6 @@ class UClass* UWorldRegionBlueprintFunctionLibrary::STATIC_GetSeaIdFromWorldSpac
 }
 
 
-// Function Athena.NamedObjectInterface.GetObjectDisplayName
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UNamedObjectInterface::GetObjectDisplayName()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.NamedObjectInterface.GetObjectDisplayName");
-
-	UNamedObjectInterface_GetObjectDisplayName_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Athena.ActorFunctionLibrary.TestSetNetCullDistance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -36240,24 +36782,6 @@ class AActor* UActorFunctionLibrary::STATIC_ClosestActorToPoint(TArray<class AAc
 }
 
 
-// Function Athena.InteractObjectActionStateId.PushCharacterIntoInteractObjectActionState
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FNetSubObjectPtr        InteractObject                 (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UInteractObjectActionStateId::STATIC_PushCharacterIntoInteractObjectActionState(const struct FNetSubObjectPtr& InteractObject, class AActor* Character)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.InteractObjectActionStateId.PushCharacterIntoInteractObjectActionState");
-
-	UInteractObjectActionStateId_PushCharacterIntoInteractObjectActionState_Params params;
-	params.InteractObject = InteractObject;
-	params.Character = Character;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Athena.PhysicsCollisionFunctions.IsWorldSpacePositionInsideVolume
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -36334,6 +36858,23 @@ void UDitherFunctionLibrary::STATIC_DisableDitheringOnMaterial(class UMaterialIn
 	params.Material = Material;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.NamedObjectInterface.GetObjectDisplayName
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UNamedObjectInterface::GetObjectDisplayName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.NamedObjectInterface.GetObjectDisplayName");
+
+	UNamedObjectInterface_GetObjectDisplayName_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -36531,6 +37072,24 @@ bool UBuoyancyComponent::IsEnabled()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.InteractObjectActionStateId.PushCharacterIntoInteractObjectActionState
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FNetSubObjectPtr        InteractObject                 (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UInteractObjectActionStateId::STATIC_PushCharacterIntoInteractObjectActionState(const struct FNetSubObjectPtr& InteractObject, class AActor* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.InteractObjectActionStateId.PushCharacterIntoInteractObjectActionState");
+
+	UInteractObjectActionStateId_PushCharacterIntoInteractObjectActionState_Params params;
+	params.InteractObject = InteractObject;
+	params.Character = Character;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

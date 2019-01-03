@@ -285,33 +285,33 @@ public:
 
 
 // Class GameplayAbilities.AbilitySystemComponent
-// 0x0D50 (0x0E88 - 0x0138)
+// 0x0D50 (0x0E80 - 0x0130)
 class UAbilitySystemComponent : public UGameplayTasksComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0138(0x0008) MISSED OFFSET
-	TArray<struct FAttributeDefaults>                  DefaultStartingData;                                      // 0x0140(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAttributeSet*>                       SpawnedAttributes;                                        // 0x0150(0x0010) (ExportObject, Net, ZeroConstructor)
-	struct FPredictionKey                              ReplicatedPredictionKey;                                  // 0x0160(0x0018) (Net)
-	unsigned char                                      UnknownData01[0xD8];                                      // 0x0178(0x00D8) MISSED OFFSET
-	float                                              OutgoingDuration;                                         // 0x0250(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              IncomingDuration;                                         // 0x0254(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FGameplayAbilitySpecContainer               ActivatableAbilities;                                     // 0x0258(0x00C0) (BlueprintVisible, BlueprintReadOnly, Net)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x0318(0x0050) MISSED OFFSET
-	TArray<class UGameplayAbility*>                    AllReplicatedInstancedAbilities;                          // 0x0368(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x270];                                     // 0x0378(0x0270) MISSED OFFSET
-	TArray<class AGameplayAbilityTargetActor*>         SpawnedTargetActors;                                      // 0x05E8(0x0010) (ZeroConstructor)
-	struct FGameplayAbilityRepAnimMontage              RepAnimMontageInfo;                                       // 0x05F8(0x0030) (Net)
-	struct FGameplayAbilityLocalAnimMontage            LocalAnimMontageInfo;                                     // 0x0628(0x0030)
-	unsigned char                                      UnknownData04[0xA0];                                      // 0x0658(0x00A0) MISSED OFFSET
-	class AActor*                                      OwnerActor;                                               // 0x06F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      AvatarActor;                                              // 0x0700(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x18];                                      // 0x0708(0x0018) MISSED OFFSET
-	struct FActiveGameplayEffectsContainer             ActiveGameplayEffects;                                    // 0x0720(0x03C8) (Net)
-	struct FActiveGameplayCueContainer                 ActiveGameplayCues;                                       // 0x0AE8(0x00C0) (Net)
-	unsigned char                                      UnknownData06[0x160];                                     // 0x0BA8(0x0160) MISSED OFFSET
-	TArray<unsigned char>                              BlockedAbilityBindings;                                   // 0x0D08(0x0010) (Net, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData07[0x170];                                     // 0x0D18(0x0170) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0130(0x0008) MISSED OFFSET
+	TArray<struct FAttributeDefaults>                  DefaultStartingData;                                      // 0x0138(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAttributeSet*>                       SpawnedAttributes;                                        // 0x0148(0x0010) (ExportObject, Net, ZeroConstructor)
+	struct FPredictionKey                              ReplicatedPredictionKey;                                  // 0x0158(0x0018) (Net)
+	unsigned char                                      UnknownData01[0xD8];                                      // 0x0170(0x00D8) MISSED OFFSET
+	float                                              OutgoingDuration;                                         // 0x0248(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              IncomingDuration;                                         // 0x024C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FGameplayAbilitySpecContainer               ActivatableAbilities;                                     // 0x0250(0x00C0) (BlueprintVisible, BlueprintReadOnly, Net)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0310(0x0050) MISSED OFFSET
+	TArray<class UGameplayAbility*>                    AllReplicatedInstancedAbilities;                          // 0x0360(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData03[0x270];                                     // 0x0370(0x0270) MISSED OFFSET
+	TArray<class AGameplayAbilityTargetActor*>         SpawnedTargetActors;                                      // 0x05E0(0x0010) (ZeroConstructor)
+	struct FGameplayAbilityRepAnimMontage              RepAnimMontageInfo;                                       // 0x05F0(0x0030) (Net)
+	struct FGameplayAbilityLocalAnimMontage            LocalAnimMontageInfo;                                     // 0x0620(0x0030)
+	unsigned char                                      UnknownData04[0xA0];                                      // 0x0650(0x00A0) MISSED OFFSET
+	class AActor*                                      OwnerActor;                                               // 0x06F0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      AvatarActor;                                              // 0x06F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x18];                                      // 0x0700(0x0018) MISSED OFFSET
+	struct FActiveGameplayEffectsContainer             ActiveGameplayEffects;                                    // 0x0718(0x03C8) (Net)
+	struct FActiveGameplayCueContainer                 ActiveGameplayCues;                                       // 0x0AE0(0x00C0) (Net)
+	unsigned char                                      UnknownData06[0x160];                                     // 0x0BA0(0x0160) MISSED OFFSET
+	TArray<unsigned char>                              BlockedAbilityBindings;                                   // 0x0D00(0x0010) (Net, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData07[0x170];                                     // 0x0D10(0x0170) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -450,12 +450,12 @@ public:
 
 
 // Class GameplayAbilities.AbilitySystemTestPawn
-// 0x0020 (0x0538 - 0x0518)
+// 0x0020 (0x0540 - 0x0520)
 class AAbilitySystemTestPawn : public ADefaultPawn
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0518(0x0018) MISSED OFFSET
-	class UAbilitySystemComponent*                     AbilitySystemComponent;                                   // 0x0530(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0520(0x0018) MISSED OFFSET
+	class UAbilitySystemComponent*                     AbilitySystemComponent;                                   // 0x0538(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

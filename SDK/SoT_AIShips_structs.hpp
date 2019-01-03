@@ -13,8 +13,8 @@
 #include "SoT_AthenaAI_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 
 namespace SDK
 {

@@ -31,6 +31,13 @@ struct FSerialisedActionStateInfo
 	unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
 };
 
+// ScriptStruct ActionStateMachine.SerialisedActionStateMessage
+// 0x0018
+struct FSerialisedActionStateMessage
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+};
+
 // ScriptStruct ActionStateMachine.SerialisedConstructionInfoStore
 // 0x0140
 struct FSerialisedConstructionInfoStore
@@ -132,6 +139,14 @@ struct FActorActionStateConstructionInfo : public FActionStateConstructionInfo
 	TWeakObjectPtr<class AActor>                       ActorOwner;                                               // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct ActionStateMachine.ActionStateMessage
+// 0x0010
+struct FActionStateMessage
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class UScriptStruct*                               Type;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+};
+
 // ScriptStruct ActionStateMachine.InnerWithObjTestStruct
 // 0x0008
 struct FInnerWithObjTestStruct
@@ -146,21 +161,6 @@ struct FTestActionStateConstructionInfoWithObjPointers : public FActionStateCons
 	class UObject*                                     ObjPointer;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FInnerWithObjTestStruct                     Inner;                                                    // 0x0030(0x0008)
 	TArray<class UObject*>                             Array;                                                    // 0x0038(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct ActionStateMachine.ActionStateMessage
-// 0x0010
-struct FActionStateMessage
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class UScriptStruct*                               Type;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct ActionStateMachine.SerialisedActionStateMessage
-// 0x0018
-struct FSerialisedActionStateMessage
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct ActionStateMachine.NullActionStateConstructionInfo

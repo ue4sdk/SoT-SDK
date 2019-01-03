@@ -140,6 +140,7 @@ public:
 	void SinkShip();
 	void SinkAllBarrels();
 	void SinkAllAIShips();
+	void ShowTaleDebug();
 	void ShowRandomCrewMemberGamerCard();
 	void ShowAllWelds();
 	void ShowAllItemsInRadialInventory();
@@ -175,6 +176,8 @@ public:
 	void SetPlayerInvisibleToAI();
 	void SetPhotoMode(bool Enabled);
 	void SetNonCrewChatSpatialisation(bool Enabled);
+	void SetMastsFullyRepaired();
+	void SetMastsFullyDamaged();
 	void SetKnockbackDisabled(bool Disabled);
 	void SetIdleDisconnectEnabled(bool Enabled);
 	void SetGrogSecondary(bool InValue);
@@ -187,7 +190,6 @@ public:
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
 	void SendStatEvent(const class FString& StatName, uint64_t StatValue);
 	void SendRewardRequestEvent(const class FString& CompanyNameAndRewardIdSeparatedByColon);
-	void SelectTale(const class FString& SourceAssetName);
 	void ScuttleShip();
 	void ScreenFadeStart();
 	void ScreenFadeEnd();
@@ -209,10 +211,12 @@ public:
 	void ReplaceShipWithSmallShip(const class FString& ShipActorIdConsoleString);
 	void RepairShipAndClearInternalWater();
 	void RenameTreasure(const class FString& InVendorName);
+	void RemovePetFromPlayer();
 	void RemoveItemInSlot(int SlotIndex);
 	void RemoveAllFog();
 	void PushShip(float FwdSpdInMetersPerSecond);
 	void PullLatestEmblemProgress();
+	void ProceedToNextContestState();
 	void PrintTime();
 	void PrintAllNetworkActors();
 	void PlayerAnimationOverride(const struct FName& Name);
@@ -247,6 +251,7 @@ public:
 	void IPGLoad(const class FString& path);
 	void InfiniteGunAmmo(bool Enabled);
 	void IncrementTime(int Hours, int Minutes);
+	void HideTaleDebug();
 	void HealthSet(float Value);
 	void HealthReset();
 	void HealthAdjust(float Amount);
@@ -333,6 +338,7 @@ public:
 	void AIPlayerShip();
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);
+	void AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex);
 	void AddDrunkenness(int DrunkennessType, float DrunkennessChange);
 	void ActivateSkellyFort(const class FString& FortName);
 };

@@ -292,11 +292,11 @@ public:
 
 
 // Class Water.MockWaterExclusionSurfaceComponent
-// 0x0010 (0x00E8 - 0x00D8)
+// 0x0010 (0x00E0 - 0x00D0)
 class UMockWaterExclusionSurfaceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -339,14 +339,14 @@ public:
 
 
 // Class Water.MockWaterPlaneComponent
-// 0x0058 (0x0130 - 0x00D8)
+// 0x0050 (0x0120 - 0x00D0)
 class UMockWaterPlaneComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x00D8(0x0018) MISSED OFFSET
-	struct FWaterSimPlane                              GetWaterPlaneSetPlane;                                    // 0x00F0(0x0030)
-	class UBaseWaterComponent*                         EnterWaterPlaneComponent;                                 // 0x0120(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBaseWaterComponent*                         LeaveWaterPlaneComponent;                                 // 0x0128(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
+	struct FWaterSimPlane                              GetWaterPlaneSetPlane;                                    // 0x00E0(0x0030)
+	class UBaseWaterComponent*                         EnterWaterPlaneComponent;                                 // 0x0110(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         LeaveWaterPlaneComponent;                                 // 0x0118(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -373,11 +373,11 @@ public:
 
 
 // Class Water.MockWaterVolumeComponent
-// 0x0010 (0x00E8 - 0x00D8)
+// 0x0010 (0x00E0 - 0x00D0)
 class UMockWaterVolumeComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -522,7 +522,7 @@ public:
 
 
 // Class Water.WaterPlaneExclusionComponent
-// 0x0000 (0x00D8 - 0x00D8)
+// 0x0000 (0x00D0 - 0x00D0)
 class UWaterPlaneExclusionComponent : public UActorComponent
 {
 public:

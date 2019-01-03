@@ -295,13 +295,13 @@ public:
 
 
 // Class AIShips.ShipProxyPawn
-// 0x0038 (0x0528 - 0x04F0)
+// 0x0038 (0x0530 - 0x04F8)
 class AShipProxyPawn : public APawn
 {
 public:
-	class AShip*                                       Ship;                                                     // 0x04F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AShip*                                       SpawnTargetShip;                                          // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0500(0x0028) MISSED OFFSET
+	class AShip*                                       Ship;                                                     // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AShip*                                       SpawnTargetShip;                                          // 0x0500(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0508(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -397,11 +397,11 @@ public:
 
 
 // Class AIShips.AIShipTelemetryComponent
-// 0x0040 (0x0118 - 0x00D8)
+// 0x0040 (0x0110 - 0x00D0)
 class UAIShipTelemetryComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x00D8(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x00D0(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

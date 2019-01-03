@@ -6993,6 +6993,19 @@ void UCharacterMovementComponent::AddForce(const struct FVector& Force)
 }
 
 
+// Function Engine.WorldSettings.OnRep_WorldGravityZ
+// (Native, Public)
+
+void AWorldSettings::OnRep_WorldGravityZ()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.WorldSettings.OnRep_WorldGravityZ");
+
+	AWorldSettings_OnRep_WorldGravityZ_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.GameInstance.ReceiveShutdown
 // (Event, Public, BlueprintEvent)
 
@@ -11997,19 +12010,6 @@ void APlayerController::ActivateTouchInterface(class UTouchInterface* NewTouchIn
 
 	APlayerController_ActivateTouchInterface_Params params;
 	params.NewTouchInterface = NewTouchInterface;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.WorldSettings.OnRep_WorldGravityZ
-// (Native, Public)
-
-void AWorldSettings::OnRep_WorldGravityZ()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.WorldSettings.OnRep_WorldGravityZ");
-
-	AWorldSettings_OnRep_WorldGravityZ_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

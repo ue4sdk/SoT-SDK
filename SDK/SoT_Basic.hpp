@@ -20,13 +20,13 @@ inline Fn GetVFunction(const void *instance, std::size_t index)
 
 class UObject;
 
-class FUObjectItem
+class FUObjectItem //it's UObjectBase from UE4 v4.10
 {
 public:
 	UObject* Object;
 	int32_t Flags;
-	int32_t ClusterIndex;
-	int32_t SerialNumber;
+	int32_t ClusterIndex; 
+	//__int32 SerialNumber;
 
 	enum class EInternalObjectFlags : int32_t
 	{
@@ -422,7 +422,7 @@ struct FWeakObjectPtr
 public:
 	inline bool SerialNumbersMatch(FUObjectItem* ObjectItem) const
 	{
-		return ObjectItem->SerialNumber == ObjectSerialNumber;
+		return true;//ObjectItem->SerialNumber == ObjectSerialNumber;
 	}
 
 	bool IsValid() const;

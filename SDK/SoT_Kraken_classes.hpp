@@ -201,11 +201,11 @@ public:
 
 
 // Class Kraken.KrakenTelemetryComponent
-// 0x0108 (0x01E0 - 0x00D8)
+// 0x0108 (0x01D8 - 0x00D0)
 class UKrakenTelemetryComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x108];                                     // 0x00D8(0x0108) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x108];                                     // 0x00D0(0x0108) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

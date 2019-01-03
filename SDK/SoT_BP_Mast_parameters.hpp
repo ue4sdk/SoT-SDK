@@ -14,6 +14,26 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Mast.BP_Mast_C.AttemptToAddDamageDecal
+struct ABP_Mast_C_AttemptToAddDamageDecal_Params
+{
+	TEnumAsByte<ERepairableState>                      RepairableState;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	class UDecalComponent*                             DecalComponent;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, IsPlainOldData)
+	class UMaterialInterface*                          NewDecalMaterial;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Mast.BP_Mast_C.IsMastVisuallyFractured
+struct ABP_Mast_C_IsMastVisuallyFractured_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_Mast.BP_Mast_C.DrawDebugSkeleton
+struct ABP_Mast_C_DrawDebugSkeleton_Params
+{
+};
+
 // Function BP_Mast.BP_Mast_C.Customise Static Mesh
 struct ABP_Mast_C_Customise_Static_Mesh_Params
 {
@@ -58,6 +78,31 @@ struct ABP_Mast_C_UserConstructionScript_Params
 struct ABP_Mast_C_OnMastDescLoaded_Params
 {
 	class UMastDescAsset*                              MastDesc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Mast.BP_Mast_C.OnMastMeshSwapRequested
+struct ABP_Mast_C_OnMastMeshSwapRequested_Params
+{
+	class UStaticMesh*                                 NewMeshBottom;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 NewMeshTop;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature
+struct ABP_Mast_C_BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature_Params
+{
+	TEnumAsByte<ERepairableState>                      State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature
+struct ABP_Mast_C_BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature_Params
+{
+	TEnumAsByte<ERepairableState>                      State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature
+struct ABP_Mast_C_BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature_Params
+{
+	TEnumAsByte<ERepairableState>                      State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Mast.BP_Mast_C.ExecuteUbergraph_BP_Mast

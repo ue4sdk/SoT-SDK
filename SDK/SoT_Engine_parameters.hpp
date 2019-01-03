@@ -2633,6 +2633,11 @@ struct UCharacterMovementComponent_AddForce_Params
 	struct FVector                                     Force;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.WorldSettings.OnRep_WorldGravityZ
+struct AWorldSettings_OnRep_WorldGravityZ_Params
+{
+};
+
 // Function Engine.GameInstance.ReceiveShutdown
 struct UGameInstance_ReceiveShutdown_Params
 {
@@ -4524,11 +4529,6 @@ struct APlayerController_AddPitchInput_Params
 struct APlayerController_ActivateTouchInterface_Params
 {
 	class UTouchInterface*                             NewTouchInterface;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.WorldSettings.OnRep_WorldGravityZ
-struct AWorldSettings_OnRep_WorldGravityZ_Params
-{
 };
 
 // Function Engine.PostProcessComponent.AddOrUpdateBlendable

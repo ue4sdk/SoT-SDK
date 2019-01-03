@@ -59,55 +59,6 @@ public:
 };
 
 
-// Class StatusEffects.MaterialStatusSusceptibilityInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMaterialStatusSusceptibilityInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class StatusEffects.SurfaceMaterialStatusZoneInterface
-// 0x0000 (0x0028 - 0x0028)
-class USurfaceMaterialStatusZoneInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class StatusEffects.MaterialStatusSusceptibilityComponent
-// 0x0030 (0x0108 - 0x00D8)
-class UMaterialStatusSusceptibilityComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
-	class UPhysicalMaterial*                           CurrentSurfaceMaterial;                                   // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TScriptInterface<class USurfaceMaterialStatusZoneInterface> CurrentMaterialStatusZone;                                // 0x00E8(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x00F8(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class StatusEffects.StatusEffectRecipientInterface
 // 0x0000 (0x0028 - 0x0028)
 class UStatusEffectRecipientInterface : public UInterface
@@ -117,21 +68,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectRecipientInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class StatusEffects.StatusEffectTicketDispenserInterface
-// 0x0000 (0x0028 - 0x0028)
-class UStatusEffectTicketDispenserInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectTicketDispenserInterface");
 		return ptr;
 	}
 
@@ -172,14 +108,98 @@ public:
 };
 
 
+// Class StatusEffects.LightweightStatusEffectManagerComponent
+// 0x0020 (0x00F0 - 0x00D0)
+class ULightweightStatusEffectManagerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00E0(0x0010) (Net, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.LightweightStatusEffectManagerComponent");
+		return ptr;
+	}
+
+
+	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects);
+};
+
+
+// Class StatusEffects.MaterialStatusSusceptibilityInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMaterialStatusSusceptibilityInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.SurfaceMaterialStatusZoneInterface
+// 0x0000 (0x0028 - 0x0028)
+class USurfaceMaterialStatusZoneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.MaterialStatusSusceptibilityComponent
+// 0x0030 (0x0100 - 0x00D0)
+class UMaterialStatusSusceptibilityComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	class UPhysicalMaterial*                           CurrentSurfaceMaterial;                                   // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TScriptInterface<class USurfaceMaterialStatusZoneInterface> CurrentMaterialStatusZone;                                // 0x00E0(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x00F0(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusEffectTicketDispenserInterface
+// 0x0000 (0x0028 - 0x0028)
+class UStatusEffectTicketDispenserInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectTicketDispenserInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.StatusEffectManagerComponent
-// 0x0028 (0x0100 - 0x00D8)
+// 0x0028 (0x00F8 - 0x00D0)
 class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
-	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F0(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
+	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00E8(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

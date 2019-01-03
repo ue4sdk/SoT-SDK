@@ -1418,6 +1418,180 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 }
 
 
+// Function AthenaAI.Fauna.TestingSetWaterState
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EFaunaInWaterState> NewInState                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.TestingSetWaterState");
+
+	AFauna_TestingSetWaterState_Params params;
+	params.NewInState = NewInState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_TargetTurnAngle
+// (Final, Native, Private)
+
+void AFauna::OnRep_TargetTurnAngle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_TargetTurnAngle");
+
+	AFauna_OnRep_TargetTurnAngle_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim
+// (Final, Native, Private)
+
+void AFauna::OnRep_IsPlayingStarvingAnim()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim");
+
+	AFauna_OnRep_IsPlayingStarvingAnim_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_IsCalm
+// (Final, Native, Private)
+
+void AFauna::OnRep_IsCalm()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsCalm");
+
+	AFauna_OnRep_IsCalm_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_IsAgitated
+// (Final, Native, Private)
+
+void AFauna::OnRep_IsAgitated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsAgitated");
+
+	AFauna_OnRep_IsAgitated_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_InWaterState
+// (Final, Native, Private)
+
+void AFauna::OnRep_InWaterState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_InWaterState");
+
+	AFauna_OnRep_InWaterState_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_CratedState
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// TEnumAsByte<EFaunaCratedState> PreviousCratedState            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_CratedState");
+
+	AFauna_OnRep_CratedState_Params params;
+	params.PreviousCratedState = PreviousCratedState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// class AActor*                  Crate                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC");
+
+	AFauna_Multicast_PlayPutInCrateEffectsRPC_Params params;
+	params.Crate = Crate;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.Multicast_JustBeenFedRPC
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// class AActor*                  FedBy                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC");
+
+	AFauna_Multicast_JustBeenFedRPC_Params params;
+	params.FedBy = FedBy;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.Multicast_HightlightLeader
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// bool                           bIsLeader                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::Multicast_HightlightLeader(bool bIsLeader)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_HightlightLeader");
+
+	AFauna_Multicast_HightlightLeader_Params params;
+	params.bIsLeader = bIsLeader;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed
+// (Final, Native, Public, BlueprintCallable)
+
+void AFauna::GenerateNewRandomAnimationSeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed");
+
+	AFauna_GenerateNewRandomAnimationSeed_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.ActivateResponseRPC
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// Parameters:
+// float                          InTargetTurnAngle              (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.ActivateResponseRPC");
+
+	AFauna_ActivateResponseRPC_Params params;
+	params.InTargetTurnAngle = InTargetTurnAngle;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
 // (Final, Native, Public, BlueprintCallable)
 
@@ -1495,242 +1669,6 @@ class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAth
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.Fauna.TestingSetWaterState
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EFaunaInWaterState> NewInState                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.TestingSetWaterState");
-
-	AFauna_TestingSetWaterState_Params params;
-	params.NewInState = NewInState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.SetAIStrategy
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  InStrategy                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::SetAIStrategy(class UClass* InStrategy)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.SetAIStrategy");
-
-	AFauna_SetAIStrategy_Params params;
-	params.InStrategy = InStrategy;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_TargetTurnAngle
-// (Final, Native, Private)
-
-void AFauna::OnRep_TargetTurnAngle()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_TargetTurnAngle");
-
-	AFauna_OnRep_TargetTurnAngle_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim
-// (Final, Native, Private)
-
-void AFauna::OnRep_IsPlayingStarvingAnim()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim");
-
-	AFauna_OnRep_IsPlayingStarvingAnim_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_IsCalm
-// (Final, Native, Private)
-
-void AFauna::OnRep_IsCalm()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsCalm");
-
-	AFauna_OnRep_IsCalm_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_IsAgitated
-// (Final, Native, Private)
-
-void AFauna::OnRep_IsAgitated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsAgitated");
-
-	AFauna_OnRep_IsAgitated_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_InWaterState
-// (Final, Native, Private)
-
-void AFauna::OnRep_InWaterState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_InWaterState");
-
-	AFauna_OnRep_InWaterState_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_CurrentAIStrategy
-// (Final, Native, Protected)
-// Parameters:
-// class UClass*                  OldAIStrategy                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_CurrentAIStrategy");
-
-	AFauna_OnRep_CurrentAIStrategy_Params params;
-	params.OldAIStrategy = OldAIStrategy;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_CratedState
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// TEnumAsByte<EFaunaCratedState> PreviousCratedState            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedState)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_CratedState");
-
-	AFauna_OnRep_CratedState_Params params;
-	params.PreviousCratedState = PreviousCratedState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class AActor*                  Crate                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC");
-
-	AFauna_Multicast_PlayPutInCrateEffectsRPC_Params params;
-	params.Crate = Crate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_JustBeenFedRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class AActor*                  FedBy                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC");
-
-	AFauna_Multicast_JustBeenFedRPC_Params params;
-	params.FedBy = FedBy;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_HightlightLeader
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// bool                           bIsLeader                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::Multicast_HightlightLeader(bool bIsLeader)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_HightlightLeader");
-
-	AFauna_Multicast_HightlightLeader_Params params;
-	params.bIsLeader = bIsLeader;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_DespawnRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-
-void AFauna::Multicast_DespawnRPC()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_DespawnRPC");
-
-	AFauna_Multicast_DespawnRPC_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.GetAIStrategy
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UClass* AFauna::GetAIStrategy()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.GetAIStrategy");
-
-	AFauna_GetAIStrategy_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed
-// (Final, Native, Public, BlueprintCallable)
-
-void AFauna::GenerateNewRandomAnimationSeed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed");
-
-	AFauna_GenerateNewRandomAnimationSeed_Params params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.ActivateResponseRPC
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-// Parameters:
-// float                          InTargetTurnAngle              (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.ActivateResponseRPC");
-
-	AFauna_ActivateResponseRPC_Params params;
-	params.InTargetTurnAngle = InTargetTurnAngle;
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 

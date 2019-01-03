@@ -14,6 +14,24 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAthenaLoadingScreenBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool STATIC_IsLoadingScreenVisible();
+	bool STATIC_IsLoadingScreenRegistered();
+};
+
+
 // Class AthenaLoadingScreen.SlateLoadingScreenParams
 // 0x01E8 (0x0210 - 0x0028)
 class USlateLoadingScreenParams : public UDataAsset
@@ -62,22 +80,6 @@ public:
 };
 
 
-// Class AthenaLoadingScreen.AthenaGameLoadingScreensDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class UAthenaGameLoadingScreensDataAsset : public UDataAsset
-{
-public:
-	struct FFeatureToggledStringAssetReference         GameLoadingScreens;                                       // 0x0028(0x0010) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.AthenaGameLoadingScreensDataAsset");
-		return ptr;
-	}
-
-};
-
-
 // Class AthenaLoadingScreen.AthenaLoadingScreenParams
 // 0x0030 (0x0068 - 0x0038)
 class UAthenaLoadingScreenParams : public UDeveloperSettings
@@ -93,24 +95,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UAthenaLoadingScreenBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary");
-		return ptr;
-	}
-
-
-	bool STATIC_IsLoadingScreenVisible();
-	bool STATIC_IsLoadingScreenRegistered();
 };
 
 

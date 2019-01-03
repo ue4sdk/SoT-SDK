@@ -672,6 +672,11 @@ struct UAthenaCheatManager_SinkAllAIShips_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.ShowTaleDebug
+struct UAthenaCheatManager_ShowTaleDebug_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ShowRandomCrewMemberGamerCard
 struct UAthenaCheatManager_ShowRandomCrewMemberGamerCard_Params
 {
@@ -870,6 +875,16 @@ struct UAthenaCheatManager_SetNonCrewChatSpatialisation_Params
 	bool                                               Enabled;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AthenaCheat.AthenaCheatManager.SetMastsFullyRepaired
+struct UAthenaCheatManager_SetMastsFullyRepaired_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.SetMastsFullyDamaged
+struct UAthenaCheatManager_SetMastsFullyDamaged_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.SetKnockbackDisabled
 struct UAthenaCheatManager_SetKnockbackDisabled_Params
 {
@@ -943,12 +958,6 @@ struct UAthenaCheatManager_SendStatEvent_Params
 struct UAthenaCheatManager_SendRewardRequestEvent_Params
 {
 	class FString                                      CompanyNameAndRewardIdSeparatedByColon;                   // (Parm, ZeroConstructor)
-};
-
-// Function AthenaCheat.AthenaCheatManager.SelectTale
-struct UAthenaCheatManager_SelectTale_Params
-{
-	class FString                                      SourceAssetName;                                          // (Parm, ZeroConstructor)
 };
 
 // Function AthenaCheat.AthenaCheatManager.ScuttleShip
@@ -1063,6 +1072,11 @@ struct UAthenaCheatManager_RenameTreasure_Params
 	class FString                                      InVendorName;                                             // (Parm, ZeroConstructor)
 };
 
+// Function AthenaCheat.AthenaCheatManager.RemovePetFromPlayer
+struct UAthenaCheatManager_RemovePetFromPlayer_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.RemoveItemInSlot
 struct UAthenaCheatManager_RemoveItemInSlot_Params
 {
@@ -1082,6 +1096,11 @@ struct UAthenaCheatManager_PushShip_Params
 
 // Function AthenaCheat.AthenaCheatManager.PullLatestEmblemProgress
 struct UAthenaCheatManager_PullLatestEmblemProgress_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.ProceedToNextContestState
+struct UAthenaCheatManager_ProceedToNextContestState_Params
 {
 };
 
@@ -1271,6 +1290,11 @@ struct UAthenaCheatManager_IncrementTime_Params
 {
 	int                                                Hours;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Minutes;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AthenaCheat.AthenaCheatManager.HideTaleDebug
+struct UAthenaCheatManager_HideTaleDebug_Params
+{
 };
 
 // Function AthenaCheat.AthenaCheatManager.HealthSet
@@ -1761,6 +1785,13 @@ struct UAthenaCheatManager_AddPlayerToCrew_Params
 {
 	class FString                                      ActorIdString;                                            // (Parm, ZeroConstructor)
 	class FString                                      CrewId;                                                   // (Parm, ZeroConstructor)
+};
+
+// Function AthenaCheat.AthenaCheatManager.AddPetForPlayer
+struct UAthenaCheatManager_AddPetForPlayer_Params
+{
+	int                                                PetTypeIndex;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                PetCustomisationIndex;                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AthenaCheat.AthenaCheatManager.AddDrunkenness

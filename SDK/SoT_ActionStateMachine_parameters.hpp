@@ -14,6 +14,15 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ActionStateMachine.ActionStateMachineComponent.Server_RequestActionWithMessageForCurrentState
+struct UActionStateMachineComponent_Server_RequestActionWithMessageForCurrentState_Params
+{
+	struct FActionStateChangeRequestId                 InEpochId;                                                // (ConstParm, Parm)
+	struct FActionStateChangeRequestId                 InRequestId;                                              // (ConstParm, Parm)
+	struct FSerialisedActionStateInfo                  InSerialisedActionStateConstructionInfo;                  // (ConstParm, Parm, ReferenceParm)
+	struct FSerialisedActionStateMessage               InSerialisedPreviousStateMessage;                         // (ConstParm, Parm, ReferenceParm)
+};
+
 // Function ActionStateMachine.ActionStateMachineComponent.Server_RequestAction
 struct UActionStateMachineComponent_Server_RequestAction_Params
 {

@@ -113,15 +113,15 @@ public:
 
 
 // Class GameplayTasks.GameplayTasksComponent
-// 0x0060 (0x0138 - 0x00D8)
+// 0x0060 (0x0130 - 0x00D0)
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
-	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x00E0(0x0010) (Net, ZeroConstructor)
-	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x00F0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x0100(0x0028) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0128(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x00D8(0x0010) (Net, ZeroConstructor)
+	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x00E8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x00F8(0x0028) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0120(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
 
 	static UClass* StaticClass()
 	{

@@ -12,6 +12,60 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Mast.BP_Mast_C.AttemptToAddDamageDecal
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<ERepairableState>  RepairableState                (Parm, ZeroConstructor, IsPlainOldData)
+// class UDecalComponent*         DecalComponent                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FTransform              RelativeTransform              (ConstParm, Parm, IsPlainOldData)
+// class UMaterialInterface*      NewDecalMaterial               (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Mast_C::AttemptToAddDamageDecal(TEnumAsByte<ERepairableState> RepairableState, const struct FTransform& RelativeTransform, class UMaterialInterface* NewDecalMaterial, class UDecalComponent** DecalComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.AttemptToAddDamageDecal");
+
+	ABP_Mast_C_AttemptToAddDamageDecal_Params params;
+	params.RepairableState = RepairableState;
+	params.RelativeTransform = RelativeTransform;
+	params.NewDecalMaterial = NewDecalMaterial;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (DecalComponent != nullptr)
+		*DecalComponent = params.DecalComponent;
+}
+
+
+// Function BP_Mast.BP_Mast_C.IsMastVisuallyFractured
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_Mast_C::IsMastVisuallyFractured()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.IsMastVisuallyFractured");
+
+	ABP_Mast_C_IsMastVisuallyFractured_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Mast.BP_Mast_C.DrawDebugSkeleton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_Mast_C::DrawDebugSkeleton()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.DrawDebugSkeleton");
+
+	ABP_Mast_C_DrawDebugSkeleton_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Mast.BP_Mast_C.Customise Static Mesh
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -136,8 +190,74 @@ void ABP_Mast_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 }
 
 
+// Function BP_Mast.BP_Mast_C.OnMastMeshSwapRequested
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UStaticMesh*             NewMeshBottom                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh*             NewMeshTop                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Mast_C::OnMastMeshSwapRequested(class UStaticMesh* NewMeshBottom, class UStaticMesh* NewMeshTop)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.OnMastMeshSwapRequested");
+
+	ABP_Mast_C_OnMastMeshSwapRequested_Params params;
+	params.NewMeshBottom = NewMeshBottom;
+	params.NewMeshTop = NewMeshTop;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// TEnumAsByte<ERepairableState>  State                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Mast_C::BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature");
+
+	ABP_Mast_C_BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature_Params params;
+	params.State = State;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// TEnumAsByte<ERepairableState>  State                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Mast_C::BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature");
+
+	ABP_Mast_C_BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature_Params params;
+	params.State = State;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// TEnumAsByte<ERepairableState>  State                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Mast_C::BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature");
+
+	ABP_Mast_C_BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature_Params params;
+	params.State = State;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Mast.BP_Mast_C.ExecuteUbergraph_BP_Mast
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

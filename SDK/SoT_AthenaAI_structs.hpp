@@ -13,6 +13,7 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
+#include "SoT_Animation_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -326,7 +327,7 @@ struct FAITypeData
 };
 
 // ScriptStruct AthenaAI.AISpawnTypeParams
-// 0x0080
+// 0x00B8
 struct FAISpawnTypeParams
 {
 	TAssetPtr<class UClass>                            AIClass;                                                  // 0x0000(0x0020) (Edit)
@@ -337,15 +338,17 @@ struct FAISpawnTypeParams
 	class UClass*                                      AIClassIdOverride;                                        // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FStringAssetReference                       TeamColorOverride;                                        // 0x0068(0x0010) (Edit, ZeroConstructor)
 	struct FName                                       DioramaRole;                                              // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FText                                       LocalisableName;                                          // 0x0080(0x0018) (Edit)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 };
 
 // ScriptStruct AthenaAI.WeightedAISpawnTypeParams
-// 0x0088
+// 0x00C0
 struct FWeightedAISpawnTypeParams
 {
 	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                MaxTimesCanBeSelected;                                    // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FAISpawnTypeParams                          Params;                                                   // 0x0008(0x0080) (Edit)
+	struct FAISpawnTypeParams                          Params;                                                   // 0x0008(0x00B8) (Edit)
 };
 
 // ScriptStruct AthenaAI.AISpawnTypeParamsCollection
@@ -575,7 +578,7 @@ struct FAIStategyControllerMovementMod
 };
 
 // ScriptStruct AthenaAI.AIEncounterSpecification
-// 0x0060
+// 0x00A0
 struct FAIEncounterSpecification
 {
 	TAssetPtr<class UClass>                            PawnClass;                                                // 0x0000(0x0020)
@@ -588,6 +591,10 @@ struct FAIEncounterSpecification
 	int                                                TeamColorIndex;                                           // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       DioramaRole;                                              // 0x0054(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	struct FText                                       LocalisableName;                                          // 0x0060(0x0018)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x005C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	bool                                               ShowNameplate;                                            // 0x0098(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIEncounterWave
@@ -644,10 +651,10 @@ struct FAIBountySpawnerWaveLocation
 };
 
 // ScriptStruct AthenaAI.AIPerCrewSpawnerCrewUnit
-// 0x0018
+// 0x0010
 struct FAIPerCrewSpawnerCrewUnit
 {
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AthenaAIControllerAggregateTickFunction
@@ -1062,13 +1069,6 @@ struct FTinySharkSpawnTelemetryEvent
 // ScriptStruct AthenaAI.AICreatureCharacterAggregateTickFunction
 // 0x00C0 (0x0108 - 0x0048)
 struct FAICreatureCharacterAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x0048(0x00C0) MISSED OFFSET
-};
-
-// ScriptStruct AthenaAI.FaunaAggregateTickFunction
-// 0x00C0 (0x0108 - 0x0048)
-struct FFaunaAggregateTickFunction : public FTickFunction
 {
 	unsigned char                                      UnknownData00[0xC0];                                      // 0x0048(0x00C0) MISSED OFFSET
 };

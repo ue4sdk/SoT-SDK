@@ -129,30 +129,30 @@ public:
 
 
 // Class GameplayDebugger.GameplayDebuggingControllerComponent
-// 0x02A0 (0x0378 - 0x00D8)
+// 0x02A0 (0x0370 - 0x00D0)
 class UGameplayDebuggingControllerComponent : public UActorComponent
 {
 public:
-	class AGameplayDebuggingHUDComponent*              OnDebugAIHUD;                                             // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      DebugAITargetActor;                                       // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UInputComponent*                             AIDebugViewInputComponent;                                // 0x00E8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UInputComponent*                             DebugCameraInputComponent;                                // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x00F8(0x0028) MISSED OFFSET
-	struct FInputChord                                 ActivationKey;                                            // 0x0120(0x0028) (Config)
-	struct FInputChord                                 CategoryZeroBind;                                         // 0x0148(0x0028) (Config)
-	struct FInputChord                                 CategoryOneBind;                                          // 0x0170(0x0028) (Config)
-	struct FInputChord                                 CategoryTwoBind;                                          // 0x0198(0x0028) (Config)
-	struct FInputChord                                 CategoryThreeBind;                                        // 0x01C0(0x0028) (Config)
-	struct FInputChord                                 CategoryFourBind;                                         // 0x01E8(0x0028) (Config)
-	struct FInputChord                                 CategoryFiveBind;                                         // 0x0210(0x0028) (Config)
-	struct FInputChord                                 CategorySixBind;                                          // 0x0238(0x0028) (Config)
-	struct FInputChord                                 CategorySevenBind;                                        // 0x0260(0x0028) (Config)
-	struct FInputChord                                 CategoryEightBind;                                        // 0x0288(0x0028) (Config)
-	struct FInputChord                                 CategoryNineBind;                                         // 0x02B0(0x0028) (Config)
-	struct FInputChord                                 CycleDetailsViewBind;                                     // 0x02D8(0x0028) (Config)
-	struct FInputChord                                 DebugCameraBind;                                          // 0x0300(0x0028) (Config)
-	struct FInputChord                                 OnScreenDebugMessagesBind;                                // 0x0328(0x0028) (Config)
-	struct FInputChord                                 GameHUDBind;                                              // 0x0350(0x0028) (Config)
+	class AGameplayDebuggingHUDComponent*              OnDebugAIHUD;                                             // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      DebugAITargetActor;                                       // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UInputComponent*                             AIDebugViewInputComponent;                                // 0x00E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UInputComponent*                             DebugCameraInputComponent;                                // 0x00E8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x00F0(0x0028) MISSED OFFSET
+	struct FInputChord                                 ActivationKey;                                            // 0x0118(0x0028) (Config)
+	struct FInputChord                                 CategoryZeroBind;                                         // 0x0140(0x0028) (Config)
+	struct FInputChord                                 CategoryOneBind;                                          // 0x0168(0x0028) (Config)
+	struct FInputChord                                 CategoryTwoBind;                                          // 0x0190(0x0028) (Config)
+	struct FInputChord                                 CategoryThreeBind;                                        // 0x01B8(0x0028) (Config)
+	struct FInputChord                                 CategoryFourBind;                                         // 0x01E0(0x0028) (Config)
+	struct FInputChord                                 CategoryFiveBind;                                         // 0x0208(0x0028) (Config)
+	struct FInputChord                                 CategorySixBind;                                          // 0x0230(0x0028) (Config)
+	struct FInputChord                                 CategorySevenBind;                                        // 0x0258(0x0028) (Config)
+	struct FInputChord                                 CategoryEightBind;                                        // 0x0280(0x0028) (Config)
+	struct FInputChord                                 CategoryNineBind;                                         // 0x02A8(0x0028) (Config)
+	struct FInputChord                                 CycleDetailsViewBind;                                     // 0x02D0(0x0028) (Config)
+	struct FInputChord                                 DebugCameraBind;                                          // 0x02F8(0x0028) (Config)
+	struct FInputChord                                 OnScreenDebugMessagesBind;                                // 0x0320(0x0028) (Config)
+	struct FInputChord                                 GameHUDBind;                                              // 0x0348(0x0028) (Config)
 
 	static UClass* StaticClass()
 	{

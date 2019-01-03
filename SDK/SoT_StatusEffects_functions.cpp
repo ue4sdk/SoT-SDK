@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function StatusEffects.LightweightStatusEffectManagerComponent.OnRep_ActiveEffects
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// TArray<struct FActiveStatusEffect> OldEffects                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void ULightweightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StatusEffects.LightweightStatusEffectManagerComponent.OnRep_ActiveEffects");
+
+	ULightweightStatusEffectManagerComponent_OnRep_ActiveEffects_Params params;
+	params.OldEffects = OldEffects;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects
 // (Final, Native, Private, HasOutParms)
 // Parameters:

@@ -172,12 +172,12 @@ public:
 
 
 // Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent
-// 0x0008 (0x00E0 - 0x00D8)
+// 0x0008 (0x00D8 - 0x00D0)
 class UServerMigrationSerialisationDetailsTestsMigratableComponent : public UActorComponent
 {
 public:
-	float                                              FloatWithMigrationMarkup;                                 // 0x00D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                IntWithNoMarkup;                                          // 0x00DC(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              FloatWithMigrationMarkup;                                 // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                IntWithNoMarkup;                                          // 0x00D4(0x0004) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -230,6 +230,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationActorCallsOrderingTestActor");
+		return ptr;
+	}
+
+};
+
+
+// Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationActorWithRootComponentSimulatePhysicsEnabledByDefault
+// 0x0000 (0x0490 - 0x0490)
+class AServerMigrationSerialisationDetailsTestsMigrationActorWithRootComponentSimulatePhysicsEnabledByDefault : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigrationActorWithRootComponentSimulatePhysicsEnabledByDefault");
 		return ptr;
 	}
 

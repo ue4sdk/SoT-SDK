@@ -182,11 +182,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMapComponent
-// 0x0010 (0x00E8 - 0x00D8)
+// 0x0010 (0x00E0 - 0x00D0)
 class UAudioEventToComponentMapComponent : public UActorComponent
 {
 public:
-	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x00D8(0x0010) (ZeroConstructor)
+	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x00D0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -333,11 +333,11 @@ public:
 
 
 // Class RareAudio.AudioSpaceTrackerComponent
-// 0x0010 (0x00E8 - 0x00D8)
+// 0x0010 (0x00E0 - 0x00D0)
 class UAudioSpaceTrackerComponent : public UActorComponent
 {
 public:
-	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x00D8(0x0010) (ExportObject, ZeroConstructor, Transient)
+	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x00D0(0x0010) (ExportObject, ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

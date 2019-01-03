@@ -15,29 +15,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Mast.BP_Mast_C
-// 0x00B0 (0x07D0 - 0x0720)
+// 0x00A8 (0x0988 - 0x08E0)
 class ABP_Mast_C : public AMast
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0720(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UChildActorComponent*                        TopgallantActor;                                          // 0x0728(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TopsailActor;                                             // 0x0730(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Mast_Top_StaticMesh;                                      // 0x0738(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Topgallant_Yard;                                          // 0x0740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Top_Yard;                                                 // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Main_Yard;                                                // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        MainsailActor;                                            // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 Mast_Mesh;                                                // 0x0760(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Mast_Scale;                                               // 0x0768(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0774(0x0004) MISSED OFFSET
-	TArray<struct FBP_SailStructure>                   Sail_Parameters;                                          // 0x0778(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UStaticMeshComponent*>                Yards;                                                    // 0x0788(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UChildActorComponent*>                Sails;                                                    // 0x0798(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UStaticMesh*                                 Mast_Base_Mesh;                                           // 0x07A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Mast_Falling_Limit;                                       // 0x07B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x07B4(0x0004) MISSED OFFSET
-	class UMaterialInstance*                           Sail_Material;                                            // 0x07B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class ABP_Sail_C*>                          SailActors;                                               // 0x07C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        MastTopComponent;                                         // 0x08E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        MastBaseComponent;                                        // 0x08F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TopgallantActor;                                          // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TopsailActor;                                             // 0x0900(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Topgallant_Yard;                                          // 0x0908(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Top_Yard;                                                 // 0x0910(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Main_Yard;                                                // 0x0918(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        MainsailActor;                                            // 0x0920(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FBP_SailStructure>                   Sail_Parameters;                                          // 0x0928(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UStaticMeshComponent*>                Yards;                                                    // 0x0938(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UChildActorComponent*>                Sails;                                                    // 0x0948(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              Mast_Falling_Limit;                                       // 0x0958(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x095C(0x0004) MISSED OFFSET
+	class UMaterialInstance*                           Sail_Material;                                            // 0x0960(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class ABP_Sail_C*>                          SailActors;                                               // 0x0968(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	class UDecalComponent*                             DamageDecalRight;                                         // 0x0978(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UDecalComponent*                             DamageDecalLeft;                                          // 0x0980(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -46,6 +45,9 @@ public:
 	}
 
 
+	void AttemptToAddDamageDecal(TEnumAsByte<ERepairableState> RepairableState, const struct FTransform& RelativeTransform, class UMaterialInterface* NewDecalMaterial, class UDecalComponent** DecalComponent);
+	bool IsMastVisuallyFractured();
+	void DrawDebugSkeleton();
 	void Customise_Static_Mesh(class UStaticMesh* New_Static_Mesh, class UStaticMeshComponent* Static_Mesh_Component);
 	void Trim_Array_Func(int Size, TArray<class UObject*>* TargetArray);
 	void Initialise_Sail_Parameters();
@@ -54,6 +56,10 @@ public:
 	void Initialise_Sails();
 	void UserConstructionScript();
 	void OnMastDescLoaded(class UMastDescAsset* MastDesc);
+	void OnMastMeshSwapRequested(class UStaticMesh* NewMeshBottom, class UStaticMesh* NewMeshTop);
+	void BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State);
+	void BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State);
+	void BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State);
 	void ExecuteUbergraph_BP_Mast(int EntryPoint);
 };
 

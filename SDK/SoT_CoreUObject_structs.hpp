@@ -172,6 +172,13 @@ struct FLinearColor
 		  A(a)
 	{ }
 
+	inline FLinearColor(float r, float g, float b)
+		: R(r),
+		  G(g),
+		  B(b),
+		  A(1.f)
+		{ }
+
 };
 
 // ScriptStruct CoreUObject.Box

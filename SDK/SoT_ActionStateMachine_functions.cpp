@@ -12,6 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function ActionStateMachine.ActionStateMachineComponent.Server_RequestActionWithMessageForCurrentState
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// struct FActionStateChangeRequestId InEpochId                      (ConstParm, Parm)
+// struct FActionStateChangeRequestId InRequestId                    (ConstParm, Parm)
+// struct FSerialisedActionStateInfo InSerialisedActionStateConstructionInfo (ConstParm, Parm, ReferenceParm)
+// struct FSerialisedActionStateMessage InSerialisedPreviousStateMessage (ConstParm, Parm, ReferenceParm)
+
+void UActionStateMachineComponent::Server_RequestActionWithMessageForCurrentState(const struct FActionStateChangeRequestId& InEpochId, const struct FActionStateChangeRequestId& InRequestId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo, const struct FSerialisedActionStateMessage& InSerialisedPreviousStateMessage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Server_RequestActionWithMessageForCurrentState");
+
+	UActionStateMachineComponent_Server_RequestActionWithMessageForCurrentState_Params params;
+	params.InEpochId = InEpochId;
+	params.InRequestId = InRequestId;
+	params.InSerialisedActionStateConstructionInfo = InSerialisedActionStateConstructionInfo;
+	params.InSerialisedPreviousStateMessage = InSerialisedPreviousStateMessage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ActionStateMachine.ActionStateMachineComponent.Server_RequestAction
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
