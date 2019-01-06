@@ -89,8 +89,8 @@ public:
 	}
 
 
-	void STATIC_SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode);
-	void STATIC_FlushNetDormancy(class AActor* TargetActor);
+	static void SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode);
+	static void FlushNetDormancy(class AActor* TargetActor);
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ESailAnimationType_parameters.hpp"
+#include "SoT_ESailAnimationType_classes.hpp"
 
 namespace SDK
 {

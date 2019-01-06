@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AnchorCannonballItemCategory_parameters.hpp"
+#include "SoT_AnchorCannonballItemCategory_classes.hpp"
 
 namespace SDK
 {

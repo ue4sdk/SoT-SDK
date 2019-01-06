@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_SkellyThrones_Master_parameters.hpp"
+#include "SoT_Title_SkellyThrones_Master_classes.hpp"
 
 namespace SDK
 {

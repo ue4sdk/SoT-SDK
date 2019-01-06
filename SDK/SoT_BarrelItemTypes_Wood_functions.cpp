@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BarrelItemTypes_Wood_parameters.hpp"
+#include "SoT_BarrelItemTypes_Wood_classes.hpp"
 
 namespace SDK
 {

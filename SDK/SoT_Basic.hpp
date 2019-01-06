@@ -205,16 +205,8 @@ using TNameEntryArray = TStaticIndirectArrayThreadSafeRead<FNameEntry, 2 * 1024 
 
 struct FName
 {
-	union
-	{
-		struct
-		{
-			int32_t ComparisonIndex;
-			int32_t Number;
-		};
-
-		uint64_t CompositeComparisonValue;
-	};
+	int32_t ComparisonIndex;
+	int32_t Number;
 
 	inline FName()
 		: ComparisonIndex(0),

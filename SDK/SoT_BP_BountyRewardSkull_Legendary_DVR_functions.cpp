@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BountyRewardSkull_Legendary_DVR_parameters.hpp"
+#include "SoT_BP_BountyRewardSkull_Legendary_DVR_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_BountyRewardSkull_Legendary_DVR_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkull_Legendary_DVR.BP_BountyRewardSkull_Legendary_DVR_C.UserConstructionScript");
 
-	ABP_BountyRewardSkull_Legendary_DVR_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -62,7 +62,7 @@ public:
 	}
 
 
-	float STATIC_GetMaxWindSpeed();
+	static float GetMaxWindSpeed();
 };
 
 

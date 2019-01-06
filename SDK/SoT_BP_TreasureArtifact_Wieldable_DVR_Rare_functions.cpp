@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureArtifact_Wieldable_DVR_Rare_parameters.hpp"
+#include "SoT_BP_TreasureArtifact_Wieldable_DVR_Rare_classes.hpp"
 
 namespace SDK
 {

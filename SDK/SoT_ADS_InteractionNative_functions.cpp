@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ADS_InteractionNative_parameters.hpp"
+#include "SoT_ADS_InteractionNative_classes.hpp"
 
 namespace SDK
 {

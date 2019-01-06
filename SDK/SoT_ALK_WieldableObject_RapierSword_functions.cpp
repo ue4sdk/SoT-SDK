@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ALK_WieldableObject_RapierSword_parameters.hpp"
+#include "SoT_ALK_WieldableObject_RapierSword_classes.hpp"
 
 namespace SDK
 {

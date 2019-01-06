@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_large_mast_main_parameters.hpp"
+#include "SoT_BP_large_mast_main_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_large_mast_main_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.UserConstructionScript");
 
-	ABP_large_mast_main_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -34,7 +37,11 @@ void ABP_large_mast_main_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.OnMastDescLoaded");
 
-	ABP_large_mast_main_C_OnMastDescLoaded_Params params;
+	struct
+	{
+		class UMastDescAsset*          MastDesc;
+	} params;
+
 	params.MastDesc = MastDesc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -50,7 +57,11 @@ void ABP_large_mast_main_C::ExecuteUbergraph_BP_large_mast_main(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.ExecuteUbergraph_BP_large_mast_main");
 
-	ABP_large_mast_main_C_ExecuteUbergraph_BP_large_mast_main_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

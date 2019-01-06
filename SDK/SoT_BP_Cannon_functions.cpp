@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Cannon_parameters.hpp"
+#include "SoT_BP_Cannon_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.GetDockableInfo");
 
-	ABP_Cannon_C_GetDockableInfo_Params params;
+	struct
+	{
+		struct FDockableInfo           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +40,10 @@ void ABP_Cannon_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.UserConstructionScript");
 
-	ABP_Cannon_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,7 +58,11 @@ void ABP_Cannon_C::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded");
 
-	ABP_Cannon_C_OnCannonDescLoaded_Params params;
+	struct
+	{
+		class UCannonDescAsset*        CannonDesc;
+	} params;
+
 	params.CannonDesc = CannonDesc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -67,7 +78,11 @@ void ABP_Cannon_C::ExecuteUbergraph_BP_Cannon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.ExecuteUbergraph_BP_Cannon");
 
-	ABP_Cannon_C_ExecuteUbergraph_BP_Cannon_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

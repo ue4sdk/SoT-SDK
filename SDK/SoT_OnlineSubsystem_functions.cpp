@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_OnlineSubsystem_parameters.hpp"
+#include "SoT_OnlineSubsystem_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,12 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
 
-	UTurnBasedMatchInterface_OnMatchReceivedTurn_Params params;
+	struct
+	{
+		class FString                  Match;
+		bool                           bDidBecomeActive;
+	} params;
+
 	params.Match = Match;
 	params.bDidBecomeActive = bDidBecomeActive;
 
@@ -39,7 +44,11 @@ void UTurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
 
-	UTurnBasedMatchInterface_OnMatchEnded_Params params;
+	struct
+	{
+		class FString                  Match;
+	} params;
+
 	params.Match = Match;
 
 	UObject::ProcessEvent(fn, &params);

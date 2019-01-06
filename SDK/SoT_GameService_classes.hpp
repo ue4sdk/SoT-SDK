@@ -42,10 +42,10 @@ public:
 	}
 
 
-	void STATIC_UnregisterService(class UObject* Service, struct FGameServiceMap* ServiceMap);
-	void STATIC_RegisterService(class UObject* Service, class UClass* Class, struct FGameServiceMap* ServiceMap);
-	class UObject* STATIC_GetService(class UClass* Class, struct FGameServiceMap* ServiceMap);
-	int STATIC_GetNumServices(struct FGameServiceMap* ServiceMap);
+	static void UnregisterService(class UObject* Service, struct FGameServiceMap* ServiceMap);
+	static void RegisterService(class UObject* Service, class UClass* Class, struct FGameServiceMap* ServiceMap);
+	static class UObject* GetService(class UClass* Class, struct FGameServiceMap* ServiceMap);
+	static int GetNumServices(struct FGameServiceMap* ServiceMap);
 };
 
 

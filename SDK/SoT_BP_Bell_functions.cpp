@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Bell_parameters.hpp"
+#include "SoT_BP_Bell_classes.hpp"
 
 namespace SDK
 {

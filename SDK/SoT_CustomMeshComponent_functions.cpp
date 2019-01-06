@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CustomMeshComponent_parameters.hpp"
+#include "SoT_CustomMeshComponent_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,12 @@ bool UCustomMeshComponent::SetCustomMeshTriangles(TArray<struct FCustomMeshTrian
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles");
 
-	UCustomMeshComponent_SetCustomMeshTriangles_Params params;
+	struct
+	{
+		TArray<struct FCustomMeshTriangle> Triangles;
+		bool                           ReturnValue;
+	} params;
+
 	params.Triangles = Triangles;
 
 	UObject::ProcessEvent(fn, &params);
@@ -38,7 +43,10 @@ void UCustomMeshComponent::ClearCustomMeshTriangles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles");
 
-	UCustomMeshComponent_ClearCustomMeshTriangles_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,7 +61,11 @@ void UCustomMeshComponent::AddCustomMeshTriangles(TArray<struct FCustomMeshTrian
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles");
 
-	UCustomMeshComponent_AddCustomMeshTriangles_Params params;
+	struct
+	{
+		TArray<struct FCustomMeshTriangle> Triangles;
+	} params;
+
 	params.Triangles = Triangles;
 
 	UObject::ProcessEvent(fn, &params);

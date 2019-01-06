@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ServiceMessaging_parameters.hpp"
+#include "SoT_ServiceMessaging_classes.hpp"
 
 namespace SDK
 {
@@ -18,14 +18,20 @@ namespace SDK
 // class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FObjectMessagingDispatcherHandle ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetServiceMessagingDispatcherFromActor(class UObject* Object)
+struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::GetServiceMessagingDispatcherFromActor(class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor");
 
-	UServiceMessagingFunctions_GetServiceMessagingDispatcherFromActor_Params params;
+	struct
+	{
+		class UObject*                 Object;
+		struct FObjectMessagingDispatcherHandle ReturnValue;
+	} params;
+
 	params.Object = Object;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -37,14 +43,20 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetSe
 // TScriptInterface<class UServiceMessagingDispatcherInterface> ServiceMessagingDispatcher     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FObjectMessagingDispatcherHandle ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher)
+struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcher");
 
-	UServiceMessagingFunctions_GetServiceMessagingDispatcher_Params params;
+	struct
+	{
+		TScriptInterface<class UServiceMessagingDispatcherInterface> ServiceMessagingDispatcher;
+		struct FObjectMessagingDispatcherHandle ReturnValue;
+	} params;
+
 	params.ServiceMessagingDispatcher = ServiceMessagingDispatcher;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -59,7 +71,11 @@ void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServic
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage");
 
-	UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params params;
+	struct
+	{
+		struct FServiceMessagingTestMessage InMessage;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 

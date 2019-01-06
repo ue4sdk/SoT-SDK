@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MerchantCrate_BananaCrate_parameters.hpp"
+#include "SoT_BP_MerchantCrate_BananaCrate_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_MerchantCrate_BananaCrate_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BananaCrate.BP_MerchantCrate_BananaCrate_C.UserConstructionScript");
 
-	ABP_MerchantCrate_BananaCrate_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaEngine_parameters.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 
 namespace SDK
 {
@@ -18,15 +18,21 @@ namespace SDK
 // class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ENetDormancy>      DormancyMode                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UNetDormancyHelpers::STATIC_SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode)
+void UNetDormancyHelpers::SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaEngine.NetDormancyHelpers.SetNetDormancy");
 
-	UNetDormancyHelpers_SetNetDormancy_Params params;
+	struct
+	{
+		class AActor*                  TargetActor;
+		TEnumAsByte<ENetDormancy>      DormancyMode;
+	} params;
+
 	params.TargetActor = TargetActor;
 	params.DormancyMode = DormancyMode;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -35,14 +41,19 @@ void UNetDormancyHelpers::STATIC_SetNetDormancy(class AActor* TargetActor, TEnum
 // Parameters:
 // class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UNetDormancyHelpers::STATIC_FlushNetDormancy(class AActor* TargetActor)
+void UNetDormancyHelpers::FlushNetDormancy(class AActor* TargetActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaEngine.NetDormancyHelpers.FlushNetDormancy");
 
-	UNetDormancyHelpers_FlushNetDormancy_Params params;
+	struct
+	{
+		class AActor*                  TargetActor;
+	} params;
+
 	params.TargetActor = TargetActor;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 

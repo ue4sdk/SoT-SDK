@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Tavern_B_AudioLayer_parameters.hpp"
+#include "SoT_BP_Tavern_B_AudioLayer_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_Tavern_B_AudioLayer_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tavern_B_AudioLayer.BP_Tavern_B_AudioLayer_C.UserConstructionScript");
 
-	ABP_Tavern_B_AudioLayer_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -32,7 +35,10 @@ void ABP_Tavern_B_AudioLayer_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tavern_B_AudioLayer.BP_Tavern_B_AudioLayer_C.ReceiveBeginPlay");
 
-	ABP_Tavern_B_AudioLayer_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,7 +53,11 @@ void ABP_Tavern_B_AudioLayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tavern_B_AudioLayer.BP_Tavern_B_AudioLayer_C.ReceiveEndPlay");
 
-	ABP_Tavern_B_AudioLayer_C_ReceiveEndPlay_Params params;
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -63,7 +73,11 @@ void ABP_Tavern_B_AudioLayer_C::ExecuteUbergraph_BP_Tavern_B_AudioLayer(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tavern_B_AudioLayer.BP_Tavern_B_AudioLayer_C.ExecuteUbergraph_BP_Tavern_B_AudioLayer");
 
-	ABP_Tavern_B_AudioLayer_C_ExecuteUbergraph_BP_Tavern_B_AudioLayer_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

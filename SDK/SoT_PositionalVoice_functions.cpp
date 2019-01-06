@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_PositionalVoice_parameters.hpp"
+#include "SoT_PositionalVoice_classes.hpp"
 
 namespace SDK
 {
@@ -18,14 +18,20 @@ namespace SDK
 // class APlayerController*       CurrentPlayer                  (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UPositionalVoiceTestFunctionLibrary::STATIC_GetNumberOfUnmutedRemotePlayers(class APlayerController* CurrentPlayer)
+int UPositionalVoiceTestFunctionLibrary::GetNumberOfUnmutedRemotePlayers(class APlayerController* CurrentPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetNumberOfUnmutedRemotePlayers");
 
-	UPositionalVoiceTestFunctionLibrary_GetNumberOfUnmutedRemotePlayers_Params params;
+	struct
+	{
+		class APlayerController*       CurrentPlayer;
+		int                            ReturnValue;
+	} params;
+
 	params.CurrentPlayer = CurrentPlayer;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -38,15 +44,22 @@ int UPositionalVoiceTestFunctionLibrary::STATIC_GetNumberOfUnmutedRemotePlayers(
 // class UClass*                  VoiceChatRendererClass         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UPositionalVoiceTestFunctionLibrary::STATIC_GetNumberOfRegisteredChatEmitters(class UObject* WorldContextObject, class UClass* VoiceChatRendererClass)
+int UPositionalVoiceTestFunctionLibrary::GetNumberOfRegisteredChatEmitters(class UObject* WorldContextObject, class UClass* VoiceChatRendererClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetNumberOfRegisteredChatEmitters");
 
-	UPositionalVoiceTestFunctionLibrary_GetNumberOfRegisteredChatEmitters_Params params;
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		class UClass*                  VoiceChatRendererClass;
+		int                            ReturnValue;
+	} params;
+
 	params.WorldContextObject = WorldContextObject;
 	params.VoiceChatRendererClass = VoiceChatRendererClass;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -57,13 +70,18 @@ int UPositionalVoiceTestFunctionLibrary::STATIC_GetNumberOfRegisteredChatEmitter
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UPositionalVoiceTestFunctionLibrary::STATIC_GetMaxNumberOfAudibleChatEmitters()
+int UPositionalVoiceTestFunctionLibrary::GetMaxNumberOfAudibleChatEmitters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetMaxNumberOfAudibleChatEmitters");
 
-	UPositionalVoiceTestFunctionLibrary_GetMaxNumberOfAudibleChatEmitters_Params params;
+	struct
+	{
+		int                            ReturnValue;
+	} params;
 
-	UObject::ProcessEvent(fn, &params);
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -78,7 +96,11 @@ struct FVector UVoiceChatEmitterInterface::GetVoiceLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceLocation");
 
-	UVoiceChatEmitterInterface_GetVoiceLocation_Params params;
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +117,11 @@ void UVoiceChatEmitterInterface::GetVoiceAudioEmitterProxy(struct FWwiseEmitter*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAudioEmitterProxy");
 
-	UVoiceChatEmitterInterface_GetVoiceAudioEmitterProxy_Params params;
+	struct
+	{
+		struct FWwiseEmitter           EmitterProxy;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,7 +140,12 @@ float UVoiceChatEmitterInterface::GetVoiceAttenuationScaler(const TScriptInterfa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAttenuationScaler");
 
-	UVoiceChatEmitterInterface_GetVoiceAttenuationScaler_Params params;
+	struct
+	{
+		TScriptInterface<class UVoiceChatEmitterInterface> RelativeToThisEmitter;
+		float                          ReturnValue;
+	} params;
+
 	params.RelativeToThisEmitter = RelativeToThisEmitter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -132,7 +163,11 @@ struct FVector ATestVoiceChatEmitter::GetVoiceLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceLocation");
 
-	ATestVoiceChatEmitter_GetVoiceLocation_Params params;
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +184,11 @@ void ATestVoiceChatEmitter::GetVoiceAudioEmitterProxy(struct FWwiseEmitter* Emit
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceAudioEmitterProxy");
 
-	ATestVoiceChatEmitter_GetVoiceAudioEmitterProxy_Params params;
+	struct
+	{
+		struct FWwiseEmitter           EmitterProxy;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,7 +207,12 @@ float ATestVoiceChatEmitter::GetVoiceAttenuationScaler(const TScriptInterface<cl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceAttenuationScaler");
 
-	ATestVoiceChatEmitter_GetVoiceAttenuationScaler_Params params;
+	struct
+	{
+		TScriptInterface<class UVoiceChatEmitterInterface> RelativeToThisEmitter;
+		float                          ReturnValue;
+	} params;
+
 	params.RelativeToThisEmitter = RelativeToThisEmitter;
 
 	UObject::ProcessEvent(fn, &params);

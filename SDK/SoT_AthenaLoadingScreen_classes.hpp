@@ -27,8 +27,8 @@ public:
 	}
 
 
-	bool STATIC_IsLoadingScreenVisible();
-	bool STATIC_IsLoadingScreenRegistered();
+	static bool IsLoadingScreenVisible();
+	static bool IsLoadingScreenRegistered();
 };
 
 
@@ -111,7 +111,7 @@ public:
 	}
 
 
-	bool STATIC_IsStreaming(class UObject* WorldContextObject);
+	static bool IsStreaming(class UObject* WorldContextObject);
 };
 
 

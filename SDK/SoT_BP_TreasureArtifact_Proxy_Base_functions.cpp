@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureArtifact_Proxy_Base_parameters.hpp"
+#include "SoT_BP_TreasureArtifact_Proxy_Base_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_TreasureArtifact_Proxy_Base_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureArtifact_Proxy_Base.BP_TreasureArtifact_Proxy_Base_C.UserConstructionScript");
 
-	ABP_TreasureArtifact_Proxy_Base_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_EIKLimbName_parameters.hpp"
+#include "SoT_EIKLimbName_classes.hpp"
 
 namespace SDK
 {

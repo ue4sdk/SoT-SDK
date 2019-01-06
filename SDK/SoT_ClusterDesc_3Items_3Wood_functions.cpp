@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ClusterDesc_3Items_3Wood_parameters.hpp"
+#include "SoT_ClusterDesc_3Items_3Wood_classes.hpp"
 
 namespace SDK
 {

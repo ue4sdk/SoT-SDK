@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_VotableVoyageProposal_parameters.hpp"
+#include "SoT_BP_VotableVoyageProposal_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ void ABP_VotableVoyageProposal_C::PlayShowTokenAnimation(class UPrimitiveCompone
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.PlayShowTokenAnimation");
 
-	ABP_VotableVoyageProposal_C_PlayShowTokenAnimation_Params params;
+	struct
+	{
+		class UPrimitiveComponent*     Token;
+	} params;
+
 	params.Token = Token;
 
 	UObject::ProcessEvent(fn, &params);
@@ -37,7 +41,11 @@ void ABP_VotableVoyageProposal_C::Is_Session_Locked(bool* IsLocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.Is Session Locked");
 
-	ABP_VotableVoyageProposal_C_Is_Session_Locked_Params params;
+	struct
+	{
+		bool                           IsLocked;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +61,10 @@ void ABP_VotableVoyageProposal_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.UserConstructionScript");
 
-	ABP_VotableVoyageProposal_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -66,7 +77,10 @@ void ABP_VotableVoyageProposal_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.ReceiveBeginPlay");
 
-	ABP_VotableVoyageProposal_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -81,7 +95,11 @@ void ABP_VotableVoyageProposal_C::OnVoteAdded(const TScriptInterface<class UVote
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.OnVoteAdded");
 
-	ABP_VotableVoyageProposal_C_OnVoteAdded_Params params;
+	struct
+	{
+		TScriptInterface<class UVoterInterface> Voter;
+	} params;
+
 	params.Voter = Voter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -97,7 +115,11 @@ void ABP_VotableVoyageProposal_C::OnVoteRemoved(const TScriptInterface<class UVo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.OnVoteRemoved");
 
-	ABP_VotableVoyageProposal_C_OnVoteRemoved_Params params;
+	struct
+	{
+		TScriptInterface<class UVoterInterface> Voter;
+	} params;
+
 	params.Voter = Voter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -113,7 +135,11 @@ void ABP_VotableVoyageProposal_C::ExecuteUbergraph_BP_VotableVoyageProposal(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableVoyageProposal.BP_VotableVoyageProposal_C.ExecuteUbergraph_BP_VotableVoyageProposal");
 
-	ABP_VotableVoyageProposal_C_ExecuteUbergraph_BP_VotableVoyageProposal_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MountableType_Pig_parameters.hpp"
+#include "SoT_MountableType_Pig_classes.hpp"
 
 namespace SDK
 {

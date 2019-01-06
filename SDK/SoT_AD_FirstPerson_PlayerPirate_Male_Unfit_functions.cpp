@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AD_FirstPerson_PlayerPirate_Male_Unfit_parameters.hpp"
+#include "SoT_AD_FirstPerson_PlayerPirate_Male_Unfit_classes.hpp"
 
 namespace SDK
 {

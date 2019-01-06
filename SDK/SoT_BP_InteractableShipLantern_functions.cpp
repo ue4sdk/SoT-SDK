@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_InteractableShipLantern_parameters.hpp"
+#include "SoT_BP_InteractableShipLantern_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_InteractableShipLantern_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.UserConstructionScript");
 
-	ABP_InteractableShipLantern_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -32,7 +35,10 @@ void ABP_InteractableShipLantern_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ReceiveBeginPlay");
 
-	ABP_InteractableShipLantern_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -45,7 +51,10 @@ void ABP_InteractableShipLantern_C::LightStateChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.LightStateChanged");
 
-	ABP_InteractableShipLantern_C_LightStateChanged_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -60,7 +69,11 @@ void ABP_InteractableShipLantern_C::ExecuteUbergraph_BP_InteractableShipLantern(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ExecuteUbergraph_BP_InteractableShipLantern");
 
-	ABP_InteractableShipLantern_C_ExecuteUbergraph_BP_InteractableShipLantern_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

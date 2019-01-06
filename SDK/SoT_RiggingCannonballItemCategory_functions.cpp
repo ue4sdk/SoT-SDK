@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_RiggingCannonballItemCategory_parameters.hpp"
+#include "SoT_RiggingCannonballItemCategory_classes.hpp"
 
 namespace SDK
 {

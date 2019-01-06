@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaAI_parameters.hpp"
+#include "SoT_AthenaAI_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void UAthenaAIFormComponent::OnRep_FormData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIFormComponent.OnRep_FormData");
 
-	UAthenaAIFormComponent_OnRep_FormData_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -34,7 +37,11 @@ void UAIEncounterServiceInterface::RegisterLoadedSkillsetProgression(TAssetPtr<c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillsetProgression");
 
-	UAIEncounterServiceInterface_RegisterLoadedSkillsetProgression_Params params;
+	struct
+	{
+		TAssetPtr<class UAISkillsetRankProgression> Progression;
+	} params;
+
 	params.Progression = Progression;
 
 	UObject::ProcessEvent(fn, &params);
@@ -50,7 +57,11 @@ void UAIEncounterServiceInterface::RegisterLoadedSkillset(TAssetPtr<class UAthen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillset");
 
-	UAIEncounterServiceInterface_RegisterLoadedSkillset_Params params;
+	struct
+	{
+		TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset;
+	} params;
+
 	params.Skillset = Skillset;
 
 	UObject::ProcessEvent(fn, &params);
@@ -66,7 +77,11 @@ void UAIEncounterServiceInterface::RegisterLoadedLoadout(TAssetPtr<class ULoadou
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedLoadout");
 
-	UAIEncounterServiceInterface_RegisterLoadedLoadout_Params params;
+	struct
+	{
+		TAssetPtr<class ULoadoutAsset> Loadout;
+	} params;
+
 	params.Loadout = Loadout;
 
 	UObject::ProcessEvent(fn, &params);
@@ -82,7 +97,11 @@ void UAIEncounterServiceInterface::RegisterLoadedForm(TAssetPtr<class UAthenaAIF
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedForm");
 
-	UAIEncounterServiceInterface_RegisterLoadedForm_Params params;
+	struct
+	{
+		TAssetPtr<class UAthenaAIFormDataAsset> Form;
+	} params;
+
 	params.Form = Form;
 
 	UObject::ProcessEvent(fn, &params);
@@ -98,7 +117,11 @@ void UAIEncounterServiceInterface::RegisterLoadedEncounter(TAssetPtr<class UAIEn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedEncounter");
 
-	UAIEncounterServiceInterface_RegisterLoadedEncounter_Params params;
+	struct
+	{
+		TAssetPtr<class UAIEncounterSettings> Encounter;
+	} params;
+
 	params.Encounter = Encounter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -114,7 +137,11 @@ void AAIEncounterService::RegisterLoadedSkillsetProgression(TAssetPtr<class UAIS
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedSkillsetProgression");
 
-	AAIEncounterService_RegisterLoadedSkillsetProgression_Params params;
+	struct
+	{
+		TAssetPtr<class UAISkillsetRankProgression> Progression;
+	} params;
+
 	params.Progression = Progression;
 
 	UObject::ProcessEvent(fn, &params);
@@ -130,7 +157,11 @@ void AAIEncounterService::RegisterLoadedSkillset(TAssetPtr<class UAthenaAIContro
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedSkillset");
 
-	AAIEncounterService_RegisterLoadedSkillset_Params params;
+	struct
+	{
+		TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset;
+	} params;
+
 	params.Skillset = Skillset;
 
 	UObject::ProcessEvent(fn, &params);
@@ -146,7 +177,11 @@ void AAIEncounterService::RegisterLoadedLoadout(TAssetPtr<class ULoadoutAsset> L
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedLoadout");
 
-	AAIEncounterService_RegisterLoadedLoadout_Params params;
+	struct
+	{
+		TAssetPtr<class ULoadoutAsset> Loadout;
+	} params;
+
 	params.Loadout = Loadout;
 
 	UObject::ProcessEvent(fn, &params);
@@ -162,7 +197,11 @@ void AAIEncounterService::RegisterLoadedForm(TAssetPtr<class UAthenaAIFormDataAs
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedForm");
 
-	AAIEncounterService_RegisterLoadedForm_Params params;
+	struct
+	{
+		TAssetPtr<class UAthenaAIFormDataAsset> Form;
+	} params;
+
 	params.Form = Form;
 
 	UObject::ProcessEvent(fn, &params);
@@ -178,7 +217,11 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedEncounter");
 
-	AAIEncounterService_RegisterLoadedEncounter_Params params;
+	struct
+	{
+		TAssetPtr<class UAIEncounterSettings> Encounter;
+	} params;
+
 	params.Encounter = Encounter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -192,15 +235,22 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 // class UClass*                  ItemDesc                       (Parm, ZeroConstructor, IsPlainOldData)
 // class AItemInfo*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AItemInfo* UAIManagerBlueprintFunctionLibrary::STATIC_SpawnItemFromAI(class APawn* Pawn, class UClass* ItemDesc)
+class AItemInfo* UAIManagerBlueprintFunctionLibrary::SpawnItemFromAI(class APawn* Pawn, class UClass* ItemDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI");
 
-	UAIManagerBlueprintFunctionLibrary_SpawnItemFromAI_Params params;
+	struct
+	{
+		class APawn*                   Pawn;
+		class UClass*                  ItemDesc;
+		class AItemInfo*               ReturnValue;
+	} params;
+
 	params.Pawn = Pawn;
 	params.ItemDesc = ItemDesc;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -212,15 +262,21 @@ class AItemInfo* UAIManagerBlueprintFunctionLibrary::STATIC_SpawnItemFromAI(clas
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  DisplayName                    (Parm, ZeroConstructor)
 
-void UAIManagerBlueprintFunctionLibrary::STATIC_AddNameplateToAI(class AActor* Actor, const class FString& DisplayName)
+void UAIManagerBlueprintFunctionLibrary::AddNameplateToAI(class AActor* Actor, const class FString& DisplayName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI");
 
-	UAIManagerBlueprintFunctionLibrary_AddNameplateToAI_Params params;
+	struct
+	{
+		class AActor*                  Actor;
+		class FString                  DisplayName;
+	} params;
+
 	params.Actor = Actor;
 	params.DisplayName = DisplayName;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -234,7 +290,12 @@ void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor, TEnumAsByt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerServiceInterface.StartDespawnAI");
 
-	UAIManagerServiceInterface_StartDespawnAI_Params params;
+	struct
+	{
+		class APawn*                   AIActor;
+		TEnumAsByte<ECharacterDeathType> DeathType;
+	} params;
+
 	params.AIActor = AIActor;
 	params.DeathType = DeathType;
 
@@ -251,7 +312,11 @@ int UAIManagerServiceInterface::GetNumOfSpawnedPawns()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerServiceInterface.GetNumOfSpawnedPawns");
 
-	UAIManagerServiceInterface_GetNumOfSpawnedPawns_Params params;
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,7 +333,11 @@ int UAISpawner::GetNumOfSpawnRequests()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AISpawner.GetNumOfSpawnRequests");
 
-	UAISpawner_GetNumOfSpawnRequests_Params params;
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,7 +354,11 @@ void AAIManagerService::TickService(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.TickService");
 
-	AAIManagerService_TickService_Params params;
+	struct
+	{
+		float                          DeltaSeconds;
+	} params;
+
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -302,7 +375,12 @@ void AAIManagerService::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharac
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.StartDespawnAI");
 
-	AAIManagerService_StartDespawnAI_Params params;
+	struct
+	{
+		class APawn*                   AIActor;
+		TEnumAsByte<ECharacterDeathType> DeathType;
+	} params;
+
 	params.AIActor = AIActor;
 	params.DeathType = DeathType;
 
@@ -321,7 +399,13 @@ class UAISpawner* AAIManagerService::GetRegionSpawner(const struct FName& Region
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.GetRegionSpawner");
 
-	AAIManagerService_GetRegionSpawner_Params params;
+	struct
+	{
+		struct FName                   Region;
+		int                            Index;
+		class UAISpawner*              ReturnValue;
+	} params;
+
 	params.Region = Region;
 	params.Index = Index;
 
@@ -340,7 +424,11 @@ int AAIManagerService::GetNumOfSpawnRequests()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.GetNumOfSpawnRequests");
 
-	AAIManagerService_GetNumOfSpawnRequests_Params params;
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -357,7 +445,11 @@ void UDebugAIManagerServiceInterface::SetMaxNumOfSpawnedActors(int InMaxNumOfSpa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxNumOfSpawnedActors");
 
-	UDebugAIManagerServiceInterface_SetMaxNumOfSpawnedActors_Params params;
+	struct
+	{
+		int                            InMaxNumOfSpawnedActors;
+	} params;
+
 	params.InMaxNumOfSpawnedActors = InMaxNumOfSpawnedActors;
 
 	UObject::ProcessEvent(fn, &params);
@@ -373,7 +465,11 @@ void UDebugAIManagerServiceInterface::SetMaxAICostUnitsPerRegion(int InMaxAICost
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxAICostUnitsPerRegion");
 
-	UDebugAIManagerServiceInterface_SetMaxAICostUnitsPerRegion_Params params;
+	struct
+	{
+		int                            InMaxAICostUnitsPerRegion;
+	} params;
+
 	params.InMaxAICostUnitsPerRegion = InMaxAICostUnitsPerRegion;
 
 	UObject::ProcessEvent(fn, &params);
@@ -389,7 +485,11 @@ void UDebugAIManagerServiceInterface::SetMaxAICostUnitsForWorld(int InMaxAICostU
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxAICostUnitsForWorld");
 
-	UDebugAIManagerServiceInterface_SetMaxAICostUnitsForWorld_Params params;
+	struct
+	{
+		int                            InMaxAICostUnitsForWorld;
+	} params;
+
 	params.InMaxAICostUnitsForWorld = InMaxAICostUnitsForWorld;
 
 	UObject::ProcessEvent(fn, &params);
@@ -405,7 +505,11 @@ void UDebugAIManagerServiceInterface::SetIgnoreCharacterLimits(bool Ignore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetIgnoreCharacterLimits");
 
-	UDebugAIManagerServiceInterface_SetIgnoreCharacterLimits_Params params;
+	struct
+	{
+		bool                           Ignore;
+	} params;
+
 	params.Ignore = Ignore;
 
 	UObject::ProcessEvent(fn, &params);
@@ -421,7 +525,11 @@ void UDebugAIManagerServiceInterface::SetDistanceToPlayerToRaiseSpawnPriority(fl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetDistanceToPlayerToRaiseSpawnPriority");
 
-	UDebugAIManagerServiceInterface_SetDistanceToPlayerToRaiseSpawnPriority_Params params;
+	struct
+	{
+		float                          InDistanceToPlayerToRaiseSpawnPriority;
+	} params;
+
 	params.InDistanceToPlayerToRaiseSpawnPriority = InDistanceToPlayerToRaiseSpawnPriority;
 
 	UObject::ProcessEvent(fn, &params);
@@ -437,7 +545,11 @@ void UDebugAIManagerServiceInterface::SetCharacterWorldDensityCheckTimer(float I
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterWorldDensityCheckTimer");
 
-	UDebugAIManagerServiceInterface_SetCharacterWorldDensityCheckTimer_Params params;
+	struct
+	{
+		float                          InCharacterWorldDensityCheckTimer;
+	} params;
+
 	params.InCharacterWorldDensityCheckTimer = InCharacterWorldDensityCheckTimer;
 
 	UObject::ProcessEvent(fn, &params);
@@ -453,7 +565,11 @@ void UDebugAIManagerServiceInterface::SetCharacterRegionDensityCheckTimer(float 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterRegionDensityCheckTimer");
 
-	UDebugAIManagerServiceInterface_SetCharacterRegionDensityCheckTimer_Params params;
+	struct
+	{
+		float                          InCharacterRegionDensityCheckTimer;
+	} params;
+
 	params.InCharacterRegionDensityCheckTimer = InCharacterRegionDensityCheckTimer;
 
 	UObject::ProcessEvent(fn, &params);
@@ -469,7 +585,11 @@ void UDebugAIManagerServiceInterface::SetCharacterNetRelevancy(float InCloseByCh
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterNetRelevancy");
 
-	UDebugAIManagerServiceInterface_SetCharacterNetRelevancy_Params params;
+	struct
+	{
+		float                          InCloseByCharactersRadius;
+	} params;
+
 	params.InCloseByCharactersRadius = InCloseByCharactersRadius;
 
 	UObject::ProcessEvent(fn, &params);
@@ -485,7 +605,11 @@ void ADebugAIManagerService::SetMaxNumOfSpawnedActors(int InMaxNumOfSpawnedActor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetMaxNumOfSpawnedActors");
 
-	ADebugAIManagerService_SetMaxNumOfSpawnedActors_Params params;
+	struct
+	{
+		int                            InMaxNumOfSpawnedActors;
+	} params;
+
 	params.InMaxNumOfSpawnedActors = InMaxNumOfSpawnedActors;
 
 	UObject::ProcessEvent(fn, &params);
@@ -501,7 +625,11 @@ void ADebugAIManagerService::SetMaxAICostUnitsPerRegion(int InMaxAICostUnitsPerR
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetMaxAICostUnitsPerRegion");
 
-	ADebugAIManagerService_SetMaxAICostUnitsPerRegion_Params params;
+	struct
+	{
+		int                            InMaxAICostUnitsPerRegion;
+	} params;
+
 	params.InMaxAICostUnitsPerRegion = InMaxAICostUnitsPerRegion;
 
 	UObject::ProcessEvent(fn, &params);
@@ -517,7 +645,11 @@ void ADebugAIManagerService::SetMaxAICostUnitsForWorld(int InMaxAICostUnitsForWo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetMaxAICostUnitsForWorld");
 
-	ADebugAIManagerService_SetMaxAICostUnitsForWorld_Params params;
+	struct
+	{
+		int                            InMaxAICostUnitsForWorld;
+	} params;
+
 	params.InMaxAICostUnitsForWorld = InMaxAICostUnitsForWorld;
 
 	UObject::ProcessEvent(fn, &params);
@@ -533,7 +665,11 @@ void ADebugAIManagerService::SetIgnoreCharacterLimits(bool Ignore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetIgnoreCharacterLimits");
 
-	ADebugAIManagerService_SetIgnoreCharacterLimits_Params params;
+	struct
+	{
+		bool                           Ignore;
+	} params;
+
 	params.Ignore = Ignore;
 
 	UObject::ProcessEvent(fn, &params);
@@ -549,7 +685,11 @@ void ADebugAIManagerService::SetDistanceToPlayerToRaiseSpawnPriority(float InDis
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetDistanceToPlayerToRaiseSpawnPriority");
 
-	ADebugAIManagerService_SetDistanceToPlayerToRaiseSpawnPriority_Params params;
+	struct
+	{
+		float                          InDistanceToPlayerToRaiseSpawnPriority;
+	} params;
+
 	params.InDistanceToPlayerToRaiseSpawnPriority = InDistanceToPlayerToRaiseSpawnPriority;
 
 	UObject::ProcessEvent(fn, &params);
@@ -565,7 +705,11 @@ void ADebugAIManagerService::SetCharacterWorldDensityCheckTimer(float InCharacte
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetCharacterWorldDensityCheckTimer");
 
-	ADebugAIManagerService_SetCharacterWorldDensityCheckTimer_Params params;
+	struct
+	{
+		float                          InCharacterWorldDensityCheckTimer;
+	} params;
+
 	params.InCharacterWorldDensityCheckTimer = InCharacterWorldDensityCheckTimer;
 
 	UObject::ProcessEvent(fn, &params);
@@ -581,7 +725,11 @@ void ADebugAIManagerService::SetCharacterRegionDensityCheckTimer(float InCharact
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetCharacterRegionDensityCheckTimer");
 
-	ADebugAIManagerService_SetCharacterRegionDensityCheckTimer_Params params;
+	struct
+	{
+		float                          InCharacterRegionDensityCheckTimer;
+	} params;
+
 	params.InCharacterRegionDensityCheckTimer = InCharacterRegionDensityCheckTimer;
 
 	UObject::ProcessEvent(fn, &params);
@@ -597,7 +745,11 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetCharacterNetRelevancy");
 
-	ADebugAIManagerService_SetCharacterNetRelevancy_Params params;
+	struct
+	{
+		float                          InCloseByCharactersRadius;
+	} params;
+
 	params.InCloseByCharactersRadius = InCloseByCharactersRadius;
 
 	UObject::ProcessEvent(fn, &params);
@@ -613,7 +765,11 @@ void UAIPerPlayerSpawner::PlayerDeath(class AActor* Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIPerPlayerSpawner.PlayerDeath");
 
-	UAIPerPlayerSpawner_PlayerDeath_Params params;
+	struct
+	{
+		class AActor*                  Player;
+	} params;
+
 	params.Player = Player;
 
 	UObject::ProcessEvent(fn, &params);
@@ -629,7 +785,11 @@ int UAIPerPlayerSpawner::GetNumOfPlayers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIPerPlayerSpawner.GetNumOfPlayers");
 
-	UAIPerPlayerSpawner_GetNumOfPlayers_Params params;
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -649,7 +809,14 @@ bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Ta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget");
 
-	UAITargetWeaponInterface_FindAimConfigToHitTarget_Params params;
+	struct
+	{
+		struct FVector                 Target;
+		bool                           CheckYaw;
+		struct FRotator                OutAimConfig;
+		bool                           ReturnValue;
+	} params;
+
 	params.Target = Target;
 	params.CheckYaw = CheckYaw;
 
@@ -672,7 +839,12 @@ void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamN
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam");
 
-	AAthenaAIControllerBase_SetNamedControllerParam_Params params;
+	struct
+	{
+		struct FName                   ParamName;
+		float                          Value;
+	} params;
+
 	params.ParamName = ParamName;
 	params.Value = Value;
 
@@ -690,7 +862,12 @@ struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeigh
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam");
 
-	AAthenaAIControllerBase_FindNamedWeightedRangesControllerParam_Params params;
+	struct
+	{
+		struct FName                   ParamName;
+		struct FWeightedProbabilityRangeOfRanges ReturnValue;
+	} params;
+
 	params.ParamName = ParamName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -709,7 +886,12 @@ float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& Para
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam");
 
-	AAthenaAIControllerBase_FindNamedControllerParam_Params params;
+	struct
+	{
+		struct FName                   ParamName;
+		float                          ReturnValue;
+	} params;
+
 	params.ParamName = ParamName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -728,7 +910,12 @@ void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerPar
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams");
 
-	AAthenaAIControllerBase_ApplyControllerParams_Params params;
+	struct
+	{
+		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
+		class APawn*                   InPawn;
+	} params;
+
 	params.ParamsAsset = ParamsAsset;
 	params.InPawn = InPawn;
 
@@ -743,7 +930,10 @@ void AAthenaAIController::StopBehaviourLogic()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.StopBehaviourLogic");
 
-	AAthenaAIController_StopBehaviourLogic_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -760,7 +950,13 @@ void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor");
 
-	AAthenaAIController_SetPerceptionExpirationAgeForActor_Params params;
+	struct
+	{
+		class AActor*                  Actor;
+		float                          ExpirationAge;
+		class UClass*                  Sense;
+	} params;
+
 	params.Actor = Actor;
 	params.ExpirationAge = ExpirationAge;
 	params.Sense = Sense;
@@ -778,7 +974,11 @@ void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* Trig
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus");
 
-	AAthenaAIController_RegisterSpawnTriggerActorAsStimulus_Params params;
+	struct
+	{
+		class AActor*                  TriggerActor;
+	} params;
+
 	params.TriggerActor = TriggerActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -794,7 +994,11 @@ void AAthenaAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerce
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.OnPerceptionUpdated");
 
-	AAthenaAIController_OnPerceptionUpdated_Params params;
+	struct
+	{
+		TArray<class AActor*>          ChangedPerceivedActors;
+	} params;
+
 	params.ChangedPerceivedActors = ChangedPerceivedActors;
 
 	UObject::ProcessEvent(fn, &params);
@@ -808,7 +1012,10 @@ void AAthenaAIController::OnNewlySpawned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.OnNewlySpawned");
 
-	AAthenaAIController_OnNewlySpawned_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -821,7 +1028,10 @@ void AAthenaAIController::OnFinishDespawn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.OnFinishDespawn");
 
-	AAthenaAIController_OnFinishDespawn_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -837,7 +1047,12 @@ bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.IsActorPerceived");
 
-	AAthenaAIController_IsActorPerceived_Params params;
+	struct
+	{
+		class AActor*                  TargetActor;
+		bool                           ReturnValue;
+	} params;
+
 	params.TargetActor = TargetActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -855,7 +1070,11 @@ class AActor* AAthenaAIController::GetTargetActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.GetTargetActor");
 
-	AAthenaAIController_GetTargetActor_Params params;
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -872,7 +1091,11 @@ class UAthenaAIPerceptionComponent* AAthenaAIController::GetAthenaAIPerceptionCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent");
 
-	AAthenaAIController_GetAthenaAIPerceptionComponent_Params params;
+	struct
+	{
+		class UAthenaAIPerceptionComponent* ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -889,7 +1112,11 @@ void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.GetAllSeenActors");
 
-	AAthenaAIController_GetAllSeenActors_Params params;
+	struct
+	{
+		TArray<class AActor*>          SeenActors;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -908,7 +1135,12 @@ void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.ApplyControllerParams");
 
-	AAthenaAIController_ApplyControllerParams_Params params;
+	struct
+	{
+		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
+		class APawn*                   InPawn;
+	} params;
+
 	params.ParamsAsset = ParamsAsset;
 	params.InPawn = InPawn;
 
@@ -925,7 +1157,11 @@ void AAthenaAICharacterController::SetOverridePrioritiseInteractablesBeforeEnemi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.SetOverridePrioritiseInteractablesBeforeEnemies");
 
-	AAthenaAICharacterController_SetOverridePrioritiseInteractablesBeforeEnemies_Params params;
+	struct
+	{
+		bool                           InPrioritiseInteractablesBeforeEnemies;
+	} params;
+
 	params.InPrioritiseInteractablesBeforeEnemies = InPrioritiseInteractablesBeforeEnemies;
 
 	UObject::ProcessEvent(fn, &params);
@@ -943,7 +1179,13 @@ void AAthenaAICharacterController::SetItemSpecificNamedControllerParam(class UCl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.SetItemSpecificNamedControllerParam");
 
-	AAthenaAICharacterController_SetItemSpecificNamedControllerParam_Params params;
+	struct
+	{
+		class UClass*                  InItemCategory;
+		struct FName                   ParamName;
+		float                          Value;
+	} params;
+
 	params.InItemCategory = InItemCategory;
 	params.ParamName = ParamName;
 	params.Value = Value;
@@ -959,7 +1201,10 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies");
 
-	AAthenaAICharacterController_ClearOverridePrioritiseInteractablesBeforeEnemies_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -980,11 +1225,25 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 // struct FName                   NavMeshOverride                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
+void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings");
 
-	UAthenaAIDebugFunctionLibrary_SpawnAIWithSettings_Params params;
+	struct
+	{
+		TAssetPtr<class UClass>        AIType;
+		TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset;
+		TAssetPtr<class ULoadoutAsset> Loadout;
+		TAssetPtr<class UAthenaAIFormDataAsset> Form;
+		class UClass*                  ClassId;
+		struct FVector                 Pos;
+		struct FRotator                Rot;
+		struct FName                   Region;
+		class AActor*                  TriggerActor;
+		struct FName                   NavMeshOverride;
+		float                          Delay;
+	} params;
+
 	params.AIType = AIType;
 	params.Skillset = Skillset;
 	params.Loadout = Loadout;
@@ -997,7 +1256,8 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIWithSettings(TAssetPtr<class U
 	params.NavMeshOverride = NavMeshOverride;
 	params.Delay = Delay;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -1013,11 +1273,22 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAIWithSettings(TAssetPtr<class U
 // bool                           MakeAIPermanentlyNetRelevant   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  InstancedNavMesh               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
+void UAthenaAIDebugFunctionLibrary::SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI");
 
-	UAthenaAIDebugFunctionLibrary_SpawnAI_Params params;
+	struct
+	{
+		TAssetPtr<class UClass>        AIClass;
+		class UAIEncounterSettings*    EncounterSettings;
+		struct FVector                 Pos;
+		struct FRotator                Rot;
+		bool                           RequireNavMesh;
+		float                          Delay;
+		bool                           MakeAIPermanentlyNetRelevant;
+		class AActor*                  InstancedNavMesh;
+	} params;
+
 	params.AIClass = AIClass;
 	params.EncounterSettings = EncounterSettings;
 	params.Pos = Pos;
@@ -1027,7 +1298,8 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AICla
 	params.MakeAIPermanentlyNetRelevant = MakeAIPermanentlyNetRelevant;
 	params.InstancedNavMesh = InstancedNavMesh;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -1037,15 +1309,21 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SpawnAI(TAssetPtr<class UClass> AICla
 // float                          InMaxAllowedSeconds            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 QueryOwner                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_SetEnvQueryManagerMaxAllowedSeconds(float InMaxAllowedSeconds, class UObject* QueryOwner)
+void UAthenaAIDebugFunctionLibrary::SetEnvQueryManagerMaxAllowedSeconds(float InMaxAllowedSeconds, class UObject* QueryOwner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds");
 
-	UAthenaAIDebugFunctionLibrary_SetEnvQueryManagerMaxAllowedSeconds_Params params;
+	struct
+	{
+		float                          InMaxAllowedSeconds;
+		class UObject*                 QueryOwner;
+	} params;
+
 	params.InMaxAllowedSeconds = InMaxAllowedSeconds;
 	params.QueryOwner = QueryOwner;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -1055,14 +1333,20 @@ void UAthenaAIDebugFunctionLibrary::STATIC_SetEnvQueryManagerMaxAllowedSeconds(f
 // class UObject*                 QueryOwner                     (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAthenaAIDebugFunctionLibrary::STATIC_GetEnvQueryManagerNumRunningQueries(class UObject* QueryOwner)
+int UAthenaAIDebugFunctionLibrary::GetEnvQueryManagerNumRunningQueries(class UObject* QueryOwner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries");
 
-	UAthenaAIDebugFunctionLibrary_GetEnvQueryManagerNumRunningQueries_Params params;
+	struct
+	{
+		class UObject*                 QueryOwner;
+		int                            ReturnValue;
+	} params;
+
 	params.QueryOwner = QueryOwner;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1074,15 +1358,21 @@ int UAthenaAIDebugFunctionLibrary::STATIC_GetEnvQueryManagerNumRunningQueries(cl
 // class AAthenaAIController*     AIController                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UAthenaAIControllerParamsDataAsset* ControllerParams               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_EnableMaximumSightSettings(class AAthenaAIController* AIController, class UAthenaAIControllerParamsDataAsset* ControllerParams)
+void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAIController* AIController, class UAthenaAIControllerParamsDataAsset* ControllerParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings");
 
-	UAthenaAIDebugFunctionLibrary_EnableMaximumSightSettings_Params params;
+	struct
+	{
+		class AAthenaAIController*     AIController;
+		class UAthenaAIControllerParamsDataAsset* ControllerParams;
+	} params;
+
 	params.AIController = AIController;
 	params.ControllerParams = ControllerParams;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -1091,14 +1381,19 @@ void UAthenaAIDebugFunctionLibrary::STATIC_EnableMaximumSightSettings(class AAth
 // Parameters:
 // class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_EnableBehaviorTreeLogging(class UObject* WorldContext)
+void UAthenaAIDebugFunctionLibrary::EnableBehaviorTreeLogging(class UObject* WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging");
 
-	UAthenaAIDebugFunctionLibrary_EnableBehaviorTreeLogging_Params params;
+	struct
+	{
+		class UObject*                 WorldContext;
+	} params;
+
 	params.WorldContext = WorldContext;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -1107,14 +1402,19 @@ void UAthenaAIDebugFunctionLibrary::STATIC_EnableBehaviorTreeLogging(class UObje
 // Parameters:
 // class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::STATIC_DespawnAIPawn(class APawn* Pawn)
+void UAthenaAIDebugFunctionLibrary::DespawnAIPawn(class APawn* Pawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn");
 
-	UAthenaAIDebugFunctionLibrary_DespawnAIPawn_Params params;
+	struct
+	{
+		class APawn*                   Pawn;
+	} params;
+
 	params.Pawn = Pawn;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 
@@ -1128,18 +1428,28 @@ void UAthenaAIDebugFunctionLibrary::STATIC_DespawnAIPawn(class APawn* Pawn)
 // struct FVector                 QueryExtent                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UAthenaAIDebugFunctionLibrary::STATIC_CanProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
+struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation");
 
-	UAthenaAIDebugFunctionLibrary_CanProjectPointToNavigation_Params params;
+	struct
+	{
+		class UObject*                 WorldContext;
+		struct FVector                 Point;
+		class ANavigationData*         NavData;
+		class UClass*                  FilterClass;
+		struct FVector                 QueryExtent;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.WorldContext = WorldContext;
 	params.Point = Point;
 	params.NavData = NavData;
 	params.FilterClass = FilterClass;
 	params.QueryExtent = QueryExtent;
 
-	UObject::ProcessEvent(fn, &params);
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1155,7 +1465,12 @@ bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled");
 
-	UAthenaAIPerceptionComponent_IsPerceptionSenseEnabled_Params params;
+	struct
+	{
+		class UClass*                  Sense;
+		bool                           ReturnValue;
+	} params;
+
 	params.Sense = Sense;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1173,7 +1488,11 @@ bool UAthenaAIPerceptionComponent::IsAnyPerceptionEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled");
 
-	UAthenaAIPerceptionComponent_IsAnyPerceptionEnabled_Params params;
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1191,7 +1510,12 @@ void UAthenaAIPerceptionComponent::EnablePerceptionSense(class UClass* Sense, bo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense");
 
-	UAthenaAIPerceptionComponent_EnablePerceptionSense_Params params;
+	struct
+	{
+		class UClass*                  Sense;
+		bool                           Enable;
+	} params;
+
 	params.Sense = Sense;
 	params.Enable = Enable;
 
@@ -1208,7 +1532,11 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception");
 
-	UAthenaAIPerceptionComponent_EnableAllPerception_Params params;
+	struct
+	{
+		bool                           Enable;
+	} params;
+
 	params.Enable = Enable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1224,7 +1552,11 @@ void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed");
 
-	ATinySharkExperience_TinySharkPawnDestroyed_Params params;
+	struct
+	{
+		class AActor*                  InDestroyedActor;
+	} params;
+
 	params.InDestroyedActor = InDestroyedActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1240,7 +1572,11 @@ class AShip* ATinySharkExperience::GetTrackedShip()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetTrackedShip");
 
-	ATinySharkExperience_GetTrackedShip_Params params;
+	struct
+	{
+		class AShip*                   ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1257,7 +1593,11 @@ TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetCurrentState");
 
-	ATinySharkExperience_GetCurrentState_Params params;
+	struct
+	{
+		TEnumAsByte<ETinySharkState>   ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1274,7 +1614,11 @@ TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetActiveState");
 
-	ATinySharkExperience_GetActiveState_Params params;
+	struct
+	{
+		TEnumAsByte<ETinySharkActiveState> ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1294,7 +1638,14 @@ bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithShip");
 
-	ATinySharkService_RequestTinySharkWithShip_Params params;
+	struct
+	{
+		class AShip*                   InTrackedShip;
+		int                            OverrideControllerParamIndex;
+		int                            PartIndex;
+		bool                           ReturnValue;
+	} params;
+
 	params.InTrackedShip = InTrackedShip;
 	params.OverrideControllerParamIndex = OverrideControllerParamIndex;
 	params.PartIndex = PartIndex;
@@ -1316,7 +1667,13 @@ bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& Spawn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation");
 
-	ATinySharkService_RequestTinySharkWithLocation_Params params;
+	struct
+	{
+		struct FVector                 SpawnLocation;
+		int                            PartIndex;
+		bool                           ReturnValue;
+	} params;
+
 	params.SpawnLocation = SpawnLocation;
 	params.PartIndex = PartIndex;
 
@@ -1333,7 +1690,10 @@ void ATinySharkService::DismissAllTinySharks()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.DismissAllTinySharks");
 
-	ATinySharkService_DismissAllTinySharks_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1348,7 +1708,11 @@ bool ATinySharkService::CanSpawnTinySharkExperience()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience");
 
-	ATinySharkService_CanSpawnTinySharkExperience_Params params;
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1365,7 +1729,11 @@ void AAICreatureCharacter::SetAIStrategy(class UClass* InStrategy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.SetAIStrategy");
 
-	AAICreatureCharacter_SetAIStrategy_Params params;
+	struct
+	{
+		class UClass*                  InStrategy;
+	} params;
+
 	params.InStrategy = InStrategy;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1381,7 +1749,11 @@ void AAICreatureCharacter::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy");
 
-	AAICreatureCharacter_OnRep_CurrentAIStrategy_Params params;
+	struct
+	{
+		class UClass*                  OldAIStrategy;
+	} params;
+
 	params.OldAIStrategy = OldAIStrategy;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1395,7 +1767,10 @@ void AAICreatureCharacter::Multicast_DespawnRPC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC");
 
-	AAICreatureCharacter_Multicast_DespawnRPC_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1410,7 +1785,11 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.GetAIStrategy");
 
-	AAICreatureCharacter_GetAIStrategy_Params params;
+	struct
+	{
+		class UClass*                  ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1427,7 +1806,11 @@ void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.TestingSetWaterState");
 
-	AFauna_TestingSetWaterState_Params params;
+	struct
+	{
+		TEnumAsByte<EFaunaInWaterState> NewInState;
+	} params;
+
 	params.NewInState = NewInState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1441,7 +1824,10 @@ void AFauna::OnRep_TargetTurnAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_TargetTurnAngle");
 
-	AFauna_OnRep_TargetTurnAngle_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1454,7 +1840,10 @@ void AFauna::OnRep_IsPlayingStarvingAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim");
 
-	AFauna_OnRep_IsPlayingStarvingAnim_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1467,7 +1856,10 @@ void AFauna::OnRep_IsCalm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsCalm");
 
-	AFauna_OnRep_IsCalm_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1480,7 +1872,10 @@ void AFauna::OnRep_IsAgitated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsAgitated");
 
-	AFauna_OnRep_IsAgitated_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1493,7 +1888,10 @@ void AFauna::OnRep_InWaterState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_InWaterState");
 
-	AFauna_OnRep_InWaterState_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1508,7 +1906,11 @@ void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedStat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_CratedState");
 
-	AFauna_OnRep_CratedState_Params params;
+	struct
+	{
+		TEnumAsByte<EFaunaCratedState> PreviousCratedState;
+	} params;
+
 	params.PreviousCratedState = PreviousCratedState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1524,7 +1926,11 @@ void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC");
 
-	AFauna_Multicast_PlayPutInCrateEffectsRPC_Params params;
+	struct
+	{
+		class AActor*                  Crate;
+	} params;
+
 	params.Crate = Crate;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1540,7 +1946,11 @@ void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC");
 
-	AFauna_Multicast_JustBeenFedRPC_Params params;
+	struct
+	{
+		class AActor*                  FedBy;
+	} params;
+
 	params.FedBy = FedBy;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1556,7 +1966,11 @@ void AFauna::Multicast_HightlightLeader(bool bIsLeader)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_HightlightLeader");
 
-	AFauna_Multicast_HightlightLeader_Params params;
+	struct
+	{
+		bool                           bIsLeader;
+	} params;
+
 	params.bIsLeader = bIsLeader;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1570,7 +1984,10 @@ void AFauna::GenerateNewRandomAnimationSeed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed");
 
-	AFauna_GenerateNewRandomAnimationSeed_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1585,7 +2002,11 @@ void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.ActivateResponseRPC");
 
-	AFauna_ActivateResponseRPC_Params params;
+	struct
+	{
+		float                          InTargetTurnAngle;
+	} params;
+
 	params.InTargetTurnAngle = InTargetTurnAngle;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1599,7 +2020,10 @@ void UAIFaunaSpawner::SpawnFaunaGroup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup");
 
-	UAIFaunaSpawner_SpawnFaunaGroup_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1614,7 +2038,11 @@ void AAthenaFaunaAIController::LeaderDestroyed(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed");
 
-	AAthenaFaunaAIController_LeaderDestroyed_Params params;
+	struct
+	{
+		class AActor*                  Actor;
+	} params;
+
 	params.Actor = Actor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -1630,7 +2058,11 @@ class AActor* AAthenaFaunaAIController::GetLeader()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.GetLeader");
 
-	AAthenaFaunaAIController_GetLeader_Params params;
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1647,7 +2079,11 @@ float AAthenaFaunaAIController::GetCourage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.GetCourage");
 
-	AAthenaFaunaAIController_GetCourage_Params params;
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1664,7 +2100,11 @@ class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAth
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp");
 
-	AAthenaFaunaAIController_GetAthenaAICharPathFollowingComp_Params params;
+	struct
+	{
+		class UAthenaAICharacterPathFollowingComponent* ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 

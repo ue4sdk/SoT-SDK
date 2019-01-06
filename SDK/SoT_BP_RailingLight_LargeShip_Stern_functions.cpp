@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_RailingLight_LargeShip_Stern_parameters.hpp"
+#include "SoT_BP_RailingLight_LargeShip_Stern_classes.hpp"
 
 namespace SDK
 {

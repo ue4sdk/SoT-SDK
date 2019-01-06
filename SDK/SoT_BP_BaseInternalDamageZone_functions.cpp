@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BaseInternalDamageZone_parameters.hpp"
+#include "SoT_BP_BaseInternalDamageZone_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_BaseInternalDamageZone_C::OnRepairMounted()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.OnRepairMounted");
 
-	ABP_BaseInternalDamageZone_C_OnRepairMounted_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -36,7 +39,13 @@ bool ABP_BaseInternalDamageZone_C::GetRepairMountLocation(class USceneComponent*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.GetRepairMountLocation");
 
-	ABP_BaseInternalDamageZone_C_GetRepairMountLocation_Params params;
+	struct
+	{
+		class USceneComponent*         MountLocation;
+		struct FName                   MountSocket;
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +69,13 @@ bool ABP_BaseInternalDamageZone_C::ShouldDrawTooltipInWorldSpace(class AActor* I
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ShouldDrawTooltipInWorldSpace");
 
-	ABP_BaseInternalDamageZone_C_ShouldDrawTooltipInWorldSpace_Params params;
+	struct
+	{
+		class AActor*                  InInteractor;
+		struct FVector                 DesiredTooltipWorldPosition;
+		bool                           ReturnValue;
+	} params;
+
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -79,7 +94,10 @@ void ABP_BaseInternalDamageZone_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.UserConstructionScript");
 
-	ABP_BaseInternalDamageZone_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -94,7 +112,11 @@ void ABP_BaseInternalDamageZone_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ReceiveEndPlay");
 
-	ABP_BaseInternalDamageZone_C_ReceiveEndPlay_Params params;
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -110,7 +132,11 @@ void ABP_BaseInternalDamageZone_C::ExecuteUbergraph_BP_BaseInternalDamageZone(in
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ExecuteUbergraph_BP_BaseInternalDamageZone");
 
-	ABP_BaseInternalDamageZone_C_ExecuteUbergraph_BP_BaseInternalDamageZone_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

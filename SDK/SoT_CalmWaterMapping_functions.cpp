@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CalmWaterMapping_parameters.hpp"
+#include "SoT_CalmWaterMapping_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,12 @@ float UCalmWaterMappingInterface::GetDampeningFactor(const struct FVector2D& InP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingInterface.GetDampeningFactor");
 
-	UCalmWaterMappingInterface_GetDampeningFactor_Params params;
+	struct
+	{
+		struct FVector2D               InPosition;
+		float                          ReturnValue;
+	} params;
+
 	params.InPosition = InPosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,7 +46,12 @@ float UCalmWaterMappingInterface::GetChoppinessFactor(const struct FVector2D& In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingInterface.GetChoppinessFactor");
 
-	UCalmWaterMappingInterface_GetChoppinessFactor_Params params;
+	struct
+	{
+		struct FVector2D               InPosition;
+		float                          ReturnValue;
+	} params;
+
 	params.InPosition = InPosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,13 +65,18 @@ float UCalmWaterMappingInterface::GetChoppinessFactor(const struct FVector2D& In
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UCalmWaterMappingService::STATIC_GetMaxWindSpeed()
+float UCalmWaterMappingService::GetMaxWindSpeed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed");
 
-	UCalmWaterMappingService_GetMaxWindSpeed_Params params;
+	struct
+	{
+		float                          ReturnValue;
+	} params;
 
-	UObject::ProcessEvent(fn, &params);
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

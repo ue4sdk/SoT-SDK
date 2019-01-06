@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShipwreckTreasureChest_Wieldable_Rare_parameters.hpp"
+#include "SoT_BP_ShipwreckTreasureChest_Wieldable_Rare_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_ShipwreckTreasureChest_Wieldable_Rare_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckTreasureChest_Wieldable_Rare.BP_ShipwreckTreasureChest_Wieldable_Rare_C.UserConstructionScript");
 
-	ABP_ShipwreckTreasureChest_Wieldable_Rare_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ALK_ThirdPerson_Female_Large_parameters.hpp"
+#include "SoT_ALK_ThirdPerson_Female_Large_classes.hpp"
 
 namespace SDK
 {

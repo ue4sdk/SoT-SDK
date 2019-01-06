@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LargeShip_StandardHull_Art_Interior_Captains_Cabin_parameters.hpp"
+#include "SoT_BP_LargeShip_StandardHull_Art_Interior_Captains_Cabin_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_LargeShip_StandardHull_Art_Interior_Captains_Cabin_C::UserConstructionS
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Interior_Captains_Cabin.BP_LargeShip_StandardHull_Art_Interior_Captains_Cabin_C.UserConstructionScript");
 
-	ABP_LargeShip_StandardHull_Art_Interior_Captains_Cabin_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

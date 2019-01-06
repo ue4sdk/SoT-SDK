@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TreasureChest_Proxy_Common_parameters.hpp"
+#include "SoT_BP_TreasureChest_Proxy_Common_classes.hpp"
 
 namespace SDK
 {

@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void STATIC_StopBroadcastingGame();
-	void STATIC_StartBroadcastingGame(int FrameRate, float ScreenScaling, bool bEnableWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, bool bDrawSimpleWebCamVideo);
-	bool STATIC_IsBroadcastingGame();
+	static void StopBroadcastingGame();
+	static void StartBroadcastingGame(int FrameRate, float ScreenScaling, bool bEnableWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, bool bDrawSimpleWebCamVideo);
+	static bool IsBroadcastingGame();
 };
 
 
@@ -48,7 +48,7 @@ public:
 	}
 
 
-	class UQueryLiveStreamsCallbackProxy* STATIC_QueryLiveStreams(const class FString& GameName);
+	static class UQueryLiveStreamsCallbackProxy* QueryLiveStreams(const class FString& GameName);
 };
 
 

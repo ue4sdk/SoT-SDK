@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ForceSpot_Rowboat_Launch_parameters.hpp"
+#include "SoT_BP_ForceSpot_Rowboat_Launch_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_ForceSpot_Rowboat_Launch_C::SetupClamberSpline()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C.SetupClamberSpline");
 
-	ABP_ForceSpot_Rowboat_Launch_C_SetupClamberSpline_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -32,7 +35,10 @@ void ABP_ForceSpot_Rowboat_Launch_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C.UserConstructionScript");
 
-	ABP_ForceSpot_Rowboat_Launch_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

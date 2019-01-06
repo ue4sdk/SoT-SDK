@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_bottle_burner_parameters.hpp"
+#include "SoT_wsp_bottle_burner_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void Awsp_bottle_burner_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wsp_bottle_burner.wsp_bottle_burner_C.UserConstructionScript");
 
-	Awsp_bottle_burner_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

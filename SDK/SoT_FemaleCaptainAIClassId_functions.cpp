@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_FemaleCaptainAIClassId_parameters.hpp"
+#include "SoT_FemaleCaptainAIClassId_classes.hpp"
 
 namespace SDK
 {

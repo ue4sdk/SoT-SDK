@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_female_eyebrows_01_Desc_parameters.hpp"
+#include "SoT_BP_female_eyebrows_01_Desc_classes.hpp"
 
 namespace SDK
 {

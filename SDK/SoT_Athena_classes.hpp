@@ -458,8 +458,8 @@ public:
 	}
 
 
-	void STATIC_AddOneShotUseActionRule(class UClass* StartInput, class AActor* Item);
-	void STATIC_AddHoldToUseActionRule(class UClass* StartInput, class UClass* EndInput, class AActor* Item);
+	static void AddOneShotUseActionRule(class UClass* StartInput, class AActor* Item);
+	static void AddHoldToUseActionRule(class UClass* StartInput, class UClass* EndInput, class AActor* Item);
 };
 
 
@@ -525,9 +525,9 @@ public:
 	}
 
 
-	void STATIC_WaitForActorToBeAckedForPlayerId(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* Actor, int ClientId, int SplitScreenIndex);
-	void STATIC_WaitForActorToBeAckedForPlayerController(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* Actor, class APlayerController* PlayerController);
-	bool STATIC_IsActorAckedForPlayer(class APlayerController* PlayerController, class AActor* Actor);
+	static void WaitForActorToBeAckedForPlayerId(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* Actor, int ClientId, int SplitScreenIndex);
+	static void WaitForActorToBeAckedForPlayerController(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* Actor, class APlayerController* PlayerController);
+	static bool IsActorAckedForPlayer(class APlayerController* PlayerController, class AActor* Actor);
 };
 
 
@@ -1359,7 +1359,7 @@ public:
 	}
 
 
-	void STATIC_UpdateCameraAdditiveType(TEnumAsByte<ECameraLookatAnimationType> EnumControllableType, float CameraAdditiveBlendValue, float CameraYawAngle, float CameraPitchAngle, float MinPitchAngle, float MaxPitchAngle, float MaxYawAngle, float MinYawAngle, float* IsCameraAdditive, float* CameraPitchTime, float* CameraYawTime);
+	static void UpdateCameraAdditiveType(TEnumAsByte<ECameraLookatAnimationType> EnumControllableType, float CameraAdditiveBlendValue, float CameraYawAngle, float CameraPitchAngle, float MinPitchAngle, float MaxPitchAngle, float MaxYawAngle, float MinYawAngle, float* IsCameraAdditive, float* CameraPitchTime, float* CameraYawTime);
 };
 
 
@@ -1434,18 +1434,18 @@ public:
 	}
 
 
-	void STATIC_MarkRunStopComplete(struct FAthenaAnimationLocomotion* Locomotion);
-	float STATIC_GetWantedMovementSpeed(const struct FAthenaAnimationLocomotion& Locomotion);
-	struct FVector STATIC_GetVelocity(const struct FAthenaAnimationLocomotion& Locomotion);
-	bool STATIC_GetTurningLeft(const struct FAthenaAnimationLocomotion& Locomotion);
-	bool STATIC_GetTurningActive(const struct FAthenaAnimationLocomotion& Locomotion);
-	bool STATIC_GetRunStopWanted(const struct FAthenaAnimationLocomotion& Locomotion);
-	bool STATIC_GetIsUnderwaterSwimming(const struct FAthenaAnimationLocomotion& Locomotion);
-	bool STATIC_GetIsSwimming(const struct FAthenaAnimationLocomotion& Locomotion);
-	float STATIC_GetCurrentYaw(const struct FAthenaAnimationLocomotion& Locomotion);
-	float STATIC_GetCurrentDirection(const struct FAthenaAnimationLocomotion& Locomotion);
-	bool STATIC_GetCharacterMoving(const struct FAthenaAnimationLocomotion& Locomotion);
-	float STATIC_GetBlendedTurnRate(const struct FAthenaAnimationLocomotion& Locomotion);
+	static void MarkRunStopComplete(struct FAthenaAnimationLocomotion* Locomotion);
+	static float GetWantedMovementSpeed(const struct FAthenaAnimationLocomotion& Locomotion);
+	static struct FVector GetVelocity(const struct FAthenaAnimationLocomotion& Locomotion);
+	static bool GetTurningLeft(const struct FAthenaAnimationLocomotion& Locomotion);
+	static bool GetTurningActive(const struct FAthenaAnimationLocomotion& Locomotion);
+	static bool GetRunStopWanted(const struct FAthenaAnimationLocomotion& Locomotion);
+	static bool GetIsUnderwaterSwimming(const struct FAthenaAnimationLocomotion& Locomotion);
+	static bool GetIsSwimming(const struct FAthenaAnimationLocomotion& Locomotion);
+	static float GetCurrentYaw(const struct FAthenaAnimationLocomotion& Locomotion);
+	static float GetCurrentDirection(const struct FAthenaAnimationLocomotion& Locomotion);
+	static bool GetCharacterMoving(const struct FAthenaAnimationLocomotion& Locomotion);
+	static float GetBlendedTurnRate(const struct FAthenaAnimationLocomotion& Locomotion);
 };
 
 
@@ -2302,7 +2302,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoAIShipCaptainActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character);
+	static void PushCharacterIntoAIShipCaptainActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character);
 };
 
 
@@ -2366,7 +2366,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoAISpawnActionState(class AActor* InCharacter);
+	static void PushCharacterIntoAISpawnActionState(class AActor* InCharacter);
 };
 
 
@@ -2903,9 +2903,9 @@ public:
 	}
 
 
-	void STATIC_SetAnimationRemapSpeed(float Speed, struct FAthenaAnimationCapstan* Capstan);
-	TEnumAsByte<EAthenaAnimationCapstanState> STATIC_GetCapstanState(const struct FAthenaAnimationCapstan& Capstan);
-	float STATIC_GetAngularVelocityWanted(const struct FAthenaAnimationCapstan& Capstan);
+	static void SetAnimationRemapSpeed(float Speed, struct FAthenaAnimationCapstan* Capstan);
+	static TEnumAsByte<EAthenaAnimationCapstanState> GetCapstanState(const struct FAthenaAnimationCapstan& Capstan);
+	static float GetAngularVelocityWanted(const struct FAthenaAnimationCapstan& Capstan);
 };
 
 
@@ -3160,8 +3160,8 @@ public:
 	}
 
 
-	bool STATIC_IsStateActiveOnAnimationInstance(class UAthenaAnimationInstance* AnimationInstance, const struct FName& InStatePathName);
-	TArray<struct FName> STATIC_GetActiveStatesOnAnimationInstance(class UAthenaAnimationInstance* AnimationInstance);
+	static bool IsStateActiveOnAnimationInstance(class UAthenaAnimationInstance* AnimationInstance, const struct FName& InStatePathName);
+	static TArray<struct FName> GetActiveStatesOnAnimationInstance(class UAthenaAnimationInstance* AnimationInstance);
 };
 
 
@@ -3178,13 +3178,13 @@ public:
 	}
 
 
-	void STATIC_SetMaxJumpSequence(int NewMaxJumpSequence, struct FAthenaAnimationJumping* Jumping);
-	void STATIC_SetJumpCompleted(struct FAthenaAnimationJumping* Jumping);
-	bool STATIC_IsHeavyLanding(const struct FAthenaAnimationJumping& Jumping);
-	float STATIC_GetPreImpactTime(const struct FAthenaAnimationJumping& Jumping);
-	int STATIC_GetLandingSequence(const struct FAthenaAnimationJumping& Jumping);
-	int STATIC_GetJumpSequence(const struct FAthenaAnimationJumping& Jumping);
-	TEnumAsByte<EAthenaAnimationJumpingState> STATIC_GetJumpingState(const struct FAthenaAnimationJumping& Jumping);
+	static void SetMaxJumpSequence(int NewMaxJumpSequence, struct FAthenaAnimationJumping* Jumping);
+	static void SetJumpCompleted(struct FAthenaAnimationJumping* Jumping);
+	static bool IsHeavyLanding(const struct FAthenaAnimationJumping& Jumping);
+	static float GetPreImpactTime(const struct FAthenaAnimationJumping& Jumping);
+	static int GetLandingSequence(const struct FAthenaAnimationJumping& Jumping);
+	static int GetJumpSequence(const struct FAthenaAnimationJumping& Jumping);
+	static TEnumAsByte<EAthenaAnimationJumpingState> GetJumpingState(const struct FAthenaAnimationJumping& Jumping);
 };
 
 
@@ -3201,11 +3201,11 @@ public:
 	}
 
 
-	void STATIC_SetClimbOnComplete(struct FAthenaAnimationLadder* Ladder);
-	void STATIC_SetClimbOffComplete(struct FAthenaAnimationLadder* Ladder);
-	float STATIC_GetPlayerIntent(const struct FAthenaAnimationLadder& Ladder);
-	TEnumAsByte<EAthenaAnimationLadderState> STATIC_GetLadderState(const struct FAthenaAnimationLadder& Ladder);
-	float STATIC_GetClimbDistance(const struct FAthenaAnimationLadder& Ladder);
+	static void SetClimbOnComplete(struct FAthenaAnimationLadder* Ladder);
+	static void SetClimbOffComplete(struct FAthenaAnimationLadder* Ladder);
+	static float GetPlayerIntent(const struct FAthenaAnimationLadder& Ladder);
+	static TEnumAsByte<EAthenaAnimationLadderState> GetLadderState(const struct FAthenaAnimationLadder& Ladder);
+	static float GetClimbDistance(const struct FAthenaAnimationLadder& Ladder);
 };
 
 
@@ -3222,7 +3222,7 @@ public:
 	}
 
 
-	void STATIC_SetFireFinished(struct FAthenaAnimationMountedWeapon* MountedWeapon);
+	static void SetFireFinished(struct FAthenaAnimationMountedWeapon* MountedWeapon);
 };
 
 
@@ -3239,16 +3239,16 @@ public:
 	}
 
 
-	float STATIC_GetWheelTime(const struct FAthenaAnimationWheel& Wheel);
-	float STATIC_GetWheelDirection(const struct FAthenaAnimationWheel& Wheel);
-	TEnumAsByte<EWheelAnimationType> STATIC_GetWheelAnimationType(const struct FAthenaAnimationWheel& Wheel);
-	bool STATIC_GetRightWheelArmDown(const struct FAthenaAnimationWheel& Wheel);
-	struct FSocketId STATIC_GetRightHandSocket(const struct FAthenaAnimationWheel& Wheel, class UAthenaAnimationInstance* Owner);
-	float STATIC_GetRightFingerAlpha(const struct FAthenaAnimationWheel& Wheel);
-	bool STATIC_GetLeftWheelArmDown(const struct FAthenaAnimationWheel& Wheel);
-	struct FSocketId STATIC_GetLeftHandSocket(const struct FAthenaAnimationWheel& Wheel, class UAthenaAnimationInstance* Owner);
-	float STATIC_GetLeftFingerAlpha(const struct FAthenaAnimationWheel& Wheel);
-	float STATIC_GetFullBodyAlpha(const struct FAthenaAnimationWheel& Wheel);
+	static float GetWheelTime(const struct FAthenaAnimationWheel& Wheel);
+	static float GetWheelDirection(const struct FAthenaAnimationWheel& Wheel);
+	static TEnumAsByte<EWheelAnimationType> GetWheelAnimationType(const struct FAthenaAnimationWheel& Wheel);
+	static bool GetRightWheelArmDown(const struct FAthenaAnimationWheel& Wheel);
+	static struct FSocketId GetRightHandSocket(const struct FAthenaAnimationWheel& Wheel, class UAthenaAnimationInstance* Owner);
+	static float GetRightFingerAlpha(const struct FAthenaAnimationWheel& Wheel);
+	static bool GetLeftWheelArmDown(const struct FAthenaAnimationWheel& Wheel);
+	static struct FSocketId GetLeftHandSocket(const struct FAthenaAnimationWheel& Wheel, class UAthenaAnimationInstance* Owner);
+	static float GetLeftFingerAlpha(const struct FAthenaAnimationWheel& Wheel);
+	static float GetFullBodyAlpha(const struct FAthenaAnimationWheel& Wheel);
 };
 
 
@@ -3265,12 +3265,12 @@ public:
 	}
 
 
-	void STATIC_UpdateThirdPersonArmOverlayFlags(class UAthenaAnimationInstance* Owner, const class FString& SourceString, const struct FAthenaAnimationLocomotion& Locomotion);
-	void STATIC_UpdateFirstPersonArmOverlayFlags(class UAthenaAnimationInstance* Owner, const class FString& SourceString, const struct FAthenaAnimationLocomotion& Locomotion);
-	void STATIC_UpdateAnimOverlayParameters(class UAthenaAnimationInstance* Owner, TEnumAsByte<EArmOverlayState> ArmOverlayState, bool ThirdPersonAnimgraph);
-	bool STATIC_StopFacialAnimationMontage(class UAthenaAnimationInstance* Owner, class UAnimMontage* MontageToStop, float BlendTime, TEnumAsByte<EFacialPriority> Priority);
-	bool STATIC_PlayNewFacialAnimation(class UAthenaAnimationInstance* Owner, class UAnimMontage* MontageToPlay, float MontagePlayRate, TEnumAsByte<EFacialPriority> Priority);
-	bool STATIC_JumpToFacialAnimationMontageSection(class UAthenaAnimationInstance* Owner, class UAnimMontage* PlayingMontage, const struct FName& MontageSection, TEnumAsByte<EFacialPriority> Priority);
+	static void UpdateThirdPersonArmOverlayFlags(class UAthenaAnimationInstance* Owner, const class FString& SourceString, const struct FAthenaAnimationLocomotion& Locomotion);
+	static void UpdateFirstPersonArmOverlayFlags(class UAthenaAnimationInstance* Owner, const class FString& SourceString, const struct FAthenaAnimationLocomotion& Locomotion);
+	static void UpdateAnimOverlayParameters(class UAthenaAnimationInstance* Owner, TEnumAsByte<EArmOverlayState> ArmOverlayState, bool ThirdPersonAnimgraph);
+	static bool StopFacialAnimationMontage(class UAthenaAnimationInstance* Owner, class UAnimMontage* MontageToStop, float BlendTime, TEnumAsByte<EFacialPriority> Priority);
+	static bool PlayNewFacialAnimation(class UAthenaAnimationInstance* Owner, class UAnimMontage* MontageToPlay, float MontagePlayRate, TEnumAsByte<EFacialPriority> Priority);
+	static bool JumpToFacialAnimationMontageSection(class UAthenaAnimationInstance* Owner, class UAnimMontage* PlayingMontage, const struct FName& MontageSection, TEnumAsByte<EFacialPriority> Priority);
 };
 
 
@@ -3287,8 +3287,8 @@ public:
 	}
 
 
-	class UBlendSpace* STATIC_GetIntoContinuousUseSwimmingAnimationBlendSpace(class UAthenaAnimationInstance* AnimInstance, TEnumAsByte<EContinuousUseOverride> Override);
-	class UAnimSequenceBase* STATIC_GetIntoContinuousUseAnimationSequence(class UAthenaAnimationInstance* AnimInstance, TEnumAsByte<EContinuousUseOverride> Override);
+	static class UBlendSpace* GetIntoContinuousUseSwimmingAnimationBlendSpace(class UAthenaAnimationInstance* AnimInstance, TEnumAsByte<EContinuousUseOverride> Override);
+	static class UAnimSequenceBase* GetIntoContinuousUseAnimationSequence(class UAthenaAnimationInstance* AnimInstance, TEnumAsByte<EContinuousUseOverride> Override);
 };
 
 
@@ -3681,9 +3681,9 @@ public:
 	}
 
 
-	void STATIC_SetWindowSize(class UObject* WorldContextObject, const struct FVector2D& WindowSize);
-	void STATIC_SetBlendValues(class UObject* WorldContextObject, const struct FVector4& BlendValues);
-	void STATIC_AddDisturbance(class UObject* WorldContextObject, const struct FVector& Position, const struct FVector& Velocity, float Size, float GrassCutScale);
+	static void SetWindowSize(class UObject* WorldContextObject, const struct FVector2D& WindowSize);
+	static void SetBlendValues(class UObject* WorldContextObject, const struct FVector4& BlendValues);
+	static void AddDisturbance(class UObject* WorldContextObject, const struct FVector& Position, const struct FVector& Velocity, float Size, float GrassCutScale);
 };
 
 
@@ -3862,7 +3862,7 @@ public:
 	}
 
 
-	void STATIC_StartDockingCharacterWithActor(class AAthenaCharacter* Owner, class AActor* Target, float DockDuration, float DelayAfterDockDuration, struct FDocker* Docker);
+	static void StartDockingCharacterWithActor(class AAthenaCharacter* Owner, class AActor* Target, float DockDuration, float DelayAfterDockDuration, struct FDocker* Docker);
 };
 
 
@@ -3900,9 +3900,9 @@ public:
 	}
 
 
-	bool STATIC_TeleportPlayerToLocation(class AAthenaCharacter* Character, const struct FTeleportLocation& Where);
-	struct FTeleportLocation STATIC_GetTeleportLocationForPlayer(class AAthenaCharacter* Player);
-	bool STATIC_AllAnimationsLoadedForCharacter(class AAthenaCharacter* Character);
+	static bool TeleportPlayerToLocation(class AAthenaCharacter* Character, const struct FTeleportLocation& Where);
+	static struct FTeleportLocation GetTeleportLocationForPlayer(class AAthenaCharacter* Player);
+	static bool AllAnimationsLoadedForCharacter(class AAthenaCharacter* Character);
 };
 
 
@@ -4052,31 +4052,31 @@ public:
 	}
 
 
-	void STATIC_WaitUntilFullySpawned(class AAthenaCharacter* Target, const struct FLatentActionInfo& LatentInfo);
-	void STATIC_WaitUntilDocked(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter);
-	void STATIC_WaitForTeleport(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter, const struct FLatentActionInfo& LatentInfo);
-	void STATIC_WaitForMovementMode(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, TEnumAsByte<EMovementMode> WantedMovementMode, int NumFramesInMovementMode);
-	void STATIC_WaitForCustomMovementMode(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, unsigned char CustomMovementMode, int NumFramesInMovementMode);
-	void STATIC_TestRadialHandleNotificationInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id);
-	void STATIC_TestRadialHandleAnalogInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id, float Value);
-	void STATIC_TestAthenaCharacterHandleNotificationInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id);
-	void STATIC_TestAthenaCharacterHandleAnalogInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id, float Value);
-	void STATIC_TeleportToPosition(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, class USceneComponent* TeleportBase, const struct FVector& Position, const struct FRotator& Rotation, int StreamOutLevel, int StreamInLevel);
-	void STATIC_SimulateButtonPress(class APlayerController* PlayerController, const struct FKey& Button);
-	class UCharacterInputBinder* STATIC_SetupInputBinder(class AAthenaCharacter* Character);
-	void STATIC_SetupCharacterForMPTesting(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter);
-	class AAthenaCharacter* STATIC_SetupAthenaCharacterForInteractionTestByIndex(class UObject* WorldContextObject, int PlayerIndex);
-	class AAthenaCharacter* STATIC_SetupAthenaCharacterForInteractionTest(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter);
-	void STATIC_SendCharacterMoveInput(class AAthenaCharacter* Character, const struct FVector2D& Movement);
-	bool STATIC_HasAnyoneGotInputBindings(class UObject* WorldContextObject);
-	class AAthenaPlayerCharacter* STATIC_GetLocalAthenaCharacter(class UObject* WorldContextObject, int PlayerIndex);
-	class AAthenaPlayerCharacter* STATIC_GetClientPlayerCharacter(class UObject* WorldContextObject, int ClientId, int SplitScreenIndex);
-	class AAthenaCharacter* STATIC_GetClientCharacter(class UObject* WorldContextObject, int ClientId, int SplitScreenIndex);
-	void STATIC_ForceInteract(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, class AActor* Interactable, bool WaitUntilFullyDocked);
-	class AItemInfo* STATIC_CreateAndEquipItemDesc(class AAthenaCharacter* Character, class UClass* ItemDesc);
-	class AItemInfo* STATIC_CreateAndAddItemDescToInventory(class AAthenaCharacter* Character, class UClass* ItemDesc);
-	void STATIC_ClearInputBindings(class UObject* WorldContextObject);
-	void STATIC_ClearCharacterInteractionPolicies(class UObject* WorldContextObject);
+	static void WaitUntilFullySpawned(class AAthenaCharacter* Target, const struct FLatentActionInfo& LatentInfo);
+	static void WaitUntilDocked(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter);
+	static void WaitForTeleport(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter, const struct FLatentActionInfo& LatentInfo);
+	static void WaitForMovementMode(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, TEnumAsByte<EMovementMode> WantedMovementMode, int NumFramesInMovementMode);
+	static void WaitForCustomMovementMode(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, unsigned char CustomMovementMode, int NumFramesInMovementMode);
+	static void TestRadialHandleNotificationInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id);
+	static void TestRadialHandleAnalogInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id, float Value);
+	static void TestAthenaCharacterHandleNotificationInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id);
+	static void TestAthenaCharacterHandleAnalogInput(class AAthenaCharacter* AthenaCharacter, class UClass* Id, float Value);
+	static void TeleportToPosition(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, class USceneComponent* TeleportBase, const struct FVector& Position, const struct FRotator& Rotation, int StreamOutLevel, int StreamInLevel);
+	static void SimulateButtonPress(class APlayerController* PlayerController, const struct FKey& Button);
+	static class UCharacterInputBinder* SetupInputBinder(class AAthenaCharacter* Character);
+	static void SetupCharacterForMPTesting(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter);
+	static class AAthenaCharacter* SetupAthenaCharacterForInteractionTestByIndex(class UObject* WorldContextObject, int PlayerIndex);
+	static class AAthenaCharacter* SetupAthenaCharacterForInteractionTest(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter);
+	static void SendCharacterMoveInput(class AAthenaCharacter* Character, const struct FVector2D& Movement);
+	static bool HasAnyoneGotInputBindings(class UObject* WorldContextObject);
+	static class AAthenaPlayerCharacter* GetLocalAthenaCharacter(class UObject* WorldContextObject, int PlayerIndex);
+	static class AAthenaPlayerCharacter* GetClientPlayerCharacter(class UObject* WorldContextObject, int ClientId, int SplitScreenIndex);
+	static class AAthenaCharacter* GetClientCharacter(class UObject* WorldContextObject, int ClientId, int SplitScreenIndex);
+	static void ForceInteract(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AAthenaCharacter* AthenaCharacter, class AActor* Interactable, bool WaitUntilFullyDocked);
+	static class AItemInfo* CreateAndEquipItemDesc(class AAthenaCharacter* Character, class UClass* ItemDesc);
+	static class AItemInfo* CreateAndAddItemDescToInventory(class AAthenaCharacter* Character, class UClass* ItemDesc);
+	static void ClearInputBindings(class UObject* WorldContextObject);
+	static void ClearCharacterInteractionPolicies(class UObject* WorldContextObject);
 };
 
 
@@ -4900,9 +4900,9 @@ public:
 	}
 
 
-	void STATIC_ForceShipRegion(class AAthenaPlayerCharacter* AthenaPlayerCharacter, TEnumAsByte<EShipRegion> ShipRegion);
-	void STATIC_ForceReCalculateShipRegion(class AAthenaPlayerCharacter* AthenaPlayerCharacter);
-	void STATIC_DisableStatusResponse(class AAthenaPlayerCharacter* AthenaPlayerCharacter, class UClass* StatusResponseClass);
+	static void ForceShipRegion(class AAthenaPlayerCharacter* AthenaPlayerCharacter, TEnumAsByte<EShipRegion> ShipRegion);
+	static void ForceReCalculateShipRegion(class AAthenaPlayerCharacter* AthenaPlayerCharacter);
+	static void DisableStatusResponse(class AAthenaPlayerCharacter* AthenaPlayerCharacter, class UClass* StatusResponseClass);
 };
 
 
@@ -6046,8 +6046,8 @@ public:
 	}
 
 
-	void STATIC_TestAthenaPlayerControllerDisableNormalInputHandling(class AAthenaPlayerController* AthenaPlayerController);
-	void STATIC_AddEntitlementDescToInventory(class AAthenaPlayerController* Controller, class UClass* EntitlementDesc);
+	static void TestAthenaPlayerControllerDisableNormalInputHandling(class AAthenaPlayerController* AthenaPlayerController);
+	static void AddEntitlementDescToInventory(class AAthenaPlayerController* Controller, class UClass* EntitlementDesc);
 };
 
 
@@ -6521,9 +6521,9 @@ public:
 	}
 
 
-	void STATIC_UpdateCharacterWadingRtpc(class AAthenaCharacter* AthenaCharacter, TArray<struct FWwiseEmitter> Emitters, const struct FName& WadingRtpcName, const struct FName& SquelchRtpcName, float MinRtpcValue, float MaxRtpcValue);
-	void STATIC_PlayFootstepSound(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter, const struct FWwiseEmitter& Emitter, const struct FVector& Location, class UWwiseEvent* Cue, TEnumAsByte<EPhysicalSurface> SurfaceType, const struct FName& CharacterSpeedRtpc, float MinRtpcValue, float MaxRtpcValue, TEnumAsByte<ECharacterFootImpactType> FootImpactType);
-	void STATIC_FilterLocalPlayerFootStepSounds(TEnumAsByte<ECharacterFootImpactType> FootImpactType);
+	static void UpdateCharacterWadingRtpc(class AAthenaCharacter* AthenaCharacter, TArray<struct FWwiseEmitter> Emitters, const struct FName& WadingRtpcName, const struct FName& SquelchRtpcName, float MinRtpcValue, float MaxRtpcValue);
+	static void PlayFootstepSound(class UObject* WorldContextObject, class AAthenaCharacter* AthenaCharacter, const struct FWwiseEmitter& Emitter, const struct FVector& Location, class UWwiseEvent* Cue, TEnumAsByte<EPhysicalSurface> SurfaceType, const struct FName& CharacterSpeedRtpc, float MinRtpcValue, float MaxRtpcValue, TEnumAsByte<ECharacterFootImpactType> FootImpactType);
+	static void FilterLocalPlayerFootStepSounds(TEnumAsByte<ECharacterFootImpactType> FootImpactType);
 };
 
 
@@ -8499,9 +8499,9 @@ public:
 	}
 
 
-	bool STATIC_IsFadeComplete(class APlayerController* TargetController);
-	bool STATIC_IsFadeActive(class APlayerController* TargetController);
-	void STATIC_FireFadeAckRequestToClient(class AAthenaPlayerController* TargetController, float AckTimeout);
+	static bool IsFadeComplete(class APlayerController* TargetController);
+	static bool IsFadeActive(class APlayerController* TargetController);
+	static void FireFadeAckRequestToClient(class AAthenaPlayerController* TargetController, float AckTimeout);
 };
 
 
@@ -8762,7 +8762,7 @@ public:
 
 	void ReceiveUpdate(class UCanvas* Canvas, int Width, int Height);
 	void GetSize(int* Width, int* Height);
-	class UIterativeCanvasRenderTarget2D* STATIC_Create(class UObject* WorldContextObject, class UClass* CanvasRenderTarget2DClass, int Width, int Height, const struct FLinearColor& InClearColor);
+	static class UIterativeCanvasRenderTarget2D* Create(class UObject* WorldContextObject, class UClass* CanvasRenderTarget2DClass, int Width, int Height, const struct FLinearColor& InClearColor);
 };
 
 
@@ -8902,11 +8902,11 @@ public:
 	}
 
 
-	class ACapstan* STATIC_SetupCapstanTestServerSide(class UObject* WorldContextObject, const struct FVector& SpawnLocation, class UClass* CapstanClass);
-	class ACapstan* STATIC_SetupCapstanTestClientSide(class UObject* WorldContextObject);
-	void STATIC_SetCapstanSpeed(class ACapstan* Capstan, float MaxPlayerVelocity, float MaxLoweringVelocity);
-	class ACapstanArm* STATIC_GetCapstanArm(class ACapstan* Capstan, int ArmIndex);
-	void STATIC_ForceSetCapstanRatio(class ACapstan* Capstan, float TargetRatio);
+	static class ACapstan* SetupCapstanTestServerSide(class UObject* WorldContextObject, const struct FVector& SpawnLocation, class UClass* CapstanClass);
+	static class ACapstan* SetupCapstanTestClientSide(class UObject* WorldContextObject);
+	static void SetCapstanSpeed(class ACapstan* Capstan, float MaxPlayerVelocity, float MaxLoweringVelocity);
+	static class ACapstanArm* GetCapstanArm(class ACapstan* Capstan, int ArmIndex);
+	static void ForceSetCapstanRatio(class ACapstan* Capstan, float TargetRatio);
 };
 
 
@@ -8953,8 +8953,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoCapturedByKrakenActionState(class AActor* Character, class AKrakenAnimatedTentacle* Tentacle);
-	void STATIC_PopCharacterOutOfCapturedByKrakenActionState(class AActor* Character);
+	static void PushCharacterIntoCapturedByKrakenActionState(class AActor* Character, class AKrakenAnimatedTentacle* Tentacle);
+	static void PopCharacterOutOfCapturedByKrakenActionState(class AActor* Character);
 };
 
 
@@ -9228,8 +9228,8 @@ public:
 	}
 
 
-	struct FPirateDescription STATIC_ToPirateDescriptor(const struct FCarouselPirateDesc& InParams);
-	TArray<class UClass*> STATIC_ToOutfit(const struct FCarouselPirateDesc& InParams);
+	static struct FPirateDescription ToPirateDescriptor(const struct FCarouselPirateDesc& InParams);
+	static TArray<class UClass*> ToOutfit(const struct FCarouselPirateDesc& InParams);
 };
 
 
@@ -9246,9 +9246,9 @@ public:
 	}
 
 
-	void STATIC_RefreshCurrentPirateStatus(class UObject* WorldContextObject, bool Locked);
-	TArray<struct FCarouselPirateDesc> STATIC_GenerateSetOfPirates(int InSeed, int InCount, const struct FCarouselPirateGeneratorParams& InParams);
-	TArray<struct FName> STATIC_GenerateClothingItems(int InSeed, const struct FCarouselPirateGeneratorParams& InParams, TEnumAsByte<EIPGGender> InTargetGender, TEnumAsByte<EIPGEthnicity> InTargetEthnicity);
+	static void RefreshCurrentPirateStatus(class UObject* WorldContextObject, bool Locked);
+	static TArray<struct FCarouselPirateDesc> GenerateSetOfPirates(int InSeed, int InCount, const struct FCarouselPirateGeneratorParams& InParams);
+	static TArray<struct FName> GenerateClothingItems(int InSeed, const struct FCarouselPirateGeneratorParams& InParams, TEnumAsByte<EIPGGender> InTargetGender, TEnumAsByte<EIPGEthnicity> InTargetEthnicity);
 };
 
 
@@ -9608,10 +9608,10 @@ public:
 	}
 
 
-	void STATIC_PushCanInteractValidatorToInteractionComponent(class UCharacterInteractionComponent* InCharacterInteractionComponent);
-	bool STATIC_CharacterInteractionComponentWithoutInteractors_WhenPolicyIsAdded_PolicyIsntCalled(class UCharacterInteractionComponent* InCharacterInteractionComponent);
-	bool STATIC_CharacterInteractionComponentWithInteractors_WhenPolicyIsAdded_PolicyIsCalled(class UCharacterInteractionComponent* InCharacterInteractionComponent);
-	bool STATIC_CharacterInteractionComponentWithInteractor_TwoPolicies_HighestPriorityFirst(class UCharacterInteractionComponent* InCharacterInteractionComponent);
+	static void PushCanInteractValidatorToInteractionComponent(class UCharacterInteractionComponent* InCharacterInteractionComponent);
+	static bool CharacterInteractionComponentWithoutInteractors_WhenPolicyIsAdded_PolicyIsntCalled(class UCharacterInteractionComponent* InCharacterInteractionComponent);
+	static bool CharacterInteractionComponentWithInteractors_WhenPolicyIsAdded_PolicyIsCalled(class UCharacterInteractionComponent* InCharacterInteractionComponent);
+	static bool CharacterInteractionComponentWithInteractor_TwoPolicies_HighestPriorityFirst(class UCharacterInteractionComponent* InCharacterInteractionComponent);
 };
 
 
@@ -9676,9 +9676,9 @@ public:
 	}
 
 
-	bool STATIC_NotEqual(const struct FCharacterSocketCollisionHandle& A, const struct FCharacterSocketCollisionHandle& B);
-	bool STATIC_IsValid(const struct FCharacterSocketCollisionHandle& Handle);
-	bool STATIC_Equal(const struct FCharacterSocketCollisionHandle& A, const struct FCharacterSocketCollisionHandle& B);
+	static bool NotEqual(const struct FCharacterSocketCollisionHandle& A, const struct FCharacterSocketCollisionHandle& B);
+	static bool IsValid(const struct FCharacterSocketCollisionHandle& Handle);
+	static bool Equal(const struct FCharacterSocketCollisionHandle& A, const struct FCharacterSocketCollisionHandle& B);
 };
 
 
@@ -9827,7 +9827,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoClamberActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ClamberActor, class AActor* Character, float NormalisedInteractionWidth, unsigned char ClimbId, const struct FLadderBlendParams& ClamberBlendParams);
+	static void PushCharacterIntoClamberActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ClamberActor, class AActor* Character, float NormalisedInteractionWidth, unsigned char ClimbId, const struct FLadderBlendParams& ClamberBlendParams);
 };
 
 
@@ -11588,7 +11588,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoControlCapstanArmActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character);
+	static void PushCharacterIntoControlCapstanArmActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character);
 };
 
 
@@ -12002,9 +12002,9 @@ public:
 	}
 
 
-	class AActor* STATIC_GetAnyUncontrolledActor(TArray<class AActor*> Actors);
-	TArray<class AActor*> STATIC_FilterUncontrolledActors(TArray<class AActor*>* Actors);
-	TArray<class AActor*> STATIC_FilterControllableActors(TArray<class AActor*>* Actors);
+	static class AActor* GetAnyUncontrolledActor(TArray<class AActor*> Actors);
+	static TArray<class AActor*> FilterUncontrolledActors(TArray<class AActor*>* Actors);
+	static TArray<class AActor*> FilterControllableActors(TArray<class AActor*>* Actors);
 };
 
 
@@ -12021,7 +12021,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoControlObjectActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character);
+	static void PushCharacterIntoControlObjectActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character);
 };
 
 
@@ -12038,7 +12038,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoControlSailManipulatorActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character, TEnumAsByte<EControllableObjectType> ControllableType, class UClass* AnalogInputId);
+	static void PushCharacterIntoControlSailManipulatorActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character, TEnumAsByte<EControllableObjectType> ControllableType, class UClass* AnalogInputId);
 };
 
 
@@ -12055,7 +12055,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoControlWheelActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AWheel* ControlledObject, class AActor* Character);
+	static void PushCharacterIntoControlWheelActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AWheel* ControlledObject, class AActor* Character);
 };
 
 
@@ -12072,20 +12072,20 @@ public:
 	}
 
 
-	void STATIC_ResetCrewToSpawnLocation(class UObject* WorldContext, const struct FGuid& CrewId, class AShipSpawnLocation* SpawnLocation);
-	void STATIC_ResetCrewToSafeSpawnLocation(class UObject* WorldContext, const struct FGuid& CrewId, const struct FVector& ActorLocation);
-	void STATIC_RemoveCharacterFromCrew(class UObject* WorldContext, class AAthenaCharacter* Player);
-	bool STATIC_IsCharacterMemberOfCrew(class AAthenaCharacter* Player, const struct FGuid& CrewId);
-	bool STATIC_IsActorMemberOfCharactersCrew(class AActor* Actor, class AAthenaCharacter* Player);
-	class UClass* STATIC_GetShipSizeForCrewId(class UObject* WorldContext, const struct FGuid& CrewId);
-	class UClass* STATIC_GetShipSizeForActorsCrew(class UObject* WorldContext, class AActor* Actor);
-	struct FGuid STATIC_GetCrewIdFromActor(class UObject* WorldContext, class AActor* Actor);
-	void STATIC_CreateCrewWithSessionTemplate(class UObject* WorldContext, const struct FGuid& CrewId, const struct FCrewSessionTemplate& CrewSessionTemplate, class AAthenaPlayerState* FirstMember, TEnumAsByte<ESessionVisibility> SessionVisibility);
-	void STATIC_CreateCrew(class UObject* WorldContext, const struct FGuid& CrewId, class AAthenaPlayerState* FirstMember, TEnumAsByte<ESessionVisibility> SessionVisibility);
-	bool STATIC_AreInSameCrew(const struct FGuid& CrewId1, const struct FGuid& CrewId2);
-	bool STATIC_AreCharactersInSameCrew(class AAthenaCharacter* Player1, class AAthenaCharacter* Player2);
-	void STATIC_AddShipToCrew(class UObject* WorldContext, class AShip* Ship, const struct FGuid& CrewId);
-	void STATIC_AddCharacterToCrew(class UObject* WorldContext, class AAthenaCharacter* Player, const struct FGuid& CrewId);
+	static void ResetCrewToSpawnLocation(class UObject* WorldContext, const struct FGuid& CrewId, class AShipSpawnLocation* SpawnLocation);
+	static void ResetCrewToSafeSpawnLocation(class UObject* WorldContext, const struct FGuid& CrewId, const struct FVector& ActorLocation);
+	static void RemoveCharacterFromCrew(class UObject* WorldContext, class AAthenaCharacter* Player);
+	static bool IsCharacterMemberOfCrew(class AAthenaCharacter* Player, const struct FGuid& CrewId);
+	static bool IsActorMemberOfCharactersCrew(class AActor* Actor, class AAthenaCharacter* Player);
+	static class UClass* GetShipSizeForCrewId(class UObject* WorldContext, const struct FGuid& CrewId);
+	static class UClass* GetShipSizeForActorsCrew(class UObject* WorldContext, class AActor* Actor);
+	static struct FGuid GetCrewIdFromActor(class UObject* WorldContext, class AActor* Actor);
+	static void CreateCrewWithSessionTemplate(class UObject* WorldContext, const struct FGuid& CrewId, const struct FCrewSessionTemplate& CrewSessionTemplate, class AAthenaPlayerState* FirstMember, TEnumAsByte<ESessionVisibility> SessionVisibility);
+	static void CreateCrew(class UObject* WorldContext, const struct FGuid& CrewId, class AAthenaPlayerState* FirstMember, TEnumAsByte<ESessionVisibility> SessionVisibility);
+	static bool AreInSameCrew(const struct FGuid& CrewId1, const struct FGuid& CrewId2);
+	static bool AreCharactersInSameCrew(class AAthenaCharacter* Player1, class AAthenaCharacter* Player2);
+	static void AddShipToCrew(class UObject* WorldContext, class AShip* Ship, const struct FGuid& CrewId);
+	static void AddCharacterToCrew(class UObject* WorldContext, class AAthenaCharacter* Player, const struct FGuid& CrewId);
 };
 
 
@@ -12949,11 +12949,11 @@ public:
 	}
 
 
-	void STATIC_TriggerShipImpactDamageFromLookAt(class AAthenaPlayerCharacter* AthenaCharacter, float Strength, TArray<class AActor*> IgnoreList);
-	void STATIC_TriggerShipImpactDamageFromLocationAndDirection(class UObject* WorldContext, float Strength, const struct FVector& Location, const struct FVector& Direction, TArray<class AActor*> IgnoreList);
-	void STATIC_TriggerShipImpactDamageAtLocation(class AShip* Ship, const struct FVector& Location, int NumHoles, class UClass* DamagerType);
-	void STATIC_TriggerPlayerImpactDamageFromLookAt(class AAthenaPlayerCharacter* AthenaCharacter, float Strength, TArray<class AActor*> IgnoreList);
-	void STATIC_TriggerPlayerImpactDamageFromLocationAndDirection(class UObject* WorldContext, float Strength, const struct FVector& Location, const struct FVector& Direction, TArray<class AActor*> IgnoreList);
+	static void TriggerShipImpactDamageFromLookAt(class AAthenaPlayerCharacter* AthenaCharacter, float Strength, TArray<class AActor*> IgnoreList);
+	static void TriggerShipImpactDamageFromLocationAndDirection(class UObject* WorldContext, float Strength, const struct FVector& Location, const struct FVector& Direction, TArray<class AActor*> IgnoreList);
+	static void TriggerShipImpactDamageAtLocation(class AShip* Ship, const struct FVector& Location, int NumHoles, class UClass* DamagerType);
+	static void TriggerPlayerImpactDamageFromLookAt(class AAthenaPlayerCharacter* AthenaCharacter, float Strength, TArray<class AActor*> IgnoreList);
+	static void TriggerPlayerImpactDamageFromLocationAndDirection(class UObject* WorldContext, float Strength, const struct FVector& Location, const struct FVector& Direction, TArray<class AActor*> IgnoreList);
 };
 
 
@@ -13279,7 +13279,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoDeadActionState(class AActor* Character, const struct FDamageInstance& FinalBlow, TEnumAsByte<ECharacterDeathType> DeathType);
+	static void PushCharacterIntoDeadActionState(class AActor* Character, const struct FDamageInstance& FinalBlow, TEnumAsByte<ECharacterDeathType> DeathType);
 };
 
 
@@ -13296,7 +13296,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoDebugFlyingActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* Character);
+	static void PushCharacterIntoDebugFlyingActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* Character);
 };
 
 
@@ -13359,7 +13359,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoDebugShipControlActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class ADebugShipController* DebugShipController, class AActor* Owner);
+	static void PushCharacterIntoDebugShipControlActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class ADebugShipController* DebugShipController, class AActor* Owner);
 };
 
 
@@ -13396,19 +13396,19 @@ public:
 	}
 
 
-	void STATIC_SetAllWheelAngle(class AActor* Ship, float Angle);
-	void STATIC_SetAllSailsLoweredProportion(class AActor* Ship, float Proportion);
-	void STATIC_SetAllSailsDamageScalar(class AActor* Ship, float Proportion);
-	void STATIC_SetAllSailsAngle(class AActor* Ship, float Angle);
-	void STATIC_SetAllRuddersAngleRatio(class AActor* Ship, float InRudderAngleRatio);
-	void STATIC_SetAllCapstansPosition(class AActor* Ship, float Position);
-	void STATIC_SetAllCannonsAim(class AActor* Ship, float Pitch, float Yaw);
-	void STATIC_SetAllAnchorsLoweredProportion(class AActor* Ship, float InLoweredProportion);
-	void STATIC_RotateAllMastsSailAngles(TArray<class AActor*> Masts, float DeltaSeconds, float* PercentPerSec);
-	void STATIC_FireEveryNthCannons(class AActor* Ship, int EveryNthCannons);
-	void STATIC_FireCannonEveryXSecond(TArray<class AActor*> Cannons, float DeltaSeconds, float SecondsBetweenShots, float* Accumulator, int* CannonIndex);
-	void STATIC_FireAllCannons(class AActor* Ship);
-	void STATIC_CycleAllMastsSailLowered(TArray<class AActor*> Masts, float DeltaSeconds, float* PercentPerSec);
+	static void SetAllWheelAngle(class AActor* Ship, float Angle);
+	static void SetAllSailsLoweredProportion(class AActor* Ship, float Proportion);
+	static void SetAllSailsDamageScalar(class AActor* Ship, float Proportion);
+	static void SetAllSailsAngle(class AActor* Ship, float Angle);
+	static void SetAllRuddersAngleRatio(class AActor* Ship, float InRudderAngleRatio);
+	static void SetAllCapstansPosition(class AActor* Ship, float Position);
+	static void SetAllCannonsAim(class AActor* Ship, float Pitch, float Yaw);
+	static void SetAllAnchorsLoweredProportion(class AActor* Ship, float InLoweredProportion);
+	static void RotateAllMastsSailAngles(TArray<class AActor*> Masts, float DeltaSeconds, float* PercentPerSec);
+	static void FireEveryNthCannons(class AActor* Ship, int EveryNthCannons);
+	static void FireCannonEveryXSecond(TArray<class AActor*> Cannons, float DeltaSeconds, float SecondsBetweenShots, float* Accumulator, int* CannonIndex);
+	static void FireAllCannons(class AActor* Ship);
+	static void CycleAllMastsSailLowered(TArray<class AActor*> Masts, float DeltaSeconds, float* PercentPerSec);
 };
 
 
@@ -13457,7 +13457,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoDebugSuperSailorActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* Character);
+	static void PushCharacterIntoDebugSuperSailorActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* Character);
 };
 
 
@@ -13912,7 +13912,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoEmoteActionState(class AActor* Character, const struct FName& EmoteIdentifier, bool ForcedEmote);
+	static void PushCharacterIntoEmoteActionState(class AActor* Character, const struct FName& EmoteIdentifier, bool ForcedEmote);
 };
 
 
@@ -14385,8 +14385,8 @@ public:
 	}
 
 
-	void STATIC_UpdateEnchantedCompassTargetLocation(class UObject* WorldContextObject, class AEnchantedCompassItemInfo* ItemInfo, const struct FVector& Target, TEnumAsByte<ETargetUpdateReason> Reason);
-	void STATIC_UpdateEnchantedCompassTargetActor(class UObject* WorldContextObject, class AEnchantedCompassItemInfo* ItemInfo, class AActor* Target, TEnumAsByte<ETargetUpdateReason> Reason);
+	static void UpdateEnchantedCompassTargetLocation(class UObject* WorldContextObject, class AEnchantedCompassItemInfo* ItemInfo, const struct FVector& Target, TEnumAsByte<ETargetUpdateReason> Reason);
+	static void UpdateEnchantedCompassTargetActor(class UObject* WorldContextObject, class AEnchantedCompassItemInfo* ItemInfo, class AActor* Target, TEnumAsByte<ETargetUpdateReason> Reason);
 };
 
 
@@ -15350,8 +15350,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoFiredFromActorActionState(class AActor* Character, class AActor* FiringActor, const struct FVector& LaunchVelocity);
-	void STATIC_PopCharacterOutOfFiredFromActorActionState(class AActor* Character);
+	static void PushCharacterIntoFiredFromActorActionState(class AActor* Character, class AActor* FiringActor, const struct FVector& LaunchVelocity);
+	static void PopCharacterOutOfFiredFromActorActionState(class AActor* Character);
 };
 
 
@@ -15368,8 +15368,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoFiredFromCannonActionState(class AActor* Character, class AActor* FiringActor, const struct FVector& LaunchVelocity);
-	void STATIC_PopCharacterOutOfFiredFromCannonActionState(class AActor* Character);
+	static void PushCharacterIntoFiredFromCannonActionState(class AActor* Character, class AActor* FiringActor, const struct FVector& LaunchVelocity);
+	static void PopCharacterOutOfFiredFromCannonActionState(class AActor* Character);
 };
 
 
@@ -15816,13 +15816,13 @@ public:
 	}
 
 
-	void STATIC_SetTargetFOV(class AAthenaPlayerCharacter* Character, float TargetFOV);
-	void STATIC_SetBlendSpeed(class AAthenaPlayerCharacter* Character, float BlendSpeed);
-	void STATIC_ResetToDefault(class AAthenaPlayerCharacter* Character);
-	float STATIC_GetTargetFOV(class AAthenaPlayerCharacter* Character);
-	float STATIC_GetDefaultTargetFOV(class AAthenaPlayerCharacter* Character);
-	float STATIC_GetDefaultFOV(class AAthenaPlayerCharacter* Character);
-	float STATIC_GetBlendSpeed(class AAthenaPlayerCharacter* Character);
+	static void SetTargetFOV(class AAthenaPlayerCharacter* Character, float TargetFOV);
+	static void SetBlendSpeed(class AAthenaPlayerCharacter* Character, float BlendSpeed);
+	static void ResetToDefault(class AAthenaPlayerCharacter* Character);
+	static float GetTargetFOV(class AAthenaPlayerCharacter* Character);
+	static float GetDefaultTargetFOV(class AAthenaPlayerCharacter* Character);
+	static float GetDefaultFOV(class AAthenaPlayerCharacter* Character);
+	static float GetBlendSpeed(class AAthenaPlayerCharacter* Character);
 };
 
 
@@ -16211,8 +16211,8 @@ public:
 	}
 
 
-	class AAthenaGameState* STATIC_GetAthenaGameStateFromWorld(class UWorld* InWorld);
-	class AAthenaGameState* STATIC_GetAthenaGameState(class UObject* InWorldContextObject);
+	static class AAthenaGameState* GetAthenaGameStateFromWorld(class UWorld* InWorld);
+	static class AAthenaGameState* GetAthenaGameState(class UObject* InWorldContextObject);
 };
 
 
@@ -16650,9 +16650,9 @@ public:
 	}
 
 
-	bool STATIC_NotEqual(const struct FBlueprintableIntegerHandle& A, const struct FBlueprintableIntegerHandle& B);
-	bool STATIC_IsValid(const struct FBlueprintableIntegerHandle& Handle);
-	bool STATIC_Equal(const struct FBlueprintableIntegerHandle& A, const struct FBlueprintableIntegerHandle& B);
+	static bool NotEqual(const struct FBlueprintableIntegerHandle& A, const struct FBlueprintableIntegerHandle& B);
+	static bool IsValid(const struct FBlueprintableIntegerHandle& Handle);
+	static bool Equal(const struct FBlueprintableIntegerHandle& A, const struct FBlueprintableIntegerHandle& B);
 };
 
 
@@ -16765,25 +16765,25 @@ public:
 	}
 
 
-	struct FDamageInstance STATIC_MakeDamageInstance(float Amount, class AActor* From, TEnumAsByte<EHealthChangedReason> Reason);
-	void STATIC_EnableAdjustHealth_YetToBeInteractedWith(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_TavernPlayerCharacter(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_SkeletonShadowForm(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_ServerMigration(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_IsTeleporting(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_IsInert(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_Invincible(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_HidingObject(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_EnableAdjustHealth_Dead(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_YetToBeInteractedWith(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_TavernPlayerCharacter(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_SkeletonShadowForm(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_ServerMigration(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_IsTeleporting(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_IsInert(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_Invincible(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_HidingObject(class UHealthComponent* Component, bool IsStrict);
-	void STATIC_DisableAdjustHealth_Dead(class UHealthComponent* Component, bool IsStrict);
+	static struct FDamageInstance MakeDamageInstance(float Amount, class AActor* From, TEnumAsByte<EHealthChangedReason> Reason);
+	static void EnableAdjustHealth_YetToBeInteractedWith(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_TavernPlayerCharacter(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_SkeletonShadowForm(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_ServerMigration(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_IsTeleporting(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_IsInert(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_Invincible(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_HidingObject(class UHealthComponent* Component, bool IsStrict);
+	static void EnableAdjustHealth_Dead(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_YetToBeInteractedWith(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_TavernPlayerCharacter(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_SkeletonShadowForm(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_ServerMigration(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_IsTeleporting(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_IsInert(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_Invincible(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_HidingObject(class UHealthComponent* Component, bool IsStrict);
+	static void DisableAdjustHealth_Dead(class UHealthComponent* Component, bool IsStrict);
 };
 
 
@@ -16800,8 +16800,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoHideInObjectActionState(class AActor* Character, class AActor* ObjectToHideIn, class AActor* Dockable);
-	void STATIC_PopCharacterOutOfHideInObjectActionState(class AActor* Character);
+	static void PushCharacterIntoHideInObjectActionState(class AActor* Character, class AActor* ObjectToHideIn, class AActor* Dockable);
+	static void PopCharacterOutOfHideInObjectActionState(class AActor* Character);
 };
 
 
@@ -18023,8 +18023,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoIngestedByKrakenActionState(class AActor* Character, class AKrakenAnimatedTentacle* Tentacle);
-	void STATIC_PopCharacterOutOfIngestedByKrakenActionState(class AActor* Character);
+	static void PushCharacterIntoIngestedByKrakenActionState(class AActor* Character, class AKrakenAnimatedTentacle* Tentacle);
+	static void PopCharacterOutOfIngestedByKrakenActionState(class AActor* Character);
 };
 
 
@@ -18727,9 +18727,9 @@ public:
 	}
 
 
-	class AShip* STATIC_SpawnLargeShipForMPTesting(class UObject* WorldContextObject, const struct FVector& Position, const struct FRotator& Rotation);
-	class AShip* STATIC_SetupServerSideAndSpawnShip(class UObject* WorldContextObject, float CapstanPosition, float SailsLoweredPosition);
-	class AShip* STATIC_SetupClientSide(class UObject* WorldContextObject);
+	static class AShip* SpawnLargeShipForMPTesting(class UObject* WorldContextObject, const struct FVector& Position, const struct FRotator& Rotation);
+	static class AShip* SetupServerSideAndSpawnShip(class UObject* WorldContextObject, float CapstanPosition, float SailsLoweredPosition);
+	static class AShip* SetupClientSide(class UObject* WorldContextObject);
 };
 
 
@@ -18786,14 +18786,14 @@ public:
 	}
 
 
-	bool STATIC_WithinInteractionAngleValidationPolicy_WithInteractorBehindTheObject_IsInvalidReturnsFalse(class AAthenaCharacter* InCharacter, class AActor* InInteractable);
-	bool STATIC_WithinInteractionAngleValidationPolicy_WithinInteractionAngleInteractor_IsValidReturnsTrue(class AAthenaCharacter* InCharacter, float InInteractionRegionDegrees, class UInteractableArea* InRegionInteractor);
-	bool STATIC_WithinInteractionAngleValidationPolicy_OutsideInteractionAngleInteractor_IsValidReturnsFalse(class AAthenaCharacter* InCharacter, float InInteractionRegionDegrees, class UInteractableArea* InOutOfRegionInteractor);
-	bool STATIC_ClosestToPlayerSortingPolicy_WithTwoInteractablesClosestAndFurthest_ClosestTakesHighestPrecedent(class AAthenaCharacter* InCharacter, class UInteractableArea* InClosestInteractable, class UInteractableArea* InFurthestInteractable);
-	bool STATIC_CenterOfScreenDistanceSortingPolicy_ExecuteTakesHighestPrecedent(class AAthenaCharacter* InCharacter, class UInteractableArea* InLhsInteractor, class UInteractableArea* InRhsInteractor, float InPlayerDistanceDelta, float InCenterDistanceDelta);
-	bool STATIC_CanInteractValidationPolicy_WithCantInteractInteractor_IsValidReturnsFalse(class AActor* InCharacter, class UInteractableArea* InCanInteractInteractor);
-	bool STATIC_CanInteractValidationPolicy_WithCanInteractInteractor_IsValidReturnsTrue(class AActor* InCharacter, class UInteractableArea* InCanInteractInteractor);
-	bool STATIC_AirbornePolicy_ExecuteCanInteract(class AAthenaCharacter* InCharacter, class AActor* InInteractable);
+	static bool WithinInteractionAngleValidationPolicy_WithInteractorBehindTheObject_IsInvalidReturnsFalse(class AAthenaCharacter* InCharacter, class AActor* InInteractable);
+	static bool WithinInteractionAngleValidationPolicy_WithinInteractionAngleInteractor_IsValidReturnsTrue(class AAthenaCharacter* InCharacter, float InInteractionRegionDegrees, class UInteractableArea* InRegionInteractor);
+	static bool WithinInteractionAngleValidationPolicy_OutsideInteractionAngleInteractor_IsValidReturnsFalse(class AAthenaCharacter* InCharacter, float InInteractionRegionDegrees, class UInteractableArea* InOutOfRegionInteractor);
+	static bool ClosestToPlayerSortingPolicy_WithTwoInteractablesClosestAndFurthest_ClosestTakesHighestPrecedent(class AAthenaCharacter* InCharacter, class UInteractableArea* InClosestInteractable, class UInteractableArea* InFurthestInteractable);
+	static bool CenterOfScreenDistanceSortingPolicy_ExecuteTakesHighestPrecedent(class AAthenaCharacter* InCharacter, class UInteractableArea* InLhsInteractor, class UInteractableArea* InRhsInteractor, float InPlayerDistanceDelta, float InCenterDistanceDelta);
+	static bool CanInteractValidationPolicy_WithCantInteractInteractor_IsValidReturnsFalse(class AActor* InCharacter, class UInteractableArea* InCanInteractInteractor);
+	static bool CanInteractValidationPolicy_WithCanInteractInteractor_IsValidReturnsTrue(class AActor* InCharacter, class UInteractableArea* InCanInteractInteractor);
+	static bool AirbornePolicy_ExecuteCanInteract(class AAthenaCharacter* InCharacter, class AActor* InInteractable);
 };
 
 
@@ -19283,7 +19283,7 @@ public:
 	}
 
 
-	struct FName STATIC_GetActorsCurrentIslandName(class AActor* TheActor);
+	static struct FName GetActorsCurrentIslandName(class AActor* TheActor);
 };
 
 
@@ -20102,13 +20102,13 @@ public:
 	}
 
 
-	class AKrakenAnimatedTentacle* STATIC_SpawnTentacleAndSuckTarget(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UClass* TentacleClass, const struct FVector& SpawnLocation, class AAthenaCharacter* AthenaCharacter, float AnimPlayRate, float SuckingTellTime);
-	void STATIC_SetTimeUntilNextKrakenSpawnAttempt(class UObject* WorldContextObject, float Time);
-	void STATIC_RequestKrakenWithShip(class UObject* WorldContextObject, class AShip* ShipTarget);
-	void STATIC_OverridePlayRateScaleInKrakenServiceParams(class UObject* WorldContextObject, float OverridePlayRateScale);
-	void STATIC_OverrideNumberOfTentaclesSpawnedInKrakenServiceParams(class UObject* WorldContextObject, int OverrideNumberOfTentacles);
-	void STATIC_OverrideNewTargetTimeoutInKrakenServiceParams(class UObject* WorldContextObject, float OverrideNewTargetTimeout);
-	TArray<struct FVector> STATIC_GenerateKrakenSpawnLocationDistribution(TArray<struct FKrakenSpawnLocationExclusionZone> SeaRockExclusionZones, TArray<struct FKrakenSpawnLocationExclusionZone> IslandExclusionZones, float DistributionWidth, float DistributionHeight, float MinDistanceBetweenSamplePoints, int Seed, const struct FKrakenSpawnLocationParams& SpawnLocationParams);
+	static class AKrakenAnimatedTentacle* SpawnTentacleAndSuckTarget(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UClass* TentacleClass, const struct FVector& SpawnLocation, class AAthenaCharacter* AthenaCharacter, float AnimPlayRate, float SuckingTellTime);
+	static void SetTimeUntilNextKrakenSpawnAttempt(class UObject* WorldContextObject, float Time);
+	static void RequestKrakenWithShip(class UObject* WorldContextObject, class AShip* ShipTarget);
+	static void OverridePlayRateScaleInKrakenServiceParams(class UObject* WorldContextObject, float OverridePlayRateScale);
+	static void OverrideNumberOfTentaclesSpawnedInKrakenServiceParams(class UObject* WorldContextObject, int OverrideNumberOfTentacles);
+	static void OverrideNewTargetTimeoutInKrakenServiceParams(class UObject* WorldContextObject, float OverrideNewTargetTimeout);
+	static TArray<struct FVector> GenerateKrakenSpawnLocationDistribution(TArray<struct FKrakenSpawnLocationExclusionZone> SeaRockExclusionZones, TArray<struct FKrakenSpawnLocationExclusionZone> IslandExclusionZones, float DistributionWidth, float DistributionHeight, float MinDistanceBetweenSamplePoints, int Seed, const struct FKrakenSpawnLocationParams& SpawnLocationParams);
 };
 
 
@@ -20216,7 +20216,7 @@ public:
 	}
 
 
-	struct FVector STATIC_GetRelativePositionAtHeight(const TScriptInterface<class ULadderInterface>& LadderInterface, float Height);
+	static struct FVector GetRelativePositionAtHeight(const TScriptInterface<class ULadderInterface>& LadderInterface, float Height);
 };
 
 
@@ -20618,8 +20618,8 @@ public:
 
 
 	void SetImpactCallback(const struct FScriptDelegate& Callback);
-	void STATIC_SetChannelToIgnoreInShip(TEnumAsByte<ECollisionChannel> Channel);
-	class AVomitProjectile* STATIC_LaunchVomitProjectile(class AActor* Vomiter, const struct FName& LaunchSocketName, float Speed, float AdditionalLiftAngle, float Radius);
+	static void SetChannelToIgnoreInShip(TEnumAsByte<ECollisionChannel> Channel);
+	static class AVomitProjectile* LaunchVomitProjectile(class AActor* Vomiter, const struct FName& LaunchSocketName, float Speed, float AdditionalLiftAngle, float Radius);
 };
 
 
@@ -20636,8 +20636,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoLaunchedFromKrakenActionState(class AActor* Character, class AActor* FiringActor, class AKrakenAnimatedTentacle* Tentacle);
-	void STATIC_PopCharacterOutOfLaunchedFromKrakenActionState(class AActor* Character);
+	static void PushCharacterIntoLaunchedFromKrakenActionState(class AActor* Character, class AActor* FiringActor, class AKrakenAnimatedTentacle* Tentacle);
+	static void PopCharacterOutOfLaunchedFromKrakenActionState(class AActor* Character);
 };
 
 
@@ -20738,7 +20738,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoLeaveGhostShipActionState(class AActor* Character, int GhostShipLevelId);
+	static void PushCharacterIntoLeaveGhostShipActionState(class AActor* Character, int GhostShipLevelId);
 };
 
 
@@ -20854,7 +20854,7 @@ public:
 	}
 
 
-	struct FLightingControllerSettingsOutput STATIC_GetOutput(class ULightingControllerSettings* Settings, float Input);
+	static struct FLightingControllerSettingsOutput GetOutput(class ULightingControllerSettings* Settings, float Input);
 };
 
 
@@ -21214,8 +21214,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoLoadItemActionState(class AActor* Character, class AActor* LoadableActor, class AActor* Interactable, class UClass* DefaultItemDesc);
-	void STATIC_PopCharacterOutOfLoadItemActionState(class AActor* Character);
+	static void PushCharacterIntoLoadItemActionState(class AActor* Character, class AActor* LoadableActor, class AActor* Interactable, class UClass* DefaultItemDesc);
+	static void PopCharacterOutOfLoadItemActionState(class AActor* Character);
 };
 
 
@@ -21353,7 +21353,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoLoadPlayerActionState(class AActor* InCharacter, class AActor* InLoadable, class AActor* InInteractable);
+	static void PushCharacterIntoLoadPlayerActionState(class AActor* InCharacter, class AActor* InLoadable, class AActor* InInteractable);
 };
 
 
@@ -21558,7 +21558,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoLocomotionActionState(class AActor* Character);
+	static void PushCharacterIntoLocomotionActionState(class AActor* Character);
 };
 
 
@@ -21737,12 +21737,12 @@ public:
 	}
 
 
-	bool STATIC_IsLookAtEnabled(const struct FLookAtOffset& LookAtOffset);
-	float STATIC_GetLookAtYaw(const struct FLookAtOffset& LookAtOffset);
-	struct FVector STATIC_GetLookAtWorldLocation(const struct FLookAtOffset& LookAtOffset);
-	float STATIC_GetLookAtPitch(const struct FLookAtOffset& LookAtOffset);
-	void STATIC_AddYawInput(float YawInput, struct FLookAtOffset* LookAtOffset);
-	void STATIC_AddPitchInput(float PitchInput, struct FLookAtOffset* LookAtOffset);
+	static bool IsLookAtEnabled(const struct FLookAtOffset& LookAtOffset);
+	static float GetLookAtYaw(const struct FLookAtOffset& LookAtOffset);
+	static struct FVector GetLookAtWorldLocation(const struct FLookAtOffset& LookAtOffset);
+	static float GetLookAtPitch(const struct FLookAtOffset& LookAtOffset);
+	static void AddYawInput(float YawInput, struct FLookAtOffset* LookAtOffset);
+	static void AddPitchInput(float PitchInput, struct FLookAtOffset* LookAtOffset);
 };
 
 
@@ -21819,9 +21819,9 @@ public:
 	}
 
 
-	void STATIC_TickLPVAdaptation(float InDeltaTime, struct FLPVAdaptationState* InOutLPVAdaptationState, struct FPostProcessSettings* InOutPostProcessSettings, struct FTransform* InCurrentShipTransform);
-	void STATIC_SetLPVAdaptationState(bool bInIsPlayerInLPVRefFrameArea, struct FLPVAdaptationState* InOutLPVAdaptationState, struct FVector* InPlayerPawnLocation, struct FTransform* InCurrentShipTransform);
-	void STATIC_InitializeLPVAdaptationStateDefaultOptions(TEnumAsByte<ELPVAdaptationType> InAdaptationType, float InRotationBlendTime, float InTranslationBlendTime, float InAdditionalBlendTime, struct FLPVAdaptationState* InOutLPVAdaptationState);
+	static void TickLPVAdaptation(float InDeltaTime, struct FLPVAdaptationState* InOutLPVAdaptationState, struct FPostProcessSettings* InOutPostProcessSettings, struct FTransform* InCurrentShipTransform);
+	static void SetLPVAdaptationState(bool bInIsPlayerInLPVRefFrameArea, struct FLPVAdaptationState* InOutLPVAdaptationState, struct FVector* InPlayerPawnLocation, struct FTransform* InCurrentShipTransform);
+	static void InitializeLPVAdaptationStateDefaultOptions(TEnumAsByte<ELPVAdaptationType> InAdaptationType, float InRotationBlendTime, float InTranslationBlendTime, float InAdditionalBlendTime, struct FLPVAdaptationState* InOutLPVAdaptationState);
 };
 
 
@@ -22012,18 +22012,18 @@ public:
 	}
 
 
-	void STATIC_ZoomOut(class AMapTable* MapTable, float ZoomValue);
-	void STATIC_ZoomIn(class AMapTable* MapTable, float ZoomValue);
-	void STATIC_SetMinZoom(class AMapTable* MapTable, float MinValue);
-	void STATIC_SetMinPan(class AMapTable* MapTable, const struct FVector2D& MinValue);
-	void STATIC_SetMaxZoom(class AMapTable* MapTable, float MaxValue);
-	void STATIC_SetMaxPan(class AMapTable* MapTable, const struct FVector2D& MaxValue);
-	void STATIC_PanY(class AMapTable* MapTable, float PanValue);
-	void STATIC_PanX(class AMapTable* MapTable, float PanValue);
-	bool STATIC_IsUnderLocalControl(class AMapTable* MapTable);
-	bool STATIC_IsLocationDirty(class AMapTable* MapTable);
-	class AMapTableControlPoint* STATIC_GetControlPoint(class AMapTable* MapTable, int PointIndex);
-	void STATIC_ConsumeLocationChange(class AMapTable* MapTable, struct FWorldMapSetLocation* Event);
+	static void ZoomOut(class AMapTable* MapTable, float ZoomValue);
+	static void ZoomIn(class AMapTable* MapTable, float ZoomValue);
+	static void SetMinZoom(class AMapTable* MapTable, float MinValue);
+	static void SetMinPan(class AMapTable* MapTable, const struct FVector2D& MinValue);
+	static void SetMaxZoom(class AMapTable* MapTable, float MaxValue);
+	static void SetMaxPan(class AMapTable* MapTable, const struct FVector2D& MaxValue);
+	static void PanY(class AMapTable* MapTable, float PanValue);
+	static void PanX(class AMapTable* MapTable, float PanValue);
+	static bool IsUnderLocalControl(class AMapTable* MapTable);
+	static bool IsLocationDirty(class AMapTable* MapTable);
+	static class AMapTableControlPoint* GetControlPoint(class AMapTable* MapTable, int PointIndex);
+	static void ConsumeLocationChange(class AMapTable* MapTable, struct FWorldMapSetLocation* Event);
 };
 
 
@@ -22073,8 +22073,8 @@ public:
 	}
 
 
-	bool STATIC_GetVFXInformationForSurface(class UObject* WorldContextObject, TEnumAsByte<EPhysicalSurface> SurfaceType, struct FMaterialInformationVFXData* VFXSurfaceData);
-	bool STATIC_GetAudioInformationForSurface(class UObject* WorldContextObject, TEnumAsByte<EPhysicalSurface> SurfaceType, struct FMaterialInformationAudioData* AudioSurfaceData);
+	static bool GetVFXInformationForSurface(class UObject* WorldContextObject, TEnumAsByte<EPhysicalSurface> SurfaceType, struct FMaterialInformationVFXData* VFXSurfaceData);
+	static bool GetAudioInformationForSurface(class UObject* WorldContextObject, TEnumAsByte<EPhysicalSurface> SurfaceType, struct FMaterialInformationAudioData* AudioSurfaceData);
 };
 
 
@@ -22284,8 +22284,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoMeleeBlockingActionState(class AActor* Character, class UClass* InputID, float BlockMovementTime);
-	void STATIC_PopCharacterOutOfMeleeBlockingActionState(class AActor* Character);
+	static void PushCharacterIntoMeleeBlockingActionState(class AActor* Character, class UClass* InputID, float BlockMovementTime);
+	static void PopCharacterOutOfMeleeBlockingActionState(class AActor* Character);
 };
 
 
@@ -22705,7 +22705,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoMigrationActionState(class AAthenaCharacter* Character);
+	static void PushCharacterIntoMigrationActionState(class AAthenaCharacter* Character);
 };
 
 
@@ -22927,7 +22927,7 @@ public:
 	}
 
 
-	bool STATIC_ValidateGameEndTelemetryEvent(const struct FPlayerGameEndTelemetryEvent& Event, int MinIdleDuration, int MinActiveDuration, int MinVoiceChatDuration);
+	static bool ValidateGameEndTelemetryEvent(const struct FPlayerGameEndTelemetryEvent& Event, int MinIdleDuration, int MinActiveDuration, int MinVoiceChatDuration);
 	void SeamlessTravelTo(class AAthenaPlayerController* Controller);
 	void OnUIScreenTransitionTelemetryEvent(const struct FUIScreenTransitionTelemetryEvent& Event);
 	void OnShovelTelemetryEvent(const struct FShovelTelemetryEvent& Event);
@@ -23125,7 +23125,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoModalInteractionActionState(class AActor* Character, class AModalInteractionProxy* InInteractionProxy);
+	static void PushCharacterIntoModalInteractionActionState(class AActor* Character, class AModalInteractionProxy* InInteractionProxy);
 };
 
 
@@ -24567,8 +24567,8 @@ public:
 	}
 
 
-	class UObject* STATIC_GetDefaultObject(class UClass* Class);
-	class UObject* STATIC_CreateObject(class UClass* Class);
+	static class UObject* GetDefaultObject(class UClass* Class);
+	static class UObject* CreateObject(class UClass* Class);
 };
 
 
@@ -24585,7 +24585,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoOffBottomTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
+	static void PushCharacterIntoOffBottomTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
 };
 
 
@@ -24602,7 +24602,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoOffTopTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
+	static void PushCharacterIntoOffTopTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
 };
 
 
@@ -24667,7 +24667,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoOnBottomTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
+	static void PushCharacterIntoOnBottomTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
 };
 
 
@@ -24715,7 +24715,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoOnTopTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
+	static void PushCharacterIntoOnTopTransitionLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, TEnumAsByte<ELadderTransitionMode> LadderTransitionMode, const struct FLadderDefinition& LadderDefinition);
 };
 
 
@@ -25050,8 +25050,8 @@ public:
 	}
 
 
-	class FString STATIC_GetServicesScopeId(const struct FPirateIdentity& InPirateIdentity);
-	struct FPirateIdentity STATIC_GetPirateIdentity(class AActor* InPawn);
+	static class FString GetServicesScopeId(const struct FPirateIdentity& InPirateIdentity);
+	static struct FPirateIdentity GetPirateIdentity(class AActor* InPawn);
 };
 
 
@@ -25433,7 +25433,7 @@ public:
 	}
 
 
-	TArray<class UClass*> STATIC_GetEntitlements(const TScriptInterface<class UPlayerEntitlementViewInterface>& InPlayerEntitlementViewInterface, class UClass* InEntitlementType);
+	static TArray<class UClass*> GetEntitlements(const TScriptInterface<class UPlayerEntitlementViewInterface>& InPlayerEntitlementViewInterface, class UClass* InEntitlementType);
 };
 
 
@@ -25489,7 +25489,7 @@ public:
 	}
 
 
-	void STATIC_DebugRemoveLocalPlayer(class UObject* WorldContextObject, int ControllerId);
+	static void DebugRemoveLocalPlayer(class UObject* WorldContextObject, int ControllerId);
 };
 
 
@@ -26150,7 +26150,7 @@ public:
 	}
 
 
-	void STATIC_CheckWeldParentMatches(class UPrimitiveComponent* TestComponent, class UPrimitiveComponent* ExpectedParentComponent);
+	static void CheckWeldParentMatches(class UPrimitiveComponent* TestComponent, class UPrimitiveComponent* ExpectedParentComponent);
 };
 
 
@@ -26323,7 +26323,7 @@ public:
 	}
 
 
-	struct FProjectileAim STATIC_ClampAimPositionToWeapon(class AProjectileWeapon* ProjectileWeapon, const struct FProjectileAim& InAim, double RewindTime);
+	static struct FProjectileAim ClampAimPositionToWeapon(class AProjectileWeapon* ProjectileWeapon, const struct FProjectileAim& InAim, double RewindTime);
 };
 
 
@@ -27061,7 +27061,7 @@ public:
 	}
 
 
-	void STATIC_UpdateRendererSettings();
+	static void UpdateRendererSettings();
 };
 
 
@@ -27095,8 +27095,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoRepairObjectActionState(const struct FNetSubObjectPtr& Repairable, class AActor* Character, class UClass* InputID);
-	void STATIC_PopCharacterOutOfRepairObjectActionState(class AActor* Character);
+	static void PushCharacterIntoRepairObjectActionState(const struct FNetSubObjectPtr& Repairable, class AActor* Character, class UClass* InputID);
+	static void PopCharacterOutOfRepairObjectActionState(class AActor* Character);
 };
 
 
@@ -27899,9 +27899,9 @@ public:
 	}
 
 
-	class ASailHoist* STATIC_SetupSailHoistServerSide(class UObject* WorldContextObject, const struct FVector& SpawnLocation, class UClass* SailHoistClass);
-	void STATIC_SetupSailHoistClientSideWithProvidedHoist(class UObject* WorldContextObject, class ASailHoist* Hoist);
-	class ASailHoist* STATIC_SetupSailHoistClientSide(class UObject* WorldContextObject);
+	static class ASailHoist* SetupSailHoistServerSide(class UObject* WorldContextObject, const struct FVector& SpawnLocation, class UClass* SailHoistClass);
+	static void SetupSailHoistClientSideWithProvidedHoist(class UObject* WorldContextObject, class ASailHoist* Hoist);
+	static class ASailHoist* SetupSailHoistClientSide(class UObject* WorldContextObject);
 };
 
 
@@ -27918,8 +27918,8 @@ public:
 	}
 
 
-	void STATIC_SetupHoistControl(class ASailHoist* Hoist, const class FString& MastLookatPath, const struct FName& MastLookatScoket, class URiggingSystemComponent* Rigging, const struct FName& RiggingLineGroup, int RiggingRopeIndex);
-	void STATIC_SetupAngleControl(class ASailAngle* Angle, const class FString& MastLookatPath, const struct FName& MastLookatScoket, class URiggingSystemComponent* Rigging, const struct FName& RiggingLineGroup, int RiggingLeftRopeIndex, int RiggingRightRopeIndex);
+	static void SetupHoistControl(class ASailHoist* Hoist, const class FString& MastLookatPath, const struct FName& MastLookatScoket, class URiggingSystemComponent* Rigging, const struct FName& RiggingLineGroup, int RiggingRopeIndex);
+	static void SetupAngleControl(class ASailAngle* Angle, const class FString& MastLookatPath, const struct FName& MastLookatScoket, class URiggingSystemComponent* Rigging, const struct FName& RiggingLineGroup, int RiggingLeftRopeIndex, int RiggingRightRopeIndex);
 };
 
 
@@ -28270,8 +28270,8 @@ public:
 	}
 
 
-	bool STATIC_TestRegisterAndGetService(class UObject* WorldContextObject);
-	bool STATIC_TestGetServiceUnregistered(class UObject* WorldContextObject);
+	static bool TestRegisterAndGetService(class UObject* WorldContextObject);
+	static bool TestGetServiceUnregistered(class UObject* WorldContextObject);
 };
 
 
@@ -28740,8 +28740,8 @@ public:
 	}
 
 
-	bool STATIC_ShipDescToJson(const struct FShipDesc& ShipDesc, class FString* JsonString);
-	bool STATIC_ShipDescFromJson(const class FString& JsonString, struct FShipDesc* ShipDesc);
+	static bool ShipDescToJson(const struct FShipDesc& ShipDesc, class FString* JsonString);
+	static bool ShipDescFromJson(const class FString& JsonString, struct FShipDesc* ShipDesc);
 };
 
 
@@ -28758,7 +28758,7 @@ public:
 	}
 
 
-	struct FShipDesc STATIC_GenerateShipDescForTestLargeShip();
+	static struct FShipDesc GenerateShipDescForTestLargeShip();
 };
 
 
@@ -28825,7 +28825,7 @@ public:
 
 	class AActor* SpawnSyncWithDatabase(class UObject* WorldContextObject, const struct FShipDesc& Desc, const TScriptInterface<class UShipAssetClassDatabaseInterface>& ShipAssetClassDatabaseInterface, const struct FVector& Position, const struct FRotator& Rotation);
 	class AActor* SpawnSync(class UObject* WorldContextObject, const struct FShipDesc& Desc, const struct FVector& Position, const struct FRotator& Rotation);
-	class UShipFactory* STATIC_MakeShipFactory();
+	static class UShipFactory* MakeShipFactory();
 };
 
 
@@ -28861,17 +28861,17 @@ public:
 	}
 
 
-	class AActor* STATIC_SpawnShip(const struct FVector& Pos, const struct FRotator& Rotation);
-	void STATIC_SpawnFunctioningSmallShipWithCrewId(const struct FVector& Pos, const struct FRotator& Rotation, const struct FGuid& CrewId);
-	void STATIC_SpawnFunctioningSmallShip(const struct FVector& Pos, const struct FRotator& Rotation);
-	void STATIC_SpawnFunctioningLargeShip(const struct FVector& Pos, const struct FRotator& Rotation);
-	TArray<class AWheel*> STATIC_GetWheels(class AActor* Actor);
-	TArray<class ASailHoist*> STATIC_GetSailHoists(class AActor* Actor);
-	TArray<class ASailAngle*> STATIC_GetSailAnglers(class AActor* Actor);
-	TArray<class ALadder*> STATIC_GetLadders(class AActor* Actor);
-	TArray<class AActor*> STATIC_GetInteractablesOfClass(class AActor* Actor, class UClass* Class);
-	TArray<class AActor*> STATIC_GetInteractables(class AActor* Actor);
-	TArray<class ACannon*> STATIC_GetCannons(class AActor* Actor);
+	static class AActor* SpawnShip(const struct FVector& Pos, const struct FRotator& Rotation);
+	static void SpawnFunctioningSmallShipWithCrewId(const struct FVector& Pos, const struct FRotator& Rotation, const struct FGuid& CrewId);
+	static void SpawnFunctioningSmallShip(const struct FVector& Pos, const struct FRotator& Rotation);
+	static void SpawnFunctioningLargeShip(const struct FVector& Pos, const struct FRotator& Rotation);
+	static TArray<class AWheel*> GetWheels(class AActor* Actor);
+	static TArray<class ASailHoist*> GetSailHoists(class AActor* Actor);
+	static TArray<class ASailAngle*> GetSailAnglers(class AActor* Actor);
+	static TArray<class ALadder*> GetLadders(class AActor* Actor);
+	static TArray<class AActor*> GetInteractablesOfClass(class AActor* Actor, class UClass* Class);
+	static TArray<class AActor*> GetInteractables(class AActor* Actor);
+	static TArray<class ACannon*> GetCannons(class AActor* Actor);
 };
 
 
@@ -29001,8 +29001,8 @@ public:
 	}
 
 
-	class UShipPartCustomization* STATIC_MakeSyncShipPartCustomization();
-	class UShipPartCustomization* STATIC_MakeAsyncShipPartCustomization();
+	static class UShipPartCustomization* MakeSyncShipPartCustomization();
+	static class UShipPartCustomization* MakeAsyncShipPartCustomization();
 	void Customize(class AShip* InShip, const struct FPartDesc& PartDesc, const struct FScriptDelegate& OnSuccessCallback, const struct FScriptDelegate& OnFailureCallback);
 };
 
@@ -29039,7 +29039,7 @@ public:
 	}
 
 
-	bool STATIC_ApplyCustomization(class UShipPartCustomizationComponent* CustomizationComponent, const struct FPartDesc& InPartDesc);
+	static bool ApplyCustomization(class UShipPartCustomizationComponent* CustomizationComponent, const struct FPartDesc& InPartDesc);
 };
 
 
@@ -29826,7 +29826,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoSittingActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character, const struct FSittingActionStateParams& SittingActionStateParams);
+	static void PushCharacterIntoSittingActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character, const struct FSittingActionStateParams& SittingActionStateParams);
 };
 
 
@@ -31235,7 +31235,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoStunnedActionState(class AAthenaCharacter* Character, const struct FStunnedActionStateParams& Params);
+	static void PushCharacterIntoStunnedActionState(class AAthenaCharacter* Character, const struct FStunnedActionStateParams& Params);
 };
 
 
@@ -31382,8 +31382,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoSwallowedByKrakenActionState(class AActor* Character, class AKrakenAnimatedTentacle* Tentacle);
-	void STATIC_PopCharacterOutOfSwallowedByKrakenActionState(class AActor* Character);
+	static void PushCharacterIntoSwallowedByKrakenActionState(class AActor* Character, class AKrakenAnimatedTentacle* Tentacle);
+	static void PopCharacterOutOfSwallowedByKrakenActionState(class AActor* Character);
 };
 
 
@@ -32806,7 +32806,7 @@ public:
 	}
 
 
-	void STATIC_PopCharOutOfActionState(class UNPCDialogComponent* NPCDialogComp, class AActor* Character);
+	static void PopCharOutOfActionState(class UNPCDialogComponent* NPCDialogComp, class AActor* Character);
 };
 
 
@@ -33056,8 +33056,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoTeleportActionStateWithCustomTeleportLocation(class AActor* Character, const struct FTeleportLocation& TeleportLocation, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX);
-	void STATIC_PushCharacterIntoTeleportActionState(class AActor* Character, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX);
+	static void PushCharacterIntoTeleportActionStateWithCustomTeleportLocation(class AActor* Character, const struct FTeleportLocation& TeleportLocation, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX);
+	static void PushCharacterIntoTeleportActionState(class AActor* Character, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX);
 };
 
 
@@ -33074,12 +33074,12 @@ public:
 	}
 
 
-	void STATIC_SortTeleportLocationsByProximity(const struct FVector& Pivot, TArray<struct FTeleportLocation>* Locations);
-	TArray<struct FTeleportLocation> STATIC_GetTeleportLocationsOnShip(class AAthenaCharacter* InCharacter, class AShip* InShip);
-	TArray<struct FTeleportLocation> STATIC_GetTeleportLocationsOnDeckOfShip(class AAthenaCharacter* InCharacter, class AShip* InShip, TEnumAsByte<EShipDeck> InDeck);
-	struct FTeleportLocation STATIC_GetTeleportLocationOnShip(class AAthenaCharacter* InCharacter, class AShip* InShip);
-	struct FTeleportLocation STATIC_GetTeleportLocationAroundTarget(class AAthenaCharacter* InCharacter, class AActor* InTarget, float InDistanceFromTarget);
-	struct FTeleportLocation STATIC_GetNearestTeleportLocationOnLand(class AAthenaCharacter* InCharacter);
+	static void SortTeleportLocationsByProximity(const struct FVector& Pivot, TArray<struct FTeleportLocation>* Locations);
+	static TArray<struct FTeleportLocation> GetTeleportLocationsOnShip(class AAthenaCharacter* InCharacter, class AShip* InShip);
+	static TArray<struct FTeleportLocation> GetTeleportLocationsOnDeckOfShip(class AAthenaCharacter* InCharacter, class AShip* InShip, TEnumAsByte<EShipDeck> InDeck);
+	static struct FTeleportLocation GetTeleportLocationOnShip(class AAthenaCharacter* InCharacter, class AShip* InShip);
+	static struct FTeleportLocation GetTeleportLocationAroundTarget(class AAthenaCharacter* InCharacter, class AActor* InTarget, float InDistanceFromTarget);
+	static struct FTeleportLocation GetNearestTeleportLocationOnLand(class AAthenaCharacter* InCharacter);
 };
 
 
@@ -33198,7 +33198,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoTestControlObjectActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character, float DockTime);
+	static void PushCharacterIntoTestControlObjectActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* ControlledObject, class AActor* Character, float DockTime);
 };
 
 
@@ -33371,8 +33371,8 @@ public:
 	}
 
 
-	void STATIC_FireTestEventToServer(class AAthenaPlayerController* PlayerController, int TestEventData);
-	void STATIC_FireTestEventToClient(class AAthenaPlayerController* PlayerController, int TestEventData);
+	static void FireTestEventToServer(class AAthenaPlayerController* PlayerController, int TestEventData);
+	static void FireTestEventToClient(class AAthenaPlayerController* PlayerController, int TestEventData);
 };
 
 
@@ -33514,7 +33514,7 @@ public:
 	}
 
 
-	class UTestReturnCompleteAfterTimeoutPlayerRelevancyService* STATIC_CreateTestReturnCompleteAfterTimeoutPlayerRelevancyService(float InTimeoutWanted);
+	static class UTestReturnCompleteAfterTimeoutPlayerRelevancyService* CreateTestReturnCompleteAfterTimeoutPlayerRelevancyService(float InTimeoutWanted);
 };
 
 
@@ -33550,7 +33550,7 @@ public:
 	}
 
 
-	class UTestShipAssetClassDatabase* STATIC_MakeTestShipAssetClassDatabase();
+	static class UTestShipAssetClassDatabase* MakeTestShipAssetClassDatabase();
 };
 
 
@@ -33648,7 +33648,7 @@ public:
 	}
 
 
-	void STATIC_GetTeleportPoints(class UObject* WorldContextObject, TEnumAsByte<ECollisionChannel> BlockingChannel, float CharacterRadius, float CharacterHalfHeight, float IntervalSize, const struct FVector& MinExtents, const struct FVector& MaxExtents, TArray<struct FVector>* Points);
+	static void GetTeleportPoints(class UObject* WorldContextObject, TEnumAsByte<ECollisionChannel> BlockingChannel, float CharacterRadius, float CharacterHalfHeight, float IntervalSize, const struct FVector& MinExtents, const struct FVector& MaxExtents, TArray<struct FVector>* Points);
 };
 
 
@@ -33821,7 +33821,7 @@ public:
 	}
 
 
-	void STATIC_OverrideTinySharkExperienceRepositionTimerParam(class ATinySharkExperience* TinySharkExperience, float InTime);
+	static void OverrideTinySharkExperienceRepositionTimerParam(class ATinySharkExperience* TinySharkExperience, float InTime);
 };
 
 
@@ -34516,7 +34516,7 @@ public:
 
 
 	void UnbindDelegate();
-	class UUnifiedDelegateTestUnifiedDelegate* STATIC_MakeTestUnifiedDelegate();
+	static class UUnifiedDelegateTestUnifiedDelegate* MakeTestUnifiedDelegate();
 	bool IsDelegateBound();
 	void BindDelegate(const struct FScriptDelegate& InDynamicDelegate);
 };
@@ -34535,8 +34535,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoUnloadItemActionState(class AActor* Character, class AActor* UnloadableActor, class AActor* Interactable);
-	void STATIC_PopCharacterOutOfUnloadItemActionState(class AActor* Character);
+	static void PushCharacterIntoUnloadItemActionState(class AActor* Character, class AActor* UnloadableActor, class AActor* Interactable);
+	static void PopCharacterOutOfUnloadItemActionState(class AActor* Character);
 };
 
 
@@ -34575,7 +34575,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoUseCannonActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* CannonActor, class AActor* Character);
+	static void PushCharacterIntoUseCannonActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* CannonActor, class AActor* Character);
 };
 
 
@@ -34622,8 +34622,8 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoUseItemActionState(class AActor* Character, class AActor* Usable, class UClass* InputID);
-	void STATIC_PopCharacterOutOfUseItemActionState(class AActor* Character);
+	static void PushCharacterIntoUseItemActionState(class AActor* Character, class AActor* Usable, class UClass* InputID);
+	static void PopCharacterOutOfUseItemActionState(class AActor* Character);
 };
 
 
@@ -34640,7 +34640,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoUseLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, const struct FLadderDefinition& LadderDefinition);
+	static void PushCharacterIntoUseLadderActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* LadderActor, class AActor* Character, float InteractingHeight, unsigned char ClimbId, const struct FLadderDefinition& LadderDefinition);
 };
 
 
@@ -34657,7 +34657,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoUseMapTableActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* MapTableActor, class AActor* Character);
+	static void PushCharacterIntoUseMapTableActionState(TEnumAsByte<EActionStateMachineTrackId> TrackId, class AActor* MapTableActor, class AActor* Character);
 };
 
 
@@ -34727,24 +34727,24 @@ public:
 	}
 
 
-	void STATIC_WithWorldOwner(struct FVfxSpawner* Spawner);
-	void STATIC_WithRelativeScale(const struct FVector& Scale3D, struct FVfxSpawner* Spawner);
-	void STATIC_WithOwner(class UObject* InOwner, bool InOwnerOnlySee, bool InOwnerNoSee, struct FVfxSpawner* Spawner);
-	void STATIC_WithEffect(class UObject* InEmitterTemplate, bool InAutoDestroy, struct FVfxSpawner* Spawner);
-	void STATIC_WithCustomLocalSpaceDelegateForCharacter(class AAthenaPlayerCharacter* AthenaPlayerCharacter, TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode, struct FVfxSpawner* Spawner);
-	class UParticleSystemComponent* STATIC_Spawn(class UObject* WorldContextObject, struct FVfxSpawner* Spawner);
-	void STATIC_SetUnderwater(bool IsUnderwater, struct FVfxSpawner* Spawner);
-	void STATIC_SetCustomLocalSpaceDelegateForCharacter(class UParticleSystemComponent* PSC, class AAthenaCharacter* AthenaCharacter, TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode);
-	void STATIC_InVfxRegion(TEnumAsByte<EVfxRegion> InRegion, struct FVfxSpawner* Spawner);
-	void STATIC_AttachedToSocket(class USceneComponent* InAttachToComponent, const struct FName& InAttachPointName, TEnumAsByte<EAttachLocation> InLocationType, struct FVfxSpawner* Spawner);
-	void STATIC_AttachedToComponent(class USceneComponent* InAttachToComponent, TEnumAsByte<EAttachLocation> InLocationType, struct FVfxSpawner* Spawner);
-	void STATIC_AtSocketLocation(class USceneComponent* InSocketOwnerComponent, const struct FName& InSocketName, const struct FVector& InLocation, const struct FRotator& InRotation, struct FVfxSpawner* Spawner);
-	void STATIC_AtLocation(const struct FVector& InLocation, const struct FRotator& InRotation, struct FVfxSpawner* Spawner);
-	class UParticleSystemComponent* STATIC_AthenaSpawnShipRelativeEmitterAtSocketLocation(class UObject* EmitterTemplate, class AAthenaPlayerCharacter* AthenaPlayerCharacter, class USceneComponent* SocketOwnerComponent, const struct FName& SocketName, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
-	class UParticleSystemComponent* STATIC_AthenaSpawnEmitterAttachedWithOwner(class UObject* EmitterTemplate, class USceneComponent* AttachToComponent, class UObject* Owner, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
-	class UParticleSystemComponent* STATIC_AthenaSpawnEmitterAttachedAndWorldOwned(class UObject* EmitterTemplate, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
-	class UParticleSystemComponent* STATIC_AthenaSpawnEmitterAtLocationWithOwner(class UObject* WorldContextObject, class UObject* EmitterTemplate, class AActor* Owner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
-	class UParticleSystemComponent* STATIC_AthenaSpawnEmitterAtLocation(class UObject* WorldContextObject, class UObject* EmitterTemplate, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
+	static void WithWorldOwner(struct FVfxSpawner* Spawner);
+	static void WithRelativeScale(const struct FVector& Scale3D, struct FVfxSpawner* Spawner);
+	static void WithOwner(class UObject* InOwner, bool InOwnerOnlySee, bool InOwnerNoSee, struct FVfxSpawner* Spawner);
+	static void WithEffect(class UObject* InEmitterTemplate, bool InAutoDestroy, struct FVfxSpawner* Spawner);
+	static void WithCustomLocalSpaceDelegateForCharacter(class AAthenaPlayerCharacter* AthenaPlayerCharacter, TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode, struct FVfxSpawner* Spawner);
+	static class UParticleSystemComponent* Spawn(class UObject* WorldContextObject, struct FVfxSpawner* Spawner);
+	static void SetUnderwater(bool IsUnderwater, struct FVfxSpawner* Spawner);
+	static void SetCustomLocalSpaceDelegateForCharacter(class UParticleSystemComponent* PSC, class AAthenaCharacter* AthenaCharacter, TEnumAsByte<EVfxCustomLocalSpaceMode> CustomLocalSpaceMode);
+	static void InVfxRegion(TEnumAsByte<EVfxRegion> InRegion, struct FVfxSpawner* Spawner);
+	static void AttachedToSocket(class USceneComponent* InAttachToComponent, const struct FName& InAttachPointName, TEnumAsByte<EAttachLocation> InLocationType, struct FVfxSpawner* Spawner);
+	static void AttachedToComponent(class USceneComponent* InAttachToComponent, TEnumAsByte<EAttachLocation> InLocationType, struct FVfxSpawner* Spawner);
+	static void AtSocketLocation(class USceneComponent* InSocketOwnerComponent, const struct FName& InSocketName, const struct FVector& InLocation, const struct FRotator& InRotation, struct FVfxSpawner* Spawner);
+	static void AtLocation(const struct FVector& InLocation, const struct FRotator& InRotation, struct FVfxSpawner* Spawner);
+	static class UParticleSystemComponent* AthenaSpawnShipRelativeEmitterAtSocketLocation(class UObject* EmitterTemplate, class AAthenaPlayerCharacter* AthenaPlayerCharacter, class USceneComponent* SocketOwnerComponent, const struct FName& SocketName, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
+	static class UParticleSystemComponent* AthenaSpawnEmitterAttachedWithOwner(class UObject* EmitterTemplate, class USceneComponent* AttachToComponent, class UObject* Owner, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
+	static class UParticleSystemComponent* AthenaSpawnEmitterAttachedAndWorldOwned(class UObject* EmitterTemplate, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
+	static class UParticleSystemComponent* AthenaSpawnEmitterAtLocationWithOwner(class UObject* WorldContextObject, class UObject* EmitterTemplate, class AActor* Owner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
+	static class UParticleSystemComponent* AthenaSpawnEmitterAtLocation(class UObject* WorldContextObject, class UObject* EmitterTemplate, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bIsUnderwater, TEnumAsByte<EVfxRegion> VfxRegion);
 };
 
 
@@ -34779,9 +34779,9 @@ public:
 	}
 
 
-	class UParticleSystemComponent* STATIC_SelectUpdateVfxWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class AActor* Owner, class UParticleSystemComponent* ExistingVfx, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater);
-	class UParticleSystemComponent* STATIC_SelectSpawnVfxAttachedWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class USceneComponent* AttachToComponent, class AActor* Owner, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater);
-	class UParticleSystemComponent* STATIC_SelectSpawnVfx(class AActor* Actor, class UVfxSelectorDataAsset* SelectorAsset, float Value, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater);
+	static class UParticleSystemComponent* SelectUpdateVfxWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class AActor* Owner, class UParticleSystemComponent* ExistingVfx, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater);
+	static class UParticleSystemComponent* SelectSpawnVfxAttachedWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class USceneComponent* AttachToComponent, class AActor* Owner, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater);
+	static class UParticleSystemComponent* SelectSpawnVfx(class AActor* Actor, class UVfxSelectorDataAsset* SelectorAsset, float Value, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater);
 };
 
 
@@ -35234,10 +35234,10 @@ public:
 	}
 
 
-	void STATIC_PrintBlackboard(const struct FVoyageGeneratorSimBlackboard& Blackboard);
-	TArray<int> STATIC_GetValuesFromBlackboardByNameInt(const struct FVoyageGeneratorSimBlackboard& Blackboard, const struct FName& Name);
-	TArray<class FString> STATIC_GetValuesFromBlackboardByName(const struct FVoyageGeneratorSimBlackboard& Blackboard, const struct FName& Name);
-	struct FVoyageGeneratorSimBlackboard STATIC_CombineBlackboards(const struct FVoyageGeneratorSimBlackboard& A, const struct FVoyageGeneratorSimBlackboard& B);
+	static void PrintBlackboard(const struct FVoyageGeneratorSimBlackboard& Blackboard);
+	static TArray<int> GetValuesFromBlackboardByNameInt(const struct FVoyageGeneratorSimBlackboard& Blackboard, const struct FName& Name);
+	static TArray<class FString> GetValuesFromBlackboardByName(const struct FVoyageGeneratorSimBlackboard& Blackboard, const struct FName& Name);
+	static struct FVoyageGeneratorSimBlackboard CombineBlackboards(const struct FVoyageGeneratorSimBlackboard& A, const struct FVoyageGeneratorSimBlackboard& B);
 };
 
 
@@ -35254,9 +35254,9 @@ public:
 	}
 
 
-	struct FVector STATIC_GetIslandLocation(TArray<struct FIsland> Islands, const struct FName& InName);
-	class UVoyageGeneratorSimResult* STATIC_GenerateVoyageFromRecipe(const struct FVector& StartingLocation, class UVoyageRecipeDataAsset* Recipe, TArray<struct FIsland> Islands, int Seed, class UObject* WorldContextObject);
-	TArray<int> STATIC_GenerateDistributionFromRecipe(class UVoyageRecipeDataAsset* Recipe, int Seed);
+	static struct FVector GetIslandLocation(TArray<struct FIsland> Islands, const struct FName& InName);
+	static class UVoyageGeneratorSimResult* GenerateVoyageFromRecipe(const struct FVector& StartingLocation, class UVoyageRecipeDataAsset* Recipe, TArray<struct FIsland> Islands, int Seed, class UObject* WorldContextObject);
+	static TArray<int> GenerateDistributionFromRecipe(class UVoyageRecipeDataAsset* Recipe, int Seed);
 };
 
 
@@ -35413,7 +35413,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoWaitForDemoResetActionState(class AActor* Character);
+	static void PushCharacterIntoWaitForDemoResetActionState(class AActor* Character);
 };
 
 
@@ -35430,7 +35430,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoWaitingToSpawnActionState(class AAthenaCharacter* InCharacter, class AActor* InStartSpot, bool InReceiveLoadout, bool InReceiveEntitlement, bool InWaitForRelevancy, int InStreamOutLevel, int InStreamInLevel);
+	static void PushCharacterIntoWaitingToSpawnActionState(class AAthenaCharacter* InCharacter, class AActor* InStartSpot, bool InReceiveLoadout, bool InReceiveEntitlement, bool InWaitForRelevancy, int InStreamOutLevel, int InStreamInLevel);
 };
 
 
@@ -35773,7 +35773,7 @@ public:
 	}
 
 
-	bool STATIC_TestCreatingWeakActorHandleFromConsoleStringWithValidNetGuidInvalidName(class AActor* Actor);
+	static bool TestCreatingWeakActorHandleFromConsoleStringWithValidNetGuidInvalidName(class AActor* Actor);
 };
 
 
@@ -35890,8 +35890,8 @@ public:
 	}
 
 
-	struct FWheelAdditiveAlphaSets STATIC_UpdateAdditiveIdles(float Rate, float AnimationTime, const struct FWheelAdditiveProperties& WithinRange, const struct FWheelAdditiveAlphaSets& SetAdditiveIdles, const struct FBlendAdditiveValues& SetAdditiveBlendValues, TEnumAsByte<EWheelAnimationType> WheelTurnType);
-	struct FWheelArmIKBoolSets STATIC_CharacterWheelAnimationUpdate(class AActor* Wheel, const struct FSocketId& LeftHandSocketName, const struct FSocketId& RightHandSocketName, float WheelTime, float Rate, bool LeftArm, bool RightArm, TEnumAsByte<EWheelAnimationType> WheelTurnType, const struct FWheelArmIKDownWithinRange& WithinRange, struct FTransform* LeftHandTransform, struct FTransform* RightHandTransform);
+	static struct FWheelAdditiveAlphaSets UpdateAdditiveIdles(float Rate, float AnimationTime, const struct FWheelAdditiveProperties& WithinRange, const struct FWheelAdditiveAlphaSets& SetAdditiveIdles, const struct FBlendAdditiveValues& SetAdditiveBlendValues, TEnumAsByte<EWheelAnimationType> WheelTurnType);
+	static struct FWheelArmIKBoolSets CharacterWheelAnimationUpdate(class AActor* Wheel, const struct FSocketId& LeftHandSocketName, const struct FSocketId& RightHandSocketName, float WheelTime, float Rate, bool LeftArm, bool RightArm, TEnumAsByte<EWheelAnimationType> WheelTurnType, const struct FWheelArmIKDownWithinRange& WithinRange, struct FTransform* LeftHandTransform, struct FTransform* RightHandTransform);
 };
 
 
@@ -36032,8 +36032,8 @@ public:
 	}
 
 
-	bool STATIC_IsThirdPersonMeshComponentTickEnabled(class AWieldableItem* InWieldable);
-	bool STATIC_IsFirstPersonMeshComponentTickEnabled(class AWieldableItem* InWieldable);
+	static bool IsThirdPersonMeshComponentTickEnabled(class AWieldableItem* InWieldable);
+	static bool IsFirstPersonMeshComponentTickEnabled(class AWieldableItem* InWieldable);
 };
 
 
@@ -36178,7 +36178,7 @@ public:
 	}
 
 
-	void STATIC_ChangeItemSize(class AWieldableItem* InWieldable, TEnumAsByte<EWieldableItemSize> InNewSize);
+	static void ChangeItemSize(class AWieldableItem* InWieldable, TEnumAsByte<EWieldableItemSize> InNewSize);
 };
 
 
@@ -36299,7 +36299,7 @@ public:
 	}
 
 
-	class UClass* STATIC_GetSeaIdFromWorldSpaceLocation(const struct FVector& InLocation);
+	static class UClass* GetSeaIdFromWorldSpaceLocation(const struct FVector& InLocation);
 };
 
 
@@ -36381,19 +36381,19 @@ public:
 	}
 
 
-	void STATIC_TestSetNetCullDistance(class AActor* Actor, float InDistance);
-	void STATIC_TestSetActorRoleAutonomousProxy(class AActor* Actor);
-	bool STATIC_IsParentActorInChildActorComponentHierarchy(class AActor* ChildActor, class AActor* TestParentActor);
-	bool STATIC_IsDependentActorSpawnAckedOnClient(class AActor* RealViewer, class AActor* DependencyActor);
-	bool STATIC_IsActorTickFunctionRegistered(class AActor* Actor);
-	struct FTransform STATIC_GetTransformOfActorRelativeToAnother(class AActor* TargetActor, class AActor* RelativeToActor);
-	int STATIC_GetActorNetGuidValue(class AActor* Actor);
-	TArray<class AActor*> STATIC_FindChildActorsByClass(class AActor* ParentActor, class UClass* Class);
-	class AActor* STATIC_FindActorByNetGuidValue(class UObject* WorldContext, int NetGuidValue);
-	class AActor* STATIC_FindActorByName(class UObject* WorldContext, const class FString& ActorName);
-	class AActor* STATIC_FindActorByClass(class UObject* WorldContext, class UClass* Class);
-	TArray<class AActor*> STATIC_FilterActorArrayByInterface(TArray<class AActor*> Actors, class UClass* InterfaceToTest);
-	class AActor* STATIC_ClosestActorToPoint(TArray<class AActor*> Actors, const struct FVector& Position);
+	static void TestSetNetCullDistance(class AActor* Actor, float InDistance);
+	static void TestSetActorRoleAutonomousProxy(class AActor* Actor);
+	static bool IsParentActorInChildActorComponentHierarchy(class AActor* ChildActor, class AActor* TestParentActor);
+	static bool IsDependentActorSpawnAckedOnClient(class AActor* RealViewer, class AActor* DependencyActor);
+	static bool IsActorTickFunctionRegistered(class AActor* Actor);
+	static struct FTransform GetTransformOfActorRelativeToAnother(class AActor* TargetActor, class AActor* RelativeToActor);
+	static int GetActorNetGuidValue(class AActor* Actor);
+	static TArray<class AActor*> FindChildActorsByClass(class AActor* ParentActor, class UClass* Class);
+	static class AActor* FindActorByNetGuidValue(class UObject* WorldContext, int NetGuidValue);
+	static class AActor* FindActorByName(class UObject* WorldContext, const class FString& ActorName);
+	static class AActor* FindActorByClass(class UObject* WorldContext, class UClass* Class);
+	static TArray<class AActor*> FilterActorArrayByInterface(TArray<class AActor*> Actors, class UClass* InterfaceToTest);
+	static class AActor* ClosestActorToPoint(TArray<class AActor*> Actors, const struct FVector& Position);
 };
 
 
@@ -36445,7 +36445,7 @@ public:
 	}
 
 
-	bool STATIC_IsWorldSpacePositionInsideVolume(class UStaticMeshComponent* Volume, const struct FVector& Position);
+	static bool IsWorldSpacePositionInsideVolume(class UStaticMeshComponent* Volume, const struct FVector& Position);
 };
 
 
@@ -36486,7 +36486,7 @@ public:
 	}
 
 
-	void STATIC_DisableDitheringOnMaterial(class UMaterialInstance* Material);
+	static void DisableDitheringOnMaterial(class UMaterialInstance* Material);
 };
 
 
@@ -36830,7 +36830,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoInteractObjectActionState(const struct FNetSubObjectPtr& InteractObject, class AActor* Character);
+	static void PushCharacterIntoInteractObjectActionState(const struct FNetSubObjectPtr& InteractObject, class AActor* Character);
 };
 
 
@@ -37133,7 +37133,7 @@ public:
 	}
 
 
-	bool STATIC_DetermineDropPos(class AActor* SrcActor, class AActor* DroppedActor, const struct FVector& InSpawnPos, const struct FDropItemParams& DropItemParams, struct FHitResult* OutHit, struct FHitResult* OutSweepHit);
+	static bool DetermineDropPos(class AActor* SrcActor, class AActor* DroppedActor, const struct FVector& InSpawnPos, const struct FDropItemParams& DropItemParams, struct FHitResult* OutHit, struct FHitResult* OutSweepHit);
 };
 
 
@@ -37165,9 +37165,9 @@ public:
 	}
 
 
-	class AActor* STATIC_SpawnProxyItem(class UObject* WorldContext, class UClass* What, const struct FTransform& Where);
-	class AWieldableItem* STATIC_SpawnItemAsWieldable(class UObject* WorldContext, class UClass* What, const struct FTransform& Where, class AActor* Owner);
-	class AItemInfo* STATIC_SpawnItem(class UObject* WorldContext, class UClass* What, const struct FTransform& Where);
+	static class AActor* SpawnProxyItem(class UObject* WorldContext, class UClass* What, const struct FTransform& Where);
+	static class AWieldableItem* SpawnItemAsWieldable(class UObject* WorldContext, class UClass* What, const struct FTransform& Where, class AActor* Owner);
+	static class AItemInfo* SpawnItem(class UObject* WorldContext, class UClass* What, const struct FTransform& Where);
 };
 
 
@@ -37217,7 +37217,7 @@ public:
 	}
 
 
-	bool STATIC_IsActorWieldingLargeItem(class AActor* WieldingActor);
+	static bool IsActorWieldingLargeItem(class AActor* WieldingActor);
 };
 
 
@@ -37381,7 +37381,7 @@ public:
 	}
 
 
-	void STATIC_PushCharacterIntoPickupObjectActionState(class AActor* InCharacter, class AActor* InPickupableObject);
+	static void PushCharacterIntoPickupObjectActionState(class AActor* InCharacter, class AActor* InPickupableObject);
 };
 
 

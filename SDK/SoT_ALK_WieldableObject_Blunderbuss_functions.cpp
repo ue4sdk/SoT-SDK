@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ALK_WieldableObject_Blunderbuss_parameters.hpp"
+#include "SoT_ALK_WieldableObject_Blunderbuss_classes.hpp"
 
 namespace SDK
 {

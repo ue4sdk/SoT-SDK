@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_XMarksTheSpot_TheJourneyForBuriedTreasure_parameters.hpp"
+#include "SoT_XMarksTheSpot_TheJourneyForBuriedTreasure_classes.hpp"
 
 namespace SDK
 {

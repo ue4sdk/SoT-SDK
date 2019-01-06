@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MermaidGem_ItemInfo_Emerald_parameters.hpp"
+#include "SoT_BP_MermaidGem_ItemInfo_Emerald_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void ABP_MermaidGem_ItemInfo_Emerald_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MermaidGem_ItemInfo_Emerald.BP_MermaidGem_ItemInfo_Emerald_C.UserConstructionScript");
 
-	ABP_MermaidGem_ItemInfo_Emerald_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

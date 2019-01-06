@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CapstanArm_parameters.hpp"
+#include "SoT_BP_CapstanArm_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace");
 
-	ABP_CapstanArm_C_GetLookAtPosBasisSpace_Params params;
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +42,11 @@ struct FVector ABP_CapstanArm_C::GetFrontFacingVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector");
 
-	ABP_CapstanArm_C_GetFrontFacingVector_Params params;
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +63,11 @@ bool ABP_CapstanArm_C::DoesRequireFacingFront()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.DoesRequireFacingFront");
 
-	ABP_CapstanArm_C_DoesRequireFacingFront_Params params;
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,7 +84,11 @@ struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetDockableInfo");
 
-	ABP_CapstanArm_C_GetDockableInfo_Params params;
+	struct
+	{
+		struct FDockableInfo           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +107,13 @@ struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(const struct FVector
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint");
 
-	ABP_CapstanArm_C_GetClosestInteractionPoint_Params params;
+	struct
+	{
+		struct FVector                 ReferencePosition;
+		float                          OutInteractionPointRadius;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -112,7 +134,11 @@ struct FVector ABP_CapstanArm_C::GetLookAtPos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPos");
 
-	ABP_CapstanArm_C_GetLookAtPos_Params params;
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +153,10 @@ void ABP_CapstanArm_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.UserConstructionScript");
 
-	ABP_CapstanArm_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

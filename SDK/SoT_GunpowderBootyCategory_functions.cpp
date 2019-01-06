@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_GunpowderBootyCategory_parameters.hpp"
+#include "SoT_GunpowderBootyCategory_classes.hpp"
 
 namespace SDK
 {

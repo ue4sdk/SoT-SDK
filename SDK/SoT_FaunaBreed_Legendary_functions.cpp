@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_FaunaBreed_Legendary_parameters.hpp"
+#include "SoT_FaunaBreed_Legendary_classes.hpp"
 
 namespace SDK
 {

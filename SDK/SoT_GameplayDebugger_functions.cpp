@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_GameplayDebugger_parameters.hpp"
+#include "SoT_GameplayDebugger_classes.hpp"
 
 namespace SDK
 {
@@ -22,7 +22,12 @@ void UGameplayDebuggingComponent::ServerReplicateData(uint32_t InMessage, uint32
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ServerReplicateData");
 
-	UGameplayDebuggingComponent_ServerReplicateData_Params params;
+	struct
+	{
+		uint32_t                       InMessage;
+		uint32_t                       DataView;
+	} params;
+
 	params.InMessage = InMessage;
 	params.DataView = DataView;
 
@@ -37,7 +42,10 @@ void UGameplayDebuggingComponent::ServerDiscardNavmeshData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ServerDiscardNavmeshData");
 
-	UGameplayDebuggingComponent_ServerDiscardNavmeshData_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -52,7 +60,11 @@ void UGameplayDebuggingComponent::ServerCollectNavmeshData(const struct FVector_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ServerCollectNavmeshData");
 
-	UGameplayDebuggingComponent_ServerCollectNavmeshData_Params params;
+	struct
+	{
+		struct FVector_NetQuantize10   TargetLocation;
+	} params;
+
 	params.TargetLocation = TargetLocation;
 
 	UObject::ProcessEvent(fn, &params);
@@ -66,7 +78,10 @@ void UGameplayDebuggingComponent::OnRep_UpdateNavmesh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateNavmesh");
 
-	UGameplayDebuggingComponent_OnRep_UpdateNavmesh_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -79,7 +94,10 @@ void UGameplayDebuggingComponent::OnRep_UpdateEQS()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateEQS");
 
-	UGameplayDebuggingComponent_OnRep_UpdateEQS_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -92,7 +110,10 @@ void UGameplayDebuggingComponent::OnRep_UpdateBlackboard()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateBlackboard");
 
-	UGameplayDebuggingComponent_OnRep_UpdateBlackboard_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -105,7 +126,10 @@ void UGameplayDebuggingComponent::OnRep_PathCorridorData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_PathCorridorData");
 
-	UGameplayDebuggingComponent_OnRep_PathCorridorData_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -118,7 +142,10 @@ void UGameplayDebuggingComponent::OnCycleDetailsView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnCycleDetailsView");
 
-	UGameplayDebuggingComponent_OnCycleDetailsView_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -133,7 +160,11 @@ void UGameplayDebuggingComponent::ClientEnableTargetSelection(bool bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ClientEnableTargetSelection");
 
-	UGameplayDebuggingComponent_ClientEnableTargetSelection_Params params;
+	struct
+	{
+		bool                           bEnable;
+	} params;
+
 	params.bEnable = bEnable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -149,7 +180,11 @@ void AGameplayDebuggingReplicator::ServerSetActorToDebug(class AActor* InActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ServerSetActorToDebug");
 
-	AGameplayDebuggingReplicator_ServerSetActorToDebug_Params params;
+	struct
+	{
+		class AActor*                  InActor;
+	} params;
+
 	params.InActor = InActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -167,7 +202,13 @@ void AGameplayDebuggingReplicator::ServerReplicateMessage(class AActor* Actor, u
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ServerReplicateMessage");
 
-	AGameplayDebuggingReplicator_ServerReplicateMessage_Params params;
+	struct
+	{
+		class AActor*                  Actor;
+		uint32_t                       InMessage;
+		uint32_t                       DataView;
+	} params;
+
 	params.Actor = Actor;
 	params.InMessage = InMessage;
 	params.DataView = DataView;
@@ -183,7 +224,10 @@ void AGameplayDebuggingReplicator::OnRep_AutoActivate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.OnRep_AutoActivate");
 
-	AGameplayDebuggingReplicator_OnRep_AutoActivate_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -200,7 +244,13 @@ void AGameplayDebuggingReplicator::ClientReplicateMessage(class AActor* Actor, u
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ClientReplicateMessage");
 
-	AGameplayDebuggingReplicator_ClientReplicateMessage_Params params;
+	struct
+	{
+		class AActor*                  Actor;
+		uint32_t                       InMessage;
+		uint32_t                       DataView;
+	} params;
+
 	params.Actor = Actor;
 	params.InMessage = InMessage;
 	params.DataView = DataView;
@@ -219,7 +269,12 @@ void AGameplayDebuggingReplicator::ClientEnableTargetSelection(bool bEnable, cla
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ClientEnableTargetSelection");
 
-	AGameplayDebuggingReplicator_ClientEnableTargetSelection_Params params;
+	struct
+	{
+		bool                           bEnable;
+		class APlayerController*       Context;
+	} params;
+
 	params.bEnable = bEnable;
 	params.Context = Context;
 
@@ -234,7 +289,10 @@ void AGameplayDebuggingReplicator::ClientAutoActivate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ClientAutoActivate");
 
-	AGameplayDebuggingReplicator_ClientAutoActivate_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

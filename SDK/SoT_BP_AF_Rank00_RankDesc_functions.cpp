@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AF_Rank00_RankDesc_parameters.hpp"
+#include "SoT_BP_AF_Rank00_RankDesc_classes.hpp"
 
 namespace SDK
 {

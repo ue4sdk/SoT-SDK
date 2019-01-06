@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ShipSpeedBand_High_parameters.hpp"
+#include "SoT_ShipSpeedBand_High_classes.hpp"
 
 namespace SDK
 {

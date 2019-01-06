@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CS_BigGunpowderExplosion_parameters.hpp"
+#include "SoT_CS_BigGunpowderExplosion_classes.hpp"
 
 namespace SDK
 {

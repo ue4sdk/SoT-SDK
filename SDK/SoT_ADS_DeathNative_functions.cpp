@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ADS_DeathNative_parameters.hpp"
+#include "SoT_ADS_DeathNative_classes.hpp"
 
 namespace SDK
 {

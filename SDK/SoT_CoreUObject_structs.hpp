@@ -79,6 +79,49 @@ struct FVector2D
 		  Y(y)
 	{ }
 
+    inline FVector2D operator + (const FVector2D& other) const 
+	{ 
+		return FVector2D(X + other.X, Y + other.Y); 
+	}
+
+    inline FVector2D operator - (const FVector2D& other) const 
+	{ 
+		return FVector2D(X - other.X, Y - other.Y);
+	 }
+
+    inline FVector2D operator * (float scalar) const 
+	{ 
+		return FVector2D(X * scalar, Y * scalar); 
+	}
+
+    inline FVector2D& operator=  (const FVector2D& other) 
+	{	
+		X  = other.X;
+		Y  = other.Y;
+		return *this;
+	}
+
+    inline FVector2D& operator+= (const FVector2D& other) 
+	{ 
+		X += other.X;
+		Y += other.Y;
+		return *this;
+	}
+
+    inline FVector2D& operator-= (const FVector2D& other)
+	{
+		X -= other.X;
+		Y -= other.Y;
+		return *this;
+	}
+
+    inline FVector2D& operator*= (const float other)
+	{
+		X *= other;
+		Y *= other;
+		return *this;
+	}
+
 };
 
 // ScriptStruct CoreUObject.TwoVectors

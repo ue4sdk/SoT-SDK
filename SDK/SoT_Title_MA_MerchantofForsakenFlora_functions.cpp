@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Title_MA_MerchantofForsakenFlora_parameters.hpp"
+#include "SoT_Title_MA_MerchantofForsakenFlora_classes.hpp"
 
 namespace SDK
 {

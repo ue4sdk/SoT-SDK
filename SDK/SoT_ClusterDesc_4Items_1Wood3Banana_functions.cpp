@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ClusterDesc_4Items_1Wood3Banana_parameters.hpp"
+#include "SoT_ClusterDesc_4Items_1Wood3Banana_classes.hpp"
 
 namespace SDK
 {

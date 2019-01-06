@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ClamberSpot_Rowboat_parameters.hpp"
+#include "SoT_BP_ClamberSpot_Rowboat_classes.hpp"
 
 namespace SDK
 {

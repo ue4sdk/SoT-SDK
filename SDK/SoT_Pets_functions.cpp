@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Pets_parameters.hpp"
+#include "SoT_Pets_classes.hpp"
 
 namespace SDK
 {
@@ -21,7 +21,11 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetAIController.GetAthenaAICharPathFollowingComp");
 
-	APetAIController_GetAthenaAICharPathFollowingComp_Params params;
+	struct
+	{
+		class UAthenaAICharacterPathFollowingComponent* ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +42,11 @@ void UPetsService::RemovePetFromActor(class AActor* InOwner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetsService.RemovePetFromActor");
 
-	UPetsService_RemovePetFromActor_Params params;
+	struct
+	{
+		class AActor*                  InOwner;
+	} params;
+
 	params.InOwner = InOwner;
 
 	UObject::ProcessEvent(fn, &params);

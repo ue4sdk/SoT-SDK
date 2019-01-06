@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ALK_WieldableObject_Fiddle_parameters.hpp"
+#include "SoT_ALK_WieldableObject_Fiddle_classes.hpp"
 
 namespace SDK
 {

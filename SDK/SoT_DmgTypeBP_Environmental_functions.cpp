@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_DmgTypeBP_Environmental_parameters.hpp"
+#include "SoT_DmgTypeBP_Environmental_classes.hpp"
 
 namespace SDK
 {

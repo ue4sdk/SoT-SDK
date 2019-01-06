@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_FoodItemCategory_parameters.hpp"
+#include "SoT_FoodItemCategory_classes.hpp"
 
 namespace SDK
 {

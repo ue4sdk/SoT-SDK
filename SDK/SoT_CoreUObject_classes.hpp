@@ -219,6 +219,11 @@ public:
 		return static_cast<T*>(CreateDefaultObject());
 	}
 
+	inline UObject* CreateDefaultObject()
+	{
+		return GetVFunction<UObject*(*)(UClass*)>(this, 87)(this);
+	}
+
 };
 
 

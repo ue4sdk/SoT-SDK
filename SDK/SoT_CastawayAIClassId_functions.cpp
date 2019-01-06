@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CastawayAIClassId_parameters.hpp"
+#include "SoT_CastawayAIClassId_classes.hpp"
 
 namespace SDK
 {

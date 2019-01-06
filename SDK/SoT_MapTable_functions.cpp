@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MapTable_parameters.hpp"
+#include "SoT_MapTable_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,10 @@ void AMapTable_C::UpdateBlurEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UpdateBlurEffect");
 
-	AMapTable_C_UpdateBlurEffect_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -36,7 +39,13 @@ struct FVector AMapTable_C::GetClosestInteractionPoint(const struct FVector& Ref
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.GetClosestInteractionPoint");
 
-	AMapTable_C_GetClosestInteractionPoint_Params params;
+	struct
+	{
+		struct FVector                 ReferencePosition;
+		float                          OutInteractionPointRadius;
+		struct FVector                 ReturnValue;
+	} params;
+
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,7 +64,10 @@ void AMapTable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UserConstructionScript");
 
-	AMapTable_C_UserConstructionScript_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -68,7 +80,10 @@ void AMapTable_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ReceiveBeginPlay");
 
-	AMapTable_C_ReceiveBeginPlay_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -81,7 +96,10 @@ void AMapTable_C::SetEffectActiveWhenClose()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.SetEffectActiveWhenClose");
 
-	AMapTable_C_SetEffectActiveWhenClose_Params params;
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -97,7 +115,12 @@ void AMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapActivate");
 
-	AMapTable_C_OnMapActivate_Params params;
+	struct
+	{
+		bool                           IsMapActive;
+		class UTextureRenderTarget2D*  Texture;
+	} params;
+
 	params.IsMapActive = IsMapActive;
 	params.Texture = Texture;
 
@@ -115,7 +138,12 @@ void AMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapMove");
 
-	AMapTable_C_OnMapMove_Params params;
+	struct
+	{
+		struct FVector2D               CentreLocation;
+		struct FVector2D               ZoomLevel;
+	} params;
+
 	params.CentreLocation = CentreLocation;
 	params.ZoomLevel = ZoomLevel;
 
@@ -132,7 +160,11 @@ void AMapTable_C::ExecuteUbergraph_MapTable(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ExecuteUbergraph_MapTable");
 
-	AMapTable_C_ExecuteUbergraph_MapTable_Params params;
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

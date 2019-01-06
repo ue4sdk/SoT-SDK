@@ -266,8 +266,8 @@ public:
 	}
 
 
-	class AWatercraft* STATIC_SpawnWatercraft(class UObject* WorldContextObject, class UClass* WatercraftClass, const struct FVector& Location, const struct FRotator& Rotation);
-	bool STATIC_IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter);
+	static class AWatercraft* SpawnWatercraft(class UObject* WorldContextObject, class UClass* WatercraftClass, const struct FVector& Location, const struct FRotator& Rotation);
+	static bool IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter);
 };
 
 
