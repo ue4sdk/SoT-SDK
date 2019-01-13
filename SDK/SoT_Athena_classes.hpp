@@ -2527,8 +2527,7 @@ public:
 class UCategoryBase : public UObject
 {
 public:
-	struct FText                                       Name;                                                     // 0x0028(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 	struct FName                                       UniqueTextIdentifier;                                     // 0x0060(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FStringAssetReference                       IconPath;                                                 // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
@@ -2608,10 +2607,8 @@ public:
 class UEntitlementDesc : public UDataAsset
 {
 public:
-	struct FText                                       Title;                                                    // 0x0028(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Description;                                              // 0x0060(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0060(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0028(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       Description;                                              // 0x0060(0x0038) (Edit, DisableEditOnInstance)
 	struct FStringAssetReference                       IconPath;                                                 // 0x0098(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringAssetReference                       IconInvPath;                                              // 0x00A8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringAssetReference                       IconPrvPath;                                              // 0x00B8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -5074,8 +5071,7 @@ public:
 class URepairTypeId : public UObject
 {
 public:
-	struct FText                                       DisplayName;                                              // 0x0028(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -6347,17 +6343,16 @@ public:
 class AAthenaTextRender : public AStaticMeshActor
 {
 public:
-	struct FText                                       Text;                                                     // 0x04A0(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x04A0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x04A0(0x0038) (Edit, BlueprintVisible)
 	struct FTreasureMapWidgetText                      TextDesc;                                                 // 0x04D8(0x0020) (Edit, BlueprintVisible)
 	int                                                CanvasWidth;                                              // 0x04F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                CanvasHeight;                                             // 0x04FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	class UFont*                                       Font;                                                     // 0x0500(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   FontScale;                                                // 0x0508(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              FontLineSpacingScale;                                     // 0x0510(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0514(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0514(0x000C) MISSED OFFSET
 	class UCanvasRenderTarget2D*                       AthenaTextRenderTarget;                                   // 0x0520(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0528(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0528(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8282,9 +8277,8 @@ class AInteractableObject : public AInteractableBase
 public:
 	unsigned char                                      UnknownData00[0x18];                                      // 0x04B0(0x0018) MISSED OFFSET
 	struct FOneShotInteractableActionRuleParams        OneShotInteractableActionRuleParams;                      // 0x04C8(0x0010) (Edit, BlueprintVisible)
-	struct FText                                       Verb;                                                     // 0x04D8(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x04D8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0510(0x0020) MISSED OFFSET
+	struct FText                                       Verb;                                                     // 0x04D8(0x0038) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0510(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9292,10 +9286,9 @@ class UCatalogDiscountDataAsset : public UDataAsset
 {
 public:
 	struct FGuid                                       DiscountId;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       DisplayName;                                              // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0038(0x0038) (Edit)
 	TEnumAsByte<EWalletCurrencyId>                     CurrencyType;                                             // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
 	uint32_t                                           PercentOff;                                               // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -9313,10 +9306,9 @@ class UCatalogDataAsset : public UDataAsset
 {
 public:
 	struct FGuid                                       CatalogId;                                                // 0x0028(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       DisplayName;                                              // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0038(0x0038) (Edit)
 	bool                                               ExportAsRewardIds;                                        // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
 	TArray<class UCatalogOfferDataAsset*>              Offers;                                                   // 0x0078(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
@@ -9841,12 +9833,10 @@ public:
 	class USplineComponent*                            ClamberSplineComponent;                                   // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	struct FLadderBlendParams                          ClamberBlendParams;                                       // 0x04E0(0x000C) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x04EC(0x0004) MISSED OFFSET
-	struct FText                                       InteractionVerb;                                          // 0x04F0(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x04EC(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       InteractionDisplayName;                                   // 0x0528(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0528(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       InteractionVerb;                                          // 0x04F0(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       InteractionDisplayName;                                   // 0x0528(0x0038) (Edit, DisableEditOnInstance)
 	struct FVector                                     InteractionOffset;                                        // 0x0560(0x000C) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x134];                                     // 0x056C(0x0134) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x134];                                     // 0x056C(0x0134) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -10700,16 +10690,13 @@ public:
 	struct FCompanyShopSkin                            ShopSkin;                                                 // 0x00A0(0x0020) (Edit)
 	struct FCompanyProgressIcons                       ProgressIcons;                                            // 0x00C0(0x0018) (Edit)
 	struct FCompanyRankData                            RankData;                                                 // 0x00D8(0x0010) (Edit)
-	struct FText                                       Motto;                                                    // 0x00E8(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00E8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CompanyFlavourText1;                                      // 0x0120(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0120(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CompanyFlavourText2;                                      // 0x0158(0x0018) (Edit)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0158(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Motto;                                                    // 0x00E8(0x0038) (Edit)
+	struct FText                                       CompanyFlavourText1;                                      // 0x0120(0x0038) (Edit)
+	struct FText                                       CompanyFlavourText2;                                      // 0x0158(0x0038) (Edit)
 	uint32_t                                           TotalNumberOfTitles;                                      // 0x0190(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	uint32_t                                           TotalNumberOfItems;                                       // 0x0194(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	uint32_t                                           MaxVoyagesOffered;                                        // 0x0198(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x019C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x019C(0x0004) MISSED OFFSET
 	struct FStringAssetReference                       MapsDiscoveredBackgroundImage;                            // 0x01A0(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FStringAssetReference>               MapsDiscoveredImages;                                     // 0x01B0(0x0010) (Edit, ZeroConstructor)
 	class FString                                      VoyageAudioSwitchName;                                    // 0x01C0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -10937,10 +10924,8 @@ public:
 class UContentEngagementMessageParams : public UDataAsset
 {
 public:
-	struct FText                                       Title;                                                    // 0x0028(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Body;                                                     // 0x0060(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0060(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0028(0x0038) (Edit)
+	struct FText                                       Body;                                                     // 0x0060(0x0038) (Edit)
 	struct FStringAssetReference                       KeyArt;                                                   // 0x0098(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
@@ -11247,13 +11232,11 @@ public:
 	class UPrimitiveComponent*                         Mesh;                                                     // 0x04B8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UInteractableComponent*                      InteractionRegion;                                        // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UClass*                                      InteractionType;                                          // 0x04C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       DefaultTooltip;                                           // 0x04D0(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x04D0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       DefaultDisplayName;                                       // 0x0508(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0508(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DefaultTooltip;                                           // 0x04D0(0x0038) (Edit)
+	struct FText                                       DefaultDisplayName;                                       // 0x0508(0x0038) (Edit)
 	class UClass*                                      NotificationInputId;                                      // 0x0540(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EActionDisplayPriority>                DisplayPriority;                                          // 0x0548(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0549(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0549(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11635,13 +11618,12 @@ class UControllableMock : public UObject
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 	class AActor*                                      ActorThatRequestedStateChange;                            // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       ObjectDisplayName;                                        // 0x0040(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0040(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ObjectDisplayName;                                        // 0x0040(0x0038)
 	struct FControlObjectActionRuleParams              ControlObjectActionRuleParams;                            // 0x0078(0x0010)
 	TEnumAsByte<ENetRole>                              Role;                                                     // 0x0088(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               HasAController;                                           // 0x0089(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               CanBeControlledByActorValue;                              // 0x008A(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5];                                       // 0x008B(0x0005) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x5];                                       // 0x008B(0x0005) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11906,12 +11888,10 @@ public:
 	struct FSittingActionStateParams                   SittingStateParams;                                       // 0x05D0(0x0050) (Edit)
 	class UInteractableComponent*                      InteractableComponent;                                    // 0x0620(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FName                                       SocketName;                                               // 0x0628(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       InteractionVerb;                                          // 0x0630(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0630(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       InteractionDisplayName;                                   // 0x0668(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0668(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       InteractionVerb;                                          // 0x0630(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       InteractionDisplayName;                                   // 0x0668(0x0038) (Edit, DisableEditOnInstance)
 	float                                              CosCameraAngleToTurnOffFirstPersonMesh;                   // 0x06A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x06A4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x06A4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16831,10 +16811,9 @@ class AHideout : public AActor
 public:
 	TArray<class ASpawnLocation*>                      AssociatedSpawnLocations;                                 // 0x0490(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	class UPrimitiveComponent*                         RevealTriggerVolume;                                      // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FText                                       HideoutName;                                              // 0x04A8(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x04A8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       HideoutName;                                              // 0x04A8(0x0038) (Edit)
 	TArray<struct FPlayerHideoutInfo>                  Players;                                                  // 0x04E0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x04F0(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x04F0(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18254,22 +18233,21 @@ class ABell : public AInteractableObject
 {
 public:
 	class UInteractableComponent*                      InteractableComponent;                                    // 0x0530(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FText                                       BellName;                                                 // 0x0538(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0538(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       BellName;                                                 // 0x0538(0x0038) (Edit, DisableEditOnInstance)
 	float                                              TimeBetweenTurbulenceChecks;                              // 0x0570(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinIntervalBetweenRingsLowerBound;                        // 0x0574(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinIntervalBetweenRingsUpperBound;                        // 0x0578(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxIntervalBetweenRingsLowerBound;                        // 0x057C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxIntervalBetweenRingsUpperBound;                        // 0x0580(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0584(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0584(0x0004) MISSED OFFSET
 	class UStaticMeshComponent*                        BellMeshComponent;                                        // 0x0588(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UWwiseEvent*                                 BellRingSfx;                                              // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseEvent*                                 BellRingSfxStorm;                                         // 0x0598(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     EmitterOffset;                                            // 0x05A0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
 	class UMaterialInstanceDynamic*                    BellMaterial;                                             // 0x05B0(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                BellMaterialIndex;                                        // 0x05B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x5C];                                      // 0x05BC(0x005C) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x5C];                                      // 0x05BC(0x005C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18327,10 +18305,9 @@ public:
 	class USplineComponent*                            InteractionSplineComponent;                               // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	float                                              ForceScalar;                                              // 0x0548(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x054C(0x0004) MISSED OFFSET
-	struct FText                                       InteractionDisplayName;                                   // 0x0550(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x054C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       InteractionDisplayName;                                   // 0x0550(0x0038) (Edit, DisableEditOnInstance)
 	float                                              InteractionRadius;                                        // 0x0588(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xA4];                                      // 0x058C(0x00A4) MISSED OFFSET
+	unsigned char                                      UnknownData02[0xA4];                                      // 0x058C(0x00A4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18520,20 +18497,17 @@ public:
 	class UClass*                                      ReleasedNotificationInputId;                              // 0x0568(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              InputHoldTime;                                            // 0x0570(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0574(0x0004) MISSED OFFSET
-	struct FText                                       MountVerb;                                                // 0x0578(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0574(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       UnmountVerb;                                              // 0x05B0(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x05B0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       MountVerb;                                                // 0x0578(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       UnmountVerb;                                              // 0x05B0(0x0038) (Edit, DisableEditOnInstance)
 	bool                                               IsNothingToMountTooltipEnabled;                           // 0x05E8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x05E9(0x0007) MISSED OFFSET
-	struct FText                                       NothingToMountDescription;                                // 0x05F0(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData05[0x20];                                      // 0x05E9(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData02[0x7];                                       // 0x05E9(0x0007) MISSED OFFSET
+	struct FText                                       NothingToMountDescription;                                // 0x05F0(0x0038) (Edit, DisableEditOnInstance)
 	TArray<struct FVector>                             DetachInteractionPoints;                                  // 0x0628(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              DetachInteractionPointRadius;                             // 0x0638(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              DetachInteractionMaxDistance;                             // 0x063C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AttachInteractionMaxDistance;                             // 0x0640(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               UnmountIfOwnerShipSinks;                                  // 0x0644(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0xE3];                                      // 0x0645(0x00E3) MISSED OFFSET
+	unsigned char                                      UnknownData03[0xE3];                                      // 0x0645(0x00E3) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19215,8 +19189,7 @@ public:
 	TArray<class UIslandItemDataAsset*>                IslandItemLocationDataSources;                            // 0x0080(0x0010) (Edit, ZeroConstructor)
 	TArray<class UIslandSalvageSpawnerCollection*>     IslandSalvageSpawnerCollections;                          // 0x0090(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FTypedIslandItemSpawnLocationData>   SalvageItemsLocationData;                                 // 0x00A0(0x0010) (ZeroConstructor, Transient)
-	struct FText                                       LocalisedName;                                            // 0x00B0(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00B0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       LocalisedName;                                            // 0x00B0(0x0038) (Edit)
 	class UAISpawner*                                  AISpawner;                                                // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UAISpawner*                                  CannonsAISpawner;                                         // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UIslandMaterialStatusZone*                   IslandMaterialStatusZone;                                 // 0x00F8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -20245,25 +20218,21 @@ class ALandmark : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	struct FText                                       Name;                                                     // 0x0498(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0490(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       NameV2;                                                   // 0x04D0(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x04D0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       NameV3;                                                   // 0x0508(0x0018) (Edit)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0508(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       NameV4;                                                   // 0x0540(0x0018) (Edit)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x0540(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0498(0x0038) (Edit)
+	struct FText                                       NameV2;                                                   // 0x04D0(0x0038) (Edit)
+	struct FText                                       NameV3;                                                   // 0x0508(0x0038) (Edit)
+	struct FText                                       NameV4;                                                   // 0x0540(0x0038) (Edit)
 	TEnumAsByte<ELandmarkVagueness>                    LandmarkVagueness;                                        // 0x0578(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ELandmarkUniqueness>                   LandmarkUniqueness;                                       // 0x0579(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IsUnderground;                                            // 0x057A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x5];                                       // 0x057B(0x0005) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x5];                                       // 0x057B(0x0005) MISSED OFFSET
 	TArray<TEnumAsByte<EQuestType>>                    IsUnsuitableFor;                                          // 0x0580(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData06[0x11C];                                     // 0x0590(0x011C) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x11C];                                     // 0x0590(0x011C) MISSED OFFSET
 	float                                              PacingStartRadius;                                        // 0x06AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FLandmarkReaction>                   Reactions;                                                // 0x06B0(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData07[0x20];                                      // 0x06C0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x20];                                      // 0x06C0(0x0020) MISSED OFFSET
 	class UOverlapTriggerComponent*                    AudioZoneComponent;                                       // 0x06E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x2C];                                      // 0x06E8(0x002C) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x2C];                                      // 0x06E8(0x002C) MISSED OFFSET
 	struct FVector                                     StartLocation;                                            // 0x0714(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -22539,8 +22508,7 @@ public:
 	TArray<class UClass*>                              AllMerchantCargo;                                         // 0x0038(0x0010) (Edit, ZeroConstructor)
 	TArray<TAssetPtr<class UClass>>                    AllFauna;                                                 // 0x0048(0x0010) (Edit, ZeroConstructor)
 	TArray<class UMerchantMapLayout*>                  MerchantMapLayouts;                                       // 0x0058(0x0010) (Edit, ZeroConstructor)
-	struct FText                                       DeliverByTimeTextFormat;                                  // 0x0068(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DeliverByTimeTextFormat;                                  // 0x0068(0x0038) (Edit)
 	TArray<struct FText>                               DeliverByTimeHourFormat;                                  // 0x00A0(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FText>                               DeliverByTimeDayFormat;                                   // 0x00B0(0x0010) (Edit, ZeroConstructor)
 	class UPopUpMessageDesc*                           CollectCratesFromTraderPopupDesc;                         // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
@@ -22753,8 +22721,7 @@ public:
 	class UFont*                                       Font;                                                     // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               ShowBanner;                                               // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	struct FText                                       BannerText;                                               // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0031(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       BannerText;                                               // 0x0038(0x0038) (Edit)
 	float                                              BannerTextFontScale;                                      // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                BannerTextPostSpacing;                                    // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              PoemTextFontScale;                                        // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -23198,13 +23165,12 @@ public:
 class APossessionsChest : public AModalInteractionProxy
 {
 public:
-	struct FText                                       Name;                                                     // 0x0550(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0550(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0550(0x0038) (Edit, DisableEditOnInstance)
 	struct FName                                       InteractionFeatureGuard;                                  // 0x0588(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseEvent*                                 BeginInteractionSfx;                                      // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseEvent*                                 EndInteractionSfx;                                        // 0x0598(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseObjectPoolWrapper*                     SfxPool;                                                  // 0x05A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x05A8(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05A8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -23332,9 +23298,8 @@ public:
 	class UClass*                                      MountableType;                                            // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               ActorCanServerMigrate;                                    // 0x00E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	struct FText                                       Description;                                              // 0x00E8(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x00E1(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData03[0x18];                                      // 0x0120(0x0018) MISSED OFFSET
+	struct FText                                       Description;                                              // 0x00E8(0x0038) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0120(0x0018) MISSED OFFSET
 	class UObject*                                     ReplicatedMountpoint;                                     // 0x0138(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -24007,24 +23972,23 @@ public:
 class UNPCDialogComponent : public UActorComponent
 {
 public:
-	struct FText                                       WelcomeMessage;                                           // 0x00D0(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       WelcomeMessage;                                           // 0x00D0(0x0038) (Edit)
 	class UNPCDialogTreeData*                          Data;                                                     // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      InputID;                                                  // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EActionDisplayPriority>                ActionDisplayPriority;                                    // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
 	class UWwiseObjectPoolWrapper*                     NpcDialoguePool;                                          // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UWwiseEvent*                                 NpcDialogueWelcome;                                       // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UWwiseEvent*                                 NpcDialogueBridge;                                        // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UWwiseEvent*                                 NpcDialogueGoodbye;                                       // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               CreateInteractionRules;                                   // 0x0140(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0141(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0141(0x0003) MISSED OFFSET
 	float                                              DialogueInputFocusTimeout;                                // 0x0144(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	class FString                                      TelemetryKey;                                             // 0x0148(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData03[0x108];                                     // 0x0158(0x0108) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x108];                                     // 0x0158(0x0108) MISSED OFFSET
 	class AController*                                 InteractingController;                                    // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
 	TArray<uint32_t>                                   DialogOptionUsageCounter;                                 // 0x0268(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData04[0x30];                                      // 0x0278(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x30];                                      // 0x0278(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24172,8 +24136,7 @@ public:
 class UNPCDialogHeaderSimple : public UNPCDialogHeader
 {
 public:
-	struct FText                                       Text;                                                     // 0x0028(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0028(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24190,8 +24153,7 @@ class UNPCDialogHeaderByRank : public UNPCDialogHeader
 {
 public:
 	TArray<struct FNPCDialogRankGatedText>             Text;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor)
-	struct FText                                       DefaultText;                                              // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DefaultText;                                              // 0x0038(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24207,8 +24169,7 @@ public:
 class UNPCDialogHeaderStorageContainer : public UNPCDialogHeader
 {
 public:
-	struct FText                                       Text;                                                     // 0x0028(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0028(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24261,8 +24222,7 @@ public:
 class UNPCDialogOptionClose : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24278,10 +24238,9 @@ public:
 class UNPCDialogOptionDialogSelect : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 	int                                                LinkedDialog;                                             // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00AC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00AC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24297,13 +24256,12 @@ public:
 class UNPCDialogOptionGiveMap : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 	class UVoyageRecipeDataAsset*                      VoyageRecipe;                                             // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                LinkedDialog;                                             // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                NumberOfUses;                                             // 0x00B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                NumTimesUsed;                                             // 0x00B8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24319,12 +24277,11 @@ public:
 class UNPCDialogOptionGiveReward : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 	struct FRewardId                                   RewardId;                                                 // 0x00A8(0x0008) (Edit)
 	class UClass*                                      Company;                                                  // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                LinkedDialog;                                             // 0x00B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24340,13 +24297,12 @@ public:
 class UNPCDialogOptionNoUIPurchase : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 	class UCatalogDataAsset*                           Catalog;                                                  // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UCatalogOfferDataAsset*                      CatalogOffer;                                             // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UPopUpMessageDesc*                           OfferTriggeredPopupDesc;                                  // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class AController*                                 Interactor;                                               // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24362,10 +24318,9 @@ public:
 class UNPCDialogOptionRefillTankard : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 	int                                                LinkedDialog;                                             // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00AC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00AC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24381,8 +24336,7 @@ public:
 class UNPCDialogOptionSellBooty : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24398,11 +24352,10 @@ public:
 class UNPCDialogOptionShop : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
 	class UShopDesc*                                   ShopDesc;                                                 // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class AController*                                 Interactor;                                               // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x60];                                      // 0x00B8(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x00B8(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24418,12 +24371,9 @@ public:
 class UNPCDialogOptionStorageContainerStore : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       FullText;                                                 // 0x00A8(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00A8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       NoItemInInventoryText;                                    // 0x00E0(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x00E0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
+	struct FText                                       FullText;                                                 // 0x00A8(0x0038) (Edit)
+	struct FText                                       NoItemInInventoryText;                                    // 0x00E0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24439,12 +24389,9 @@ public:
 class UNPCDialogOptionStorageContainerTake : public UNPCDialogOption
 {
 public:
-	struct FText                                       Text;                                                     // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       EmptyText;                                                // 0x00A8(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00A8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       NoInventorySpaceText;                                     // 0x00E0(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x00E0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0070(0x0038) (Edit)
+	struct FText                                       EmptyText;                                                // 0x00A8(0x0038) (Edit)
+	struct FText                                       NoInventorySpaceText;                                     // 0x00E0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -24951,9 +24898,8 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
 	float                                              PickupTime;                                               // 0x00D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
-	struct FText                                       PickupActionDisplayString;                                // 0x00E0(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x00DC(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData03[0x50];                                      // 0x0118(0x0050) MISSED OFFSET
+	struct FText                                       PickupActionDisplayString;                                // 0x00E0(0x0038) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0118(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27723,11 +27669,10 @@ public:
 class UCinematicQuestRunnable : public URunnable
 {
 public:
-	struct FText                                       Message;                                                  // 0x0028(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Message;                                                  // 0x0028(0x0038) (Edit)
 	struct FName                                       Tag;                                                      // 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               RunOnce;                                                  // 0x0068(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27976,10 +27921,9 @@ class USceneDialogueTextPoint : public USceneDialoguePoint
 public:
 	unsigned char                                      ActorNumber;                                              // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	struct FText                                       Text;                                                     // 0x0030(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0029(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0030(0x0038) (Edit)
 	float                                              DelayAfter;                                               // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 	class UAnimationAsset*                             Animation;                                                // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UWwiseEvent*                                 Speech;                                                   // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
@@ -29356,14 +29300,13 @@ public:
 	class USceneComponent*                             MeshParentComponent;                                      // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UPrimitiveComponent*                         RevealTriggerVolume;                                      // 0x04A8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UCalmWaterComponent*                         CalmZone;                                                 // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FText                                       LocalisedName;                                            // 0x04B8(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x04B8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       LocalisedName;                                            // 0x04B8(0x0038) (Edit, BlueprintVisible)
 	float                                              DistanceThresholdToConsiderPlayerAsBeingNearShipwreckForTelemetry;// 0x04F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ServerMigrationPointOfInterestDistance;                   // 0x04F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      ProxyClass;                                               // 0x04F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0500(0x000C) (Edit, DisableEditOnInstance)
 	struct FEncounterParams                            CloseEncounterParams;                                     // 0x050C(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x30];                                      // 0x0518(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x30];                                      // 0x0518(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -29638,13 +29581,12 @@ public:
 class UShopDesc : public UDataAsset
 {
 public:
-	struct FText                                       ShopName;                                                 // 0x0028(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ShopName;                                                 // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 	class UCatalogDataAsset*                           Catalog;                                                  // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FCatalogDescTab>                     Catalogs;                                                 // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class FString                                      Storefront;                                               // 0x0078(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	bool                                               EnablePiratePreview;                                      // 0x0088(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 	class UShopDialogue*                               Dialogue;                                                 // 0x0090(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      Company;                                                  // 0x0098(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<class UClass*>                              Categories;                                               // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
@@ -29664,16 +29606,11 @@ public:
 class UShopDialogue : public UDataAsset
 {
 public:
-	struct FText                                       ConfirmPurchaseMessage;                                   // 0x0028(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       PurchaseFailedMessage;                                    // 0x0060(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0060(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       PurchasePendingMessage;                                   // 0x0098(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0098(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       PurchaseSuccessMessage;                                   // 0x00D0(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x00D0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       GetShopOffersFailedMessage;                               // 0x0108(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x0108(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ConfirmPurchaseMessage;                                   // 0x0028(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       PurchaseFailedMessage;                                    // 0x0060(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       PurchasePendingMessage;                                   // 0x0098(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       PurchaseSuccessMessage;                                   // 0x00D0(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       GetShopOffersFailedMessage;                               // 0x0108(0x0038) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -30923,17 +30860,16 @@ class UStorageContainerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
-	struct FText                                       ContainerDisplayName;                                     // 0x00E0(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x00D0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
+	struct FText                                       ContainerDisplayName;                                     // 0x00E0(0x0038) (Edit)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
 	struct FTransform                                  InstanceTransform;                                        // 0x0120(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
 	struct FStorageContainerBackingStore               ContainerNodes;                                           // 0x0150(0x0038) (Edit, Net, DisableEditOnInstance)
 	class UWwiseEvent*                                 AddItemSFX;                                               // 0x0188(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseEvent*                                 TakeItemSFX;                                              // 0x0190(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseEvent*                                 OpenContainerSFX;                                         // 0x0198(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x01A0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x8];                                       // 0x01A0(0x0008) MISSED OFFSET
 	class UWwiseObjectPoolWrapper*                     SfxPool;                                                  // 0x01A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x28];                                      // 0x01B0(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x28];                                      // 0x01B0(0x0028) MISSED OFFSET
 	class UObject*                                     Aggregator;                                               // 0x01D8(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -34806,8 +34742,7 @@ public:
 class UPossessionsChestViewModel : public UViewModelComponentBase
 {
 public:
-	struct FText                                       AllTabLabel;                                              // 0x0130(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0130(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       AllTabLabel;                                              // 0x0130(0x0038)
 	struct FStringAssetReference                       AllTabIcon;                                               // 0x0168(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
@@ -35074,11 +35009,10 @@ public:
 class UVotableWithSessionComponent : public UVotableBaseComponent
 {
 public:
-	struct FText                                       VoteTooltipText;                                          // 0x00D0(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       VoteTooltipText;                                          // 0x00D0(0x0038) (Edit, BlueprintVisible)
 	class UClass*                                      VoteActionInputId;                                        // 0x0108(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      VoteActionReleaseInputId;                                 // 0x0110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x128];                                     // 0x0118(0x0128) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x128];                                     // 0x0118(0x0128) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35183,12 +35117,11 @@ class UVoyageDescDataAsset : public UDataAsset
 {
 public:
 	TArray<struct FChapterQuests>                      Chapters;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
-	struct FText                                       Title;                                                    // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0038(0x0038) (Edit)
 	class UClass*                                      Company;                                                  // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IsEmergent;                                               // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               DoNotNotifyParticipantsOnVoyageComplete;                  // 0x0079(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x007A(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x2];                                       // 0x007A(0x0002) MISSED OFFSET
 	int                                                Rank;                                                     // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x0080(0x0010) (Edit, ZeroConstructor)
 
@@ -36564,8 +36497,7 @@ public:
 	struct FStringAssetReference                       ToastBackgroundImage;                                     // 0x0028(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       BackgroundImage;                                          // 0x0038(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       ForegroundImage;                                          // 0x0048(0x0010) (Edit, ZeroConstructor)
-	struct FText                                       Text;                                                     // 0x0058(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0058(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0058(0x0038) (Edit, DisableEditOnInstance)
 	class FString                                      AudioSfxEventName;                                        // 0x0090(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class FString                                      AudioEventName;                                           // 0x00A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class FString                                      AudioSwitchName;                                          // 0x00B0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -36573,7 +36505,7 @@ public:
 	class FString                                      StyleModifier;                                            // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringAssetReference                       AllianceIcon;                                             // 0x00E0(0x0010) (Edit, ZeroConstructor)
 	float                                              HoldDuration;                                             // 0x00F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -36689,8 +36621,7 @@ public:
 class UCompany : public UObject
 {
 public:
-	struct FText                                       DisplayName;                                              // 0x0028(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 	struct FName                                       UniqueTextIdentifier;                                     // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -38378,13 +38309,11 @@ class UEmblemDefinitionDataAsset : public UDataAsset
 public:
 	class UClass*                                      Company;                                                  // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       CampaignId;                                               // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       CampaignTitle;                                            // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CampaignDescription;                                      // 0x0070(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CampaignTitle;                                            // 0x0038(0x0038) (Edit)
+	struct FText                                       CampaignDescription;                                      // 0x0070(0x0038) (Edit)
 	struct FStringAssetReference                       CampaignImagePath;                                        // 0x00A8(0x0010) (Edit, ZeroConstructor)
 	bool                                               MarkAsNew;                                                // 0x00B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
 	struct FEmblemDefinitionActiveDuration             ActiveDuration;                                           // 0x00C0(0x0018) (Edit)
 	TArray<struct FEmblemSetDefinition>                EmblemSets;                                               // 0x00D8(0x0010) (Edit, ZeroConstructor)
 

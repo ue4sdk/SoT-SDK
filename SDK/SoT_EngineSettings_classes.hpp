@@ -138,8 +138,7 @@ public:
 	class FString                                      ProjectName;                                              // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
 	class FString                                      ProjectVersion;                                           // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
 	class FString                                      SupportContact;                                           // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
-	struct FText                                       ProjectDisplayedTitle;                                    // 0x00D8(0x0018) (Edit, Config)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ProjectDisplayedTitle;                                    // 0x00D8(0x0038) (Edit, Config)
 
 	static UClass* StaticClass()
 	{

@@ -26,11 +26,10 @@ namespace SDK
 // 0x0048
 struct FAIShipBattleParams
 {
-	struct FText                                       Name;                                                     // 0x0000(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0000(0x0038) (Edit, DisableEditOnInstance)
 	struct FVector2D                                   Location;                                                 // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Radius;                                                   // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AIShips.TrackingNoiseGenerator
@@ -319,13 +318,11 @@ struct FRelativeSpawnLocationGeneratorParams
 // 0x0080
 struct FCursedSailsBattleParams
 {
-	struct FText                                       Name;                                                     // 0x0000(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       SkellyCrewName;                                           // 0x0038(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0000(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       SkellyCrewName;                                           // 0x0038(0x0038) (Edit, DisableEditOnInstance)
 	TEnumAsByte<ECannonballIconType>                   CannonballType;                                           // 0x0070(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<ESkellyFormIconType>                   SkellyType;                                               // 0x0071(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x0072(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0072(0x0006) MISSED OFFSET
 	class UAIShipEncounterDesc*                        EncounterDescription;                                     // 0x0078(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
 };
 
@@ -389,14 +386,12 @@ struct FAIShipEncounterRevealNetEvent : public FBoxedRpc
 // 0x0080
 struct FAIShipEncounterNotification
 {
-	struct FText                                       BattleName;                                               // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       BattleName;                                               // 0x0000(0x0038)
 	struct FName                                       SeaName;                                                  // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       SkellyCrewName;                                           // 0x0040(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0040(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       SkellyCrewName;                                           // 0x0040(0x0038)
 	TEnumAsByte<ECannonballIconType>                   CannonballType;                                           // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ESkellyFormIconType>                   SkellyType;                                               // 0x0079(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct AIShips.AIShipEncounterZoneExitedNetworkEvent

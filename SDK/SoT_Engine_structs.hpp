@@ -3071,10 +3071,8 @@ struct FDebugFloatHistory
 // 0x0070
 struct FFormatTextArgument
 {
-	struct FText                                       ArgumentName;                                             // 0x0000(0x0018) (Edit, BlueprintVisible, DisableEditOnTemplate)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       TextValue;                                                // 0x0038(0x0018) (Edit, BlueprintVisible, DisableEditOnTemplate)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ArgumentName;                                             // 0x0000(0x0038) (Edit, BlueprintVisible, DisableEditOnTemplate)
+	struct FText                                       TextValue;                                                // 0x0038(0x0038) (Edit, BlueprintVisible, DisableEditOnTemplate)
 };
 
 // ScriptStruct Engine.BakedStateExitTransition
@@ -3315,10 +3313,9 @@ struct FDestructibleChunkParameters
 // 0x0040
 struct FAudioQualitySettings
 {
-	struct FText                                       DisplayName;                                              // 0x0000(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0000(0x0038) (Edit)
 	int                                                MaxChannels;                                              // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.PhysicalSurfaceName
@@ -4267,10 +4264,9 @@ struct FSoundGroup
 // 0x0040
 struct FSubtitleCue
 {
-	struct FText                                       Text;                                                     // 0x0000(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0000(0x0038) (Edit, BlueprintVisible)
 	float                                              Time;                                                     // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.LocalizedSubtitle
@@ -4979,8 +4975,7 @@ struct FBPVariableDescription
 	struct FGuid                                       VarGuid;                                                  // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
 	struct FEdGraphPinType                             VarType;                                                  // 0x0018(0x0050) (Edit)
 	class FString                                      FriendlyName;                                             // 0x0068(0x0010) (Edit, ZeroConstructor)
-	struct FText                                       Category;                                                 // 0x0078(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0078(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Category;                                                 // 0x0078(0x0038) (Edit)
 	uint64_t                                           PropertyFlags;                                            // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       RepNotifyFunc;                                            // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FBPVariableMetaDataEntry>            MetaDataArray;                                            // 0x00C0(0x0010) (Edit, ZeroConstructor)
@@ -5278,10 +5273,8 @@ struct FAnimExtractContext
 struct FSpriteCategoryInfo
 {
 	struct FName                                       Category;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       DisplayName;                                              // 0x0008(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Description;                                              // 0x0040(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0040(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0008(0x0038)
+	struct FText                                       Description;                                              // 0x0040(0x0038)
 };
 
 // ScriptStruct Engine.AnimNotifyTrack
@@ -5711,13 +5704,10 @@ struct FGraphReference
 struct FEdGraphSchemaAction
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	struct FText                                       MenuDescription;                                          // 0x0008(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       MenuDescription;                                          // 0x0008(0x0038)
 	class FString                                      TooltipDescription;                                       // 0x0040(0x0010) (ZeroConstructor)
-	struct FText                                       Category;                                                 // 0x0050(0x0018)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0050(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Keywords;                                                 // 0x0088(0x0018)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0088(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Category;                                                 // 0x0050(0x0038)
+	struct FText                                       Keywords;                                                 // 0x0088(0x0038)
 	int                                                Grouping;                                                 // 0x00C0(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                SectionID;                                                // 0x00C4(0x0004) (ZeroConstructor, IsPlainOldData)
 };

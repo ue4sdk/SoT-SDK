@@ -626,10 +626,9 @@ class UMovieSceneShotSection : public USubMovieSceneSection
 {
 public:
 	struct FGuid                                       CameraGuid;                                               // 0x0040(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       DisplayName;                                              // 0x0050(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0050(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0050(0x0038)
 	int                                                ShotNumber;                                               // 0x0088(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

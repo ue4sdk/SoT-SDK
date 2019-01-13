@@ -1079,13 +1079,12 @@ struct FShipLiveryCatalogueEntry
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 	struct FName                                       FeatureName;                                              // 0x002C(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FText                                       ShipTeamName;                                             // 0x0038(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0034(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ShipTeamName;                                             // 0x0038(0x0038) (Edit, DisableEditOnInstance)
 	struct FStringAssetReference                       ShipScrollTeamIcon;                                       // 0x0070(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringAssetReference                       ShipToastTeamIcon;                                        // 0x0080(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	bool                                               AvailableWhenFeatureEnabled;                              // 0x0090(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               AvailableWhenFeatureDisabled;                             // 0x0091(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x16];                                      // 0x0092(0x0016) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x16];                                      // 0x0092(0x0016) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ShipLiveryCatalogue
@@ -1696,30 +1695,29 @@ struct FItemLoadout
 // 0x00B0
 struct FVoyageParticipantView
 {
-	struct FText                                       Title;                                                    // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0000(0x0038)
 	struct FGuid                                       Id;                                                       // 0x0038(0x0010) (ZeroConstructor, IsPlainOldData)
 	int                                                ChapterIndex;                                             // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                ChapterCount;                                             // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                ActiveQuestCount;                                         // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EVoyageChangeReason>                   History;                                                  // 0x0054(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
 	class UClass*                                      Company;                                                  // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               IsEmergent;                                               // 0x0060(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               DoNotNotifyParticipantsOnVoyageComplete;                  // 0x0061(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x0062(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0062(0x0002) MISSED OFFSET
 	int                                                Rank;                                                     // 0x0064(0x0004) (ZeroConstructor, IsPlainOldData)
 	class FString                                      DiscovererName;                                           // 0x0068(0x0010) (ZeroConstructor)
 	bool                                               IsDiscovererMe;                                           // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0079(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0079(0x0003) MISSED OFFSET
 	struct FName                                       ChestRarity;                                              // 0x007C(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               PlayAudio;                                                // 0x0084(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
 	int                                                ChestDiscoveredId;                                        // 0x0088(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                CollectCratesPopUpId;                                     // 0x0098(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x00A0(0x0010) (ZeroConstructor)
 };
 
@@ -2601,8 +2599,7 @@ struct FBountyMapLayoutTarget
 // 0x0038 (0x0058 - 0x0020)
 struct FTreasureMapWidgetLocalisedText : public FTreasureMapWidgetText
 {
-	struct FText                                       Text;                                                     // 0x0020(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0020(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0020(0x0038) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct Athena.QuestBootyItemPopUpEntry
@@ -2839,8 +2836,7 @@ struct FCanvasWorldMapForegroundItems
 struct FCanvasWorldMapSeaData
 {
 	class UTexture*                                    Texture;                                                  // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FText                                       Name;                                                     // 0x0008(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0008(0x0038) (Edit, BlueprintVisible)
 	struct FVector2D                                   Location;                                                 // 0x0040(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FName                                       FeatureName;                                              // 0x0048(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
@@ -3671,10 +3667,8 @@ struct FCrewScore
 struct FContestUIDescriptions
 {
 	class UPopUpMessageDesc*                           NewMapDesc;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FText                                       ContestStartBlindText;                                    // 0x0008(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       ContestEndBlindText;                                      // 0x0040(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0040(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ContestStartBlindText;                                    // 0x0008(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       ContestEndBlindText;                                      // 0x0040(0x0038) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct Athena.MerchantSpawnData
@@ -3751,8 +3745,7 @@ struct FAchievementCompleteContest
 // 0x0040
 struct FCinematicQuestEvent
 {
-	struct FText                                       Message;                                                  // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Message;                                                  // 0x0000(0x0038)
 	struct FName                                       Tag;                                                      // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
@@ -4162,8 +4155,7 @@ struct FDrunkennessSetupData
 struct FEmoteData
 {
 	struct FName                                       EmoteIdentifier;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       EmoteDisplayName;                                         // 0x0008(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       EmoteDisplayName;                                         // 0x0008(0x0038) (Edit)
 	float                                              DelayBeforeAllowingExit;                                  // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              VerticalOffsetFactorWhenZoomed;                           // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
@@ -6060,16 +6052,14 @@ struct FFeaturedShipCustomisationCategory
 struct FShipCustomizationChestCrewMember
 {
 	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       GamerTag;                                                 // 0x0010(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       GamerTag;                                                 // 0x0010(0x0038)
 };
 
 // ScriptStruct Athena.NPCDialogRankGatedText
 // 0x0048
 struct FNPCDialogRankGatedText
 {
-	struct FText                                       Text;                                                     // 0x0000(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0000(0x0038) (Edit)
 	TArray<class UClass*>                              RequiredRanks;                                            // 0x0038(0x0010) (Edit, ZeroConstructor)
 };
 
@@ -6097,13 +6087,11 @@ struct FNPCData
 	struct FNetActorPtr                                NPC;                                                      // 0x0000(0x0014)
 	struct FGuid                                       Id;                                                       // 0x0014(0x0010) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	struct FText                                       Name;                                                     // 0x0028(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0024(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0028(0x0038)
 	struct FVector                                     Location;                                                 // 0x0060(0x000C) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       IslandName;                                               // 0x006C(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
-	struct FText                                       IslandNameLocalised;                                      // 0x0078(0x0018)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0074(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
+	struct FText                                       IslandNameLocalised;                                      // 0x0078(0x0038)
 };
 
 // ScriptStruct Athena.AISpawnActionStateParams
@@ -7386,16 +7374,14 @@ struct FActionVisualsOverride
 struct FTreasureMapTextEntry
 {
 	class FString                                      Name;                                                     // 0x0000(0x0010) (ZeroConstructor)
-	struct FText                                       Substitution;                                             // 0x0010(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Substitution;                                             // 0x0010(0x0038)
 };
 
 // ScriptStruct Athena.TreasureMapTextDesc
 // 0x0048
 struct FTreasureMapTextDesc
 {
-	struct FText                                       Pattern;                                                  // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Pattern;                                                  // 0x0000(0x0038)
 	TArray<struct FTreasureMapTextEntry>               Substitutions;                                            // 0x0038(0x0010) (ZeroConstructor)
 };
 
@@ -8037,8 +8023,7 @@ struct FFeaturedEntitlements
 // 0x0038
 struct FPhraseData
 {
-	struct FText                                       TextToBroadcast;                                          // 0x0000(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       TextToBroadcast;                                          // 0x0000(0x0038) (Edit)
 };
 
 // ScriptStruct Athena.ItemConsumptionStatusChanceEntry
@@ -8115,21 +8100,18 @@ struct FEmblemRankDefinition
 struct FEmblemSetDefinition
 {
 	class FString                                      FriendlyName;                                             // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FText                                       Title;                                                    // 0x0010(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Description;                                              // 0x0048(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0048(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CompletedDescription;                                     // 0x0080(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0010(0x0038) (Edit)
+	struct FText                                       Description;                                              // 0x0048(0x0038) (Edit)
+	struct FText                                       CompletedDescription;                                     // 0x0080(0x0038) (Edit)
 	float                                              ValueArgScalar;                                           // 0x00B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
 	TArray<struct FEmblemRankDefinition>               Emblems;                                                  // 0x00C0(0x0010) (Edit, ZeroConstructor)
 	class UPopUpMessageDesc*                           UnlockPopUp;                                              // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UPopUpAudioDesc*                             UnlockPopUpAudioOverrides;                                // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               HighPriority;                                             // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               GrantsTitleAfterLastUnlock;                               // 0x00E1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               Hidden;                                                   // 0x00E2(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x5];                                       // 0x00E3(0x0005) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x5];                                       // 0x00E3(0x0005) MISSED OFFSET
 };
 
 // ScriptStruct Athena.CharacterSocketCollisionResult
@@ -9867,12 +9849,11 @@ struct FEventAllIslandsLoaded
 // 0x0048
 struct FEventIslandDiscoveredNotification
 {
-	struct FText                                       IslandName;                                               // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       IslandName;                                               // 0x0000(0x0038)
 	TEnumAsByte<EIslandType>                           IslandType;                                               // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
 	struct FName                                       SeaName;                                                  // 0x003C(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EventPlayerSetFootOnIsland
@@ -10042,8 +10023,7 @@ struct FWorldMapSetShipLocation
 // 0x0060
 struct FWorldMapIslandData
 {
-	struct FText                                       Name;                                                     // 0x0000(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0000(0x0038) (Edit, BlueprintVisible)
 	class FString                                      IslandUrl;                                                // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              MinX;                                                     // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              MinY;                                                     // 0x004C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -10082,13 +10062,12 @@ struct FWorldMapRequestWorld
 // 0x0060
 struct FCanvasWorldMapIslandData
 {
-	struct FText                                       Name;                                                     // 0x0000(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0000(0x0038) (Edit, BlueprintVisible)
 	class UTexture*                                    IslandTex;                                                // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FBox2D                                      Bounds;                                                   // 0x0040(0x0014) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Rotation;                                                 // 0x0054(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              LabelOffset;                                              // 0x0058(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.CanvasWorldMapWorldData
@@ -10436,8 +10415,7 @@ struct FVoyageChestDiscoveredInContest : public FNetworkEventStruct
 	bool                                               PlayAudio;                                                // 0x0021(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0022(0x0006) MISSED OFFSET
 	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       CrewName;                                                 // 0x0030(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0030(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CrewName;                                                 // 0x0030(0x0038)
 	struct FStringAssetReference                       CrewIcon;                                                 // 0x0068(0x0010) (ZeroConstructor)
 };
 
@@ -10465,8 +10443,7 @@ struct FVoyageComplete
 // 0x0038
 struct FVoyageBegun
 {
-	struct FText                                       Title;                                                    // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0000(0x0038)
 };
 
 // ScriptStruct Athena.ShipIdentityOwnership
@@ -10748,8 +10725,7 @@ struct FShowRadialInventory : public FRadialInventoryEvent
 {
 	struct FName                                       ActionKeyBinding;                                         // 0x0004(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	struct FText                                       ActionText;                                               // 0x0010(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x000C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ActionText;                                               // 0x0010(0x0038)
 };
 
 // ScriptStruct Athena.EnsembleAggregateTickFunction
@@ -11891,16 +11867,14 @@ struct FPlayerNonVerbalComponentTelemetry
 struct FEventPlayerSendOutDirectTextMessage
 {
 	class AAthenaPlayerState*                          Sender;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       Message;                                                  // 0x0008(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Message;                                                  // 0x0008(0x0038)
 };
 
 // ScriptStruct Athena.EventSendNewTextMessageToServer
 // 0x0038
 struct FEventSendNewTextMessageToServer
 {
-	struct FText                                       Message;                                                  // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Message;                                                  // 0x0000(0x0038)
 };
 
 // ScriptStruct Athena.EventRequestSayPhrase
@@ -12282,10 +12256,9 @@ struct FShopOfferPrice
 {
 	TEnumAsByte<EWalletCurrencyId>                     Currency;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FText                                       DisplayPrice;                                             // 0x0008(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0001(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayPrice;                                             // 0x0008(0x0038)
 	uint32_t                                           Price;                                                    // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ShopOfferPrerequisites
@@ -12442,8 +12415,7 @@ struct FShopDialogueMessages
 // 0x0050
 struct FCategoryTab
 {
-	struct FText                                       Name;                                                     // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0000(0x0038)
 	struct FName                                       UniqueTextIdentifier;                                     // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 	class FString                                      IconPath;                                                 // 0x0040(0x0010) (ZeroConstructor)
 };
@@ -12612,14 +12584,12 @@ struct FVomitFacialAnim
 // 0x0098
 struct FVoyageDisplayInformation
 {
-	struct FText                                       Title;                                                    // 0x0000(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Description;                                              // 0x0038(0x0018) (Edit)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0000(0x0038) (Edit)
+	struct FText                                       Description;                                              // 0x0038(0x0038) (Edit)
 	class FString                                      KeyArtUrl;                                                // 0x0070(0x0010) (Edit, ZeroConstructor)
 	class FString                                      IconUrl;                                                  // 0x0080(0x0010) (Edit, ZeroConstructor)
 	int                                                RumouredHaulMin;                                          // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.VoyageProposalDescViewModel
@@ -15080,8 +15050,7 @@ struct FEventEmblemUnlockedNotification
 {
 	struct FName                                       CompanyName;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       FriendlyName;                                             // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       EmblemName;                                               // 0x0010(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       EmblemName;                                               // 0x0010(0x0038)
 	class FString                                      EmblemUrl;                                                // 0x0048(0x0010) (ZeroConstructor)
 };
 
@@ -15455,10 +15424,8 @@ struct FPlayerInfoRequest
 // 0x0070
 struct FPlayerInfoResponse
 {
-	struct FText                                       GamerTag;                                                 // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Title;                                                    // 0x0038(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       GamerTag;                                                 // 0x0000(0x0038)
+	struct FText                                       Title;                                                    // 0x0038(0x0038)
 };
 
 // ScriptStruct Athena.PlayerManagerServiceUninitialisedEvent
@@ -15572,10 +15539,9 @@ struct FHUDWalletBalance
 {
 	TEnumAsByte<EWalletCurrencyId>                     CurrencyId;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FText                                       DisplayBalance;                                           // 0x0008(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0001(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayBalance;                                           // 0x0008(0x0038)
 	uint32_t                                           Balance;                                                  // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.UpdateWalletBalanceHUDEvent
@@ -15603,8 +15569,7 @@ struct FShipwreckDiscoveredRpc : public FBoxedRpc
 // 0x0038
 struct FEventShipwreckDiscoveredNotification
 {
-	struct FText                                       WreckName;                                                // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       WreckName;                                                // 0x0000(0x0038)
 };
 
 // ScriptStruct Athena.ArmoryChestEquipItemEvent
@@ -16250,8 +16215,7 @@ struct FProjectileWeaponFiredTelemetryEvent
 struct FTreasureChestSoldInContestNetworkEvent : public FNetworkEventStruct
 {
 	struct FName                                       RewardId;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       CrewName;                                                 // 0x0018(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0018(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CrewName;                                                 // 0x0018(0x0038)
 	struct FStringAssetReference                       CrewIcon;                                                 // 0x0050(0x0010) (ZeroConstructor)
 };
 
@@ -16464,8 +16428,7 @@ struct FGameEventSchedulerConfigChangeTelemetryEvent
 // 0x0038
 struct FHideoutRevealedEvent
 {
-	struct FText                                       HideoutName;                                              // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       HideoutName;                                              // 0x0000(0x0038)
 };
 
 // ScriptStruct Athena.PlayerExitedHideoutEvent
@@ -16555,8 +16518,7 @@ struct FDisplayServiceStatusNotificationClient
 {
 	uint32_t                                           NotificationId;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FText                                       NotificationText;                                         // 0x0008(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0004(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       NotificationText;                                         // 0x0008(0x0038)
 	struct FTimespan                                   Duration;                                                 // 0x0040(0x0008) (ZeroConstructor)
 };
 
@@ -16613,8 +16575,7 @@ struct FEventGhostShipLevelLoaded
 // 0x0038
 struct FEventSpawnedAsGhostNotification
 {
-	struct FText                                       NotificationText;                                         // 0x0000(0x0018) (BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       NotificationText;                                         // 0x0000(0x0038) (BlueprintVisible)
 };
 
 // ScriptStruct Athena.EventGhostShipDoorDestroyed
@@ -16867,12 +16828,10 @@ struct FCatalogOfferPrerequisites
 struct FCatalogOffer
 {
 	struct FGuid                                       OfferId;                                                  // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       DisplayName;                                              // 0x0010(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       DisplayDescription;                                       // 0x0048(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0048(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       DisplayName;                                              // 0x0010(0x0038)
+	struct FText                                       DisplayDescription;                                       // 0x0048(0x0038)
 	uint32_t                                           Price;                                                    // 0x0080(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
 	class FString                                      CurrencyType;                                             // 0x0088(0x0010) (ZeroConstructor)
 	TArray<class FString>                              AssetPaths;                                               // 0x0098(0x0010) (ZeroConstructor)
 	class FString                                      Thumbnail;                                                // 0x00A8(0x0010) (ZeroConstructor)
@@ -18572,12 +18531,10 @@ struct FProgressUpdatedNotificationUIEvent
 	struct FProgressPoint                              New;                                                      // 0x0018(0x0018)
 	class FString                                      RibbonImage;                                              // 0x0030(0x0010) (ZeroConstructor)
 	class FString                                      BackgroundImage;                                          // 0x0040(0x0010) (ZeroConstructor)
-	struct FText                                       Title;                                                    // 0x0050(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0050(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Body;                                                     // 0x0088(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0088(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0050(0x0038)
+	struct FText                                       Body;                                                     // 0x0088(0x0038)
 	TEnumAsByte<EProgressStyle>                        Style;                                                    // 0x00C0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
 	class FString                                      RankIncreaseAudioCue;                                     // 0x00C8(0x0010) (ZeroConstructor)
 	class FString                                      RankIncreaseStopAudioCue;                                 // 0x00D8(0x0010) (ZeroConstructor)
 	class FString                                      RankLevelUpAudioCue;                                      // 0x00E8(0x0010) (ZeroConstructor)
@@ -18600,8 +18557,7 @@ struct FPopUpNotificationUIEvent
 {
 	class FString                                      BackgroundImage;                                          // 0x0000(0x0010) (ZeroConstructor)
 	class FString                                      ForegroundImage;                                          // 0x0010(0x0010) (ZeroConstructor)
-	struct FText                                       Text;                                                     // 0x0020(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0020(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Text;                                                     // 0x0020(0x0038)
 	class FString                                      AudioSfxEventName;                                        // 0x0058(0x0010) (ZeroConstructor)
 	class FString                                      AudioEventName;                                           // 0x0068(0x0010) (ZeroConstructor)
 	class FString                                      AudioSwitchName;                                          // 0x0078(0x0010) (ZeroConstructor)
@@ -18627,8 +18583,7 @@ struct FShowTutorialNotificationUIEvent : public FGenericNotificationUIEvent
 // 0x0060
 struct FVoyageCompleteAnimationEvent
 {
-	struct FText                                       VoyageTitle;                                              // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       VoyageTitle;                                              // 0x0000(0x0038)
 	class FString                                      AudioSwitchName;                                          // 0x0038(0x0010) (ZeroConstructor)
 	class FString                                      AudioSwitchValue;                                         // 0x0048(0x0010) (ZeroConstructor)
 	struct FName                                       CompanyId;                                                // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -18640,8 +18595,7 @@ struct FVoyageChapterBegunAnimationEvent
 {
 	int                                                ChapterIndex;                                             // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                ChapterCount;                                             // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       VoyageTitle;                                              // 0x0008(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       VoyageTitle;                                              // 0x0008(0x0038)
 	class FString                                      AudioSwitchName;                                          // 0x0040(0x0010) (ZeroConstructor)
 	class FString                                      AudioSwitchValue;                                         // 0x0050(0x0010) (ZeroConstructor)
 	struct FName                                       CompanyId;                                                // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -18651,13 +18605,11 @@ struct FVoyageChapterBegunAnimationEvent
 // 0x00B0
 struct FVoyageBegunAnimationEvent
 {
-	struct FText                                       ShipName;                                                 // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       ShipName;                                                 // 0x0000(0x0038)
 	TArray<class FString>                              CrewMembers;                                              // 0x0038(0x0010) (ZeroConstructor)
 	int                                                ChapterIndex;                                             // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                ChapterCount;                                             // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       VoyageTitle;                                              // 0x0050(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0050(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       VoyageTitle;                                              // 0x0050(0x0038)
 	class FString                                      AudioSwitchName;                                          // 0x0088(0x0010) (ZeroConstructor)
 	class FString                                      AudioSwitchValue;                                         // 0x0098(0x0010) (ZeroConstructor)
 	struct FName                                       CompanyId;                                                // 0x00A8(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -18941,12 +18893,11 @@ struct FCappedCount
 struct FEmblemInformation
 {
 	class FString                                      BackgroundImageUrl;                                       // 0x0000(0x0010) (ZeroConstructor)
-	struct FText                                       Name;                                                     // 0x0010(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0010(0x0038)
 	TArray<struct FText>                               ProgressDescriptions;                                     // 0x0048(0x0010) (ZeroConstructor)
 	TArray<struct FCappedCount>                        Progressions;                                             // 0x0058(0x0010) (ZeroConstructor)
 	uint32_t                                           Doubloons;                                                // 0x0068(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EmblemSetInformation
@@ -18987,17 +18938,14 @@ struct FEventCompanyReputationCampaignInformation
 // 0x00D8
 struct FReputationCompanyDisplayInformation
 {
-	struct FText                                       CompanyName;                                              // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       Motto;                                                    // 0x0038(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CurrentRank;                                              // 0x0070(0x0018)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CompanyName;                                              // 0x0000(0x0038)
+	struct FText                                       Motto;                                                    // 0x0038(0x0038)
+	struct FText                                       CurrentRank;                                              // 0x0070(0x0038)
 	class FString                                      BackgroundImageUrl;                                       // 0x00A8(0x0010) (ZeroConstructor)
 	class FString                                      RibbonImageUrl;                                           // 0x00B8(0x0010) (ZeroConstructor)
 	struct FName                                       CompanyId;                                                // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EProgressStyle>                        Style;                                                    // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
 	float                                              CompanyLevel;                                             // 0x00D4(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
@@ -19007,10 +18955,8 @@ struct FCompanyScreenInformation
 {
 	struct FReputationCompanyDisplayInformation        CompanySummary;                                           // 0x0000(0x00D8)
 	struct FCappedCount                                CompanyProgression;                                       // 0x00D8(0x0008)
-	struct FText                                       CompanyFlavourText1;                                      // 0x00E0(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00E0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CompanyFlavourText2;                                      // 0x0118(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0118(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CompanyFlavourText1;                                      // 0x00E0(0x0038)
+	struct FText                                       CompanyFlavourText2;                                      // 0x0118(0x0038)
 	TArray<struct FEmblemSetInformation>               EmblemSets;                                               // 0x0150(0x0010) (ZeroConstructor)
 };
 
@@ -19567,10 +19513,8 @@ struct FMerchantItemGroupDesc
 struct FMerchantQuestDesc : public FQuestDesc
 {
 	class UMerchantMapLayout*                          Layout;                                                   // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       PickupLocationLocalisedIslandName;                        // 0x0038(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       DeliveryLocationLocalisedIslandName;                      // 0x0070(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0070(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       PickupLocationLocalisedIslandName;                        // 0x0038(0x0038)
+	struct FText                                       DeliveryLocationLocalisedIslandName;                      // 0x0070(0x0038)
 	struct FTreasureMapTextDesc                        PickupLocation;                                           // 0x00A8(0x0048)
 	struct FTreasureMapTextDesc                        DeliveryLocation;                                         // 0x00F0(0x0048)
 	struct FTreasureMapTextDesc                        DeliverByTimeText;                                        // 0x0138(0x0048)
@@ -19578,7 +19522,7 @@ struct FMerchantQuestDesc : public FQuestDesc
 	TArray<struct FMerchantMapItemData>                ItemData;                                                 // 0x01C8(0x0010) (ZeroConstructor)
 	TArray<struct FMerchantItemGroupDesc>              ItemGroupDescs;                                           // 0x01D8(0x0010) (ZeroConstructor)
 	int                                                TimeLimitInMinutes;                                       // 0x01E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x01EC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x01EC(0x0004) MISSED OFFSET
 	struct FGameTime                                   DeliverByTime;                                            // 0x01F0(0x0008)
 };
 
@@ -19739,12 +19683,11 @@ struct FTaleQuestFailedNetworkEvent : public FNetworkEventStruct
 // 0x0068
 struct FVoyageInfo
 {
-	struct FText                                       Title;                                                    // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0000(0x0038)
 	struct FGuid                                       Id;                                                       // 0x0038(0x0010) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      Company;                                                  // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               IsEmergent;                                               // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
 	int                                                Rank;                                                     // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
 	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x0058(0x0010) (ZeroConstructor)
 };
@@ -19753,14 +19696,13 @@ struct FVoyageInfo
 // 0x0078
 struct FVoyageMembershipInfo
 {
-	struct FText                                       Title;                                                    // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Title;                                                    // 0x0000(0x0038)
 	struct FGuid                                       Id;                                                       // 0x0038(0x0010) (ZeroConstructor, IsPlainOldData)
 	TArray<struct FQuestInfo>                          QuestStatus;                                              // 0x0048(0x0010) (ZeroConstructor)
 	class UClass*                                      Company;                                                  // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               IsEmergent;                                               // 0x0060(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               DoNotNotifyParticipantsOnVoyageComplete;                  // 0x0061(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0062(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0062(0x0006) MISSED OFFSET
 	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x0068(0x0010) (ZeroConstructor)
 };
 

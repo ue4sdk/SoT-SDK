@@ -390,7 +390,7 @@ public:
 
 struct FText
 {
-	char UnknownData[0x18];
+	char UnknownData[0x38];
 };
 
 struct FScriptDelegate

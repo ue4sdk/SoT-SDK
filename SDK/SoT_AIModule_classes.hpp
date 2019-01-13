@@ -2556,11 +2556,10 @@ public:
 class UEnvQueryGenerator_BlueprintBase : public UEnvQueryGenerator
 {
 public:
-	struct FText                                       GeneratorsActionDescription;                              // 0x0048(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0048(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       GeneratorsActionDescription;                              // 0x0048(0x0038) (Edit)
 	class UClass*                                      Context;                                                  // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      GeneratedItemType;                                        // 0x0088(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0090(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0090(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -1545,8 +1545,7 @@ public:
 class UGameplayEffectUIData_TextOnly : public UGameplayEffectUIData
 {
 public:
-	struct FText                                       Description;                                              // 0x0028(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Description;                                              // 0x0028(0x0038) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

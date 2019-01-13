@@ -338,8 +338,7 @@ struct FAISpawnTypeParams
 	class UClass*                                      AIClassIdOverride;                                        // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FStringAssetReference                       TeamColorOverride;                                        // 0x0068(0x0010) (Edit, ZeroConstructor)
 	struct FName                                       DioramaRole;                                              // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       LocalisableName;                                          // 0x0080(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       LocalisableName;                                          // 0x0080(0x0038) (Edit)
 };
 
 // ScriptStruct AthenaAI.WeightedAISpawnTypeParams
@@ -591,10 +590,9 @@ struct FAIEncounterSpecification
 	int                                                TeamColorIndex;                                           // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       DioramaRole;                                              // 0x0054(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
-	struct FText                                       LocalisableName;                                          // 0x0060(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x005C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       LocalisableName;                                          // 0x0060(0x0038)
 	bool                                               ShowNameplate;                                            // 0x0098(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIEncounterWave

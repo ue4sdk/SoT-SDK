@@ -52,8 +52,7 @@ public:
 	TArray<struct FSlateLoadingScreenImageParams>      CyclingImages;                                            // 0x0080(0x0010) (Edit, ZeroConstructor)
 	int                                                MaxNumImagesPerLoad;                                      // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
-	struct FText                                       SpinnerText;                                              // 0x0098(0x0018) (Edit)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0094(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       SpinnerText;                                              // 0x0098(0x0038) (Edit)
 	struct FSlateColor                                 SpinnerTextColour;                                        // 0x00D0(0x0030) (Edit)
 	struct FSlateFontInfo                              SpinnerTextFont;                                          // 0x0100(0x0040) (Edit)
 	float                                              SpinnerSize;                                              // 0x0140(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -67,7 +66,7 @@ public:
 	int                                                NumTipsPerImage;                                          // 0x0184(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FSlateFontInfo                              LoadingTipFont;                                           // 0x0188(0x0040) (Edit)
 	float                                              LoadingTipFontLineHeightPercentage;                       // 0x01C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x01CC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x4];                                       // 0x01CC(0x0004) MISSED OFFSET
 	TArray<struct FText>                               LoadingScreenTips;                                        // 0x01D0(0x0010) (Edit, ZeroConstructor)
 	struct FSlateColor                                 LoadingScreenTipColour;                                   // 0x01E0(0x0030) (Edit)
 

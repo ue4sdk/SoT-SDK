@@ -22,8 +22,7 @@ namespace SDK
 struct FNotificationInputDisplayName
 {
 	class UClass*                                      InputID;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FText                                       Name;                                                     // 0x0008(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       Name;                                                     // 0x0008(0x0038) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct AthenaInput.IdleTimeTracker

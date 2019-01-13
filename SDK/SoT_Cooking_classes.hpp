@@ -55,12 +55,9 @@ public:
 	class UCookerComponent*                            CookerComponent;                                          // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
 	float                                              HoldToInteractTime;                                       // 0x04C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x04CC(0x0004) MISSED OFFSET
-	struct FText                                       NotWieldingItemTooltip;                                   // 0x04D0(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x04CC(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       WieldingNonCookableItemTooltip;                           // 0x0508(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0508(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       WieldingCookableItemTooltip;                              // 0x0540(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0540(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       NotWieldingItemTooltip;                                   // 0x04D0(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       WieldingNonCookableItemTooltip;                           // 0x0508(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       WieldingCookableItemTooltip;                              // 0x0540(0x0038) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

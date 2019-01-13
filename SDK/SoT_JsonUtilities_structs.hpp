@@ -28,10 +28,8 @@ struct FJsonObjectWrapper
 // 0x0070
 struct FTestTextObject
 {
-	struct FText                                       TestText;                                                 // 0x0000(0x0018)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       TestTextExport;                                           // 0x0038(0x0018)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       TestText;                                                 // 0x0000(0x0038)
+	struct FText                                       TestTextExport;                                           // 0x0038(0x0038)
 };
 
 // ScriptStruct JsonUtilities.TestFloatObject

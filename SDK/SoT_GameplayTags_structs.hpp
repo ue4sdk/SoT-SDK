@@ -57,8 +57,7 @@ struct FGameplayTagNode
 struct FGameplayTagTableRow : public FTableRowBase
 {
 	class FString                                      Tag;                                                      // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FText                                       CategoryText;                                             // 0x0010(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CategoryText;                                             // 0x0010(0x0038) (Edit, BlueprintVisible)
 };
 
 }
