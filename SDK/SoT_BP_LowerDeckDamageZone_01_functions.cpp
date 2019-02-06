@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_LowerDeckDamageZone_01_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LowerDeckDamageZone_01.BP_LowerDeckDamageZone_01_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LowerDeckDamageZone_01.BP_LowerDeckDamageZone_01_C.UserConstructionScript"));
 
 	struct
 	{

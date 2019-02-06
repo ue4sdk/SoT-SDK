@@ -21,7 +21,7 @@ namespace SDK
 
 bool ABP_ShipStorageBarrel_Wood_C::ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C.ShouldDrawTooltipInWorldSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C.ShouldDrawTooltipInWorldSpace"));
 
 	struct
 	{
@@ -46,7 +46,7 @@ bool ABP_ShipStorageBarrel_Wood_C::ShouldDrawTooltipInWorldSpace(class AActor* I
 
 void ABP_ShipStorageBarrel_Wood_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C.UserConstructionScript"));
 
 	struct
 	{

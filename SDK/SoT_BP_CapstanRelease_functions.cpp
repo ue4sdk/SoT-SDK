@@ -21,7 +21,7 @@ namespace SDK
 
 struct FVector ABP_CapstanRelease_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanRelease.BP_CapstanRelease_C.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanRelease.BP_CapstanRelease_C.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -46,7 +46,7 @@ struct FVector ABP_CapstanRelease_C::GetClosestInteractionPoint(const struct FVe
 
 void ABP_CapstanRelease_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanRelease.BP_CapstanRelease_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanRelease.BP_CapstanRelease_C.UserConstructionScript"));
 
 	struct
 	{

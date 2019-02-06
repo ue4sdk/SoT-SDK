@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_SmallShip_Mast_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.UserConstructionScript"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void ABP_SmallShip_Mast_C::UserConstructionScript()
 
 void ABP_SmallShip_Mast_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.OnMastDescLoaded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.OnMastDescLoaded"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ABP_SmallShip_Mast_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 
 void ABP_SmallShip_Mast_C::ExecuteUbergraph_BP_SmallShip_Mast(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.ExecuteUbergraph_BP_SmallShip_Mast");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.ExecuteUbergraph_BP_SmallShip_Mast"));
 
 	struct
 	{

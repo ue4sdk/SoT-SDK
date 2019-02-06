@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TinyShark_Zone.BP_TinyShark_Zone_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0508 - 0x0508)
 class ABP_TinyShark_Zone_C : public AHungeringDeep
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_TinyShark_Zone.BP_TinyShark_Zone_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_TinyShark_Zone.BP_TinyShark_Zone_C"));
 		return ptr;
 	}
 

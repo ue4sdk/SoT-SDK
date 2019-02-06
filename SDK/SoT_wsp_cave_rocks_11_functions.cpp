@@ -17,7 +17,7 @@ namespace SDK
 
 void Awsp_cave_rocks_10_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_cave_rocks_11.wsp_cave_rocks_10_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_cave_rocks_11.wsp_cave_rocks_10_C.UserConstructionScript"));
 
 	struct
 	{

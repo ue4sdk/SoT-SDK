@@ -17,7 +17,7 @@ namespace SDK
 
 void Acmn_torch_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_torch_a.cmn_torch_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function cmn_torch_a.cmn_torch_a_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void Acmn_torch_a_C::UserConstructionScript()
 
 void Acmn_torch_a_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_torch_a.cmn_torch_a_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function cmn_torch_a.cmn_torch_a_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void Acmn_torch_a_C::ReceiveBeginPlay()
 
 void Acmn_torch_a_C::ExecuteUbergraph_cmn_torch_a(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_torch_a.cmn_torch_a_C.ExecuteUbergraph_cmn_torch_a");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function cmn_torch_a.cmn_torch_a_C.ExecuteUbergraph_cmn_torch_a"));
 
 	struct
 	{

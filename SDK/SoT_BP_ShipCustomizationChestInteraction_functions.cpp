@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_ShipCustomizationChestInteraction_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipCustomizationChestInteraction.BP_ShipCustomizationChestInteraction_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipCustomizationChestInteraction.BP_ShipCustomizationChestInteraction_C.UserConstructionScript"));
 
 	struct
 	{

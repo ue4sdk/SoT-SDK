@@ -21,7 +21,7 @@ namespace SDK
 
 void ABP_DistantLightProxy_C::FindExistingLight(const class FString& Name, bool* Result, int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.FindExistingLight");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DistantLightProxy.BP_DistantLightProxy_C.FindExistingLight"));
 
 	struct
 	{
@@ -46,7 +46,7 @@ void ABP_DistantLightProxy_C::FindExistingLight(const class FString& Name, bool*
 
 void ABP_DistantLightProxy_C::Create_Lights()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Create Lights");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Create Lights"));
 
 	struct
 	{
@@ -62,7 +62,7 @@ void ABP_DistantLightProxy_C::Create_Lights()
 
 void ABP_DistantLightProxy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DistantLightProxy.BP_DistantLightProxy_C.UserConstructionScript"));
 
 	struct
 	{
@@ -83,7 +83,7 @@ void ABP_DistantLightProxy_C::UserConstructionScript()
 
 void ABP_DistantLightProxy_C::Add_Light(const struct FVector& Location, float Size, class UMaterialInterface* Material, const class FString& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Add Light");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Add Light"));
 
 	struct
 	{
@@ -109,7 +109,7 @@ void ABP_DistantLightProxy_C::Add_Light(const struct FVector& Location, float Si
 
 void ABP_DistantLightProxy_C::ExecuteUbergraph_BP_DistantLightProxy(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.ExecuteUbergraph_BP_DistantLightProxy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DistantLightProxy.BP_DistantLightProxy_C.ExecuteUbergraph_BP_DistantLightProxy"));
 
 	struct
 	{

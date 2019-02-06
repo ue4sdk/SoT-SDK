@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bp_lantern_hook_01_a.bp_lantern_hook_01_a_C
-// 0x0018 (0x04A8 - 0x0490)
+// 0x0018 (0x04B0 - 0x0498)
 class Abp_lantern_hook_01_a_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        tls_lantern_01_d;                                         // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMeshComponent0;                                     // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             SharedRoot;                                               // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        tls_lantern_01_d;                                         // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMeshComponent0;                                     // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             SharedRoot;                                               // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass bp_lantern_hook_01_a.bp_lantern_hook_01_a_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass bp_lantern_hook_01_a.bp_lantern_hook_01_a_C"));
 		return ptr;
 	}
 

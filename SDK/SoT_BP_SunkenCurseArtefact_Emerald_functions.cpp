@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_SunkenCurseArtefact_Emerald_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SunkenCurseArtefact_Emerald.BP_SunkenCurseArtefact_Emerald_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SunkenCurseArtefact_Emerald.BP_SunkenCurseArtefact_Emerald_C.UserConstructionScript"));
 
 	struct
 	{

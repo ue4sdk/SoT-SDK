@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_InstancedStaticMeshes.BP_InstancedStaticMeshes_C
-// 0x001C (0x04AC - 0x0490)
+// 0x001C (0x04B4 - 0x0498)
 class ABP_InstancedStaticMeshes_C : public AActor
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FInstance_Struct>                    Instances;                                                // 0x0498(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              DrawDistance;                                             // 0x04A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FInstance_Struct>                    Instances;                                                // 0x04A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              DrawDistance;                                             // 0x04B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_InstancedStaticMeshes.BP_InstancedStaticMeshes_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_InstancedStaticMeshes.BP_InstancedStaticMeshes_C"));
 		return ptr;
 	}
 

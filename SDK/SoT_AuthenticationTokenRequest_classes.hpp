@@ -32,7 +32,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AuthenticationTokenRequest.DevAuthenticationTokenRequestSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AuthenticationTokenRequest.DevAuthenticationTokenRequestSettings"));
 		return ptr;
 	}
 

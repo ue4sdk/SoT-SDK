@@ -12,6 +12,42 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnRep_CurrentWatercraft
+// (Final, Native, Private)
+
+void UItemProxyWatercraftTrackerComponent::OnRep_CurrentWatercraft()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnRep_CurrentWatercraft"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnCurrentWatercraftDestroyed
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  DestroyedWatercraft            (Parm, ZeroConstructor, IsPlainOldData)
+
+void UItemProxyWatercraftTrackerComponent::OnCurrentWatercraftDestroyed(class AActor* DestroyedWatercraft)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnCurrentWatercraftDestroyed"));
+
+	struct
+	{
+		class AActor*                  DestroyedWatercraft;
+	} params;
+
+	params.DestroyedWatercraft = DestroyedWatercraft;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Watercrafts.Watercraft.OnRigidBodyWake
 // (Final, Native, Protected)
 // Parameters:
@@ -19,7 +55,7 @@ namespace SDK
 
 void AWatercraft::OnRigidBodyWake(const struct FName& InBoneName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodyWake");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.Watercraft.OnRigidBodyWake"));
 
 	struct
 	{
@@ -39,7 +75,7 @@ void AWatercraft::OnRigidBodyWake(const struct FName& InBoneName)
 
 void AWatercraft::OnRigidBodySleep(const struct FName& InBoneName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodySleep");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.Watercraft.OnRigidBodySleep"));
 
 	struct
 	{
@@ -59,7 +95,7 @@ void AWatercraft::OnRigidBodySleep(const struct FName& InBoneName)
 
 void ARowboat::SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*> InAlwaysEnabledInteractables)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables"));
 
 	struct
 	{
@@ -77,7 +113,7 @@ void ARowboat::SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*>
 
 void ARowboat::OnRep_IsSinking()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.OnRep_IsSinking");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.Rowboat.OnRep_IsSinking"));
 
 	struct
 	{
@@ -99,7 +135,7 @@ void ARowboat::OnRep_IsSinking()
 
 class AWatercraft* UWatercraftBlueprintFunctionLibrary::SpawnWatercraft(class UObject* WorldContextObject, class UClass* WatercraftClass, const struct FVector& Location, const struct FRotator& Rotation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft"));
 
 	struct
 	{
@@ -130,7 +166,7 @@ class AWatercraft* UWatercraftBlueprintFunctionLibrary::SpawnWatercraft(class UO
 
 bool UWatercraftBlueprintFunctionLibrary::IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft"));
 
 	struct
 	{
@@ -144,6 +180,26 @@ bool UWatercraftBlueprintFunctionLibrary::IsCharacterOnWatercraft(class AAthenaC
 	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Watercrafts.WatercraftTrackerComponent.OnWatercraftDestroyed
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  WatercraftActor                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWatercraftTrackerComponent::OnWatercraftDestroyed(class AActor* WatercraftActor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.WatercraftTrackerComponent.OnWatercraftDestroyed"));
+
+	struct
+	{
+		class AActor*                  WatercraftActor;
+	} params;
+
+	params.WatercraftActor = WatercraftActor;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

@@ -34,7 +34,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UdpMessaging.UdpMessagingSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UdpMessaging.UdpMessagingSettings"));
 		return ptr;
 	}
 

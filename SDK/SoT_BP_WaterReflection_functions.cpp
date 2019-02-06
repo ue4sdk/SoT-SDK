@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_WaterReflection_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WaterReflection.BP_WaterReflection_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterReflection.BP_WaterReflection_C.UserConstructionScript"));
 
 	struct
 	{

@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class EditorStyle.EditorStyleSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EditorStyle.EditorStyleSettings"));
 		return ptr;
 	}
 

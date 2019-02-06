@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_NetworkingUtilsMacroLibrary.BP_NetworkingUtilsMacroLibrary_C
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class ABP_NetworkingUtilsMacroLibrary_C : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_NetworkingUtilsMacroLibrary.BP_NetworkingUtilsMacroLibrary_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_NetworkingUtilsMacroLibrary.BP_NetworkingUtilsMacroLibrary_C"));
 		return ptr;
 	}
 

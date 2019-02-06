@@ -17,7 +17,7 @@ namespace SDK
 
 void Atls_wld_Orb_light_D_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function tls_wld_Orb_light_D.tls_wld_Orb_light_D_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function tls_wld_Orb_light_D.tls_wld_Orb_light_D_C.UserConstructionScript"));
 
 	struct
 	{

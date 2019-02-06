@@ -22,7 +22,7 @@ namespace SDK
 
 void UActionStateMachineComponent::Server_RequestActionWithMessageForCurrentState(const struct FActionStateChangeRequestId& InEpochId, const struct FActionStateChangeRequestId& InRequestId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo, const struct FSerialisedActionStateMessage& InSerialisedPreviousStateMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Server_RequestActionWithMessageForCurrentState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Server_RequestActionWithMessageForCurrentState"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void UActionStateMachineComponent::Server_RequestActionWithMessageForCurrentStat
 
 void UActionStateMachineComponent::Server_RequestAction(const struct FActionStateChangeRequestId& InEpochId, const struct FActionStateChangeRequestId& InRequestId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo, TEnumAsByte<EActionPredictionType> ClientPredicted)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Server_RequestAction");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Server_RequestAction"));
 
 	struct
 	{
@@ -75,7 +75,7 @@ void UActionStateMachineComponent::Server_RequestAction(const struct FActionStat
 
 void UActionStateMachineComponent::PostNetInit()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.PostNetInit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.PostNetInit"));
 
 	struct
 	{
@@ -91,7 +91,7 @@ void UActionStateMachineComponent::PostNetInit()
 
 void UActionStateMachineComponent::OnNetOwnershipChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.OnNetOwnershipChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.OnNetOwnershipChanged"));
 
 	struct
 	{
@@ -110,7 +110,7 @@ void UActionStateMachineComponent::OnNetOwnershipChanged()
 
 void UActionStateMachineComponent::Multicast_PushSerialisableData(const struct FActionStateChangeRequestId& InEpochId, const struct FSerialisedActionStateInfo& InSerialisedActionStateSerialisationStateInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushSerialisableData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushSerialisableData"));
 
 	struct
 	{
@@ -133,7 +133,7 @@ void UActionStateMachineComponent::Multicast_PushSerialisableData(const struct F
 
 void UActionStateMachineComponent::Multicast_PushActionFromRequest(const struct FActionStateChangeRequestId& InEpochId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushActionFromRequest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushActionFromRequest"));
 
 	struct
 	{
@@ -156,7 +156,7 @@ void UActionStateMachineComponent::Multicast_PushActionFromRequest(const struct 
 
 void UActionStateMachineComponent::Multicast_PushAction(const struct FActionStateChangeRequestId& InEpochId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushAction");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Multicast_PushAction"));
 
 	struct
 	{
@@ -176,7 +176,7 @@ void UActionStateMachineComponent::Multicast_PushAction(const struct FActionStat
 
 void UActionStateMachineComponent::End()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.End");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.End"));
 
 	struct
 	{
@@ -194,7 +194,7 @@ void UActionStateMachineComponent::End()
 
 void UActionStateMachineComponent::Client_ResetStateMachine(const struct FResetStateMachineRpc& Rpc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Client_ResetStateMachine");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Client_ResetStateMachine"));
 
 	struct
 	{
@@ -216,7 +216,7 @@ void UActionStateMachineComponent::Client_ResetStateMachine(const struct FResetS
 
 void UActionStateMachineComponent::Client_CorrectAction(const struct FActionStateChangeRequestId& InEpochId, const struct FActionStateChangeRequestId& InRequestId, const struct FSerialisedActionStateInfo& InSerialisedActionStateConstructionInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponent.Client_CorrectAction");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponent.Client_CorrectAction"));
 
 	struct
 	{
@@ -242,7 +242,7 @@ void UActionStateMachineComponent::Client_CorrectAction(const struct FActionStat
 
 bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysPassesExceptForId(class UActionStateMachineComponent* InComponent, class UClass* StateId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysPassesExceptForId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysPassesExceptForId"));
 
 	struct
 	{
@@ -269,7 +269,7 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysP
 
 bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysPasses(class UActionStateMachineComponent* InComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysPasses");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysPasses"));
 
 	struct
 	{
@@ -294,7 +294,7 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysP
 
 bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysFails(class UActionStateMachineComponent* InComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysFails");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateValidatorThatAlwaysFails"));
 
 	struct
 	{
@@ -319,7 +319,7 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysF
 
 bool UActionStateMachineComponentTestFunctions::SetTestStateFactoryChangeToNullOnUpdate(class UActionStateMachineComponent* InComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateFactoryChangeToNullOnUpdate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateFactoryChangeToNullOnUpdate"));
 
 	struct
 	{
@@ -344,7 +344,7 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateFactoryChangeToNullO
 
 bool UActionStateMachineComponentTestFunctions::SetTestStateFactory(class UActionStateMachineComponent* InComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateFactory");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetTestStateFactory"));
 
 	struct
 	{
@@ -370,7 +370,7 @@ bool UActionStateMachineComponentTestFunctions::SetTestStateFactory(class UActio
 
 bool UActionStateMachineComponentTestFunctions::SetCustomClientValidationTestStateFactory(class UActionStateMachineComponent* InComponent, class UCustomClientValidityCheckCallback* InCallback)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetCustomClientValidationTestStateFactory");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.SetCustomClientValidationTestStateFactory"));
 
 	struct
 	{
@@ -400,7 +400,7 @@ bool UActionStateMachineComponentTestFunctions::SetCustomClientValidationTestSta
 
 bool UActionStateMachineComponentTestFunctions::RequestUnpredictedTestActionStateWithIdOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* ClientStateId, class UClass* ServerStateId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestUnpredictedTestActionStateWithIdOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestUnpredictedTestActionStateWithIdOnTrack"));
 
 	struct
 	{
@@ -433,7 +433,7 @@ bool UActionStateMachineComponentTestFunctions::RequestUnpredictedTestActionStat
 
 bool UActionStateMachineComponentTestFunctions::RequestTestActionStateWithIdOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestTestActionStateWithIdOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestTestActionStateWithIdOnTrack"));
 
 	struct
 	{
@@ -463,7 +463,7 @@ bool UActionStateMachineComponentTestFunctions::RequestTestActionStateWithIdOnTr
 
 bool UActionStateMachineComponentTestFunctions::RequestNullActionStateOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestNullActionStateOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.RequestNullActionStateOnTrack"));
 
 	struct
 	{
@@ -492,7 +492,7 @@ bool UActionStateMachineComponentTestFunctions::RequestNullActionStateOnTrack(cl
 
 void UActionStateMachineComponentTestFunctions::PushTestActionStateSerialisableDataOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId, int DataValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.PushTestActionStateSerialisableDataOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.PushTestActionStateSerialisableDataOnTrack"));
 
 	struct
 	{
@@ -522,7 +522,7 @@ void UActionStateMachineComponentTestFunctions::PushTestActionStateSerialisableD
 
 bool UActionStateMachineComponentTestFunctions::IsActionStateTypeActiveOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, class UClass* StateId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.IsActionStateTypeActiveOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.IsActionStateTypeActiveOnTrack"));
 
 	struct
 	{
@@ -552,7 +552,7 @@ bool UActionStateMachineComponentTestFunctions::IsActionStateTypeActiveOnTrack(c
 
 class UClass* UActionStateMachineComponentTestFunctions::GetTypeOfActionStateActiveOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.GetTypeOfActionStateActiveOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.GetTypeOfActionStateActiveOnTrack"));
 
 	struct
 	{
@@ -581,7 +581,7 @@ class UClass* UActionStateMachineComponentTestFunctions::GetTypeOfActionStateAct
 
 bool UActionStateMachineComponentTestFunctions::GetTestActionStateSerialisableDataOnTrack(class UActionStateMachineComponent* InComponent, TEnumAsByte<EActionStateMachineTrackId> TrackId, struct FTestActionStateSerialisableData* Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.GetTestActionStateSerialisableDataOnTrack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.GetTestActionStateSerialisableDataOnTrack"));
 
 	struct
 	{
@@ -611,7 +611,7 @@ bool UActionStateMachineComponentTestFunctions::GetTestActionStateSerialisableDa
 
 class UCustomClientValidityCheckCallback* UActionStateMachineComponentTestFunctions::CreateCustomClientValidityCheckCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.CreateCustomClientValidityCheckCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStateMachineComponentTestFunctions.CreateCustomClientValidityCheckCallback"));
 
 	struct
 	{
@@ -636,7 +636,7 @@ class UCustomClientValidityCheckCallback* UActionStateMachineComponentTestFuncti
 
 TEnumAsByte<EActionStatePriority> UActionStatePriorityTableUtility::GetPriority(class UClass* InStateA, class UClass* InStateB, struct FActionStatePriorityTable* PriorityTable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStatePriorityTableUtility.GetPriority");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStatePriorityTableUtility.GetPriority"));
 
 	struct
 	{
@@ -667,7 +667,7 @@ TEnumAsByte<EActionStatePriority> UActionStatePriorityTableUtility::GetPriority(
 
 struct FActionStatePriorityTable UActionStatePriorityTableUtility::CreatePriorityTable(class UActionStatePriorityTableData* Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.ActionStatePriorityTableUtility.CreatePriorityTable");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.ActionStatePriorityTableUtility.CreatePriorityTable"));
 
 	struct
 	{
@@ -692,7 +692,7 @@ struct FActionStatePriorityTable UActionStatePriorityTableUtility::CreatePriorit
 
 bool USerialisedActionStateConstructionInfoTestFunctions::IsValid(const struct FSerialisedActionStateInfo& TestStruct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.IsValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.IsValid"));
 
 	struct
 	{
@@ -717,7 +717,7 @@ bool USerialisedActionStateConstructionInfoTestFunctions::IsValid(const struct F
 
 bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInfoWithInner(const struct FSerialisedActionStateInfo& TestStruct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.HasTestConstructionInfoWithInner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.HasTestConstructionInfoWithInner"));
 
 	struct
 	{
@@ -742,7 +742,7 @@ bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInf
 
 bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInfo(const struct FSerialisedActionStateInfo& TestStruct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.HasTestConstructionInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.HasTestConstructionInfo"));
 
 	struct
 	{
@@ -767,7 +767,7 @@ bool USerialisedActionStateConstructionInfoTestFunctions::HasTestConstructionInf
 
 struct FTestActionStateConstructionInfoWithInner USerialisedActionStateConstructionInfoTestFunctions::GetTestConstructionInfoWithInner(const struct FSerialisedActionStateInfo& TestStruct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.GetTestConstructionInfoWithInner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.GetTestConstructionInfoWithInner"));
 
 	struct
 	{
@@ -792,7 +792,7 @@ struct FTestActionStateConstructionInfoWithInner USerialisedActionStateConstruct
 
 struct FTestActionStateConstructionInfo USerialisedActionStateConstructionInfoTestFunctions::GetTestConstructionInfo(const struct FSerialisedActionStateInfo& TestStruct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.GetTestConstructionInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.GetTestConstructionInfo"));
 
 	struct
 	{
@@ -818,7 +818,7 @@ struct FTestActionStateConstructionInfo USerialisedActionStateConstructionInfoTe
 
 struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::CreateTestSerialisableData(class UClass* Id, int IntProp)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestSerialisableData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestSerialisableData"));
 
 	struct
 	{
@@ -848,7 +848,7 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 
 struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::CreateTestConstructionInfoWithInner(class UClass* Id, float FloatProp, bool BoolProp, const class FString& StringProp)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestConstructionInfoWithInner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestConstructionInfoWithInner"));
 
 	struct
 	{
@@ -880,7 +880,7 @@ struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunc
 
 struct FSerialisedActionStateInfo USerialisedActionStateConstructionInfoTestFunctions::CreateTestConstructionInfo(class UClass* Id, int IntProp)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestConstructionInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions.CreateTestConstructionInfo"));
 
 	struct
 	{

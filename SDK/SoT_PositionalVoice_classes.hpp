@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatRendererInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.VoiceChatRendererInterface"));
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.MockVoiceChatRenderer");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.MockVoiceChatRenderer"));
 		return ptr;
 	}
 
@@ -53,7 +53,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatRendererRetreivalInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.VoiceChatRendererRetreivalInterface"));
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.MockVoiceChatRendererRetriever");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.MockVoiceChatRendererRetriever"));
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.PositionalVoiceTestFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.PositionalVoiceTestFunctionLibrary"));
 		return ptr;
 	}
 
@@ -103,7 +103,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatEmitterInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.VoiceChatEmitterInterface"));
 		return ptr;
 	}
 
@@ -115,15 +115,15 @@ public:
 
 
 // Class PositionalVoice.TestVoiceChatEmitter
-// 0x0038 (0x04C8 - 0x0490)
+// 0x0038 (0x04D0 - 0x0498)
 class ATestVoiceChatEmitter : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0490(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0498(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.TestVoiceChatEmitter");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.TestVoiceChatEmitter"));
 		return ptr;
 	}
 
@@ -150,7 +150,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class PositionalVoice.VoiceChatRenderer");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PositionalVoice.VoiceChatRenderer"));
 		return ptr;
 	}
 

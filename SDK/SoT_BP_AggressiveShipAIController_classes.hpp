@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AggressiveShipAIController.BP_AggressiveShipAIController_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07A8 - 0x07A8)
 class ABP_AggressiveShipAIController_C : public AAthenaAIShipController
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_AggressiveShipAIController.BP_AggressiveShipAIController_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_AggressiveShipAIController.BP_AggressiveShipAIController_C"));
 		return ptr;
 	}
 

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RailingLight_SmallShip_Wheel.BP_RailingLight_SmallShip_Wheel_C
-// 0x0000 (0x0819 - 0x0819)
+// 0x0000 (0x0821 - 0x0821)
 class ABP_RailingLight_SmallShip_Wheel_C : public ABP_InteractableShipRailingLight_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_RailingLight_SmallShip_Wheel.BP_RailingLight_SmallShip_Wheel_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_RailingLight_SmallShip_Wheel.BP_RailingLight_SmallShip_Wheel_C"));
 		return ptr;
 	}
 

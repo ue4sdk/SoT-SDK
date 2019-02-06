@@ -17,7 +17,7 @@ namespace SDK
 
 void UBP_Anim_Merchant_C::AnimNotify_NPCItemAnimation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Merchant.BP_Anim_Merchant_C.AnimNotify_NPCItemAnimation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Merchant.BP_Anim_Merchant_C.AnimNotify_NPCItemAnimation"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void UBP_Anim_Merchant_C::AnimNotify_NPCItemAnimation()
 
 void UBP_Anim_Merchant_C::ExecuteUbergraph_BP_Anim_Merchant(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Merchant.BP_Anim_Merchant_C.ExecuteUbergraph_BP_Anim_Merchant");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Merchant.BP_Anim_Merchant_C.ExecuteUbergraph_BP_Anim_Merchant"));
 
 	struct
 	{

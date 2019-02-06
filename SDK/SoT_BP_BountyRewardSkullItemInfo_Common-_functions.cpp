@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BountyRewardSkullItemInfo_Common__C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Common-.BP_BountyRewardSkullItemInfo_Common-_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkullItemInfo_Common-.BP_BountyRewardSkullItemInfo_Common-_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_BountyRewardSkullItemInfo_Common__C::UserConstructionScript()
 
 void ABP_BountyRewardSkullItemInfo_Common__C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Common-.BP_BountyRewardSkullItemInfo_Common-_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkullItemInfo_Common-.BP_BountyRewardSkullItemInfo_Common-_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_BountyRewardSkullItemInfo_Common__C::ReceiveBeginPlay()
 
 void ABP_BountyRewardSkullItemInfo_Common__C::ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Common_(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Common-.BP_BountyRewardSkullItemInfo_Common-_C.ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Common-");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkullItemInfo_Common-.BP_BountyRewardSkullItemInfo_Common-_C.ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Common-"));
 
 	struct
 	{

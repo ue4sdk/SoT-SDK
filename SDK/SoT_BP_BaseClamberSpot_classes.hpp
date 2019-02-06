@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BaseClamberSpot.BP_BaseClamberSpot_C
-// 0x0010 (0x06B0 - 0x06A0)
+// 0x0010 (0x06C0 - 0x06B0)
 class ABP_BaseClamberSpot_C : public AClamberSpot
 {
 public:
-	TArray<struct FVector>                             ClamberSplinePoints;                                      // 0x06A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             ClamberSplinePoints;                                      // 0x06B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BaseClamberSpot.BP_BaseClamberSpot_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BaseClamberSpot.BP_BaseClamberSpot_C"));
 		return ptr;
 	}
 

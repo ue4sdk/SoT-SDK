@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipsCompass.BP_ShipsCompass_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0508 - 0x0508)
 class ABP_ShipsCompass_C : public AShipCompass
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_ShipsCompass.BP_ShipsCompass_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_ShipsCompass.BP_ShipsCompass_C"));
 		return ptr;
 	}
 

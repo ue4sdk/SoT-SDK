@@ -23,7 +23,7 @@ namespace SDK
 
 int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount"));
 
 	struct
 	{
@@ -56,7 +56,7 @@ int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContex
 
 int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount"));
 
 	struct
 	{
@@ -88,7 +88,7 @@ int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextOb
 
 void AInteractiveFoliageActor::CapsuleTouched(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.InteractiveFoliageActor.CapsuleTouched"));
 
 	struct
 	{
@@ -116,7 +116,7 @@ void AInteractiveFoliageActor::CapsuleTouched(class AActor* Other, class UPrimit
 
 void UProceduralFoliageSpawner::Simulate(int NumSteps)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.ProceduralFoliageSpawner.Simulate"));
 
 	struct
 	{

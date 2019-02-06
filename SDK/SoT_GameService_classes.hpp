@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceLifecycleInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameService.GameServiceLifecycleInterface"));
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceMapFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameService.GameServiceMapFunctions"));
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameService.GameServiceProviderInterface"));
 		return ptr;
 	}
 
@@ -76,7 +76,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameService.GameServiceTickInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameService.GameServiceTickInterface"));
 		return ptr;
 	}
 

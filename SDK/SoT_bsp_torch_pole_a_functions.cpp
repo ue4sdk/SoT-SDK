@@ -17,7 +17,7 @@ namespace SDK
 
 void Absp_torch_pole_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bsp_torch_pole_a.bsp_torch_pole_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bsp_torch_pole_a.bsp_torch_pole_a_C.UserConstructionScript"));
 
 	struct
 	{

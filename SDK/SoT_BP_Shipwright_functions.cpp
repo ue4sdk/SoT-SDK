@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Shipwright_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwright.BP_Shipwright_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwright.BP_Shipwright_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Shipwright_C::UserConstructionScript()
 
 void ABP_Shipwright_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwright.BP_Shipwright_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwright.BP_Shipwright_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Shipwright_C::ReceiveBeginPlay()
 
 void ABP_Shipwright_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwright.BP_Shipwright_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwright.BP_Shipwright_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_Shipwright_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 void ABP_Shipwright_C::ExecuteUbergraph_BP_Shipwright(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwright.BP_Shipwright_C.ExecuteUbergraph_BP_Shipwright");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwright.BP_Shipwright_C.ExecuteUbergraph_BP_Shipwright"));
 
 	struct
 	{

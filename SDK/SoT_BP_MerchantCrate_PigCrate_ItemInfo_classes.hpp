@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_PigCrate_ItemInfo.BP_MerchantCrate_PigCrate_ItemInfo_C
-// 0x0008 (0x05F8 - 0x05F0)
+// 0x0008 (0x0610 - 0x0608)
 class ABP_MerchantCrate_PigCrate_ItemInfo_C : public AMerchantCrateItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0608(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MerchantCrate_PigCrate_ItemInfo.BP_MerchantCrate_PigCrate_ItemInfo_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MerchantCrate_PigCrate_ItemInfo.BP_MerchantCrate_PigCrate_ItemInfo_C"));
 		return ptr;
 	}
 

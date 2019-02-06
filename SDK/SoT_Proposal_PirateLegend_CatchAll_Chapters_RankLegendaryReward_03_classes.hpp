@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03.Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03.Proposal_PirateLegend_CatchAll_Chapters_RankLegendaryReward_03_C"));
 		return ptr;
 	}
 

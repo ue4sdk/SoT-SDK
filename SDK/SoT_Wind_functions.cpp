@@ -19,7 +19,7 @@ namespace SDK
 
 void UWindInterface::UnregisterWindZone(const TScriptInterface<class UWindZoneInterface>& InWindZone)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.UnregisterWindZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.UnregisterWindZone"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void UWindInterface::UnregisterWindZone(const TScriptInterface<class UWindZoneIn
 
 void UWindInterface::TriggerChange(bool ChangeInstantly)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.TriggerChange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.TriggerChange"));
 
 	struct
 	{
@@ -59,7 +59,7 @@ void UWindInterface::TriggerChange(bool ChangeInstantly)
 
 void UWindInterface::SetParams(const struct FWindServiceParams& Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.SetParams"));
 
 	struct
 	{
@@ -79,7 +79,7 @@ void UWindInterface::SetParams(const struct FWindServiceParams& Params)
 
 void UWindInterface::SetGlobalWindVector(const struct FVector& InWindVector)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindVector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.SetGlobalWindVector"));
 
 	struct
 	{
@@ -99,7 +99,7 @@ void UWindInterface::SetGlobalWindVector(const struct FVector& InWindVector)
 
 void UWindInterface::SetGlobalWindMagnitude(float InWindMagnitude)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.SetGlobalWindMagnitude"));
 
 	struct
 	{
@@ -119,7 +119,7 @@ void UWindInterface::SetGlobalWindMagnitude(float InWindMagnitude)
 
 void UWindInterface::SetGlobalWindDirection(const struct FVector& InWindDirection)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindDirection");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.SetGlobalWindDirection"));
 
 	struct
 	{
@@ -139,7 +139,7 @@ void UWindInterface::SetGlobalWindDirection(const struct FVector& InWindDirectio
 
 void UWindInterface::SetGlobalWindAngle(float InAngle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.SetGlobalWindAngle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.SetGlobalWindAngle"));
 
 	struct
 	{
@@ -159,7 +159,7 @@ void UWindInterface::SetGlobalWindAngle(float InAngle)
 
 void UWindInterface::RegisterWindZone(const TScriptInterface<class UWindZoneInterface>& InWindZone)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.RegisterWindZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.RegisterWindZone"));
 
 	struct
 	{
@@ -180,7 +180,7 @@ void UWindInterface::RegisterWindZone(const TScriptInterface<class UWindZoneInte
 
 TScriptInterface<class UWindZoneInterface> UWindInterface::GetWindZoneAtLocation(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindZoneAtLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetWindZoneAtLocation"));
 
 	struct
 	{
@@ -204,7 +204,7 @@ TScriptInterface<class UWindZoneInterface> UWindInterface::GetWindZoneAtLocation
 
 struct FVector UWindInterface::GetWindVector(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindVector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetWindVector"));
 
 	struct
 	{
@@ -228,7 +228,7 @@ struct FVector UWindInterface::GetWindVector(const struct FVector& SamplePositio
 
 float UWindInterface::GetWindMagnitude(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetWindMagnitude"));
 
 	struct
 	{
@@ -252,7 +252,7 @@ float UWindInterface::GetWindMagnitude(const struct FVector& SamplePosition)
 
 struct FVector UWindInterface::GetWindDirection(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindDirection");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetWindDirection"));
 
 	struct
 	{
@@ -276,7 +276,7 @@ struct FVector UWindInterface::GetWindDirection(const struct FVector& SamplePosi
 
 float UWindInterface::GetWindAngle(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetWindAngle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetWindAngle"));
 
 	struct
 	{
@@ -300,7 +300,7 @@ float UWindInterface::GetWindAngle(const struct FVector& SamplePosition)
 
 struct FWindZoneTurbulence UWindInterface::GetTurbulenceForTrees(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetTurbulenceForTrees");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetTurbulenceForTrees"));
 
 	struct
 	{
@@ -324,7 +324,7 @@ struct FWindZoneTurbulence UWindInterface::GetTurbulenceForTrees(const struct FV
 
 struct FWindZoneTurbulence UWindInterface::GetTurbulence(const struct FVector& SamplePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetTurbulence");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetTurbulence"));
 
 	struct
 	{
@@ -347,7 +347,7 @@ struct FWindZoneTurbulence UWindInterface::GetTurbulence(const struct FVector& S
 
 float UWindInterface::GetMaxWindMagnitude()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindInterface.GetMaxWindMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindInterface.GetMaxWindMagnitude"));
 
 	struct
 	{
@@ -368,7 +368,7 @@ float UWindInterface::GetMaxWindMagnitude()
 
 struct FWindZoneParams UWindZoneInterface::GetWindZoneParams()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindZoneInterface.GetWindZoneParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetWindZoneParams"));
 
 	struct
 	{
@@ -389,7 +389,7 @@ struct FWindZoneParams UWindZoneInterface::GetWindZoneParams()
 
 struct FVector2D UWindZoneInterface::GetWindZoneLocation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindZoneInterface.GetWindZoneLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetWindZoneLocation"));
 
 	struct
 	{
@@ -411,7 +411,7 @@ struct FVector2D UWindZoneInterface::GetWindZoneLocation()
 
 struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVector& Location)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindZoneInterface.GetTurbulence");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetTurbulence"));
 
 	struct
 	{
@@ -434,7 +434,7 @@ struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVecto
 
 void UWindFunctions::SetDefaultWindBlowingNorth(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindFunctions.SetDefaultWindBlowingNorth");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindFunctions.SetDefaultWindBlowingNorth"));
 
 	struct
 	{
@@ -457,7 +457,7 @@ void UWindFunctions::SetDefaultWindBlowingNorth(class UObject* WorldContextObjec
 
 struct FVector UWindFunctions::GetWindAtLocation(class UObject* WorldContextObject, const struct FVector& WorldPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindFunctions.GetWindAtLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindFunctions.GetWindAtLocation"));
 
 	struct
 	{
@@ -481,7 +481,7 @@ struct FVector UWindFunctions::GetWindAtLocation(class UObject* WorldContextObje
 
 void AWindService::OnRep_WindMagnitude()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindService.OnRep_WindMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindService.OnRep_WindMagnitude"));
 
 	struct
 	{
@@ -497,7 +497,7 @@ void AWindService::OnRep_WindMagnitude()
 
 void AWindService::OnRep_WindAngle()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindService.OnRep_WindAngle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindService.OnRep_WindAngle"));
 
 	struct
 	{
@@ -515,7 +515,7 @@ void AWindService::OnRep_WindAngle()
 
 struct FWindServiceParams AWindService::GetWindParams()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindService.GetWindParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindService.GetWindParams"));
 
 	struct
 	{
@@ -538,7 +538,7 @@ struct FWindServiceParams AWindService::GetWindParams()
 
 bool UWindServiceParamsFunctionLibrary::AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wind.WindServiceParamsFunctionLibrary.AreWindServiceParamsEqual");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindServiceParamsFunctionLibrary.AreWindServiceParamsEqual"));
 
 	struct
 	{

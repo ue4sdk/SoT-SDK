@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_MerchantCrate_BigGunpowderBarrel_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_MerchantCrate_BigGunpowderBarrel_C::UserConstructionScript()
 
 void ABP_MerchantCrate_BigGunpowderBarrel_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_MerchantCrate_BigGunpowderBarrel_C::ReceiveBeginPlay()
 
 void ABP_MerchantCrate_BigGunpowderBarrel_C::ExecuteUbergraph_BP_MerchantCrate_BigGunpowderBarrel(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.ExecuteUbergraph_BP_MerchantCrate_BigGunpowderBarrel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantCrate_BigGunpowderBarrel.BP_MerchantCrate_BigGunpowderBarrel_C.ExecuteUbergraph_BP_MerchantCrate_BigGunpowderBarrel"));
 
 	struct
 	{

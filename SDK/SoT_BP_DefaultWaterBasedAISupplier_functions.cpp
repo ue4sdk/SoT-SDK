@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_DefaultWaterBasedAISupplier_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultWaterBasedAISupplier.BP_DefaultWaterBasedAISupplier_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DefaultWaterBasedAISupplier.BP_DefaultWaterBasedAISupplier_C.UserConstructionScript"));
 
 	struct
 	{

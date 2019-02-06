@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_OutpostCrate_bld_shop_wood_box_03_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_OutpostCrate_bld_shop_wood_box_03_a.BP_OutpostCrate_bld_shop_wood_box_03_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_OutpostCrate_bld_shop_wood_box_03_a.BP_OutpostCrate_bld_shop_wood_box_03_a_C.UserConstructionScript"));
 
 	struct
 	{

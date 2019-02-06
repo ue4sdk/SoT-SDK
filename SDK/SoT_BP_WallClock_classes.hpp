@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WallClock.BP_WallClock_C
-// 0x0000 (0x04F8 - 0x04F8)
+// 0x0000 (0x0500 - 0x0500)
 class ABP_WallClock_C : public AWallClock
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_WallClock.BP_WallClock_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_WallClock.BP_WallClock_C"));
 		return ptr;
 	}
 

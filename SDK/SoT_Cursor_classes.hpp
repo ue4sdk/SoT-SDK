@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("WidgetBlueprintGeneratedClass Cursor.Cursor_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("WidgetBlueprintGeneratedClass Cursor.Cursor_C"));
 		return ptr;
 	}
 

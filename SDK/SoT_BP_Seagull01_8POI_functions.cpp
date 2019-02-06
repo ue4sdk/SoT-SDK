@@ -20,7 +20,7 @@ namespace SDK
 
 void ABP_Seagull01_8POI_C::seagull_Fade(class UMaterialInstance* Seagull_Material, class UMaterialInstance* Seagull_MT_LOD)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.seagull_Fade");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.seagull_Fade"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ void ABP_Seagull01_8POI_C::seagull_Fade(class UMaterialInstance* Seagull_Materia
 
 void ABP_Seagull01_8POI_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.UserConstructionScript"));
 
 	struct
 	{
@@ -56,7 +56,7 @@ void ABP_Seagull01_8POI_C::UserConstructionScript()
 
 void ABP_Seagull01_8POI_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -72,7 +72,7 @@ void ABP_Seagull01_8POI_C::ReceiveBeginPlay()
 
 void ABP_Seagull01_8POI_C::FadeIn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeIn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeIn"));
 
 	struct
 	{
@@ -88,7 +88,7 @@ void ABP_Seagull01_8POI_C::FadeIn()
 
 void ABP_Seagull01_8POI_C::FadeOut()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeOut");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeOut"));
 
 	struct
 	{
@@ -106,7 +106,7 @@ void ABP_Seagull01_8POI_C::FadeOut()
 
 void ABP_Seagull01_8POI_C::ExecuteUbergraph_BP_Seagull01_8POI(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ExecuteUbergraph_BP_Seagull01_8POI");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ExecuteUbergraph_BP_Seagull01_8POI"));
 
 	struct
 	{

@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RenderToTexture.RenderToTextureSceneDetails");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RenderToTexture.RenderToTextureSceneDetails"));
 		return ptr;
 	}
 
@@ -48,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RenderToTexture.RenderToTextureFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RenderToTexture.RenderToTextureFunctionLibrary"));
 		return ptr;
 	}
 

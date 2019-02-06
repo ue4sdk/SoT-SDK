@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_MerchantCrate_ChickenCrate_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MerchantCrate_ChickenCrate.BP_MerchantCrate_ChickenCrate_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantCrate_ChickenCrate.BP_MerchantCrate_ChickenCrate_C.UserConstructionScript"));
 
 	struct
 	{

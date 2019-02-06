@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.AchievementBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.AchievementBlueprintLibrary"));
 		return ptr;
 	}
 
@@ -43,7 +43,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy"));
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy"));
 		return ptr;
 	}
 
@@ -83,7 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy"));
 		return ptr;
 	}
 
@@ -101,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.IpConnection");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.IpConnection"));
 		return ptr;
 	}
 
@@ -121,7 +121,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.IpNetDriver");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.IpNetDriver"));
 		return ptr;
 	}
 
@@ -136,7 +136,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary"));
 		return ptr;
 	}
 
@@ -156,7 +156,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy"));
 		return ptr;
 	}
 
@@ -176,7 +176,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy"));
 		return ptr;
 	}
 
@@ -196,7 +196,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.LogoutCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.LogoutCallbackProxy"));
 		return ptr;
 	}
 
@@ -206,19 +206,19 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeacon
-// 0x0028 (0x04B8 - 0x0490)
+// 0x0028 (0x04C0 - 0x0498)
 class AOnlineBeacon : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	float                                              BeaconConnectionInitialTimeout;                           // 0x0498(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              BeaconConnectionTimeout;                                  // 0x049C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	class UNetDriver*                                  NetDriver;                                                // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04A8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	float                                              BeaconConnectionInitialTimeout;                           // 0x04A0(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float                                              BeaconConnectionTimeout;                                  // 0x04A4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	class UNetDriver*                                  NetDriver;                                                // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x04B0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.OnlineBeacon");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.OnlineBeacon"));
 		return ptr;
 	}
 
@@ -226,18 +226,18 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeaconClient
-// 0x0028 (0x04E0 - 0x04B8)
+// 0x0028 (0x04E8 - 0x04C0)
 class AOnlineBeaconClient : public AOnlineBeacon
 {
 public:
-	class AOnlineBeaconHostObject*                     BeaconOwner;                                              // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UNetConnection*                              BeaconConnection;                                         // 0x04C0(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EBeaconConnectionState>                ConnectionState;                                          // 0x04C8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x17];                                      // 0x04C9(0x0017) MISSED OFFSET
+	class AOnlineBeaconHostObject*                     BeaconOwner;                                              // 0x04C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UNetConnection*                              BeaconConnection;                                         // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EBeaconConnectionState>                ConnectionState;                                          // 0x04D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x17];                                      // 0x04D1(0x0017) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.OnlineBeaconClient");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.OnlineBeaconClient"));
 		return ptr;
 	}
 
@@ -263,7 +263,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.PartyBeaconState");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.PartyBeaconState"));
 		return ptr;
 	}
 
@@ -271,21 +271,21 @@ public:
 
 
 // Class OnlineSubsystemUtils.PartyBeaconClient
-// 0x0058 (0x0538 - 0x04E0)
+// 0x0058 (0x0540 - 0x04E8)
 class APartyBeaconClient : public AOnlineBeaconClient
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04E0(0x0010) MISSED OFFSET
-	class FString                                      DestSessionId;                                            // 0x04F0(0x0010) (ZeroConstructor)
-	struct FPartyReservation                           PendingReservation;                                       // 0x0500(0x0030)
-	TEnumAsByte<EClientRequestType>                    RequestType;                                              // 0x0530(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bPendingReservationSent;                                  // 0x0531(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bCancelReservation;                                       // 0x0532(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x0533(0x0005) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x04E8(0x0010) MISSED OFFSET
+	class FString                                      DestSessionId;                                            // 0x04F8(0x0010) (ZeroConstructor)
+	struct FPartyReservation                           PendingReservation;                                       // 0x0508(0x0030)
+	TEnumAsByte<EClientRequestType>                    RequestType;                                              // 0x0538(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bPendingReservationSent;                                  // 0x0539(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bCancelReservation;                                       // 0x053A(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x5];                                       // 0x053B(0x0005) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.PartyBeaconClient");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.PartyBeaconClient"));
 		return ptr;
 	}
 
@@ -299,14 +299,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.TestBeaconClient
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x04E8 - 0x04E8)
 class ATestBeaconClient : public AOnlineBeaconClient
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.TestBeaconClient");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.TestBeaconClient"));
 		return ptr;
 	}
 
@@ -317,18 +317,18 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeaconHost
-// 0x00B8 (0x0570 - 0x04B8)
+// 0x00B8 (0x0578 - 0x04C0)
 class AOnlineBeaconHost : public AOnlineBeacon
 {
 public:
-	int                                                ListenPort;                                               // 0x04B8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04BC(0x0004) MISSED OFFSET
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x04C0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x04D0(0x00A0) MISSED OFFSET
+	int                                                ListenPort;                                               // 0x04C0(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04C4(0x0004) MISSED OFFSET
+	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x04C8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x04D8(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.OnlineBeaconHost");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.OnlineBeaconHost"));
 		return ptr;
 	}
 
@@ -336,17 +336,17 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeaconHostObject
-// 0x0028 (0x04B8 - 0x0490)
+// 0x0028 (0x04C0 - 0x0498)
 class AOnlineBeaconHostObject : public AActor
 {
 public:
-	class FString                                      BeaconTypeName;                                           // 0x0490(0x0010) (ZeroConstructor, Transient)
-	class UClass*                                      ClientBeaconActorClass;                                   // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x04A8(0x0010) (ZeroConstructor)
+	class FString                                      BeaconTypeName;                                           // 0x0498(0x0010) (ZeroConstructor, Transient)
+	class UClass*                                      ClientBeaconActorClass;                                   // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x04B0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.OnlineBeaconHostObject");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.OnlineBeaconHostObject"));
 		return ptr;
 	}
 
@@ -354,18 +354,18 @@ public:
 
 
 // Class OnlineSubsystemUtils.PartyBeaconHost
-// 0x0038 (0x04F0 - 0x04B8)
+// 0x0038 (0x04F8 - 0x04C0)
 class APartyBeaconHost : public AOnlineBeaconHostObject
 {
 public:
-	class UPartyBeaconState*                           State;                                                    // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x04C0(0x0028) MISSED OFFSET
-	float                                              SessionTimeoutSecs;                                       // 0x04E8(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
-	float                                              TravelSessionTimeoutSecs;                                 // 0x04EC(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
+	class UPartyBeaconState*                           State;                                                    // 0x04C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x04C8(0x0028) MISSED OFFSET
+	float                                              SessionTimeoutSecs;                                       // 0x04F0(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
+	float                                              TravelSessionTimeoutSecs;                                 // 0x04F4(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.PartyBeaconHost");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.PartyBeaconHost"));
 		return ptr;
 	}
 
@@ -373,14 +373,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.TestBeaconHost
-// 0x0000 (0x04B8 - 0x04B8)
+// 0x0000 (0x04C0 - 0x04C0)
 class ATestBeaconHost : public AOnlineBeaconHostObject
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.TestBeaconHost");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.TestBeaconHost"));
 		return ptr;
 	}
 
@@ -395,7 +395,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.OnlineBlueprintCallProxyBase");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.OnlineBlueprintCallProxyBase"));
 		return ptr;
 	}
 
@@ -415,7 +415,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.AchievementQueryCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.AchievementQueryCallbackProxy"));
 		return ptr;
 	}
 
@@ -436,7 +436,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.AchievementWriteCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.AchievementWriteCallbackProxy"));
 		return ptr;
 	}
 
@@ -456,7 +456,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.ConnectionCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.ConnectionCallbackProxy"));
 		return ptr;
 	}
 
@@ -476,7 +476,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.CreateSessionCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.CreateSessionCallbackProxy"));
 		return ptr;
 	}
 
@@ -496,7 +496,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.DestroySessionCallbackProxy"));
 		return ptr;
 	}
 
@@ -516,7 +516,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.EndMatchCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.EndMatchCallbackProxy"));
 		return ptr;
 	}
 
@@ -536,7 +536,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.EndTurnCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.EndTurnCallbackProxy"));
 		return ptr;
 	}
 
@@ -556,7 +556,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.FindSessionsCallbackProxy"));
 		return ptr;
 	}
 
@@ -580,7 +580,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy"));
 		return ptr;
 	}
 
@@ -600,7 +600,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.JoinSessionCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.JoinSessionCallbackProxy"));
 		return ptr;
 	}
 
@@ -620,7 +620,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.QuitMatchCallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.QuitMatchCallbackProxy"));
 		return ptr;
 	}
 
@@ -641,7 +641,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.OnlineSessionClient");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.OnlineSessionClient"));
 		return ptr;
 	}
 
@@ -659,7 +659,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.ShowLoginUICallbackProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.ShowLoginUICallbackProxy"));
 		return ptr;
 	}
 
@@ -676,7 +676,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary"));
 		return ptr;
 	}
 

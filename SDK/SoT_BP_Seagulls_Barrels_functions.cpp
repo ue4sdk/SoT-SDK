@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Seagulls_Barrels_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagulls_Barrels.BP_Seagulls_Barrels_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagulls_Barrels.BP_Seagulls_Barrels_C.UserConstructionScript"));
 
 	struct
 	{

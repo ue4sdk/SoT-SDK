@@ -19,7 +19,7 @@ namespace SDK
 
 struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.GetDockableInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cannon.BP_Cannon_C.GetDockableInfo"));
 
 	struct
 	{
@@ -38,7 +38,7 @@ struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 
 void ABP_Cannon_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cannon.BP_Cannon_C.UserConstructionScript"));
 
 	struct
 	{
@@ -56,7 +56,7 @@ void ABP_Cannon_C::UserConstructionScript()
 
 void ABP_Cannon_C::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded"));
 
 	struct
 	{
@@ -76,7 +76,7 @@ void ABP_Cannon_C::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
 
 void ABP_Cannon_C::ExecuteUbergraph_BP_Cannon(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.ExecuteUbergraph_BP_Cannon");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cannon.BP_Cannon_C.ExecuteUbergraph_BP_Cannon"));
 
 	struct
 	{

@@ -70,7 +70,7 @@ bool UObject::IsA(UClass* cmp) const
 
 void UObject::ExecuteUbergraph(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoreUObject.Object.ExecuteUbergraph"));
 
 	struct
 	{

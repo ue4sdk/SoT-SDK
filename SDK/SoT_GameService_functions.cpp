@@ -20,7 +20,7 @@ namespace SDK
 
 void UGameServiceMapFunctions::UnregisterService(class UObject* Service, struct FGameServiceMap* ServiceMap)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.UnregisterService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceMapFunctions.UnregisterService"));
 
 	struct
 	{
@@ -47,7 +47,7 @@ void UGameServiceMapFunctions::UnregisterService(class UObject* Service, struct 
 
 void UGameServiceMapFunctions::RegisterService(class UObject* Service, class UClass* Class, struct FGameServiceMap* ServiceMap)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.RegisterService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceMapFunctions.RegisterService"));
 
 	struct
 	{
@@ -76,7 +76,7 @@ void UGameServiceMapFunctions::RegisterService(class UObject* Service, class UCl
 
 class UObject* UGameServiceMapFunctions::GetService(class UClass* Class, struct FGameServiceMap* ServiceMap)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.GetService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceMapFunctions.GetService"));
 
 	struct
 	{
@@ -105,7 +105,7 @@ class UObject* UGameServiceMapFunctions::GetService(class UClass* Class, struct 
 
 int UGameServiceMapFunctions::GetNumServices(struct FGameServiceMap* ServiceMap)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.GetNumServices");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceMapFunctions.GetNumServices"));
 
 	struct
 	{
@@ -131,7 +131,7 @@ int UGameServiceMapFunctions::GetNumServices(struct FGameServiceMap* ServiceMap)
 
 void UGameServiceProviderInterface::UnregisterService(class UObject* Service)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.UnregisterService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceProviderInterface.UnregisterService"));
 
 	struct
 	{
@@ -152,7 +152,7 @@ void UGameServiceProviderInterface::UnregisterService(class UObject* Service)
 
 void UGameServiceProviderInterface::RegisterService(class UObject* Service, class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.RegisterService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceProviderInterface.RegisterService"));
 
 	struct
 	{
@@ -175,7 +175,7 @@ void UGameServiceProviderInterface::RegisterService(class UObject* Service, clas
 
 class UObject* UGameServiceProviderInterface::GetService(class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.GetService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameService.GameServiceProviderInterface.GetService"));
 
 	struct
 	{

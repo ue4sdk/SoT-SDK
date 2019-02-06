@@ -21,7 +21,7 @@ namespace SDK
 
 float UAngleMaths::CalculateEulerAngle(float FromAngle, float ToAngle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.CalculateEulerAngle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.AngleMaths.CalculateEulerAngle"));
 
 	struct
 	{
@@ -50,7 +50,7 @@ float UAngleMaths::CalculateEulerAngle(float FromAngle, float ToAngle)
 
 float UAngleMaths::AngleMoveTowardsMod180(float Angle, float TargetAngle, float Rate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleMoveTowardsMod180");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.AngleMaths.AngleMoveTowardsMod180"));
 
 	struct
 	{
@@ -79,7 +79,7 @@ float UAngleMaths::AngleMoveTowardsMod180(float Angle, float TargetAngle, float 
 
 float UAngleMaths::AngleMod360(float Angle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleMod360");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.AngleMaths.AngleMod360"));
 
 	struct
 	{
@@ -104,7 +104,7 @@ float UAngleMaths::AngleMod360(float Angle)
 
 float UAngleMaths::AngleMod180(float Angle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleMod180");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.AngleMaths.AngleMod180"));
 
 	struct
 	{
@@ -131,7 +131,7 @@ float UAngleMaths::AngleMod180(float Angle)
 
 float UAngleMaths::AngleLerpShortest(float Start, float End, float Amount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.AngleMaths.AngleLerpShortest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.AngleMaths.AngleLerpShortest"));
 
 	struct
 	{
@@ -162,7 +162,7 @@ float UAngleMaths::AngleLerpShortest(float Start, float End, float Amount)
 
 float UBuoyancyMaths::CalculateMagnitude(float InSubmersedVolume, float InFluidDensity, float InGravity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.BuoyancyMaths.CalculateMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.BuoyancyMaths.CalculateMagnitude"));
 
 	struct
 	{
@@ -196,7 +196,7 @@ float UBuoyancyMaths::CalculateMagnitude(float InSubmersedVolume, float InFluidD
 
 float UBuoyancyMaths::CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBuoyancyCurve, class UCurveFloat* SecondaryBuoyancyCurve, class UCurveFloat* TertiaryBuoyancyCurve, float UnaryDistUnderwater, float Blend, TEnumAsByte<EBuoyancyBlend> BlendType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.BuoyancyMaths.CalcBlendedProbeCurveBuoyancy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.BuoyancyMaths.CalcBlendedProbeCurveBuoyancy"));
 
 	struct
 	{
@@ -233,7 +233,7 @@ float UBuoyancyMaths::CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBu
 
 int UCircleMaths::ConvertAngleToCircleSectorIndex(float AngleInDegrees, int NumberOfSectors, float IgnoredFraction)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CircleMaths.ConvertAngleToCircleSectorIndex");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CircleMaths.ConvertAngleToCircleSectorIndex"));
 
 	struct
 	{
@@ -262,7 +262,7 @@ int UCircleMaths::ConvertAngleToCircleSectorIndex(float AngleInDegrees, int Numb
 
 float UCircleMaths::Area(float InRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CircleMaths.Area");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CircleMaths.Area"));
 
 	struct
 	{
@@ -288,7 +288,7 @@ float UCircleMaths::Area(float InRadius)
 
 float UCurveMaths::GetDistanceSquaredToCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetDistanceSquaredToCurve");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CurveMaths.GetDistanceSquaredToCurve"));
 
 	struct
 	{
@@ -316,7 +316,7 @@ float UCurveMaths::GetDistanceSquaredToCurve(const struct FVector& WorldSpacePos
 
 float UCurveMaths::GetClosestTimeOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetClosestTimeOnCurve");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CurveMaths.GetClosestTimeOnCurve"));
 
 	struct
 	{
@@ -344,7 +344,7 @@ float UCurveMaths::GetClosestTimeOnCurve(const struct FVector& WorldSpacePos, cl
 
 struct FVector UCurveMaths::GetClosestPositionOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetClosestPositionOnCurve");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CurveMaths.GetClosestPositionOnCurve"));
 
 	struct
 	{
@@ -372,7 +372,7 @@ struct FVector UCurveMaths::GetClosestPositionOnCurve(const struct FVector& Worl
 
 float UCurveMaths::GetClosestPointOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetClosestPointOnCurve");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CurveMaths.GetClosestPointOnCurve"));
 
 	struct
 	{
@@ -399,7 +399,7 @@ float UCurveMaths::GetClosestPointOnCurve(const struct FVector& WorldSpacePos, c
 
 struct FVector UCurveMaths::GetCentre(class USplineComponent* Spline)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.CurveMaths.GetCentre");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.CurveMaths.GetCentre"));
 
 	struct
 	{
@@ -423,7 +423,7 @@ struct FVector UCurveMaths::GetCentre(class USplineComponent* Spline)
 
 float UDensity::Water()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Water");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Density.Water"));
 
 	struct
 	{
@@ -445,7 +445,7 @@ float UDensity::Water()
 
 float UDensity::SeaWater()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.SeaWater");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Density.SeaWater"));
 
 	struct
 	{
@@ -467,7 +467,7 @@ float UDensity::SeaWater()
 
 float UDensity::Min()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Min");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Density.Min"));
 
 	struct
 	{
@@ -489,7 +489,7 @@ float UDensity::Min()
 
 float UDensity::Max()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Max");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Density.Max"));
 
 	struct
 	{
@@ -512,7 +512,7 @@ float UDensity::Max()
 
 bool UDensity::IsValid(float InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.IsValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Density.IsValid"));
 
 	struct
 	{
@@ -536,7 +536,7 @@ bool UDensity::IsValid(float InValue)
 
 float UDensity::Air()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Density.Air");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Density.Air"));
 
 	struct
 	{
@@ -558,7 +558,7 @@ float UDensity::Air()
 
 float UDragCoefficients::Sphere()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Sphere");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.Sphere"));
 
 	struct
 	{
@@ -580,7 +580,7 @@ float UDragCoefficients::Sphere()
 
 float UDragCoefficients::PlanePerpendicularToFlow()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.PlanePerpendicularToFlow");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.PlanePerpendicularToFlow"));
 
 	struct
 	{
@@ -602,7 +602,7 @@ float UDragCoefficients::PlanePerpendicularToFlow()
 
 float UDragCoefficients::PlaneParallelToFlow()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.PlaneParallelToFlow");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.PlaneParallelToFlow"));
 
 	struct
 	{
@@ -624,7 +624,7 @@ float UDragCoefficients::PlaneParallelToFlow()
 
 float UDragCoefficients::Min()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Min");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.Min"));
 
 	struct
 	{
@@ -646,7 +646,7 @@ float UDragCoefficients::Min()
 
 float UDragCoefficients::Max()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Max");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.Max"));
 
 	struct
 	{
@@ -669,7 +669,7 @@ float UDragCoefficients::Max()
 
 bool UDragCoefficients::IsValid(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.IsValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.IsValid"));
 
 	struct
 	{
@@ -693,7 +693,7 @@ bool UDragCoefficients::IsValid(float Value)
 
 float UDragCoefficients::Cube()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragCoefficients.Cube");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragCoefficients.Cube"));
 
 	struct
 	{
@@ -719,7 +719,7 @@ float UDragCoefficients::Cube()
 
 float UDragMaths::CalculateMagnitude(float InSurfaceArea, float InSpeedReltaiveToFluid, float InDragCoefficient, float InFluidDensity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.DragMaths.CalculateMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.DragMaths.CalculateMagnitude"));
 
 	struct
 	{
@@ -752,7 +752,7 @@ float UDragMaths::CalculateMagnitude(float InSurfaceArea, float InSpeedReltaiveT
 
 float UFloatMaths::WrapToRange(float Input, float LowerLimit, float UpperLimit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapToRange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.WrapToRange"));
 
 	struct
 	{
@@ -782,7 +782,7 @@ float UFloatMaths::WrapToRange(float Input, float LowerLimit, float UpperLimit)
 
 float UFloatMaths::WrapToPositiveRange(float Input, float UpperLimit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapToPositiveRange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.WrapToPositiveRange"));
 
 	struct
 	{
@@ -811,7 +811,7 @@ float UFloatMaths::WrapToPositiveRange(float Input, float UpperLimit)
 
 float UFloatMaths::WrapAroundPivot(float Input, float Pivot, float Range)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.WrapAroundPivot");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.WrapAroundPivot"));
 
 	struct
 	{
@@ -843,7 +843,7 @@ float UFloatMaths::WrapAroundPivot(float Input, float Pivot, float Range)
 
 float UFloatMaths::MoveTowards(float From, float To, float Speed, float Time)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.MoveTowards");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.MoveTowards"));
 
 	struct
 	{
@@ -879,7 +879,7 @@ float UFloatMaths::MoveTowards(float From, float To, float Speed, float Time)
 
 float UFloatMaths::Map(float ValueToMapFrom, float FromRangeStart, float FromRangeEnd, float ToRangeStart, float ToRangeEnd, bool Clamp)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.Map");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.Map"));
 
 	struct
 	{
@@ -916,7 +916,7 @@ float UFloatMaths::Map(float ValueToMapFrom, float FromRangeStart, float FromRan
 
 bool UFloatMaths::IncrementCounter(float Delta, float CounterMax, float* Counter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.IncrementCounter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.IncrementCounter"));
 
 	struct
 	{
@@ -950,7 +950,7 @@ bool UFloatMaths::IncrementCounter(float Delta, float CounterMax, float* Counter
 
 float UFloatMaths::FindMidpointInWrappedRange(float Value1, float Value2, float LowerLimit, float UpperLimit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.FindMidpointInWrappedRange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.FindMidpointInWrappedRange"));
 
 	struct
 	{
@@ -983,7 +983,7 @@ float UFloatMaths::FindMidpointInWrappedRange(float Value1, float Value2, float 
 
 float UFloatMaths::Bound(float ValueToBound, float Bound1, float Bound2)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.FloatMaths.Bound");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.Bound"));
 
 	struct
 	{
@@ -1011,7 +1011,7 @@ float UFloatMaths::Bound(float ValueToBound, float Bound1, float Bound2)
 
 float UGravity::Earth()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.Gravity.Earth");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.Gravity.Earth"));
 
 	struct
 	{
@@ -1039,7 +1039,7 @@ float UGravity::Earth()
 
 TArray<struct FVector> UPoissonDiscSampling::GeneratePoissonDiscDistributionAcrossPlane(const struct FVector& InCenter, const struct FQuat& InOrientation, float InWidth, float InHeight, float InMinDistance, int InRNGSeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.PoissonDiscSampling.GeneratePoissonDiscDistributionAcrossPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.PoissonDiscSampling.GeneratePoissonDiscDistributionAcrossPlane"));
 
 	struct
 	{
@@ -1077,7 +1077,7 @@ TArray<struct FVector> UPoissonDiscSampling::GeneratePoissonDiscDistributionAcro
 
 struct FTransform URotationMaths::TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.RotationMaths.TransformAroundArbitraryPivot");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.RotationMaths.TransformAroundArbitraryPivot"));
 
 	struct
 	{
@@ -1108,7 +1108,7 @@ struct FTransform URotationMaths::TransformAroundArbitraryPivot(const struct FTr
 
 struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.RotationMaths.RotatorToQuat");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.RotationMaths.RotatorToQuat"));
 
 	struct
 	{
@@ -1133,7 +1133,7 @@ struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 
 float USphereMaths::VolumeFromRadius(float InRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphereMaths.VolumeFromRadius");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.SphereMaths.VolumeFromRadius"));
 
 	struct
 	{
@@ -1158,7 +1158,7 @@ float USphereMaths::VolumeFromRadius(float InRadius)
 
 float USphereMaths::SurfaceAreaFromRadius(float InRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphereMaths.SurfaceAreaFromRadius");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.SphereMaths.SurfaceAreaFromRadius"));
 
 	struct
 	{
@@ -1184,7 +1184,7 @@ float USphereMaths::SurfaceAreaFromRadius(float InRadius)
 
 float USphericalCapMaths::Volume(float InRadius, float InHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphericalCapMaths.Volume");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.SphericalCapMaths.Volume"));
 
 	struct
 	{
@@ -1212,7 +1212,7 @@ float USphericalCapMaths::Volume(float InRadius, float InHeight)
 
 float USphericalCapMaths::CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid(float InRadius, float InHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphericalCapMaths.CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.SphericalCapMaths.CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid"));
 
 	struct
 	{
@@ -1240,7 +1240,7 @@ float USphericalCapMaths::CalculateGeometricCentroidOffsetRelativeToBoundingSphe
 
 float USphericalCapMaths::BaseRadius(float InRadius, float InHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.SphericalCapMaths.BaseRadius");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.SphericalCapMaths.BaseRadius"));
 
 	struct
 	{
@@ -1268,7 +1268,7 @@ float USphericalCapMaths::BaseRadius(float InRadius, float InHeight)
 
 void UTimedBufferFunctionLibrary::UpdateInterval(float DeltaTime, float Value, struct FTimedBuffer* TimedBuffer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimedBufferFunctionLibrary.UpdateInterval");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.TimedBufferFunctionLibrary.UpdateInterval"));
 
 	struct
 	{
@@ -1298,7 +1298,7 @@ void UTimedBufferFunctionLibrary::UpdateInterval(float DeltaTime, float Value, s
 
 bool UTimedBufferFunctionLibrary::GetValueRange(float MinWindowLength, struct FTimedBuffer* TimedBuffer, float* ValueRange)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimedBufferFunctionLibrary.GetValueRange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.TimedBufferFunctionLibrary.GetValueRange"));
 
 	struct
 	{
@@ -1330,7 +1330,7 @@ bool UTimedBufferFunctionLibrary::GetValueRange(float MinWindowLength, struct FT
 
 struct FTimedBuffer UTimedBufferFunctionLibrary::CreateTimedBuffer(float WindowLength)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimedBufferFunctionLibrary.CreateTimedBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.TimedBufferFunctionLibrary.CreateTimedBuffer"));
 
 	struct
 	{
@@ -1356,7 +1356,7 @@ struct FTimedBuffer UTimedBufferFunctionLibrary::CreateTimedBuffer(float WindowL
 
 struct FTimespan UTimeMaths::GetDifference(const struct FDateTime& A, const struct FDateTime& B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.TimeMaths.GetDifference");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.TimeMaths.GetDifference"));
 
 	struct
 	{
@@ -1387,7 +1387,7 @@ struct FTimespan UTimeMaths::GetDifference(const struct FDateTime& A, const stru
 
 bool UVectorMaths::LineIntersectsSphere(const struct FVector& LineStart, const struct FVector& LineDir, const struct FVector& SphereCentre, float SphereRadius, struct FVector* ClosestIntersectionPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsSphere");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.VectorMaths.LineIntersectsSphere"));
 
 	struct
 	{
@@ -1429,7 +1429,7 @@ bool UVectorMaths::LineIntersectsSphere(const struct FVector& LineStart, const s
 
 bool UVectorMaths::LineIntersectsCircleWithExitPoint(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, struct FVector2D* OutSecondaryIntersectionPoint, float* OutClosestIntersectionDistance, float* OutSecondaryIntersectionDistance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsCircleWithExitPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.VectorMaths.LineIntersectsCircleWithExitPoint"));
 
 	struct
 	{
@@ -1478,7 +1478,7 @@ bool UVectorMaths::LineIntersectsCircleWithExitPoint(const struct FVector2D& Lin
 
 bool UVectorMaths::LineIntersectsCircle(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.LineIntersectsCircle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.VectorMaths.LineIntersectsCircle"));
 
 	struct
 	{
@@ -1522,7 +1522,7 @@ bool UVectorMaths::LineIntersectsCircle(const struct FVector2D& LineOrigin, cons
 
 TEnumAsByte<EPlaneLineIntersectionType> UVectorMaths::IntersectLineSegmentWithPlane(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FVector& PlanePos, const struct FVector& PlaneNormal, float PlaneThickness, struct FVector* IntersectionPos, float* NormalisedIntersectionTOnLineSegment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.IntersectLineSegmentWithPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.VectorMaths.IntersectLineSegmentWithPlane"));
 
 	struct
 	{
@@ -1563,7 +1563,7 @@ TEnumAsByte<EPlaneLineIntersectionType> UVectorMaths::IntersectLineSegmentWithPl
 
 float UVectorMaths::Distance(const struct FVector& A, const struct FVector& B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.Distance");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.VectorMaths.Distance"));
 
 	struct
 	{
@@ -1591,7 +1591,7 @@ float UVectorMaths::Distance(const struct FVector& A, const struct FVector& B)
 
 float UVectorMaths::Cross_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Maths.VectorMaths.Cross_Vector2DVector2D");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.VectorMaths.Cross_Vector2DVector2D"));
 
 	struct
 	{

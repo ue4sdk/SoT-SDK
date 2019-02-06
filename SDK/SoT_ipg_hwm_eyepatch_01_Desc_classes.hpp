@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass ipg_hwm_eyepatch_01_Desc.ipg_hwm_eyepatch_01_Desc_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass ipg_hwm_eyepatch_01_Desc.ipg_hwm_eyepatch_01_Desc_C"));
 		return ptr;
 	}
 

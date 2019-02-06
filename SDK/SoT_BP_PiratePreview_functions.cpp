@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_PiratePreview_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_PiratePreview_C::UserConstructionScript()
 
 void ABP_PiratePreview_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_PiratePreview_C::ReceiveBeginPlay()
 
 void ABP_PiratePreview_C::PreviewBusy_Event(const struct FPiratePreviewBusyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy_Event");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy_Event"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_PiratePreview_C::PreviewBusy_Event(const struct FPiratePreviewBusyEvent
 
 void ABP_PiratePreview_C::PreviewReady_Event(const struct FPiratePreviewReadyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady_Event");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady_Event"));
 
 	struct
 	{
@@ -91,7 +91,7 @@ void ABP_PiratePreview_C::PreviewReady_Event(const struct FPiratePreviewReadyEve
 
 void ABP_PiratePreview_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -111,7 +111,7 @@ void ABP_PiratePreview_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 
 void ABP_PiratePreview_C::ExecuteUbergraph_BP_PiratePreview(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.ExecuteUbergraph_BP_PiratePreview");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.ExecuteUbergraph_BP_PiratePreview"));
 
 	struct
 	{
@@ -131,7 +131,7 @@ void ABP_PiratePreview_C::ExecuteUbergraph_BP_PiratePreview(int EntryPoint)
 
 void ABP_PiratePreview_C::PreviewShutdown__DelegateSignature(const struct FPiratePreviewShutdownEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.PreviewShutdown__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewShutdown__DelegateSignature"));
 
 	struct
 	{
@@ -151,7 +151,7 @@ void ABP_PiratePreview_C::PreviewShutdown__DelegateSignature(const struct FPirat
 
 void ABP_PiratePreview_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady__DelegateSignature"));
 
 	struct
 	{
@@ -171,7 +171,7 @@ void ABP_PiratePreview_C::PreviewReady__DelegateSignature(const struct FPiratePr
 
 void ABP_PiratePreview_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy__DelegateSignature"));
 
 	struct
 	{

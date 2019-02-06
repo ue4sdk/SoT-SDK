@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaPlayerCameraManager.BP_AthenaPlayerCameraManager_C
-// 0x0000 (0x1D10 - 0x1D10)
+// 0x0000 (0x1D70 - 0x1D70)
 class ABP_AthenaPlayerCameraManager_C : public AAthenaPlayerCameraManager
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_AthenaPlayerCameraManager.BP_AthenaPlayerCameraManager_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_AthenaPlayerCameraManager.BP_AthenaPlayerCameraManager_C"));
 		return ptr;
 	}
 

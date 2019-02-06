@@ -19,7 +19,7 @@ namespace SDK
 
 void UGameplayAbility::SetShouldBlockOtherAbilities(bool bShouldBlockAbilities)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.SetShouldBlockOtherAbilities");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.SetShouldBlockOtherAbilities"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void UGameplayAbility::SetShouldBlockOtherAbilities(bool bShouldBlockAbilities)
 
 void UGameplayAbility::SetCanBeCanceled(bool bCanBeCanceled)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.SetCanBeCanceled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.SetCanBeCanceled"));
 
 	struct
 	{
@@ -60,7 +60,7 @@ void UGameplayAbility::SetCanBeCanceled(bool bCanBeCanceled)
 
 void UGameplayAbility::SendGameplayEvent(const struct FGameplayTag& EventTag, const struct FGameplayEventData& payload)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.SendGameplayEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.SendGameplayEvent"));
 
 	struct
 	{
@@ -82,7 +82,7 @@ void UGameplayAbility::SendGameplayEvent(const struct FGameplayTag& EventTag, co
 
 void UGameplayAbility::MontageStop(float OverrideBlendOutTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.MontageStop");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.MontageStop"));
 
 	struct
 	{
@@ -103,7 +103,7 @@ void UGameplayAbility::MontageStop(float OverrideBlendOutTime)
 
 void UGameplayAbility::MontageSetNextSectionName(const struct FName& FromSectionName, const struct FName& ToSectionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.MontageSetNextSectionName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.MontageSetNextSectionName"));
 
 	struct
 	{
@@ -125,7 +125,7 @@ void UGameplayAbility::MontageSetNextSectionName(const struct FName& FromSection
 
 void UGameplayAbility::MontageJumpToSection(const struct FName& SectionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.MontageJumpToSection");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.MontageJumpToSection"));
 
 	struct
 	{
@@ -146,7 +146,7 @@ void UGameplayAbility::MontageJumpToSection(const struct FName& SectionName)
 
 struct FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocationInfoFromOwnerSkeletalMeshComponent(const struct FName& SocketName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerSkeletalMeshComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerSkeletalMeshComponent"));
 
 	struct
 	{
@@ -169,7 +169,7 @@ struct FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocatio
 
 struct FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocationInfoFromOwnerActor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerActor"));
 
 	struct
 	{
@@ -192,7 +192,7 @@ struct FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocatio
 
 struct FGameplayEffectSpecHandle UGameplayAbility::MakeOutgoingGameplayEffectSpec(class UClass* GameplayEffectClass, float Level)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.MakeOutgoingGameplayEffectSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.MakeOutgoingGameplayEffectSpec"));
 
 	struct
 	{
@@ -219,7 +219,7 @@ struct FGameplayEffectSpecHandle UGameplayAbility::MakeOutgoingGameplayEffectSpe
 
 bool UGameplayAbility::K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& payload)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ShouldAbilityRespondToEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ShouldAbilityRespondToEvent"));
 
 	struct
 	{
@@ -244,7 +244,7 @@ bool UGameplayAbility::K2_ShouldAbilityRespondToEvent(const struct FGameplayAbil
 
 void UGameplayAbility::K2_RemoveGameplayCue(const struct FGameplayTag& GameplayCueTag)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_RemoveGameplayCue");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_RemoveGameplayCue"));
 
 	struct
 	{
@@ -262,7 +262,7 @@ void UGameplayAbility::K2_RemoveGameplayCue(const struct FGameplayTag& GameplayC
 
 void UGameplayAbility::K2_OnEndAbility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_OnEndAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_OnEndAbility"));
 
 	struct
 	{
@@ -281,7 +281,7 @@ void UGameplayAbility::K2_OnEndAbility()
 
 void UGameplayAbility::K2_ExecuteGameplayCueWithParams(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& GameplayCueParameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCueWithParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCueWithParams"));
 
 	struct
 	{
@@ -304,7 +304,7 @@ void UGameplayAbility::K2_ExecuteGameplayCueWithParams(const struct FGameplayTag
 
 void UGameplayAbility::K2_ExecuteGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayEffectContextHandle& Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCue");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCue"));
 
 	struct
 	{
@@ -324,7 +324,7 @@ void UGameplayAbility::K2_ExecuteGameplayCue(const struct FGameplayTag& Gameplay
 
 void UGameplayAbility::K2_EndAbility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_EndAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_EndAbility"));
 
 	struct
 	{
@@ -340,7 +340,7 @@ void UGameplayAbility::K2_EndAbility()
 
 void UGameplayAbility::K2_CommitExecute()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CommitExecute");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CommitExecute"));
 
 	struct
 	{
@@ -359,7 +359,7 @@ void UGameplayAbility::K2_CommitExecute()
 
 bool UGameplayAbility::K2_CommitAbilityCost(bool BroadcastCommitEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCost");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCost"));
 
 	struct
 	{
@@ -383,7 +383,7 @@ bool UGameplayAbility::K2_CommitAbilityCost(bool BroadcastCommitEvent)
 
 bool UGameplayAbility::K2_CommitAbilityCooldown(bool BroadcastCommitEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCooldown");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCooldown"));
 
 	struct
 	{
@@ -406,7 +406,7 @@ bool UGameplayAbility::K2_CommitAbilityCooldown(bool BroadcastCommitEvent)
 
 bool UGameplayAbility::K2_CommitAbility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CommitAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CommitAbility"));
 
 	struct
 	{
@@ -427,7 +427,7 @@ bool UGameplayAbility::K2_CommitAbility()
 
 bool UGameplayAbility::K2_CheckAbilityCost()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCost");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCost"));
 
 	struct
 	{
@@ -448,7 +448,7 @@ bool UGameplayAbility::K2_CheckAbilityCost()
 
 bool UGameplayAbility::K2_CheckAbilityCooldown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCooldown");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCooldown"));
 
 	struct
 	{
@@ -471,7 +471,7 @@ bool UGameplayAbility::K2_CheckAbilityCooldown()
 
 bool UGameplayAbility::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_CanActivateAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_CanActivateAbility"));
 
 	struct
 	{
@@ -501,7 +501,7 @@ bool UGameplayAbility::K2_CanActivateAbility(const struct FGameplayAbilityActorI
 
 TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::K2_ApplyGameplayEffectToTarget(const struct FGameplayAbilityTargetDataHandle& TargetData, class UGameplayEffect* GameplayEffect, int GameplayEffectLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectToTarget"));
 
 	struct
 	{
@@ -530,7 +530,7 @@ TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::K2_ApplyGameplayEff
 
 struct FActiveGameplayEffectHandle UGameplayAbility::K2_ApplyGameplayEffectToOwner(class UGameplayEffect* GameplayEffect, int GameplayEffectLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectToOwner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectToOwner"));
 
 	struct
 	{
@@ -557,7 +557,7 @@ struct FActiveGameplayEffectHandle UGameplayAbility::K2_ApplyGameplayEffectToOwn
 
 TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::K2_ApplyGameplayEffectSpecToTarget(const struct FGameplayEffectSpecHandle& EffectSpecHandle, const struct FGameplayAbilityTargetDataHandle& TargetData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToTarget"));
 
 	struct
 	{
@@ -583,7 +583,7 @@ TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::K2_ApplyGameplayEff
 
 struct FActiveGameplayEffectHandle UGameplayAbility::K2_ApplyGameplayEffectSpecToOwner(const struct FGameplayEffectSpecHandle& EffectSpecHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToOwner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToOwner"));
 
 	struct
 	{
@@ -608,7 +608,7 @@ struct FActiveGameplayEffectHandle UGameplayAbility::K2_ApplyGameplayEffectSpecT
 
 void UGameplayAbility::K2_AddGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayEffectContextHandle& Context, bool bRemoveOnAbilityEnd)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_AddGameplayCue");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_AddGameplayCue"));
 
 	struct
 	{
@@ -632,7 +632,7 @@ void UGameplayAbility::K2_AddGameplayCue(const struct FGameplayTag& GameplayCueT
 
 void UGameplayAbility::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent"));
 
 	struct
 	{
@@ -650,7 +650,7 @@ void UGameplayAbility::K2_ActivateAbilityFromEvent(const struct FGameplayEventDa
 
 void UGameplayAbility::K2_ActivateAbility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.K2_ActivateAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.K2_ActivateAbility"));
 
 	struct
 	{
@@ -668,7 +668,7 @@ void UGameplayAbility::K2_ActivateAbility()
 
 class USkeletalMeshComponent* UGameplayAbility::GetOwningComponentFromActorInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetOwningComponentFromActorInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetOwningComponentFromActorInfo"));
 
 	struct
 	{
@@ -689,7 +689,7 @@ class USkeletalMeshComponent* UGameplayAbility::GetOwningComponentFromActorInfo(
 
 class AActor* UGameplayAbility::GetOwningActorFromActorInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetOwningActorFromActorInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetOwningActorFromActorInfo"));
 
 	struct
 	{
@@ -712,7 +712,7 @@ class AActor* UGameplayAbility::GetOwningActorFromActorInfo()
 
 struct FGameplayEffectSpecHandle UGameplayAbility::GetOutgoingGameplayEffectSpec(class UGameplayEffect* GameplayEffect, float Level)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetOutgoingGameplayEffectSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetOutgoingGameplayEffectSpec"));
 
 	struct
 	{
@@ -737,7 +737,7 @@ struct FGameplayEffectSpecHandle UGameplayAbility::GetOutgoingGameplayEffectSpec
 
 class UObject* UGameplayAbility::GetCurrentSourceObject()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetCurrentSourceObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetCurrentSourceObject"));
 
 	struct
 	{
@@ -758,7 +758,7 @@ class UObject* UGameplayAbility::GetCurrentSourceObject()
 
 class UAnimMontage* UGameplayAbility::GetCurrentMontage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetCurrentMontage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetCurrentMontage"));
 
 	struct
 	{
@@ -780,7 +780,7 @@ class UAnimMontage* UGameplayAbility::GetCurrentMontage()
 
 struct FGameplayEffectContextHandle UGameplayAbility::GetContextFromOwner(const struct FGameplayAbilityTargetDataHandle& OptionalTargetData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetContextFromOwner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetContextFromOwner"));
 
 	struct
 	{
@@ -803,7 +803,7 @@ struct FGameplayEffectContextHandle UGameplayAbility::GetContextFromOwner(const 
 
 class AActor* UGameplayAbility::GetAvatarActorFromActorInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetAvatarActorFromActorInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetAvatarActorFromActorInfo"));
 
 	struct
 	{
@@ -824,7 +824,7 @@ class AActor* UGameplayAbility::GetAvatarActorFromActorInfo()
 
 struct FGameplayAbilityActorInfo UGameplayAbility::GetActorInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetActorInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetActorInfo"));
 
 	struct
 	{
@@ -845,7 +845,7 @@ struct FGameplayAbilityActorInfo UGameplayAbility::GetActorInfo()
 
 int UGameplayAbility::GetAbilityLevel()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.GetAbilityLevel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.GetAbilityLevel"));
 
 	struct
 	{
@@ -866,7 +866,7 @@ int UGameplayAbility::GetAbilityLevel()
 
 void UGameplayAbility::EndTaskByInstanceName(const struct FName& InstanceName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.EndTaskByInstanceName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.EndTaskByInstanceName"));
 
 	struct
 	{
@@ -886,7 +886,7 @@ void UGameplayAbility::EndTaskByInstanceName(const struct FName& InstanceName)
 
 void UGameplayAbility::EndAbilityState(const struct FName& OptionalStateNameToEnd)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.EndAbilityState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.EndAbilityState"));
 
 	struct
 	{
@@ -907,7 +907,7 @@ void UGameplayAbility::EndAbilityState(const struct FName& OptionalStateNameToEn
 
 void UGameplayAbility::ConfirmTaskByInstanceName(const struct FName& InstanceName, bool bEndTask)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.ConfirmTaskByInstanceName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.ConfirmTaskByInstanceName"));
 
 	struct
 	{
@@ -929,7 +929,7 @@ void UGameplayAbility::ConfirmTaskByInstanceName(const struct FName& InstanceNam
 
 void UGameplayAbility::CancelTaskByInstanceName(const struct FName& InstanceName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.CancelTaskByInstanceName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.CancelTaskByInstanceName"));
 
 	struct
 	{
@@ -950,7 +950,7 @@ void UGameplayAbility::CancelTaskByInstanceName(const struct FName& InstanceName
 
 void UGameplayAbility::BP_RemoveGameplayEffectFromOwnerWithGrantedTags(const struct FGameplayTagContainer& WithGrantedTags, int StacksToRemove)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithGrantedTags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithGrantedTags"));
 
 	struct
 	{
@@ -973,7 +973,7 @@ void UGameplayAbility::BP_RemoveGameplayEffectFromOwnerWithGrantedTags(const str
 
 void UGameplayAbility::BP_RemoveGameplayEffectFromOwnerWithAssetTags(const struct FGameplayTagContainer& WithAssetTags, int StacksToRemove)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithAssetTags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithAssetTags"));
 
 	struct
 	{
@@ -998,7 +998,7 @@ void UGameplayAbility::BP_RemoveGameplayEffectFromOwnerWithAssetTags(const struc
 
 TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::BP_ApplyGameplayEffectToTarget(const struct FGameplayAbilityTargetDataHandle& TargetData, class UClass* GameplayEffectClass, int GameplayEffectLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToTarget"));
 
 	struct
 	{
@@ -1027,7 +1027,7 @@ TArray<struct FActiveGameplayEffectHandle> UGameplayAbility::BP_ApplyGameplayEff
 
 struct FActiveGameplayEffectHandle UGameplayAbility::BP_ApplyGameplayEffectToOwner(class UClass* GameplayEffectClass, int GameplayEffectLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToOwner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToOwner"));
 
 	struct
 	{
@@ -1050,7 +1050,7 @@ struct FActiveGameplayEffectHandle UGameplayAbility::BP_ApplyGameplayEffectToOwn
 
 void UGameplayCueInterface::ForwardGameplayCueToParent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueInterface.ForwardGameplayCueToParent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueInterface.ForwardGameplayCueToParent"));
 
 	struct
 	{
@@ -1069,7 +1069,7 @@ void UGameplayCueInterface::ForwardGameplayCueToParent()
 
 void UGameplayCueInterface::BlueprintCustomHandler(TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueInterface.BlueprintCustomHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueInterface.BlueprintCustomHandler"));
 
 	struct
 	{
@@ -1093,7 +1093,7 @@ void UGameplayCueInterface::BlueprintCustomHandler(TEnumAsByte<EGameplayCueEvent
 
 bool UAbilitySystemBlueprintLibrary::TargetDataHasOrigin(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasOrigin"));
 
 	struct
 	{
@@ -1121,7 +1121,7 @@ bool UAbilitySystemBlueprintLibrary::TargetDataHasOrigin(const struct FGameplayA
 
 bool UAbilitySystemBlueprintLibrary::TargetDataHasHitResult(const struct FGameplayAbilityTargetDataHandle& HitResult, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasHitResult");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasHitResult"));
 
 	struct
 	{
@@ -1149,7 +1149,7 @@ bool UAbilitySystemBlueprintLibrary::TargetDataHasHitResult(const struct FGamepl
 
 bool UAbilitySystemBlueprintLibrary::TargetDataHasEndPoint(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasEndPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasEndPoint"));
 
 	struct
 	{
@@ -1177,7 +1177,7 @@ bool UAbilitySystemBlueprintLibrary::TargetDataHasEndPoint(const struct FGamepla
 
 bool UAbilitySystemBlueprintLibrary::TargetDataHasActor(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasActor"));
 
 	struct
 	{
@@ -1204,7 +1204,7 @@ bool UAbilitySystemBlueprintLibrary::TargetDataHasActor(const struct FGameplayAb
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::SetStackCountToMax(const struct FGameplayEffectSpecHandle& SpecHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SetStackCountToMax");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SetStackCountToMax"));
 
 	struct
 	{
@@ -1230,7 +1230,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::SetStackCountTo
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::SetStackCount(const struct FGameplayEffectSpecHandle& SpecHandle, int StackCount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SetStackCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SetStackCount"));
 
 	struct
 	{
@@ -1258,7 +1258,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::SetStackCount(c
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::SetDuration(const struct FGameplayEffectSpecHandle& SpecHandle, float Duration)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SetDuration");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SetDuration"));
 
 	struct
 	{
@@ -1286,7 +1286,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::SetDuration(con
 
 void UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(class AActor* Actor, const struct FGameplayTag& EventTag, const struct FGameplayEventData& payload)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SendGameplayEventToActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.SendGameplayEventToActor"));
 
 	struct
 	{
@@ -1315,7 +1315,7 @@ void UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(class AActor* Acto
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::MakeSpecHandle(class UGameplayEffect* InGameplayEffect, class AActor* InInstigator, class AActor* InEffectCauser, float InLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeSpecHandle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeSpecHandle"));
 
 	struct
 	{
@@ -1347,7 +1347,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::MakeSpecHandle(
 
 struct FGameplayTargetDataFilterHandle UAbilitySystemBlueprintLibrary::MakeFilterHandle(const struct FGameplayTargetDataFilter& Filter, class AActor* FilterActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeFilterHandle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeFilterHandle"));
 
 	struct
 	{
@@ -1374,7 +1374,7 @@ struct FGameplayTargetDataFilterHandle UAbilitySystemBlueprintLibrary::MakeFilte
 
 bool UAbilitySystemBlueprintLibrary::IsInstigatorLocallyControlledPlayer(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.IsInstigatorLocallyControlledPlayer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.IsInstigatorLocallyControlledPlayer"));
 
 	struct
 	{
@@ -1399,7 +1399,7 @@ bool UAbilitySystemBlueprintLibrary::IsInstigatorLocallyControlledPlayer(const s
 
 bool UAbilitySystemBlueprintLibrary::IsInstigatorLocallyControlled(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.IsInstigatorLocallyControlled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.IsInstigatorLocallyControlled"));
 
 	struct
 	{
@@ -1424,7 +1424,7 @@ bool UAbilitySystemBlueprintLibrary::IsInstigatorLocallyControlled(const struct 
 
 bool UAbilitySystemBlueprintLibrary::HasHitResult(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.HasHitResult");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.HasHitResult"));
 
 	struct
 	{
@@ -1450,7 +1450,7 @@ bool UAbilitySystemBlueprintLibrary::HasHitResult(const struct FGameplayCueParam
 
 struct FTransform UAbilitySystemBlueprintLibrary::GetTargetDataOrigin(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataOrigin"));
 
 	struct
 	{
@@ -1478,7 +1478,7 @@ struct FTransform UAbilitySystemBlueprintLibrary::GetTargetDataOrigin(const stru
 
 struct FTransform UAbilitySystemBlueprintLibrary::GetTargetDataEndPointTransform(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataEndPointTransform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataEndPointTransform"));
 
 	struct
 	{
@@ -1506,7 +1506,7 @@ struct FTransform UAbilitySystemBlueprintLibrary::GetTargetDataEndPointTransform
 
 struct FVector UAbilitySystemBlueprintLibrary::GetTargetDataEndPoint(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataEndPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataEndPoint"));
 
 	struct
 	{
@@ -1533,7 +1533,7 @@ struct FVector UAbilitySystemBlueprintLibrary::GetTargetDataEndPoint(const struc
 
 struct FVector UAbilitySystemBlueprintLibrary::GetOrigin(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetOrigin"));
 
 	struct
 	{
@@ -1558,7 +1558,7 @@ struct FVector UAbilitySystemBlueprintLibrary::GetOrigin(const struct FGameplayC
 
 struct FTransform UAbilitySystemBlueprintLibrary::GetInstigatorTransform(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetInstigatorTransform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetInstigatorTransform"));
 
 	struct
 	{
@@ -1583,7 +1583,7 @@ struct FTransform UAbilitySystemBlueprintLibrary::GetInstigatorTransform(const s
 
 class AActor* UAbilitySystemBlueprintLibrary::GetInstigatorActor(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetInstigatorActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetInstigatorActor"));
 
 	struct
 	{
@@ -1609,7 +1609,7 @@ class AActor* UAbilitySystemBlueprintLibrary::GetInstigatorActor(const struct FG
 
 struct FHitResult UAbilitySystemBlueprintLibrary::GetHitResultFromTargetData(const struct FGameplayAbilityTargetDataHandle& HitResult, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetHitResultFromTargetData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetHitResultFromTargetData"));
 
 	struct
 	{
@@ -1636,7 +1636,7 @@ struct FHitResult UAbilitySystemBlueprintLibrary::GetHitResultFromTargetData(con
 
 struct FHitResult UAbilitySystemBlueprintLibrary::GetHitResult(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetHitResult");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetHitResult"));
 
 	struct
 	{
@@ -1664,7 +1664,7 @@ struct FHitResult UAbilitySystemBlueprintLibrary::GetHitResult(const struct FGam
 
 bool UAbilitySystemBlueprintLibrary::GetGameplayCueEndLocationAndNormal(class AActor* TargetActor, const struct FGameplayCueParameters& Parameters, struct FVector* Location, struct FVector* Normal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetGameplayCueEndLocationAndNormal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetGameplayCueEndLocationAndNormal"));
 
 	struct
 	{
@@ -1700,7 +1700,7 @@ bool UAbilitySystemBlueprintLibrary::GetGameplayCueEndLocationAndNormal(class AA
 
 bool UAbilitySystemBlueprintLibrary::GetGameplayCueDirection(class AActor* TargetActor, const struct FGameplayCueParameters& Parameters, struct FVector* Direction)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetGameplayCueDirection");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetGameplayCueDirection"));
 
 	struct
 	{
@@ -1733,7 +1733,7 @@ bool UAbilitySystemBlueprintLibrary::GetGameplayCueDirection(class AActor* Targe
 
 float UAbilitySystemBlueprintLibrary::GetFloatAttribute(class AActor* Actor, const struct FGameplayAttribute& Attribute, bool* bSuccessfullyFoundAttribute)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetFloatAttribute");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetFloatAttribute"));
 
 	struct
 	{
@@ -1764,7 +1764,7 @@ float UAbilitySystemBlueprintLibrary::GetFloatAttribute(class AActor* Actor, con
 
 int UAbilitySystemBlueprintLibrary::GetDataCountFromTargetData(const struct FGameplayAbilityTargetDataHandle& TargetData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetDataCountFromTargetData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetDataCountFromTargetData"));
 
 	struct
 	{
@@ -1790,7 +1790,7 @@ int UAbilitySystemBlueprintLibrary::GetDataCountFromTargetData(const struct FGam
 
 TArray<class AActor*> UAbilitySystemBlueprintLibrary::GetActorsFromTargetData(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorsFromTargetData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorsFromTargetData"));
 
 	struct
 	{
@@ -1817,7 +1817,7 @@ TArray<class AActor*> UAbilitySystemBlueprintLibrary::GetActorsFromTargetData(co
 
 int UAbilitySystemBlueprintLibrary::GetActorCount(const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorCount"));
 
 	struct
 	{
@@ -1843,7 +1843,7 @@ int UAbilitySystemBlueprintLibrary::GetActorCount(const struct FGameplayCueParam
 
 class AActor* UAbilitySystemBlueprintLibrary::GetActorByIndex(const struct FGameplayCueParameters& Parameters, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorByIndex");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorByIndex"));
 
 	struct
 	{
@@ -1870,7 +1870,7 @@ class AActor* UAbilitySystemBlueprintLibrary::GetActorByIndex(const struct FGame
 
 int UAbilitySystemBlueprintLibrary::GetActiveGameplayEffectStackCount(const struct FActiveGameplayEffectHandle& ActiveHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActiveGameplayEffectStackCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActiveGameplayEffectStackCount"));
 
 	struct
 	{
@@ -1895,7 +1895,7 @@ int UAbilitySystemBlueprintLibrary::GetActiveGameplayEffectStackCount(const stru
 
 class UAbilitySystemComponent* UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetAbilitySystemComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetAbilitySystemComponent"));
 
 	struct
 	{
@@ -1921,7 +1921,7 @@ class UAbilitySystemComponent* UAbilitySystemBlueprintLibrary::GetAbilitySystemC
 
 void UAbilitySystemBlueprintLibrary::ForwardGameplayCueToTarget(const TScriptInterface<class UGameplayCueInterface>& TargetCueInterface, TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.ForwardGameplayCueToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.ForwardGameplayCueToTarget"));
 
 	struct
 	{
@@ -1948,7 +1948,7 @@ void UAbilitySystemBlueprintLibrary::ForwardGameplayCueToTarget(const TScriptInt
 
 struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::FilterTargetData(const struct FGameplayAbilityTargetDataHandle& TargetDataHandle, const struct FGameplayTargetDataFilterHandle& ActorFilterClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.FilterTargetData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.FilterTargetData"));
 
 	struct
 	{
@@ -1975,7 +1975,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::FilterTa
 
 bool UAbilitySystemBlueprintLibrary::EffectContextIsInstigatorLocallyControlled(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextIsInstigatorLocallyControlled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextIsInstigatorLocallyControlled"));
 
 	struct
 	{
@@ -2000,7 +2000,7 @@ bool UAbilitySystemBlueprintLibrary::EffectContextIsInstigatorLocallyControlled(
 
 bool UAbilitySystemBlueprintLibrary::EffectContextHasHitResult(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextHasHitResult");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextHasHitResult"));
 
 	struct
 	{
@@ -2025,7 +2025,7 @@ bool UAbilitySystemBlueprintLibrary::EffectContextHasHitResult(const struct FGam
 
 class UObject* UAbilitySystemBlueprintLibrary::EffectContextGetSourceObject(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetSourceObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetSourceObject"));
 
 	struct
 	{
@@ -2050,7 +2050,7 @@ class UObject* UAbilitySystemBlueprintLibrary::EffectContextGetSourceObject(cons
 
 class AActor* UAbilitySystemBlueprintLibrary::EffectContextGetOriginalInstigatorActor(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetOriginalInstigatorActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetOriginalInstigatorActor"));
 
 	struct
 	{
@@ -2075,7 +2075,7 @@ class AActor* UAbilitySystemBlueprintLibrary::EffectContextGetOriginalInstigator
 
 struct FVector UAbilitySystemBlueprintLibrary::EffectContextGetOrigin(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetOrigin"));
 
 	struct
 	{
@@ -2100,7 +2100,7 @@ struct FVector UAbilitySystemBlueprintLibrary::EffectContextGetOrigin(const stru
 
 class AActor* UAbilitySystemBlueprintLibrary::EffectContextGetInstigatorActor(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetInstigatorActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetInstigatorActor"));
 
 	struct
 	{
@@ -2125,7 +2125,7 @@ class AActor* UAbilitySystemBlueprintLibrary::EffectContextGetInstigatorActor(co
 
 struct FHitResult UAbilitySystemBlueprintLibrary::EffectContextGetHitResult(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetHitResult");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetHitResult"));
 
 	struct
 	{
@@ -2150,7 +2150,7 @@ struct FHitResult UAbilitySystemBlueprintLibrary::EffectContextGetHitResult(cons
 
 class AActor* UAbilitySystemBlueprintLibrary::EffectContextGetEffectCauser(const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetEffectCauser");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetEffectCauser"));
 
 	struct
 	{
@@ -2177,7 +2177,7 @@ class AActor* UAbilitySystemBlueprintLibrary::EffectContextGetEffectCauser(const
 
 bool UAbilitySystemBlueprintLibrary::DoesTargetDataContainActor(const struct FGameplayAbilityTargetDataHandle& TargetData, int Index, class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.DoesTargetDataContainActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.DoesTargetDataContainActor"));
 
 	struct
 	{
@@ -2208,7 +2208,7 @@ bool UAbilitySystemBlueprintLibrary::DoesTargetDataContainActor(const struct FGa
 
 bool UAbilitySystemBlueprintLibrary::DoesGameplayCueMeetTagRequirements(const struct FGameplayCueParameters& Parameters, struct FGameplayTagRequirements* SourceTagReqs, struct FGameplayTagRequirements* TargetTagReqs)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.DoesGameplayCueMeetTagRequirements");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.DoesGameplayCueMeetTagRequirements"));
 
 	struct
 	{
@@ -2242,7 +2242,7 @@ bool UAbilitySystemBlueprintLibrary::DoesGameplayCueMeetTagRequirements(const st
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AssignSetByCallerMagnitude(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FName& DataName, float Magnitude)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AssignSetByCallerMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AssignSetByCallerMagnitude"));
 
 	struct
 	{
@@ -2272,7 +2272,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AssignSetByCall
 
 struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AppendTargetDataHandle(const struct FGameplayAbilityTargetDataHandle& TargetHandle, const struct FGameplayAbilityTargetDataHandle& HandleToAdd)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AppendTargetDataHandle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AppendTargetDataHandle"));
 
 	struct
 	{
@@ -2300,7 +2300,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AppendTa
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddLinkedGameplayEffectSpec(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayEffectSpecHandle& LinkedGameplayEffectSpec)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddLinkedGameplayEffectSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddLinkedGameplayEffectSpec"));
 
 	struct
 	{
@@ -2328,7 +2328,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddLinkedGamepl
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddGrantedTags(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTagContainer& NewGameplayTags)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddGrantedTags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddGrantedTags"));
 
 	struct
 	{
@@ -2356,7 +2356,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddGrantedTags(
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddGrantedTag(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTag& NewGameplayTag)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddGrantedTag");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddGrantedTag"));
 
 	struct
 	{
@@ -2384,7 +2384,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddGrantedTag(c
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddAssetTags(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTagContainer& NewGameplayTags)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddAssetTags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddAssetTags"));
 
 	struct
 	{
@@ -2412,7 +2412,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddAssetTags(co
 
 struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddAssetTag(const struct FGameplayEffectSpecHandle& SpecHandle, const struct FGameplayTag& NewGameplayTag)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddAssetTag");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AddAssetTag"));
 
 	struct
 	{
@@ -2440,7 +2440,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemBlueprintLibrary::AddAssetTag(con
 
 struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityTargetDataFromLocations(const struct FGameplayAbilityTargetingLocationInfo& SourceLocation, const struct FGameplayAbilityTargetingLocationInfo& TargetLocation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromLocations");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromLocations"));
 
 	struct
 	{
@@ -2467,7 +2467,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityT
 
 struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityTargetDataFromHitResult(const struct FHitResult& HitResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromHitResult");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromHitResult"));
 
 	struct
 	{
@@ -2493,7 +2493,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityT
 
 struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityTargetDataFromActorArray(TArray<class AActor*> ActorArray, bool OneTargetPerHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromActorArray");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromActorArray"));
 
 	struct
 	{
@@ -2520,7 +2520,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityT
 
 struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityTargetDataFromActor(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromActor"));
 
 	struct
 	{
@@ -2546,7 +2546,7 @@ struct FGameplayAbilityTargetDataHandle UAbilitySystemBlueprintLibrary::AbilityT
 
 bool UAbilitySystemComponent::TryActivateAbilityByClass(class UClass* InAbilityToActivate, bool bAllowRemoteActivation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.TryActivateAbilityByClass");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.TryActivateAbilityByClass"));
 
 	struct
 	{
@@ -2573,7 +2573,7 @@ bool UAbilitySystemComponent::TryActivateAbilityByClass(class UClass* InAbilityT
 
 bool UAbilitySystemComponent::TryActivateAbilitiesByTag(const struct FGameplayTagContainer& GameplayTagContainer, bool bAllowRemoteActivation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.TryActivateAbilitiesByTag");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.TryActivateAbilitiesByTag"));
 
 	struct
 	{
@@ -2596,7 +2596,7 @@ bool UAbilitySystemComponent::TryActivateAbilitiesByTag(const struct FGameplayTa
 
 void UAbilitySystemComponent::TargetConfirm()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.TargetConfirm");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.TargetConfirm"));
 
 	struct
 	{
@@ -2612,7 +2612,7 @@ void UAbilitySystemComponent::TargetConfirm()
 
 void UAbilitySystemComponent::TargetCancel()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.TargetCancel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.TargetCancel"));
 
 	struct
 	{
@@ -2630,7 +2630,7 @@ void UAbilitySystemComponent::TargetCancel()
 
 void UAbilitySystemComponent::SetUserAbilityActivationInhibited(bool NewInhibit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.SetUserAbilityActivationInhibited");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.SetUserAbilityActivationInhibited"));
 
 	struct
 	{
@@ -2651,7 +2651,7 @@ void UAbilitySystemComponent::SetUserAbilityActivationInhibited(bool NewInhibit)
 
 void UAbilitySystemComponent::SetActiveGameplayEffectLevel(const struct FActiveGameplayEffectHandle& ActiveHandle, int NewLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.SetActiveGameplayEffectLevel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.SetActiveGameplayEffectLevel"));
 
 	struct
 	{
@@ -2676,7 +2676,7 @@ void UAbilitySystemComponent::SetActiveGameplayEffectLevel(const struct FActiveG
 
 void UAbilitySystemComponent::ServerTryActivateAbilityWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbilityWithEventData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbilityWithEventData"));
 
 	struct
 	{
@@ -2704,7 +2704,7 @@ void UAbilitySystemComponent::ServerTryActivateAbilityWithEventData(const struct
 
 void UAbilitySystemComponent::ServerTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbility"));
 
 	struct
 	{
@@ -2730,7 +2730,7 @@ void UAbilitySystemComponent::ServerTryActivateAbility(const struct FGameplayAbi
 
 void UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetDataCancelled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetDataCancelled"));
 
 	struct
 	{
@@ -2758,7 +2758,7 @@ void UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled(const struc
 
 void UAbilitySystemComponent::ServerSetReplicatedTargetData(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FGameplayAbilityTargetDataHandle& ReplicatedTargetDataHandle, const struct FGameplayTag& ApplicationTag, const struct FPredictionKey& CurrentPredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetData"));
 
 	struct
 	{
@@ -2789,7 +2789,7 @@ void UAbilitySystemComponent::ServerSetReplicatedTargetData(const struct FGamepl
 
 void UAbilitySystemComponent::ServerSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedEvent"));
 
 	struct
 	{
@@ -2815,7 +2815,7 @@ void UAbilitySystemComponent::ServerSetReplicatedEvent(TEnumAsByte<EAbilityGener
 
 void UAbilitySystemComponent::ServerSetInputReleased(const struct FGameplayAbilitySpecHandle& AbilityHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerSetInputReleased");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerSetInputReleased"));
 
 	struct
 	{
@@ -2835,7 +2835,7 @@ void UAbilitySystemComponent::ServerSetInputReleased(const struct FGameplayAbili
 
 void UAbilitySystemComponent::ServerSetInputPressed(const struct FGameplayAbilitySpecHandle& AbilityHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerSetInputPressed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerSetInputPressed"));
 
 	struct
 	{
@@ -2857,7 +2857,7 @@ void UAbilitySystemComponent::ServerSetInputPressed(const struct FGameplayAbilit
 
 void UAbilitySystemComponent::ServerEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo, const struct FPredictionKey& PredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerEndAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerEndAbility"));
 
 	struct
 	{
@@ -2884,7 +2884,7 @@ void UAbilitySystemComponent::ServerEndAbility(const struct FGameplayAbilitySpec
 
 void UAbilitySystemComponent::ServerCurrentMontageSetNextSectionName(class UAnimMontage* ClientAnimMontage, float ClientPosition, const struct FName& SectionName, const struct FName& NextSectionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageSetNextSectionName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageSetNextSectionName"));
 
 	struct
 	{
@@ -2911,7 +2911,7 @@ void UAbilitySystemComponent::ServerCurrentMontageSetNextSectionName(class UAnim
 
 void UAbilitySystemComponent::ServerCurrentMontageJumpToSectionName(class UAnimMontage* ClientAnimMontage, const struct FName& SectionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageJumpToSectionName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageJumpToSectionName"));
 
 	struct
 	{
@@ -2934,7 +2934,7 @@ void UAbilitySystemComponent::ServerCurrentMontageJumpToSectionName(class UAnimM
 
 void UAbilitySystemComponent::ServerCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ServerCancelAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ServerCancelAbility"));
 
 	struct
 	{
@@ -2958,7 +2958,7 @@ void UAbilitySystemComponent::ServerCancelAbility(const struct FGameplayAbilityS
 
 void UAbilitySystemComponent::RemoveActiveGameplayEffectBySourceEffect(class UClass* GameplayEffect, class UAbilitySystemComponent* InstigatorAbilitySystemComponent, int StacksToRemove)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.RemoveActiveGameplayEffectBySourceEffect");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.RemoveActiveGameplayEffectBySourceEffect"));
 
 	struct
 	{
@@ -2984,7 +2984,7 @@ void UAbilitySystemComponent::RemoveActiveGameplayEffectBySourceEffect(class UCl
 
 bool UAbilitySystemComponent::RemoveActiveGameplayEffect(const struct FActiveGameplayEffectHandle& Handle, int StacksToRemove)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.RemoveActiveGameplayEffect");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.RemoveActiveGameplayEffect"));
 
 	struct
 	{
@@ -3009,7 +3009,7 @@ bool UAbilitySystemComponent::RemoveActiveGameplayEffect(const struct FActiveGam
 
 void UAbilitySystemComponent::RemoveActiveEffectsWithTags(const struct FGameplayTagContainer& Tags)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.RemoveActiveEffectsWithTags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.RemoveActiveEffectsWithTags"));
 
 	struct
 	{
@@ -3027,7 +3027,7 @@ void UAbilitySystemComponent::RemoveActiveEffectsWithTags(const struct FGameplay
 
 void UAbilitySystemComponent::OnRep_ReplicatedAnimMontage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.OnRep_ReplicatedAnimMontage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.OnRep_ReplicatedAnimMontage"));
 
 	struct
 	{
@@ -3043,7 +3043,7 @@ void UAbilitySystemComponent::OnRep_ReplicatedAnimMontage()
 
 void UAbilitySystemComponent::OnRep_PredictionKey()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.OnRep_PredictionKey");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.OnRep_PredictionKey"));
 
 	struct
 	{
@@ -3059,7 +3059,7 @@ void UAbilitySystemComponent::OnRep_PredictionKey()
 
 void UAbilitySystemComponent::OnRep_OwningActor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.OnRep_OwningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.OnRep_OwningActor"));
 
 	struct
 	{
@@ -3075,7 +3075,7 @@ void UAbilitySystemComponent::OnRep_OwningActor()
 
 void UAbilitySystemComponent::OnRep_GameplayEffects()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.OnRep_GameplayEffects");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.OnRep_GameplayEffects"));
 
 	struct
 	{
@@ -3091,7 +3091,7 @@ void UAbilitySystemComponent::OnRep_GameplayEffects()
 
 void UAbilitySystemComponent::OnRep_ActivateAbilities()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.OnRep_ActivateAbilities");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.OnRep_ActivateAbilities"));
 
 	struct
 	{
@@ -3111,7 +3111,7 @@ void UAbilitySystemComponent::OnRep_ActivateAbilities()
 
 void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_WithParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_WithParams"));
 
 	struct
 	{
@@ -3136,7 +3136,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams(
 
 void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_FromSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_FromSpec"));
 
 	struct
 	{
@@ -3160,7 +3160,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec(co
 
 void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted"));
 
 	struct
 	{
@@ -3185,7 +3185,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted(const struc
 
 void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec"));
 
 	struct
 	{
@@ -3209,7 +3209,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_
 
 void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAdded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAdded"));
 
 	struct
 	{
@@ -3236,7 +3236,7 @@ void UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded(const struct F
 
 struct FGameplayEffectSpecHandle UAbilitySystemComponent::MakeOutgoingSpec(class UClass* GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.MakeOutgoingSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.MakeOutgoingSpec"));
 
 	struct
 	{
@@ -3264,7 +3264,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemComponent::MakeOutgoingSpec(class
 
 void UAbilitySystemComponent::K2_InitStats(class UClass* Attributes, class UDataTable* DataTable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.K2_InitStats");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.K2_InitStats"));
 
 	struct
 	{
@@ -3290,7 +3290,7 @@ void UAbilitySystemComponent::K2_InitStats(class UClass* Attributes, class UData
 
 struct FActiveGameplayEffectHandle UAbilitySystemComponent::K2_ApplyGameplayEffectToTarget(class UGameplayEffect* GameplayEffect, class UAbilitySystemComponent* Target, float Level, const struct FGameplayEffectContextHandle& Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.K2_ApplyGameplayEffectToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.K2_ApplyGameplayEffectToTarget"));
 
 	struct
 	{
@@ -3322,7 +3322,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::K2_ApplyGameplayEffe
 
 struct FActiveGameplayEffectHandle UAbilitySystemComponent::K2_ApplyGameplayEffectToSelf(class UGameplayEffect* GameplayEffect, float Level, const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.K2_ApplyGameplayEffectToSelf");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.K2_ApplyGameplayEffectToSelf"));
 
 	struct
 	{
@@ -3350,7 +3350,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::K2_ApplyGameplayEffe
 
 bool UAbilitySystemComponent::IsGameplayCueActive(const struct FGameplayTag& GameplayCueTag)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.IsGameplayCueActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.IsGameplayCueActive"));
 
 	struct
 	{
@@ -3373,7 +3373,7 @@ bool UAbilitySystemComponent::IsGameplayCueActive(const struct FGameplayTag& Gam
 
 bool UAbilitySystemComponent::GetUserAbilityActivationInhibited()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.GetUserAbilityActivationInhibited");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.GetUserAbilityActivationInhibited"));
 
 	struct
 	{
@@ -3396,7 +3396,7 @@ bool UAbilitySystemComponent::GetUserAbilityActivationInhibited()
 
 struct FGameplayEffectSpecHandle UAbilitySystemComponent::GetOutgoingSpec(class UGameplayEffect* GameplayEffect, float Level)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.GetOutgoingSpec");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.GetOutgoingSpec"));
 
 	struct
 	{
@@ -3423,7 +3423,7 @@ struct FGameplayEffectSpecHandle UAbilitySystemComponent::GetOutgoingSpec(class 
 
 float UAbilitySystemComponent::GetGameplayEffectMagnitude(const struct FActiveGameplayEffectHandle& Handle, const struct FGameplayAttribute& Attribute)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.GetGameplayEffectMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.GetGameplayEffectMagnitude"));
 
 	struct
 	{
@@ -3450,7 +3450,7 @@ float UAbilitySystemComponent::GetGameplayEffectMagnitude(const struct FActiveGa
 
 int UAbilitySystemComponent::GetGameplayEffectCount(class UClass* SourceGameplayEffect, class UAbilitySystemComponent* OptionalInstigatorFilterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.GetGameplayEffectCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.GetGameplayEffectCount"));
 
 	struct
 	{
@@ -3475,7 +3475,7 @@ int UAbilitySystemComponent::GetGameplayEffectCount(class UClass* SourceGameplay
 
 struct FGameplayEffectContextHandle UAbilitySystemComponent::GetEffectContext()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.GetEffectContext");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.GetEffectContext"));
 
 	struct
 	{
@@ -3496,7 +3496,7 @@ struct FGameplayEffectContextHandle UAbilitySystemComponent::GetEffectContext()
 
 void UAbilitySystemComponent::ClientTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientTryActivateAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientTryActivateAbility"));
 
 	struct
 	{
@@ -3518,7 +3518,7 @@ void UAbilitySystemComponent::ClientTryActivateAbility(const struct FGameplayAbi
 
 void UAbilitySystemComponent::ClientSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientSetReplicatedEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientSetReplicatedEvent"));
 
 	struct
 	{
@@ -3543,7 +3543,7 @@ void UAbilitySystemComponent::ClientSetReplicatedEvent(TEnumAsByte<EAbilityGener
 
 void UAbilitySystemComponent::ClientEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientEndAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientEndAbility"));
 
 	struct
 	{
@@ -3566,7 +3566,7 @@ void UAbilitySystemComponent::ClientEndAbility(const struct FGameplayAbilitySpec
 
 void UAbilitySystemComponent::ClientCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientCancelAbility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientCancelAbility"));
 
 	struct
 	{
@@ -3590,7 +3590,7 @@ void UAbilitySystemComponent::ClientCancelAbility(const struct FGameplayAbilityS
 
 void UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceedWithEventData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceedWithEventData"));
 
 	struct
 	{
@@ -3615,7 +3615,7 @@ void UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData(const st
 
 void UAbilitySystemComponent::ClientActivateAbilitySucceed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceed"));
 
 	struct
 	{
@@ -3638,7 +3638,7 @@ void UAbilitySystemComponent::ClientActivateAbilitySucceed(const struct FGamepla
 
 void UAbilitySystemComponent::ClientActivateAbilityFailed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, int16_t PredictionKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilityFailed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilityFailed"));
 
 	struct
 	{
@@ -3664,7 +3664,7 @@ void UAbilitySystemComponent::ClientActivateAbilityFailed(const struct FGameplay
 
 struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffectToTarget(class UClass* GameplayEffectClass, class UAbilitySystemComponent* Target, float Level, const struct FGameplayEffectContextHandle& Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectToTarget"));
 
 	struct
 	{
@@ -3696,7 +3696,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 
 struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffectToSelf(class UClass* GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& EffectContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectToSelf");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectToSelf"));
 
 	struct
 	{
@@ -3725,7 +3725,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 
 struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffectSpecToTarget(class UAbilitySystemComponent* Target, struct FGameplayEffectSpecHandle* SpecHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectSpecToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectSpecToTarget"));
 
 	struct
 	{
@@ -3753,7 +3753,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 
 struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffectSpecToSelf(struct FGameplayEffectSpecHandle* SpecHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectSpecToSelf");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectSpecToSelf"));
 
 	struct
 	{
@@ -3776,7 +3776,7 @@ struct FActiveGameplayEffectHandle UAbilitySystemComponent::BP_ApplyGameplayEffe
 
 void UAbilitySystemComponent::AbilityConfirmOrCancel__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction GameplayAbilities.AbilitySystemComponent.AbilityConfirmOrCancel__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("DelegateFunction GameplayAbilities.AbilitySystemComponent.AbilityConfirmOrCancel__DelegateSignature"));
 
 	struct
 	{
@@ -3794,7 +3794,7 @@ void UAbilitySystemComponent::AbilityConfirmOrCancel__DelegateSignature()
 
 void UAbilitySystemComponent::AbilityAbilityKey__DelegateSignature(int InputID)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction GameplayAbilities.AbilitySystemComponent.AbilityAbilityKey__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("DelegateFunction GameplayAbilities.AbilitySystemComponent.AbilityAbilityKey__DelegateSignature"));
 
 	struct
 	{
@@ -3812,7 +3812,7 @@ void UAbilitySystemComponent::AbilityAbilityKey__DelegateSignature(int InputID)
 
 void UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCosts()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemGlobals.ToggleIgnoreAbilitySystemCosts");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemGlobals.ToggleIgnoreAbilitySystemCosts"));
 
 	struct
 	{
@@ -3828,7 +3828,7 @@ void UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCosts()
 
 void UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCooldowns()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilitySystemGlobals.ToggleIgnoreAbilitySystemCooldowns");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilitySystemGlobals.ToggleIgnoreAbilitySystemCooldowns"));
 
 	struct
 	{
@@ -3852,7 +3852,7 @@ void UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCooldowns()
 
 class UAbilityTask_MoveToLocation* UAbilityTask_MoveToLocation::MoveToLocation(class UObject* WorldContextObject, const struct FName& TaskInstanceName, const struct FVector& Location, float Duration, class UCurveFloat* OptionalInterpolationCurve, class UCurveVector* OptionalVectorInterpolationCurve)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_MoveToLocation.MoveToLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_MoveToLocation.MoveToLocation"));
 
 	struct
 	{
@@ -3888,7 +3888,7 @@ class UAbilityTask_MoveToLocation* UAbilityTask_MoveToLocation::MoveToLocation(c
 
 class UAbilityTask_NetworkSyncPoint* UAbilityTask_NetworkSyncPoint::WaitNetSync(class UObject* WorldContextObject, TEnumAsByte<EAbilityTaskNetSyncType> SyncType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_NetworkSyncPoint.WaitNetSync");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_NetworkSyncPoint.WaitNetSync"));
 
 	struct
 	{
@@ -3912,7 +3912,7 @@ class UAbilityTask_NetworkSyncPoint* UAbilityTask_NetworkSyncPoint::WaitNetSync(
 
 void UAbilityTask_NetworkSyncPoint::OnSignalCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_NetworkSyncPoint.OnSignalCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_NetworkSyncPoint.OnSignalCallback"));
 
 	struct
 	{
@@ -3928,7 +3928,7 @@ void UAbilityTask_NetworkSyncPoint::OnSignalCallback()
 
 void UAbilityTask_PlayMontageAndWait::OnMontageInterrupted()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageInterrupted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageInterrupted"));
 
 	struct
 	{
@@ -3947,7 +3947,7 @@ void UAbilityTask_PlayMontageAndWait::OnMontageInterrupted()
 
 void UAbilityTask_PlayMontageAndWait::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut"));
 
 	struct
 	{
@@ -3974,7 +3974,7 @@ void UAbilityTask_PlayMontageAndWait::OnMontageBlendingOut(class UAnimMontage* M
 
 class UAbilityTask_PlayMontageAndWait* UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(class UObject* WorldContextObject, const struct FName& TaskInstanceName, class UAnimMontage* MontageToPlay, float Rate, const struct FName& StartSection)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy"));
 
 	struct
 	{
@@ -4009,7 +4009,7 @@ class UAbilityTask_PlayMontageAndWait* UAbilityTask_PlayMontageAndWait::CreatePl
 
 class UAbilityTask_Repeat* UAbilityTask_Repeat::RepeatAction(class UObject* WorldContextObject, float TimeBetweenActions, int TotalActionCount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_Repeat.RepeatAction");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_Repeat.RepeatAction"));
 
 	struct
 	{
@@ -4040,7 +4040,7 @@ class UAbilityTask_Repeat* UAbilityTask_Repeat::RepeatAction(class UObject* Worl
 
 class UAbilityTask_SpawnActor* UAbilityTask_SpawnActor::SpawnActor(class UObject* WorldContextObject, const struct FGameplayAbilityTargetDataHandle& TargetData, class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_SpawnActor.SpawnActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_SpawnActor.SpawnActor"));
 
 	struct
 	{
@@ -4070,7 +4070,7 @@ class UAbilityTask_SpawnActor* UAbilityTask_SpawnActor::SpawnActor(class UObject
 
 void UAbilityTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextObject, const struct FGameplayAbilityTargetDataHandle& TargetData, class AActor* SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_SpawnActor.FinishSpawningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_SpawnActor.FinishSpawningActor"));
 
 	struct
 	{
@@ -4098,7 +4098,7 @@ void UAbilityTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextObj
 
 bool UAbilityTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObject, const struct FGameplayAbilityTargetDataHandle& TargetData, class UClass* Class, class AActor** SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_SpawnActor.BeginSpawningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_SpawnActor.BeginSpawningActor"));
 
 	struct
 	{
@@ -4132,7 +4132,7 @@ bool UAbilityTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObje
 
 class UAbilityTask_StartAbilityState* UAbilityTask_StartAbilityState::StartAbilityState(class UObject* WorldContextObject, const struct FName& StateName, bool bEndCurrentState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_StartAbilityState.StartAbilityState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_StartAbilityState.StartAbilityState"));
 
 	struct
 	{
@@ -4164,7 +4164,7 @@ class UAbilityTask_StartAbilityState* UAbilityTask_StartAbilityState::StartAbili
 
 class UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::VisualizeTargetingUsingActor(class UObject* WorldContextObject, class AGameplayAbilityTargetActor* TargetActor, const struct FName& TaskInstanceName, float Duration)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor"));
 
 	struct
 	{
@@ -4198,7 +4198,7 @@ class UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::Visualiz
 
 class UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::VisualizeTargeting(class UObject* WorldContextObject, class UClass* Class, const struct FName& TaskInstanceName, float Duration)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting"));
 
 	struct
 	{
@@ -4229,7 +4229,7 @@ class UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::Visualiz
 
 void UAbilityTask_VisualizeTargeting::FinishSpawningActor(class UObject* WorldContextObject, class AGameplayAbilityTargetActor* SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor"));
 
 	struct
 	{
@@ -4254,7 +4254,7 @@ void UAbilityTask_VisualizeTargeting::FinishSpawningActor(class UObject* WorldCo
 
 bool UAbilityTask_VisualizeTargeting::BeginSpawningActor(class UObject* WorldContextObject, class UClass* Class, class AGameplayAbilityTargetActor** SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor"));
 
 	struct
 	{
@@ -4288,7 +4288,7 @@ bool UAbilityTask_VisualizeTargeting::BeginSpawningActor(class UObject* WorldCon
 
 class UAbilityTask_WaitAbilityActivate* UAbilityTask_WaitAbilityActivate::WaitForAbilityActivate(class UObject* WorldContextObject, const struct FGameplayTag& WithTag, const struct FGameplayTag& WithoutTag, bool IncludeTriggeredAbilities, bool TriggerOnce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivate"));
 
 	struct
 	{
@@ -4320,7 +4320,7 @@ class UAbilityTask_WaitAbilityActivate* UAbilityTask_WaitAbilityActivate::WaitFo
 
 void UAbilityTask_WaitAbilityActivate::OnAbilityActivate(class UGameplayAbility* ActivatedAbility)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitAbilityActivate.OnAbilityActivate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitAbilityActivate.OnAbilityActivate"));
 
 	struct
 	{
@@ -4344,7 +4344,7 @@ void UAbilityTask_WaitAbilityActivate::OnAbilityActivate(class UGameplayAbility*
 
 class UAbilityTask_WaitAbilityCommit* UAbilityTask_WaitAbilityCommit::WaitForAbilityCommit(class UObject* WorldContextObject, const struct FGameplayTag& WithTag, const struct FGameplayTag& WithoutTage, bool TriggerOnce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit"));
 
 	struct
 	{
@@ -4374,7 +4374,7 @@ class UAbilityTask_WaitAbilityCommit* UAbilityTask_WaitAbilityCommit::WaitForAbi
 
 void UAbilityTask_WaitAbilityCommit::OnAbilityCommit(class UGameplayAbility* ActivatedAbility)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitAbilityCommit.OnAbilityCommit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitAbilityCommit.OnAbilityCommit"));
 
 	struct
 	{
@@ -4401,7 +4401,7 @@ void UAbilityTask_WaitAbilityCommit::OnAbilityCommit(class UGameplayAbility* Act
 
 class UAbilityTask_WaitAttributeChange* UAbilityTask_WaitAttributeChange::WaitForAttributeChangeWithComparison(class UObject* WorldContextObject, const struct FGameplayAttribute& InAttribute, const struct FGameplayTag& InWithTag, const struct FGameplayTag& InWithoutTag, TEnumAsByte<EWaitAttributeChangeComparison> InComparisonType, float InComparisonValue, bool TriggerOnce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChangeWithComparison");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChangeWithComparison"));
 
 	struct
 	{
@@ -4442,7 +4442,7 @@ class UAbilityTask_WaitAttributeChange* UAbilityTask_WaitAttributeChange::WaitFo
 
 class UAbilityTask_WaitAttributeChange* UAbilityTask_WaitAttributeChange::WaitForAttributeChange(class UObject* WorldContextObject, const struct FGameplayAttribute& Attribute, const struct FGameplayTag& WithSrcTag, const struct FGameplayTag& WithoutSrcTag, bool TriggerOnce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChange"));
 
 	struct
 	{
@@ -4475,7 +4475,7 @@ class UAbilityTask_WaitAttributeChange* UAbilityTask_WaitAttributeChange::WaitFo
 
 class UAbilityTask_WaitCancel* UAbilityTask_WaitCancel::WaitCancel(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitCancel.WaitCancel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitCancel.WaitCancel"));
 
 	struct
 	{
@@ -4497,7 +4497,7 @@ class UAbilityTask_WaitCancel* UAbilityTask_WaitCancel::WaitCancel(class UObject
 
 void UAbilityTask_WaitCancel::OnLocalCancelCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitCancel.OnLocalCancelCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitCancel.OnLocalCancelCallback"));
 
 	struct
 	{
@@ -4513,7 +4513,7 @@ void UAbilityTask_WaitCancel::OnLocalCancelCallback()
 
 void UAbilityTask_WaitCancel::OnCancelCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitCancel.OnCancelCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitCancel.OnCancelCallback"));
 
 	struct
 	{
@@ -4532,7 +4532,7 @@ void UAbilityTask_WaitCancel::OnCancelCallback()
 
 class UAbilityTask_WaitConfirm* UAbilityTask_WaitConfirm::WaitConfirm(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirm.WaitConfirm");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirm.WaitConfirm"));
 
 	struct
 	{
@@ -4556,7 +4556,7 @@ class UAbilityTask_WaitConfirm* UAbilityTask_WaitConfirm::WaitConfirm(class UObj
 
 void UAbilityTask_WaitConfirm::OnConfirmCallback(class UGameplayAbility* Ability)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirm.OnConfirmCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirm.OnConfirmCallback"));
 
 	struct
 	{
@@ -4577,7 +4577,7 @@ void UAbilityTask_WaitConfirm::OnConfirmCallback(class UGameplayAbility* Ability
 
 class UAbilityTask_WaitConfirmCancel* UAbilityTask_WaitConfirmCancel::WaitConfirmCancel(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.WaitConfirmCancel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.WaitConfirmCancel"));
 
 	struct
 	{
@@ -4599,7 +4599,7 @@ class UAbilityTask_WaitConfirmCancel* UAbilityTask_WaitConfirmCancel::WaitConfir
 
 void UAbilityTask_WaitConfirmCancel::OnLocalConfirmCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnLocalConfirmCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnLocalConfirmCallback"));
 
 	struct
 	{
@@ -4615,7 +4615,7 @@ void UAbilityTask_WaitConfirmCancel::OnLocalConfirmCallback()
 
 void UAbilityTask_WaitConfirmCancel::OnLocalCancelCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnLocalCancelCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnLocalCancelCallback"));
 
 	struct
 	{
@@ -4631,7 +4631,7 @@ void UAbilityTask_WaitConfirmCancel::OnLocalCancelCallback()
 
 void UAbilityTask_WaitConfirmCancel::OnConfirmCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnConfirmCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnConfirmCallback"));
 
 	struct
 	{
@@ -4647,7 +4647,7 @@ void UAbilityTask_WaitConfirmCancel::OnConfirmCallback()
 
 void UAbilityTask_WaitConfirmCancel::OnCancelCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnCancelCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitConfirmCancel.OnCancelCallback"));
 
 	struct
 	{
@@ -4667,7 +4667,7 @@ void UAbilityTask_WaitConfirmCancel::OnCancelCallback()
 
 class UAbilityTask_WaitDelay* UAbilityTask_WaitDelay::WaitDelay(class UObject* WorldContextObject, float Time)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitDelay.WaitDelay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitDelay.WaitDelay"));
 
 	struct
 	{
@@ -4695,7 +4695,7 @@ class UAbilityTask_WaitDelay* UAbilityTask_WaitDelay::WaitDelay(class UObject* W
 
 void UAbilityTask_WaitGameplayEffectApplied::OnApplyGameplayEffectCallback(class UAbilitySystemComponent* Target, const struct FGameplayEffectSpec& SpecApplied, const struct FActiveGameplayEffectHandle& ActiveHandle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayEffectApplied.OnApplyGameplayEffectCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayEffectApplied.OnApplyGameplayEffectCallback"));
 
 	struct
 	{
@@ -4725,7 +4725,7 @@ void UAbilityTask_WaitGameplayEffectApplied::OnApplyGameplayEffectCallback(class
 
 class UAbilityTask_WaitGameplayEffectApplied_Self* UAbilityTask_WaitGameplayEffectApplied_Self::WaitGameplayEffectAppliedToSelf(class UObject* WorldContextObject, const struct FGameplayTargetDataFilterHandle& SourceFilter, const struct FGameplayTagRequirements& SourceTagRequirements, const struct FGameplayTagRequirements& TargetTagRequirements, bool TriggerOnce, class AActor* OptionalExternalOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self.WaitGameplayEffectAppliedToSelf");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self.WaitGameplayEffectAppliedToSelf"));
 
 	struct
 	{
@@ -4765,7 +4765,7 @@ class UAbilityTask_WaitGameplayEffectApplied_Self* UAbilityTask_WaitGameplayEffe
 
 class UAbilityTask_WaitGameplayEffectApplied_Target* UAbilityTask_WaitGameplayEffectApplied_Target::WaitGameplayEffectAppliedToTarget(class UObject* WorldContextObject, const struct FGameplayTargetDataFilterHandle& TargetFilter, const struct FGameplayTagRequirements& SourceTagRequirements, const struct FGameplayTagRequirements& TargetTagRequirements, bool TriggerOnce, class AActor* OptionalExternalOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target.WaitGameplayEffectAppliedToTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target.WaitGameplayEffectAppliedToTarget"));
 
 	struct
 	{
@@ -4801,7 +4801,7 @@ class UAbilityTask_WaitGameplayEffectApplied_Target* UAbilityTask_WaitGameplayEf
 
 class UAbilityTask_WaitGameplayEffectRemoved* UAbilityTask_WaitGameplayEffectRemoved::WaitForGameplayEffectRemoved(class UObject* WorldContextObject, const struct FActiveGameplayEffectHandle& Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.WaitForGameplayEffectRemoved");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.WaitForGameplayEffectRemoved"));
 
 	struct
 	{
@@ -4825,7 +4825,7 @@ class UAbilityTask_WaitGameplayEffectRemoved* UAbilityTask_WaitGameplayEffectRem
 
 void UAbilityTask_WaitGameplayEffectRemoved::OnGameplayEffectRemoved()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.OnGameplayEffectRemoved");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.OnGameplayEffectRemoved"));
 
 	struct
 	{
@@ -4844,7 +4844,7 @@ void UAbilityTask_WaitGameplayEffectRemoved::OnGameplayEffectRemoved()
 
 void UAbilityTask_WaitGameplayTag::GameplayTagCallback(const struct FGameplayTag& Tag, int NewCount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayTag.GameplayTagCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayTag.GameplayTagCallback"));
 
 	struct
 	{
@@ -4870,7 +4870,7 @@ void UAbilityTask_WaitGameplayTag::GameplayTagCallback(const struct FGameplayTag
 
 class UAbilityTask_WaitGameplayTagAdded* UAbilityTask_WaitGameplayTagAdded::WaitGameplayTagAdd(class UObject* WorldContextObject, const struct FGameplayTag& Tag, class AActor* OptionalExternalTarget, bool OnlyTriggerOnce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayTagAdded.WaitGameplayTagAdd");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayTagAdded.WaitGameplayTagAdd"));
 
 	struct
 	{
@@ -4904,7 +4904,7 @@ class UAbilityTask_WaitGameplayTagAdded* UAbilityTask_WaitGameplayTagAdded::Wait
 
 class UAbilityTask_WaitGameplayTagRemoved* UAbilityTask_WaitGameplayTagRemoved::WaitGameplayTagRemove(class UObject* WorldContextObject, const struct FGameplayTag& Tag, class AActor* OptionalExternalTarget, bool OnlyTriggerOnce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitGameplayTagRemoved.WaitGameplayTagRemove");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitGameplayTagRemoved.WaitGameplayTagRemove"));
 
 	struct
 	{
@@ -4936,7 +4936,7 @@ class UAbilityTask_WaitGameplayTagRemoved* UAbilityTask_WaitGameplayTagRemoved::
 
 class UAbilityTask_WaitInputPress* UAbilityTask_WaitInputPress::WaitInputPress(class UObject* WorldContextObject, bool bTestAlreadyPressed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitInputPress.WaitInputPress");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitInputPress.WaitInputPress"));
 
 	struct
 	{
@@ -4960,7 +4960,7 @@ class UAbilityTask_WaitInputPress* UAbilityTask_WaitInputPress::WaitInputPress(c
 
 void UAbilityTask_WaitInputPress::OnPressCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitInputPress.OnPressCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitInputPress.OnPressCallback"));
 
 	struct
 	{
@@ -4980,7 +4980,7 @@ void UAbilityTask_WaitInputPress::OnPressCallback()
 
 class UAbilityTask_WaitInputRelease* UAbilityTask_WaitInputRelease::WaitInputRelease(class UObject* WorldContextObject, bool bTestAlreadyReleased)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitInputRelease.WaitInputRelease");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitInputRelease.WaitInputRelease"));
 
 	struct
 	{
@@ -5004,7 +5004,7 @@ class UAbilityTask_WaitInputRelease* UAbilityTask_WaitInputRelease::WaitInputRel
 
 void UAbilityTask_WaitInputRelease::OnReleaseCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitInputRelease.OnReleaseCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitInputRelease.OnReleaseCallback"));
 
 	struct
 	{
@@ -5024,7 +5024,7 @@ void UAbilityTask_WaitInputRelease::OnReleaseCallback()
 
 void UAbilityTask_WaitMovementModeChange::OnMovementModeChange(class ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, unsigned char PreviousCustomMode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitMovementModeChange.OnMovementModeChange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitMovementModeChange.OnMovementModeChange"));
 
 	struct
 	{
@@ -5050,7 +5050,7 @@ void UAbilityTask_WaitMovementModeChange::OnMovementModeChange(class ACharacter*
 
 class UAbilityTask_WaitMovementModeChange* UAbilityTask_WaitMovementModeChange::CreateWaitMovementModeChange(class UObject* WorldContextObject, TEnumAsByte<EMovementMode> NewMode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitMovementModeChange.CreateWaitMovementModeChange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitMovementModeChange.CreateWaitMovementModeChange"));
 
 	struct
 	{
@@ -5077,7 +5077,7 @@ class UAbilityTask_WaitMovementModeChange* UAbilityTask_WaitMovementModeChange::
 
 class UAbilityTask_WaitOverlap* UAbilityTask_WaitOverlap::WaitForOverlap(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitOverlap.WaitForOverlap");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitOverlap.WaitForOverlap"));
 
 	struct
 	{
@@ -5105,7 +5105,7 @@ class UAbilityTask_WaitOverlap* UAbilityTask_WaitOverlap::WaitForOverlap(class U
 
 void UAbilityTask_WaitOverlap::OnOverlapCallback(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitOverlap.OnOverlapCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitOverlap.OnOverlapCallback"));
 
 	struct
 	{
@@ -5136,7 +5136,7 @@ void UAbilityTask_WaitOverlap::OnOverlapCallback(class AActor* OtherActor, class
 
 void UAbilityTask_WaitOverlap::OnHitCallback(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitOverlap.OnHitCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitOverlap.OnHitCallback"));
 
 	struct
 	{
@@ -5166,7 +5166,7 @@ void UAbilityTask_WaitOverlap::OnHitCallback(class AActor* OtherActor, class UPr
 
 class UAbilityTask_WaitTargetData* UAbilityTask_WaitTargetData::WaitTargetDataUsingActor(class UObject* WorldContextObject, const struct FName& TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation> ConfirmationType, class AGameplayAbilityTargetActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.WaitTargetDataUsingActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.WaitTargetDataUsingActor"));
 
 	struct
 	{
@@ -5200,7 +5200,7 @@ class UAbilityTask_WaitTargetData* UAbilityTask_WaitTargetData::WaitTargetDataUs
 
 class UAbilityTask_WaitTargetData* UAbilityTask_WaitTargetData::WaitTargetData(class UObject* WorldContextObject, const struct FName& TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation> ConfirmationType, class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.WaitTargetData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.WaitTargetData"));
 
 	struct
 	{
@@ -5228,7 +5228,7 @@ class UAbilityTask_WaitTargetData* UAbilityTask_WaitTargetData::WaitTargetData(c
 
 void UAbilityTask_WaitTargetData::OnTargetDataReplicatedCancelledCallback()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCancelledCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCancelledCallback"));
 
 	struct
 	{
@@ -5247,7 +5247,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataReplicatedCancelledCallback()
 
 void UAbilityTask_WaitTargetData::OnTargetDataReplicatedCallback(const struct FGameplayAbilityTargetDataHandle& Data, const struct FGameplayTag& ActivationTag)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCallback"));
 
 	struct
 	{
@@ -5269,7 +5269,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataReplicatedCallback(const struct FG
 
 void UAbilityTask_WaitTargetData::OnTargetDataReadyCallback(const struct FGameplayAbilityTargetDataHandle& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReadyCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReadyCallback"));
 
 	struct
 	{
@@ -5289,7 +5289,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataReadyCallback(const struct FGamepl
 
 void UAbilityTask_WaitTargetData::OnTargetDataCancelledCallback(const struct FGameplayAbilityTargetDataHandle& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataCancelledCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataCancelledCallback"));
 
 	struct
 	{
@@ -5310,7 +5310,7 @@ void UAbilityTask_WaitTargetData::OnTargetDataCancelledCallback(const struct FGa
 
 void UAbilityTask_WaitTargetData::FinishSpawningActor(class UObject* WorldContextObject, class AGameplayAbilityTargetActor* SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.FinishSpawningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.FinishSpawningActor"));
 
 	struct
 	{
@@ -5335,7 +5335,7 @@ void UAbilityTask_WaitTargetData::FinishSpawningActor(class UObject* WorldContex
 
 bool UAbilityTask_WaitTargetData::BeginSpawningActor(class UObject* WorldContextObject, class UClass* Class, class AGameplayAbilityTargetActor** SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitTargetData.BeginSpawningActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitTargetData.BeginSpawningActor"));
 
 	struct
 	{
@@ -5367,7 +5367,7 @@ bool UAbilityTask_WaitTargetData::BeginSpawningActor(class UObject* WorldContext
 
 class UAbilityTask_WaitVelocityChange* UAbilityTask_WaitVelocityChange::CreateWaitVelocityChange(class UObject* WorldContextObject, const struct FVector& Direction, float MinimumMagnitude)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.AbilityTask_WaitVelocityChange.CreateWaitVelocityChange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.AbilityTask_WaitVelocityChange.CreateWaitVelocityChange"));
 
 	struct
 	{
@@ -5396,7 +5396,7 @@ class UAbilityTask_WaitVelocityChange* UAbilityTask_WaitVelocityChange::CreateWa
 
 void AGameplayAbilityWorldReticle::SetReticleMaterialParamVector(const struct FName& ParamName, const struct FVector& Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamVector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamVector"));
 
 	struct
 	{
@@ -5419,7 +5419,7 @@ void AGameplayAbilityWorldReticle::SetReticleMaterialParamVector(const struct FN
 
 void AGameplayAbilityWorldReticle::SetReticleMaterialParamFloat(const struct FName& ParamName, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamFloat");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamFloat"));
 
 	struct
 	{
@@ -5441,7 +5441,7 @@ void AGameplayAbilityWorldReticle::SetReticleMaterialParamFloat(const struct FNa
 
 void AGameplayAbilityWorldReticle::OnValidTargetChanged(bool bNewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityWorldReticle.OnValidTargetChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityWorldReticle.OnValidTargetChanged"));
 
 	struct
 	{
@@ -5461,7 +5461,7 @@ void AGameplayAbilityWorldReticle::OnValidTargetChanged(bool bNewValue)
 
 void AGameplayAbilityWorldReticle::OnTargetingAnActor(bool bNewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityWorldReticle.OnTargetingAnActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityWorldReticle.OnTargetingAnActor"));
 
 	struct
 	{
@@ -5479,7 +5479,7 @@ void AGameplayAbilityWorldReticle::OnTargetingAnActor(bool bNewValue)
 
 void AGameplayAbilityWorldReticle::OnParametersInitialized()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityWorldReticle.OnParametersInitialized");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityWorldReticle.OnParametersInitialized"));
 
 	struct
 	{
@@ -5497,7 +5497,7 @@ void AGameplayAbilityWorldReticle::OnParametersInitialized()
 
 void AGameplayAbilityWorldReticle::FaceTowardSource(bool bFaceIn2D)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityWorldReticle.FaceTowardSource");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityWorldReticle.FaceTowardSource"));
 
 	struct
 	{
@@ -5515,7 +5515,7 @@ void AGameplayAbilityWorldReticle::FaceTowardSource(bool bFaceIn2D)
 
 void AGameplayAbilityTargetActor::ConfirmTargeting()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityTargetActor.ConfirmTargeting");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityTargetActor.ConfirmTargeting"));
 
 	struct
 	{
@@ -5531,7 +5531,7 @@ void AGameplayAbilityTargetActor::ConfirmTargeting()
 
 void AGameplayAbilityTargetActor::CancelTargeting()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayAbilityTargetActor.CancelTargeting");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayAbilityTargetActor.CancelTargeting"));
 
 	struct
 	{
@@ -5551,7 +5551,7 @@ void AGameplayAbilityTargetActor::CancelTargeting()
 
 bool AGameplayCueNotify_Actor::WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Actor.WhileActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Actor.WhileActive"));
 
 	struct
 	{
@@ -5578,7 +5578,7 @@ bool AGameplayCueNotify_Actor::WhileActive(class AActor* MyTarget, const struct 
 
 bool AGameplayCueNotify_Actor::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Actor.OnRemove");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Actor.OnRemove"));
 
 	struct
 	{
@@ -5601,7 +5601,7 @@ bool AGameplayCueNotify_Actor::OnRemove(class AActor* MyTarget, const struct FGa
 
 void AGameplayCueNotify_Actor::OnOwnerDestroyed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Actor.OnOwnerDestroyed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Actor.OnOwnerDestroyed"));
 
 	struct
 	{
@@ -5621,7 +5621,7 @@ void AGameplayCueNotify_Actor::OnOwnerDestroyed()
 
 bool AGameplayCueNotify_Actor::OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Actor.OnExecute");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Actor.OnExecute"));
 
 	struct
 	{
@@ -5648,7 +5648,7 @@ bool AGameplayCueNotify_Actor::OnExecute(class AActor* MyTarget, const struct FG
 
 bool AGameplayCueNotify_Actor::OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Actor.OnActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Actor.OnActive"));
 
 	struct
 	{
@@ -5675,7 +5675,7 @@ bool AGameplayCueNotify_Actor::OnActive(class AActor* MyTarget, const struct FGa
 
 void AGameplayCueNotify_Actor::K2_HandleGameplayCue(class AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Actor.K2_HandleGameplayCue");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Actor.K2_HandleGameplayCue"));
 
 	struct
 	{
@@ -5701,7 +5701,7 @@ void AGameplayCueNotify_Actor::K2_HandleGameplayCue(class AActor* MyTarget, TEnu
 
 bool UGameplayCueNotify_Static::WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Static.WhileActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Static.WhileActive"));
 
 	struct
 	{
@@ -5728,7 +5728,7 @@ bool UGameplayCueNotify_Static::WhileActive(class AActor* MyTarget, const struct
 
 bool UGameplayCueNotify_Static::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Static.OnRemove");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Static.OnRemove"));
 
 	struct
 	{
@@ -5755,7 +5755,7 @@ bool UGameplayCueNotify_Static::OnRemove(class AActor* MyTarget, const struct FG
 
 bool UGameplayCueNotify_Static::OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Static.OnExecute");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Static.OnExecute"));
 
 	struct
 	{
@@ -5782,7 +5782,7 @@ bool UGameplayCueNotify_Static::OnExecute(class AActor* MyTarget, const struct F
 
 bool UGameplayCueNotify_Static::OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Static.OnActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Static.OnActive"));
 
 	struct
 	{
@@ -5809,7 +5809,7 @@ bool UGameplayCueNotify_Static::OnActive(class AActor* MyTarget, const struct FG
 
 void UGameplayCueNotify_Static::K2_HandleGameplayCue(class AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayCueNotify_Static.K2_HandleGameplayCue");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayCueNotify_Static.K2_HandleGameplayCue"));
 
 	struct
 	{
@@ -5834,7 +5834,7 @@ void UGameplayCueNotify_Static::K2_HandleGameplayCue(class AActor* MyTarget, TEn
 
 void UGameplayEffectExecutionCalculation::Execute(const struct FGameplayEffectCustomExecutionParameters& ExecutionParams, struct FGameplayEffectCustomExecutionOutput* OutExecutionOutput)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayEffectExecutionCalculation.Execute");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayEffectExecutionCalculation.Execute"));
 
 	struct
 	{
@@ -5859,7 +5859,7 @@ void UGameplayEffectExecutionCalculation::Execute(const struct FGameplayEffectCu
 
 float UGameplayModMagnitudeCalculation::CalculateBaseMagnitude(const struct FGameplayEffectSpec& Spec)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayModMagnitudeCalculation.CalculateBaseMagnitude");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayModMagnitudeCalculation.CalculateBaseMagnitude"));
 
 	struct
 	{
@@ -5885,7 +5885,7 @@ float UGameplayModMagnitudeCalculation::CalculateBaseMagnitude(const struct FGam
 
 void UGameplayTagReponseTable::TagResponseEvent(const struct FGameplayTag& Tag, int NewCount, class UAbilitySystemComponent* ASC, int idx)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayAbilities.GameplayTagReponseTable.TagResponseEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayAbilities.GameplayTagReponseTable.TagResponseEvent"));
 
 	struct
 	{

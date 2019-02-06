@@ -20,7 +20,7 @@ namespace SDK
 
 void UBP_Anim_Concertina_C::OnUseStarted(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Concertina.BP_Anim_Concertina_C.OnUseStarted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Concertina.BP_Anim_Concertina_C.OnUseStarted"));
 
 	struct
 	{
@@ -42,7 +42,7 @@ void UBP_Anim_Concertina_C::OnUseStarted(class UClass* InputID, const struct FWi
 
 void UBP_Anim_Concertina_C::OnUseStopped(class UClass* InputID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Concertina.BP_Anim_Concertina_C.OnUseStopped");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Concertina.BP_Anim_Concertina_C.OnUseStopped"));
 
 	struct
 	{
@@ -62,7 +62,7 @@ void UBP_Anim_Concertina_C::OnUseStopped(class UClass* InputID)
 
 void UBP_Anim_Concertina_C::ExecuteUbergraph_BP_Anim_Concertina(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Concertina.BP_Anim_Concertina_C.ExecuteUbergraph_BP_Anim_Concertina");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Concertina.BP_Anim_Concertina_C.ExecuteUbergraph_BP_Anim_Concertina"));
 
 	struct
 	{

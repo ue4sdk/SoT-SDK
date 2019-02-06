@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_IslandCosmeticChest.BP_IslandCosmeticChest_C
-// 0x0000 (0x0600 - 0x0600)
+// 0x0000 (0x0608 - 0x0608)
 class ABP_IslandCosmeticChest_C : public AShipCustomizationChest
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_IslandCosmeticChest.BP_IslandCosmeticChest_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_IslandCosmeticChest.BP_IslandCosmeticChest_C"));
 		return ptr;
 	}
 

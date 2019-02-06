@@ -26,7 +26,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class SlateReflector.WidgetReflectorNodeBase");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SlateReflector.WidgetReflectorNodeBase"));
 		return ptr;
 	}
 
@@ -42,7 +42,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class SlateReflector.LiveWidgetReflectorNode");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SlateReflector.LiveWidgetReflectorNode"));
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class SlateReflector.SnapshotWidgetReflectorNode");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SlateReflector.SnapshotWidgetReflectorNode"));
 		return ptr;
 	}
 

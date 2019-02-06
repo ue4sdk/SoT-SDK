@@ -19,7 +19,7 @@ namespace SDK
 
 int UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber"));
 
 	struct
 	{
@@ -41,7 +41,7 @@ int UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
 
 float UMovieSceneCaptureEnvironment::GetCaptureElapsedTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime"));
 
 	struct
 	{

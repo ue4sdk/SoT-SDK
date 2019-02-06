@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C
-// 0x0000 (0x04D8 - 0x04D8)
+// 0x0000 (0x04E0 - 0x04E0)
 class ABP_HideoutTeleportZone_C : public AHideoutEntrance
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C"));
 		return ptr;
 	}
 

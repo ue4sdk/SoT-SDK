@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass StandardMacros.StandardMacros_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass StandardMacros.StandardMacros_C"));
 		return ptr;
 	}
 

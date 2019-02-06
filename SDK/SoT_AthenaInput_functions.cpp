@@ -20,7 +20,7 @@ namespace SDK
 
 void UCompositeInputHandler::SetNotificationInputHandler(class UClass* Id, const struct FScriptDelegate& Handler)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler"));
 
 	struct
 	{
@@ -43,7 +43,7 @@ void UCompositeInputHandler::SetNotificationInputHandler(class UClass* Id, const
 
 void UCompositeInputHandler::SetAnalogInputHandler(class UClass* Id, const struct FScriptDelegate& Handler)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler"));
 
 	struct
 	{
@@ -65,7 +65,7 @@ void UCompositeInputHandler::SetAnalogInputHandler(class UClass* Id, const struc
 
 void UInputBinder::SpoofNotificationInput(class UClass* Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.SpoofNotificationInput");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputBinder.SpoofNotificationInput"));
 
 	struct
 	{
@@ -86,7 +86,7 @@ void UInputBinder::SpoofNotificationInput(class UClass* Id)
 
 void UInputBinder::SpoofAnalogInput(class UClass* Id, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.SpoofAnalogInput");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputBinder.SpoofAnalogInput"));
 
 	struct
 	{
@@ -109,7 +109,7 @@ void UInputBinder::SpoofAnalogInput(class UClass* Id, float Value)
 
 bool UInputBinder::IsContinuousActionActive(class UClass* BeginNotificationInputId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.IsContinuousActionActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputBinder.IsContinuousActionActive"));
 
 	struct
 	{
@@ -132,7 +132,7 @@ bool UInputBinder::IsContinuousActionActive(class UClass* BeginNotificationInput
 
 void UInputBinder::IgnoreNonSpoofedInput(bool InShouldIgnore)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.IgnoreNonSpoofedInput");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputBinder.IgnoreNonSpoofedInput"));
 
 	struct
 	{
@@ -153,7 +153,7 @@ void UInputBinder::IgnoreNonSpoofedInput(bool InShouldIgnore)
 
 TEnumAsByte<EInputHandlerResult> UInputHandlerInterface::HandleNotificationInput(class UClass* Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerInterface.HandleNotificationInput");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputHandlerInterface.HandleNotificationInput"));
 
 	struct
 	{
@@ -178,7 +178,7 @@ TEnumAsByte<EInputHandlerResult> UInputHandlerInterface::HandleNotificationInput
 
 TEnumAsByte<EInputHandlerResult> UInputHandlerInterface::HandleAnalogInput(class UClass* Id, float Input)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerInterface.HandleAnalogInput");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputHandlerInterface.HandleAnalogInput"));
 
 	struct
 	{
@@ -203,7 +203,7 @@ TEnumAsByte<EInputHandlerResult> UInputHandlerInterface::HandleAnalogInput(class
 
 TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnSecondNotificationHandler()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondNotificationHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondNotificationHandler"));
 
 	struct
 	{
@@ -225,7 +225,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 
 TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnSecondHandler(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondHandler"));
 
 	struct
 	{
@@ -248,7 +248,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 
 TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnFirstNotificationHandler()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstNotificationHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstNotificationHandler"));
 
 	struct
 	{
@@ -270,7 +270,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 
 TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnFirstHandler(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstHandler"));
 
 	struct
 	{
@@ -293,7 +293,7 @@ TEnumAsByte<EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::On
 
 class UCompositeInputHandler* UInputHandlerFunctionLibrary::MakeCompositeInputHandler()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerFunctionLibrary.MakeCompositeInputHandler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.InputHandlerFunctionLibrary.MakeCompositeInputHandler"));
 
 	struct
 	{
@@ -316,7 +316,7 @@ class UCompositeInputHandler* UInputHandlerFunctionLibrary::MakeCompositeInputHa
 
 struct FText UNamedNotificationInputInterface::GetNotificationInputDisplayName(class UClass* InputID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName"));
 
 	struct
 	{

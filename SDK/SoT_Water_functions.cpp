@@ -19,7 +19,7 @@ namespace SDK
 
 void UFFTWaterInterface::SetExtendedPlaneComponent(class UFFTWaterExtendedPlaneComponent* InFFTWaterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.SetExtendedPlaneComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterInterface.SetExtendedPlaneComponent"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void UFFTWaterInterface::SetExtendedPlaneComponent(class UFFTWaterExtendedPlaneC
 
 void UFFTWaterInterface::SetComponent(class UFFTWaterComponent* InFFTWaterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.SetComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterInterface.SetComponent"));
 
 	struct
 	{
@@ -59,7 +59,7 @@ void UFFTWaterInterface::SetComponent(class UFFTWaterComponent* InFFTWaterCompon
 
 void UFFTWaterInterface::SetActor(class AAthenaFFTWater* InFFTWaterActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.SetActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterInterface.SetActor"));
 
 	struct
 	{
@@ -79,7 +79,7 @@ void UFFTWaterInterface::SetActor(class AAthenaFFTWater* InFFTWaterActor)
 
 class UFFTWaterExtendedPlaneComponent* UFFTWaterInterface::GetExtendedPlaneComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.GetExtendedPlaneComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterInterface.GetExtendedPlaneComponent"));
 
 	struct
 	{
@@ -100,7 +100,7 @@ class UFFTWaterExtendedPlaneComponent* UFFTWaterInterface::GetExtendedPlaneCompo
 
 class UFFTWaterComponent* UFFTWaterInterface::GetComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.GetComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterInterface.GetComponent"));
 
 	struct
 	{
@@ -121,7 +121,7 @@ class UFFTWaterComponent* UFFTWaterInterface::GetComponent()
 
 class AAthenaFFTWater* UFFTWaterInterface::GetActor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterInterface.GetActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterInterface.GetActor"));
 
 	struct
 	{
@@ -142,7 +142,7 @@ class AAthenaFFTWater* UFFTWaterInterface::GetActor()
 
 bool UWaterInterface::IsReadyToBeQueried()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.IsReadyToBeQueried");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.IsReadyToBeQueried"));
 
 	struct
 	{
@@ -169,7 +169,7 @@ bool UWaterInterface::IsReadyToBeQueried()
 
 TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformationWithScaledChoppyness(const struct FVector& SamplePosition, class AActor* Actor, float ChoppynessScalar, float* Height, struct FVector2D* ApproxVelocity, struct FVector* Normal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetWaterInformationWithScaledChoppyness");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterInformationWithScaledChoppyness"));
 
 	struct
 	{
@@ -211,7 +211,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformationWithScaledCho
 
 TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformationBatched(TArray<struct FVector2D> SamplePositions, class AActor* Actor, TArray<float>* Heights, TArray<struct FVector2D>* ApproxVelocities, TArray<struct FVector>* Normals)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetWaterInformationBatched");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterInformationBatched"));
 
 	struct
 	{
@@ -251,7 +251,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformationBatched(TArra
 
 TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformation(const struct FVector& SamplePosition, class AActor* Actor, float* Height, struct FVector2D* ApproxVelocity, struct FVector* Normal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetWaterInformation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterInformation"));
 
 	struct
 	{
@@ -291,7 +291,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterInformation(const struct
 
 TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightWithScaledChoppyness(const struct FVector& SamplePosition, class AActor* Actor, bool Interpolate, float ChoppynessScalar, float* Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetWaterHeightWithScaledChoppyness");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterHeightWithScaledChoppyness"));
 
 	struct
 	{
@@ -327,7 +327,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightWithScaledChoppyne
 
 TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightsBatched(TArray<struct FVector2D> SamplePositions, class AActor* Actor, TArray<float>* Heights)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetWaterHeightsBatched");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterHeightsBatched"));
 
 	struct
 	{
@@ -360,7 +360,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightsBatched(TArray<st
 
 TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeight(const struct FVector& SamplePosition, class AActor* Actor, bool Interpolate, float* Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetWaterHeight");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterHeight"));
 
 	struct
 	{
@@ -392,7 +392,7 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeight(const struct FVec
 
 struct FWaterSimPlane UWaterInterface::GetActorWaterPlane(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetActorWaterPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetActorWaterPlane"));
 
 	struct
 	{
@@ -416,7 +416,7 @@ struct FWaterSimPlane UWaterInterface::GetActorWaterPlane(class AActor* Actor)
 
 struct FWaterInformation UWaterInterface::GetActorWaterInformation(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInterface.GetActorWaterInformation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetActorWaterInformation"));
 
 	struct
 	{
@@ -437,7 +437,7 @@ struct FWaterInformation UWaterInterface::GetActorWaterInformation(class AActor*
 
 void AFFTWaterService::OnRep_FFTWaterComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterService.OnRep_FFTWaterComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterService.OnRep_FFTWaterComponent"));
 
 	struct
 	{
@@ -453,7 +453,7 @@ void AFFTWaterService::OnRep_FFTWaterComponent()
 
 void AFFTWaterService::OnRep_FFTWaterActor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterService.OnRep_FFTWaterActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterService.OnRep_FFTWaterActor"));
 
 	struct
 	{
@@ -469,7 +469,7 @@ void AFFTWaterService::OnRep_FFTWaterActor()
 
 void AFFTWaterService::OnRep_ExtendedPlaneComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterService.OnRep_ExtendedPlaneComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterService.OnRep_ExtendedPlaneComponent"));
 
 	struct
 	{
@@ -487,7 +487,7 @@ void AFFTWaterService::OnRep_ExtendedPlaneComponent()
 
 void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* WaterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.LeaveWaterPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.LeaveWaterPlane"));
 
 	struct
 	{
@@ -505,7 +505,7 @@ void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* Wate
 
 void UWaterInteractionComponent::LeaveWaterExclusionZone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.LeaveWaterExclusionZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.LeaveWaterExclusionZone"));
 
 	struct
 	{
@@ -523,7 +523,7 @@ void UWaterInteractionComponent::LeaveWaterExclusionZone()
 
 bool UWaterInteractionComponent::IsUsingNonDefaultWaterPlane()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane"));
 
 	struct
 	{
@@ -544,7 +544,7 @@ bool UWaterInteractionComponent::IsUsingNonDefaultWaterPlane()
 
 bool UWaterInteractionComponent::IsInWaterExcludedZone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.IsInWaterExcludedZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsInWaterExcludedZone"));
 
 	struct
 	{
@@ -565,7 +565,7 @@ bool UWaterInteractionComponent::IsInWaterExcludedZone()
 
 class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.GetWaterPlaneComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.GetWaterPlaneComponent"));
 
 	struct
 	{
@@ -586,7 +586,7 @@ class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
 
 unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes"));
 
 	struct
 	{
@@ -607,7 +607,7 @@ unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
 
 void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* WaterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.EnterWaterPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.EnterWaterPlane"));
 
 	struct
 	{
@@ -625,7 +625,7 @@ void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* Wate
 
 void UWaterInteractionComponent::EnterWaterExclusionZone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterInteractionComponent.EnterWaterExclusionZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.EnterWaterExclusionZone"));
 
 	struct
 	{
@@ -643,7 +643,7 @@ void UWaterInteractionComponent::EnterWaterExclusionZone()
 
 struct FFFTWaterPerformanceCountData AFFTWaterPerformanceCountService::EndScopePerformanceCount()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterPerformanceCountService.EndScopePerformanceCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterPerformanceCountService.EndScopePerformanceCount"));
 
 	struct
 	{
@@ -662,7 +662,7 @@ struct FFFTWaterPerformanceCountData AFFTWaterPerformanceCountService::EndScopeP
 
 void AFFTWaterPerformanceCountService::BeginScopePerformanceCount()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FFTWaterPerformanceCountService.BeginScopePerformanceCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterPerformanceCountService.BeginScopePerformanceCount"));
 
 	struct
 	{
@@ -680,7 +680,7 @@ void AFFTWaterPerformanceCountService::BeginScopePerformanceCount()
 
 void UFlatWaterPlaneComponent::OnActorLeaveWaterPlane(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FlatWaterPlaneComponent.OnActorLeaveWaterPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FlatWaterPlaneComponent.OnActorLeaveWaterPlane"));
 
 	struct
 	{
@@ -700,7 +700,7 @@ void UFlatWaterPlaneComponent::OnActorLeaveWaterPlane(class AActor* Actor)
 
 void UFlatWaterPlaneComponent::OnActorEnterWaterPlane(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FlatWaterPlaneComponent.OnActorEnterWaterPlane");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FlatWaterPlaneComponent.OnActorEnterWaterPlane"));
 
 	struct
 	{
@@ -721,7 +721,7 @@ void UFlatWaterPlaneComponent::OnActorEnterWaterPlane(class AActor* Actor)
 
 struct FVector2D UFlatWaterPlaneComponent::ConvertToWaterSpace(const struct FVector& WorldSpacePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.FlatWaterPlaneComponent.ConvertToWaterSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FlatWaterPlaneComponent.ConvertToWaterSpace"));
 
 	struct
 	{
@@ -749,7 +749,7 @@ struct FVector2D UFlatWaterPlaneComponent::ConvertToWaterSpace(const struct FVec
 
 float UWaterBuoyancyFunctionLibrary::TickBuoyancy(class AActor* InOwner, float InDeltaTime, float InChoppinessScalar, float FakeZOffsetGeneratorScalar, struct FWaterBuoyancy* InWaterBuoyancy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancyFunctionLibrary.TickBuoyancy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancyFunctionLibrary.TickBuoyancy"));
 
 	struct
 	{
@@ -784,7 +784,7 @@ float UWaterBuoyancyFunctionLibrary::TickBuoyancy(class AActor* InOwner, float I
 
 void UWaterBuoyancyFunctionLibrary::SetBuoyancySamplesZOffsetSymmetricalAroundXAxis(float ZOffset, struct FWaterBuoyancy* InWaterBuoyancy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancyFunctionLibrary.SetBuoyancySamplesZOffsetSymmetricalAroundXAxis");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancyFunctionLibrary.SetBuoyancySamplesZOffsetSymmetricalAroundXAxis"));
 
 	struct
 	{
@@ -810,7 +810,7 @@ void UWaterBuoyancyFunctionLibrary::SetBuoyancySamplesZOffsetSymmetricalAroundXA
 
 void UWaterBuoyancyFunctionLibrary::SetBuoyancyProbeCurveBlendDebugOverride(float UnaryBlendOverride, struct FWaterBuoyancy* InWaterBuoyancy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancyFunctionLibrary.SetBuoyancyProbeCurveBlendDebugOverride");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancyFunctionLibrary.SetBuoyancyProbeCurveBlendDebugOverride"));
 
 	struct
 	{
@@ -837,7 +837,7 @@ void UWaterBuoyancyFunctionLibrary::SetBuoyancyProbeCurveBlendDebugOverride(floa
 
 void UWaterBuoyancyFunctionLibrary::SetBuoyancyProbeCurveBlend(float Blend, TEnumAsByte<EBuoyancyBlend> BlendType, struct FWaterBuoyancy* InWaterBuoyancy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancyFunctionLibrary.SetBuoyancyProbeCurveBlend");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancyFunctionLibrary.SetBuoyancyProbeCurveBlend"));
 
 	struct
 	{
@@ -867,7 +867,7 @@ void UWaterBuoyancyFunctionLibrary::SetBuoyancyProbeCurveBlend(float Blend, TEnu
 
 void UWaterBuoyancySampleMovementFunctionLibrary::TickLocalSampleMovement(class AActor* InActor, float DeltaTime, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancySampleMovementFunctionLibrary.TickLocalSampleMovement");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancySampleMovementFunctionLibrary.TickLocalSampleMovement"));
 
 	struct
 	{
@@ -899,7 +899,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::TickLocalSampleMovement(class 
 
 void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocallyByRandomConfigurationIndex(class AActor* InActor, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocallyByRandomConfigurationIndex");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocallyByRandomConfigurationIndex"));
 
 	struct
 	{
@@ -930,7 +930,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocall
 
 void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocallyByConfigurationIndex(class AActor* InActor, int ConfigurationIndex, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocallyByConfigurationIndex");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocallyByConfigurationIndex"));
 
 	struct
 	{
@@ -968,7 +968,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocall
 
 void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocally(class AActor* InActor, class UCurveVector* InCenterOfMassOffsetCurve, float BuoyancyScalarAtNewPosition, class UCurveFloat* BuoyancyScalarCurve, class UCurveFloat* ProbeMovementCurve, float MoveTime, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement, TArray<struct FBuoyancySampleMovementConfigurationEntry>* NewSampleData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocally");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterBuoyancySampleMovementFunctionLibrary.StartMovingVolumeSamplesLocally"));
 
 	struct
 	{
@@ -1011,7 +1011,7 @@ void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocall
 
 void UWaterPlaneExclusionComponent::OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterPlaneExclusionComponent.OnOverlapEnd");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterPlaneExclusionComponent.OnOverlapEnd"));
 
 	struct
 	{
@@ -1039,7 +1039,7 @@ void UWaterPlaneExclusionComponent::OnOverlapEnd(class AActor* OtherActor, class
 
 void UWaterPlaneExclusionComponent::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterPlaneExclusionComponent.OnOverlapBegin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterPlaneExclusionComponent.OnOverlapBegin"));
 
 	struct
 	{
@@ -1069,7 +1069,7 @@ void UWaterPlaneExclusionComponent::OnOverlapBegin(class AActor* OtherActor, cla
 
 void UWaterSplashProbeFunctionLibrary::TickProbes(class AActor* InOwner, float InDeltaTime, TArray<struct FWaterSplashProbe>* InSplashProbes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterSplashProbeFunctionLibrary.TickProbes");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSplashProbeFunctionLibrary.TickProbes"));
 
 	struct
 	{
@@ -1098,7 +1098,7 @@ void UWaterSplashProbeFunctionLibrary::TickProbes(class AActor* InOwner, float I
 
 void UWaterSplashProbeFunctionLibrary::TickProbe(class AActor* InOwner, float InDeltaTime, struct FWaterSplashProbe* InSplashProbe)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterSplashProbeFunctionLibrary.TickProbe");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSplashProbeFunctionLibrary.TickProbe"));
 
 	struct
 	{
@@ -1126,7 +1126,7 @@ void UWaterSplashProbeFunctionLibrary::TickProbe(class AActor* InOwner, float In
 
 void UWaterSplashProbeFunctionLibrary::SetSamplingTime(float SamplingTime, TArray<struct FWaterSplashProbe>* InSplashProbes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterSplashProbeFunctionLibrary.SetSamplingTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSplashProbeFunctionLibrary.SetSamplingTime"));
 
 	struct
 	{
@@ -1153,7 +1153,7 @@ void UWaterSplashProbeFunctionLibrary::SetSamplingTime(float SamplingTime, TArra
 
 struct FVector UWaterSplashProbeFunctionLibrary::GetRelativeWaterHeightChangeSpd(int ProbeIndex, TArray<struct FWaterSplashProbe>* InSplashProbes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Water.WaterSplashProbeFunctionLibrary.GetRelativeWaterHeightChangeSpd");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSplashProbeFunctionLibrary.GetRelativeWaterHeightChangeSpd"));
 
 	struct
 	{

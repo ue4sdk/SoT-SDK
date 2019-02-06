@@ -24,7 +24,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.AsyncTaskDownloadImage");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.AsyncTaskDownloadImage"));
 		return ptr;
 	}
 
@@ -51,7 +51,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.DragDropOperation");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.DragDropOperation"));
 		return ptr;
 	}
 
@@ -74,7 +74,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MovieScene2DTransformSection");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MovieScene2DTransformSection"));
 		return ptr;
 	}
 
@@ -89,7 +89,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MovieScene2DTransformTrack");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MovieScene2DTransformTrack"));
 		return ptr;
 	}
 
@@ -108,7 +108,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MovieSceneMarginSection");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MovieSceneMarginSection"));
 		return ptr;
 	}
 
@@ -123,7 +123,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MovieSceneMarginTrack");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MovieSceneMarginTrack"));
 		return ptr;
 	}
 
@@ -138,7 +138,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.NamedSlotInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.NamedSlotInterface"));
 		return ptr;
 	}
 
@@ -156,7 +156,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.PropertyBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.PropertyBinding"));
 		return ptr;
 	}
 
@@ -171,7 +171,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.BoolBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.BoolBinding"));
 		return ptr;
 	}
 
@@ -189,7 +189,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.BrushBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.BrushBinding"));
 		return ptr;
 	}
 
@@ -207,7 +207,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.CheckedStateBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.CheckedStateBinding"));
 		return ptr;
 	}
 
@@ -225,7 +225,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ColorBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ColorBinding"));
 		return ptr;
 	}
 
@@ -243,7 +243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.FloatBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.FloatBinding"));
 		return ptr;
 	}
 
@@ -260,7 +260,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Int32Binding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Int32Binding"));
 		return ptr;
 	}
 
@@ -277,7 +277,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MouseCursorBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MouseCursorBinding"));
 		return ptr;
 	}
 
@@ -295,7 +295,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.TextBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.TextBinding"));
 		return ptr;
 	}
 
@@ -313,7 +313,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.VisibilityBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.VisibilityBinding"));
 		return ptr;
 	}
 
@@ -330,7 +330,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetBinding");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetBinding"));
 		return ptr;
 	}
 
@@ -350,7 +350,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.RichTextBlockDecorator");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.RichTextBlockDecorator"));
 		return ptr;
 	}
 
@@ -365,7 +365,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.SlateBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.SlateBlueprintLibrary"));
 		return ptr;
 	}
 
@@ -390,7 +390,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.UMGSequencePlayer");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.UMGSequencePlayer"));
 		return ptr;
 	}
 
@@ -405,7 +405,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Visual");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Visual"));
 		return ptr;
 	}
 
@@ -422,7 +422,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.PanelSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.PanelSlot"));
 		return ptr;
 	}
 
@@ -441,7 +441,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.BorderSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.BorderSlot"));
 		return ptr;
 	}
 
@@ -464,7 +464,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ButtonSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ButtonSlot"));
 		return ptr;
 	}
 
@@ -488,7 +488,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.CanvasPanelSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.CanvasPanelSlot"));
 		return ptr;
 	}
 
@@ -532,7 +532,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.GridSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.GridSlot"));
 		return ptr;
 	}
 
@@ -559,7 +559,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.HorizontalBoxSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.HorizontalBoxSlot"));
 		return ptr;
 	}
 
@@ -583,7 +583,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.OverlaySlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.OverlaySlot"));
 		return ptr;
 	}
 
@@ -608,7 +608,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.SafeZoneSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.SafeZoneSlot"));
 		return ptr;
 	}
 
@@ -627,7 +627,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ScaleBoxSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ScaleBoxSlot"));
 		return ptr;
 	}
 
@@ -649,7 +649,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ScrollBoxSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ScrollBoxSlot"));
 		return ptr;
 	}
 
@@ -671,7 +671,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.SizeBoxSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.SizeBoxSlot"));
 		return ptr;
 	}
 
@@ -696,7 +696,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.UniformGridSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.UniformGridSlot"));
 		return ptr;
 	}
 
@@ -721,7 +721,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.VerticalBoxSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.VerticalBoxSlot"));
 		return ptr;
 	}
 
@@ -745,7 +745,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetSwitcherSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetSwitcherSlot"));
 		return ptr;
 	}
 
@@ -771,7 +771,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WrapBoxSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WrapBoxSlot"));
 		return ptr;
 	}
 
@@ -818,7 +818,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Widget");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Widget"));
 		return ptr;
 	}
 
@@ -886,7 +886,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.CircularThrobber");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.CircularThrobber"));
 		return ptr;
 	}
 
@@ -908,7 +908,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ComboBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ComboBox"));
 		return ptr;
 	}
 
@@ -934,7 +934,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ComboBoxString");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ComboBoxString"));
 		return ptr;
 	}
 
@@ -986,7 +986,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.EditableText");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.EditableText"));
 		return ptr;
 	}
 
@@ -1033,7 +1033,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.EditableTextBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.EditableTextBox"));
 		return ptr;
 	}
 
@@ -1064,7 +1064,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ExpandableArea");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ExpandableArea"));
 		return ptr;
 	}
 
@@ -1089,7 +1089,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Image");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Image"));
 		return ptr;
 	}
 
@@ -1122,7 +1122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MultiLineEditableText");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MultiLineEditableText"));
 		return ptr;
 	}
 
@@ -1157,7 +1157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MultiLineEditableTextBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MultiLineEditableTextBox"));
 		return ptr;
 	}
 
@@ -1179,7 +1179,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.NativeWidgetHost");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.NativeWidgetHost"));
 		return ptr;
 	}
 
@@ -1196,7 +1196,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.PanelWidget");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.PanelWidget"));
 		return ptr;
 	}
 
@@ -1222,7 +1222,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.CanvasPanel");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.CanvasPanel"));
 		return ptr;
 	}
 
@@ -1239,7 +1239,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ContentWidget");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ContentWidget"));
 		return ptr;
 	}
 
@@ -1274,7 +1274,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Border");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Border"));
 		return ptr;
 	}
 
@@ -1312,7 +1312,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Button");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Button"));
 		return ptr;
 	}
 
@@ -1353,7 +1353,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.CheckBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.CheckBox"));
 		return ptr;
 	}
 
@@ -1376,7 +1376,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.InvalidationBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.InvalidationBox"));
 		return ptr;
 	}
 
@@ -1399,7 +1399,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.MenuAnchor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MenuAnchor"));
 		return ptr;
 	}
 
@@ -1423,7 +1423,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.NamedSlot");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.NamedSlot"));
 		return ptr;
 	}
 
@@ -1439,7 +1439,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.SafeZone");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.SafeZone"));
 		return ptr;
 	}
 
@@ -1459,7 +1459,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ScaleBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ScaleBox"));
 		return ptr;
 	}
 
@@ -1488,7 +1488,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.SizeBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.SizeBox"));
 		return ptr;
 	}
 
@@ -1518,7 +1518,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Viewport");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Viewport"));
 		return ptr;
 	}
 
@@ -1543,7 +1543,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.GridPanel");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.GridPanel"));
 		return ptr;
 	}
 
@@ -1561,7 +1561,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.HorizontalBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.HorizontalBox"));
 		return ptr;
 	}
 
@@ -1579,7 +1579,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Overlay");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Overlay"));
 		return ptr;
 	}
 
@@ -1607,7 +1607,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ScrollBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ScrollBox"));
 		return ptr;
 	}
 
@@ -1632,7 +1632,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.UniformGridPanel");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.UniformGridPanel"));
 		return ptr;
 	}
 
@@ -1653,7 +1653,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.VerticalBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.VerticalBox"));
 		return ptr;
 	}
 
@@ -1672,7 +1672,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetSwitcher");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetSwitcher"));
 		return ptr;
 	}
 
@@ -1695,7 +1695,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WrapBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WrapBox"));
 		return ptr;
 	}
 
@@ -1726,7 +1726,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ProgressBar");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ProgressBar"));
 		return ptr;
 	}
 
@@ -1758,7 +1758,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.RichTextBlock");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.RichTextBlock"));
 		return ptr;
 	}
 
@@ -1780,7 +1780,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ScrollBar");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ScrollBar"));
 		return ptr;
 	}
 
@@ -1812,7 +1812,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Slider");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Slider"));
 		return ptr;
 	}
 
@@ -1834,7 +1834,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Spacer");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Spacer"));
 		return ptr;
 	}
 
@@ -1878,7 +1878,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.SpinBox");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.SpinBox"));
 		return ptr;
 	}
 
@@ -1912,7 +1912,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.TableViewBase");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.TableViewBase"));
 		return ptr;
 	}
 
@@ -1936,7 +1936,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.ListView");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.ListView"));
 		return ptr;
 	}
 
@@ -1958,7 +1958,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.TileView");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.TileView"));
 		return ptr;
 	}
 
@@ -1994,7 +1994,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.TextBlock");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.TextBlock"));
 		return ptr;
 	}
 
@@ -2026,7 +2026,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.Throbber");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.Throbber"));
 		return ptr;
 	}
 
@@ -2058,7 +2058,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.UserWidget");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.UserWidget"));
 		return ptr;
 	}
 
@@ -2132,7 +2132,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetAnimation");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetAnimation"));
 		return ptr;
 	}
 
@@ -2154,7 +2154,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetBlueprintGeneratedClass");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetBlueprintGeneratedClass"));
 		return ptr;
 	}
 
@@ -2169,7 +2169,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetBlueprintLibrary"));
 		return ptr;
 	}
 
@@ -2261,7 +2261,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetComponent"));
 		return ptr;
 	}
 
@@ -2285,7 +2285,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetLayoutLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetLayoutLibrary"));
 		return ptr;
 	}
 
@@ -2318,7 +2318,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetNavigation");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetNavigation"));
 		return ptr;
 	}
 
@@ -2335,7 +2335,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class UMG.WidgetTree");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.WidgetTree"));
 		return ptr;
 	}
 

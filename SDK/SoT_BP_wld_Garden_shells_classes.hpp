@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wld_Garden_shells.BP_wld_Garden_shells_C
-// 0x0000 (0x0535 - 0x0535)
+// 0x0000 (0x053D - 0x053D)
 class ABP_wld_Garden_shells_C : public ABP_Placement_Garden_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_wld_Garden_shells.BP_wld_Garden_shells_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_wld_Garden_shells.BP_wld_Garden_shells_C"));
 		return ptr;
 	}
 

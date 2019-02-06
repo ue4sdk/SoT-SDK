@@ -23,7 +23,7 @@ namespace SDK
 
 void ABP_CliffGenerator_C::Draw_Debug_Numbers(int CurrentIndex, int NextIndex, const struct FVector& StartLocation, const struct FVector& EndLocation, const struct FVector& StartTangent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CliffGenerator.BP_CliffGenerator_C.Draw_Debug_Numbers");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.Draw_Debug_Numbers"));
 
 	struct
 	{
@@ -49,7 +49,7 @@ void ABP_CliffGenerator_C::Draw_Debug_Numbers(int CurrentIndex, int NextIndex, c
 
 void ABP_CliffGenerator_C::Deform_Terrain()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CliffGenerator.BP_CliffGenerator_C.Deform_Terrain");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.Deform_Terrain"));
 
 	struct
 	{
@@ -68,7 +68,7 @@ void ABP_CliffGenerator_C::Deform_Terrain()
 
 void ABP_CliffGenerator_C::Build_Element(int Index, class UStaticMesh* ElementMesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CliffGenerator.BP_CliffGenerator_C.Build_Element");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.Build_Element"));
 
 	struct
 	{
@@ -88,7 +88,7 @@ void ABP_CliffGenerator_C::Build_Element(int Index, class UStaticMesh* ElementMe
 
 void ABP_CliffGenerator_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CliffGenerator.BP_CliffGenerator_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.UserConstructionScript"));
 
 	struct
 	{

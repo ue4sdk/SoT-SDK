@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass CS_Earthquake_04.CS_Earthquake_04_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass CS_Earthquake_04.CS_Earthquake_04_C"));
 		return ptr;
 	}
 

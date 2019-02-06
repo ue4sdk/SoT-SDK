@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_InteractableShipRailingLight_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_InteractableShipRailingLight_C::UserConstructionScript()
 
 void ABP_InteractableShipRailingLight_C::LightStateChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.LightStateChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.LightStateChanged"));
 
 	struct
 	{
@@ -49,7 +49,7 @@ void ABP_InteractableShipRailingLight_C::LightStateChanged()
 
 void ABP_InteractableShipRailingLight_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ void ABP_InteractableShipRailingLight_C::ReceiveBeginPlay()
 
 void ABP_InteractableShipRailingLight_C::ExecuteUbergraph_BP_InteractableShipRailingLight(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ExecuteUbergraph_BP_InteractableShipRailingLight");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ExecuteUbergraph_BP_InteractableShipRailingLight"));
 
 	struct
 	{

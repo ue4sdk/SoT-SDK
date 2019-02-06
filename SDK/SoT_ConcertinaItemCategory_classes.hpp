@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass ConcertinaItemCategory.ConcertinaItemCategory_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass ConcertinaItemCategory.ConcertinaItemCategory_C"));
 		return ptr;
 	}
 

@@ -21,7 +21,7 @@ namespace SDK
 
 void UBP_CharacterInterface_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Stretch");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Stretch"));
 
 	struct
 	{
@@ -47,7 +47,7 @@ void UBP_CharacterInterface_C::IK_Limb_Stretch(float ArmStretch, float SpineStre
 
 void UBP_CharacterInterface_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Active, TEnumAsByte<ELimbIKSpace> CoordinateSpace)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Active");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Active"));
 
 	struct
 	{
@@ -73,7 +73,7 @@ void UBP_CharacterInterface_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, b
 
 void UBP_CharacterInterface_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId, float LocationStrength, float RotationStrength)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Update Strength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Update Strength"));
 
 	struct
 	{
@@ -99,7 +99,7 @@ void UBP_CharacterInterface_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> 
 
 void UBP_CharacterInterface_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, float BlendIn, float BlendOut)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Blend Timing");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Blend Timing"));
 
 	struct
 	{
@@ -124,7 +124,7 @@ void UBP_CharacterInterface_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> Lim
 
 void UBP_CharacterInterface_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbId, const struct FTransform& TransformUpdate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Update Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.IK Limb Update Transform"));
 
 	struct
 	{
@@ -149,7 +149,7 @@ void UBP_CharacterInterface_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName>
 
 void UBP_CharacterInterface_C::CapstanForce(float IndividualForce, const struct FTransform& LH_IK, const struct FTransform& RH_IK, class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.CapstanForce");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.CapstanForce"));
 
 	struct
 	{
@@ -175,7 +175,7 @@ void UBP_CharacterInterface_C::CapstanForce(float IndividualForce, const struct 
 
 void UBP_CharacterInterface_C::DockingInterface(const struct FBP_Docking& Docking)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.DockingInterface");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.DockingInterface"));
 
 	struct
 	{
@@ -195,7 +195,7 @@ void UBP_CharacterInterface_C::DockingInterface(const struct FBP_Docking& Dockin
 
 void UBP_CharacterInterface_C::CapstanRotationSpeed(float RotationSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.CapstanRotationSpeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.CapstanRotationSpeed"));
 
 	struct
 	{
@@ -215,7 +215,7 @@ void UBP_CharacterInterface_C::CapstanRotationSpeed(float RotationSpeed)
 
 void UBP_CharacterInterface_C::Update_Athena_Character(class AAthenaCharacter* AthenaCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterInterface.BP_CharacterInterface_C.Update Athena Character");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterInterface.BP_CharacterInterface_C.Update Athena Character"));
 
 	struct
 	{

@@ -17,7 +17,7 @@ namespace SDK
 
 void Abp_fire_bin_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bp_fire_bin_a.bp_fire_bin_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bp_fire_bin_a.bp_fire_bin_a_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void Abp_fire_bin_a_C::UserConstructionScript()
 
 void Abp_fire_bin_a_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bp_fire_bin_a.bp_fire_bin_a_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bp_fire_bin_a.bp_fire_bin_a_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void Abp_fire_bin_a_C::ReceiveBeginPlay()
 
 void Abp_fire_bin_a_C::ExecuteUbergraph_bp_fire_bin_a(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bp_fire_bin_a.bp_fire_bin_a_C.ExecuteUbergraph_bp_fire_bin_a");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bp_fire_bin_a.bp_fire_bin_a_C.ExecuteUbergraph_bp_fire_bin_a"));
 
 	struct
 	{

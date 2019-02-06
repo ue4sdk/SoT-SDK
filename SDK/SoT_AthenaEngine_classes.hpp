@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.AthenaEngineInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.AthenaEngineInterface"));
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.BoxedRpcDispatcherInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.BoxedRpcDispatcherInterface"));
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.EmptyObject");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.EmptyObject"));
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.NestedWorldRootDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.NestedWorldRootDataAsset"));
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.NetDormancyHelpers");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.NetDormancyHelpers"));
 		return ptr;
 	}
 
@@ -102,7 +102,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.ResourceProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.ResourceProviderInterface"));
 		return ptr;
 	}
 
@@ -119,7 +119,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaEngine.StringToAssetClassMap");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.StringToAssetClassMap"));
 		return ptr;
 	}
 

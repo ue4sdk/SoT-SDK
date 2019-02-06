@@ -23,7 +23,23 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.MockObjectWithMessagingDispatcher");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.MockObjectWithMessagingDispatcher"));
+		return ptr;
+	}
+
+};
+
+
+// Class TestUtilities.ObjectCollectorGameState
+// 0x0060 (0x0550 - 0x04F0)
+class AObjectCollectorGameState : public AGameState
+{
+public:
+	unsigned char                                      UnknownData00[0x60];                                      // 0x04F0(0x0060) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.ObjectCollectorGameState"));
 		return ptr;
 	}
 
@@ -31,14 +47,14 @@ public:
 
 
 // Class TestUtilities.TestActor
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class ATestActor : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestActor"));
 		return ptr;
 	}
 
@@ -46,15 +62,15 @@ public:
 
 
 // Class TestUtilities.TestActorWithCapsule
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class ATestActorWithCapsule : public AActor
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestActorWithCapsule");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestActorWithCapsule"));
 		return ptr;
 	}
 
@@ -62,15 +78,15 @@ public:
 
 
 // Class TestUtilities.TestActorWithObjectMessagingDispatcher
-// 0x00A8 (0x0538 - 0x0490)
+// 0x00A8 (0x0540 - 0x0498)
 class ATestActorWithObjectMessagingDispatcher : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0490(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0498(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestActorWithObjectMessagingDispatcher");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestActorWithObjectMessagingDispatcher"));
 		return ptr;
 	}
 
@@ -85,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestEnvQueryContextPoints");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestEnvQueryContextPoints"));
 		return ptr;
 	}
 
@@ -100,7 +116,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestEnvQueryContextActors");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestEnvQueryContextActors"));
 		return ptr;
 	}
 
@@ -116,7 +132,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestPrimitiveComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestPrimitiveComponent"));
 		return ptr;
 	}
 
@@ -134,7 +150,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class TestUtilities.TestStaticMeshComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestStaticMeshComponent"));
 		return ptr;
 	}
 

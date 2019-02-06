@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterReflection.BP_WaterReflection_C
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class ABP_WaterReflection_C : public AActor
 {
 public:
-	class UPlanarReflectionPlaneComponent*             PlanarReflectionPlane;                                    // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlanarReflectionPlaneComponent*             PlanarReflectionPlane;                                    // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_WaterReflection.BP_WaterReflection_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_WaterReflection.BP_WaterReflection_C"));
 		return ptr;
 	}
 

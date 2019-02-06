@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_SnakeBasketProxy.BP_MerchantCrate_SnakeBasketProxy_C
-// 0x0010 (0x0838 - 0x0828)
+// 0x0010 (0x0870 - 0x0860)
 class ABP_MerchantCrate_SnakeBasketProxy_C : public AMerchantCrateItemProxy
 {
 public:
-	class UMountpointComponent*                        Mountpoint;                                               // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMountpointComponent*                        Mountpoint;                                               // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MerchantCrate_SnakeBasketProxy.BP_MerchantCrate_SnakeBasketProxy_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MerchantCrate_SnakeBasketProxy.BP_MerchantCrate_SnakeBasketProxy_C"));
 		return ptr;
 	}
 

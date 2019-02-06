@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_PassiveShipPawn_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PassiveShipPawn.BP_PassiveShipPawn_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PassiveShipPawn.BP_PassiveShipPawn_C.UserConstructionScript"));
 
 	struct
 	{

@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BaseClamberSpot_C::SetupClamberSpline()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseClamberSpot.BP_BaseClamberSpot_C.SetupClamberSpline");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseClamberSpot.BP_BaseClamberSpot_C.SetupClamberSpline"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_BaseClamberSpot_C::SetupClamberSpline()
 
 void ABP_BaseClamberSpot_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseClamberSpot.BP_BaseClamberSpot_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseClamberSpot.BP_BaseClamberSpot_C.UserConstructionScript"));
 
 	struct
 	{

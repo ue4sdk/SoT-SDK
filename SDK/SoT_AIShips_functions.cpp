@@ -20,7 +20,7 @@ namespace SDK
 
 void UAIShipDebugFunctionLibrary::RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.RequestAIShipForCrew");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AIShips.AIShipDebugFunctionLibrary.RequestAIShipForCrew"));
 
 	struct
 	{
@@ -45,7 +45,7 @@ void UAIShipDebugFunctionLibrary::RequestAIShipForCrew(class UObject* WorldConte
 
 struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::GenerateAIShipBattleDesc(class UObject* WorldContextObject, class UAIShipServiceDataAsset* ServiceParams)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.GenerateAIShipBattleDesc");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AIShips.AIShipDebugFunctionLibrary.GenerateAIShipBattleDesc"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::GenerateAIShipBat
 
 void UCursedCrewCustomisationInterface::SetCursedCrewCustomisationProperties(const struct FAIShipSailData& SailData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties"));
 
 	struct
 	{

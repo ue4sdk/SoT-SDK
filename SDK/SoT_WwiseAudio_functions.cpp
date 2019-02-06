@@ -21,7 +21,7 @@ namespace SDK
 
 bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.IsAudible");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.IsAudible"));
 
 	struct
 	{
@@ -46,7 +46,7 @@ bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FV
 
 float UWwiseEvent::GetMaxAttenuation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetMaxAttenuation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetMaxAttenuation"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ float UWwiseEvent::GetMaxAttenuation()
 
 TEnumAsByte<EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationType");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetDurationType"));
 
 	struct
 	{
@@ -88,7 +88,7 @@ TEnumAsByte<EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 
 float UWwiseEvent::GetDurationMin()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetDurationMin"));
 
 	struct
 	{
@@ -109,7 +109,7 @@ float UWwiseEvent::GetDurationMin()
 
 float UWwiseEvent::GetDurationMax()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMax");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetDurationMax"));
 
 	struct
 	{

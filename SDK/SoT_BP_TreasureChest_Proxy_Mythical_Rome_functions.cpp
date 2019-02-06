@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_TreasureChest_Proxy_Mythical_Rome_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C.UserConstructionScript"));
 
 	struct
 	{

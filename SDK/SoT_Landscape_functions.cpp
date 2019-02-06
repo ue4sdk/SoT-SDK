@@ -29,7 +29,7 @@ namespace SDK
 
 void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorApplySpline");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Landscape.LandscapeProxy.EditorApplySpline"));
 
 	struct
 	{
@@ -69,7 +69,7 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 
 void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor"));
 
 	struct
 	{

@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class JsonUtilities.JsonUtilitiesBlueprintHelperLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class JsonUtilities.JsonUtilitiesBlueprintHelperLibrary"));
 		return ptr;
 	}
 

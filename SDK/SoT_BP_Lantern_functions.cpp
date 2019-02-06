@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Lantern_C::CreateLanternDynamicMaterial()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.CreateLanternDynamicMaterial");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.CreateLanternDynamicMaterial"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Lantern_C::CreateLanternDynamicMaterial()
 
 void ABP_Lantern_C::OnAttachThirdPerson()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.OnAttachThirdPerson");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.OnAttachThirdPerson"));
 
 	struct
 	{
@@ -49,7 +49,7 @@ void ABP_Lantern_C::OnAttachThirdPerson()
 
 void ABP_Lantern_C::OnAttachFirstPerson()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.OnAttachFirstPerson");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.OnAttachFirstPerson"));
 
 	struct
 	{
@@ -65,7 +65,7 @@ void ABP_Lantern_C::OnAttachFirstPerson()
 
 void ABP_Lantern_C::TurnOff()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.TurnOff");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.TurnOff"));
 
 	struct
 	{
@@ -81,7 +81,7 @@ void ABP_Lantern_C::TurnOff()
 
 void ABP_Lantern_C::TurnOn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.TurnOn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.TurnOn"));
 
 	struct
 	{
@@ -97,7 +97,7 @@ void ABP_Lantern_C::TurnOn()
 
 void ABP_Lantern_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.UserConstructionScript"));
 
 	struct
 	{
@@ -113,7 +113,7 @@ void ABP_Lantern_C::UserConstructionScript()
 
 void ABP_Lantern_C::ReceiveWieldFirstPerson()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveWieldFirstPerson");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.ReceiveWieldFirstPerson"));
 
 	struct
 	{
@@ -129,7 +129,7 @@ void ABP_Lantern_C::ReceiveWieldFirstPerson()
 
 void ABP_Lantern_C::ReceiveWieldThirdPerson()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveWieldThirdPerson");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.ReceiveWieldThirdPerson"));
 
 	struct
 	{
@@ -145,7 +145,7 @@ void ABP_Lantern_C::ReceiveWieldThirdPerson()
 
 void ABP_Lantern_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -161,7 +161,7 @@ void ABP_Lantern_C::ReceiveBeginPlay()
 
 void ABP_Lantern_C::ReceiveLightChange()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveLightChange");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.ReceiveLightChange"));
 
 	struct
 	{
@@ -177,7 +177,7 @@ void ABP_Lantern_C::ReceiveLightChange()
 
 void ABP_Lantern_C::TriggerGlow()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.TriggerGlow");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.TriggerGlow"));
 
 	struct
 	{
@@ -195,7 +195,7 @@ void ABP_Lantern_C::TriggerGlow()
 
 void ABP_Lantern_C::PostMeshChangedBPEvent(bool SkipFlameColourTransition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.PostMeshChangedBPEvent"));
 
 	struct
 	{
@@ -215,7 +215,7 @@ void ABP_Lantern_C::PostMeshChangedBPEvent(bool SkipFlameColourTransition)
 
 void ABP_Lantern_C::ReceiveFlameData(bool WantChangeAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ReceiveFlameData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.ReceiveFlameData"));
 
 	struct
 	{
@@ -235,7 +235,7 @@ void ABP_Lantern_C::ReceiveFlameData(bool WantChangeAnimation)
 
 void ABP_Lantern_C::ExecuteUbergraph_BP_Lantern(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern"));
 
 	struct
 	{

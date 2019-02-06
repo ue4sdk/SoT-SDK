@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Cutlass_Item_C::DoBlockEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.DoBlockEffect");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cutlass_Item.BP_Cutlass_Item_C.DoBlockEffect"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Cutlass_Item_C::DoBlockEffect()
 
 void ABP_Cutlass_Item_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cutlass_Item.BP_Cutlass_Item_C.UserConstructionScript"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Cutlass_Item_C::UserConstructionScript()
 
 void ABP_Cutlass_Item_C::OnBlockedAttack(const struct FEventBlocked& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.OnBlockedAttack");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cutlass_Item.BP_Cutlass_Item_C.OnBlockedAttack"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_Cutlass_Item_C::OnBlockedAttack(const struct FEventBlocked& Event)
 
 void ABP_Cutlass_Item_C::ExecuteUbergraph_BP_Cutlass_Item(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.ExecuteUbergraph_BP_Cutlass_Item");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cutlass_Item.BP_Cutlass_Item_C.ExecuteUbergraph_BP_Cutlass_Item"));
 
 	struct
 	{

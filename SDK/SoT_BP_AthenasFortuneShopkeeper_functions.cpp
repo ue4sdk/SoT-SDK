@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_AthenasFortuneShopkeeper_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AthenasFortuneShopkeeper.BP_AthenasFortuneShopkeeper_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AthenasFortuneShopkeeper.BP_AthenasFortuneShopkeeper_C.UserConstructionScript"));
 
 	struct
 	{

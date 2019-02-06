@@ -19,7 +19,7 @@ namespace SDK
 
 TEnumAsByte<ECollisionChannel> UTestPrimitiveComponent::GetCollisionObjectType()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.TestPrimitiveComponent.GetCollisionObjectType");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function TestUtilities.TestPrimitiveComponent.GetCollisionObjectType"));
 
 	struct
 	{
@@ -42,7 +42,7 @@ TEnumAsByte<ECollisionChannel> UTestPrimitiveComponent::GetCollisionObjectType()
 
 void UTestStaticMeshComponent::AddForce(const struct FVector& Force, const struct FName& BoneName, bool bAccelChange)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.TestStaticMeshComponent.AddForce");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function TestUtilities.TestStaticMeshComponent.AddForce"));
 
 	struct
 	{

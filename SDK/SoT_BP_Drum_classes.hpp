@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Drum.BP_Drum_C
-// 0x0000 (0x08C8 - 0x08C8)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_Drum_C : public AMusicalInstrumentStaticMesh
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Drum.BP_Drum_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Drum.BP_Drum_C"));
 		return ptr;
 	}
 

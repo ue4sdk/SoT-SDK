@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SuperheatedWater_ForSeaBasedVolcanoes.BP_SuperheatedWater_ForSeaBasedVolcanoes_C
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x0638 - 0x0638)
 class ABP_SuperheatedWater_ForSeaBasedVolcanoes_C : public ABP_SuperheatedWater_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_SuperheatedWater_ForSeaBasedVolcanoes.BP_SuperheatedWater_ForSeaBasedVolcanoes_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_SuperheatedWater_ForSeaBasedVolcanoes.BP_SuperheatedWater_ForSeaBasedVolcanoes_C"));
 		return ptr;
 	}
 

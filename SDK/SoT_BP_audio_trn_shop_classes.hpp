@@ -15,18 +15,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_audio_trn_shop.BP_audio_trn_shop_C
-// 0x0020 (0x04B0 - 0x0490)
+// 0x0020 (0x04B8 - 0x0498)
 class ABP_audio_trn_shop_C : public AActor
 {
 public:
-	class UTritonComponent*                            Triton;                                                   // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioPortalComponent*                       AudioPortal;                                              // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioSpaceComponent*                        AudioSpace;                                               // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTritonComponent*                            Triton;                                                   // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioPortalComponent*                       AudioPortal;                                              // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioSpaceComponent*                        AudioSpace;                                               // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Scene;                                                    // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_audio_trn_shop.BP_audio_trn_shop_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_audio_trn_shop.BP_audio_trn_shop_C"));
 		return ptr;
 	}
 

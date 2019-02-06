@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_lighting.wsp_lighting_C
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class Awsp_lighting_C : public ALevelScriptActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass wsp_lighting.wsp_lighting_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass wsp_lighting.wsp_lighting_C"));
 		return ptr;
 	}
 

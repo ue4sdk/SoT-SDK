@@ -27,7 +27,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystem.DefaultOnlineEnvironmentSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystem.DefaultOnlineEnvironmentSettings"));
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystem.NamedInterfaces");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystem.NamedInterfaces"));
 		return ptr;
 	}
 
@@ -60,7 +60,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystem.TurnBasedMatchInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystem.TurnBasedMatchInterface"));
 		return ptr;
 	}
 

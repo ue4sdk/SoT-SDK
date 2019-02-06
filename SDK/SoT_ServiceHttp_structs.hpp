@@ -7,6 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_ServiceHttp_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK

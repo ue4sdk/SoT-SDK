@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipWheel.BP_SmallShipWheel_C
-// 0x0000 (0x0A41 - 0x0A41)
+// 0x0000 (0x0A49 - 0x0A49)
 class ABP_SmallShipWheel_C : public ABP_Wheel_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_SmallShipWheel.BP_SmallShipWheel_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_SmallShipWheel.BP_SmallShipWheel_C"));
 		return ptr;
 	}
 

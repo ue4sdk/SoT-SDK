@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_BilgeRat1.BP_Anim_BilgeRat1_C
-// 0x0000 (0x14AD - 0x14AD)
+// 0x0000 (0x1D39 - 0x1D39)
 class UBP_Anim_BilgeRat1_C : public UBP_Anim_NPC_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("AnimBlueprintGeneratedClass BP_Anim_BilgeRat1.BP_Anim_BilgeRat1_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("AnimBlueprintGeneratedClass BP_Anim_BilgeRat1.BP_Anim_BilgeRat1_C"));
 		return ptr;
 	}
 

@@ -19,7 +19,7 @@ namespace SDK
 
 void AEarthquake::OnRep_EarthquakeState(TEnumAsByte<EEarthquakeState> OldEarthquakeState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Earthquake.OnRep_EarthquakeState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Earthquake.OnRep_EarthquakeState"));
 
 	struct
 	{
@@ -37,7 +37,7 @@ void AEarthquake::OnRep_EarthquakeState(TEnumAsByte<EEarthquakeState> OldEarthqu
 
 void AGeyser::OnRep_GeyserState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Geyser.OnRep_GeyserState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Geyser.OnRep_GeyserState"));
 
 	struct
 	{
@@ -53,7 +53,7 @@ void AGeyser::OnRep_GeyserState()
 
 void AGeyser::Multicast_TriggerExplosion()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Geyser.Multicast_TriggerExplosion");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Geyser.Multicast_TriggerExplosion"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void AGeyser::Multicast_TriggerExplosion()
 
 void ALavaZone::OnRep_ActorsInZone(TArray<class AActor*> PreviousActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.LavaZone.OnRep_ActorsInZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.LavaZone.OnRep_ActorsInZone"));
 
 	struct
 	{
@@ -89,7 +89,7 @@ void ALavaZone::OnRep_ActorsInZone(TArray<class AActor*> PreviousActors)
 
 void ALavaZone::OnRep_Active()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.LavaZone.OnRep_Active");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.LavaZone.OnRep_Active"));
 
 	struct
 	{
@@ -105,7 +105,7 @@ void ALavaZone::OnRep_Active()
 
 void ASuperheatedWater::OnRep_PlayersInZone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone"));
 
 	struct
 	{
@@ -123,7 +123,7 @@ void ASuperheatedWater::OnRep_PlayersInZone()
 
 void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.OnRep_VolcanoState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Volcano.OnRep_VolcanoState"));
 
 	struct
 	{
@@ -148,7 +148,7 @@ void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoStat
 
 void AVolcano::Multicast_FireProjectile(class UClass* ProjectileType, const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity, const struct FVector& RotationRate, float ProjectileGravityScale, class UWwiseEvent* LaunchAudioPlayEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NaturalDisasters.Volcano.Multicast_FireProjectile");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Volcano.Multicast_FireProjectile"));
 
 	struct
 	{

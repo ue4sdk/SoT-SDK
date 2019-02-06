@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass flag_bilgerat_01_Event_CustomizationDesc.flag_bilgerat_01_Event_CustomizationDesc_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass flag_bilgerat_01_Event_CustomizationDesc.flag_bilgerat_01_Event_CustomizationDesc_C"));
 		return ptr;
 	}
 

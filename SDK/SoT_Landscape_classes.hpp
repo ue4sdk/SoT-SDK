@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.ControlPointMeshComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.ControlPointMeshComponent"));
 		return ptr;
 	}
 
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeGrassType");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeGrassType"));
 		return ptr;
 	}
 
@@ -95,7 +95,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeComponent"));
 		return ptr;
 	}
 
@@ -103,14 +103,14 @@ public:
 
 
 // Class Landscape.LandscapeGizmoActor
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class ALandscapeGizmoActor : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeGizmoActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeGizmoActor"));
 		return ptr;
 	}
 
@@ -118,15 +118,15 @@ public:
 
 
 // Class Landscape.LandscapeGizmoActiveActor
-// 0x0050 (0x04E0 - 0x0490)
+// 0x0050 (0x04E8 - 0x0498)
 class ALandscapeGizmoActiveActor : public ALandscapeGizmoActor
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0490(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0498(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeGizmoActiveActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeGizmoActiveActor"));
 		return ptr;
 	}
 
@@ -141,7 +141,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeGizmoRenderComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeGizmoRenderComponent"));
 		return ptr;
 	}
 
@@ -168,7 +168,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeHeightfieldCollisionComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeHeightfieldCollisionComponent"));
 		return ptr;
 	}
 
@@ -184,7 +184,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeMeshCollisionComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMeshCollisionComponent"));
 		return ptr;
 	}
 
@@ -206,7 +206,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeInfo");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeInfo"));
 		return ptr;
 	}
 
@@ -222,7 +222,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeInfoMap");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeInfoMap"));
 		return ptr;
 	}
 
@@ -241,7 +241,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeLayerInfoObject");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeLayerInfoObject"));
 		return ptr;
 	}
 
@@ -261,7 +261,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeMaterialInstanceConstant");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMaterialInstanceConstant"));
 		return ptr;
 	}
 
@@ -269,15 +269,15 @@ public:
 
 
 // Class Landscape.LandscapeMeshProxyActor
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class ALandscapeMeshProxyActor : public AActor
 {
 public:
-	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0490(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0498(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeMeshProxyActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMeshProxyActor"));
 		return ptr;
 	}
 
@@ -296,7 +296,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeMeshProxyComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMeshProxyComponent"));
 		return ptr;
 	}
 
@@ -304,27 +304,27 @@ public:
 
 
 // Class Landscape.LandscapeProxy
-// 0x03A0 (0x0830 - 0x0490)
+// 0x0398 (0x0830 - 0x0498)
 class ALandscapeProxy : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	class ULandscapeSplinesComponent*                  SplineComponent;                                          // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FGuid                                       LandscapeGuid;                                            // 0x04A0(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FIntPoint                                   LandscapeSectionOffset;                                   // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxLODLevel;                                              // 0x04B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                StaticLightingLOD;                                        // 0x04BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPhysicalMaterial*                           DefaultPhysMaterial;                                      // 0x04C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              StreamingDistanceMultiplier;                              // 0x04C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04CC(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          LandscapeMaterial;                                        // 0x04D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          LandscapeHoleMaterial;                                    // 0x04D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LODDistanceFactor;                                        // 0x04E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x04E4(0x0004) MISSED OFFSET
-	TArray<class ULandscapeComponent*>                 LandscapeComponents;                                      // 0x04E8(0x0010) (ExportObject, ZeroConstructor)
-	TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                                      // 0x04F8(0x0010) (ExportObject, ZeroConstructor)
-	TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                        // 0x0508(0x0010) (ExportObject, ZeroConstructor, Transient, DuplicateTransient)
-	unsigned char                                      UnknownData03[0x78];                                      // 0x0518(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class ULandscapeSplinesComponent*                  SplineComponent;                                          // 0x04A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FGuid                                       LandscapeGuid;                                            // 0x04A8(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FIntPoint                                   LandscapeSectionOffset;                                   // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxLODLevel;                                              // 0x04C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                StaticLightingLOD;                                        // 0x04C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPhysicalMaterial*                           DefaultPhysMaterial;                                      // 0x04C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              StreamingDistanceMultiplier;                              // 0x04D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04D4(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          LandscapeMaterial;                                        // 0x04D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          LandscapeHoleMaterial;                                    // 0x04E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LODDistanceFactor;                                        // 0x04E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x04EC(0x0004) MISSED OFFSET
+	TArray<class ULandscapeComponent*>                 LandscapeComponents;                                      // 0x04F0(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                                      // 0x0500(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                        // 0x0510(0x0010) (ExportObject, ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData03[0x70];                                      // 0x0520(0x0070) MISSED OFFSET
 	float                                              StaticLightingResolution;                                 // 0x0590(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0594(0x001C) (Edit, IsPlainOldData)
 	unsigned char                                      bCastStaticShadow : 1;                                    // 0x05B0(0x0001) (Edit)
@@ -353,7 +353,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeProxy");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeProxy"));
 		return ptr;
 	}
 
@@ -371,7 +371,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.Landscape");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.Landscape"));
 		return ptr;
 	}
 
@@ -389,7 +389,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeSplinesComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeSplinesComponent"));
 		return ptr;
 	}
 
@@ -410,7 +410,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeSplineSegment");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeSplineSegment"));
 		return ptr;
 	}
 
@@ -436,7 +436,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.LandscapeSplineControlPoint");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeSplineControlPoint"));
 		return ptr;
 	}
 
@@ -452,7 +452,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeGrassOutput");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeGrassOutput"));
 		return ptr;
 	}
 
@@ -469,7 +469,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeLayerBlend");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeLayerBlend"));
 		return ptr;
 	}
 
@@ -492,7 +492,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeLayerCoords");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeLayerCoords"));
 		return ptr;
 	}
 
@@ -511,7 +511,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeLayerSample");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeLayerSample"));
 		return ptr;
 	}
 
@@ -533,7 +533,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeLayerSwitch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeLayerSwitch"));
 		return ptr;
 	}
 
@@ -554,7 +554,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeLayerWeight");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeLayerWeight"));
 		return ptr;
 	}
 
@@ -570,7 +570,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Landscape.MaterialExpressionLandscapeVisibilityMask");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.MaterialExpressionLandscapeVisibilityMask"));
 		return ptr;
 	}
 

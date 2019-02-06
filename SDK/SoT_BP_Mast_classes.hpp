@@ -15,32 +15,32 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Mast.BP_Mast_C
-// 0x00A8 (0x0988 - 0x08E0)
+// 0x00A8 (0x0A60 - 0x09B8)
 class ABP_Mast_C : public AMast
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        MastTopComponent;                                         // 0x08E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        MastBaseComponent;                                        // 0x08F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TopgallantActor;                                          // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TopsailActor;                                             // 0x0900(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Topgallant_Yard;                                          // 0x0908(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Top_Yard;                                                 // 0x0910(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Main_Yard;                                                // 0x0918(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        MainsailActor;                                            // 0x0920(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FBP_SailStructure>                   Sail_Parameters;                                          // 0x0928(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UStaticMeshComponent*>                Yards;                                                    // 0x0938(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UChildActorComponent*>                Sails;                                                    // 0x0948(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              Mast_Falling_Limit;                                       // 0x0958(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x095C(0x0004) MISSED OFFSET
-	class UMaterialInstance*                           Sail_Material;                                            // 0x0960(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class ABP_Sail_C*>                          SailActors;                                               // 0x0968(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	class UDecalComponent*                             DamageDecalRight;                                         // 0x0978(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UDecalComponent*                             DamageDecalLeft;                                          // 0x0980(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x09B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        MastTopComponent;                                         // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        MastBaseComponent;                                        // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TopgallantActor;                                          // 0x09D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TopsailActor;                                             // 0x09D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Topgallant_Yard;                                          // 0x09E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Top_Yard;                                                 // 0x09E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Main_Yard;                                                // 0x09F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        MainsailActor;                                            // 0x09F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FBP_SailStructure>                   Sail_Parameters;                                          // 0x0A00(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UStaticMeshComponent*>                Yards;                                                    // 0x0A10(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UChildActorComponent*>                Sails;                                                    // 0x0A20(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              Mast_Falling_Limit;                                       // 0x0A30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0A34(0x0004) MISSED OFFSET
+	class UMaterialInstance*                           Sail_Material;                                            // 0x0A38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class ABP_Sail_C*>                          SailActors;                                               // 0x0A40(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	class UDecalComponent*                             DamageDecalRight;                                         // 0x0A50(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UDecalComponent*                             DamageDecalLeft;                                          // 0x0A58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Mast.BP_Mast_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Mast.BP_Mast_C"));
 		return ptr;
 	}
 

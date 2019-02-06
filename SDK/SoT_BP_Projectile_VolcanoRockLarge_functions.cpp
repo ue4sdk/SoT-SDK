@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Projectile_VolcanoRockLarge_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Projectile_VolcanoRockLarge.BP_Projectile_VolcanoRockLarge_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Projectile_VolcanoRockLarge.BP_Projectile_VolcanoRockLarge_C.UserConstructionScript"));
 
 	struct
 	{

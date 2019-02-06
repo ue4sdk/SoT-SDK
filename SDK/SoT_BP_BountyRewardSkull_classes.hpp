@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull.BP_BountyRewardSkull_C
-// 0x0018 (0x0808 - 0x07F0)
+// 0x0018 (0x0810 - 0x07F8)
 class ABP_BountyRewardSkull_C : public ABountyReward
 {
 public:
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BountyRewardSkull.BP_BountyRewardSkull_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BountyRewardSkull.BP_BountyRewardSkull_C"));
 		return ptr;
 	}
 

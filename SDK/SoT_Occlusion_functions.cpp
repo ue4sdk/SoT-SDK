@@ -25,7 +25,7 @@ namespace SDK
 
 TEnumAsByte<EOcclusionTypes> UOcclusionFunctionLibrary::IsActorOccludedFromActor(class UObject* WorldContextObject, class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float InteractionPointRadius, TArray<class AActor*> AdditionalIgnoredActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionFunctionLibrary.IsActorOccludedFromActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Occlusion.OcclusionFunctionLibrary.IsActorOccludedFromActor"));
 
 	struct
 	{
@@ -65,7 +65,7 @@ TEnumAsByte<EOcclusionTypes> UOcclusionFunctionLibrary::IsActorOccludedFromActor
 
 TEnumAsByte<EOcclusionTypes> UOcclusionInterface::IsActorOccludedFromActor(class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float Tolerance, TEnumAsByte<ECollisionChannel> CollisionChannel, TArray<class AActor*> AdditionalIgnoredActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionInterface.IsActorOccludedFromActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Occlusion.OcclusionInterface.IsActorOccludedFromActor"));
 
 	struct
 	{

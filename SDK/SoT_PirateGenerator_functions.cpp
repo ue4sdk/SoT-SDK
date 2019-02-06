@@ -20,7 +20,7 @@ namespace SDK
 
 class UClass* UAnimationSwitchDataAsset::GetAnimSetIdForDesc(const struct FPirateDescription& Desc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.AnimationSwitchDataAsset.GetAnimSetIdForDesc");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.AnimationSwitchDataAsset.GetAnimSetIdForDesc"));
 
 	struct
 	{
@@ -44,7 +44,7 @@ class UClass* UAnimationSwitchDataAsset::GetAnimSetIdForDesc(const struct FPirat
 
 void UCharacterMeshBakeFunctionLibrary::BakeCharacterMeshAsync(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, const struct FScriptDelegate& AsyncResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.BakeCharacterMeshAsync");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.BakeCharacterMeshAsync"));
 
 	struct
 	{
@@ -68,7 +68,7 @@ void UCharacterMeshBakeFunctionLibrary::BakeCharacterMeshAsync(class UCharacterM
 
 class USkeletalMesh* UCharacterMeshBakeFunctionLibrary::BakeCharacterMesh(class UCharacterMeshBakeSpecification* CharacterMeshSpecification)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.BakeCharacterMesh");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.BakeCharacterMesh"));
 
 	struct
 	{
@@ -92,7 +92,7 @@ class USkeletalMesh* UCharacterMeshBakeFunctionLibrary::BakeCharacterMesh(class 
 
 void UCharacterMeshBakeFunctionLibrary::AsyncBakeResultDynamic__DelegateSignature(class USkeletalMesh* Mesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PirateGenerator.CharacterMeshBakeFunctionLibrary.AsyncBakeResultDynamic__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("DelegateFunction PirateGenerator.CharacterMeshBakeFunctionLibrary.AsyncBakeResultDynamic__DelegateSignature"));
 
 	struct
 	{
@@ -113,7 +113,7 @@ void UCharacterMeshBakeFunctionLibrary::AsyncBakeResultDynamic__DelegateSignatur
 
 void UCharacterMeshBakeFunctionLibrary::AppendCharacterBlendShapes(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, TArray<struct FIPGBlendShape> BlendShapes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.AppendCharacterBlendShapes");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeFunctionLibrary.AppendCharacterBlendShapes"));
 
 	struct
 	{
@@ -136,7 +136,7 @@ void UCharacterMeshBakeFunctionLibrary::AppendCharacterBlendShapes(class UCharac
 
 class UCharacterMeshBakeSpecification* UCharacterMeshBakeTestFunctionLibrary::MakeCharacterMeshSpecification()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.MakeCharacterMeshSpecification");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.MakeCharacterMeshSpecification"));
 
 	struct
 	{
@@ -162,7 +162,7 @@ class UCharacterMeshBakeSpecification* UCharacterMeshBakeTestFunctionLibrary::Ma
 
 void UCharacterMeshBakeTestFunctionLibrary::BlendMeshWithMeshPatchAssets(class USkeletalMesh* BaseMesh, float BaseMeshWeight, TArray<class UMeshPatchAsset*> MeshPatchAssets, TArray<float> MeshPatchAssetWeights, class USkeletalMesh** TargetMesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.BlendMeshWithMeshPatchAssets");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.BlendMeshWithMeshPatchAssets"));
 
 	struct
 	{
@@ -194,7 +194,7 @@ void UCharacterMeshBakeTestFunctionLibrary::BlendMeshWithMeshPatchAssets(class U
 
 class USkeletalMesh* UCharacterMeshBakeTestFunctionLibrary::BakeCharacterMeshFromClassDefault(class UClass* CharacterMeshBakeSpecificationClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.BakeCharacterMeshFromClassDefault");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.BakeCharacterMeshFromClassDefault"));
 
 	struct
 	{
@@ -220,7 +220,7 @@ class USkeletalMesh* UCharacterMeshBakeTestFunctionLibrary::BakeCharacterMeshFro
 
 bool UCharacterMeshBakeTestFunctionLibrary::AreMeshesEquivalentByMeshPatchCriteria(class USkeletalMesh* MeshA, class USkeletalMesh* MeshB)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.AreMeshesEquivalentByMeshPatchCriteria");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.CharacterMeshBakeTestFunctionLibrary.AreMeshesEquivalentByMeshPatchCriteria"));
 
 	struct
 	{
@@ -248,7 +248,7 @@ bool UCharacterMeshBakeTestFunctionLibrary::AreMeshesEquivalentByMeshPatchCriter
 
 class FString UFileAccessFunctionLibrary::GetMeshPatchAssetPathFromMeshPathAndTypeName(const class FString& MeshPath, const class FString& TypeName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.FileAccessFunctionLibrary.GetMeshPatchAssetPathFromMeshPathAndTypeName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.FileAccessFunctionLibrary.GetMeshPatchAssetPathFromMeshPathAndTypeName"));
 
 	struct
 	{
@@ -276,7 +276,7 @@ class FString UFileAccessFunctionLibrary::GetMeshPatchAssetPathFromMeshPathAndTy
 
 class UMeshPatchAsset* UFileAccessFunctionLibrary::GetMeshPatchAssetForMeshFromTypeName(class USkeletalMesh* Mesh, const class FString& TypeName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.FileAccessFunctionLibrary.GetMeshPatchAssetForMeshFromTypeName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.FileAccessFunctionLibrary.GetMeshPatchAssetForMeshFromTypeName"));
 
 	struct
 	{
@@ -306,7 +306,7 @@ class UMeshPatchAsset* UFileAccessFunctionLibrary::GetMeshPatchAssetForMeshFromT
 
 class FString UPirateBodyShapeFunctionLibrary::GetHighestWeighted(float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights, float Threshold)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.GetHighestWeighted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateBodyShapeFunctionLibrary.GetHighestWeighted"));
 
 	struct
 	{
@@ -341,7 +341,7 @@ class FString UPirateBodyShapeFunctionLibrary::GetHighestWeighted(float BaseMesh
 
 bool UPirateBodyShapeFunctionLibrary::FindBodyBlendsFromBodyShapeWheelRadialCoordinate(TEnumAsByte<EIPGGender> Gender, const struct FRadialCoordinate& BodyShapeWheelRadialCoordinate, float* BaseMeshBlendWeight, TArray<class FString>* BodyShapeBlendNames, TArray<float>* BodyShapeBlendWeights)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.FindBodyBlendsFromBodyShapeWheelRadialCoordinate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateBodyShapeFunctionLibrary.FindBodyBlendsFromBodyShapeWheelRadialCoordinate"));
 
 	struct
 	{
@@ -378,7 +378,7 @@ bool UPirateBodyShapeFunctionLibrary::FindBodyBlendsFromBodyShapeWheelRadialCoor
 
 struct FRadialCoordinate UPirateBodyShapeFunctionLibrary::ConvertToRadialCoordinate(const struct FVector2D& UV)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.ConvertToRadialCoordinate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateBodyShapeFunctionLibrary.ConvertToRadialCoordinate"));
 
 	struct
 	{
@@ -403,7 +403,7 @@ struct FRadialCoordinate UPirateBodyShapeFunctionLibrary::ConvertToRadialCoordin
 
 struct FVector2D UPirateBodyShapeFunctionLibrary::ConvertFromRadialCoordinate(const struct FRadialCoordinate& Coord)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateBodyShapeFunctionLibrary.ConvertFromRadialCoordinate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateBodyShapeFunctionLibrary.ConvertFromRadialCoordinate"));
 
 	struct
 	{
@@ -429,7 +429,7 @@ struct FVector2D UPirateBodyShapeFunctionLibrary::ConvertFromRadialCoordinate(co
 
 bool UPirateGeneratorFunctionLibrary::SavePirateDescription(const class FString& RelativePath, const struct FPirateDescription& InDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.SavePirateDescription");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.SavePirateDescription"));
 
 	struct
 	{
@@ -456,7 +456,7 @@ bool UPirateGeneratorFunctionLibrary::SavePirateDescription(const class FString&
 
 struct FRadialCoordinate UPirateGeneratorFunctionLibrary::RandomBodyShape(int Seed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.RandomBodyShape");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.RandomBodyShape"));
 
 	struct
 	{
@@ -482,7 +482,7 @@ struct FRadialCoordinate UPirateGeneratorFunctionLibrary::RandomBodyShape(int Se
 
 bool UPirateGeneratorFunctionLibrary::LoadPirateDescription(const class FString& RelativePath, struct FPirateDescription* OutDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.LoadPirateDescription");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.LoadPirateDescription"));
 
 	struct
 	{
@@ -513,7 +513,7 @@ bool UPirateGeneratorFunctionLibrary::LoadPirateDescription(const class FString&
 
 void UPirateGeneratorFunctionLibrary::K2_BakeFromDescriptionGameThread(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, class USkeletalMesh** OutMesh, struct FPirateDescription* OutDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.K2_BakeFromDescriptionGameThread");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.K2_BakeFromDescriptionGameThread"));
 
 	struct
 	{
@@ -543,7 +543,7 @@ void UPirateGeneratorFunctionLibrary::K2_BakeFromDescriptionGameThread(const str
 
 int UPirateGeneratorFunctionLibrary::IPGLatestVersion()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.IPGLatestVersion");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.IPGLatestVersion"));
 
 	struct
 	{
@@ -567,7 +567,7 @@ int UPirateGeneratorFunctionLibrary::IPGLatestVersion()
 
 int UPirateGeneratorFunctionLibrary::GetSeedFromString(const class FString& RefName, const class FString& Str)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetSeedFromString");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetSeedFromString"));
 
 	struct
 	{
@@ -594,7 +594,7 @@ int UPirateGeneratorFunctionLibrary::GetSeedFromString(const class FString& RefN
 
 void UPirateGeneratorFunctionLibrary::GetAllTextureReferences(class USkeletalMesh* Mesh, TArray<struct FPirateGeneratorTextureReference>* OutReferences)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllTextureReferences");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllTextureReferences"));
 
 	struct
 	{
@@ -619,7 +619,7 @@ void UPirateGeneratorFunctionLibrary::GetAllTextureReferences(class USkeletalMes
 
 TArray<class FString> UPirateGeneratorFunctionLibrary::GetAllDescriptions()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllDescriptions");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.GetAllDescriptions"));
 
 	struct
 	{
@@ -650,7 +650,7 @@ TArray<class FString> UPirateGeneratorFunctionLibrary::GetAllDescriptions()
 
 struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirateWithVersion(int Seed, int Version, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirateWithVersion");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirateWithVersion"));
 
 	struct
 	{
@@ -698,7 +698,7 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirateW
 
 struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirate(int Seed, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.GenerateRandomPirate"));
 
 	struct
 	{
@@ -738,7 +738,7 @@ struct FPirateDescription UPirateGeneratorFunctionLibrary::GenerateRandomPirate(
 
 void UPirateGeneratorFunctionLibrary::BakeFromDescriptionAsync(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, const struct FScriptDelegate& AsyncResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PirateGeneratorFunctionLibrary.BakeFromDescriptionAsync");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PirateGeneratorFunctionLibrary.BakeFromDescriptionAsync"));
 
 	struct
 	{
@@ -769,7 +769,7 @@ void UPirateGeneratorFunctionLibrary::BakeFromDescriptionAsync(const struct FPir
 
 void UPreparePirateMeshBakeTestFunctionLibrary::PopulateSkeletonBlendsInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, class USkeletalMesh* MeshWithBaseSkeleton, class USkeletonsDataAsset* SkeletonsDataAsset, const class FString& MeshTypeSkeletonFileFormat, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary.PopulateSkeletonBlendsInCharacterMeshBakeSpecification");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary.PopulateSkeletonBlendsInCharacterMeshBakeSpecification"));
 
 	struct
 	{
@@ -806,7 +806,7 @@ void UPreparePirateMeshBakeTestFunctionLibrary::PopulateSkeletonBlendsInCharacte
 
 void UPreparePirateMeshBakeTestFunctionLibrary::PopulateBlendedSubMeshesInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, TArray<class USkeletalMesh*> SubMeshes, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary.PopulateBlendedSubMeshesInCharacterMeshBakeSpecification");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary.PopulateBlendedSubMeshesInCharacterMeshBakeSpecification"));
 
 	struct
 	{
@@ -836,7 +836,7 @@ void UPreparePirateMeshBakeTestFunctionLibrary::PopulateBlendedSubMeshesInCharac
 
 float UWardrobeOutfitDataAsset::GetBiasForCategory(const struct FName& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeOutfitDataAsset.GetBiasForCategory");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeOutfitDataAsset.GetBiasForCategory"));
 
 	struct
 	{
@@ -863,7 +863,7 @@ float UWardrobeOutfitDataAsset::GetBiasForCategory(const struct FName& Name)
 
 void UWardrobeFunctionLibrary::PickOutfitAsync(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, const struct FScriptDelegate& AsyncResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.PickOutfitAsync");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.PickOutfitAsync"));
 
 	struct
 	{
@@ -897,7 +897,7 @@ void UWardrobeFunctionLibrary::PickOutfitAsync(TArray<struct FName> ClothingItem
 
 bool UWardrobeFunctionLibrary::PickOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, struct FWardrobeOutfitResult* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.PickOutfit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.PickOutfit"));
 
 	struct
 	{
@@ -934,7 +934,7 @@ bool UWardrobeFunctionLibrary::PickOutfit(TArray<struct FName> ClothingItemNames
 
 TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItemsWithBias(int Seed, TArray<struct FName> InputItems, TArray<struct FWardrobeOutfitCategoryBias> BiasPerCategory)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomWardrobeItemsWithBias");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomWardrobeItemsWithBias"));
 
 	struct
 	{
@@ -964,7 +964,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItemsWithBias(in
 
 TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItems(int Seed, TArray<struct FName> InputItems)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomWardrobeItems");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomWardrobeItems"));
 
 	struct
 	{
@@ -993,7 +993,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetRandomWardrobeItems(int Seed, 
 
 TArray<struct FName> UWardrobeFunctionLibrary::GetRandomOutfit(class UWardrobeOutfitDataAsset* Outfit, int Seed, TEnumAsByte<EIPGGender> Gender)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomOutfit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.GetRandomOutfit"));
 
 	struct
 	{
@@ -1021,7 +1021,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetRandomOutfit(class UWardrobeOu
 
 TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeTypes()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeTypes");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeTypes"));
 
 	struct
 	{
@@ -1046,7 +1046,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeTypes()
 
 TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItemsForType");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItemsForType"));
 
 	struct
 	{
@@ -1075,7 +1075,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItemsForType(const 
 
 TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItems(TEnumAsByte<EIPGPirateType> PirateType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItems");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.GetAllWardrobeItems"));
 
 	struct
 	{
@@ -1103,7 +1103,7 @@ TArray<struct FName> UWardrobeFunctionLibrary::GetAllWardrobeItems(TEnumAsByte<E
 
 bool UWardrobeFunctionLibrary::CanLoadOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PirateGenerator.WardrobeFunctionLibrary.CanLoadOutfit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PirateGenerator.WardrobeFunctionLibrary.CanLoadOutfit"));
 
 	struct
 	{
@@ -1134,7 +1134,7 @@ bool UWardrobeFunctionLibrary::CanLoadOutfit(TArray<struct FName> ClothingItemNa
 
 void UWardrobeFunctionLibrary::AsyncOutfitResultDynamic__DelegateSignature(bool Success, TArray<class USkeletalMesh*> Meshes)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PirateGenerator.WardrobeFunctionLibrary.AsyncOutfitResultDynamic__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("DelegateFunction PirateGenerator.WardrobeFunctionLibrary.AsyncOutfitResultDynamic__DelegateSignature"));
 
 	struct
 	{

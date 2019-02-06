@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_FlyingCreature_C::CreateCreature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.CreateCreature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FlyingCreature.BP_FlyingCreature_C.CreateCreature"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_FlyingCreature_C::CreateCreature()
 
 void ABP_FlyingCreature_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FlyingCreature.BP_FlyingCreature_C.UserConstructionScript"));
 
 	struct
 	{

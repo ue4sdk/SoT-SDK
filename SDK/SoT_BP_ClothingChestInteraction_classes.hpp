@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ClothingChestInteraction.BP_ClothingChestInteraction_C
-// 0x0008 (0x06C0 - 0x06B8)
+// 0x0008 (0x06C8 - 0x06C0)
 class ABP_ClothingChestInteraction_C : public AClothingChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_ClothingChestInteraction.BP_ClothingChestInteraction_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_ClothingChestInteraction.BP_ClothingChestInteraction_C"));
 		return ptr;
 	}
 

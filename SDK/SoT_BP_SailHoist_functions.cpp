@@ -19,7 +19,7 @@ namespace SDK
 
 struct FDockableInfo ABP_SailHoist_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailHoist.BP_SailHoist_C.GetDockableInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailHoist.BP_SailHoist_C.GetDockableInfo"));
 
 	struct
 	{
@@ -38,7 +38,7 @@ struct FDockableInfo ABP_SailHoist_C::GetDockableInfo()
 
 void ABP_SailHoist_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailHoist.BP_SailHoist_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailHoist.BP_SailHoist_C.UserConstructionScript"));
 
 	struct
 	{

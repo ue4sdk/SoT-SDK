@@ -17,7 +17,7 @@ namespace SDK
 
 void ULevelSequencePlayer::Stop()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.Stop");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.Stop"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void ULevelSequencePlayer::Stop()
 
 void ULevelSequencePlayer::SetPlayRate(float PlayRate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.SetPlayRate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.SetPlayRate"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ULevelSequencePlayer::SetPlayRate(float PlayRate)
 
 void ULevelSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.SetPlaybackPosition");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.SetPlaybackPosition"));
 
 	struct
 	{
@@ -75,7 +75,7 @@ void ULevelSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 
 void ULevelSequencePlayer::PlayLooping(int NumLoops)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.PlayLooping");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.PlayLooping"));
 
 	struct
 	{
@@ -93,7 +93,7 @@ void ULevelSequencePlayer::PlayLooping(int NumLoops)
 
 void ULevelSequencePlayer::Play()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.Play");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.Play"));
 
 	struct
 	{
@@ -109,7 +109,7 @@ void ULevelSequencePlayer::Play()
 
 void ULevelSequencePlayer::Pause()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.Pause");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.Pause"));
 
 	struct
 	{
@@ -127,7 +127,7 @@ void ULevelSequencePlayer::Pause()
 
 bool ULevelSequencePlayer::IsPlaying()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.IsPlaying");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.IsPlaying"));
 
 	struct
 	{
@@ -148,7 +148,7 @@ bool ULevelSequencePlayer::IsPlaying()
 
 float ULevelSequencePlayer::GetPlayRate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetPlayRate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.GetPlayRate"));
 
 	struct
 	{
@@ -169,7 +169,7 @@ float ULevelSequencePlayer::GetPlayRate()
 
 float ULevelSequencePlayer::GetPlaybackPosition()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetPlaybackPosition");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.GetPlaybackPosition"));
 
 	struct
 	{
@@ -190,7 +190,7 @@ float ULevelSequencePlayer::GetPlaybackPosition()
 
 float ULevelSequencePlayer::GetLength()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetLength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.GetLength"));
 
 	struct
 	{
@@ -214,7 +214,7 @@ float ULevelSequencePlayer::GetLength()
 
 class ULevelSequencePlayer* ULevelSequencePlayer::CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FLevelSequencePlaybackSettings& Settings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer"));
 
 	struct
 	{
@@ -242,7 +242,7 @@ class ULevelSequencePlayer* ULevelSequencePlayer::CreateLevelSequencePlayer(clas
 
 void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetSequence");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LevelSequence.LevelSequenceActor.SetSequence"));
 
 	struct
 	{

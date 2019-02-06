@@ -19,7 +19,7 @@ namespace SDK
 
 void UBP_Anim_PocketWatch_C::ExecuteUbergraph_BP_Anim_PocketWatch(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_PocketWatch.BP_Anim_PocketWatch_C.ExecuteUbergraph_BP_Anim_PocketWatch");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PocketWatch.BP_Anim_PocketWatch_C.ExecuteUbergraph_BP_Anim_PocketWatch"));
 
 	struct
 	{

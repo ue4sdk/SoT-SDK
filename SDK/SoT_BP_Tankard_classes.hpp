@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tankard.BP_Tankard_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x08A8 - 0x08A8)
 class ABP_Tankard_C : public ATankard
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Tankard.BP_Tankard_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Tankard.BP_Tankard_C"));
 		return ptr;
 	}
 

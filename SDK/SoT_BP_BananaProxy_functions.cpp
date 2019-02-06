@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BananaProxy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BananaProxy.BP_BananaProxy_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BananaProxy.BP_BananaProxy_C.UserConstructionScript"));
 
 	struct
 	{

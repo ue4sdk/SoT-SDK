@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_large_mast_mizzen_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_mizzen.BP_large_mast_mizzen_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_large_mast_mizzen.BP_large_mast_mizzen_C.UserConstructionScript"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void ABP_large_mast_mizzen_C::UserConstructionScript()
 
 void ABP_large_mast_mizzen_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_mizzen.BP_large_mast_mizzen_C.OnMastDescLoaded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_large_mast_mizzen.BP_large_mast_mizzen_C.OnMastDescLoaded"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ABP_large_mast_mizzen_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 
 void ABP_large_mast_mizzen_C::ExecuteUbergraph_BP_large_mast_mizzen(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_mizzen.BP_large_mast_mizzen_C.ExecuteUbergraph_BP_large_mast_mizzen");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_large_mast_mizzen.BP_large_mast_mizzen_C.ExecuteUbergraph_BP_large_mast_mizzen"));
 
 	struct
 	{

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ClamberSpot_Rowboat.BP_ClamberSpot_Rowboat_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x06C0 - 0x06C0)
 class ABP_ClamberSpot_Rowboat_C : public ABP_BaseClamberSpot_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_ClamberSpot_Rowboat.BP_ClamberSpot_Rowboat_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_ClamberSpot_Rowboat.BP_ClamberSpot_Rowboat_C"));
 		return ptr;
 	}
 

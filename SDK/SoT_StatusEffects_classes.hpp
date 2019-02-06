@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusBase");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusBase"));
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusResponse");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusResponse"));
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface"));
 		return ptr;
 	}
 
@@ -67,7 +67,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectRecipientInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectRecipientInterface"));
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusResponseAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusResponseAsset"));
 		return ptr;
 	}
 
@@ -101,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusRecipientResponseList");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusRecipientResponseList"));
 		return ptr;
 	}
 
@@ -119,7 +119,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.LightweightStatusEffectManagerComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.LightweightStatusEffectManagerComponent"));
 		return ptr;
 	}
 
@@ -136,7 +136,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.MaterialStatusSusceptibilityInterface"));
 		return ptr;
 	}
 
@@ -151,7 +151,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.SurfaceMaterialStatusZoneInterface"));
 		return ptr;
 	}
 
@@ -170,7 +170,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.MaterialStatusSusceptibilityComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.MaterialStatusSusceptibilityComponent"));
 		return ptr;
 	}
 
@@ -185,7 +185,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectTicketDispenserInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectTicketDispenserInterface"));
 		return ptr;
 	}
 
@@ -203,12 +203,43 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class StatusEffects.StatusEffectManagerComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectManagerComponent"));
 		return ptr;
 	}
 
 
 	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects);
+};
+
+
+// Class StatusEffects.StatusEffectPersistenceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UStatusEffectPersistenceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectPersistenceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusEffectPersistenceComponent
+// 0x0008 (0x00D8 - 0x00D0)
+class UStatusEffectPersistenceComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectPersistenceComponent"));
+		return ptr;
+	}
+
 };
 
 

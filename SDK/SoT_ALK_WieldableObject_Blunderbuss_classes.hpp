@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass ALK_WieldableObject_Blunderbuss.ALK_WieldableObject_Blunderbuss_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass ALK_WieldableObject_Blunderbuss.ALK_WieldableObject_Blunderbuss_C"));
 		return ptr;
 	}
 

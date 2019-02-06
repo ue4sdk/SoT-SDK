@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_sky.wsp_sky_C
-// 0x000C (0x04A4 - 0x0498)
+// 0x000C (0x04AC - 0x04A0)
 class Awsp_sky_C : public ALevelScriptActor
 {
 public:
-	float                                              Atmospheric_Cloud_Pressure;                               // 0x0498(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ElapsedTime;                                              // 0x049C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Interval;                                                 // 0x04A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Atmospheric_Cloud_Pressure;                               // 0x04A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ElapsedTime;                                              // 0x04A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Interval;                                                 // 0x04A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass wsp_sky.wsp_sky_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass wsp_sky.wsp_sky_C"));
 		return ptr;
 	}
 

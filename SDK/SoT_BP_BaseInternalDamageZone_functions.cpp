@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BaseInternalDamageZone_C::OnRepairMounted()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.OnRepairMounted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.OnRepairMounted"));
 
 	struct
 	{
@@ -37,7 +37,7 @@ void ABP_BaseInternalDamageZone_C::OnRepairMounted()
 
 bool ABP_BaseInternalDamageZone_C::GetRepairMountLocation(class USceneComponent** MountLocation, struct FName* MountSocket)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.GetRepairMountLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.GetRepairMountLocation"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ bool ABP_BaseInternalDamageZone_C::GetRepairMountLocation(class USceneComponent*
 
 bool ABP_BaseInternalDamageZone_C::ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ShouldDrawTooltipInWorldSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ShouldDrawTooltipInWorldSpace"));
 
 	struct
 	{
@@ -92,7 +92,7 @@ bool ABP_BaseInternalDamageZone_C::ShouldDrawTooltipInWorldSpace(class AActor* I
 
 void ABP_BaseInternalDamageZone_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.UserConstructionScript"));
 
 	struct
 	{
@@ -110,7 +110,7 @@ void ABP_BaseInternalDamageZone_C::UserConstructionScript()
 
 void ABP_BaseInternalDamageZone_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -130,7 +130,7 @@ void ABP_BaseInternalDamageZone_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 void ABP_BaseInternalDamageZone_C::ExecuteUbergraph_BP_BaseInternalDamageZone(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ExecuteUbergraph_BP_BaseInternalDamageZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ExecuteUbergraph_BP_BaseInternalDamageZone"));
 
 	struct
 	{

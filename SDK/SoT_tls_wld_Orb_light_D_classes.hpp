@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass tls_wld_Orb_light_D.tls_wld_Orb_light_D_C
-// 0x0008 (0x04A8 - 0x04A0)
+// 0x0008 (0x04B0 - 0x04A8)
 class Atls_wld_Orb_light_D_C : public AStaticMeshActor
 {
 public:
-	class UPointLightComponent*                        PointLight;                                               // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass tls_wld_Orb_light_D.tls_wld_Orb_light_D_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass tls_wld_Orb_light_D.tls_wld_Orb_light_D_C"));
 		return ptr;
 	}
 

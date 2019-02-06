@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BoneForm_SkeletonAudioComponent.BP_BoneForm_SkeletonAudioComponent_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BoneForm_SkeletonAudioComponent.BP_BoneForm_SkeletonAudioComponent_C"));
 		return ptr;
 	}
 

@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Lantern_Rowboat_Front_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Lantern_Rowboat_Front_C::UserConstructionScript()
 
 void ABP_Lantern_Rowboat_Front_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -49,7 +49,7 @@ void ABP_Lantern_Rowboat_Front_C::ReceiveBeginPlay()
 
 void ABP_Lantern_Rowboat_Front_C::LightStateChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.LightStateChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.LightStateChanged"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ void ABP_Lantern_Rowboat_Front_C::LightStateChanged()
 
 void ABP_Lantern_Rowboat_Front_C::ExecuteUbergraph_BP_Lantern_Rowboat_Front(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.ExecuteUbergraph_BP_Lantern_Rowboat_Front");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Lantern_Rowboat_Front.BP_Lantern_Rowboat_Front_C.ExecuteUbergraph_BP_Lantern_Rowboat_Front"));
 
 	struct
 	{

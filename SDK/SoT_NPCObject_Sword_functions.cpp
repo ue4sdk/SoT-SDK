@@ -17,7 +17,7 @@ namespace SDK
 
 void ANPCObject_Sword_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NPCObject_Sword.NPCObject_Sword_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NPCObject_Sword.NPCObject_Sword_C.UserConstructionScript"));
 
 	struct
 	{

@@ -20,7 +20,7 @@ namespace SDK
 
 void UWwiseEmitterBlueprintLibrary::WwiseSetState(const struct FName& StateGroup, const struct FName& StateValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseSetState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseSetState"));
 
 	struct
 	{
@@ -44,7 +44,7 @@ void UWwiseEmitterBlueprintLibrary::WwiseSetState(const struct FName& StateGroup
 
 void UWwiseEmitterBlueprintLibrary::WwiseSetGlobalRTPC(const struct FName& RTPCName, float RTPCValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseSetGlobalRTPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseSetGlobalRTPC"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ void UWwiseEmitterBlueprintLibrary::WwiseSetGlobalRTPC(const struct FName& RTPCN
 
 void UWwiseEmitterBlueprintLibrary::WwisePostGlobalEvent(class UWwiseEvent* Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostGlobalEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostGlobalEvent"));
 
 	struct
 	{
@@ -94,7 +94,7 @@ void UWwiseEmitterBlueprintLibrary::WwisePostGlobalEvent(class UWwiseEvent* Even
 
 int UWwiseEmitterBlueprintLibrary::WwisePostEventAtLocation(class UWwiseEvent* Event, const struct FVector& Location, const struct FVector& Front, class UWwiseObjectPoolWrapper* EmitterPool, TEnumAsByte<EEmitterRelationship> Relationship, struct FWwiseEmitter* Emitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostEventAtLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostEventAtLocation"));
 
 	struct
 	{
@@ -132,7 +132,7 @@ int UWwiseEmitterBlueprintLibrary::WwisePostEventAtLocation(class UWwiseEvent* E
 
 bool UWwiseEmitterBlueprintLibrary::WwiseGetListenerInfo(int Viewport, struct FWwiseListenerInfo* InfoOut)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetListenerInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetListenerInfo"));
 
 	struct
 	{
@@ -167,7 +167,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseGetListenerInfo(int Viewport, struct FW
 
 bool UWwiseEmitterBlueprintLibrary::WwiseGetListenerEmitter(class UObject* WorldContextObject, int ListenerIndex, const struct FName& Name, const struct FVector& Offset, bool bFollowOrientaion, class UWwiseObjectPoolWrapper* EmitterPool, struct FWwiseEmitter* Emitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetListenerEmitter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetListenerEmitter"));
 
 	struct
 	{
@@ -210,7 +210,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseGetListenerEmitter(class UObject* World
 
 bool UWwiseEmitterBlueprintLibrary::WwiseGetEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter"));
 
 	struct
 	{
@@ -248,7 +248,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseGetEmitter(const struct FName& Name, cl
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterWaitToComplete(const struct FWwiseEmitter& Emitter, int PlayId, class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterWaitToComplete");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterWaitToComplete"));
 
 	struct
 	{
@@ -281,7 +281,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterWaitToComplete(const struct FWwi
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterStop(const struct FWwiseEmitter& Emitter, int PlayId, float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterStop");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterStop"));
 
 	struct
 	{
@@ -312,7 +312,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterStop(const struct FWwiseEmitter&
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetRTPCOnAll(TArray<struct FWwiseEmitter> Emitters, const struct FName& Name, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetRTPCOnAll");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetRTPCOnAll"));
 
 	struct
 	{
@@ -343,7 +343,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetRTPCOnAll(TArray<struct FWwis
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetRTPC(const struct FWwiseEmitter& Emitter, const struct FName& Name, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetRTPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetRTPC"));
 
 	struct
 	{
@@ -373,7 +373,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetRTPC(const struct FWwiseEmitt
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetParams(const struct FWwiseEmitter& Emitter, const struct FWwiseEmitterParams& Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetParams"));
 
 	struct
 	{
@@ -401,7 +401,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetParams(const struct FWwiseEmi
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetLocation(const struct FWwiseEmitter& Emitter, const struct FVector& Location)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetLocation"));
 
 	struct
 	{
@@ -432,7 +432,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetLocation(const struct FWwiseE
 
 TArray<int> UWwiseEmitterBlueprintLibrary::WwiseEmitterPostEventOnAll(TArray<struct FWwiseEmitter> Emitters, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterPostEventOnAll");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterPostEventOnAll"));
 
 	struct
 	{
@@ -469,7 +469,7 @@ TArray<int> UWwiseEmitterBlueprintLibrary::WwiseEmitterPostEventOnAll(TArray<str
 
 int UWwiseEmitterBlueprintLibrary::WwiseEmitterPostEvent(const struct FWwiseEmitter& Emitter, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterPostEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterPostEvent"));
 
 	struct
 	{
@@ -502,7 +502,7 @@ int UWwiseEmitterBlueprintLibrary::WwiseEmitterPostEvent(const struct FWwiseEmit
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterIsValid(const struct FWwiseEmitter& Emitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterIsValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterIsValid"));
 
 	struct
 	{
@@ -528,7 +528,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterIsValid(const struct FWwiseEmitt
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterIsPlaying(const struct FWwiseEmitter& Emitter, class UWwiseEvent* Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterIsPlaying");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterIsPlaying"));
 
 	struct
 	{
@@ -557,7 +557,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterIsPlaying(const struct FWwiseEmi
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterGetRTPC(const struct FWwiseEmitter& Emitter, const struct FName& Name, float* Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterGetRTPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterGetRTPC"));
 
 	struct
 	{
@@ -587,7 +587,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterGetRTPC(const struct FWwiseEmitt
 
 void UWwiseEmitterBlueprintLibrary::WwiseEmitterDestroy(struct FWwiseEmitter* Emitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterDestroy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterDestroy"));
 
 	struct
 	{
@@ -613,7 +613,7 @@ void UWwiseEmitterBlueprintLibrary::WwiseEmitterDestroy(struct FWwiseEmitter* Em
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentSetRTPCOnAll(TArray<class UWwiseEmitterComponent*> EmitterComponents, const struct FName& Name, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentSetRTPCOnAll");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentSetRTPCOnAll"));
 
 	struct
 	{
@@ -644,7 +644,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentSetRTPCOnAll(TArray<cla
 
 bool UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentSetRTPC(class UWwiseEmitterComponent* EmitterComponent, const struct FName& Name, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentSetRTPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentSetRTPC"));
 
 	struct
 	{
@@ -677,7 +677,7 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentSetRTPC(class UWwiseEmi
 
 TArray<int> UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentPostEventOnAll(TArray<class UWwiseEmitterComponent*> EmitterComponents, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentPostEventOnAll");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentPostEventOnAll"));
 
 	struct
 	{
@@ -714,7 +714,7 @@ TArray<int> UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentPostEventOnAll(T
 
 int UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentPostEvent(class UWwiseEmitterComponent* EmitterComponent, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentPostEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterComponentPostEvent"));
 
 	struct
 	{
@@ -753,7 +753,7 @@ int UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentPostEvent(class UWwiseEm
 
 int UWwiseEmitterBlueprintLibrary::WwiseCreateDetachedEmitter(const struct FName& Name, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Location, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship, const struct FVector& Forward, struct FWwiseEmitter* Emitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateDetachedEmitter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateDetachedEmitter"));
 
 	struct
 	{
@@ -796,7 +796,7 @@ int UWwiseEmitterBlueprintLibrary::WwiseCreateDetachedEmitter(const struct FName
 
 bool UWwiseEmitterBlueprintLibrary::SeekOnEvent(const struct FWwiseEmitter& WwiseEmitter, class UWwiseEvent* in_eventID, int in_iPosition, bool in_bSeekToNearestMarker, int in_PlayingID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.SeekOnEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.SeekOnEvent"));
 
 	struct
 	{
@@ -831,7 +831,7 @@ bool UWwiseEmitterBlueprintLibrary::SeekOnEvent(const struct FWwiseEmitter& Wwis
 
 bool UWwiseEmitterBlueprintLibrary::GetPlaybackPosition(const struct FWwiseEmitter& WwiseEmitter, int in_PlayingID, int* PlaybackPositionInMs)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterBlueprintLibrary.GetPlaybackPosition");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.GetPlaybackPosition"));
 
 	struct
 	{
@@ -859,7 +859,7 @@ bool UWwiseEmitterBlueprintLibrary::GetPlaybackPosition(const struct FWwiseEmitt
 
 void AAudioEventToComponentMap::ClearMappings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioEventToComponentMap.ClearMappings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.ClearMappings"));
 
 	struct
 	{
@@ -880,7 +880,7 @@ void AAudioEventToComponentMap::ClearMappings()
 
 void AAudioEventToComponentMap::AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioEventToComponentMap.AddMappingWithSingleEmitterComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.AddMappingWithSingleEmitterComponent"));
 
 	struct
 	{
@@ -911,7 +911,7 @@ void AAudioEventToComponentMap::AddMappingWithSingleEmitterComponent(class UWwis
 
 void AAudioEventToComponentMap::AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioEventToComponentMap.AddMapping");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.AddMapping"));
 
 	struct
 	{
@@ -937,7 +937,7 @@ void AAudioEventToComponentMap::AddMapping(class UWwiseEvent* PlayEvent, class U
 
 void UAudioEventToComponentMapComponent::ClearMappings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioEventToComponentMapComponent.ClearMappings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.ClearMappings"));
 
 	struct
 	{
@@ -958,7 +958,7 @@ void UAudioEventToComponentMapComponent::ClearMappings()
 
 void UAudioEventToComponentMapComponent::AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioEventToComponentMapComponent.AddMappingWithSingleEmitterComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.AddMappingWithSingleEmitterComponent"));
 
 	struct
 	{
@@ -989,7 +989,7 @@ void UAudioEventToComponentMapComponent::AddMappingWithSingleEmitterComponent(cl
 
 void UAudioEventToComponentMapComponent::AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioEventToComponentMapComponent.AddMapping");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.AddMapping"));
 
 	struct
 	{
@@ -1017,7 +1017,7 @@ void UAudioEventToComponentMapComponent::AddMapping(class UWwiseEvent* PlayEvent
 
 struct FName UAudioSpaceDataAsset::GetRtpcName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioSpaceDataAsset.GetRtpcName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioSpaceDataAsset.GetRtpcName"));
 
 	struct
 	{
@@ -1038,7 +1038,7 @@ struct FName UAudioSpaceDataAsset::GetRtpcName()
 
 void UAudioPortalComponent::SetParentShip(class AActor* ParentShip)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioPortalComponent.SetParentShip");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioPortalComponent.SetParentShip"));
 
 	struct
 	{
@@ -1058,7 +1058,7 @@ void UAudioPortalComponent::SetParentShip(class AActor* ParentShip)
 
 void UAudioPortalInterface::UnregisterPortal(class UAudioPortalComponent* AudioPortal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioPortalInterface.UnregisterPortal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioPortalInterface.UnregisterPortal"));
 
 	struct
 	{
@@ -1079,7 +1079,7 @@ void UAudioPortalInterface::UnregisterPortal(class UAudioPortalComponent* AudioP
 
 void UAudioPortalInterface::RegisterPortal(class UAudioPortalComponent* AudioPortal, class AActor* OwningActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioPortalInterface.RegisterPortal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioPortalInterface.RegisterPortal"));
 
 	struct
 	{
@@ -1103,7 +1103,7 @@ void UAudioPortalInterface::RegisterPortal(class UAudioPortalComponent* AudioPor
 
 TArray<TWeakObjectPtr<class UAudioPortalComponent>> UAudioPortalInterface::GetAllRegisteredPortalsInSpecificSpace(class UAudioSpaceDataAsset* AudioSpace, class AActor* OwningActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioPortalInterface.GetAllRegisteredPortalsInSpecificSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioPortalInterface.GetAllRegisteredPortalsInSpecificSpace"));
 
 	struct
 	{
@@ -1128,7 +1128,7 @@ TArray<TWeakObjectPtr<class UAudioPortalComponent>> UAudioPortalInterface::GetAl
 
 TArray<TWeakObjectPtr<class UAudioPortalComponent>> UAudioPortalInterface::GetAllRegisteredPortals()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioPortalInterface.GetAllRegisteredPortals");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioPortalInterface.GetAllRegisteredPortals"));
 
 	struct
 	{
@@ -1151,7 +1151,7 @@ TArray<TWeakObjectPtr<class UAudioPortalComponent>> UAudioPortalInterface::GetAl
 
 void UAudioSpaceComponent::OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioSpaceComponent.OnOverlapEnd");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioSpaceComponent.OnOverlapEnd"));
 
 	struct
 	{
@@ -1179,7 +1179,7 @@ void UAudioSpaceComponent::OnOverlapEnd(class AActor* OtherActor, class UPrimiti
 
 void UAudioSpaceComponent::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioSpaceComponent.OnOverlapBegin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioSpaceComponent.OnOverlapBegin"));
 
 	struct
 	{
@@ -1207,7 +1207,7 @@ void UAudioSpaceComponent::OnOverlapBegin(class AActor* OtherActor, class UPrimi
 
 class UAudioSpaceDataAsset* UAudioSpaceTrackerComponent::GetCurrentSpace()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.AudioSpaceTrackerComponent.GetCurrentSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioSpaceTrackerComponent.GetCurrentSpace"));
 
 	struct
 	{
@@ -1226,7 +1226,7 @@ class UAudioSpaceDataAsset* UAudioSpaceTrackerComponent::GetCurrentSpace()
 
 void UStaticMeshAudioEmittersComponent::PopulateInstanceAssociations()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.StaticMeshAudioEmittersComponent.PopulateInstanceAssociations");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.StaticMeshAudioEmittersComponent.PopulateInstanceAssociations"));
 
 	struct
 	{
@@ -1247,7 +1247,7 @@ void UStaticMeshAudioEmittersComponent::PopulateInstanceAssociations()
 
 bool UWwiseEmitterComponentBlueprintLibrary::GetNamedEmitter(const struct FName& InNameOfEmitterToRetrieve, class AActor* InActorToFindEmitterOn, struct FWwiseEmitter* OutEmitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetNamedEmitter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetNamedEmitter"));
 
 	struct
 	{
@@ -1281,7 +1281,7 @@ bool UWwiseEmitterComponentBlueprintLibrary::GetNamedEmitter(const struct FName&
 
 bool UWwiseEmitterComponentBlueprintLibrary::GetClosestNEmitters(const struct FVector& InFromPosition, int InNumEmittersToFind, class AActor* InActorToFindClosestEmitterOn, TArray<struct FWwiseEmitter>* OutEmitters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetClosestNEmitters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetClosestNEmitters"));
 
 	struct
 	{
@@ -1316,7 +1316,7 @@ bool UWwiseEmitterComponentBlueprintLibrary::GetClosestNEmitters(const struct FV
 
 bool UWwiseEmitterComponentBlueprintLibrary::GetClosestEmitter(const struct FVector& InFromPosition, class AActor* InActorToFindClosestEmitterOn, struct FWwiseEmitter* OutEmitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetClosestEmitter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetClosestEmitter"));
 
 	struct
 	{

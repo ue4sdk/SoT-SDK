@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_SunkenCurseArtefact_Sapphire_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SunkenCurseArtefact_Sapphire.BP_SunkenCurseArtefact_Sapphire_C.UserConstructionScript"));
 
 	struct
 	{

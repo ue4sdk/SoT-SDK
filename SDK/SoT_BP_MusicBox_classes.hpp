@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MusicBox.BP_MusicBox_C
-// 0x0000 (0x0598 - 0x0598)
+// 0x0000 (0x05A0 - 0x05A0)
 class ABP_MusicBox_C : public AMusicBox
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MusicBox.BP_MusicBox_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MusicBox.BP_MusicBox_C"));
 		return ptr;
 	}
 

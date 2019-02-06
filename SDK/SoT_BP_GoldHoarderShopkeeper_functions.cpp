@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_GoldHoarderShopkeeper_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GoldHoarderShopkeeper.BP_GoldHoarderShopkeeper_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GoldHoarderShopkeeper.BP_GoldHoarderShopkeeper_C.UserConstructionScript"));
 
 	struct
 	{

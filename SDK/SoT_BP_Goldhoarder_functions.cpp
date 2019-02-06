@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Goldhoarder_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Goldhoarder.BP_Goldhoarder_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Goldhoarder.BP_Goldhoarder_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Goldhoarder_C::UserConstructionScript()
 
 void ABP_Goldhoarder_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Goldhoarder_C::ReceiveBeginPlay()
 
 void ABP_Goldhoarder_C::ReceiveTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Goldhoarder.BP_Goldhoarder_C.ReceiveTick"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_Goldhoarder_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_Goldhoarder_C::ExecuteUbergraph_BP_Goldhoarder(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Goldhoarder.BP_Goldhoarder_C.ExecuteUbergraph_BP_Goldhoarder");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Goldhoarder.BP_Goldhoarder_C.ExecuteUbergraph_BP_Goldhoarder"));
 
 	struct
 	{

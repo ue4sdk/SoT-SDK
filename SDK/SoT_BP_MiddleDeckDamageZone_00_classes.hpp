@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MiddleDeckDamageZone_00.BP_MiddleDeckDamageZone_00_C
-// 0x0000 (0x08F0 - 0x08F0)
+// 0x0000 (0x0900 - 0x0900)
 class ABP_MiddleDeckDamageZone_00_C : public ABP_BaseInternalDamageZone_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MiddleDeckDamageZone_00.BP_MiddleDeckDamageZone_00_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MiddleDeckDamageZone_00.BP_MiddleDeckDamageZone_00_C"));
 		return ptr;
 	}
 

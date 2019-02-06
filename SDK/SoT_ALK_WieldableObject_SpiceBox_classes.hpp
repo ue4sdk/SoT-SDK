@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass ALK_WieldableObject_SpiceBox.ALK_WieldableObject_SpiceBox_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass ALK_WieldableObject_SpiceBox.ALK_WieldableObject_SpiceBox_C"));
 		return ptr;
 	}
 

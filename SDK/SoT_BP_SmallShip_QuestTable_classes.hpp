@@ -15,19 +15,20 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C
-// 0x0028 (0x07F8 - 0x07D0)
+// 0x0030 (0x0770 - 0x0740)
 class ABP_SmallShip_QuestTable_C : public AVoyageProposalContainer
 {
 public:
-	class UChildActorComponent*                        CancelVoyage;                                             // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        VoyageSelectionSlot4;                                     // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        VoyageSelectionSlot3;                                     // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        VoyageSelectionSlot2;                                     // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        VoyageSelectionSlot1;                                     // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        CancelTale;                                               // 0x0740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        CancelVoyage;                                             // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot4;                                     // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot3;                                     // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot2;                                     // 0x0760(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        VoyageSelectionSlot1;                                     // 0x0768(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C"));
 		return ptr;
 	}
 

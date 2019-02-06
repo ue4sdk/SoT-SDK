@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GeyserManager.BP_GeyserManager_C
-// 0x0000 (0x04A8 - 0x04A8)
+// 0x0000 (0x04B0 - 0x04B0)
 class ABP_GeyserManager_C : public AGeyserManager
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_GeyserManager.BP_GeyserManager_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_GeyserManager.BP_GeyserManager_C"));
 		return ptr;
 	}
 

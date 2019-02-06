@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Occlusion.OcclusionFunctionLibrary"));
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Occlusion.OcclusionInterface"));
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionMock");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Occlusion.OcclusionMock"));
 		return ptr;
 	}
 
@@ -73,7 +73,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Occlusion.OcclusionService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Occlusion.OcclusionService"));
 		return ptr;
 	}
 

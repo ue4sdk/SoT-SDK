@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass ClusterDesc_5Items_5Wood.ClusterDesc_5Items_5Wood_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass ClusterDesc_5Items_5Wood.ClusterDesc_5Items_5Wood_C"));
 		return ptr;
 	}
 

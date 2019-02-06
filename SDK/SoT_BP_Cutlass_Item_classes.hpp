@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C
-// 0x0008 (0x0A48 - 0x0A40)
+// 0x0008 (0x0A50 - 0x0A48)
 class ABP_Cutlass_Item_C : public AMeleeWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A40(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A48(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C"));
 		return ptr;
 	}
 

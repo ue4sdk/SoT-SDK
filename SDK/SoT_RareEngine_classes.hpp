@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.RareGameEngine");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.RareGameEngine"));
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.AudioHardwareDeviceService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.AudioHardwareDeviceService"));
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.HitchDiagnosisBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.HitchDiagnosisBlueprintFunctionLibrary"));
 		return ptr;
 	}
 
@@ -76,7 +76,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.MemoryUsageVisualiserSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.MemoryUsageVisualiserSettings"));
 		return ptr;
 	}
 
@@ -84,14 +84,14 @@ public:
 
 
 // Class RareEngine.RareHUD
-// 0x0000 (0x0588 - 0x0588)
+// 0x0000 (0x0590 - 0x0590)
 class ARareHUD : public AHUD
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.RareHUD");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.RareHUD"));
 		return ptr;
 	}
 
@@ -109,7 +109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.StallDetector");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.StallDetector"));
 		return ptr;
 	}
 
@@ -128,7 +128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareEngine.StaticMeshActorBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.StaticMeshActorBlueprintLibrary"));
 		return ptr;
 	}
 

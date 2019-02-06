@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Campaign010_ShroudedSpoils_BilgeRats_NPC_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Campaign010_ShroudedSpoils_BilgeRats_NPC.BP_Campaign010_ShroudedSpoils_BilgeRats_NPC_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Campaign010_ShroudedSpoils_BilgeRats_NPC.BP_Campaign010_ShroudedSpoils_BilgeRats_NPC_C.UserConstructionScript"));
 
 	struct
 	{

@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands.Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands.Voyage_SOT_World_Layout_1_With_Cursed_Chests_And_Riddles_With_Actions_And_New_Islands_C"));
 		return ptr;
 	}
 

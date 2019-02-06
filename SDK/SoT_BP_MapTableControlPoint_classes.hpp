@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MapTableControlPoint.BP_MapTableControlPoint_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x05F8 - 0x05F8)
 class ABP_MapTableControlPoint_C : public AMapTableControlPoint
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MapTableControlPoint.BP_MapTableControlPoint_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MapTableControlPoint.BP_MapTableControlPoint_C"));
 		return ptr;
 	}
 

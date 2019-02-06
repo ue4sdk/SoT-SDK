@@ -21,11 +21,12 @@ class UAthenaCheatManager : public UCheatManager
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      CinematicCameraControllerClass;                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0088(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x24];                                      // 0x0088(0x0024) MISSED OFFSET
+	float                                              TeleportToDigsiteHeightOffset;                            // 0x00AC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaCheat.AthenaCheatManager");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaCheat.AthenaCheatManager"));
 		return ptr;
 	}
 
@@ -58,6 +59,7 @@ public:
 	void ToggleThirdPerson();
 	void ToggleNearestSuperheatedWater();
 	void ToggleNearestLava();
+	void ToggleMigrationPointOfInterestChecks(bool Enabled);
 	void ToggleFastShipControls();
 	void ToggleDrawShipSpeed();
 	void ToggleDisplayCannonAISpawnerZones();
@@ -87,9 +89,11 @@ public:
 	void TeleportActorToTeleportLocationActor(const class FString& ControllerActorIdString, const class FString& TeleportLocationActorIdString);
 	void TeleportActorToLocation(const class FString& ActorIdString, float LocationX, float LocationY, float LocationZ, float Yaw);
 	void TeleportActorToIsland(const class FString& ActorIdString, const class FString& IslandName);
+	void TeleportActorToDigSite(const class FString& ActorIdString);
 	void TeleportActorToActorWithOffset(const class FString& ActorIdString, const class FString& DestinationActorIdString, float OffsetX, float OffsetY, float OffsetZ);
 	void SuperSailor();
-	void StartVoyage(const class FString& SourceAssetName);
+	void StartVoyage(const class FString& SourceAssetName, bool Development);
+	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
 	void StartNearestVolcano();
 	void StartNearestGeysers();
 	void StartNearestEarthquake();
@@ -206,6 +210,7 @@ public:
 	void ResetStats();
 	void ResetMouseDelta();
 	void ResetDemoSession(bool StartNewSession);
+	void ResetAllMechanisms();
 	void ResetAITeamAttitudes();
 	void ReplenishShip();
 	void ReplaceShipWithSmallShip(const class FString& ShipActorIdConsoleString);
@@ -325,6 +330,7 @@ public:
 	void CheckLandmarkRelativeToIslandCalculation();
 	void CapsizeShip();
 	void CancelVoyage();
+	void CancelTale();
 	void CancelEmergentVoyages();
 	void CancelAllCrewVoyages();
 	void CancelActiveAIShipEncounters();
@@ -335,6 +341,7 @@ public:
 	void ApplyDamageToAllDamageZones(float Damage);
 	void ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString);
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
+	void AllowTeleportWithItems(bool CanTeleport);
 	void AIPlayerShip();
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);

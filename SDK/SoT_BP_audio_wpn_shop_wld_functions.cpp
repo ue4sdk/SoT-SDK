@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_audio_wpn_shop_wld_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_audio_wpn_shop_wld_C::UserConstructionScript()
 
 void ABP_audio_wpn_shop_wld_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_audio_wpn_shop_wld_C::ReceiveBeginPlay()
 
 void ABP_audio_wpn_shop_wld_C::ExecuteUbergraph_BP_audio_wpn_shop_wld(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.ExecuteUbergraph_BP_audio_wpn_shop_wld");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.ExecuteUbergraph_BP_audio_wpn_shop_wld"));
 
 	struct
 	{

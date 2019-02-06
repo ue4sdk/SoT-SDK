@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_ForceSpot_Rowboat_Launch_C::SetupClamberSpline()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C.SetupClamberSpline");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C.SetupClamberSpline"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_ForceSpot_Rowboat_Launch_C::SetupClamberSpline()
 
 void ABP_ForceSpot_Rowboat_Launch_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C.UserConstructionScript"));
 
 	struct
 	{

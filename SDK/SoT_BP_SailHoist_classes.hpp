@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailHoist.BP_SailHoist_C
-// 0x0008 (0x0828 - 0x0820)
+// 0x0008 (0x08C0 - 0x08B8)
 class ABP_SailHoist_C : public ASailHoist
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x08B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_SailHoist.BP_SailHoist_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_SailHoist.BP_SailHoist_C"));
 		return ptr;
 	}
 

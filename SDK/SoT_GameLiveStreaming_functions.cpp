@@ -17,7 +17,7 @@ namespace SDK
 
 void UGameLiveStreamingFunctionLibrary::StopBroadcastingGame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame"));
 
 	struct
 	{
@@ -44,7 +44,7 @@ void UGameLiveStreamingFunctionLibrary::StopBroadcastingGame()
 
 void UGameLiveStreamingFunctionLibrary::StartBroadcastingGame(int FrameRate, float ScreenScaling, bool bEnableWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, bool bDrawSimpleWebCamVideo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartBroadcastingGame");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartBroadcastingGame"));
 
 	struct
 	{
@@ -81,7 +81,7 @@ void UGameLiveStreamingFunctionLibrary::StartBroadcastingGame(int FrameRate, flo
 
 bool UGameLiveStreamingFunctionLibrary::IsBroadcastingGame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsBroadcastingGame");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsBroadcastingGame"));
 
 	struct
 	{
@@ -104,7 +104,7 @@ bool UGameLiveStreamingFunctionLibrary::IsBroadcastingGame()
 
 class UQueryLiveStreamsCallbackProxy* UQueryLiveStreamsCallbackProxy::QueryLiveStreams(const class FString& GameName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.QueryLiveStreamsCallbackProxy.QueryLiveStreams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameLiveStreaming.QueryLiveStreamsCallbackProxy.QueryLiveStreams"));
 
 	struct
 	{

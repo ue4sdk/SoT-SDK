@@ -17,7 +17,7 @@ namespace SDK
 
 void ANPCObject_Flint_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NPCObject_Flint.NPCObject_Flint_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NPCObject_Flint.NPCObject_Flint_C.UserConstructionScript"));
 
 	struct
 	{

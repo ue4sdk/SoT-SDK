@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaServerMigration.ServerMigrationGatherableActorInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaServerMigration.ServerMigrationGatherableActorInterface"));
 		return ptr;
 	}
 

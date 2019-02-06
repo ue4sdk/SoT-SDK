@@ -19,7 +19,7 @@ namespace SDK
 
 void ABP_VotableCancelVoyage_C::PlayShowTokenAnimation(class UPrimitiveComponent* Token)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.PlayShowTokenAnimation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.PlayShowTokenAnimation"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void ABP_VotableCancelVoyage_C::PlayShowTokenAnimation(class UPrimitiveComponent
 
 void ABP_VotableCancelVoyage_C::Is_Session_Locked(bool* IsLocked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.Is Session Locked");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.Is Session Locked"));
 
 	struct
 	{
@@ -61,7 +61,7 @@ void ABP_VotableCancelVoyage_C::Is_Session_Locked(bool* IsLocked)
 
 struct FText ABP_VotableCancelVoyage_C::GetObjectDisplayName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.GetObjectDisplayName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.GetObjectDisplayName"));
 
 	struct
 	{
@@ -80,7 +80,7 @@ struct FText ABP_VotableCancelVoyage_C::GetObjectDisplayName()
 
 void ABP_VotableCancelVoyage_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.UserConstructionScript"));
 
 	struct
 	{
@@ -96,7 +96,7 @@ void ABP_VotableCancelVoyage_C::UserConstructionScript()
 
 void ABP_VotableCancelVoyage_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -114,7 +114,7 @@ void ABP_VotableCancelVoyage_C::ReceiveBeginPlay()
 
 void ABP_VotableCancelVoyage_C::OnVoteAdded(const TScriptInterface<class UVoterInterface>& Voter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteAdded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteAdded"));
 
 	struct
 	{
@@ -134,7 +134,7 @@ void ABP_VotableCancelVoyage_C::OnVoteAdded(const TScriptInterface<class UVoterI
 
 void ABP_VotableCancelVoyage_C::OnVoteRemoved(const TScriptInterface<class UVoterInterface>& Voter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteRemoved");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.OnVoteRemoved"));
 
 	struct
 	{
@@ -154,7 +154,7 @@ void ABP_VotableCancelVoyage_C::OnVoteRemoved(const TScriptInterface<class UVote
 
 void ABP_VotableCancelVoyage_C::ExecuteUbergraph_BP_VotableCancelVoyage(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ExecuteUbergraph_BP_VotableCancelVoyage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableCancelVoyage.BP_VotableCancelVoyage_C.ExecuteUbergraph_BP_VotableCancelVoyage"));
 
 	struct
 	{

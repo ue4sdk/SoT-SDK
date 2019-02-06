@@ -19,7 +19,7 @@ namespace SDK
 
 class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICharPathFollowingComp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetAIController.GetAthenaAICharPathFollowingComp");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetAIController.GetAthenaAICharPathFollowingComp"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 
 void UPetsService::RemovePetFromActor(class AActor* InOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetsService.RemovePetFromActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetsService.RemovePetFromActor"));
 
 	struct
 	{

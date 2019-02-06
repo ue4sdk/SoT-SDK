@@ -23,7 +23,7 @@ namespace SDK
 
 void UBP_Placement_Functions_C::GenerateRadialXYPositionsAroundPoint(const struct FVector& Centre, float Radius, int Segments, class UObject* __WorldContext, TArray<struct FVector>* Positions)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.GenerateRadialXYPositionsAroundPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.GenerateRadialXYPositionsAroundPoint"));
 
 	struct
 	{
@@ -57,7 +57,7 @@ void UBP_Placement_Functions_C::GenerateRadialXYPositionsAroundPoint(const struc
 
 void UBP_Placement_Functions_C::Get_First_Valid_Hit(class UObject* __WorldContext, TArray<struct FHitResult>* Hits, bool* Is_Valid_Hit, struct FHitResult* Hit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Get First Valid Hit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get First Valid Hit"));
 
 	struct
 	{
@@ -94,7 +94,7 @@ void UBP_Placement_Functions_C::Get_First_Valid_Hit(class UObject* __WorldContex
 
 void UBP_Placement_Functions_C::Generate_Random_Rotated_Box_Raycast(const struct FVector& Centre, const struct FVector& Extent, const struct FRotator& Rotation, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Rotated Box Raycast");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Rotated Box Raycast"));
 
 	struct
 	{
@@ -138,7 +138,7 @@ void UBP_Placement_Functions_C::Generate_Random_Rotated_Box_Raycast(const struct
 
 void UBP_Placement_Functions_C::Detonate_Charge(class AActor* Spawn, const struct FVector& Position, float Radius, float Radius_Overlap, int Seed, class UObject* __WorldContext, TArray<struct FLinearColor>* Blast_Radii, TArray<struct FLinearColor>* Blast_Radii_Out)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Detonate Charge");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Detonate Charge"));
 
 	struct
 	{
@@ -179,7 +179,7 @@ void UBP_Placement_Functions_C::Detonate_Charge(class AActor* Spawn, const struc
 
 void UBP_Placement_Functions_C::Does_A_Delete_B(const class FString& A_String, const class FString& B_String, class UObject* __WorldContext, bool* Return)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Does A Delete B");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Does A Delete B"));
 
 	struct
 	{
@@ -211,7 +211,7 @@ void UBP_Placement_Functions_C::Does_A_Delete_B(const class FString& A_String, c
 
 void UBP_Placement_Functions_C::Get_Actor_Placement_Asset_Type(class AActor* Input_Actor, class UObject* __WorldContext, bool* Returning_Tag, class FString* Asset_Tag)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Actor Placement Asset Type");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Actor Placement Asset Type"));
 
 	struct
 	{
@@ -244,7 +244,7 @@ void UBP_Placement_Functions_C::Get_Actor_Placement_Asset_Type(class AActor* Inp
 
 void UBP_Placement_Functions_C::Check_Actor_Overlap(class AActor* Input_Actor, class UObject* __WorldContext, bool* Delete_Actor, TArray<class AActor*>* Overlaps_to_Delete)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Actor Overlap");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Actor Overlap"));
 
 	struct
 	{
@@ -279,7 +279,7 @@ void UBP_Placement_Functions_C::Check_Actor_Overlap(class AActor* Input_Actor, c
 
 void UBP_Placement_Functions_C::Get_Mesh_Instance_Transform(const struct FPlacementGardenSeed& Selected_Mesh, const struct FVector& Location, const struct FVector& Normal, class UObject* __WorldContext, struct FRandomStream* Random, struct FTransform* Transform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Mesh Instance Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Mesh Instance Transform"));
 
 	struct
 	{
@@ -315,7 +315,7 @@ void UBP_Placement_Functions_C::Get_Mesh_Instance_Transform(const struct FPlacem
 
 void UBP_Placement_Functions_C::Normalise_Mesh_Probabilities(class UObject* __WorldContext, TArray<struct FPlacementGardenSeed>* Charges, TArray<float>* Charge_Probabilities)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Mesh Probabilities");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Mesh Probabilities"));
 
 	struct
 	{
@@ -357,7 +357,7 @@ void UBP_Placement_Functions_C::Normalise_Mesh_Probabilities(class UObject* __Wo
 
 void UBP_Placement_Functions_C::Set_Mesh(float Generator_Radius, float Spawn_Clustering, float Spawn_Radius_Multiplier, class AActor* Actor, class UObject* __WorldContext, TArray<struct FPlacementGardenSeed>* Meshes, TArray<float>* Mesh_Probabilities, TArray<class UObject*>* Physical_Materials, TArray<struct FLinearColor>* Mesh_Radii, struct FRandomStream* Random, bool* Spawn_Permission, struct FTransform* Transform, float* Radius, int* Mesh_Index, struct FPlacementGardenSeed* Mesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Mesh");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Mesh"));
 
 	struct
 	{
@@ -430,7 +430,7 @@ void UBP_Placement_Functions_C::Set_Mesh(float Generator_Radius, float Spawn_Clu
 
 void UBP_Placement_Functions_C::Set_Charge(float Generator_Radius, float Spawn_Clustering, bool Box_Distribution, class AActor* Actor, class UObject* __WorldContext, TArray<struct FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities, TArray<class UObject*>* Physical_Materials, TArray<struct FLinearColor>* Blast_Radii, struct FRandomStream* Random, bool* Spawn_Permission, struct FVector* Position, float* Radius, struct FPlacementBombCharge* Charge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Charge");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Charge"));
 
 	struct
 	{
@@ -490,7 +490,7 @@ void UBP_Placement_Functions_C::Set_Charge(float Generator_Radius, float Spawn_C
 
 void UBP_Placement_Functions_C::Check_Surface_Materials(class UObject* Placement_Material, class UObject* __WorldContext, TArray<class UObject*>* Physical_Materials, bool* Placement_Permission)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Surface Materials");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Surface Materials"));
 
 	struct
 	{
@@ -523,7 +523,7 @@ void UBP_Placement_Functions_C::Check_Surface_Materials(class UObject* Placement
 
 void UBP_Placement_Functions_C::Check_Slope(const struct FVector& Normal, const struct FVector2D& Slope_Range, class UObject* __WorldContext, bool* Placement_Permission)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Slope");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Slope"));
 
 	struct
 	{
@@ -555,7 +555,7 @@ void UBP_Placement_Functions_C::Check_Slope(const struct FVector& Normal, const 
 
 void UBP_Placement_Functions_C::Check_Height(const struct FVector& Position, const struct FVector2D& Height_Range, class UObject* __WorldContext, bool* Placement_Permission)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Height");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Height"));
 
 	struct
 	{
@@ -589,7 +589,7 @@ void UBP_Placement_Functions_C::Check_Height(const struct FVector& Position, con
 
 void UBP_Placement_Functions_C::Check_Radius_Overlap(const struct FVector& Position, float Radius, float Radius_Overlap, class UObject* __WorldContext, TArray<struct FLinearColor>* Blast_Radii, bool* Placement_Permission)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Radius Overlap");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Radius Overlap"));
 
 	struct
 	{
@@ -627,7 +627,7 @@ void UBP_Placement_Functions_C::Check_Radius_Overlap(const struct FVector& Posit
 
 void UBP_Placement_Functions_C::Set_Spawn_Properties(class UObject* Object, int Seed, float Radius, class UObject* __WorldContext, bool* Cast_Success)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Spawn Properties");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Spawn Properties"));
 
 	struct
 	{
@@ -663,7 +663,7 @@ void UBP_Placement_Functions_C::Set_Spawn_Properties(class UObject* Object, int 
 
 void UBP_Placement_Functions_C::Generate_Random_Box_Raycast(const struct FVector& Centre, const struct FVector& Extent, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Box Raycast");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Box Raycast"));
 
 	struct
 	{
@@ -701,7 +701,7 @@ void UBP_Placement_Functions_C::Generate_Random_Box_Raycast(const struct FVector
 
 void UBP_Placement_Functions_C::Get_Box_Sample_Count(class AActor* Actor, float Seed_Density, class UObject* __WorldContext, int* Sample_Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Box Sample Count");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Box Sample Count"));
 
 	struct
 	{
@@ -738,7 +738,7 @@ void UBP_Placement_Functions_C::Get_Box_Sample_Count(class AActor* Actor, float 
 
 void UBP_Placement_Functions_C::Generate_Random_Radial_Raycast(float Radius, const struct FVector& Centre, float Spawn_Clustering, float Spawn_Radius_Multiplier, const struct FTransform& Actor_Transform, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Radial Raycast");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Radial Raycast"));
 
 	struct
 	{
@@ -782,7 +782,7 @@ void UBP_Placement_Functions_C::Generate_Random_Radial_Raycast(float Radius, con
 
 void UBP_Placement_Functions_C::Calculate_Index_from_Probabilities(float Random_Float, class UObject* __WorldContext, TArray<float>* Charge_Probabilities, int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Calculate Index from Probabilities");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Calculate Index from Probabilities"));
 
 	struct
 	{
@@ -815,7 +815,7 @@ void UBP_Placement_Functions_C::Calculate_Index_from_Probabilities(float Random_
 
 void UBP_Placement_Functions_C::Get_Radial_Sample_Count(float Radius, float Spawn_Sample_Density, class UObject* __WorldContext, int* Sample_Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Radial Sample Count");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Radial Sample Count"));
 
 	struct
 	{
@@ -846,7 +846,7 @@ void UBP_Placement_Functions_C::Get_Radial_Sample_Count(float Radius, float Spaw
 
 void UBP_Placement_Functions_C::Normalise_Charge_Probabilities(class UObject* __WorldContext, TArray<struct FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Charge Probabilities");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Charge Probabilities"));
 
 	struct
 	{

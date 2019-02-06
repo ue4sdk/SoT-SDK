@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Clothing.BP_Anim_Clothing_C
-// 0x0000 (0x14AD - 0x14AD)
+// 0x0000 (0x1D39 - 0x1D39)
 class UBP_Anim_Clothing_C : public UBP_Anim_NPC_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("AnimBlueprintGeneratedClass BP_Anim_Clothing.BP_Anim_Clothing_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("AnimBlueprintGeneratedClass BP_Anim_Clothing.BP_Anim_Clothing_C"));
 		return ptr;
 	}
 

@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass ALK_WieldableObject_SniperRifle.ALK_WieldableObject_SniperRifle_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass ALK_WieldableObject_SniperRifle.ALK_WieldableObject_SniperRifle_C"));
 		return ptr;
 	}
 

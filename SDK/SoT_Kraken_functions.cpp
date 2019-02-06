@@ -19,7 +19,7 @@ namespace SDK
 
 void AKrakenTentacle::OnDamageToTentacle(const struct FImpactDamageEvent& ImpactDamageEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenTentacle.OnDamageToTentacle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenTentacle.OnDamageToTentacle"));
 
 	struct
 	{
@@ -37,7 +37,7 @@ void AKrakenTentacle::OnDamageToTentacle(const struct FImpactDamageEvent& Impact
 
 void AKrakenShipWrappingTentacle::OnRep_CurrentServerAnimationState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenShipWrappingTentacle.OnRep_CurrentServerAnimationState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenShipWrappingTentacle.OnRep_CurrentServerAnimationState"));
 
 	struct
 	{
@@ -53,7 +53,7 @@ void AKrakenShipWrappingTentacle::OnRep_CurrentServerAnimationState()
 
 void AKraken::Multicast_OnTentacleTakenDamage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.Kraken.Multicast_OnTentacleTakenDamage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.Kraken.Multicast_OnTentacleTakenDamage"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void AKraken::Multicast_OnTentacleTakenDamage()
 
 void AKraken::AddActorToKnownTargets(class AActor* Target)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.Kraken.AddActorToKnownTargets");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.Kraken.AddActorToKnownTargets"));
 
 	struct
 	{
@@ -92,7 +92,7 @@ void AKraken::AddActorToKnownTargets(class AActor* Target)
 
 void AKrakenService::RequestKrakenWithLocation(const struct FVector& SpawnLocation, class AActor* SpawnedForActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.RequestKrakenWithLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenService.RequestKrakenWithLocation"));
 
 	struct
 	{
@@ -114,7 +114,7 @@ void AKrakenService::RequestKrakenWithLocation(const struct FVector& SpawnLocati
 
 bool AKrakenService::IsServiceInitialized()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.IsServiceInitialized");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenService.IsServiceInitialized"));
 
 	struct
 	{
@@ -135,7 +135,7 @@ bool AKrakenService::IsServiceInitialized()
 
 bool AKrakenService::IsKrakenActive()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.IsKrakenActive");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenService.IsKrakenActive"));
 
 	struct
 	{
@@ -154,7 +154,7 @@ bool AKrakenService::IsKrakenActive()
 
 void AKrakenService::DismissKraken()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Kraken.KrakenService.DismissKraken");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenService.DismissKraken"));
 
 	struct
 	{

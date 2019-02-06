@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatSeat.BP_RowboatSeat_C
-// 0x0000 (0x06A8 - 0x06A8)
+// 0x0000 (0x06B0 - 0x06B0)
 class ABP_RowboatSeat_C : public ASeat
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_RowboatSeat.BP_RowboatSeat_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_RowboatSeat.BP_RowboatSeat_C"));
 		return ptr;
 	}
 

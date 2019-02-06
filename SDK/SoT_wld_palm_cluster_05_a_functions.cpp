@@ -17,7 +17,7 @@ namespace SDK
 
 void Awld_palm_cluster_05_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wld_palm_cluster_05_a.wld_palm_cluster_05_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wld_palm_cluster_05_a.wld_palm_cluster_05_a_C.UserConstructionScript"));
 
 	struct
 	{

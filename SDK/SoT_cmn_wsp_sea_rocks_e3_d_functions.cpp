@@ -17,7 +17,7 @@ namespace SDK
 
 void Acmn_wsp_sea_rocks_e3_d_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_wsp_sea_rocks_e3_d.cmn_wsp_sea_rocks_e3_d_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function cmn_wsp_sea_rocks_e3_d.cmn_wsp_sea_rocks_e3_d_C.UserConstructionScript"));
 
 	struct
 	{

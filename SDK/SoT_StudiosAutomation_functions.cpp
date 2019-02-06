@@ -17,7 +17,7 @@ namespace SDK
 
 void ATestablePlayerController::YieldToServer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestablePlayerController.YieldToServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestablePlayerController.YieldToServer"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ATestablePlayerController::YieldToServer()
 
 void ATestablePlayerController::PerformPostTestCleanup()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestablePlayerController.PerformPostTestCleanup");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestablePlayerController.PerformPostTestCleanup"));
 
 	struct
 	{
@@ -49,7 +49,7 @@ void ATestablePlayerController::PerformPostTestCleanup()
 
 void ATestablePlayerController::DisconnectClientFromTest()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestablePlayerController.DisconnectClientFromTest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestablePlayerController.DisconnectClientFromTest"));
 
 	struct
 	{
@@ -68,7 +68,7 @@ void ATestablePlayerController::DisconnectClientFromTest()
 
 void ATestLevelScriptActor::YieldToServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.YieldToServer"));
 
 	struct
 	{
@@ -92,7 +92,7 @@ void ATestLevelScriptActor::YieldToServer(class UObject* WorldContextObject, con
 
 void ATestLevelScriptActor::YieldToOriginalServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToOriginalServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.YieldToOriginalServer"));
 
 	struct
 	{
@@ -116,7 +116,7 @@ void ATestLevelScriptActor::YieldToOriginalServer(class UObject* WorldContextObj
 
 void ATestLevelScriptActor::YieldToDynamicServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int ServerIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToDynamicServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.YieldToDynamicServer"));
 
 	struct
 	{
@@ -142,7 +142,7 @@ void ATestLevelScriptActor::YieldToDynamicServer(class UObject* WorldContextObje
 
 void ATestLevelScriptActor::YieldToClient(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int ClientId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.YieldToClient");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.YieldToClient"));
 
 	struct
 	{
@@ -168,7 +168,7 @@ void ATestLevelScriptActor::YieldToClient(class UObject* WorldContextObject, con
 
 void ATestLevelScriptActor::WaitForPossessionAcknowledgement(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.WaitForPossessionAcknowledgement");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.WaitForPossessionAcknowledgement"));
 
 	struct
 	{
@@ -193,7 +193,7 @@ void ATestLevelScriptActor::WaitForPossessionAcknowledgement(class UObject* Worl
 
 void ATestLevelScriptActor::WaitForOtherServers(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumberOfServers)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.WaitForOtherServers");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.WaitForOtherServers"));
 
 	struct
 	{
@@ -219,7 +219,7 @@ void ATestLevelScriptActor::WaitForOtherServers(class UObject* WorldContextObjec
 
 void ATestLevelScriptActor::WaitForClients(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumberOfClients)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.WaitForClients");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.WaitForClients"));
 
 	struct
 	{
@@ -245,7 +245,7 @@ void ATestLevelScriptActor::WaitForClients(class UObject* WorldContextObject, co
 
 void ATestLevelScriptActor::TestTriggerServerMigration(TArray<class AActor*> ActorGroup, int TargetServerIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.TestTriggerServerMigration");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.TestTriggerServerMigration"));
 
 	struct
 	{
@@ -271,7 +271,7 @@ void ATestLevelScriptActor::TestTriggerServerMigration(TArray<class AActor*> Act
 
 void ATestLevelScriptActor::SyncClientServer(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumClients, bool RegisterPawnsForMPTesting, bool ClearPawnInputBindings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.SyncClientServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.SyncClientServer"));
 
 	struct
 	{
@@ -304,7 +304,7 @@ void ATestLevelScriptActor::SyncClientServer(class UObject* WorldContextObject, 
 
 class AActor* ATestLevelScriptActor::SpawnActorForMPTesting(class UObject* WorldContextObject, class UClass* ActorClass, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.SpawnActorForMPTesting");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.SpawnActorForMPTesting"));
 
 	struct
 	{
@@ -334,7 +334,7 @@ class AActor* ATestLevelScriptActor::SpawnActorForMPTesting(class UObject* World
 
 void ATestLevelScriptActor::SendServerMigrationTestValueInt32(int TestValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.SendServerMigrationTestValueInt32");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.SendServerMigrationTestValueInt32"));
 
 	struct
 	{
@@ -354,7 +354,7 @@ void ATestLevelScriptActor::SendServerMigrationTestValueInt32(int TestValue)
 
 void ATestLevelScriptActor::RegisterPawnsForMPTesting(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.RegisterPawnsForMPTesting");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.RegisterPawnsForMPTesting"));
 
 	struct
 	{
@@ -375,7 +375,7 @@ void ATestLevelScriptActor::RegisterPawnsForMPTesting(class UObject* WorldContex
 
 void ATestLevelScriptActor::RegisterActorForMPTestingRecursively(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.RegisterActorForMPTestingRecursively");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.RegisterActorForMPTestingRecursively"));
 
 	struct
 	{
@@ -395,7 +395,7 @@ void ATestLevelScriptActor::RegisterActorForMPTestingRecursively(class AActor* T
 
 void ATestLevelScriptActor::RegisterActorForMPTesting(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.RegisterActorForMPTesting");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.RegisterActorForMPTesting"));
 
 	struct
 	{
@@ -413,7 +413,7 @@ void ATestLevelScriptActor::RegisterActorForMPTesting(class AActor* TargetActor)
 
 void ATestLevelScriptActor::PostTestCleanup()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.PostTestCleanup");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.PostTestCleanup"));
 
 	struct
 	{
@@ -431,7 +431,7 @@ void ATestLevelScriptActor::PostTestCleanup()
 
 void ATestLevelScriptActor::OnServerMigrationTestValueInt32Received(int TestValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnServerMigrationTestValueInt32Received");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnServerMigrationTestValueInt32Received"));
 
 	struct
 	{
@@ -452,7 +452,7 @@ void ATestLevelScriptActor::OnServerMigrationTestValueInt32Received(int TestValu
 
 void ATestLevelScriptActor::OnOutgoingServerMigrationStarted(const struct FGuid& MigrationId, TArray<class APlayerController*> Players)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationStarted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationStarted"));
 
 	struct
 	{
@@ -474,7 +474,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationStarted(const struct FGuid&
 
 void ATestLevelScriptActor::OnOutgoingServerMigrationCompleted(const struct FGuid& MigrationId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationCompleted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationCompleted"));
 
 	struct
 	{
@@ -494,7 +494,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationCompleted(const struct FGui
 
 void ATestLevelScriptActor::OnOutgoingServerMigrationAborted(const struct FGuid& MigrationId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationAborted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnOutgoingServerMigrationAborted"));
 
 	struct
 	{
@@ -515,7 +515,7 @@ void ATestLevelScriptActor::OnOutgoingServerMigrationAborted(const struct FGuid&
 
 void ATestLevelScriptActor::OnIncomingServerMigrationStarted(const struct FGuid& MigrationId, int NumPlayers)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationStarted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationStarted"));
 
 	struct
 	{
@@ -539,7 +539,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationStarted(const struct FGuid&
 
 void ATestLevelScriptActor::OnIncomingServerMigrationCompleted(const struct FGuid& MigrationId, TArray<class APlayerController*> Players, TArray<class AActor*> Actors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationCompleted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationCompleted"));
 
 	struct
 	{
@@ -563,7 +563,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationCompleted(const struct FGui
 
 void ATestLevelScriptActor::OnIncomingServerMigrationAborted(const struct FGuid& MigrationId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationAborted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnIncomingServerMigrationAborted"));
 
 	struct
 	{
@@ -583,7 +583,7 @@ void ATestLevelScriptActor::OnIncomingServerMigrationAborted(const struct FGuid&
 
 void ATestLevelScriptActor::OnClientServerMigrationStarted(const struct FGuid& MigrationId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationStarted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationStarted"));
 
 	struct
 	{
@@ -603,7 +603,7 @@ void ATestLevelScriptActor::OnClientServerMigrationStarted(const struct FGuid& M
 
 void ATestLevelScriptActor::OnClientServerMigrationCompleted(const struct FGuid& MigrationId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationCompleted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationCompleted"));
 
 	struct
 	{
@@ -623,7 +623,7 @@ void ATestLevelScriptActor::OnClientServerMigrationCompleted(const struct FGuid&
 
 void ATestLevelScriptActor::OnClientServerMigrationAborted(const struct FGuid& MigrationId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationAborted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.OnClientServerMigrationAborted"));
 
 	struct
 	{
@@ -644,7 +644,7 @@ void ATestLevelScriptActor::OnClientServerMigrationAborted(const struct FGuid& M
 
 int ATestLevelScriptActor::GetServerIndex(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetServerIndex");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetServerIndex"));
 
 	struct
 	{
@@ -668,7 +668,7 @@ int ATestLevelScriptActor::GetServerIndex(class UObject* WorldContextObject)
 
 class FString ATestLevelScriptActor::GetRemoteServerMigrationURL(int TargetServerIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetRemoteServerMigrationURL");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetRemoteServerMigrationURL"));
 
 	struct
 	{
@@ -692,7 +692,7 @@ class FString ATestLevelScriptActor::GetRemoteServerMigrationURL(int TargetServe
 
 int ATestLevelScriptActor::GetPlayerIndexFromClientId(int ClientId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetPlayerIndexFromClientId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetPlayerIndexFromClientId"));
 
 	struct
 	{
@@ -715,7 +715,7 @@ int ATestLevelScriptActor::GetPlayerIndexFromClientId(int ClientId)
 
 int ATestLevelScriptActor::GetNumClientsForMultiplayerTest()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetNumClientsForMultiplayerTest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetNumClientsForMultiplayerTest"));
 
 	struct
 	{
@@ -736,7 +736,7 @@ int ATestLevelScriptActor::GetNumClientsForMultiplayerTest()
 
 int ATestLevelScriptActor::GetNumAutomationClients()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetNumAutomationClients");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetNumAutomationClients"));
 
 	struct
 	{
@@ -759,7 +759,7 @@ int ATestLevelScriptActor::GetNumAutomationClients()
 
 class APawn* ATestLevelScriptActor::GetClientPawn(int ClientId, int SplitScreenIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetClientPawn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetClientPawn"));
 
 	struct
 	{
@@ -785,7 +785,7 @@ class APawn* ATestLevelScriptActor::GetClientPawn(int ClientId, int SplitScreenI
 
 int ATestLevelScriptActor::GetClientId(bool ErrorOnFailure)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.GetClientId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.GetClientId"));
 
 	struct
 	{
@@ -806,7 +806,7 @@ int ATestLevelScriptActor::GetClientId(bool ErrorOnFailure)
 
 void ATestLevelScriptActor::DoServerPostTestCleanup()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.DoServerPostTestCleanup");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.DoServerPostTestCleanup"));
 
 	struct
 	{
@@ -824,7 +824,7 @@ void ATestLevelScriptActor::DoServerPostTestCleanup()
 
 void ATestLevelScriptActor::ClearPawnInputBindings(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.ClearPawnInputBindings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.ClearPawnInputBindings"));
 
 	struct
 	{
@@ -845,7 +845,7 @@ void ATestLevelScriptActor::ClearPawnInputBindings(class UObject* WorldContextOb
 
 void ATestLevelScriptActor::AddServer(const class FString& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.AddServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.AddServer"));
 
 	struct
 	{
@@ -866,7 +866,7 @@ void ATestLevelScriptActor::AddServer(const class FString& Name)
 
 void ATestLevelScriptActor::AddClient(int Port, const class FString& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.TestLevelScriptActor.AddClient");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.AddClient"));
 
 	struct
 	{
@@ -888,7 +888,7 @@ void ATestLevelScriptActor::AddClient(int Port, const class FString& Name)
 
 void UAutomationBlueprintFunctionLibrary::TestFinished(class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFinished");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFinished"));
 
 	struct
 	{
@@ -910,7 +910,7 @@ void UAutomationBlueprintFunctionLibrary::TestFinished(class UObject* ContextObj
 
 void UAutomationBlueprintFunctionLibrary::TestFailed(const class FString& Message, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFailed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFailed"));
 
 	struct
 	{
@@ -937,7 +937,7 @@ void UAutomationBlueprintFunctionLibrary::TestFailed(const class FString& Messag
 
 void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshotAtCamera(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class ACameraActor* Camera, const class FString& NameOverride, float DelayBeforeScreenshotSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TakeAutomationScreenshotAtCamera");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TakeAutomationScreenshotAtCamera"));
 
 	struct
 	{
@@ -968,7 +968,7 @@ void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshotAtCamera(class
 
 void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshot(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, const class FString& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TakeAutomationScreenshot");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TakeAutomationScreenshot"));
 
 	struct
 	{
@@ -993,7 +993,7 @@ void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshot(class UObject
 
 void UAutomationBlueprintFunctionLibrary::StepStarted(const class FString& StepName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepStarted");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepStarted"));
 
 	struct
 	{
@@ -1012,7 +1012,7 @@ void UAutomationBlueprintFunctionLibrary::StepStarted(const class FString& StepN
 
 void UAutomationBlueprintFunctionLibrary::StepFinished()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepFinished");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepFinished"));
 
 	struct
 	{
@@ -1031,7 +1031,7 @@ void UAutomationBlueprintFunctionLibrary::StepFinished()
 
 void UAutomationBlueprintFunctionLibrary::SetTestTimeoutAsFatal(bool TimeoutIsFatal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.SetTestTimeoutAsFatal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.SetTestTimeoutAsFatal"));
 
 	struct
 	{
@@ -1055,7 +1055,7 @@ void UAutomationBlueprintFunctionLibrary::SetTestTimeoutAsFatal(bool TimeoutIsFa
 
 void UAutomationBlueprintFunctionLibrary::OpenLevelWithGameMode(class UObject* WorldContextObject, const struct FName& LevelName, class UClass* GameMode, bool Absolute)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.OpenLevelWithGameMode");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.OpenLevelWithGameMode"));
 
 	struct
 	{
@@ -1083,7 +1083,7 @@ void UAutomationBlueprintFunctionLibrary::OpenLevelWithGameMode(class UObject* W
 
 bool UAutomationBlueprintFunctionLibrary::IsTravelFinished(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsTravelFinished");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsTravelFinished"));
 
 	struct
 	{
@@ -1107,7 +1107,7 @@ bool UAutomationBlueprintFunctionLibrary::IsTravelFinished(class UObject* WorldC
 
 bool UAutomationBlueprintFunctionLibrary::IsEditor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsEditor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsEditor"));
 
 	struct
 	{
@@ -1129,7 +1129,7 @@ bool UAutomationBlueprintFunctionLibrary::IsEditor()
 
 bool UAutomationBlueprintFunctionLibrary::HasPerformanceDataBeenCaptured()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.HasPerformanceDataBeenCaptured");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.HasPerformanceDataBeenCaptured"));
 
 	struct
 	{
@@ -1152,7 +1152,7 @@ bool UAutomationBlueprintFunctionLibrary::HasPerformanceDataBeenCaptured()
 
 class ATestLevelScriptActor* UAutomationBlueprintFunctionLibrary::GetTestLevelScriptActor(bool ErrorOnFailure)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetTestLevelScriptActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetTestLevelScriptActor"));
 
 	struct
 	{
@@ -1177,7 +1177,7 @@ class ATestLevelScriptActor* UAutomationBlueprintFunctionLibrary::GetTestLevelSc
 
 int UAutomationBlueprintFunctionLibrary::GetPlayerId(class APlayerState* State)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetPlayerId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetPlayerId"));
 
 	struct
 	{
@@ -1202,7 +1202,7 @@ int UAutomationBlueprintFunctionLibrary::GetPlayerId(class APlayerState* State)
 
 class FString UAutomationBlueprintFunctionLibrary::GetLevelUrl(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetLevelUrl");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetLevelUrl"));
 
 	struct
 	{
@@ -1226,7 +1226,7 @@ class FString UAutomationBlueprintFunctionLibrary::GetLevelUrl(class UObject* Wo
 
 class FString UAutomationBlueprintFunctionLibrary::GetCurrentMapTestName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetCurrentMapTestName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.GetCurrentMapTestName"));
 
 	struct
 	{
@@ -1248,7 +1248,7 @@ class FString UAutomationBlueprintFunctionLibrary::GetCurrentMapTestName()
 
 void UAutomationBlueprintFunctionLibrary::EndPerformanceCapture(bool DumpMemReport)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.EndPerformanceCapture");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.EndPerformanceCapture"));
 
 	struct
 	{
@@ -1269,7 +1269,7 @@ void UAutomationBlueprintFunctionLibrary::EndPerformanceCapture(bool DumpMemRepo
 
 void UAutomationBlueprintFunctionLibrary::DumpFullMemReportDelayed(int FrameDelay)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReportDelayed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReportDelayed"));
 
 	struct
 	{
@@ -1288,7 +1288,7 @@ void UAutomationBlueprintFunctionLibrary::DumpFullMemReportDelayed(int FrameDela
 
 void UAutomationBlueprintFunctionLibrary::DumpFullMemReport()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReport");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DumpFullMemReport"));
 
 	struct
 	{
@@ -1310,7 +1310,7 @@ void UAutomationBlueprintFunctionLibrary::DumpFullMemReport()
 
 void UAutomationBlueprintFunctionLibrary::DelayForFramesWithDesc(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames, const class FString& Description)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DelayForFramesWithDesc");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DelayForFramesWithDesc"));
 
 	struct
 	{
@@ -1339,7 +1339,7 @@ void UAutomationBlueprintFunctionLibrary::DelayForFramesWithDesc(class UObject* 
 
 void UAutomationBlueprintFunctionLibrary::DelayForFrames(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, int NumFrames)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DelayForFrames");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.DelayForFrames"));
 
 	struct
 	{
@@ -1364,7 +1364,7 @@ void UAutomationBlueprintFunctionLibrary::DelayForFrames(class UObject* WorldCon
 
 void UAutomationBlueprintFunctionLibrary::BlockAsyncLoading(bool EnableBlock)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading"));
 
 	struct
 	{
@@ -1387,7 +1387,7 @@ void UAutomationBlueprintFunctionLibrary::BlockAsyncLoading(bool EnableBlock)
 
 void UAutomationBlueprintFunctionLibrary::BeginPerformanceCapture(const class FString& FolderName, bool DumpMemReport, bool PreventGarbageCollection)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BeginPerformanceCapture");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BeginPerformanceCapture"));
 
 	struct
 	{
@@ -1416,7 +1416,7 @@ void UAutomationBlueprintFunctionLibrary::BeginPerformanceCapture(const class FS
 
 void UAutomationBlueprintFunctionLibrary::AssertValue_Int(int Actual, TEnumAsByte<EComparisonMethod> ShouldBe, int Expected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_Int");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_Int"));
 
 	struct
 	{
@@ -1449,7 +1449,7 @@ void UAutomationBlueprintFunctionLibrary::AssertValue_Int(int Actual, TEnumAsByt
 
 void UAutomationBlueprintFunctionLibrary::AssertValue_Float(float Actual, TEnumAsByte<EComparisonMethod> ShouldBe, float Expected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_Float");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_Float"));
 
 	struct
 	{
@@ -1482,7 +1482,7 @@ void UAutomationBlueprintFunctionLibrary::AssertValue_Float(float Actual, TEnumA
 
 void UAutomationBlueprintFunctionLibrary::AssertValue_DateTime(const struct FDateTime& Actual, TEnumAsByte<EComparisonMethod> ShouldBe, const struct FDateTime& Expected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_DateTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertValue_DateTime"));
 
 	struct
 	{
@@ -1513,7 +1513,7 @@ void UAutomationBlueprintFunctionLibrary::AssertValue_DateTime(const struct FDat
 
 void UAutomationBlueprintFunctionLibrary::AssertTrue(bool Condition, const class FString& Message, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertTrue");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertTrue"));
 
 	struct
 	{
@@ -1541,7 +1541,7 @@ void UAutomationBlueprintFunctionLibrary::AssertTrue(bool Condition, const class
 
 void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Vector(const struct FVector& Actual, const struct FVector& NotExpected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Vector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Vector"));
 
 	struct
 	{
@@ -1571,7 +1571,7 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Vector(const struct FVe
 
 void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Transform(const struct FTransform& Actual, const struct FTransform& NotExpected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Transform"));
 
 	struct
 	{
@@ -1601,7 +1601,7 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Transform(const struct 
 
 void UAutomationBlueprintFunctionLibrary::AssertNotEqual_String(const class FString& Actual, const class FString& NotExpected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_String");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_String"));
 
 	struct
 	{
@@ -1631,7 +1631,7 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_String(const class FStr
 
 void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Rotator(const struct FRotator& Actual, const struct FRotator& NotExpected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Rotator");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertNotEqual_Rotator"));
 
 	struct
 	{
@@ -1660,7 +1660,7 @@ void UAutomationBlueprintFunctionLibrary::AssertNotEqual_Rotator(const struct FR
 
 void UAutomationBlueprintFunctionLibrary::AssertIsValid(class UObject* Object, const class FString& Message, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertIsValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertIsValid"));
 
 	struct
 	{
@@ -1687,7 +1687,7 @@ void UAutomationBlueprintFunctionLibrary::AssertIsValid(class UObject* Object, c
 
 void UAutomationBlueprintFunctionLibrary::AssertIsNotValid(class UObject* Object, const class FString& Message, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertIsNotValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertIsNotValid"));
 
 	struct
 	{
@@ -1714,7 +1714,7 @@ void UAutomationBlueprintFunctionLibrary::AssertIsNotValid(class UObject* Object
 
 void UAutomationBlueprintFunctionLibrary::AssertFalse(bool Condition, const class FString& Message, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertFalse");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertFalse"));
 
 	struct
 	{
@@ -1739,7 +1739,7 @@ void UAutomationBlueprintFunctionLibrary::AssertFalse(bool Condition, const clas
 
 void UAutomationBlueprintFunctionLibrary::AssertErrorOccurred(const class FString& ErrorMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertErrorOccurred");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertErrorOccurred"));
 
 	struct
 	{
@@ -1764,7 +1764,7 @@ void UAutomationBlueprintFunctionLibrary::AssertErrorOccurred(const class FStrin
 
 void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector2D(const struct FVector2D& Actual, const struct FVector2D& Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Vector2D");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Vector2D"));
 
 	struct
 	{
@@ -1797,7 +1797,7 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector2D(const struct FVec
 
 void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector(const struct FVector& Actual, const struct FVector& Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Vector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Vector"));
 
 	struct
 	{
@@ -1829,7 +1829,7 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Vector(const struct FVecto
 
 void UAutomationBlueprintFunctionLibrary::AssertEqual_Transform(const struct FTransform& Actual, const struct FTransform& Expected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Transform"));
 
 	struct
 	{
@@ -1859,7 +1859,7 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Transform(const struct FTr
 
 void UAutomationBlueprintFunctionLibrary::AssertEqual_String(const class FString& Actual, const class FString& Expected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_String");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_String"));
 
 	struct
 	{
@@ -1889,7 +1889,7 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_String(const class FString
 
 void UAutomationBlueprintFunctionLibrary::AssertEqual_Rotator(const struct FRotator& Actual, const struct FRotator& Expected, const class FString& What, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Rotator");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Rotator"));
 
 	struct
 	{
@@ -1920,7 +1920,7 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Rotator(const struct FRota
 
 void UAutomationBlueprintFunctionLibrary::AssertEqual_Float(float Actual, float Expected, const class FString& What, float Tolerance, class UObject* ContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Float");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AssertEqual_Float"));
 
 	struct
 	{
@@ -1949,7 +1949,7 @@ void UAutomationBlueprintFunctionLibrary::AssertEqual_Float(float Actual, float 
 
 void UAutomationBlueprintFunctionLibrary::AddExpectedError(const class FString& ErrorMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AddExpectedError");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.AddExpectedError"));
 
 	struct
 	{
@@ -1970,7 +1970,7 @@ void UAutomationBlueprintFunctionLibrary::AddExpectedError(const class FString& 
 
 void UAutomationLatentActionCallback::LatentCallback(int Linkage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StudiosAutomation.AutomationLatentActionCallback.LatentCallback");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationLatentActionCallback.LatentCallback"));
 
 	struct
 	{

@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTaskOwnerInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTasks.GameplayTaskOwnerInterface"));
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTask");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTasks.GameplayTask"));
 		return ptr;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTask_SpawnActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTasks.GameplayTask_SpawnActor"));
 		return ptr;
 	}
 
@@ -83,7 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTask_WaitDelay");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTasks.GameplayTask_WaitDelay"));
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTaskResource");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTasks.GameplayTaskResource"));
 		return ptr;
 	}
 
@@ -125,7 +125,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTasks.GameplayTasksComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTasks.GameplayTasksComponent"));
 		return ptr;
 	}
 

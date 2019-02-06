@@ -19,7 +19,7 @@ namespace SDK
 
 bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenVisible()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary.IsLoadingScreenVisible");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary.IsLoadingScreenVisible"));
 
 	struct
 	{
@@ -41,7 +41,7 @@ bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenVisible()
 
 bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenRegistered()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary.IsLoadingScreenRegistered");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary.IsLoadingScreenRegistered"));
 
 	struct
 	{
@@ -64,7 +64,7 @@ bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenRegistered()
 
 bool ULoadingUtilities::IsStreaming(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaLoadingScreen.LoadingUtilities.IsStreaming");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaLoadingScreen.LoadingUtilities.IsStreaming"));
 
 	struct
 	{

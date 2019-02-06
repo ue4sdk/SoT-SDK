@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rudder.BP_Rudder_C
-// 0x0010 (0x0518 - 0x0508)
+// 0x0010 (0x0520 - 0x0510)
 class ABP_Rudder_C : public ARudder
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Root;                                                     // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Root;                                                     // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Rudder.BP_Rudder_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Rudder.BP_Rudder_C"));
 		return ptr;
 	}
 

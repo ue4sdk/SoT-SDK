@@ -20,7 +20,7 @@ namespace SDK
 
 bool UDebugMenuTestFunctions::IsDebugMenuReady(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady"));
 
 	struct
 	{
@@ -45,7 +45,7 @@ bool UDebugMenuTestFunctions::IsDebugMenuReady(class UObject* WorldContextObject
 
 bool UDebugMenuTestFunctions::IsDebugMenuOpen(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen"));
 
 	struct
 	{
@@ -69,7 +69,7 @@ bool UDebugMenuTestFunctions::IsDebugMenuOpen(class UObject* WorldContextObject)
 
 bool UDebugMenuTestFunctions::IsDebugMenuAvailable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuAvailable");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuAvailable"));
 
 	struct
 	{
@@ -91,7 +91,7 @@ bool UDebugMenuTestFunctions::IsDebugMenuAvailable()
 
 struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard"));
 
 	struct
 	{
@@ -113,7 +113,7 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
 
 struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard"));
 
 	struct
 	{
@@ -135,7 +135,7 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
 
 struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad"));
 
 	struct
 	{
@@ -157,7 +157,7 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
 
 struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboAlphaGamepad()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad"));
 
 	struct
 	{

@@ -23,7 +23,7 @@ namespace SDK
 
 void ABP_HullDamage_C::Apply_Hit(const struct FVector& HitPosition, const struct FVector& HitNormal, float HitStrength, bool Has_Decal, class UDecalComponent** Decal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Apply Hit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Apply Hit"));
 
 	struct
 	{
@@ -54,7 +54,7 @@ void ABP_HullDamage_C::Apply_Hit(const struct FVector& HitPosition, const struct
 
 void ABP_HullDamage_C::PlayHitSFX(const struct FVector& HitLocation, float HitStrenght)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.PlayHitSFX");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.PlayHitSFX"));
 
 	struct
 	{
@@ -80,7 +80,7 @@ void ABP_HullDamage_C::PlayHitSFX(const struct FVector& HitLocation, float HitSt
 
 void ABP_HullDamage_C::Apply_Visual_Hit(const struct FVector& HitPosition, const struct FVector& HitNormal, float HitStrength, bool HasDecal, class UDecalComponent** Decal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Apply Visual Hit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Apply Visual Hit"));
 
 	struct
 	{
@@ -115,7 +115,7 @@ void ABP_HullDamage_C::Apply_Visual_Hit(const struct FVector& HitPosition, const
 
 void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVector& HitPosition, const struct FVector& HitNormal, const struct FVector& HitVelocity, int NumDamageZones, int LevelOfDamage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Process Hit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Process Hit"));
 
 	struct
 	{
@@ -149,7 +149,7 @@ void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVect
 
 void ABP_HullDamage_C::Scale_Hit_Strength_and_Get_Decal_Flag(const struct FVector& Hit_Normal, const struct FVector& Hit_Velocity, float Hit_Strength, float* Strength, bool* HasDecal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Scale Hit Strength and Get Decal Flag");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Scale Hit Strength and Get Decal Flag"));
 
 	struct
 	{
@@ -180,7 +180,7 @@ void ABP_HullDamage_C::Scale_Hit_Strength_and_Get_Decal_Flag(const struct FVecto
 
 void ABP_HullDamage_C::Get_Random_Deferred_Decal(class UMaterialInterface** Decal_Material)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Get Random Deferred Decal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Get Random Deferred Decal"));
 
 	struct
 	{
@@ -202,7 +202,7 @@ void ABP_HullDamage_C::Get_Random_Deferred_Decal(class UMaterialInterface** Deca
 
 void ABP_HullDamage_C::Get_Random_Persistent_Decal(class UTexture2D** Decal_Texture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Get Random Persistent Decal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Get Random Persistent Decal"));
 
 	struct
 	{
@@ -229,7 +229,7 @@ void ABP_HullDamage_C::Get_Random_Persistent_Decal(class UTexture2D** Decal_Text
 
 void ABP_HullDamage_C::Add_Hit_To_HitList(const struct FVector& HitPosition, const struct FVector& Hit_Normal, float HitStrength, bool HasDecal, class AActor* DamageZone, int HitLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Add Hit To HitList");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Add Hit To HitList"));
 
 	struct
 	{
@@ -259,7 +259,7 @@ void ABP_HullDamage_C::Add_Hit_To_HitList(const struct FVector& HitPosition, con
 
 void ABP_HullDamage_C::Initialize_Damage_Materials(TArray<class UStaticMeshComponent*>* StaticMeshes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.Initialize Damage Materials");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Initialize Damage Materials"));
 
 	struct
 	{
@@ -279,7 +279,7 @@ void ABP_HullDamage_C::Initialize_Damage_Materials(TArray<class UStaticMeshCompo
 
 void ABP_HullDamage_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.UserConstructionScript"));
 
 	struct
 	{
@@ -295,7 +295,7 @@ void ABP_HullDamage_C::UserConstructionScript()
 
 void ABP_HullDamage_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -313,7 +313,7 @@ void ABP_HullDamage_C::ReceiveBeginPlay()
 
 void ABP_HullDamage_C::BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_ImpactDamageEventDelegate__DelegateSignature(const struct FImpactDamageEvent& ImpactDamageEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_ImpactDamageEventDelegate__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_ImpactDamageEventDelegate__DelegateSignature"));
 
 	struct
 	{
@@ -333,7 +333,7 @@ void ABP_HullDamage_C::BndEvt__ShipDamageComponent_K2Node_ComponentBoundEvent_6_
 
 void ABP_HullDamage_C::ExecuteUbergraph_BP_HullDamage(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HullDamage.BP_HullDamage_C.ExecuteUbergraph_BP_HullDamage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.ExecuteUbergraph_BP_HullDamage"));
 
 	struct
 	{

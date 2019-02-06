@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_FeatureIslandWashedUpResourcesSpawner.BP_FeatureIslandWashedUpResourcesSpawner_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_FeatureIslandWashedUpResourcesSpawner.BP_FeatureIslandWashedUpResourcesSpawner_C"));
 		return ptr;
 	}
 

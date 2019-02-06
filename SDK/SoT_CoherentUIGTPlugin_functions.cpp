@@ -19,7 +19,7 @@ namespace SDK
 
 void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromStruct(class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.UpdateWholeDataModelFromStruct");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.UpdateWholeDataModelFromStruct"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromStruct(class UStructPro
 
 void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromObject(class UObject* Model)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.UpdateWholeDataModelFromObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.UpdateWholeDataModelFromObject"));
 
 	struct
 	{
@@ -60,7 +60,7 @@ void UCoherentUIGTBaseComponent::UpdateWholeDataModelFromObject(class UObject* M
 
 void UCoherentUIGTBaseComponent::TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* EventData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.TriggerJSEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.TriggerJSEvent"));
 
 	struct
 	{
@@ -80,7 +80,7 @@ void UCoherentUIGTBaseComponent::TriggerJSEvent(const class FString& Name, class
 
 void UCoherentUIGTBaseComponent::SynchronizeModels()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SynchronizeModels");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SynchronizeModels"));
 
 	struct
 	{
@@ -98,7 +98,7 @@ void UCoherentUIGTBaseComponent::SynchronizeModels()
 
 void UCoherentUIGTBaseComponent::ShowPaintRects(bool show)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.ShowPaintRects");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.ShowPaintRects"));
 
 	struct
 	{
@@ -118,7 +118,7 @@ void UCoherentUIGTBaseComponent::ShowPaintRects(bool show)
 
 void UCoherentUIGTBaseComponent::SetClickThroughAlphaThreshold(float Threshold)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SetClickThroughAlphaThreshold");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SetClickThroughAlphaThreshold"));
 
 	struct
 	{
@@ -139,7 +139,7 @@ void UCoherentUIGTBaseComponent::SetClickThroughAlphaThreshold(float Threshold)
 
 void UCoherentUIGTBaseComponent::Resize(int Width, int Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Resize");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Resize"));
 
 	struct
 	{
@@ -159,7 +159,7 @@ void UCoherentUIGTBaseComponent::Resize(int Width, int Height)
 
 void UCoherentUIGTBaseComponent::Reload()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Reload");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Reload"));
 
 	struct
 	{
@@ -175,7 +175,7 @@ void UCoherentUIGTBaseComponent::Reload()
 
 void UCoherentUIGTBaseComponent::Redraw()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Redraw");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Redraw"));
 
 	struct
 	{
@@ -193,7 +193,7 @@ void UCoherentUIGTBaseComponent::Redraw()
 
 void UCoherentUIGTBaseComponent::Load(const class FString& path)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Load");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Load"));
 
 	struct
 	{
@@ -213,7 +213,7 @@ void UCoherentUIGTBaseComponent::Load(const class FString& path)
 
 bool UCoherentUIGTBaseComponent::IsTransparent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsTransparent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsTransparent"));
 
 	struct
 	{
@@ -234,7 +234,7 @@ bool UCoherentUIGTBaseComponent::IsTransparent()
 
 bool UCoherentUIGTBaseComponent::IsReadyToCreateView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyToCreateView");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyToCreateView"));
 
 	struct
 	{
@@ -255,7 +255,7 @@ bool UCoherentUIGTBaseComponent::IsReadyToCreateView()
 
 bool UCoherentUIGTBaseComponent::IsReadyForBindings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyForBindings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyForBindings"));
 
 	struct
 	{
@@ -276,7 +276,7 @@ bool UCoherentUIGTBaseComponent::IsReadyForBindings()
 
 bool UCoherentUIGTBaseComponent::IsDocumentReady()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsDocumentReady");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsDocumentReady"));
 
 	struct
 	{
@@ -297,7 +297,7 @@ bool UCoherentUIGTBaseComponent::IsDocumentReady()
 
 bool UCoherentUIGTBaseComponent::HasRequestedView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.HasRequestedView");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.HasRequestedView"));
 
 	struct
 	{
@@ -318,7 +318,7 @@ bool UCoherentUIGTBaseComponent::HasRequestedView()
 
 float UCoherentUIGTBaseComponent::GetClickThroughAlphaThreshold()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.GetClickThroughAlphaThreshold");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.GetClickThroughAlphaThreshold"));
 
 	struct
 	{
@@ -337,7 +337,7 @@ float UCoherentUIGTBaseComponent::GetClickThroughAlphaThreshold()
 
 void UCoherentUIGTBaseComponent::EndDebugFrameSave()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EndDebugFrameSave");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EndDebugFrameSave"));
 
 	struct
 	{
@@ -355,7 +355,7 @@ void UCoherentUIGTBaseComponent::EndDebugFrameSave()
 
 void UCoherentUIGTBaseComponent::EnableDelayedUpdate(bool bEnabled)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EnableDelayedUpdate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EnableDelayedUpdate"));
 
 	struct
 	{
@@ -373,7 +373,7 @@ void UCoherentUIGTBaseComponent::EnableDelayedUpdate(bool bEnabled)
 
 void UCoherentUIGTBaseComponent::DebugSaveNextFrame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.DebugSaveNextFrame");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.DebugSaveNextFrame"));
 
 	struct
 	{
@@ -391,7 +391,7 @@ void UCoherentUIGTBaseComponent::DebugSaveNextFrame()
 
 class UCoherentUIGTJSEvent* UCoherentUIGTBaseComponent::CreateJSEvent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateJSEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateJSEvent"));
 
 	struct
 	{
@@ -413,7 +413,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBaseComponent::CreateJSEvent()
 
 void UCoherentUIGTBaseComponent::CreateDataModelFromStruct(const class FString& Name, class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateDataModelFromStruct");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateDataModelFromStruct"));
 
 	struct
 	{
@@ -436,7 +436,7 @@ void UCoherentUIGTBaseComponent::CreateDataModelFromStruct(const class FString& 
 
 void UCoherentUIGTBaseComponent::CreateDataModelFromObject(const class FString& Name, class UObject* Model)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateDataModelFromObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateDataModelFromObject"));
 
 	struct
 	{
@@ -456,7 +456,7 @@ void UCoherentUIGTBaseComponent::CreateDataModelFromObject(const class FString& 
 
 void UCoherentUIGTBaseComponent::BeginDebugFrameSave()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.BeginDebugFrameSave");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.BeginDebugFrameSave"));
 
 	struct
 	{
@@ -477,7 +477,7 @@ void UCoherentUIGTBaseComponent::BeginDebugFrameSave()
 
 void UCoherentUIGTLiveView::OnLiveViewSizeRequest(class UCoherentUIGTBaseComponent* BaseComponent, const class FString& Name, int* Width, int* Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTLiveView.OnLiveViewSizeRequest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTLiveView.OnLiveViewSizeRequest"));
 
 	struct
 	{
@@ -506,7 +506,7 @@ void UCoherentUIGTLiveView::OnLiveViewSizeRequest(class UCoherentUIGTBaseCompone
 
 void UCoherentUIGTJSEvent::AddStructArg(class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddStructArg");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddStructArg"));
 
 	struct
 	{
@@ -526,7 +526,7 @@ void UCoherentUIGTJSEvent::AddStructArg(class UStructProperty* Arg)
 
 void UCoherentUIGTJSEvent::AddString(const class FString& Str)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddString");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddString"));
 
 	struct
 	{
@@ -546,7 +546,7 @@ void UCoherentUIGTJSEvent::AddString(const class FString& Str)
 
 void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddObject"));
 
 	struct
 	{
@@ -566,7 +566,7 @@ void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 
 void UCoherentUIGTJSEvent::AddInt32(int integer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddInt32");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddInt32"));
 
 	struct
 	{
@@ -586,7 +586,7 @@ void UCoherentUIGTJSEvent::AddInt32(int integer)
 
 void UCoherentUIGTJSEvent::AddFloat(float fl)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddFloat");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddFloat"));
 
 	struct
 	{
@@ -606,7 +606,7 @@ void UCoherentUIGTJSEvent::AddFloat(float fl)
 
 void UCoherentUIGTJSEvent::AddByte(unsigned char byte)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddByte");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddByte"));
 
 	struct
 	{
@@ -626,7 +626,7 @@ void UCoherentUIGTJSEvent::AddByte(unsigned char byte)
 
 void UCoherentUIGTJSEvent::AddBool(bool B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddBool");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddBool"));
 
 	struct
 	{
@@ -646,7 +646,7 @@ void UCoherentUIGTJSEvent::AddBool(bool B)
 
 void UCoherentUIGTJSEvent::AddArray(TArray<int> Array)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddArray");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddArray"));
 
 	struct
 	{
@@ -667,7 +667,7 @@ void UCoherentUIGTJSEvent::AddArray(TArray<int> Array)
 
 void UCoherentUIGTJSPayload::ReadObject(int Index, class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.ReadObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.ReadObject"));
 
 	struct
 	{
@@ -690,7 +690,7 @@ void UCoherentUIGTJSPayload::ReadObject(int Index, class UObject* Object)
 
 class FString UCoherentUIGTJSPayload::GetString(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetString");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetString"));
 
 	struct
 	{
@@ -714,7 +714,7 @@ class FString UCoherentUIGTJSPayload::GetString(int Index)
 
 float UCoherentUIGTJSPayload::GetNumber(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetNumber");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetNumber"));
 
 	struct
 	{
@@ -738,7 +738,7 @@ float UCoherentUIGTJSPayload::GetNumber(int Index)
 
 int UCoherentUIGTJSPayload::GetInt32(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetInt32");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetInt32"));
 
 	struct
 	{
@@ -762,7 +762,7 @@ int UCoherentUIGTJSPayload::GetInt32(int Index)
 
 bool UCoherentUIGTJSPayload::GetBool(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetBool");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetBool"));
 
 	struct
 	{
@@ -787,7 +787,7 @@ bool UCoherentUIGTJSPayload::GetBool(int Index)
 
 void UCoherentUIGTBlueprintFunctionLibrary::TriggerJSEvent(class UCoherentUIGTBaseComponent* Component, const class FString& EventName, class UCoherentUIGTJSEvent* JSEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.TriggerJSEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.TriggerJSEvent"));
 
 	struct
 	{
@@ -813,7 +813,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::TriggerJSEvent(class UCoherentUIGTBa
 
 void UCoherentUIGTBlueprintFunctionLibrary::SetupLoadingScreen(class UObject* WorldContextObject, const struct FCoherentUIGTLoadingScreenSettings& Settings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.SetupLoadingScreen");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.SetupLoadingScreen"));
 
 	struct
 	{
@@ -837,7 +837,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::SetupLoadingScreen(class UObject* Wo
 
 class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::CreateJSEvent(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.CreateJSEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.CreateJSEvent"));
 
 	struct
 	{
@@ -862,7 +862,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::CreateJSEvent
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddStructArg(class UCoherentUIGTJSEvent* JSEvent, class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddStructArg");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddStructArg"));
 
 	struct
 	{
@@ -886,7 +886,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddStructArg(class UCoherentUIGTJSEv
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddString(class UCoherentUIGTJSEvent* JSEvent, const class FString& Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddString");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddString"));
 
 	struct
 	{
@@ -910,7 +910,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddString(class UCoherentUIGTJSEvent
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddObject(class UCoherentUIGTJSEvent* JSEvent, class UObject* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddObject"));
 
 	struct
 	{
@@ -934,7 +934,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddObject(class UCoherentUIGTJSEvent
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddInt32(class UCoherentUIGTJSEvent* JSEvent, int Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddInt32");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddInt32"));
 
 	struct
 	{
@@ -958,7 +958,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddInt32(class UCoherentUIGTJSEvent*
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddFloat(class UCoherentUIGTJSEvent* JSEvent, float Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddFloat");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddFloat"));
 
 	struct
 	{
@@ -982,7 +982,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddFloat(class UCoherentUIGTJSEvent*
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddByte(class UCoherentUIGTJSEvent* JSEvent, unsigned char Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddByte");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddByte"));
 
 	struct
 	{
@@ -1006,7 +1006,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddByte(class UCoherentUIGTJSEvent* 
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddBool(class UCoherentUIGTJSEvent* JSEvent, bool Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddBool");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddBool"));
 
 	struct
 	{
@@ -1030,7 +1030,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddBool(class UCoherentUIGTJSEvent* 
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddArrayOfStructs(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArrayOfStructs");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArrayOfStructs"));
 
 	struct
 	{
@@ -1055,7 +1055,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddArrayOfStructs(class UCoherentUIG
 
 void UCoherentUIGTBlueprintFunctionLibrary::AddArray(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg, int ArrayType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArray");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArray"));
 
 	struct
 	{
@@ -1084,7 +1084,7 @@ void UCoherentUIGTBlueprintFunctionLibrary::AddArray(class UCoherentUIGTJSEvent*
 
 void ACoherentUIGTGameHUD::SetupUIGTView(const class FString& PageUrl, bool bIsTransparent, float ClickThroughAlphaThreshold, float AnimationFrameDefer, bool bDelayedUpdate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTGameHUD.SetupUIGTView");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTGameHUD.SetupUIGTView"));
 
 	struct
 	{
@@ -1110,7 +1110,7 @@ void ACoherentUIGTGameHUD::SetupUIGTView(const class FString& PageUrl, bool bIsT
 
 void ACoherentUIGTInputActor::ToggleCoherentUIGTInputFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.ToggleCoherentUIGTInputFocus");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.ToggleCoherentUIGTInputFocus"));
 
 	struct
 	{
@@ -1128,7 +1128,7 @@ void ACoherentUIGTInputActor::ToggleCoherentUIGTInputFocus()
 
 void ACoherentUIGTInputActor::SetLineTraceMode(TEnumAsByte<EGTInputWidgetLineTraceMode> Mode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetLineTraceMode");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetLineTraceMode"));
 
 	struct
 	{
@@ -1148,7 +1148,7 @@ void ACoherentUIGTInputActor::SetLineTraceMode(TEnumAsByte<EGTInputWidgetLineTra
 
 void ACoherentUIGTInputActor::SetInputPropagationBehaviour(TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> Propagation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetInputPropagationBehaviour");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetInputPropagationBehaviour"));
 
 	struct
 	{
@@ -1168,7 +1168,7 @@ void ACoherentUIGTInputActor::SetInputPropagationBehaviour(TEnumAsByte<ECoherent
 
 void ACoherentUIGTInputActor::SetCoherentUIGTViewFocus(class UCoherentUIGTBaseComponent* NewFocusedView)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTViewFocus");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTViewFocus"));
 
 	struct
 	{
@@ -1188,7 +1188,7 @@ void ACoherentUIGTInputActor::SetCoherentUIGTViewFocus(class UCoherentUIGTBaseCo
 
 void ACoherentUIGTInputActor::SetCoherentUIGTInputFocus(bool FocusUI)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTInputFocus");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTInputFocus"));
 
 	struct
 	{
@@ -1208,7 +1208,7 @@ void ACoherentUIGTInputActor::SetCoherentUIGTInputFocus(bool FocusUI)
 
 bool ACoherentUIGTInputActor::IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED"));
 
 	struct
 	{
@@ -1229,7 +1229,7 @@ bool ACoherentUIGTInputActor::IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATE
 
 bool ACoherentUIGTInputActor::IsCoherentUIGTFocused()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsCoherentUIGTFocused");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsCoherentUIGTFocused"));
 
 	struct
 	{
@@ -1253,7 +1253,7 @@ bool ACoherentUIGTInputActor::IsCoherentUIGTFocused()
 
 void ACoherentUIGTInputActor::Initialize(TEnumAsByte<ECollisionChannel> CollisionChannel, TEnumAsByte<ETextureAddress> AddressMode, TEnumAsByte<EGTInputWidgetRaycastQuality> RaycastQuality, int UVChannel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.Initialize");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.Initialize"));
 
 	struct
 	{
@@ -1279,7 +1279,7 @@ void ACoherentUIGTInputActor::Initialize(TEnumAsByte<ECollisionChannel> Collisio
 
 TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> ACoherentUIGTInputActor::GetInputPropagationBehaviour()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.GetInputPropagationBehaviour");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.GetInputPropagationBehaviour"));
 
 	struct
 	{
@@ -1300,7 +1300,7 @@ TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> ACoherentUIGTInputActor::Get
 
 void ACoherentUIGTInputActor::AlwaysAcceptMouseInput(bool bAccept)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.AlwaysAcceptMouseInput");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.AlwaysAcceptMouseInput"));
 
 	struct
 	{
@@ -1320,7 +1320,7 @@ void ACoherentUIGTInputActor::AlwaysAcceptMouseInput(bool bAccept)
 
 void ACoherentUIGTInputActor::AllowJoystickInputWhileUIGTIsFocused_DEPRECATED(bool bAllow)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTInputActor.AllowJoystickInputWhileUIGTIsFocused_DEPRECATED");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTInputActor.AllowJoystickInputWhileUIGTIsFocused_DEPRECATED"));
 
 	struct
 	{
@@ -1340,7 +1340,7 @@ void ACoherentUIGTInputActor::AllowJoystickInputWhileUIGTIsFocused_DEPRECATED(bo
 
 void UCoherentUIGTWidget::UpdateWholeDataModelFromStruct(class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.UpdateWholeDataModelFromStruct");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.UpdateWholeDataModelFromStruct"));
 
 	struct
 	{
@@ -1360,7 +1360,7 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromStruct(class UStructProperty* 
 
 void UCoherentUIGTWidget::UpdateWholeDataModelFromObject(class UObject* Model)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.UpdateWholeDataModelFromObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.UpdateWholeDataModelFromObject"));
 
 	struct
 	{
@@ -1381,7 +1381,7 @@ void UCoherentUIGTWidget::UpdateWholeDataModelFromObject(class UObject* Model)
 
 void UCoherentUIGTWidget::TriggerJSEvent(const class FString& Name, class UCoherentUIGTJSEvent* EventData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.TriggerJSEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.TriggerJSEvent"));
 
 	struct
 	{
@@ -1401,7 +1401,7 @@ void UCoherentUIGTWidget::TriggerJSEvent(const class FString& Name, class UCoher
 
 void UCoherentUIGTWidget::SynchronizeModels()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.SynchronizeModels");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.SynchronizeModels"));
 
 	struct
 	{
@@ -1419,7 +1419,7 @@ void UCoherentUIGTWidget::SynchronizeModels()
 
 void UCoherentUIGTWidget::ShowPaintRects(bool show)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.ShowPaintRects");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.ShowPaintRects"));
 
 	struct
 	{
@@ -1439,7 +1439,7 @@ void UCoherentUIGTWidget::ShowPaintRects(bool show)
 
 void UCoherentUIGTWidget::SetClickThroughAlphaThreshold(float Threshold)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.SetClickThroughAlphaThreshold");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.SetClickThroughAlphaThreshold"));
 
 	struct
 	{
@@ -1457,7 +1457,7 @@ void UCoherentUIGTWidget::SetClickThroughAlphaThreshold(float Threshold)
 
 void UCoherentUIGTWidget::Reload()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Reload");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.Reload"));
 
 	struct
 	{
@@ -1473,7 +1473,7 @@ void UCoherentUIGTWidget::Reload()
 
 void UCoherentUIGTWidget::Redraw()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Redraw");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.Redraw"));
 
 	struct
 	{
@@ -1491,7 +1491,7 @@ void UCoherentUIGTWidget::Redraw()
 
 void UCoherentUIGTWidget::Load(const class FString& path)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Load");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.Load"));
 
 	struct
 	{
@@ -1511,7 +1511,7 @@ void UCoherentUIGTWidget::Load(const class FString& path)
 
 bool UCoherentUIGTWidget::IsTransparent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsTransparent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsTransparent"));
 
 	struct
 	{
@@ -1532,7 +1532,7 @@ bool UCoherentUIGTWidget::IsTransparent()
 
 bool UCoherentUIGTWidget::IsReadyToCreateView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyToCreateView");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyToCreateView"));
 
 	struct
 	{
@@ -1553,7 +1553,7 @@ bool UCoherentUIGTWidget::IsReadyToCreateView()
 
 bool UCoherentUIGTWidget::IsReadyForBindings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyForBindings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyForBindings"));
 
 	struct
 	{
@@ -1574,7 +1574,7 @@ bool UCoherentUIGTWidget::IsReadyForBindings()
 
 bool UCoherentUIGTWidget::IsDocumentReady()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsDocumentReady");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsDocumentReady"));
 
 	struct
 	{
@@ -1595,7 +1595,7 @@ bool UCoherentUIGTWidget::IsDocumentReady()
 
 bool UCoherentUIGTWidget::HasRequestedView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.HasRequestedView");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.HasRequestedView"));
 
 	struct
 	{
@@ -1616,7 +1616,7 @@ bool UCoherentUIGTWidget::HasRequestedView()
 
 float UCoherentUIGTWidget::GetClickThroughAlphaThreshold()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.GetClickThroughAlphaThreshold");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.GetClickThroughAlphaThreshold"));
 
 	struct
 	{
@@ -1635,7 +1635,7 @@ float UCoherentUIGTWidget::GetClickThroughAlphaThreshold()
 
 void UCoherentUIGTWidget::EndDebugFrameSave()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.EndDebugFrameSave");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.EndDebugFrameSave"));
 
 	struct
 	{
@@ -1651,7 +1651,7 @@ void UCoherentUIGTWidget::EndDebugFrameSave()
 
 void UCoherentUIGTWidget::DebugSaveNextFrame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.DebugSaveNextFrame");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.DebugSaveNextFrame"));
 
 	struct
 	{
@@ -1669,7 +1669,7 @@ void UCoherentUIGTWidget::DebugSaveNextFrame()
 
 class UCoherentUIGTJSEvent* UCoherentUIGTWidget::CreateJSEvent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateJSEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateJSEvent"));
 
 	struct
 	{
@@ -1691,7 +1691,7 @@ class UCoherentUIGTJSEvent* UCoherentUIGTWidget::CreateJSEvent()
 
 void UCoherentUIGTWidget::CreateDataModelFromStruct(const class FString& Name, class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateDataModelFromStruct");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateDataModelFromStruct"));
 
 	struct
 	{
@@ -1714,7 +1714,7 @@ void UCoherentUIGTWidget::CreateDataModelFromStruct(const class FString& Name, c
 
 void UCoherentUIGTWidget::CreateDataModelFromObject(const class FString& Name, class UObject* Model)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateDataModelFromObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateDataModelFromObject"));
 
 	struct
 	{
@@ -1734,7 +1734,7 @@ void UCoherentUIGTWidget::CreateDataModelFromObject(const class FString& Name, c
 
 void UCoherentUIGTWidget::BeginDebugFrameSave()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.BeginDebugFrameSave");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.BeginDebugFrameSave"));
 
 	struct
 	{

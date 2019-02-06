@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BuoyantStorageBarrel_LockedToWater_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailAngle_FrontSail.BP_SailAngle_FrontSail_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x08C8 - 0x08C8)
 class ABP_SailAngle_FrontSail_C : public ABP_SailAngle_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_SailAngle_FrontSail.BP_SailAngle_FrontSail_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_SailAngle_FrontSail.BP_SailAngle_FrontSail_C"));
 		return ptr;
 	}
 

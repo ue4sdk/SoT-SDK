@@ -23,6 +23,21 @@ struct FGuid
 	int                                                B;                                                        // 0x0004(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 	int                                                C;                                                        // 0x0008(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 	int                                                D;                                                        // 0x000C(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+
+    FGuid() : A(0), B(0), C(0), D(0) {}
+
+    FGuid(int a, int b, int c, int d) : A(a), B(b), C(c), D(d) {}
+
+    bool operator==(const FGuid& other)
+	{
+	    return A == other.A && B == other.B && C == other.C && D == other.D;
+	}
+
+   bool operator!=(const FGuid& other)
+	{
+	    return A != other.A || B != other.B || C != other.C || D != other.D;
+	}
+
 };
 
 // ScriptStruct CoreUObject.Vector
@@ -146,6 +161,11 @@ struct FRotator
 	float                                              Pitch;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              Yaw;                                                      // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              Roll;                                                     // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+
+    inline FRotator() {}
+
+    inline FRotator(float pitch, float yaw, float roll) : Pitch(pitch), Yaw(yaw), Roll(roll) {}
+
 };
 
 // ScriptStruct CoreUObject.Quat
@@ -156,6 +176,13 @@ struct alignas(16) FQuat
 	float                                              Y;                                                        // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              Z;                                                        // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              W;                                                        // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+
+    inline FQuat() {}
+
+    inline FQuat( float InX, float InY, float InZ, float InW ) : X(InX) , Y(InY) , Z(InZ) , W(InW) {}
+
+    inline FQuat( const FQuat& Q ) : X(Q.X), Y(Q.Y), Z(Q.Z), W(Q.W) {}
+
 };
 
 // ScriptStruct CoreUObject.PackedNormal
@@ -242,6 +269,11 @@ struct FBox2D
 	struct FVector2D                                   Max;                                                      // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	unsigned char                                      IsValid;                                                  // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+
+    FBox2D() : Min(FVector2D(0,0)), Max(FVector2D(0,0)), IsValid(1), UnknownData00{} {}
+
+    FBox2D(FVector2D min, FVector2D max) : Min(min), Max(max), IsValid(1), UnknownData00{} {}
+
 };
 
 // ScriptStruct CoreUObject.BoxSphereBounds

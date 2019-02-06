@@ -17,7 +17,7 @@ namespace SDK
 
 void Awld_beach_rocks_03_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wld_beach_rocks_03.wld_beach_rocks_03_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wld_beach_rocks_03.wld_beach_rocks_03_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EquipmentShopkeeper.BP_EquipmentShopkeeper_C
-// 0x0008 (0x0548 - 0x0540)
+// 0x0008 (0x0550 - 0x0548)
 class ABP_EquipmentShopkeeper_C : public AShopkeeperInteractionProxy
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_EquipmentShopkeeper.BP_EquipmentShopkeeper_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_EquipmentShopkeeper.BP_EquipmentShopkeeper_C"));
 		return ptr;
 	}
 

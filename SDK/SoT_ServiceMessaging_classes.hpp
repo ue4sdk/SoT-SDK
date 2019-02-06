@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingDispatcherInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServiceMessaging.ServiceMessagingDispatcherInterface"));
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServiceMessaging.ServiceMessagingInterface"));
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServiceMessaging.ServiceMessagingFunctions"));
 		return ptr;
 	}
 
@@ -71,7 +71,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ServiceMessaging.ServiceMessagingListenerTestObject");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServiceMessaging.ServiceMessagingListenerTestObject"));
 		return ptr;
 	}
 

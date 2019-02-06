@@ -19,7 +19,7 @@ namespace SDK
 
 void ABP_PlayerPirate_C::TattoGlowDynamicMaterials(class UMeshComponent* Mesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.TattoGlowDynamicMaterials");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.TattoGlowDynamicMaterials"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void ABP_PlayerPirate_C::TattoGlowDynamicMaterials(class UMeshComponent* Mesh)
 
 struct FVector ABP_PlayerPirate_C::GetMouthPosition()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.GetMouthPosition");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.GetMouthPosition"));
 
 	struct
 	{
@@ -58,7 +58,7 @@ struct FVector ABP_PlayerPirate_C::GetMouthPosition()
 
 void ABP_PlayerPirate_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.UserConstructionScript"));
 
 	struct
 	{
@@ -76,7 +76,7 @@ void ABP_PlayerPirate_C::UserConstructionScript()
 
 void ABP_PlayerPirate_C::Update_Athena_Character(class AAthenaCharacter* AthenaCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.Update Athena Character");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.Update Athena Character"));
 
 	struct
 	{
@@ -96,7 +96,7 @@ void ABP_PlayerPirate_C::Update_Athena_Character(class AAthenaCharacter* AthenaC
 
 void ABP_PlayerPirate_C::CapstanRotationSpeed(float RotationSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.CapstanRotationSpeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.CapstanRotationSpeed"));
 
 	struct
 	{
@@ -116,7 +116,7 @@ void ABP_PlayerPirate_C::CapstanRotationSpeed(float RotationSpeed)
 
 void ABP_PlayerPirate_C::DockingInterface(const struct FBP_Docking& Docking)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.DockingInterface");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.DockingInterface"));
 
 	struct
 	{
@@ -139,7 +139,7 @@ void ABP_PlayerPirate_C::DockingInterface(const struct FBP_Docking& Docking)
 
 void ABP_PlayerPirate_C::CapstanForce(float IndividualForce, const struct FTransform& LH_IK, const struct FTransform& RH_IK, class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.CapstanForce");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.CapstanForce"));
 
 	struct
 	{
@@ -166,7 +166,7 @@ void ABP_PlayerPirate_C::CapstanForce(float IndividualForce, const struct FTrans
 
 void ABP_PlayerPirate_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbId, const struct FTransform& TransformUpdate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Update Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Update Transform"));
 
 	struct
 	{
@@ -190,7 +190,7 @@ void ABP_PlayerPirate_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbI
 
 void ABP_PlayerPirate_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, float BlendIn, float BlendOut)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Blend Timing");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Blend Timing"));
 
 	struct
 	{
@@ -216,7 +216,7 @@ void ABP_PlayerPirate_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, f
 
 void ABP_PlayerPirate_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId, float LocationStrength, float RotationStrength)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Update Strength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Update Strength"));
 
 	struct
 	{
@@ -242,7 +242,7 @@ void ABP_PlayerPirate_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId
 
 void ABP_PlayerPirate_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Active, TEnumAsByte<ELimbIKSpace> CoordinateSpace)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Active");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Active"));
 
 	struct
 	{
@@ -268,7 +268,7 @@ void ABP_PlayerPirate_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Ac
 
 void ABP_PlayerPirate_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Stretch");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.IK Limb Stretch"));
 
 	struct
 	{
@@ -290,7 +290,7 @@ void ABP_PlayerPirate_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 
 void ABP_PlayerPirate_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -306,7 +306,7 @@ void ABP_PlayerPirate_C::ReceiveBeginPlay()
 
 void ABP_PlayerPirate_C::TriggerTattooGlow()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.TriggerTattooGlow");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.TriggerTattooGlow"));
 
 	struct
 	{
@@ -324,7 +324,7 @@ void ABP_PlayerPirate_C::TriggerTattooGlow()
 
 void ABP_PlayerPirate_C::ExecuteUbergraph_BP_PlayerPirate(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerPirate.BP_PlayerPirate_C.ExecuteUbergraph_BP_PlayerPirate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.ExecuteUbergraph_BP_PlayerPirate"));
 
 	struct
 	{

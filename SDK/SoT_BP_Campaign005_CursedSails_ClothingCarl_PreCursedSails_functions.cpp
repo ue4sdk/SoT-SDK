@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Campaign005_CursedSails_ClothingCarl_PreCursedSails_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Campaign005_CursedSails_ClothingCarl_PreCursedSails.BP_Campaign005_CursedSails_ClothingCarl_PreCursedSails_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Campaign005_CursedSails_ClothingCarl_PreCursedSails.BP_Campaign005_CursedSails_ClothingCarl_PreCursedSails_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails.BP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05D8 - 0x05D8)
 class ABP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails_C : public ABP_Shipwright_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails.BP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails.BP_Campaign005_CursedSails_ShipwrightSandra_PreCursedSails_C"));
 		return ptr;
 	}
 

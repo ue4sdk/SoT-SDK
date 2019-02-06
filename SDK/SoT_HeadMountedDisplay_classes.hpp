@@ -27,7 +27,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class HeadMountedDisplay.MotionControllerComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class HeadMountedDisplay.MotionControllerComponent"));
 		return ptr;
 	}
 

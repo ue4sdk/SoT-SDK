@@ -17,7 +17,7 @@ namespace SDK
 
 void ADrawDebugService::OnRep_ReplicatedItems()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.OnRep_ReplicatedItems");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaDebug.DrawDebugService.OnRep_ReplicatedItems"));
 
 	struct
 	{

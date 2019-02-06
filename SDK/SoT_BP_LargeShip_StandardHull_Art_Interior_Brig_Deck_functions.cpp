@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_LargeShip_StandardHull_Art_Interior_Brig_Deck_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Interior_Brig_Deck.BP_LargeShip_StandardHull_Art_Interior_Brig_Deck_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShip_StandardHull_Art_Interior_Brig_Deck.BP_LargeShip_StandardHull_Art_Interior_Brig_Deck_C.UserConstructionScript"));
 
 	struct
 	{

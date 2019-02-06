@@ -19,7 +19,7 @@ namespace SDK
 
 void UBP_DamageZoneInterface_C::GetNumExternalHits(int* NumExternalHits)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.GetNumExternalHits");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.GetNumExternalHits"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void UBP_DamageZoneInterface_C::GetNumExternalHits(int* NumExternalHits)
 
 void UBP_DamageZoneInterface_C::ClearDecalFlags()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.ClearDecalFlags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.ClearDecalFlags"));
 
 	struct
 	{
@@ -57,7 +57,7 @@ void UBP_DamageZoneInterface_C::ClearDecalFlags()
 
 void UBP_DamageZoneInterface_C::AddExternalHit(const struct FHullDamageHit& Hit_Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.AddExternalHit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.AddExternalHit"));
 
 	struct
 	{

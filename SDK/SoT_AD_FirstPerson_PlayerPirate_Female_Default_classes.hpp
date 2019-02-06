@@ -36,7 +36,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Default.AD_FirstPerson_PlayerPirate_Female_Default_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Default.AD_FirstPerson_PlayerPirate_Female_Default_C"));
 		return ptr;
 	}
 

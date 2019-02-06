@@ -17,7 +17,7 @@ namespace SDK
 
 void Abp_light_volume_underwater_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bp_light_volume_underwater_a.bp_light_volume_underwater_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bp_light_volume_underwater_a.bp_light_volume_underwater_a_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shipwreck_01_a_NetProxy.BP_Shipwreck_01_a_NetProxy_C
-// 0x0000 (0x04A8 - 0x04A8)
+// 0x0000 (0x04B0 - 0x04B0)
 class ABP_Shipwreck_01_a_NetProxy_C : public ANetProxy
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Shipwreck_01_a_NetProxy.BP_Shipwreck_01_a_NetProxy_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Shipwreck_01_a_NetProxy.BP_Shipwreck_01_a_NetProxy_C"));
 		return ptr;
 	}
 

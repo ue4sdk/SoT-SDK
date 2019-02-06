@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bucket.BP_Bucket_C
-// 0x0000 (0x0908 - 0x0908)
+// 0x0000 (0x0910 - 0x0910)
 class ABP_Bucket_C : public ABucket
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Bucket.BP_Bucket_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Bucket.BP_Bucket_C"));
 		return ptr;
 	}
 

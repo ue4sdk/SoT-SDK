@@ -19,7 +19,7 @@ namespace SDK
 
 void ULightweightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StatusEffects.LightweightStatusEffectManagerComponent.OnRep_ActiveEffects");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.LightweightStatusEffectManagerComponent.OnRep_ActiveEffects"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void ULightweightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct
 
 void UStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects"));
 
 	struct
 	{

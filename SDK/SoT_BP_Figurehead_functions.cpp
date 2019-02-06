@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Figurehead_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void ABP_Figurehead_C::UserConstructionScript()
 
 void ABP_Figurehead_C::OnPartMeshLoaded(class UStaticMesh* Mesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ABP_Figurehead_C::OnPartMeshLoaded(class UStaticMesh* Mesh)
 
 void ABP_Figurehead_C::OnPartDescLoaded(class UGenericPartDescAsset* Desc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded"));
 
 	struct
 	{
@@ -75,7 +75,7 @@ void ABP_Figurehead_C::OnPartDescLoaded(class UGenericPartDescAsset* Desc)
 
 void ABP_Figurehead_C::ExecuteUbergraph_BP_Figurehead(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead"));
 
 	struct
 	{

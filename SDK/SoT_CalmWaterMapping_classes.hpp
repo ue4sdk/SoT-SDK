@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CalmWaterMapping.CalmWaterMappingInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CalmWaterMapping.CalmWaterMappingInterface"));
 		return ptr;
 	}
 
@@ -33,15 +33,15 @@ public:
 
 
 // Class CalmWaterMapping.AthenaCalmWaterZone
-// 0x0020 (0x04B8 - 0x0498)
+// 0x0020 (0x04C0 - 0x04A0)
 class AAthenaCalmWaterZone : public ACalmWaterZone
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0498(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x04A0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CalmWaterMapping.AthenaCalmWaterZone");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CalmWaterMapping.AthenaCalmWaterZone"));
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CalmWaterMapping.CalmWaterMappingService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CalmWaterMapping.CalmWaterMappingService"));
 		return ptr;
 	}
 

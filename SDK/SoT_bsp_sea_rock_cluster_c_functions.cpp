@@ -17,7 +17,7 @@ namespace SDK
 
 void Absp_sea_rock_cluster_c_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bsp_sea_rock_cluster_c.bsp_sea_rock_cluster_c_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bsp_sea_rock_cluster_c.bsp_sea_rock_cluster_c_C.UserConstructionScript"));
 
 	struct
 	{

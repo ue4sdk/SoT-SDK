@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStateId"));
 		return ptr;
 	}
 
@@ -30,14 +30,14 @@ public:
 
 
 // Class ActionStateMachine.ActionStateCreatorDefinition
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class AActionStateCreatorDefinition : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStateCreatorDefinition"));
 		return ptr;
 	}
 
@@ -45,15 +45,15 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateCreatorDefinition
-// 0x0018 (0x04A8 - 0x0490)
+// 0x0018 (0x04B0 - 0x0498)
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0490(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0498(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateCreatorDefinition");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.TestActionStateCreatorDefinition"));
 		return ptr;
 	}
 
@@ -68,7 +68,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.CustomClientValidityActionState2Id");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.CustomClientValidityActionState2Id"));
 		return ptr;
 	}
 
@@ -83,7 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.CustomClientValidityActionStateId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.CustomClientValidityActionStateId"));
 		return ptr;
 	}
 
@@ -98,7 +98,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.NullActionStateId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.NullActionStateId"));
 		return ptr;
 	}
 
@@ -113,7 +113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.TestActionStateId"));
 		return ptr;
 	}
 
@@ -128,7 +128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateId2");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.TestActionStateId2"));
 		return ptr;
 	}
 
@@ -146,7 +146,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateMachineComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStateMachineComponent"));
 		return ptr;
 	}
 
@@ -173,7 +173,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestActionStateMachineComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.TestActionStateMachineComponent"));
 		return ptr;
 	}
 
@@ -190,7 +190,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.CustomClientValidityCheckCallback");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.CustomClientValidityCheckCallback"));
 		return ptr;
 	}
 
@@ -205,7 +205,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateMachineComponentTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStateMachineComponentTestFunctions"));
 		return ptr;
 	}
 
@@ -235,7 +235,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStateMachineInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStateMachineInterface"));
 		return ptr;
 	}
 
@@ -252,7 +252,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStatePriorityTableData");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStatePriorityTableData"));
 		return ptr;
 	}
 
@@ -267,7 +267,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.ActionStatePriorityTableUtility");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.ActionStatePriorityTableUtility"));
 		return ptr;
 	}
 
@@ -278,15 +278,15 @@ public:
 
 
 // Class ActionStateMachine.RemoteValidationFailActionStateActor
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0490(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0498(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.RemoteValidationFailActionStateActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.RemoteValidationFailActionStateActor"));
 		return ptr;
 	}
 
@@ -301,7 +301,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions"));
 		return ptr;
 	}
 
@@ -318,16 +318,16 @@ public:
 
 
 // Class ActionStateMachine.TestObjectWithActionStateMachine
-// 0x0018 (0x04A8 - 0x0490)
+// 0x0018 (0x04B0 - 0x0498)
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0490(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0498(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x04A0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ActionStateMachine.TestObjectWithActionStateMachine");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ActionStateMachine.TestObjectWithActionStateMachine"));
 		return ptr;
 	}
 

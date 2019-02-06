@@ -19,7 +19,7 @@ namespace SDK
 
 void ABP_EyeOfReach_C::determine_sfx_relationship(TEnumAsByte<EEmitterRelationship>* Relationship)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.determine sfx relationship");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.determine sfx relationship"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void ABP_EyeOfReach_C::determine_sfx_relationship(TEnumAsByte<EEmitterRelationsh
 
 void ABP_EyeOfReach_C::DoFireEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.DoFireEffect");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.DoFireEffect"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ABP_EyeOfReach_C::DoFireEffect()
 
 void ABP_EyeOfReach_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.UserConstructionScript"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_EyeOfReach_C::UserConstructionScript()
 
 void ABP_EyeOfReach_C::OnWeaponFired()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.OnWeaponFired");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.OnWeaponFired"));
 
 	struct
 	{
@@ -87,7 +87,7 @@ void ABP_EyeOfReach_C::OnWeaponFired()
 
 void ABP_EyeOfReach_C::ScopeOn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOn"));
 
 	struct
 	{
@@ -103,7 +103,7 @@ void ABP_EyeOfReach_C::ScopeOn()
 
 void ABP_EyeOfReach_C::ScopeOff()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOff");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOff"));
 
 	struct
 	{
@@ -121,7 +121,7 @@ void ABP_EyeOfReach_C::ScopeOff()
 
 void ABP_EyeOfReach_C::ScopeTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeTick"));
 
 	struct
 	{
@@ -139,7 +139,7 @@ void ABP_EyeOfReach_C::ScopeTick(float DeltaSeconds)
 
 void ABP_EyeOfReach_C::ScopeOffImmediate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOffImmediate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.ScopeOffImmediate"));
 
 	struct
 	{
@@ -155,7 +155,7 @@ void ABP_EyeOfReach_C::ScopeOffImmediate()
 
 void ABP_EyeOfReach_C::GlintOn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.GlintOn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.GlintOn"));
 
 	struct
 	{
@@ -171,7 +171,7 @@ void ABP_EyeOfReach_C::GlintOn()
 
 void ABP_EyeOfReach_C::GlintOff()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.GlintOff");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.GlintOff"));
 
 	struct
 	{
@@ -189,7 +189,7 @@ void ABP_EyeOfReach_C::GlintOff()
 
 void ABP_EyeOfReach_C::ExecuteUbergraph_BP_EyeOfReach(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EyeOfReach.BP_EyeOfReach_C.ExecuteUbergraph_BP_EyeOfReach");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EyeOfReach.BP_EyeOfReach_C.ExecuteUbergraph_BP_EyeOfReach"));
 
 	struct
 	{

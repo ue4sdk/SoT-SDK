@@ -22,7 +22,7 @@ namespace SDK
 
 bool UAnimationDataFunctionLib::UnwrapAnimDataEntryStruct(const struct FAnimDataEntryStructWrapper& Wrapper, class UScriptStruct* DestinationStruct, struct FGenericStruct* Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.UnwrapAnimDataEntryStruct");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataFunctionLib.UnwrapAnimDataEntryStruct"));
 
 	struct
 	{
@@ -53,7 +53,7 @@ bool UAnimationDataFunctionLib::UnwrapAnimDataEntryStruct(const struct FAnimData
 
 class UAnimationData* UAnimationDataFunctionLib::MakeAnimationData(class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.MakeAnimationData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataFunctionLib.MakeAnimationData"));
 
 	struct
 	{
@@ -79,7 +79,7 @@ class UAnimationData* UAnimationDataFunctionLib::MakeAnimationData(class UClass*
 
 struct FAnimDataEntryStructWrapper UAnimationDataFunctionLib::GetAnimDataEntryStructAsStructWrapper(class UAnimationData* AnimationDataObject, class UScriptStruct* TheClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.GetAnimDataEntryStructAsStructWrapper");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataFunctionLib.GetAnimDataEntryStructAsStructWrapper"));
 
 	struct
 	{
@@ -105,7 +105,7 @@ struct FAnimDataEntryStructWrapper UAnimationDataFunctionLib::GetAnimDataEntrySt
 
 void UAnimationDataFunctionLib::CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs(class UClass* InClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataFunctionLib.CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataFunctionLib.CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs"));
 
 	struct
 	{
@@ -127,7 +127,7 @@ void UAnimationDataFunctionLib::CheckAnimDataClassTypeForDuplicateAnimDataEntryS
 
 class UAnimationData* UAnimationDataStoreAsset::LookupAnimationData(class UClass* AnimDataId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreAsset.LookupAnimationData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataStoreAsset.LookupAnimationData"));
 
 	struct
 	{
@@ -151,7 +151,7 @@ class UAnimationData* UAnimationDataStoreAsset::LookupAnimationData(class UClass
 
 class UClass* UAnimationDataStoreAsset::GetAnimationDataClass(struct FAnimationDataStoreAssetEntry* Entry)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreAsset.GetAnimationDataClass");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataStoreAsset.GetAnimationDataClass"));
 
 	struct
 	{
@@ -178,7 +178,7 @@ class UClass* UAnimationDataStoreAsset::GetAnimationDataClass(struct FAnimationD
 
 class UAnimationData* UAnimationDataStoreInterface::GetAnimationDataForId(class UClass* AnimDataId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.AnimationDataStoreInterface.GetAnimationDataForId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.AnimationDataStoreInterface.GetAnimationDataForId"));
 
 	struct
 	{
@@ -199,7 +199,7 @@ class UAnimationData* UAnimationDataStoreInterface::GetAnimationDataForId(class 
 
 void UDockableInterface::HandleDestroy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockableInterface.HandleDestroy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockableInterface.HandleDestroy"));
 
 	struct
 	{
@@ -217,7 +217,7 @@ void UDockableInterface::HandleDestroy()
 
 struct FDockableInfo UDockableInterface::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockableInterface.GetDockableInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockableInterface.GetDockableInfo"));
 
 	struct
 	{
@@ -239,7 +239,7 @@ struct FDockableInfo UDockableInterface::GetDockableInfo()
 
 void UDockerBlueprintFunctions::UpdateDock(float DeltaTime, struct FDocker* Docker)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.UpdateDock");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockerBlueprintFunctions.UpdateDock"));
 
 	struct
 	{
@@ -268,7 +268,7 @@ void UDockerBlueprintFunctions::UpdateDock(float DeltaTime, struct FDocker* Dock
 
 void UDockerBlueprintFunctions::StartDockingWithActor(class AActor* Owner, class AActor* Target, float DockDuration, float DelayAfterDocking, struct FDocker* Docker)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.StartDockingWithActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockerBlueprintFunctions.StartDockingWithActor"));
 
 	struct
 	{
@@ -300,7 +300,7 @@ void UDockerBlueprintFunctions::StartDockingWithActor(class AActor* Owner, class
 
 bool UDockerBlueprintFunctions::IsFullyDocked(struct FDocker* Docker)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.IsFullyDocked");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockerBlueprintFunctions.IsFullyDocked"));
 
 	struct
 	{
@@ -327,7 +327,7 @@ bool UDockerBlueprintFunctions::IsFullyDocked(struct FDocker* Docker)
 
 bool UDockerBlueprintFunctions::IsDocking(struct FDocker* Docker)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.IsDocking");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockerBlueprintFunctions.IsDocking"));
 
 	struct
 	{
@@ -354,7 +354,7 @@ bool UDockerBlueprintFunctions::IsDocking(struct FDocker* Docker)
 
 struct FVector UDockerBlueprintFunctions::GetTargetLocalOffset(const struct FDocker& Docker)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.GetTargetLocalOffset");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockerBlueprintFunctions.GetTargetLocalOffset"));
 
 	struct
 	{
@@ -378,7 +378,7 @@ struct FVector UDockerBlueprintFunctions::GetTargetLocalOffset(const struct FDoc
 
 void UDockerBlueprintFunctions::EndDock(struct FDocker* Docker)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.DockerBlueprintFunctions.EndDock");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.DockerBlueprintFunctions.EndDock"));
 
 	struct
 	{
@@ -402,7 +402,7 @@ void UDockerBlueprintFunctions::EndDock(struct FDocker* Docker)
 
 void ULimbIKFunctionLibrary::SetTranslationStrength(float InRotationStrength, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetTranslationStrength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetTranslationStrength"));
 
 	struct
 	{
@@ -428,7 +428,7 @@ void ULimbIKFunctionLibrary::SetTranslationStrength(float InRotationStrength, st
 
 void ULimbIKFunctionLibrary::SetTransform(const struct FTransform& InTransform, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetTransform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetTransform"));
 
 	struct
 	{
@@ -454,7 +454,7 @@ void ULimbIKFunctionLibrary::SetTransform(const struct FTransform& InTransform, 
 
 void ULimbIKFunctionLibrary::SetRotationStrength(float InRotationStrength, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetRotationStrength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetRotationStrength"));
 
 	struct
 	{
@@ -480,7 +480,7 @@ void ULimbIKFunctionLibrary::SetRotationStrength(float InRotationStrength, struc
 
 void ULimbIKFunctionLibrary::SetParentBone(const struct FName& Bone, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetParentBone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetParentBone"));
 
 	struct
 	{
@@ -506,7 +506,7 @@ void ULimbIKFunctionLibrary::SetParentBone(const struct FName& Bone, struct FLim
 
 void ULimbIKFunctionLibrary::SetIKSpace(TEnumAsByte<ELimbIKSpace> IKSpace, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetIKSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetIKSpace"));
 
 	struct
 	{
@@ -534,7 +534,7 @@ void ULimbIKFunctionLibrary::SetIKSpace(TEnumAsByte<ELimbIKSpace> IKSpace, struc
 
 void ULimbIKFunctionLibrary::SetEnabled(bool Enabled, TEnumAsByte<ELimbIKSpace> IKSpace, const struct FName& ParentBone, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetEnabled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetEnabled"));
 
 	struct
 	{
@@ -564,7 +564,7 @@ void ULimbIKFunctionLibrary::SetEnabled(bool Enabled, TEnumAsByte<ELimbIKSpace> 
 
 void ULimbIKFunctionLibrary::SetBlendOutSpeed(float BlendOutSpeed, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetBlendOutSpeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetBlendOutSpeed"));
 
 	struct
 	{
@@ -590,7 +590,7 @@ void ULimbIKFunctionLibrary::SetBlendOutSpeed(float BlendOutSpeed, struct FLimbI
 
 void ULimbIKFunctionLibrary::SetBlendInSpeed(float BlendInSpeed, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetBlendInSpeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetBlendInSpeed"));
 
 	struct
 	{
@@ -616,7 +616,7 @@ void ULimbIKFunctionLibrary::SetBlendInSpeed(float BlendInSpeed, struct FLimbIK*
 
 void ULimbIKFunctionLibrary::SetAnimationOverride(bool AnimationOverride, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetAnimationOverride");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetAnimationOverride"));
 
 	struct
 	{
@@ -642,7 +642,7 @@ void ULimbIKFunctionLibrary::SetAnimationOverride(bool AnimationOverride, struct
 
 void ULimbIKFunctionLibrary::SetAlphaTarget(float AlphaTarget, struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.SetAlphaTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.SetAlphaTarget"));
 
 	struct
 	{
@@ -668,7 +668,7 @@ void ULimbIKFunctionLibrary::SetAlphaTarget(float AlphaTarget, struct FLimbIK* L
 
 bool ULimbIKFunctionLibrary::IsEnabled(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.IsEnabled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.IsEnabled"));
 
 	struct
 	{
@@ -695,7 +695,7 @@ bool ULimbIKFunctionLibrary::IsEnabled(struct FLimbIK* LimbIK)
 
 float ULimbIKFunctionLibrary::GetTranslationStrength(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetTranslationStrength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetTranslationStrength"));
 
 	struct
 	{
@@ -722,7 +722,7 @@ float ULimbIKFunctionLibrary::GetTranslationStrength(struct FLimbIK* LimbIK)
 
 struct FTransform ULimbIKFunctionLibrary::GetTransform(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetTransform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetTransform"));
 
 	struct
 	{
@@ -749,7 +749,7 @@ struct FTransform ULimbIKFunctionLibrary::GetTransform(struct FLimbIK* LimbIK)
 
 float ULimbIKFunctionLibrary::GetRotationStrength(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetRotationStrength");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetRotationStrength"));
 
 	struct
 	{
@@ -776,7 +776,7 @@ float ULimbIKFunctionLibrary::GetRotationStrength(struct FLimbIK* LimbIK)
 
 struct FName ULimbIKFunctionLibrary::GetParentBone(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetParentBone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetParentBone"));
 
 	struct
 	{
@@ -803,7 +803,7 @@ struct FName ULimbIKFunctionLibrary::GetParentBone(struct FLimbIK* LimbIK)
 
 TEnumAsByte<ELimbIKSpace> ULimbIKFunctionLibrary::GetIKSpace(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetIKSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetIKSpace"));
 
 	struct
 	{
@@ -830,7 +830,7 @@ TEnumAsByte<ELimbIKSpace> ULimbIKFunctionLibrary::GetIKSpace(struct FLimbIK* Lim
 
 float ULimbIKFunctionLibrary::GetCurrentAlpha(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetCurrentAlpha");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetCurrentAlpha"));
 
 	struct
 	{
@@ -857,7 +857,7 @@ float ULimbIKFunctionLibrary::GetCurrentAlpha(struct FLimbIK* LimbIK)
 
 bool ULimbIKFunctionLibrary::GetAnimationOverride(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetAnimationOverride");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetAnimationOverride"));
 
 	struct
 	{
@@ -884,7 +884,7 @@ bool ULimbIKFunctionLibrary::GetAnimationOverride(struct FLimbIK* LimbIK)
 
 float ULimbIKFunctionLibrary::GetAlphaTarget(struct FLimbIK* LimbIK)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.GetAlphaTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.GetAlphaTarget"));
 
 	struct
 	{
@@ -911,7 +911,7 @@ float ULimbIKFunctionLibrary::GetAlphaTarget(struct FLimbIK* LimbIK)
 
 float ULimbIKFunctionLibrary::ConvertBoolToAlpha(bool InBool)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LimbIKFunctionLibrary.ConvertBoolToAlpha");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LimbIKFunctionLibrary.ConvertBoolToAlpha"));
 
 	struct
 	{
@@ -938,7 +938,7 @@ float ULimbIKFunctionLibrary::ConvertBoolToAlpha(bool InBool)
 
 float ULocomotionFunctionLib::UpdateControllerSpineRotation(const struct FRotator& CharacterRotation, float AngleSpeedMax, float AngleSpeedMin)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LocomotionFunctionLib.UpdateControllerSpineRotation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LocomotionFunctionLib.UpdateControllerSpineRotation"));
 
 	struct
 	{
@@ -972,7 +972,7 @@ float ULocomotionFunctionLib::UpdateControllerSpineRotation(const struct FRotato
 
 struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const struct FVector& Velocity, float CurrentMaxWalkSpeed, float WantedMovementSpeed, float BaseMaxWalkSpeed, float SpeedBlendValue, bool IsSwimming)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LocomotionFunctionLib.UpdateCharacterSpeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LocomotionFunctionLib.UpdateCharacterSpeed"));
 
 	struct
 	{
@@ -1010,7 +1010,7 @@ struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const str
 
 float ULocomotionFunctionLib::UpdateCalculateRateAndCurrentYaw(const struct FRotator& CharacterRotation, float LargeRate, float DeltaSeconds, float* CurrentCharacterYaw)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.LocomotionFunctionLib.UpdateCalculateRateAndCurrentYaw");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LocomotionFunctionLib.UpdateCalculateRateAndCurrentYaw"));
 
 	struct
 	{
@@ -1040,7 +1040,7 @@ float ULocomotionFunctionLib::UpdateCalculateRateAndCurrentYaw(const struct FRot
 
 void UNetworkSyncedAnimationComponent::OnRep_PlayingAnimationIndex()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.NetworkSyncedAnimationComponent.OnRep_PlayingAnimationIndex");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.NetworkSyncedAnimationComponent.OnRep_PlayingAnimationIndex"));
 
 	struct
 	{
@@ -1056,7 +1056,7 @@ void UNetworkSyncedAnimationComponent::OnRep_PlayingAnimationIndex()
 
 void UNetworkSyncedAnimationComponent::OnRep_AnimationProgression()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.NetworkSyncedAnimationComponent.OnRep_AnimationProgression");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.NetworkSyncedAnimationComponent.OnRep_AnimationProgression"));
 
 	struct
 	{
@@ -1081,7 +1081,7 @@ void UNetworkSyncedAnimationComponent::OnRep_AnimationProgression()
 
 bool UTurningFunctionLib::TurningUpdate(float DeltaSeconds, bool CharacterMoving, float TurnRate, float CounterMax, bool* DeadZone, float* DelayedCounter, bool* TurningLeft)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.TurningFunctionLib.TurningUpdate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.TurningFunctionLib.TurningUpdate"));
 
 	struct
 	{
@@ -1121,7 +1121,7 @@ bool UTurningFunctionLib::TurningUpdate(float DeltaSeconds, bool CharacterMoving
 
 void UWaitForAnimationStateEntryProxy::OnEnteredState(const struct FName& path)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateEntryProxy.OnEnteredState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.WaitForAnimationStateEntryProxy.OnEnteredState"));
 
 	struct
 	{
@@ -1139,7 +1139,7 @@ void UWaitForAnimationStateEntryProxy::OnEnteredState(const struct FName& path)
 
 void UWaitForAnimationStateEntryProxy::OnAnimationUpdated()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateEntryProxy.OnAnimationUpdated");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.WaitForAnimationStateEntryProxy.OnAnimationUpdated"));
 
 	struct
 	{
@@ -1159,7 +1159,7 @@ void UWaitForAnimationStateEntryProxy::OnAnimationUpdated()
 
 class UWaitForAnimationStateEntryProxy* UWaitForAnimationStateEntryProxy::CreateProxy(class UAnimInstance* AnimInstance, const struct FName& TargetPath)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateEntryProxy.CreateProxy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.WaitForAnimationStateEntryProxy.CreateProxy"));
 
 	struct
 	{
@@ -1185,7 +1185,7 @@ class UWaitForAnimationStateEntryProxy* UWaitForAnimationStateEntryProxy::Create
 
 void UWaitForAnimationStateExitProxy::OnExitState(const struct FName& path)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateExitProxy.OnExitState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.WaitForAnimationStateExitProxy.OnExitState"));
 
 	struct
 	{
@@ -1203,7 +1203,7 @@ void UWaitForAnimationStateExitProxy::OnExitState(const struct FName& path)
 
 void UWaitForAnimationStateExitProxy::OnAnimationUpdated()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateExitProxy.OnAnimationUpdated");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.WaitForAnimationStateExitProxy.OnAnimationUpdated"));
 
 	struct
 	{
@@ -1223,7 +1223,7 @@ void UWaitForAnimationStateExitProxy::OnAnimationUpdated()
 
 class UWaitForAnimationStateExitProxy* UWaitForAnimationStateExitProxy::CreateProxy(class UAnimInstance* AnimInstance, const struct FName& TargetPath)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Animation.WaitForAnimationStateExitProxy.CreateProxy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.WaitForAnimationStateExitProxy.CreateProxy"));
 
 	struct
 	{

@@ -20,7 +20,7 @@ namespace SDK
 
 struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::GetServiceMessagingDispatcherFromActor(class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor"));
 
 	struct
 	{
@@ -45,7 +45,7 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::GetServiceMe
 
 struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcher");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcher"));
 
 	struct
 	{
@@ -69,7 +69,7 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::GetServiceMe
 
 void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage"));
 
 	struct
 	{

@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BilgeRat1_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BilgeRat1.BP_BilgeRat1_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BilgeRat1.BP_BilgeRat1_C.UserConstructionScript"));
 
 	struct
 	{

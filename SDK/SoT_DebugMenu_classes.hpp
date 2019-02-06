@@ -25,7 +25,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DebugMenu.DebugMenuComponent"));
 		return ptr;
 	}
 
@@ -40,7 +40,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuEntryGenerator");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DebugMenu.DebugMenuEntryGenerator"));
 		return ptr;
 	}
 
@@ -59,7 +59,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DebugMenu.DebugMenuDataAsset"));
 		return ptr;
 	}
 
@@ -67,15 +67,15 @@ public:
 
 
 // Class DebugMenu.DebugMenu
-// 0x0060 (0x04F0 - 0x0490)
+// 0x0060 (0x04F8 - 0x0498)
 class ADebugMenu : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0490(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0498(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenu");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DebugMenu.DebugMenu"));
 		return ptr;
 	}
 
@@ -91,7 +91,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuComponentMock");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DebugMenu.DebugMenuComponentMock"));
 		return ptr;
 	}
 
@@ -106,7 +106,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class DebugMenu.DebugMenuTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DebugMenu.DebugMenuTestFunctions"));
 		return ptr;
 	}
 

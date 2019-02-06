@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Speaking_Trumpet.BP_Speaking_Trumpet_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0828 - 0x0828)
 class ABP_Speaking_Trumpet_C : public ASpeakingTrumpet
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Speaking_Trumpet.BP_Speaking_Trumpet_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Speaking_Trumpet.BP_Speaking_Trumpet_C"));
 		return ptr;
 	}
 

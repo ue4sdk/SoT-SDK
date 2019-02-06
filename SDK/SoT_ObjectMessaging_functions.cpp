@@ -20,7 +20,7 @@ namespace SDK
 
 void UObjectMessagingFunctions::UnregisterEventFromHandle(struct FObjectMessagingDispatcherHandle* Dispatcher, struct FObjectMessagingHandle* Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.UnregisterEventFromHandle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.UnregisterEventFromHandle"));
 
 	struct
 	{
@@ -47,7 +47,7 @@ void UObjectMessagingFunctions::UnregisterEventFromHandle(struct FObjectMessagin
 
 void UObjectMessagingFunctions::UnregisterEvent(struct FObjectMessagingDispatcher* Dispatcher, struct FObjectMessagingHandle* Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.UnregisterEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.UnregisterEvent"));
 
 	struct
 	{
@@ -77,7 +77,7 @@ void UObjectMessagingFunctions::UnregisterEvent(struct FObjectMessagingDispatche
 
 void UObjectMessagingFunctions::RegisterEventFromHandle(class UObject* FunctionOwner, const class FString& FunctionName, class UStruct* EventType, struct FObjectMessagingDispatcherHandle* MessageDispatcher, struct FObjectMessagingHandle* Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.RegisterEventFromHandle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.RegisterEventFromHandle"));
 
 	struct
 	{
@@ -113,7 +113,7 @@ void UObjectMessagingFunctions::RegisterEventFromHandle(class UObject* FunctionO
 
 void UObjectMessagingFunctions::RegisterEvent(class UObject* FunctionOwner, const class FString& FunctionName, class UStruct* EventType, struct FObjectMessagingDispatcher* MessageDispatcher, struct FObjectMessagingHandle* Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.RegisterEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.RegisterEvent"));
 
 	struct
 	{
@@ -146,7 +146,7 @@ void UObjectMessagingFunctions::RegisterEvent(class UObject* FunctionOwner, cons
 
 bool UObjectMessagingFunctions::IsObjectMessagingDispatcherValid(struct FObjectMessagingDispatcherHandle* Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.IsObjectMessagingDispatcherValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.IsObjectMessagingDispatcherValid"));
 
 	struct
 	{
@@ -173,7 +173,7 @@ bool UObjectMessagingFunctions::IsObjectMessagingDispatcherValid(struct FObjectM
 
 bool UObjectMessagingFunctions::IsHandleRegistered(struct FObjectMessagingHandle* Handle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.IsHandleRegistered");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.IsHandleRegistered"));
 
 	struct
 	{
@@ -200,7 +200,7 @@ bool UObjectMessagingFunctions::IsHandleRegistered(struct FObjectMessagingHandle
 
 struct FObjectMessagingDispatcherHandle UObjectMessagingFunctions::GetObjectMessagingDispatcherFromActor(class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.GetObjectMessagingDispatcherFromActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.GetObjectMessagingDispatcherFromActor"));
 
 	struct
 	{
@@ -225,7 +225,7 @@ struct FObjectMessagingDispatcherHandle UObjectMessagingFunctions::GetObjectMess
 
 struct FObjectMessagingDispatcherHandle UObjectMessagingFunctions::GetObjectMessagingDispatcher(const TScriptInterface<class UObjectMessagingDispatcherInterface>& ObjectMessagingDispatcher)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.GetObjectMessagingDispatcher");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.GetObjectMessagingDispatcher"));
 
 	struct
 	{
@@ -253,7 +253,7 @@ struct FObjectMessagingDispatcherHandle UObjectMessagingFunctions::GetObjectMess
 
 void UObjectMessagingFunctions::FireEventWithDataFromHandle(class UStruct* EventDataStruct, const class FString& Scope, const class FString& ScopeId, struct FObjectMessagingDispatcherHandle* MessageDispatcher, struct FGenericStruct* Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.FireEventWithDataFromHandle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.FireEventWithDataFromHandle"));
 
 	struct
 	{
@@ -289,7 +289,7 @@ void UObjectMessagingFunctions::FireEventWithDataFromHandle(class UStruct* Event
 
 void UObjectMessagingFunctions::FireEventWithData(class UStruct* EventDataStruct, const class FString& Scope, const class FString& ScopeId, struct FObjectMessagingDispatcher* MessageDispatcher, struct FGenericStruct* Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectMessaging.ObjectMessagingFunctions.FireEventWithData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ObjectMessaging.ObjectMessagingFunctions.FireEventWithData"));
 
 	struct
 	{

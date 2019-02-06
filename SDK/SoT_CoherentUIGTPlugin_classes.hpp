@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTBaseComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTBaseComponent"));
 		return ptr;
 	}
 
@@ -94,7 +94,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTComponent"));
 		return ptr;
 	}
 
@@ -112,7 +112,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTLiveView");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTLiveView"));
 		return ptr;
 	}
 
@@ -130,7 +130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTRenderToTextureLiveView");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTRenderToTextureLiveView"));
 		return ptr;
 	}
 
@@ -145,7 +145,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTAssetReferencer");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTAssetReferencer"));
 		return ptr;
 	}
 
@@ -153,15 +153,15 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTSystem
-// 0x0050 (0x04E0 - 0x0490)
+// 0x0050 (0x04E8 - 0x0498)
 class ACoherentUIGTSystem : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0490(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0498(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTSystem");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTSystem"));
 		return ptr;
 	}
 
@@ -177,7 +177,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTJSEvent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTJSEvent"));
 		return ptr;
 	}
 
@@ -203,7 +203,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTJSPayload");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTJSPayload"));
 		return ptr;
 	}
 
@@ -224,7 +224,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTEventHelpers");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTEventHelpers"));
 		return ptr;
 	}
 
@@ -243,7 +243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTHUD");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTHUD"));
 		return ptr;
 	}
 
@@ -258,7 +258,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary"));
 		return ptr;
 	}
 
@@ -279,16 +279,16 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTGameHUD
-// 0x0088 (0x0610 - 0x0588)
+// 0x0088 (0x0618 - 0x0590)
 class ACoherentUIGTGameHUD : public AHUD
 {
 public:
-	class UCoherentUIGTHUD*                            CoherentUIGTHUD;                                          // 0x0588(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0590(0x0080) MISSED OFFSET
+	class UCoherentUIGTHUD*                            CoherentUIGTHUD;                                          // 0x0590(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x80];                                      // 0x0598(0x0080) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTGameHUD");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTGameHUD"));
 		return ptr;
 	}
 
@@ -298,19 +298,19 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTInputActor
-// 0x0060 (0x04F0 - 0x0490)
+// 0x0060 (0x04F8 - 0x0498)
 class ACoherentUIGTInputActor : public AActor
 {
 public:
-	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorMouseButtonDown;                  // 0x0490(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorMouseButtonUp;                    // 0x04A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorKeyDown;                          // 0x04B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorKeyUp;                            // 0x04C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x04D0(0x0020) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorMouseButtonDown;                  // 0x0498(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorMouseButtonUp;                    // 0x04A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorKeyDown;                          // 0x04B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnCoherentUIGTInputActorKeyUp;                            // 0x04C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x04D8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTInputActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTInputActor"));
 		return ptr;
 	}
 
@@ -357,7 +357,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTSettings"));
 		return ptr;
 	}
 
@@ -403,7 +403,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class CoherentUIGTPlugin.CoherentUIGTWidget");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoherentUIGTPlugin.CoherentUIGTWidget"));
 		return ptr;
 	}
 

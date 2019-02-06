@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Concertina.BP_Concertina_C
-// 0x0000 (0x08C8 - 0x08C8)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_Concertina_C : public AMusicalInstrumentSkeletalMesh
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Concertina.BP_Concertina_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Concertina.BP_Concertina_C"));
 		return ptr;
 	}
 

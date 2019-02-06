@@ -15,14 +15,77 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Pets.AIPetsOnDemandSpawner
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x02D0 - 0x02D0)
 class UAIPetsOnDemandSpawner : public UAISpawner
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.AIPetsOnDemandSpawner");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.AIPetsOnDemandSpawner"));
+		return ptr;
+	}
+
+};
+
+
+// Class Pets.BTTask_PetWaitForAnimationRoamingState
+// 0x0020 (0x0080 - 0x0060)
+class UBTTask_PetWaitForAnimationRoamingState : public UBTTaskNode
+{
+public:
+	TArray<TEnumAsByte<EAthenaAnimationPetRoamingState>> SuccessRoamingStates;                                     // 0x0060(0x0010) (Edit, ZeroConstructor)
+	TArray<TEnumAsByte<EAthenaAnimationPetRoamingState>> FailRoamingStates;                                        // 0x0070(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.BTTask_PetWaitForAnimationRoamingState"));
+		return ptr;
+	}
+
+};
+
+
+// Class Pets.BTTask_SelectPetHangoutSpot
+// 0x0000 (0x0088 - 0x0088)
+class UBTTask_SelectPetHangoutSpot : public UBTTask_BlackboardBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.BTTask_SelectPetHangoutSpot"));
+		return ptr;
+	}
+
+};
+
+
+// Class Pets.HangoutSpotSelectionInterface
+// 0x0000 (0x0028 - 0x0028)
+class UHangoutSpotSelectionInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.HangoutSpotSelectionInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Pets.PetHangoutSpotsDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UPetHangoutSpotsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FHangoutSpotParams>                  HangoutSpotParams;                                        // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetHangoutSpotsDataAsset"));
 		return ptr;
 	}
 
@@ -30,17 +93,20 @@ public:
 
 
 // Class Pets.PetAIController
-// 0x0070 (0x0950 - 0x08E0)
+// 0x00F8 (0x09E8 - 0x08F0)
 class APetAIController : public AAthenaAIController
 {
 public:
-	TArray<struct FAIStategyControllerMovementMod>     StrategyControllerMovementMods;                           // 0x08E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              DefaultControlRotationInterpSpeed;                        // 0x08F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5C];                                      // 0x08F4(0x005C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x08F0(0x0008) MISSED OFFSET
+	TArray<struct FAIStategyControllerMovementMod>     StrategyControllerMovementMods;                           // 0x08F8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              DefaultControlRotationInterpSpeed;                        // 0x0908(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x090C(0x0004) MISSED OFFSET
+	struct FPetHangoutSpotSelector                     HangoutSpotSelector;                                      // 0x0910(0x0080)
+	unsigned char                                      UnknownData02[0x58];                                      // 0x0990(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetAIController");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetAIController"));
 		return ptr;
 	}
 
@@ -58,7 +124,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetAssignmentComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetAssignmentComponent"));
 		return ptr;
 	}
 
@@ -73,7 +139,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetCategory");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetCategory"));
 		return ptr;
 	}
 
@@ -89,23 +155,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetDesc");
-		return ptr;
-	}
-
-};
-
-
-// Class Pets.PetHangoutSpotsDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class UPetHangoutSpotsDataAsset : public UDataAsset
-{
-public:
-	TArray<struct FHangoutSpotParams>                  HangoutSpotParams;                                        // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetHangoutSpotsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetDesc"));
 		return ptr;
 	}
 
@@ -122,7 +172,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetHangoutSpotComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetHangoutSpotComponent"));
 		return ptr;
 	}
 
@@ -130,15 +180,18 @@ public:
 
 
 // Class Pets.PetItemInfo
-// 0x0018 (0x0518 - 0x0500)
+// 0x0030 (0x0548 - 0x0518)
 class APetItemInfo : public ANonStorableItemInfo
 {
 public:
-	struct FPetCustomisation                           PetCustomisation;                                         // 0x0500(0x0018) (Edit, Net, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0518(0x0008) MISSED OFFSET
+	struct FPetCustomisation                           PetCustomisation;                                         // 0x0520(0x0018) (Edit, Net, DisableEditOnInstance)
+	class AActor*                                      PetOwner;                                                 // 0x0538(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      SpawnedForShip;                                           // 0x0540(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetItemInfo");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetItemInfo"));
 		return ptr;
 	}
 
@@ -154,7 +207,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetListingDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetListingDataAsset"));
 		return ptr;
 	}
 
@@ -174,7 +227,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetSpawnParamsDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetSpawnParamsDataAsset"));
 		return ptr;
 	}
 
@@ -189,7 +242,24 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetsServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetsServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Pets.PetsServiceParamsDataAsset
+// 0x0038 (0x0060 - 0x0028)
+class UPetsServiceParamsDataAsset : public UDataAsset
+{
+public:
+	struct FPetsServiceParams                          Params;                                                   // 0x0028(0x0034) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetsServiceParamsDataAsset"));
 		return ptr;
 	}
 
@@ -197,17 +267,23 @@ public:
 
 
 // Class Pets.PetsService
-// 0x0060 (0x0088 - 0x0028)
+// 0x0248 (0x0270 - 0x0028)
 class UPetsService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	TMap<class AActor*, TWeakObjectPtr<class APetItemInfo>> PetOwnerRelationships;                                    // 0x0030(0x0050) (ZeroConstructor)
-	class UAIPetsOnDemandSpawner*                      Spawner;                                                  // 0x0080(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TMap<class AActor*, struct FPetRelationship>       PetOwnerRelationships;                                    // 0x0038(0x0050) (ZeroConstructor)
+	class UAIPetsOnDemandSpawner*                      Spawner;                                                  // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0090(0x0050) MISSED OFFSET
+	TArray<class AActor*>                              OwnersToRemove;                                           // 0x00E0(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              OwnersToRequestDespawn;                                   // 0x00F0(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x150];                                     // 0x0100(0x0150) MISSED OFFSET
+	class UPetHangoutSpotsDataAsset*                   PetHangoutDataAsset;                                      // 0x0250(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x18];                                      // 0x0258(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetsService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetsService"));
 		return ptr;
 	}
 
@@ -217,16 +293,17 @@ public:
 
 
 // Class Pets.PetsSettings
-// 0x0020 (0x0048 - 0x0028)
+// 0x0030 (0x0058 - 0x0028)
 class UPetsSettings : public UObject
 {
 public:
 	struct FStringAssetReference                       PetHangoutSpotsDataAsset;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 	struct FStringAssetReference                       PetListingDataAsset;                                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	struct FStringAssetReference                       PetsServiceParamsDataAsset;                               // 0x0048(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.PetsSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.PetsSettings"));
 		return ptr;
 	}
 
@@ -234,15 +311,16 @@ public:
 
 
 // Class Pets.WieldablePet
-// 0x0008 (0x07F8 - 0x07F0)
+// 0x0010 (0x0808 - 0x07F8)
 class AWieldablePet : public ASkeletalMeshWieldableItem
 {
 public:
-	class UWieldablePetComponent*                      WieldablePetComponent;                                    // 0x07F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
+	class UWieldablePetComponent*                      WieldablePetComponent;                                    // 0x0800(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.WieldablePet");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.WieldablePet"));
 		return ptr;
 	}
 
@@ -250,16 +328,16 @@ public:
 
 
 // Class Pets.WieldablePetComponent
-// 0x00A0 (0x0170 - 0x00D0)
+// 0x00B0 (0x0180 - 0x00D0)
 class UWieldablePetComponent : public UActorComponent
 {
 public:
 	class UWieldablePetComponentDataAsset*             WieldablePetComponentData;                                // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x98];                                      // 0x00D8(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x00D8(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.WieldablePetComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.WieldablePetComponent"));
 		return ptr;
 	}
 
@@ -276,7 +354,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Pets.WieldablePetComponentDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.WieldablePetComponentDataAsset"));
 		return ptr;
 	}
 

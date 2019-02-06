@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_LavaZone_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LavaZone.BP_LavaZone_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LavaZone.BP_LavaZone_C.UserConstructionScript"));
 
 	struct
 	{

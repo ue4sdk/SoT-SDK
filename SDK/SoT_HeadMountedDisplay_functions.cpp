@@ -19,7 +19,7 @@ namespace SDK
 
 bool UMotionControllerComponent::IsTracked()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.IsTracked");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function HeadMountedDisplay.MotionControllerComponent.IsTracked"));
 
 	struct
 	{

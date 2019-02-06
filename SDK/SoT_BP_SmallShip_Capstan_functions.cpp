@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_SmallShip_Capstan_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Capstan.BP_SmallShip_Capstan_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_Capstan.BP_SmallShip_Capstan_C.UserConstructionScript"));
 
 	struct
 	{

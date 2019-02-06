@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_MermaidGem_Proxy_Ruby_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MermaidGem_Proxy_Ruby.BP_MermaidGem_Proxy_Ruby_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MermaidGem_Proxy_Ruby.BP_MermaidGem_Proxy_Ruby_C.UserConstructionScript"));
 
 	struct
 	{

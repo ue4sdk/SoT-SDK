@@ -17,7 +17,7 @@ namespace SDK
 
 void Awld_shp_rocks_cluster_02_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wld_shp_rocks_cluster_02.wld_shp_rocks_cluster_02_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wld_shp_rocks_cluster_02.wld_shp_rocks_cluster_02_C.UserConstructionScript"));
 
 	struct
 	{

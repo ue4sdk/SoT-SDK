@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Storm_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Storm.BP_Storm_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Storm.BP_Storm_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Storm_C::UserConstructionScript()
 
 void ABP_Storm_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Storm.BP_Storm_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Storm.BP_Storm_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Storm_C::ReceiveBeginPlay()
 
 void ABP_Storm_C::ReceiveTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Storm.BP_Storm_C.ReceiveTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Storm.BP_Storm_C.ReceiveTick"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_Storm_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_Storm_C::ExecuteUbergraph_BP_Storm(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Storm.BP_Storm_C.ExecuteUbergraph_BP_Storm");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Storm.BP_Storm_C.ExecuteUbergraph_BP_Storm"));
 
 	struct
 	{

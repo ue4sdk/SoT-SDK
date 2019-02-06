@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C
-// 0x0008 (0x0988 - 0x0980)
+// 0x0008 (0x09A8 - 0x09A0)
 class ABP_TreasureChest_Proxy_Mythical_Rome_C : public ABP_TreasureChestProxy_C
 {
 public:
-	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x09A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C"));
 		return ptr;
 	}
 

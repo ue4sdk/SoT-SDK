@@ -21,7 +21,7 @@ namespace SDK
 
 struct FVector ABP_ShipwreckStorageBarrel_Grog_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -50,7 +50,7 @@ struct FVector ABP_ShipwreckStorageBarrel_Grog_C::GetClosestInteractionPoint(con
 
 bool ABP_ShipwreckStorageBarrel_Grog_C::ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.ShouldDrawTooltipInWorldSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.ShouldDrawTooltipInWorldSpace"));
 
 	struct
 	{
@@ -75,7 +75,7 @@ bool ABP_ShipwreckStorageBarrel_Grog_C::ShouldDrawTooltipInWorldSpace(class AAct
 
 void ABP_ShipwreckStorageBarrel_Grog_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipwreckStorageBarrel_Grog.BP_ShipwreckStorageBarrel_Grog_C.UserConstructionScript"));
 
 	struct
 	{

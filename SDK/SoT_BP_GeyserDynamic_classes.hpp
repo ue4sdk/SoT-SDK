@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C
-// 0x0000 (0x04F8 - 0x04F8)
+// 0x0000 (0x0500 - 0x0500)
 class ABP_GeyserDynamic_C : public ABP_Geyser_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C"));
 		return ptr;
 	}
 

@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractableComponent"));
 		return ptr;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.CharacterInteractionComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.CharacterInteractionComponent"));
 		return ptr;
 	}
 
@@ -82,7 +82,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.GroupedInteractableAreaComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.GroupedInteractableAreaComponent"));
 		return ptr;
 	}
 
@@ -102,7 +102,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableArea");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractableArea"));
 		return ptr;
 	}
 
@@ -127,7 +127,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractableInterface"));
 		return ptr;
 	}
 
@@ -158,7 +158,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableServiceInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractableServiceInterface"));
 		return ptr;
 	}
 
@@ -175,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractableService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractableService"));
 		return ptr;
 	}
 
@@ -190,7 +190,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.InteractorInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractorInterface"));
 		return ptr;
 	}
 
@@ -198,17 +198,17 @@ public:
 
 
 // Class Interaction.MockActorWithCharacterInteractionComponent
-// 0x00B0 (0x0540 - 0x0490)
+// 0x00B0 (0x0548 - 0x0498)
 class AMockActorWithCharacterInteractionComponent : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x04A0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x04A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x04A8(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockActorWithCharacterInteractionComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.MockActorWithCharacterInteractionComponent"));
 		return ptr;
 	}
 
@@ -224,7 +224,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockInteractableService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.MockInteractableService"));
 		return ptr;
 	}
 
@@ -232,19 +232,19 @@ public:
 
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (0x04B8 - 0x0490)
+// 0x0028 (0x04C0 - 0x0498)
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
-	class UObject*                                     FocusedInteractable;                                      // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     InteractedObject;                                         // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InteractNotificationType;                                 // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class UObject*                                     FocusedInteractable;                                      // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InteractedObject;                                         // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      InteractNotificationType;                                 // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x04B8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Interaction.MockInteractorActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.MockInteractorActor"));
 		return ptr;
 	}
 

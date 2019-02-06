@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_AudioCoast_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AudioCoast.BP_AudioCoast_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AudioCoast.BP_AudioCoast_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_AudioCoast_C::UserConstructionScript()
 
 void ABP_AudioCoast_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AudioCoast.BP_AudioCoast_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AudioCoast.BP_AudioCoast_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_AudioCoast_C::ReceiveBeginPlay()
 
 void ABP_AudioCoast_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AudioCoast.BP_AudioCoast_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AudioCoast.BP_AudioCoast_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ void ABP_AudioCoast_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 void ABP_AudioCoast_C::ExecuteUbergraph_BP_AudioCoast(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AudioCoast.BP_AudioCoast_C.ExecuteUbergraph_BP_AudioCoast");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AudioCoast.BP_AudioCoast_C.ExecuteUbergraph_BP_AudioCoast"));
 
 	struct
 	{

@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Cutscene_Banana_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutscene_Banana.BP_Cutscene_Banana_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cutscene_Banana.BP_Cutscene_Banana_C.UserConstructionScript"));
 
 	struct
 	{

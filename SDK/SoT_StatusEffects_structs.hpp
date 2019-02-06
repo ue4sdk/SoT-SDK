@@ -58,6 +58,13 @@ struct FStatusEffectManagerComponentAggregateTickFunction : public FTickFunction
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
 };
 
+// ScriptStruct StatusEffects.StatusEffectPersistenceKey
+// 0x0018
+struct FStatusEffectPersistenceKey
+{
+	struct FStatus                                     AppliedStatuses;                                          // 0x0000(0x0018)
+};
+
 // ScriptStruct StatusEffects.EventExitedSurfaceMaterialStatusZone
 // 0x0001
 struct FEventExitedSurfaceMaterialStatusZone

@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass PursuitCircleSlowStrategyId.PursuitCircleSlowStrategyId_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass PursuitCircleSlowStrategyId.PursuitCircleSlowStrategyId_C"));
 		return ptr;
 	}
 

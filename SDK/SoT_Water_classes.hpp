@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Water.AthenaFFTWater
-// 0x0028 (0x0500 - 0x04D8)
+// 0x0028 (0x0508 - 0x04E0)
 class AAthenaFFTWater : public AFFTWater
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x04D8(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x04E0(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.AthenaFFTWater");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.AthenaFFTWater"));
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterEmissionVolumeInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterEmissionVolumeInterface"));
 		return ptr;
 	}
 
@@ -46,15 +46,15 @@ public:
 
 
 // Class Water.AthenaWaterEmissionVolume
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0008 (0x04A8 - 0x04A0)
 class AAthenaWaterEmissionVolume : public AWaterEmissionVolume
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.AthenaWaterEmissionVolume");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.AthenaWaterEmissionVolume"));
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.FFTWaterInterface"));
 		return ptr;
 	}
 
@@ -92,7 +92,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterProperties");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterProperties"));
 		return ptr;
 	}
 
@@ -107,7 +107,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterInterface"));
 		return ptr;
 	}
 
@@ -125,20 +125,20 @@ public:
 
 
 // Class Water.FFTWaterService
-// 0x0080 (0x0510 - 0x0490)
+// 0x0080 (0x0518 - 0x0498)
 class AFFTWaterService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
-	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x04A0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x04A8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                   // 0x04B0(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x04B8(0x0050) MISSED OFFSET
-	double                                             ReplicatedServerCreationTime;                             // 0x0508(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x04A8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x04B0(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                   // 0x04B8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x04C0(0x0050) MISSED OFFSET
+	double                                             ReplicatedServerCreationTime;                             // 0x0510(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.FFTWaterService"));
 		return ptr;
 	}
 
@@ -157,7 +157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterPlaneInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterPlaneInterface"));
 		return ptr;
 	}
 
@@ -173,7 +173,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterInteractionComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterInteractionComponent"));
 		return ptr;
 	}
 
@@ -197,7 +197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterPlaneRetrievalProviderInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterPlaneRetrievalProviderInterface"));
 		return ptr;
 	}
 
@@ -205,15 +205,15 @@ public:
 
 
 // Class Water.FFTWaterQueryTestActor
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class AFFTWaterQueryTestActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterQueryTestActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.FFTWaterQueryTestActor"));
 		return ptr;
 	}
 
@@ -221,15 +221,15 @@ public:
 
 
 // Class Water.FFTWaterPerformanceCountService
-// 0x0008 (0x0518 - 0x0510)
+// 0x0008 (0x0520 - 0x0518)
 class AFFTWaterPerformanceCountService : public AFFTWaterService
 {
 public:
-	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0510(0x0008)
+	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0518(0x0008)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterPerformanceCountService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.FFTWaterPerformanceCountService"));
 		return ptr;
 	}
 
@@ -240,16 +240,16 @@ public:
 
 
 // Class Water.FFTWaterServiceFixedWaterHeight
-// 0x0008 (0x0518 - 0x0510)
+// 0x0008 (0x0520 - 0x0518)
 class AFFTWaterServiceFixedWaterHeight : public AFFTWaterService
 {
 public:
-	float                                              RequiredWaterHeight;                                      // 0x0510(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0514(0x0004) MISSED OFFSET
+	float                                              RequiredWaterHeight;                                      // 0x0518(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x051C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.FFTWaterServiceFixedWaterHeight");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.FFTWaterServiceFixedWaterHeight"));
 		return ptr;
 	}
 
@@ -265,7 +265,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.FlatWaterPlaneComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.FlatWaterPlaneComponent"));
 		return ptr;
 	}
 
@@ -284,7 +284,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterExclusionSurfaceInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterExclusionSurfaceInterface"));
 		return ptr;
 	}
 
@@ -300,7 +300,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterExclusionSurfaceComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterExclusionSurfaceComponent"));
 		return ptr;
 	}
 
@@ -316,7 +316,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterInterface"));
 		return ptr;
 	}
 
@@ -331,7 +331,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterSubmersionTests");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterSubmersionTests"));
 		return ptr;
 	}
 
@@ -350,7 +350,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterPlaneComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterPlaneComponent"));
 		return ptr;
 	}
 
@@ -365,7 +365,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterVolumeInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterVolumeInterface"));
 		return ptr;
 	}
 
@@ -381,7 +381,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.MockWaterVolumeComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterVolumeComponent"));
 		return ptr;
 	}
 
@@ -396,7 +396,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.NoSwimWaterId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.NoSwimWaterId"));
 		return ptr;
 	}
 
@@ -411,7 +411,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.SeaWaterId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.SeaWaterId"));
 		return ptr;
 	}
 
@@ -426,7 +426,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.ShipWaterId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.ShipWaterId"));
 		return ptr;
 	}
 
@@ -434,16 +434,16 @@ public:
 
 
 // Class Water.TestBaseWaterActor
-// 0x0010 (0x04A0 - 0x0490)
+// 0x0010 (0x04A8 - 0x0498)
 class ATestBaseWaterActor : public AActor
 {
 public:
-	class USceneComponent*                             SceneRootComponent;                                       // 0x0490(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x0498(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             SceneRootComponent;                                       // 0x0498(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x04A0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.TestBaseWaterActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.TestBaseWaterActor"));
 		return ptr;
 	}
 
@@ -458,7 +458,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.UndergroundSeaWaterId");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.UndergroundSeaWaterId"));
 		return ptr;
 	}
 
@@ -473,7 +473,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterBuoyancyFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterBuoyancyFunctionLibrary"));
 		return ptr;
 	}
 
@@ -493,7 +493,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterBuoyancySampleMovementFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterBuoyancySampleMovementFunctionLibrary"));
 		return ptr;
 	}
 
@@ -514,7 +514,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterEmissionVolumeService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterEmissionVolumeService"));
 		return ptr;
 	}
 
@@ -529,7 +529,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterPlaneExclusionComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterPlaneExclusionComponent"));
 		return ptr;
 	}
 
@@ -547,7 +547,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Water.WaterSplashProbeFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterSplashProbeFunctionLibrary"));
 		return ptr;
 	}
 

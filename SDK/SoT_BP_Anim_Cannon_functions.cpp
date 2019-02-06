@@ -17,7 +17,7 @@ namespace SDK
 
 void UBP_Anim_Cannon_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Cannon_AnimGraphNode_TransitionResult_D8AE3CC240728DC448411C83C0524A3E()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Cannon_AnimGraphNode_TransitionResult_D8AE3CC240728DC448411C83C0524A3E");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Cannon.BP_Anim_Cannon_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Cannon_AnimGraphNode_TransitionResult_D8AE3CC240728DC448411C83C0524A3E"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void UBP_Anim_Cannon_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Cann
 
 void UBP_Anim_Cannon_C::AnimNotify_FireEnd()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.AnimNotify_FireEnd");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Cannon.BP_Anim_Cannon_C.AnimNotify_FireEnd"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void UBP_Anim_Cannon_C::AnimNotify_FireEnd()
 
 void UBP_Anim_Cannon_C::ExecuteUbergraph_BP_Anim_Cannon(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.ExecuteUbergraph_BP_Anim_Cannon");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Cannon.BP_Anim_Cannon_C.ExecuteUbergraph_BP_Anim_Cannon"));
 
 	struct
 	{

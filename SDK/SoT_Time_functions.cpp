@@ -19,7 +19,7 @@ namespace SDK
 
 struct FGameTime UTimeInterface::GetTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.GetTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeInterface.GetTime"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ struct FGameTime UTimeInterface::GetTime()
 
 struct FDateTime UTimeInterface::GetSmoothRealWorldTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.GetSmoothRealWorldTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeInterface.GetSmoothRealWorldTime"));
 
 	struct
 	{
@@ -61,7 +61,7 @@ struct FDateTime UTimeInterface::GetSmoothRealWorldTime()
 
 struct FDateTime UTimeInterface::GetPreciseRealWorldTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.GetPreciseRealWorldTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeInterface.GetPreciseRealWorldTime"));
 
 	struct
 	{
@@ -83,7 +83,7 @@ struct FDateTime UTimeInterface::GetPreciseRealWorldTime()
 
 struct FGameTime UTimeInterface::ConvertRealWorldTimeToGameWorldTime(const struct FDateTime& RealWorldTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.ConvertRealWorldTimeToGameWorldTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeInterface.ConvertRealWorldTimeToGameWorldTime"));
 
 	struct
 	{
@@ -107,7 +107,7 @@ struct FGameTime UTimeInterface::ConvertRealWorldTimeToGameWorldTime(const struc
 
 struct FDateTime UTimeInterface::ConvertGameWorldTimeToRealWorldTime(const struct FGameTime& GameWorldTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeInterface.ConvertGameWorldTimeToRealWorldTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeInterface.ConvertGameWorldTimeToRealWorldTime"));
 
 	struct
 	{
@@ -130,7 +130,7 @@ struct FDateTime UTimeInterface::ConvertGameWorldTimeToRealWorldTime(const struc
 
 void UDebugTimeInterface::SetTimeSlowdownScalar(float RequestedSlowdownScalar)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetTimeSlowdownScalar");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetTimeSlowdownScalar"));
 
 	struct
 	{
@@ -150,7 +150,7 @@ void UDebugTimeInterface::SetTimeSlowdownScalar(float RequestedSlowdownScalar)
 
 void UDebugTimeInterface::SetTimeScalar(int RequestedTimeScalar)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetTimeScalar");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetTimeScalar"));
 
 	struct
 	{
@@ -170,7 +170,7 @@ void UDebugTimeInterface::SetTimeScalar(int RequestedTimeScalar)
 
 void UDebugTimeInterface::SetTimeCatchupScalar(float RequestedCatchupScalar)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetTimeCatchupScalar");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetTimeCatchupScalar"));
 
 	struct
 	{
@@ -190,7 +190,7 @@ void UDebugTimeInterface::SetTimeCatchupScalar(float RequestedCatchupScalar)
 
 void UDebugTimeInterface::SetSunset(float SunsetHours)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetSunset");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetSunset"));
 
 	struct
 	{
@@ -210,7 +210,7 @@ void UDebugTimeInterface::SetSunset(float SunsetHours)
 
 void UDebugTimeInterface::SetSunrise(float SunriseHours)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetSunrise");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetSunrise"));
 
 	struct
 	{
@@ -230,7 +230,7 @@ void UDebugTimeInterface::SetSunrise(float SunriseHours)
 
 void UDebugTimeInterface::SetGameWorldTime(const struct FGameTime& RequestedTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.SetGameWorldTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetGameWorldTime"));
 
 	struct
 	{
@@ -250,7 +250,7 @@ void UDebugTimeInterface::SetGameWorldTime(const struct FGameTime& RequestedTime
 
 float UDebugTimeInterface::GetTimeSlowdownScalar()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.GetTimeSlowdownScalar");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.GetTimeSlowdownScalar"));
 
 	struct
 	{
@@ -271,7 +271,7 @@ float UDebugTimeInterface::GetTimeSlowdownScalar()
 
 int UDebugTimeInterface::GetTimeScalar()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.GetTimeScalar");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.GetTimeScalar"));
 
 	struct
 	{
@@ -292,7 +292,7 @@ int UDebugTimeInterface::GetTimeScalar()
 
 float UDebugTimeInterface::GetTimeCatchupScalar()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.GetTimeCatchupScalar");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.GetTimeCatchupScalar"));
 
 	struct
 	{
@@ -313,7 +313,7 @@ float UDebugTimeInterface::GetTimeCatchupScalar()
 
 void UDebugTimeInterface::EnableQueryServiceTime(bool Enable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeInterface.EnableQueryServiceTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.EnableQueryServiceTime"));
 
 	struct
 	{
@@ -334,7 +334,7 @@ void UDebugTimeInterface::EnableQueryServiceTime(bool Enable)
 
 struct FReplicatedDateTime UTimeBlueprintLibrary::MakeReplicatedDateTimeFromDateTime(const struct FDateTime& InDateTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeBlueprintLibrary.MakeReplicatedDateTimeFromDateTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeBlueprintLibrary.MakeReplicatedDateTimeFromDateTime"));
 
 	struct
 	{
@@ -359,7 +359,7 @@ struct FReplicatedDateTime UTimeBlueprintLibrary::MakeReplicatedDateTimeFromDate
 
 struct FDateTime UTimeBlueprintLibrary::MakeDateTimeFromReplicatedDateTime(const struct FReplicatedDateTime& InDateTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeBlueprintLibrary.MakeDateTimeFromReplicatedDateTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeBlueprintLibrary.MakeDateTimeFromReplicatedDateTime"));
 
 	struct
 	{
@@ -390,7 +390,7 @@ struct FDateTime UTimeBlueprintLibrary::MakeDateTimeFromReplicatedDateTime(const
 
 struct FDateTime UTimeBlueprintLibrary::MakeDateTimeFromRaw(int Year, int Month, int Day, int Hour, int Minute, int Second, int Millisecond)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeBlueprintLibrary.MakeDateTimeFromRaw");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeBlueprintLibrary.MakeDateTimeFromRaw"));
 
 	struct
 	{
@@ -429,7 +429,7 @@ struct FDateTime UTimeBlueprintLibrary::MakeDateTimeFromRaw(int Year, int Month,
 
 bool UTimeBlueprintLibrary::DateTimesWithinTolerance(const struct FDateTime& FirstDateTime, const struct FDateTime& SecondDateTime, const struct FTimespan& Tolerance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeBlueprintLibrary.DateTimesWithinTolerance");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeBlueprintLibrary.DateTimesWithinTolerance"));
 
 	struct
 	{
@@ -455,7 +455,7 @@ bool UTimeBlueprintLibrary::DateTimesWithinTolerance(const struct FDateTime& Fir
 
 void ATimeService::OnRep_ReplicatedServerTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeService.OnRep_ReplicatedServerTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeService.OnRep_ReplicatedServerTime"));
 
 	struct
 	{
@@ -473,7 +473,7 @@ void ATimeService::OnRep_ReplicatedServerTime()
 
 void ATimeService::MulticastOnServiceTimeChangedRPC(int64_t ServiceTimeInTicks)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.TimeService.MulticastOnServiceTimeChangedRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.TimeService.MulticastOnServiceTimeChangedRPC"));
 
 	struct
 	{
@@ -494,7 +494,7 @@ void ATimeService::MulticastOnServiceTimeChangedRPC(int64_t ServiceTimeInTicks)
 
 void ADebugTimeService::MulticastOnTimeScalarOffsetRPC(int Scalar, int64_t Offset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeService.MulticastOnTimeScalarOffsetRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeService.MulticastOnTimeScalarOffsetRPC"));
 
 	struct
 	{
@@ -516,7 +516,7 @@ void ADebugTimeService::MulticastOnTimeScalarOffsetRPC(int Scalar, int64_t Offse
 
 void ADebugTimeService::MulticastOnSynchronizeTimeSpeedupRateRPC(float Rate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeService.MulticastOnSynchronizeTimeSpeedupRateRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeService.MulticastOnSynchronizeTimeSpeedupRateRPC"));
 
 	struct
 	{
@@ -536,7 +536,7 @@ void ADebugTimeService::MulticastOnSynchronizeTimeSpeedupRateRPC(float Rate)
 
 void ADebugTimeService::MulticastOnSynchronizeTimeSlowdownRateRPC(float Rate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Time.DebugTimeService.MulticastOnSynchronizeTimeSlowdownRateRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeService.MulticastOnSynchronizeTimeSlowdownRateRPC"));
 
 	struct
 	{

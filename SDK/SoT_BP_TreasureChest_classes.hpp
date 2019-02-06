@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest.BP_TreasureChest_C
-// 0x0000 (0x07F0 - 0x07F0)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABP_TreasureChest_C : public ATreasureChest
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_TreasureChest.BP_TreasureChest_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_TreasureChest.BP_TreasureChest_C"));
 		return ptr;
 	}
 

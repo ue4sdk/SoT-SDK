@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Thin.AD_ThirdPerson_PlayerPirate_Female_Thin_C
-// 0x0000 (0x07A8 - 0x07A8)
+// 0x0000 (0x07C8 - 0x07C8)
 class UAD_ThirdPerson_PlayerPirate_Female_Thin_C : public UAD_ThirdPerson_PlayerPirate_Female_Default_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Thin.AD_ThirdPerson_PlayerPirate_Female_Thin_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Thin.AD_ThirdPerson_PlayerPirate_Female_Thin_C"));
 		return ptr;
 	}
 

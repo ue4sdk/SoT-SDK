@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatMountpoint_SmallShip.BP_RowboatMountpoint_SmallShip_C
-// 0x0000 (0x0728 - 0x0728)
+// 0x0000 (0x0730 - 0x0730)
 class ABP_RowboatMountpoint_SmallShip_C : public ABP_RowboatMountpoint_Base_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_RowboatMountpoint_SmallShip.BP_RowboatMountpoint_SmallShip_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_RowboatMountpoint_SmallShip.BP_RowboatMountpoint_SmallShip_C"));
 		return ptr;
 	}
 

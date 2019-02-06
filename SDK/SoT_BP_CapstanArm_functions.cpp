@@ -19,7 +19,7 @@ namespace SDK
 
 struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
 
 struct FVector ABP_CapstanArm_C::GetFrontFacingVector()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector"));
 
 	struct
 	{
@@ -61,7 +61,7 @@ struct FVector ABP_CapstanArm_C::GetFrontFacingVector()
 
 bool ABP_CapstanArm_C::DoesRequireFacingFront()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.DoesRequireFacingFront");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.DoesRequireFacingFront"));
 
 	struct
 	{
@@ -82,7 +82,7 @@ bool ABP_CapstanArm_C::DoesRequireFacingFront()
 
 struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetDockableInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.GetDockableInfo"));
 
 	struct
 	{
@@ -105,7 +105,7 @@ struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 
 struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -132,7 +132,7 @@ struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(const struct FVector
 
 struct FVector ABP_CapstanArm_C::GetLookAtPos()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPos");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPos"));
 
 	struct
 	{
@@ -151,7 +151,7 @@ struct FVector ABP_CapstanArm_C::GetLookAtPos()
 
 void ABP_CapstanArm_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanArm.BP_CapstanArm_C.UserConstructionScript"));
 
 	struct
 	{

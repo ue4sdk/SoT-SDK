@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Volcano_SeaBased.BP_Volcano_SeaBased_C
-// 0x0000 (0x0658 - 0x0658)
+// 0x0000 (0x0660 - 0x0660)
 class ABP_Volcano_SeaBased_C : public ABP_Volcano_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Volcano_SeaBased.BP_Volcano_SeaBased_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Volcano_SeaBased.BP_Volcano_SeaBased_C"));
 		return ptr;
 	}
 

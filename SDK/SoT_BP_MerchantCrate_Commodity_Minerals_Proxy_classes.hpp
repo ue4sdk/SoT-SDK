@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_Commodity_Minerals_Proxy.BP_MerchantCrate_Commodity_Minerals_Proxy_C
-// 0x0008 (0x0838 - 0x0830)
+// 0x0008 (0x0870 - 0x0868)
 class ABP_MerchantCrate_Commodity_Minerals_Proxy_C : public ABP_MerchantCrate_Commodity_Base_Proxy_C
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MerchantCrate_Commodity_Minerals_Proxy.BP_MerchantCrate_Commodity_Minerals_Proxy_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MerchantCrate_Commodity_Minerals_Proxy.BP_MerchantCrate_Commodity_Minerals_Proxy_C"));
 		return ptr;
 	}
 

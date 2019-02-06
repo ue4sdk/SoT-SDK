@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BountyRewardSkullItemInfo_Rare_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Rare.BP_BountyRewardSkullItemInfo_Rare_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkullItemInfo_Rare.BP_BountyRewardSkullItemInfo_Rare_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_BountyRewardSkullItemInfo_Rare_C::UserConstructionScript()
 
 void ABP_BountyRewardSkullItemInfo_Rare_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Rare.BP_BountyRewardSkullItemInfo_Rare_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkullItemInfo_Rare.BP_BountyRewardSkullItemInfo_Rare_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_BountyRewardSkullItemInfo_Rare_C::ReceiveBeginPlay()
 
 void ABP_BountyRewardSkullItemInfo_Rare_C::ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Rare(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkullItemInfo_Rare.BP_BountyRewardSkullItemInfo_Rare_C.ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Rare");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkullItemInfo_Rare.BP_BountyRewardSkullItemInfo_Rare_C.ExecuteUbergraph_BP_BountyRewardSkullItemInfo_Rare"));
 
 	struct
 	{

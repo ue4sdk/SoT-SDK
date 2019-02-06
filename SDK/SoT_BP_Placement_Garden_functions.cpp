@@ -21,7 +21,7 @@ namespace SDK
 
 void ABP_Placement_Garden_C::Set_Garden_Parameters(float Radius, int Int, bool* Instances_Created)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Set Garden Parameters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Garden.BP_Placement_Garden_C.Set Garden Parameters"));
 
 	struct
 	{
@@ -45,7 +45,7 @@ void ABP_Placement_Garden_C::Set_Garden_Parameters(float Radius, int Int, bool* 
 
 void ABP_Placement_Garden_C::Create_Garden()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Create Garden");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Garden.BP_Placement_Garden_C.Create Garden"));
 
 	struct
 	{
@@ -61,7 +61,7 @@ void ABP_Placement_Garden_C::Create_Garden()
 
 void ABP_Placement_Garden_C::Initialise_Instances()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Initialise Instances");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Garden.BP_Placement_Garden_C.Initialise Instances"));
 
 	struct
 	{
@@ -77,7 +77,7 @@ void ABP_Placement_Garden_C::Initialise_Instances()
 
 void ABP_Placement_Garden_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Garden.BP_Placement_Garden_C.UserConstructionScript"));
 
 	struct
 	{
@@ -93,7 +93,7 @@ void ABP_Placement_Garden_C::UserConstructionScript()
 
 void ABP_Placement_Garden_C::Force_Create_Garden()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.Force Create Garden");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Garden.BP_Placement_Garden_C.Force Create Garden"));
 
 	struct
 	{
@@ -111,7 +111,7 @@ void ABP_Placement_Garden_C::Force_Create_Garden()
 
 void ABP_Placement_Garden_C::ExecuteUbergraph_BP_Placement_Garden(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_Garden.BP_Placement_Garden_C.ExecuteUbergraph_BP_Placement_Garden");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Garden.BP_Placement_Garden_C.ExecuteUbergraph_BP_Placement_Garden"));
 
 	struct
 	{

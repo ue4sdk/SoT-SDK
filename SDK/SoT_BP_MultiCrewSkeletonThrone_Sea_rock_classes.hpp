@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Sea_rock.BP_MultiCrewSkeletonThrone_Sea_rock_C
-// 0x0000 (0x0508 - 0x0508)
+// 0x0000 (0x0510 - 0x0510)
 class ABP_MultiCrewSkeletonThrone_Sea_rock_C : public ABP_MultiCrewSkeletonThrone_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Sea_rock.BP_MultiCrewSkeletonThrone_Sea_rock_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Sea_rock.BP_MultiCrewSkeletonThrone_Sea_rock_C"));
 		return ptr;
 	}
 

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailHoist_FrontSail.BP_SailHoist_FrontSail_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0000 (0x08C0 - 0x08C0)
 class ABP_SailHoist_FrontSail_C : public ABP_SailHoist_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_SailHoist_FrontSail.BP_SailHoist_FrontSail_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_SailHoist_FrontSail.BP_SailHoist_FrontSail_C"));
 		return ptr;
 	}
 

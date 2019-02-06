@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BountyRewardSkull_Proxy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkull_Proxy.BP_BountyRewardSkull_Proxy_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkull_Proxy.BP_BountyRewardSkull_Proxy_C.UserConstructionScript"));
 
 	struct
 	{

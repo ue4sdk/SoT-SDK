@@ -19,7 +19,7 @@ namespace SDK
 
 void Awsp_audio_C::ReceiveTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ReceiveTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_audio.wsp_audio_C.ReceiveTick"));
 
 	struct
 	{
@@ -37,7 +37,7 @@ void Awsp_audio_C::ReceiveTick(float DeltaSeconds)
 
 void Awsp_audio_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_audio.wsp_audio_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void Awsp_audio_C::ReceiveBeginPlay()
 
 void Awsp_audio_C::ExecuteUbergraph_wsp_audio(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_audio.wsp_audio_C.ExecuteUbergraph_wsp_audio");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_audio.wsp_audio_C.ExecuteUbergraph_wsp_audio"));
 
 	struct
 	{

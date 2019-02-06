@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_large_mast_fore_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_fore.BP_large_mast_fore_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_large_mast_fore.BP_large_mast_fore_C.UserConstructionScript"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void ABP_large_mast_fore_C::UserConstructionScript()
 
 void ABP_large_mast_fore_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_fore.BP_large_mast_fore_C.OnMastDescLoaded");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_large_mast_fore.BP_large_mast_fore_C.OnMastDescLoaded"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ABP_large_mast_fore_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 
 void ABP_large_mast_fore_C::ExecuteUbergraph_BP_large_mast_fore(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_fore.BP_large_mast_fore_C.ExecuteUbergraph_BP_large_mast_fore");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_large_mast_fore.BP_large_mast_fore_C.ExecuteUbergraph_BP_large_mast_fore"));
 
 	struct
 	{

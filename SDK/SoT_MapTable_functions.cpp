@@ -17,7 +17,7 @@ namespace SDK
 
 void AMapTable_C::UpdateBlurEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UpdateBlurEffect");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.UpdateBlurEffect"));
 
 	struct
 	{
@@ -37,7 +37,7 @@ void AMapTable_C::UpdateBlurEffect()
 
 struct FVector AMapTable_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -62,7 +62,7 @@ struct FVector AMapTable_C::GetClosestInteractionPoint(const struct FVector& Ref
 
 void AMapTable_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.UserConstructionScript"));
 
 	struct
 	{
@@ -78,7 +78,7 @@ void AMapTable_C::UserConstructionScript()
 
 void AMapTable_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -94,7 +94,7 @@ void AMapTable_C::ReceiveBeginPlay()
 
 void AMapTable_C::SetEffectActiveWhenClose()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.SetEffectActiveWhenClose");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.SetEffectActiveWhenClose"));
 
 	struct
 	{
@@ -113,7 +113,7 @@ void AMapTable_C::SetEffectActiveWhenClose()
 
 void AMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* Texture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapActivate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.OnMapActivate"));
 
 	struct
 	{
@@ -136,7 +136,7 @@ void AMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* 
 
 void AMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct FVector2D& ZoomLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapMove");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.OnMapMove"));
 
 	struct
 	{
@@ -158,7 +158,7 @@ void AMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct
 
 void AMapTable_C::ExecuteUbergraph_MapTable(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ExecuteUbergraph_MapTable");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MapTable.MapTable_C.ExecuteUbergraph_MapTable"));
 
 	struct
 	{

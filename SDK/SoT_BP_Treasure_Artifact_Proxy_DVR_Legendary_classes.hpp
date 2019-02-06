@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_DVR_Legendary.BP_Treasure_Artifact_Proxy_DVR_Legendary_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x0858 - 0x0858)
 class ABP_Treasure_Artifact_Proxy_DVR_Legendary_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_DVR_Legendary.BP_Treasure_Artifact_Proxy_DVR_Legendary_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_DVR_Legendary.BP_Treasure_Artifact_Proxy_DVR_Legendary_C"));
 		return ptr;
 	}
 

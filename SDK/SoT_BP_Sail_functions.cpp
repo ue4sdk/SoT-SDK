@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Sail_C::Debug()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.Debug");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Sail.BP_Sail_C.Debug"));
 
 	struct
 	{
@@ -36,7 +36,7 @@ void ABP_Sail_C::Debug()
 
 void ABP_Sail_C::Initialise(bool IsMainSail, float SailForceScalar)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.Initialise");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Sail.BP_Sail_C.Initialise"));
 
 	struct
 	{
@@ -56,7 +56,7 @@ void ABP_Sail_C::Initialise(bool IsMainSail, float SailForceScalar)
 
 void ABP_Sail_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Sail.BP_Sail_C.UserConstructionScript"));
 
 	struct
 	{

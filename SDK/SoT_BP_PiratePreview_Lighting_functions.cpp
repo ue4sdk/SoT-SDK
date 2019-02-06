@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.UserConstructionScript"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 
 void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewReady__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewReady__DelegateSignature"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct 
 
 void ABP_PiratePreview_Lighting_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewBusy__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewBusy__DelegateSignature"));
 
 	struct
 	{

@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_TreasureChest_ItemInfo_Common_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureChest_ItemInfo_Common.BP_TreasureChest_ItemInfo_Common_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureChest_ItemInfo_Common.BP_TreasureChest_ItemInfo_Common_C.UserConstructionScript"));
 
 	struct
 	{

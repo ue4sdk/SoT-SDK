@@ -21,7 +21,7 @@ namespace SDK
 
 void UBP_MathAndTrigAnimation_C::DisplayAllCharacterSockets(class AAthenaCharacter* Athena_Character, float Size, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.DisplayAllCharacterSockets");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.DisplayAllCharacterSockets"));
 
 	struct
 	{
@@ -48,7 +48,7 @@ void UBP_MathAndTrigAnimation_C::DisplayAllCharacterSockets(class AAthenaCharact
 
 void UBP_MathAndTrigAnimation_C::DecrementFloat(float DecrementValue, class UObject* __WorldContext, float* Float)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.DecrementFloat");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.DecrementFloat"));
 
 	struct
 	{
@@ -77,7 +77,7 @@ void UBP_MathAndTrigAnimation_C::DecrementFloat(float DecrementValue, class UObj
 
 void UBP_MathAndTrigAnimation_C::Increment_Float(float Incement_Value, class UObject* __WorldContext, float* Float)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Increment Float");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Increment Float"));
 
 	struct
 	{
@@ -107,7 +107,7 @@ void UBP_MathAndTrigAnimation_C::Increment_Float(float Incement_Value, class UOb
 
 void UBP_MathAndTrigAnimation_C::Apply_Relative_Transform(const struct FTransform& RelativeTransform, const struct FTransform& BaseTransform, class UObject* __WorldContext, struct FTransform* CombinedTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Apply Relative Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Apply Relative Transform"));
 
 	struct
 	{
@@ -139,7 +139,7 @@ void UBP_MathAndTrigAnimation_C::Apply_Relative_Transform(const struct FTransfor
 
 void UBP_MathAndTrigAnimation_C::Calculate_Relative_Transform(const struct FTransform& RelativeObjectsWorldTransform, const struct FTransform& BaseObjectsWorldTransform, class UObject* __WorldContext, struct FTransform* RealtiveOffsetTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Calculate Relative Transform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MathAndTrigAnimation.BP_MathAndTrigAnimation_C.Calculate Relative Transform"));
 
 	struct
 	{

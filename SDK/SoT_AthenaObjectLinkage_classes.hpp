@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.EndPlayHandler");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaObjectLinkage.EndPlayHandler"));
 		return ptr;
 	}
 
@@ -40,7 +40,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkEndpointIdUtilities");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaObjectLinkage.LinkEndpointIdUtilities"));
 		return ptr;
 	}
 
@@ -61,7 +61,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkEndpointInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaObjectLinkage.LinkEndpointInterface"));
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkerComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaObjectLinkage.LinkerComponent"));
 		return ptr;
 	}
 
@@ -109,7 +109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaObjectLinkage.LinkerInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaObjectLinkage.LinkerInterface"));
 		return ptr;
 	}
 

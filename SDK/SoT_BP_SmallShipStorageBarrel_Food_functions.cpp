@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_SmallShipStorageBarrel_Food_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipStorageBarrel_Food.BP_SmallShipStorageBarrel_Food_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipStorageBarrel_Food.BP_SmallShipStorageBarrel_Food_C.UserConstructionScript"));
 
 	struct
 	{

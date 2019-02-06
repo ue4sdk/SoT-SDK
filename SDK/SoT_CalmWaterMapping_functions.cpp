@@ -20,7 +20,7 @@ namespace SDK
 
 float UCalmWaterMappingInterface::GetDampeningFactor(const struct FVector2D& InPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingInterface.GetDampeningFactor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CalmWaterMapping.CalmWaterMappingInterface.GetDampeningFactor"));
 
 	struct
 	{
@@ -44,7 +44,7 @@ float UCalmWaterMappingInterface::GetDampeningFactor(const struct FVector2D& InP
 
 float UCalmWaterMappingInterface::GetChoppinessFactor(const struct FVector2D& InPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingInterface.GetChoppinessFactor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CalmWaterMapping.CalmWaterMappingInterface.GetChoppinessFactor"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ float UCalmWaterMappingInterface::GetChoppinessFactor(const struct FVector2D& In
 
 float UCalmWaterMappingService::GetMaxWindSpeed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed"));
 
 	struct
 	{

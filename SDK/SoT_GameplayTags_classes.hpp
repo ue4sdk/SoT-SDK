@@ -26,7 +26,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQuery");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQuery"));
 		return ptr;
 	}
 
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression"));
 		return ptr;
 	}
 
@@ -57,7 +57,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch"));
 		return ptr;
 	}
 
@@ -73,7 +73,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch"));
 		return ptr;
 	}
 
@@ -89,7 +89,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch"));
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch"));
 		return ptr;
 	}
 
@@ -121,7 +121,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch"));
 		return ptr;
 	}
 
@@ -137,7 +137,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch"));
 		return ptr;
 	}
 
@@ -152,7 +152,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.GameplayTagAssetInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.GameplayTagAssetInterface"));
 		return ptr;
 	}
 
@@ -172,7 +172,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.BlueprintGameplayTagLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.BlueprintGameplayTagLibrary"));
 		return ptr;
 	}
 
@@ -202,7 +202,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.GameplayTagsManager");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.GameplayTagsManager"));
 		return ptr;
 	}
 
@@ -220,7 +220,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.GameplayTagsSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameplayTags.GameplayTagsSettings"));
 		return ptr;
 	}
 

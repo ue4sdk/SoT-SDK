@@ -19,7 +19,7 @@ namespace SDK
 
 void UEndPlayHandler::OnEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.EndPlayHandler.OnEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.EndPlayHandler.OnEndPlay"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ void UEndPlayHandler::OnEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 bool ULinkEndpointIdUtilities::IsValid(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsValid"));
 
 	struct
 	{
@@ -65,7 +65,7 @@ bool ULinkEndpointIdUtilities::IsValid(const struct FLinkEndpointId& Id)
 
 bool ULinkEndpointIdUtilities::IsPathed(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsPathed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsPathed"));
 
 	struct
 	{
@@ -90,7 +90,7 @@ bool ULinkEndpointIdUtilities::IsPathed(const struct FLinkEndpointId& Id)
 
 struct FLinkEndpointId ULinkEndpointIdUtilities::CreateEndpointId(const class FString& String)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointIdUtilities.CreateEndpointId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.CreateEndpointId"));
 
 	struct
 	{
@@ -115,7 +115,7 @@ struct FLinkEndpointId ULinkEndpointIdUtilities::CreateEndpointId(const class FS
 
 class FString ULinkEndpointIdUtilities::Conv_LinkEndpointIdToString(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointIdUtilities.Conv_LinkEndpointIdToString");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.Conv_LinkEndpointIdToString"));
 
 	struct
 	{
@@ -141,7 +141,7 @@ class FString ULinkEndpointIdUtilities::Conv_LinkEndpointIdToString(const struct
 
 struct FLinkEndpointId ULinkEndpointIdUtilities::CombineEndpointIds(const struct FLinkEndpointId& Root, const struct FLinkEndpointId& path)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointIdUtilities.CombineEndpointIds");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.CombineEndpointIds"));
 
 	struct
 	{
@@ -168,7 +168,7 @@ struct FLinkEndpointId ULinkEndpointIdUtilities::CombineEndpointIds(const struct
 
 void ULinkEndpointInterface::ReceiveLink(const struct FLinkEndpointId& Id, class AActor* Instance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointInterface.ReceiveLink");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointInterface.ReceiveLink"));
 
 	struct
 	{
@@ -190,7 +190,7 @@ void ULinkEndpointInterface::ReceiveLink(const struct FLinkEndpointId& Id, class
 
 void ULinkEndpointInterface::LoseLink(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkEndpointInterface.LoseLink");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointInterface.LoseLink"));
 
 	struct
 	{
@@ -211,7 +211,7 @@ void ULinkEndpointInterface::LoseLink(const struct FLinkEndpointId& Id)
 
 void ULinkerComponent::UnregisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.UnregisterLink");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.UnregisterLink"));
 
 	struct
 	{
@@ -233,7 +233,7 @@ void ULinkerComponent::UnregisterLink(const struct FLinkEndpointId& SourceId, co
 
 void ULinkerComponent::UnregisterEndpoint(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.UnregisterEndpoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.UnregisterEndpoint"));
 
 	struct
 	{
@@ -253,7 +253,7 @@ void ULinkerComponent::UnregisterEndpoint(const struct FLinkEndpointId& Id)
 
 void ULinkerComponent::SetParent(class AActor* Parent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.SetParent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.SetParent"));
 
 	struct
 	{
@@ -275,7 +275,7 @@ void ULinkerComponent::SetParent(class AActor* Parent)
 
 TEnumAsByte<EAddLinkResult> ULinkerComponent::RegisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.RegisterLink");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.RegisterLink"));
 
 	struct
 	{
@@ -302,7 +302,7 @@ TEnumAsByte<EAddLinkResult> ULinkerComponent::RegisterLink(const struct FLinkEnd
 
 TEnumAsByte<EAddEndpointResult> ULinkerComponent::RegisterEndpoint(const struct FLinkEndpointId& Id, class AActor* Source)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.RegisterEndpoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.RegisterEndpoint"));
 
 	struct
 	{
@@ -328,7 +328,7 @@ TEnumAsByte<EAddEndpointResult> ULinkerComponent::RegisterEndpoint(const struct 
 
 void ULinkerComponent::OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.OnEndpointRemovedFromChild");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.OnEndpointRemovedFromChild"));
 
 	struct
 	{
@@ -352,7 +352,7 @@ void ULinkerComponent::OnEndpointRemovedFromChild(class AActor* Child, const str
 
 void ULinkerComponent::OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.OnEndpointAddedToChild");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.OnEndpointAddedToChild"));
 
 	struct
 	{
@@ -377,7 +377,7 @@ void ULinkerComponent::OnEndpointAddedToChild(class AActor* Child, const struct 
 
 class AActor* ULinkerComponent::LookupEndpoint(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.LookupEndpoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.LookupEndpoint"));
 
 	struct
 	{
@@ -400,7 +400,7 @@ class AActor* ULinkerComponent::LookupEndpoint(const struct FLinkEndpointId& Id)
 
 int ULinkerComponent::GetNumSetLinks()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.GetNumSetLinks");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumSetLinks"));
 
 	struct
 	{
@@ -421,7 +421,7 @@ int ULinkerComponent::GetNumSetLinks()
 
 int ULinkerComponent::GetNumRegisteredLinks()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.GetNumRegisteredLinks");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumRegisteredLinks"));
 
 	struct
 	{
@@ -442,7 +442,7 @@ int ULinkerComponent::GetNumRegisteredLinks()
 
 int ULinkerComponent::GetNumRegisteredEndpoints()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.GetNumRegisteredEndpoints");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumRegisteredEndpoints"));
 
 	struct
 	{
@@ -463,7 +463,7 @@ int ULinkerComponent::GetNumRegisteredEndpoints()
 
 int ULinkerComponent::GetNumPendingLinks()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerComponent.GetNumPendingLinks");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumPendingLinks"));
 
 	struct
 	{
@@ -484,7 +484,7 @@ int ULinkerComponent::GetNumPendingLinks()
 
 void ULinkerInterface::SetParent(class AActor* Parent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.SetParent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.SetParent"));
 
 	struct
 	{
@@ -505,7 +505,7 @@ void ULinkerInterface::SetParent(class AActor* Parent)
 
 void ULinkerInterface::RemoveLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.RemoveLink");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.RemoveLink"));
 
 	struct
 	{
@@ -527,7 +527,7 @@ void ULinkerInterface::RemoveLink(const struct FLinkEndpointId& SourceId, const 
 
 void ULinkerInterface::RemoveEndpoint(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.RemoveEndpoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.RemoveEndpoint"));
 
 	struct
 	{
@@ -548,7 +548,7 @@ void ULinkerInterface::RemoveEndpoint(const struct FLinkEndpointId& Id)
 
 void ULinkerInterface::OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.OnEndpointRemovedFromChild");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.OnEndpointRemovedFromChild"));
 
 	struct
 	{
@@ -572,7 +572,7 @@ void ULinkerInterface::OnEndpointRemovedFromChild(class AActor* Child, const str
 
 void ULinkerInterface::OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.OnEndpointAddedToChild");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.OnEndpointAddedToChild"));
 
 	struct
 	{
@@ -597,7 +597,7 @@ void ULinkerInterface::OnEndpointAddedToChild(class AActor* Child, const struct 
 
 class AActor* ULinkerInterface::LookupEndpoint(const struct FLinkEndpointId& Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.LookupEndpoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.LookupEndpoint"));
 
 	struct
 	{
@@ -622,7 +622,7 @@ class AActor* ULinkerInterface::LookupEndpoint(const struct FLinkEndpointId& Id)
 
 bool ULinkerInterface::AddLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.AddLink");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.AddLink"));
 
 	struct
 	{
@@ -649,7 +649,7 @@ bool ULinkerInterface::AddLink(const struct FLinkEndpointId& SourceId, const str
 
 bool ULinkerInterface::AddEndpoint(const struct FLinkEndpointId& Id, class AActor* Instance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaObjectLinkage.LinkerInterface.AddEndpoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.AddEndpoint"));
 
 	struct
 	{

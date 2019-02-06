@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_AncientChest_Wieldable_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AncientChest_Wieldable.BP_AncientChest_Wieldable_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AncientChest_Wieldable.BP_AncientChest_Wieldable_C.UserConstructionScript"));
 
 	struct
 	{

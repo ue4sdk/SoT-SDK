@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_WaterProjectile_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WaterProjectile.BP_WaterProjectile_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterProjectile.BP_WaterProjectile_C.UserConstructionScript"));
 
 	struct
 	{

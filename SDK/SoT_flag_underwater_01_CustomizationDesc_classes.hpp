@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass flag_underwater_01_CustomizationDesc.flag_underwater_01_CustomizationDesc_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass flag_underwater_01_CustomizationDesc.flag_underwater_01_CustomizationDesc_C"));
 		return ptr;
 	}
 

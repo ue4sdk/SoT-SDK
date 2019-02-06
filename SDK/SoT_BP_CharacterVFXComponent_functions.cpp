@@ -19,7 +19,7 @@ namespace SDK
 
 void UBP_CharacterVFXComponent_C::GetWindService(class UObject** WindInterface)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.GetWindService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.GetWindService"));
 
 	struct
 	{
@@ -41,7 +41,7 @@ void UBP_CharacterVFXComponent_C::GetWindService(class UObject** WindInterface)
 
 void UBP_CharacterVFXComponent_C::WindVFX_CanProcessWind(bool* CanProcess)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_CanProcessWind");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_CanProcessWind"));
 
 	struct
 	{
@@ -61,7 +61,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_CanProcessWind(bool* CanProcess)
 
 void UBP_CharacterVFXComponent_C::WindVFX_DebugTick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_DebugTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_DebugTick"));
 
 	struct
 	{
@@ -77,7 +77,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_DebugTick()
 
 void UBP_CharacterVFXComponent_C::WindVFX_Destroy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Destroy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Destroy"));
 
 	struct
 	{
@@ -93,7 +93,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Destroy()
 
 void UBP_CharacterVFXComponent_C::WindVFX_Create()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Create");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Create"));
 
 	struct
 	{
@@ -109,7 +109,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Create()
 
 void UBP_CharacterVFXComponent_C::WindVFX_Update()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Update");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Update"));
 
 	struct
 	{
@@ -125,7 +125,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Update()
 
 void UBP_CharacterVFXComponent_C::WindVFX_Deactivate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Deactivate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Deactivate"));
 
 	struct
 	{
@@ -141,7 +141,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Deactivate()
 
 void UBP_CharacterVFXComponent_C::WindVFX_Activate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Activate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Activate"));
 
 	struct
 	{
@@ -159,7 +159,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Activate()
 
 void UBP_CharacterVFXComponent_C::Play_View_Under_Water_FX(const struct FEventPlayerViewUnderWaterStateChanged& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play View Under Water FX");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play View Under Water FX"));
 
 	struct
 	{
@@ -179,7 +179,7 @@ void UBP_CharacterVFXComponent_C::Play_View_Under_Water_FX(const struct FEventPl
 
 void UBP_CharacterVFXComponent_C::Play_Falling_Splash(float FallingSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Falling Splash");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Falling Splash"));
 
 	struct
 	{
@@ -199,7 +199,7 @@ void UBP_CharacterVFXComponent_C::Play_Falling_Splash(float FallingSpeed)
 
 void UBP_CharacterVFXComponent_C::Play_Foot_Splash(const struct FVector& Location)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Foot Splash");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Foot Splash"));
 
 	struct
 	{
@@ -219,7 +219,7 @@ void UBP_CharacterVFXComponent_C::Play_Foot_Splash(const struct FVector& Locatio
 
 void UBP_CharacterVFXComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -239,7 +239,7 @@ void UBP_CharacterVFXComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 
 void UBP_CharacterVFXComponent_C::ReceiveTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveTick"));
 
 	struct
 	{
@@ -257,7 +257,7 @@ void UBP_CharacterVFXComponent_C::ReceiveTick(float DeltaSeconds)
 
 void UBP_CharacterVFXComponent_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -275,7 +275,7 @@ void UBP_CharacterVFXComponent_C::ReceiveBeginPlay()
 
 void UBP_CharacterVFXComponent_C::PlayerViewUnderWaterEvent(const struct FEventPlayerViewUnderWaterStateChanged& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.PlayerViewUnderWaterEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.PlayerViewUnderWaterEvent"));
 
 	struct
 	{
@@ -295,7 +295,7 @@ void UBP_CharacterVFXComponent_C::PlayerViewUnderWaterEvent(const struct FEventP
 
 void UBP_CharacterVFXComponent_C::FallingIntoWaterEvent(const struct FAthena_FFallingIntoWaterEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.FallingIntoWaterEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.FallingIntoWaterEvent"));
 
 	struct
 	{
@@ -315,7 +315,7 @@ void UBP_CharacterVFXComponent_C::FallingIntoWaterEvent(const struct FAthena_FFa
 
 void UBP_CharacterVFXComponent_C::WaterStateChanged(const struct FEventPlayerViewUnderWaterStateChanged& Under_water_state_changed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WaterStateChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WaterStateChanged"));
 
 	struct
 	{
@@ -335,7 +335,7 @@ void UBP_CharacterVFXComponent_C::WaterStateChanged(const struct FEventPlayerVie
 
 void UBP_CharacterVFXComponent_C::On_Foot_Enter_Water(const struct FEventCharacterFootEnterWater& Enter_Water)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.On Foot Enter Water");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.On Foot Enter Water"));
 
 	struct
 	{
@@ -355,7 +355,7 @@ void UBP_CharacterVFXComponent_C::On_Foot_Enter_Water(const struct FEventCharact
 
 void UBP_CharacterVFXComponent_C::DeadEvent(const struct FEventCharacterDead& EventDead)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.DeadEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.DeadEvent"));
 
 	struct
 	{
@@ -375,7 +375,7 @@ void UBP_CharacterVFXComponent_C::DeadEvent(const struct FEventCharacterDead& Ev
 
 void UBP_CharacterVFXComponent_C::ExecuteUbergraph_BP_CharacterVFXComponent(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ExecuteUbergraph_BP_CharacterVFXComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ExecuteUbergraph_BP_CharacterVFXComponent"));
 
 	struct
 	{

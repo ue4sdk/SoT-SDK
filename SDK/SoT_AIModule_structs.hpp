@@ -256,32 +256,33 @@ struct FEnvQueryInstanceCache
 };
 
 // ScriptStruct AIModule.EnvTraceData
-// 0x0038
+// 0x0040
 struct FEnvTraceData
 {
 	int                                                VersionNum;                                               // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	class UClass*                                      NavigationFilter;                                         // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ProjectDown;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ProjectUp;                                                // 0x0014(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ExtentX;                                                  // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ExtentY;                                                  // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ExtentZ;                                                  // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PostProjectionVerticalOffset;                             // 0x0024(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                             // 0x0028(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     SerializedChannel;                                        // 0x0029(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EEnvTraceShape>                        TraceShape;                                               // 0x002A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EEnvQueryTrace>                        TraceMode;                                                // 0x002B(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      bTraceComplex : 1;                                        // 0x002C(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bOnlyBlockingHits : 1;                                    // 0x002C(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bCanTraceOnNavMesh : 1;                                   // 0x002C(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bCanTraceOnGeometry : 1;                                  // 0x002C(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bCanDisableTrace : 1;                                     // 0x002C(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bCanProjectDown : 1;                                      // 0x002C(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
-	bool                                               bUseUpDownAsAbsoluteZStartAndEnd;                         // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bUseSourceZAsEnd;                                         // 0x0031(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
+	struct FName                                       OverrideNavMesh;                                          // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ProjectDown;                                              // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ProjectUp;                                                // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ExtentX;                                                  // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ExtentY;                                                  // 0x0024(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ExtentZ;                                                  // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PostProjectionVerticalOffset;                             // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                             // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     SerializedChannel;                                        // 0x0031(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EEnvTraceShape>                        TraceShape;                                               // 0x0032(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EEnvQueryTrace>                        TraceMode;                                                // 0x0033(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      bTraceComplex : 1;                                        // 0x0034(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bOnlyBlockingHits : 1;                                    // 0x0034(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bCanTraceOnNavMesh : 1;                                   // 0x0034(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bCanTraceOnGeometry : 1;                                  // 0x0034(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bCanDisableTrace : 1;                                     // 0x0034(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bCanProjectDown : 1;                                      // 0x0034(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
+	bool                                               bUseUpDownAsAbsoluteZStartAndEnd;                         // 0x0038(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bUseSourceZAsEnd;                                         // 0x0039(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.AIDataProviderIntValue

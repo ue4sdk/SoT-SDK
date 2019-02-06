@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_banana_01_a_Proxy.BP_fod_banana_01_a_Proxy_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x0700 - 0x0700)
 class ABP_fod_banana_01_a_Proxy_C : public ABP_BananaProxy_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_fod_banana_01_a_Proxy.BP_fod_banana_01_a_Proxy_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_fod_banana_01_a_Proxy.BP_fod_banana_01_a_Proxy_C"));
 		return ptr;
 	}
 

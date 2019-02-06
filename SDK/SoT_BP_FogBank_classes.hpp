@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FogBank.BP_FogBank_C
-// 0x0008 (0x0600 - 0x05F8)
+// 0x0008 (0x0608 - 0x0600)
 class ABP_FogBank_C : public AFogBank
 {
 public:
-	class UAthenaPlayerZonePenetrationTrackerComponent* AthenaPlayerZonePenetrationTracker;                       // 0x05F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAthenaPlayerZonePenetrationTrackerComponent* AthenaPlayerZonePenetrationTracker;                       // 0x0600(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_FogBank.BP_FogBank_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_FogBank.BP_FogBank_C"));
 		return ptr;
 	}
 

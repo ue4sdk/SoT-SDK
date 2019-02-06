@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaSocketLookup.SocketIdTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaSocketLookup.SocketIdTestFunctions"));
 		return ptr;
 	}
 
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaSocketLookup.SocketLookupCacheTestFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaSocketLookup.SocketLookupCacheTestFunctions"));
 		return ptr;
 	}
 
@@ -59,7 +59,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaSocketLookup.SocketLookupFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaSocketLookup.SocketLookupFunctions"));
 		return ptr;
 	}
 
@@ -79,7 +79,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaSocketLookup.SocketLookupInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaSocketLookup.SocketLookupInterface"));
 		return ptr;
 	}
 

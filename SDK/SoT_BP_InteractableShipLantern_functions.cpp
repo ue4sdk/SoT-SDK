@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_InteractableShipLantern_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_InteractableShipLantern_C::UserConstructionScript()
 
 void ABP_InteractableShipLantern_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -49,7 +49,7 @@ void ABP_InteractableShipLantern_C::ReceiveBeginPlay()
 
 void ABP_InteractableShipLantern_C::LightStateChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.LightStateChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.LightStateChanged"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ void ABP_InteractableShipLantern_C::LightStateChanged()
 
 void ABP_InteractableShipLantern_C::ExecuteUbergraph_BP_InteractableShipLantern(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ExecuteUbergraph_BP_InteractableShipLantern");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableShipLantern.BP_InteractableShipLantern_C.ExecuteUbergraph_BP_InteractableShipLantern"));
 
 	struct
 	{

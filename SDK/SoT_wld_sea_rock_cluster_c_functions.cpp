@@ -17,7 +17,7 @@ namespace SDK
 
 void Awld_sea_rock_cluster_c_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wld_sea_rock_cluster_c.wld_sea_rock_cluster_c_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wld_sea_rock_cluster_c.wld_sea_rock_cluster_c_C.UserConstructionScript"));
 
 	struct
 	{

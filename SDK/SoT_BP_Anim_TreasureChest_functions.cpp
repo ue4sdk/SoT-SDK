@@ -19,7 +19,7 @@ namespace SDK
 
 void UBP_Anim_TreasureChest_C::ExecuteUbergraph_BP_Anim_TreasureChest(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_TreasureChest.BP_Anim_TreasureChest_C.ExecuteUbergraph_BP_Anim_TreasureChest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_TreasureChest.BP_Anim_TreasureChest_C.ExecuteUbergraph_BP_Anim_TreasureChest"));
 
 	struct
 	{

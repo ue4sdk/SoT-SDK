@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass GoldHoardersSpawnContext.GoldHoardersSpawnContext_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass GoldHoardersSpawnContext.GoldHoardersSpawnContext_C"));
 		return ptr;
 	}
 

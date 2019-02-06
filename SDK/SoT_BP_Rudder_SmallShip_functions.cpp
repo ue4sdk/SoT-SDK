@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Rudder_SmallShip_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Rudder_SmallShip.BP_Rudder_SmallShip_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Rudder_SmallShip.BP_Rudder_SmallShip_C.UserConstructionScript"));
 
 	struct
 	{

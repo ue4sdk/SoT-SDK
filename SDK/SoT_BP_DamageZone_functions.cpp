@@ -19,7 +19,7 @@ namespace SDK
 
 void ABP_DamageZone_C::GetNumExternalHits(int* NumExternalHits)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.GetNumExternalHits");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.GetNumExternalHits"));
 
 	struct
 	{
@@ -41,7 +41,7 @@ void ABP_DamageZone_C::GetNumExternalHits(int* NumExternalHits)
 
 void ABP_DamageZone_C::GetOrCreateDecalMID(class UMaterialInstanceDynamic** DecalMID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.GetOrCreateDecalMID");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.GetOrCreateDecalMID"));
 
 	struct
 	{
@@ -61,7 +61,7 @@ void ABP_DamageZone_C::GetOrCreateDecalMID(class UMaterialInstanceDynamic** Deca
 
 void ABP_DamageZone_C::Initialise()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Initialise");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Initialise"));
 
 	struct
 	{
@@ -77,7 +77,7 @@ void ABP_DamageZone_C::Initialise()
 
 void ABP_DamageZone_C::Update_External_Hits()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Update External Hits");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Update External Hits"));
 
 	struct
 	{
@@ -93,7 +93,7 @@ void ABP_DamageZone_C::Update_External_Hits()
 
 void ABP_DamageZone_C::OnRep_Rep_ExternalHitList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnRep_Rep_ExternalHitList");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnRep_Rep_ExternalHitList"));
 
 	struct
 	{
@@ -109,7 +109,7 @@ void ABP_DamageZone_C::OnRep_Rep_ExternalHitList()
 
 void ABP_DamageZone_C::Clear_Decal_Flags()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Clear Decal Flags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Clear Decal Flags"));
 
 	struct
 	{
@@ -127,7 +127,7 @@ void ABP_DamageZone_C::Clear_Decal_Flags()
 
 void ABP_DamageZone_C::Add_Deferred_Decal(class UDecalComponent* Decal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Add Deferred Decal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Add Deferred Decal"));
 
 	struct
 	{
@@ -147,7 +147,7 @@ void ABP_DamageZone_C::Add_Deferred_Decal(class UDecalComponent* Decal)
 
 void ABP_DamageZone_C::KillDeferredDecal(class UDecalComponent** Decal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.KillDeferredDecal");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.KillDeferredDecal"));
 
 	struct
 	{
@@ -167,7 +167,7 @@ void ABP_DamageZone_C::KillDeferredDecal(class UDecalComponent** Decal)
 
 void ABP_DamageZone_C::RemoveDeferredDecals()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.RemoveDeferredDecals");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.RemoveDeferredDecals"));
 
 	struct
 	{
@@ -185,7 +185,7 @@ void ABP_DamageZone_C::RemoveDeferredDecals()
 
 void ABP_DamageZone_C::Set_Repair_Visibility(bool Visible)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Set Repair Visibility");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Set Repair Visibility"));
 
 	struct
 	{
@@ -205,7 +205,7 @@ void ABP_DamageZone_C::Set_Repair_Visibility(bool Visible)
 
 void ABP_DamageZone_C::Add_External_Hit(const struct FHullDamageHit& HitData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.Add External Hit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Add External Hit"));
 
 	struct
 	{
@@ -223,7 +223,7 @@ void ABP_DamageZone_C::Add_External_Hit(const struct FHullDamageHit& HitData)
 
 void ABP_DamageZone_C::CollectTaggedComponents()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.CollectTaggedComponents");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.CollectTaggedComponents"));
 
 	struct
 	{
@@ -239,7 +239,7 @@ void ABP_DamageZone_C::CollectTaggedComponents()
 
 void ABP_DamageZone_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.UserConstructionScript"));
 
 	struct
 	{
@@ -257,7 +257,7 @@ void ABP_DamageZone_C::UserConstructionScript()
 
 void ABP_DamageZone_C::AddExternalHit(const struct FHullDamageHit& Hit_Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.AddExternalHit");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.AddExternalHit"));
 
 	struct
 	{
@@ -275,7 +275,7 @@ void ABP_DamageZone_C::AddExternalHit(const struct FHullDamageHit& Hit_Data)
 
 void ABP_DamageZone_C::ClearDecalFlags()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.ClearDecalFlags");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.ClearDecalFlags"));
 
 	struct
 	{
@@ -293,7 +293,7 @@ void ABP_DamageZone_C::ClearDecalFlags()
 
 void ABP_DamageZone_C::OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InRepairableState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnRepairableStateUpdate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnRepairableStateUpdate"));
 
 	struct
 	{
@@ -311,7 +311,7 @@ void ABP_DamageZone_C::OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InR
 
 void ABP_DamageZone_C::OnInitialise()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnInitialise");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnInitialise"));
 
 	struct
 	{
@@ -330,7 +330,7 @@ void ABP_DamageZone_C::OnInitialise()
 
 void ABP_DamageZone_C::OnDecalMaterialUpdated(class UMaterialInterface* NewMaterial, TEnumAsByte<ERepairableState> RepairableState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated"));
 
 	struct
 	{
@@ -352,7 +352,7 @@ void ABP_DamageZone_C::OnDecalMaterialUpdated(class UMaterialInterface* NewMater
 
 void ABP_DamageZone_C::ExecuteUbergraph_BP_DamageZone(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZone.BP_DamageZone_C.ExecuteUbergraph_BP_DamageZone");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.ExecuteUbergraph_BP_DamageZone"));
 
 	struct
 	{

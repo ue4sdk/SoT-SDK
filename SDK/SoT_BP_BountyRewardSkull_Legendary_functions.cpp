@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_BountyRewardSkull_Legendary_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BountyRewardSkull_Legendary.BP_BountyRewardSkull_Legendary_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BountyRewardSkull_Legendary.BP_BountyRewardSkull_Legendary_C.UserConstructionScript"));
 
 	struct
 	{

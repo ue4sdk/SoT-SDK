@@ -19,7 +19,7 @@ namespace SDK
 
 struct FText ABP_AmmoChest_C::GetObjectDisplayName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.GetObjectDisplayName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.GetObjectDisplayName"));
 
 	struct
 	{
@@ -42,7 +42,7 @@ struct FText ABP_AmmoChest_C::GetObjectDisplayName()
 
 struct FVector ABP_AmmoChest_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ struct FVector ABP_AmmoChest_C::GetClosestInteractionPoint(const struct FVector&
 
 void ABP_AmmoChest_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.UserConstructionScript"));
 
 	struct
 	{
@@ -83,7 +83,7 @@ void ABP_AmmoChest_C::UserConstructionScript()
 
 void ABP_AmmoChest_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -101,7 +101,7 @@ void ABP_AmmoChest_C::ReceiveBeginPlay()
 
 void ABP_AmmoChest_C::Blueprint_OnInteract_Client(class AActor* InInteractor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Client");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Client"));
 
 	struct
 	{
@@ -121,7 +121,7 @@ void ABP_AmmoChest_C::Blueprint_OnInteract_Client(class AActor* InInteractor)
 
 void ABP_AmmoChest_C::Blueprint_OnInteract_Server(class AActor* InInteractor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Server");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.Blueprint_OnInteract_Server"));
 
 	struct
 	{
@@ -141,7 +141,7 @@ void ABP_AmmoChest_C::Blueprint_OnInteract_Server(class AActor* InInteractor)
 
 void ABP_AmmoChest_C::ExecuteUbergraph_BP_AmmoChest(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AmmoChest.BP_AmmoChest_C.ExecuteUbergraph_BP_AmmoChest");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AmmoChest.BP_AmmoChest_C.ExecuteUbergraph_BP_AmmoChest"));
 
 	struct
 	{

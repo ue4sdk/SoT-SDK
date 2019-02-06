@@ -15,23 +15,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C
-// 0x0044 (0x1754 - 0x1710)
+// 0x0044 (0x1814 - 0x17D0)
 class ABP_PlayerPirate_Ghost_C : public AAthenaGhostPlayerCharacter
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1710(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBP_GhostCharacterAudioComponent_C*          BP_GhostCharacterAudioComponent;                          // 0x1718(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x1720(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerNameplateComponent*                   PlayerNameplate;                                          // 0x1728(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBodyLightControllerComponent*               BodyLightController;                                      // 0x1730(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x1738(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAmbientLightSourceComponent*                BodyLight;                                                // 0x1740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x1748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Default_Ghost_Parameter;                                  // 0x1750(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x17D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_GhostCharacterAudioComponent_C*          BP_GhostCharacterAudioComponent;                          // 0x17D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x17E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerNameplateComponent*                   PlayerNameplate;                                          // 0x17E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBodyLightControllerComponent*               BodyLightController;                                      // 0x17F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x17F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAmbientLightSourceComponent*                BodyLight;                                                // 0x1800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x1808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Default_Ghost_Parameter;                                  // 0x1810(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C"));
 		return ptr;
 	}
 

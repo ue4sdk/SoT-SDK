@@ -20,7 +20,7 @@ namespace SDK
 
 void UGameplayDebuggingComponent::ServerReplicateData(uint32_t InMessage, uint32_t DataView)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ServerReplicateData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.ServerReplicateData"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ void UGameplayDebuggingComponent::ServerReplicateData(uint32_t InMessage, uint32
 
 void UGameplayDebuggingComponent::ServerDiscardNavmeshData()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ServerDiscardNavmeshData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.ServerDiscardNavmeshData"));
 
 	struct
 	{
@@ -58,7 +58,7 @@ void UGameplayDebuggingComponent::ServerDiscardNavmeshData()
 
 void UGameplayDebuggingComponent::ServerCollectNavmeshData(const struct FVector_NetQuantize10& TargetLocation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ServerCollectNavmeshData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.ServerCollectNavmeshData"));
 
 	struct
 	{
@@ -76,7 +76,7 @@ void UGameplayDebuggingComponent::ServerCollectNavmeshData(const struct FVector_
 
 void UGameplayDebuggingComponent::OnRep_UpdateNavmesh()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateNavmesh");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateNavmesh"));
 
 	struct
 	{
@@ -92,7 +92,7 @@ void UGameplayDebuggingComponent::OnRep_UpdateNavmesh()
 
 void UGameplayDebuggingComponent::OnRep_UpdateEQS()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateEQS");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateEQS"));
 
 	struct
 	{
@@ -108,7 +108,7 @@ void UGameplayDebuggingComponent::OnRep_UpdateEQS()
 
 void UGameplayDebuggingComponent::OnRep_UpdateBlackboard()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateBlackboard");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_UpdateBlackboard"));
 
 	struct
 	{
@@ -124,7 +124,7 @@ void UGameplayDebuggingComponent::OnRep_UpdateBlackboard()
 
 void UGameplayDebuggingComponent::OnRep_PathCorridorData()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_PathCorridorData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.OnRep_PathCorridorData"));
 
 	struct
 	{
@@ -140,7 +140,7 @@ void UGameplayDebuggingComponent::OnRep_PathCorridorData()
 
 void UGameplayDebuggingComponent::OnCycleDetailsView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.OnCycleDetailsView");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.OnCycleDetailsView"));
 
 	struct
 	{
@@ -158,7 +158,7 @@ void UGameplayDebuggingComponent::OnCycleDetailsView()
 
 void UGameplayDebuggingComponent::ClientEnableTargetSelection(bool bEnable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingComponent.ClientEnableTargetSelection");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingComponent.ClientEnableTargetSelection"));
 
 	struct
 	{
@@ -178,7 +178,7 @@ void UGameplayDebuggingComponent::ClientEnableTargetSelection(bool bEnable)
 
 void AGameplayDebuggingReplicator::ServerSetActorToDebug(class AActor* InActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ServerSetActorToDebug");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingReplicator.ServerSetActorToDebug"));
 
 	struct
 	{
@@ -200,7 +200,7 @@ void AGameplayDebuggingReplicator::ServerSetActorToDebug(class AActor* InActor)
 
 void AGameplayDebuggingReplicator::ServerReplicateMessage(class AActor* Actor, uint32_t InMessage, uint32_t DataView)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ServerReplicateMessage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingReplicator.ServerReplicateMessage"));
 
 	struct
 	{
@@ -222,7 +222,7 @@ void AGameplayDebuggingReplicator::ServerReplicateMessage(class AActor* Actor, u
 
 void AGameplayDebuggingReplicator::OnRep_AutoActivate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.OnRep_AutoActivate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingReplicator.OnRep_AutoActivate"));
 
 	struct
 	{
@@ -242,7 +242,7 @@ void AGameplayDebuggingReplicator::OnRep_AutoActivate()
 
 void AGameplayDebuggingReplicator::ClientReplicateMessage(class AActor* Actor, uint32_t InMessage, uint32_t DataView)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ClientReplicateMessage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingReplicator.ClientReplicateMessage"));
 
 	struct
 	{
@@ -267,7 +267,7 @@ void AGameplayDebuggingReplicator::ClientReplicateMessage(class AActor* Actor, u
 
 void AGameplayDebuggingReplicator::ClientEnableTargetSelection(bool bEnable, class APlayerController* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ClientEnableTargetSelection");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingReplicator.ClientEnableTargetSelection"));
 
 	struct
 	{
@@ -287,7 +287,7 @@ void AGameplayDebuggingReplicator::ClientEnableTargetSelection(bool bEnable, cla
 
 void AGameplayDebuggingReplicator::ClientAutoActivate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayDebugger.GameplayDebuggingReplicator.ClientAutoActivate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GameplayDebugger.GameplayDebuggingReplicator.ClientAutoActivate"));
 
 	struct
 	{

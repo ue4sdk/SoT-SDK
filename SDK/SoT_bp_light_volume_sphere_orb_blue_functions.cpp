@@ -17,7 +17,7 @@ namespace SDK
 
 void Abp_light_volume_sphere_orb_blue_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bp_light_volume_sphere_orb_blue.bp_light_volume_sphere_orb_blue_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bp_light_volume_sphere_orb_blue.bp_light_volume_sphere_orb_blue_C.UserConstructionScript"));
 
 	struct
 	{

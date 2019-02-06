@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_EquipmentShopkeeper_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EquipmentShopkeeper.BP_EquipmentShopkeeper_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EquipmentShopkeeper.BP_EquipmentShopkeeper_C.UserConstructionScript"));
 
 	struct
 	{

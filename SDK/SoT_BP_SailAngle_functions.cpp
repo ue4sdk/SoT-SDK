@@ -19,7 +19,7 @@ namespace SDK
 
 struct FDockableInfo ABP_SailAngle_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAngle.BP_SailAngle_C.GetDockableInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailAngle.BP_SailAngle_C.GetDockableInfo"));
 
 	struct
 	{
@@ -38,7 +38,7 @@ struct FDockableInfo ABP_SailAngle_C::GetDockableInfo()
 
 void ABP_SailAngle_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAngle.BP_SailAngle_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailAngle.BP_SailAngle_C.UserConstructionScript"));
 
 	struct
 	{

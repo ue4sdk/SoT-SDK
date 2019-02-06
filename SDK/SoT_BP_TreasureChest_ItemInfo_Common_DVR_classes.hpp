@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_ItemInfo_Common_DVR.BP_TreasureChest_ItemInfo_Common_DVR_C
-// 0x0008 (0x05E8 - 0x05E0)
+// 0x0008 (0x0600 - 0x05F8)
 class ABP_TreasureChest_ItemInfo_Common_DVR_C : public ATreasureChestItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_TreasureChest_ItemInfo_Common_DVR.BP_TreasureChest_ItemInfo_Common_DVR_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_TreasureChest_ItemInfo_Common_DVR.BP_TreasureChest_ItemInfo_Common_DVR_C"));
 		return ptr;
 	}
 

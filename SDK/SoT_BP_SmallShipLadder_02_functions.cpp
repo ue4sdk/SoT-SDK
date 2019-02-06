@@ -19,7 +19,7 @@ namespace SDK
 
 struct FDockableInfo ABP_SmallShipLadder_02_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.GetDockableInfo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.GetDockableInfo"));
 
 	struct
 	{
@@ -41,7 +41,7 @@ struct FDockableInfo ABP_SmallShipLadder_02_C::GetDockableInfo()
 
 void ABP_SmallShipLadder_02_C::Setup_Spline(class USplineComponent* Spline, TArray<struct FVector>* Positions)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.Setup Spline");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.Setup Spline"));
 
 	struct
 	{
@@ -66,7 +66,7 @@ void ABP_SmallShipLadder_02_C::Setup_Spline(class USplineComponent* Spline, TArr
 
 bool ABP_SmallShipLadder_02_C::CanInteract(class AActor* InInteractor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.CanInteract");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.CanInteract"));
 
 	struct
 	{
@@ -87,7 +87,7 @@ bool ABP_SmallShipLadder_02_C::CanInteract(class AActor* InInteractor)
 
 void ABP_SmallShipLadder_02_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadder_02.BP_SmallShipLadder_02_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_Wieldable_DVR_Legendary.BP_TreasureArtifact_Wieldable_DVR_Legendary_C
-// 0x0000 (0x0808 - 0x0808)
+// 0x0000 (0x0810 - 0x0810)
 class ABP_TreasureArtifact_Wieldable_DVR_Legendary_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_TreasureArtifact_Wieldable_DVR_Legendary.BP_TreasureArtifact_Wieldable_DVR_Legendary_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_TreasureArtifact_Wieldable_DVR_Legendary.BP_TreasureArtifact_Wieldable_DVR_Legendary_C"));
 		return ptr;
 	}
 

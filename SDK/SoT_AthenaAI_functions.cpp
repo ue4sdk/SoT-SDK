@@ -17,7 +17,7 @@ namespace SDK
 
 void UAthenaAIFormComponent::OnRep_FormData()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIFormComponent.OnRep_FormData");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIFormComponent.OnRep_FormData"));
 
 	struct
 	{
@@ -35,7 +35,7 @@ void UAthenaAIFormComponent::OnRep_FormData()
 
 void UAIEncounterServiceInterface::RegisterLoadedSkillsetProgression(TAssetPtr<class UAISkillsetRankProgression> Progression)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillsetProgression");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillsetProgression"));
 
 	struct
 	{
@@ -55,7 +55,7 @@ void UAIEncounterServiceInterface::RegisterLoadedSkillsetProgression(TAssetPtr<c
 
 void UAIEncounterServiceInterface::RegisterLoadedSkillset(TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillset");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillset"));
 
 	struct
 	{
@@ -75,7 +75,7 @@ void UAIEncounterServiceInterface::RegisterLoadedSkillset(TAssetPtr<class UAthen
 
 void UAIEncounterServiceInterface::RegisterLoadedLoadout(TAssetPtr<class ULoadoutAsset> Loadout)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedLoadout");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedLoadout"));
 
 	struct
 	{
@@ -95,7 +95,7 @@ void UAIEncounterServiceInterface::RegisterLoadedLoadout(TAssetPtr<class ULoadou
 
 void UAIEncounterServiceInterface::RegisterLoadedForm(TAssetPtr<class UAthenaAIFormDataAsset> Form)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedForm");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedForm"));
 
 	struct
 	{
@@ -115,7 +115,7 @@ void UAIEncounterServiceInterface::RegisterLoadedForm(TAssetPtr<class UAthenaAIF
 
 void UAIEncounterServiceInterface::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSettings> Encounter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedEncounter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedEncounter"));
 
 	struct
 	{
@@ -135,7 +135,7 @@ void UAIEncounterServiceInterface::RegisterLoadedEncounter(TAssetPtr<class UAIEn
 
 void AAIEncounterService::RegisterLoadedSkillsetProgression(TAssetPtr<class UAISkillsetRankProgression> Progression)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedSkillsetProgression");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterService.RegisterLoadedSkillsetProgression"));
 
 	struct
 	{
@@ -155,7 +155,7 @@ void AAIEncounterService::RegisterLoadedSkillsetProgression(TAssetPtr<class UAIS
 
 void AAIEncounterService::RegisterLoadedSkillset(TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedSkillset");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterService.RegisterLoadedSkillset"));
 
 	struct
 	{
@@ -175,7 +175,7 @@ void AAIEncounterService::RegisterLoadedSkillset(TAssetPtr<class UAthenaAIContro
 
 void AAIEncounterService::RegisterLoadedLoadout(TAssetPtr<class ULoadoutAsset> Loadout)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedLoadout");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterService.RegisterLoadedLoadout"));
 
 	struct
 	{
@@ -195,7 +195,7 @@ void AAIEncounterService::RegisterLoadedLoadout(TAssetPtr<class ULoadoutAsset> L
 
 void AAIEncounterService::RegisterLoadedForm(TAssetPtr<class UAthenaAIFormDataAsset> Form)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedForm");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterService.RegisterLoadedForm"));
 
 	struct
 	{
@@ -215,7 +215,7 @@ void AAIEncounterService::RegisterLoadedForm(TAssetPtr<class UAthenaAIFormDataAs
 
 void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSettings> Encounter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIEncounterService.RegisterLoadedEncounter");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIEncounterService.RegisterLoadedEncounter"));
 
 	struct
 	{
@@ -237,7 +237,7 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 
 class AItemInfo* UAIManagerBlueprintFunctionLibrary::SpawnItemFromAI(class APawn* Pawn, class UClass* ItemDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI"));
 
 	struct
 	{
@@ -264,7 +264,7 @@ class AItemInfo* UAIManagerBlueprintFunctionLibrary::SpawnItemFromAI(class APawn
 
 void UAIManagerBlueprintFunctionLibrary::AddNameplateToAI(class AActor* Actor, const class FString& DisplayName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI"));
 
 	struct
 	{
@@ -288,7 +288,7 @@ void UAIManagerBlueprintFunctionLibrary::AddNameplateToAI(class AActor* Actor, c
 
 void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharacterDeathType> DeathType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerServiceInterface.StartDespawnAI");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerServiceInterface.StartDespawnAI"));
 
 	struct
 	{
@@ -310,7 +310,7 @@ void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor, TEnumAsByt
 
 int UAIManagerServiceInterface::GetNumOfSpawnedPawns()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerServiceInterface.GetNumOfSpawnedPawns");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerServiceInterface.GetNumOfSpawnedPawns"));
 
 	struct
 	{
@@ -331,7 +331,7 @@ int UAIManagerServiceInterface::GetNumOfSpawnedPawns()
 
 int UAISpawner::GetNumOfSpawnRequests()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AISpawner.GetNumOfSpawnRequests");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AISpawner.GetNumOfSpawnRequests"));
 
 	struct
 	{
@@ -352,7 +352,7 @@ int UAISpawner::GetNumOfSpawnRequests()
 
 void AAIManagerService::TickService(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.TickService");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerService.TickService"));
 
 	struct
 	{
@@ -373,7 +373,7 @@ void AAIManagerService::TickService(float DeltaSeconds)
 
 void AAIManagerService::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharacterDeathType> DeathType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.StartDespawnAI");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerService.StartDespawnAI"));
 
 	struct
 	{
@@ -397,7 +397,7 @@ void AAIManagerService::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharac
 
 class UAISpawner* AAIManagerService::GetRegionSpawner(const struct FName& Region, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.GetRegionSpawner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerService.GetRegionSpawner"));
 
 	struct
 	{
@@ -422,7 +422,7 @@ class UAISpawner* AAIManagerService::GetRegionSpawner(const struct FName& Region
 
 int AAIManagerService::GetNumOfSpawnRequests()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIManagerService.GetNumOfSpawnRequests");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerService.GetNumOfSpawnRequests"));
 
 	struct
 	{
@@ -443,7 +443,7 @@ int AAIManagerService::GetNumOfSpawnRequests()
 
 void UDebugAIManagerServiceInterface::SetMaxNumOfSpawnedActors(int InMaxNumOfSpawnedActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxNumOfSpawnedActors");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxNumOfSpawnedActors"));
 
 	struct
 	{
@@ -463,7 +463,7 @@ void UDebugAIManagerServiceInterface::SetMaxNumOfSpawnedActors(int InMaxNumOfSpa
 
 void UDebugAIManagerServiceInterface::SetMaxAICostUnitsPerRegion(int InMaxAICostUnitsPerRegion)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxAICostUnitsPerRegion");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxAICostUnitsPerRegion"));
 
 	struct
 	{
@@ -483,7 +483,7 @@ void UDebugAIManagerServiceInterface::SetMaxAICostUnitsPerRegion(int InMaxAICost
 
 void UDebugAIManagerServiceInterface::SetMaxAICostUnitsForWorld(int InMaxAICostUnitsForWorld)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxAICostUnitsForWorld");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetMaxAICostUnitsForWorld"));
 
 	struct
 	{
@@ -503,7 +503,7 @@ void UDebugAIManagerServiceInterface::SetMaxAICostUnitsForWorld(int InMaxAICostU
 
 void UDebugAIManagerServiceInterface::SetIgnoreCharacterLimits(bool Ignore)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetIgnoreCharacterLimits");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetIgnoreCharacterLimits"));
 
 	struct
 	{
@@ -523,7 +523,7 @@ void UDebugAIManagerServiceInterface::SetIgnoreCharacterLimits(bool Ignore)
 
 void UDebugAIManagerServiceInterface::SetDistanceToPlayerToRaiseSpawnPriority(float InDistanceToPlayerToRaiseSpawnPriority)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetDistanceToPlayerToRaiseSpawnPriority");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetDistanceToPlayerToRaiseSpawnPriority"));
 
 	struct
 	{
@@ -543,7 +543,7 @@ void UDebugAIManagerServiceInterface::SetDistanceToPlayerToRaiseSpawnPriority(fl
 
 void UDebugAIManagerServiceInterface::SetCharacterWorldDensityCheckTimer(float InCharacterWorldDensityCheckTimer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterWorldDensityCheckTimer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterWorldDensityCheckTimer"));
 
 	struct
 	{
@@ -563,7 +563,7 @@ void UDebugAIManagerServiceInterface::SetCharacterWorldDensityCheckTimer(float I
 
 void UDebugAIManagerServiceInterface::SetCharacterRegionDensityCheckTimer(float InCharacterRegionDensityCheckTimer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterRegionDensityCheckTimer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterRegionDensityCheckTimer"));
 
 	struct
 	{
@@ -583,7 +583,7 @@ void UDebugAIManagerServiceInterface::SetCharacterRegionDensityCheckTimer(float 
 
 void UDebugAIManagerServiceInterface::SetCharacterNetRelevancy(float InCloseByCharactersRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterNetRelevancy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.SetCharacterNetRelevancy"));
 
 	struct
 	{
@@ -603,7 +603,7 @@ void UDebugAIManagerServiceInterface::SetCharacterNetRelevancy(float InCloseByCh
 
 void ADebugAIManagerService::SetMaxNumOfSpawnedActors(int InMaxNumOfSpawnedActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetMaxNumOfSpawnedActors");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetMaxNumOfSpawnedActors"));
 
 	struct
 	{
@@ -623,7 +623,7 @@ void ADebugAIManagerService::SetMaxNumOfSpawnedActors(int InMaxNumOfSpawnedActor
 
 void ADebugAIManagerService::SetMaxAICostUnitsPerRegion(int InMaxAICostUnitsPerRegion)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetMaxAICostUnitsPerRegion");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetMaxAICostUnitsPerRegion"));
 
 	struct
 	{
@@ -643,7 +643,7 @@ void ADebugAIManagerService::SetMaxAICostUnitsPerRegion(int InMaxAICostUnitsPerR
 
 void ADebugAIManagerService::SetMaxAICostUnitsForWorld(int InMaxAICostUnitsForWorld)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetMaxAICostUnitsForWorld");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetMaxAICostUnitsForWorld"));
 
 	struct
 	{
@@ -663,7 +663,7 @@ void ADebugAIManagerService::SetMaxAICostUnitsForWorld(int InMaxAICostUnitsForWo
 
 void ADebugAIManagerService::SetIgnoreCharacterLimits(bool Ignore)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetIgnoreCharacterLimits");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetIgnoreCharacterLimits"));
 
 	struct
 	{
@@ -683,7 +683,7 @@ void ADebugAIManagerService::SetIgnoreCharacterLimits(bool Ignore)
 
 void ADebugAIManagerService::SetDistanceToPlayerToRaiseSpawnPriority(float InDistanceToPlayerToRaiseSpawnPriority)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetDistanceToPlayerToRaiseSpawnPriority");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetDistanceToPlayerToRaiseSpawnPriority"));
 
 	struct
 	{
@@ -703,7 +703,7 @@ void ADebugAIManagerService::SetDistanceToPlayerToRaiseSpawnPriority(float InDis
 
 void ADebugAIManagerService::SetCharacterWorldDensityCheckTimer(float InCharacterWorldDensityCheckTimer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetCharacterWorldDensityCheckTimer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetCharacterWorldDensityCheckTimer"));
 
 	struct
 	{
@@ -723,7 +723,7 @@ void ADebugAIManagerService::SetCharacterWorldDensityCheckTimer(float InCharacte
 
 void ADebugAIManagerService::SetCharacterRegionDensityCheckTimer(float InCharacterRegionDensityCheckTimer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetCharacterRegionDensityCheckTimer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetCharacterRegionDensityCheckTimer"));
 
 	struct
 	{
@@ -743,7 +743,7 @@ void ADebugAIManagerService::SetCharacterRegionDensityCheckTimer(float InCharact
 
 void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.DebugAIManagerService.SetCharacterNetRelevancy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.SetCharacterNetRelevancy"));
 
 	struct
 	{
@@ -763,7 +763,7 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 
 void UAIPerPlayerSpawner::PlayerDeath(class AActor* Player)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIPerPlayerSpawner.PlayerDeath");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIPerPlayerSpawner.PlayerDeath"));
 
 	struct
 	{
@@ -783,7 +783,7 @@ void UAIPerPlayerSpawner::PlayerDeath(class AActor* Player)
 
 int UAIPerPlayerSpawner::GetNumOfPlayers()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIPerPlayerSpawner.GetNumOfPlayers");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIPerPlayerSpawner.GetNumOfPlayers"));
 
 	struct
 	{
@@ -807,7 +807,7 @@ int UAIPerPlayerSpawner::GetNumOfPlayers()
 
 bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Target, bool CheckYaw, struct FRotator* OutAimConfig)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AITargetWeaponInterface.FindAimConfigToHitTarget"));
 
 	struct
 	{
@@ -837,7 +837,7 @@ bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Ta
 
 void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamName, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam"));
 
 	struct
 	{
@@ -860,7 +860,7 @@ void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamN
 
 struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeightedRangesControllerParam(const struct FName& ParamName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam"));
 
 	struct
 	{
@@ -884,7 +884,7 @@ struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeigh
 
 float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& ParamName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam"));
 
 	struct
 	{
@@ -908,7 +908,7 @@ float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& Para
 
 void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams"));
 
 	struct
 	{
@@ -928,7 +928,7 @@ void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerPar
 
 void AAthenaAIController::StopBehaviourLogic()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.StopBehaviourLogic");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.StopBehaviourLogic"));
 
 	struct
 	{
@@ -948,7 +948,7 @@ void AAthenaAIController::StopBehaviourLogic()
 
 void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor, float ExpirationAge, class UClass* Sense)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor"));
 
 	struct
 	{
@@ -972,7 +972,7 @@ void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor
 
 void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* TriggerActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus"));
 
 	struct
 	{
@@ -992,7 +992,7 @@ void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* Trig
 
 void AAthenaAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerceivedActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.OnPerceptionUpdated");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnPerceptionUpdated"));
 
 	struct
 	{
@@ -1010,7 +1010,7 @@ void AAthenaAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerce
 
 void AAthenaAIController::OnNewlySpawned()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.OnNewlySpawned");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnNewlySpawned"));
 
 	struct
 	{
@@ -1026,7 +1026,7 @@ void AAthenaAIController::OnNewlySpawned()
 
 void AAthenaAIController::OnFinishDespawn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.OnFinishDespawn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnFinishDespawn"));
 
 	struct
 	{
@@ -1045,7 +1045,7 @@ void AAthenaAIController::OnFinishDespawn()
 
 bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.IsActorPerceived");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.IsActorPerceived"));
 
 	struct
 	{
@@ -1068,7 +1068,7 @@ bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
 
 class AActor* AAthenaAIController::GetTargetActor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.GetTargetActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetTargetActor"));
 
 	struct
 	{
@@ -1089,7 +1089,7 @@ class AActor* AAthenaAIController::GetTargetActor()
 
 class UAthenaAIPerceptionComponent* AAthenaAIController::GetAthenaAIPerceptionComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent"));
 
 	struct
 	{
@@ -1110,7 +1110,7 @@ class UAthenaAIPerceptionComponent* AAthenaAIController::GetAthenaAIPerceptionCo
 
 void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.GetAllSeenActors");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetAllSeenActors"));
 
 	struct
 	{
@@ -1133,7 +1133,7 @@ void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
 
 void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIController.ApplyControllerParams");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.ApplyControllerParams"));
 
 	struct
 	{
@@ -1155,7 +1155,7 @@ void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsD
 
 void AAthenaAICharacterController::SetOverridePrioritiseInteractablesBeforeEnemies(bool InPrioritiseInteractablesBeforeEnemies)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.SetOverridePrioritiseInteractablesBeforeEnemies");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAICharacterController.SetOverridePrioritiseInteractablesBeforeEnemies"));
 
 	struct
 	{
@@ -1177,7 +1177,7 @@ void AAthenaAICharacterController::SetOverridePrioritiseInteractablesBeforeEnemi
 
 void AAthenaAICharacterController::SetItemSpecificNamedControllerParam(class UClass* InItemCategory, const struct FName& ParamName, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.SetItemSpecificNamedControllerParam");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAICharacterController.SetItemSpecificNamedControllerParam"));
 
 	struct
 	{
@@ -1199,7 +1199,7 @@ void AAthenaAICharacterController::SetItemSpecificNamedControllerParam(class UCl
 
 void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEnemies()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies"));
 
 	struct
 	{
@@ -1227,7 +1227,7 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 
 void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings"));
 
 	struct
 	{
@@ -1275,7 +1275,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 
 void UAthenaAIDebugFunctionLibrary::SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI"));
 
 	struct
 	{
@@ -1311,7 +1311,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAI(TAssetPtr<class UClass> AIClass, cla
 
 void UAthenaAIDebugFunctionLibrary::SetEnvQueryManagerMaxAllowedSeconds(float InMaxAllowedSeconds, class UObject* QueryOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds"));
 
 	struct
 	{
@@ -1335,7 +1335,7 @@ void UAthenaAIDebugFunctionLibrary::SetEnvQueryManagerMaxAllowedSeconds(float In
 
 int UAthenaAIDebugFunctionLibrary::GetEnvQueryManagerNumRunningQueries(class UObject* QueryOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries"));
 
 	struct
 	{
@@ -1360,7 +1360,7 @@ int UAthenaAIDebugFunctionLibrary::GetEnvQueryManagerNumRunningQueries(class UOb
 
 void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAIController* AIController, class UAthenaAIControllerParamsDataAsset* ControllerParams)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings"));
 
 	struct
 	{
@@ -1383,7 +1383,7 @@ void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAICo
 
 void UAthenaAIDebugFunctionLibrary::EnableBehaviorTreeLogging(class UObject* WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging"));
 
 	struct
 	{
@@ -1404,7 +1404,7 @@ void UAthenaAIDebugFunctionLibrary::EnableBehaviorTreeLogging(class UObject* Wor
 
 void UAthenaAIDebugFunctionLibrary::DespawnAIPawn(class APawn* Pawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn"));
 
 	struct
 	{
@@ -1430,7 +1430,7 @@ void UAthenaAIDebugFunctionLibrary::DespawnAIPawn(class APawn* Pawn)
 
 struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation"));
 
 	struct
 	{
@@ -1463,7 +1463,7 @@ struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class 
 
 bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled"));
 
 	struct
 	{
@@ -1486,7 +1486,7 @@ bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
 
 bool UAthenaAIPerceptionComponent::IsAnyPerceptionEnabled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled"));
 
 	struct
 	{
@@ -1508,7 +1508,7 @@ bool UAthenaAIPerceptionComponent::IsAnyPerceptionEnabled()
 
 void UAthenaAIPerceptionComponent::EnablePerceptionSense(class UClass* Sense, bool Enable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense"));
 
 	struct
 	{
@@ -1530,7 +1530,7 @@ void UAthenaAIPerceptionComponent::EnablePerceptionSense(class UClass* Sense, bo
 
 void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception"));
 
 	struct
 	{
@@ -1550,7 +1550,7 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 
 void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed"));
 
 	struct
 	{
@@ -1570,7 +1570,7 @@ void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor
 
 class AShip* ATinySharkExperience::GetTrackedShip()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetTrackedShip");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetTrackedShip"));
 
 	struct
 	{
@@ -1591,7 +1591,7 @@ class AShip* ATinySharkExperience::GetTrackedShip()
 
 TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetCurrentState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetCurrentState"));
 
 	struct
 	{
@@ -1612,7 +1612,7 @@ TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
 
 TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkExperience.GetActiveState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetActiveState"));
 
 	struct
 	{
@@ -1636,7 +1636,7 @@ TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
 
 bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex, int PartIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithShip");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.RequestTinySharkWithShip"));
 
 	struct
 	{
@@ -1665,7 +1665,7 @@ bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int
 
 bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation, int PartIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation"));
 
 	struct
 	{
@@ -1688,7 +1688,7 @@ bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& Spawn
 
 void ATinySharkService::DismissAllTinySharks()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.DismissAllTinySharks");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.DismissAllTinySharks"));
 
 	struct
 	{
@@ -1706,7 +1706,7 @@ void ATinySharkService::DismissAllTinySharks()
 
 bool ATinySharkService::CanSpawnTinySharkExperience()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience"));
 
 	struct
 	{
@@ -1727,7 +1727,7 @@ bool ATinySharkService::CanSpawnTinySharkExperience()
 
 void AAICreatureCharacter::SetAIStrategy(class UClass* InStrategy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.SetAIStrategy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.SetAIStrategy"));
 
 	struct
 	{
@@ -1747,7 +1747,7 @@ void AAICreatureCharacter::SetAIStrategy(class UClass* InStrategy)
 
 void AAICreatureCharacter::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy"));
 
 	struct
 	{
@@ -1765,7 +1765,7 @@ void AAICreatureCharacter::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
 
 void AAICreatureCharacter::Multicast_DespawnRPC()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC"));
 
 	struct
 	{
@@ -1783,7 +1783,7 @@ void AAICreatureCharacter::Multicast_DespawnRPC()
 
 class UClass* AAICreatureCharacter::GetAIStrategy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AICreatureCharacter.GetAIStrategy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.GetAIStrategy"));
 
 	struct
 	{
@@ -1804,7 +1804,7 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 
 void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.TestingSetWaterState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.TestingSetWaterState"));
 
 	struct
 	{
@@ -1822,7 +1822,7 @@ void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
 
 void AFauna::OnRep_TargetTurnAngle()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_TargetTurnAngle");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_TargetTurnAngle"));
 
 	struct
 	{
@@ -1838,7 +1838,7 @@ void AFauna::OnRep_TargetTurnAngle()
 
 void AFauna::OnRep_IsPlayingStarvingAnim()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim"));
 
 	struct
 	{
@@ -1854,7 +1854,7 @@ void AFauna::OnRep_IsPlayingStarvingAnim()
 
 void AFauna::OnRep_IsCalm()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsCalm");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsCalm"));
 
 	struct
 	{
@@ -1870,7 +1870,7 @@ void AFauna::OnRep_IsCalm()
 
 void AFauna::OnRep_IsAgitated()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_IsAgitated");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsAgitated"));
 
 	struct
 	{
@@ -1886,7 +1886,7 @@ void AFauna::OnRep_IsAgitated()
 
 void AFauna::OnRep_InWaterState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_InWaterState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_InWaterState"));
 
 	struct
 	{
@@ -1904,7 +1904,7 @@ void AFauna::OnRep_InWaterState()
 
 void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.OnRep_CratedState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_CratedState"));
 
 	struct
 	{
@@ -1924,7 +1924,7 @@ void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedStat
 
 void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC"));
 
 	struct
 	{
@@ -1944,7 +1944,7 @@ void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
 
 void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC"));
 
 	struct
 	{
@@ -1964,7 +1964,7 @@ void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
 
 void AFauna::Multicast_HightlightLeader(bool bIsLeader)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.Multicast_HightlightLeader");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_HightlightLeader"));
 
 	struct
 	{
@@ -1982,7 +1982,7 @@ void AFauna::Multicast_HightlightLeader(bool bIsLeader)
 
 void AFauna::GenerateNewRandomAnimationSeed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed"));
 
 	struct
 	{
@@ -2000,7 +2000,7 @@ void AFauna::GenerateNewRandomAnimationSeed()
 
 void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.Fauna.ActivateResponseRPC");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.ActivateResponseRPC"));
 
 	struct
 	{
@@ -2013,12 +2013,28 @@ void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 }
 
 
+// Function AthenaAI.Pet.OnRep_MovementRequest
+// (Final, Native, Private)
+
+void APet::OnRep_MovementRequest()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_MovementRequest"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
 // (Final, Native, Public, BlueprintCallable)
 
 void UAIFaunaSpawner::SpawnFaunaGroup()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup"));
 
 	struct
 	{
@@ -2036,7 +2052,7 @@ void UAIFaunaSpawner::SpawnFaunaGroup()
 
 void AAthenaFaunaAIController::LeaderDestroyed(class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed"));
 
 	struct
 	{
@@ -2056,7 +2072,7 @@ void AAthenaFaunaAIController::LeaderDestroyed(class AActor* Actor)
 
 class AActor* AAthenaFaunaAIController::GetLeader()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.GetLeader");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetLeader"));
 
 	struct
 	{
@@ -2077,7 +2093,7 @@ class AActor* AAthenaFaunaAIController::GetLeader()
 
 float AAthenaFaunaAIController::GetCourage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.GetCourage");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetCourage"));
 
 	struct
 	{
@@ -2098,7 +2114,7 @@ float AAthenaFaunaAIController::GetCourage()
 
 class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAthenaAICharPathFollowingComp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp"));
 
 	struct
 	{

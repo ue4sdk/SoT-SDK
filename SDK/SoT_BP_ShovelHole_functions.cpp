@@ -19,7 +19,7 @@ namespace SDK
 
 void ABP_ShovelHole_C::SetFadeInParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeInParameters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeInParameters"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void ABP_ShovelHole_C::SetFadeInParameters(float FadeTime)
 
 void ABP_ShovelHole_C::SetFadeOutParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeOutParameters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeOutParameters"));
 
 	struct
 	{
@@ -57,7 +57,7 @@ void ABP_ShovelHole_C::SetFadeOutParameters(float FadeTime)
 
 void ABP_ShovelHole_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShovelHole.BP_ShovelHole_C.UserConstructionScript"));
 
 	struct
 	{
@@ -75,7 +75,7 @@ void ABP_ShovelHole_C::UserConstructionScript()
 
 void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged"));
 
 	struct
 	{
@@ -93,7 +93,7 @@ void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 
 void ABP_ShovelHole_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShovelHole.BP_ShovelHole_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -111,7 +111,7 @@ void ABP_ShovelHole_C::ReceiveBeginPlay()
 
 void ABP_ShovelHole_C::ExecuteUbergraph_BP_ShovelHole(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ExecuteUbergraph_BP_ShovelHole");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShovelHole.BP_ShovelHole_C.ExecuteUbergraph_BP_ShovelHole"));
 
 	struct
 	{

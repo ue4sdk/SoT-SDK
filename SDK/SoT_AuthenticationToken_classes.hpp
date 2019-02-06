@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AuthenticationToken.JwtAuthenticationTokenSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AuthenticationToken.JwtAuthenticationTokenSettings"));
 		return ptr;
 	}
 
@@ -39,7 +39,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AuthenticationToken.JwtAuthenticationTokenEditorSettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AuthenticationToken.JwtAuthenticationTokenEditorSettings"));
 		return ptr;
 	}
 

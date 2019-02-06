@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_ItemInfo.BP_CollectorsChest_ItemInfo_C
-// 0x0008 (0x0608 - 0x0600)
+// 0x0008 (0x0660 - 0x0658)
 class ABP_CollectorsChest_ItemInfo_C : public ACollectorsChestItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0600(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_CollectorsChest_ItemInfo.BP_CollectorsChest_ItemInfo_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_CollectorsChest_ItemInfo.BP_CollectorsChest_ItemInfo_C"));
 		return ptr;
 	}
 

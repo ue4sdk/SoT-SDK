@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Watercrafts_enums.hpp"
+#include "SoT_Water_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Water_classes.hpp"
 
 namespace SDK
 {
@@ -94,6 +94,22 @@ struct FWatercraftSpawnTelemetryEvent
 	class FString                                      WatercraftType;                                           // 0x0010(0x0010) (ZeroConstructor)
 	struct FVector                                     Location;                                                 // 0x0020(0x000C) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Forward;                                                  // 0x002C(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Watercrafts.EventExitedWatercraft
+// 0x0010
+struct FEventExitedWatercraft
+{
+	class AActor*                                      Watercraft;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Watercrafts.EventEnteredWatercraft
+// 0x0010
+struct FEventEnteredWatercraft
+{
+	class AActor*                                      Watercraft;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

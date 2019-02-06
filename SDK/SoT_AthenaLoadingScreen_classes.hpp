@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary"));
 		return ptr;
 	}
 
@@ -72,7 +72,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.SlateLoadingScreenParams");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaLoadingScreen.SlateLoadingScreenParams"));
 		return ptr;
 	}
 
@@ -90,7 +90,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.AthenaLoadingScreenParams");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaLoadingScreen.AthenaLoadingScreenParams"));
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class AthenaLoadingScreen.LoadingUtilities");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaLoadingScreen.LoadingUtilities"));
 		return ptr;
 	}
 

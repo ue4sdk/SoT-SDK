@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class OnlineSubsystemLive.LiveNetDriver");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class OnlineSubsystemLive.LiveNetDriver"));
 		return ptr;
 	}
 

@@ -17,7 +17,7 @@ namespace SDK
 
 void Abld_beacon_01_a_fire_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bld_beacon_01_a_fire.bld_beacon_01_a_fire_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bld_beacon_01_a_fire.bld_beacon_01_a_fire_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void Abld_beacon_01_a_fire_C::UserConstructionScript()
 
 void Abld_beacon_01_a_fire_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bld_beacon_01_a_fire.bld_beacon_01_a_fire_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bld_beacon_01_a_fire.bld_beacon_01_a_fire_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void Abld_beacon_01_a_fire_C::ReceiveBeginPlay()
 
 void Abld_beacon_01_a_fire_C::ExecuteUbergraph_bld_beacon_01_a_fire(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bld_beacon_01_a_fire.bld_beacon_01_a_fire_C.ExecuteUbergraph_bld_beacon_01_a_fire");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bld_beacon_01_a_fire.bld_beacon_01_a_fire_C.ExecuteUbergraph_bld_beacon_01_a_fire"));
 
 	struct
 	{

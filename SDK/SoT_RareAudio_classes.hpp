@@ -25,7 +25,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterComponent"));
 		return ptr;
 	}
 
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AnimNotifyWwiseEmitterComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AnimNotifyWwiseEmitterComponent"));
 		return ptr;
 	}
 
@@ -56,7 +56,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterBlueprintLibrary"));
 		return ptr;
 	}
 
@@ -102,7 +102,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AnimNotify_WwiseSound");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AnimNotify_WwiseSound"));
 		return ptr;
 	}
 
@@ -120,7 +120,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AnimNotifyState_WwiseSound");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AnimNotifyState_WwiseSound"));
 		return ptr;
 	}
 
@@ -135,7 +135,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterInterface"));
 		return ptr;
 	}
 
@@ -154,7 +154,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseObjectPoolWrapper");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapper"));
 		return ptr;
 	}
 
@@ -162,15 +162,15 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioEventToComponentMap");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioEventToComponentMap"));
 		return ptr;
 	}
 
@@ -190,7 +190,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioEventToComponentMapComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioEventToComponentMapComponent"));
 		return ptr;
 	}
 
@@ -210,7 +210,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.StaticMeshAudioDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.StaticMeshAudioDataAsset"));
 		return ptr;
 	}
 
@@ -218,14 +218,14 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioIslandStaticMeshAssociatorBase");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioIslandStaticMeshAssociatorBase"));
 		return ptr;
 	}
 
@@ -243,7 +243,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioSpaceDataAsset");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioSpaceDataAsset"));
 		return ptr;
 	}
 
@@ -267,7 +267,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioPortalComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioPortalComponent"));
 		return ptr;
 	}
 
@@ -284,7 +284,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioPortalInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioPortalInterface"));
 		return ptr;
 	}
 
@@ -305,7 +305,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioPortalService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioPortalService"));
 		return ptr;
 	}
 
@@ -322,7 +322,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioSpaceComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioSpaceComponent"));
 		return ptr;
 	}
 
@@ -341,7 +341,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.AudioSpaceTrackerComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AudioSpaceTrackerComponent"));
 		return ptr;
 	}
 
@@ -359,7 +359,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.RareAudioHardwareDeviceService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.RareAudioHardwareDeviceService"));
 		return ptr;
 	}
 
@@ -375,7 +375,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.StaticMeshAudioEmittersComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.StaticMeshAudioEmittersComponent"));
 		return ptr;
 	}
 
@@ -394,7 +394,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonAcousticMap");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonAcousticMap"));
 		return ptr;
 	}
 
@@ -412,7 +412,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonComponent"));
 		return ptr;
 	}
 
@@ -427,7 +427,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonInterface"));
 		return ptr;
 	}
 
@@ -445,7 +445,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.TritonService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonService"));
 		return ptr;
 	}
 
@@ -460,7 +460,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterComponentBlueprintLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterComponentBlueprintLibrary"));
 		return ptr;
 	}
 
@@ -472,14 +472,14 @@ public:
 
 
 // Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor"));
 		return ptr;
 	}
 
@@ -495,7 +495,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class RareAudio.WwisePoolManager");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwisePoolManager"));
 		return ptr;
 	}
 

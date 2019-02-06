@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Shipwreck_01_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Shipwreck_01_a_C::UserConstructionScript()
 
 void ABP_Shipwreck_01_a_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Shipwreck_01_a_C::ReceiveBeginPlay()
 
 void ABP_Shipwreck_01_a_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -69,7 +69,7 @@ void ABP_Shipwreck_01_a_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 
 void ABP_Shipwreck_01_a_C::OnResetTo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.OnResetTo");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.OnResetTo"));
 
 	struct
 	{
@@ -87,7 +87,7 @@ void ABP_Shipwreck_01_a_C::OnResetTo()
 
 void ABP_Shipwreck_01_a_C::ExecuteUbergraph_BP_Shipwreck_01_a(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ExecuteUbergraph_BP_Shipwreck_01_a");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shipwreck_01_a.BP_Shipwreck_01_a_C.ExecuteUbergraph_BP_Shipwreck_01_a"));
 
 	struct
 	{

@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindInterface"));
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.DebugWindInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.DebugWindInterface"));
 		return ptr;
 	}
 
@@ -70,7 +70,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.MockWindService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.MockWindService"));
 		return ptr;
 	}
 
@@ -87,7 +87,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.TestWindInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.TestWindInterface"));
 		return ptr;
 	}
 
@@ -102,7 +102,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindZoneInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindZoneInterface"));
 		return ptr;
 	}
 
@@ -122,7 +122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.TestWindZone");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.TestWindZone"));
 		return ptr;
 	}
 
@@ -137,7 +137,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindFunctions"));
 		return ptr;
 	}
 
@@ -148,21 +148,21 @@ public:
 
 
 // Class Wind.WindService
-// 0x0120 (0x05B0 - 0x0490)
+// 0x0120 (0x05B8 - 0x0498)
 class AWindService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
-	class AWindDirectionalSource*                      GlobalWindSource;                                         // 0x04A0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04A8(0x0010) MISSED OFFSET
-	float                                              CurrentWindAngle;                                         // 0x04B8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              CurrentWindMagnitude;                                     // 0x04BC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xE0];                                      // 0x04C0(0x00E0) MISSED OFFSET
-	TArray<class UObject*>                             WindZones;                                                // 0x05A0(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	class AWindDirectionalSource*                      GlobalWindSource;                                         // 0x04A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x04B0(0x0010) MISSED OFFSET
+	float                                              CurrentWindAngle;                                         // 0x04C0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              CurrentWindMagnitude;                                     // 0x04C4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xE0];                                      // 0x04C8(0x00E0) MISSED OFFSET
+	TArray<class UObject*>                             WindZones;                                                // 0x05A8(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindService"));
 		return ptr;
 	}
 
@@ -174,15 +174,15 @@ public:
 
 
 // Class Wind.DebugWindService
-// 0x0010 (0x05C0 - 0x05B0)
+// 0x0010 (0x05C8 - 0x05B8)
 class ADebugWindService : public AWindService
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05B0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05B8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.DebugWindService");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.DebugWindService"));
 		return ptr;
 	}
 
@@ -197,7 +197,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindServiceParamsFunctionLibrary");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindServiceParamsFunctionLibrary"));
 		return ptr;
 	}
 
@@ -218,7 +218,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.WindZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindZoneComponent"));
 		return ptr;
 	}
 
@@ -233,7 +233,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class Wind.TestWindZoneComponent");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.TestWindZoneComponent"));
 		return ptr;
 	}
 

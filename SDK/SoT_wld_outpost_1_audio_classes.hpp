@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_outpost_1_audio.wld_outpost_1_audio_C
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class Awld_outpost_1_audio_C : public ALevelScriptActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass wld_outpost_1_audio.wld_outpost_1_audio_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass wld_outpost_1_audio.wld_outpost_1_audio_C"));
 		return ptr;
 	}
 

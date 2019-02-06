@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass hulllivery_bilgerat_01_v01_CustomizationDesc.hulllivery_bilgerat_01_v01_CustomizationDesc_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass hulllivery_bilgerat_01_v01_CustomizationDesc.hulllivery_bilgerat_01_v01_CustomizationDesc_C"));
 		return ptr;
 	}
 

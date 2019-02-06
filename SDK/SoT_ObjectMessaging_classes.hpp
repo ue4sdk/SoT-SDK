@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ObjectMessaging.ObjectMessagingInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingInterface"));
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ObjectMessaging.ObjectMessagingDispatcherInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingDispatcherInterface"));
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ObjectMessaging.ObjectMessagingFunctions");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingFunctions"));
 		return ptr;
 	}
 

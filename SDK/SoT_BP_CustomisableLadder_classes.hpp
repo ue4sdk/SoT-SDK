@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CustomisableLadder.BP_CustomisableLadder_C
-// 0x007C (0x06FC - 0x0680)
+// 0x0088 (0x0708 - 0x0680)
 class ABP_CustomisableLadder_C : public ALadder
 {
 public:
@@ -26,14 +26,16 @@ public:
 	TArray<struct FVector>                             OffTopSplineComponentPositions;                           // 0x06B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FVector>                             OnTopSplineComponentPositions;                            // 0x06C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	int                                                Steps;                                                    // 0x06D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StepHeight;                                               // 0x06DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     Interactable_Position;                                    // 0x06E0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     Interactable_Scale;                                       // 0x06EC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                Minimum_Steps;                                            // 0x06F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x06DC(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          Material_Override;                                        // 0x06E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              StepHeight;                                               // 0x06E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     Interactable_Position;                                    // 0x06EC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     Interactable_Scale;                                       // 0x06F8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                Minimum_Steps;                                            // 0x0704(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_CustomisableLadder.BP_CustomisableLadder_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_CustomisableLadder.BP_CustomisableLadder_C"));
 		return ptr;
 	}
 

@@ -17,7 +17,7 @@ namespace SDK
 
 void UBP_AnimatedStepsComponent_C::StartOpeningSteps()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpeningSteps");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpeningSteps"));
 
 	struct
 	{
@@ -36,7 +36,7 @@ void UBP_AnimatedStepsComponent_C::StartOpeningSteps()
 
 void UBP_AnimatedStepsComponent_C::SetAllStepsZs(bool OpeningOrClosing, TArray<float>* TargetZOffsets)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.SetAllStepsZs");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.SetAllStepsZs"));
 
 	struct
 	{
@@ -64,7 +64,7 @@ void UBP_AnimatedStepsComponent_C::SetAllStepsZs(bool OpeningOrClosing, TArray<f
 
 void UBP_AnimatedStepsComponent_C::UpdateStep(int BoneIndex, float TargetZ, float MovementDelay, class UBoxComponent* AttachedBox, const struct FVector& BoxOrigin)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.UpdateStep");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.UpdateStep"));
 
 	struct
 	{
@@ -92,7 +92,7 @@ void UBP_AnimatedStepsComponent_C::UpdateStep(int BoneIndex, float TargetZ, floa
 
 void UBP_AnimatedStepsComponent_C::ReceiveTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick"));
 
 	struct
 	{
@@ -110,7 +110,7 @@ void UBP_AnimatedStepsComponent_C::ReceiveTick(float DeltaSeconds)
 
 void UBP_AnimatedStepsComponent_C::StartOpening()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpening");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpening"));
 
 	struct
 	{
@@ -126,7 +126,7 @@ void UBP_AnimatedStepsComponent_C::StartOpening()
 
 void UBP_AnimatedStepsComponent_C::OpenImmediate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.OpenImmediate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.OpenImmediate"));
 
 	struct
 	{
@@ -142,7 +142,7 @@ void UBP_AnimatedStepsComponent_C::OpenImmediate()
 
 void UBP_AnimatedStepsComponent_C::Close()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.Close");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.Close"));
 
 	struct
 	{
@@ -160,7 +160,7 @@ void UBP_AnimatedStepsComponent_C::Close()
 
 void UBP_AnimatedStepsComponent_C::ExecuteUbergraph_BP_AnimatedStepsComponent(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ExecuteUbergraph_BP_AnimatedStepsComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ExecuteUbergraph_BP_AnimatedStepsComponent"));
 
 	struct
 	{

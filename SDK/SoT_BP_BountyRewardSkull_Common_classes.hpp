@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Common.BP_BountyRewardSkull_Common_C
-// 0x0000 (0x0808 - 0x0808)
+// 0x0000 (0x0810 - 0x0810)
 class ABP_BountyRewardSkull_Common_C : public ABP_BountyRewardSkull_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BountyRewardSkull_Common.BP_BountyRewardSkull_Common_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BountyRewardSkull_Common.BP_BountyRewardSkull_Common_C"));
 		return ptr;
 	}
 

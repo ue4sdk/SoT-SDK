@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_CannonBallProxy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CannonBallProxy.BP_CannonBallProxy_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBallProxy.BP_CannonBallProxy_C.UserConstructionScript"));
 
 	struct
 	{

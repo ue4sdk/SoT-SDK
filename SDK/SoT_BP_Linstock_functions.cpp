@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Linstock_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Linstock.BP_Linstock_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Linstock_C::UserConstructionScript()
 
 void ABP_Linstock_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Linstock.BP_Linstock_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Linstock_C::ReceiveBeginPlay()
 
 void ABP_Linstock_C::ExecuteUbergraph_BP_Linstock(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.ExecuteUbergraph_BP_Linstock");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Linstock.BP_Linstock_C.ExecuteUbergraph_BP_Linstock"));
 
 	struct
 	{

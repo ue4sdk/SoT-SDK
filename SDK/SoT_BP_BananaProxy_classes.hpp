@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BananaProxy.BP_BananaProxy_C
-// 0x0008 (0x06E0 - 0x06D8)
+// 0x0008 (0x0700 - 0x06F8)
 class ABP_BananaProxy_C : public AStaticMeshItemProxy
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x06D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BananaProxy.BP_BananaProxy_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BananaProxy.BP_BananaProxy_C"));
 		return ptr;
 	}
 

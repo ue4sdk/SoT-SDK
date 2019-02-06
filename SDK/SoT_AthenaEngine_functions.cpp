@@ -20,7 +20,7 @@ namespace SDK
 
 void UNetDormancyHelpers::SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaEngine.NetDormancyHelpers.SetNetDormancy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaEngine.NetDormancyHelpers.SetNetDormancy"));
 
 	struct
 	{
@@ -43,7 +43,7 @@ void UNetDormancyHelpers::SetNetDormancy(class AActor* TargetActor, TEnumAsByte<
 
 void UNetDormancyHelpers::FlushNetDormancy(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaEngine.NetDormancyHelpers.FlushNetDormancy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaEngine.NetDormancyHelpers.FlushNetDormancy"));
 
 	struct
 	{

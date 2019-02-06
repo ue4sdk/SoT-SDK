@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_tls_hand_lantern_elb_01_a_v01_ItemDesc.BP_tls_hand_lantern_elb_01_a_v01_ItemDesc_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_tls_hand_lantern_elb_01_a_v01_ItemDesc.BP_tls_hand_lantern_elb_01_a_v01_ItemDesc_C"));
 		return ptr;
 	}
 

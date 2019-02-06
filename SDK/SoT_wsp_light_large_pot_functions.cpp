@@ -17,7 +17,7 @@ namespace SDK
 
 void Awsp_light_large_pot_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_light_large_pot.wsp_light_large_pot_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_light_large_pot.wsp_light_large_pot_C.UserConstructionScript"));
 
 	struct
 	{

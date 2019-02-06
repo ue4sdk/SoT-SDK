@@ -17,7 +17,7 @@ namespace SDK
 
 void Awsp_mushroom_glow_01_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_mushroom_glow_01_a.wsp_mushroom_glow_01_a_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_mushroom_glow_01_a.wsp_mushroom_glow_01_a_C.UserConstructionScript"));
 
 	struct
 	{

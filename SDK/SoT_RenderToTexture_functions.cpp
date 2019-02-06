@@ -19,7 +19,7 @@ namespace SDK
 
 class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RenderToTexture.RenderToTextureSceneDetails.GetTexture");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetTexture"));
 
 	struct
 	{
@@ -40,7 +40,7 @@ class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
 
 class AActor* URenderToTextureSceneDetails::GetInstance()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RenderToTexture.RenderToTextureSceneDetails.GetInstance");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetInstance"));
 
 	struct
 	{
@@ -59,7 +59,7 @@ class AActor* URenderToTextureSceneDetails::GetInstance()
 
 void URenderToTextureSceneDetails::DestroyTexture()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture"));
 
 	struct
 	{
@@ -78,7 +78,7 @@ void URenderToTextureSceneDetails::DestroyTexture()
 
 class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::GetRenderToTexture(const struct FName& Identifier)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RenderToTexture.RenderToTextureFunctionLibrary.GetRenderToTexture");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureFunctionLibrary.GetRenderToTexture"));
 
 	struct
 	{
@@ -106,7 +106,7 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::GetRenderTo
 
 class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RenderToTexture.RenderToTextureFunctionLibrary.CreateRenderToTexture");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureFunctionLibrary.CreateRenderToTexture"));
 
 	struct
 	{

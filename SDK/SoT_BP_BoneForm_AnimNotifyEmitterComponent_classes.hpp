@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BoneForm_AnimNotifyEmitterComponent.BP_BoneForm_AnimNotifyEmitterComponent_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BoneForm_AnimNotifyEmitterComponent.BP_BoneForm_AnimNotifyEmitterComponent_C"));
 		return ptr;
 	}
 

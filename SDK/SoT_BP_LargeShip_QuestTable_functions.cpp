@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_LargeShip_QuestTable_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShip_QuestTable.BP_LargeShip_QuestTable_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShip_QuestTable.BP_LargeShip_QuestTable_C.UserConstructionScript"));
 
 	struct
 	{

@@ -21,7 +21,7 @@ namespace SDK
 
 bool UJsonUtilitiesBlueprintHelperLibrary::UStructToJsonObjectString(const struct FGenericStruct& Struct, class FString* OutJsonString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.UStructToJsonObjectString");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.UStructToJsonObjectString"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ bool UJsonUtilitiesBlueprintHelperLibrary::UStructToJsonObjectString(const struc
 
 bool UJsonUtilitiesBlueprintHelperLibrary::JsonObjectStringToUStruct(const class FString& InJsonString, const struct FGenericStruct& Struct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.JsonObjectStringToUStruct");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.JsonObjectStringToUStruct"));
 
 	struct
 	{

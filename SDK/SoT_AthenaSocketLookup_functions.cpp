@@ -20,7 +20,7 @@ namespace SDK
 
 struct FSocketId USocketIdTestFunctions::MakeSocketIdWithInvalidName(const class FString& InPath)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketIdWithInvalidName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketIdWithInvalidName"));
 
 	struct
 	{
@@ -45,7 +45,7 @@ struct FSocketId USocketIdTestFunctions::MakeSocketIdWithInvalidName(const class
 
 struct FSocketId USocketIdTestFunctions::MakeSocketIdWithEmptyPath(const struct FName& InSocketName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketIdWithEmptyPath");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketIdWithEmptyPath"));
 
 	struct
 	{
@@ -71,7 +71,7 @@ struct FSocketId USocketIdTestFunctions::MakeSocketIdWithEmptyPath(const struct 
 
 struct FSocketId USocketIdTestFunctions::MakeSocketId(const class FString& InPath, const struct FName& InSocketName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketIdTestFunctions.MakeSocketId"));
 
 	struct
 	{
@@ -99,7 +99,7 @@ struct FSocketId USocketIdTestFunctions::MakeSocketId(const class FString& InPat
 
 bool USocketLookupCacheTestFunctions::IsInCache(const struct FSocketId& InSocketId, struct FSocketLookupCache* InCache)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupCacheTestFunctions.IsInCache");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupCacheTestFunctions.IsInCache"));
 
 	struct
 	{
@@ -130,7 +130,7 @@ bool USocketLookupCacheTestFunctions::IsInCache(const struct FSocketId& InSocket
 
 bool USocketLookupCacheTestFunctions::AddToCache(const struct FSocketId& InSocketId, class USceneComponent* InSceneComponent, struct FSocketLookupCache* InCache)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupCacheTestFunctions.AddToCache");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupCacheTestFunctions.AddToCache"));
 
 	struct
 	{
@@ -164,7 +164,7 @@ bool USocketLookupCacheTestFunctions::AddToCache(const struct FSocketId& InSocke
 
 bool USocketLookupFunctions::TryGetSocketTransformWithCache(class AActor* InActor, const struct FSocketId& InSocketId, struct FSocketLookupCache* Cache, struct FTransform* OutTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryGetSocketTransformWithCache");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupFunctions.TryGetSocketTransformWithCache"));
 
 	struct
 	{
@@ -201,7 +201,7 @@ bool USocketLookupFunctions::TryGetSocketTransformWithCache(class AActor* InActo
 
 bool USocketLookupFunctions::TryGetSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, TEnumAsByte<ERelativeTransformSpace> Space, struct FTransform* OutTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryGetSocketTransform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupFunctions.TryGetSocketTransform"));
 
 	struct
 	{
@@ -237,7 +237,7 @@ bool USocketLookupFunctions::TryGetSocketTransform(class AActor* InActor, const 
 
 bool USocketLookupFunctions::TryGetRelativeSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, class USceneComponent* RelativeTo, struct FTransform* OutTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryGetRelativeSocketTransform");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupFunctions.TryGetRelativeSocketTransform"));
 
 	struct
 	{
@@ -271,7 +271,7 @@ bool USocketLookupFunctions::TryGetRelativeSocketTransform(class AActor* InActor
 
 class USceneComponent* USocketLookupFunctions::TryFindSocketOwner(class AActor* InActor, const struct FSocketId& InSocketId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupFunctions.TryFindSocketOwner");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupFunctions.TryFindSocketOwner"));
 
 	struct
 	{
@@ -299,7 +299,7 @@ class USceneComponent* USocketLookupFunctions::TryFindSocketOwner(class AActor* 
 
 bool USocketLookupInterface::FindSocket(const struct FSocketId& InSocketId, struct FTransform* OutTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaSocketLookup.SocketLookupInterface.FindSocket");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaSocketLookup.SocketLookupInterface.FindSocket"));
 
 	struct
 	{

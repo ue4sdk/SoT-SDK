@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass Title_AF_LegendaryMerchantofFauna.Title_AF_LegendaryMerchantofFauna_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass Title_AF_LegendaryMerchantofFauna.Title_AF_LegendaryMerchantofFauna_C"));
 		return ptr;
 	}
 

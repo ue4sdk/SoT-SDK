@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Proxy_Legendary_DVR.BP_BountyRewardSkull_Proxy_Legendary_DVR_C
-// 0x0008 (0x0860 - 0x0858)
+// 0x0008 (0x0898 - 0x0890)
 class ABP_BountyRewardSkull_Proxy_Legendary_DVR_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_BountyRewardSkull_Proxy_Legendary_DVR.BP_BountyRewardSkull_Proxy_Legendary_DVR_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_BountyRewardSkull_Proxy_Legendary_DVR.BP_BountyRewardSkull_Proxy_Legendary_DVR_C"));
 		return ptr;
 	}
 

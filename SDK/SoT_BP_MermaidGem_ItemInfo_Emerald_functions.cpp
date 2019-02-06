@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_MermaidGem_ItemInfo_Emerald_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MermaidGem_ItemInfo_Emerald.BP_MermaidGem_ItemInfo_Emerald_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MermaidGem_ItemInfo_Emerald.BP_MermaidGem_ItemInfo_Emerald_C.UserConstructionScript"));
 
 	struct
 	{

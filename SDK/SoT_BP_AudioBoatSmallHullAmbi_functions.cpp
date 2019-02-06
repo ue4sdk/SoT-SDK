@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_AudioBoatSmallHullAmbi_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AudioBoatSmallHullAmbi.BP_AudioBoatSmallHullAmbi_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AudioBoatSmallHullAmbi.BP_AudioBoatSmallHullAmbi_C.UserConstructionScript"));
 
 	struct
 	{

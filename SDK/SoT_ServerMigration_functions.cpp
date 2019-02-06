@@ -20,7 +20,7 @@ namespace SDK
 
 void UNetworkTestingBlueprintFunctionLibrary::SwitchNetworkClusterForActor(class AActor* TargetActor, class AActor* NewOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SwitchNetworkClusterForActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SwitchNetworkClusterForActor"));
 
 	struct
 	{
@@ -44,7 +44,7 @@ void UNetworkTestingBlueprintFunctionLibrary::SwitchNetworkClusterForActor(class
 
 void UNetworkTestingBlueprintFunctionLibrary::SetConnectionLastReceiveTime(class APlayerController* PlayerController, float OffsetFromDriverTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SetConnectionLastReceiveTime");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.SetConnectionLastReceiveTime"));
 
 	struct
 	{
@@ -67,7 +67,7 @@ void UNetworkTestingBlueprintFunctionLibrary::SetConnectionLastReceiveTime(class
 
 void UNetworkTestingBlueprintFunctionLibrary::ResumePropertyTracking(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.ResumePropertyTracking");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.ResumePropertyTracking"));
 
 	struct
 	{
@@ -88,7 +88,7 @@ void UNetworkTestingBlueprintFunctionLibrary::ResumePropertyTracking(class AActo
 
 void UNetworkTestingBlueprintFunctionLibrary::PausePropertyTrackingOnNextSend(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.PausePropertyTrackingOnNextSend");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.PausePropertyTrackingOnNextSend"));
 
 	struct
 	{
@@ -111,7 +111,7 @@ void UNetworkTestingBlueprintFunctionLibrary::PausePropertyTrackingOnNextSend(cl
 
 bool UNetworkTestingBlueprintFunctionLibrary::IsActorNetRelevantFor(class AActor* TargetActor, class APlayerController* PlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetRelevantFor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetRelevantFor"));
 
 	struct
 	{
@@ -138,7 +138,7 @@ bool UNetworkTestingBlueprintFunctionLibrary::IsActorNetRelevantFor(class AActor
 
 bool UNetworkTestingBlueprintFunctionLibrary::IsActorNetDormant(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetDormant");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetDormant"));
 
 	struct
 	{
@@ -163,7 +163,7 @@ bool UNetworkTestingBlueprintFunctionLibrary::IsActorNetDormant(class AActor* Ta
 
 int UNetworkTestingBlueprintFunctionLibrary::GetReliableBufferBunchCount(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.GetReliableBufferBunchCount");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.GetReliableBufferBunchCount"));
 
 	struct
 	{
@@ -188,7 +188,7 @@ int UNetworkTestingBlueprintFunctionLibrary::GetReliableBufferBunchCount(class A
 
 void UNetworkTestingBlueprintFunctionLibrary::ClearRecentRelevanceTimerForPlayer(class AActor* TargetActor, class APlayerController* PlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.ClearRecentRelevanceTimerForPlayer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.ClearRecentRelevanceTimerForPlayer"));
 
 	struct
 	{
@@ -211,7 +211,7 @@ void UNetworkTestingBlueprintFunctionLibrary::ClearRecentRelevanceTimerForPlayer
 
 void UNetworkTestingBlueprintFunctionLibrary::ClearRecentRelevanceTimer(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.ClearRecentRelevanceTimer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.ClearRecentRelevanceTimer"));
 
 	struct
 	{
@@ -233,7 +233,7 @@ void UNetworkTestingBlueprintFunctionLibrary::ClearRecentRelevanceTimer(class AA
 
 void UServerMigrationBlueprintFunctionLibrary::WaitWhileMigrationInProgress(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitWhileMigrationInProgress");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitWhileMigrationInProgress"));
 
 	struct
 	{
@@ -258,7 +258,7 @@ void UServerMigrationBlueprintFunctionLibrary::WaitWhileMigrationInProgress(clas
 
 void UServerMigrationBlueprintFunctionLibrary::WaitForPendingNetTraffic(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitForPendingNetTraffic");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitForPendingNetTraffic"));
 
 	struct
 	{
@@ -284,7 +284,7 @@ void UServerMigrationBlueprintFunctionLibrary::WaitForPendingNetTraffic(class UO
 
 void UServerMigrationBlueprintFunctionLibrary::WaitForMigrationCompletedEvent(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitForMigrationCompletedEvent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitForMigrationCompletedEvent"));
 
 	struct
 	{
@@ -309,7 +309,7 @@ void UServerMigrationBlueprintFunctionLibrary::WaitForMigrationCompletedEvent(cl
 
 void UServerMigrationBlueprintFunctionLibrary::WaitForClientsToHaveActorChannel(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitForClientsToHaveActorChannel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.WaitForClientsToHaveActorChannel"));
 
 	struct
 	{
@@ -335,7 +335,7 @@ void UServerMigrationBlueprintFunctionLibrary::WaitForClientsToHaveActorChannel(
 
 TArray<unsigned char> UServerMigrationBlueprintFunctionLibrary::TestSerialiseActorToBuffer(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestSerialiseActorToBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestSerialiseActorToBuffer"));
 
 	struct
 	{
@@ -360,7 +360,7 @@ TArray<unsigned char> UServerMigrationBlueprintFunctionLibrary::TestSerialiseAct
 
 TArray<unsigned char> UServerMigrationBlueprintFunctionLibrary::TestSerialiseActorGroupToBuffer(TArray<class AActor*> ActorGroup)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestSerialiseActorGroupToBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestSerialiseActorGroupToBuffer"));
 
 	struct
 	{
@@ -387,7 +387,7 @@ TArray<unsigned char> UServerMigrationBlueprintFunctionLibrary::TestSerialiseAct
 
 class AActor* UServerMigrationBlueprintFunctionLibrary::TestDeserialiseActorWithOffsetFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer, const struct FVector& Offset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorWithOffsetFromBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorWithOffsetFromBuffer"));
 
 	struct
 	{
@@ -418,7 +418,7 @@ class AActor* UServerMigrationBlueprintFunctionLibrary::TestDeserialiseActorWith
 
 TArray<class AActor*> UServerMigrationBlueprintFunctionLibrary::TestDeserialiseActorGroupWithOffsetFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer, const struct FVector& Offset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorGroupWithOffsetFromBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorGroupWithOffsetFromBuffer"));
 
 	struct
 	{
@@ -448,7 +448,7 @@ TArray<class AActor*> UServerMigrationBlueprintFunctionLibrary::TestDeserialiseA
 
 TArray<class AActor*> UServerMigrationBlueprintFunctionLibrary::TestDeserialiseActorGroupFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorGroupFromBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorGroupFromBuffer"));
 
 	struct
 	{
@@ -476,7 +476,7 @@ TArray<class AActor*> UServerMigrationBlueprintFunctionLibrary::TestDeserialiseA
 
 class AActor* UServerMigrationBlueprintFunctionLibrary::TestDeserialiseActorFromBuffer(class UObject* WorldContextObject, TArray<unsigned char> Buffer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorFromBuffer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.TestDeserialiseActorFromBuffer"));
 
 	struct
 	{
@@ -503,7 +503,7 @@ class AActor* UServerMigrationBlueprintFunctionLibrary::TestDeserialiseActorFrom
 
 void UServerMigrationBlueprintFunctionLibrary::SetServerMigrationTestServerSettings(class UObject* WorldContextObject, const struct FServerSettings& Settings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.SetServerMigrationTestServerSettings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.SetServerMigrationTestServerSettings"));
 
 	struct
 	{
@@ -527,7 +527,7 @@ void UServerMigrationBlueprintFunctionLibrary::SetServerMigrationTestServerSetti
 
 void UServerMigrationBlueprintFunctionLibrary::SetServerMigrationTestClientSettings(class UObject* WorldContextObject, const struct FClientSettings& Settings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.SetServerMigrationTestClientSettings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.SetServerMigrationTestClientSettings"));
 
 	struct
 	{
@@ -553,7 +553,7 @@ void UServerMigrationBlueprintFunctionLibrary::SetServerMigrationTestClientSetti
 
 void UServerMigrationBlueprintFunctionLibrary::SetPacketSimulationSettings(class UObject* WorldContextObject, int PacketLag, int PacketLagVariance, int PacketLoss)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.SetPacketSimulationSettings");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.SetPacketSimulationSettings"));
 
 	struct
 	{
@@ -580,7 +580,7 @@ void UServerMigrationBlueprintFunctionLibrary::SetPacketSimulationSettings(class
 
 void UServerMigrationBlueprintFunctionLibrary::ResumeReplication(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.ResumeReplication");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.ResumeReplication"));
 
 	struct
 	{
@@ -602,7 +602,7 @@ void UServerMigrationBlueprintFunctionLibrary::ResumeReplication(class AActor* T
 
 void UServerMigrationBlueprintFunctionLibrary::RegisterPersistentDynamicActor(class AActor* TargetActor, const class FString& IdentificationName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.RegisterPersistentDynamicActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.RegisterPersistentDynamicActor"));
 
 	struct
 	{
@@ -626,7 +626,7 @@ void UServerMigrationBlueprintFunctionLibrary::RegisterPersistentDynamicActor(cl
 
 void UServerMigrationBlueprintFunctionLibrary::PauseReplication(class AActor* TargetActor, bool bDropUnreliableRPCsWhilePaused)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.PauseReplication");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.PauseReplication"));
 
 	struct
 	{
@@ -650,7 +650,7 @@ void UServerMigrationBlueprintFunctionLibrary::PauseReplication(class AActor* Ta
 
 bool UServerMigrationBlueprintFunctionLibrary::HasActorChannelFromServer(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.HasActorChannelFromServer");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.HasActorChannelFromServer"));
 
 	struct
 	{
@@ -675,7 +675,7 @@ bool UServerMigrationBlueprintFunctionLibrary::HasActorChannelFromServer(class A
 
 bool UServerMigrationBlueprintFunctionLibrary::ClientsHaveDormantActor(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.ClientsHaveDormantActor");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.ClientsHaveDormantActor"));
 
 	struct
 	{
@@ -700,7 +700,7 @@ bool UServerMigrationBlueprintFunctionLibrary::ClientsHaveDormantActor(class AAc
 
 bool UServerMigrationBlueprintFunctionLibrary::ClientsHaveActorChannel(class AActor* TargetActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.ClientsHaveActorChannel");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.ServerMigrationBlueprintFunctionLibrary.ClientsHaveActorChannel"));
 
 	struct
 	{

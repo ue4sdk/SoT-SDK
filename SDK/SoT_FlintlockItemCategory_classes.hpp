@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass FlintlockItemCategory.FlintlockItemCategory_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass FlintlockItemCategory.FlintlockItemCategory_C"));
 		return ptr;
 	}
 

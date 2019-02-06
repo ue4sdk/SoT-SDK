@@ -26,7 +26,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class LightPropagationVolumeRuntime.LightPropagationVolumeBlendable");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LightPropagationVolumeRuntime.LightPropagationVolumeBlendable"));
 		return ptr;
 	}
 

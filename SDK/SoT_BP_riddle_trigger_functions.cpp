@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_riddle_trigger_C::Destroy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_riddle_trigger.BP_riddle_trigger_C.Destroy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_riddle_trigger.BP_riddle_trigger_C.Destroy"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_riddle_trigger_C::Destroy()
 
 void ABP_riddle_trigger_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_riddle_trigger.BP_riddle_trigger_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_riddle_trigger.BP_riddle_trigger_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PocketWatch.BP_PocketWatch_C
-// 0x0000 (0x0888 - 0x0888)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_PocketWatch_C : public APocketWatch
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_PocketWatch.BP_PocketWatch_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_PocketWatch.BP_PocketWatch_C"));
 		return ptr;
 	}
 

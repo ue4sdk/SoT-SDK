@@ -24,7 +24,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings"));
 		return ptr;
 	}
 
@@ -41,7 +41,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class MaterialShaderQualitySettings.MaterialShaderQualitySettings");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class MaterialShaderQualitySettings.MaterialShaderQualitySettings"));
 		return ptr;
 	}
 

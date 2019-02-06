@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_TreasureArtifact_ItemInfo_DVR_Rare_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureArtifact_ItemInfo_DVR_Rare.BP_TreasureArtifact_ItemInfo_DVR_Rare_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureArtifact_ItemInfo_DVR_Rare.BP_TreasureArtifact_ItemInfo_DVR_Rare_C.UserConstructionScript"));
 
 	struct
 	{

@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_PigCrateProxy.BP_MerchantCrate_PigCrateProxy_C
-// 0x0018 (0x0840 - 0x0828)
+// 0x0018 (0x0878 - 0x0860)
 class ABP_MerchantCrate_PigCrateProxy_C : public AStaticMerchantCrateItemProxy
 {
 public:
-	class UFeedingComponent*                           Feeding;                                                  // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMountpointComponent*                        Mountpoint;                                               // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UFeedingComponent*                           Feeding;                                                  // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMountpointComponent*                        Mountpoint;                                               // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_MerchantCrate_PigCrateProxy.BP_MerchantCrate_PigCrateProxy_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_MerchantCrate_PigCrateProxy.BP_MerchantCrate_PigCrateProxy_C"));
 		return ptr;
 	}
 

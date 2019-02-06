@@ -20,7 +20,7 @@ namespace SDK
 
 int UPositionalVoiceTestFunctionLibrary::GetNumberOfUnmutedRemotePlayers(class APlayerController* CurrentPlayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetNumberOfUnmutedRemotePlayers");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetNumberOfUnmutedRemotePlayers"));
 
 	struct
 	{
@@ -46,7 +46,7 @@ int UPositionalVoiceTestFunctionLibrary::GetNumberOfUnmutedRemotePlayers(class A
 
 int UPositionalVoiceTestFunctionLibrary::GetNumberOfRegisteredChatEmitters(class UObject* WorldContextObject, class UClass* VoiceChatRendererClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetNumberOfRegisteredChatEmitters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetNumberOfRegisteredChatEmitters"));
 
 	struct
 	{
@@ -72,7 +72,7 @@ int UPositionalVoiceTestFunctionLibrary::GetNumberOfRegisteredChatEmitters(class
 
 int UPositionalVoiceTestFunctionLibrary::GetMaxNumberOfAudibleChatEmitters()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetMaxNumberOfAudibleChatEmitters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.PositionalVoiceTestFunctionLibrary.GetMaxNumberOfAudibleChatEmitters"));
 
 	struct
 	{
@@ -94,7 +94,7 @@ int UPositionalVoiceTestFunctionLibrary::GetMaxNumberOfAudibleChatEmitters()
 
 struct FVector UVoiceChatEmitterInterface::GetVoiceLocation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceLocation"));
 
 	struct
 	{
@@ -115,7 +115,7 @@ struct FVector UVoiceChatEmitterInterface::GetVoiceLocation()
 
 void UVoiceChatEmitterInterface::GetVoiceAudioEmitterProxy(struct FWwiseEmitter* EmitterProxy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAudioEmitterProxy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAudioEmitterProxy"));
 
 	struct
 	{
@@ -138,7 +138,7 @@ void UVoiceChatEmitterInterface::GetVoiceAudioEmitterProxy(struct FWwiseEmitter*
 
 float UVoiceChatEmitterInterface::GetVoiceAttenuationScaler(const TScriptInterface<class UVoiceChatEmitterInterface>& RelativeToThisEmitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAttenuationScaler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAttenuationScaler"));
 
 	struct
 	{
@@ -161,7 +161,7 @@ float UVoiceChatEmitterInterface::GetVoiceAttenuationScaler(const TScriptInterfa
 
 struct FVector ATestVoiceChatEmitter::GetVoiceLocation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceLocation"));
 
 	struct
 	{
@@ -182,7 +182,7 @@ struct FVector ATestVoiceChatEmitter::GetVoiceLocation()
 
 void ATestVoiceChatEmitter::GetVoiceAudioEmitterProxy(struct FWwiseEmitter* EmitterProxy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceAudioEmitterProxy");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceAudioEmitterProxy"));
 
 	struct
 	{
@@ -205,7 +205,7 @@ void ATestVoiceChatEmitter::GetVoiceAudioEmitterProxy(struct FWwiseEmitter* Emit
 
 float ATestVoiceChatEmitter::GetVoiceAttenuationScaler(const TScriptInterface<class UVoiceChatEmitterInterface>& RelativeToThisEmitter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceAttenuationScaler");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.TestVoiceChatEmitter.GetVoiceAttenuationScaler"));
 
 	struct
 	{

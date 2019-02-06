@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_IslandWeaponsChest.BP_IslandWeaponsChest_C
-// 0x0000 (0x05C8 - 0x05C8)
+// 0x0000 (0x05D0 - 0x05D0)
 class ABP_IslandWeaponsChest_C : public APossessionsChest
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("BlueprintGeneratedClass BP_IslandWeaponsChest.BP_IslandWeaponsChest_C");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_IslandWeaponsChest.BP_IslandWeaponsChest_C"));
 		return ptr;
 	}
 

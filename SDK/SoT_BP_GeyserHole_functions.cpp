@@ -19,7 +19,7 @@ namespace SDK
 
 void ABP_GeyserHole_C::SetFadeOutParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeOutParameters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeOutParameters"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void ABP_GeyserHole_C::SetFadeOutParameters(float FadeTime)
 
 void ABP_GeyserHole_C::SetFadeInParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeInParameters");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeInParameters"));
 
 	struct
 	{
@@ -57,7 +57,7 @@ void ABP_GeyserHole_C::SetFadeInParameters(float FadeTime)
 
 void ABP_GeyserHole_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.UserConstructionScript"));
 
 	struct
 	{
@@ -73,7 +73,7 @@ void ABP_GeyserHole_C::UserConstructionScript()
 
 void ABP_GeyserHole_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -91,7 +91,7 @@ void ABP_GeyserHole_C::ReceiveBeginPlay()
 
 void ABP_GeyserHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.OnStateChanged");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.OnStateChanged"));
 
 	struct
 	{
@@ -111,7 +111,7 @@ void ABP_GeyserHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 
 void ABP_GeyserHole_C::ExecuteUbergraph_BP_GeyserHole(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.ExecuteUbergraph_BP_GeyserHole");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.ExecuteUbergraph_BP_GeyserHole"));
 
 	struct
 	{

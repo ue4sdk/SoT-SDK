@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_Merchant_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Merchant.BP_Merchant_C.UserConstructionScript"));
 
 	struct
 	{
@@ -33,7 +33,7 @@ void ABP_Merchant_C::UserConstructionScript()
 
 void ABP_Merchant_C::PlayItemAnimation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.PlayItemAnimation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Merchant.BP_Merchant_C.PlayItemAnimation"));
 
 	struct
 	{
@@ -51,7 +51,7 @@ void ABP_Merchant_C::PlayItemAnimation()
 
 void ABP_Merchant_C::ExecuteUbergraph_BP_Merchant(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.ExecuteUbergraph_BP_Merchant");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Merchant.BP_Merchant_C.ExecuteUbergraph_BP_Merchant"));
 
 	struct
 	{

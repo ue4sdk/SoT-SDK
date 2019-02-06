@@ -21,7 +21,7 @@ namespace SDK
 
 struct FVector ABP_Innkeeper_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Innkeeper.BP_Innkeeper_C.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -46,7 +46,7 @@ struct FVector ABP_Innkeeper_C::GetClosestInteractionPoint(const struct FVector&
 
 void ABP_Innkeeper_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Innkeeper.BP_Innkeeper_C.UserConstructionScript"));
 
 	struct
 	{
@@ -62,7 +62,7 @@ void ABP_Innkeeper_C::UserConstructionScript()
 
 void ABP_Innkeeper_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveBeginPlay"));
 
 	struct
 	{
@@ -80,7 +80,7 @@ void ABP_Innkeeper_C::ReceiveBeginPlay()
 
 void ABP_Innkeeper_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveEndPlay");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveEndPlay"));
 
 	struct
 	{
@@ -100,7 +100,7 @@ void ABP_Innkeeper_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 void ABP_Innkeeper_C::ExecuteUbergraph_BP_Innkeeper(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ExecuteUbergraph_BP_Innkeeper");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Innkeeper.BP_Innkeeper_C.ExecuteUbergraph_BP_Innkeeper"));
 
 	struct
 	{

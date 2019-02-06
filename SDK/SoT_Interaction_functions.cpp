@@ -19,7 +19,7 @@ namespace SDK
 
 void UInteractableComponent::SetBoxOrigin(const struct FVector& IntBoxOrigin)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.SetBoxOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.SetBoxOrigin"));
 
 	struct
 	{
@@ -39,7 +39,7 @@ void UInteractableComponent::SetBoxOrigin(const struct FVector& IntBoxOrigin)
 
 void UInteractableComponent::SetBoxExtent(const struct FVector& InBoxExtent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.SetBoxExtent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.SetBoxExtent"));
 
 	struct
 	{
@@ -59,7 +59,7 @@ void UInteractableComponent::SetBoxExtent(const struct FVector& InBoxExtent)
 
 class UInteractableArea* UInteractableComponent::GetInteractableArea()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetInteractableArea");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetInteractableArea"));
 
 	struct
 	{
@@ -80,7 +80,7 @@ class UInteractableArea* UInteractableComponent::GetInteractableArea()
 
 struct FVector UInteractableComponent::GetBoxWorldOrigin()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxWorldOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxWorldOrigin"));
 
 	struct
 	{
@@ -101,7 +101,7 @@ struct FVector UInteractableComponent::GetBoxWorldOrigin()
 
 float UInteractableComponent::GetBoxSphereRadius()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxSphereRadius");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxSphereRadius"));
 
 	struct
 	{
@@ -122,7 +122,7 @@ float UInteractableComponent::GetBoxSphereRadius()
 
 struct FVector UInteractableComponent::GetBoxOrigin()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxOrigin");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxOrigin"));
 
 	struct
 	{
@@ -143,7 +143,7 @@ struct FVector UInteractableComponent::GetBoxOrigin()
 
 struct FVector UInteractableComponent::GetBoxExtent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableComponent.GetBoxExtent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxExtent"));
 
 	struct
 	{
@@ -165,7 +165,7 @@ struct FVector UInteractableComponent::GetBoxExtent()
 
 bool UCharacterInteractionComponent::IsInteractionValid(class UObject* InInteractable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.IsInteractionValid");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.IsInteractionValid"));
 
 	struct
 	{
@@ -186,7 +186,7 @@ bool UCharacterInteractionComponent::IsInteractionValid(class UObject* InInterac
 
 void UCharacterInteractionComponent::InvalidateOptimalObject()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.InvalidateOptimalObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.InvalidateOptimalObject"));
 
 	struct
 	{
@@ -204,7 +204,7 @@ void UCharacterInteractionComponent::InvalidateOptimalObject()
 
 class UInteractableArea* UCharacterInteractionComponent::GetOptimalFocusObject()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.GetOptimalFocusObject");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.GetOptimalFocusObject"));
 
 	struct
 	{
@@ -223,7 +223,7 @@ class UInteractableArea* UCharacterInteractionComponent::GetOptimalFocusObject()
 
 void UCharacterInteractionComponent::ClearAllPolicies()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.CharacterInteractionComponent.ClearAllPolicies");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.ClearAllPolicies"));
 
 	struct
 	{
@@ -241,7 +241,7 @@ void UCharacterInteractionComponent::ClearAllPolicies()
 
 void UInteractableArea::SetParent(class AActor* InParent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetParent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetParent"));
 
 	struct
 	{
@@ -261,7 +261,7 @@ void UInteractableArea::SetParent(class AActor* InParent)
 
 void UInteractableArea::SetInteractable(class UObject* InInteractable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetInteractable");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetInteractable"));
 
 	struct
 	{
@@ -281,7 +281,7 @@ void UInteractableArea::SetInteractable(class UObject* InInteractable)
 
 void UInteractableArea::SetAreaName(const struct FName& InName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetAreaName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetAreaName"));
 
 	struct
 	{
@@ -301,7 +301,7 @@ void UInteractableArea::SetAreaName(const struct FName& InName)
 
 void UInteractableArea::SetAreaBounds(const struct FBoxSphereBounds& InBounds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.SetAreaBounds");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetAreaBounds"));
 
 	struct
 	{
@@ -321,7 +321,7 @@ void UInteractableArea::SetAreaBounds(const struct FBoxSphereBounds& InBounds)
 
 class AActor* UInteractableArea::GetParent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetParent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetParent"));
 
 	struct
 	{
@@ -342,7 +342,7 @@ class AActor* UInteractableArea::GetParent()
 
 class UObject* UInteractableArea::GetInteractable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetInteractable");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetInteractable"));
 
 	struct
 	{
@@ -363,7 +363,7 @@ class UObject* UInteractableArea::GetInteractable()
 
 struct FName UInteractableArea::GetAreaName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaName");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetAreaName"));
 
 	struct
 	{
@@ -384,7 +384,7 @@ struct FName UInteractableArea::GetAreaName()
 
 struct FVector UInteractableArea::GetAreaLocation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaLocation");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetAreaLocation"));
 
 	struct
 	{
@@ -405,7 +405,7 @@ struct FVector UInteractableArea::GetAreaLocation()
 
 struct FBoxSphereBounds UInteractableArea::GetAreaBounds()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableArea.GetAreaBounds");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetAreaBounds"));
 
 	struct
 	{
@@ -428,7 +428,7 @@ struct FBoxSphereBounds UInteractableArea::GetAreaBounds()
 
 bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.ShouldDrawTooltipInWorldSpace");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.ShouldDrawTooltipInWorldSpace"));
 
 	struct
 	{
@@ -455,7 +455,7 @@ bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInter
 
 void UInteractableInterface::SetInteractionState(TEnumAsByte<EInteractableState> InNewInteractableState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.SetInteractionState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.SetInteractionState"));
 
 	struct
 	{
@@ -475,7 +475,7 @@ void UInteractableInterface::SetInteractionState(TEnumAsByte<EInteractableState>
 
 bool UInteractableInterface::IsInteractableDisabled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.IsInteractableDisabled");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.IsInteractableDisabled"));
 
 	struct
 	{
@@ -497,7 +497,7 @@ bool UInteractableInterface::IsInteractableDisabled()
 
 void UInteractableInterface::Interact(class AActor* InInteractor, class UClass* NotificationInputId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.Interact");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.Interact"));
 
 	struct
 	{
@@ -519,7 +519,7 @@ void UInteractableInterface::Interact(class AActor* InInteractor, class UClass* 
 
 TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetInteractionState");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetInteractionState"));
 
 	struct
 	{
@@ -540,7 +540,7 @@ TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 
 struct FVector UInteractableInterface::GetFrontFacingVector()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetFrontFacingVector");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetFrontFacingVector"));
 
 	struct
 	{
@@ -563,7 +563,7 @@ struct FVector UInteractableInterface::GetFrontFacingVector()
 
 struct FVector UInteractableInterface::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetClosestInteractionPoint");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetClosestInteractionPoint"));
 
 	struct
 	{
@@ -590,7 +590,7 @@ struct FVector UInteractableInterface::GetClosestInteractionPoint(const struct F
 
 void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<class AActor*>* ActorsToIgnore)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetActorsToIgnoreDuringOcclusionChecker");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetActorsToIgnoreDuringOcclusionChecker"));
 
 	struct
 	{
@@ -612,7 +612,7 @@ void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<clas
 
 class UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.GetActionRulesComponent");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetActionRulesComponent"));
 
 	struct
 	{
@@ -633,7 +633,7 @@ class UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
 
 bool UInteractableInterface::DoesRequireNotSwimming()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireNotSwimming");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.DoesRequireNotSwimming"));
 
 	struct
 	{
@@ -654,7 +654,7 @@ bool UInteractableInterface::DoesRequireNotSwimming()
 
 bool UInteractableInterface::DoesRequireNotBeingAirborne()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireNotBeingAirborne");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.DoesRequireNotBeingAirborne"));
 
 	struct
 	{
@@ -675,7 +675,7 @@ bool UInteractableInterface::DoesRequireNotBeingAirborne()
 
 bool UInteractableInterface::DoesRequireFacingFront()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.DoesRequireFacingFront");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.DoesRequireFacingFront"));
 
 	struct
 	{
@@ -698,7 +698,7 @@ bool UInteractableInterface::DoesRequireFacingFront()
 
 bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* InInteractor, class UClass* NotificationInputId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteractWithNotificationInputId");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.CanInteractWithNotificationInputId"));
 
 	struct
 	{
@@ -723,7 +723,7 @@ bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* In
 
 bool UInteractableInterface::CanInteractionStatesBeSet()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteractionStatesBeSet");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.CanInteractionStatesBeSet"));
 
 	struct
 	{
@@ -745,7 +745,7 @@ bool UInteractableInterface::CanInteractionStatesBeSet()
 
 bool UInteractableInterface::CanInteract(class AActor* InInteractor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interaction.InteractableInterface.CanInteract");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.CanInteract"));
 
 	struct
 	{

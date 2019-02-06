@@ -17,7 +17,7 @@ namespace SDK
 
 void UBP_SailAnim_C::Set_Billow_Animation_Rate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.Set Billow Animation Rate");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailAnim.BP_SailAnim_C.Set Billow Animation Rate"));
 
 	struct
 	{
@@ -36,7 +36,7 @@ void UBP_SailAnim_C::Set_Billow_Animation_Rate()
 
 void UBP_SailAnim_C::InitialiseSail(float PlayRateMultiplier, bool MainSail)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.InitialiseSail");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailAnim.BP_SailAnim_C.InitialiseSail"));
 
 	struct
 	{
@@ -58,7 +58,7 @@ void UBP_SailAnim_C::InitialiseSail(float PlayRateMultiplier, bool MainSail)
 
 void UBP_SailAnim_C::ExecuteUbergraph_BP_SailAnim(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.ExecuteUbergraph_BP_SailAnim");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailAnim.BP_SailAnim_C.ExecuteUbergraph_BP_SailAnim"));
 
 	struct
 	{

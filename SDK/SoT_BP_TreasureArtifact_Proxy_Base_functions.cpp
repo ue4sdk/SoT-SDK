@@ -17,7 +17,7 @@ namespace SDK
 
 void ABP_TreasureArtifact_Proxy_Base_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TreasureArtifact_Proxy_Base.BP_TreasureArtifact_Proxy_Base_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureArtifact_Proxy_Base.BP_TreasureArtifact_Proxy_Base_C.UserConstructionScript"));
 
 	struct
 	{

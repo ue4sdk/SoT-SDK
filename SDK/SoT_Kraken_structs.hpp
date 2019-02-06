@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Kraken_enums.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
@@ -77,7 +77,7 @@ struct FKrakenShipWrappingTentacleParams
 // 0x0010
 struct FKrakenShipWrappingTentacleAnimationState
 {
-	uint32_t                                           EpochID;                                                  // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	uint32_t                                           EpochId;                                                  // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 	TEnumAsByte<EKrakenShipWrappingTentacleState>      State;                                                    // 0x0004(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 	double                                             EndTime;                                                  // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData)

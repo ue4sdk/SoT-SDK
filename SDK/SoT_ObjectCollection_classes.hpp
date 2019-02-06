@@ -22,7 +22,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ObjectCollection.ObjectCollectorInterface");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectCollection.ObjectCollectorInterface"));
 		return ptr;
 	}
 
@@ -38,7 +38,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ObjectCollection.TestCollector");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectCollection.TestCollector"));
 		return ptr;
 	}
 
@@ -54,7 +54,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>("Class ObjectCollection.TestObjectForCollection");
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectCollection.TestObjectForCollection"));
 		return ptr;
 	}
 
