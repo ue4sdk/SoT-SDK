@@ -224,14 +224,6 @@ struct FAnimNode_TwoBoneIK : public FAnimNode_SkeletalControlBase
 	unsigned char                                      UnknownData02[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct AnimGraphRuntime.AnimNode_WheelHandler
-// 0x0018 (0x0070 - 0x0058)
-struct FAnimNode_WheelHandler : public FAnimNode_SkeletalControlBase
-{
-	class UWheeledVehicleMovementComponent*            VehicleSimComponent;                                      // 0x0058(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
-};
-
 }
 
 #ifdef _MSC_VER

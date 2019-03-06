@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Male_Large.AD_FirstPerson_PlayerPirate_Male_Large_C
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0438 - 0x0438)
 class UAD_FirstPerson_PlayerPirate_Male_Large_C : public UAD_FirstPerson_PlayerPirate_Male_Default_C
 {
 public:

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterProjectile.BP_WaterProjectile_C
-// 0x0010 (0x0750 - 0x0740)
+// 0x0010 (0x0758 - 0x0748)
 class ABP_WaterProjectile_C : public ALiquidProjectile
 {
 public:
-	class UStaticMeshComponent*                        Sphere;                                                   // 0x0740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            Collision;                                                // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Sphere;                                                   // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Collision;                                                // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

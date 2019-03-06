@@ -16,14 +16,11 @@ namespace SDK
 enum class ECrewSessionType : uint8_t
 {
 	ECrewSessionType__Invalid      = 0,
-	ECrewSessionType__Default      = 1,
-	ECrewSessionType__LargeShip    = 2,
-	ECrewSessionType__ThreePlayerShip = 3,
-	ECrewSessionType__SmallShip    = 4,
-	ECrewSessionType__SoloShip     = 5,
-	ECrewSessionType__ServerLarge  = 6,
-	ECrewSessionType__MediumShip   = 7,
-	ECrewSessionType__ECrewSessionType_MAX = 8
+	ECrewSessionType__SmallShip    = 1,
+	ECrewSessionType__MediumShip   = 2,
+	ECrewSessionType__LargeShip    = 3,
+	ECrewSessionType__ServerLarge  = 4,
+	ECrewSessionType__ECrewSessionType_MAX = 5
 };
 
 

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_LargeShip_StandardHull_Art_Interior_Map_Deck_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        cmn_cooking__pot_01;                                      // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        BP_CookingPot;                                            // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMeshComponent*                        shp_cooker_02_a;                                          // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMeshComponent*                        shp_kitchen_worktop_01_a;                                 // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMeshComponent*                        shp_inv_zone_01_a;                                        // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)

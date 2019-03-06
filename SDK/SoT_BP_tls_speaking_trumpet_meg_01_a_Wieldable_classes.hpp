@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_speaking_trumpet_meg_01_a_Wieldable.BP_tls_speaking_trumpet_meg_01_a_Wieldable_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABP_tls_speaking_trumpet_meg_01_a_Wieldable_C : public ABP_Speaking_Trumpet_C
 {
 public:

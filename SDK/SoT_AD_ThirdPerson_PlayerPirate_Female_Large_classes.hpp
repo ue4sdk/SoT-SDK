@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Large.AD_ThirdPerson_PlayerPirate_Female_Large_C
-// 0x0000 (0x07C8 - 0x07C8)
+// 0x0000 (0x07F0 - 0x07F0)
 class UAD_ThirdPerson_PlayerPirate_Female_Large_C : public UAD_ThirdPerson_PlayerPirate_Female_Default_C
 {
 public:

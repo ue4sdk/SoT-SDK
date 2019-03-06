@@ -278,96 +278,98 @@ public:
 
 
 // Class Athena.Mast
-// 0x0520 (0x09B8 - 0x0498)
+// 0x0598 (0x0A30 - 0x0498)
 class AMast : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0498(0x0018) MISSED OFFSET
-	TEnumAsByte<EMastType>                             MastType;                                                 // 0x04B0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04B1(0x0007) MISSED OFFSET
-	class UMastAudioParams*                            MastAudioParams;                                          // 0x04B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USceneComponent*                             SceneRootComponent;                                       // 0x04C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UIntentCombinerComponent*                    AngleCombinerComponent;                                   // 0x04C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UIntentCombinerComponent*                    SailHoistIntentCombinerComponent;                         // 0x04D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UIntentCombinerComponent*                    MastHoistIntentCombinerComponent;                         // 0x04D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UPoseableSkeletalMeshComponent*              MastSkeletonComponent;                                    // 0x04E0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UReplicatedShipPartCustomizationComponent*   CustomizationComponent;                                   // 0x04E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class URepairableComponent*                        RepairableComponentFirst;                                 // 0x04F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class URepairableComponent*                        RepairableComponentSecond;                                // 0x04F8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class URepairableComponent*                        RepairableComponentThird;                                 // 0x0500(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UShipDamageableComponent*                    DamageableComponent;                                      // 0x0508(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              AngleBlend;                                               // 0x0510(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LoweredBlend;                                             // 0x0514(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LoweringSpeed;                                            // 0x0518(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RaisingSpeed;                                             // 0x051C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TurnSpeed;                                                // 0x0520(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTurnAngle;                                             // 0x0524(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       MastAngleBoneName;                                        // 0x0528(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     LookAtPosLow;                                             // 0x0530(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     LookAtPosHigh;                                            // 0x053C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     SailAudioPool;                                            // 0x0548(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 AmbientSailFlapsSfx;                                      // 0x0550(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 AmbientSailFlapsStopSfx;                                  // 0x0558(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 PerfectSailInflationOneShot;                              // 0x0560(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       InflationRTPC;                                            // 0x0568(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       SailLengthRTPC;                                           // 0x0570(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0578(0x0004) MISSED OFFSET
-	float                                              ClientSailBlendSpeed;                                     // 0x057C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               MastShouldBeFractured;                                    // 0x0580(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0581(0x0003) MISSED OFFSET
-	struct FMastCollisionProfiles                      MastCollisionProfiles;                                    // 0x0584(0x0028) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
-	struct FMastPhysicsComponents                      MastPhysicsComponents;                                    // 0x05B0(0x0038) (Edit, BlueprintVisible)
-	class UStaticMesh*                                 MastIntactMesh;                                           // 0x05E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 MastFractureMeshBottom;                                   // 0x05F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 MastFractureMeshTop;                                      // 0x05F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             DamageParticleSystem;                                     // 0x0600(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              HingeHeight;                                              // 0x0608(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              HingeDistanceFromCentre;                                  // 0x060C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              HingeDirectionAngle;                                      // 0x0610(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxFallAngle;                                             // 0x0614(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MastLiftingSpeed;                                         // 0x0618(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideSailLengthWhenFalling;                            // 0x061C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x061D(0x0003) MISSED OFFSET
-	float                                              MaxFallenSailLength;                                      // 0x0620(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SailFoldingSpeed;                                         // 0x0624(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideSailAngleWhenFalling;                             // 0x0628(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x0629(0x0003) MISSED OFFSET
-	float                                              DesiredFallingSailAngle;                                  // 0x062C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SailTwistingSpeed;                                        // 0x0630(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x4];                                       // 0x0634(0x0004) MISSED OFFSET
-	class UMastHinge*                                  Hinge;                                                    // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           MastImpactForceToApplyToShip;                             // 0x0640(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
-	float                                              MastImpactForceModifierToApplyToKrakenWrappedShip;        // 0x0670(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MastImpactHeightLocation;                                 // 0x0674(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CameraShake;                                              // 0x0678(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraShakeInnerRadius;                                   // 0x0680(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraShakeOuterRadius;                                   // 0x0684(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               PreviewMastFallenPosition;                                // 0x0688(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x7];                                       // 0x0689(0x0007) MISSED OFFSET
-	TArray<class URepairableComponent*>                RepairableComponents;                                     // 0x0690(0x0010) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor)
-	struct FMastDamageAudioParams                      DamageAudioParameters;                                    // 0x06A0(0x00B0) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData09[0xA8];                                      // 0x0750(0x00A8) MISSED OFFSET
-	TArray<class ASail*>                               LinkedSails;                                              // 0x07F8(0x0010) (ZeroConstructor)
-	struct FIntentPredictor                            LengthIntentPredictor;                                    // 0x0808(0x0018) (Edit)
-	struct FIntentPredictor                            AngleIntentPredictor;                                     // 0x0820(0x0018) (Edit)
-	struct FIntentPredictor                            MastHoistIntentPredictor;                                 // 0x0838(0x0018) (Edit)
-	bool                                               MastHoistingControlSchemeActive;                          // 0x0850(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x0851(0x0007) MISSED OFFSET
-	struct FObjectMessagingHandle                      SailGotPerfectWindEventHandle;                            // 0x0858(0x0048)
-	struct FObjectMessagingHandle                      SailLostPerfectWindEventHandle;                           // 0x08A0(0x0048)
-	struct FObjectMessagingHandle                      ShipReceivedDamageHandle;                                 // 0x08E8(0x0048)
-	unsigned char                                      UnknownData11[0x10];                                      // 0x0930(0x0010) MISSED OFFSET
-	struct FWwiseEmitter                               SailsAudioEmitter;                                        // 0x0940(0x0020)
-	float                                              ServerAngleRatio;                                         // 0x0960(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              ServerLoweredProportion;                                  // 0x0964(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              ServerMastFallingProportion;                              // 0x0968(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData12[0xC];                                       // 0x096C(0x000C) MISSED OFFSET
-	bool                                               AllowedToFall;                                            // 0x0978(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               PlayAudio;                                                // 0x0979(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x2E];                                      // 0x097A(0x002E) MISSED OFFSET
-	bool                                               IsCursed;                                                 // 0x09A8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0xF];                                       // 0x09A9(0x000F) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0498(0x0020) MISSED OFFSET
+	TEnumAsByte<EMastType>                             MastType;                                                 // 0x04B8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04B9(0x0007) MISSED OFFSET
+	class UMastAudioParams*                            MastAudioParams;                                          // 0x04C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USceneComponent*                             SceneRootComponent;                                       // 0x04C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UIntentCombinerComponent*                    AngleCombinerComponent;                                   // 0x04D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UIntentCombinerComponent*                    SailHoistIntentCombinerComponent;                         // 0x04D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UIntentCombinerComponent*                    MastHoistIntentCombinerComponent;                         // 0x04E0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPoseableSkeletalMeshComponent*              MastSkeletonComponent;                                    // 0x04E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UReplicatedShipPartCustomizationComponent*   CustomizationComponent;                                   // 0x04F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class URepairableComponent*                        RepairableComponentFirst;                                 // 0x04F8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class URepairableComponent*                        RepairableComponentSecond;                                // 0x0500(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class URepairableComponent*                        RepairableComponentThird;                                 // 0x0508(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UShipDamageableComponent*                    DamageableComponent;                                      // 0x0510(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              AngleBlend;                                               // 0x0518(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LoweredBlend;                                             // 0x051C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LoweringSpeed;                                            // 0x0520(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RaisingSpeed;                                             // 0x0524(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TurnSpeed;                                                // 0x0528(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTurnAngle;                                             // 0x052C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       MastAngleBoneName;                                        // 0x0530(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     LookAtPosLow;                                             // 0x0538(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     LookAtPosHigh;                                            // 0x0544(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     SailAudioPool;                                            // 0x0550(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 AmbientSailFlapsSfx;                                      // 0x0558(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 AmbientSailFlapsStopSfx;                                  // 0x0560(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PerfectSailInflationOneShot;                              // 0x0568(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       InflationRTPC;                                            // 0x0570(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       SailLengthRTPC;                                           // 0x0578(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0580(0x0004) MISSED OFFSET
+	float                                              ClientSailBlendSpeed;                                     // 0x0584(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               MastShouldBeFractured;                                    // 0x0588(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0589(0x0003) MISSED OFFSET
+	struct FMastCollisionProfiles                      MastCollisionProfiles;                                    // 0x058C(0x0030) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x05BC(0x0004) MISSED OFFSET
+	struct FMastPhysicsComponents                      MastPhysicsComponents;                                    // 0x05C0(0x0040) (Edit, BlueprintVisible)
+	class UBoxComponent*                               HitBoxComponent;                                          // 0x0600(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMesh*                                 MastIntactMesh;                                           // 0x0608(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 MastFractureMeshBottom;                                   // 0x0610(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 MastFractureMeshTop;                                      // 0x0618(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             DamageParticleSystem;                                     // 0x0620(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              HingeHeight;                                              // 0x0628(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              HingeDistanceFromCentre;                                  // 0x062C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              HingeDirectionAngle;                                      // 0x0630(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxFallAngle;                                             // 0x0634(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MastLiftingSpeed;                                         // 0x0638(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               OverrideSailLengthWhenFalling;                            // 0x063C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x063D(0x0003) MISSED OFFSET
+	float                                              MaxFallenSailLength;                                      // 0x0640(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SailFoldingSpeed;                                         // 0x0644(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               OverrideSailAngleWhenFalling;                             // 0x0648(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x0649(0x0003) MISSED OFFSET
+	float                                              DesiredFallingSailAngle;                                  // 0x064C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SailTwistingSpeed;                                        // 0x0650(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x0654(0x0004) MISSED OFFSET
+	class UMastHinge*                                  Hinge;                                                    // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           MastImpactForceToApplyToShip;                             // 0x0660(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
+	float                                              MastImpactForceModifierToApplyToKrakenWrappedShip;        // 0x0690(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MastImpactHeightLocation;                                 // 0x0694(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x0698(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraShakeInnerRadius;                                   // 0x06A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraShakeOuterRadius;                                   // 0x06A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               PreviewMastFallenPosition;                                // 0x06A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
+	TArray<class URepairableComponent*>                RepairableComponents;                                     // 0x06B0(0x0010) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor)
+	struct FMastDamageAudioParams                      DamageAudioParameters;                                    // 0x06C0(0x00B0) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData09[0xA8];                                      // 0x0770(0x00A8) MISSED OFFSET
+	TArray<class ASail*>                               LinkedSails;                                              // 0x0818(0x0010) (ZeroConstructor)
+	struct FIntentPredictor                            LengthIntentPredictor;                                    // 0x0828(0x0018) (Edit)
+	struct FIntentPredictor                            AngleIntentPredictor;                                     // 0x0840(0x0018) (Edit)
+	struct FIntentPredictor                            MastHoistIntentPredictor;                                 // 0x0858(0x0018) (Edit)
+	bool                                               MastHoistingControlSchemeActive;                          // 0x0870(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x7];                                       // 0x0871(0x0007) MISSED OFFSET
+	struct FObjectMessagingHandle                      SailGotPerfectWindEventHandle;                            // 0x0878(0x0048)
+	struct FObjectMessagingHandle                      SailLostPerfectWindEventHandle;                           // 0x08C0(0x0048)
+	struct FObjectMessagingHandle                      ShipReceivedDamageHandle;                                 // 0x0908(0x0048)
+	struct FObjectMessagingHandle                      MastRepairStoppedHandle;                                  // 0x0950(0x0048)
+	unsigned char                                      UnknownData11[0x10];                                      // 0x0998(0x0010) MISSED OFFSET
+	struct FWwiseEmitter                               SailsAudioEmitter;                                        // 0x09A8(0x0020)
+	float                                              ServerAngleRatio;                                         // 0x09C8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              ServerLoweredProportion;                                  // 0x09CC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              ServerMastFallingProportion;                              // 0x09D0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData12[0xC];                                       // 0x09D4(0x000C) MISSED OFFSET
+	bool                                               AllowedToFall;                                            // 0x09E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               PlayAudio;                                                // 0x09E1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x2E];                                      // 0x09E2(0x002E) MISSED OFFSET
+	bool                                               IsCursed;                                                 // 0x0A10(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x1F];                                      // 0x0A11(0x001F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -396,12 +398,13 @@ public:
 	bool IsMastVisuallyFractured();
 	bool IsMastFullyDamaged();
 	bool IsExpandedDamageFeatureEnabled();
-	void HingeTransformChanged(const struct FTransform& NewTansform);
+	void HingeTransformChanged(const struct FTransform& NewTransform);
 	float GetSailTurnRate();
 	TArray<class ASail*> GetSails();
 	float GetSailMovementRate();
 	float GetSailLoweredProportion();
 	float GetSailAngleRatio();
+	float GetMastHeight();
 	TEnumAsByte<EMastDamageState> GetMastDamageState();
 	struct FTransform GetMastAngleBoneTransform();
 	struct FVector GetLookAtPos();
@@ -582,6 +585,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AgitatedAIStrategyId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AIAbilityActionStateId
+// 0x0000 (0x0028 - 0x0028)
+class UAIAbilityActionStateId : public UActionStateId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AIAbilityActionStateId"));
 		return ptr;
 	}
 
@@ -1218,11 +1236,11 @@ public:
 
 
 // Class Athena.AICharacterPartsDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UAICharacterPartsDesc : public UAIPartsDesc
 {
 public:
-	struct FStringAssetReference                       Mesh;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       Mesh;                                                     // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -1315,58 +1333,6 @@ public:
 	TEnumAsByte<EInputHandlerResult> OnQuickSwitchPrimaryWeapon();
 	TEnumAsByte<EInputHandlerResult> OnPrimaryItemUseReleased();
 	TEnumAsByte<EInputHandlerResult> OnPrimaryItemUsePressed();
-};
-
-
-// Class Athena.AIPartCustomizationInterface
-// 0x0000 (0x0028 - 0x0028)
-class UAIPartCustomizationInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AIPartCustomizationInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.AIPartsRetrievalInterface
-// 0x0000 (0x0028 - 0x0028)
-class UAIPartsRetrievalInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AIPartsRetrievalInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.AIPartsRetrievalComponent
-// 0x00A0 (0x0170 - 0x00D0)
-class UAIPartsRetrievalComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	class UAIPartsCategory*                            PartsCategory;                                            // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FReplicatedAIPartsData                      ReplicatedAIPartsData;                                    // 0x00E0(0x0010) (Net)
-	unsigned char                                      UnknownData01[0x80];                                      // 0x00F0(0x0080) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AIPartsRetrievalComponent"));
-		return ptr;
-	}
-
-
-	void RequestNewAIParts(class UAIPartsCategory* AssignedPartsCategory, int PartsIndexToUse, int TeamColorIndex);
-	void OnRep_ReplicatedAIPartsData();
 };
 
 
@@ -1496,7 +1462,7 @@ public:
 
 
 // Class Athena.AthenaAnimationInstance
-// 0x1970 (0x1DB0 - 0x0440)
+// 0x1D60 (0x21A0 - 0x0440)
 class UAthenaAnimationInstance : public UAnimInstance
 {
 public:
@@ -1515,38 +1481,43 @@ public:
 	float                                              DodgeDirection;                                           // 0x085C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FAthenaAnimationRowboatParams               RowboatParams;                                            // 0x0860(0x00C0) (BlueprintVisible)
 	struct FAthenaAnimationRowing                      Rowing;                                                   // 0x0920(0x00C0) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class AAthenaCharacter*                            AthenaCharacter;                                          // 0x09E0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationJumping                     JumpingAnimationParams;                                   // 0x09E8(0x00D0) (BlueprintVisible)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0AB8(0x0008) MISSED OFFSET
-	struct FLimbIK                                     RightHandIK;                                              // 0x0AC0(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     LeftHandIK;                                               // 0x0B20(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     RightFootIK;                                              // 0x0B80(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     LeftFootIK;                                               // 0x0BE0(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     HeadIK;                                                   // 0x0C40(0x0060) (BlueprintVisible)
-	struct FLimbIK                                     ChestIK;                                                  // 0x0CA0(0x0060) (BlueprintVisible)
-	float                                              SpineBlendAlpha;                                          // 0x0D00(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               InDockingTransition;                                      // 0x0D04(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0D05(0x0003) MISSED OFFSET
-	float                                              DockingTransitionAlpha;                                   // 0x0D08(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // 0x0D0C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0D0D(0x0003) MISSED OFFSET
-	struct FDamageInstance                             KillingDamage;                                            // 0x0D10(0x0020) (BlueprintVisible)
-	struct FAthenaAnimationLODSettings                 AnimationLODSettings;                                     // 0x0D30(0x0003) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData06[0x1];                                       // 0x0D33(0x0001) MISSED OFFSET
-	struct FAthenaAnimationLocomotion                  Locomotion;                                               // 0x0D34(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      UnknownData07[0x4];                                       // 0x0D74(0x0004) MISSED OFFSET
-	struct FAthenaAnimationWieldedItemStateMachine     WieldedItemStateMachine;                                  // 0x0D78(0x0500) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      UnknownData08[0x8];                                       // 0x1278(0x0008) MISSED OFFSET
-	struct FAthenaAnimationLoadObjectByID              ItemLoading;                                              // 0x1280(0x08B0) (BlueprintVisible)
-	TEnumAsByte<EAthenaAnimationSocketGroup>           ControllableSocketGroup;                                  // 0x1B30(0x0001) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAthenaAnimationSocketGroupCharacterSize> ControllableSocketGroupCharacterSize;                     // 0x1B31(0x0001) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ELocomotionType>                       LocomotionState;                                          // 0x1B32(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationDebugTrackingParams         DebugTrackingParams;                                      // 0x1B33(0x0004) (BlueprintVisible)
-	bool                                               FaunaAddedToCrate;                                        // 0x1B37(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationWhisperingAnimations        WhisperingAnimations;                                     // 0x1B38(0x0068) (BlueprintVisible)
-	bool                                               IsWhispering;                                             // 0x1BA0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               WhisperingTransitionCompleted;                            // 0x1BA1(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x20E];                                     // 0x1BA2(0x020E) MISSED OFFSET
+	struct FAthenaAnimationWaterPumpAnimData           WaterPumpAnimations;                                      // 0x09E0(0x0028) (BlueprintVisible)
+	struct FAthenaAnimationWaterPumpParams             WaterPumpAnimationParams;                                 // 0x0A08(0x0008) (BlueprintVisible)
+	struct FAthenaAnimationFishingParams               FishingParams;                                            // 0x0A10(0x0034) (BlueprintVisible)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0A44(0x0004) MISSED OFFSET
+	struct FAthenaAnimationFishing                     Fishing;                                                  // 0x0A48(0x02F8) (BlueprintVisible)
+	class AAthenaCharacter*                            AthenaCharacter;                                          // 0x0D40(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationJumping                     JumpingAnimationParams;                                   // 0x0D48(0x00D0) (BlueprintVisible)
+	unsigned char                                      UnknownData04[0x8];                                       // 0x0E18(0x0008) MISSED OFFSET
+	struct FLimbIK                                     RightHandIK;                                              // 0x0E20(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     LeftHandIK;                                               // 0x0E80(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     RightFootIK;                                              // 0x0EE0(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     LeftFootIK;                                               // 0x0F40(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     HeadIK;                                                   // 0x0FA0(0x0060) (BlueprintVisible)
+	struct FLimbIK                                     ChestIK;                                                  // 0x1000(0x0060) (BlueprintVisible)
+	float                                              SpineBlendAlpha;                                          // 0x1060(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               InDockingTransition;                                      // 0x1064(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x1065(0x0003) MISSED OFFSET
+	float                                              DockingTransitionAlpha;                                   // 0x1068(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // 0x106C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x106D(0x0003) MISSED OFFSET
+	struct FDamageInstance                             KillingDamage;                                            // 0x1070(0x0020) (BlueprintVisible)
+	struct FAthenaAnimationLODSettings                 AnimationLODSettings;                                     // 0x1090(0x0003) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData07[0x1];                                       // 0x1093(0x0001) MISSED OFFSET
+	struct FAthenaAnimationLocomotion                  Locomotion;                                               // 0x1094(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData08[0x4];                                       // 0x10D4(0x0004) MISSED OFFSET
+	struct FAthenaAnimationWieldedItemStateMachine     WieldedItemStateMachine;                                  // 0x10D8(0x0500) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData09[0x8];                                       // 0x15D8(0x0008) MISSED OFFSET
+	struct FAthenaAnimationLoadObjectByID              ItemLoading;                                              // 0x15E0(0x0940) (BlueprintVisible)
+	TEnumAsByte<EAthenaAnimationSocketGroup>           ControllableSocketGroup;                                  // 0x1F20(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAthenaAnimationSocketGroupCharacterSize> ControllableSocketGroupCharacterSize;                     // 0x1F21(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ELocomotionType>                       LocomotionState;                                          // 0x1F22(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationDebugTrackingParams         DebugTrackingParams;                                      // 0x1F23(0x0004) (BlueprintVisible)
+	bool                                               FaunaAddedToCrate;                                        // 0x1F27(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationWhisperingAnimations        WhisperingAnimations;                                     // 0x1F28(0x0068) (BlueprintVisible)
+	bool                                               IsWhispering;                                             // 0x1F90(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               WhisperingTransitionCompleted;                            // 0x1F91(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x20E];                                     // 0x1F92(0x020E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1584,6 +1555,7 @@ public:
 	bool GetLoadedItemIsRangedWeapon();
 	struct FAthenaAnimationObjectIdleAnimations GetLoadedItemIdleAnimations();
 	class UAnimSequence* GetLoadedItemHandAdditiveOverlayAnimation();
+	struct FAthenaAnimationFishingAnimations GetLoadedItemFishingAnimations();
 	struct FAthenaAnimationObjectFacial GetLoadedItemFacialAnimations();
 	struct FAthenaAnimationObjectEquipAnimations GetLoadedItemEquippingAnimations();
 	struct FAthenaAnimationObjectLocomotionAnimations GetLoadedItemAlternateLocomotionAnimations();
@@ -1764,7 +1736,7 @@ public:
 
 
 // Class Athena.AthenaCharacter
-// 0x05D0 (0x0C70 - 0x06A0)
+// 0x05E0 (0x0C80 - 0x06A0)
 class AAthenaCharacter : public ACharacter
 {
 public:
@@ -1798,28 +1770,29 @@ public:
 	class UShipTrackerComponent*                       ShipTrackerComponent;                                     // 0x0908(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UWatercraftTrackerComponent*                 WatercraftTrackerComponent;                               // 0x0910(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UItemLoaderComponent*                        ItemLoaderComponent;                                      // 0x0918(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UResourceProviderComponent*                  ResourceProviderComponent;                                // 0x0920(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnJumpedDelegate;                                         // 0x0928(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0938(0x0010) MISSED OFFSET
-	int                                                RandomAnimationSeed;                                      // 0x0948(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x094C(0x0004) MISSED OFFSET
-	struct FCompositeInputDelegator                    InputDelegator;                                           // 0x0950(0x0060)
-	class UCharacterInputBinder*                       InputBinder;                                              // 0x09B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x09B8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      ThirdPersonAnimSetDataId;                                 // 0x09C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideEncroachesBlockingGeometry;                       // 0x09C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     OverrideEncroachesBlockingGeometryChannel;                // 0x09C9(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x09CA(0x0002) MISSED OFFSET
-	struct FName                                       OverrideFloorSweepCollisionProfileName;                   // 0x09CC(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x94];                                      // 0x09D4(0x0094) MISSED OFFSET
-	class UAnimationDataStore*                         AnimationDataStore;                                       // 0x0A68(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x190];                                     // 0x0A70(0x0190) MISSED OFFSET
-	class APlayerState*                                OldPlayerState;                                           // 0x0C00(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x20];                                      // 0x0C08(0x0020) MISSED OFFSET
-	float                                              RelativeTargetYawOnMovingBase;                            // 0x0C28(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x34];                                      // 0x0C2C(0x0034) MISSED OFFSET
-	float                                              SmoothYawOnMovingBaseTime;                                // 0x0C60(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0xC];                                       // 0x0C64(0x000C) MISSED OFFSET
+	class URetractableCharacterComponent*              RetractableCharacterComponent;                            // 0x0920(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UResourceProviderComponent*                  ResourceProviderComponent;                                // 0x0928(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnJumpedDelegate;                                         // 0x0930(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0940(0x0010) MISSED OFFSET
+	int                                                RandomAnimationSeed;                                      // 0x0950(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0954(0x0004) MISSED OFFSET
+	struct FCompositeInputDelegator                    InputDelegator;                                           // 0x0958(0x0060)
+	class UCharacterInputBinder*                       InputBinder;                                              // 0x09B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x09C0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass*                                      ThirdPersonAnimSetDataId;                                 // 0x09C8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               OverrideEncroachesBlockingGeometry;                       // 0x09D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     OverrideEncroachesBlockingGeometryChannel;                // 0x09D1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x09D2(0x0002) MISSED OFFSET
+	struct FName                                       OverrideFloorSweepCollisionProfileName;                   // 0x09D4(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x94];                                      // 0x09DC(0x0094) MISSED OFFSET
+	class UAnimationDataStore*                         AnimationDataStore;                                       // 0x0A70(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x190];                                     // 0x0A78(0x0190) MISSED OFFSET
+	class APlayerState*                                OldPlayerState;                                           // 0x0C08(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x20];                                      // 0x0C10(0x0020) MISSED OFFSET
+	float                                              RelativeTargetYawOnMovingBase;                            // 0x0C30(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x34];                                      // 0x0C34(0x0034) MISSED OFFSET
+	float                                              SmoothYawOnMovingBaseTime;                                // 0x0C68(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x14];                                      // 0x0C6C(0x0014) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1900,23 +1873,6 @@ public:
 };
 
 
-// Class Athena.DamageInstigatorInterface
-// 0x0000 (0x0028 - 0x0028)
-class UDamageInstigatorInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageInstigatorInterface"));
-		return ptr;
-	}
-
-
-	bool CanDamageActor(class AActor* DamageRecipient);
-};
-
-
 // Class Athena.ExplosionReceiverInterface
 // 0x0000 (0x0028 - 0x0028)
 class UExplosionReceiverInterface : public UInterface
@@ -1971,21 +1927,6 @@ public:
 };
 
 
-// Class Athena.DamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UDamagerType : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamagerType"));
-		return ptr;
-	}
-
-};
-
-
 // Class Athena.ImpactProjectileId
 // 0x0000 (0x0028 - 0x0028)
 class UImpactProjectileId : public UObject
@@ -2010,21 +1951,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ProjectileWeaponFiringIntentionInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.TrackedActorInterface
-// 0x0000 (0x0028 - 0x0028)
-class UTrackedActorInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TrackedActorInterface"));
 		return ptr;
 	}
 
@@ -2068,81 +1994,83 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacter
-// 0x0AC0 (0x1730 - 0x0C70)
+// 0x0AD0 (0x1750 - 0x0C80)
 class AAthenaPlayerCharacter : public AAthenaCharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0C70(0x0078) MISSED OFFSET
-	class USceneComponent*                             FirstPersonMeshOffsetComponent;                           // 0x0CE8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class USkeletalMeshComponent*                      FirstPersonMesh;                                          // 0x0CF0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAthenaCameraComponent*                      FirstPersonCamera;                                        // 0x0CF8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAthenaCameraComponent*                      ThirdPersonCamera;                                        // 0x0D00(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAthenaCameraComponent*                      SpringArmCamera;                                          // 0x0D08(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAthenaSpringArmComponent*                   SpringArm;                                                // 0x0D10(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        LocalCloudDome;                                           // 0x0D18(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        ColdDataStore;                                            // 0x0D20(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCharacterInteractionComponent*              InteractionComponent;                                     // 0x0D28(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UClimbingComponent*                          ClimbingComponent;                                        // 0x0D30(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UDrunkennessComponent*                       DrunkennessComponent;                                     // 0x0D38(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaggerComponent*                           StaggerComponent;                                         // 0x0D40(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UDrowningComponent*                          DrowningComponent;                                        // 0x0D48(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class URumbleHandlerComponent*                     RumbleHandlerComponent;                                   // 0x0D50(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UScreenSpaceVfxComponent*                    ScreenSpaceVfxComponent;                                  // 0x0D58(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UTreasureMapCollectionComponent*             TreasureMapCollectionComponent;                           // 0x0D60(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UCustomCategoryRadialInventoryComponent*     CustomCategoryRadialInventoryComponent;                   // 0x0D68(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UItemRadialInventoryComponent*               ItemRadialInventoryComponent;                             // 0x0D70(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPhrasesRadialComponent*                     PhrasesRadialComponent;                                   // 0x0D78(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UEmotesRadialComponent*                      EmotesRadialComponent;                                    // 0x0D80(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UMapRadialInventoryComponent*                MapRadialInventoryComponent;                              // 0x0D88(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UQuickInventoryComponent*                    QuickInventoryComponent;                                  // 0x0D90(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBoxedRpcDispatcherComponent*                BoxedRpcDispatcherComponent;                              // 0x0D98(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPointOfInterestTrackerComponent*            PointOfInterestTrackerComponent;                          // 0x0DA0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class ULimpingComponent*                           LimpingComponent;                                         // 0x0DA8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPacingComponent*                            PacingComponent;                                          // 0x0DB0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBurpComponent*                              BurpComponent;                                            // 0x0DB8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UMeleeAttackLockOnComponent*                 MeleeLockOnComponent;                                     // 0x0DC0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData)
-	class UMeleeAttackLockOnComponentSettings*         MeleeAttackLockOnSettings;                                // 0x0DC8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0DD0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStatusEffectPersistenceComponent*           StatusEffectPersistenceComponent;                         // 0x0DD8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UPlayerCurseComponent*                       PlayerCurseComponent;                                     // 0x0DE0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UMaterialStatusSusceptibilityComponent*      MaterialStatusSusceptibilityComponent;                    // 0x0DE8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCapsuleComponent*                           ProjectileTraceHitVolume;                                 // 0x0DF0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerShroudBreakerTrackerComponent*        PlayerShroudBreakerTrackerComponent;                      // 0x0DF8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              CameraFOVWhenSprinting;                                   // 0x0E00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0E04(0x0004) MISSED OFFSET
-	class UCurveVector*                                ApproximateCamPitchToLocalCamOffsetCurve;                 // 0x0E08(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWalkConditionsParams                       WalkConditionParams;                                      // 0x0E10(0x0008) (Edit, BlueprintVisible)
-	struct FSprintConditionsParams                     ServerSprintConditionParams;                              // 0x0E18(0x000C) (Edit, BlueprintVisible)
-	struct FSprintConditionsParams                     ClientSprintConditionParams;                              // 0x0E24(0x000C) (Edit, BlueprintVisible)
-	float                                              SprintingServerTimeTolerance;                             // 0x0E30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0E34(0x0004) MISSED OFFSET
-	class UAthenaSpringArmComponentParams*             EmoteSpringArmParameters;                                 // 0x0E38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAthenaSpringArmComponentParams*             DeathSpringArmParameters;                                 // 0x0E40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UEmotesRadialDataAsset*                      EmotesRadialDataAsset;                                    // 0x0E48(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ReplicatedIsSprinting;                                    // 0x0E50(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowAnimationTickAggregation;                            // 0x0E51(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x0E52(0x0002) MISSED OFFSET
-	struct FAchievementKillOpponentFromBehindWithBlunderbuss AchievementKillOpponentFromBehindWithBlunderbuss;         // 0x0E54(0x0004) (Edit, DisableEditOnInstance)
-	struct FAchievementHeavyAttackRivalOffTheirShip    AchievementHeavyAttackRivalOffTheirShip;                  // 0x0E58(0x0010) (Edit, DisableEditOnInstance)
-	struct FAchievementBlockThenHitAndGetBlockedThenTakeHit AchievementBlockThenHitAndGetBlockedThenTakeHit;          // 0x0E68(0x0010) (Edit, DisableEditOnInstance)
-	struct FAchievementHaveADrinkWithAnotherCrewAtAnOutpost AchievementHaveADrinkWithAnotherCrewAtAnOutpost;          // 0x0E78(0x0020) (Edit, DisableEditOnInstance)
-	struct FAchievementKillOpponentInContest           AchievementKillOpponentInContest;                         // 0x0E98(0x0008)
-	unsigned char                                      UnknownData04[0x98];                                      // 0x0EA0(0x0098) MISSED OFFSET
-	int                                                ReplicatedOverridePirateDescSeed;                         // 0x0F38(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ReplicatedOverrideAnimationEntry;                         // 0x0F3C(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0F44(0x0004) MISSED OFFSET
-	class UClass*                                      FirstPersonAnimSetDataId;                                 // 0x0F48(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECharacterType>                        CharacterType;                                            // 0x0F50(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x677];                                     // 0x0F51(0x0677) MISSED OFFSET
-	class FString                                      CurrentWorldLocation;                                     // 0x15C8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData07[0x68];                                      // 0x15D8(0x0068) MISSED OFFSET
-	class AAthenaPlayerCharacterColdDataStore*         ColdDataStoreActor;                                       // 0x1640(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FAthenaPlayerCharacterModelSwap             PendingModelSwap;                                         // 0x1648(0x0028) (Transient)
-	unsigned char                                      UnknownData08[0x17];                                      // 0x1670(0x0017) MISSED OFFSET
-	bool                                               ReplicatedEmoteExitAllowed;                               // 0x1687(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x60];                                      // 0x1688(0x0060) MISSED OFFSET
-	bool                                               FinishedWaitingForSpawn;                                  // 0x16E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x47];                                      // 0x16E9(0x0047) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0C80(0x0078) MISSED OFFSET
+	class USceneComponent*                             FirstPersonMeshOffsetComponent;                           // 0x0CF8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      FirstPersonMesh;                                          // 0x0D00(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAthenaCameraComponent*                      FirstPersonCamera;                                        // 0x0D08(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAthenaCameraComponent*                      ThirdPersonCamera;                                        // 0x0D10(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAthenaCameraComponent*                      SpringArmCamera;                                          // 0x0D18(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAthenaSpringArmComponent*                   SpringArm;                                                // 0x0D20(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        LocalCloudDome;                                           // 0x0D28(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        ColdDataStore;                                            // 0x0D30(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCharacterInteractionComponent*              InteractionComponent;                                     // 0x0D38(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UClimbingComponent*                          ClimbingComponent;                                        // 0x0D40(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UDrunkennessComponent*                       DrunkennessComponent;                                     // 0x0D48(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaggerComponent*                           StaggerComponent;                                         // 0x0D50(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UDrowningComponent*                          DrowningComponent;                                        // 0x0D58(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class URumbleHandlerComponent*                     RumbleHandlerComponent;                                   // 0x0D60(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UScreenSpaceVfxComponent*                    ScreenSpaceVfxComponent;                                  // 0x0D68(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UTreasureMapCollectionComponent*             TreasureMapCollectionComponent;                           // 0x0D70(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UCustomCategoryRadialInventoryComponent*     CustomCategoryRadialInventoryComponent;                   // 0x0D78(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UItemRadialInventoryComponent*               ItemRadialInventoryComponent;                             // 0x0D80(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPhrasesRadialComponent*                     PhrasesRadialComponent;                                   // 0x0D88(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UEmotesRadialComponent*                      EmotesRadialComponent;                                    // 0x0D90(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UMapRadialInventoryComponent*                MapRadialInventoryComponent;                              // 0x0D98(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UQuickInventoryComponent*                    QuickInventoryComponent;                                  // 0x0DA0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBoxedRpcDispatcherComponent*                BoxedRpcDispatcherComponent;                              // 0x0DA8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPointOfInterestTrackerComponent*            PointOfInterestTrackerComponent;                          // 0x0DB0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class ULimpingComponent*                           LimpingComponent;                                         // 0x0DB8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPacingComponent*                            PacingComponent;                                          // 0x0DC0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBurpComponent*                              BurpComponent;                                            // 0x0DC8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UMeleeAttackLockOnComponent*                 MeleeLockOnComponent;                                     // 0x0DD0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData)
+	class UMeleeAttackLockOnComponentSettings*         MeleeAttackLockOnSettings;                                // 0x0DD8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0DE0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStatusEffectPersistenceComponent*           StatusEffectPersistenceComponent;                         // 0x0DE8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerCurseComponent*                       PlayerCurseComponent;                                     // 0x0DF0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMaterialStatusSusceptibilityComponent*      MaterialStatusSusceptibilityComponent;                    // 0x0DF8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UHealthRegenerationPoolComponent*            HealthRegenerationPoolComponent;                          // 0x0E00(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class USicknessComponent*                          SicknessComponent;                                        // 0x0E08(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           ProjectileTraceHitVolume;                                 // 0x0E10(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerShroudBreakerTrackerComponent*        PlayerShroudBreakerTrackerComponent;                      // 0x0E18(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              CameraFOVWhenSprinting;                                   // 0x0E20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0E24(0x0004) MISSED OFFSET
+	class UCurveVector*                                ApproximateCamPitchToLocalCamOffsetCurve;                 // 0x0E28(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWalkConditionsParams                       WalkConditionParams;                                      // 0x0E30(0x0008) (Edit, BlueprintVisible)
+	struct FSprintConditionsParams                     ServerSprintConditionParams;                              // 0x0E38(0x000C) (Edit, BlueprintVisible)
+	struct FSprintConditionsParams                     ClientSprintConditionParams;                              // 0x0E44(0x000C) (Edit, BlueprintVisible)
+	float                                              SprintingServerTimeTolerance;                             // 0x0E50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0E54(0x0004) MISSED OFFSET
+	class UAthenaSpringArmComponentParams*             EmoteSpringArmParameters;                                 // 0x0E58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAthenaSpringArmComponentParams*             DeathSpringArmParameters;                                 // 0x0E60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UEmotesRadialDataAsset*                      EmotesRadialDataAsset;                                    // 0x0E68(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ReplicatedIsSprinting;                                    // 0x0E70(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowAnimationTickAggregation;                            // 0x0E71(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x0E72(0x0002) MISSED OFFSET
+	struct FAchievementKillOpponentFromBehindWithBlunderbuss AchievementKillOpponentFromBehindWithBlunderbuss;         // 0x0E74(0x0004) (Edit, DisableEditOnInstance)
+	struct FAchievementHeavyAttackRivalOffTheirShip    AchievementHeavyAttackRivalOffTheirShip;                  // 0x0E78(0x0010) (Edit, DisableEditOnInstance)
+	struct FAchievementBlockThenHitAndGetBlockedThenTakeHit AchievementBlockThenHitAndGetBlockedThenTakeHit;          // 0x0E88(0x0010) (Edit, DisableEditOnInstance)
+	struct FAchievementHaveADrinkWithAnotherCrewAtAnOutpost AchievementHaveADrinkWithAnotherCrewAtAnOutpost;          // 0x0E98(0x0020) (Edit, DisableEditOnInstance)
+	struct FAchievementKillOpponentInContest           AchievementKillOpponentInContest;                         // 0x0EB8(0x0008)
+	unsigned char                                      UnknownData04[0x98];                                      // 0x0EC0(0x0098) MISSED OFFSET
+	int                                                ReplicatedOverridePirateDescSeed;                         // 0x0F58(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReplicatedOverrideAnimationEntry;                         // 0x0F5C(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x0F64(0x0004) MISSED OFFSET
+	class UClass*                                      FirstPersonAnimSetDataId;                                 // 0x0F68(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterType>                        CharacterType;                                            // 0x0F70(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x677];                                     // 0x0F71(0x0677) MISSED OFFSET
+	class FString                                      CurrentWorldLocation;                                     // 0x15E8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData07[0x68];                                      // 0x15F8(0x0068) MISSED OFFSET
+	class AAthenaPlayerCharacterColdDataStore*         ColdDataStoreActor;                                       // 0x1660(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FAthenaPlayerCharacterModelSwap             PendingModelSwap;                                         // 0x1668(0x0028) (Transient)
+	unsigned char                                      UnknownData08[0x17];                                      // 0x1690(0x0017) MISSED OFFSET
+	bool                                               ReplicatedEmoteExitAllowed;                               // 0x16A7(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x60];                                      // 0x16A8(0x0060) MISSED OFFSET
+	bool                                               FinishedWaitingForSpawn;                                  // 0x1708(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x47];                                      // 0x1709(0x0047) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2725,11 +2653,11 @@ public:
 	TArray<struct FNPCContinuousAnimationElement>      ContinuousSequences;                                      // 0x0450(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	class UAnimInstance*                               ParentCharacterAnimationInstance;                         // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UAnimMontage*                                CurrentPlayingMontage;                                    // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               OneShot;                                                  // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               ContinuousIn;                                             // 0x0478(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               ContinuousLoopA;                                          // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               ContinuousLoopB;                                          // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               ContinuousOut;                                            // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           OneShot;                                                  // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           ContinuousIn;                                             // 0x0478(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           ContinuousLoopA;                                          // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           ContinuousLoopB;                                          // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           ContinuousOut;                                            // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -2738,8 +2666,6 @@ public:
 		return ptr;
 	}
 
-
-	class UAnimMontage* GetCurrentPlayingMontage();
 };
 
 
@@ -2811,15 +2737,33 @@ public:
 
 
 // Class Athena.AnimNotifyAdditionalEventsWwiseEmitterComponent
-// 0x0010 (0x0320 - 0x0310)
+// 0x0010 (0x02F0 - 0x02E0)
 class UAnimNotifyAdditionalEventsWwiseEmitterComponent : public UAnimNotifyWwiseEmitterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0310(0x0010) MISSED OFFSET
+	TArray<struct FAnimNotifyWwiseObserver>            AnimNotifyObservers;                                      // 0x02E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AnimNotifyAdditionalEventsWwiseEmitterComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ArenaVendorShip
+// 0x0018 (0x04B0 - 0x0498)
+class AArenaVendorShip : public AActor
+{
+public:
+	class USceneComponent*                             ArenaVendorShipRootComponent;                             // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UContestMerchantSpawnerComponent*            ContestMerchantSpawnerComponent;                          // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UGenericWorldMapMarker*                      VendorShipWorldMarkerComponent;                           // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ArenaVendorShip"));
 		return ptr;
 	}
 
@@ -2937,11 +2881,11 @@ public:
 
 
 // Class Athena.AthenaAnimationCustomSkeletonAnimationData
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UAthenaAnimationCustomSkeletonAnimationData : public UDataAsset
 {
 public:
-	struct FSkeletonCustomAnimationDataStructure       SkeletonCustomAnimData;                                   // 0x0028(0x0020) (Edit, BlueprintVisible)
+	struct FSkeletonCustomAnimationDataStructure       SkeletonCustomAnimData;                                   // 0x0028(0x0028) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
@@ -2953,27 +2897,27 @@ public:
 
 
 // Class Athena.FirstPersonAnimationInstance
-// 0x0040 (0x1DF0 - 0x1DB0)
+// 0x0040 (0x21E0 - 0x21A0)
 class UFirstPersonAnimationInstance : public UAthenaAnimationInstance
 {
 public:
-	float                                              SpineRotationTime;                                        // 0x1DB0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     RangedWeaponTargetingOffset;                              // 0x1DB4(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RangedWeaponAlpha;                                        // 0x1DC0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationCamera                      CameraParams;                                             // 0x1DC4(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
-	TEnumAsByte<ECameraLookatAnimationType>            CameraAdditiveBlendPoseType;                              // 0x1DDC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1DDD(0x0003) MISSED OFFSET
-	unsigned char                                      UseAdditiveHandOverlay : 1;                               // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      CameraAttachmentTypeNotDefault : 1;                       // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      BlendUpperBodyAndArmOverlay : 1;                          // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UseArmOverlayJumpContinuous : 1;                          // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsDead : 1;                                               // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsSwimming : 1;                                           // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsOnLadder : 1;                                           // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsJumping : 1;                                            // 0x1DE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsControllableObjectActive : 1;                           // 0x1DE1(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsOnboardingAnimaticActive : 1;                           // 0x1DE1(0x0001) (BlueprintVisible)
-	unsigned char                                      UnknownData01[0xE];                                       // 0x1DE2(0x000E) MISSED OFFSET
+	float                                              SpineRotationTime;                                        // 0x21A0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RangedWeaponTargetingOffset;                              // 0x21A4(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RangedWeaponAlpha;                                        // 0x21B0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationCamera                      CameraParams;                                             // 0x21B4(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	TEnumAsByte<ECameraLookatAnimationType>            CameraAdditiveBlendPoseType;                              // 0x21CC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x21CD(0x0003) MISSED OFFSET
+	unsigned char                                      UseAdditiveHandOverlay : 1;                               // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      CameraAttachmentTypeNotDefault : 1;                       // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      BlendUpperBodyAndArmOverlay : 1;                          // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UseArmOverlayJumpContinuous : 1;                          // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsDead : 1;                                               // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsSwimming : 1;                                           // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsOnLadder : 1;                                           // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsJumping : 1;                                            // 0x21D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsControllableObjectActive : 1;                           // 0x21D1(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsOnboardingAnimaticActive : 1;                           // 0x21D1(0x0001) (BlueprintVisible)
+	unsigned char                                      UnknownData01[0xE];                                       // 0x21D2(0x000E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2987,104 +2931,104 @@ public:
 
 
 // Class Athena.ThirdPersonAnimationInstance
-// 0x11A0 (0x2F50 - 0x1DB0)
+// 0x11A0 (0x3340 - 0x21A0)
 class UThirdPersonAnimationInstance : public UAthenaAnimationInstance
 {
 public:
-	unsigned char                                      IsItemAnimPaused : 1;                                     // 0x1DB0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1DB1(0x0003) MISSED OFFSET
-	float                                              ItemAnimPausedTimeRemaining;                              // 0x1DB4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationIKLimbStretch               IKLimbStretchParams;                                      // 0x1DB8(0x000C) (BlueprintVisible)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x1DC4(0x0004) MISSED OFFSET
-	struct FAthenaAnimationLadder                      LadderAnimationParams;                                    // 0x1DC8(0x02B0) (BlueprintVisible)
-	struct FAthenaAnimationPitchControlStates          PitchTargetingControlStates;                              // 0x2078(0x0168) (BlueprintVisible)
-	struct FAthenaAnimationObjectTargetingOptions      PitchTargetingParameters;                                 // 0x21E0(0x003C) (BlueprintVisible)
-	struct FAthenaAnimationObjectTargetingOptions      WantedPitchTargetingParameters;                           // 0x221C(0x003C) (BlueprintVisible)
-	struct FAthenaAnimationPitchAlpha                  PitchTargetingAlpha;                                      // 0x2258(0x0014) (BlueprintVisible)
-	struct FAthenaAnimationPitchShoulders              PitchShoulderParams;                                      // 0x226C(0x001C) (BlueprintVisible)
-	struct FAthenaAnimationMountedWeapon               MountedWeaponAnimationParams;                             // 0x2288(0x00F8) (BlueprintVisible)
-	struct FAthenaAnimationFootPlanting                FootPlanting;                                             // 0x2380(0x0058) (BlueprintVisible)
-	TEnumAsByte<EStairAnimations>                      StairAnimationState;                                      // 0x23D8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x23D9(0x0007) MISSED OFFSET
-	struct FAthenaAnimationSailControl                 SailControlParams;                                        // 0x23E0(0x00A0) (BlueprintVisible)
-	struct FAthenaAnimationAI                          AIAnimationParams;                                        // 0x2480(0x02A0) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionDrunk;                                          // 0x2720(0x0050) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionLimp;                                           // 0x2770(0x0050) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionPegLeg;                                         // 0x27C0(0x0050) (BlueprintVisible)
-	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionHotCoals;                                       // 0x2810(0x0050) (BlueprintVisible)
-	unsigned char                                      ZeroLocomotionForced : 1;                                 // 0x2860(0x0001) (BlueprintVisible)
-	unsigned char                                      ConcealedInLoadable : 1;                                  // 0x2860(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x2861(0x0007) MISSED OFFSET
-	TArray<struct FAthenaAnimationSpawnBase>           AISpawnStruct;                                            // 0x2868(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<struct FAthenaAnimationSkeletonFlee>        AIFleeLoadingStruct;                                      // 0x2878(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FAthenaAnimationSkeletonFleeInGraph         AIFleePlayingStruct;                                      // 0x2888(0x0038) (BlueprintVisible)
-	struct FAthenaAnimationSkeletonScream              SkeletonScream;                                           // 0x28C0(0x0008) (BlueprintVisible)
-	class UBlendSpace1D*                               PitchAnimationToPlay;                                     // 0x28C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationShopInteractionParams       ShopInteractionParams;                                    // 0x28D0(0x0030) (BlueprintVisible)
-	struct FAthenaAnimationEmoteAnimgraphStructure     EmoteParams;                                              // 0x2900(0x00E0) (BlueprintVisible)
-	struct FAthenaAnimationSkeletonCurseAnimations     SkeletonCurseAnims;                                       // 0x29E0(0x0028) (BlueprintVisible)
-	struct FAthenaAnimationHarpoonLauncherAnimData     HarpoonLauncherAnims;                                     // 0x2A08(0x0020) (BlueprintVisible)
-	class UClass*                                      LoadedObjectType;                                         // 0x2A28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationAIKnockback                 AIKnockbackStruct;                                        // 0x2A30(0x0030) (BlueprintVisible)
-	bool                                               AIUseAlternateLocomotion;                                 // 0x2A60(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x2A61(0x0007) MISSED OFFSET
-	struct FAthenaAnimationHitReactsAnimData           HitReactionsAnimationData;                                // 0x2A68(0x0040) (BlueprintVisible)
-	struct FAthenaAnimationHitReactsSelectedAnimations HitReactionsSelectedAnimationData;                        // 0x2AA8(0x0040) (BlueprintVisible)
-	struct FAthenaAnimationHitReactParams              HitReactionsAnimationParams;                              // 0x2AE8(0x002C) (BlueprintVisible)
-	unsigned char                                      EmoteIKIsOff : 1;                                         // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      InBlockingInto : 1;                                       // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      IsAI : 1;                                                 // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      IsLocallyControlled : 1;                                  // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      IsHit : 1;                                                // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      InRecover : 1;                                            // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      InWarmUp : 1;                                             // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingFullBodyAnimation : 1;                             // 0x2B14(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingUpperBodyAnimation : 1;                            // 0x2B15(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingRightArmOverlayAnimation : 1;                      // 0x2B15(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingSpineOverlayAnimation : 1;                         // 0x2B15(0x0001) (BlueprintVisible)
-	unsigned char                                      PlayingLeftArmOverlayAnimation : 1;                       // 0x2B15(0x0001) (BlueprintVisible)
-	unsigned char                                      IsUsingAdditiveHandOverlayPose : 1;                       // 0x2B15(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsUsingLocalIKPose : 1;                                   // 0x2B15(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsRightShoulderActive : 1;                                // 0x2B15(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IsLeftShoulderActive : 1;                                 // 0x2B15(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData05[0x2];                                       // 0x2B16(0x0002) MISSED OFFSET
-	float                                              HitReactAdditiveBlendAmount;                              // 0x2B18(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              WieldedItemPoseBlendTime;                                 // 0x2B1C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              UpperBodyPoseBlendTime;                                   // 0x2B20(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              AimingAndPitchOverride;                                   // 0x2B24(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              FacialOverlayBlendWeight;                                 // 0x2B28(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    PitchShoulderRotation;                                    // 0x2B2C(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    PitchClavicleRotation;                                    // 0x2B38(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RightArmPitchAlpha;                                       // 0x2B44(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              LeftArmPitchAlpha;                                        // 0x2B48(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SpineRotation;                                            // 0x2B4C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EStunAnimationType>                    StunAnimType;                                             // 0x2B50(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x2B51(0x0003) MISSED OFFSET
-	unsigned char                                      ControllableObjectTypeHasValidTarget : 1;                 // 0x2B54(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x2B55(0x0003) MISSED OFFSET
-	class UBlendSpace1D*                               HitReactItem;                                             // 0x2B58(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              WorldDelta;                                               // 0x2B60(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UseHandsAndFootplantingIK : 1;                            // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      IKLODActive : 1;                                          // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      LODSolverActive : 1;                                      // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      ObjectPitchTargetingActive : 1;                           // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      ObjectOrIKEmoteActive : 1;                                // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      ObjectOrWheelCapstanAndNotDocking : 1;                    // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      HitReact1Active : 1;                                      // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      HitReact2Active : 1;                                      // 0x2B64(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData08[0xB];                                       // 0x2B65(0x000B) MISSED OFFSET
-	struct FAthenaAnimationIKUpdateParams              IKLeftHandUpdateParams;                                   // 0x2B70(0x0040) (BlueprintVisible, BlueprintReadOnly)
-	struct FAthenaAnimationIKUpdateParams              IKRightHandUpdateParams;                                  // 0x2BB0(0x0040) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      AthenaCharacterIsValid : 1;                               // 0x2BF0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x2BF1(0x0003) MISSED OFFSET
-	float                                              CapstanAngularVelocityWanted;                             // 0x2BF4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      SailMovementForceNotZero : 1;                             // 0x2BF8(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x2BF9(0x0007) MISSED OFFSET
-	struct FAthenaAnimationPlayingFacialAnimations     PlayingFacialAnimations;                                  // 0x2C00(0x0038) (BlueprintVisible, BlueprintReadOnly)
-	struct FAthenaAnimationPlayingEquipAnimations      PlayingEquipAnimations;                                   // 0x2C38(0x0010) (BlueprintVisible, BlueprintReadOnly)
-	struct FName                                       RightHandIKSocketName;                                    // 0x2C48(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       LeftHandIKSocketName;                                     // 0x2C50(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x2F8];                                     // 0x2C58(0x02F8) MISSED OFFSET
+	unsigned char                                      IsItemAnimPaused : 1;                                     // 0x21A0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x21A1(0x0003) MISSED OFFSET
+	float                                              ItemAnimPausedTimeRemaining;                              // 0x21A4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationIKLimbStretch               IKLimbStretchParams;                                      // 0x21A8(0x000C) (BlueprintVisible)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x21B4(0x0004) MISSED OFFSET
+	struct FAthenaAnimationLadder                      LadderAnimationParams;                                    // 0x21B8(0x02B0) (BlueprintVisible)
+	struct FAthenaAnimationPitchControlStates          PitchTargetingControlStates;                              // 0x2468(0x0168) (BlueprintVisible)
+	struct FAthenaAnimationObjectTargetingOptions      PitchTargetingParameters;                                 // 0x25D0(0x003C) (BlueprintVisible)
+	struct FAthenaAnimationObjectTargetingOptions      WantedPitchTargetingParameters;                           // 0x260C(0x003C) (BlueprintVisible)
+	struct FAthenaAnimationPitchAlpha                  PitchTargetingAlpha;                                      // 0x2648(0x0014) (BlueprintVisible)
+	struct FAthenaAnimationPitchShoulders              PitchShoulderParams;                                      // 0x265C(0x001C) (BlueprintVisible)
+	struct FAthenaAnimationMountedWeapon               MountedWeaponAnimationParams;                             // 0x2678(0x00F8) (BlueprintVisible)
+	struct FAthenaAnimationFootPlanting                FootPlanting;                                             // 0x2770(0x0058) (BlueprintVisible)
+	TEnumAsByte<EStairAnimations>                      StairAnimationState;                                      // 0x27C8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x27C9(0x0007) MISSED OFFSET
+	struct FAthenaAnimationSailControl                 SailControlParams;                                        // 0x27D0(0x00A0) (BlueprintVisible)
+	struct FAthenaAnimationAI                          AIAnimationParams;                                        // 0x2870(0x02A0) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionDrunk;                                          // 0x2B10(0x0050) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionLimp;                                           // 0x2B60(0x0050) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionPegLeg;                                         // 0x2BB0(0x0050) (BlueprintVisible)
+	struct FAthenaAnimationLocomotionAlternateAnimData LocomotionHotCoals;                                       // 0x2C00(0x0050) (BlueprintVisible)
+	unsigned char                                      ZeroLocomotionForced : 1;                                 // 0x2C50(0x0001) (BlueprintVisible)
+	unsigned char                                      ConcealedInLoadable : 1;                                  // 0x2C50(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x2C51(0x0007) MISSED OFFSET
+	TArray<struct FAthenaAnimationSpawnBase>           AISpawnStruct;                                            // 0x2C58(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<struct FAthenaAnimationSkeletonFlee>        AIFleeLoadingStruct;                                      // 0x2C68(0x0010) (BlueprintVisible, ZeroConstructor)
+	struct FAthenaAnimationSkeletonFleeInGraph         AIFleePlayingStruct;                                      // 0x2C78(0x0038) (BlueprintVisible)
+	struct FAthenaAnimationSkeletonScream              SkeletonScream;                                           // 0x2CB0(0x0008) (BlueprintVisible)
+	class UBlendSpace1D*                               PitchAnimationToPlay;                                     // 0x2CB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationShopInteractionParams       ShopInteractionParams;                                    // 0x2CC0(0x0030) (BlueprintVisible)
+	struct FAthenaAnimationEmoteAnimgraphStructure     EmoteParams;                                              // 0x2CF0(0x00E0) (BlueprintVisible)
+	struct FAthenaAnimationSkeletonCurseAnimations     SkeletonCurseAnims;                                       // 0x2DD0(0x0028) (BlueprintVisible)
+	struct FAthenaAnimationHarpoonLauncherAnimData     HarpoonLauncherAnims;                                     // 0x2DF8(0x0020) (BlueprintVisible)
+	class UClass*                                      LoadedObjectType;                                         // 0x2E18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationAIKnockback                 AIKnockbackStruct;                                        // 0x2E20(0x0030) (BlueprintVisible)
+	bool                                               AIUseAlternateLocomotion;                                 // 0x2E50(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x2E51(0x0007) MISSED OFFSET
+	struct FAthenaAnimationHitReactsAnimData           HitReactionsAnimationData;                                // 0x2E58(0x0040) (BlueprintVisible)
+	struct FAthenaAnimationHitReactsSelectedAnimations HitReactionsSelectedAnimationData;                        // 0x2E98(0x0040) (BlueprintVisible)
+	struct FAthenaAnimationHitReactParams              HitReactionsAnimationParams;                              // 0x2ED8(0x002C) (BlueprintVisible)
+	unsigned char                                      EmoteIKIsOff : 1;                                         // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      InBlockingInto : 1;                                       // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      IsAI : 1;                                                 // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      IsLocallyControlled : 1;                                  // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      IsHit : 1;                                                // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      InRecover : 1;                                            // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      InWarmUp : 1;                                             // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingFullBodyAnimation : 1;                             // 0x2F04(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingUpperBodyAnimation : 1;                            // 0x2F05(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingRightArmOverlayAnimation : 1;                      // 0x2F05(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingSpineOverlayAnimation : 1;                         // 0x2F05(0x0001) (BlueprintVisible)
+	unsigned char                                      PlayingLeftArmOverlayAnimation : 1;                       // 0x2F05(0x0001) (BlueprintVisible)
+	unsigned char                                      IsUsingAdditiveHandOverlayPose : 1;                       // 0x2F05(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsUsingLocalIKPose : 1;                                   // 0x2F05(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsRightShoulderActive : 1;                                // 0x2F05(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IsLeftShoulderActive : 1;                                 // 0x2F05(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData05[0x2];                                       // 0x2F06(0x0002) MISSED OFFSET
+	float                                              HitReactAdditiveBlendAmount;                              // 0x2F08(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WieldedItemPoseBlendTime;                                 // 0x2F0C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              UpperBodyPoseBlendTime;                                   // 0x2F10(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              AimingAndPitchOverride;                                   // 0x2F14(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              FacialOverlayBlendWeight;                                 // 0x2F18(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    PitchShoulderRotation;                                    // 0x2F1C(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    PitchClavicleRotation;                                    // 0x2F28(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RightArmPitchAlpha;                                       // 0x2F34(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              LeftArmPitchAlpha;                                        // 0x2F38(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SpineRotation;                                            // 0x2F3C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EStunAnimationType>                    StunAnimType;                                             // 0x2F40(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x2F41(0x0003) MISSED OFFSET
+	unsigned char                                      ControllableObjectTypeHasValidTarget : 1;                 // 0x2F44(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x2F45(0x0003) MISSED OFFSET
+	class UBlendSpace1D*                               HitReactItem;                                             // 0x2F48(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WorldDelta;                                               // 0x2F50(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UseHandsAndFootplantingIK : 1;                            // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      IKLODActive : 1;                                          // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      LODSolverActive : 1;                                      // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ObjectPitchTargetingActive : 1;                           // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ObjectOrIKEmoteActive : 1;                                // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      ObjectOrWheelCapstanAndNotDocking : 1;                    // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      HitReact1Active : 1;                                      // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      HitReact2Active : 1;                                      // 0x2F54(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData08[0xB];                                       // 0x2F55(0x000B) MISSED OFFSET
+	struct FAthenaAnimationIKUpdateParams              IKLeftHandUpdateParams;                                   // 0x2F60(0x0040) (BlueprintVisible, BlueprintReadOnly)
+	struct FAthenaAnimationIKUpdateParams              IKRightHandUpdateParams;                                  // 0x2FA0(0x0040) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      AthenaCharacterIsValid : 1;                               // 0x2FE0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x2FE1(0x0003) MISSED OFFSET
+	float                                              CapstanAngularVelocityWanted;                             // 0x2FE4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      SailMovementForceNotZero : 1;                             // 0x2FE8(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData10[0x7];                                       // 0x2FE9(0x0007) MISSED OFFSET
+	struct FAthenaAnimationPlayingFacialAnimations     PlayingFacialAnimations;                                  // 0x2FF0(0x0038) (BlueprintVisible, BlueprintReadOnly)
+	struct FAthenaAnimationPlayingEquipAnimations      PlayingEquipAnimations;                                   // 0x3028(0x0010) (BlueprintVisible, BlueprintReadOnly)
+	struct FName                                       RightHandIKSocketName;                                    // 0x3038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       LeftHandIKSocketName;                                     // 0x3040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x2F8];                                     // 0x3048(0x02F8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3095,7 +3039,7 @@ public:
 
 	void UpdateSkeletonFleeingAnimations(class UClass* ObjectID);
 	void UpdatePitchOverrideAnimation(bool IsPrimary);
-	float UpdateAISpawnAnimation(class AAthenaCharacter* Owner, class UClass* ObjectID, bool OnLand, bool QuickSpawn);
+	float UpdateAISpawnAnimation(class AAthenaCharacter* Owner, class UClass* ObjectID, TEnumAsByte<EAthenaAISpawnType> SpawnType, bool QuickSpawn);
 	void TriggerSensingAnimation(TEnumAsByte<ESkeletonSensingState> NewSensingState);
 	void TriggerEmoteActionAnimation(TEnumAsByte<ESkeletonEmoteActionState> EmoteActionState);
 	void StopMeleeStanceChange();
@@ -3115,11 +3059,11 @@ public:
 
 
 // Class Athena.MockThirdPersonAnimationInstance
-// 0x0010 (0x2F60 - 0x2F50)
+// 0x0010 (0x3350 - 0x3340)
 class UMockThirdPersonAnimationInstance : public UThirdPersonAnimationInstance
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x2F50(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x3340(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3131,14 +3075,17 @@ public:
 
 
 // Class Athena.SkeletonAnimationInstance
-// 0x00F0 (0x3040 - 0x2F50)
+// 0x0100 (0x3440 - 0x3340)
 class USkeletonAnimationInstance : public UThirdPersonAnimationInstance
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x2F50(0x0008) MISSED OFFSET
-	class UAthenaAnimationCustomSkeletonAnimationData* CustomAnimationData;                                      // 0x2F58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaAnimationCustomSkeletonAnimationBlueprintData CustomAnimationBlueprintData;                             // 0x2F60(0x0048) (BlueprintVisible)
-	unsigned char                                      UnknownData01[0x98];                                      // 0x2FA8(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x3340(0x0008) MISSED OFFSET
+	class UNPCHeldObjectData*                          HeldObjectList;                                           // 0x3348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      LeftHandObject;                                           // 0x3350(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      RightHandObject;                                          // 0x3358(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UAthenaAnimationCustomSkeletonAnimationData* CustomAnimationData;                                      // 0x3360(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAnimationCustomSkeletonAnimationBlueprintData CustomAnimationBlueprintData;                             // 0x3368(0x0048) (BlueprintVisible)
+	unsigned char                                      UnknownData01[0x90];                                      // 0x33B0(0x0090) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3147,24 +3094,30 @@ public:
 	}
 
 
+	void UseHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand, TEnumAsByte<EAthenaNPCObjectSlot> ObjectSlot);
 	bool TriggerCustomAnimationSequence(const struct FName& SequenceName);
 	void StopCustomAnimationLoopingSequence();
 	bool SetNewCustomAnimationLoopingSequence(bool IsLoopA);
 	bool InitialiseNewCustomAnimationSet(class UAthenaAnimationCustomSkeletonAnimationData* AnimationData);
+	void DetachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand);
+	void DestroyHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand);
+	void AttachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand);
 };
 
 
 // Class Athena.MockSkeletonAnimationInstance
-// 0x0130 (0x3170 - 0x3040)
+// 0x0130 (0x3570 - 0x3440)
 class UMockSkeletonAnimationInstance : public USkeletonAnimationInstance
 {
 public:
-	struct FOneShotAnimationElement                    OneShotElementA;                                          // 0x3040(0x0028)
-	struct FOneShotAnimationElement                    OneShotElementB;                                          // 0x3068(0x0028)
-	struct FContinuousAnimationElement                 ContinuousElementA;                                       // 0x3090(0x0038)
-	struct FContinuousAnimationElement                 ContinuousElementB;                                       // 0x30C8(0x0038)
-	struct FContinuousAnimationElement                 ContinuousElementC;                                       // 0x3100(0x0038)
-	struct FContinuousAnimationElement                 ContinuousElementD;                                       // 0x3138(0x0038)
+	class UAthenaAnimationCustomSkeletonAnimationData* TestCustomSkeletonAnimationData;                          // 0x3440(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FOneShotAnimationElement                    OneShotElementA;                                          // 0x3448(0x0020)
+	struct FOneShotAnimationElement                    OneShotElementB;                                          // 0x3468(0x0020)
+	struct FContinuousAnimationElement                 ContinuousElementA;                                       // 0x3488(0x0038)
+	struct FContinuousAnimationElement                 ContinuousElementB;                                       // 0x34C0(0x0038)
+	struct FContinuousAnimationElement                 ContinuousElementC;                                       // 0x34F8(0x0038)
+	struct FContinuousAnimationElement                 ContinuousElementD;                                       // 0x3530(0x0038)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x3568(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3447,50 +3400,50 @@ public:
 
 
 // Class Athena.AthenaAICharacter
-// 0x04F0 (0x1160 - 0x0C70)
+// 0x04E0 (0x1160 - 0x0C80)
 class AAthenaAICharacter : public AAthenaCharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0C70(0x0058) MISSED OFFSET
-	class UAthenaAIControllerParamsDataAsset*          AIControllerParams;                                       // 0x0CC8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 DistanceInMToProjectileHitChanceCurve;                    // 0x0CD0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DefaultInteractableAmmoItemDescType;                      // 0x0CD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 DistanceInMToCannonShotHitChanceCurve;                    // 0x0CE0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               AimNoiseEnabled;                                          // 0x0CE8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0CE9(0x0003) MISSED OFFSET
-	float                                              AmplitudeChangeSpeed;                                     // 0x0CEC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AmplitudeOffset;                                          // 0x0CF0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Frequency;                                                // 0x0CF4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InteractableMissFallShortMinProportion;                   // 0x0CF8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InteractableMissFallShortMaxProportion;                   // 0x0CFC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UFaceTargetComponent*                        FaceTargetComponent;                                      // 0x0D00(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAIPartsRetrievalComponent*                  AIPartsRetrievalComponent;                                // 0x0D08(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAthenaAIFormComponent*                      FormComponent;                                            // 0x0D10(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAICharacterAudioComponent*                  AICharacterAudioComponent;                                // 0x0D18(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyEmitterComponent;                               // 0x0D20(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0D28(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStatusEffectPersistenceComponent*           StatusEffectPersistenceComponent;                         // 0x0D30(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerCurseComponent*                       PlayerCurseComponent;                                     // 0x0D38(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStatusEffectComponent*                      VenomStatusEffectComponent;                               // 0x0D40(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UCapsuleComponent*                           ProjectileTraceHitVolume;                                 // 0x0D48(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UCustomAnimationHandlerComponent*            CustomAnimationHandlerComponent;                          // 0x0D50(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UObject*                                     KilledVfxTemplate;                                        // 0x0D58(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FItemLoadout                                AISpawnLoadout;                                           // 0x0D60(0x0020) (Edit)
-	bool                                               KillOnFallingIntoWater;                                   // 0x0D80(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0D81(0x0007) MISSED OFFSET
-	class UClass*                                      MeleeAttackStrategyId;                                    // 0x0D88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      GunpowderKegAnimationStoreId;                             // 0x0D90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x48];                                      // 0x0D98(0x0048) MISSED OFFSET
-	class USkeletalMesh*                               AssignedMesh;                                             // 0x0DE0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UColorTexture*                               TeamColorTexture;                                         // 0x0DE8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      CurrentShip;                                              // 0x0DF0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x0DF8(0x0008) MISSED OFFSET
-	class UClass*                                      CurrentAIStrategy;                                        // 0x0E00(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CurrentAnimationState;                                    // 0x0E08(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x278];                                     // 0x0E10(0x0278) MISSED OFFSET
-	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x1088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FAIEncounterSpecification                   PawnEncounterSpec;                                        // 0x1090(0x00A0)
-	unsigned char                                      UnknownData06[0x30];                                      // 0x1130(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0C80(0x0058) MISSED OFFSET
+	class UCurveFloat*                                 DistanceInMToProjectileHitChanceCurve;                    // 0x0CD8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DefaultInteractableAmmoItemDescType;                      // 0x0CE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 DistanceInMToCannonShotHitChanceCurve;                    // 0x0CE8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AimNoiseEnabled;                                          // 0x0CF0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0CF1(0x0003) MISSED OFFSET
+	float                                              AmplitudeChangeSpeed;                                     // 0x0CF4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AmplitudeOffset;                                          // 0x0CF8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Frequency;                                                // 0x0CFC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InteractableMissFallShortMinProportion;                   // 0x0D00(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InteractableMissFallShortMaxProportion;                   // 0x0D04(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFaceTargetComponent*                        FaceTargetComponent;                                      // 0x0D08(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAIPartsRetrievalComponent*                  AIPartsRetrievalComponent;                                // 0x0D10(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAthenaAIFormComponent*                      FormComponent;                                            // 0x0D18(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAICharacterAudioComponent*                  AICharacterAudioComponent;                                // 0x0D20(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyEmitterComponent;                               // 0x0D28(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0D30(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStatusEffectPersistenceComponent*           StatusEffectPersistenceComponent;                         // 0x0D38(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerCurseComponent*                       PlayerCurseComponent;                                     // 0x0D40(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStatusEffectComponent*                      VenomStatusEffectComponent;                               // 0x0D48(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           ProjectileTraceHitVolume;                                 // 0x0D50(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UCustomAnimationHandlerComponent*            CustomAnimationHandlerComponent;                          // 0x0D58(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UObject*                                     KilledVfxTemplate;                                        // 0x0D60(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FItemLoadout                                AISpawnLoadout;                                           // 0x0D68(0x0020) (Edit)
+	bool                                               KillOnFallingIntoWater;                                   // 0x0D88(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0D89(0x0007) MISSED OFFSET
+	class UClass*                                      MeleeAttackStrategyId;                                    // 0x0D90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      GunpowderKegAnimationStoreId;                             // 0x0D98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x48];                                      // 0x0DA0(0x0048) MISSED OFFSET
+	class USkeletalMesh*                               AssignedMesh;                                             // 0x0DE8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UColorTexture*                               TeamColorTexture;                                         // 0x0DF0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      CurrentShip;                                              // 0x0DF8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              MeshScale;                                                // 0x0E00(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0E04(0x0004) MISSED OFFSET
+	class UClass*                                      CurrentAIStrategy;                                        // 0x0E08(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CurrentAnimationState;                                    // 0x0E10(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x278];                                     // 0x0E18(0x0278) MISSED OFFSET
+	class UAthenaAIAmmoDataAsset*                      Ammo;                                                     // 0x1090(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FAIEncounterSpecification                   PawnEncounterSpec;                                        // 0x1098(0x00A0)
+	unsigned char                                      UnknownData06[0x28];                                      // 0x1138(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3506,6 +3459,7 @@ public:
 	void SetLoadout(TAssetPtr<class ULoadoutAsset> InLoadout);
 	void SetAIStrategy(class UClass* InStrategy);
 	void SetAIAnimationState(class UClass* InAnimationState);
+	void OnRep_MeshScale(float OldMeshScale);
 	void OnRep_CurrentAnimationState(class UClass* OldAnimationState);
 	void OnRep_CurrentAIStrategy(class UClass* OldAIStrategy);
 	struct FName GetRegion();
@@ -3516,13 +3470,13 @@ public:
 
 
 // Class Athena.AthenaCharacterMock
-// 0x0090 (0x0D00 - 0x0C70)
+// 0x0090 (0x0D10 - 0x0C80)
 class AAthenaCharacterMock : public AAthenaCharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0C70(0x0080) MISSED OFFSET
-	class AAthenaWorldSettings*                        AthenaWorldSettings;                                      // 0x0CF0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0CF8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x80];                                      // 0x0C80(0x0080) MISSED OFFSET
+	class AAthenaWorldSettings*                        AthenaWorldSettings;                                      // 0x0D00(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0D08(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3534,7 +3488,7 @@ public:
 
 
 // Class Athena.AthenaCharacterMockWithProjectileHits
-// 0x0000 (0x0D00 - 0x0D00)
+// 0x0000 (0x0D10 - 0x0D10)
 class AAthenaCharacterMockWithProjectileHits : public AAthenaCharacterMock
 {
 public:
@@ -3549,13 +3503,13 @@ public:
 
 
 // Class Athena.AthenaGhostPlayerCharacter
-// 0x00A0 (0x17D0 - 0x1730)
+// 0x00A0 (0x17F0 - 0x1750)
 class AAthenaGhostPlayerCharacter : public AAthenaPlayerCharacter
 {
 public:
-	class UStreamingLocationComponent*                 StreamingLocationComponent;                               // 0x1730(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x90];                                      // 0x1738(0x0090) MISSED OFFSET
-	class AGhostShipTickManager*                       GhostShipTickManager;                                     // 0x17C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UStreamingLocationComponent*                 StreamingLocationComponent;                               // 0x1750(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x90];                                      // 0x1758(0x0090) MISSED OFFSET
+	class AGhostShipTickManager*                       GhostShipTickManager;                                     // 0x17E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -3567,7 +3521,7 @@ public:
 
 
 // Class Athena.AthenaGhostPlayerCharacterMock
-// 0x0000 (0x17D0 - 0x17D0)
+// 0x0000 (0x17F0 - 0x17F0)
 class AAthenaGhostPlayerCharacterMock : public AAthenaGhostPlayerCharacter
 {
 public:
@@ -3582,15 +3536,15 @@ public:
 
 
 // Class Athena.VoyageParticipantComponent
-// 0x0270 (0x0340 - 0x00D0)
+// 0x0290 (0x0360 - 0x00D0)
 class UVoyageParticipantComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0xA8];                                      // 0x00D0(0x00A8) MISSED OFFSET
 	class AActor*                                      OwningPlayer;                                             // 0x0178(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVoyageParticipantViewContainer             ViewContainer;                                            // 0x0180(0x00B0) (Net)
-	struct FVoyageParticipantViewContainer             PreviousViewContainer;                                    // 0x0230(0x00B0) (Transient)
-	unsigned char                                      UnknownData01[0x60];                                      // 0x02E0(0x0060) MISSED OFFSET
+	struct FVoyageParticipantViewContainer             ViewContainer;                                            // 0x0180(0x00C0) (Net)
+	struct FVoyageParticipantViewContainer             PreviousViewContainer;                                    // 0x0240(0x00C0) (Transient)
+	unsigned char                                      UnknownData01[0x60];                                      // 0x0300(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3604,12 +3558,12 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterMock
-// 0x0010 (0x1740 - 0x1730)
+// 0x0010 (0x1760 - 0x1750)
 class AAthenaPlayerCharacterMock : public AAthenaPlayerCharacter
 {
 public:
-	bool                                               AllowedToSwim;                                            // 0x1730(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x1731(0x000F) MISSED OFFSET
+	bool                                               AllowedToSwim;                                            // 0x1750(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x1751(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3621,11 +3575,11 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterUnitTestMock
-// 0x0110 (0x1850 - 0x1740)
+// 0x0120 (0x1880 - 0x1760)
 class AAthenaPlayerCharacterUnitTestMock : public AAthenaPlayerCharacterMock
 {
 public:
-	unsigned char                                      UnknownData00[0x110];                                     // 0x1740(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x120];                                     // 0x1760(0x0120) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3637,7 +3591,7 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterUnitTestMockWithTestInputHandler
-// 0x0000 (0x1850 - 0x1850)
+// 0x0000 (0x1880 - 0x1880)
 class AAthenaPlayerCharacterUnitTestMockWithTestInputHandler : public AAthenaPlayerCharacterUnitTestMock
 {
 public:
@@ -3652,11 +3606,11 @@ public:
 
 
 // Class Athena.TestObscuredVisionActor
-// 0x0010 (0x1860 - 0x1850)
+// 0x0010 (0x1890 - 0x1880)
 class ATestObscuredVisionActor : public AAthenaPlayerCharacterUnitTestMock
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1850(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x1880(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3800,6 +3754,7 @@ public:
 
 
 	void RestoreAudioStateAfterFallDamage();
+	void CheckForExcessiveVelocity(float DeltaTime);
 };
 
 
@@ -3819,7 +3774,7 @@ public:
 
 
 // Class Athena.MockAthenaPlayerCharacterWithAthenaPlayerCharacterMovementComponent
-// 0x0000 (0x1740 - 0x1740)
+// 0x0000 (0x1760 - 0x1760)
 class AMockAthenaPlayerCharacterWithAthenaPlayerCharacterMovementComponent : public AAthenaPlayerCharacterMock
 {
 public:
@@ -3834,12 +3789,12 @@ public:
 
 
 // Class Athena.AthenaPlayerCharacterWithTestInputHandler
-// 0x0010 (0x1740 - 0x1730)
+// 0x0010 (0x1760 - 0x1750)
 class AAthenaPlayerCharacterWithTestInputHandler : public AAthenaPlayerCharacter
 {
 public:
-	class UAthenaPlayerCharacterTestInputBinder*       TestInputBinder;                                          // 0x1730(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x1738(0x0008) MISSED OFFSET
+	class UAthenaPlayerCharacterTestInputBinder*       TestInputBinder;                                          // 0x1750(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x1758(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3885,12 +3840,12 @@ public:
 
 
 // Class Athena.AthenaTavernPlayerCharacter
-// 0x0050 (0x1780 - 0x1730)
+// 0x0050 (0x17A0 - 0x1750)
 class AAthenaTavernPlayerCharacter : public AAthenaPlayerCharacter
 {
 public:
-	class UStreamingLocationComponent*                 StreamingLocationComponent;                               // 0x1730(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x1738(0x0048) MISSED OFFSET
+	class UStreamingLocationComponent*                 StreamingLocationComponent;                               // 0x1750(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x48];                                      // 0x1758(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3902,7 +3857,7 @@ public:
 
 
 // Class Athena.AthenaTavernPlayerCharacterMock
-// 0x0000 (0x1780 - 0x1780)
+// 0x0000 (0x17A0 - 0x17A0)
 class AAthenaTavernPlayerCharacterMock : public AAthenaTavernPlayerCharacter
 {
 public:
@@ -4164,11 +4119,13 @@ public:
 
 
 // Class Athena.AthenaContestTavern
-// 0x0010 (0x04A8 - 0x0498)
+// 0x0038 (0x04D0 - 0x0498)
 class AAthenaContestTavern : public AActor
 {
 public:
 	TArray<class ASpawnLocation*>                      TavernSpawnPoints;                                        // 0x0498(0x0010) (Edit, ZeroConstructor)
+	TArray<class AActor*>                              TavernLevelActorsToPrepare;                               // 0x04A8(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x04B8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4302,7 +4259,7 @@ public:
 
 
 // Class Athena.AthenaWorldSettings
-// 0x00D0 (0x0710 - 0x0640)
+// 0x00D8 (0x0718 - 0x0640)
 class AAthenaWorldSettings : public AWorldSettings
 {
 public:
@@ -4320,16 +4277,18 @@ public:
 	struct FTinySharkWorldSettingsParams               TinySharkParams;                                          // 0x0689(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x068A(0x0006) MISSED OFFSET
 	struct FAIShipWorldSettings                        AIShipParams;                                             // 0x0690(0x0018) (Edit, BlueprintVisible)
-	class UPrebakedIslandAsset*                        PrebakedIslandData;                                       // 0x06A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              DevilsShroudPlayerDamageMaxDamage;                        // 0x06B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x06B4(0x0004) MISSED OFFSET
-	class UGameEventSchedulerSettingsAsset*            GameEventSchedulerSettings;                               // 0x06B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UGameEventSchedulerSettingsAsset*            PlayModeSpecificEventSchedulerSettings[0x2];              // 0x06C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UStormServiceAsset*                          StormServiceSettings;                                     // 0x06D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FWorldSafeZone>                      SafeZonesIncludingRequiresShroudBreaker;                  // 0x06D8(0x0010) (ZeroConstructor, Transient)
-	TArray<struct FWorldSafeZone>                      SafeZonesExcludingRequiresShroudBreaker;                  // 0x06E8(0x0010) (ZeroConstructor, Transient)
-	TArray<struct FWorldSafeZone>                      OverridingSafeZones;                                      // 0x06F8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0708(0x0008) MISSED OFFSET
+	struct FPetsWorldSettingsParams                    PetsParams;                                               // 0x06A8(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
+	class UPrebakedIslandAsset*                        PrebakedIslandData;                                       // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              DevilsShroudPlayerDamageMaxDamage;                        // 0x06B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x06BC(0x0004) MISSED OFFSET
+	class UGameEventSchedulerSettingsAsset*            GameEventSchedulerSettings;                               // 0x06C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UGameEventSchedulerSettingsAsset*            PlayModeSpecificEventSchedulerSettings[0x2];              // 0x06C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStormServiceAsset*                          StormServiceSettings;                                     // 0x06D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FWorldSafeZone>                      SafeZonesIncludingRequiresShroudBreaker;                  // 0x06E0(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FWorldSafeZone>                      SafeZonesExcludingRequiresShroudBreaker;                  // 0x06F0(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FWorldSafeZone>                      OverridingSafeZones;                                      // 0x0700(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0710(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4341,14 +4300,15 @@ public:
 
 
 // Class Athena.AthenaDevilsShroudDamageComponent
-// 0x0040 (0x0110 - 0x00D0)
+// 0x0048 (0x0118 - 0x00D0)
 class UAthenaDevilsShroudDamageComponent : public UActorComponent
 {
 public:
 	class AAthenaWorldSettings*                        WorldSettings;                                            // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
-	class AAthenaPlayerController*                     PlayerControllerOwner;                                    // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x00E8(0x0028) MISSED OFFSET
+	class UCurveFloat*                                 DamageCurve;                                              // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00E0(0x0008) MISSED OFFSET
+	class AAthenaPlayerController*                     PlayerControllerOwner;                                    // 0x00E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x00F0(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4360,13 +4320,13 @@ public:
 
 
 // Class Athena.AthenaGameEngine
-// 0x0028 (0x0B60 - 0x0B38)
+// 0x0028 (0x0B48 - 0x0B20)
 class UAthenaGameEngine : public URareGameEngine
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0B38(0x0008) MISSED OFFSET
-	class UAthenaGameEngineSettings*                   EngineSettings;                                           // 0x0B40(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0B48(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0B20(0x0008) MISSED OFFSET
+	class UAthenaGameEngineSettings*                   EngineSettings;                                           // 0x0B28(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0B30(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4471,21 +4431,6 @@ public:
 };
 
 
-// Class Athena.TelemetryDispatcherRetrievalInterface
-// 0x0000 (0x0028 - 0x0028)
-class UTelemetryDispatcherRetrievalInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TelemetryDispatcherRetrievalInterface"));
-		return ptr;
-	}
-
-};
-
-
 // Class Athena.AthenaGameInstance
 // 0x0428 (0x04B0 - 0x0088)
 class UAthenaGameInstance : public UGameInstance
@@ -4555,7 +4500,7 @@ public:
 
 
 // Class Athena.AthenaGameMode
-// 0x04B0 (0x0A40 - 0x0590)
+// 0x04D0 (0x0A60 - 0x0590)
 class AAthenaGameMode : public AGameMode
 {
 public:
@@ -4565,12 +4510,13 @@ public:
 	unsigned char                                      UnknownData01[0x178];                                     // 0x05A8(0x0178) MISSED OFFSET
 	TArray<class UVoiceChatComponent*>                 ChatComponents;                                           // 0x0720(0x0010) (ExportObject, ZeroConstructor)
 	struct FGhostShipCoordinator                       GhostShipCoordinator;                                     // 0x0730(0x0230)
-	struct FStorageContainerRefresher                  StorageContainerRefresher;                                // 0x0960(0x00C0)
-	class URiddleQuestDescGeneratorData*               RiddleQuestDescGeneratorData;                             // 0x0A20(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RespawnTimer;                                             // 0x0A28(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ContestRespawnTimer;                                      // 0x0A2C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              StorageContainerRefreshInterval;                          // 0x0A30(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x0A34(0x000C) MISSED OFFSET
+	struct FStorageContainerRefresher                  StorageContainerRefresher;                                // 0x0960(0x00D8)
+	class URiddleQuestDescGeneratorData*               RiddleQuestDescGeneratorData;                             // 0x0A38(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RespawnTimer;                                             // 0x0A40(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ContestRespawnTimer;                                      // 0x0A44(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              StorageContainerRefreshInterval;                          // 0x0A48(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ContainerRefreshBatchSize;                                // 0x0A4C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0A50(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4588,11 +4534,11 @@ public:
 
 
 // Class Athena.OnlineAthenaGameMode
-// 0x0110 (0x0B50 - 0x0A40)
+// 0x0110 (0x0B70 - 0x0A60)
 class AOnlineAthenaGameMode : public AAthenaGameMode
 {
 public:
-	unsigned char                                      UnknownData00[0x110];                                     // 0x0A40(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x110];                                     // 0x0A60(0x0110) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4604,11 +4550,11 @@ public:
 
 
 // Class Athena.TestAthenaGameMode
-// 0x0008 (0x0A48 - 0x0A40)
+// 0x0008 (0x0A68 - 0x0A60)
 class ATestAthenaGameMode : public AAthenaGameMode
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0A40(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0A60(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4620,7 +4566,7 @@ public:
 
 
 // Class Athena.TestAthenaGameModeWithHUD
-// 0x0000 (0x0A48 - 0x0A48)
+// 0x0000 (0x0A68 - 0x0A68)
 class ATestAthenaGameModeWithHUD : public ATestAthenaGameMode
 {
 public:
@@ -4635,7 +4581,7 @@ public:
 
 
 // Class Athena.TestInventoryAthenaGameMode
-// 0x0000 (0x0A40 - 0x0A40)
+// 0x0000 (0x0A60 - 0x0A60)
 class ATestInventoryAthenaGameMode : public AAthenaGameMode
 {
 public:
@@ -4683,7 +4629,7 @@ public:
 
 
 // Class Athena.AthenaGameSettings
-// 0x05A0 (0x05C8 - 0x0028)
+// 0x05C0 (0x05E8 - 0x0028)
 class UAthenaGameSettings : public UObject
 {
 public:
@@ -4729,55 +4675,57 @@ public:
 	struct FStringAssetReference                       FlamesOfFateSettingsAssetLocation;                        // 0x0280(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringAssetReference                       ItemDiggingAssetLocation;                                 // 0x0290(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringAssetReference                       ContestSettingsDataAsset;                                 // 0x02A0(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      InventoryDefaultItemURL;                                  // 0x02B0(0x0010) (Edit, ZeroConstructor, Config)
-	TEnumAsByte<ECollisionChannel>                     ProjectileCollisionChannel;                               // 0x02C0(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     ThrowableCollisionChannel;                                // 0x02C1(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     NameplateCollisionChannel;                                // 0x02C2(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x02C3(0x0001) MISSED OFFSET
-	float                                              CheatFlyingSpeedSlow;                                     // 0x02C4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              CheatFlyingSpeedDefault;                                  // 0x02C8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              CheatFlyingSpeedFast;                                     // 0x02CC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              CheatFlyingAcceleration;                                  // 0x02D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x02D4(0x0004) MISSED OFFSET
-	struct FEncounterServiceParams                     EncounterServiceParams;                                   // 0x02D8(0x0018) (Edit, Config)
-	struct FWindServiceParams                          WindParams;                                               // 0x02F0(0x0024) (Edit, Config)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0314(0x0004) MISSED OFFSET
-	struct FCrewServiceParams                          CrewServiceParams;                                        // 0x0318(0x0050) (Edit, Config)
-	struct FSharedShovelParams                         SharedShovelParams;                                       // 0x0368(0x0050) (Edit, Config)
-	struct FMermaidServiceParams                       MermaidServiceParams;                                     // 0x03B8(0x0068) (Edit, Config)
-	struct FMakeFriendsEmoteParams                     MakeFriendsEmoteParams;                                   // 0x0420(0x000C) (Edit, Config)
-	struct FMermaidRespawnConfig                       MermaidRespawnConfiguration;                              // 0x042C(0x0028) (Edit, Config)
-	struct FCharacterSocketCollisionServiceParams      CharacterSocketCollisionServiceParams;                    // 0x0454(0x0008) (Edit, Config)
-	struct FAthenaAICharacterParams                    AAthenaAICharacterParams;                                 // 0x045C(0x0008) (Edit, Config)
-	int                                                AssumedMaxFPSOnServer;                                    // 0x0464(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       WwiseObjectUnderwaterStateSwitchGroup;                    // 0x0468(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       WwiseObjectUnderwaterSwitchDefaultState;                  // 0x0470(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       WwiseObjectUnderwaterSwitchUnderwaterState;               // 0x0478(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       IslandTypeStateGroup;                                     // 0x0480(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              StormQuantisePrecision;                                   // 0x0488(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x048C(0x0004) MISSED OFFSET
-	struct FStringAssetReference                       ShipLiveryCatalogueDataAssetLocation;                     // 0x0490(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       ShipPartsCatalogueDataAssetLocation;                      // 0x04A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       RowboatSpawnParamsDataAssetLocation;                      // 0x04B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       RewardDistributionModelDataAssetLocation;                 // 0x04C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CatalogListDataAssetLocation;                             // 0x04D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       KrakenTentacleClassLocation;                              // 0x04E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       KrakenShipTentacleClassLocation;                          // 0x04F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       KrakenServiceParamsDataAssetLocation;                     // 0x0500(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       AmbientTinySharkServiceParamsDataAssetLocation;           // 0x0510(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CompanyLevelDataListAssetLocation;                        // 0x0520(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CompanyDataListAssetLocation;                             // 0x0530(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       AchievementDefinitionDataAssetLocation;                   // 0x0540(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CategoryDefaults;                                         // 0x0550(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CoherentUIGTAssetRootLocation;                            // 0x0560(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CoherentUIGTPersistentDataAssetLocation;                  // 0x0570(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       CoherentContentEngagementMessageLocation;                 // 0x0580(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       NestedWorldRootDataAssetLocation;                         // 0x0590(0x0010) (Edit, ZeroConstructor, Config)
-	float                                              SinkingShipDestructionDistanceThreshold;                  // 0x05A0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x05A4(0x0004) MISSED OFFSET
-	struct FStringAssetReference                       DefaultItemsToBeDisplayedOnInventoryPanel;                // 0x05A8(0x0010) (Edit, ZeroConstructor, Config)
-	class UClass*                                      DefaultFogBank;                                           // 0x05B8(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class UClass*                                      DefaultFogBankManager;                                    // 0x05C0(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FStringAssetReference                       ContestEventsDataAsset;                                   // 0x02B0(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      InventoryDefaultItemURL;                                  // 0x02C0(0x0010) (Edit, ZeroConstructor, Config)
+	TEnumAsByte<ECollisionChannel>                     ProjectileCollisionChannel;                               // 0x02D0(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     ThrowableCollisionChannel;                                // 0x02D1(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     NameplateCollisionChannel;                                // 0x02D2(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x02D3(0x0001) MISSED OFFSET
+	float                                              CheatFlyingSpeedSlow;                                     // 0x02D4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              CheatFlyingSpeedDefault;                                  // 0x02D8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              CheatFlyingSpeedFast;                                     // 0x02DC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              CheatFlyingAcceleration;                                  // 0x02E0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x02E4(0x0004) MISSED OFFSET
+	struct FEncounterServiceParams                     EncounterServiceParams;                                   // 0x02E8(0x0018) (Edit, Config)
+	struct FWindServiceParams                          WindParams;                                               // 0x0300(0x0024) (Edit, Config)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0324(0x0004) MISSED OFFSET
+	struct FCrewServiceParams                          CrewServiceParams;                                        // 0x0328(0x0050) (Edit, Config)
+	struct FSharedShovelParams                         SharedShovelParams;                                       // 0x0378(0x0050) (Edit, Config)
+	struct FMermaidServiceParams                       MermaidServiceParams;                                     // 0x03C8(0x0068) (Edit, Config)
+	struct FMakeFriendsEmoteParams                     MakeFriendsEmoteParams;                                   // 0x0430(0x000C) (Edit, Config)
+	struct FMermaidRespawnConfig                       MermaidRespawnConfiguration;                              // 0x043C(0x0028) (Edit, Config)
+	struct FCharacterSocketCollisionServiceParams      CharacterSocketCollisionServiceParams;                    // 0x0464(0x0008) (Edit, Config)
+	struct FAthenaAICharacterParams                    AAthenaAICharacterParams;                                 // 0x046C(0x0008) (Edit, Config)
+	int                                                AssumedMaxFPSOnServer;                                    // 0x0474(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       WwiseObjectUnderwaterStateSwitchGroup;                    // 0x0478(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       WwiseObjectUnderwaterSwitchDefaultState;                  // 0x0480(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       WwiseObjectUnderwaterSwitchUnderwaterState;               // 0x0488(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FName                                       IslandTypeStateGroup;                                     // 0x0490(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float                                              StormQuantisePrecision;                                   // 0x0498(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x049C(0x0004) MISSED OFFSET
+	struct FStringAssetReference                       ShipLiveryCatalogueDataAssetLocation;                     // 0x04A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       ShipPartsCatalogueDataAssetLocation;                      // 0x04B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       RowboatSpawnParamsDataAssetLocation;                      // 0x04C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       RewardDistributionModelDataAssetLocation;                 // 0x04D0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CatalogListDataAssetLocation;                             // 0x04E0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       KrakenTentacleClassLocation;                              // 0x04F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       KrakenShipTentacleClassLocation;                          // 0x0500(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       KrakenServiceParamsDataAssetLocation;                     // 0x0510(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       AmbientTinySharkServiceParamsDataAssetLocation;           // 0x0520(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CompanyLevelDataListAssetLocation;                        // 0x0530(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CompanyDataListAssetLocation;                             // 0x0540(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       AchievementDefinitionDataAssetLocation;                   // 0x0550(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CategoryDefaults;                                         // 0x0560(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CoherentUIGTAssetRootLocation;                            // 0x0570(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CoherentUIGTPersistentDataAssetLocation;                  // 0x0580(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       CoherentContentEngagementMessageLocation;                 // 0x0590(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       NestedWorldRootDataAssetLocation;                         // 0x05A0(0x0010) (Edit, ZeroConstructor, Config)
+	float                                              SinkingShipDestructionDistanceThreshold;                  // 0x05B0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x05B4(0x0004) MISSED OFFSET
+	struct FStringAssetReference                       DefaultItemsToBeDisplayedOnInventoryPanel;                // 0x05B8(0x0010) (Edit, ZeroConstructor, Config)
+	class UClass*                                      DefaultFogBank;                                           // 0x05C8(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	class UClass*                                      DefaultFogBankManager;                                    // 0x05D0(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FStringAssetReference                       StorageContainerComponentDataAssetLocation;               // 0x05D8(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -5067,6 +5015,133 @@ public:
 };
 
 
+// Class Athena.VoyageRewardDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UVoyageRewardDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FPerChapterRankRewardEntry>          RankEntries;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoyageRewardDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.WeightedTreasureChestDescAsset
+// 0x0010 (0x0038 - 0x0028)
+class UWeightedTreasureChestDescAsset : public UDataAsset
+{
+public:
+	TArray<struct FWeightedTreasureChestDesc>          Rewards;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WeightedTreasureChestDescAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MerchantQuestRandomRequiredItemsDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UMerchantQuestRandomRequiredItemsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FMerchantQuestCategoryGroup>         CategoryGroups;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MerchantQuestRandomRequiredItemsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.VoyageLocationOnlyNamedIslandListDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UVoyageLocationOnlyNamedIslandListDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FName>                               OnlyNamedIslandsList;                                     // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoyageLocationOnlyNamedIslandListDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SeaId
+// 0x0008 (0x0030 - 0x0028)
+class USeaId : public UObject
+{
+public:
+	struct FName                                       SeaName;                                                  // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SeaId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.VoyageRecipeDataAsset
+// 0x0140 (0x0168 - 0x0028)
+class UVoyageRecipeDataAsset : public UDataAsset
+{
+public:
+	struct FVoyageRecipe                               Recipe;                                                   // 0x0028(0x0140) (Edit, BlueprintVisible, BlueprintReadOnly)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoyageRecipeDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.EmergentContestVoyageRecipeDataAsset
+// 0x0170 (0x02D8 - 0x0168)
+class UEmergentContestVoyageRecipeDataAsset : public UVoyageRecipeDataAsset
+{
+public:
+	struct FEmergentContestVoyageRecipe                ContestVoyageRecipe;                                      // 0x0168(0x0170) (Edit, BlueprintVisible, BlueprintReadOnly)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.EmergentContestVoyageRecipeDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ContestManagerServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UContestManagerServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContestManagerServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.ShipPartCustomizationComponent
 // 0x0000 (0x00D0 - 0x00D0)
 class UShipPartCustomizationComponent : public UActorComponent
@@ -5098,40 +5173,6 @@ public:
 
 
 	void OnReplicate_PartDesc();
-};
-
-
-// Class Athena.DamageableInterface
-// 0x0000 (0x0028 - 0x0028)
-class UDamageableInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageableInterface"));
-		return ptr;
-	}
-
-
-	bool OnDamageableImpact(const struct FImpactDamageEvent& ImpactDamageEvent);
-	bool CanApplyDamage(const struct FImpactDamageEvent& ImpactDamageEvent);
-};
-
-
-// Class Athena.DamageableVulnerabilityLayer
-// 0x0010 (0x0038 - 0x0028)
-class UDamageableVulnerabilityLayer : public UObject
-{
-public:
-	TArray<struct FDamageableVulnerabilityPair>        Vulnerabilities;                                          // 0x0028(0x0010) (ZeroConstructor, Transient)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageableVulnerabilityLayer"));
-		return ptr;
-	}
-
 };
 
 
@@ -5173,6 +5214,7 @@ public:
 
 
 	void Multicast_DamageTriggered(const struct FImpactDamageEvent& DamageEvent);
+	void Multicast_DamageApplied(const struct FEventShipDamageApplied& ShipDamagedEvent);
 };
 
 
@@ -5315,7 +5357,7 @@ public:
 
 
 // Class Athena.Wheel
-// 0x0348 (0x0920 - 0x05D8)
+// 0x03A0 (0x0978 - 0x05D8)
 class AWheel : public AControllableObject
 {
 public:
@@ -5362,7 +5404,7 @@ public:
 	unsigned char                                      UnknownData05[0x24];                                      // 0x07E0(0x0024) MISSED OFFSET
 	float                                              MaxWheelAngle;                                            // 0x0804(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	float                                              MinWheelAngle;                                            // 0x0808(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x114];                                     // 0x080C(0x0114) MISSED OFFSET
+	unsigned char                                      UnknownData06[0x16C];                                     // 0x080C(0x016C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5433,7 +5475,7 @@ public:
 
 
 // Class Athena.Capstan
-// 0x0378 (0x0810 - 0x0498)
+// 0x0388 (0x0820 - 0x0498)
 class ACapstan : public AActor
 {
 public:
@@ -5457,10 +5499,10 @@ public:
 	unsigned char                                      UnknownData03[0x4];                                       // 0x0594(0x0004) MISSED OFFSET
 	struct FWwiseEmitter                               CapstanEmitter;                                           // 0x0598(0x0020)
 	struct FObjectMessagingDispatcher                  EventDispatcher;                                          // 0x05B8(0x00A0)
-	unsigned char                                      UnknownData04[0x1B1];                                     // 0x0658(0x01B1) MISSED OFFSET
-	bool                                               IsCursed;                                                 // 0x0809(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x2];                                       // 0x080A(0x0002) MISSED OFFSET
-	float                                              CursedIntent;                                             // 0x080C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x1C1];                                     // 0x0658(0x01C1) MISSED OFFSET
+	bool                                               IsCursed;                                                 // 0x0819(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x2];                                       // 0x081A(0x0002) MISSED OFFSET
+	float                                              CursedIntent;                                             // 0x081C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -5483,6 +5525,21 @@ public:
 	void BindToRepairableComponents();
 	void BindToDamageComponent();
 	void ApplyDamage(const struct FImpactDamageEvent& ImpactDamageEvent);
+};
+
+
+// Class Athena.TargetPointInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTargetPointInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TargetPointInterface"));
+		return ptr;
+	}
+
 };
 
 
@@ -5725,7 +5782,7 @@ public:
 	float GetDamagePercentage();
 	int GetDamageLevel();
 	struct FLevelOfDamageProperties GetCurrentLevelOfDamageProperties();
-	void ApplyDamage(const struct FHullDamageHit& InHit);
+	void ApplyDamage(const struct FImpactDamageEvent& InHit);
 };
 
 
@@ -5745,7 +5802,7 @@ public:
 
 
 // Class Athena.HullDamage
-// 0x0178 (0x0610 - 0x0498)
+// 0x0170 (0x0608 - 0x0498)
 class AHullDamage : public AActor
 {
 public:
@@ -5753,17 +5810,16 @@ public:
 	class USceneComponent*                             Root;                                                     // 0x04A8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UMobileInstancedStaticMeshComponent*         RepairPlanksMesh;                                         // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UShipDamageableComponent*                    ShipDamageComponent;                                      // 0x04B8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UTetherCustomisationComponent*               TetherCustomisationComponent;                             // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	int                                                DamageZoneTickInterval;                                   // 0x04C8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04CC(0x0004) MISSED OFFSET
-	class AShipInternalWater*                          InternalWater;                                            // 0x04D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	TArray<class ADamageZone*>                         DamageZones;                                              // 0x04D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	TArray<class ADamageZone*>                         ActiveHullDamageZones;                                    // 0x04E8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	TArray<class ADamageZone*>                         BottomDeckDamageZones;                                    // 0x04F8(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<class ADamageZone*>                         MiddleDeckDamageZones;                                    // 0x0508(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FWeightedProbabilityRange                   DamageZoneDeckDistribution;                               // 0x0518(0x0020) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0xC8];                                      // 0x0538(0x00C8) MISSED OFFSET
-	TArray<class URepairableComponent*>                RepairablePoints;                                         // 0x0600(0x0010) (ExportObject, ZeroConstructor)
+	int                                                DamageZoneTickInterval;                                   // 0x04C0(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04C4(0x0004) MISSED OFFSET
+	class AShipInternalWater*                          InternalWater;                                            // 0x04C8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	TArray<class ADamageZone*>                         DamageZones;                                              // 0x04D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TArray<class ADamageZone*>                         ActiveHullDamageZones;                                    // 0x04E0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TArray<class ADamageZone*>                         BottomDeckDamageZones;                                    // 0x04F0(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<class ADamageZone*>                         MiddleDeckDamageZones;                                    // 0x0500(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FWeightedProbabilityRange                   DamageZoneDeckDistribution;                               // 0x0510(0x0020) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0xC8];                                      // 0x0530(0x00C8) MISSED OFFSET
+	TArray<class URepairableComponent*>                RepairablePoints;                                         // 0x05F8(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -5780,7 +5836,7 @@ public:
 
 
 // Class Athena.LaunchableProjectile
-// 0x0108 (0x05A0 - 0x0498)
+// 0x0110 (0x05A8 - 0x0498)
 class ALaunchableProjectile : public AActor
 {
 public:
@@ -5803,9 +5859,9 @@ public:
 	bool                                               DestroyWhenEnteringWater;                                 // 0x0500(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x17];                                      // 0x0501(0x0017) MISSED OFFSET
 	class UStaticMeshComponent*                        StaticMeshComponent;                                      // 0x0518(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x28];                                      // 0x0520(0x0028) MISSED OFFSET
-	class UParticleSystemComponent*                    TrailEffect;                                              // 0x0548(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x50];                                      // 0x0550(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x8];                                       // 0x0520(0x0008) MISSED OFFSET
+	class UParticleSystemComponent*                    TrailEffect;                                              // 0x0528(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x78];                                      // 0x0530(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5828,16 +5884,16 @@ public:
 
 
 // Class Athena.CannonProjectile
-// 0x0038 (0x05D8 - 0x05A0)
+// 0x0038 (0x05E0 - 0x05A8)
 class ACannonProjectile : public ALaunchableProjectile
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x05A0(0x0008) MISSED OFFSET
-	float                                              DamageAmount;                                             // 0x05A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
-	struct FShipPartsDamageMap                         ShipDamage;                                               // 0x05B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	class UExplosionComponent*                         ExplosionComponent;                                       // 0x05C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x05C8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
+	float                                              DamageAmount;                                             // 0x05B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x05B4(0x0004) MISSED OFFSET
+	struct FShipPartsDamageMap                         ShipDamage;                                               // 0x05B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	class UExplosionComponent*                         ExplosionComponent;                                       // 0x05C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x05D0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5994,41 +6050,42 @@ public:
 
 
 // Class Athena.AthenaPlayerController
-// 0x09D8 (0x1160 - 0x0788)
+// 0x09E0 (0x1168 - 0x0788)
 class AAthenaPlayerController : public ATestablePlayerController
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0788(0x0028) MISSED OFFSET
-	class UPlayerPermissionsComponent*                 PlayerPermissionsComponent;                               // 0x07B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerTelemetryComponent*                   PlayerTelemetryComponent;                                 // 0x07B8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerStatsComponent*                       PlayerStatsComponent;                                     // 0x07C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerHeroStatsComponent*                   PlayerHeroStatsComponent;                                 // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerWalletComponent*                      PlayerWalletComponent;                                    // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBoxedRpcDispatcherComponent*                BoxedRpcDispatcherComponent;                              // 0x07D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerEntitlementComponent*                 PlayerEntitlementComponent;                               // 0x07E0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerMigratableStatusComponent*            PlayerMigratableStatusComponent;                          // 0x07E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UEmblemComponent*                            EmblemComponent;                                          // 0x07F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerCompanyComponent*                     PlayerCompanyComponent;                                   // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class URewardComponent*                            RewardComponent;                                          // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerNonVerbalComponent*                   PlayerNonVerbalComponent;                                 // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerCrewComponent*                        PlayerCrewComponent;                                      // 0x0810(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPlayerMuteComponent*                        PlayerMuteComponent;                                      // 0x0818(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UPopUpNotificationComponent*                 PopUpNotificationComponent;                               // 0x0820(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UEncounterListenerComponent*                 EncounterListenerComponent;                               // 0x0828(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAthenaTutorialComponent*                    TutorialComponent;                                        // 0x0830(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	float                                              InputRawYawScale;                                         // 0x0838(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	float                                              InputRawPitchScale;                                       // 0x083C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	struct FInventoryMemory                            InventoryMemory;                                          // 0x0840(0x0050)
-	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0890(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     CinematicCameraControllerLocation;                        // 0x0898(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    CinematicCameraControllerRotation;                        // 0x08A4(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x840];                                     // 0x08B0(0x0840) MISSED OFFSET
-	struct FGuid                                       ClientSessionId;                                          // 0x10F0(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x1100(0x0028) (Net)
-	unsigned char                                      UnknownData02[0x30];                                      // 0x1128(0x0030) MISSED OFFSET
-	TEnumAsByte<EFlameOfFateType>                      DeathFlameOfFateType;                                     // 0x1158(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EFlameOfFateType>                      FlameOfFateType;                                          // 0x1159(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x115A(0x0006) MISSED OFFSET
+	class UPioneerComponent*                           PioneerComponent;                                         // 0x07B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerPermissionsComponent*                 PlayerPermissionsComponent;                               // 0x07B8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerTelemetryComponent*                   PlayerTelemetryComponent;                                 // 0x07C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerStatsComponent*                       PlayerStatsComponent;                                     // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerHeroStatsComponent*                   PlayerHeroStatsComponent;                                 // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerWalletComponent*                      PlayerWalletComponent;                                    // 0x07D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBoxedRpcDispatcherComponent*                BoxedRpcDispatcherComponent;                              // 0x07E0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerEntitlementComponent*                 PlayerEntitlementComponent;                               // 0x07E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerMigratableStatusComponent*            PlayerMigratableStatusComponent;                          // 0x07F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UEmblemComponent*                            EmblemComponent;                                          // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerCompanyComponent*                     PlayerCompanyComponent;                                   // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class URewardComponent*                            RewardComponent;                                          // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerNonVerbalComponent*                   PlayerNonVerbalComponent;                                 // 0x0810(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerCrewComponent*                        PlayerCrewComponent;                                      // 0x0818(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPlayerMuteComponent*                        PlayerMuteComponent;                                      // 0x0820(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UPopUpNotificationComponent*                 PopUpNotificationComponent;                               // 0x0828(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UEncounterListenerComponent*                 EncounterListenerComponent;                               // 0x0830(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAthenaTutorialComponent*                    TutorialComponent;                                        // 0x0838(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	float                                              InputRawYawScale;                                         // 0x0840(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	float                                              InputRawPitchScale;                                       // 0x0844(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	struct FInventoryMemory                            InventoryMemory;                                          // 0x0848(0x0050)
+	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0898(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     CinematicCameraControllerLocation;                        // 0x08A0(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    CinematicCameraControllerRotation;                        // 0x08AC(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x840];                                     // 0x08B8(0x0840) MISSED OFFSET
+	struct FGuid                                       ClientSessionId;                                          // 0x10F8(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x1108(0x0028) (Net)
+	unsigned char                                      UnknownData02[0x30];                                      // 0x1130(0x0030) MISSED OFFSET
+	TEnumAsByte<EFlameOfFateType>                      DeathFlameOfFateType;                                     // 0x1160(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EFlameOfFateType>                      FlameOfFateType;                                          // 0x1161(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x1162(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6048,14 +6105,14 @@ public:
 
 
 // Class Athena.OnlineAthenaPlayerController
-// 0x0040 (0x11A0 - 0x1160)
+// 0x0040 (0x11A8 - 0x1168)
 class AOnlineAthenaPlayerController : public AAthenaPlayerController
 {
 public:
-	struct FIdleTimeTracker                            IdleTimeTracker;                                          // 0x1160(0x0038) (Edit)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x1198(0x0001) MISSED OFFSET
-	bool                                               IdleDisconnectEnabled;                                    // 0x1199(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x119A(0x0006) MISSED OFFSET
+	struct FIdleTimeTracker                            IdleTimeTracker;                                          // 0x1168(0x0038) (Edit)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x11A0(0x0001) MISSED OFFSET
+	bool                                               IdleDisconnectEnabled;                                    // 0x11A1(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x11A2(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6070,7 +6127,7 @@ public:
 
 
 // Class Athena.TestOnlineAthenaPlayerControllerNoEvents
-// 0x0000 (0x11A0 - 0x11A0)
+// 0x0000 (0x11A8 - 0x11A8)
 class ATestOnlineAthenaPlayerControllerNoEvents : public AOnlineAthenaPlayerController
 {
 public:
@@ -6085,12 +6142,12 @@ public:
 
 
 // Class Athena.TestAthenaPlayerController
-// 0x0018 (0x1178 - 0x1160)
+// 0x0018 (0x1180 - 0x1168)
 class ATestAthenaPlayerController : public AAthenaPlayerController
 {
 public:
-	class UForceFeedbackEffect*                        LastReceivedForceFeedbackEffect;                          // 0x1160(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1168(0x0010) MISSED OFFSET
+	class UForceFeedbackEffect*                        LastReceivedForceFeedbackEffect;                          // 0x1168(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x1170(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6107,7 +6164,7 @@ public:
 
 
 // Class Athena.TestAthenaPlayerControllerWithAthenaPlayerCameraManager
-// 0x0000 (0x1178 - 0x1178)
+// 0x0000 (0x1180 - 0x1180)
 class ATestAthenaPlayerControllerWithAthenaPlayerCameraManager : public ATestAthenaPlayerController
 {
 public:
@@ -6137,12 +6194,12 @@ public:
 
 
 // Class Athena.TestPlayerRelevancyAthenaPlayerController
-// 0x0028 (0x1188 - 0x1160)
+// 0x0028 (0x1190 - 0x1168)
 class ATestPlayerRelevancyAthenaPlayerController : public AAthenaPlayerController
 {
 public:
-	struct FScriptMulticastDelegate                    OnQueryRelevancyCallback;                                 // 0x1160(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x1170(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnQueryRelevancyCallback;                                 // 0x1168(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x1178(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6368,7 +6425,7 @@ public:
 
 
 // Class Athena.WieldableItem
-// 0x0360 (0x07F8 - 0x0498)
+// 0x0330 (0x07C8 - 0x0498)
 class AWieldableItem : public AActor
 {
 public:
@@ -6378,33 +6435,32 @@ public:
 	class UActionRulesComponent*                       ActionRulesComponent;                                     // 0x04E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UClass*                                      AnimationKey;                                             // 0x04F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FObjectMessagingDispatcher                  MessagingDispatcher;                                      // 0x04F8(0x00A0) (BlueprintVisible)
-	class FString                                      ItemName;                                                 // 0x0598(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UWwiseEvent*                                 EquipSfx;                                                 // 0x05A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 UnequipSfx;                                               // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WielderLandedJumpSfx;                                     // 0x05B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WielderFootstepLayerOneshot;                              // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       PlayerWalkSpeedRtpc;                                      // 0x05C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     WwiseSfxPool;                                             // 0x05D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EWieldableItemSize>                    ItemSize;                                                 // 0x05D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x05D9(0x0007) MISSED OFFSET
-	struct FDetailAppearenceDesc                       DetailAppearence;                                         // 0x05E0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	bool                                               PropagateVisibilityToChildren;                            // 0x0600(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0601(0x0003) MISSED OFFSET
-	struct FName                                       AINoiseTag;                                               // 0x0604(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x060C(0x0004) MISSED OFFSET
-	class UClass*                                      ItemCategory;                                             // 0x0610(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AItemInfo*                                   ItemInfo;                                                 // 0x0618(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UMeshComponent*                              StashedMeshComponent;                                     // 0x0620(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       StashedMeshAttachSocket;                                  // 0x0628(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ServerWieldAttachSocket;                                  // 0x0630(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPhrasesRadialDataAsset*                     Phrases;                                                  // 0x0638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     CachedFirstPersonProxyMesh;                               // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	class UObject*                                     CachedThirdPersonProxyMesh;                               // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x128];                                     // 0x0650(0x0128) MISSED OFFSET
-	class AInterpolatingItem*                          InterpolatingItem;                                        // 0x0778(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x50];                                      // 0x0780(0x0050) MISSED OFFSET
-	class UWieldableItemVfxComponent*                  WieldableItemVfxComponent;                                // 0x07D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x20];                                      // 0x07D8(0x0020) MISSED OFFSET
+	class UWwiseEvent*                                 EquipSfx;                                                 // 0x0598(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 UnequipSfx;                                               // 0x05A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WielderLandedJumpSfx;                                     // 0x05A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WielderFootstepLayerOneshot;                              // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       PlayerWalkSpeedRtpc;                                      // 0x05B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     WwiseSfxPool;                                             // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWieldableItemSize>                    ItemSize;                                                 // 0x05C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x05C9(0x0007) MISSED OFFSET
+	struct FDetailAppearenceDesc                       DetailAppearence;                                         // 0x05D0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	bool                                               PropagateVisibilityToChildren;                            // 0x05F0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x05F1(0x0003) MISSED OFFSET
+	struct FName                                       AINoiseTag;                                               // 0x05F4(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x05FC(0x0004) MISSED OFFSET
+	class UClass*                                      ItemCategory;                                             // 0x0600(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AItemInfo*                                   ItemInfo;                                                 // 0x0608(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UMeshComponent*                              StashedMeshComponent;                                     // 0x0610(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       StashedMeshAttachSocket;                                  // 0x0618(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ServerWieldAttachSocket;                                  // 0x0620(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPhrasesRadialDataAsset*                     Phrases;                                                  // 0x0628(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     CachedFirstPersonProxyMesh;                               // 0x0630(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	class UObject*                                     CachedThirdPersonProxyMesh;                               // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x128];                                     // 0x0640(0x0128) MISSED OFFSET
+	class AInterpolatingItem*                          InterpolatingItem;                                        // 0x0768(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x30];                                      // 0x0770(0x0030) MISSED OFFSET
+	class UWieldableItemVfxComponent*                  WieldableItemVfxComponent;                                // 0x07A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x20];                                      // 0x07A8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6426,7 +6482,7 @@ public:
 
 
 // Class Athena.SkeletalMeshWieldableItem
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class ASkeletalMeshWieldableItem : public AWieldableItem
 {
 public:
@@ -6441,18 +6497,18 @@ public:
 
 
 // Class Athena.TreasureMap
-// 0x0080 (0x0878 - 0x07F8)
+// 0x0080 (0x0848 - 0x07C8)
 class ATreasureMap : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0810(0x0010) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x40];                                      // 0x0830(0x0040) MISSED OFFSET
-	TEnumAsByte<EQuestMapIcon>                         QuestMapIcon;                                             // 0x0870(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0871(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x07E0(0x0010) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x40];                                      // 0x0800(0x0040) MISSED OFFSET
+	TEnumAsByte<EQuestMapIcon>                         QuestMapIcon;                                             // 0x0840(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0841(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -6982,7 +7038,10 @@ public:
 	}
 
 
-	class AActor* SpawnItem(class UClass* InWhat, const struct FTransform& InWhere, bool Tracked);
+	class AActor* SpawnPhasedItem(class UClass* InWhat, const struct FTransform& InWhere, bool Tracked, bool Critical, const struct FText& FailureMessage);
+	class AActor* SpawnPhasedActor(class UClass* InWhat, const struct FTransform& InTransform, class AActor* MapActor, const struct FName& SocketName);
+	class AActor* SpawnItem(class UClass* InWhat, const struct FTransform& InWhere, bool Tracked, bool Critical, const struct FText& FailureMessage);
+	class AItemInfo* SpawnDroppedItem(class APawn* InWho, class UClass* InWhat, bool Tracked, bool Critical, const struct FText& FailureMessage);
 	class AActor* SpawnActor(class UClass* InWhat, const struct FTransform& InWhere, bool Tracked);
 	void SignalComplete();
 	void SetVariables(const struct FGenericStruct& OutStruct);
@@ -6991,20 +7050,24 @@ public:
 	void OnParticipantJoin(class AActor* Participant);
 	void OnEnd();
 	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
+	void GiveEnchantedSpyglassToAllParticipants();
 	void GiveCompassToAllParticipants();
 	void GetVariables(struct FGenericStruct* OutStruct);
+	class UTaleQuestService* GetService(class UClass* ServiceClass);
 	void GetParticipants(TArray<class AActor*>* Participants);
 	class UObject* GetDefinition();
+	void Delay(float Duration, const struct FLatentActionInfo& LatentInfo);
 	void ChangeCompassTargetByLocation(const struct FVector& TargetLocation, TEnumAsByte<ETargetUpdateReason> Reason);
 	void ChangeCompassTargetByActor(class AActor* TargetActor, TEnumAsByte<ETargetUpdateReason> Reason);
 };
 
 
 // Class Athena.BlueprintSpawnAIStepBase
-// 0x0000 (0x0090 - 0x0090)
+// 0x0018 (0x00A8 - 0x0090)
 class UBlueprintSpawnAIStepBase : public UBlueprintStepBase
 {
 public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0090(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7016,6 +7079,37 @@ public:
 	void OnSpawn(class APawn* Pawn);
 	void OnSetSpawnLocationActor(class AActor* Actor);
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
+	void OnBattleWon();
+};
+
+
+// Class Athena.DamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UDamagerType : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamagerType"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.BlunderbussDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UBlunderbussDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.BlunderbussDamagerType"));
+		return ptr;
+	}
+
 };
 
 
@@ -7155,25 +7249,27 @@ public:
 
 
 // Class Athena.ItemInfo
-// 0x0080 (0x0518 - 0x0498)
+// 0x0128 (0x05C0 - 0x0498)
 class AItemInfo : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0498(0x0018) MISSED OFFSET
-	bool                                               CanBeStoredInInventory;                                   // 0x04B0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04B1(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnItemPickedUpDelegate;                                   // 0x04B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UClass*                                      WieldableType;                                            // 0x04C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ProxyType;                                                // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ProjectileType;                                           // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             LoadedItemParticleTemplate;                               // 0x04E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UItemDesc*                                   Desc;                                                     // 0x04E8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EItemRepresentation>                   CurrentRepresentation;                                    // 0x04F0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x04F1(0x0007) MISSED OFFSET
-	class AActor*                                      CurrentRepresentationInstance;                            // 0x04F8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	class AActor*                                      CurrentOwner;                                             // 0x0500(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	class AActor*                                      TutorialOwner;                                            // 0x0508(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0510(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0498(0x0020) MISSED OFFSET
+	bool                                               CanBeStoredInInventory;                                   // 0x04B8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04B9(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnItemPickedUpDelegate;                                   // 0x04C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UClass*                                      WieldableType;                                            // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ProxyType;                                                // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ProjectileType;                                           // 0x04E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             LoadedItemParticleTemplate;                               // 0x04E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UItemDesc*                                   Desc;                                                     // 0x04F0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EItemRepresentation>                   CurrentRepresentation;                                    // 0x04F8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x04F9(0x0007) MISSED OFFSET
+	class AActor*                                      CurrentRepresentationInstance;                            // 0x0500(0x0008) (Edit, Net, ZeroConstructor, EditConst, IsPlainOldData)
+	class AActor*                                      CurrentOwner;                                             // 0x0508(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	class AActor*                                      TutorialOwner;                                            // 0x0510(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xA1];                                      // 0x0518(0x00A1) MISSED OFFSET
+	bool                                               DoNotConsiderForMigrationGather;                          // 0x05B9(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x6];                                       // 0x05BA(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7182,6 +7278,7 @@ public:
 	}
 
 
+	void OnRep_CurrentRepresentationInstance();
 	class UClass* GetItemType();
 	class UClass* GetItemCategory();
 	class AActor* GetItem();
@@ -7192,7 +7289,7 @@ public:
 
 
 // Class Athena.NonStorableItemInfo
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x05C0 - 0x05C0)
 class ANonStorableItemInfo : public AItemInfo
 {
 public:
@@ -7207,29 +7304,29 @@ public:
 
 
 // Class Athena.BootyItemInfo
-// 0x00E0 (0x05F8 - 0x0518)
+// 0x00E0 (0x06A0 - 0x05C0)
 class ABootyItemInfo : public ANonStorableItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0518(0x0010) MISSED OFFSET
-	TEnumAsByte<EBootyTypes>                           BootyType;                                                // 0x0528(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0529(0x0003) MISSED OFFSET
-	struct FGuid                                       Id;                                                       // 0x052C(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x053C(0x0004) MISSED OFFSET
-	TArray<struct FPlayerStat>                         HandInPlayerStats;                                        // 0x0540(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         HandInStolenPlayerStats;                                  // 0x0550(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         HandInAsPirateLegendPlayerStats;                          // 0x0560(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         HandInOnSchedulePlayerStats;                              // 0x0570(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         HandInAsPirateLegendOnSchedulePlayerStats;                // 0x0580(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UPopUpMessageDesc*                           DiscoveredPopupDesc;                                      // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRewardId                                   HandInRewardId;                                           // 0x0598(0x0008) (Edit, DisableEditOnInstance)
-	struct FName                                       Rarity;                                                   // 0x05A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x18];                                      // 0x05A8(0x0018) MISSED OFFSET
-	TEnumAsByte<ESpawnedItemSource>                    SpawnSource;                                              // 0x05C0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x05C1(0x0003) MISSED OFFSET
-	struct FGuid                                       FirstOwnedByCrewId;                                       // 0x05C4(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       LastOwnedByCrewId;                                        // 0x05D4(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x14];                                      // 0x05E4(0x0014) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
+	TEnumAsByte<EBootyTypes>                           BootyType;                                                // 0x05D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x05D1(0x0003) MISSED OFFSET
+	struct FGuid                                       Id;                                                       // 0x05D4(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x05E4(0x0004) MISSED OFFSET
+	TArray<struct FPlayerStat>                         HandInPlayerStats;                                        // 0x05E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         HandInStolenPlayerStats;                                  // 0x05F8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         HandInAsPirateLegendPlayerStats;                          // 0x0608(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         HandInOnSchedulePlayerStats;                              // 0x0618(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         HandInAsPirateLegendOnSchedulePlayerStats;                // 0x0628(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UPopUpMessageDesc*                           DiscoveredPopupDesc;                                      // 0x0638(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRewardId                                   HandInRewardId;                                           // 0x0640(0x0008) (Edit, DisableEditOnInstance)
+	struct FName                                       Rarity;                                                   // 0x0648(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x18];                                      // 0x0650(0x0018) MISSED OFFSET
+	TEnumAsByte<ESpawnedItemSource>                    SpawnSource;                                              // 0x0668(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0669(0x0003) MISSED OFFSET
+	struct FGuid                                       FirstOwnedByCrewId;                                       // 0x066C(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       LastOwnedByCrewId;                                        // 0x067C(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x14];                                      // 0x068C(0x0014) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7241,30 +7338,15 @@ public:
 
 
 // Class Athena.MerchantCrateItemInfo
-// 0x0010 (0x0608 - 0x05F8)
+// 0x0010 (0x06B0 - 0x06A0)
 class AMerchantCrateItemInfo : public ABootyItemInfo
 {
 public:
-	TArray<struct FMerchantCrateItemInfoFaunaBreedRarityEntry> FaunaBreedRarity;                                         // 0x05F8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FMerchantCrateItemInfoFaunaBreedRarityEntry> FaunaBreedRarity;                                         // 0x06A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MerchantCrateItemInfo"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MountpointInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMountpointInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountpointInterface"));
 		return ptr;
 	}
 
@@ -7336,7 +7418,7 @@ public:
 
 
 // Class Athena.FloatingItemProxy
-// 0x0148 (0x0840 - 0x06F8)
+// 0x0140 (0x0838 - 0x06F8)
 class AFloatingItemProxy : public AItemProxy
 {
 public:
@@ -7348,8 +7430,8 @@ public:
 	class AActor*                                      TutorialOwner;                                            // 0x07B0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 	bool                                               IsTutorialProxy;                                          // 0x07B8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x07B9(0x0007) MISSED OFFSET
-	struct FReplicatedPhysicsState                     ReplicatedPhysicsState;                                   // 0x07C0(0x0050) (Net)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0810(0x0030) MISSED OFFSET
+	struct FReplicatedPhysicsState                     ReplicatedPhysicsState;                                   // 0x07C0(0x0048) (Net)
+	unsigned char                                      UnknownData03[0x30];                                      // 0x0808(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7363,10 +7445,11 @@ public:
 
 
 // Class Athena.BootyProxy
-// 0x0000 (0x0840 - 0x0840)
+// 0x0008 (0x0840 - 0x0838)
 class ABootyProxy : public AFloatingItemProxy
 {
 public:
+	class URetractableComponent*                       RetractableComponent;                                     // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -7426,11 +7509,11 @@ public:
 
 
 // Class Athena.MerchantCrate
-// 0x0020 (0x0818 - 0x07F8)
+// 0x0020 (0x07E8 - 0x07C8)
 class AMerchantCrate : public ASkeletalMeshWieldableItem
 {
 public:
-	struct FMerchantCrateSfx                           FullCrateSfx;                                             // 0x07F8(0x0020) (Edit)
+	struct FMerchantCrateSfx                           FullCrateSfx;                                             // 0x07C8(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -7442,7 +7525,7 @@ public:
 
 
 // Class Athena.StaticMeshWieldableItem
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class AStaticMeshWieldableItem : public AWieldableItem
 {
 public:
@@ -7457,12 +7540,12 @@ public:
 
 
 // Class Athena.StaticMerchantCrate
-// 0x0028 (0x0820 - 0x07F8)
+// 0x0028 (0x07F0 - 0x07C8)
 class AStaticMerchantCrate : public AStaticMeshWieldableItem
 {
 public:
-	class URewindComponent*                            RewindComponent;                                          // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FMerchantCrateSfx                           FullCrateSfx;                                             // 0x0800(0x0020) (Edit)
+	class URewindComponent*                            RewindComponent;                                          // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FMerchantCrateSfx                           FullCrateSfx;                                             // 0x07D0(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -7520,11 +7603,11 @@ public:
 
 
 // Class Athena.MerchantCrateItemInfoMock
-// 0x0008 (0x0610 - 0x0608)
+// 0x0008 (0x06B8 - 0x06B0)
 class AMerchantCrateItemInfoMock : public AMerchantCrateItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0608(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x06B0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7536,7 +7619,7 @@ public:
 
 
 // Class Athena.CommonMerchantCrateItemInfoMock
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x06B8 - 0x06B8)
 class ACommonMerchantCrateItemInfoMock : public AMerchantCrateItemInfoMock
 {
 public:
@@ -7551,7 +7634,7 @@ public:
 
 
 // Class Athena.RareMerchantCrateItemInfoMock
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x06B8 - 0x06B8)
 class ARareMerchantCrateItemInfoMock : public AMerchantCrateItemInfoMock
 {
 public:
@@ -7566,7 +7649,7 @@ public:
 
 
 // Class Athena.LegendaryMerchantCrateItemInfoMock
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x06B8 - 0x06B8)
 class ALegendaryMerchantCrateItemInfoMock : public AMerchantCrateItemInfoMock
 {
 public:
@@ -7581,7 +7664,7 @@ public:
 
 
 // Class Athena.MythicalMerchantCrateItemInfoMock
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x06B8 - 0x06B8)
 class AMythicalMerchantCrateItemInfoMock : public AMerchantCrateItemInfoMock
 {
 public:
@@ -7611,7 +7694,7 @@ public:
 
 
 // Class Athena.TreasureChestItemInfo
-// 0x0000 (0x05F8 - 0x05F8)
+// 0x0000 (0x06A0 - 0x06A0)
 class ATreasureChestItemInfo : public ABootyItemInfo
 {
 public:
@@ -7647,7 +7730,7 @@ class ULayerInContainerComponent : public UStaticMeshComponent
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0630(0x0008) MISSED OFFSET
 	float                                              FadeRate;                                                 // 0x0638(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               IsTaken;                                                  // 0x063C(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               CanTake;                                                  // 0x063C(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x063D(0x0003) MISSED OFFSET
 	class ULayerInContainerComponent*                  LayerBlockingTakingThisLayer;                             // 0x0640(0x0008) (ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	TArray<class UMaterialInstanceDynamic*>            DynamicMaterials;                                         // 0x0648(0x0010) (ZeroConstructor, Transient)
@@ -7660,23 +7743,23 @@ public:
 	}
 
 
-	void OnRep_IsTaken();
+	void OnRep_CanTake();
 };
 
 
 // Class Athena.CollectorsChestItemInfo
-// 0x0060 (0x0658 - 0x05F8)
+// 0x0060 (0x0700 - 0x06A0)
 class ACollectorsChestItemInfo : public ATreasureChestItemInfo
 {
 public:
-	struct FRewardId                                   GoldInContainerRewardId;                                  // 0x05F8(0x0008) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0600(0x0018) MISSED OFFSET
-	class UGoldInContainerDataAsset*                   GoldInContainerDataAsset;                                 // 0x0618(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCollectorsChestSharedParamsDataAsset*       CollectorsChestSharedParams;                              // 0x0620(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UQuestBookPagesInContainerDataAsset*         PagesInContainerDataAsset;                                // 0x0628(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              CurrentLayerPriorityOrder;                                // 0x0630(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0640(0x0008) MISSED OFFSET
-	TArray<class AItemInfo*>                           ItemInfosToStore;                                         // 0x0648(0x0010) (ZeroConstructor)
+	struct FRewardId                                   GoldInContainerRewardId;                                  // 0x06A0(0x0008) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x06A8(0x0018) MISSED OFFSET
+	class UGoldInContainerDataAsset*                   GoldInContainerDataAsset;                                 // 0x06C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCollectorsChestSharedParamsDataAsset*       CollectorsChestSharedParams;                              // 0x06C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UQuestBookPagesInContainerDataAsset*         PagesInContainerDataAsset;                                // 0x06D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              CurrentLayerPriorityOrder;                                // 0x06D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x06E8(0x0008) MISSED OFFSET
+	TArray<class AItemInfo*>                           ItemInfosToStore;                                         // 0x06F0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -7688,7 +7771,7 @@ public:
 
 
 // Class Athena.WeepingChestItemInfo
-// 0x0000 (0x05F8 - 0x05F8)
+// 0x0000 (0x06A0 - 0x06A0)
 class AWeepingChestItemInfo : public ATreasureChestItemInfo
 {
 public:
@@ -7980,7 +8063,7 @@ public:
 
 
 // Class Athena.BountyReward
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class ABountyReward : public AStaticMeshWieldableItem
 {
 public:
@@ -8194,11 +8277,19 @@ public:
 
 
 // Class Athena.BTService_RunLoopingCustomAnimation
-// 0x0028 (0x0098 - 0x0070)
+// 0x0090 (0x0100 - 0x0070)
 class UBTService_RunLoopingCustomAnimation : public UBTService
 {
 public:
-	struct FBlackboardKeySelector                      LoopingCustomAnimationNameKey;                            // 0x0070(0x0028) (Edit)
+	bool                                               UseFixedLoopingCustomAnimationName;                       // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
+	struct FName                                       FixedLoopingCustomAnimationName;                          // 0x0074(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	struct FBlackboardKeySelector                      LoopingCustomAnimationNameKey;                            // 0x0080(0x0028) (Edit)
+	bool                                               GetAnimationDurations;                                    // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	struct FBlackboardKeySelector                      IntoAnimationDuration;                                    // 0x00B0(0x0028) (Edit)
+	struct FBlackboardKeySelector                      OutOfAnimationDuration;                                   // 0x00D8(0x0028) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -8273,7 +8364,7 @@ public:
 
 
 // Class Athena.BTTask_RunOneShotCustomAnimation
-// 0x0038 (0x0098 - 0x0060)
+// 0x0090 (0x00F0 - 0x0060)
 class UBTTask_RunOneShotCustomAnimation : public UBTTaskNode
 {
 public:
@@ -8282,6 +8373,10 @@ public:
 	struct FName                                       FixedOneShotCustomAnimationName;                          // 0x0064(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 	struct FBlackboardKeySelector                      OneShotCustomAnimationNameKey;                            // 0x0070(0x0028) (Edit)
+	bool                                               GetDurationAndEffectTime;                                 // 0x0098(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
+	struct FBlackboardKeySelector                      AnimationDuration;                                        // 0x00A0(0x0028) (Edit)
+	struct FBlackboardKeySelector                      AnimationEffectTime;                                      // 0x00C8(0x0028) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -8394,43 +8489,43 @@ public:
 
 
 // Class Athena.Bucket
-// 0x0118 (0x0910 - 0x07F8)
+// 0x0118 (0x08E0 - 0x07C8)
 class ABucket : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWwiseEvent*                                 ScoopSfx;                                                 // 0x0808(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 ThrowSfx;                                                 // 0x0810(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 ThrowVomitSfx;                                            // 0x0818(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ThrowSocketName;                                          // 0x0820(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     ThrowVfxFirstPerson;                                      // 0x0828(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     ThrowVfxThirdPerson;                                      // 0x0830(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     ThrowVomitVfxFirstPerson;                                 // 0x0838(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     ThrowVomitVfxThirdPerson;                                 // 0x0840(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ProjectileClass;                                          // 0x0848(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      VomitProjectileClass;                                     // 0x0850(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ScoopActionTime;                                          // 0x0858(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ScoopCompleteTime;                                        // 0x085C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ThrowActionTime;                                          // 0x0860(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ThrowCompleteTime;                                        // 0x0864(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RequestToleranceTimeOnServer;                             // 0x0868(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ProjectileSpeed;                                          // 0x086C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ProjectileAdditionalLiftAngle;                            // 0x0870(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WaterFillFromShip;                                        // 0x0874(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WaterFillFromSea;                                         // 0x0878(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WaterTransferFillAmountModifier;                          // 0x087C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ScoopBufferDistance;                                      // 0x0880(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     ScoopHitTestTraceChannel;                                 // 0x0884(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0885(0x0003) MISSED OFFSET
-	float                                              ThrowLiquidAINoiseRange;                                  // 0x0888(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x088C(0x0004) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class ULiquidContainerComponent*                   LiquidContainer;                                          // 0x0898(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FLiquidContents                             Contents;                                                 // 0x08A0(0x0040)
-	unsigned char                                      UnknownData03[0x1];                                       // 0x08E0(0x0001) MISSED OFFSET
-	TEnumAsByte<EThrowableLiquidType>                  FillState;                                                // 0x08E1(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2E];                                      // 0x08E2(0x002E) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWwiseEvent*                                 ScoopSfx;                                                 // 0x07D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 ThrowSfx;                                                 // 0x07E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 ThrowVomitSfx;                                            // 0x07E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ThrowSocketName;                                          // 0x07F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     ThrowVfxFirstPerson;                                      // 0x07F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     ThrowVfxThirdPerson;                                      // 0x0800(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     ThrowVomitVfxFirstPerson;                                 // 0x0808(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     ThrowVomitVfxThirdPerson;                                 // 0x0810(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ProjectileClass;                                          // 0x0818(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      VomitProjectileClass;                                     // 0x0820(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ScoopActionTime;                                          // 0x0828(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ScoopCompleteTime;                                        // 0x082C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThrowActionTime;                                          // 0x0830(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThrowCompleteTime;                                        // 0x0834(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RequestToleranceTimeOnServer;                             // 0x0838(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ProjectileSpeed;                                          // 0x083C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ProjectileAdditionalLiftAngle;                            // 0x0840(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WaterFillFromShip;                                        // 0x0844(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WaterFillFromSea;                                         // 0x0848(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WaterTransferFillAmountModifier;                          // 0x084C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ScoopBufferDistance;                                      // 0x0850(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     ScoopHitTestTraceChannel;                                 // 0x0854(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0855(0x0003) MISSED OFFSET
+	float                                              ThrowLiquidAINoiseRange;                                  // 0x0858(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x085C(0x0004) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0860(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class ULiquidContainerComponent*                   LiquidContainer;                                          // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FLiquidContents                             Contents;                                                 // 0x0870(0x0040)
+	unsigned char                                      UnknownData03[0x1];                                       // 0x08B0(0x0001) MISSED OFFSET
+	TEnumAsByte<EThrowableLiquidType>                  FillState;                                                // 0x08B1(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2E];                                      // 0x08B2(0x002E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8515,22 +8610,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipSpawnLocation"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.SeaId
-// 0x0008 (0x0030 - 0x0028)
-class USeaId : public UObject
-{
-public:
-	struct FName                                       SeaName;                                                  // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SeaId"));
 		return ptr;
 	}
 
@@ -8709,8 +8788,9 @@ public:
 	class UBuoyancyComponent*                          BuoyancyComponent;                                        // 0x05D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UDitherComponent*                            DitherComponent;                                          // 0x05D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x05E0(0x0070) (Net)
-	struct FReplicatedPhysicsState                     ReplicatedPhysicsState;                                   // 0x0650(0x0050) (Net)
-	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x06A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FReplicatedPhysicsState                     ReplicatedPhysicsState;                                   // 0x0650(0x0048) (Net)
+	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x0698(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class URetractableComponent*                       RetractableComponent;                                     // 0x06A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x48];                                      // 0x06A8(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -8757,13 +8837,14 @@ public:
 
 
 // Class Athena.BuriedTreasureLocation
-// 0x0020 (0x04B8 - 0x0498)
+// 0x0028 (0x04C0 - 0x0498)
 class ABuriedTreasureLocation : public AActor
 {
 public:
 	class USphereComponent*                            BaseComponent;                                            // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	TArray<class UPhysicalMaterial*>                   DiggableSurfaceTypes;                                     // 0x04A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
+	bool                                               StopVerification;                                         // 0x04B0(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x04B1(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8916,6 +8997,22 @@ public:
 };
 
 
+// Class Athena.CameraYawModifier
+// 0x0040 (0x0088 - 0x0048)
+class UCameraYawModifier : public UCameraModifier
+{
+public:
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CameraYawModifier"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.Campfire
 // 0x00F8 (0x0590 - 0x0498)
 class ACampfire : public AActor
@@ -9011,16 +9108,31 @@ public:
 
 
 // Class Athena.CannonBall
-// 0x0010 (0x0808 - 0x07F8)
+// 0x0010 (0x07D8 - 0x07C8)
 class ACannonBall : public AStaticMeshWieldableItem
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UConsumableWieldableComponent*               ConsumableWieldable;                                      // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UConsumableWieldableComponent*               ConsumableWieldable;                                      // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CannonBall"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.CannonDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UCannonDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CannonDamagerType"));
 		return ptr;
 	}
 
@@ -9070,6 +9182,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CannonRotationStatus"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.CannonSplashDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UCannonSplashDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CannonSplashDamagerType"));
 		return ptr;
 	}
 
@@ -9245,19 +9372,476 @@ public:
 };
 
 
+// Class Athena.LauncherParentInterface
+// 0x0000 (0x0028 - 0x0028)
+class ULauncherParentInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LauncherParentInterface"));
+		return ptr;
+	}
+
+
+	TArray<class AActor*> GetProjectileIgnoreActors();
+	struct FVector GetInheritedLaunchVelocity();
+};
+
+
+// Class Athena.ShipCurseComponent
+// 0x00F8 (0x01C8 - 0x00D0)
+class UShipCurseComponent : public UActorComponent
+{
+public:
+	TArray<class AActor*>                              CachedShipAttachedActors;                                 // 0x00D0(0x0010) (ZeroConstructor, Transient)
+	TArray<class AMast*>                               FoundMasts;                                               // 0x00E0(0x0010) (ZeroConstructor)
+	class ACapstan*                                    ShipCapstan;                                              // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class ACannon*>                             ShipCannons;                                              // 0x00F8(0x0010) (ZeroConstructor)
+	class AWheel*                                      ShipWheel;                                                // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UFixedIntentComponent*>               SailFixedIntentComponents;                                // 0x0110(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0120(0x0070) MISSED OFFSET
+	float                                              ShipCapstanTargetRatio;                                   // 0x0190(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0194(0x0004) MISSED OFFSET
+	TArray<struct FShipActiveCurseFXData>              ActiveCurseFX;                                            // 0x0198(0x0010) (Net, ZeroConstructor)
+	TArray<class AActor*>                              ActorsAffectedByToggleInteractionsCurse;                  // 0x01A8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x01B8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipCurseComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_ActorsAffectedByToggleInteractionsCurse(TArray<class AActor*> PreviousActorsAffectedByToggleInteractionsCurse);
+	void OnRep_ActiveCurseFX(TArray<struct FShipActiveCurseFXData> PreviousActiveCurseFX);
+	void ApplyIntentOnSails(float InNewIntent);
+};
+
+
+// Class Athena.ShipDynamicsTargetInterface
+// 0x0000 (0x0028 - 0x0028)
+class UShipDynamicsTargetInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipDynamicsTargetInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RammerInterface
+// 0x0000 (0x0028 - 0x0028)
+class URammerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RammerInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ShipLiveryDescAsset
+// 0x0020 (0x0048 - 0x0028)
+class UShipLiveryDescAsset : public UShipPartDescAsset
+{
+public:
+	struct FShipLivery                                 ShipLivery;                                               // 0x0028(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipLiveryDescAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ShipLiveryComponent
+// 0x0058 (0x0128 - 0x00D0)
+class UShipLiveryComponent : public UActorComponent
+{
+public:
+	TArray<struct FShipLivery>                         LiveryDescs;                                              // 0x00D0(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x48];                                      // 0x00E0(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipLiveryComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TeleportLocationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTeleportLocationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TeleportLocationInterface"));
+		return ptr;
+	}
+
+
+	struct FTeleportLocation GetTeleportLocationForCharacter(class AAthenaCharacter* Character);
+	TArray<struct FTeleportLocation> GetAllTeleportLocationsForCharacter(class AAthenaCharacter* Character);
+};
+
+
+// Class Athena.RainZoneInterface
+// 0x0000 (0x0028 - 0x0028)
+class URainZoneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RainZoneInterface"));
+		return ptr;
+	}
+
+
+	struct FRainZoneParametersAndLocation GetRainZoneParametersAtTime(double InTime);
+	struct FRainZoneParametersAndLocation GetRainZoneParameters();
+};
+
+
+// Class Athena.RainZoneServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class URainZoneServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RainZoneServiceInterface"));
+		return ptr;
+	}
+
+
+	void UnregisterRainZoneFromService(const TScriptInterface<class URainZoneInterface>& RainZone);
+	void RegisterRainZoneWithService(const TScriptInterface<class URainZoneInterface>& RainZone);
+	struct FRainZoneParametersAndLocation GetRainZone(int RainZoneIndex);
+	float GetRainStrengthAtTime(const struct FVector& Position, double InTime);
+	float GetRainStrength(const struct FVector& Position);
+	int GetNumberOfRainZones();
+	TArray<struct FRainZoneParametersAndLocation> GetAllRainZones();
+};
+
+
+// Class Athena.SurfaceWaterComponent
+// 0x0090 (0x0640 - 0x05B0)
+class USurfaceWaterComponent : public UPrimitiveComponent
+{
+public:
+	struct FVector                                     BoxExtent;                                                // 0x05B0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              UpdateCullDistance;                                       // 0x05BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  AddWaterMaskTexture;                                      // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  BaseHeightTexture;                                        // 0x05C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                TextureSizeX;                                             // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                TextureSizeY;                                             // 0x05D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WetnessPerStrength;                                       // 0x05D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WetnessDecayRate;                                         // 0x05DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05E0(0x0020) MISSED OFFSET
+	struct FVector4                                    SplatData;                                                // 0x0600(0x0010) (Net, ZeroConstructor, IsPlainOldData)
+	class UTextureRenderTarget2D*                      WaterHeightTexture;                                       // 0x0610(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      WaterHeightTexturePingPong;                               // 0x0618(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      NormalTexture;                                            // 0x0620(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      OutflowTexture;                                           // 0x0628(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UTextureRenderTarget2D*                      OutflowTexturePingPong;                                   // 0x0630(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SurfaceWaterComponent"));
+		return ptr;
+	}
+
+
+	void SetSimulationActive(bool IsActive);
+	void OnRep_AddWater();
+	class UTexture* GetWaterTexture();
+	class UTexture* GetNormalTexture();
+	struct FVector ConvertToWaterSpace(const struct FVector& WorldSpacePosition);
+	void ClearWaterTexture(const struct FLinearColor& ClearColor);
+	void AddWater(const struct FVector& Position, float Radius, float Strength, bool CheckBounds);
+};
+
+
+// Class Athena.DrowningComponentParams
+// 0x00D0 (0x00F8 - 0x0028)
+class UDrowningComponentParams : public UDataAsset
+{
+public:
+	struct FBlendableDrowningParams                    DrowningParameters;                                       // 0x0028(0x0028) (Edit)
+	class UWwiseObjectPoolWrapper*                     DrowningEmitterPool;                                      // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StartDrowningSfx;                                         // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopDrowningSfx;                                          // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StartDrowningSfxRemotePlayer;                             // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopDrowningSfxRemotePlayer;                              // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 SurfaceBreathSfxSoft;                                     // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 SurfaceBreathSfxMed;                                      // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 SurfaceBreathSfxHard;                                     // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 BubblesSfx;                                               // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       PlayerDrowningAmountRtpc;                                 // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RemotePlayerDrowningAmountRtpc;                           // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     BubblesFirstPerson;                                       // 0x00A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     BubblesThirdPerson;                                       // 0x00B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       BubblesAmountRtpc;                                        // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       BubblesFirstPersonSocket;                                 // 0x00C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       BubblesThirdPersonSocket;                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       BubblesRateParam;                                         // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       BubblesLargeRateParam;                                    // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 BubbleRateTimeCurve;                                      // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   BubbleIntervalForOxygenLevel;                             // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LargeBubbleStartTime;                                     // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DrowningComponentParams"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.WaterModifierZoneInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWaterModifierZoneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaterModifierZoneInterface"));
+		return ptr;
+	}
+
+
+	class UClass* GetWaterModifierZoneType();
+	struct FWaterModifierZoneParametersAndLocation GetWaterModifierZoneParameters();
+};
+
+
+// Class Athena.WaterModifierZoneServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWaterModifierZoneServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaterModifierZoneServiceInterface"));
+		return ptr;
+	}
+
+
+	void UnregisterWaterModifierZoneFromService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone);
+	void RegisterWaterModifierZoneWithService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone);
+	TArray<struct FWaterModifierZoneParametersAndLocation> GetWaterModifierZones(class UClass* Type);
+	struct FWaterModifierZoneParametersAndLocation GetWaterModifierZone(int WaterModifierZoneIndex);
+	float GetWaterModifierStrength(class UClass* Type, const struct FVector& Position);
+	struct FBlendableDrowningParams GetWaterModifierDrowningParams(class AAthenaCharacter* Actor, const struct FBlendableDrowningParams& DefaultParams);
+	int GetNumberOfWaterModifierZonesByType(class UClass* Type);
+	int GetNumberOfWaterModifierZones();
+	float GetDragScalarAtLocation(const struct FVector& Position);
+	TArray<struct FWaterModifierZoneParametersAndLocation> GetAllWaterModifierZones();
+};
+
+
+// Class Athena.DamageablePartsInterface
+// 0x0000 (0x0028 - 0x0028)
+class UDamageablePartsInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageablePartsInterface"));
+		return ptr;
+	}
+
+
+	void UnregisterDamageablePart(class AActor* DamageableActor);
+	void RegisterDamageablePart(class AActor* DamageableActor);
+	TArray<class AActor*> GetDamageableParts();
+};
+
+
+// Class Athena.Ship
+// 0x0D28 (0x11C0 - 0x0498)
+class AShip : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0498(0x0068) MISSED OFFSET
+	struct FShipPartConnections                        PartConnections;                                          // 0x0500(0x0098) (Edit)
+	class UStaticMeshComponent*                        BoatCollision;                                            // 0x0598(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBasisComponent*                             BoatBasis;                                                // 0x05A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        OverlapHit;                                               // 0x05A8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        BelowDeckVolume;                                          // 0x05B0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        CabinVolume;                                              // 0x05B8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FObjectMessagingDispatcher                  ObjectMessageDispatcher;                                  // 0x05C0(0x00A0) (BlueprintVisible)
+	class UTeleportLocationRetrievalComponent*         TeleportLocationRetrievalComponent;                       // 0x0660(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        ShipInternalWaterComponent;                               // 0x0668(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USinkingComponent*                           SinkingComponent;                                         // 0x0670(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShipHullCollisionComponent*                 HullCollisionComponent;                                   // 0x0678(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTetherCustomisationComponent*               TetherCustomisationComponent;                             // 0x0680(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShipStuckDetectionComponent*                StuckDetectionComponent;                                  // 0x0688(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0690(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStatusEffectPersistenceComponent*           StatusEffectPersistenceComponent;                         // 0x0698(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShipCurseComponent*                         ShipCurseComponent;                                       // 0x06A0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInstancedNavMeshComponent*                  InstancedNavMeshComponent;                                // 0x06A8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FWaterBuoyancy                              Buoyancy;                                                 // 0x06B0(0x00B8) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0768(0x0008) MISSED OFFSET
+	class UCrewOwnershipComponent*                     CrewOwnershipComponent;                                   // 0x0770(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UOnboardCharacterTrackerComponent*           OnboardCharacterTrackerComponent;                         // 0x0778(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class URewindComponent*                            RewindComponent;                                          // 0x0780(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UShipLiveryComponent*                        LiveryComponent;                                          // 0x0788(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UReplicatedShipPartCustomizationComponent*   HullLiveryCustomizationComponent;                         // 0x0790(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UReplicatedShipPartCustomizationComponent*   SailsLiveryCustomizationComponent;                        // 0x0798(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass*                                      RammerType;                                               // 0x07A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UGroupedInteractableAreaComponent*           GroupedInteractableAreaComponent;                         // 0x07A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FShipConfigurationSettings                  ShipConfigurationSettings;                                // 0x07B0(0x0014)
+	float                                              RainFillRate;                                             // 0x07C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RainTimePerDrop;                                          // 0x07C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RainDropScale;                                            // 0x07CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RainDropRadius;                                           // 0x07D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x07D4(0x0004) MISSED OFFSET
+	TArray<struct FVector>                             AITargetVisibilityPoints;                                 // 0x07D8(0x0010) (Edit, ZeroConstructor)
+	struct FAchievementSinkAnotherCrewsShip            AchievementSinkOtherCrewsShip;                            // 0x07E8(0x0018) (Edit)
+	struct FAchievementSailThroughStormAtNightWithLightsOff AchievementSailThroughStormAtNightWithLightsOff;          // 0x0800(0x0080) (Edit)
+	struct FAchievementSailCloseToShipWithoutFiring    AchievementSailCloseToShipWithoutFiring;                  // 0x0880(0x0018) (Edit)
+	struct FAchievementSailFullyWithTheWind            AchievementSailFullyIntoTheWind;                          // 0x0898(0x0008) (Edit)
+	class UImpulseThrottlerComponent*                  ImpulseThrottlerComponent;                                // 0x08A0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FShipDynamics                               ShipDynamics;                                             // 0x08A8(0x00C8) (Edit, BlueprintVisible)
+	struct FRigidBodyErrorCorrection                   PhysicsErrorCorrection;                                   // 0x0970(0x001C) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x098C(0x0004) MISSED OFFSET
+	struct FBuoyancySampleMovement                     BuoyancySampleMovement;                                   // 0x0990(0x0068) (Edit, BlueprintVisible)
+	struct FBuoyancySampleMovement                     SurfacingBuoyancySampleMovement;                          // 0x09F8(0x0068) (Edit, BlueprintVisible)
+	struct FBuoyancySampleMovement                     DivingBuoyancySampleMovement;                             // 0x0A60(0x0068) (Edit, BlueprintVisible)
+	class UShipNosediveBrake*                          NosediveBrake;                                            // 0x0AC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UShipRolloverCorrector*                      RolloverCorrector;                                        // 0x0AD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBowSplashContainer*                         BowSplashContainer;                                       // 0x0AD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBowSplashContainer*                         SurfacingBowSplashContainer;                              // 0x0AE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBowSplashContainer*                         DivingBowSplashContainer;                                 // 0x0AE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableSailingBowSplashesWhenDiving;                      // 0x0AF0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0AF1(0x0007) MISSED OFFSET
+	class ULocatorContainer*                           ShipLocators;                                             // 0x0AF8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LocalSailForceApplicationOffset;                          // 0x0B00(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x0B0C(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 ShipSpeedToChoppinessScalarCurve;                         // 0x0B10(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 HullSubmergedValueRemapping;                              // 0x0B18(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FakeBuoyancyZOffsetScalarSpringAccel;                     // 0x0B20(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PositionSamplerTimeWindow;                                // 0x0B24(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ClientConvexHullCollisionProfile;                         // 0x0B28(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EmpiricalMaxSpeedInMPS;                                   // 0x0B30(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0xC];                                       // 0x0B34(0x000C) MISSED OFFSET
+	struct FTransform                                  BrigSpawnLocation;                                        // 0x0B40(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              WaterStrengthThresholdForStormDamage;                     // 0x0B70(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x3C];                                      // 0x0B74(0x003C) MISSED OFFSET
+	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0BB0(0x000C) (Edit, DisableEditOnInstance)
+	struct FEncounterParams                            CloseProximityEncounterParams;                            // 0x0BBC(0x000C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData08[0x10];                                      // 0x0BC8(0x0010) MISSED OFFSET
+	class UClass*                                      ShipCategoryObject;                                       // 0x0BD8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ShipSizeObject;                                           // 0x0BE0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ShipTypeObject;                                           // 0x0BE8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*>                              DamageableChildActors;                                    // 0x0BF0(0x0010) (ZeroConstructor)
+	class ACrewShipManifest*                           CrewShipManifest;                                         // 0x0C00(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x50];                                      // 0x0C08(0x0050) MISSED OFFSET
+	class UObject*                                     HullDamage;                                               // 0x0C58(0x0008) (ZeroConstructor, IsPlainOldData)
+	class USurfaceWaterComponent*                      DeckWater;                                                // 0x0C60(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShroudBreakerTrackerComponent*              ShroudBreakerTrackerComponent;                            // 0x0C68(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x0C70(0x0070) (Net)
+	unsigned char                                      UnknownData10[0xD0];                                      // 0x0CE0(0x00D0) MISSED OFFSET
+	float                                              StormStrainWeight;                                        // 0x0DB0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              WorldEdgeWeight;                                          // 0x0DB4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	struct FStrainDamage                               StormStrainDamage;                                        // 0x0DB8(0x0028) (Edit)
+	struct FStrainDamage                               WorldEdgeDamage;                                          // 0x0DE0(0x0028) (Edit)
+	struct FStrainDamage                               ScuttleDamage;                                            // 0x0E08(0x0028) (Edit)
+	struct FVector2D                                   WorldEdgeDamageRange;                                     // 0x0E30(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ScuttleForceSinkTime;                                     // 0x0E38(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x4];                                       // 0x0E3C(0x0004) MISSED OFFSET
+	class UClass*                                      ProxyClass;                                               // 0x0E40(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x1];                                       // 0x0E48(0x0001) MISSED OFFSET
+	bool                                               HasEverStartedSailing;                                    // 0x0E49(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EShipSurfacingState>                   SurfacingState;                                           // 0x0E4A(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x5];                                       // 0x0E4B(0x0005) MISSED OFFSET
+	TArray<class UMobileInstancedStaticMeshComponent*> InstancedMeshes;                                          // 0x0E50(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData14[0x340];                                     // 0x0E60(0x0340) MISSED OFFSET
+	float                                              ScuttleTime;                                              // 0x11A0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x1C];                                      // 0x11A4(0x001C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.Ship"));
+		return ptr;
+	}
+
+
+	void ToggleShipWaterReflections(bool EnableReflections);
+	void SetVelocity(const struct FVector& Velocity);
+	void SetDebugKeelOverSpeedScalar(float Scalar);
+	void Replenish();
+	void ReduceWaterOcclusionZone(float ReduceWaterOcclusionZoneTime);
+	void OnShipSurface();
+	void OnShipPartUnregistered(const struct FName& PartName, class AActor* PartActor);
+	void OnShipPartRegistered(const struct FName& PartName, class AActor* PartActor);
+	void OnShipDive();
+	void OnRep_ShipTypeObject();
+	void OnRep_ShipSizeObject();
+	void OnRep_CrewShipManifest();
+	void OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult);
+	void Multicast_DisableAllShipInteractables();
+	bool IsWorldSpacePositionBelowTopDeckPlane(const struct FVector& Position);
+	bool IsWorldSpacePositionBelowMidDeckPlane(const struct FVector& Position);
+	bool IsOcclusionZoneFullyReduced();
+	struct FVector GetShipLocatorPositionChecked(TEnumAsByte<EShipLocation> LocatorID);
+	bool GetShipLocatorPosition(TEnumAsByte<EShipLocation> LocatorName, struct FVector* LocatorPosition);
+	struct FVector GetSampledSpeed();
+	float GetRawHullSubmersedPercentage();
+	class AShipInternalWater* GetInternalWater();
+	float GetHullSubmersedPercentage();
+	class AHullDamage* GetHullDamage();
+	bool GetHasShipEverSetSail();
+	float GetEmpiricalMaxShipSpeedInMPS();
+	class USurfaceWaterComponent* GetDeckSurfaceWater();
+	struct FVector GetCurrentVelocity();
+	void EnableCalmWaterBobbing(bool bEnable);
+	void Deplete();
+	bool CanBeReplenished();
+	bool AreShipInteractablesDisabled();
+};
+
+
 // Class Athena.CapstanMock
-// 0x0048 (0x0500 - 0x04B8)
+// 0x0058 (0x0510 - 0x04B8)
 class ACapstanMock : public AInteractableBase
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04B8(0x0010) MISSED OFFSET
-	float                                              State;                                                    // 0x04C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RatioVelocity;                                            // 0x04CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxRatioVelocity;                                         // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxVelocityPerPlayer;                                     // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                NumCurrentUsers;                                          // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Locked;                                                   // 0x04DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x23];                                      // 0x04DD(0x0023) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x04B8(0x0018) MISSED OFFSET
+	float                                              State;                                                    // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RatioVelocity;                                            // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxRatioVelocity;                                         // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocityPerPlayer;                                     // 0x04DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                NumCurrentUsers;                                          // 0x04E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Locked;                                                   // 0x04E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2B];                                      // 0x04E5(0x002B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9647,6 +10231,27 @@ public:
 };
 
 
+// Class Athena.CarvedWoodenPlank
+// 0x00B0 (0x0878 - 0x07C8)
+class ACarvedWoodenPlank : public AStaticMeshWieldableItem
+{
+public:
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07D0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              FOVBlendSpeed;                                            // 0x07D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TargetFOV;                                                // 0x07DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaCharacterItemUseSpeedParams          AimSpeedParams;                                           // 0x07E0(0x0008) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x90];                                      // 0x07E8(0x0090) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CarvedWoodenPlank"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.CatalogOfferDataAsset
 // 0x0018 (0x0040 - 0x0028)
 class UCatalogOfferDataAsset : public UDataAsset
@@ -9780,26 +10385,26 @@ public:
 
 
 // Class Athena.CharacterAudioComponent
-// 0x0930 (0x0A00 - 0x00D0)
+// 0x0A40 (0x0B10 - 0x00D0)
 class UCharacterAudioComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
 	class UCharacterAudioComponentParams*              Params;                                                   // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       TimeOfDayRtpc;                                            // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FPlayerMusicController                      PlayerMusicController;                                    // 0x00E8(0x0120) (Edit)
-	class UCharacterAudioFootfallControllerParams*     FootfallParams;                                           // 0x0208(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCharacterAudioEventControllerParams*        EventParams;                                              // 0x0210(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      PegLegCategory;                                           // 0x0218(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      BootsCategory;                                            // 0x0220(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0228(0x0020) MISSED OFFSET
-	class UAudioSpaceTrackerComponent*                 AudioSpaceTracker;                                        // 0x0248(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0250(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x780];                                     // 0x0258(0x0780) MISSED OFFSET
-	class UAudioSpaceDataAsset*                        CurrentSpace;                                             // 0x09D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x09E0(0x0010) MISSED OFFSET
-	class AShip*                                       CurrentShip;                                              // 0x09F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x09F8(0x0008) MISSED OFFSET
+	struct FPlayerMusicController                      PlayerMusicController;                                    // 0x00E8(0x0150) (Edit)
+	class UCharacterAudioFootfallControllerParams*     FootfallParams;                                           // 0x0238(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCharacterAudioEventControllerParams*        EventParams;                                              // 0x0240(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      PegLegCategory;                                           // 0x0248(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      BootsCategory;                                            // 0x0250(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0258(0x0020) MISSED OFFSET
+	class UAudioSpaceTrackerComponent*                 AudioSpaceTracker;                                        // 0x0278(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0280(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x858];                                     // 0x0288(0x0858) MISSED OFFSET
+	class UAudioSpaceDataAsset*                        CurrentSpace;                                             // 0x0AE0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0AE8(0x0010) MISSED OFFSET
+	class AShip*                                       CurrentShip;                                              // 0x0AF8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x0B00(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -10837,14 +11442,14 @@ public:
 
 
 // Class Athena.CoherentUIGTHUDComponent
-// 0x0960 (0x0EE8 - 0x0588)
+// 0x0980 (0x0F08 - 0x0588)
 class UCoherentUIGTHUDComponent : public UCoherentBaseHUDComponent
 {
 public:
 	class UShipNamesDataAsset*                         ShipNames;                                                // 0x0588(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x40];                                      // 0x0590(0x0040) MISSED OFFSET
 	struct FHealthUI                                   HealthUI;                                                 // 0x05D0(0x0128) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x7F0];                                     // 0x06F8(0x07F0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x810];                                     // 0x06F8(0x0810) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11052,14 +11657,14 @@ public:
 
 
 // Class Athena.CollectorsChestWieldableItem
-// 0x0038 (0x0830 - 0x07F8)
+// 0x0038 (0x0800 - 0x07C8)
 class ACollectorsChestWieldableItem : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	class UOpenableItemComponent*                      OpenableItemComponent;                                    // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TArray<class UCollectorsChestItemSlotInteractable*> Slots;                                                    // 0x0810(0x0010) (ExportObject, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0820(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UOpenableItemComponent*                      OpenableItemComponent;                                    // 0x07D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TArray<class UCollectorsChestItemSlotInteractable*> Slots;                                                    // 0x07E0(0x0010) (ExportObject, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x07F0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11192,13 +11797,14 @@ public:
 
 
 // Class Athena.CompanyNPCComponent
-// 0x0078 (0x0148 - 0x00D0)
+// 0x0080 (0x0150 - 0x00D0)
 class UCompanyNPCComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x30];                                      // 0x00D0(0x0030) MISSED OFFSET
 	class UClass*                                      Company;                                                  // 0x0100(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x0108(0x0040) MISSED OFFSET
+	float                                              HoldToHandInBootyDuration;                                // 0x0108(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x44];                                      // 0x010C(0x0044) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11259,7 +11865,7 @@ public:
 
 
 // Class Athena.CompassSpinComponent
-// 0x0120 (0x01F0 - 0x00D0)
+// 0x0130 (0x0200 - 0x00D0)
 class UCompassSpinComponent : public UActorComponent
 {
 public:
@@ -11287,7 +11893,7 @@ public:
 	TArray<float>                                      StormSpinChancesOfPointingNorth;                          // 0x0178(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           StormSpinPointingNorthDurations;                          // 0x0188(0x0030) (Edit, DisableEditOnInstance)
 	struct FFloatRange                                 StormSpinDirectionChangeInterval;                         // 0x01B8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x28];                                      // 0x01C8(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x38];                                      // 0x01C8(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11337,6 +11943,68 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ConcealingInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ConstellationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UConstellationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ConstellationInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.Constellation
+// 0x0008 (0x04A0 - 0x0498)
+class AConstellation : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.Constellation"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ConstellationsServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UConstellationsServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ConstellationsServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ConstellationsService
+// 0x0060 (0x04F8 - 0x0498)
+class AConstellationsService : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0498(0x0060) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ConstellationsService"));
 		return ptr;
 	}
 
@@ -11472,6 +12140,61 @@ public:
 };
 
 
+// Class Athena.TavernCeremonyInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTavernCeremonyInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TavernCeremonyInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ContestCeremonyEventsDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UContestCeremonyEventsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FContestEventSet>                    ContestEvents;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContestCeremonyEventsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ContestCeremoniesComponent
+// 0x00E8 (0x01B8 - 0x00D0)
+class UContestCeremoniesComponent : public UActorComponent
+{
+public:
+	TEnumAsByte<EContestEventStages>                   CurrentContestStage;                                      // 0x00D0(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1F];                                      // 0x00D1(0x001F) MISSED OFFSET
+	TArray<struct FTimedContestEventAction>            ContestCeremonyTimedActions;                              // 0x00F0(0x0010) (ZeroConstructor)
+	class UContestCeremonyEventsDataAsset*             ContestEventsDataAsset;                                   // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x0108(0x00B0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContestCeremoniesComponent"));
+		return ptr;
+	}
+
+
+	void MulticastTriggerLuanchLeaderboardBlind(TArray<struct FCrewScore> SortedScores, TArray<struct FShipIdentityOwnership> CrewShipData, TArray<struct FText> SortedLeaderboardMessages, float ScoreboardHoldDuration);
+	void MulticastTriggerLuanchContestStartBlind(const class FString& ContestName, TArray<struct FShipIdentityOwnership> CrewShipData, float BlindHoldDuration);
+	void MulticastTriggerAudioEvent(TArray<class UWwiseEvent*> EmitterEvents);
+};
+
+
 // Class Athena.ContestManagerDebugRepActor
 // 0x0050 (0x04E8 - 0x0498)
 class AContestManagerDebugRepActor : public AActor
@@ -11513,132 +12236,25 @@ public:
 };
 
 
-// Class Athena.VoyageRewardDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class UVoyageRewardDataAsset : public UDataAsset
-{
-public:
-	TArray<struct FPerChapterRankRewardEntry>          RankEntries;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoyageRewardDataAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.WeightedTreasureChestDescAsset
-// 0x0010 (0x0038 - 0x0028)
-class UWeightedTreasureChestDescAsset : public UDataAsset
-{
-public:
-	TArray<struct FWeightedTreasureChestDesc>          Rewards;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WeightedTreasureChestDescAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MerchantQuestRandomRequiredItemsDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class UMerchantQuestRandomRequiredItemsDataAsset : public UDataAsset
-{
-public:
-	TArray<struct FMerchantQuestCategoryGroup>         CategoryGroups;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MerchantQuestRandomRequiredItemsDataAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.VoyageLocationOnlyNamedIslandListDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class UVoyageLocationOnlyNamedIslandListDataAsset : public UDataAsset
-{
-public:
-	TArray<struct FName>                               OnlyNamedIslandsList;                                     // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoyageLocationOnlyNamedIslandListDataAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.VoyageRecipeDataAsset
-// 0x0130 (0x0158 - 0x0028)
-class UVoyageRecipeDataAsset : public UDataAsset
-{
-public:
-	struct FVoyageRecipe                               Recipe;                                                   // 0x0028(0x0130) (Edit, BlueprintVisible, BlueprintReadOnly)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoyageRecipeDataAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.EmergentContestVoyageRecipeDataAsset
-// 0x0160 (0x02B8 - 0x0158)
-class UEmergentContestVoyageRecipeDataAsset : public UVoyageRecipeDataAsset
-{
-public:
-	struct FEmergentContestVoyageRecipe                ContestVoyageRecipe;                                      // 0x0158(0x0160) (Edit, BlueprintVisible, BlueprintReadOnly)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.EmergentContestVoyageRecipeDataAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ContestManagerServiceInterface
-// 0x0000 (0x0028 - 0x0028)
-class UContestManagerServiceInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContestManagerServiceInterface"));
-		return ptr;
-	}
-
-};
-
-
 // Class Athena.ScoreRewardDataAsset
-// 0x0028 (0x0050 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UScoreRewardDataAsset : public UDataAsset
 {
 public:
 	TArray<struct FWieldableItemScore>                 WieldableItemScores;                                      // 0x0028(0x0010) (Edit, ZeroConstructor)
-	bool                                               WillAwardScoreForKillingPlayersInContest;                 // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	int                                                ScoreForKillingPlayerInContest;                           // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               WillDeductScoreForShipsBeingSunk;                         // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
-	int                                                NegativeScoreForOwnShipSunkInContest;                     // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               WillAwardScoreForDiggingUpChests;                         // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
-	int                                                ScoreForDiggingUpChests;                                  // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               WillAwardScoreForShipPartHits;                            // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	TArray<struct FShipPartScore>                      ShipPartHitScores;                                        // 0x0040(0x0010) (Edit, ZeroConstructor)
+	bool                                               WillAwardScoreForKillingPlayersInContest;                 // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	int                                                ScoreForKillingPlayerInContest;                           // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               WillDeductScoreForShipsBeingSunk;                         // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
+	int                                                NegativeScoreForOwnShipSunkInContest;                     // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               WillAwardScoreForDiggingUpChests;                         // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
+	int                                                ScoreForDiggingUpChests;                                  // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FScoreReasonIcons>                   ScoreReasonIcons;                                         // 0x0068(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -11689,7 +12305,7 @@ public:
 
 
 // Class Athena.ContestSettingsDataAsset
-// 0x00E0 (0x0108 - 0x0028)
+// 0x0138 (0x0160 - 0x0028)
 class UContestSettingsDataAsset : public UDataAsset
 {
 public:
@@ -11697,18 +12313,23 @@ public:
 	float                                              MatchmakingTimeoutTime;                                   // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ContestStartTime;                                         // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PostContestTimeBeforeReturningToACT;                      // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LeaderboardDisplayTime;                                   // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ContestRewardTime;                                        // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                ServerShutdownMinutes;                                    // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	float                                              StartBlindsDisplayTime;                                   // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LeaderboardDisplayTime;                                   // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ContestRewardTime;                                        // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ServerShutdownMinutes;                                    // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UContestVoyagesDataAsset*                    VoyageDataAsset;                                          // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UMatchmakingVoyageRecipeDesc*                OverarchingVoyageAsset;                                   // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      ArenaCompany;                                             // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UContestShipCatalogueDataAsset*              ShipCatalogueDataAsset;                                   // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      ArenaTavernPawnClass;                                     // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FContestUIDescriptions                      ContestUIDescriptions;                                    // 0x0070(0x0078) (Edit, DisableEditOnInstance)
-	TArray<struct FText>                               LeaderboardMessagesInOrder;                               // 0x00E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              ItemsToReset;                                             // 0x00F8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FContestUIDescriptions                      ContestUIDescriptions;                                    // 0x0070(0x0080) (Edit, DisableEditOnInstance)
+	struct FText                                       ContestStartBlindMessage;                                 // 0x00F0(0x0038) (Edit, DisableEditOnInstance)
+	TArray<struct FText>                               LeaderboardMessagesInOrder;                               // 0x0128(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ItemsToReset;                                             // 0x0138(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UCurveFloat*                                 ContestDevilsShroudDamageCurve;                           // 0x0148(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 ContestLightingZoneWeightCurve;                           // 0x0150(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ContestForceSinkThreshold;                                // 0x0158(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11845,27 +12466,29 @@ public:
 
 
 // Class Athena.ContestZone
-// 0x0140 (0x05D8 - 0x0498)
+// 0x0170 (0x0608 - 0x0498)
 class AContestZone : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
-	class USphereComponent*                            ContestZoneBoundaryComponent;                             // 0x04A0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UContestMerchantSpawnerComponent*            MerchantSpawnerComponent;                                 // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       ContestZoneName;                                          // 0x04B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ContestZoneRadius;                                        // 0x04B8(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
-	float                                              RespawnSafeZoneRadius;                                    // 0x04BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFullyActivated;                                         // 0x04C0(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04C1(0x0007) MISSED OFFSET
-	struct FObjectMessagingDispatcher                  ContestZoneObjectMessagingDispatcher;                     // 0x04C8(0x00A0) (BlueprintVisible)
-	TArray<struct FInitialShipSpawnLocations>          InitialSpawnLocations;                                    // 0x0568(0x0010) (Edit, ZeroConstructor)
-	TArray<class AIslandData*>                         IslandsWithinContestZone;                                 // 0x0578(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class AShipSpawnLocation*>                  RespawnLocationsWithinContestZone;                        // 0x0588(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class AContestSafeRegion*                          ContestSafeRegion;                                        // 0x0598(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              ContestZoneRadiusSquared;                                 // 0x05A0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              ContestZoneDiameter;                                      // 0x05A4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              ContestZoneArea;                                          // 0x05A8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2C];                                      // 0x05AC(0x002C) MISSED OFFSET
+	TArray<struct FContestZoneVendorShipData>          VendorShipsToSpawnInContest;                              // 0x04A0(0x0010) (Edit, ZeroConstructor)
+	class USphereComponent*                            ContestZoneBoundaryComponent;                             // 0x04B0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       ContestZoneName;                                          // 0x04B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ContestZoneRadius;                                        // 0x04C0(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	float                                              RespawnSafeZoneRadius;                                    // 0x04C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFullyActivated;                                         // 0x04C8(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
+	struct FObjectMessagingDispatcher                  ContestZoneObjectMessagingDispatcher;                     // 0x04D0(0x00A0) (BlueprintVisible)
+	TArray<struct FInitialShipSpawnLocations>          InitialSpawnLocations;                                    // 0x0570(0x0010) (Edit, ZeroConstructor)
+	TArray<class AIslandData*>                         IslandsWithinContestZone;                                 // 0x0580(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class AShipSpawnLocation*>                  RespawnLocationsWithinContestZone;                        // 0x0590(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class AContestSafeRegion*                          ContestSafeRegion;                                        // 0x05A0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              ContestZoneRadiusSquared;                                 // 0x05A8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              ContestZoneDiameter;                                      // 0x05AC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              ContestZoneArea;                                          // 0x05B0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x05B4(0x0004) MISSED OFFSET
+	TArray<class AArenaVendorShip*>                    VendorShips;                                              // 0x05B8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData03[0x40];                                      // 0x05C8(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11962,35 +12585,41 @@ public:
 
 
 // Class Athena.ContestManagerService
-// 0x0428 (0x08C0 - 0x0498)
+// 0x04B8 (0x0950 - 0x0498)
 class AContestManagerService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
 	class UContestServiceTelemetryComponent*           ContestServiceTelemetryComponent;                         // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UContestSpawnLocationsComponent*             CrewSpawnLocationsComponent;                              // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x58];                                      // 0x04B8(0x0058) MISSED OFFSET
-	TEnumAsByte<EContestState>                         CurrentContestState;                                      // 0x0510(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x177];                                     // 0x0511(0x0177) MISSED OFFSET
-	class UEmergentContestVoyageRecipeDataAsset*       CurrentContestVoyageDataAsset;                            // 0x0688(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UMatchmakingVoyageRecipeDesc*                OverarchingVoyageDataAsset;                               // 0x0690(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x58];                                      // 0x0698(0x0058) MISSED OFFSET
-	class UContestVoyagesDataAsset*                    ContestVoyages;                                           // 0x06F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x58];                                      // 0x06F8(0x0058) MISSED OFFSET
-	struct FAchievementCompleteContest                 CompleteContestAchievementRewarder;                       // 0x0750(0x0008) (Transient)
-	unsigned char                                      UnknownData05[0x20];                                      // 0x0758(0x0020) MISSED OFFSET
-	class UContestScoreSystem*                         ScoreSystem;                                              // 0x0778(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UContestShipCatalogueDataAsset*              ContestShipAppearences;                                   // 0x0780(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x50];                                      // 0x0788(0x0050) MISSED OFFSET
-	struct FContestUIDescriptions                      ContestUIDescriptions;                                    // 0x07D8(0x0078)
-	class AAthenaContestTavern*                        ContestStagingTavern;                                     // 0x0850(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      TavernPawnType;                                           // 0x0858(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ArenaCompany;                                             // 0x0860(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x20];                                      // 0x0868(0x0020) MISSED OFFSET
-	class AContestManagerDebugRepActor*                DebugRepActor;                                            // 0x0888(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x10];                                      // 0x0890(0x0010) MISSED OFFSET
-	TArray<class AController*>                         PlayersNeedingTeleport;                                   // 0x08A0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData09[0x10];                                      // 0x08B0(0x0010) MISSED OFFSET
+	class UContestCeremoniesComponent*                 ContestCeremoniesComponent;                               // 0x04B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UContestRewardComponent*                     ContestRewardComponent;                                   // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x04C8(0x0001) MISSED OFFSET
+	TEnumAsByte<EContestState>                         CurrentContestState;                                      // 0x04C9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x04CA(0x0006) MISSED OFFSET
+	int64_t                                            StateEndTime;                                             // 0x04D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x1F0];                                     // 0x04D8(0x01F0) MISSED OFFSET
+	class UCurveFloat*                                 ContestShroudPlayerDamageCurve;                           // 0x06C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x8];                                       // 0x06D0(0x0008) MISSED OFFSET
+	class UEmergentContestVoyageRecipeDataAsset*       CurrentContestVoyageDataAsset;                            // 0x06D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UMatchmakingVoyageRecipeDesc*                OverarchingVoyageDataAsset;                               // 0x06E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x68];                                      // 0x06E8(0x0068) MISSED OFFSET
+	class UContestVoyagesDataAsset*                    ContestVoyages;                                           // 0x0750(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x68];                                      // 0x0758(0x0068) MISSED OFFSET
+	struct FAchievementCompleteContest                 CompleteContestAchievementRewarder;                       // 0x07C0(0x0008) (Transient)
+	unsigned char                                      UnknownData07[0x20];                                      // 0x07C8(0x0020) MISSED OFFSET
+	class UContestScoreSystem*                         ScoreSystem;                                              // 0x07E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UContestShipCatalogueDataAsset*              ContestShipAppearences;                                   // 0x07F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x50];                                      // 0x07F8(0x0050) MISSED OFFSET
+	struct FContestUIDescriptions                      ContestUIDescriptions;                                    // 0x0848(0x0080)
+	class AAthenaContestTavern*                        ContestStagingTavern;                                     // 0x08C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      TavernPawnType;                                           // 0x08D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ArenaCompany;                                             // 0x08D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x20];                                      // 0x08E0(0x0020) MISSED OFFSET
+	class AContestManagerDebugRepActor*                DebugRepActor;                                            // 0x0900(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x10];                                      // 0x0908(0x0010) MISSED OFFSET
+	TArray<class AController*>                         PlayersNeedingTeleport;                                   // 0x0918(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData11[0x28];                                      // 0x0928(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11999,14 +12628,17 @@ public:
 	}
 
 
+	void UpdateTimeLeftOnClient();
 	void PopupNotifyEveryParticipant(class UPopUpMessageDesc* InPopup);
+	void OnRep_StateEndTime();
 	void OnRep_ContestStateUpdated();
 	void OnContestStart();
 	void OnContestEnd();
 	void OnContestComplete();
-	void MulticastTriggerContestEndBlind(TArray<struct FCrewScore> SortedScores, TArray<struct FShipIdentityOwnership> CrewShipData, TArray<struct FText> SortedLeaderboardMessages, float ScoreboardHoldDuration);
 	void MulticastTriggerCinematicBlind(const struct FCinematicQuestEvent& InEvent);
 	void MigrateAllCrewsAndQuit();
+	void CollectStartBlindsData(class FString* OutVoyageName, TArray<struct FShipIdentityOwnership>* OutShipPool, float* OutBlindDuration);
+	void CollectLeaderboardData(TArray<struct FCrewScore>* OutCrewScores, TArray<struct FShipIdentityOwnership>* OutShipPool, TArray<struct FText>* OutLeaderboardMessages, float* OutLeaderboardDuration);
 	void CinematicBlindsNotifyEveryParticipant(const struct FText& BlindDisplayString);
 };
 
@@ -12074,6 +12706,62 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Athena.ContestRewardComponent
+// 0x0028 (0x00F8 - 0x00D0)
+class UContestRewardComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	TWeakObjectPtr<class AContestManagerService>       CachedOwningContestManager;                               // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x00E0(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContestRewardComponent"));
+		return ptr;
+	}
+
+
+	void GiveRewards();
+};
+
+
+// Class Athena.ContestTavernBanners
+// 0x0090 (0x0528 - 0x0498)
+class AContestTavernBanners : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class USceneComponent*                             SceneRootComponent;                                       // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        BannerMeshComponent;                                      // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                BannerPosition;                                           // 0x04B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04B4(0x0004) MISSED OFFSET
+	TArray<class UStaticMesh*>                         Meshes;                                                   // 0x04B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                BannerBaseMaterialIndex;                                  // 0x04C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              UnfoldTime;                                               // 0x04CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              UnfoldDelay;                                              // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxWindAmount;                                            // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              WindBlendSpeed;                                           // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
+	class AActor*                                      AssociatedRope;                                           // 0x04E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x20];                                      // 0x04E8(0x0020) MISSED OFFSET
+	class UMaterialInstanceDynamic*                    MatInst;                                                  // 0x0508(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  BannerTexture;                                            // 0x0510(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x0518(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContestTavernBanners"));
+		return ptr;
+	}
+
+
+	void OnColours_Rep();
+	void Multicast_UnfoldBanners();
+	void Multicast_SetHidden(bool InNewHidden);
 };
 
 
@@ -12222,6 +12910,22 @@ public:
 };
 
 
+// Class Athena.MockContestCannon
+// 0x0008 (0x0BB8 - 0x0BB0)
+class AMockContestCannon : public ACannon
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0BB0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MockContestCannon"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.CapstanArm
 // 0x0038 (0x0610 - 0x05D8)
 class ACapstanArm : public AControllableObject
@@ -12273,31 +12977,45 @@ public:
 
 
 // Class Athena.HarpoonLauncher
-// 0x0188 (0x0760 - 0x05D8)
+// 0x0348 (0x0920 - 0x05D8)
 class AHarpoonLauncher : public AControllableObject
 {
 public:
-	unsigned char                                      UnknownData00[0xD8];                                      // 0x05D8(0x00D8) MISSED OFFSET
-	struct FName                                       CameraDockSocket;                                         // 0x06B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       CharacterDockSocket;                                      // 0x06B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ProjectileLaunchSocket;                                   // 0x06C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 PitchRange;                                               // 0x06C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 YawRange;                                                 // 0x06D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UStaticMeshComponent*                        BaseMeshComponent;                                        // 0x06E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        MountMeshComponent;                                       // 0x06F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        BarrelMeshComponent;                                      // 0x06F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UInteractableComponent*                      InteractableComponent;                                    // 0x0700(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class URetractorComponent*                         RetractorComponent;                                       // 0x0708(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        ProjectileChildActorComponent;                            // 0x0710(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UHarpoonLauncherAudioParamsDataAsset*        AudioParams;                                              // 0x0718(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      StartControllingNotificationInputId;                      // 0x0720(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ProjectileSpeed;                                          // 0x0728(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PitchSpeed;                                               // 0x072C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              YawSpeed;                                                 // 0x0730(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SimProxyBlendToAimTime;                                   // 0x0734(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ServerPitch;                                              // 0x0738(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              ServerYaw;                                                // 0x073C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0740(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x228];                                     // 0x05D8(0x0228) MISSED OFFSET
+	struct FName                                       CameraDockSocket;                                         // 0x0800(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       CharacterDockSocket;                                      // 0x0808(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       TooltipSocket;                                            // 0x0810(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ProjectileLaunchSocket;                                   // 0x0818(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       TetherAttachSocket;                                       // 0x0820(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       RetractedCharacterTargetPositionSocket;                   // 0x0828(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFloatRange                                 PitchRange;                                               // 0x0830(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFloatRange                                 YawRange;                                                 // 0x0840(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0850(0x0010) MISSED OFFSET
+	class UChildActorComponent*                        TetherChildActorComponent;                                // 0x0860(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        BaseMeshComponent;                                        // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        MountMeshComponent;                                       // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        BarrelMeshComponent;                                      // 0x0878(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        LeftSpinnerMeshComponent;                                 // 0x0880(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        RightSpinnerMeshComponent;                                // 0x0888(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UInteractableComponent*                      InteractableComponent;                                    // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class URetractorComponent*                         RetractorComponent;                                       // 0x0898(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        ProjectileChildActorComponent;                            // 0x08A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	TScriptInterface<class UTetherInterface>           TetherInterface;                                          // 0x08A8(0x0010) (ZeroConstructor, IsPlainOldData)
+	class UHarpoonLauncherAudioParamsDataAsset*        AudioParams;                                              // 0x08B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      StartControllingNotificationInputId;                      // 0x08C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ProjectileSpeed;                                          // 0x08C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RetractionSpeed;                                          // 0x08CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpinnerPitchScalar;                                       // 0x08D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumTetherLengthCm;                                    // 0x08D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    AngularLimitsDegrees;                                     // 0x08D8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x08E4(0x0004) MISSED OFFSET
+	float                                              PitchSpeed;                                               // 0x08E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              YawSpeed;                                                 // 0x08EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ClientToServerAimBlendSpeed;                              // 0x08F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ServerPitch;                                              // 0x08F4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              ServerYaw;                                                // 0x08F8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              ReelInSpeed;                                              // 0x08FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x20];                                      // 0x0900(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12307,6 +13025,7 @@ public:
 
 
 	void Server_RequestRetractHarpoon();
+	void Server_RequestReel(TEnumAsByte<EHarpoonLauncherReelingState> InState);
 	void Server_RequestFire(float InPitch, float InYaw);
 	void Server_RequestAim(float InPitch, float InYaw);
 	void Multicast_PlayThirdPersonFireFX();
@@ -12708,12 +13427,11 @@ public:
 
 
 // Class Athena.CrewSessionConfig
-// 0x0020 (0x0048 - 0x0028)
+// 0x0010 (0x0038 - 0x0028)
 class UCrewSessionConfig : public UObject
 {
 public:
 	TArray<struct FCrewSessionTemplate>                SessionTemplates;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FCrewSessionTemplate>                PrivateSessionsSessionTemplatesOverrides;                 // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -12792,13 +13510,13 @@ class ACrewShipManifest : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
-	struct FSerialisableVotingSessionData              VoyageSelectionVoteData;                                  // 0x04A8(0x0028) (Net)
+	struct FVoteSessionData                            VoyageSelectionVoteData;                                  // 0x04A8(0x0028) (Net)
 	unsigned char                                      UnknownData01[0x40];                                      // 0x04D0(0x0040) MISSED OFFSET
-	struct FSerialisableVotingSessionData              VoyageCancelVoteData;                                     // 0x0510(0x0028) (Net)
+	struct FVoteSessionData                            VoyageCancelVoteData;                                     // 0x0510(0x0028) (Net)
 	unsigned char                                      UnknownData02[0x40];                                      // 0x0538(0x0040) MISSED OFFSET
-	struct FSerialisableVotingSessionData              TaleSelectionVoteData;                                    // 0x0578(0x0028) (Net)
+	struct FVoteSessionData                            TaleSelectionVoteData;                                    // 0x0578(0x0028) (Net)
 	unsigned char                                      UnknownData03[0x40];                                      // 0x05A0(0x0040) MISSED OFFSET
-	struct FSerialisableVotingSessionData              TaleCancelVoteData;                                       // 0x05E0(0x0028) (Net)
+	struct FVoteSessionData                            TaleCancelVoteData;                                       // 0x05E0(0x0028) (Net)
 	unsigned char                                      UnknownData04[0x70];                                      // 0x0608(0x0070) MISSED OFFSET
 	class AShip*                                       AssociatedShip;                                           // 0x0678(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FGuid                                       AssociatedCrew;                                           // 0x0680(0x0010) (Net, ZeroConstructor, IsPlainOldData)
@@ -12954,461 +13672,6 @@ public:
 };
 
 
-// Class Athena.LauncherParentInterface
-// 0x0000 (0x0028 - 0x0028)
-class ULauncherParentInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LauncherParentInterface"));
-		return ptr;
-	}
-
-
-	TArray<class AActor*> GetProjectileIgnoreActors();
-	struct FVector GetInheritedLaunchVelocity();
-};
-
-
-// Class Athena.ShipCurseComponent
-// 0x00F8 (0x01C8 - 0x00D0)
-class UShipCurseComponent : public UActorComponent
-{
-public:
-	TArray<class AActor*>                              CachedShipAttachedActors;                                 // 0x00D0(0x0010) (ZeroConstructor, Transient)
-	TArray<class AMast*>                               FoundMasts;                                               // 0x00E0(0x0010) (ZeroConstructor)
-	class ACapstan*                                    ShipCapstan;                                              // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class ACannon*>                             ShipCannons;                                              // 0x00F8(0x0010) (ZeroConstructor)
-	class AWheel*                                      ShipWheel;                                                // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UFixedIntentComponent*>               SailFixedIntentComponents;                                // 0x0110(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0120(0x0070) MISSED OFFSET
-	float                                              ShipCapstanTargetRatio;                                   // 0x0190(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0194(0x0004) MISSED OFFSET
-	TArray<struct FShipActiveCurseFXData>              ActiveCurseFX;                                            // 0x0198(0x0010) (Net, ZeroConstructor)
-	TArray<class AActor*>                              ActorsAffectedByToggleInteractionsCurse;                  // 0x01A8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x01B8(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipCurseComponent"));
-		return ptr;
-	}
-
-
-	void OnRep_ActorsAffectedByToggleInteractionsCurse(TArray<class AActor*> PreviousActorsAffectedByToggleInteractionsCurse);
-	void OnRep_ActiveCurseFX(TArray<struct FShipActiveCurseFXData> PreviousActiveCurseFX);
-	void ApplyIntentOnSails(float InNewIntent);
-};
-
-
-// Class Athena.ShipDynamicsTargetInterface
-// 0x0000 (0x0028 - 0x0028)
-class UShipDynamicsTargetInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipDynamicsTargetInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.RammerInterface
-// 0x0000 (0x0028 - 0x0028)
-class URammerInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RammerInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ShipLiveryDescAsset
-// 0x0020 (0x0048 - 0x0028)
-class UShipLiveryDescAsset : public UShipPartDescAsset
-{
-public:
-	struct FShipLivery                                 ShipLivery;                                               // 0x0028(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipLiveryDescAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ShipLiveryComponent
-// 0x0058 (0x0128 - 0x00D0)
-class UShipLiveryComponent : public UActorComponent
-{
-public:
-	TArray<struct FShipLivery>                         LiveryDescs;                                              // 0x00D0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x00E0(0x0048) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipLiveryComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.TeleportLocationInterface
-// 0x0000 (0x0028 - 0x0028)
-class UTeleportLocationInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TeleportLocationInterface"));
-		return ptr;
-	}
-
-
-	struct FTeleportLocation GetTeleportLocationForCharacter(class AAthenaCharacter* Character);
-	TArray<struct FTeleportLocation> GetAllTeleportLocationsForCharacter(class AAthenaCharacter* Character);
-};
-
-
-// Class Athena.RainZoneInterface
-// 0x0000 (0x0028 - 0x0028)
-class URainZoneInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RainZoneInterface"));
-		return ptr;
-	}
-
-
-	struct FRainZoneParametersAndLocation GetRainZoneParametersAtTime(double InTime);
-	struct FRainZoneParametersAndLocation GetRainZoneParameters();
-};
-
-
-// Class Athena.RainZoneServiceInterface
-// 0x0000 (0x0028 - 0x0028)
-class URainZoneServiceInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RainZoneServiceInterface"));
-		return ptr;
-	}
-
-
-	void UnregisterRainZoneFromService(const TScriptInterface<class URainZoneInterface>& RainZone);
-	void RegisterRainZoneWithService(const TScriptInterface<class URainZoneInterface>& RainZone);
-	struct FRainZoneParametersAndLocation GetRainZone(int RainZoneIndex);
-	float GetRainStrengthAtTime(const struct FVector& Position, double InTime);
-	float GetRainStrength(const struct FVector& Position);
-	int GetNumberOfRainZones();
-	TArray<struct FRainZoneParametersAndLocation> GetAllRainZones();
-};
-
-
-// Class Athena.SurfaceWaterComponent
-// 0x0090 (0x0640 - 0x05B0)
-class USurfaceWaterComponent : public UPrimitiveComponent
-{
-public:
-	struct FVector                                     BoxExtent;                                                // 0x05B0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              UpdateCullDistance;                                       // 0x05BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  AddWaterMaskTexture;                                      // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  BaseHeightTexture;                                        // 0x05C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                TextureSizeX;                                             // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                TextureSizeY;                                             // 0x05D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WetnessPerStrength;                                       // 0x05D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WetnessDecayRate;                                         // 0x05DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05E0(0x0020) MISSED OFFSET
-	struct FVector4                                    SplatData;                                                // 0x0600(0x0010) (Net, ZeroConstructor, IsPlainOldData)
-	class UTextureRenderTarget2D*                      WaterHeightTexture;                                       // 0x0610(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      WaterHeightTexturePingPong;                               // 0x0618(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      NormalTexture;                                            // 0x0620(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      OutflowTexture;                                           // 0x0628(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      OutflowTexturePingPong;                                   // 0x0630(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SurfaceWaterComponent"));
-		return ptr;
-	}
-
-
-	void SetSimulationActive(bool IsActive);
-	void OnRep_AddWater();
-	class UTexture* GetWaterTexture();
-	class UTexture* GetNormalTexture();
-	struct FVector ConvertToWaterSpace(const struct FVector& WorldSpacePosition);
-	void ClearWaterTexture(const struct FLinearColor& ClearColor);
-	void AddWater(const struct FVector& Position, float Radius, float Strength, bool CheckBounds);
-};
-
-
-// Class Athena.DrowningComponentParams
-// 0x00D0 (0x00F8 - 0x0028)
-class UDrowningComponentParams : public UDataAsset
-{
-public:
-	struct FBlendableDrowningParams                    DrowningParameters;                                       // 0x0028(0x0028) (Edit)
-	class UWwiseObjectPoolWrapper*                     DrowningEmitterPool;                                      // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StartDrowningSfx;                                         // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StopDrowningSfx;                                          // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StartDrowningSfxRemotePlayer;                             // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StopDrowningSfxRemotePlayer;                              // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 SurfaceBreathSfxSoft;                                     // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 SurfaceBreathSfxMed;                                      // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 SurfaceBreathSfxHard;                                     // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 BubblesSfx;                                               // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       PlayerDrowningAmountRtpc;                                 // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       RemotePlayerDrowningAmountRtpc;                           // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     BubblesFirstPerson;                                       // 0x00A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     BubblesThirdPerson;                                       // 0x00B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       BubblesAmountRtpc;                                        // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       BubblesFirstPersonSocket;                                 // 0x00C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       BubblesThirdPersonSocket;                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       BubblesRateParam;                                         // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       BubblesLargeRateParam;                                    // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 BubbleRateTimeCurve;                                      // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   BubbleIntervalForOxygenLevel;                             // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LargeBubbleStartTime;                                     // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DrowningComponentParams"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.WaterModifierZoneInterface
-// 0x0000 (0x0028 - 0x0028)
-class UWaterModifierZoneInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaterModifierZoneInterface"));
-		return ptr;
-	}
-
-
-	class UClass* GetWaterModifierZoneType();
-	struct FWaterModifierZoneParametersAndLocation GetWaterModifierZoneParameters();
-};
-
-
-// Class Athena.WaterModifierZoneServiceInterface
-// 0x0000 (0x0028 - 0x0028)
-class UWaterModifierZoneServiceInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaterModifierZoneServiceInterface"));
-		return ptr;
-	}
-
-
-	void UnregisterWaterModifierZoneFromService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone);
-	void RegisterWaterModifierZoneWithService(const TScriptInterface<class UWaterModifierZoneInterface>& WaterModifierZone);
-	TArray<struct FWaterModifierZoneParametersAndLocation> GetWaterModifierZones(class UClass* Type);
-	struct FWaterModifierZoneParametersAndLocation GetWaterModifierZone(int WaterModifierZoneIndex);
-	float GetWaterModifierStrength(class UClass* Type, const struct FVector& Position);
-	struct FBlendableDrowningParams GetWaterModifierDrowningParams(class AAthenaCharacter* Actor, const struct FBlendableDrowningParams& DefaultParams);
-	int GetNumberOfWaterModifierZonesByType(class UClass* Type);
-	int GetNumberOfWaterModifierZones();
-	float GetDragScalarAtLocation(const struct FVector& Position);
-	TArray<struct FWaterModifierZoneParametersAndLocation> GetAllWaterModifierZones();
-};
-
-
-// Class Athena.DamageablePartsInterface
-// 0x0000 (0x0028 - 0x0028)
-class UDamageablePartsInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageablePartsInterface"));
-		return ptr;
-	}
-
-
-	void UnregisterDamageablePart(class AActor* DamageableActor);
-	void RegisterDamageablePart(class AActor* DamageableActor);
-	TArray<class AActor*> GetDamageableParts();
-};
-
-
-// Class Athena.Ship
-// 0x0D08 (0x11A0 - 0x0498)
-class AShip : public AActor
-{
-public:
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0498(0x0068) MISSED OFFSET
-	struct FShipPartConnections                        PartConnections;                                          // 0x0500(0x0098) (Edit)
-	class UStaticMeshComponent*                        BoatCollision;                                            // 0x0598(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBasisComponent*                             BoatBasis;                                                // 0x05A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        OverlapHit;                                               // 0x05A8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        BelowDeckVolume;                                          // 0x05B0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        CabinVolume;                                              // 0x05B8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FObjectMessagingDispatcher                  ObjectMessageDispatcher;                                  // 0x05C0(0x00A0) (BlueprintVisible)
-	class UTeleportLocationRetrievalComponent*         TeleportLocationRetrievalComponent;                       // 0x0660(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        ShipInternalWaterComponent;                               // 0x0668(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USinkingComponent*                           SinkingComponent;                                         // 0x0670(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShipHullCollisionComponent*                 HullCollisionComponent;                                   // 0x0678(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShipStuckDetectionComponent*                StuckDetectionComponent;                                  // 0x0680(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0688(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStatusEffectPersistenceComponent*           StatusEffectPersistenceComponent;                         // 0x0690(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShipCurseComponent*                         ShipCurseComponent;                                       // 0x0698(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FWaterBuoyancy                              Buoyancy;                                                 // 0x06A0(0x00B8) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0758(0x0008) MISSED OFFSET
-	class UCrewOwnershipComponent*                     CrewOwnershipComponent;                                   // 0x0760(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UOnboardCharacterTrackerComponent*           OnboardCharacterTrackerComponent;                         // 0x0768(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class URewindComponent*                            RewindComponent;                                          // 0x0770(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UShipLiveryComponent*                        LiveryComponent;                                          // 0x0778(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UReplicatedShipPartCustomizationComponent*   HullLiveryCustomizationComponent;                         // 0x0780(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UReplicatedShipPartCustomizationComponent*   SailsLiveryCustomizationComponent;                        // 0x0788(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      RammerType;                                               // 0x0790(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UGroupedInteractableAreaComponent*           GroupedInteractableAreaComponent;                         // 0x0798(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FShipConfigurationSettings                  ShipConfigurationSettings;                                // 0x07A0(0x0014)
-	float                                              RainFillRate;                                             // 0x07B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RainTimePerDrop;                                          // 0x07B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RainDropScale;                                            // 0x07BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RainDropRadius;                                           // 0x07C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x07C4(0x0004) MISSED OFFSET
-	TArray<struct FVector>                             AITargetVisibilityPoints;                                 // 0x07C8(0x0010) (Edit, ZeroConstructor)
-	struct FAchievementSinkAnotherCrewsShip            AchievementSinkOtherCrewsShip;                            // 0x07D8(0x0018) (Edit)
-	struct FAchievementSailThroughStormAtNightWithLightsOff AchievementSailThroughStormAtNightWithLightsOff;          // 0x07F0(0x0080) (Edit)
-	struct FAchievementSailCloseToShipWithoutFiring    AchievementSailCloseToShipWithoutFiring;                  // 0x0870(0x0018) (Edit)
-	struct FAchievementSailFullyWithTheWind            AchievementSailFullyIntoTheWind;                          // 0x0888(0x0008) (Edit)
-	class UImpulseThrottlerComponent*                  ImpulseThrottlerComponent;                                // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FShipDynamics                               ShipDynamics;                                             // 0x0898(0x00C8) (Edit, BlueprintVisible)
-	struct FRigidBodyErrorCorrection                   PhysicsErrorCorrection;                                   // 0x0960(0x001C) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x097C(0x0004) MISSED OFFSET
-	struct FBuoyancySampleMovement                     BuoyancySampleMovement;                                   // 0x0980(0x0068) (Edit, BlueprintVisible)
-	struct FBuoyancySampleMovement                     SurfacingBuoyancySampleMovement;                          // 0x09E8(0x0068) (Edit, BlueprintVisible)
-	struct FBuoyancySampleMovement                     DivingBuoyancySampleMovement;                             // 0x0A50(0x0068) (Edit, BlueprintVisible)
-	class UShipNosediveBrake*                          NosediveBrake;                                            // 0x0AB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UShipRolloverCorrector*                      RolloverCorrector;                                        // 0x0AC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBowSplashContainer*                         BowSplashContainer;                                       // 0x0AC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBowSplashContainer*                         SurfacingBowSplashContainer;                              // 0x0AD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBowSplashContainer*                         DivingBowSplashContainer;                                 // 0x0AD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableSailingBowSplashesWhenDiving;                      // 0x0AE0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0AE1(0x0007) MISSED OFFSET
-	class ULocatorContainer*                           ShipLocators;                                             // 0x0AE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LocalSailForceApplicationOffset;                          // 0x0AF0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0AFC(0x0004) MISSED OFFSET
-	class UCurveFloat*                                 ShipSpeedToChoppinessScalarCurve;                         // 0x0B00(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 HullSubmergedValueRemapping;                              // 0x0B08(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FakeBuoyancyZOffsetScalarSpringAccel;                     // 0x0B10(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PositionSamplerTimeWindow;                                // 0x0B14(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ClientConvexHullCollisionProfile;                         // 0x0B18(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EmpiricalMaxSpeedInMPS;                                   // 0x0B20(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0xC];                                       // 0x0B24(0x000C) MISSED OFFSET
-	struct FTransform                                  BrigSpawnLocation;                                        // 0x0B30(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              WaterStrengthThresholdForStormDamage;                     // 0x0B60(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x34];                                      // 0x0B64(0x0034) MISSED OFFSET
-	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0B98(0x000C) (Edit, DisableEditOnInstance)
-	struct FEncounterParams                            CloseProximityEncounterParams;                            // 0x0BA4(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData08[0x10];                                      // 0x0BB0(0x0010) MISSED OFFSET
-	class UClass*                                      ShipCategoryObject;                                       // 0x0BC0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ShipSizeObject;                                           // 0x0BC8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ShipTypeObject;                                           // 0x0BD0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	TArray<class AActor*>                              DamageableChildActors;                                    // 0x0BD8(0x0010) (ZeroConstructor)
-	class ACrewShipManifest*                           CrewShipManifest;                                         // 0x0BE8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x50];                                      // 0x0BF0(0x0050) MISSED OFFSET
-	class UObject*                                     HullDamage;                                               // 0x0C40(0x0008) (ZeroConstructor, IsPlainOldData)
-	class USurfaceWaterComponent*                      DeckWater;                                                // 0x0C48(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UShroudBreakerTrackerComponent*              ShroudBreakerTrackerComponent;                            // 0x0C50(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x0C58(0x0070) (Net)
-	unsigned char                                      UnknownData10[0xD0];                                      // 0x0CC8(0x00D0) MISSED OFFSET
-	float                                              StormStrainWeight;                                        // 0x0D98(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              WorldEdgeWeight;                                          // 0x0D9C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	struct FStrainDamage                               StormStrainDamage;                                        // 0x0DA0(0x0028) (Edit)
-	struct FStrainDamage                               WorldEdgeDamage;                                          // 0x0DC8(0x0028) (Edit)
-	struct FStrainDamage                               ScuttleDamage;                                            // 0x0DF0(0x0028) (Edit)
-	struct FVector2D                                   WorldEdgeDamageRange;                                     // 0x0E18(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ScuttleForceSinkTime;                                     // 0x0E20(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x4];                                       // 0x0E24(0x0004) MISSED OFFSET
-	class UClass*                                      ProxyClass;                                               // 0x0E28(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x1];                                       // 0x0E30(0x0001) MISSED OFFSET
-	bool                                               HasEverStartedSailing;                                    // 0x0E31(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EShipSurfacingState>                   SurfacingState;                                           // 0x0E32(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x5];                                       // 0x0E33(0x0005) MISSED OFFSET
-	TArray<class UMobileInstancedStaticMeshComponent*> InstancedMeshes;                                          // 0x0E38(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData14[0x340];                                     // 0x0E48(0x0340) MISSED OFFSET
-	float                                              ScuttleTime;                                              // 0x1188(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x14];                                      // 0x118C(0x0014) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.Ship"));
-		return ptr;
-	}
-
-
-	void ToggleShipWaterReflections(bool EnableReflections);
-	void SetVelocity(const struct FVector& Velocity);
-	void SetDebugKeelOverSpeedScalar(float Scalar);
-	void Replenish();
-	void ReduceWaterOcclusionZone(float ReduceWaterOcclusionZoneTime);
-	void OnShipSurface();
-	void OnShipPartUnregistered(const struct FName& PartName, class AActor* PartActor);
-	void OnShipPartRegistered(const struct FName& PartName, class AActor* PartActor);
-	void OnShipDive();
-	void OnRep_ShipTypeObject();
-	void OnRep_ShipSizeObject();
-	void OnRep_CrewShipManifest();
-	void OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult);
-	void Multicast_DisableAllShipInteractables();
-	bool IsWorldSpacePositionBelowTopDeckPlane(const struct FVector& Position);
-	bool IsWorldSpacePositionBelowMidDeckPlane(const struct FVector& Position);
-	bool IsOcclusionZoneFullyReduced();
-	struct FVector GetShipLocatorPositionChecked(TEnumAsByte<EShipLocation> LocatorID);
-	bool GetShipLocatorPosition(TEnumAsByte<EShipLocation> LocatorName, struct FVector* LocatorPosition);
-	struct FVector GetSampledSpeed();
-	float GetRawHullSubmersedPercentage();
-	class AShipInternalWater* GetInternalWater();
-	float GetHullSubmersedPercentage();
-	class AHullDamage* GetHullDamage();
-	bool GetHasShipEverSetSail();
-	float GetEmpiricalMaxShipSpeedInMPS();
-	class USurfaceWaterComponent* GetDeckSurfaceWater();
-	struct FVector GetCurrentVelocity();
-	void EnableCalmWaterBobbing(bool bEnable);
-	void Deplete();
-	bool CanBeReplenished();
-	bool AreShipInteractablesDisabled();
-};
-
-
 // Class Athena.CustomisationPreviewShip
 // 0x0050 (0x04E8 - 0x0498)
 class ACustomisationPreviewShip : public AActor
@@ -13441,6 +13704,21 @@ public:
 };
 
 
+// Class Athena.CutlassDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UCutlassDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CutlassDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.DamageableActor
 // 0x0070 (0x0508 - 0x0498)
 class ADamageableActor : public AActor
@@ -13455,23 +13733,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageableActor"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ActorDamageableComponent
-// 0x0018 (0x0120 - 0x0108)
-class UActorDamageableComponent : public UDamageableComponent
-{
-public:
-	class UHealthComponent*                            HealthComp;                                               // 0x0108(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	TArray<class UClass*>                              NonBlockableDamageTypes;                                  // 0x0110(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ActorDamageableComponent"));
 		return ptr;
 	}
 
@@ -13496,291 +13757,6 @@ public:
 	static void TriggerShipImpactDamageAtLocation(class AShip* Ship, const struct FVector& Location, int NumHoles, class UClass* DamagerType);
 	static void TriggerPlayerImpactDamageFromLookAt(class AAthenaPlayerCharacter* AthenaCharacter, float Strength, TArray<class AActor*> IgnoreList);
 	static void TriggerPlayerImpactDamageFromLocationAndDirection(class UObject* WorldContext, float Strength, const struct FVector& Location, const struct FVector& Direction, TArray<class AActor*> IgnoreList);
-};
-
-
-// Class Athena.BlunderbussDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UBlunderbussDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.BlunderbussDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.CannonDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UCannonDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CannonDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.CannonSplashDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UCannonSplashDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CannonSplashDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.CutlassDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UCutlassDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CutlassDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ExplosionDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UExplosionDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ExplosionDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.EyeOfReachDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UEyeOfReachDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.EyeOfReachDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.FlintlockDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UFlintlockDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FlintlockDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.HarpoonDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UHarpoonDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.KrakenTentacleDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UKrakenTentacleDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.KrakenTentacleDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.LandscapeDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class ULandscapeDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LandscapeDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.LightningDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class ULightningDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LightningDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.OffworldStrainDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UOffworldStrainDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.OffworldStrainDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ScuttleDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UScuttleDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ScuttleDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.ShipDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UShipDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.SingleBulletGunDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class USingleBulletGunDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SingleBulletGunDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.StrainDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UStrainDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StrainDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.SwimmingCreatureDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class USwimmingCreatureDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwimmingCreatureDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.TinySharkDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UTinySharkDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TinySharkDamagerType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.UnarmedCombatDamagerType
-// 0x0000 (0x0028 - 0x0028)
-class UUnarmedCombatDamagerType : public UDamagerType
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.UnarmedCombatDamagerType"));
-		return ptr;
-	}
-
 };
 
 
@@ -14754,6 +14730,7 @@ public:
 	bool RemoveItem(class AActor* Item);
 	class UClass* GetSlotForItem(int Index);
 	int GetNumItemsOfType(class UClass* Type);
+	int GetNumItemsOfCategory(class UClass* ItemCategory);
 	int GetNumItems();
 	TArray<class AActor*> GetItemsOfCategory(class UClass* ItemCategory);
 	int GetItemIndexInCategorySet(class AActor* Item, class UClass* ItemCategory);
@@ -15362,6 +15339,21 @@ public:
 };
 
 
+// Class Athena.ExplosionDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UExplosionDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ExplosionDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.ExplosiveComponentInterface
 // 0x0000 (0x0028 - 0x0028)
 class UExplosiveComponentInterface : public UInterface
@@ -15560,6 +15552,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ExtentEstimationInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.EyeOfReachDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UEyeOfReachDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.EyeOfReachDamagerType"));
 		return ptr;
 	}
 
@@ -15939,6 +15946,21 @@ public:
 };
 
 
+// Class Athena.FlintlockDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UFlintlockDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FlintlockDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.FlyingCreature
 // 0x0058 (0x04F0 - 0x0498)
 class AFlyingCreature : public AActor
@@ -16083,6 +16105,21 @@ public:
 };
 
 
+// Class Athena.FoodPoisoningStatus
+// 0x0000 (0x0028 - 0x0028)
+class UFoodPoisoningStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FoodPoisoningStatus"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TutorialEventControlledObject
 // 0x0188 (0x0620 - 0x0498)
 class ATutorialEventControlledObject : public AActor
@@ -16216,7 +16253,7 @@ public:
 	struct FName                                       ObjectDamageRTPCName;                                     // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UObject*                                     DamageVfx;                                                // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FName                                       DamageVfxSocketName;                                      // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SignificantHealthChangeNormalised;                        // 0x0060(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SignificantHealthChangeAbsolute;                          // 0x0060(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 	TMap<class UClass*, float>                         ShipDamageTypeMappings;                                   // 0x0068(0x0050) (ZeroConstructor)
 	unsigned char                                      UnknownData02[0xA0];                                      // 0x00B8(0x00A0) MISSED OFFSET
@@ -16277,19 +16314,19 @@ public:
 
 
 // Class Athena.Fruit
-// 0x0078 (0x0870 - 0x07F8)
+// 0x0078 (0x0840 - 0x07C8)
 class AFruit : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWwiseEvent*                                 StartEatingSfx;                                           // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FFruitParameters                            FruitParameters;                                          // 0x0818(0x0010) (Edit, BlueprintVisible, Net)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               CanEat;                                                   // 0x0830(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0831(0x0007) MISSED OFFSET
-	class UConsumableWieldableComponent*               ConsumableWieldable;                                      // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x30];                                      // 0x0840(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWwiseEvent*                                 StartEatingSfx;                                           // 0x07E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFruitParameters                            FruitParameters;                                          // 0x07E8(0x0010) (Edit, BlueprintVisible, Net)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               CanEat;                                                   // 0x0800(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0801(0x0007) MISSED OFFSET
+	class UConsumableWieldableComponent*               ConsumableWieldable;                                      // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x30];                                      // 0x0810(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16303,7 +16340,7 @@ public:
 
 
 // Class Athena.FruitItemInfo
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x05C0 - 0x05C0)
 class AFruitItemInfo : public AItemInfo
 {
 public:
@@ -17130,51 +17167,33 @@ public:
 };
 
 
-// Class Athena.HarpoonLauncherAudioParamsDataAsset
-// 0x0050 (0x0078 - 0x0028)
-class UHarpoonLauncherAudioParamsDataAsset : public UDataAsset
+// Class Athena.HarpoonDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UHarpoonDamagerType : public UDamagerType
 {
 public:
-	struct FName                                       MoveYawRateRTPCName;                                      // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StartMovePitchAudioLoopEvent;                             // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopMovePitchAudioLoopEvent;                              // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StartMoveYawAudioLoopEvent;                               // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopMoveYawAudioLoopEvent;                                // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StoppedAimAtEdgeOfRangeAudioEvent;                        // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     MovementAudioPool;                                        // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 FireAudioEvent;                                           // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 RetractTriggeredAudioEvent;                               // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     LaunchEmitterAudioPool;                                   // 0x0070(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonLauncherAudioParamsDataAsset"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonDamagerType"));
 		return ptr;
 	}
 
 };
 
 
-// Class Athena.HarpoonLauncherRetractAndReelCompositeInputHandler
-// 0x0058 (0x0130 - 0x00D8)
-class UHarpoonLauncherRetractAndReelCompositeInputHandler : public UCompositeInputHandler
+// Class Athena.HarpoonFireAndRetractNotificationInputId
+// 0x0000 (0x0038 - 0x0038)
+class UHarpoonFireAndRetractNotificationInputId : public UNotificationInputId
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00D8(0x0050) MISSED OFFSET
-	class AHarpoonLauncher*                            HarpoonLauncher;                                          // 0x0128(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonLauncherRetractAndReelCompositeInputHandler"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonFireAndRetractNotificationInputId"));
 		return ptr;
 	}
 
-
-	TEnumAsByte<EInputHandlerResult> OnRetract();
-	TEnumAsByte<EInputHandlerResult> OnReelLockReleased();
-	TEnumAsByte<EInputHandlerResult> OnReelLockPressed();
-	TEnumAsByte<EInputHandlerResult> OnReelInReleased();
-	TEnumAsByte<EInputHandlerResult> OnReelInPressed();
 };
 
 
@@ -17235,6 +17254,63 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Athena.HarpoonLauncherAudioParamsDataAsset
+// 0x0090 (0x00B8 - 0x0028)
+class UHarpoonLauncherAudioParamsDataAsset : public UDataAsset
+{
+public:
+	struct FVector                                     MovementEmitterOffset;                                    // 0x0028(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       MoveYawRateRTPCName;                                      // 0x0034(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       MovePitchRateRTPCName;                                    // 0x003C(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       SpoolingSpeedRTPCName;                                    // 0x0044(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 StartMovePitchAudioLoopEvent;                             // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StopMovePitchAudioLoopEvent;                              // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StartMoveYawAudioLoopEvent;                               // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StopMoveYawAudioLoopEvent;                                // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StoppedAimAtEdgeOfRangeAudioEvent;                        // 0x0070(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     MovementAudioPool;                                        // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 FireAudioEvent;                                           // 0x0080(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 RetractTriggeredAudioEvent;                               // 0x0088(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 RetractFinishedAudioEvent;                                // 0x0090(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     LaunchEmitterAudioPool;                                   // 0x0098(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StartSpoolingAudioEvent;                                  // 0x00A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StopSpoolingAudioEvent;                                   // 0x00A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpoolingSpeedClampValue;                                  // 0x00B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AttachedSpoolingSpeedClampValue;                          // 0x00B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonLauncherAudioParamsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.HarpoonLauncherRetractAndReelCompositeInputHandler
+// 0x0058 (0x0130 - 0x00D8)
+class UHarpoonLauncherRetractAndReelCompositeInputHandler : public UCompositeInputHandler
+{
+public:
+	unsigned char                                      UnknownData00[0x50];                                      // 0x00D8(0x0050) MISSED OFFSET
+	class AHarpoonLauncher*                            HarpoonLauncher;                                          // 0x0128(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HarpoonLauncherRetractAndReelCompositeInputHandler"));
+		return ptr;
+	}
+
+
+	TEnumAsByte<EInputHandlerResult> OnRetract();
+	TEnumAsByte<EInputHandlerResult> OnReelLockReleased();
+	TEnumAsByte<EInputHandlerResult> OnReelLockPressed();
+	TEnumAsByte<EInputHandlerResult> OnReelInReleased();
+	TEnumAsByte<EInputHandlerResult> OnReelInPressed();
 };
 
 
@@ -17689,11 +17765,11 @@ public:
 
 
 // Class Athena.TestHullDamage
-// 0x0008 (0x0618 - 0x0610)
+// 0x0008 (0x0610 - 0x0608)
 class ATestHullDamage : public AHullDamage
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0610(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0608(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17767,23 +17843,22 @@ public:
 
 
 // Class Athena.HullDamage2
-// 0x02A8 (0x0740 - 0x0498)
+// 0x0358 (0x07F0 - 0x0498)
 class AHullDamage2 : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
-	float                                              ExternalScarDecalMinSize;                                 // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ExternalScarDecalMaxSize;                                 // 0x04AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UTexture2D*>                          ExternalScarDecals;                                       // 0x04B0(0x0010) (Edit, ZeroConstructor)
-	float                                              ExternalHoleDecalMinSize;                                 // 0x04C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ExternalHoleDecalMaxSize;                                 // 0x04C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstance*>                   ExternalHoleDecals;                                       // 0x04C8(0x0010) (Edit, ZeroConstructor)
-	class UMaterialInstance*                           InternalHoleDecal;                                        // 0x04D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRange                   DamageZoneDeckDistribution;                               // 0x04E0(0x0020) (Edit)
-	class UParticleSystem*                             InternalHitVfx;                                           // 0x0500(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 Strain_DamageSfx;                                         // 0x0508(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     StrainDamagePool;                                         // 0x0510(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0518(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0498(0x0018) MISSED OFFSET
+	float                                              ExternalScarDecalMinSize;                                 // 0x04B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ExternalScarDecalMaxSize;                                 // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UTexture2D*>                          ExternalScarDecals;                                       // 0x04B8(0x0010) (Edit, ZeroConstructor)
+	float                                              ExternalHoleDecalMinSize;                                 // 0x04C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ExternalHoleDecalMaxSize;                                 // 0x04CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInstance*>                   ExternalHoleDecals;                                       // 0x04D0(0x0010) (Edit, ZeroConstructor)
+	class UMaterialInstance*                           InternalHoleDecal;                                        // 0x04E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRange                   DamageZoneDeckDistribution;                               // 0x04E8(0x0020) (Edit)
+	class UParticleSystem*                             InternalHitVfx;                                           // 0x0508(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 Strain_DamageSfx;                                         // 0x0510(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     StrainDamagePool;                                         // 0x0518(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FHullDamageParamSet                         InternalParamDefaults;                                    // 0x0520(0x0060) (Edit)
 	TArray<struct FHullDamageNamedParamSet>            InternalParamNamedSets;                                   // 0x0580(0x0010) (Edit, ZeroConstructor)
 	class UBakedDecalComponent*                        ImpactDecalComponent;                                     // 0x0590(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
@@ -17791,18 +17866,18 @@ public:
 	class UTetherCustomisationComponent*               TetherCustomisationComponent;                             // 0x05A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UShipLeakerComponent*                        ShipLeakerComponent;                                      // 0x05A8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	class UMobileInstancedStaticMeshComponent*         InstancedPlanksComponent;                                 // 0x05B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x05B8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x8];                                       // 0x05B8(0x0008) MISSED OFFSET
 	struct FTransform                                  HiddenPlankLocation;                                      // 0x05C0(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData)
 	TArray<class UHullDamagePointProxy*>               Points;                                                   // 0x05F0(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0x78];                                      // 0x0600(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x78];                                      // 0x0600(0x0078) MISSED OFFSET
 	TArray<struct FHullDamageHit>                      HitsCircularBuffer;                                       // 0x0678(0x0010) (Net, ZeroConstructor)
 	TArray<class URepairableComponent*>                RepairComponents;                                         // 0x0688(0x0010) (ExportObject, ZeroConstructor, Transient)
 	TArray<class UDecalComponent*>                     ExternalHoleDecalComponents;                              // 0x0698(0x0010) (ExportObject, ZeroConstructor, Transient)
 	TArray<class UDecalComponent*>                     InternalHoleDecalComponents;                              // 0x06A8(0x0010) (ExportObject, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData04[0x58];                                      // 0x06B8(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x58];                                      // 0x06B8(0x0058) MISSED OFFSET
 	class AShip*                                       Ship;                                                     // 0x0710(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                ServerHitCount;                                           // 0x0718(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x24];                                      // 0x071C(0x0024) MISSED OFFSET
+	unsigned char                                      UnknownData04[0xD4];                                      // 0x071C(0x00D4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17841,7 +17916,7 @@ public:
 
 
 // Class Athena.HumanoidActionStateCreatorDefinition
-// 0x0340 (0x07D8 - 0x0498)
+// 0x0370 (0x0808 - 0x0498)
 class AHumanoidActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
@@ -17851,32 +17926,32 @@ public:
 	struct FControlSailManipulatorActionStateParams    ControlSailManipulatorParams;                             // 0x0500(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
 	struct FUseLadderActionStateParams                 UseLadderParams;                                          // 0x052C(0x004C) (Edit, BlueprintVisible, BlueprintReadOnly)
 	struct FClamberActionStateParams                   ClamberParams;                                            // 0x0578(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FUseCannonActionStateParams                 UseCannonParams;                                          // 0x05A8(0x0030) (Edit)
-	struct FUseMountedWeaponActionStateParams          UseHarpoonLauncherParams;                                 // 0x05D8(0x0028) (Edit, DisableEditOnInstance)
-	struct FUseMapTableActionStateParams               UseMapTableParams;                                        // 0x0600(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLinearTransitionLadderActionStateParams    OffBottomTransitionLadderParams;                          // 0x0614(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLinearTransitionLadderActionStateParams    OnBottomTransitionLadderParams;                           // 0x0628(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FSplineTransitionLadderActionStateParams    OffTopTransitionLadderParams;                             // 0x063C(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FSplineTransitionLadderActionStateParams    OnTopTransitionLadderParams;                              // 0x064C(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FTeleportActionStateParams                  TeleportParams;                                           // 0x065C(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FWaitingToSpawnActionStateParams            WaitingToSpawnParams;                                     // 0x0688(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FRepairObjectActionStateParams              RepairObjectParams;                                       // 0x069C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FUseItemActionStateParams                   UseItemParams;                                            // 0x06A0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x06A1(0x0003) MISSED OFFSET
-	struct FDeadActionStateParams                      DeadParams;                                               // 0x06A4(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FHideInObjectActionStateParams              HideInObjectParams;                                       // 0x06C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLeaveGhostShipActionStateParams            LeaveGhostShipParams;                                     // 0x06D8(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x06FC(0x0004) MISSED OFFSET
-	struct FShovelDigActionStateParams                 ShovelDigParams;                                          // 0x0700(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FMigrationActionStateParams                 MigrationParams;                                          // 0x0710(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FFiredFromActorActionStateParams            FiredFromCannonParams;                                    // 0x0714(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FFiredFromActorActionStateParams            LaunchedFromKrakenParams;                                 // 0x073C(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FWaitForDemoResetActionStateParams          WaitForDemoResetParams;                                   // 0x0764(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0765(0x0003) MISSED OFFSET
-	struct FCapturedByKrakenActionStateParams          CapturedByKrakenParams;                                   // 0x0768(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FIngestedByKrakenActionStateParams          IngestedByKrakenParams;                                   // 0x07A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FSwallowedByKrakenActionStateParams         SwallowedByKrakenParams;                                  // 0x07AC(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0x24];                                      // 0x07B4(0x0024) MISSED OFFSET
+	struct FUseCannonActionStateParams                 UseCannonParams;                                          // 0x05A8(0x0048) (Edit)
+	struct FUseMountedWeaponActionStateParams          UseHarpoonLauncherParams;                                 // 0x05F0(0x0040) (Edit, DisableEditOnInstance)
+	struct FUseMapTableActionStateParams               UseMapTableParams;                                        // 0x0630(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLinearTransitionLadderActionStateParams    OffBottomTransitionLadderParams;                          // 0x0644(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLinearTransitionLadderActionStateParams    OnBottomTransitionLadderParams;                           // 0x0658(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FSplineTransitionLadderActionStateParams    OffTopTransitionLadderParams;                             // 0x066C(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FSplineTransitionLadderActionStateParams    OnTopTransitionLadderParams;                              // 0x067C(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FTeleportActionStateParams                  TeleportParams;                                           // 0x068C(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FWaitingToSpawnActionStateParams            WaitingToSpawnParams;                                     // 0x06B8(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FRepairObjectActionStateParams              RepairObjectParams;                                       // 0x06CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FUseItemActionStateParams                   UseItemParams;                                            // 0x06D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x06D1(0x0003) MISSED OFFSET
+	struct FDeadActionStateParams                      DeadParams;                                               // 0x06D4(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FHideInObjectActionStateParams              HideInObjectParams;                                       // 0x06F8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLeaveGhostShipActionStateParams            LeaveGhostShipParams;                                     // 0x0708(0x0024) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x072C(0x0004) MISSED OFFSET
+	struct FShovelDigActionStateParams                 ShovelDigParams;                                          // 0x0730(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FMigrationActionStateParams                 MigrationParams;                                          // 0x0740(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FFiredFromActorActionStateParams            FiredFromCannonParams;                                    // 0x0744(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FFiredFromActorActionStateParams            LaunchedFromKrakenParams;                                 // 0x076C(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FWaitForDemoResetActionStateParams          WaitForDemoResetParams;                                   // 0x0794(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0795(0x0003) MISSED OFFSET
+	struct FCapturedByKrakenActionStateParams          CapturedByKrakenParams;                                   // 0x0798(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FIngestedByKrakenActionStateParams          IngestedByKrakenParams;                                   // 0x07D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FSwallowedByKrakenActionStateParams         SwallowedByKrakenParams;                                  // 0x07DC(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x24];                                      // 0x07E4(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18261,6 +18336,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ImpactProjectileIdCannonball_Cur_Snooze"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ImpactProjectileIdHarpoonProjectile
+// 0x0000 (0x0028 - 0x0028)
+class UImpactProjectileIdHarpoonProjectile : public UImpactProjectileId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ImpactProjectileIdHarpoonProjectile"));
 		return ptr;
 	}
 
@@ -18792,14 +18882,16 @@ public:
 
 
 // Class Athena.CollectableQuestBookPage
-// 0x0018 (0x0550 - 0x0538)
+// 0x0058 (0x0590 - 0x0538)
 class ACollectableQuestBookPage : public AInteractableObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0538(0x0008) MISSED OFFSET
 	float                                              InteractionPointRadius;                                   // 0x0540(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0544(0x0004) MISSED OFFSET
-	class UStaticMeshComponent*                        ThirdPersonMesh;                                          // 0x0548(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FName                                       InteractionPointSocketName;                               // 0x0544(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x054C(0x0004) MISSED OFFSET
+	struct FText                                       InteractableObjectPickupName;                             // 0x0550(0x0038) (Edit, DisableEditOnInstance)
+	class USceneComponent*                             ThirdPersonMesh;                                          // 0x0588(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19076,7 +19168,7 @@ public:
 
 
 // Class Athena.RotatingBlockPuzzle
-// 0x0080 (0x05C8 - 0x0548)
+// 0x00B8 (0x0600 - 0x0548)
 class ARotatingBlockPuzzle : public APuzzleMechanism
 {
 public:
@@ -19087,10 +19179,11 @@ public:
 	class UDecalComponent*                             Position4Decal;                                           // 0x0568(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	struct FText                                       BlockName;                                                // 0x0570(0x0038) (Edit, DisableEditOnInstance)
 	class UMaterialInterface*                          DefaultMaterialInstance;                                  // 0x05A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CorrectPostion;                                           // 0x05B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RotationSpeed;                                            // 0x05B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CurrentPosition;                                          // 0x05B8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x05BC(0x000C) MISSED OFFSET
+	class UPuzzleVaultAudioParams*                     PuzzleVaultAudioParams;                                   // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                CorrectPostion;                                           // 0x05B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RotationSpeed;                                            // 0x05BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CurrentPosition;                                          // 0x05C0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3C];                                      // 0x05C4(0x003C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19120,25 +19213,41 @@ public:
 
 
 // Class Athena.PuzzleVault
-// 0x00E0 (0x0618 - 0x0538)
+// 0x0208 (0x0740 - 0x0538)
 class APuzzleVault : public AInteractableObject
 {
 public:
-	TArray<class ARotatingBlockPuzzle*>                PuzzleMechanisms;                                         // 0x0538(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
-	TArray<class ABeacon*>                             Braziers;                                                 // 0x0548(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
-	class ASkeletonFortDoor*                           VaultDoor;                                                // 0x0558(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class AWaterVolume*                                WaterVolume;                                              // 0x0560(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	struct FText                                       VaultName;                                                // 0x0568(0x0038) (Edit, DisableEditOnTemplate)
-	float                                              FillRatePerWaterSpout;                                    // 0x05A0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxNumWaterSpouts;                                        // 0x05A4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FVaultPuzzleSolutionPositions>       Solutions;                                                // 0x05A8(0x0010) (ZeroConstructor)
-	TArray<struct FStringAssetReference>               MaterialSetReferences;                                    // 0x05B8(0x0010) (Net, ZeroConstructor)
-	class UInteractableComponent*                      InteractableComponent;                                    // 0x05C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	int                                                CurrentSolution;                                          // 0x05D0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsActive;                                                 // 0x05D4(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x05D5(0x0003) MISSED OFFSET
-	TArray<class UVaultMaterialSetDataAsset*>          MaterialSets;                                             // 0x05D8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x05E8(0x0030) MISSED OFFSET
+	class USpawnActorComponent*                        PuzzleMechanism1ActorComponent;                           // 0x0538(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        PuzzleMechanism2ActorComponent;                           // 0x0540(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        PuzzleMechanism3ActorComponent;                           // 0x0548(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        PuzzleMechanism4ActorComponent;                           // 0x0550(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        Brazier1ActorComponent;                                   // 0x0558(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        Brazier2ActorComponent;                                   // 0x0560(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        Brazier3ActorComponent;                                   // 0x0568(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        Brazier4ActorComponent;                                   // 0x0570(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        WaterActorComponent;                                      // 0x0578(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USpawnActorComponent*                        MainDoorActorComponent;                                   // 0x0580(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FText                                       VaultName;                                                // 0x0590(0x0038) (Edit, DisableEditOnTemplate)
+	class ASkeletonFortDoor*                           OuterDoor;                                                // 0x05C8(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	float                                              FillRatePerWaterSpout;                                    // 0x05D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxNumWaterSpouts;                                        // 0x05D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WaterFillFactorChangeToUpdateAudio;                       // 0x05D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FailureCheckInterval;                                     // 0x05DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPuzzleVaultAudioParams*                     PuzzleVaultAudioParams;                                   // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class ASlidingDoor*                                VaultDoor;                                                // 0x05E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AWaterVolume*                                WaterVolume;                                              // 0x05F0(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class ARotatingBlockPuzzle*>                PuzzleMechanisms;                                         // 0x05F8(0x0010) (Net, ZeroConstructor, Transient)
+	TArray<class ABeacon*>                             Braziers;                                                 // 0x0608(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FVaultPuzzleSolutionPositions>       Solutions;                                                // 0x0618(0x0010) (ZeroConstructor)
+	TArray<struct FStringAssetReference>               MaterialSetReferences;                                    // 0x0628(0x0010) (Net, ZeroConstructor)
+	class UInteractableComponent*                      InteractableComponent;                                    // 0x0638(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	int                                                CurrentSolution;                                          // 0x0640(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsActive;                                                 // 0x0644(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsCompleted;                                              // 0x0645(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0646(0x0002) MISSED OFFSET
+	TArray<class UVaultMaterialSetDataAsset*>          MaterialSets;                                             // 0x0648(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0xE8];                                      // 0x0658(0x00E8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19149,7 +19258,11 @@ public:
 
 	void SubmitSolution();
 	void OnRep_MaterialSetReferences();
+	void OnRep_IsCompleted();
+	void OnRep_IsActive();
 	void OnRep_CurrentSolution();
+	void OnIncorrectAttempt();
+	void OnCorrectAttempt();
 	void ActivateVault();
 };
 
@@ -19568,7 +19681,7 @@ public:
 
 
 // Class Athena.AthenaGameState
-// 0x0320 (0x0910 - 0x05F0)
+// 0x0330 (0x0920 - 0x05F0)
 class AAthenaGameState : public AServiceProviderGameState
 {
 public:
@@ -19589,36 +19702,38 @@ public:
 	class AAIShipService*                              AIShipService;                                            // 0x06B8(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AAITargetService*                            AITargetService;                                          // 0x06C0(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AShipwrightService*                          ShipwrightService;                                        // 0x06C8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AContestManagerService*                      ContestManagerService;                                    // 0x06D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ADrawDebugService*                           DrawDebugService;                                         // 0x06D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AWorldEventZoneService*                      WorldEventZoneService;                                    // 0x06E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AKrakenService*                              KrakenService;                                            // 0x06E8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class ATinySharkService*                           TinySharkService;                                         // 0x06F0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AProjectileService*                          ProjectileService;                                        // 0x06F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UServerNotificationsService*                 ServerNotificationsService;                               // 0x0700(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AAIManagerService*                           AIManagerService;                                         // 0x0708(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AAIEncounterService*                         AIEncounterService;                                       // 0x0710(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AAIEncounterGenerationService*               AIEncounterGenerationService;                             // 0x0718(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UGameEventSchedulerService*                  GameEventSchedulerService;                                // 0x0720(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UHideoutService*                             HideoutService;                                           // 0x0728(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAthenaStreamedLevelService*                 StreamedLevelService;                                     // 0x0730(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ULocationProviderService*                    LocationProviderService;                                  // 0x0738(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AHoleService*                                HoleService;                                              // 0x0740(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ULoadoutService*                             LoadoutService;                                           // 0x0748(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPetsService*                                PetsService;                                              // 0x0750(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAthenaAITeamsService*                       AthenaAITeamsService;                                     // 0x0758(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AAllianceService*                            AllianceService;                                          // 0x0760(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AReapersMarkService*                         ReapersMarkService;                                       // 0x0768(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AFlamesOfFateSettingsService*                FlamesOfFateSettingsService;                              // 0x0770(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AServiceStatusNotificationsService*          ServiceStatusNotificationsService;                        // 0x0778(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UMigrationService*                           MigrationService;                                         // 0x0780(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UServerUpdateReportingService*               ServerUpdateReportingService;                             // 0x0788(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AGenericMarkerService*                       GenericMarkerService;                                     // 0x0790(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UShipFactory*                                ShipFactory;                                              // 0x0798(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UNotificationMessagesDataAsset*              NotificationMessagesDataAsset;                            // 0x07A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x140];                                     // 0x07A8(0x0140) MISSED OFFSET
-	struct FGameServiceCoordinator                     ServiceCoordinator;                                       // 0x08E8(0x0010)
-	unsigned char                                      UnknownData02[0x18];                                      // 0x08F8(0x0018) MISSED OFFSET
+	class UShipLiveryCatalogueService*                 ShipLiveryCatalogueService;                               // 0x06D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AContestManagerService*                      ContestManagerService;                                    // 0x06D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class ADrawDebugService*                           DrawDebugService;                                         // 0x06E0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AWorldEventZoneService*                      WorldEventZoneService;                                    // 0x06E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWorldResourceRegistry*                      WorldResourceRegistry;                                    // 0x06F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AKrakenService*                              KrakenService;                                            // 0x06F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class ATinySharkService*                           TinySharkService;                                         // 0x0700(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AProjectileService*                          ProjectileService;                                        // 0x0708(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UServerNotificationsService*                 ServerNotificationsService;                               // 0x0710(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AAIManagerService*                           AIManagerService;                                         // 0x0718(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AAIEncounterService*                         AIEncounterService;                                       // 0x0720(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AAIEncounterGenerationService*               AIEncounterGenerationService;                             // 0x0728(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UGameEventSchedulerService*                  GameEventSchedulerService;                                // 0x0730(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UHideoutService*                             HideoutService;                                           // 0x0738(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAthenaStreamedLevelService*                 StreamedLevelService;                                     // 0x0740(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ULocationProviderService*                    LocationProviderService;                                  // 0x0748(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AHoleService*                                HoleService;                                              // 0x0750(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ULoadoutService*                             LoadoutService;                                           // 0x0758(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPetsService*                                PetsService;                                              // 0x0760(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAthenaAITeamsService*                       AthenaAITeamsService;                                     // 0x0768(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AAllianceService*                            AllianceService;                                          // 0x0770(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AReapersMarkService*                         ReapersMarkService;                                       // 0x0778(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AFlamesOfFateSettingsService*                FlamesOfFateSettingsService;                              // 0x0780(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AServiceStatusNotificationsService*          ServiceStatusNotificationsService;                        // 0x0788(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UMigrationService*                           MigrationService;                                         // 0x0790(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UServerUpdateReportingService*               ServerUpdateReportingService;                             // 0x0798(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AGenericMarkerService*                       GenericMarkerService;                                     // 0x07A0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UShipFactory*                                ShipFactory;                                              // 0x07A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UNotificationMessagesDataAsset*              NotificationMessagesDataAsset;                            // 0x07B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x140];                                     // 0x07B8(0x0140) MISSED OFFSET
+	struct FGameServiceCoordinator                     ServiceCoordinator;                                       // 0x08F8(0x0010)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0908(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19642,6 +19757,7 @@ public:
 	void OnRep_ReplicatedIslandService();
 	void OnRep_ReplicatedDrawDebugService();
 	void OnRep_ReplicatedCrewService();
+	void OnRep_ReplicatedContestManagerService();
 	void OnRep_ReplicatedAllianceService();
 	void OnRep_GenericMarkerService();
 };
@@ -19885,27 +20001,6 @@ public:
 
 
 	struct FIslandLocationVerifierResult VerifyLocation(const struct FVector& Location, bool RequiresNavMesh);
-};
-
-
-// Class Athena.IslandMechanismSelectionComponent
-// 0x0108 (0x01D8 - 0x00D0)
-class UIslandMechanismSelectionComponent : public UActorComponent
-{
-public:
-	TArray<class AMechanismGroup*>                     MechanismGroups;                                          // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
-	float                                              CoolDownDuration;                                         // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
-	struct FWeightedProbabilityRangeOfRanges           MechanismGroupsToSelect;                                  // 0x00E8(0x0030) (Edit, DisableEditOnTemplate)
-	TArray<class AMechanismGroup*>                     SelectedMechanismGroups;                                  // 0x0118(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0xB0];                                      // 0x0128(0x00B0) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.IslandMechanismSelectionComponent"));
-		return ptr;
-	}
-
 };
 
 
@@ -20524,14 +20619,12 @@ public:
 
 
 // Class Athena.KnockbackAIAbility
-// 0x0040 (0x0078 - 0x0038)
+// 0x0030 (0x0090 - 0x0060)
 class UKnockbackAIAbility : public UAthenaAIAbility
 {
 public:
-	TWeakObjectPtr<class UKnockbackAIAbilityTriggerComponent> ExplosionTriggerPtr;                                      // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UKnockbackAIAbilityParams*                   AbilityParams;                                            // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FExplosionForceFeedbackInfo                 ForceFeedbackInfo;                                        // 0x0048(0x0028)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+	TWeakObjectPtr<class UKnockbackAIAbilityTriggerComponent> ExplosionTriggerPtr;                                      // 0x0060(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FExplosionForceFeedbackInfo                 ForceFeedbackInfo;                                        // 0x0068(0x0028)
 
 	static UClass* StaticClass()
 	{
@@ -20543,15 +20636,11 @@ public:
 
 
 // Class Athena.KnockbackAIAbilityParams
-// 0x0118 (0x0140 - 0x0028)
+// 0x0108 (0x0178 - 0x0070)
 class UKnockbackAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	struct FExplosionInfo                              ExplosionInfo;                                            // 0x0028(0x0108) (Edit, DisableEditOnInstance)
-	float                                              MinTimeBetweenKnockback;                                  // 0x0130(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTimeBetweenKnockback;                                  // 0x0134(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AbilityRadius;                                            // 0x0138(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x013C(0x0004) MISSED OFFSET
+	struct FExplosionInfo                              ExplosionInfo;                                            // 0x0070(0x0108) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -20563,125 +20652,125 @@ public:
 
 
 // Class Athena.KrakenAnimatedTentacle
-// 0x0528 (0x0AE0 - 0x05B8)
+// 0x0530 (0x0AF0 - 0x05C0)
 class AKrakenAnimatedTentacle : public AKrakenTentacle
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05B8(0x0010) MISSED OFFSET
-	class USceneComponent*                             RootSceneComponent;                                       // 0x05C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UCapsuleComponent*                           BaseShipCollision;                                        // 0x05D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             MeshOffsetComponent;                                      // 0x05D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USkeletalMeshComponent*                      TentacleMeshComponent;                                    // 0x05E0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UKrakenTentacleAIAudioComponent*             KrakenTentacleAudioComponent;                             // 0x05E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FName                                       AttachSocketNameFirstPerson;                              // 0x05F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       AttachSocketNameThirdPerson;                              // 0x05F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FCollisionProfileName                       TentacleCollisionProfile;                                 // 0x0600(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	TArray<struct FKrakenAnimatedTentacleCollisionSegment> CollisionSegments;                                        // 0x0608(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               EnabledShipCollision;                                     // 0x0618(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableHeadCollisionsDuringHoldingState;                  // 0x0619(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x061A(0x0002) MISSED OFFSET
-	int                                                CollisionBoneToUseForShipCollision;                       // 0x061C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionEnabled>                     SegmentsCollisionEnableType;                              // 0x0620(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionEnabled>                     BaseShipCollisionEnableType;                              // 0x0621(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x0622(0x0006) MISSED OFFSET
-	class UKrakenAnimatedTentacleAnimationSpecDataAsset* AnimationSpec;                                            // 0x0628(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UKrakenAnimatedTentacleAnimationMappingDataAsset* AnimationMapping;                                         // 0x0630(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UKrakenAnimatedTentacleStateAnimationsDataAsset* StateAnimationMapping;                                    // 0x0638(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AnimationPlayRate;                                        // 0x0640(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	float                                              RequestedAnimationPlayRateBlendTime;                      // 0x0644(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PlayRateAdjustMaxTimeDelta;                               // 0x0648(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PlayRateAdjustMaxPercentageToSpeedUpPlayRate;             // 0x064C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PlayRateAdjustMaxPercentageToSlowDownPlayRate;            // 0x0650(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ServerAnimationTimeOffsetLatencyMultiplierForSynchronisation;// 0x0654(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DebugDrawBoneLocationRadius;                              // 0x0658(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DebugDrawTargetRadius;                                    // 0x065C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DebugDrawBoneRotationEndPointRadius;                      // 0x0660(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DebugDrawBoneRotationLength;                              // 0x0664(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DebugDrawSuckingTargetRadius;                             // 0x0668(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinAnimationPlayedTimeToSetPendingStateChange;            // 0x066C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinAnimationLeftTimeToSetPendingStateChange;              // 0x0670(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              AnimationOffsetTimeLeftForOptimalPendingStateChange;      // 0x0674(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SmoothNetUpdateLocationTime;                              // 0x0678(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SmoothNetUpdateRotationTime;                              // 0x067C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinDotToTargetToTryAndRotate;                             // 0x0680(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDotToTargetToTryAndRotate;                             // 0x0684(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinYawTurnRate;                                           // 0x0688(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxYawTurnRate;                                           // 0x068C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinInvisibleTime;                                         // 0x0690(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinSuckingTellTime;                                       // 0x0694(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxSuckingTellTime;                                       // 0x0698(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxSuckingPlayerDistance;                                 // 0x069C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MinHealthLossRequiredToAvoidAbortSuck;                    // 0x06A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x06A4(0x0004) MISSED OFFSET
-	class UObject*                                     TentacleSuckingTellVFX;                                   // 0x06A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       TargetVFXAttachSocketName;                                // 0x06B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     TargetFirstPersonSuckingTellVFX;                          // 0x06B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     TargetThirdPersonSuckingTellVFX;                          // 0x06C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxHealthLossRequiredToAvoidAbortSuck;                    // 0x06C8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SuckingVelocity;                                          // 0x06CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SuckingPlayerAttachDistance;                              // 0x06D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinHealthLossRequiredToDropPlayer;                        // 0x06D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxHealthLossRequiredToDropPlayer;                        // 0x06D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinDamageDealtByCurrentTargetRequiredToDropPlayer;        // 0x06DC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDamageDealtByCurrentTargetRequiredToDropPlayer;        // 0x06E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinHoldingTime;                                           // 0x06E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxHoldingTime;                                           // 0x06E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinWaterDunkTime;                                         // 0x06EC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxWaterDunkTime;                                         // 0x06F0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PowerSlamDamageTime;                                      // 0x06F4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PowerSlamDamage;                                          // 0x06F8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FName                                       IngestTargetSocketName;                                   // 0x06FC(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                IngestTargetBoneIndexOffset;                              // 0x0704(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinIngestingTime;                                         // 0x0708(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxIngestingTime;                                         // 0x070C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              IngestingDamageAmountPerSecond;                           // 0x0710(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RegurgitatingSpeed;                                       // 0x0714(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RegurgitatingLaunchTime;                                  // 0x0718(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ThrowTargetLaunchTime;                                    // 0x071C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ThrowTargetVisibleTime;                                   // 0x0720(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ThrowingSpeed;                                            // 0x0724(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     TentacleFirstPersonThrowingVFX;                           // 0x0728(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     TentacleThirdPersonThrowingVFX;                           // 0x0730(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinTargetVomitingDelay;                                   // 0x0738(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTargetVomitingDelay;                                   // 0x073C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MinTargetVomitingDuration;                                // 0x0740(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTargetVomitingDuration;                                // 0x0744(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FKrakenAnimatedTentacleHeldTargetVomittingChance> TargetVomitingChances;                                    // 0x0748(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FName                                       VomitVFXType;                                             // 0x0758(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FKrakenAnimatedTentacleWaterTriggerableFX> WaterTriggerableFX;                                       // 0x0760(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                WaterQueryBoneIndex;                                      // 0x0770(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x0774(0x0004) MISSED OFFSET
-	class UPhysicalMaterial*                           TentaclePhysicalMaterial;                                 // 0x0778(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VisualLoggerUpdateTime;                                   // 0x0780(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ServerTimeToStartPlayingIdle;                             // 0x0784(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             AITargetVisibilityPoints;                                 // 0x0788(0x0010) (Edit, ZeroConstructor)
-	struct FVector                                     TargetBoxOffset;                                          // 0x0798(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     TargetBoxScale;                                           // 0x07A4(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x14];                                      // 0x07B0(0x0014) MISSED OFFSET
-	float                                              ReplicatedAnimationProgression;                           // 0x07C4(0x0004) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x28];                                      // 0x07C8(0x0028) MISSED OFFSET
-	class UClass*                                      PendingState;                                             // 0x07F0(0x0008) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UClass*                                      ReplicatedCurrentState;                                   // 0x0800(0x0008) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x8];                                       // 0x0808(0x0008) MISSED OFFSET
-	class UClass*                                      PreviousState;                                            // 0x0810(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x30];                                      // 0x0818(0x0030) MISSED OFFSET
-	float                                              IngestingProgress;                                        // 0x0848(0x0004) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x4];                                       // 0x084C(0x0004) MISSED OFFSET
-	class UKrakenAnimatedTentacleAnimationDataAsset*   AuthoritativeAnimation;                                   // 0x0850(0x0008) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	float                                              TentacleYaw;                                              // 0x0858(0x0004) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	struct FVector                                     TentacleWorldLocation;                                    // 0x085C(0x000C) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	class AAthenaCharacter*                            CurrentTarget;                                            // 0x0868(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x160];                                     // 0x0870(0x0160) MISSED OFFSET
-	class AActor*                                      DockedToActor;                                            // 0x09D0(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     DockedLocalSpaceOffset;                                   // 0x09D8(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData12[0xC];                                       // 0x09E4(0x000C) MISSED OFFSET
-	struct FQuat                                       DockedLocalSpaceRotation;                                 // 0x09F0(0x0010) (Net, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x48];                                      // 0x0A00(0x0048) MISSED OFFSET
-	class UParticleSystemComponent*                    TentacleSuckingTellParticleSystem;                        // 0x0A48(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    TargetFirstPersonSuckingTellParticleSystem;               // 0x0A50(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    TargetThirdPersonSuckingTellParticleSystem;               // 0x0A58(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x80];                                      // 0x0A60(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
+	class USceneComponent*                             RootSceneComponent;                                       // 0x05D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseShipCollision;                                        // 0x05D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             MeshOffsetComponent;                                      // 0x05E0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      TentacleMeshComponent;                                    // 0x05E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UKrakenTentacleAIAudioComponent*             KrakenTentacleAudioComponent;                             // 0x05F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FName                                       AttachSocketNameFirstPerson;                              // 0x05F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       AttachSocketNameThirdPerson;                              // 0x0600(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FCollisionProfileName                       TentacleCollisionProfile;                                 // 0x0608(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	TArray<struct FKrakenAnimatedTentacleCollisionSegment> CollisionSegments;                                        // 0x0610(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool                                               EnabledShipCollision;                                     // 0x0620(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableHeadCollisionsDuringHoldingState;                  // 0x0621(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0622(0x0002) MISSED OFFSET
+	int                                                CollisionBoneToUseForShipCollision;                       // 0x0624(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionEnabled>                     SegmentsCollisionEnableType;                              // 0x0628(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionEnabled>                     BaseShipCollisionEnableType;                              // 0x0629(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x062A(0x0006) MISSED OFFSET
+	class UKrakenAnimatedTentacleAnimationSpecDataAsset* AnimationSpec;                                            // 0x0630(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UKrakenAnimatedTentacleAnimationMappingDataAsset* AnimationMapping;                                         // 0x0638(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UKrakenAnimatedTentacleStateAnimationsDataAsset* StateAnimationMapping;                                    // 0x0640(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AnimationPlayRate;                                        // 0x0648(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              RequestedAnimationPlayRateBlendTime;                      // 0x064C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRateAdjustMaxTimeDelta;                               // 0x0650(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRateAdjustMaxPercentageToSpeedUpPlayRate;             // 0x0654(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRateAdjustMaxPercentageToSlowDownPlayRate;            // 0x0658(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ServerAnimationTimeOffsetLatencyMultiplierForSynchronisation;// 0x065C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DebugDrawBoneLocationRadius;                              // 0x0660(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DebugDrawTargetRadius;                                    // 0x0664(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DebugDrawBoneRotationEndPointRadius;                      // 0x0668(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DebugDrawBoneRotationLength;                              // 0x066C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DebugDrawSuckingTargetRadius;                             // 0x0670(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinAnimationPlayedTimeToSetPendingStateChange;            // 0x0674(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinAnimationLeftTimeToSetPendingStateChange;              // 0x0678(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              AnimationOffsetTimeLeftForOptimalPendingStateChange;      // 0x067C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SmoothNetUpdateLocationTime;                              // 0x0680(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SmoothNetUpdateRotationTime;                              // 0x0684(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinDotToTargetToTryAndRotate;                             // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDotToTargetToTryAndRotate;                             // 0x068C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinYawTurnRate;                                           // 0x0690(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxYawTurnRate;                                           // 0x0694(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinInvisibleTime;                                         // 0x0698(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinSuckingTellTime;                                       // 0x069C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSuckingTellTime;                                       // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSuckingPlayerDistance;                                 // 0x06A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinHealthLossRequiredToAvoidAbortSuck;                    // 0x06A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x06AC(0x0004) MISSED OFFSET
+	class UObject*                                     TentacleSuckingTellVFX;                                   // 0x06B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       TargetVFXAttachSocketName;                                // 0x06B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     TargetFirstPersonSuckingTellVFX;                          // 0x06C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     TargetThirdPersonSuckingTellVFX;                          // 0x06C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxHealthLossRequiredToAvoidAbortSuck;                    // 0x06D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SuckingVelocity;                                          // 0x06D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SuckingPlayerAttachDistance;                              // 0x06D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinHealthLossRequiredToDropPlayer;                        // 0x06DC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxHealthLossRequiredToDropPlayer;                        // 0x06E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinDamageDealtByCurrentTargetRequiredToDropPlayer;        // 0x06E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDamageDealtByCurrentTargetRequiredToDropPlayer;        // 0x06E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinHoldingTime;                                           // 0x06EC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxHoldingTime;                                           // 0x06F0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinWaterDunkTime;                                         // 0x06F4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxWaterDunkTime;                                         // 0x06F8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PowerSlamDamageTime;                                      // 0x06FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PowerSlamDamage;                                          // 0x0700(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FName                                       IngestTargetSocketName;                                   // 0x0704(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                IngestTargetBoneIndexOffset;                              // 0x070C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinIngestingTime;                                         // 0x0710(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxIngestingTime;                                         // 0x0714(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              IngestingDamageAmountPerSecond;                           // 0x0718(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RegurgitatingSpeed;                                       // 0x071C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RegurgitatingLaunchTime;                                  // 0x0720(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ThrowTargetLaunchTime;                                    // 0x0724(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ThrowTargetVisibleTime;                                   // 0x0728(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ThrowingSpeed;                                            // 0x072C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     TentacleFirstPersonThrowingVFX;                           // 0x0730(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     TentacleThirdPersonThrowingVFX;                           // 0x0738(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinTargetVomitingDelay;                                   // 0x0740(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTargetVomitingDelay;                                   // 0x0744(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinTargetVomitingDuration;                                // 0x0748(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTargetVomitingDuration;                                // 0x074C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FKrakenAnimatedTentacleHeldTargetVomittingChance> TargetVomitingChances;                                    // 0x0750(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName                                       VomitVFXType;                                             // 0x0760(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FKrakenAnimatedTentacleWaterTriggerableFX> WaterTriggerableFX;                                       // 0x0768(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                WaterQueryBoneIndex;                                      // 0x0778(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x077C(0x0004) MISSED OFFSET
+	class UPhysicalMaterial*                           TentaclePhysicalMaterial;                                 // 0x0780(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VisualLoggerUpdateTime;                                   // 0x0788(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ServerTimeToStartPlayingIdle;                             // 0x078C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             AITargetVisibilityPoints;                                 // 0x0790(0x0010) (Edit, ZeroConstructor)
+	struct FVector                                     TargetBoxOffset;                                          // 0x07A0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TargetBoxScale;                                           // 0x07AC(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x14];                                      // 0x07B8(0x0014) MISSED OFFSET
+	float                                              ReplicatedAnimationProgression;                           // 0x07CC(0x0004) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x28];                                      // 0x07D0(0x0028) MISSED OFFSET
+	class UClass*                                      PendingState;                                             // 0x07F8(0x0008) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x8];                                       // 0x0800(0x0008) MISSED OFFSET
+	class UClass*                                      ReplicatedCurrentState;                                   // 0x0808(0x0008) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x8];                                       // 0x0810(0x0008) MISSED OFFSET
+	class UClass*                                      PreviousState;                                            // 0x0818(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x30];                                      // 0x0820(0x0030) MISSED OFFSET
+	float                                              IngestingProgress;                                        // 0x0850(0x0004) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x4];                                       // 0x0854(0x0004) MISSED OFFSET
+	class UKrakenAnimatedTentacleAnimationDataAsset*   AuthoritativeAnimation;                                   // 0x0858(0x0008) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	float                                              TentacleYaw;                                              // 0x0860(0x0004) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	struct FVector                                     TentacleWorldLocation;                                    // 0x0864(0x000C) (Edit, Net, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	class AAthenaCharacter*                            CurrentTarget;                                            // 0x0870(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x168];                                     // 0x0878(0x0168) MISSED OFFSET
+	class AActor*                                      DockedToActor;                                            // 0x09E0(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     DockedLocalSpaceOffset;                                   // 0x09E8(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData12[0xC];                                       // 0x09F4(0x000C) MISSED OFFSET
+	struct FQuat                                       DockedLocalSpaceRotation;                                 // 0x0A00(0x0010) (Net, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x48];                                      // 0x0A10(0x0048) MISSED OFFSET
+	class UParticleSystemComponent*                    TentacleSuckingTellParticleSystem;                        // 0x0A58(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    TargetFirstPersonSuckingTellParticleSystem;               // 0x0A60(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    TargetThirdPersonSuckingTellParticleSystem;               // 0x0A68(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x80];                                      // 0x0A70(0x0080) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -20709,7 +20798,7 @@ public:
 
 
 // Class Athena.KrakenShipWrappingTellAnimatedTentacle
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AF0 - 0x0AF0)
 class AKrakenShipWrappingTellAnimatedTentacle : public AKrakenAnimatedTentacle
 {
 public:
@@ -20799,6 +20888,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.KrakenGooStatus"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.KrakenTentacleDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UKrakenTentacleDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.KrakenTentacleDamagerType"));
 		return ptr;
 	}
 
@@ -21184,30 +21288,45 @@ public:
 };
 
 
+// Class Athena.LandscapeDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class ULandscapeDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LandscapeDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.Lantern
-// 0x0198 (0x0990 - 0x07F8)
+// 0x0198 (0x0960 - 0x07C8)
 class ALantern : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x07F8(0x0018) MISSED OFFSET
-	float                                              LightRaisedBlendSpringAccel;                              // 0x0810(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LightActiveBlendSpringAccel;                              // 0x0814(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 TurnOnSfx;                                                // 0x0818(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 TurnOffSfx;                                               // 0x0820(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 FlameTransferSfx;                                         // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 ThirdPersonLanternDistanceInMetresMultiplier;             // 0x0830(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 ThirdPersonLanternTimeOfDayMultiplier;                    // 0x0838(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CurrentThirdPersonMultiplier;                             // 0x0840(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              CurrentExternalLightFactor;                               // 0x0844(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	struct FFlameData                                  FlameData;                                                // 0x0848(0x0002) (BlueprintVisible, BlueprintReadOnly, Net)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x084A(0x0006) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0850(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x80];                                      // 0x0858(0x0080) MISSED OFFSET
-	bool                                               LightOn;                                                  // 0x08D8(0x0001) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	bool                                               bRaised;                                                  // 0x08D9(0x0001) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x08DA(0x0006) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x08E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData04[0xA8];                                      // 0x08E8(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x07C8(0x0018) MISSED OFFSET
+	float                                              LightRaisedBlendSpringAccel;                              // 0x07E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              LightActiveBlendSpringAccel;                              // 0x07E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 TurnOnSfx;                                                // 0x07E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 TurnOffSfx;                                               // 0x07F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FlameTransferSfx;                                         // 0x07F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 ThirdPersonLanternDistanceInMetresMultiplier;             // 0x0800(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 ThirdPersonLanternTimeOfDayMultiplier;                    // 0x0808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CurrentThirdPersonMultiplier;                             // 0x0810(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              CurrentExternalLightFactor;                               // 0x0814(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	struct FFlameData                                  FlameData;                                                // 0x0818(0x0002) (BlueprintVisible, BlueprintReadOnly, Net)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x081A(0x0006) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0820(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x80];                                      // 0x0828(0x0080) MISSED OFFSET
+	bool                                               LightOn;                                                  // 0x08A8(0x0001) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	bool                                               bRaised;                                                  // 0x08A9(0x0001) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x08AA(0x0006) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x08B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData04[0xA8];                                      // 0x08B8(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -21239,7 +21358,7 @@ public:
 
 
 // Class Athena.VolcanicRock
-// 0x0000 (0x05D8 - 0x05D8)
+// 0x0000 (0x05E0 - 0x05E0)
 class AVolcanicRock : public ACannonProjectile
 {
 public:
@@ -21254,21 +21373,22 @@ public:
 
 
 // Class Athena.HarpoonProjectile
-// 0x00F8 (0x0698 - 0x05A0)
+// 0x01A8 (0x0750 - 0x05A8)
 class AHarpoonProjectile : public ALaunchableProjectile
 {
 public:
-	struct FReplicatedTransformState                   ReplicatedTransformState;                                 // 0x05A0(0x0028) (Net, Transient)
-	struct FNetTimeStampCalculator                     NetMovementTimeStamp;                                     // 0x05C8(0x0070) (Net, Transient)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0638(0x0020) MISSED OFFSET
-	class UShapeComponent*                             CollisionComponent;                                       // 0x0658(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        MeshComponent;                                            // 0x0660(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UHarpoonRenderComponent*                     HarpoonRenderComponent;                                   // 0x0668(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0670(0x0018) MISSED OFFSET
-	struct FName                                       TetherAttachSocketName;                                   // 0x0688(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DamageAmount;                                             // 0x0690(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EHarpoonProjectileState>               ProjectileState;                                          // 0x0694(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0695(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
+	struct FReplicatedTransformState                   ReplicatedTransformState;                                 // 0x05B0(0x0030) (Net, Transient)
+	struct FNetTimeStampCalculator                     NetMovementTimeStamp;                                     // 0x05E0(0x0070) (Net, Transient)
+	unsigned char                                      UnknownData01[0xC0];                                      // 0x0650(0x00C0) MISSED OFFSET
+	class UShapeComponent*                             CollisionComponent;                                       // 0x0710(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        MeshComponent;                                            // 0x0718(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UHarpoonRenderComponent*                     HarpoonRenderComponent;                                   // 0x0720(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0728(0x0018) MISSED OFFSET
+	struct FName                                       TetherAttachSocketName;                                   // 0x0740(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DamageAmount;                                             // 0x0748(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EHarpoonProjectileState>               ProjectileState;                                          // 0x074C(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x074D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -21283,17 +21403,17 @@ public:
 
 
 // Class Athena.LiquidProjectile
-// 0x01A0 (0x0740 - 0x05A0)
+// 0x01A0 (0x0748 - 0x05A8)
 class ALiquidProjectile : public ALaunchableProjectile
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x05A0(0x0008) MISSED OFFSET
-	TEnumAsByte<ECollisionChannel>                     ObjectTypeChannelToEnableInShip;                          // 0x05A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x05A9(0x0007) MISSED OFFSET
-	struct FObjectMessagingDispatcher                  ObjectMessageDispatcher;                                  // 0x05B0(0x00A0) (BlueprintVisible)
-	TArray<struct FStatus>                             StatusesToApply;                                          // 0x0650(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FLiquidContents                             Contents;                                                 // 0x0660(0x0040)
-	unsigned char                                      UnknownData02[0xA0];                                      // 0x06A0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
+	TEnumAsByte<ECollisionChannel>                     ObjectTypeChannelToEnableInShip;                          // 0x05B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x05B1(0x0007) MISSED OFFSET
+	struct FObjectMessagingDispatcher                  ObjectMessageDispatcher;                                  // 0x05B8(0x00A0) (BlueprintVisible)
+	TArray<struct FStatus>                             StatusesToApply;                                          // 0x0658(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FLiquidContents                             Contents;                                                 // 0x0668(0x0040)
+	unsigned char                                      UnknownData02[0xA0];                                      // 0x06A8(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -21305,13 +21425,13 @@ public:
 
 
 // Class Athena.VomitProjectile
-// 0x0018 (0x0758 - 0x0740)
+// 0x0018 (0x0760 - 0x0748)
 class AVomitProjectile : public ALiquidProjectile
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0740(0x0010) MISSED OFFSET
-	bool                                               CallParentFunctionalityOnImpactEffects;                   // 0x0750(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0751(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0748(0x0010) MISSED OFFSET
+	bool                                               CallParentFunctionalityOnImpactEffects;                   // 0x0758(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0759(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -21562,7 +21682,7 @@ public:
 
 
 // Class Athena.LightingController
-// 0x0968 (0x0E00 - 0x0498)
+// 0x09A8 (0x0E40 - 0x0498)
 class ALightingController : public AThreadedActor
 {
 public:
@@ -21597,13 +21717,15 @@ public:
 	unsigned char                                      ShowDebugSunHeightInfo : 1;                               // 0x0880(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      ShowDebugLightingZoneInfo : 1;                            // 0x0880(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      ShowDebugUnderwater : 1;                                  // 0x0880(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0881(0x000F) MISSED OFFSET
-	struct FLightingControllerLightingVars             LightingVars;                                             // 0x0890(0x0460)
-	struct FLightingControllerMaterialInstances        MaterialInstances;                                        // 0x0CF0(0x0020)
-	TArray<class AActor*>                              ReflectionProbes;                                         // 0x0D10(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0D20(0x0020) MISSED OFFSET
-	TArray<struct FWaterModifierZoneParametersAndLocation> MurkZones;                                                // 0x0D40(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0xB0];                                      // 0x0D50(0x00B0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x1F];                                      // 0x0881(0x001F) MISSED OFFSET
+	struct FLightingControllerLightingVars             LightingVars;                                             // 0x08A0(0x0460)
+	struct FLightingControllerMaterialInstances        MaterialInstances;                                        // 0x0D00(0x0020)
+	TArray<class AActor*>                              ReflectionProbes;                                         // 0x0D20(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x20];                                      // 0x0D30(0x0020) MISSED OFFSET
+	TArray<struct FWaterModifierZoneParametersAndLocation> MurkZones;                                                // 0x0D50(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData03[0xB0];                                      // 0x0D60(0x00B0) MISSED OFFSET
+	class UCurveFloat*                                 EndOfWorldLightingZoneWeightCurve;                        // 0x0E10(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x28];                                      // 0x0E18(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -21686,6 +21808,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LightingZoneService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.LightningDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class ULightningDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LightningDamagerType"));
 		return ptr;
 	}
 
@@ -21886,6 +22023,38 @@ public:
 };
 
 
+// Class Athena.LoadingPointInterface
+// 0x0000 (0x0028 - 0x0028)
+class ULoadingPointInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LoadingPointInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.LoadingPointComponent
+// 0x0018 (0x00E8 - 0x00D0)
+class ULoadingPointComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	TArray<struct FCanLoadItemCategoryEntry>           AcceptedItemCategories;                                   // 0x00D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.LoadingPointComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.LoadItemActionStateId
 // 0x0000 (0x0028 - 0x0028)
 class ULoadItemActionStateId : public UActionStateId
@@ -21989,13 +22158,13 @@ public:
 
 
 // Class Athena.LoadoutService
-// 0x0808 (0x0830 - 0x0028)
+// 0x0810 (0x0838 - 0x0028)
 class ULoadoutService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x760];                                     // 0x0028(0x0760) MISSED OFFSET
 	TArray<struct FLoadoutEntry>                       LoadoutEntries;                                           // 0x0788(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x98];                                      // 0x0798(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0798(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -22007,14 +22176,15 @@ public:
 
 
 // Class Athena.LoadoutSettings
-// 0x0040 (0x0068 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class ULoadoutSettings : public UObject
 {
 public:
 	struct FStringAssetReference                       DefaultLoadoutAsset;                                      // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringAssetReference                       InitialLoadoutAsset;                                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringAssetReference                       FallbackLoadoutAsset;                                     // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FSupplementalLoadout>                SupplementalLoadouts;                                     // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       ContestLoadoutAsset;                                      // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FSupplementalLoadout>                SupplementalLoadouts;                                     // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -22136,17 +22306,22 @@ public:
 
 
 // Class Athena.LockComponent
-// 0x0078 (0x0148 - 0x00D0)
+// 0x0178 (0x0248 - 0x00D0)
 class ULockComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
 	TArray<struct FLockData>                           Locks;                                                    // 0x00D8(0x0010) (Edit, Net, ZeroConstructor, DisableEditOnInstance)
-	float                                              PlaceLerpTime;                                            // 0x00E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LocalPredictionTimeout;                                   // 0x00EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x00F0(0x0048) MISSED OFFSET
-	class UMeshComponent*                              Mesh;                                                     // 0x0138(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UActionRulesComponent*                       ActionRules;                                              // 0x0140(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FScriptMulticastDelegate                    LockOpenedDelegate;                                       // 0x00E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	float                                              PlaceLerpTime;                                            // 0x00F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LocalPredictionTimeout;                                   // 0x00FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      UnlockInputId;                                            // 0x0100(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EActionDisplayPriority>                TooltipDisplayPriority;                                   // 0x0108(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xBF];                                      // 0x0109(0x00BF) MISSED OFFSET
+	class UMeshComponent*                              Mesh;                                                     // 0x01C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActionRulesComponent*                       ActionRules;                                              // 0x01D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FText                                       UnlockText;                                               // 0x01D8(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       NeedKeyToUnlockText;                                      // 0x0210(0x0038) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -22513,7 +22688,7 @@ public:
 
 
 // Class Athena.MapTable
-// 0x01D8 (0x0670 - 0x0498)
+// 0x01F8 (0x0690 - 0x0498)
 class AMapTable : public AActor
 {
 public:
@@ -22556,7 +22731,9 @@ public:
 	TArray<struct FWorldMapShipLocation>               TrackedShips;                                             // 0x0570(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
 	struct FLinearColor                                BoundaryData;                                             // 0x0580(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
 	class UTexture*                                    AllianceOverlayIcon;                                      // 0x0590(0x0008) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xD8];                                      // 0x0598(0x00D8) MISSED OFFSET
+	unsigned char                                      UnknownData03[0xE0];                                      // 0x0598(0x00E0) MISSED OFFSET
+	TEnumAsByte<EPlayMode>                             CachedPlaymode;                                           // 0x0678(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x17];                                      // 0x0679(0x0017) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -22791,243 +22968,6 @@ public:
 };
 
 
-// Class Athena.MechanismElementProxy
-// 0x0020 (0x04B8 - 0x0498)
-class AMechanismElementProxy : public AActor
-{
-public:
-	class USceneComponent*                             DefaultRoot;                                              // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UEditorOnlyChildActorComponent*              ElementProxy;                                             // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UClass*                                      ElementClass;                                             // 0x04A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Instance;                                                 // 0x04B0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismElementProxy"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MechanismActionInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMechanismActionInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismActionInterface"));
-		return ptr;
-	}
-
-
-	TEnumAsByte<EMechanismActionType> GetActionType();
-	TEnumAsByte<EMechanismActionState> GetActionState();
-	float GetActionProgress();
-	struct FName GetActionName();
-};
-
-
-// Class Athena.MechanismResetInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMechanismResetInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismResetInterface"));
-		return ptr;
-	}
-
-
-	bool ResetMechanism();
-};
-
-
-// Class Athena.MechanismTriggerInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMechanismTriggerInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismTriggerInterface"));
-		return ptr;
-	}
-
-
-	void SetTriggerProgress(float Progress);
-	TEnumAsByte<EMechanismTriggerType> GetTriggerType();
-	TEnumAsByte<EMechanismTriggerState> GetTriggerState();
-	float GetTriggerProgress();
-	struct FName GetTriggerName();
-	bool DisableTrigger(class AActor* Instigator);
-	bool DeactivateTrigger(class AActor* Instigator);
-	bool ActivateTrigger(class AActor* Instigator);
-};
-
-
-// Class Athena.MechanismActionComponent
-// 0x0060 (0x0130 - 0x00D0)
-class UMechanismActionComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
-	TEnumAsByte<EMechanismActionType>                  ActionType;                                               // 0x00E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EMechanismActionActivationMode>        ActivationMode;                                           // 0x00E1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00E2(0x0006) MISSED OFFSET
-	TArray<class AActor*>                              TriggerActors;                                            // 0x00E8(0x0010) (Edit, ZeroConstructor)
-	struct FScriptMulticastDelegate                    OnMechanismActionStateChangedDelegate;                    // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMechanismActionResetDelegate;                           // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TEnumAsByte<EMechanismActionState>                 ActionState;                                              // 0x0118(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x17];                                      // 0x0119(0x0017) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismActionComponent"));
-		return ptr;
-	}
-
-
-	void OnTriggerStateChanged(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismTriggerState> PreviousState, TEnumAsByte<EMechanismTriggerState> NewState, class AActor* Instigator);
-	void OnRep_ActionState(TEnumAsByte<EMechanismActionState> PreviousState);
-};
-
-
-// Class Athena.MechanismInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMechanismInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.Mechanism
-// 0x0030 (0x04C8 - 0x0498)
-class AMechanism : public AActor
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
-	TArray<struct FMechanismBinding>                   Bindings;                                                 // 0x04A8(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
-	struct FScriptMulticastDelegate                    OnMechanismResetDelegate;                                 // 0x04B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.Mechanism"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MechanismGroupInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMechanismGroupInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismGroupInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MechanismGroup
-// 0x0070 (0x0508 - 0x0498)
-class AMechanismGroup : public AActor
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
-	TArray<class AMechanism*>                          Mechanisms;                                               // 0x04A8(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
-	struct FWeightedProbabilityRangeOfRanges           MechanismsToSelect;                                       // 0x04B8(0x0030) (Edit, DisableEditOnTemplate)
-	struct FScriptMulticastDelegate                    OnMechanismGroupResetDelegate;                            // 0x04E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TArray<class AMechanism*>                          SelectedMechanisms;                                       // 0x04F8(0x0010) (ZeroConstructor, Transient)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismGroup"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MechanismProximityResetComponent
-// 0x0000 (0x05E0 - 0x05E0)
-class UMechanismProximityResetComponent : public USphereComponent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismProximityResetComponent"));
-		return ptr;
-	}
-
-
-	void OnComponentEndOverlapFunc(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void OnComponentBeginOverlapFunc(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-};
-
-
-// Class Athena.MechanismTriggerComponent
-// 0x0088 (0x0158 - 0x00D0)
-class UMechanismTriggerComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
-	TEnumAsByte<EMechanismTriggerType>                 TriggerType;                                              // 0x00E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnMechanismActionRegisteredWithTriggerDelegate;           // 0x00E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMechanismActionUnregisteredWithTriggerDelegate;         // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMechanismTriggerChangedMechanismActionStatesDelegate;   // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMechanismTriggerStateChangedDelegate;                   // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMechanismTriggerResetDelegate;                          // 0x0128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TEnumAsByte<EMechanismTriggerState>                TriggerState;                                             // 0x0138(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1F];                                      // 0x0139(0x001F) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismTriggerComponent"));
-		return ptr;
-	}
-
-
-	void OnRep_TriggerState(TEnumAsByte<EMechanismTriggerState> PreviousState);
-	void OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* Instigator);
-};
-
-
-// Class Athena.CapstanMechanismTriggerComponent
-// 0x0090 (0x01E8 - 0x0158)
-class UCapstanMechanismTriggerComponent : public UMechanismTriggerComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0158(0x0090) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CapstanMechanismTriggerComponent"));
-		return ptr;
-	}
-
-};
-
-
 // Class Athena.MeleeAttackDataAsset
 // 0x01A0 (0x01C8 - 0x0028)
 class UMeleeAttackDataAsset : public UDataAsset
@@ -23233,20 +23173,20 @@ public:
 
 
 // Class Athena.MeleeWeapon
-// 0x0250 (0x0A48 - 0x07F8)
+// 0x0250 (0x0A18 - 0x07C8)
 class AMeleeWeapon : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    TrailParticleSystem_FP;                                   // 0x0818(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    TrailParticleSystem_TP;                                   // 0x0820(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UMeleeWeaponDataAsset*                       DataAsset;                                                // 0x0828(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanUseWeaponToBlock;                                      // 0x0830(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0831(0x0007) MISSED OFFSET
-	class UMeleeAttackProcessorComponent*              WieldersAttackProcessor;                                  // 0x0838(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x208];                                     // 0x0840(0x0208) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    TrailParticleSystem_FP;                                   // 0x07E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    TrailParticleSystem_TP;                                   // 0x07F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UMeleeWeaponDataAsset*                       DataAsset;                                                // 0x07F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanUseWeaponToBlock;                                      // 0x0800(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0801(0x0007) MISSED OFFSET
+	class UMeleeAttackProcessorComponent*              WieldersAttackProcessor;                                  // 0x0808(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x208];                                     // 0x0810(0x0208) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -23365,13 +23305,13 @@ public:
 
 
 // Class Athena.CargoRunCrate
-// 0x0018 (0x0830 - 0x0818)
+// 0x0018 (0x0800 - 0x07E8)
 class ACargoRunCrate : public AMerchantCrate
 {
 public:
-	class UCargoRunCrateComponent*                     CargoRunCrateComponent;                                   // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UGatedHealthComponent*                       GatedHealthComponent;                                     // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UVisualHealthResponseComponent*              VisualHealthResponseComponent;                            // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UCargoRunCrateComponent*                     CargoRunCrateComponent;                                   // 0x07E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UGatedHealthComponent*                       GatedHealthComponent;                                     // 0x07F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UVisualHealthResponseComponent*              VisualHealthResponseComponent;                            // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -23536,13 +23476,13 @@ public:
 
 
 // Class Athena.MermaidPartsDesc
-// 0x0030 (0x0058 - 0x0028)
+// 0x0030 (0x0060 - 0x0030)
 class UMermaidPartsDesc : public UAIPartsDesc
 {
 public:
-	struct FStringAssetReference                       Mesh;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FStringAssetReference                       PlaySongEvent;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FStringAssetReference                       StopSongEvent;                                            // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       Mesh;                                                     // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       PlaySongEvent;                                            // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       StopSongEvent;                                            // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -23596,12 +23536,12 @@ public:
 
 
 // Class Athena.MessageInABottleItemProxy
-// 0x0018 (0x0858 - 0x0840)
+// 0x0018 (0x0850 - 0x0838)
 class AMessageInABottleItemProxy : public AFloatingItemProxy
 {
 public:
-	TArray<struct FMessageInABottleVoyageEntry>        VoyageRecipeList;                                         // 0x0840(0x0010) (Edit, ZeroConstructor)
-	class UWwiseEvent*                                 OnBottleOpenedSfx;                                        // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FMessageInABottleVoyageEntry>        VoyageRecipeList;                                         // 0x0838(0x0010) (Edit, ZeroConstructor)
+	class UWwiseEvent*                                 OnBottleOpenedSfx;                                        // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -23818,26 +23758,26 @@ public:
 
 
 // Class Athena.Shovel
-// 0x0088 (0x0880 - 0x07F8)
+// 0x0088 (0x0850 - 0x07C8)
 class AShovel : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FDigAnimParams>                      DigAnimParams;                                            // 0x0808(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UWwiseEvent*                                 ShovelEnterSurfaceSfx;                                    // 0x0818(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 ShovelExitSurfaceSfx;                                     // 0x0820(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 HitBuriedChestSfx;                                        // 0x0828(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DigRequestToleranceTimeOnServer;                          // 0x0830(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraPitchAfterSuccessfulDigIfStartedHigh;               // 0x0834(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraPitchAfterSuccessfulDigIfStartedLow;                // 0x0838(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraPitchAfterDeflectedDigIfStartedHigh;                // 0x083C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraPitchAfterDeflectedDigIfStartedLow;                 // 0x0840(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ShovelHeadSocketName;                                     // 0x0844(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x084C(0x0004) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UClass*                                      CurrentDigUnearthingItemClass;                            // 0x0858(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0860(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FDigAnimParams>                      DigAnimParams;                                            // 0x07D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UWwiseEvent*                                 ShovelEnterSurfaceSfx;                                    // 0x07E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 ShovelExitSurfaceSfx;                                     // 0x07F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 HitBuriedChestSfx;                                        // 0x07F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DigRequestToleranceTimeOnServer;                          // 0x0800(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraPitchAfterSuccessfulDigIfStartedHigh;               // 0x0804(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraPitchAfterSuccessfulDigIfStartedLow;                // 0x0808(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraPitchAfterDeflectedDigIfStartedHigh;                // 0x080C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraPitchAfterDeflectedDigIfStartedLow;                 // 0x0810(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ShovelHeadSocketName;                                     // 0x0814(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x081C(0x0004) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UClass*                                      CurrentDigUnearthingItemClass;                            // 0x0828(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x20];                                      // 0x0830(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24248,7 +24188,7 @@ public:
 
 
 // Class Athena.VoyageProposalContainer
-// 0x01E8 (0x0740 - 0x0558)
+// 0x0240 (0x0798 - 0x0558)
 class AVoyageProposalContainer : public AModalInteractionProxy
 {
 public:
@@ -24262,10 +24202,11 @@ public:
 	class ACrewShipManifest*                           CrewShipManifest;                                         // 0x05A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TArray<class AActor*>                              VoyageSelectionVotableObjectViews;                        // 0x05B0(0x0010) (ZeroConstructor, Transient)
 	class AActor*                                      VoyageCancelVotableObjectView;                            // 0x05C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      TaleSelectionVotableObjectView;                           // 0x05C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      TaleCancelVotableObjectView;                              // 0x05D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AShip*                                       ParentShip;                                               // 0x05D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x160];                                     // 0x05E0(0x0160) MISSED OFFSET
+	TArray<class ACrewShipManifest*>                   TaleManifests;                                            // 0x05C8(0x0010) (ZeroConstructor, Transient)
+	TMap<class AActor*, struct FGuid>                  TaleVoteViews;                                            // 0x05D8(0x0050) (ZeroConstructor, Transient)
+	class AActor*                                      TaleCancelVotableObjectView;                              // 0x0628(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AShip*                                       ParentShip;                                               // 0x0630(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x160];                                     // 0x0638(0x0160) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24274,61 +24215,8 @@ public:
 	}
 
 
+	void SetTaleManifest(class ACrewShipManifest* Manifest);
 	void SetManifest(class ACrewShipManifest* Manifest);
-};
-
-
-// Class Athena.MountableInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMountableInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountableInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MountableType
-// 0x0000 (0x0028 - 0x0028)
-class UMountableType : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountableType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Athena.MountableComponent
-// 0x0070 (0x0140 - 0x00D0)
-class UMountableComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	class UClass*                                      MountableType;                                            // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               ActorCanServerMigrate;                                    // 0x00E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	struct FText                                       Description;                                              // 0x00E8(0x0038) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x18];                                      // 0x0120(0x0018) MISSED OFFSET
-	class UObject*                                     ReplicatedMountpoint;                                     // 0x0138(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountableComponent"));
-		return ptr;
-	}
-
-
-	void OnRep_ReplicatedMountpoint();
 };
 
 
@@ -24349,57 +24237,6 @@ public:
 	TEnumAsByte<EInputHandlerResult> OnMoveYaw(float Value);
 	TEnumAsByte<EInputHandlerResult> OnMovePitch(float Value);
 	TEnumAsByte<EInputHandlerResult> OnFire();
-};
-
-
-// Class Athena.MountpointComponent
-// 0x0070 (0x0320 - 0x02B0)
-class UMountpointComponent : public USceneComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
-	TArray<class UClass*>                              AcceptedMountableTypes;                                   // 0x02B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FRotator                                    DetachForwardDirectionRotator;                            // 0x02C8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DetachOffset;                                             // 0x02D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               UseOverrideMountedCollisionProfile;                       // 0x02D8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x02D9(0x0003) MISSED OFFSET
-	struct FCollisionProfileName                       OverrideMountedCollisionProfileName;                      // 0x02DC(0x0008) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x14];                                      // 0x02E4(0x0014) MISSED OFFSET
-	class UObject*                                     ReplicatedMountedItem;                                    // 0x02F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
-	bool                                               IsMountingDisabled;                                       // 0x0310(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               MountedItemHadSimulatePhysicsEnabled;                     // 0x0311(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2];                                       // 0x0312(0x0002) MISSED OFFSET
-	struct FName                                       MountedItemPremountCollisionProfileName;                  // 0x0314(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x031C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountpointComponent"));
-		return ptr;
-	}
-
-
-	void OnRep_ReplicatedMountedItem(class UObject* PrevReplicatedMountedItem);
-};
-
-
-// Class Athena.InterpolatingMountpointComponent
-// 0x0060 (0x0380 - 0x0320)
-class UInterpolatingMountpointComponent : public UMountpointComponent
-{
-public:
-	float                                              InterpolateSpeed;                                         // 0x0320(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumDistance;                                          // 0x0324(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     RelativeSnapLocation;                                     // 0x0328(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4C];                                      // 0x0334(0x004C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.InterpolatingMountpointComponent"));
-		return ptr;
-	}
-
 };
 
 
@@ -24464,27 +24301,27 @@ public:
 
 
 // Class Athena.MusicalInstrument
-// 0x00D8 (0x08D0 - 0x07F8)
+// 0x00D8 (0x08A0 - 0x07C8)
 class AMusicalInstrument : public AWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	TEnumAsByte<EMusicalInstrumentType>                InstrumentType;                                           // 0x0808(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0809(0x0007) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0810(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              PlayingCoolDownTime;                                      // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       InstrumentDrunkennessRtpc;                                // 0x081C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       InstrumentUnderwaterRtpc;                                 // 0x0824(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxUnderwaterRtpcFactor;                                  // 0x082C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinUnderwaterRtpcFactor;                                  // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PlayingAINoiseRange;                                      // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AINoiseEventInterval;                                     // 0x0838(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x083C(0x0004) MISSED OFFSET
-	class UClass*                                      TriggerEffectActor;                                       // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0850(0x0008) MISSED OFFSET
-	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0858(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x70];                                      // 0x0860(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	TEnumAsByte<EMusicalInstrumentType>                InstrumentType;                                           // 0x07D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x07D9(0x0007) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07E0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              PlayingCoolDownTime;                                      // 0x07E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       InstrumentDrunkennessRtpc;                                // 0x07EC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       InstrumentUnderwaterRtpc;                                 // 0x07F4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxUnderwaterRtpcFactor;                                  // 0x07FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinUnderwaterRtpcFactor;                                  // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PlayingAINoiseRange;                                      // 0x0804(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AINoiseEventInterval;                                     // 0x0808(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x080C(0x0004) MISSED OFFSET
+	class UClass*                                      TriggerEffectActor;                                       // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0820(0x0008) MISSED OFFSET
+	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0828(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x70];                                      // 0x0830(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24500,7 +24337,7 @@ public:
 
 
 // Class Athena.MusicalInstrumentStaticMesh
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08A0 - 0x08A0)
 class AMusicalInstrumentStaticMesh : public AMusicalInstrument
 {
 public:
@@ -24515,7 +24352,7 @@ public:
 
 
 // Class Athena.MusicalInstrumentSkeletalMesh
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08A0 - 0x08A0)
 class AMusicalInstrumentSkeletalMesh : public AMusicalInstrument
 {
 public:
@@ -24919,7 +24756,7 @@ public:
 
 
 // Class Athena.NPCAnimInstance
-// 0x0090 (0x04D0 - 0x0440)
+// 0x00A0 (0x04E0 - 0x0440)
 class UNPCAnimInstance : public UAnimInstance
 {
 public:
@@ -24933,12 +24770,13 @@ public:
 	bool                                               LookAtActive;                                             // 0x0472(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0473(0x0001) MISSED OFFSET
 	float                                              LookAtIKAlpha;                                            // 0x0474(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       CurrentSyncGroup;                                         // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNPCCustomAnimationDataAsset*                NPCCustomAnimationData;                                   // 0x0480(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FNPCCustomAnimationBlueprintData            NPCCustomAnimationBlueprintData;                          // 0x0488(0x0040) (BlueprintVisible)
-	bool                                               InitialSpawnedCosmeticItemsActive;                        // 0x04C8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ENPCCustomAnimationState>              PreviousCustomAnimationState;                             // 0x04C9(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x04CA(0x0006) MISSED OFFSET
+	class UNPCCustomAnimationDataAsset*                NPCCustomAnimationData;                                   // 0x0478(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FNPCCustomAnimationBlueprintData            NPCCustomAnimationBlueprintData;                          // 0x0480(0x0040) (BlueprintVisible)
+	bool                                               InitialSpawnedCosmeticItemsActive;                        // 0x04C0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04C1(0x0007) MISSED OFFSET
+	class UAnimMontage*                                NPCCustomAnimationCurrentMontage;                         // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ENPCCustomAnimationState>              PreviousCustomAnimationState;                             // 0x04D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xF];                                       // 0x04D1(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24953,7 +24791,7 @@ public:
 	bool SpawnInitialCosmeticItems();
 	bool SetNewNPCCustomAnimationLoopingSequence(bool IsLoopA, const struct FName& SequenceName);
 	TArray<class AActor*> GetNPCInitialSpawnedCosmeticItemArray();
-	float GetCurrentSynchGroupPosition();
+	float GetCurrentMontagePosition();
 	void DetachHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand);
 	void DestroyHeldObject(TEnumAsByte<EAthenaNPCSpawnHand> SpawnHand);
 	void CleanUpNPCCustomAnimationInitialCosmeticItems();
@@ -24963,27 +24801,29 @@ public:
 
 
 // Class Athena.NPCDialogComponent
-// 0x01D8 (0x02A8 - 0x00D0)
+// 0x01F0 (0x02C0 - 0x00D0)
 class UNPCDialogComponent : public UActorComponent
 {
 public:
 	struct FText                                       WelcomeMessage;                                           // 0x00D0(0x0038) (Edit)
 	class UNPCDialogTreeData*                          Data;                                                     // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InputID;                                                  // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EActionDisplayPriority>                ActionDisplayPriority;                                    // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     NpcDialoguePool;                                          // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 NpcDialogueWelcome;                                       // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 NpcDialogueBridge;                                        // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 NpcDialogueGoodbye;                                       // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               CreateInteractionRules;                                   // 0x0140(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0141(0x0003) MISSED OFFSET
-	float                                              DialogueInputFocusTimeout;                                // 0x0144(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class FString                                      TelemetryKey;                                             // 0x0148(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x108];                                     // 0x0158(0x0108) MISSED OFFSET
-	class AController*                                 InteractingController;                                    // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<uint32_t>                                   DialogOptionUsageCounter;                                 // 0x0268(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0278(0x0030) MISSED OFFSET
+	class UScriptStruct*                               DialogBlackboardSchema;                                   // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      InputID;                                                  // 0x0118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EActionDisplayPriority>                ActionDisplayPriority;                                    // 0x0120(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     NpcDialoguePool;                                          // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 NpcDialogueWelcome;                                       // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 NpcDialogueBridge;                                        // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 NpcDialogueGoodbye;                                       // 0x0140(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               CreateInteractionRules;                                   // 0x0148(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0149(0x0003) MISSED OFFSET
+	float                                              DialogueInputFocusTimeout;                                // 0x014C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class FString                                      TelemetryKey;                                             // 0x0150(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x108];                                     // 0x0160(0x0108) MISSED OFFSET
+	class AController*                                 InteractingController;                                    // 0x0268(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<uint32_t>                                   DialogOptionUsageCounter;                                 // 0x0270(0x0010) (Net, ZeroConstructor)
+	TArray<unsigned char>                              DialogBlackboard;                                         // 0x0280(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData03[0x30];                                      // 0x0290(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -24991,6 +24831,14 @@ public:
 		return ptr;
 	}
 
+
+	bool SetParameterFromString(const struct FName& Parameter, const class FString& Value);
+	bool SetIntegerParameter(const struct FName& Parameter, int Value);
+	bool SetBooleanParameter(const struct FName& Parameter, bool Value);
+	void OnRep_DialogBlackboard();
+	class FString GetParameterAsString(const struct FName& Parameter);
+	int GetIntegerParameter(const struct FName& Parameter);
+	bool GetBooleanParameter(const struct FName& Parameter);
 };
 
 
@@ -25317,6 +25165,57 @@ public:
 };
 
 
+// Class Athena.NPCDialogPredicateIsTrue
+// 0x0008 (0x0040 - 0x0038)
+class UNPCDialogPredicateIsTrue : public UNPCDialogPredicate
+{
+public:
+	struct FName                                       ParameterName;                                            // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.NPCDialogPredicateIsTrue"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.NPCDialogPredicateIntEquals
+// 0x0010 (0x0048 - 0x0038)
+class UNPCDialogPredicateIntEquals : public UNPCDialogPredicate
+{
+public:
+	struct FName                                       ParameterName;                                            // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Value;                                                    // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.NPCDialogPredicateIntEquals"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.NPCDialogPredicateEquals
+// 0x0018 (0x0050 - 0x0038)
+class UNPCDialogPredicateEquals : public UNPCDialogPredicate
+{
+public:
+	struct FName                                       ParameterName;                                            // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class FString                                      Value;                                                    // 0x0040(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.NPCDialogPredicateEquals"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.NPCDialogPredicateHasEmblem
 // 0x0020 (0x0058 - 0x0038)
 class UNPCDialogPredicateHasEmblem : public UNPCDialogPredicate
@@ -25377,6 +25276,37 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.NPCDialogPredicateHasRank"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.NPCDialogPredicateIsWearingAny
+// 0x0010 (0x0048 - 0x0038)
+class UNPCDialogPredicateIsWearingAny : public UNPCDialogPredicate
+{
+public:
+	TArray<class UClass*>                              ClothingItems;                                            // 0x0038(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.NPCDialogPredicateIsWearingAny"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.NPCDialogPredicateIsWearingAll
+// 0x0000 (0x0048 - 0x0048)
+class UNPCDialogPredicateIsWearingAll : public UNPCDialogPredicateIsWearingAny
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.NPCDialogPredicateIsWearingAll"));
 		return ptr;
 	}
 
@@ -25662,11 +25592,12 @@ public:
 
 
 // Class Athena.NPCDialogTreeData
-// 0x0010 (0x0038 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UNPCDialogTreeData : public UDataAsset
 {
 public:
 	TArray<struct FNPCDialogData>                      Dialogs;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
+	class FString                                      SourceText;                                               // 0x0038(0x0010) (Edit, ZeroConstructor, EditConst)
 
 	static UClass* StaticClass()
 	{
@@ -25812,6 +25743,21 @@ public:
 };
 
 
+// Class Athena.OffworldStrainDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UOffworldStrainDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.OffworldStrainDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.OnboardCharacterTrackerInterface
 // 0x0000 (0x0028 - 0x0028)
 class UOnboardCharacterTrackerInterface : public UInterface
@@ -25947,13 +25893,14 @@ class UOpenableItemAnimationInstance : public UAnimInstance
 public:
 	class UAnimSequence*                               ClosedLoopAnim;                                           // 0x0440(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UAnimSequence*                               OpenTransitionAnim;                                       // 0x0448(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimSequence*                               OpenLoopAnim;                                             // 0x0450(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BlendInTime;                                              // 0x0458(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BlendOutTime;                                             // 0x045C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimMontage*                                CurrentMontage;                                           // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAnimSequence*                               NextAnim;                                                 // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EOpenableItemState>                    CurrentAnimOpenState;                                     // 0x0470(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1F];                                      // 0x0471(0x001F) MISSED OFFSET
+	class UAnimSequence*                               FirstOpenTransitionAnim;                                  // 0x0450(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimSequence*                               OpenLoopAnim;                                             // 0x0458(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlendInTime;                                              // 0x0460(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlendOutTime;                                             // 0x0464(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimMontage*                                CurrentMontage;                                           // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAnimSequence*                               NextAnim;                                                 // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EOpenableItemState>                    CurrentAnimOpenState;                                     // 0x0478(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x17];                                      // 0x0479(0x0017) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -25971,7 +25918,8 @@ class UOpenableItemComponent : public UActorComponent
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
 	TEnumAsByte<EOpenableItemState>                    OpenState;                                                // 0x00D8(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x17];                                      // 0x00D9(0x0017) MISSED OFFSET
+	bool                                               HasEverClosed;                                            // 0x00D9(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x16];                                      // 0x00DA(0x0016) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -26100,15 +26048,15 @@ public:
 
 
 // Class Athena.PetActionStateCreatorDefinition
-// 0x0080 (0x0518 - 0x0498)
+// 0x0090 (0x0528 - 0x0498)
 class APetActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	struct FAISpawnActionStateParams                   AISpawnParams;                                            // 0x0498(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FAIDeadActionStateParams                    AIDeadParams;                                             // 0x04A8(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FHideInObjectActionStateParams              HideInObjectParams;                                       // 0x04C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FFiredFromActorActionStateParams            FiredFromActorParams;                                     // 0x04D8(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0500(0x0018) MISSED OFFSET
+	struct FPetSpawnActionStateParams                  SpawnParams;                                              // 0x0498(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FPetDespawnActionStateParams                DespawnParams;                                            // 0x04B8(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FHideInObjectActionStateParams              HideInObjectParams;                                       // 0x04D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FFiredFromActorActionStateParams            FiredFromActorParams;                                     // 0x04E8(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0510(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -26119,12 +26067,28 @@ public:
 };
 
 
+// Class Athena.PetAssignmentComponent
+// 0x0070 (0x0140 - 0x00D0)
+class UPetAssignmentComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x70];                                      // 0x00D0(0x0070) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PetAssignmentComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.PetsAnimationData
-// 0x0168 (0x0190 - 0x0028)
+// 0x0170 (0x0198 - 0x0028)
 class UPetsAnimationData : public UDataAsset
 {
 public:
-	struct FPetAnimationDataStructure                  PetAnimations;                                            // 0x0028(0x0168) (Edit, BlueprintVisible)
+	struct FPetAnimationDataStructure                  PetAnimations;                                            // 0x0028(0x0170) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
@@ -26233,6 +26197,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PickupActorMock"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.PioneerComponent
+// 0x0098 (0x0168 - 0x00D0)
+class UPioneerComponent : public UActorComponent
+{
+public:
+	float                                              PioneerPeriodicUpdateInterval;                            // 0x00D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x94];                                      // 0x00D4(0x0094) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PioneerComponent"));
 		return ptr;
 	}
 
@@ -26435,14 +26416,15 @@ public:
 
 
 // Class Athena.PlaceableReaction
-// 0x0020 (0x04B8 - 0x0498)
+// 0x0028 (0x04C0 - 0x0498)
 class APlaceableReaction : public AActor
 {
 public:
 	TArray<struct FLandmarkReactionKeyFrame>           ReactionEvents;                                           // 0x0498(0x0010) (Edit, ZeroConstructor)
-	float                                              RelevancyRadiusInMetres;                                  // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TriggerRadiusInMetres;                                    // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x04AC(0x0004) MISSED OFFSET
 	class USceneComponent*                             SceneComponent;                                           // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ALandmarkReactionPlayer*                     ReactionEventPlayer;                                      // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26518,15 +26500,15 @@ public:
 
 
 // Class Athena.PlayerAtmosphericsAudioComponent
-// 0x0110 (0x03F0 - 0x02E0)
-class UPlayerAtmosphericsAudioComponent : public UWwiseEmitterComponent
+// 0x0130 (0x03E0 - 0x02B0)
+class UPlayerAtmosphericsAudioComponent : public USceneComponent
 {
 public:
-	class UPlayerAtmosphericsAudioComponentParams*     AtmosphericParams;                                        // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FNoiseMakerController                       NoiseMakerController;                                     // 0x02E8(0x0040) (Edit)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0328(0x0010) MISSED OFFSET
-	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0338(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB0];                                      // 0x0340(0x00B0) MISSED OFFSET
+	class UPlayerAtmosphericsAudioComponentParams*     AtmosphericParams;                                        // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FNoiseMakerController                       NoiseMakerController;                                     // 0x02B8(0x0040) (Edit)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x02F8(0x0010) MISSED OFFSET
+	class AAthenaPlayerCharacter*                      AthenaPlayerCharacter;                                    // 0x0308(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xD0];                                      // 0x0310(0x00D0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -26604,8 +26586,23 @@ public:
 };
 
 
+// Class Athena.ProgressSpawnLocationProviderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UProgressSpawnLocationProviderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ProgressSpawnLocationProviderInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.PlayerCrewComponent
-// 0x0078 (0x0148 - 0x00D0)
+// 0x0088 (0x0158 - 0x00D0)
 class UPlayerCrewComponent : public UActorComponent
 {
 public:
@@ -26613,7 +26610,9 @@ public:
 	TArray<struct FCrewMemberData>                     CrewMembers;                                              // 0x0128(0x0010) (Net, ZeroConstructor)
 	struct FCrewShipData                               CrewShip;                                                 // 0x0138(0x0003) (Net, ZeroConstructor, IsPlainOldData)
 	struct FCrewMatchmakingVisibilityData              CrewMatchmakingVisibility;                                // 0x013B(0x0003) (Net)
-	unsigned char                                      UnknownData01[0xA];                                       // 0x013E(0x000A) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x2];                                       // 0x013E(0x0002) MISSED OFFSET
+	TScriptInterface<class UProgressSpawnLocationProviderInterface> SpawnProgress;                                            // 0x0140(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -26694,7 +26693,7 @@ public:
 
 
 // Class Athena.PlayerEntitlementComponent
-// 0x0258 (0x0328 - 0x00D0)
+// 0x0280 (0x0350 - 0x00D0)
 class UPlayerEntitlementComponent : public UActorComponent
 {
 public:
@@ -26703,7 +26702,7 @@ public:
 	struct FPlayerEntitlements                         Entitlements;                                             // 0x0118(0x0080) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x78];                                      // 0x0198(0x0078) MISSED OFFSET
 	TArray<struct FEntitlementIdInfo>                  ReplicatedEntitlementIds;                                 // 0x0210(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x108];                                     // 0x0220(0x0108) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x130];                                     // 0x0220(0x0130) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -26789,7 +26788,7 @@ public:
 
 
 // Class Athena.PlayerMusicControllerParams
-// 0x0358 (0x0380 - 0x0028)
+// 0x0380 (0x03A8 - 0x0028)
 class UPlayerMusicControllerParams : public UDataAsset
 {
 public:
@@ -26914,6 +26913,11 @@ public:
 	float                                              SkellyShipMinProximity;                                   // 0x0370(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              SkellyShipMaxProximity;                                   // 0x0374(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       SkellyProximityRtpc;                                      // 0x0378(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayerInPuzzleVaultPlay;                                  // 0x0380(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PlayerInPuzzleVaultStop;                                  // 0x0388(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultCompleteMusic;                                 // 0x0390(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultIncorrectMusic;                                // 0x0398(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       PuzzleVaultWaterFillRtpc;                                 // 0x03A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27023,7 +27027,7 @@ public:
 	void Server_SendPhrase(const class FString& PhraseKey);
 	void Client_ReceiveText(class AAthenaPlayerState* SenderPlayerState, const struct FText& Message);
 	void Client_ReceivePhrase(class AAthenaPlayerState* SenderPlayerState, const class FString& PhraseKey);
-	void Client_ReceiveNPCText(const class FString& SenderNameKey, const class FString& TextKey);
+	void Client_ReceiveNPCText(const class FString& SenderNameKey, const class FString& TextKey, TEnumAsByte<ENPCChatType> ChatType);
 };
 
 
@@ -27200,25 +27204,25 @@ public:
 
 
 // Class Athena.PocketWatch
-// 0x0098 (0x0890 - 0x07F8)
+// 0x0098 (0x0860 - 0x07C8)
 class APocketWatch : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FName                                       MinuteHandBoneName;                                       // 0x0818(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       HourHandBoneName;                                         // 0x0820(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 MinuteHandTickSFX;                                        // 0x0828(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 DateSwitchSFX;                                            // 0x0830(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEmitterComponent*                      AudioEmitter;                                             // 0x0838(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x0840(0x0028) MISSED OFFSET
-	class UPocketWatchAnimationInstance*               FirstPersonMeshAnimator;                                  // 0x0868(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UPocketWatchAnimationInstance*               ThirdPersonMeshAnimator;                                  // 0x0870(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UPocketWatchAnimationInstance*               SelectedMeshAnimator;                                     // 0x0878(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    FirstPersonMeshDynamicMaterialInstance;                   // 0x0880(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ThirdPersonMeshDynamicMaterialInstance;                   // 0x0888(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FName                                       MinuteHandBoneName;                                       // 0x07E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       HourHandBoneName;                                         // 0x07F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 MinuteHandTickSFX;                                        // 0x07F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 DateSwitchSFX;                                            // 0x0800(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEmitterComponent*                      AudioEmitter;                                             // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0810(0x0028) MISSED OFFSET
+	class UPocketWatchAnimationInstance*               FirstPersonMeshAnimator;                                  // 0x0838(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UPocketWatchAnimationInstance*               ThirdPersonMeshAnimator;                                  // 0x0840(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UPocketWatchAnimationInstance*               SelectedMeshAnimator;                                     // 0x0848(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    FirstPersonMeshDynamicMaterialInstance;                   // 0x0850(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ThirdPersonMeshDynamicMaterialInstance;                   // 0x0858(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27230,13 +27234,15 @@ public:
 
 
 // Class Athena.PopUpNotificationComponent
-// 0x0058 (0x0128 - 0x00D0)
+// 0x0068 (0x0138 - 0x00D0)
 class UPopUpNotificationComponent : public UActorComponent
 {
 public:
-	class UPopUpMessageDesc*                           NewTitlesAvailableToBuyPopUp;                             // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FPioneerRewardInfo>                  PioneerRewards;                                           // 0x00D8(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x00E8(0x0040) MISSED OFFSET
+	TArray<struct FPioneerRewardInfo>                  PioneerRewards;                                           // 0x00D0(0x0010) (Edit, ZeroConstructor)
+	class UPopUpMessageDesc*                           PeriodicObjectiveCompletePopUp;                           // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           PeriodicObjectiveIncompletePopUp;                         // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           NewTitlesAvailableToBuyPopUp;                             // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x00F8(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27277,7 +27283,7 @@ public:
 
 
 // Class Athena.PoseableMeshWieldableItem
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class APoseableMeshWieldableItem : public AWieldableItem
 {
 public:
@@ -27292,16 +27298,16 @@ public:
 
 
 // Class Athena.Compass
-// 0x00E0 (0x08D8 - 0x07F8)
+// 0x00E0 (0x08A8 - 0x07C8)
 class ACompass : public APoseableMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0800(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UCompassSpinComponent*                       SpinComponent;                                            // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UPoseableMeshComponent*                      MeshToUse;                                                // 0x0818(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x0820(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UCompassSpinComponent*                       SpinComponent;                                            // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPoseableMeshComponent*                      MeshToUse;                                                // 0x07E8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x07F0(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27313,16 +27319,16 @@ public:
 
 
 // Class Athena.EnchantedCompass
-// 0x00C8 (0x09A0 - 0x08D8)
+// 0x00C8 (0x0970 - 0x08A8)
 class AEnchantedCompass : public ACompass
 {
 public:
-	class UForceFeedbackEffect*                        TargetReplacedForceFeedback;                              // 0x08D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 TargetReplacedSFX;                                        // 0x08E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x08E8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x08F0(0x0004) MISSED OFFSET
-	struct FEnchantedCompassTarget                     Target;                                                   // 0x08F4(0x0018) (Net)
-	unsigned char                                      UnknownData01[0x94];                                      // 0x090C(0x0094) MISSED OFFSET
+	class UForceFeedbackEffect*                        TargetReplacedForceFeedback;                              // 0x08A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 TargetReplacedSFX;                                        // 0x08B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x08B8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x08C0(0x0004) MISSED OFFSET
+	struct FEnchantedCompassTarget                     Target;                                                   // 0x08C4(0x0018) (Net)
+	unsigned char                                      UnknownData01[0x94];                                      // 0x08DC(0x0094) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27332,33 +27338,7 @@ public:
 
 
 	void TriggerRetargetEffect();
-	void Client_OnCompassTargetReplaced();
-};
-
-
-// Class Athena.PressurePlateMechanismTrigger
-// 0x0030 (0x04C8 - 0x0498)
-class APressurePlateMechanismTrigger : public AActor
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
-	class UMechanismTriggerComponent*                  MechanismTriggerComponent;                                // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               TriggerBox;                                               // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               DisableAfterActivation;                                   // 0x04B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x04B1(0x0003) MISSED OFFSET
-	float                                              DelayActivationTime;                                      // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               InvertTriggerActivation;                                  // 0x04B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xF];                                       // 0x04B9(0x000F) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PressurePlateMechanismTrigger"));
-		return ptr;
-	}
-
-
-	void OnTriggerStateChanged(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismTriggerState> PreviousState, TEnumAsByte<EMechanismTriggerState> NewState, class AActor* InInstigator);
-	void OnMechanismTriggerChangedMechanismActionStates(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismActionState> State);
+	void OnRep_Target();
 };
 
 
@@ -27466,22 +27446,22 @@ public:
 
 
 // Class Athena.ProjectileWeapon
-// 0x0258 (0x0A50 - 0x07F8)
+// 0x0258 (0x0A20 - 0x07C8)
 class AProjectileWeapon : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x07F8(0x0028) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0820(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FScriptDelegate                             ProjectileAimValidator;                                   // 0x0828(0x0014) (ZeroConstructor, Config, InstancedReference)
-	struct FProjectileWeaponParameters                 WeaponParameters;                                         // 0x0838(0x0198) (Edit, BlueprintVisible)
-	TEnumAsByte<EProjectileWeaponState>                State;                                                    // 0x09D0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x09D1(0x0007) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x09D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TEnumAsByte<EProjectileWeaponType>                 ProjectileWeaponType;                                     // 0x09E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x09E1(0x0007) MISSED OFFSET
-	int                                                AmmoLeft;                                                 // 0x09E8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              NameplateVisibilityRangeExtensionFactorWhileAiming;       // 0x09EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x60];                                      // 0x09F0(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x07C8(0x0028) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FScriptDelegate                             ProjectileAimValidator;                                   // 0x07F8(0x0014) (ZeroConstructor, Config, InstancedReference)
+	struct FProjectileWeaponParameters                 WeaponParameters;                                         // 0x0808(0x0198) (Edit, BlueprintVisible)
+	TEnumAsByte<EProjectileWeaponState>                State;                                                    // 0x09A0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x09A1(0x0007) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x09A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TEnumAsByte<EProjectileWeaponType>                 ProjectileWeaponType;                                     // 0x09B0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x09B1(0x0007) MISSED OFFSET
+	int                                                AmmoLeft;                                                 // 0x09B8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              NameplateVisibilityRangeExtensionFactorWhileAiming;       // 0x09BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x60];                                      // 0x09C0(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27513,25 +27493,25 @@ public:
 
 
 // Class Athena.TestProjectileWeapon
-// 0x00A0 (0x0AF0 - 0x0A50)
+// 0x00A0 (0x0AC0 - 0x0A20)
 class ATestProjectileWeapon : public AProjectileWeapon
 {
 public:
-	struct FTestProjectileWeaponParameters             TestProjectileWeaponParameters;                           // 0x0A50(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0A51(0x0003) MISSED OFFSET
-	int                                                RequestDeniedCount;                                       // 0x0A54(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                FireProjectilesCallCount;                                 // 0x0A58(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                HitPredictedCount;                                        // 0x0A5C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                HitAuthorityCount;                                        // 0x0A60(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ProcessHitsAuthorityCallCount;                            // 0x0A64(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               OnWeaponFiredCalled;                                      // 0x0A68(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0A69(0x0003) MISSED OFFSET
-	struct FGuid                                       AttackId;                                                 // 0x0A6C(0x0010) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0A7C(0x0004) MISSED OFFSET
-	TArray<class AActor*>                              ActorsHits;                                               // 0x0A80(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPhysicalMaterial*>                   PhysicsMaterials;                                         // 0x0A90(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FProjectileAim                              LastProjectileAim;                                        // 0x0AA0(0x0020) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0AC0(0x0030) MISSED OFFSET
+	struct FTestProjectileWeaponParameters             TestProjectileWeaponParameters;                           // 0x0A20(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0A21(0x0003) MISSED OFFSET
+	int                                                RequestDeniedCount;                                       // 0x0A24(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                FireProjectilesCallCount;                                 // 0x0A28(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                HitPredictedCount;                                        // 0x0A2C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                HitAuthorityCount;                                        // 0x0A30(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                ProcessHitsAuthorityCallCount;                            // 0x0A34(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               OnWeaponFiredCalled;                                      // 0x0A38(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0A39(0x0003) MISSED OFFSET
+	struct FGuid                                       AttackId;                                                 // 0x0A3C(0x0010) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0A4C(0x0004) MISSED OFFSET
+	TArray<class AActor*>                              ActorsHits;                                               // 0x0A50(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPhysicalMaterial*>                   PhysicsMaterials;                                         // 0x0A60(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FProjectileAim                              LastProjectileAim;                                        // 0x0A70(0x0020) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData03[0x30];                                      // 0x0A90(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27612,6 +27592,33 @@ public:
 };
 
 
+// Class Athena.PuzzleVaultAudioParams
+// 0x0060 (0x0088 - 0x0028)
+class UPuzzleVaultAudioParams : public UDataAsset
+{
+public:
+	class UWwiseObjectPoolWrapper*                     PuzzleVaultPool;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     PuzzleVaultWaterFillPool;                                 // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultDoorOpening;                                   // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultDoorClosing;                                   // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultTriggered;                                     // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultComplete;                                      // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultCorrectSolution;                               // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultIncorrectSolution;                             // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 PuzzleVaultTurnBlock;                                     // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakStart;                                           // 0x0070(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakStop;                                            // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 WaterLeakEndClunk;                                        // 0x0080(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PuzzleVaultAudioParams"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TurnablePageInterface
 // 0x0000 (0x0028 - 0x0028)
 class UTurnablePageInterface : public UInterface
@@ -27647,7 +27654,7 @@ public:
 class UQuestBookPageList : public UDataAsset
 {
 public:
-	TArray<class UQuestBookPageLayout*>                AllPages;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FPageReference>                      Pages;                                                    // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FQuestBookPageDesc>                  InitialPages;                                             // 0x0038(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
@@ -27660,24 +27667,29 @@ public:
 
 
 // Class Athena.QuestBook
-// 0x00E0 (0x08D8 - 0x07F8)
-class AQuestBook : public AStaticMeshWieldableItem
+// 0x0120 (0x08E8 - 0x07C8)
+class AQuestBook : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x07F8(0x0018) MISSED OFFSET
-	TArray<struct FPageState>                          CurrentBookContents;                                      // 0x0810(0x0010) (Net, ZeroConstructor)
-	int                                                PageWidth;                                                // 0x0820(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                PageHeight;                                               // 0x0824(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FQuestBookPageRenderer                      PageTextRenderer;                                         // 0x0828(0x0018) (Edit, DisableEditOnInstance)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0840(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCanvasRenderTarget2D*                       LeftPageRenderTarget;                                     // 0x0848(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UCanvasRenderTarget2D*                       RightPageRenderTarget;                                    // 0x0850(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                LeftPageIndex;                                            // 0x0858(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x085C(0x0004) MISSED OFFSET
-	class UQuestBookPageList*                          PageList;                                                 // 0x0860(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x60];                                      // 0x0878(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x07C8(0x0018) MISSED OFFSET
+	TArray<struct FPageState>                          CurrentBookContents;                                      // 0x07E0(0x0010) (Net, ZeroConstructor)
+	int                                                PageWidth;                                                // 0x07F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                PageHeight;                                               // 0x07F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FQuestBookPageRenderer                      PageTextRenderer;                                         // 0x07F8(0x0018) (Edit, DisableEditOnInstance)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0810(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
+	class UCanvasRenderTarget2D*                       LeftSpreadLeftPageRenderTarget;                           // 0x0820(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCanvasRenderTarget2D*                       LeftSpreadRightPageRenderTarget;                          // 0x0828(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCanvasRenderTarget2D*                       RightSpreadLeftPageRenderTarget;                          // 0x0830(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCanvasRenderTarget2D*                       RightSpreadRightPageRenderTarget;                         // 0x0838(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                LeftPageIndex;                                            // 0x0840(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0844(0x0004) MISSED OFFSET
+	class UQuestBookPageList*                          PageList;                                                 // 0x0848(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UQuestBookPageLayout*                        LeftPageContents;                                         // 0x0860(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UQuestBookPageLayout*                        RightPageContents;                                        // 0x0868(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x78];                                      // 0x0870(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27732,7 +27744,7 @@ class UQuestBookDoublePageLayout : public UQuestBookPageLayout
 {
 public:
 	TArray<struct FTreasureMapWidgetTexture>           Images;                                                   // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FTreasureMapWidgetLocalisedText>     GeneralText;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FTreasureMapWidgetLocalisedTextWithFontOverride> GeneralText;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -27749,7 +27761,7 @@ class UQuestBookSinglePageLayout : public UQuestBookPageLayout
 {
 public:
 	TArray<struct FTreasureMapWidgetTexture>           Images;                                                   // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FTreasureMapWidgetLocalisedText>     GeneralText;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FTreasureMapWidgetLocalisedTextWithFontOverride> GeneralText;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -27797,7 +27809,7 @@ public:
 
 
 // Class Athena.TaleQuestDescAsset
-// 0x0028 (0x0058 - 0x0030)
+// 0x0068 (0x0098 - 0x0030)
 class UTaleQuestDescAsset : public UQuestDescDataAsset
 {
 public:
@@ -27805,6 +27817,8 @@ public:
 	TArray<class UUserDefinedStruct*>                  Linkage;                                                  // 0x0038(0x0010) (Edit, ZeroConstructor)
 	class UClass*                                      Definition;                                               // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      DevDefinition;                                            // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FText                                       TaleFailMessage;                                          // 0x0058(0x0038) (Edit)
+	struct FName                                       TaleFailBannerTag;                                        // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27816,7 +27830,7 @@ public:
 
 
 // Class Athena.QuestsConfig
-// 0x0278 (0x02A0 - 0x0028)
+// 0x02A8 (0x02D0 - 0x0028)
 class UQuestsConfig : public UDataAsset
 {
 public:
@@ -27874,19 +27888,24 @@ public:
 	class UPopUpMessageDesc*                           TutorialShowMapPopupDesc;                                 // 0x0220(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      MapToAddToInventoryInTutorial;                            // 0x0228(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	class UPopUpMessageDesc*                           TutorialBuyVoyagePopupDesc;                               // 0x0230(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           PlaceVoyageOnCaptainTablePopupDesc;                       // 0x0238(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           ReturnBootyToTraderPopupDesc;                             // 0x0240(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           TutorialBuyClothesPopupDesc;                              // 0x0248(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           TutorialEquipItemPopupDesc;                               // 0x0250(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UFootstepIDAsset*                            GoldHoarderToClothesShopFootstepID;                       // 0x0258(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UFootstepIDAsset*                            ClothesShopToVanityChestFootstepID;                       // 0x0260(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           MermaidTutorialPopupDesc;                                 // 0x0268(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ChestInventoryInSellTreasureStep;                         // 0x0270(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           TutorialTalkToStrangerPopupDesc;                          // 0x0278(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           TutorialSellTreasurePopupDesc;                            // 0x0280(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           TutorialPickUpChestPopupDesc;                             // 0x0288(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UFootstepIDAsset*                            StrangerToGoldHoarderFootstepID;                          // 0x0290(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ContestMapItemInfoDescClass;                              // 0x0298(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialBuyVoyagePersistentPopupDesc;                     // 0x0238(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           PlaceVoyageOnCaptainTablePopupDesc;                       // 0x0240(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           ReturnBootyToTraderPopupDesc;                             // 0x0248(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialBuyClothesPopupDesc;                              // 0x0250(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialEquipItemPopupDesc;                               // 0x0258(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFootstepIDAsset*                            GoldHoarderToClothesShopFootstepID;                       // 0x0260(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFootstepIDAsset*                            ClothesShopToVanityChestFootstepID;                       // 0x0268(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           MermaidTutorialPopupDesc;                                 // 0x0270(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRewardId                                   OnTutorialEndedRewardId;                                  // 0x0278(0x0008) (Edit)
+	struct FName                                       OnTutorialEndedRewardCompanyName;                         // 0x0280(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ChestInventoryInSellTreasureStep;                         // 0x0288(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FName>                               IslandNamesWithFemaleStranger;                            // 0x0290(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class UPopUpMessageDesc*                           TutorialTalkToStrangerPopupDesc;                          // 0x02A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialTalkToFemaleStrangerPopupDesc;                    // 0x02A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialSellTreasurePopupDesc;                            // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           TutorialPickUpChestPopupDesc;                             // 0x02B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFootstepIDAsset*                            StrangerToGoldHoarderFootstepID;                          // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ContestMapItemInfoDescClass;                              // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28059,11 +28078,10 @@ public:
 
 
 // Class Athena.MapRadialInventoryComponent
-// 0x0008 (0x0380 - 0x0378)
+// 0x0000 (0x0378 - 0x0378)
 class UMapRadialInventoryComponent : public URadialInventoryComponent
 {
 public:
-	class UClass*                                      QuestToolItemCategory;                                    // 0x0378(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28593,6 +28611,93 @@ public:
 };
 
 
+// Class Athena.RevealerInterface
+// 0x0000 (0x0028 - 0x0028)
+class URevealerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RevealerInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RevealableInterface
+// 0x0000 (0x0028 - 0x0028)
+class URevealableInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RevealableInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RevealableComponent
+// 0x00A8 (0x0178 - 0x00D0)
+class URevealableComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	float                                              FarRevealDistance;                                        // 0x00D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CloseRevealDistance;                                      // 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnCloseRevealDelegate;                                    // 0x00E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFarRevealDelegate;                                      // 0x00F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnHideDelegate;                                           // 0x0100(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0110(0x0048) MISSED OFFSET
+	class UObject*                                     TargetGameStateObject;                                    // 0x0158(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0160(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RevealableComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RevealableServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class URevealableServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RevealableServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RevealableService
+// 0x0040 (0x04D8 - 0x0498)
+class ARevealableService : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class UObject*                                     TargetGameStateObject;                                    // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x30];                                      // 0x04A8(0x0030) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RevealableService"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.RewardComponent
 // 0x00B0 (0x0180 - 0x00D0)
 class URewardComponent : public UActorComponent
@@ -29034,14 +29139,15 @@ public:
 
 
 // Class Athena.CinematicQuestRunnable
-// 0x0048 (0x0070 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UCinematicQuestRunnable : public URunnable
 {
 public:
 	struct FText                                       Message;                                                  // 0x0028(0x0038) (Edit)
-	struct FName                                       Tag;                                                      // 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               RunOnce;                                                  // 0x0068(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	struct FText                                       Header;                                                   // 0x0060(0x0038) (Edit)
+	struct FName                                       Tag;                                                      // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               RunOnce;                                                  // 0x00A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -29372,12 +29478,15 @@ public:
 
 
 // Class Athena.SceneDialogueData
-// 0x0020 (0x0048 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class USceneDialogueData : public UObject
 {
 public:
 	TArray<struct FName>                               ActorNames;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
-	TArray<class USceneDialogueSection*>               TextSections;                                             // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TEnumAsByte<ENPCChatType>                          ChatType;                                                 // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	TArray<class USceneDialogueSection*>               TextSections;                                             // 0x0040(0x0010) (Edit, ExportObject, ZeroConstructor)
+	class FString                                      SourceText;                                               // 0x0050(0x0010) (Edit, ZeroConstructor, EditConst)
 
 	static UClass* StaticClass()
 	{
@@ -29455,6 +29564,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ScreenSpaceVfxComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ScuttleDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UScuttleDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ScuttleDamagerType"));
 		return ptr;
 	}
 
@@ -29736,14 +29860,14 @@ public:
 
 
 // Class Athena.SharkPartsDesc
-// 0x0050 (0x0078 - 0x0028)
+// 0x0050 (0x0080 - 0x0030)
 class USharkPartsDesc : public UAIPartsDesc
 {
 public:
-	struct FStringAssetReference                       Mesh;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      SharkPartsTag;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FSharkPlayerStats                           SharkPlayerStats;                                         // 0x0048(0x0020) (Edit, DisableEditOnInstance)
-	TArray<struct FSharkMaterialEntry>                 Materials;                                                // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       Mesh;                                                     // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      SharkPartsTag;                                            // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FSharkPlayerStats                           SharkPlayerStats;                                         // 0x0050(0x0020) (Edit, DisableEditOnInstance)
+	TArray<struct FSharkMaterialEntry>                 Materials;                                                // 0x0070(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -29790,7 +29914,7 @@ public:
 
 
 // Class Athena.DebugRegisterDynamicsShip
-// 0x0000 (0x11A0 - 0x11A0)
+// 0x0000 (0x11C0 - 0x11C0)
 class ADebugRegisterDynamicsShip : public AShip
 {
 public:
@@ -29805,12 +29929,11 @@ public:
 
 
 // Class Athena.ShipErrorOnNonAuthorityPhysicsChange
-// 0x0020 (0x11C0 - 0x11A0)
+// 0x0020 (0x11E0 - 0x11C0)
 class AShipErrorOnNonAuthorityPhysicsChange : public AShip
 {
 public:
-	class UBaseHullDragDynamicsDesc*                   HullDragDynamicsDesc;                                     // 0x11A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x11A8(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x11C0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -29822,11 +29945,11 @@ public:
 
 
 // Class Athena.TestShipActorPhysicsErrorCorrection
-// 0x0010 (0x11B0 - 0x11A0)
+// 0x0010 (0x11D0 - 0x11C0)
 class ATestShipActorPhysicsErrorCorrection : public AShip
 {
 public:
-	struct FScriptMulticastDelegate                    OnGetPhysicsErrorCorrection;                              // 0x11A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x11C0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -30052,6 +30175,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipCompass"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ShipDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UShipDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipDamagerType"));
 		return ptr;
 	}
 
@@ -30284,6 +30422,37 @@ public:
 };
 
 
+// Class Athena.ShipLiveryCatalogueServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UShipLiveryCatalogueServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipLiveryCatalogueServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ShipLiveryCatalogueService
+// 0x0058 (0x0080 - 0x0028)
+class UShipLiveryCatalogueService : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipLiveryCatalogueService"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.ShipNamesDataAsset
 // 0x0010 (0x0038 - 0x0028)
 class UShipNamesDataAsset : public UDataAsset
@@ -30476,11 +30645,11 @@ public:
 
 
 // Class Athena.ShipTelemetryComponent
-// 0x0110 (0x01E0 - 0x00D0)
+// 0x0158 (0x0228 - 0x00D0)
 class UShipTelemetryComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x110];                                     // 0x00D0(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x158];                                     // 0x00D0(0x0158) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -30928,14 +31097,14 @@ public:
 
 
 // Class Athena.ShroudBreakerProxy
-// 0x0020 (0x0860 - 0x0840)
+// 0x0020 (0x0858 - 0x0838)
 class AShroudBreakerProxy : public AFloatingItemProxy
 {
 public:
-	class UShroudBreakerComponent*                     ShroudBreakerComponent;                                   // 0x0840(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UItemProxyShipTrackerComponent*              ItemProxyShipTrackerComponent;                            // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UItemProxyWatercraftTrackerComponent*        ItemProxyWatercraftTrackerComponent;                      // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UInteractableComponent*                      InteractableComponent;                                    // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UShroudBreakerComponent*                     ShroudBreakerComponent;                                   // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UItemProxyShipTrackerComponent*              ItemProxyShipTrackerComponent;                            // 0x0840(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UItemProxyWatercraftTrackerComponent*        ItemProxyWatercraftTrackerComponent;                      // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UInteractableComponent*                      InteractableComponent;                                    // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30980,11 +31149,11 @@ public:
 
 
 // Class Athena.ShroudBreakerWieldable
-// 0x0008 (0x0800 - 0x07F8)
+// 0x0008 (0x07D0 - 0x07C8)
 class AShroudBreakerWieldable : public AStaticMeshWieldableItem
 {
 public:
-	class UShroudBreakerComponent*                     ShroudBreakerComponent;                                   // 0x07F8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UShroudBreakerComponent*                     ShroudBreakerComponent;                                   // 0x07C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30992,6 +31161,53 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Athena.SicknessInterface
+// 0x0000 (0x0028 - 0x0028)
+class USicknessInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SicknessInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SicknessComponent
+// 0x01B0 (0x0280 - 0x00D0)
+class USicknessComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           IncubationPeriodDuration;                                 // 0x00D8(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           LatentPeriodDuration;                                     // 0x0108(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           VomitingPeriodDuration;                                   // 0x0138(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           VomitBoutDuration;                                        // 0x0168(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           DelayBetweenVomitBouts;                                   // 0x0198(0x0030) (Edit, DisableEditOnInstance)
+	float                                              ScreenEffectStrengthWhenSicknessActive;                   // 0x01C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ScreenEffectStrengthWhileVomiting;                        // 0x01CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaterialEffectStrengthWhenSicknessActive;                 // 0x01D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TargetScreenEffectStrength;                               // 0x01D4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              TargetMaterialEffectStrength;                             // 0x01D8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              ScreenEffectSpringAcceleration;                           // 0x01DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaterialEffectSpringAcceleration;                         // 0x01E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x9C];                                      // 0x01E4(0x009C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SicknessComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_SicknessScreenEffectStrength();
+	void OnRep_SicknessMaterialEffectStrength();
 };
 
 
@@ -31011,7 +31227,7 @@ public:
 
 
 // Class Athena.SimpleBootyWieldableItem
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class ASimpleBootyWieldableItem : public ASkeletalMeshWieldableItem
 {
 public:
@@ -31026,7 +31242,7 @@ public:
 
 
 // Class Athena.StaticSimpleBootyWieldableItem
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class AStaticSimpleBootyWieldableItem : public AStaticMeshWieldableItem
 {
 public:
@@ -31034,6 +31250,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StaticSimpleBootyWieldableItem"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SingleBulletGunDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class USingleBulletGunDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SingleBulletGunDamagerType"));
 		return ptr;
 	}
 
@@ -31091,7 +31322,7 @@ public:
 
 
 // Class Athena.SkeletonActionStateCreatorDefinition
-// 0x0088 (0x0520 - 0x0498)
+// 0x00A0 (0x0538 - 0x0498)
 class ASkeletonActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
@@ -31099,9 +31330,9 @@ public:
 	struct FAIDeadActionStateParams                    AIDeadParams;                                             // 0x04A8(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
 	struct FUseItemActionStateParams                   UseItemParams;                                            // 0x04C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
-	struct FUseCannonActionStateParams                 UseCannonParams;                                          // 0x04D0(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FRepairObjectActionStateParams              RepairObjectParams;                                       // 0x0500(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x1C];                                      // 0x0504(0x001C) MISSED OFFSET
+	struct FUseCannonActionStateParams                 UseCannonParams;                                          // 0x04D0(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FRepairObjectActionStateParams              RepairObjectParams;                                       // 0x0518(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x1C];                                      // 0x051C(0x001C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -31309,6 +31540,36 @@ public:
 };
 
 
+// Class Athena.SlidingDoor
+// 0x0048 (0x04E0 - 0x0498)
+class ASlidingDoor : public AActor
+{
+public:
+	float                                              AmountDoorOpens;                                          // 0x0498(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DoorOpeningSpeed;                                         // 0x049C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESlidingDoorDirection>                 MovementDirection;                                        // 0x04A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x04A1(0x0007) MISSED OFFSET
+	class UStaticMeshComponent*                        DoorMesh;                                                 // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FLandmarkReactionKeyFrame>           LandmarkReactionsWhenDoorOpens;                           // 0x04B0(0x0010) (Edit, ZeroConstructor)
+	class ALandmarkReactionPlayer*                     LandmarkReactionPlayer;                                   // 0x04C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TEnumAsByte<ESlidingDoorState>                     ServerDoorState;                                          // 0x04C8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB];                                       // 0x04C9(0x000B) MISSED OFFSET
+	struct FVector                                     InitialDoorMeshLocation;                                  // 0x04D4(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SlidingDoor"));
+		return ptr;
+	}
+
+
+	void ResetDoor();
+	void OpenDoor();
+	void OnRep_ServerDoorState();
+	void OnRep_InitialMeshLocation();
+};
+
+
 // Class Athena.SnakeVenomStatus
 // 0x0000 (0x0028 - 0x0028)
 class USnakeVenomStatus : public UStatusBase
@@ -31354,6 +31615,21 @@ public:
 };
 
 
+// Class Athena.ProgressSpawnLocation
+// 0x0000 (0x04D8 - 0x04D8)
+class AProgressSpawnLocation : public ASpawnLocation
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ProgressSpawnLocation"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.SpawnLocationKeywordPriorityListAsset
 // 0x0010 (0x0038 - 0x0028)
 class USpawnLocationKeywordPriorityListAsset : public UDataAsset
@@ -31370,18 +31646,37 @@ public:
 };
 
 
+// Class Athena.SpawnProgressTriggerVolume
+// 0x0020 (0x0500 - 0x04E0)
+class ASpawnProgressTriggerVolume : public APhysicsVolume
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04E0(0x0008) MISSED OFFSET
+	TArray<class AProgressSpawnLocation*>              LinkedSpawnLocation;                                      // 0x04E8(0x0010) (Edit, ZeroConstructor)
+	int                                                ProgressLevel;                                            // 0x04F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04FC(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SpawnProgressTriggerVolume"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.SpeakingTrumpet
-// 0x0030 (0x0828 - 0x07F8)
+// 0x0030 (0x07F8 - 0x07C8)
 class ASpeakingTrumpet : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	float                                              VoiceAttenuationScaler;                                   // 0x0800(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              NonVerbalBroadcastRadiusScaler;                           // 0x0804(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0820(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	float                                              VoiceAttenuationScaler;                                   // 0x07D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              NonVerbalBroadcastRadiusScaler;                           // 0x07D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x07F0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -31428,34 +31723,34 @@ public:
 
 
 // Class Athena.Spyglass
-// 0x00D0 (0x08C8 - 0x07F8)
+// 0x00D0 (0x0898 - 0x07C8)
 class ASpyglass : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              NameplateVisibilityRangeExtensionFactorWhileZoomed;       // 0x0820(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SecondsUntilZoomStarts;                                   // 0x0824(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SecondsUntilPostStarts;                                   // 0x0828(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InAimFOV;                                                 // 0x082C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BlendSpeed;                                               // 0x0830(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FAthenaCharacterItemUseSpeedParams          AimSpeedScaleParameters;                                  // 0x0834(0x0008) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x3C];                                      // 0x083C(0x003C) MISSED OFFSET
-	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0878(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               TurningOn;                                                // 0x0880(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0881(0x0003) MISSED OFFSET
-	float                                              BlurTime;                                                 // 0x0884(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              BlurInDuration;                                           // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BlurOutDuration;                                          // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 BlurCurve;                                                // 0x0890(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UPostProcessComponent*                       PostProcessComponent;                                     // 0x0898(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        Glint;                                                    // 0x08A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UMaterial*                                   MaterialParent;                                           // 0x08A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  LensNormal;                                               // 0x08B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  LensMask;                                                 // 0x08B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x08C0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              NameplateVisibilityRangeExtensionFactorWhileZoomed;       // 0x07F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SecondsUntilZoomStarts;                                   // 0x07F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SecondsUntilPostStarts;                                   // 0x07F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InAimFOV;                                                 // 0x07FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BlendSpeed;                                               // 0x0800(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAthenaCharacterItemUseSpeedParams          AimSpeedScaleParameters;                                  // 0x0804(0x0008) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x3C];                                      // 0x080C(0x003C) MISSED OFFSET
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0848(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               TurningOn;                                                // 0x0850(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0851(0x0003) MISSED OFFSET
+	float                                              BlurTime;                                                 // 0x0854(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              BlurInDuration;                                           // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BlurOutDuration;                                          // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 BlurCurve;                                                // 0x0860(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPostProcessComponent*                       PostProcessComponent;                                     // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        Glint;                                                    // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UMaterial*                                   MaterialParent;                                           // 0x0878(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  LensNormal;                                               // 0x0880(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  LensMask;                                                 // 0x0888(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0890(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -31467,10 +31762,12 @@ public:
 
 
 // Class Athena.EnchantedSpyglass
-// 0x0000 (0x08C8 - 0x08C8)
+// 0x0010 (0x08A8 - 0x0898)
 class AEnchantedSpyglass : public ASpyglass
 {
 public:
+	class UInventoryItemComponent*                     EnchantedInventoryItem;                                   // 0x0898(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x08A0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -32090,6 +32387,21 @@ public:
 };
 
 
+// Class Athena.StatusResponseSickness
+// 0x0000 (0x0028 - 0x0028)
+class UStatusResponseSickness : public UStatusResponse
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StatusResponseSickness"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.StatusResponseSleepCurse
 // 0x0008 (0x0030 - 0x0028)
 class UStatusResponseSleepCurse : public UStatusResponse
@@ -32232,7 +32544,7 @@ public:
 
 
 // Class Athena.StorageContainerComponent
-// 0x0130 (0x0200 - 0x00D0)
+// 0x0170 (0x0240 - 0x00D0)
 class UStorageContainerComponent : public UActorComponent
 {
 public:
@@ -32246,9 +32558,8 @@ public:
 	class UWwiseEvent*                                 OpenContainerSFX;                                         // 0x0198(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x10];                                      // 0x01A0(0x0010) MISSED OFFSET
 	class UWwiseObjectPoolWrapper*                     SfxPool;                                                  // 0x01B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x01B8(0x0030) MISSED OFFSET
-	TArray<TEnumAsByte<EHealthChangedReason>>          CloseInteractionExemptHealthChangeReasons;                // 0x01E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UObject*                                     Aggregator;                                               // 0x01F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x80];                                      // 0x01B8(0x0080) MISSED OFFSET
+	class UObject*                                     Aggregator;                                               // 0x0238(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32262,6 +32573,22 @@ public:
 	void Multicast_DetachAllPlayersRPC();
 	struct FText GetContainerDisplayName();
 	void AddItem(class AActor* Player, class UClass* InItemDesc);
+};
+
+
+// Class Athena.StorageContainerComponentData
+// 0x0010 (0x0038 - 0x0028)
+class UStorageContainerComponentData : public UDataAsset
+{
+public:
+	TArray<TEnumAsByte<EHealthChangedReason>>          CloseInteractionExemptHealthChangeReasons;                // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StorageContainerComponentData"));
+		return ptr;
+	}
+
 };
 
 
@@ -32372,7 +32699,7 @@ public:
 
 
 // Class Athena.StorageContainerSpecialTypeSelectorEntries
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UStorageContainerSpecialTypeSelectorEntries : public UDataAsset
 {
 public:
@@ -32380,6 +32707,7 @@ public:
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	class UStorageContainerSpawnerCount*               NumSpawners;                                              // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FTypedStorageContainerContentTypeSelectorEntry> Entries;                                                  // 0x0038(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       FeatureToggle;                                            // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32488,8 +32816,23 @@ public:
 };
 
 
+// Class Athena.StrainDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UStrainDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StrainDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.StrongholdKey
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class AStrongholdKey : public AStaticMeshWieldableItem
 {
 public:
@@ -32504,11 +32847,11 @@ public:
 
 
 // Class Athena.StrongholdKeyItemInfo
-// 0x0010 (0x0528 - 0x0518)
+// 0x0010 (0x05D0 - 0x05C0)
 class AStrongholdKeyItemInfo : public ANonStorableItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0518(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -32520,7 +32863,7 @@ public:
 
 
 // Class Athena.StrongholdKeyProxy
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x0838 - 0x0838)
 class AStrongholdKeyProxy : public AFloatingItemProxy
 {
 public:
@@ -32548,6 +32891,57 @@ public:
 
 
 	static void PushCharacterIntoStunnedActionState(class AAthenaCharacter* Character, const struct FStunnedActionStateParams& Params);
+};
+
+
+// Class Athena.SummonAIAbilityType
+// 0x0000 (0x0028 - 0x0028)
+class USummonAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SummonAIAbilityType"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SummonAIAbility
+// 0x00A0 (0x0100 - 0x0060)
+class USummonAIAbility : public UAthenaAIAbility
+{
+public:
+	class UAIIncrementalWaveSpawner*                   SummonSpawner;                                            // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x98];                                      // 0x0068(0x0098) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SummonAIAbility"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SummonAIAbilityParams
+// 0x0020 (0x0090 - 0x0070)
+class USummonAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+	class UAIIncrementalWaveSpawner*                   SummonSpawner;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FAthenaAIAbilityPlayerBasedRanges           NumToSpawn;                                               // 0x0078(0x0010) (Edit)
+	int                                                MaxTotalAIFromSummonAbility;                              // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SummonAIAbilityParams"));
+		return ptr;
+	}
+
 };
 
 
@@ -32755,6 +33149,21 @@ public:
 
 
 	bool RunningOnServer();
+};
+
+
+// Class Athena.SwimmingCreatureDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class USwimmingCreatureDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwimmingCreatureDamagerType"));
+		return ptr;
+	}
+
 };
 
 
@@ -33003,6 +33412,21 @@ public:
 };
 
 
+// Class Athena.TaleQuestDefinition
+// 0x0000 (0x0028 - 0x0028)
+class UTaleQuestDefinition : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestDefinition"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TaleQuestRootFrame
 // 0x0010 (0x0038 - 0x0028)
 class UTaleQuestRootFrame : public UObject
@@ -33030,6 +33454,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AISpawnContextTaleQuestService
+// 0x0018 (0x0058 - 0x0040)
+class UAISpawnContextTaleQuestService : public UTaleQuestService
+{
+public:
+	class UAISpawnContextTaleQuestServiceDesc*         Desc;                                                     // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AISpawnContextTaleQuestService"));
 		return ptr;
 	}
 
@@ -33084,7 +33525,7 @@ public:
 
 
 // Class Athena.TaleQuestActorService
-// 0x0040 (0x0080 - 0x0040)
+// 0x0050 (0x0090 - 0x0040)
 class UTaleQuestActorService : public UTaleQuestService
 {
 public:
@@ -33093,6 +33534,7 @@ public:
 	class UTaleQuestActorServiceDesc*                  Desc;                                                     // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
 	class APhasedClusterRoot*                          PhasedClusterRoot;                                        // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
 	TArray<struct FPhasedActor>                        PhasedActors;                                             // 0x0070(0x0010) (ZeroConstructor)
+	TArray<struct FPhasedItem>                         PhasedItems;                                              // 0x0080(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -33118,6 +33560,9 @@ public:
 		return ptr;
 	}
 
+
+	void RemoveToolFromAllParticipants();
+	void GiveToolToAllParticipants();
 };
 
 
@@ -33131,6 +33576,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.BookTaleQuestService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleEnchantedSpyglassService
+// 0x0000 (0x00A8 - 0x00A8)
+class UTaleEnchantedSpyglassService : public UTaleQuestToolService
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleEnchantedSpyglassService"));
 		return ptr;
 	}
 
@@ -33153,6 +33613,38 @@ public:
 };
 
 
+// Class Athena.TaleQuestLanternService
+// 0x0000 (0x00A8 - 0x00A8)
+class UTaleQuestLanternService : public UTaleQuestToolService
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestLanternService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestPlankService
+// 0x0000 (0x00A8 - 0x00A8)
+class UTaleQuestPlankService : public UTaleQuestToolService
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestPlankService"));
+		return ptr;
+	}
+
+
+	void SetWoodenPlankDesc(class UClass* PlankDesc);
+};
+
+
 // Class Athena.TaleQuestServiceDesc
 // 0x0000 (0x0028 - 0x0028)
 class UTaleQuestServiceDesc : public UObject
@@ -33168,11 +33660,110 @@ public:
 };
 
 
-// Class Athena.TaleQuestStepDesc
+// Class Athena.WorldResourceRegistryInterface
 // 0x0000 (0x0028 - 0x0028)
+class UWorldResourceRegistryInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WorldResourceRegistryInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleResourceBrokerService
+// 0x0038 (0x0078 - 0x0040)
+class UTaleResourceBrokerService : public UTaleQuestService
+{
+public:
+	TScriptInterface<class UContendedResourceServiceInterface> ContendedResourceService;                                 // 0x0040(0x0010) (ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UWorldResourceRegistryInterface> ResourceRegistry;                                         // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0060(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleResourceBrokerService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleResourceBrokerServiceDesc
+// 0x0000 (0x0028 - 0x0028)
+class UTaleResourceBrokerServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleResourceBrokerServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleVaultService
+// 0x0010 (0x0050 - 0x0040)
+class UTaleVaultService : public UTaleQuestService
+{
+public:
+	class APuzzleVault*                                Vault;                                                    // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UVaultPuzzleDataAsset*                       SolutionAsset;                                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleVaultService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleVaultServiceDesc
+// 0x0000 (0x0028 - 0x0028)
+class UTaleVaultServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleVaultServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TemporaryEntitlementsTaleQuestService
+// 0x0028 (0x0068 - 0x0040)
+class UTemporaryEntitlementsTaleQuestService : public UTaleQuestService
+{
+public:
+	class UTemporaryEntitlementsTaleQuestServiceDesc*  ServiceDesc;                                              // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0048(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TemporaryEntitlementsTaleQuestService"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestStepDesc
+// 0x0008 (0x0030 - 0x0028)
 class UTaleQuestStepDesc : public UObject
 {
 public:
+	bool                                               Fork;                                                     // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -33196,6 +33787,25 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestFramedStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AISpawnContextTaleQuestServiceDesc
+// 0x0020 (0x0048 - 0x0028)
+class UAISpawnContextTaleQuestServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+	struct FName                                       AISpawnContextName;                                       // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SpecificToIsland;                                         // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	struct FQuestVariableAsset                         ActorLocatedOnIsland;                                     // 0x0038(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AISpawnContextTaleQuestServiceDesc"));
 		return ptr;
 	}
 
@@ -33281,6 +33891,22 @@ public:
 };
 
 
+// Class Athena.TaleEnchantedSpyglassServiceDesc
+// 0x0008 (0x0038 - 0x0030)
+class UTaleEnchantedSpyglassServiceDesc : public UTaleQuestToolServiceDesc
+{
+public:
+	class UClass*                                      EnchantedSpyglassDesc;                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleEnchantedSpyglassServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TaleQuestCompassServiceDesc
 // 0x0008 (0x0038 - 0x0030)
 class UTaleQuestCompassServiceDesc : public UTaleQuestToolServiceDesc
@@ -33291,6 +33917,56 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestCompassServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestLanternServiceDesc
+// 0x0008 (0x0038 - 0x0030)
+class UTaleQuestLanternServiceDesc : public UTaleQuestToolServiceDesc
+{
+public:
+	class UClass*                                      LanternDesc;                                              // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestLanternServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestPlankServiceDesc
+// 0x0008 (0x0038 - 0x0030)
+class UTaleQuestPlankServiceDesc : public UTaleQuestToolServiceDesc
+{
+public:
+	class UClass*                                      WoodenPlankDesc;                                          // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestPlankServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TemporaryEntitlementsTaleQuestServiceDesc
+// 0x0018 (0x0040 - 0x0028)
+class UTemporaryEntitlementsTaleQuestServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+	TArray<TAssetPtr<class UClass>>                    Entitlements;                                             // 0x0028(0x0010) (Edit, ZeroConstructor)
+	bool                                               GrantTemporaryEntitlementOnStart;                         // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TemporaryEntitlementsTaleQuestServiceDesc"));
 		return ptr;
 	}
 
@@ -33419,6 +34095,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.GrantPagesStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.InitialisePuzzleVaultStep
+// 0x0008 (0x0070 - 0x0068)
+class UInitialisePuzzleVaultStep : public UTaleQuestStep
+{
+public:
+	class UInitialisePuzzleVaultStepDesc*              Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.InitialisePuzzleVaultStep"));
 		return ptr;
 	}
 
@@ -33592,7 +34284,7 @@ class USpawnCollectableQuestBookPageStep : public UTaleQuestStep
 {
 public:
 	class USpawnCollectableQuestBookPageStepDesc*      StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+	class ACollectableQuestBookPage*                   SpawnedPage;                                              // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33613,6 +34305,40 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SpawnItemStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.StatProgressStep
+// 0x0008 (0x0070 - 0x0068)
+class UStatProgressStep : public UTaleQuestStep
+{
+public:
+	class UStatProgressStepDesc*                       StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StatProgressStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestAssignVaultStep
+// 0x0010 (0x0078 - 0x0068)
+class UTaleQuestAssignVaultStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestAssignVaultStepDesc*               StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               VaultAssigned;                                            // 0x0070(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestAssignVaultStep"));
 		return ptr;
 	}
 
@@ -33658,13 +34384,14 @@ public:
 
 
 // Class Athena.TaleQuestSequenceStep
-// 0x0018 (0x00A8 - 0x0090)
+// 0x0028 (0x00B8 - 0x0090)
 class UTaleQuestSequenceStep : public UTaleQuestFramedStep
 {
 public:
 	class UTaleQuestSequenceStepDesc*                  Desc;                                                     // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UTaleQuestStep*                              CurrentStep;                                              // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00A0(0x0008) MISSED OFFSET
+	TArray<struct FForkedStep>                         ForkedSteps;                                              // 0x00A8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -33723,6 +34450,54 @@ public:
 };
 
 
+// Class Athena.TaleQuestSelectAISpawnerStep
+// 0x0008 (0x0070 - 0x0068)
+class UTaleQuestSelectAISpawnerStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestSelectAISpawnerStepDesc*           Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestSelectAISpawnerStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestSetNPCDialogKeyStep
+// 0x0008 (0x0070 - 0x0068)
+class UTaleQuestSetNPCDialogKeyStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestSetNPCDialogKeyStepDesc*           Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestSetNPCDialogKeyStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestStartingBannerStep
+// 0x0008 (0x0070 - 0x0068)
+class UTaleQuestStartingBannerStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestStartingBannerStepDesc*            Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestStartingBannerStep"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TaleQuestUnionStep
 // 0x0020 (0x0088 - 0x0068)
 class UTaleQuestUnionStep : public UTaleQuestStep
@@ -33757,6 +34532,24 @@ public:
 };
 
 
+// Class Athena.TelemetryTaskStep
+// 0x0020 (0x0088 - 0x0068)
+class UTelemetryTaskStep : public UTaleQuestStep
+{
+public:
+	class UTelemetryTaskStepDesc*                      Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTaleQuestStep*                              TaskStep;                                                 // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TelemetryTaskStep"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.WaitForUnlockStep
 // 0x0008 (0x0070 - 0x0068)
 class UWaitForUnlockStep : public UTaleQuestStep
@@ -33773,14 +34566,30 @@ public:
 };
 
 
+// Class Athena.WaitForVaultCompletionStep
+// 0x0008 (0x0070 - 0x0068)
+class UWaitForVaultCompletionStep : public UTaleQuestStep
+{
+public:
+	class UWaitForVaultCompletionStepDesc*             Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaitForVaultCompletionStep"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.AddRiddleMapStepDesc
-// 0x0028 (0x0050 - 0x0028)
+// 0x0028 (0x0058 - 0x0030)
 class UAddRiddleMapStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FName                                       MapId;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FQuestVariableName                          IslandName;                                               // 0x0030(0x0010) (Edit)
-	TArray<struct FText>                               Text;                                                     // 0x0040(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       MapId;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableName                          IslandName;                                               // 0x0038(0x0010) (Edit)
+	TArray<struct FText>                               Text;                                                     // 0x0048(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -33792,13 +34601,13 @@ public:
 
 
 // Class Athena.AddXMarksMapStepDesc
-// 0x0028 (0x0050 - 0x0028)
+// 0x0028 (0x0058 - 0x0030)
 class UAddXMarksMapStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FName                                       MapId;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FQuestVariableName                          IslandName;                                               // 0x0030(0x0010) (Edit)
-	struct FQuestVariableVector                        Location;                                                 // 0x0040(0x0010) (Edit)
+	struct FName                                       MapId;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableName                          IslandName;                                               // 0x0038(0x0010) (Edit)
+	struct FQuestVariableVector                        Location;                                                 // 0x0048(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33810,11 +34619,11 @@ public:
 
 
 // Class Athena.AdvanceRiddleMapStepDesc
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UAdvanceRiddleMapStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FName                                       MapId;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       MapId;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33826,12 +34635,12 @@ public:
 
 
 // Class Athena.AssignItemStepDesc
-// 0x0018 (0x0040 - 0x0028)
+// 0x0018 (0x0048 - 0x0030)
 class UAssignItemStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClass                         TypeVar;                                                  // 0x0028(0x0010) (Edit)
-	class UClass*                                      TypeValue;                                                // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableClass                         TypeVar;                                                  // 0x0030(0x0010) (Edit)
+	class UClass*                                      TypeValue;                                                // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33843,17 +34652,18 @@ public:
 
 
 // Class Athena.BuriedItemStepDesc
-// 0x0030 (0x0058 - 0x0028)
+// 0x0068 (0x0098 - 0x0030)
 class UBuriedItemStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClass                         ItemType;                                                 // 0x0028(0x0010) (Edit)
-	float                                              DigRadius;                                                // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FQuestVariableActor                         SpawnedItemInfo;                                          // 0x0040(0x0010) (Edit)
-	bool                                               TrackBuriedItem;                                          // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               MarkBuriedItemAsCritical;                                 // 0x0051(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0052(0x0006) MISSED OFFSET
+	struct FQuestVariableClass                         ItemType;                                                 // 0x0030(0x0010) (Edit)
+	float                                              DigRadius;                                                // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	struct FQuestVariableActor                         SpawnedItemInfo;                                          // 0x0048(0x0010) (Edit)
+	bool                                               TrackBuriedItem;                                          // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               MarkBuriedItemAsCritical;                                 // 0x0059(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x005A(0x0006) MISSED OFFSET
+	struct FText                                       CriticalActorLostMessage;                                 // 0x0060(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33865,11 +34675,11 @@ public:
 
 
 // Class Athena.BuriedItemStepFromLocationDesc
-// 0x0010 (0x0068 - 0x0058)
+// 0x0010 (0x00A8 - 0x0098)
 class UBuriedItemStepFromLocationDesc : public UBuriedItemStepDesc
 {
 public:
-	struct FQuestVariableVector                        ItemLocation;                                             // 0x0058(0x0010) (Edit)
+	struct FQuestVariableVector                        ItemLocation;                                             // 0x0098(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33881,11 +34691,11 @@ public:
 
 
 // Class Athena.BuriedItemStepFromActorDesc
-// 0x0010 (0x0068 - 0x0058)
+// 0x0010 (0x00A8 - 0x0098)
 class UBuriedItemStepFromActorDesc : public UBuriedItemStepDesc
 {
 public:
-	struct FQuestVariableActor                         PlaceableActor;                                           // 0x0058(0x0010) (Edit)
+	struct FQuestVariableActor                         PlaceableActor;                                           // 0x0098(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33897,13 +34707,13 @@ public:
 
 
 // Class Athena.ChooseIslandStepDesc
-// 0x0078 (0x00A0 - 0x0028)
+// 0x0078 (0x00A8 - 0x0030)
 class UChooseIslandStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableVector                        SourceLocation;                                           // 0x0028(0x0010) (Edit)
-	struct FVoyageLocationParams                       LocationParams;                                           // 0x0038(0x0058) (Edit)
-	struct FQuestVariableName                          IslandName;                                               // 0x0090(0x0010) (Edit)
+	struct FQuestVariableVector                        SourceLocation;                                           // 0x0030(0x0010) (Edit)
+	struct FVoyageLocationParams                       LocationParams;                                           // 0x0040(0x0058) (Edit)
+	struct FQuestVariableName                          IslandName;                                               // 0x0098(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33915,12 +34725,12 @@ public:
 
 
 // Class Athena.GenerateDigLocationStepDesc
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UGenerateDigLocationStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableName                          IslandName;                                               // 0x0028(0x0010) (Edit)
-	struct FQuestVariableVector                        DigLocation;                                              // 0x0038(0x0010) (Edit)
+	struct FQuestVariableName                          IslandName;                                               // 0x0030(0x0010) (Edit)
+	struct FQuestVariableVector                        DigLocation;                                              // 0x0040(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33932,7 +34742,7 @@ public:
 
 
 // Class Athena.GrantPagesStepDesc
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UGrantPagesStepDesc : public UTaleQuestStepDesc
 {
 public:
@@ -33947,11 +34757,11 @@ public:
 
 
 // Class Athena.GrantPagesStepFromLayoutsDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UGrantPagesStepFromLayoutsDesc : public UGrantPagesStepDesc
 {
 public:
-	TArray<struct FQuestBookPageDesc>                  Pages;                                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FQuestBookPageDesc>                  Pages;                                                    // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -33963,11 +34773,11 @@ public:
 
 
 // Class Athena.GrantPagesStepFromBundleDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UGrantPagesStepFromBundleDesc : public UGrantPagesStepDesc
 {
 public:
-	struct FQuestVariablePageBundle                    Bundle;                                                   // 0x0028(0x0010) (Edit)
+	struct FQuestVariablePageBundle                    Bundle;                                                   // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33978,12 +34788,29 @@ public:
 };
 
 
+// Class Athena.InitialisePuzzleVaultStepDesc
+// 0x0020 (0x0050 - 0x0030)
+class UInitialisePuzzleVaultStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableActor                         Vault;                                                    // 0x0030(0x0010) (Edit)
+	struct FQuestVariableDataAsset                     SolutionAsset;                                            // 0x0040(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.InitialisePuzzleVaultStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.MutateCollectorsChestStepDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UMutateCollectorsChestStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableActor                         CollectorsChest;                                          // 0x0028(0x0010) (Edit)
+	struct FQuestVariableActor                         CollectorsChest;                                          // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -33995,11 +34822,11 @@ public:
 
 
 // Class Athena.AddItemToCollectorsChestStepDesc
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0050 - 0x0040)
 class UAddItemToCollectorsChestStepDesc : public UMutateCollectorsChestStepDesc
 {
 public:
-	struct FQuestVariableClass                         ItemToStore;                                              // 0x0038(0x0010) (Edit)
+	struct FQuestVariableClass                         ItemToStore;                                              // 0x0040(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34011,7 +34838,7 @@ public:
 
 
 // Class Athena.WaitForCrewToCollectCollectorsChestPagesStepDesc
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0040 - 0x0040)
 class UWaitForCrewToCollectCollectorsChestPagesStepDesc : public UMutateCollectorsChestStepDesc
 {
 public:
@@ -34026,14 +34853,17 @@ public:
 
 
 // Class Athena.PlayNpcAnimationStepDesc
-// 0x0058 (0x0080 - 0x0028)
+// 0x0080 (0x00B0 - 0x0030)
 class UPlayNpcAnimationStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableActor                         TargetNpc;                                                // 0x0028(0x0010) (Edit)
-	struct FName                                       AnimationNameToPlay;                                      // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USceneDialogueData*                          DialogueData;                                             // 0x0040(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FText                                       SpeakingActorLocalisableName;                             // 0x0048(0x0038) (Edit)
+	struct FQuestVariableActor                         TargetNpc;                                                // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         PlaceableReaction;                                        // 0x0040(0x0010) (Edit)
+	struct FName                                       AnimationNameToPlay;                                      // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USceneDialogueData*                          DialogueData;                                             // 0x0058(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      LocalMusicZone;                                           // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       VoiceClipToPlay;                                          // 0x0068(0x0010) (Edit, ZeroConstructor)
+	struct FText                                       SpeakingActorLocalisableName;                             // 0x0078(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34045,11 +34875,11 @@ public:
 
 
 // Class Athena.RemoveCriticalActorStepDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class URemoveCriticalActorStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableActor                         ActorVar;                                                 // 0x0028(0x0010) (Edit)
+	struct FQuestVariableActor                         ActorVar;                                                 // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34061,11 +34891,11 @@ public:
 
 
 // Class Athena.RemoveRiddleMapStepDesc
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class URemoveRiddleMapStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FName                                       MapId;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       MapId;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34077,12 +34907,12 @@ public:
 
 
 // Class Athena.RemoveXMarksMapStepDesc
-// 0x0018 (0x0040 - 0x0028)
+// 0x0018 (0x0048 - 0x0030)
 class URemoveXMarksMapStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FName                                       MapId;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FQuestVariableVector                        Location;                                                 // 0x0030(0x0010) (Edit)
+	struct FName                                       MapId;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableVector                        Location;                                                 // 0x0038(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34094,12 +34924,12 @@ public:
 
 
 // Class Athena.ResolveActorStringReferenceStepDesc
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UResolveActorStringReferenceStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableActor                         ActorVariable;                                            // 0x0028(0x0010) (Edit)
-	struct FStringAssetReference                       ActorReference;                                           // 0x0038(0x0010) (Edit, ZeroConstructor)
+	struct FQuestVariableActor                         ActorVariable;                                            // 0x0030(0x0010) (Edit)
+	struct FStringAssetReference                       ActorReference;                                           // 0x0040(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -34111,16 +34941,18 @@ public:
 
 
 // Class Athena.SpawnActorStepDesc
-// 0x0030 (0x0058 - 0x0028)
+// 0x0070 (0x00A0 - 0x0030)
 class USpawnActorStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UClass*                                      Actor;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               TrackActor;                                               // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               MarkAsCritical;                                           // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
-	struct FQuestVariableVector                        LocationVar;                                              // 0x0038(0x0010) (Edit)
-	struct FQuestVariableActor                         ActorVar;                                                 // 0x0048(0x0010) (Edit)
+	class UClass*                                      Actor;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TrackActor;                                               // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               MarkAsCritical;                                           // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+	struct FText                                       CriticalActorLostMessage;                                 // 0x0040(0x0038) (Edit)
+	struct FName                                       SocketName;                                               // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableActor                         LocatorVar;                                               // 0x0080(0x0010) (Edit)
+	struct FQuestVariableActor                         ActorVar;                                                 // 0x0090(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34132,13 +34964,14 @@ public:
 
 
 // Class Athena.SpawnPhasedActorStepDesc
-// 0x0028 (0x0050 - 0x0028)
+// 0x0030 (0x0060 - 0x0030)
 class USpawnPhasedActorStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UClass*                                      Actor;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FQuestVariableActor                         LocationVar;                                              // 0x0030(0x0010) (Edit)
-	struct FQuestVariableActor                         ActorVar;                                                 // 0x0040(0x0010) (Edit)
+	struct FName                                       SocketName;                                               // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      Actor;                                                    // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableActor                         LocationVar;                                              // 0x0040(0x0010) (Edit)
+	struct FQuestVariableActor                         ActorVar;                                                 // 0x0050(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34150,11 +34983,11 @@ public:
 
 
 // Class Athena.SpawnCollectableQuestBookPageStepDesc
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class USpawnCollectableQuestBookPageStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UClass*                                      CollectableQuestBookPageToSpawn;                          // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CollectableQuestBookPageToSpawn;                          // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34166,11 +34999,11 @@ public:
 
 
 // Class Athena.SpawnCollectableQuestBookPageStepFromLocationDesc
-// 0x0010 (0x0040 - 0x0030)
+// 0x0010 (0x0048 - 0x0038)
 class USpawnCollectableQuestBookPageStepFromLocationDesc : public USpawnCollectableQuestBookPageStepDesc
 {
 public:
-	struct FQuestVariableVector                        ItemLocation;                                             // 0x0030(0x0010) (Edit)
+	struct FQuestVariableVector                        ItemLocation;                                             // 0x0038(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34182,12 +35015,12 @@ public:
 
 
 // Class Athena.SpawnCollectableQuestBookPageStepFromActorDesc
-// 0x0018 (0x0048 - 0x0030)
+// 0x0018 (0x0050 - 0x0038)
 class USpawnCollectableQuestBookPageStepFromActorDesc : public USpawnCollectableQuestBookPageStepDesc
 {
 public:
-	struct FQuestVariableActor                         PlaceableActor;                                           // 0x0030(0x0010) (Edit)
-	struct FName                                       SocketName;                                               // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableActor                         PlaceableActor;                                           // 0x0038(0x0010) (Edit)
+	struct FName                                       SocketName;                                               // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34199,16 +35032,18 @@ public:
 
 
 // Class Athena.SpawnItemStepDesc
-// 0x0030 (0x0058 - 0x0028)
+// 0x0070 (0x00A0 - 0x0030)
 class USpawnItemStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UClass*                                      Item;                                                     // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               TrackItem;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               MarkItemAsCritical;                                       // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
-	struct FQuestVariableVector                        LocationVar;                                              // 0x0038(0x0010) (Edit)
-	struct FQuestVariableActor                         ActorVar;                                                 // 0x0048(0x0010) (Edit)
+	class UClass*                                      Item;                                                     // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TrackItem;                                                // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               MarkItemAsCritical;                                       // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+	struct FText                                       CriticalActorLostMessage;                                 // 0x0040(0x0038) (Edit)
+	struct FName                                       SocketName;                                               // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableActor                         LocatorVar;                                               // 0x0080(0x0010) (Edit)
+	struct FQuestVariableActor                         ActorVar;                                                 // 0x0090(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34219,12 +35054,46 @@ public:
 };
 
 
+// Class Athena.StatProgressStepDesc
+// 0x0010 (0x0040 - 0x0030)
+class UStatProgressStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FPlayerStat                                 Stat;                                                     // 0x0030(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.StatProgressStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestAssignVaultStepDesc
+// 0x0030 (0x0060 - 0x0030)
+class UTaleQuestAssignVaultStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableVaultHandle                   AlloctedVaultHandleVar;                                   // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         AlloctedVaultVar;                                         // 0x0040(0x0010) (Edit)
+	struct FQuestVariableClass                         VaultKeyTypeVar;                                          // 0x0050(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestAssignVaultStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TaleQuestBlueprintStepDesc
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UTaleQuestBlueprintStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UClass*                                      StepType;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      StepType;                                                 // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34236,17 +35105,15 @@ public:
 
 
 // Class Athena.TaleQuestSpawnAIStepDesc
-// 0x0058 (0x0088 - 0x0030)
+// 0x0030 (0x0068 - 0x0038)
 class UTaleQuestSpawnAIStepDesc : public UTaleQuestBlueprintStepDesc
 {
 public:
-	struct FQuestVariableAISpawner                     SpawnerAsset;                                             // 0x0030(0x0010) (Edit)
-	struct FQuestVariableName                          RegionName;                                               // 0x0040(0x0010) (Edit)
-	struct FQuestVariableAsset                         BoundsCentre;                                             // 0x0050(0x0010) (Edit)
-	struct FQuestVariableFloat                         TriggerRadius;                                            // 0x0060(0x0010) (Edit)
-	struct FQuestVariableAsset                         WaveSpawnLocation;                                        // 0x0070(0x0010) (Edit)
-	bool                                               SpawnOnlyForVoyageParticipants;                           // 0x0080(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
+	struct FQuestVariableAISpawner                     SpawnerAsset;                                             // 0x0038(0x0010) (Edit)
+	struct FQuestVariableAsset                         WaveSpawnLocation;                                        // 0x0048(0x0010) (Edit)
+	class UClass*                                      MusicZone;                                                // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SpawnOnlyForVoyageParticipants;                           // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -34258,11 +35125,11 @@ public:
 
 
 // Class Athena.TaleQuestSpawnAIDioramaStepDesc
-// 0x0008 (0x0090 - 0x0088)
+// 0x0008 (0x0070 - 0x0068)
 class UTaleQuestSpawnAIDioramaStepDesc : public UTaleQuestSpawnAIStepDesc
 {
 public:
-	class UAIDioramaDesc*                              AIDioramaDesc;                                            // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAIDioramaDesc*                              AIDioramaDesc;                                            // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34274,13 +35141,13 @@ public:
 
 
 // Class Athena.TaleQuestBranchStepDesc
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UTaleQuestBranchStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableBool                          Condition;                                                // 0x0028(0x0010) (Edit)
-	class UTaleQuestStepDesc*                          IfCondition;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTaleQuestStepDesc*                          ElseCondition;                                            // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableBool                          Condition;                                                // 0x0030(0x0010) (Edit)
+	class UTaleQuestStepDesc*                          IfCondition;                                              // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTaleQuestStepDesc*                          ElseCondition;                                            // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34292,12 +35159,12 @@ public:
 
 
 // Class Athena.TaleQuestFramedStepDesc
-// 0x0018 (0x0040 - 0x0028)
+// 0x0018 (0x0048 - 0x0030)
 class UTaleQuestFramedStepDesc : public UTaleQuestStepDesc
 {
 public:
-	TArray<class UTaleQuestServiceDesc*>               Services;                                                 // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
-	class UScriptStruct*                               Variables;                                                // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UTaleQuestServiceDesc*>               Services;                                                 // 0x0030(0x0010) (Edit, ExportObject, ZeroConstructor)
+	class UScriptStruct*                               Variables;                                                // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34309,11 +35176,11 @@ public:
 
 
 // Class Athena.TaleQuestSequenceStepDesc
-// 0x0010 (0x0050 - 0x0040)
+// 0x0010 (0x0058 - 0x0048)
 class UTaleQuestSequenceStepDesc : public UTaleQuestFramedStepDesc
 {
 public:
-	TArray<class UTaleQuestStepDesc*>                  Descs;                                                    // 0x0040(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UTaleQuestStepDesc*>                  Descs;                                                    // 0x0048(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -34325,12 +35192,13 @@ public:
 
 
 // Class Athena.TaleQuestGenericBannerStepDesc
-// 0x0040 (0x0068 - 0x0028)
+// 0x0078 (0x00A8 - 0x0030)
 class UTaleQuestGenericBannerStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FText                                       Message;                                                  // 0x0028(0x0038) (Edit)
-	struct FName                                       Tag;                                                      // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Message;                                                  // 0x0030(0x0038) (Edit)
+	struct FText                                       Header;                                                   // 0x0068(0x0038) (Edit)
+	struct FName                                       Tag;                                                      // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34342,11 +35210,11 @@ public:
 
 
 // Class Athena.TaleQuestImportStepDesc
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UTaleQuestImportStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UTaleQuestDescAsset*                         Asset;                                                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTaleQuestDescAsset*                         Asset;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34358,11 +35226,11 @@ public:
 
 
 // Class Athena.TaleQuestNotificationStepDesc
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UTaleQuestNotificationStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UPopUpMessageDesc*                           Notification;                                             // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           Notification;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34374,15 +35242,15 @@ public:
 
 
 // Class Athena.TaleQuestParallelForeachStepDesc
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UTaleQuestParallelForeachStepDesc : public UTaleQuestStepDesc
 {
 public:
-	uint32_t                                           Count;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	class UTaleQuestStepDesc*                          BodyDesc;                                                 // 0x0030(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      Generator;                                                // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UScriptStruct*                               Variables;                                                // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           Count;                                                    // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	class UTaleQuestStepDesc*                          BodyDesc;                                                 // 0x0038(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass*                                      Generator;                                                // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UScriptStruct*                               Variables;                                                // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34394,11 +35262,11 @@ public:
 
 
 // Class Athena.TaleQuestReactionStepDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UTaleQuestReactionStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableActor                         PlaceableReaction;                                        // 0x0028(0x0010) (Edit)
+	struct FQuestVariableActor                         PlaceableReaction;                                        // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34409,12 +35277,64 @@ public:
 };
 
 
+// Class Athena.TaleQuestSelectAISpawnerStepDesc
+// 0x0020 (0x0050 - 0x0030)
+class UTaleQuestSelectAISpawnerStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableAISpawnerArray                SelectFromSpawnerArray;                                   // 0x0030(0x0010) (Edit)
+	struct FQuestVariableAISpawner                     SelectedSpawnerAsset;                                     // 0x0040(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestSelectAISpawnerStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestSetNPCDialogKeyStepDesc
+// 0x0028 (0x0058 - 0x0030)
+class UTaleQuestSetNPCDialogKeyStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableActor                         NPC;                                                      // 0x0030(0x0010) (Edit)
+	struct FName                                       Key;                                                      // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class FString                                      Value;                                                    // 0x0048(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestSetNPCDialogKeyStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleQuestStartingBannerStepDesc
+// 0x0040 (0x0070 - 0x0030)
+class UTaleQuestStartingBannerStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FText                                       Header;                                                   // 0x0030(0x0038) (Edit)
+	struct FName                                       Tag;                                                      // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleQuestStartingBannerStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.TaleQuestUnionStepDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UTaleQuestUnionStepDesc : public UTaleQuestStepDesc
 {
 public:
-	TArray<class UTaleQuestStepDesc*>                  Descs;                                                    // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UTaleQuestStepDesc*>                  Descs;                                                    // 0x0030(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -34426,11 +35346,12 @@ public:
 
 
 // Class Athena.TelemetryProgressStepDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0050 (0x0080 - 0x0030)
 class UTelemetryProgressStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class FString                                      Progression;                                              // 0x0028(0x0010) (Edit, ZeroConstructor)
+	class FString                                      Progression;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
+	struct FTelemetryStepContext                       TelemetryContext;                                         // 0x0040(0x0040) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34441,16 +35362,82 @@ public:
 };
 
 
+// Class Athena.TelemetryTaskStepDesc
+// 0x0058 (0x0088 - 0x0030)
+class UTelemetryTaskStepDesc : public UTaleQuestStepDesc
+{
+public:
+	class UTaleQuestStepDesc*                          TaskDesc;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      Description;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	struct FTelemetryStepContext                       TelemetryContext;                                         // 0x0048(0x0040) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TelemetryTaskStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.WaitForUnlockStepDesc
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UWaitForUnlockStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableActor                         LockedActor;                                              // 0x0028(0x0010) (Edit)
+	struct FQuestVariableActor                         LockedActor;                                              // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaitForUnlockStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.WaitForVaultCompletionStepDesc
+// 0x0048 (0x0078 - 0x0030)
+class UWaitForVaultCompletionStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableActor                         Vault;                                                    // 0x0030(0x0010) (Edit)
+	struct FText                                       VaultFailureMessage;                                      // 0x0040(0x0038) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WaitForVaultCompletionStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleRankDesc
+// 0x0000 (0x00D8 - 0x00D8)
+class UTaleRankDesc : public UEntitlementDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleRankDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TaleSettings
+// 0x0010 (0x0038 - 0x0028)
+class UTaleSettings : public UObject
+{
+public:
+	struct FStringAssetReference                       TaleEntitlementsAssetRef;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TaleSettings"));
 		return ptr;
 	}
 
@@ -34490,32 +35477,32 @@ public:
 
 
 // Class Athena.Tankard
-// 0x00B0 (0x08A8 - 0x07F8)
+// 0x00B0 (0x0878 - 0x07C8)
 class ATankard : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x07F8(0x0018) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0810(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWwiseEvent*                                 StartDrinkingSfx;                                         // 0x0818(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopDrinkingSfx;                                          // 0x0820(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SfxRefill;                                                // 0x0828(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SfxTankardOnRaised;                                       // 0x0830(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SfxTankardOnEquipWhenFullOverride;                        // 0x0838(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SfxTankardOnUnequipWhenFullOverride;                      // 0x0840(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SfxTankardSloshOnLandingAfterJump;                        // 0x0848(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SfxTankardSloshOnFootstep;                                // 0x0850(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       RaisingTankardSoundCueSwitchName;                         // 0x0858(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       RaisingTankardSoundCueSwitchFullValue;                    // 0x0860(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       RaisingTankardSoundCueSwitchEmptyValue;                   // 0x0868(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       SfxRtpcEmptiness;                                         // 0x0870(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TotalGasContained;                                        // 0x0878(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AlcoholPercentage;                                        // 0x087C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DrinkSpeed;                                               // 0x0880(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TotalVolume;                                              // 0x0884(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0888(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class ULiquidContainerComponent*                   LiquidContainer;                                          // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              RemainingVolume;                                          // 0x0898(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x089C(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x07C8(0x0018) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07E0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWwiseEvent*                                 StartDrinkingSfx;                                         // 0x07E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StopDrinkingSfx;                                          // 0x07F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SfxRefill;                                                // 0x07F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SfxTankardOnRaised;                                       // 0x0800(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SfxTankardOnEquipWhenFullOverride;                        // 0x0808(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SfxTankardOnUnequipWhenFullOverride;                      // 0x0810(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SfxTankardSloshOnLandingAfterJump;                        // 0x0818(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SfxTankardSloshOnFootstep;                                // 0x0820(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       RaisingTankardSoundCueSwitchName;                         // 0x0828(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       RaisingTankardSoundCueSwitchFullValue;                    // 0x0830(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       RaisingTankardSoundCueSwitchEmptyValue;                   // 0x0838(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       SfxRtpcEmptiness;                                         // 0x0840(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TotalGasContained;                                        // 0x0848(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AlcoholPercentage;                                        // 0x084C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DrinkSpeed;                                               // 0x0850(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TotalVolume;                                              // 0x0854(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class ULiquidContainerComponent*                   LiquidContainer;                                          // 0x0860(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              RemainingVolume;                                          // 0x0868(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x086C(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -34638,15 +35625,15 @@ public:
 
 
 // Class Athena.TaxiHorn
-// 0x0040 (0x0838 - 0x07F8)
+// 0x0040 (0x0808 - 0x07C8)
 class ATaxiHorn : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWwiseEvent*                                 TaxiHornPlay;                                             // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     TaxiHornPool;                                             // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWwiseEmitter                               TaxiHornEmitter;                                          // 0x0818(0x0020)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWwiseEvent*                                 TaxiHornPlay;                                             // 0x07D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     TaxiHornPool;                                             // 0x07E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               TaxiHornEmitter;                                          // 0x07E8(0x0020)
 
 	static UClass* StaticClass()
 	{
@@ -34737,7 +35724,7 @@ public:
 
 
 	static void PushCharacterIntoTeleportActionStateWithCustomTeleportLocation(class AActor* Character, const struct FTeleportLocation& TeleportLocation, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX);
-	static void PushCharacterIntoTeleportActionState(class AActor* Character, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX);
+	static void PushCharacterIntoTeleportActionState(class AActor* Character, TEnumAsByte<ETeleportActionStateFadeType> TeleportFadeType, TEnumAsByte<ETeleportActionStateConditions> TeleportConditions, int StreamOutLevelId, int StreamInLevelId, bool ShouldPlayTeleportSFX, bool ShouldWaitForLoadout, bool ShouldWaitForEntitlements);
 };
 
 
@@ -34757,12 +35744,10 @@ public:
 
 
 // Class Athena.TeleportAIAbility
-// 0x0010 (0x0048 - 0x0038)
+// 0x0000 (0x0060 - 0x0060)
 class UTeleportAIAbility : public UAthenaAIAbility
 {
 public:
-	class UTeleportAIAbilityParams*                    AbilityParams;                                            // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -34774,15 +35759,15 @@ public:
 
 
 // Class Athena.TeleportAIAbilityParams
-// 0x0040 (0x0068 - 0x0028)
+// 0x0020 (0x0090 - 0x0070)
 class UTeleportAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	float                                              MinDistance;                                              // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDistance;                                              // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           TimeBetweenTeleport;                                      // 0x0030(0x0030) (Edit)
-	float                                              AbilityRadius;                                            // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	float                                              MinDistance;                                              // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDistance;                                              // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               UseResurfaceDelay;                                        // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	struct FAthenaAIAbilityPlayerBasedRanges           ResurfaceDelay;                                           // 0x0080(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -34812,6 +35797,7 @@ public:
 	static struct FTeleportLocation GetTeleportLocationOnShip(class AAthenaCharacter* InCharacter, class AShip* InShip);
 	static struct FTeleportLocation GetTeleportLocationAroundTarget(class AAthenaCharacter* InCharacter, class AActor* InTarget, float InDistanceFromTarget);
 	static struct FTeleportLocation GetNearestTeleportLocationOnLand(class AAthenaCharacter* InCharacter);
+	static float GetDistanceToShipBoundingSphere(class AActor* InActor, class AShip* InShip);
 };
 
 
@@ -35072,14 +36058,14 @@ public:
 
 
 // Class Athena.TestMountedWeapon
-// 0x0038 (0x04D0 - 0x0498)
+// 0x0040 (0x04D8 - 0x0498)
 class ATestMountedWeapon : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
 	class AActor*                                      SetProjectile;                                            // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
 	class USceneComponent*                             CameraAttachComponent;                                    // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x04B8(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x20];                                      // 0x04B8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35109,11 +36095,11 @@ public:
 
 
 // Class Athena.TestObscuringItemActor
-// 0x0010 (0x0808 - 0x07F8)
+// 0x0010 (0x07D8 - 0x07C8)
 class ATestObscuringItemActor : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35217,11 +36203,11 @@ public:
 
 
 // Class Athena.TestRepairingActor
-// 0x0028 (0x0820 - 0x07F8)
+// 0x0028 (0x07F0 - 0x07C8)
 class ATestRepairingActor : public AWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x07F8(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x07C8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35336,11 +36322,11 @@ public:
 
 
 // Class Athena.TestSkeletalWieldableInventoryItem
-// 0x0008 (0x0800 - 0x07F8)
+// 0x0008 (0x07D0 - 0x07C8)
 class ATestSkeletalWieldableInventoryItem : public ASkeletalMeshWieldableItem
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35352,11 +36338,11 @@ public:
 
 
 // Class Athena.TestStaticWieldableInventoryItem
-// 0x0008 (0x0800 - 0x07F8)
+// 0x0008 (0x07D0 - 0x07C8)
 class ATestStaticWieldableInventoryItem : public AStaticMeshWieldableItem
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35385,13 +36371,13 @@ public:
 
 
 // Class Athena.TestUsable
-// 0x0020 (0x0818 - 0x07F8)
+// 0x0020 (0x07E8 - 0x07C8)
 class ATestUsable : public AWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F8(0x0010) MISSED OFFSET
-	class AActor*                                      Wielder;                                                  // 0x0808(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0810(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class AActor*                                      Wielder;                                                  // 0x07D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x07E0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35418,7 +36404,7 @@ public:
 
 
 // Class Athena.TestUsableItemInfo
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x05C0 - 0x05C0)
 class ATestUsableItemInfo : public AItemInfo
 {
 public:
@@ -35433,11 +36419,11 @@ public:
 
 
 // Class Athena.TestWieldableInventoryItem
-// 0x0008 (0x0800 - 0x07F8)
+// 0x0008 (0x07D0 - 0x07C8)
 class ATestWieldableInventoryItem : public AWieldableItem
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35449,13 +36435,13 @@ public:
 
 
 // Class Athena.TestWieldableItem
-// 0x0080 (0x0878 - 0x07F8)
+// 0x0080 (0x0848 - 0x07C8)
 class ATestWieldableItem : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0800(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x70];                                      // 0x0808(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x07D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x70];                                      // 0x07D8(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35467,7 +36453,7 @@ public:
 
 
 // Class Athena.TestWieldableItemLarge
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x0848 - 0x0848)
 class ATestWieldableItemLarge : public ATestWieldableItem
 {
 public:
@@ -35482,7 +36468,7 @@ public:
 
 
 // Class Athena.TestWieldableItemInfo
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x05C0 - 0x05C0)
 class ATestWieldableItemInfo : public AItemInfo
 {
 public:
@@ -35537,6 +36523,21 @@ public:
 	void SetEffectActive(bool IsActive);
 	class UTexture* GetTexture();
 	void ClearTexture(const struct FLinearColor& ClearColor);
+};
+
+
+// Class Athena.TinySharkDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UTinySharkDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TinySharkDamagerType"));
+		return ptr;
+	}
+
 };
 
 
@@ -35602,21 +36603,6 @@ public:
 };
 
 
-// Class Athena.TrackedActorServiceInterface
-// 0x0000 (0x0028 - 0x0028)
-class UTrackedActorServiceInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TrackedActorServiceInterface"));
-		return ptr;
-	}
-
-};
-
-
 // Class Athena.TrackedActorService
 // 0x0050 (0x0078 - 0x0028)
 class UTrackedActorService : public UObject
@@ -35638,7 +36624,7 @@ public:
 
 
 // Class Athena.TreasureChest
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class ATreasureChest : public ASkeletalMeshWieldableItem
 {
 public:
@@ -35653,23 +36639,23 @@ public:
 
 
 // Class Athena.BountyMap
-// 0x0150 (0x09C8 - 0x0878)
+// 0x0150 (0x0998 - 0x0848)
 class ABountyMap : public ATreasureMap
 {
 public:
-	int                                                CanvasWidth;                                              // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UFont*                                       Font;                                                     // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontScale;                                                // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontLineSpacingScale;                                     // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0890(0x0008) MISSED OFFSET
-	class UBountyMapLayout*                            BountyMapLayout;                                          // 0x0898(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	struct FBountyMapContents                          Contents;                                                 // 0x08A0(0x00B0) (Net)
-	struct FStringAssetReference                       MapInventoryTexturePath;                                  // 0x0950(0x0010) (Net, ZeroConstructor)
-	float                                              Rotation;                                                 // 0x0960(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0964(0x0004) MISSED OFFSET
-	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x0968(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x58];                                      // 0x0970(0x0058) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0848(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x084C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UFont*                                       Font;                                                     // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontScale;                                                // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontLineSpacingScale;                                     // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0860(0x0008) MISSED OFFSET
+	class UBountyMapLayout*                            BountyMapLayout;                                          // 0x0868(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FBountyMapContents                          Contents;                                                 // 0x0870(0x00B0) (Net)
+	struct FStringAssetReference                       MapInventoryTexturePath;                                  // 0x0920(0x0010) (Net, ZeroConstructor)
+	float                                              Rotation;                                                 // 0x0930(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0934(0x0004) MISSED OFFSET
+	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x0938(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x58];                                      // 0x0940(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35686,21 +36672,21 @@ public:
 
 
 // Class Athena.CargoRunMap
-// 0x01B0 (0x0A28 - 0x0878)
+// 0x0220 (0x0A68 - 0x0848)
 class ACargoRunMap : public ATreasureMap
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0878(0x0030) MISSED OFFSET
-	int                                                CanvasWidth;                                              // 0x08A8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x08AC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UFont*                                       Font;                                                     // 0x08B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontScale;                                                // 0x08B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontLineSpacingScale;                                     // 0x08BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x08C0(0x0020) MISSED OFFSET
-	class UCargoRunMapLayout*                          CargoRunMapLayout;                                        // 0x08E0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	struct FCargoRunMapContents                        Contents;                                                 // 0x08E8(0x0018) (Net)
-	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x0900(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x120];                                     // 0x0908(0x0120) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0848(0x0030) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UFont*                                       Font;                                                     // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontScale;                                                // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontLineSpacingScale;                                     // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0890(0x0020) MISSED OFFSET
+	class UCargoRunMapLayout*                          CargoRunMapLayout;                                        // 0x08B0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FCargoRunMapContents                        Contents;                                                 // 0x08B8(0x0018) (Net)
+	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x08D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x190];                                     // 0x08D8(0x0190) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35716,23 +36702,23 @@ public:
 
 
 // Class Athena.ContestMap
-// 0x00E0 (0x0958 - 0x0878)
+// 0x00E0 (0x0928 - 0x0848)
 class AContestMap : public ATreasureMap
 {
 public:
-	int                                                CanvasWidth;                                              // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UFont*                                       Font;                                                     // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontScale;                                                // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontLineSpacingScale;                                     // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture*                                    UnderlineIcon;                                            // 0x0890(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0898(0x0008) MISSED OFFSET
-	class UContestMapLayout*                           ContestMapLayout;                                         // 0x08A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FContestMapContents                         Contents;                                                 // 0x08A8(0x0030) (Net)
-	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x08D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x58];                                      // 0x08E0(0x0058) MISSED OFFSET
-	float                                              ServerPercentageThrough;                                  // 0x0938(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1C];                                      // 0x093C(0x001C) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0848(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x084C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UFont*                                       Font;                                                     // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontScale;                                                // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontLineSpacingScale;                                     // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture*                                    UnderlineIcon;                                            // 0x0860(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0868(0x0008) MISSED OFFSET
+	class UContestMapLayout*                           ContestMapLayout;                                         // 0x0870(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FContestMapContents                         Contents;                                                 // 0x0878(0x0030) (Net)
+	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x08A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x58];                                      // 0x08B0(0x0058) MISSED OFFSET
+	float                                              ServerPercentageThrough;                                  // 0x0908(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1C];                                      // 0x090C(0x001C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35748,20 +36734,20 @@ public:
 
 
 // Class Athena.MerchantMap
-// 0x01D0 (0x0A48 - 0x0878)
+// 0x01D0 (0x0A18 - 0x0848)
 class AMerchantMap : public ATreasureMap
 {
 public:
-	int                                                CanvasWidth;                                              // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UFont*                                       Font;                                                     // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontScale;                                                // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FontLineSpacingScale;                                     // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0890(0x0008) MISSED OFFSET
-	class UMerchantMapLayout*                          MerchantMapLayout;                                        // 0x0898(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	struct FMerchantMapContents                        Contents;                                                 // 0x08A0(0x0138) (Net)
-	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x09D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x68];                                      // 0x09E0(0x0068) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0848(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x084C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UFont*                                       Font;                                                     // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontScale;                                                // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FontLineSpacingScale;                                     // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0860(0x0008) MISSED OFFSET
+	class UMerchantMapLayout*                          MerchantMapLayout;                                        // 0x0868(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FMerchantMapContents                        Contents;                                                 // 0x0870(0x0138) (Net)
+	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x09A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x68];                                      // 0x09B0(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35777,24 +36763,24 @@ public:
 
 
 // Class Athena.RiddleMap
-// 0x0118 (0x0990 - 0x0878)
+// 0x0118 (0x0960 - 0x0848)
 class ARiddleMap : public ATreasureMap
 {
 public:
-	int                                                CanvasWidth;                                              // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RevealDuration;                                           // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RiddleGateCompleteRampInDuration;                         // 0x0884(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RiddleGateCompleteRampOutDuration;                        // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x088C(0x0004) MISSED OFFSET
-	struct FRiddleTextRenderer                         RiddleTextRenderer;                                       // 0x0890(0x0058) (Edit, DisableEditOnInstance)
-	struct FRiddleMapContents                          Contents;                                                 // 0x08E8(0x0018) (Net)
-	struct FStringAssetReference                       MapInventoryTexturePath;                                  // 0x0900(0x0010) (Net, ZeroConstructor)
-	float                                              Rotation;                                                 // 0x0910(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0914(0x0004) MISSED OFFSET
-	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x0918(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UCanvasRenderTarget2D*                       MaskRenderTarget;                                         // 0x0920(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x68];                                      // 0x0928(0x0068) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0848(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x084C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RevealDuration;                                           // 0x0850(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RiddleGateCompleteRampInDuration;                         // 0x0854(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RiddleGateCompleteRampOutDuration;                        // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x085C(0x0004) MISSED OFFSET
+	struct FRiddleTextRenderer                         RiddleTextRenderer;                                       // 0x0860(0x0058) (Edit, DisableEditOnInstance)
+	struct FRiddleMapContents                          Contents;                                                 // 0x08B8(0x0018) (Net)
+	struct FStringAssetReference                       MapInventoryTexturePath;                                  // 0x08D0(0x0010) (Net, ZeroConstructor)
+	float                                              Rotation;                                                 // 0x08E0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x08E4(0x0004) MISSED OFFSET
+	class UCanvasRenderTarget2D*                       TextRenderTarget;                                         // 0x08E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCanvasRenderTarget2D*                       MaskRenderTarget;                                         // 0x08F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x68];                                      // 0x08F8(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35814,7 +36800,7 @@ public:
 
 
 // Class Athena.TutorialMap
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x0848 - 0x0848)
 class ATutorialMap : public ATreasureMap
 {
 public:
@@ -35829,27 +36815,27 @@ public:
 
 
 // Class Athena.XMarksTheSpotMap
-// 0x00C8 (0x0940 - 0x0878)
+// 0x00C8 (0x0910 - 0x0848)
 class AXMarksTheSpotMap : public ATreasureMap
 {
 public:
-	int                                                CanvasWidth;                                              // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture*                                    MarkTexture;                                              // 0x0880(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture*                                    AltMarkTexture;                                           // 0x0888(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MarkWidthRatio;                                           // 0x0890(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MarkHeightRatio;                                          // 0x0894(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EBlendMode>                            MarkBlendMode;                                            // 0x0898(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0899(0x0007) MISSED OFFSET
-	class FString                                      MapTexturePath;                                           // 0x08A0(0x0010) (Net, ZeroConstructor)
-	struct FStringAssetReference                       MapInventoryTexturePath;                                  // 0x08B0(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x08C0(0x0020) MISSED OFFSET
-	TArray<struct FXMarksTheSpotMapMark>               Marks;                                                    // 0x08E0(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x18];                                      // 0x08F0(0x0018) MISSED OFFSET
-	float                                              Rotation;                                                 // 0x0908(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x090C(0x0004) MISSED OFFSET
-	class UCanvasRenderTarget2D*                       RenderTarget;                                             // 0x0910(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x28];                                      // 0x0918(0x0028) MISSED OFFSET
+	int                                                CanvasWidth;                                              // 0x0848(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x084C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture*                                    MarkTexture;                                              // 0x0850(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture*                                    AltMarkTexture;                                           // 0x0858(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MarkWidthRatio;                                           // 0x0860(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MarkHeightRatio;                                          // 0x0864(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EBlendMode>                            MarkBlendMode;                                            // 0x0868(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0869(0x0007) MISSED OFFSET
+	class FString                                      MapTexturePath;                                           // 0x0870(0x0010) (Net, ZeroConstructor)
+	struct FStringAssetReference                       MapInventoryTexturePath;                                  // 0x0880(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0890(0x0020) MISSED OFFSET
+	TArray<struct FXMarksTheSpotMapMark>               Marks;                                                    // 0x08B0(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x08C0(0x0018) MISSED OFFSET
+	float                                              Rotation;                                                 // 0x08D8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x08DC(0x0004) MISSED OFFSET
+	class UCanvasRenderTarget2D*                       RenderTarget;                                             // 0x08E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x28];                                      // 0x08E8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -35873,7 +36859,7 @@ public:
 
 
 // Class Athena.TreasureMapItemInfo
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x05C0 - 0x05C0)
 class ATreasureMapItemInfo : public AItemInfo
 {
 public:
@@ -36098,11 +37084,11 @@ public:
 
 
 // Class Athena.AthenaTutorialComponent
-// 0x0970 (0x0A58 - 0x00E8)
+// 0x0980 (0x0A68 - 0x00E8)
 class UAthenaTutorialComponent : public UTutorialComponent
 {
 public:
-	struct FMainTutorialSequence                       MainTutorial;                                             // 0x00E8(0x0970) (Net)
+	struct FMainTutorialSequence                       MainTutorial;                                             // 0x00E8(0x0980) (Net)
 
 	static UClass* StaticClass()
 	{
@@ -36123,6 +37109,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.UITelemetryComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.UnarmedCombatDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UUnarmedCombatDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.UnarmedCombatDamagerType"));
 		return ptr;
 	}
 
@@ -36663,6 +37664,22 @@ public:
 };
 
 
+// Class Athena.VoiceoverComponent
+// 0x0010 (0x00E0 - 0x00D0)
+class UVoiceoverComponent : public UActorComponent
+{
+public:
+	TArray<class UWwiseEvent*>                         VoiceoverAudioEvents;                                     // 0x00D0(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.VoiceoverComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.VomitBoutData
 // 0x0010 (0x0038 - 0x0028)
 class UVomitBoutData : public UDataAsset
@@ -36750,14 +37767,15 @@ public:
 
 
 // Class Athena.VotableWithSessionComponent
-// 0x0170 (0x0240 - 0x00D0)
+// 0x01A8 (0x0278 - 0x00D0)
 class UVotableWithSessionComponent : public UVotableBaseComponent
 {
 public:
 	struct FText                                       VoteTooltipText;                                          // 0x00D0(0x0038) (Edit, BlueprintVisible)
-	class UClass*                                      VoteActionInputId;                                        // 0x0108(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      VoteActionReleaseInputId;                                 // 0x0110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x128];                                     // 0x0118(0x0128) MISSED OFFSET
+	struct FText                                       CantVoteTooltipText;                                      // 0x0108(0x0038) (Edit, BlueprintVisible)
+	class UClass*                                      VoteActionInputId;                                        // 0x0140(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      VoteActionReleaseInputId;                                 // 0x0148(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x128];                                     // 0x0150(0x0128) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -36773,17 +37791,17 @@ public:
 
 
 // Class Athena.VotableVoyageProposalComponent
-// 0x00F8 (0x0338 - 0x0240)
+// 0x00F8 (0x0370 - 0x0278)
 class UVotableVoyageProposalComponent : public UVotableWithSessionComponent
 {
 public:
-	float                                              TooltipUIFadeDuration;                                    // 0x0240(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   TooltipUIScreenSpaceOffsetRatio;                          // 0x0244(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x024C(0x0004) MISSED OFFSET
-	struct FProposedVoyageEntry                        ProposedEntry;                                            // 0x0250(0x0010) (Transient)
-	struct FProposedTaleEntry                          ProposedTale;                                             // 0x0260(0x0010) (Transient)
-	class UStaticMeshComponent*                        VotableMeshComponent;                                     // 0x0270(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC0];                                      // 0x0278(0x00C0) MISSED OFFSET
+	float                                              TooltipUIFadeDuration;                                    // 0x0278(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   TooltipUIScreenSpaceOffsetRatio;                          // 0x027C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0284(0x0004) MISSED OFFSET
+	struct FProposedVoyageEntry                        ProposedEntry;                                            // 0x0288(0x0010) (Transient)
+	struct FProposedTaleEntry                          ProposedTale;                                             // 0x0298(0x0010) (Transient)
+	class UStaticMeshComponent*                        VotableMeshComponent;                                     // 0x02A8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC0];                                      // 0x02B0(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -36795,7 +37813,7 @@ public:
 
 
 // Class Athena.CancelVoyageVotableComponent
-// 0x0000 (0x0338 - 0x0338)
+// 0x0000 (0x0370 - 0x0370)
 class UCancelVoyageVotableComponent : public UVotableVoyageProposalComponent
 {
 public:
@@ -36810,15 +37828,15 @@ public:
 
 
 // Class Athena.VoteOnVoyageVotableComponent
-// 0x0030 (0x0368 - 0x0338)
+// 0x0030 (0x03A0 - 0x0370)
 class UVoteOnVoyageVotableComponent : public UVotableVoyageProposalComponent
 {
 public:
-	float                                              HoldToWithdrawVoyageTime;                                 // 0x0338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x033C(0x0004) MISSED OFFSET
-	class UClass*                                      WithdrawActionInputId;                                    // 0x0340(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      WithdrawActionReleasedInputId;                            // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0350(0x0018) MISSED OFFSET
+	float                                              HoldToWithdrawVoyageTime;                                 // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0374(0x0004) MISSED OFFSET
+	class UClass*                                      WithdrawActionInputId;                                    // 0x0378(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      WithdrawActionReleasedInputId;                            // 0x0380(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0388(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -36857,19 +37875,25 @@ public:
 
 
 // Class Athena.VoyageDescDataAsset
-// 0x0078 (0x00A0 - 0x0028)
+// 0x0128 (0x0150 - 0x0028)
 class UVoyageDescDataAsset : public UDataAsset
 {
 public:
 	TArray<struct FChapterQuests>                      Chapters;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
 	struct FText                                       Title;                                                    // 0x0038(0x0038) (Edit)
-	class UClass*                                      Company;                                                  // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsEmergent;                                               // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               DoNotNotifyParticipantsOnVoyageComplete;                  // 0x0079(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x007A(0x0002) MISSED OFFSET
-	int                                                Rank;                                                     // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x0080(0x0010) (Edit, ZeroConstructor)
-	struct FStringAssetReference                       TaleCancelVoteMesh;                                       // 0x0090(0x0010) (Edit, ZeroConstructor)
+	struct FText                                       Description;                                              // 0x0070(0x0038) (Edit)
+	struct FText                                       LockedDescription;                                        // 0x00A8(0x0038) (Edit)
+	struct FStringAssetReference                       KeyArtUrl;                                                // 0x00E0(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       IconUrl;                                                  // 0x00F0(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      Company;                                                  // 0x0100(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsEmergent;                                               // 0x0108(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FViewVoyageBanners                          ViewVoyageBanners;                                        // 0x0109(0x0002) (Edit)
+	bool                                               DoNotNotifyParticipantsOnVoyageComplete;                  // 0x010B(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Rank;                                                     // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x0110(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FPlayerStat>                         ReapersMarkCompletionStats;                               // 0x0120(0x0010) (Edit, ZeroConstructor)
+	TArray<class UClass*>                              RequiredEntitlements;                                     // 0x0130(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       TaleCancelVoteMesh;                                       // 0x0140(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -36940,13 +37964,13 @@ public:
 
 
 // Class Athena.VoyageGeneratorSimResult
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x00C8 (0x00F0 - 0x0028)
 class UVoyageGeneratorSimResult : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
-	struct FVector                                     StartingLocation;                                         // 0x00D0(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0028(0x00B8) MISSED OFFSET
+	struct FVector                                     StartingLocation;                                         // 0x00E0(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -36964,13 +37988,13 @@ public:
 
 
 // Class Athena.VoyageInAContainerWieldableItem
-// 0x0020 (0x0818 - 0x07F8)
+// 0x0020 (0x07E8 - 0x07C8)
 class AVoyageInAContainerWieldableItem : public AStaticMeshWieldableItem
 {
 public:
-	TArray<struct FMessageInABottleVoyageEntry>        VoyageRecipeList;                                         // 0x07F8(0x0010) (Edit, ZeroConstructor)
-	class UWwiseEvent*                                 OnOpenedSfx;                                              // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0810(0x0008) MISSED OFFSET
+	TArray<struct FMessageInABottleVoyageEntry>        VoyageRecipeList;                                         // 0x07C8(0x0010) (Edit, ZeroConstructor)
+	class UWwiseEvent*                                 OnOpenedSfx;                                              // 0x07D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07E0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -37026,11 +38050,11 @@ public:
 
 
 // Class Athena.MatchmakingVoyageRecipeDesc
-// 0x0138 (0x0290 - 0x0158)
+// 0x0148 (0x02B0 - 0x0168)
 class UMatchmakingVoyageRecipeDesc : public UVoyageRecipeDataAsset
 {
 public:
-	struct FMatchmakingVoyageRecipe                    MatchmakingRecipe;                                        // 0x0158(0x0138) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FMatchmakingVoyageRecipe                    MatchmakingRecipe;                                        // 0x0168(0x0148) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
@@ -37677,14 +38701,35 @@ public:
 };
 
 
+// Class Athena.WieldableFishingRodAnimationInstance
+// 0x0020 (0x0650 - 0x0630)
+class UWieldableFishingRodAnimationInstance : public UWieldableItemAnimationInstance
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0630(0x0008) MISSED OFFSET
+	class UBlendSpace*                                 RodBendAnimation;                                         // 0x0638(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UAnimSequence*                               ReelAnimation;                                            // 0x0640(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EFishingState>                         CurrentFishingState;                                      // 0x0648(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFishHookedAndVisible;                                   // 0x0649(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x064A(0x0006) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WieldableFishingRodAnimationInstance"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.WieldablePetAnimationInstance
-// 0x00C0 (0x06F0 - 0x0630)
+// 0x00B0 (0x06E0 - 0x0630)
 class UWieldablePetAnimationInstance : public UWieldableItemAnimationInstance
 {
 public:
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x0630(0x00B8) MISSED OFFSET
-	float                                              LocomotionSpeed;                                          // 0x06E8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x06EC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0630(0x00A8) MISSED OFFSET
+	float                                              LocomotionSpeed;                                          // 0x06D8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x06DC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -37741,6 +38786,7 @@ public:
 	void OnItemDestroyed(class AActor* Actor);
 	class UClass* GetSlotForItem(int Index);
 	int GetNumItemsOfType(class UClass* Type);
+	int GetNumItemsOfCategory(class UClass* ItemCategory);
 	int GetNumItems();
 	TArray<class AActor*> GetItemsOfCategory(class UClass* ItemCategory);
 	int GetItemIndexInCategorySet(class AActor* Item, class UClass* ItemCategory);
@@ -37785,13 +38831,13 @@ public:
 
 
 // Class Athena.WieldableMockActor
-// 0x0040 (0x0838 - 0x07F8)
+// 0x0048 (0x0810 - 0x07C8)
 class AWieldableMockActor : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x07F8(0x0028) MISSED OFFSET
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0820(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0828(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x07C8(0x0028) MISSED OFFSET
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x07F8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -37803,7 +38849,7 @@ public:
 
 
 // Class Athena.LargeWieldableMockActor
-// 0x0000 (0x0838 - 0x0838)
+// 0x0000 (0x0810 - 0x0810)
 class ALargeWieldableMockActor : public AWieldableMockActor
 {
 public:
@@ -37818,11 +38864,11 @@ public:
 
 
 // Class Athena.WieldableOtherMockActor
-// 0x0018 (0x0810 - 0x07F8)
+// 0x0018 (0x07E0 - 0x07C8)
 class AWieldableOtherMockActor : public AStaticMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x07F8(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x07C8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -37834,7 +38880,7 @@ public:
 
 
 // Class Athena.WieldableNonStowableMockItem
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class AWieldableNonStowableMockItem : public AStaticMeshWieldableItem
 {
 public:
@@ -37866,11 +38912,11 @@ public:
 
 
 // Class Athena.WieldableWeaponMock
-// 0x0008 (0x0800 - 0x07F8)
+// 0x0008 (0x07D0 - 0x07C8)
 class AWieldableWeaponMock : public AStaticMeshWieldableItem
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -37918,12 +38964,12 @@ public:
 
 
 // Class Athena.WoodPlank
-// 0x0010 (0x0808 - 0x07F8)
+// 0x0010 (0x07D8 - 0x07C8)
 class AWoodPlank : public AStaticMeshWieldableItem
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UConsumableWieldableComponent*               ConsumableWieldable;                                      // 0x0800(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UConsumableWieldableComponent*               ConsumableWieldable;                                      // 0x07D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -38034,6 +39080,24 @@ public:
 };
 
 
+// Class Athena.WorldResourceRegistry
+// 0x00C8 (0x00F0 - 0x0028)
+class UWorldResourceRegistry : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	TMap<uint32_t, class AActor*>                      ActorsById;                                               // 0x0030(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x70];                                      // 0x0080(0x0070) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.WorldResourceRegistry"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.ContestSafeRegion
 // 0x0020 (0x04F8 - 0x04D8)
 class AContestSafeRegion : public AWorldSafeRegion
@@ -38089,6 +39153,24 @@ public:
 
 
 	static void DisableDitheringOnMaterial(class UMaterialInstance* Material);
+};
+
+
+// Class Athena.MaterialManipulationComponent
+// 0x0030 (0x0100 - 0x00D0)
+class UMaterialManipulationComponent : public UActorComponent
+{
+public:
+	TArray<struct FScalarParameterValue>               ScalarParameterValues;                                    // 0x00D0(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FTextureParameterValue>              TextureParameterValues;                                   // 0x00E0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UMaterialInstanceDynamic*>            DynamicMaterials;                                         // 0x00F0(0x0010) (ZeroConstructor, Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MaterialManipulationComponent"));
+		return ptr;
+	}
+
 };
 
 
@@ -38449,6 +39531,23 @@ public:
 };
 
 
+// Class Athena.SpawnActorComponent
+// 0x0010 (0x02C0 - 0x02B0)
+class USpawnActorComponent : public USceneComponent
+{
+public:
+	class UClass*                                      ChildActorClass;                                          // 0x02B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      ChildActor;                                               // 0x02B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SpawnActorComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Athena.MaterialInformationInterface
 // 0x0000 (0x0028 - 0x0028)
 class UMaterialInformationInterface : public UInterface
@@ -38629,6 +39728,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TelemetryDescriptorInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TelemetryDispatcherRetrievalInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTelemetryDispatcherRetrievalInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TelemetryDispatcherRetrievalInterface"));
 		return ptr;
 	}
 
@@ -38844,7 +39958,6 @@ public:
 	}
 
 
-	static void OnItemPickedUpFromActor(class AActor* ActorPickedUp, class AActor* ActorDroppedOn);
 	static void OnItemDroppedOnActor(class AActor* ActorDropped, class AActor* ActorDroppedOn);
 	static void OnItemDestroyedWhenOnActor(class AActor* ActorDestroyed, class AActor* ActorDroppedOn);
 	static bool DetermineDropPos(class AActor* SrcActor, class AActor* DroppedActor, const struct FVector& InSpawnPos, const struct FDropItemParams& DropItemParams, struct FHitResult* OutHit, struct FHitResult* OutSweepHit);
@@ -39111,6 +40224,38 @@ public:
 	class AItemInfo* GetItemInfo();
 	class UClass* GetAnimationKey();
 	class AActor* GetActor();
+};
+
+
+// Class Athena.ItemInteractionProxy
+// 0x0020 (0x0718 - 0x06F8)
+class AItemInteractionProxy : public AItemProxy
+{
+public:
+	class UClass*                                      AcquiredItemDesc;                                         // 0x06F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0700(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ItemInteractionProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SkeletalMeshItemProxy
+// 0x0000 (0x06F8 - 0x06F8)
+class ASkeletalMeshItemProxy : public AItemProxy
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SkeletalMeshItemProxy"));
+		return ptr;
+	}
+
 };
 
 
@@ -39921,16 +41066,31 @@ public:
 };
 
 
-// Class Athena.GiveItemToConsumerComponent
-// 0x0008 (0x00D8 - 0x00D0)
-class UGiveItemToConsumerComponent : public UActorComponent
+// Class Athena.QuestItemCategory
+// 0x0000 (0x0080 - 0x0080)
+class UQuestItemCategory : public UItemCategory
 {
 public:
-	class UClass*                                      ItemToGive;                                               // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.GiveItemToConsumerComponent"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.QuestItemCategory"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.GiveItemUponConsumptionComponent
+// 0x0008 (0x00E0 - 0x00D8)
+class UGiveItemUponConsumptionComponent : public UConsumableWieldableComponent
+{
+public:
+	class UClass*                                      ItemToGive;                                               // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.GiveItemUponConsumptionComponent"));
 		return ptr;
 	}
 
@@ -39938,19 +41098,19 @@ public:
 
 
 // Class Athena.WieldableIngestible
-// 0x0068 (0x0860 - 0x07F8)
+// 0x0068 (0x0830 - 0x07C8)
 class AWieldableIngestible : public AWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	class UConsumableWieldableComponent*               ConsumableWieldableComponent;                             // 0x0800(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UApplyStatusToConsumerComponent*             ApplyStatusToConsumerComponent;                           // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              InToIngestionDuration;                                    // 0x0820(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OutOfIngestionDuration;                                   // 0x0824(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanIngest;                                                // 0x0828(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x37];                                      // 0x0829(0x0037) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
+	class UGiveItemUponConsumptionComponent*           GiveItemUponConsumptionComponent;                         // 0x07D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UApplyStatusToConsumerComponent*             ApplyStatusToConsumerComponent;                           // 0x07D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              InToIngestionDuration;                                    // 0x07F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              OutOfIngestionDuration;                                   // 0x07F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanIngest;                                                // 0x07F8(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x37];                                      // 0x07F9(0x0037) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -39964,7 +41124,7 @@ public:
 
 
 // Class Athena.StaticWieldableIngestible
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0830 - 0x0830)
 class AStaticWieldableIngestible : public AWieldableIngestible
 {
 public:
@@ -39979,7 +41139,7 @@ public:
 
 
 // Class Athena.SkeletalWieldableIngestible
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0830 - 0x0830)
 class ASkeletalWieldableIngestible : public AWieldableIngestible
 {
 public:
@@ -40246,6 +41406,74 @@ public:
 };
 
 
+// Class Athena.DamageableInterface
+// 0x0000 (0x0028 - 0x0028)
+class UDamageableInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageableInterface"));
+		return ptr;
+	}
+
+
+	bool OnDamageableImpact(const struct FImpactDamageEvent& ImpactDamageEvent);
+	bool CanApplyDamage(const struct FImpactDamageEvent& ImpactDamageEvent);
+};
+
+
+// Class Athena.DamageableVulnerabilityLayer
+// 0x0010 (0x0038 - 0x0028)
+class UDamageableVulnerabilityLayer : public UObject
+{
+public:
+	TArray<struct FDamageableVulnerabilityPair>        Vulnerabilities;                                          // 0x0028(0x0010) (ZeroConstructor, Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageableVulnerabilityLayer"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ActorDamageableComponent
+// 0x0018 (0x0120 - 0x0108)
+class UActorDamageableComponent : public UDamageableComponent
+{
+public:
+	class UHealthComponent*                            HealthComp;                                               // 0x0108(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	TArray<class UClass*>                              NonBlockableDamageTypes;                                  // 0x0110(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ActorDamageableComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.DamageInstigatorInterface
+// 0x0000 (0x0028 - 0x0028)
+class UDamageInstigatorInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.DamageInstigatorInterface"));
+		return ptr;
+	}
+
+
+	bool CanDamageActor(class AActor* DamageRecipient, TEnumAsByte<EHealthChangedReason> Reason);
+};
+
+
 // Class Athena.HealthInterface
 // 0x0000 (0x0028 - 0x0028)
 class UHealthInterface : public UInterface
@@ -40255,6 +41483,88 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HealthInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.HealthRegenerationPoolInterface
+// 0x0000 (0x0028 - 0x0028)
+class UHealthRegenerationPoolInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HealthRegenerationPoolInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.HealthRegenerationPoolComponent
+// 0x0018 (0x00E8 - 0x00D0)
+class UHealthRegenerationPoolComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	float                                              MaxCapacity;                                              // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HealingRate;                                              // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HealingDelayWhenDamaged;                                  // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CurrentCapacity;                                          // 0x00E4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.HealthRegenerationPoolComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_CurrentCapacity();
+};
+
+
+// Class Athena.TrackedActorInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTrackedActorInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TrackedActorInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TrackedActorServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTrackedActorServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TrackedActorServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.RemoteConfigurationProviderRetrievalInterface
+// 0x0000 (0x0028 - 0x0028)
+class URemoteConfigurationProviderRetrievalInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.RemoteConfigurationProviderRetrievalInterface"));
 		return ptr;
 	}
 
@@ -40443,6 +41753,1427 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShipTypeAIPassive"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MountableInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMountableInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountableInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MountableType
+// 0x0000 (0x0028 - 0x0028)
+class UMountableType : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountableType"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MountpointInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMountpointInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountpointInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MountableComponent
+// 0x0070 (0x0140 - 0x00D0)
+class UMountableComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	class UClass*                                      MountableType;                                            // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               ActorCanServerMigrate;                                    // 0x00E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
+	struct FText                                       Description;                                              // 0x00E8(0x0038) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0120(0x0018) MISSED OFFSET
+	class UObject*                                     ReplicatedMountpoint;                                     // 0x0138(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountableComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_ReplicatedMountpoint();
+};
+
+
+// Class Athena.MountpointComponent
+// 0x0070 (0x0320 - 0x02B0)
+class UMountpointComponent : public USceneComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	TArray<class UClass*>                              AcceptedMountableTypes;                                   // 0x02B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FRotator                                    DetachForwardDirectionRotator;                            // 0x02C8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DetachOffset;                                             // 0x02D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UseOverrideMountedCollisionProfile;                       // 0x02D8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x02D9(0x0003) MISSED OFFSET
+	struct FCollisionProfileName                       OverrideMountedCollisionProfileName;                      // 0x02DC(0x0008) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x14];                                      // 0x02E4(0x0014) MISSED OFFSET
+	class UObject*                                     ReplicatedMountedItem;                                    // 0x02F8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
+	bool                                               IsMountingDisabled;                                       // 0x0310(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               MountedItemHadSimulatePhysicsEnabled;                     // 0x0311(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x0312(0x0002) MISSED OFFSET
+	struct FName                                       MountedItemPremountCollisionProfileName;                  // 0x0314(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x031C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MountpointComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_ReplicatedMountedItem(class UObject* PrevReplicatedMountedItem);
+};
+
+
+// Class Athena.InterpolatingMountpointComponent
+// 0x0060 (0x0380 - 0x0320)
+class UInterpolatingMountpointComponent : public UMountpointComponent
+{
+public:
+	float                                              InterpolateSpeed;                                         // 0x0320(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumDistance;                                          // 0x0324(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     RelativeSnapLocation;                                     // 0x0328(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4C];                                      // 0x0334(0x004C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.InterpolatingMountpointComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishSizeWeightsDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UFishSizeWeightsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FFishSizeAndWeight>                  Data;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishSizeWeightsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishSpawnParamsDataAsset
+// 0x0040 (0x0068 - 0x0028)
+class UFishSpawnParamsDataAsset : public UDataAsset
+{
+public:
+	TEnumAsByte<EFishSpawnTimeOfDay>                   TimeOfDay;                                                // 0x0028(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               InPool;                                                   // 0x0029(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CloseToActiveFortOrSkellyShip;                            // 0x002A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               InStorm;                                                  // 0x002B(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CloseToShipWreck;                                         // 0x002C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	class UClass*                                      Sea;                                                      // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UVoyageLocationOnlyNamedIslandListDataAsset* Islands;                                                  // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EBaitType>                             BaitType;                                                 // 0x0040(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
+	float                                              CatchWeight;                                              // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       FishName;                                                 // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FFishSizeAndType>                    FishTypes;                                                // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UFishSizeWeightsDataAsset*                   SizeWeights;                                              // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishSpawnParamsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AvailableFishForSpawning
+// 0x0010 (0x0038 - 0x0028)
+class UAvailableFishForSpawning : public UDataAsset
+{
+public:
+	TArray<class UFishSpawnParamsDataAsset*>           AvailableFishToSelectForSpawning;                         // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AvailableFishForSpawning"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingFish
+// 0x03C0 (0x0A60 - 0x06A0)
+class AFishingFish : public ACharacter
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x06A0(0x0008) MISSED OFFSET
+	class UFishDataAsset*                              FishDataAsset;                                            // 0x06A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingMiniGameFishDataAsset*               FishingMiniGameFishDataAsset;                             // 0x06B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    BattlingVFX;                                              // 0x06B8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    BeingTiredVFX;                                            // 0x06C0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x06C8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass*                                      CaughtFishItemDesc;                                       // 0x06D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x348];                                     // 0x06D8(0x0348) MISSED OFFSET
+	struct FVector                                     MouthAttachLocation;                                      // 0x0A20(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AutoKillTime;                                             // 0x0A2C(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0A30(0x0008) MISSED OFFSET
+	int                                                RandomAnimationLoopVal;                                   // 0x0A38(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x24];                                      // 0x0A3C(0x0024) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingFish"));
+		return ptr;
+	}
+
+
+	void Multicast_SetVisible();
+};
+
+
+// Class Athena.FishAnimationInstance
+// 0x00B0 (0x04F0 - 0x0440)
+class UFishAnimationInstance : public UAnimInstance
+{
+public:
+	class AFishingFish*                                FishingFishCharacter;                                     // 0x0440(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FFishAnimationParams                        FishingFishAnimationParams;                               // 0x0448(0x0008) (BlueprintVisible)
+	struct FFishAnimationSequences                     FishAnimationSequences;                                   // 0x0450(0x0090) (Edit, BlueprintVisible)
+	bool                                               IsJumpActive;                                             // 0x04E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IsOnSurface;                                              // 0x04E1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               FishIsCaught;                                             // 0x04E2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x04E3(0x0005) MISSED OFFSET
+	class UAnimMontage*                                CurrentPlayingMontage;                                    // 0x04E8(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishAnimationInstance"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishDataAsset
+// 0x0118 (0x0140 - 0x0028)
+class UFishDataAsset : public UDataAsset
+{
+public:
+	float                                              CruisingDepthBeneathWaterHeight;                          // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RisingFromTheDepthsSpeed;                                 // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EscapingToTheDepthsSpeed;                                 // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           TimeReelingWhenBattlingToSnapLine;                        // 0x0038(0x0030) (Edit)
+	float                                              TimePenaltyForMultiTappingWhenBattling;                   // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRange                   NumberOfLoopsBeforeBiting;                                // 0x0070(0x0020) (Edit)
+	float                                              MinimumDistanceFromPlayer;                                // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DistanceFromPlayerToCatchFish;                            // 0x0094(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 SecondsToRemainBeforeDespawning;                          // 0x0098(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatBobDepthOnBeingHooked;                               // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RodBendAmountWhenBiting;                                  // 0x00AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RodBendAmountWhenBattling;                                // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RodBendAmountWhenRecovering;                              // 0x00B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     SplashVFXWhenBeingTired;                                  // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     SplashVFXWhenBattling;                                    // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     SplashVFXWhenJumpingOutOfWater;                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     SplashVFXWhenLandingInToWater;                            // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SplashZOffset;                                            // 0x00D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatReelingMoveSpeedWhenMovingToMinimumDistanceFromPlayer;// 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ReelingAnimationMaxSpeedWhenMovingToMinimumDistanceFromPlayer;// 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatReelingMoveSpeedWhenBattling;                        // 0x00E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ReelingAnimationMaxSpeedWhenBattling;                     // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatReelingMoveSpeedWhenNotBattling;                     // 0x00EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ReelingAnimationMaxSpeedWhenNotBattling;                  // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeBetweenIsBlockedHitChecksOnServer;                    // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeBeforeTurningOnHits;                                  // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     HitTestTraceChannel;                                      // 0x00FC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x00FD(0x0003) MISSED OFFSET
+	float                                              HitDetectionHalfExtentXY;                                 // 0x0100(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HitDetectionHalfExtentZ;                                  // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HitDetectionZOffset;                                      // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     FishingFishPool;                                          // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FishTiredSwitchGroup;                                     // 0x0118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FishTiredSwitchDefault;                                   // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FishTiredSwitchTired;                                     // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FishBiteAndStruggleStart;                                 // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FishBiteAndStruggleStop;                                  // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingActionStateId
+// 0x0000 (0x0028 - 0x0028)
+class UFishingActionStateId : public UActionStateId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingActionStateId"));
+		return ptr;
+	}
+
+
+	static void PushCharacterIntoFishingActionState(class AActor* Character, class AActor* FishingRod);
+	static void PopCharacterOutOfFishingActionState(class AActor* Character);
+};
+
+
+// Class Athena.FishingRodActionStateInterface
+// 0x0000 (0x0028 - 0x0028)
+class UFishingRodActionStateInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingRodActionStateInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingCompositeInputHandler
+// 0x00E0 (0x01B8 - 0x00D8)
+class UFishingCompositeInputHandler : public UCompositeInputHandler
+{
+public:
+	class AActor*                                      Owner;                                                    // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xD8];                                      // 0x00E0(0x00D8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingCompositeInputHandler"));
+		return ptr;
+	}
+
+
+	TEnumAsByte<EInputHandlerResult> OnPrimaryItemUseReleasedRecieved();
+	TEnumAsByte<EInputHandlerResult> OnPrimaryItemUsePressedRecieved();
+	TEnumAsByte<EInputHandlerResult> OnMovementInputY(float InAmount);
+	TEnumAsByte<EInputHandlerResult> OnMovementInputX(float InAmount);
+	TEnumAsByte<EInputHandlerResult> OnLookAroundRightStickInputY(float InAmount);
+	TEnumAsByte<EInputHandlerResult> OnLookAroundRightStickInputX(float InAmount);
+	TEnumAsByte<EInputHandlerResult> OnLookAroundMouseInputY(float InAmount);
+	TEnumAsByte<EInputHandlerResult> OnLookAroundMouseInputX(float InAmount);
+	TEnumAsByte<EInputHandlerResult> OnJumpNotificationRecieved();
+};
+
+
+// Class Athena.FishingFloatInterface
+// 0x0000 (0x0028 - 0x0028)
+class UFishingFloatInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingFloatInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingRodInterface
+// 0x0000 (0x0028 - 0x0028)
+class UFishingRodInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingRodInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingFloat
+// 0x01A8 (0x0640 - 0x0498)
+class AFishingFloat : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0498(0x0018) MISSED OFFSET
+	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFishingFloatSetupDataAsset*                 FishingFloatSetupDataAsset;                               // 0x04B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        FishingFloatMesh;                                         // 0x04C0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x178];                                     // 0x04C8(0x0178) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingFloat"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingFloatSetupDataAsset
+// 0x0070 (0x0098 - 0x0028)
+class UFishingFloatSetupDataAsset : public UDataAsset
+{
+public:
+	class UWwiseObjectPoolWrapper*                     FishingFloatPool;                                         // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RodCastFloatLandInWater;                                  // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DelayBeforeDetachingFloat;                                // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatBobDepthWhenMovedAndNotHooked;                       // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RetractingDuration;                                       // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ViolentlyRetractingDuration;                              // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 CastingFloatMovementXY;                                   // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 CastingFloatMovementZAtMinDistance;                       // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 CastingFloatMovementZAtMaxDistance;                       // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 ReelingInFloatMovementXY;                                 // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 ReelingInFloatMovementZ;                                  // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     SplashVFXWhenFloatLandsOnWater;                           // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ExtraOffsetWhenFishNotAttached;                           // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatBobDepthOnComedyItemBeingHooked;                     // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BringingInCatchDuration;                                  // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FloatZOffset;                                             // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WobbleSpeed;                                              // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxWobbleAngle;                                           // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WobbleYawAngleOffset;                                     // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingFloatSetupDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingFreeLookConstrainsDataAsset
+// 0x0018 (0x0040 - 0x0028)
+class UFishingFreeLookConstrainsDataAsset : public UDataAsset
+{
+public:
+	float                                              YawDegrees;                                               // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PitchMinDegrees;                                          // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PitchMaxDegrees;                                          // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LookAroundRightStickInputToAngleModifier;                 // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LookAroundMouseInputToAngleModifier;                      // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LookAroundMouseInputAsMovementInputModifier;              // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingFreeLookConstrainsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingLineRenderComponent
+// 0x0000 (0x0670 - 0x0670)
+class UFishingLineRenderComponent : public URopeCatenaryRenderComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingLineRenderComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingMiniGameFishDataAsset
+// 0x0108 (0x0130 - 0x0028)
+class UFishingMiniGameFishDataAsset : public UDataAsset
+{
+public:
+	float                                              ChanceOfEscapePositionBeingLeft;                          // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ChanceOfEscapePositionBeingAway;                          // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ChanceOfEscapePositionBeingRight;                         // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           HowLongBeforeUnfoughtFishEscapes;                         // 0x0038(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimeToTire;                                               // 0x0068(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           SwitchesBeforeRecovery;                                   // 0x0098(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimeSpentRecovering;                                      // 0x00C8(0x0030) (Edit, DisableEditOnInstance)
+	float                                              SpeedMovingBackToCentreWhenRecovering;                    // 0x00F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpeedMovingBackToCentreWhenRecoveringWhenReeling;         // 0x00FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           NumFakeOuts;                                              // 0x0100(0x0030) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingMiniGameFishDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingMiniGameSetupDataAsset
+// 0x0080 (0x00A8 - 0x0028)
+class UFishingMiniGameSetupDataAsset : public UDataAsset
+{
+public:
+	float                                              EscapeRadiusAtMaxDistance;                                // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EscapeRadiusAtMinDistance;                                // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PercentageOfEscapeRadiusToKeepFishFacingOutwards;         // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AwayEscapeSectorAngleAtMaxDistance;                       // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AwayEscapeSectorAngleAtMinDistance;                       // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LeftRightEscapeSectorAngleAtMaxDistance;                  // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LeftRightEscapeSectorAngleAtMinDistance;                  // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           TimeToNextAngleChangeWithinSector;                        // 0x0048(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           FakeOutDistancePercentage;                                // 0x0078(0x0030) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingMiniGameSetupDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingMouseXAnalogInputId
+// 0x0000 (0x0030 - 0x0030)
+class UFishingMouseXAnalogInputId : public UAnalogInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingMouseXAnalogInputId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingMouseYAnalogInputId
+// 0x0000 (0x0030 - 0x0030)
+class UFishingMouseYAnalogInputId : public UAnalogInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingMouseYAnalogInputId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingRightStickXAnalogInputId
+// 0x0000 (0x0030 - 0x0030)
+class UFishingRightStickXAnalogInputId : public UAnalogInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingRightStickXAnalogInputId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingRightStickYAnalogInputId
+// 0x0000 (0x0030 - 0x0030)
+class UFishingRightStickYAnalogInputId : public UAnalogInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingRightStickYAnalogInputId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingRod
+// 0x00E0 (0x08A8 - 0x07C8)
+class AFishingRod : public ASkeletalMeshWieldableItem
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x07C8(0x0010) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x07D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FFishingFishSelector                        FishSelector;                                             // 0x07E8(0x0018) (Edit)
+	class UFishingRodSetupDataAsset*                   FishingRodSetupDataAsset;                                 // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingSetupDataAsset*                      FishingSetupDataAssetInToSea;                             // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingSetupDataAsset*                      FishingSetupDataAssetInToPond;                            // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingMiniGameSetupDataAsset*              FishingMiniGameSetupDataAssetInToSea;                     // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingMiniGameSetupDataAsset*              FishingMiniGameSetupDataAssetInToPond;                    // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingFreeLookConstrainsDataAsset*         FishingFreeLookConstrainsDataAsset;                       // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UFishingLineRenderComponent*                 Rope;                                                     // 0x0830(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TEnumAsByte<EFishingRodServerState>                ServerState;                                              // 0x0838(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0839(0x0007) MISSED OFFSET
+	class AFishingFloat*                               FishingFloat;                                             // 0x0840(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AItemProxy*                                  LocalOnlyBaitOnFloat;                                     // 0x0848(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FFishingMiniGame                            FishingMiniGame;                                          // 0x0850(0x0050) (Transient)
+	class AFishingFish*                                FishingFish;                                              // 0x08A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingRod"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingRodSetupDataAsset
+// 0x0118 (0x0140 - 0x0028)
+class UFishingRodSetupDataAsset : public UDataAsset
+{
+public:
+	class UClass*                                      FishActorInteractionDesc;                                 // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DelayBeforeAllowingACast;                                 // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DelayBeforeCreatingFishingFloat;                          // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DelayBeforeDestroyingFishingFloat;                        // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	class UClass*                                      FishingFloatType;                                         // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     HitTestTraceChannel;                                      // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
+	float                                              PreCastingPlayerSpeedModifier;                            // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeBetweenIsFloatLocationValidChecks;                    // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SingleFishAnimationLoopDuration;                          // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FDebugFishSelectionBreed>            FishBreeds;                                               // 0x0058(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FDebugFishSelectionBreed>            FishBreedsInAPond;                                        // 0x0068(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FFishingComedyItemInfo>              ComedyItems;                                              // 0x0078(0x0010) (Edit, ZeroConstructor)
+	float                                              ChanceOfComedyItems;                                      // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DistanceFromPlayerToCatchComedyItem;                      // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FFishBaitInfo>                       FishBait;                                                 // 0x0090(0x0010) (Edit, ZeroConstructor)
+	float                                              RopeThickness;                                            // 0x00A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RopeSlackAtMaxDistance;                                   // 0x00A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RopeSlackAtMinDistance;                                   // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ServerEstimateRodEndPosition;                             // 0x00AC(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTimeToWaitForAnimationStateToFinish;                   // 0x00B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 RodCastAudioDrawBack;                                     // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RodCastAudioCast;                                         // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RodBendStart;                                             // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RodBendRateOfChangeToTriggerSound;                        // 0x00D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AmountOfWrongDirectionStrainToTriggerSound;               // 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RodBendCooldown;                                          // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RodBendFactorRtpc;                                        // 0x00E4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 RodCastReelLoopStart;                                     // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RodCastReelLoopStop;                                      // 0x00F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RodCastReelSpeedRtpc;                                     // 0x0100(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RtpcSpeedFactorCasting;                                   // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RtpcSpeedFactorFishing;                                   // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RtpcSpeedFactorReeling;                                   // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 FishingBendWrongDirectionStart;                           // 0x0118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FishingBendWrongDirectionStop;                            // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FishingLineSnap;                                          // 0x0128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 RodCastFishOutOfWaterWriggling;                           // 0x0130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     FishingRodPool;                                           // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingRodSetupDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.FishingSetupDataAsset
+// 0x00E8 (0x0110 - 0x0028)
+class UFishingSetupDataAsset : public UDataAsset
+{
+public:
+	float                                              CastDistanceMin;                                          // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CastDistanceMax;                                          // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PreCastTimeForMaxCastDistance;                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DistanceRequiredToReelInToCatchTheFish;                   // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinFloatDistanceFromPlayer;                               // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxFishSpawnDepth;                                        // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CastingThrowDurationAtMinDistance;                        // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CastingThrowDurationAtMaxDistance;                        // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FishSpawnHitDetectionHalfExtentXY;                        // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FishSpawnHitDetectionHalfExtentZ;                         // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           TimeBeforeAppearing;                                      // 0x0050(0x0030) (Edit)
+	float                                              DelayBeforeTrackingFloat;                                 // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDistanceFromFloatBeforeFishGivesUp;                    // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           TimeSpentBiting;                                          // 0x0088(0x0030) (Edit)
+	float                                              FloatReelingMoveSpeedWhenNoFishOnLine;                    // 0x00B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ReelingAnimationMaxSpeedWhenNoFishOnLine;                 // 0x00BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ReelingAnimationSpeedChangePerSec;                        // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ReelingAnimationStoppingSpeedChangePerSec;                // 0x00C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxReelingWhenFailedTime;                                 // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FishingMiniGameLeftRightInputAngle;                       // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FishingMiniGameBattlingAngle;                             // 0x00D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FishingMiniGameInputThreshold;                            // 0x00D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeBeforeTurningOnFishHits;                              // 0x00D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FOVChangeWhenBattling;                                    // 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FOVBlendSpeedWhenBattling;                                // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeBeforeDestroyingFishAndAwardingPlayer;                // 0x00E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CameraYawFishMaxOffset;                                   // 0x00E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraMaxYaw;                                             // 0x00EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraYawSpringAcc;                                       // 0x00F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraExtraPitchWhenPullingBack;                          // 0x00F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraExtraPitchSpringAcc;                                // 0x00F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlendBackFromDisabledCameraDuration;                      // 0x00FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RodDirectionBendMaxAngleOfFishFromFromRod;                // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RodDirectionMaxBendLeft;                                  // 0x0104(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RodDirectionMaxBendRight;                                 // 0x0108(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ReturnFromFreeLookSpringAcc;                              // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.FishingSetupDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MechanismActionInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMechanismActionInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismActionInterface"));
+		return ptr;
+	}
+
+
+	TEnumAsByte<EMechanismActionType> GetActionType();
+	TEnumAsByte<EMechanismActionState> GetActionState();
+	float GetActionProgress();
+	struct FName GetActionName();
+};
+
+
+// Class Athena.MechanismResetInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMechanismResetInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismResetInterface"));
+		return ptr;
+	}
+
+
+	bool ResetMechanism();
+};
+
+
+// Class Athena.MechanismTriggerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMechanismTriggerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismTriggerInterface"));
+		return ptr;
+	}
+
+
+	void SetTriggerProgress(float Progress);
+	TEnumAsByte<EMechanismTriggerType> GetTriggerType();
+	TEnumAsByte<EMechanismTriggerState> GetTriggerState();
+	float GetTriggerProgress();
+	struct FName GetTriggerName();
+	bool DisableTrigger(class AActor* Instigator);
+	bool DeactivateTrigger(class AActor* Instigator);
+	bool ActivateTrigger(class AActor* Instigator);
+};
+
+
+// Class Athena.MechanismActionComponent
+// 0x0060 (0x0130 - 0x00D0)
+class UMechanismActionComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
+	TEnumAsByte<EMechanismActionType>                  ActionType;                                               // 0x00E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EMechanismActionActivationMode>        ActivationMode;                                           // 0x00E1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x00E2(0x0006) MISSED OFFSET
+	TArray<class AActor*>                              TriggerActors;                                            // 0x00E8(0x0010) (Edit, Net, ZeroConstructor)
+	struct FScriptMulticastDelegate                    OnMechanismActionStateChangedDelegate;                    // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMechanismActionResetDelegate;                           // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TEnumAsByte<EMechanismActionState>                 ActionState;                                              // 0x0118(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x17];                                      // 0x0119(0x0017) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismActionComponent"));
+		return ptr;
+	}
+
+
+	void OnTriggerStateChanged(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismTriggerState> PreviousState, TEnumAsByte<EMechanismTriggerState> NewState, class AActor* Instigator);
+	void OnRep_TriggerActors(TArray<class AActor*> PreviousTriggerActors);
+	void OnRep_ActionState(TEnumAsByte<EMechanismActionState> PreviousState);
+};
+
+
+// Class Athena.AnimatedMechanismAction
+// 0x0078 (0x0510 - 0x0498)
+class AAnimatedMechanismAction : public AActor
+{
+public:
+	class UMechanismActionComponent*                   MechanismActionComponent;                                 // 0x0498(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              Delay;                                                    // 0x04A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NetDelay;                                                 // 0x04A4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData)
+	bool                                               AnimateOnServer;                                          // 0x04A8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x04A9(0x0007) MISSED OFFSET
+	struct FAnimatedMechanismActionState               State;                                                    // 0x04B0(0x0018) (Net)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x04C8(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AnimatedMechanismAction"));
+		return ptr;
+	}
+
+
+	void OnRep_State();
+	void OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* InInstigator);
+	void OnMechanismActionReset(const TScriptInterface<class UMechanismResetInterface>& Action);
+	bool IsAnimating();
+	void Blueprint_OnStopped();
+	void Blueprint_OnStarted();
+	void Blueprint_OnReset();
+};
+
+
+// Class Athena.SimpleAnimatedMechanismAction
+// 0x00B0 (0x05C0 - 0x0510)
+class ASimpleAnimatedMechanismAction : public AAnimatedMechanismAction
+{
+public:
+	class USceneComponent*                             Root;                                                     // 0x0510(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             Pivot;                                                    // 0x0518(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TEnumAsByte<ESimpleAnimatedMechanismActionMode>    Mode;                                                     // 0x0520(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AlwaysActive;                                             // 0x0521(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               OnlyAnimateWhenActive;                                    // 0x0522(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x0523(0x0005) MISSED OFFSET
+	struct FRuntimeFloatCurve                          Curve;                                                    // 0x0528(0x0080) (Edit)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x05A8(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SimpleAnimatedMechanismAction"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SpikeMechanismAction
+// 0x0010 (0x05D0 - 0x05C0)
+class ASpikeMechanismAction : public ASimpleAnimatedMechanismAction
+{
+public:
+	float                                              Extent;                                                   // 0x05C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Damage;                                                   // 0x05C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EHealthChangedReason>                  DamageReason;                                             // 0x05C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x05C9(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SpikeMechanismAction"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SwingMechanismAction
+// 0x0028 (0x05E8 - 0x05C0)
+class ASwingMechanismAction : public ASimpleAnimatedMechanismAction
+{
+public:
+	class UStaticMeshComponent*                        Mesh;                                                     // 0x05C0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              MaxAngle;                                                 // 0x05C8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinAngle;                                                 // 0x05CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              Damage;                                                   // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EHealthChangedReason>                  DamageReason;                                             // 0x05D4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x05D5(0x0003) MISSED OFFSET
+	TArray<class USwingMechanismCordRenderComponent*>  CordChildren;                                             // 0x05D8(0x0010) (ExportObject, ZeroConstructor, Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwingMechanismAction"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.TransformLerpComponent
+// 0x04F0 (0x05C0 - 0x00D0)
+class UTransformLerpComponent : public UActorComponent
+{
+public:
+	bool                                               UseLocationCurve;                                         // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
+	struct FRuntimeVectorCurve                         LocationCurve;                                            // 0x00D8(0x0170) (Edit)
+	bool                                               UseRotationCurve;                                         // 0x0248(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0249(0x0007) MISSED OFFSET
+	struct FRuntimeVectorCurve                         RotationCurve;                                            // 0x0250(0x0170) (Edit)
+	bool                                               UseScaleCurve;                                            // 0x03C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x03C1(0x0007) MISSED OFFSET
+	struct FRuntimeVectorCurve                         ScaleCurve;                                               // 0x03C8(0x0170) (Edit)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0538(0x0008) MISSED OFFSET
+	struct FTransform                                  SourceTransform;                                          // 0x0540(0x0030) (Edit, IsPlainOldData)
+	struct FTransform                                  TargetTransform;                                          // 0x0570(0x0030) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x20];                                      // 0x05A0(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.TransformLerpComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ToggleAnimatedMechanismAction
+// 0x0030 (0x0540 - 0x0510)
+class AToggleAnimatedMechanismAction : public AAnimatedMechanismAction
+{
+public:
+	class USceneComponent*                             Root;                                                     // 0x0510(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             Pivot;                                                    // 0x0518(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UTransformLerpComponent*                     InactiveToActiveAnimation;                                // 0x0520(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UTransformLerpComponent*                     ActiveToInactiveAnimation;                                // 0x0528(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TArray<class UTransformLerpComponent*>             Animations;                                               // 0x0530(0x0010) (ExportObject, ZeroConstructor, Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ToggleAnimatedMechanismAction"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ContinuousAnimatedMechanismAction
+// 0x0020 (0x04B8 - 0x0498)
+class AContinuousAnimatedMechanismAction : public AActor
+{
+public:
+	class USceneComponent*                             Root;                                                     // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             Pivot;                                                    // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UMechanismActionComponent*                   MechanismActionComponent;                                 // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UTransformLerpComponent*                     TransformLerpComponent;                                   // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ContinuousAnimatedMechanismAction"));
+		return ptr;
+	}
+
+
+	void OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* InInstigator);
+	void OnMechanismActionReset(const TScriptInterface<class UMechanismResetInterface>& Action);
+};
+
+
+// Class Athena.IslandMechanismSelectionComponent
+// 0x0108 (0x01D8 - 0x00D0)
+class UIslandMechanismSelectionComponent : public UActorComponent
+{
+public:
+	TArray<class AMechanismGroup*>                     MechanismGroups;                                          // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
+	float                                              CoolDownDuration;                                         // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           MechanismGroupsToSelect;                                  // 0x00E8(0x0030) (Edit, DisableEditOnTemplate)
+	TArray<class AMechanismGroup*>                     SelectedMechanismGroups;                                  // 0x0118(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x0128(0x00B0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.IslandMechanismSelectionComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MechanismElementProxyInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMechanismElementProxyInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismElementProxyInterface"));
+		return ptr;
+	}
+
+
+	void ApplyInstanceProperties(class AActor* Instance);
+};
+
+
+// Class Athena.MechanismElementProxy
+// 0x0018 (0x04B0 - 0x0498)
+class AMechanismElementProxy : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class UClass*                                      ElementClass;                                             // 0x04A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class AActor*                                      Instance;                                                 // 0x04A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismElementProxy"));
+		return ptr;
+	}
+
+
+	class AActor* GetInstance();
+};
+
+
+// Class Athena.MechanismInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMechanismInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.Mechanism
+// 0x0030 (0x04C8 - 0x0498)
+class AMechanism : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	TArray<struct FMechanismBinding>                   Bindings;                                                 // 0x04A8(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
+	struct FScriptMulticastDelegate                    OnMechanismResetDelegate;                                 // 0x04B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.Mechanism"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.AnimatedMechanismActionProxy
+// 0x0008 (0x04B8 - 0x04B0)
+class AAnimatedMechanismActionProxy : public AMechanismElementProxy
+{
+public:
+	float                                              Delay;                                                    // 0x04B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04B4(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.AnimatedMechanismActionProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SimpleAnimatedMechanismActionProxy
+// 0x0088 (0x0540 - 0x04B8)
+class ASimpleAnimatedMechanismActionProxy : public AAnimatedMechanismActionProxy
+{
+public:
+	TEnumAsByte<ESimpleAnimatedMechanismActionMode>    Mode;                                                     // 0x04B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AlwaysActive;                                             // 0x04B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               OnlyAnimateWhenActive;                                    // 0x04BA(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x04BB(0x0005) MISSED OFFSET
+	struct FRuntimeFloatCurve                          Curve;                                                    // 0x04C0(0x0080) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SimpleAnimatedMechanismActionProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SpikeMechanismActionProxy
+// 0x0008 (0x0548 - 0x0540)
+class ASpikeMechanismActionProxy : public ASimpleAnimatedMechanismActionProxy
+{
+public:
+	float                                              Extent;                                                   // 0x0540(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0544(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SpikeMechanismActionProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SwingMechanismActionProxy
+// 0x0010 (0x0550 - 0x0540)
+class ASwingMechanismActionProxy : public ASimpleAnimatedMechanismActionProxy
+{
+public:
+	float                                              MaxAngle;                                                 // 0x0540(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinAngle;                                                 // 0x0544(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              Damage;                                                   // 0x0548(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EHealthChangedReason>                  DamageReason;                                             // 0x054C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x054D(0x0003) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwingMechanismActionProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.CapstanMechanismTriggerProxy
+// 0x0010 (0x04C0 - 0x04B0)
+class ACapstanMechanismTriggerProxy : public AMechanismElementProxy
+{
+public:
+	struct FCapstanParams                              Parameters;                                               // 0x04B0(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CapstanMechanismTriggerProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MechanismTriggerComponent
+// 0x0088 (0x0158 - 0x00D0)
+class UMechanismTriggerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
+	TEnumAsByte<EMechanismTriggerType>                 TriggerType;                                              // 0x00E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnMechanismActionRegisteredWithTriggerDelegate;           // 0x00E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMechanismActionUnregisteredWithTriggerDelegate;         // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMechanismTriggerChangedMechanismActionStatesDelegate;   // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMechanismTriggerStateChangedDelegate;                   // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMechanismTriggerResetDelegate;                          // 0x0128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TEnumAsByte<EMechanismTriggerState>                TriggerState;                                             // 0x0138(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1F];                                      // 0x0139(0x001F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismTriggerComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_TriggerState(TEnumAsByte<EMechanismTriggerState> PreviousState);
+	void OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* Instigator);
+};
+
+
+// Class Athena.PressurePlateMechanismTrigger
+// 0x0030 (0x04C8 - 0x0498)
+class APressurePlateMechanismTrigger : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
+	class UMechanismTriggerComponent*                  MechanismTriggerComponent;                                // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               DisableAfterActivation;                                   // 0x04A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x04A9(0x0003) MISSED OFFSET
+	float                                              DelayActivationTime;                                      // 0x04AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               TriggerBox;                                               // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               InvertTriggerActivation;                                  // 0x04B8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xF];                                       // 0x04B9(0x000F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PressurePlateMechanismTrigger"));
+		return ptr;
+	}
+
+
+	void OnTriggerStateChanged(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismTriggerState> PreviousState, TEnumAsByte<EMechanismTriggerState> NewState, class AActor* InInstigator);
+	void OnMechanismTriggerChangedMechanismActionStates(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismActionState> State);
+};
+
+
+// Class Athena.PressurePlateMechanismTriggerProxy
+// 0x0008 (0x04B8 - 0x04B0)
+class APressurePlateMechanismTriggerProxy : public AMechanismElementProxy
+{
+public:
+	bool                                               DisableAfterActivation;                                   // 0x04B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04B1(0x0003) MISSED OFFSET
+	float                                              DelayActivationTime;                                      // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.PressurePlateMechanismTriggerProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SwitchMechanismInterface
+// 0x0000 (0x0028 - 0x0028)
+class USwitchMechanismInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwitchMechanismInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SwitchMechanismTrigger
+// 0x0120 (0x05D8 - 0x04B8)
+class ASwitchMechanismTrigger : public AInteractableBase
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x04B8(0x0010) MISSED OFFSET
+	class USceneComponent*                             Root;                                                     // 0x04C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             Pivot;                                                    // 0x04D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UMechanismTriggerComponent*                  MechanismTriggerComponent;                                // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FText                                       SwitchInteractionPromptText;                              // 0x04E0(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       SwitchNameText;                                           // 0x0518(0x0038) (Edit, DisableEditOnInstance)
+	bool                                               SyncToConnectedActionStateOnChange;                       // 0x0550(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AutoDeactivateAfterActivation;                            // 0x0551(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0552(0x0002) MISSED OFFSET
+	float                                              TimeAfterActivationBeforeAutoDeactivating;                // 0x0554(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SelectRandomStartPositionOnSpawn;                         // 0x0558(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESwitchMechanismTriggerRandomSelectionMode> RandomStartPositionSelectionMode;                         // 0x0559(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x055A(0x0002) MISSED OFFSET
+	int                                                FixedStartPositionIndex;                                  // 0x055C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 PositionTransitionCurve;                                  // 0x0560(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FSwitchMechanismTriggerPosition>     Positions;                                                // 0x0568(0x0010) (Edit, ZeroConstructor)
+	class UWwiseObjectPoolWrapper*                     AudioEmitterPool;                                         // 0x0578(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SwitchStartTransitionAudioEvent;                          // 0x0580(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SwitchStopTransitionAudioEvent;                           // 0x0588(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CurrentPositionIndex;                                     // 0x0590(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x44];                                      // 0x0594(0x0044) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwitchMechanismTrigger"));
+		return ptr;
+	}
+
+
+	void OnRep_CurrentPositionIndex(int PreviousIndex);
+	void OnMechanismTriggerChangedMechanismActionStates(const TScriptInterface<class UMechanismTriggerInterface>& Trigger, TEnumAsByte<EMechanismActionState> State);
+	void OnMechanismReset(const TScriptInterface<class UMechanismResetInterface>& Trigger);
+	void OnAnimationStarted();
+	void OnAnimationCompleted();
+};
+
+
+// Class Athena.SwitchMechanismTriggerProxy
+// 0x0028 (0x04D8 - 0x04B0)
+class ASwitchMechanismTriggerProxy : public AMechanismElementProxy
+{
+public:
+	bool                                               SyncToConnectedActionStateOnChange;                       // 0x04B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AutoDeactivateAfterActivation;                            // 0x04B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x04B2(0x0002) MISSED OFFSET
+	float                                              TimeAfterActivationBeforeAutoDeactivating;                // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               SelectRandomStartPositionOnSpawn;                         // 0x04B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESwitchMechanismTriggerRandomSelectionMode> RandomStartPositionSelectionMode;                         // 0x04B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x04BA(0x0002) MISSED OFFSET
+	int                                                FixedStartPositionIndex;                                  // 0x04BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 PositionTransitionCurve;                                  // 0x04C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FSwitchMechanismTriggerPosition>     Positions;                                                // 0x04C8(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwitchMechanismTriggerProxy"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MechanismGroupInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMechanismGroupInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismGroupInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MechanismGroup
+// 0x0070 (0x0508 - 0x0498)
+class AMechanismGroup : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0498(0x0010) MISSED OFFSET
+	TArray<class AMechanism*>                          Mechanisms;                                               // 0x04A8(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
+	struct FWeightedProbabilityRangeOfRanges           MechanismsToSelect;                                       // 0x04B8(0x0030) (Edit, DisableEditOnTemplate)
+	struct FScriptMulticastDelegate                    OnMechanismGroupResetDelegate;                            // 0x04E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TArray<class AMechanism*>                          SelectedMechanisms;                                       // 0x04F8(0x0010) (ZeroConstructor, Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismGroup"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.MechanismProximityResetComponent
+// 0x0010 (0x05F0 - 0x05E0)
+class UMechanismProximityResetComponent : public USphereComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05E0(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.MechanismProximityResetComponent"));
+		return ptr;
+	}
+
+
+	void OnComponentEndOverlapFunc(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnComponentBeginOverlapFunc(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+};
+
+
+// Class Athena.CapstanMechanismTriggerComponent
+// 0x0010 (0x0168 - 0x0158)
+class UCapstanMechanismTriggerComponent : public UMechanismTriggerComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0158(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.CapstanMechanismTriggerComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.SpawnAIWaveMechanismAction
+// 0x00D0 (0x0568 - 0x0498)
+class ASpawnAIWaveMechanismAction : public AActor
+{
+public:
+	class UMechanismActionComponent*                   MechanismActionComponent;                                 // 0x0498(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UAIProgressiveWavesSpawner*                  ProgressiveWavesSpawnerTemplate;                          // 0x04A0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x70];                                      // 0x04A8(0x0070) MISSED OFFSET
+	class UAIProximityPlayerTracker*                   ProximityPlayerTracker;                                   // 0x0518(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0520(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SpawnAIWaveMechanismAction"));
+		return ptr;
+	}
+
+
+	void OnActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* InInstigator);
+	void OnActionReset(const TScriptInterface<class UMechanismResetInterface>& Mechanism);
+};
+
+
+// Class Athena.SwingMechanismCordRenderComponent
+// 0x0020 (0x0690 - 0x0670)
+class USwingMechanismCordRenderComponent : public UCordRenderComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0670(0x0008) MISSED OFFSET
+	struct FVector                                     EndOffset;                                                // 0x0678(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0684(0x000C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.SwingMechanismCordRenderComponent"));
 		return ptr;
 	}
 

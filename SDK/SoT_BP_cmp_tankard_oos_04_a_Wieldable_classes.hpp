@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_tankard_oos_04_a_Wieldable.BP_cmp_tankard_oos_04_a_Wieldable_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x0878 - 0x0878)
 class ABP_cmp_tankard_oos_04_a_Wieldable_C : public ABP_Tankard_C
 {
 public:

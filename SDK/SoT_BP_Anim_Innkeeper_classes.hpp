@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Innkeeper.BP_Anim_Innkeeper_C
-// 0x0000 (0x1D39 - 0x1D39)
+// 0x0000 (0x14F9 - 0x14F9)
 class UBP_Anim_Innkeeper_C : public UBP_Anim_NPC_C
 {
 public:

@@ -102,6 +102,21 @@ public:
 };
 
 
+// Class AthenaInput.TestAnalogInput2Id
+// 0x0000 (0x0030 - 0x0030)
+class UTestAnalogInput2Id : public UAnalogInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.TestAnalogInput2Id"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaInput.InputHandlerInterface
 // 0x0000 (0x0028 - 0x0028)
 class UInputHandlerInterface : public UInterface

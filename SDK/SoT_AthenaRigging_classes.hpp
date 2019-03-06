@@ -100,6 +100,21 @@ public:
 };
 
 
+// Class AthenaRigging.RopeCatenaryRenderComponent
+// 0x0000 (0x0670 - 0x0670)
+class URopeCatenaryRenderComponent : public UCordRenderComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaRigging.RopeCatenaryRenderComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaRigging.RopeInterface
 // 0x0000 (0x0028 - 0x0028)
 class URopeInterface : public UInterface

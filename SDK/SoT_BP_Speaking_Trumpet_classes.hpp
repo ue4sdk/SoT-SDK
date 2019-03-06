@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Speaking_Trumpet.BP_Speaking_Trumpet_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABP_Speaking_Trumpet_C : public ASpeakingTrumpet
 {
 public:

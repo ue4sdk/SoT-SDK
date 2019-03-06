@@ -33,11 +33,10 @@ public:
 
 
 // Class RareAudio.AnimNotifyWwiseEmitterComponent
-// 0x0030 (0x0310 - 0x02E0)
+// 0x0000 (0x02E0 - 0x02E0)
 class UAnimNotifyWwiseEmitterComponent : public UWwiseEmitterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x02E0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Enum JsonUtilities.ETestEnum
-enum class ETestEnum : uint8_t
+enum class EJsonUtilities_ETestEnum : uint8_t
 {
 	ETestEnum__Value0              = 0,
 	ETestEnum__Value1              = 1,

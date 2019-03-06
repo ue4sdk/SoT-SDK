@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaCheat.AthenaCheatManager
-// 0x0038 (0x00B0 - 0x0078)
+// 0x0048 (0x00C0 - 0x0078)
 class UAthenaCheatManager : public UCheatManager
 {
 public:
@@ -23,6 +23,7 @@ public:
 	class UClass*                                      CinematicCameraControllerClass;                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x24];                                      // 0x0088(0x0024) MISSED OFFSET
 	float                                              TeleportToDigsiteHeightOffset;                            // 0x00AC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x00B0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -85,6 +86,7 @@ public:
 	void TeleportCrewMemberToShip(const class FString& ActorIdString);
 	void TeleportAllPlayersToShip();
 	void TeleportAllPlayersToPlayerStart();
+	void TeleportAllCrewsToShips();
 	void TeleportAllCrewsToCrewSpawnLocations();
 	void TeleportActorToTeleportLocationActor(const class FString& ControllerActorIdString, const class FString& TeleportLocationActorIdString);
 	void TeleportActorToLocation(const class FString& ActorIdString, float LocationX, float LocationY, float LocationZ, float Yaw);
@@ -92,7 +94,9 @@ public:
 	void TeleportActorToDigSite(const class FString& ActorIdString);
 	void TeleportActorToActorWithOffset(const class FString& ActorIdString, const class FString& DestinationActorIdString, float OffsetX, float OffsetY, float OffsetZ);
 	void SuperSailor();
+	void StoreShipLocation(float LocationX, float LocationY, float LocationZ, float Yaw);
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
+	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
 	void StartNearestVolcano();
 	void StartNearestGeysers();
@@ -115,7 +119,8 @@ public:
 	void SpawnShipFromDesc(const class FString& InShipDescAssetString, float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnShipAtIsland(const class FString& IslandName);
 	void SpawnShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
-	void SpawnNumberOfAI(const class FString& AITypeString, int NumToSpawn);
+	void SpawnNumberOfAI(const class FString& AIDescString, int NumToSpawn);
+	void SpawnMultipleTreasureChestsOfType(int Num, class FString* ChestTypeString);
 	void SpawnMessageInABottle(const class FString& MessageInABottleTypeString);
 	void SpawnMermaid();
 	void SpawnMerchantFauna(const class FString& FaunaTypeString);
@@ -127,16 +132,18 @@ public:
 	void SpawnGeyserAtPlayerLocation();
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
 	void SpawnFogAtPlayerPosition();
+	void SpawnFishAtPlayerLocation(const class FString& InBaitType);
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
 	void SpawnCollectorsChestOfType(class FString* ChestTypeString);
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);
 	void SpawnBarrelGroup();
+	void SpawnAThousandTreasureChests();
 	void SpawnAndEquipDebugWieldable(const class FString& DebugWieldableTypeString);
 	void SpawnAINoTrigger(const class FString& AIDescString);
 	void SpawnAIAtNearestAISpawnPoint(const class FString& AIDescString);
-	void SpawnAIAtLocationDelayed(const class FString& AITypeString, float LocationX, float LocationY, float LocationZ, float Yaw, float Delay);
-	void SpawnAIAtCurrentLocationDelayed(const class FString& AITypeString, float Delay);
+	void SpawnAIAtLocationDelayed(const class FString& AIDescString, float LocationX, float LocationY, float LocationZ, float Yaw, float Delay);
+	void SpawnAIAtCurrentLocationDelayed(const class FString& AIDescString, float Delay);
 	void SpawnAI(const class FString& AIDescString);
 	void SlowMotionOverride(bool InValue);
 	void SinkShipWithKeelOverIndex(int KeelOverConfigIndex);
@@ -219,6 +226,7 @@ public:
 	void RemovePetFromPlayer();
 	void RemoveItemInSlot(int SlotIndex);
 	void RemoveAllFog();
+	void RebuildPirateFromSeed(int Seed);
 	void PushShip(float FwdSpdInMetersPerSecond);
 	void PullLatestEmblemProgress();
 	void ProceedToNextContestState();
@@ -253,12 +261,21 @@ public:
 	void KillAllCrews();
 	void JoinAlliance(const class FString& OfferingCrew, const class FString& AcceptingCrew);
 	void IPGOverride(const struct FName& BodyShape, float Distance);
+	void IPGLoadWithoutClothing(const class FString& ActorIdString, const class FString& path);
+	void IPGLoadWithClothing(const class FString& ActorIdString, const class FString& path);
 	void IPGLoad(const class FString& path);
 	void InfiniteGunAmmo(bool Enabled);
 	void IncrementTime(int Hours, int Minutes);
+	void IgniteShipAtPlayerLocation();
+	void IgniteClosestShip();
+	void IgniteAllShipFires();
 	void HideTaleDebug();
 	void HealthSet(float Value);
 	void HealthReset();
+	void HealthContinuousStopWithTestReason();
+	void HealthContinuousStopWithReason(const class FString& Reason);
+	void HealthContinuousStartWithTestReason(float Value);
+	void HealthContinuousStartWithReason(float Value, const class FString& Reason);
 	void HealthAdjust(float Amount);
 	void God();
 	void ForceOpenShop();
@@ -284,6 +301,8 @@ public:
 	void DrawTemporaryLandmarkDebug(bool Enabled);
 	void DrawNearbyAISpawnPointsRanged(float Range);
 	void DrawNearbyAISpawnPoints();
+	void DouseClosestShip();
+	void DouseAllShipFires();
 	void DiveShipByActorId(const class FString& ShipActorIdString);
 	void DisplaySingleEmblemProgress(const class FString& StatName);
 	void DisplayServersideHitsAtPlayerPosWithDefaults();

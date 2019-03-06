@@ -1755,19 +1755,6 @@ enum class EFNavigationSystemRunMode : uint8_t
 };
 
 
-// Enum Engine.EVehicleDifferential4W
-enum class EVehicleDifferential4W : uint8_t
-{
-	EVehicleDifferential4W__LimitedSlip_4W = 0,
-	EVehicleDifferential4W__LimitedSlip_FrontDrive = 1,
-	EVehicleDifferential4W__LimitedSlip_RearDrive = 2,
-	EVehicleDifferential4W__Open_4W = 3,
-	EVehicleDifferential4W__Open_FrontDrive = 4,
-	EVehicleDifferential4W__Open_RearDrive = 5,
-	EVehicleDifferential4W__EVehicleDifferential4W_MAX = 6
-};
-
-
 // Enum Engine.ESoundSpatializationAlgorithm
 enum class ESoundSpatializationAlgorithm : uint8_t
 {

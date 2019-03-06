@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlantForm_AnimNotifyEmitterComponent.BP_PlantForm_AnimNotifyEmitterComponent_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x02F0 - 0x02F0)
 class UBP_PlantForm_AnimNotifyEmitterComponent_C : public UAnimNotifyAdditionalEventsWwiseEmitterComponent
 {
 public:

@@ -1251,7 +1251,7 @@ public:
 
 
 // Class Engine.Engine
-// 0x0A40 (0x0A68 - 0x0028)
+// 0x0A28 (0x0A50 - 0x0028)
 class UEngine : public UObject
 {
 public:
@@ -1296,192 +1296,190 @@ public:
 	struct FStringClassReference                       DefaultBlueprintBaseClassName;                            // 0x01F0(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, NoClear)
 	struct FStringClassReference                       GameSingletonClassName;                                   // 0x0200(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, NoClear)
 	class UObject*                                     GameSingleton;                                            // 0x0210(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UTireType*                                   DefaultTireType;                                          // 0x0218(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DefaultTireTypeName;                                      // 0x0220(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
-	class UClass*                                      DefaultPreviewPawnClass;                                  // 0x0230(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringClassReference                       DefaultPreviewPawnClassName;                              // 0x0238(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, NoClear)
-	class FString                                      PlayOnConsoleSaveDir;                                     // 0x0248(0x0010) (ZeroConstructor, Config)
-	class UTexture2D*                                  DefaultTexture;                                           // 0x0258(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DefaultTextureName;                                       // 0x0260(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture*                                    DefaultDiffuseTexture;                                    // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DefaultDiffuseTextureName;                                // 0x0278(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture2D*                                  DefaultBSPVertexTexture;                                  // 0x0288(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DefaultBSPVertexTextureName;                              // 0x0290(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture2D*                                  HighFrequencyNoiseTexture;                                // 0x02A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       HighFrequencyNoiseTextureName;                            // 0x02A8(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture2D*                                  DefaultBokehTexture;                                      // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DefaultBokehTextureName;                                  // 0x02C0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture2D*                                  HDRCalibrationTexture;                                    // 0x02D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       HDRCalibrationTextureName;                                // 0x02D8(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   WireframeMaterial;                                        // 0x02E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      WireframeMaterialName;                                    // 0x02F0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   DebugMeshMaterial;                                        // 0x0300(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DebugMeshMaterialName;                                    // 0x0308(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   LevelColorationLitMaterial;                               // 0x0318(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      LevelColorationLitMaterialName;                           // 0x0320(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   LevelColorationUnlitMaterial;                             // 0x0330(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      LevelColorationUnlitMaterialName;                         // 0x0338(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   TriangleDensityScreenSpaceMaterial;                       // 0x0348(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      TriangleDensityScreenSpaceMaterialName;                   // 0x0350(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   TriangleDensityWorldSpaceMaterial;                        // 0x0360(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      TriangleDensityWorldSpaceMaterialName;                    // 0x0368(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   LightingTexelDensityMaterial;                             // 0x0378(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      LightingTexelDensityName;                                 // 0x0380(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   ShadedLevelColorationLitMaterial;                         // 0x0390(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      ShadedLevelColorationLitMaterialName;                     // 0x0398(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   ShadedLevelColorationUnlitMaterial;                       // 0x03A8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      ShadedLevelColorationUnlitMaterialName;                   // 0x03B0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   RemoveSurfaceMaterial;                                    // 0x03C0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       RemoveSurfaceMaterialName;                                // 0x03C8(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   VertexColorMaterial;                                      // 0x03D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      VertexColorMaterialName;                                  // 0x03E0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   VertexColorViewModeMaterial_ColorOnly;                    // 0x03F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      VertexColorViewModeMaterialName_ColorOnly;                // 0x03F8(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   VertexColorViewModeMaterial_AlphaAsColor;                 // 0x0408(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      VertexColorViewModeMaterialName_AlphaAsColor;             // 0x0410(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   VertexColorViewModeMaterial_RedOnly;                      // 0x0420(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      VertexColorViewModeMaterialName_RedOnly;                  // 0x0428(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   VertexColorViewModeMaterial_GreenOnly;                    // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      VertexColorViewModeMaterialName_GreenOnly;                // 0x0440(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   VertexColorViewModeMaterial_BlueOnly;                     // 0x0450(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      VertexColorViewModeMaterialName_BlueOnly;                 // 0x0458(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   ConstraintLimitMaterial;                                  // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ConstraintLimitMaterialX;                                 // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ConstraintLimitMaterialY;                                 // 0x0478(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ConstraintLimitMaterialZ;                                 // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       ConstraintLimitMaterialName;                              // 0x0488(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   InvalidLightmapSettingsMaterial;                          // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       InvalidLightmapSettingsMaterialName;                      // 0x04A0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   PreviewShadowsIndicatorMaterial;                          // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       PreviewShadowsIndicatorMaterialName;                      // 0x04B8(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
-	class UMaterial*                                   ArrowMaterial;                                            // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       ArrowMaterialName;                                        // 0x04D0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	struct FLinearColor                                LightingOnlyBrightness;                                   // 0x04E0(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	TArray<struct FColor>                              LightComplexityColors;                                    // 0x04F0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	TArray<struct FLinearColor>                        ShaderComplexityColors;                                   // 0x0500(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	TArray<struct FLinearColor>                        StationaryLightOverlapColors;                             // 0x0510(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	TArray<struct FLinearColor>                        LODColorationColors;                                      // 0x0520(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	float                                              MaxPixelShaderAdditiveComplexityCount;                    // 0x0530(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	float                                              MaxES2PixelShaderAdditiveComplexityCount;                 // 0x0534(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	float                                              MinLightMapDensity;                                       // 0x0538(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	float                                              IdealLightMapDensity;                                     // 0x053C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	float                                              MaxLightMapDensity;                                       // 0x0540(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	unsigned char                                      bRenderLightMapDensityGrayscale : 1;                      // 0x0544(0x0001) (Config, GlobalConfig)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0545(0x0003) MISSED OFFSET
-	float                                              RenderLightMapDensityGrayscaleScale;                      // 0x0548(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	float                                              RenderLightMapDensityColorScale;                          // 0x054C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	struct FLinearColor                                LightMapDensityVertexMappedColor;                         // 0x0550(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	struct FLinearColor                                LightMapDensitySelectedColor;                             // 0x0560(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	TArray<struct FStatColorMapping>                   StatColorMappings;                                        // 0x0570(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UPhysicalMaterial*                           DefaultPhysMaterial;                                      // 0x0580(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       DefaultPhysMaterialName;                                  // 0x0588(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	TArray<struct FGameNameRedirect>                   ActiveGameNameRedirects;                                  // 0x0598(0x0010) (ZeroConstructor, Config)
-	TArray<struct FClassRedirect>                      ActiveClassRedirects;                                     // 0x05A8(0x0010) (ZeroConstructor, Config)
-	TArray<struct FPluginRedirect>                     ActivePluginRedirects;                                    // 0x05B8(0x0010) (ZeroConstructor, Config)
-	TArray<struct FStructRedirect>                     ActiveStructRedirects;                                    // 0x05C8(0x0010) (ZeroConstructor, Config)
-	class UTexture2D*                                  PreIntegratedSkinBRDFTexture;                             // 0x05D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       PreIntegratedSkinBRDFTextureName;                         // 0x05E0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture2D*                                  MiniFontTexture;                                          // 0x05F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       MiniFontTextureName;                                      // 0x05F8(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture*                                    WeightMapPlaceholderTexture;                              // 0x0608(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       WeightMapPlaceholderTextureName;                          // 0x0610(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	class UTexture2D*                                  LightMapDensityTexture;                                   // 0x0620(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       LightMapDensityTextureName;                               // 0x0628(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
-	class UGameViewportClient*                         GameViewport;                                             // 0x0640(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class FString>                              DeferredCommands;                                         // 0x0648(0x0010) (ZeroConstructor)
-	int                                                TickCycles;                                               // 0x0658(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                GameCycles;                                               // 0x065C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                ClientCycles;                                             // 0x0660(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              NearClipPlane;                                            // 0x0664(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bHardwareSurveyEnabled : 1;                               // 0x0668(0x0001) (Deprecated)
-	unsigned char                                      bSubtitlesEnabled : 1;                                    // 0x0668(0x0001) (Edit, Config)
-	unsigned char                                      bSubtitlesForcedOff : 1;                                  // 0x0668(0x0001) (Edit, Config)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0669(0x0003) MISSED OFFSET
-	int                                                MaximumLoopIterationCount;                                // 0x066C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bCanBlueprintsTickByDefault : 1;                          // 0x0670(0x0001) (Edit, Config)
-	unsigned char                                      bOptimizeAnimBlueprintMemberVariableAccess : 1;           // 0x0670(0x0001) (Edit, Config)
-	unsigned char                                      bEnableEditorPSysRealtimeLOD : 1;                         // 0x0670(0x0001) (Config)
-	unsigned char                                      UnknownData05 : 1;                                        // 0x0670(0x0001)
-	unsigned char                                      bSmoothFrameRate : 1;                                     // 0x0670(0x0001) (Edit, Config)
-	unsigned char                                      bUseFixedFrameRate : 1;                                   // 0x0670(0x0001) (Edit, Config)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x0671(0x0003) MISSED OFFSET
-	float                                              FixedFrameRate;                                           // 0x0674(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FFloatRange                                 SmoothedFrameRateRange;                                   // 0x0678(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bCheckForMultiplePawnsSpawnedInAFrame : 1;                // 0x0688(0x0001) (Config)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0689(0x0003) MISSED OFFSET
-	int                                                NumPawnsAllowedToBeSpawnedInAFrame;                       // 0x068C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bShouldGenerateLowQualityLightmaps : 1;                   // 0x0690(0x0001) (Config, GlobalConfig)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x0691(0x0003) MISSED OFFSET
-	struct FColor                                      C_WorldBox;                                               // 0x0694(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_BrushWire;                                              // 0x0698(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_AddWire;                                                // 0x069C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_SubtractWire;                                           // 0x06A0(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_SemiSolidWire;                                          // 0x06A4(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_NonSolidWire;                                           // 0x06A8(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_WireBackground;                                         // 0x06AC(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_ScaleBoxHi;                                             // 0x06B0(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_VolumeCollision;                                        // 0x06B4(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_BSPCollision;                                           // 0x06B8(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_OrthoBackground;                                        // 0x06BC(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_Volume;                                                 // 0x06C0(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      C_BrushShape;                                             // 0x06C4(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              StreamingDistanceFactor;                                  // 0x06C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETransitionType>                       TransitionType;                                           // 0x06CC(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x06CD(0x0003) MISSED OFFSET
-	class FString                                      TransitionDescription;                                    // 0x06D0(0x0010) (ZeroConstructor)
-	class FString                                      TransitionGameMode;                                       // 0x06E0(0x0010) (ZeroConstructor)
-	float                                              MeshLODRange;                                             // 0x06F0(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bAllowMatureLanguage : 1;                                 // 0x06F4(0x0001) (Config)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x06F5(0x0003) MISSED OFFSET
-	float                                              CameraRotationThreshold;                                  // 0x06F8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              CameraTranslationThreshold;                               // 0x06FC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              PrimitiveProbablyVisibleTime;                             // 0x0700(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              MaxOcclusionPixelsFraction;                               // 0x0704(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      bPauseOnLossOfFocus : 1;                                  // 0x0708(0x0001) (Config)
-	unsigned char                                      UnknownData11[0x3];                                       // 0x0709(0x0003) MISSED OFFSET
-	int                                                MaxParticleResize;                                        // 0x070C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxParticleResizeWarn;                                    // 0x0710(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x4];                                       // 0x0714(0x0004) MISSED OFFSET
-	TArray<struct FDropNoteInfo>                       PendingDroppedNotes;                                      // 0x0718(0x0010) (ZeroConstructor, Transient)
-	struct FRigidBodyErrorCorrection                   PhysicErrorCorrection;                                    // 0x0728(0x001C) (Config)
-	float                                              NetClientTicksPerSecond;                                  // 0x0744(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	unsigned char                                      bHasPendingGlobalReregister : 1;                          // 0x0748(0x0001) (Transient)
-	unsigned char                                      UnknownData13[0x3];                                       // 0x0749(0x0003) MISSED OFFSET
-	float                                              DisplayGamma;                                             // 0x074C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              MinDesiredFrameRate;                                      // 0x0750(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FLinearColor                                DefaultSelectedMaterialColor;                             // 0x0754(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	struct FLinearColor                                SelectedMaterialColor;                                    // 0x0764(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FLinearColor                                SelectionOutlineColor;                                    // 0x0774(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FLinearColor                                SubduedSelectionOutlineColor;                             // 0x0784(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FLinearColor                                SelectedMaterialColorOverride;                            // 0x0794(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               bIsOverridingSelectedColor;                               // 0x07A4(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x3];                                       // 0x07A5(0x0003) MISSED OFFSET
-	unsigned char                                      bEnableOnScreenDebugMessages : 1;                         // 0x07A8(0x0001) (Config, GlobalConfig)
-	unsigned char                                      bEnableOnScreenDebugMessagesDisplay : 1;                  // 0x07A8(0x0001) (Transient)
-	unsigned char                                      bSuppressMapWarnings : 1;                                 // 0x07A8(0x0001) (Config, GlobalConfig)
-	unsigned char                                      bCookSeparateSharedMPGameContent : 1;                     // 0x07A8(0x0001) (Config, GlobalConfig)
-	unsigned char                                      bDisableAILogging : 1;                                    // 0x07A8(0x0001) (Config, GlobalConfig)
-	unsigned char                                      UnknownData15[0x3];                                       // 0x07A9(0x0003) MISSED OFFSET
-	uint32_t                                           bEnableVisualLogRecordingOnStart;                         // 0x07AC(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x4];                                       // 0x07B0(0x0004) MISSED OFFSET
-	int                                                ScreenSaverInhibitorSemaphore;                            // 0x07B4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      bLockReadOnlyLevels : 1;                                  // 0x07B8(0x0001) (Transient)
-	unsigned char                                      UnknownData17[0x7];                                       // 0x07B9(0x0007) MISSED OFFSET
-	class FString                                      ParticleEventManagerClassPath;                            // 0x07C0(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	unsigned char                                      UnknownData18[0x10];                                      // 0x07D0(0x0010) MISSED OFFSET
-	float                                              SelectionHighlightIntensity;                              // 0x07E0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              BSPSelectionHighlightIntensity;                           // 0x07E4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              HoverHighlightIntensity;                                  // 0x07E8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              SelectionHighlightIntensityBillboards;                    // 0x07EC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData19[0x208];                                     // 0x07F0(0x0208) MISSED OFFSET
-	TArray<struct FNetDriverDefinition>                NetDriverDefinitions;                                     // 0x09F8(0x0010) (ZeroConstructor, Transient, Config)
-	TArray<class FString>                              ServerActors;                                             // 0x0A08(0x0010) (ZeroConstructor, Config)
-	TArray<class FString>                              RuntimeServerActors;                                      // 0x0A18(0x0010) (ZeroConstructor)
-	unsigned char                                      bStartedLoadMapMovie : 1;                                 // 0x0A28(0x0001) (Transient)
-	unsigned char                                      UnknownData20[0x17];                                      // 0x0A29(0x0017) MISSED OFFSET
-	int                                                NextWorldContextHandle;                                   // 0x0A40(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData21[0x24];                                      // 0x0A44(0x0024) MISSED OFFSET
+	class UClass*                                      DefaultPreviewPawnClass;                                  // 0x0218(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringClassReference                       DefaultPreviewPawnClassName;                              // 0x0220(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, NoClear)
+	class FString                                      PlayOnConsoleSaveDir;                                     // 0x0230(0x0010) (ZeroConstructor, Config)
+	class UTexture2D*                                  DefaultTexture;                                           // 0x0240(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       DefaultTextureName;                                       // 0x0248(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture*                                    DefaultDiffuseTexture;                                    // 0x0258(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       DefaultDiffuseTextureName;                                // 0x0260(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture2D*                                  DefaultBSPVertexTexture;                                  // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       DefaultBSPVertexTextureName;                              // 0x0278(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture2D*                                  HighFrequencyNoiseTexture;                                // 0x0288(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       HighFrequencyNoiseTextureName;                            // 0x0290(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture2D*                                  DefaultBokehTexture;                                      // 0x02A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       DefaultBokehTextureName;                                  // 0x02A8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture2D*                                  HDRCalibrationTexture;                                    // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       HDRCalibrationTextureName;                                // 0x02C0(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   WireframeMaterial;                                        // 0x02D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      WireframeMaterialName;                                    // 0x02D8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   DebugMeshMaterial;                                        // 0x02E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       DebugMeshMaterialName;                                    // 0x02F0(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   LevelColorationLitMaterial;                               // 0x0300(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      LevelColorationLitMaterialName;                           // 0x0308(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   LevelColorationUnlitMaterial;                             // 0x0318(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      LevelColorationUnlitMaterialName;                         // 0x0320(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   TriangleDensityScreenSpaceMaterial;                       // 0x0330(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      TriangleDensityScreenSpaceMaterialName;                   // 0x0338(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   TriangleDensityWorldSpaceMaterial;                        // 0x0348(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      TriangleDensityWorldSpaceMaterialName;                    // 0x0350(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   LightingTexelDensityMaterial;                             // 0x0360(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      LightingTexelDensityName;                                 // 0x0368(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   ShadedLevelColorationLitMaterial;                         // 0x0378(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      ShadedLevelColorationLitMaterialName;                     // 0x0380(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   ShadedLevelColorationUnlitMaterial;                       // 0x0390(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      ShadedLevelColorationUnlitMaterialName;                   // 0x0398(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   RemoveSurfaceMaterial;                                    // 0x03A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       RemoveSurfaceMaterialName;                                // 0x03B0(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   VertexColorMaterial;                                      // 0x03C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      VertexColorMaterialName;                                  // 0x03C8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   VertexColorViewModeMaterial_ColorOnly;                    // 0x03D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      VertexColorViewModeMaterialName_ColorOnly;                // 0x03E0(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   VertexColorViewModeMaterial_AlphaAsColor;                 // 0x03F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      VertexColorViewModeMaterialName_AlphaAsColor;             // 0x03F8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   VertexColorViewModeMaterial_RedOnly;                      // 0x0408(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      VertexColorViewModeMaterialName_RedOnly;                  // 0x0410(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   VertexColorViewModeMaterial_GreenOnly;                    // 0x0420(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      VertexColorViewModeMaterialName_GreenOnly;                // 0x0428(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   VertexColorViewModeMaterial_BlueOnly;                     // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      VertexColorViewModeMaterialName_BlueOnly;                 // 0x0440(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   ConstraintLimitMaterial;                                  // 0x0450(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ConstraintLimitMaterialX;                                 // 0x0458(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ConstraintLimitMaterialY;                                 // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ConstraintLimitMaterialZ;                                 // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       ConstraintLimitMaterialName;                              // 0x0470(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   InvalidLightmapSettingsMaterial;                          // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       InvalidLightmapSettingsMaterialName;                      // 0x0488(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   PreviewShadowsIndicatorMaterial;                          // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       PreviewShadowsIndicatorMaterialName;                      // 0x04A0(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
+	class UMaterial*                                   ArrowMaterial;                                            // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       ArrowMaterialName;                                        // 0x04B8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	struct FLinearColor                                LightingOnlyBrightness;                                   // 0x04C8(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	TArray<struct FColor>                              LightComplexityColors;                                    // 0x04D8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	TArray<struct FLinearColor>                        ShaderComplexityColors;                                   // 0x04E8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	TArray<struct FLinearColor>                        StationaryLightOverlapColors;                             // 0x04F8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	TArray<struct FLinearColor>                        LODColorationColors;                                      // 0x0508(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	float                                              MaxPixelShaderAdditiveComplexityCount;                    // 0x0518(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	float                                              MaxES2PixelShaderAdditiveComplexityCount;                 // 0x051C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	float                                              MinLightMapDensity;                                       // 0x0520(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	float                                              IdealLightMapDensity;                                     // 0x0524(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	float                                              MaxLightMapDensity;                                       // 0x0528(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	unsigned char                                      bRenderLightMapDensityGrayscale : 1;                      // 0x052C(0x0001) (Config, GlobalConfig)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x052D(0x0003) MISSED OFFSET
+	float                                              RenderLightMapDensityGrayscaleScale;                      // 0x0530(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	float                                              RenderLightMapDensityColorScale;                          // 0x0534(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	struct FLinearColor                                LightMapDensityVertexMappedColor;                         // 0x0538(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	struct FLinearColor                                LightMapDensitySelectedColor;                             // 0x0548(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	TArray<struct FStatColorMapping>                   StatColorMappings;                                        // 0x0558(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UPhysicalMaterial*                           DefaultPhysMaterial;                                      // 0x0568(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       DefaultPhysMaterialName;                                  // 0x0570(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	TArray<struct FGameNameRedirect>                   ActiveGameNameRedirects;                                  // 0x0580(0x0010) (ZeroConstructor, Config)
+	TArray<struct FClassRedirect>                      ActiveClassRedirects;                                     // 0x0590(0x0010) (ZeroConstructor, Config)
+	TArray<struct FPluginRedirect>                     ActivePluginRedirects;                                    // 0x05A0(0x0010) (ZeroConstructor, Config)
+	TArray<struct FStructRedirect>                     ActiveStructRedirects;                                    // 0x05B0(0x0010) (ZeroConstructor, Config)
+	class UTexture2D*                                  PreIntegratedSkinBRDFTexture;                             // 0x05C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       PreIntegratedSkinBRDFTextureName;                         // 0x05C8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture2D*                                  MiniFontTexture;                                          // 0x05D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       MiniFontTextureName;                                      // 0x05E0(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture*                                    WeightMapPlaceholderTexture;                              // 0x05F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       WeightMapPlaceholderTextureName;                          // 0x05F8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class UTexture2D*                                  LightMapDensityTexture;                                   // 0x0608(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       LightMapDensityTextureName;                               // 0x0610(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0620(0x0008) MISSED OFFSET
+	class UGameViewportClient*                         GameViewport;                                             // 0x0628(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class FString>                              DeferredCommands;                                         // 0x0630(0x0010) (ZeroConstructor)
+	int                                                TickCycles;                                               // 0x0640(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                GameCycles;                                               // 0x0644(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                ClientCycles;                                             // 0x0648(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              NearClipPlane;                                            // 0x064C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bHardwareSurveyEnabled : 1;                               // 0x0650(0x0001) (Deprecated)
+	unsigned char                                      bSubtitlesEnabled : 1;                                    // 0x0650(0x0001) (Edit, Config)
+	unsigned char                                      bSubtitlesForcedOff : 1;                                  // 0x0650(0x0001) (Edit, Config)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0651(0x0003) MISSED OFFSET
+	int                                                MaximumLoopIterationCount;                                // 0x0654(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bCanBlueprintsTickByDefault : 1;                          // 0x0658(0x0001) (Edit, Config)
+	unsigned char                                      bOptimizeAnimBlueprintMemberVariableAccess : 1;           // 0x0658(0x0001) (Edit, Config)
+	unsigned char                                      bEnableEditorPSysRealtimeLOD : 1;                         // 0x0658(0x0001) (Config)
+	unsigned char                                      UnknownData05 : 1;                                        // 0x0658(0x0001)
+	unsigned char                                      bSmoothFrameRate : 1;                                     // 0x0658(0x0001) (Edit, Config)
+	unsigned char                                      bUseFixedFrameRate : 1;                                   // 0x0658(0x0001) (Edit, Config)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x0659(0x0003) MISSED OFFSET
+	float                                              FixedFrameRate;                                           // 0x065C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FFloatRange                                 SmoothedFrameRateRange;                                   // 0x0660(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bCheckForMultiplePawnsSpawnedInAFrame : 1;                // 0x0670(0x0001) (Config)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x0671(0x0003) MISSED OFFSET
+	int                                                NumPawnsAllowedToBeSpawnedInAFrame;                       // 0x0674(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bShouldGenerateLowQualityLightmaps : 1;                   // 0x0678(0x0001) (Config, GlobalConfig)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x0679(0x0003) MISSED OFFSET
+	struct FColor                                      C_WorldBox;                                               // 0x067C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_BrushWire;                                              // 0x0680(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_AddWire;                                                // 0x0684(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_SubtractWire;                                           // 0x0688(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_SemiSolidWire;                                          // 0x068C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_NonSolidWire;                                           // 0x0690(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_WireBackground;                                         // 0x0694(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_ScaleBoxHi;                                             // 0x0698(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_VolumeCollision;                                        // 0x069C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_BSPCollision;                                           // 0x06A0(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_OrthoBackground;                                        // 0x06A4(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_Volume;                                                 // 0x06A8(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      C_BrushShape;                                             // 0x06AC(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              StreamingDistanceFactor;                                  // 0x06B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETransitionType>                       TransitionType;                                           // 0x06B4(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x06B5(0x0003) MISSED OFFSET
+	class FString                                      TransitionDescription;                                    // 0x06B8(0x0010) (ZeroConstructor)
+	class FString                                      TransitionGameMode;                                       // 0x06C8(0x0010) (ZeroConstructor)
+	float                                              MeshLODRange;                                             // 0x06D8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bAllowMatureLanguage : 1;                                 // 0x06DC(0x0001) (Config)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x06DD(0x0003) MISSED OFFSET
+	float                                              CameraRotationThreshold;                                  // 0x06E0(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float                                              CameraTranslationThreshold;                               // 0x06E4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float                                              PrimitiveProbablyVisibleTime;                             // 0x06E8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float                                              MaxOcclusionPixelsFraction;                               // 0x06EC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      bPauseOnLossOfFocus : 1;                                  // 0x06F0(0x0001) (Config)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x06F1(0x0003) MISSED OFFSET
+	int                                                MaxParticleResize;                                        // 0x06F4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	int                                                MaxParticleResizeWarn;                                    // 0x06F8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x4];                                       // 0x06FC(0x0004) MISSED OFFSET
+	TArray<struct FDropNoteInfo>                       PendingDroppedNotes;                                      // 0x0700(0x0010) (ZeroConstructor, Transient)
+	struct FRigidBodyErrorCorrection                   PhysicErrorCorrection;                                    // 0x0710(0x001C) (Config)
+	float                                              NetClientTicksPerSecond;                                  // 0x072C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	unsigned char                                      bHasPendingGlobalReregister : 1;                          // 0x0730(0x0001) (Transient)
+	unsigned char                                      UnknownData13[0x3];                                       // 0x0731(0x0003) MISSED OFFSET
+	float                                              DisplayGamma;                                             // 0x0734(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float                                              MinDesiredFrameRate;                                      // 0x0738(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FLinearColor                                DefaultSelectedMaterialColor;                             // 0x073C(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	struct FLinearColor                                SelectedMaterialColor;                                    // 0x074C(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FLinearColor                                SelectionOutlineColor;                                    // 0x075C(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FLinearColor                                SubduedSelectionOutlineColor;                             // 0x076C(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FLinearColor                                SelectedMaterialColorOverride;                            // 0x077C(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               bIsOverridingSelectedColor;                               // 0x078C(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x3];                                       // 0x078D(0x0003) MISSED OFFSET
+	unsigned char                                      bEnableOnScreenDebugMessages : 1;                         // 0x0790(0x0001) (Config, GlobalConfig)
+	unsigned char                                      bEnableOnScreenDebugMessagesDisplay : 1;                  // 0x0790(0x0001) (Transient)
+	unsigned char                                      bSuppressMapWarnings : 1;                                 // 0x0790(0x0001) (Config, GlobalConfig)
+	unsigned char                                      bCookSeparateSharedMPGameContent : 1;                     // 0x0790(0x0001) (Config, GlobalConfig)
+	unsigned char                                      bDisableAILogging : 1;                                    // 0x0790(0x0001) (Config, GlobalConfig)
+	unsigned char                                      UnknownData15[0x3];                                       // 0x0791(0x0003) MISSED OFFSET
+	uint32_t                                           bEnableVisualLogRecordingOnStart;                         // 0x0794(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x4];                                       // 0x0798(0x0004) MISSED OFFSET
+	int                                                ScreenSaverInhibitorSemaphore;                            // 0x079C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      bLockReadOnlyLevels : 1;                                  // 0x07A0(0x0001) (Transient)
+	unsigned char                                      UnknownData17[0x7];                                       // 0x07A1(0x0007) MISSED OFFSET
+	class FString                                      ParticleEventManagerClassPath;                            // 0x07A8(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	unsigned char                                      UnknownData18[0x10];                                      // 0x07B8(0x0010) MISSED OFFSET
+	float                                              SelectionHighlightIntensity;                              // 0x07C8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              BSPSelectionHighlightIntensity;                           // 0x07CC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              HoverHighlightIntensity;                                  // 0x07D0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              SelectionHighlightIntensityBillboards;                    // 0x07D4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x208];                                     // 0x07D8(0x0208) MISSED OFFSET
+	TArray<struct FNetDriverDefinition>                NetDriverDefinitions;                                     // 0x09E0(0x0010) (ZeroConstructor, Transient, Config)
+	TArray<class FString>                              ServerActors;                                             // 0x09F0(0x0010) (ZeroConstructor, Config)
+	TArray<class FString>                              RuntimeServerActors;                                      // 0x0A00(0x0010) (ZeroConstructor)
+	unsigned char                                      bStartedLoadMapMovie : 1;                                 // 0x0A10(0x0001) (Transient)
+	unsigned char                                      UnknownData20[0x17];                                      // 0x0A11(0x0017) MISSED OFFSET
+	int                                                NextWorldContextHandle;                                   // 0x0A28(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData21[0x24];                                      // 0x0A2C(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1493,14 +1491,14 @@ public:
 
 
 // Class Engine.GameEngine
-// 0x0078 (0x0AE0 - 0x0A68)
+// 0x0078 (0x0AC8 - 0x0A50)
 class UGameEngine : public UEngine
 {
 public:
-	float                                              MaxDeltaTime;                                             // 0x0A68(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              ServerFlushLogInterval;                                   // 0x0A6C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	class UGameInstance*                               GameInstance;                                             // 0x0A70(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0A78(0x0068) MISSED OFFSET
+	float                                              MaxDeltaTime;                                             // 0x0A50(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float                                              ServerFlushLogInterval;                                   // 0x0A54(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	class UGameInstance*                               GameInstance;                                             // 0x0A58(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0A60(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3115,6 +3113,27 @@ public:
 };
 
 
+// Class Engine.PhysicsVolume
+// 0x0010 (0x04E0 - 0x04D0)
+class APhysicsVolume : public AVolume
+{
+public:
+	float                                              TerminalVelocity;                                         // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                Priority;                                                 // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FluidFriction;                                            // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bWaterVolume : 1;                                         // 0x04DC(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bPhysicsOnContact : 1;                                    // 0x04DC(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04DD(0x0003) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PhysicsVolume"));
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.SplineComponent
 // 0x0080 (0x0630 - 0x05B0)
 class USplineComponent : public UPrimitiveComponent
@@ -3505,7 +3524,7 @@ public:
 
 
 // Class Engine.NetConnection
-// 0x344D0 (0x34518 - 0x0048)
+// 0x34518 (0x34560 - 0x0048)
 class UNetConnection : public UPlayer
 {
 public:
@@ -3523,7 +3542,7 @@ public:
 	double                                             LastReceiveTime;                                          // 0x03A0(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x340C0];                                   // 0x03A8(0x340C0) MISSED OFFSET
 	TArray<class UChannel*>                            DeferredCloseChannels;                                    // 0x34468(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0xA0];                                      // 0x34478(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData03[0xE8];                                      // 0x34478(0x00E8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4203,27 +4222,6 @@ public:
 
 
 	void SetAreaClass(class UClass* NewAreaClass);
-};
-
-
-// Class Engine.PhysicsVolume
-// 0x0010 (0x04E0 - 0x04D0)
-class APhysicsVolume : public AVolume
-{
-public:
-	float                                              TerminalVelocity;                                         // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                Priority;                                                 // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FluidFriction;                                            // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bWaterVolume : 1;                                         // 0x04DC(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bPhysicsOnContact : 1;                                    // 0x04DC(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04DD(0x0003) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PhysicsVolume"));
-		return ptr;
-	}
-
 };
 
 
@@ -5807,23 +5805,6 @@ public:
 };
 
 
-// Class Engine.WheeledVehicle
-// 0x0010 (0x0510 - 0x0500)
-class AWheeledVehicle : public APawn
-{
-public:
-	class USkeletalMeshComponent*                      Mesh;                                                     // 0x0500(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UWheeledVehicleMovementComponent*            VehicleMovement;                                          // 0x0508(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.WheeledVehicle"));
-		return ptr;
-	}
-
-};
-
-
 // Class Engine.ReflectionCapture
 // 0x0008 (0x04A0 - 0x0498)
 class AReflectionCapture : public AActor
@@ -6687,116 +6668,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.SpectatorPawnMovement"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.WheeledVehicleMovementComponent
-// 0x0130 (0x0290 - 0x0160)
-class UWheeledVehicleMovementComponent : public UPawnMovementComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0160(0x0008) MISSED OFFSET
-	TArray<struct FWheelSetup>                         WheelSetups;                                              // 0x0168(0x0010) (Edit, ZeroConstructor)
-	float                                              Mass;                                                     // 0x0178(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DragCoefficient;                                          // 0x017C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ChassisWidth;                                             // 0x0180(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ChassisHeight;                                            // 0x0184(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DragArea;                                                 // 0x0188(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              EstimatedMaxEngineSpeed;                                  // 0x018C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              MaxEngineRPM;                                             // 0x0190(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugDragMagnitude;                                       // 0x0194(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     InertiaTensorScale;                                       // 0x0198(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinNormalizedTireLoad;                                    // 0x01A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinNormalizedTireLoadFiltered;                            // 0x01A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxNormalizedTireLoad;                                    // 0x01AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxNormalizedTireLoadFiltered;                            // 0x01B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ThresholdLongitudinalSpeed;                               // 0x01B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                LowForwardSpeedSubStepCount;                              // 0x01B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                HighForwardSpeedSubStepCount;                             // 0x01BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UVehicleWheel*>                       Wheels;                                                   // 0x01C0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01D0(0x0004) MISSED OFFSET
-	unsigned char                                      bUseRVOAvoidance : 1;                                     // 0x01D4(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x01D5(0x0003) MISSED OFFSET
-	float                                              RVOAvoidanceRadius;                                       // 0x01D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RVOAvoidanceHeight;                                       // 0x01DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AvoidanceConsiderationRadius;                             // 0x01E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RVOSteeringStep;                                          // 0x01E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RVOThrottleStep;                                          // 0x01E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                AvoidanceUID;                                             // 0x01EC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	struct FNavAvoidanceMask                           AvoidanceGroup;                                           // 0x01F0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FNavAvoidanceMask                           GroupsToAvoid;                                            // 0x01F4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FNavAvoidanceMask                           GroupsToIgnore;                                           // 0x01F8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              AvoidanceWeight;                                          // 0x01FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     PendingLaunchVelocity;                                    // 0x0200(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FReplicatedVehicleState                     ReplicatedState;                                          // 0x020C(0x0014) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0220(0x0004) MISSED OFFSET
-	float                                              RawSteeringInput;                                         // 0x0224(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              RawThrottleInput;                                         // 0x0228(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      bRawHandbrakeInput : 1;                                   // 0x022C(0x0001) (Transient)
-	unsigned char                                      bRawGearUpInput : 1;                                      // 0x022C(0x0001) (Transient)
-	unsigned char                                      bRawGearDownInput : 1;                                    // 0x022C(0x0001) (Transient)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x022D(0x0003) MISSED OFFSET
-	float                                              SteeringInput;                                            // 0x0230(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              ThrottleInput;                                            // 0x0234(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              BrakeInput;                                               // 0x0238(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              HandbrakeInput;                                           // 0x023C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              IdleBrakeInput;                                           // 0x0240(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              StopThreshold;                                            // 0x0244(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WrongDirectionThreshold;                                  // 0x0248(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVehicleInputRate                           ThrottleInputRate;                                        // 0x024C(0x0008) (Edit)
-	struct FVehicleInputRate                           BrakeInputRate;                                           // 0x0254(0x0008) (Edit)
-	struct FVehicleInputRate                           HandbrakeInputRate;                                       // 0x025C(0x0008) (Edit)
-	struct FVehicleInputRate                           SteeringInputRate;                                        // 0x0264(0x0008) (Edit)
-	unsigned char                                      bWasAvoidanceUpdated : 1;                                 // 0x026C(0x0001) (Transient)
-	unsigned char                                      UnknownData05[0x23];                                      // 0x026D(0x0023) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.WheeledVehicleMovementComponent"));
-		return ptr;
-	}
-
-
-	void SetUseAutoGears(bool bUseAuto);
-	void SetThrottleInput(float Throttle);
-	void SetTargetGear(int GearNum, bool bImmediate);
-	void SetSteeringInput(float Steering);
-	void SetHandbrakeInput(bool bNewHandbrake);
-	void SetGroupsToIgnore(int GroupFlags);
-	void SetGroupsToAvoid(int GroupFlags);
-	void SetGearUp(bool bNewGearUp);
-	void SetGearDown(bool bNewGearDown);
-	void SetAvoidanceGroup(int GroupFlags);
-	void SetAvoidanceEnabled(bool bEnable);
-	void ServerUpdateState(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int CurrentGear);
-	bool GetUseAutoGears();
-	int GetTargetGear();
-	float GetForwardSpeed();
-	float GetEngineRotationSpeed();
-	float GetEngineMaxRotationSpeed();
-	int GetCurrentGear();
-};
-
-
-// Class Engine.WheeledVehicleMovementComponent4W
-// 0x0170 (0x0400 - 0x0290)
-class UWheeledVehicleMovementComponent4W : public UWheeledVehicleMovementComponent
-{
-public:
-	struct FVehicleEngineData                          EngineSetup;                                              // 0x0290(0x0098) (Edit)
-	struct FVehicleDifferential4WData                  DifferentialSetup;                                        // 0x0328(0x001C) (Edit)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0344(0x0004) MISSED OFFSET
-	struct FVehicleTransmissionData                    TransmissionSetup;                                        // 0x0348(0x0030) (Edit)
-	struct FRuntimeFloatCurve                          SteeringCurve;                                            // 0x0378(0x0080) (Edit)
-	float                                              AckermannAccuracy;                                        // 0x03F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x03FC(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.WheeledVehicleMovementComponent4W"));
 		return ptr;
 	}
 
@@ -9085,23 +8956,6 @@ public:
 };
 
 
-// Class Engine.VehicleAnimInstance
-// 0x0000 (0x0440 - 0x0440)
-class UVehicleAnimInstance : public UAnimInstance
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.VehicleAnimInstance"));
-		return ptr;
-	}
-
-
-	class AWheeledVehicle* GetVehicle();
-};
-
-
 // Class Engine.AnimMetaData
 // 0x0000 (0x0028 - 0x0028)
 class UAnimMetaData : public UObject
@@ -11199,23 +11053,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.StringArrayDataAsset"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.TireType
-// 0x0008 (0x0030 - 0x0028)
-class UTireType : public UDataAsset
-{
-public:
-	float                                              FrictionScale;                                            // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.TireType"));
 		return ptr;
 	}
 
@@ -19383,7 +19220,7 @@ public:
 
 
 // Class Engine.PhysicalMaterial
-// 0x0058 (0x0080 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UPhysicalMaterial : public UObject
 {
 public:
@@ -19401,10 +19238,7 @@ public:
 	unsigned char                                      UnknownData02[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 	class UPhysicalMaterialPropertyBase*               PhysicalMaterialProperty;                                 // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EPhysicalSurface>                      SurfaceType;                                              // 0x0050(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
-	float                                              TireFrictionScale;                                        // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FTireFrictionScalePair>              TireFrictionScales;                                       // 0x0058(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData04[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x1F];                                      // 0x0051(0x001F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19664,11 +19498,11 @@ public:
 
 
 // Class Engine.ChildConnection
-// 0x0008 (0x34520 - 0x34518)
+// 0x0008 (0x34568 - 0x34560)
 class UChildConnection : public UNetConnection
 {
 public:
-	class UNetConnection*                              Parent;                                                   // 0x34518(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UNetConnection*                              Parent;                                                   // 0x34560(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19680,11 +19514,11 @@ public:
 
 
 // Class Engine.DemoNetConnection
-// 0x0010 (0x34528 - 0x34518)
+// 0x0010 (0x34570 - 0x34560)
 class UDemoNetConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x34518(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x34560(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -20967,60 +20801,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Engine.VehicleWheel
-// 0x00B0 (0x00D8 - 0x0028)
-class UVehicleWheel : public UObject
-{
-public:
-	class UStaticMesh*                                 CollisionMesh;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bDontCreateShape;                                         // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bAutoAdjustCollisionSize;                                 // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
-	struct FVector                                     Offset;                                                   // 0x0034(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ShapeRadius;                                              // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ShapeWidth;                                               // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Mass;                                                     // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRate;                                              // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SteerAngle;                                               // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bAffectedByHandbrake;                                     // 0x0054(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
-	class UTireType*                                   TireType;                                                 // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LatStiffMaxLoad;                                          // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LatStiffValue;                                            // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LongStiffValue;                                           // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SuspensionForceOffset;                                    // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SuspensionMaxRaise;                                       // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SuspensionMaxDrop;                                        // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SuspensionNaturalFrequency;                               // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SuspensionDampingRatio;                                   // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxBrakeTorque;                                           // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxHandBrakeTorque;                                       // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWheeledVehicleMovementComponent*            VehicleSim;                                               // 0x0088(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	int                                                WheelIndex;                                               // 0x0090(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugLongSlip;                                            // 0x0094(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugLatSlip;                                             // 0x0098(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugNormalizedTireLoad;                                  // 0x009C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugWheelTorque;                                         // 0x00A0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugLongForce;                                           // 0x00A4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DebugLatForce;                                            // 0x00A8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     Location;                                                 // 0x00AC(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     OldLocation;                                              // 0x00B8(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     Velocity;                                                 // 0x00C4(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.VehicleWheel"));
-		return ptr;
-	}
-
-
-	float GetSuspensionOffset();
-	float GetSteerAngle();
-	float GetRotationAngle();
 };
 
 

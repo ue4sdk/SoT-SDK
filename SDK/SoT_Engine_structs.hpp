@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_enums.hpp"
+#include "SoT_SlateCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
-#include "SoT_SlateCore_classes.hpp"
 
 namespace SDK
 {
@@ -2186,87 +2186,6 @@ struct FInterpControlPoint
 	unsigned char                                      UnknownData00[0xF];                                       // 0x000D(0x000F) MISSED OFFSET
 };
 
-// ScriptStruct Engine.WheelSetup
-// 0x0020
-struct FWheelSetup
-{
-	class UClass*                                      WheelClass;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       BoneName;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     AdditionalOffset;                                         // 0x0010(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Engine.ReplicatedVehicleState
-// 0x0014
-struct FReplicatedVehicleState
-{
-	float                                              SteeringInput;                                            // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ThrottleInput;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              BrakeInput;                                               // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              HandbrakeInput;                                           // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                CurrentGear;                                              // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.VehicleInputRate
-// 0x0008
-struct FVehicleInputRate
-{
-	float                                              RiseRate;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FallRate;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.VehicleEngineData
-// 0x0098
-struct FVehicleEngineData
-{
-	struct FRuntimeFloatCurve                          TorqueCurve;                                              // 0x0000(0x0080) (Edit)
-	float                                              MaxRPM;                                                   // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MOI;                                                      // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateFullThrottle;                                  // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateZeroThrottleClutchEngaged;                     // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateZeroThrottleClutchDisengaged;                  // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Engine.VehicleDifferential4WData
-// 0x001C
-struct FVehicleDifferential4WData
-{
-	TEnumAsByte<EVehicleDifferential4W>                DifferentialType;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	float                                              FrontRearSplit;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FrontLeftRightSplit;                                      // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RearLeftRightSplit;                                       // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              CentreBias;                                               // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FrontBias;                                                // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RearBias;                                                 // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.VehicleGearData
-// 0x000C
-struct FVehicleGearData
-{
-	float                                              Ratio;                                                    // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DownRatio;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              UpRatio;                                                  // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.VehicleTransmissionData
-// 0x0030
-struct FVehicleTransmissionData
-{
-	bool                                               bUseGearAutoBox;                                          // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	float                                              GearSwitchTime;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              GearAutoBoxLatency;                                       // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FinalRatio;                                               // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVehicleGearData>                    ForwardGears;                                             // 0x0010(0x0010) (Edit, ZeroConstructor)
-	float                                              ReverseGearRatio;                                         // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NeutralGearUpRatio;                                       // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ClutchStrength;                                           // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct Engine.AtmospherePrecomputeParameters
 // 0x002C
 struct FAtmospherePrecomputeParameters
@@ -4110,15 +4029,6 @@ struct FVelocityConeGroupParams
 	unsigned char                                      UnknownData00[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Engine.TireFrictionScalePair
-// 0x0010
-struct FTireFrictionScalePair
-{
-	class UTireType*                                   TireType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FrictionScale;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct Engine.DelegateArray
 // 0x0010
 struct FDelegateArray
@@ -5700,6 +5610,14 @@ struct FRuntimeCurveLinearColor
 	class UCurveLinearColor*                           ExternalCurve;                                            // 0x01E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Engine.RuntimeVectorCurve
+// 0x0170
+struct FRuntimeVectorCurve
+{
+	struct FRichCurve                                  FloatCurves[0x3];                                         // 0x0000(0x0078)
+	class UCurveVector*                                ExternalCurve;                                            // 0x0168(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Engine.CurveTableRowHandle
 // 0x0010
 struct FCurveTableRowHandle
@@ -6523,15 +6441,15 @@ struct FServerMigrationTelemetrySucceededData
 };
 
 // ScriptStruct Engine.ReplicatedPhysicsState
-// 0x0050
+// 0x0048
 struct FReplicatedPhysicsState
 {
-	struct FRepMovement                                ReplicatedMovement;                                       // 0x0000(0x0034)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	class UPrimitiveComponent*                         MovementBase;                                             // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             AttachParent;                                             // 0x0040(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               Initialized;                                              // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	class UPrimitiveComponent*                         MovementBase;                                             // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             AttachParent;                                             // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FRepMovement                                ReplicatedMovement;                                       // 0x0010(0x0034)
+	bool                                               Initialized;                                              // 0x0044(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               IsAttached;                                               // 0x0045(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0046(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct Engine.RepTransform
@@ -6543,12 +6461,14 @@ struct FRepTransform
 };
 
 // ScriptStruct Engine.ReplicatedTransformState
-// 0x0028
+// 0x0030
 struct FReplicatedTransformState
 {
-	struct FRepTransform                               ReplicatedMovement;                                       // 0x0000(0x0018)
-	class UPrimitiveComponent*                         MovementBase;                                             // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             AttachParent;                                             // 0x0020(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPrimitiveComponent*                         MovementBase;                                             // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             AttachParent;                                             // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FRepTransform                               ReplicatedMovement;                                       // 0x0010(0x0018)
+	bool                                               IsAttached;                                               // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Engine.SkelMeshMergeMorphTarget

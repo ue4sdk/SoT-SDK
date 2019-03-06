@@ -104,37 +104,24 @@ void ABP_HullDamage_C::Apply_Visual_Hit(const struct FVector& HitPosition, const
 
 
 // Function BP_HullDamage.BP_HullDamage_C.Process Hit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  DamagerType                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitPosition                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitNormal                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitVelocity                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumDamageZones                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LevelOfDamage                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FImpactDamageEvent      ImpactDamageEvent              (Parm, OutParm, ReferenceParm)
 
-void ABP_HullDamage_C::Process_Hit(class UClass* DamagerType, const struct FVector& HitPosition, const struct FVector& HitNormal, const struct FVector& HitVelocity, int NumDamageZones, int LevelOfDamage)
+void ABP_HullDamage_C::Process_Hit(struct FImpactDamageEvent* ImpactDamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Process Hit"));
 
 	struct
 	{
-		class UClass*                  DamagerType;
-		struct FVector                 HitPosition;
-		struct FVector                 HitNormal;
-		struct FVector                 HitVelocity;
-		int                            NumDamageZones;
-		int                            LevelOfDamage;
+		struct FImpactDamageEvent      ImpactDamageEvent;
 	} params;
 
-	params.DamagerType = DamagerType;
-	params.HitPosition = HitPosition;
-	params.HitNormal = HitNormal;
-	params.HitVelocity = HitVelocity;
-	params.NumDamageZones = NumDamageZones;
-	params.LevelOfDamage = LevelOfDamage;
 
 	UObject::ProcessEvent(fn, &params);
+
+	if (ImpactDamageEvent != nullptr)
+		*ImpactDamageEvent = params.ImpactDamageEvent;
 }
 
 
@@ -214,41 +201,6 @@ void ABP_HullDamage_C::Get_Random_Persistent_Decal(class UTexture2D** Decal_Text
 
 	if (Decal_Texture != nullptr)
 		*Decal_Texture = params.Decal_Texture;
-}
-
-
-// Function BP_HullDamage.BP_HullDamage_C.Add Hit To HitList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector                 HitPosition                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Hit_Normal                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          HitStrength                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           HasDecal                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageZone                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            HitLevel                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_HullDamage_C::Add_Hit_To_HitList(const struct FVector& HitPosition, const struct FVector& Hit_Normal, float HitStrength, bool HasDecal, class AActor* DamageZone, int HitLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullDamage.BP_HullDamage_C.Add Hit To HitList"));
-
-	struct
-	{
-		struct FVector                 HitPosition;
-		struct FVector                 Hit_Normal;
-		float                          HitStrength;
-		bool                           HasDecal;
-		class AActor*                  DamageZone;
-		int                            HitLevel;
-	} params;
-
-	params.HitPosition = HitPosition;
-	params.Hit_Normal = Hit_Normal;
-	params.HitStrength = HitStrength;
-	params.HasDecal = HasDecal;
-	params.DamageZone = DamageZone;
-	params.HitLevel = HitLevel;
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 

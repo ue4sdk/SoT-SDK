@@ -34,7 +34,7 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 
 
 // Function Pets.PetsService.RemovePetFromActor
-// (Final, Native, Protected)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                  InOwner                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +47,32 @@ void UPetsService::RemovePetFromActor(class AActor* InOwner)
 		class AActor*                  InOwner;
 	} params;
 
+	params.InOwner = InOwner;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Pets.PetsService.AddPetForActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InPetType                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPetCustomisation       InCustomisation                (ConstParm, Parm)
+// class AActor*                  InOwner                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCustomisation& InCustomisation, class AActor* InOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetsService.AddPetForActor"));
+
+	struct
+	{
+		class UClass*                  InPetType;
+		struct FPetCustomisation       InCustomisation;
+		class AActor*                  InOwner;
+	} params;
+
+	params.InPetType = InPetType;
+	params.InCustomisation = InCustomisation;
 	params.InOwner = InOwner;
 
 	UObject::ProcessEvent(fn, &params);

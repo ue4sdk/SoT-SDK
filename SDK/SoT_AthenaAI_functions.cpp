@@ -228,34 +228,6 @@ void AAIEncounterService::RegisterLoadedEncounter(TAssetPtr<class UAIEncounterSe
 }
 
 
-// Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ItemDesc                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AItemInfo*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AItemInfo* UAIManagerBlueprintFunctionLibrary::SpawnItemFromAI(class APawn* Pawn, class UClass* ItemDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerBlueprintFunctionLibrary.SpawnItemFromAI"));
-
-	struct
-	{
-		class APawn*                   Pawn;
-		class UClass*                  ItemDesc;
-		class AItemInfo*               ReturnValue;
-	} params;
-
-	params.Pawn = Pawn;
-	params.ItemDesc = ItemDesc;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -751,6 +723,48 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 	} params;
 
 	params.InCloseByCharactersRadius = InCloseByCharactersRadius;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AIPartsRetrievalComponent.RequestNewAIParts
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAIPartsCategory*        AssignedPartsCategory          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            PartsIndexToUse                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            TeamColorIndex                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAIPartsRetrievalComponent::RequestNewAIParts(class UAIPartsCategory* AssignedPartsCategory, int PartsIndexToUse, int TeamColorIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIPartsRetrievalComponent.RequestNewAIParts"));
+
+	struct
+	{
+		class UAIPartsCategory*        AssignedPartsCategory;
+		int                            PartsIndexToUse;
+		int                            TeamColorIndex;
+	} params;
+
+	params.AssignedPartsCategory = AssignedPartsCategory;
+	params.PartsIndexToUse = PartsIndexToUse;
+	params.TeamColorIndex = TeamColorIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AIPartsRetrievalComponent.OnRep_ReplicatedAIPartsData
+// (Final, Native, Private)
+
+void UAIPartsRetrievalComponent::OnRep_ReplicatedAIPartsData()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIPartsRetrievalComponent.OnRep_ReplicatedAIPartsData"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2013,6 +2027,26 @@ void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 }
 
 
+// Function AthenaAI.Pet.SetExitTakeOffFlag
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InExitTakeOffFlag              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void APet::SetExitTakeOffFlag(bool InExitTakeOffFlag)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.SetExitTakeOffFlag"));
+
+	struct
+	{
+		bool                           InExitTakeOffFlag;
+	} params;
+
+	params.InExitTakeOffFlag = InExitTakeOffFlag;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.Pet.OnRep_MovementRequest
 // (Final, Native, Private)
 
@@ -2026,6 +2060,47 @@ void APet::OnRep_MovementRequest()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.OnOwnerDestroyed
+// (Final, Native, Public)
+// Parameters:
+// class AActor*                  InOwner                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void APet::OnOwnerDestroyed(class AActor* InOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnOwnerDestroyed"));
+
+	struct
+	{
+		class AActor*                  InOwner;
+	} params;
+
+	params.InOwner = InOwner;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.GetFloorMeshOffsetZ
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APet::GetFloorMeshOffsetZ()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.GetFloorMeshOffsetZ"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

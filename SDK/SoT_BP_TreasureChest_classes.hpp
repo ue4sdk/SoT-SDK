@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest.BP_TreasureChest_C
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07C8 - 0x07C8)
 class ABP_TreasureChest_C : public ATreasureChest
 {
 public:

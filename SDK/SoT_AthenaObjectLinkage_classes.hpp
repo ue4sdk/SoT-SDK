@@ -86,10 +86,10 @@ public:
 	}
 
 
-	void UnregisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId);
+	void UnregisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
 	void UnregisterEndpoint(const struct FLinkEndpointId& Id);
 	void SetParent(class AActor* Parent);
-	TEnumAsByte<EAddLinkResult> RegisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId);
+	TEnumAsByte<EAddLinkResult> RegisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
 	TEnumAsByte<EAddEndpointResult> RegisterEndpoint(const struct FLinkEndpointId& Id, class AActor* Source);
 	void OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id);
 	void OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance);
@@ -115,12 +115,12 @@ public:
 
 
 	void SetParent(class AActor* Parent);
-	void RemoveLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId);
+	void RemoveLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
 	void RemoveEndpoint(const struct FLinkEndpointId& Id);
 	void OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id);
 	void OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance);
 	class AActor* LookupEndpoint(const struct FLinkEndpointId& Id);
-	bool AddLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetId);
+	bool AddLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
 	bool AddEndpoint(const struct FLinkEndpointId& Id, class AActor* Instance);
 };
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_hand_lantern_kra_01_a_Wieldable.BP_tls_hand_lantern_kra_01_a_Wieldable_C
-// 0x0000 (0x0A1C - 0x0A1C)
+// 0x0000 (0x09EC - 0x09EC)
 class ABP_tls_hand_lantern_kra_01_a_Wieldable_C : public ABP_Lantern_C
 {
 public:

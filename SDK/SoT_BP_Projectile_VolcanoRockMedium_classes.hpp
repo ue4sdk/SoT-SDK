@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_VolcanoRockMedium.BP_Projectile_VolcanoRockMedium_C
-// 0x0018 (0x05F0 - 0x05D8)
+// 0x0018 (0x05F8 - 0x05E0)
 class ABP_Projectile_VolcanoRockMedium_C : public AVolcanicRock
 {
 public:
-	class URotatingAudioSourceComponent*               RotatingAudioSource;                                      // 0x05D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        RockMesh;                                                 // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            Collision;                                                // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class URotatingAudioSourceComponent*               RotatingAudioSource;                                      // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        RockMesh;                                                 // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Collision;                                                // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

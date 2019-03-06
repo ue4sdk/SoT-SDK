@@ -30,6 +30,15 @@ enum class EMemoryGatheringMode : uint8_t
 };
 
 
+// Enum RareEngine.ETestEnum
+enum class ERareEngine_ETestEnum : uint8_t
+{
+	Alpha                          = 0,
+	Beta                           = 1,
+	ETestEnum_MAX                  = 2
+};
+
+
 }
 
 #ifdef _MSC_VER

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Merchant.BP_Anim_Merchant_C
-// 0x000F (0x1D48 - 0x1D39)
+// 0x000F (0x1508 - 0x14F9)
 class UBP_Anim_Merchant_C : public UBP_Anim_NPC_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x1D39(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1D40(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x14F9(0x0007) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1500(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

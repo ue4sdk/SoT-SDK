@@ -25,6 +25,16 @@ enum class EAIDebugColour : uint8_t
 };
 
 
+// Enum AthenaAI.EAthenaAISpawnType
+enum class EAthenaAISpawnType : uint8_t
+{
+	EAthenaAISpawnType__SpawnOnLand = 0,
+	EAthenaAISpawnType__SpawnOnShip = 1,
+	EAthenaAISpawnType__SpawnSummoned = 2,
+	EAthenaAISpawnType__EAthenaAISpawnType_MAX = 3
+};
+
+
 // Enum AthenaAI.AISpawnLocationSearchResult
 enum class EAISpawnLocationSearchResult : uint8_t
 {
@@ -115,6 +125,17 @@ enum class ECustomAiEventDuringDeathEnum : uint8_t
 	ECustomAiEventDuringDeathEnum__StartSinking = 1,
 	ECustomAiEventDuringDeathEnum__StartSinkingAnim = 2,
 	ECustomAiEventDuringDeathEnum__ECustomAiEventDuringDeathEnum_MAX = 3
+};
+
+
+// Enum AthenaAI.EBT_ShipOwnership
+enum class EBT_ShipOwnership : uint8_t
+{
+	EBT_ShipOwnership__Any         = 0,
+	EBT_ShipOwnership__Crew        = 1,
+	EBT_ShipOwnership__Alliance    = 2,
+	EBT_ShipOwnership__AI          = 3,
+	EBT_ShipOwnership__EBT_MAX     = 4
 };
 
 

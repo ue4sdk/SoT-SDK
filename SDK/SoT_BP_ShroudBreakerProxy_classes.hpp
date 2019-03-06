@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShroudBreakerProxy.BP_ShroudBreakerProxy_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0858 - 0x0858)
 class ABP_ShroudBreakerProxy_C : public AShroudBreakerProxy
 {
 public:

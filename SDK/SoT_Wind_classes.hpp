@@ -78,12 +78,12 @@ public:
 
 
 // Class Wind.TestWindInterface
-// 0x0038 (0x0060 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UTestWindInterface : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
-	TArray<TScriptInterface<class UWindZoneInterface>> WindZones;                                                // 0x0050(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0028(0x0030) MISSED OFFSET
+	TArray<TScriptInterface<class UWindZoneInterface>> WindZones;                                                // 0x0058(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
