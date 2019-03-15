@@ -151,6 +151,36 @@ public:
 };
 
 
+// Class WwiseAudio.WwiseEventTest1
+// 0x0000 (0x0050 - 0x0050)
+class UWwiseEventTest1 : public UWwiseEvent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.WwiseEventTest1"));
+		return ptr;
+	}
+
+};
+
+
+// Class WwiseAudio.WwiseEventTest2
+// 0x0000 (0x0050 - 0x0050)
+class UWwiseEventTest2 : public UWwiseEvent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.WwiseEventTest2"));
+		return ptr;
+	}
+
+};
+
+
 // Class WwiseAudio.WwiseInputManager
 // 0x0020 (0x0048 - 0x0028)
 class UWwiseInputManager : public UObject

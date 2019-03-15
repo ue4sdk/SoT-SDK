@@ -87,17 +87,17 @@ public:
 
 
 // Class LevelSequence.LevelSequenceActor
-// 0x0030 (0x04C8 - 0x0498)
+// 0x0030 (0x04D0 - 0x04A0)
 class ALevelSequenceActor : public AActor
 {
 public:
-	bool                                               bAutoPlay;                                                // 0x0498(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0499(0x0003) MISSED OFFSET
-	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x049C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04A4(0x0004) MISSED OFFSET
-	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x04A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	struct FStringAssetReference                       LevelSequence;                                            // 0x04B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class ULevelSequenceInstance*                      SequenceInstance;                                         // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               bAutoPlay;                                                // 0x04A0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04A1(0x0003) MISSED OFFSET
+	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x04A4(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04AC(0x0004) MISSED OFFSET
+	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x04B0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	struct FStringAssetReference                       LevelSequence;                                            // 0x04B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class ULevelSequenceInstance*                      SequenceInstance;                                         // 0x04C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

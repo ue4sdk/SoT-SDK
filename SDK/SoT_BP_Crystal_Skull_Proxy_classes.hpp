@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Crystal_Skull_Proxy.BP_Crystal_Skull_Proxy_C
-// 0x0008 (0x0898 - 0x0890)
+// 0x0008 (0x08A0 - 0x0898)
 class ABP_Crystal_Skull_Proxy_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

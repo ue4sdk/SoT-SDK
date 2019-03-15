@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CookingPotBase.BP_CookingPotBase_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x05F8 - 0x05F8)
 class ABP_CookingPotBase_C : public ACookingPot
 {
 public:

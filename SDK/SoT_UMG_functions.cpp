@@ -6236,9 +6236,9 @@ void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 // class UWidgetAnimation*        InAnimation                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartAtTime                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumLoopsToPlay                 (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EUMGSequencePlayMode> PLAYMODE                       (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EUMGSequencePlayMode> PlayMode                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PLAYMODE)
+void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PlayMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function UMG.UserWidget.PlayAnimation"));
 
@@ -6247,13 +6247,13 @@ void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float Start
 		class UWidgetAnimation*        InAnimation;
 		float                          StartAtTime;
 		int                            NumLoopsToPlay;
-		TEnumAsByte<EUMGSequencePlayMode> PLAYMODE;
+		TEnumAsByte<EUMGSequencePlayMode> PlayMode;
 	} params;
 
 	params.InAnimation = InAnimation;
 	params.StartAtTime = StartAtTime;
 	params.NumLoopsToPlay = NumLoopsToPlay;
-	params.PLAYMODE = PLAYMODE;
+	params.PlayMode = PlayMode;
 
 	UObject::ProcessEvent(fn, &params);
 }

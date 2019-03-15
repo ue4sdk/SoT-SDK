@@ -393,6 +393,22 @@ void UAthenaCheatManager::TriggerControllerConnectionChange(bool IsConnect, int 
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.TriggerContestBannerUnfurl
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::TriggerContestBannerUnfurl()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.TriggerContestBannerUnfurl"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.TriggerAIShipTimerBattle
 // (Final, Exec, Native, Public)
 
@@ -1703,6 +1719,26 @@ void UAthenaCheatManager::SpawnShip(float SpawnLocationX, float SpawnLocationY, 
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnRomeTreasureChestOfType
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  ChestTypeString                (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SpawnRomeTreasureChestOfType(const class FString& ChestTypeString)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnRomeTreasureChestOfType"));
+
+	struct
+	{
+		class FString                  ChestTypeString;
+	} params;
+
+	params.ChestTypeString = ChestTypeString;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnNumberOfAI
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -2334,6 +2370,22 @@ void UAthenaCheatManager::SinkAllBarrels()
 void UAthenaCheatManager::SinkAllAIShips()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SinkAllAIShips"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ShowTavernBanners
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ShowTavernBanners()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ShowTavernBanners"));
 
 	struct
 	{

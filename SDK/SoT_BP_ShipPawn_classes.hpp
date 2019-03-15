@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipPawn.BP_ShipPawn_C
-// 0x0008 (0x0540 - 0x0538)
+// 0x0008 (0x0548 - 0x0540)
 class ABP_ShipPawn_C : public AShipProxyPawn
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0538(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_FishCreature.BP_FishCreature_C.ConfigureMaterialInstance
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FishCreature_C::ConfigureMaterialInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishCreature.BP_FishCreature_C.ConfigureMaterialInstance"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_FishCreature.BP_FishCreature_C.CreateCreature
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 

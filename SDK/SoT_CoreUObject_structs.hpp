@@ -249,6 +249,16 @@ struct FLinearColor
 		  A(1.f)
 		{ }
 
+	bool operator!=(const FLinearColor& other)
+	{
+	    return R != other.R || G != other.G || B != other.B || A != other.A;
+	}
+
+	bool operator==(const FLinearColor& other)
+	{
+	    return R == other.R && G == other.G && B == other.B && A == other.A;
+	}
+
 };
 
 // ScriptStruct CoreUObject.Box

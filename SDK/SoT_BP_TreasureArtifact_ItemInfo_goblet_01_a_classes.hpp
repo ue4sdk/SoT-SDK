@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_ItemInfo_goblet_01_a.BP_TreasureArtifact_ItemInfo_goblet_01_a_C
-// 0x0008 (0x06A8 - 0x06A0)
+// 0x0008 (0x06B0 - 0x06A8)
 class ABP_TreasureArtifact_ItemInfo_goblet_01_a_C : public ATreasureChestItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

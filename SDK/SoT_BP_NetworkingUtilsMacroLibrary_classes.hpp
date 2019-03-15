@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_NetworkingUtilsMacroLibrary.BP_NetworkingUtilsMacroLibrary_C
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class ABP_NetworkingUtilsMacroLibrary_C : public AActor
 {
 public:

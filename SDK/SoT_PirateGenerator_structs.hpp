@@ -98,7 +98,7 @@ struct FMaterialReferenceEntry
 	bool                                               bCopyParametersAcross;                                    // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	class UMaterialInterface*                          FromMaterial;                                             // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          ToMaterial;                                               // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceConstant*                   ToMaterial;                                               // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct PirateGenerator.MaterialReferencesEntry
@@ -203,11 +203,12 @@ struct FWardrobeOutfitCategoryBias
 };
 
 // ScriptStruct PirateGenerator.WardrobeOutfitResult
-// 0x0020
+// 0x0030
 struct FWardrobeOutfitResult
 {
 	TArray<class USkeletalMesh*>                       Meshes;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                         // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FName>                               MaterialReferences;                                       // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 // ScriptStruct PirateGenerator.IPGTestSimpleType
@@ -365,12 +366,13 @@ struct FWardrobeConfig
 };
 
 // ScriptStruct PirateGenerator.Outfit
-// 0x0030
+// 0x0040
 struct FOutfit
 {
 	TArray<struct FName>                               PartNames;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FName>                               FreeSlots;                                                // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                         // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               MaterialReferences;                                       // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct PirateGenerator.ClothingPart
@@ -384,7 +386,7 @@ struct FClothingPart
 };
 
 // ScriptStruct PirateGenerator.ClothingItem
-// 0x0058
+// 0x0068
 struct FClothingItem
 {
 	struct FName                                       Type;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -394,6 +396,7 @@ struct FClothingItem
 	struct FName                                       Parent;                                                   // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TArray<struct FClothingPart>                       Parts;                                                    // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                         // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               MaterialReferences;                                       // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

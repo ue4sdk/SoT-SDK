@@ -15,19 +15,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C
-// 0x0048 (0x09F8 - 0x09B0)
+// 0x0048 (0x0A00 - 0x09B8)
 class ABP_CollectorsChest_Proxy_C : public ACollectorsChestItemProxy
 {
 public:
-	class UQuestBookPagesInContainerComponent*         QuestBookPagesInContainer;                                // 0x09B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UGoldInContainerComponent*                   GoldInContainer;                                          // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UGlintComponent*                             Glint;                                                    // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x09D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractbale_3;                                   // 0x09D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x09E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x09E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x09F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UQuestBookPagesInContainerComponent*         QuestBookPagesInContainer;                                // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGoldInContainerComponent*                   GoldInContainer;                                          // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Scene;                                                    // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGlintComponent*                             Glint;                                                    // 0x09D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x09D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractbale_3;                                   // 0x09E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x09E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x09F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x09F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

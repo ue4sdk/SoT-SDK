@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0508 - 0x0508)
 class ABP_GeyserDynamic_C : public ABP_Geyser_C
 {
 public:

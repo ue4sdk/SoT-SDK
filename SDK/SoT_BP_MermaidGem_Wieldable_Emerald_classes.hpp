@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidGem_Wieldable_Emerald.BP_MermaidGem_Wieldable_Emerald_C
-// 0x0000 (0x07E0 - 0x07E0)
+// 0x0000 (0x07E8 - 0x07E8)
 class ABP_MermaidGem_Wieldable_Emerald_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:

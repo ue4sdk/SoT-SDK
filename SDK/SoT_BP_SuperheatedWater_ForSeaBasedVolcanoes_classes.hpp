@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SuperheatedWater_ForSeaBasedVolcanoes.BP_SuperheatedWater_ForSeaBasedVolcanoes_C
-// 0x0000 (0x0638 - 0x0638)
+// 0x0000 (0x0640 - 0x0640)
 class ABP_SuperheatedWater_ForSeaBasedVolcanoes_C : public ABP_SuperheatedWater_C
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LoversPendant_Right_Proxy.BP_LoversPendant_Right_Proxy_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x0860 - 0x0860)
 class ABP_LoversPendant_Right_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

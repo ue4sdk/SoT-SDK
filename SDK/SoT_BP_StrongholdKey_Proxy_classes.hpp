@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_StrongholdKey_Proxy.BP_StrongholdKey_Proxy_C
-// 0x0008 (0x0840 - 0x0838)
+// 0x0008 (0x0848 - 0x0840)
 class ABP_StrongholdKey_Proxy_C : public AStrongholdKeyProxy
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

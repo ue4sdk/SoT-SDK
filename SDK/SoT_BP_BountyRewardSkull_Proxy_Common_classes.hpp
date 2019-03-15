@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Proxy_Common.BP_BountyRewardSkull_Proxy_Common_C
-// 0x0000 (0x0890 - 0x0890)
+// 0x0000 (0x0898 - 0x0898)
 class ABP_BountyRewardSkull_Proxy_Common_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:

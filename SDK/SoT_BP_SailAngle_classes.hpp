@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailAngle.BP_SailAngle_C
-// 0x0008 (0x08C8 - 0x08C0)
+// 0x0008 (0x08D0 - 0x08C8)
 class ABP_SailAngle_C : public ASailAngle
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x08C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x08C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

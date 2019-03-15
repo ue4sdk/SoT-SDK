@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_vase_02_a.BP_Treasure_Artifact_Proxy_vase_02_a_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x0860 - 0x0860)
 class ABP_Treasure_Artifact_Proxy_vase_02_a_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

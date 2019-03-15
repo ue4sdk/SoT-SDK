@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Common_DVR.BP_BountyRewardSkull_Common_DVR_C
-// 0x0000 (0x07E0 - 0x07E0)
+// 0x0000 (0x07E8 - 0x07E8)
 class ABP_BountyRewardSkull_Common_DVR_C : public ABP_BountyRewardSkull_C
 {
 public:

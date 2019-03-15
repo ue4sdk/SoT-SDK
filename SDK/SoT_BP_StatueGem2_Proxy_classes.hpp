@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_StatueGem2_Proxy.BP_StatueGem2_Proxy_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x0860 - 0x0860)
 class ABP_StatueGem2_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

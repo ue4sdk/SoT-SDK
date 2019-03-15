@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_banana_01_a_Proxy.BP_fod_banana_01_a_Proxy_C
-// 0x0000 (0x0700 - 0x0700)
+// 0x0000 (0x0708 - 0x0708)
 class ABP_fod_banana_01_a_Proxy_C : public ABP_BananaProxy_C
 {
 public:

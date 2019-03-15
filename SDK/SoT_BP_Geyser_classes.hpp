@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Geyser.BP_Geyser_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0508 - 0x0508)
 class ABP_Geyser_C : public AGeyser
 {
 public:

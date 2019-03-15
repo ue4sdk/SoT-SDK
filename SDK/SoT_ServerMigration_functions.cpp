@@ -155,6 +155,115 @@ bool UNetworkTestingBlueprintFunctionLibrary::IsActorNetDormant(class AActor* Ta
 }
 
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInNetworkClusterGlobal
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::IsActorInNetworkClusterGlobal(class AActor* TargetActor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInNetworkClusterGlobal"));
+
+	struct
+	{
+		class AActor*                  TargetActor;
+		bool                           ReturnValue;
+	} params;
+
+	params.TargetActor = TargetActor;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInNetworkCluster
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  NetworkClusterOwner            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::IsActorInNetworkCluster(class AActor* TargetActor, class AActor* NetworkClusterOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInNetworkCluster"));
+
+	struct
+	{
+		class AActor*                  TargetActor;
+		class AActor*                  NetworkClusterOwner;
+		bool                           ReturnValue;
+	} params;
+
+	params.TargetActor = TargetActor;
+	params.NetworkClusterOwner = NetworkClusterOwner;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInLevelNetworkClusterOnOwner
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  LevelOwner                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::IsActorInLevelNetworkClusterOnOwner(class AActor* TargetActor, class AActor* LevelOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInLevelNetworkClusterOnOwner"));
+
+	struct
+	{
+		class AActor*                  TargetActor;
+		class AActor*                  LevelOwner;
+		bool                           ReturnValue;
+	} params;
+
+	params.TargetActor = TargetActor;
+	params.LevelOwner = LevelOwner;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInLevelNetworkCluster
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   Level                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::IsActorInLevelNetworkCluster(class AActor* TargetActor, const struct FName& Level)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInLevelNetworkCluster"));
+
+	struct
+	{
+		class AActor*                  TargetActor;
+		struct FName                   Level;
+		bool                           ReturnValue;
+	} params;
+
+	params.TargetActor = TargetActor;
+	params.Level = Level;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.GetReliableBufferBunchCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
