@@ -98,6 +98,21 @@ public:
 };
 
 
+// Class Animation.AnimationDataStoreOverrideId
+// 0x0000 (0x0028 - 0x0028)
+class UAnimationDataStoreOverrideId : public UAnimationDataStoreId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataStoreOverrideId"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.AnimationDataStore
 // 0x0010 (0x0038 - 0x0028)
 class UAnimationDataStore : public UObject
@@ -386,6 +401,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.RemoteAnimPlayableInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.TransformBlendCurveComponent
+// 0x0500 (0x05D0 - 0x00D0)
+class UTransformBlendCurveComponent : public UActorComponent
+{
+public:
+	struct FTransformBlendCurve                        Curve;                                                    // 0x00D0(0x0500) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.TransformBlendCurveComponent"));
 		return ptr;
 	}
 

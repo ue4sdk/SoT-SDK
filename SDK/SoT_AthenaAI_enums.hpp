@@ -323,7 +323,18 @@ enum class EAthenaAnimationPetRoamingState : uint8_t
 	EAthenaAnimationPetRoamingState__TakingOff = 19,
 	EAthenaAnimationPetRoamingState__Landing = 20,
 	EAthenaAnimationPetRoamingState__Flying = 21,
-	EAthenaAnimationPetRoamingState__EAthenaAnimationPetRoamingState_MAX = 22
+	EAthenaAnimationPetRoamingState__Yawn = 22,
+	EAthenaAnimationPetRoamingState__Scared = 23,
+	EAthenaAnimationPetRoamingState__Protective = 24,
+	EAthenaAnimationPetRoamingState__Play = 25,
+	EAthenaAnimationPetRoamingState__Vomit = 26,
+	EAthenaAnimationPetRoamingState__Chew = 27,
+	EAthenaAnimationPetRoamingState__Sneeze = 28,
+	EAthenaAnimationPetRoamingState__Sleep = 29,
+	EAthenaAnimationPetRoamingState__Hangout_A = 30,
+	EAthenaAnimationPetRoamingState__Hangout_B = 31,
+	EAthenaAnimationPetRoamingState__Hangout_C = 32,
+	EAthenaAnimationPetRoamingState__EAthenaAnimationPetRoamingState_MAX = 33
 };
 
 
@@ -350,6 +361,30 @@ enum class EAthenaAnimationPetSpawnState : uint8_t
 	EAthenaAnimationPetSpawnState__BeingHeld = 1,
 	EAthenaAnimationPetSpawnState__Roaming = 2,
 	EAthenaAnimationPetSpawnState__EAthenaAnimationPetSpawnState_MAX = 3
+};
+
+
+// Enum AthenaAI.EDebugPetStateDescriptor
+enum class EDebugPetStateDescriptor : uint8_t
+{
+	EDebugPetStateDescriptor__NoState = 0,
+	EDebugPetStateDescriptor__Hangout_Docked = 1,
+	EDebugPetStateDescriptor__Hangout_MoveToLocation = 2,
+	EDebugPetStateDescriptor__Reacting = 3,
+	EDebugPetStateDescriptor__Pursuit = 4,
+	EDebugPetStateDescriptor__Idle = 5,
+	EDebugPetStateDescriptor__Follow = 6,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 7
+};
+
+
+// Enum AthenaAI.EPetSize
+enum class EPetSize : uint8_t
+{
+	EPetSize__Small                = 0,
+	EPetSize__Medium               = 1,
+	EPetSize__Large                = 2,
+	EPetSize__EPetSize_MAX         = 3
 };
 
 

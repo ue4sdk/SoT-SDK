@@ -80,6 +80,25 @@ struct FActorVelocityData
 	float                                              WantedMovementSpeed;                                      // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Animation.TransformBlendCurve
+// 0x0500
+struct FTransformBlendCurve
+{
+	bool                                               UseLocationCurve;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	struct FRuntimeVectorCurve                         LocationCurve;                                            // 0x0008(0x0170) (Edit)
+	bool                                               UseRotationCurve;                                         // 0x0178(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0179(0x0007) MISSED OFFSET
+	struct FRuntimeVectorCurve                         RotationCurve;                                            // 0x0180(0x0170) (Edit)
+	bool                                               UseScaleCurve;                                            // 0x02F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x02F1(0x0007) MISSED OFFSET
+	struct FRuntimeVectorCurve                         ScaleCurve;                                               // 0x02F8(0x0170) (Edit)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0468(0x0008) MISSED OFFSET
+	struct FTransform                                  SourceTransform;                                          // 0x0470(0x0030) (Edit, IsPlainOldData)
+	struct FTransform                                  TargetTransform;                                          // 0x04A0(0x0030) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x30];                                      // 0x04D0(0x0030) MISSED OFFSET
+};
+
 // ScriptStruct Animation.EventDockableObjectDestroyed
 // 0x0001
 struct FEventDockableObjectDestroyed

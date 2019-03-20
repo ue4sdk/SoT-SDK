@@ -11,6 +11,18 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Script Structs
+//---------------------------------------------------------------------------
+
+// ScriptStruct AthenaServerMigration.IncomingMigrationPreventionZone
+// 0x000C
+struct FIncomingMigrationPreventionZone
+{
+	struct FVector2D                                   Location;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

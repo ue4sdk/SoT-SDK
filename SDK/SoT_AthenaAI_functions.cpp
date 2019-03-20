@@ -2047,6 +2047,26 @@ void APet::SetExitTakeOffFlag(bool InExitTakeOffFlag)
 }
 
 
+// Function AthenaAI.Pet.OnShipDestroyed
+// (Final, Native, Public)
+// Parameters:
+// class AActor*                  InShip                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void APet::OnShipDestroyed(class AActor* InShip)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnShipDestroyed"));
+
+	struct
+	{
+		class AActor*                  InShip;
+	} params;
+
+	params.InShip = InShip;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.Pet.OnRep_MovementRequest
 // (Final, Native, Private)
 

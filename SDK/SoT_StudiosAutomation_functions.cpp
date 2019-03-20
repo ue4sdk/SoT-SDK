@@ -260,6 +260,30 @@ void ATestLevelScriptActor::TestTriggerServerMigration(TArray<class AActor*> Act
 }
 
 
+// Function StudiosAutomation.TestLevelScriptActor.TestCloseConnection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            ConnectionIdx                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATestLevelScriptActor::TestCloseConnection(int ConnectionIdx)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.TestCloseConnection"));
+
+	struct
+	{
+		int                            ConnectionIdx;
+		bool                           ReturnValue;
+	} params;
+
+	params.ConnectionIdx = ConnectionIdx;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function StudiosAutomation.TestLevelScriptActor.SyncClientServer
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

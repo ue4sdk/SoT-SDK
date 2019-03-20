@@ -22270,6 +22270,26 @@ void USkinnedMeshComponent::SetMasterPoseComponent(class USkinnedMeshComponent* 
 }
 
 
+// Function Engine.SkinnedMeshComponent.OnRep_SkeletalMesh
+// (Final, Native, Public)
+// Parameters:
+// class USkeletalMesh*           OldMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void USkinnedMeshComponent::OnRep_SkeletalMesh(class USkeletalMesh* OldMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SkinnedMeshComponent.OnRep_SkeletalMesh"));
+
+	struct
+	{
+		class USkeletalMesh*           OldMesh;
+	} params;
+
+	params.OldMesh = OldMesh;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.SkinnedMeshComponent.IsBoneHiddenByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -56274,6 +56294,22 @@ int UTexture2D::Blueprint_GetSizeX()
 void UCanvasRenderTarget2D::UpdateResource()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.UpdateResource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CanvasRenderTarget2D.Render
+// (Final, Native, Public, BlueprintCallable)
+
+void UCanvasRenderTarget2D::Render()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.Render"));
 
 	struct
 	{

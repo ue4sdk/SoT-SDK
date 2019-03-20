@@ -31,11 +31,11 @@ public:
 
 
 // Class TestUtilities.ObjectCollectorGameState
-// 0x0060 (0x0550 - 0x04F0)
+// 0x0060 (0x0558 - 0x04F8)
 class AObjectCollectorGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x04F0(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x04F8(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -47,7 +47,7 @@ public:
 
 
 // Class TestUtilities.TestActor
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class ATestActor : public AActor
 {
 public:
@@ -62,11 +62,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithCapsule
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0008 (0x04A8 - 0x04A0)
 class ATestActorWithCapsule : public AActor
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x04A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -78,11 +78,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithObjectMessagingDispatcher
-// 0x00A8 (0x0540 - 0x0498)
+// 0x00A8 (0x0548 - 0x04A0)
 class ATestActorWithObjectMessagingDispatcher : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0498(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x04A0(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

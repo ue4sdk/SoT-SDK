@@ -31,6 +31,21 @@ public:
 };
 
 
+// Class Fire.FireDamagerType
+// 0x0000 (0x0028 - 0x0028)
+class UFireDamagerType : public UDamagerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.FireDamagerType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Fire.FirePropagationInterface
 // 0x0000 (0x0028 - 0x0028)
 class UFirePropagationInterface : public UInterface

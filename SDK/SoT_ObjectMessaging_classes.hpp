@@ -14,21 +14,6 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// Class ObjectMessaging.ObjectMessagingInterface
-// 0x0000 (0x0028 - 0x0028)
-class UObjectMessagingInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingInterface"));
-		return ptr;
-	}
-
-};
-
-
 // Class ObjectMessaging.ObjectMessagingDispatcherInterface
 // 0x0000 (0x0028 - 0x0028)
 class UObjectMessagingDispatcherInterface : public UInterface
@@ -38,6 +23,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingDispatcherInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class ObjectMessaging.ObjectMessagingInterface
+// 0x0000 (0x0028 - 0x0028)
+class UObjectMessagingInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingInterface"));
 		return ptr;
 	}
 

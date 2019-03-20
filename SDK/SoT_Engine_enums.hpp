@@ -437,7 +437,8 @@ enum class ENetworkFailure : uint8_t
 	ENetworkFailure__FailedPreLogin = 11,
 	ENetworkFailure__InitialConnectionTimeout = 12,
 	ENetworkFailure__PendingConnectionTimeout = 13,
-	ENetworkFailure__ENetworkFailure_MAX = 14
+	ENetworkFailure__PlayerDeemedInactive = 14,
+	ENetworkFailure__ENetworkFailure_MAX = 15
 };
 
 
@@ -2500,6 +2501,16 @@ enum class EAntiAliasingMethodUI : uint8_t
 	EAntiAliasingMethodUI__AAM_FXAA = 1,
 	EAntiAliasingMethodUI__AAM_TemporalAA = 2,
 	EAntiAliasingMethodUI__AAM_MAX = 3
+};
+
+
+// Enum Engine.EDepthSort
+enum class EDepthSort : uint8_t
+{
+	EDepthSort__Default            = 0,
+	EDepthSort__ForcedOff          = 1,
+	EDepthSort__ForcedOn           = 2,
+	EDepthSort__EDepthSort_MAX     = 3
 };
 
 

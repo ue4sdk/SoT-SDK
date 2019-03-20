@@ -52,6 +52,7 @@ public:
 	void TriggerFogManagerAtNearestIsland();
 	void TriggerEmblemUnlockedMessage(const class FString& EmblemFriendlyName);
 	void TriggerControllerConnectionChange(bool IsConnect, int UserId, int ControllerId);
+	void TriggerContestBannerUnfurl();
 	void TriggerAIShipTimerBattle();
 	void TriggerAIShipPassive();
 	void TriggerAIShipEncounter();
@@ -119,6 +120,7 @@ public:
 	void SpawnShipFromDesc(const class FString& InShipDescAssetString, float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnShipAtIsland(const class FString& IslandName);
 	void SpawnShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
+	void SpawnRomeTreasureChestOfType(const class FString& ChestTypeString);
 	void SpawnNumberOfAI(const class FString& AIDescString, int NumToSpawn);
 	void SpawnMultipleTreasureChestsOfType(int Num, class FString* ChestTypeString);
 	void SpawnMessageInABottle(const class FString& MessageInABottleTypeString);
@@ -151,6 +153,7 @@ public:
 	void SinkShip();
 	void SinkAllBarrels();
 	void SinkAllAIShips();
+	void ShowTavernBanners();
 	void ShowTaleDebug();
 	void ShowRandomCrewMemberGamerCard();
 	void ShowAllWelds();

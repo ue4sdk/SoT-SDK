@@ -9,11 +9,11 @@
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_Maths_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Maths_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_Animation_classes.hpp"
 
 namespace SDK
@@ -26,7 +26,7 @@ namespace SDK
 // 0x0008
 struct FAIPartId
 {
-	struct FName                                       PartId;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       PartId;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AthenaAIAbilityPlayerBasedRange
@@ -615,12 +615,14 @@ struct FTinySharkServiceParams
 };
 
 // ScriptStruct AthenaAI.PetFlyingStrategyProperties
-// 0x0010
+// 0x0018
 struct FPetFlyingStrategyProperties
 {
 	class UClass*                                      Strategy;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ChanceOfFlying;                                           // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	float                                              MinFlyingMeshZOffset;                                     // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxFlyingMeshZOffset;                                     // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.PetMovementRequest
@@ -657,6 +659,15 @@ struct FPetLoadedMaterial
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct AthenaAI.PetPartSizeMapping
+// 0x0008
+struct FPetPartSizeMapping
+{
+	TEnumAsByte<EPetSize>                              PetSize;                                                  // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              PetScale;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct AthenaAI.PetMaterialEntry
 // 0x0018
 struct FPetMaterialEntry
@@ -664,6 +675,14 @@ struct FPetMaterialEntry
 	struct FStringAssetReference                       MaterialReference;                                        // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	bool                                               CastShadows;                                              // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.PetWieldableReactMapping
+// 0x0010
+struct FPetWieldableReactMapping
+{
+	class UClass*                                      WieldableType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ReactId;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AIEncounterSpecification
@@ -1232,6 +1251,13 @@ struct FTinySharkSpawnTelemetryEvent
 struct FAICreatureCharacterAggregateTickFunction : public FTickFunction
 {
 	unsigned char                                      UnknownData00[0xC0];                                      // 0x0048(0x00C0) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.EventPetCustomisationComplete
+// 0x0001
+struct FEventPetCustomisationComplete
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.EventPetCustomisationReady

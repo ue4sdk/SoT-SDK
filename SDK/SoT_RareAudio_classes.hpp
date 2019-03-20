@@ -161,11 +161,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0008 (0x04A8 - 0x04A0)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0498(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x04A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -217,7 +217,7 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -312,12 +312,10 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0010 (0x0640 - 0x0630)
+// 0x0000 (0x0630 - 0x0630)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x0630(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0638(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -471,7 +469,7 @@ public:
 
 
 // Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:
