@@ -2103,6 +2103,38 @@ void APet::OnOwnerDestroyed(class AActor* InOwner)
 }
 
 
+// Function AthenaAI.Pet.Multicast_DitherOut
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+
+void APet::Multicast_DitherOut()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.Multicast_DitherOut"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.Multicast_DitherIn
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+
+void APet::Multicast_DitherIn()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.Multicast_DitherIn"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.Pet.GetFloorMeshOffsetZ
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

@@ -14,6 +14,40 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class TestUtilities.DelegateTester
+// 0x0008 (0x0030 - 0x0028)
+class UDelegateTester : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.DelegateTester"));
+		return ptr;
+	}
+
+
+	void Callback();
+};
+
+
+// Class TestUtilities.MockControllerWithMessagingDispatcher
+// 0x00A8 (0x05A8 - 0x0500)
+class AMockControllerWithMessagingDispatcher : public AController
+{
+public:
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0500(0x00A8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.MockControllerWithMessagingDispatcher"));
+		return ptr;
+	}
+
+};
+
+
 // Class TestUtilities.MockObjectWithMessagingDispatcher
 // 0x00F8 (0x0120 - 0x0028)
 class UMockObjectWithMessagingDispatcher : public UObject
@@ -40,6 +74,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.ObjectCollectorGameState"));
+		return ptr;
+	}
+
+};
+
+
+// Class TestUtilities.SampleUObject
+// 0x0000 (0x0028 - 0x0028)
+class USampleUObject : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.SampleUObject"));
 		return ptr;
 	}
 
@@ -123,12 +172,27 @@ public:
 };
 
 
+// Class TestUtilities.TestPawnWithCapsule
+// 0x0008 (0x0510 - 0x0508)
+class ATestPawnWithCapsule : public APawn
+{
+public:
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0508(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestPawnWithCapsule"));
+		return ptr;
+	}
+
+};
+
+
 // Class TestUtilities.TestPrimitiveComponent
-// 0x0010 (0x05C0 - 0x05B0)
+// 0x0000 (0x05A0 - 0x05A0)
 class UTestPrimitiveComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05B0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -142,11 +206,11 @@ public:
 
 
 // Class TestUtilities.TestStaticMeshComponent
-// 0x0010 (0x0640 - 0x0630)
+// 0x0010 (0x0610 - 0x0600)
 class UTestStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0600(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

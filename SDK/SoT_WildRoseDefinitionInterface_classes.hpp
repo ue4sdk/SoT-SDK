@@ -1,0 +1,38 @@
+#pragma once
+
+// Sea of Thieves (1.4) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_WildRoseDefinitionInterface_structs.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass WildRoseDefinitionInterface.WildRoseDefinitionInterface_C
+// 0x0000 (0x0028 - 0x0028)
+class UWildRoseDefinitionInterface_C : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass WildRoseDefinitionInterface.WildRoseDefinitionInterface_C"));
+		return ptr;
+	}
+
+
+	void GetIslandForActor(TAssetPtr<class AActor> Actor, struct FName* Name);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

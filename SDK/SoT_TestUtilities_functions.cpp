@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function TestUtilities.DelegateTester.Callback
+// (Final, RequiredAPI, Native, Public)
+
+void UDelegateTester::Callback()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function TestUtilities.DelegateTester.Callback"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function TestUtilities.TestPrimitiveComponent.GetCollisionObjectType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

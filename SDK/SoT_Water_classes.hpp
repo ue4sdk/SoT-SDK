@@ -165,11 +165,11 @@ public:
 
 
 // Class Water.WaterInteractionComponent
-// 0x0020 (0x0600 - 0x05E0)
+// 0x0020 (0x05F0 - 0x05D0)
 class UWaterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05E0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05D0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -257,11 +257,11 @@ public:
 
 
 // Class Water.FlatWaterPlaneComponent
-// 0x0010 (0x05D0 - 0x05C0)
+// 0x0010 (0x05C0 - 0x05B0)
 class UFlatWaterPlaneComponent : public UBaseWaterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05B0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

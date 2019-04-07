@@ -1552,9 +1552,8 @@ enum class EDOFMode : uint8_t
 	EDOFMode__YZPlane              = 2,
 	EDOFMode__XZPlane              = 3,
 	EDOFMode__XYPlane              = 4,
-	EDOFMode__CustomPlane          = 5,
-	EDOFMode__None                 = 6,
-	EDOFMode__EDOFMode_MAX         = 7
+	EDOFMode__None                 = 5,
+	EDOFMode__EDOFMode_MAX         = 6
 };
 
 
@@ -3311,6 +3310,15 @@ enum class EDecalBlendMode : uint8_t
 };
 
 
+// Enum Engine.ECanvasRenderTargetMips
+enum class ECanvasRenderTargetMips : uint8_t
+{
+	ECanvasRenderTargetMips__Disabled = 0,
+	ECanvasRenderTargetMips__Enabled = 1,
+	ECanvasRenderTargetMips__ECanvasRenderTargetMips_MAX = 2
+};
+
+
 // Enum Engine.EEmitterRenderMode
 enum class EEmitterRenderMode : uint8_t
 {
@@ -4137,15 +4145,6 @@ enum class ENormalMode : uint8_t
 	NM_RecalculateNormalsHard      = 3,
 	TEMP_BROKEN                    = 4,
 	ENormalMode_MAX                = 5
-};
-
-
-// Enum Engine.ECanvasRenderTargetMips
-enum class ECanvasRenderTargetMips : uint8_t
-{
-	ECanvasRenderTargetMips__Disabled = 0,
-	ECanvasRenderTargetMips__Enabled = 1,
-	ECanvasRenderTargetMips__ECanvasRenderTargetMips_MAX = 2
 };
 
 

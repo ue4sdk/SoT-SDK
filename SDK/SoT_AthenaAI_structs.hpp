@@ -9,11 +9,12 @@
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Maths_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
+#include "SoT_Maths_classes.hpp"
 #include "SoT_Animation_classes.hpp"
 
 namespace SDK
@@ -256,10 +257,12 @@ struct FAIDioramaRoleDesc
 };
 
 // ScriptStruct AthenaAI.AIDioramaLocationSourceComponentData
-// 0x0030
+// 0x0040
 struct FAIDioramaLocationSourceComponentData
 {
 	struct FTransform                                  RelativeTransform;                                        // 0x0000(0x0030) (Edit, IsPlainOldData)
+	class AActor*                                      Interactable;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIIndividualVarietyEntry
@@ -800,10 +803,12 @@ struct FAIBountySpawnerArchive : public FAISpawnerArchive
 };
 
 // ScriptStruct AthenaAI.AIFixedWavesSpawnerArchive
-// 0x0010 (0x0018 - 0x0008)
+// 0x0018 (0x0020 - 0x0008)
 struct FAIFixedWavesSpawnerArchive : public FAISpawnerArchive
 {
 	TArray<int>                                        NumSpawnedPawnsInWaves;                                   // 0x0008(0x0010) (ZeroConstructor)
+	bool                                               WavesSpawnedOnSpottedNewTarget;                           // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIIncrementalWaveSpawnerArchive
@@ -953,6 +958,13 @@ struct FEventOwnedPawnStartedDying
 	TEnumAsByte<ECharacterDeathType>                   DeathType;                                                // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	class AActor*                                      Instigator;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.EventAIPartRetrievalRequestFailed
+// 0x0001
+struct FEventAIPartRetrievalRequestFailed
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.EventVisualAppearanceSelected

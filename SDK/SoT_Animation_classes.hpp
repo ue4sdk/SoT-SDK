@@ -29,40 +29,6 @@ public:
 };
 
 
-// Class Animation.AnimationDataContainingNoDuplicateStructs
-// 0x0000 (0x0028 - 0x0028)
-class UAnimationDataContainingNoDuplicateStructs : public UAnimationData
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataContainingNoDuplicateStructs"));
-		return ptr;
-	}
-
-};
-
-
-// Class Animation.AnimationDataContainingThreeInstancesOfTheSameStruct
-// 0x0008 (0x0030 - 0x0028)
-class UAnimationDataContainingThreeInstancesOfTheSameStruct : public UAnimationData
-{
-public:
-	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance1;                                          // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
-	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance2;                                          // 0x0029(0x0001) (ZeroConstructor, IsPlainOldData)
-	struct FEmptyStructForAnimationDataDuplicateStructTest StructInstance3;                                          // 0x002A(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x002B(0x0005) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataContainingThreeInstancesOfTheSameStruct"));
-		return ptr;
-	}
-
-};
-
-
 // Class Animation.AnimationDataFunctionLib
 // 0x0000 (0x0028 - 0x0028)
 class UAnimationDataFunctionLib : public UBlueprintFunctionLibrary
@@ -114,11 +80,13 @@ public:
 
 
 // Class Animation.AnimationDataStore
-// 0x0010 (0x0038 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UAnimationDataStore : public UObject
 {
 public:
-	TArray<struct FAnimationDataStoreEntry>            Data;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor, EditConst)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
+	TArray<struct FAnimationDataStoreEntry>            Data;                                                     // 0x0040(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<struct FAnimationDataStoreLoadingEntry>     LoadingData;                                              // 0x0050(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -130,11 +98,12 @@ public:
 
 
 // Class Animation.AnimationDataStoreAsset
-// 0x0010 (0x0038 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UAnimationDataStoreAsset : public UDataAsset
 {
 public:
 	TArray<struct FAnimationDataStoreAssetEntry>       AssetRefs;                                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FAnimationDataStoreAssetReferenceEntry> AssetStringRefs;                                          // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -145,36 +114,6 @@ public:
 
 	class UAnimationData* LookupAnimationData(class UClass* AnimDataId);
 	static class UClass* GetAnimationDataClass(struct FAnimationDataStoreAssetEntry* Entry);
-};
-
-
-// Class Animation.AnimationDataTestIdOne
-// 0x0000 (0x0028 - 0x0028)
-class UAnimationDataTestIdOne : public UAnimationDataStoreId
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataTestIdOne"));
-		return ptr;
-	}
-
-};
-
-
-// Class Animation.AnimationDataTestIdTwo
-// 0x0000 (0x0028 - 0x0028)
-class UAnimationDataTestIdTwo : public UAnimationDataStoreId
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataTestIdTwo"));
-		return ptr;
-	}
-
 };
 
 
@@ -196,7 +135,7 @@ public:
 
 
 // Class Animation.ClientSkeletalMeshComponent
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x0990 - 0x0990)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:

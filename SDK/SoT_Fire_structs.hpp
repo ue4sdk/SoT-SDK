@@ -8,6 +8,7 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Fire_enums.hpp"
+#include "SoT_ShipDamage_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
@@ -29,6 +30,16 @@ struct FFireCellStateTimingParams
 	float                                              SidewaysPropagationTime;                                  // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              UpwardPropagationTime;                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DownwardPropagationTime;                                  // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Fire.ShipFireDamageParams
+// 0x0020
+struct FShipFireDamageParams
+{
+	float                                              DamageTime;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UClass*                                      DamagerType;                                              // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FShipPartsDamageMap                         ShipDamageMap;                                            // 0x0010(0x0010) (Edit)
 };
 
 // ScriptStruct Fire.FireCellStateParticleTemplate

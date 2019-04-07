@@ -28,14 +28,48 @@ struct FGuid
 
     FGuid(int a, int b, int c, int d) : A(a), B(b), C(c), D(d) {}
 
-    bool operator==(const FGuid& other)
+    friend bool operator==( const FGuid& X, const FGuid& Y )
 	{
-	    return A == other.A && B == other.B && C == other.C && D == other.D;
+		return ((X.A ^ Y.A) | (X.B ^ Y.B) | (X.C ^ Y.C) | (X.D ^ Y.D)) == 0;
 	}
 
-   bool operator!=(const FGuid& other)
+   friend bool operator!=( const FGuid& X, const FGuid& Y )
 	{
-	    return A != other.A || B != other.B || C != other.C || D != other.D;
+		return ((X.A ^ Y.A) | (X.B ^ Y.B) | (X.C ^ Y.C) | (X.D ^ Y.D)) != 0;
+	}
+
+   friend bool operator<( const FGuid& X, const FGuid& Y )
+	{
+		return	((X.A < Y.A) ? true : ((X.A > Y.A) ? false :
+				((X.B < Y.B) ? true : ((X.B > Y.B) ? false :
+				((X.C < Y.C) ? true : ((X.C > Y.C) ? false :
+				((X.D < Y.D) ? true : ((X.D > Y.D) ? false : false )))))))); //-V583
+	}
+
+   int& operator[](int Index)
+	{
+		switch(Index)
+		{
+		case 0: return A;
+		case 1: return B;
+		case 2: return C;
+		case 3: return D;
+		}
+
+		return A;
+	}
+
+   const int& operator[](int Index) const
+	{
+		switch(Index)
+		{
+		case 0: return A;
+		case 1: return B;
+		case 2: return C;
+		case 3: return D;
+		}
+
+		return A;
 	}
 
 };

@@ -181,12 +181,27 @@ public:
 };
 
 
+// Class WwiseAudio.WwiseInputManagerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWwiseInputManagerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.WwiseInputManagerInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class WwiseAudio.WwiseInputManager
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UWwiseInputManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

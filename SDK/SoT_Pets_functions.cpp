@@ -79,6 +79,26 @@ void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCust
 }
 
 
+// Function Pets.WieldablePet.OnRep_DropRequested
+// (Final, Native, Private)
+// Parameters:
+// bool                           DropRequestedPrior             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AWieldablePet::OnRep_DropRequested(bool DropRequestedPrior)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_DropRequested"));
+
+	struct
+	{
+		bool                           DropRequestedPrior;
+	} params;
+
+	params.DropRequestedPrior = DropRequestedPrior;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

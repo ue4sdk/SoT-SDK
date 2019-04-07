@@ -1919,6 +1919,46 @@ void UAthenaCheatManager::SpawnKrakenAtCurrentLocation()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnItemOnFloor
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  ItemString                     (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SpawnItemOnFloor(const class FString& ItemString)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnItemOnFloor"));
+
+	struct
+	{
+		class FString                  ItemString;
+	} params;
+
+	params.ItemString = ItemString;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SpawnItemInHand
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  ItemString                     (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::SpawnItemInHand(const class FString& ItemString)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnItemInHand"));
+
+	struct
+	{
+		class FString                  ItemString;
+	} params;
+
+	params.ItemString = ItemString;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnGeyserAtPlayerLocationWithDormancy
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -2104,15 +2144,19 @@ void UAthenaCheatManager::SpawnBountyReward(const class FString& BountyTypeStrin
 
 // Function AthenaCheat.AthenaCheatManager.SpawnBarrelGroup
 // (Final, Exec, Native, Public)
+// Parameters:
+// bool                           ForcedCloseSpawn               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaCheatManager::SpawnBarrelGroup()
+void UAthenaCheatManager::SpawnBarrelGroup(bool ForcedCloseSpawn)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnBarrelGroup"));
 
 	struct
 	{
+		bool                           ForcedCloseSpawn;
 	} params;
 
+	params.ForcedCloseSpawn = ForcedCloseSpawn;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2782,6 +2826,26 @@ void UAthenaCheatManager::SetTime(int Hours)
 	} params;
 
 	params.Hours = Hours;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetShroudbreakerActive
+// (Final, Exec, Native, Public)
+// Parameters:
+// bool                           bActive                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetShroudbreakerActive(bool bActive)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetShroudbreakerActive"));
+
+	struct
+	{
+		bool                           bActive;
+	} params;
+
+	params.bActive = bActive;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -4600,6 +4664,42 @@ void UAthenaCheatManager::HealthReset()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.HealthRegenResetToEmpty
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::HealthRegenResetToEmpty()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.HealthRegenResetToEmpty"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.HealthRegenAdd
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::HealthRegenAdd(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.HealthRegenAdd"));
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.HealthContinuousStopWithTestReason
 // (Final, Exec, Native, Public)
 
@@ -4909,6 +5009,22 @@ void UAthenaCheatManager::EnableVoiceChatMeteringForIncomingSignals(bool Enabled
 	} params;
 
 	params.Enabled = Enabled;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.EnableVengeance
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::EnableVengeance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.EnableVengeance"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -5674,6 +5790,22 @@ void UAthenaCheatManager::DeactivateSkellyFort(const class FString& FortName)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.DeactivateDeathEffect
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::DeactivateDeathEffect()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DeactivateDeathEffect"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.DamageShipFromRemoteActor
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -5818,6 +5950,22 @@ void UAthenaCheatManager::CureAllAilings()
 void UAthenaCheatManager::CompleteVoyage()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.CompleteVoyage"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.CompleteAllActivePuzzleVaults
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::CompleteAllActivePuzzleVaults()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.CompleteAllActivePuzzleVaults"));
 
 	struct
 	{
@@ -6253,6 +6401,38 @@ void UAthenaCheatManager::AIPlayerShip()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.AdjustGhostShader
+// (Final, Exec, Native, Public)
+// Parameters:
+// bool                           Enabled                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InStartingAmount               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InTargetAmount                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InDelayBeforeStart             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InBlendDuration                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InDelayBeforeStart, float InBlendDuration)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.AdjustGhostShader"));
+
+	struct
+	{
+		bool                           Enabled;
+		float                          InStartingAmount;
+		float                          InTargetAmount;
+		float                          InDelayBeforeStart;
+		float                          InBlendDuration;
+	} params;
+
+	params.Enabled = Enabled;
+	params.InStartingAmount = InStartingAmount;
+	params.InTargetAmount = InTargetAmount;
+	params.InDelayBeforeStart = InDelayBeforeStart;
+	params.InBlendDuration = InBlendDuration;
 
 	UObject::ProcessEvent(fn, &params);
 }

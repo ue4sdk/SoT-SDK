@@ -25,6 +25,17 @@ enum class EAIDebugColour : uint8_t
 };
 
 
+// Enum AthenaAI.EAIDialogueState
+enum class EAIDialogueState : uint8_t
+{
+	EAIDialogueState__Inactive     = 0,
+	EAIDialogueState__Passive      = 1,
+	EAIDialogueState__Alerted      = 2,
+	EAIDialogueState__Dead         = 3,
+	EAIDialogueState__EAIDialogueState_MAX = 4
+};
+
+
 // Enum AthenaAI.EAthenaAISpawnType
 enum class EAthenaAISpawnType : uint8_t
 {
@@ -298,69 +309,17 @@ enum class EFaunaCratedState : uint8_t
 };
 
 
-// Enum AthenaAI.EAthenaAnimationPetRoamingState
-enum class EAthenaAnimationPetRoamingState : uint8_t
+// Enum AthenaAI.EDebugPetStateDescriptor
+enum class EDebugPetStateDescriptor : uint8_t
 {
-	EAthenaAnimationPetRoamingState__Idle = 0,
-	EAthenaAnimationPetRoamingState__Locomotion = 1,
-	EAthenaAnimationPetRoamingState__Unique = 2,
-	EAthenaAnimationPetRoamingState__React = 3,
-	EAthenaAnimationPetRoamingState__Call = 4,
-	EAthenaAnimationPetRoamingState__Concealed = 5,
-	EAthenaAnimationPetRoamingState__FlyCannon = 6,
-	EAthenaAnimationPetRoamingState__Cheer = 7,
-	EAthenaAnimationPetRoamingState__Interested = 8,
-	EAthenaAnimationPetRoamingState__Talking = 9,
-	EAthenaAnimationPetRoamingState__Happy = 10,
-	EAthenaAnimationPetRoamingState__Grumpy = 11,
-	EAthenaAnimationPetRoamingState__Angry = 12,
-	EAthenaAnimationPetRoamingState__Dance = 13,
-	EAthenaAnimationPetRoamingState__Cleaning = 14,
-	EAthenaAnimationPetRoamingState__Exit = 15,
-	EAthenaAnimationPetRoamingState__Arrive = 16,
-	EAthenaAnimationPetRoamingState__Startled = 17,
-	EAthenaAnimationPetRoamingState__Inactive = 18,
-	EAthenaAnimationPetRoamingState__TakingOff = 19,
-	EAthenaAnimationPetRoamingState__Landing = 20,
-	EAthenaAnimationPetRoamingState__Flying = 21,
-	EAthenaAnimationPetRoamingState__Yawn = 22,
-	EAthenaAnimationPetRoamingState__Scared = 23,
-	EAthenaAnimationPetRoamingState__Protective = 24,
-	EAthenaAnimationPetRoamingState__Play = 25,
-	EAthenaAnimationPetRoamingState__Vomit = 26,
-	EAthenaAnimationPetRoamingState__Chew = 27,
-	EAthenaAnimationPetRoamingState__Sneeze = 28,
-	EAthenaAnimationPetRoamingState__Sleep = 29,
-	EAthenaAnimationPetRoamingState__Hangout_A = 30,
-	EAthenaAnimationPetRoamingState__Hangout_B = 31,
-	EAthenaAnimationPetRoamingState__Hangout_C = 32,
-	EAthenaAnimationPetRoamingState__EAthenaAnimationPetRoamingState_MAX = 33
-};
-
-
-// Enum AthenaAI.EAthenaAnimationPetHeldState
-enum class EAthenaAnimationPetHeldState : uint8_t
-{
-	EAthenaAnimationPetHeldState__Idle = 0,
-	EAthenaAnimationPetHeldState__Unique = 1,
-	EAthenaAnimationPetHeldState__Jump = 2,
-	EAthenaAnimationPetHeldState__Locomotion = 3,
-	EAthenaAnimationPetHeldState__Angry = 4,
-	EAthenaAnimationPetHeldState__Underwater = 5,
-	EAthenaAnimationPetHeldState__UnEquip = 6,
-	EAthenaAnimationPetHeldState__Equip = 7,
-	EAthenaAnimationPetHeldState__Inactive = 8,
-	EAthenaAnimationPetHeldState__EAthenaAnimationPetHeldState_MAX = 9
-};
-
-
-// Enum AthenaAI.EAthenaAnimationPetSpawnState
-enum class EAthenaAnimationPetSpawnState : uint8_t
-{
-	EAthenaAnimationPetSpawnState__Null = 0,
-	EAthenaAnimationPetSpawnState__BeingHeld = 1,
-	EAthenaAnimationPetSpawnState__Roaming = 2,
-	EAthenaAnimationPetSpawnState__EAthenaAnimationPetSpawnState_MAX = 3
+	EDebugPetStateDescriptor__NoState = 0,
+	EDebugPetStateDescriptor__Hangout_Docked = 1,
+	EDebugPetStateDescriptor__Hangout_MoveToLocation = 2,
+	EDebugPetStateDescriptor__Reacting = 3,
+	EDebugPetStateDescriptor__Pursuit = 4,
+	EDebugPetStateDescriptor__Idle = 5,
+	EDebugPetStateDescriptor__Follow = 6,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 7
 };
 
 

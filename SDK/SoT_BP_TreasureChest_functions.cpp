@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TreasureChest.BP_TreasureChest_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TreasureChest_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureChest.BP_TreasureChest_C.UserConstructionScript"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

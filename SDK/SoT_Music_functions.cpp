@@ -36,6 +36,38 @@ bool UMusicZoneInterface::CanPlayForPlayer(class AActor* Player)
 }
 
 
+// Function Music.MusicZoneComponent.DisableZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UMusicZoneComponent::DisableZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.DisableZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Music.MusicZoneComponent.ActivateZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UMusicZoneComponent::ActivateZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.ActivateZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Music.AISpawnerMusicZoneComponent.OnRep_SpawnerState
 // (Final, Native, Private)
 

@@ -57,6 +57,102 @@ void ABP_CollectorsChest_Proxy_C::UserConstructionScript()
 }
 
 
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ABP_CollectorsChest_Proxy_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ReceiveBeginPlay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CollectorsChest_Proxy_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ReceiveEndPlay"));
+
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
+	params.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ItemDropped
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FEventWieldableItemDropped EventParam                     (Parm)
+
+void ABP_CollectorsChest_Proxy_C::ItemDropped(const struct FEventWieldableItemDropped& EventParam)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ItemDropped"));
+
+	struct
+	{
+		struct FEventWieldableItemDropped EventParam;
+	} params;
+
+	params.EventParam = EventParam;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.HideWaterOcclusion_RPC
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Visible                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CollectorsChest_Proxy_C::HideWaterOcclusion_RPC(bool Visible)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.HideWaterOcclusion_RPC"));
+
+	struct
+	{
+		bool                           Visible;
+	} params;
+
+	params.Visible = Visible;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ExecuteUbergraph_BP_CollectorsChest_Proxy
+// (HasDefaults)
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CollectorsChest_Proxy_C::ExecuteUbergraph_BP_CollectorsChest_Proxy(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ExecuteUbergraph_BP_CollectorsChest_Proxy"));
+
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
+	params.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

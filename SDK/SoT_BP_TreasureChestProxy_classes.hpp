@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChestProxy.BP_TreasureChestProxy_C
-// 0x0010 (0x09A8 - 0x0998)
+// 0x0010 (0x09C8 - 0x09B8)
 class ABP_TreasureChestProxy_C : public ATreasureChestItemProxy
 {
 public:
-	class UGlintComponent*                             Glint;                                                    // 0x0998(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x09A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGlintComponent*                             Glint;                                                    // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Cooking_enums.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 
 namespace SDK
 {
@@ -38,7 +38,7 @@ struct FCookerSmokeFeedbackEntry
 };
 
 // ScriptStruct Cooking.CookingClientRepresentation
-// 0x0050
+// 0x00B0
 struct FCookingClientRepresentation
 {
 	bool                                               Cooking;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
@@ -48,6 +48,8 @@ struct FCookingClientRepresentation
 	TEnumAsByte<ECookingSmokeFeedbackLevel>            SmokeFeedbackLevel;                                       // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
 	float                                              VisibleCookedExtent;                                      // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FMaterialManipulationSettings               VisibleMaterialSettings;                                  // 0x0050(0x0030)
+	struct FTransform                                  PosedTransform;                                           // 0x0080(0x0030) (IsPlainOldData)
 };
 
 // ScriptStruct Cooking.CookingInfo

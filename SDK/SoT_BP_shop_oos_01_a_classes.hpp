@@ -94,6 +94,7 @@ public:
 	}
 
 
+	void Set_Magic_Box_Hidden(bool Is_Hidden);
 	void UserConstructionScript();
 };
 

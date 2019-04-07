@@ -54,6 +54,9 @@ public:
 		return ptr;
 	}
 
+
+	void DisableZone();
+	void ActivateZone();
 };
 
 

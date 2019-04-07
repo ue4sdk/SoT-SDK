@@ -312,7 +312,7 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x0600 - 0x0600)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:

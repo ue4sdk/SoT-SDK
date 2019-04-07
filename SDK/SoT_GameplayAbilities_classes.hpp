@@ -1344,18 +1344,18 @@ public:
 
 
 // Class GameplayAbilities.GameplayCueManager
-// 0x0140 (0x0168 - 0x0028)
+// 0x0158 (0x0180 - 0x0028)
 class UGameplayCueManager : public UDataAsset
 {
 public:
 	class UGameplayCueSet*                             GlobalCueSet;                                             // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UObjectLibrary*                              GameplayCueNotifyActorObjectLibrary;                      // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UObjectLibrary*                              GameplayCueNotifyStaticObjectLibrary;                     // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FStreamableManager                          StreamableManager;                                        // 0x0040(0x00A8) (Transient)
-	unsigned char                                      UnknownData00[0x60];                                      // 0x00E8(0x0060) MISSED OFFSET
-	TArray<struct FGameplayCuePendingExecute>          PendingExecuteCues;                                       // 0x0148(0x0010) (ZeroConstructor)
-	int                                                GameplayCueSendContextCount;                              // 0x0158(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x015C(0x000C) MISSED OFFSET
+	struct FStreamableManager                          StreamableManager;                                        // 0x0040(0x00C0) (Transient)
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0100(0x0060) MISSED OFFSET
+	TArray<struct FGameplayCuePendingExecute>          PendingExecuteCues;                                       // 0x0160(0x0010) (ZeroConstructor)
+	int                                                GameplayCueSendContextCount;                              // 0x0170(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0174(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

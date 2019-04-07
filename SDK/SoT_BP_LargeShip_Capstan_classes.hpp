@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LargeShip_Capstan.BP_LargeShip_Capstan_C
-// 0x0020 (0x0860 - 0x0840)
+// 0x0020 (0x0868 - 0x0848)
 class ABP_LargeShip_Capstan_C : public ABP_Base_Capstan_C
 {
 public:
-	class UChildActorComponent*                        Arm1;                                                     // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        Arm4;                                                     // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        Arm3;                                                     // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        Arm2;                                                     // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Arm1;                                                     // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Arm4;                                                     // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Arm3;                                                     // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Arm2;                                                     // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -230,6 +230,26 @@ public:
 };
 
 
+// Class Maths.ShapeMathsBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UShapeMathsBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.ShapeMathsBlueprintLibrary"));
+		return ptr;
+	}
+
+
+	static struct FVector FindClosestPointWithinASphere(class USphereComponent* SphereComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinACylinder(class UCapsuleComponent* CylinderComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinACapsule(class UCapsuleComponent* CapsuleComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint);
+};
+
+
 // Class Maths.SphereMaths
 // 0x0000 (0x0028 - 0x0028)
 class USphereMaths : public UBlueprintFunctionLibrary

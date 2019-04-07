@@ -25,6 +25,17 @@ enum class ECookingSmokeFeedbackLevel : uint8_t
 };
 
 
+// Enum Cooking.ECookingState
+enum class ECookingState : uint8_t
+{
+	ECookingState__Raw             = 0,
+	ECookingState__Undercooked     = 1,
+	ECookingState__Cooked          = 2,
+	ECookingState__Burned          = 3,
+	ECookingState__ECookingState_MAX = 4
+};
+
+
 }
 
 #ifdef _MSC_VER

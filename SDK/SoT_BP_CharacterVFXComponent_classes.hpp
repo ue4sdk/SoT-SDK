@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CharacterVFXComponent.BP_CharacterVFXComponent_C
-// 0x02A8 (0x0378 - 0x00D0)
+// 0x0258 (0x0328 - 0x00D0)
 class UBP_CharacterVFXComponent_C : public UCharacterVfxComponent
 {
 public:
@@ -39,10 +39,8 @@ public:
 	float                                              DEBUG_WindToggleTimer;                                    // 0x02C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
 	struct FObjectMessagingHandle                      WindDirectionChangedHandle;                               // 0x02D0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      PlayerDeadHandle;                                         // 0x0318(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UObject*                                     NewVar_1;                                                 // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_particle_underwater_ambient;                          // 0x0368(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_player_underwater_ambient;                            // 0x0370(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_particle_underwater_ambient;                          // 0x0318(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_player_underwater_ambient;                            // 0x0320(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -69,7 +67,6 @@ public:
 	void FallingIntoWaterEvent(const struct FAthena_FFallingIntoWaterEvent& Event);
 	void WaterStateChanged(const struct FEventPlayerViewUnderWaterStateChanged& Under_water_state_changed);
 	void On_Foot_Enter_Water(const struct FEventCharacterFootEnterWater& Enter_Water);
-	void DeadEvent(const struct FEventCharacterDead& EventDead);
 	void ExecuteUbergraph_BP_CharacterVFXComponent(int EntryPoint);
 };
 

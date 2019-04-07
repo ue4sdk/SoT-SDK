@@ -58,12 +58,36 @@ struct FCollectionTotalsLimits
 	int                                                ExpensiveAssetSetMaxTotalMemory;                          // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct StudiosAutomation.CollectionMeshLimitsBase
+// 0x0008
+struct FCollectionMeshLimitsBase
+{
+	int                                                MaxVerts;                                                 // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxMemory;                                                // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StudiosAutomation.CollectionStaticMeshLimits
+// 0x0000 (0x0008 - 0x0008)
+struct FCollectionStaticMeshLimits : public FCollectionMeshLimitsBase
+{
+
+};
+
+// ScriptStruct StudiosAutomation.CollectionSkeleMeshLimits
+// 0x0000 (0x0008 - 0x0008)
+struct FCollectionSkeleMeshLimits : public FCollectionMeshLimitsBase
+{
+
+};
+
 // ScriptStruct StudiosAutomation.CollectionLimits
-// 0x0018
+// 0x0028
 struct FCollectionLimits
 {
 	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimitsArray

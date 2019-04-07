@@ -16,10 +16,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimDataEntryStruct ADS_FacialNative.ADS_FacialNative
-// 0x0080
+// 0x0088
 struct FADS_FacialNative
 {
-	struct FAthenaAnimationFacialAnimData              FacialAnimation_36_028E190C4B060B284C338BBE3834685B;      // 0x0000(0x0080) (Edit, BlueprintVisible)
+	struct FAthenaAnimationFacialAnimData              FacialAnimation_36_028E190C4B060B284C338BBE3834685B;      // 0x0000(0x0088) (Edit, BlueprintVisible)
 };
 
 }

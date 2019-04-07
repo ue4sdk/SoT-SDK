@@ -348,26 +348,6 @@ void UBP_CharacterVFXComponent_C::On_Foot_Enter_Water(const struct FEventCharact
 }
 
 
-// Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.DeadEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FEventCharacterDead     EventDead                      (Parm)
-
-void UBP_CharacterVFXComponent_C::DeadEvent(const struct FEventCharacterDead& EventDead)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.DeadEvent"));
-
-	struct
-	{
-		struct FEventCharacterDead     EventDead;
-	} params;
-
-	params.EventDead = EventDead;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ExecuteUbergraph_BP_CharacterVFXComponent
 // (HasDefaults)
 // Parameters:

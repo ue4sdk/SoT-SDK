@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PetDesc_Monkey_Default.BP_PetDesc_Monkey_Default_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_PetDesc_Monkey_Default_C : public UPetDesc
 {
 public:
