@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwrightSandra_RevengeOfTheMorningstar.BP_ShipwrightSandra_RevengeOfTheMorningstar_C
-// 0x0008 (0x05E8 - 0x05E0)
+// 0x0008 (0x05F0 - 0x05E8)
 class ABP_ShipwrightSandra_RevengeOfTheMorningstar_C : public ABP_Shipwright_C
 {
 public:
-	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

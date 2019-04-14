@@ -332,6 +332,22 @@ void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_Ani
 }
 
 
+// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045
+// (BlueprintEvent)
+
+void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_StartLookat
 // (BlueprintCallable, BlueprintEvent)
 
@@ -434,6 +450,38 @@ void UBP_Anim_NPC_C::AnimNotify_InteractVariantChange()
 void UBP_Anim_NPC_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.BlueprintInitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOn
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_NPCLookAtOn()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOn"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOff
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_NPCLookAtOff()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOff"));
 
 	struct
 	{

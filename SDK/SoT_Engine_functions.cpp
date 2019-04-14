@@ -26689,7 +26689,7 @@ void UDirectionalLightComponent::SetCascadeTransitionFraction(float NewValue)
 
 
 // Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55583,6 +55583,26 @@ void UMaterialInstanceDynamic::SetScalarParameterValue(const struct FName& Param
 }
 
 
+// Function Engine.MaterialInstanceDynamic.MergeParameters
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInstance*       MaterialInstance               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMaterialInstanceDynamic::MergeParameters(class UMaterialInstance* MaterialInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaterialInstanceDynamic.MergeParameters"));
+
+	struct
+	{
+		class UMaterialInstance*       MaterialInstance;
+	} params;
+
+	params.MaterialInstance = MaterialInstance;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.MaterialInstanceDynamic.K2_InterpolateMaterialInstanceParams
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -55685,17 +55705,20 @@ float UMaterialInstanceDynamic::K2_GetScalarParameterValue(const struct FName& P
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*      SourceMaterialToCopyFrom       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOverride                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMaterialInstanceDynamic::K2_CopyMaterialInstanceParameters(class UMaterialInterface* SourceMaterialToCopyFrom)
+void UMaterialInstanceDynamic::K2_CopyMaterialInstanceParameters(class UMaterialInterface* SourceMaterialToCopyFrom, bool bOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaterialInstanceDynamic.K2_CopyMaterialInstanceParameters"));
 
 	struct
 	{
 		class UMaterialInterface*      SourceMaterialToCopyFrom;
+		bool                           bOverride;
 	} params;
 
 	params.SourceMaterialToCopyFrom = SourceMaterialToCopyFrom;
+	params.bOverride = bOverride;
 
 	UObject::ProcessEvent(fn, &params);
 }

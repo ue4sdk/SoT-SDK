@@ -55,6 +55,7 @@ public:
 	}
 
 
+	struct FWwiseEmitter GetEmitter();
 	void DisableZone();
 	void ActivateZone();
 };
@@ -112,11 +113,11 @@ public:
 
 
 // Class Music.MusicZoneService
-// 0x00A8 (0x0548 - 0x04A0)
+// 0x00A8 (0x0550 - 0x04A8)
 class AMusicZoneService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x04A0(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x04A8(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

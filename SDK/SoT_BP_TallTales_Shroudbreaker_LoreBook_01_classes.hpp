@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TallTales_Shroudbreaker_LoreBook_01.BP_TallTales_Shroudbreaker_LoreBook_01_C
-// 0x0018 (0x0578 - 0x0560)
+// 0x0018 (0x0580 - 0x0568)
 class ABP_TallTales_Shroudbreaker_LoreBook_01_C : public AModalInteractionProxy
 {
 public:
-	class UNPCDialogComponent*                         NPCDialog;                                                // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Book;                                                     // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNPCDialogComponent*                         NPCDialog;                                                // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Book;                                                     // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

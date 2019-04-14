@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Crab_ESE.BP_Constellation_Crab_ESE_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04D8 - 0x04D8)
 class ABP_Constellation_Crab_ESE_C : public ABP_Constellation_C
 {
 public:

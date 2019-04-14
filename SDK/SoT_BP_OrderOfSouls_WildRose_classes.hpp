@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OrderOfSouls_WildRose.BP_OrderOfSouls_WildRose_C
-// 0x0008 (0x05B0 - 0x05A8)
+// 0x0008 (0x05B8 - 0x05B0)
 class ABP_OrderOfSouls_WildRose_C : public ABP_Orderofsouls_TallTales_C
 {
 public:
-	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

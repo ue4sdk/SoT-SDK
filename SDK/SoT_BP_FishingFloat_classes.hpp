@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFloat.BP_FishingFloat_C
-// 0x0010 (0x0A40 - 0x0A30)
+// 0x0010 (0x0A50 - 0x0A40)
 class ABP_FishingFloat_C : public AFishingFloat
 {
 public:
-	class UBoxComponent*                               WaterInteractionOverlap;                                  // 0x0A30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0A38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               WaterInteractionOverlap;                                  // 0x0A40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0A48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

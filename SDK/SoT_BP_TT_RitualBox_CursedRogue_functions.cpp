@@ -12,23 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.Set Replaced Madame Olivia Box Hidden
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.Get World OOS Magic Box to Replace
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// bool                           Is_Hidden                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ABP_shop_oos_01_a_C*     Magic_Box_to_Replace           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TT_RitualBox_CursedRogue_C::Set_Replaced_Madame_Olivia_Box_Hidden(bool Is_Hidden)
+void ABP_TT_RitualBox_CursedRogue_C::Get_World_OOS_Magic_Box_to_Replace(class ABP_shop_oos_01_a_C** Magic_Box_to_Replace)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.Set Replaced Madame Olivia Box Hidden"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.Get World OOS Magic Box to Replace"));
 
 	struct
 	{
-		bool                           Is_Hidden;
+		class ABP_shop_oos_01_a_C*     Magic_Box_to_Replace;
 	} params;
 
-	params.Is_Hidden = Is_Hidden;
 
 	UObject::ProcessEvent(fn, &params);
+
+	if (Magic_Box_to_Replace != nullptr)
+		*Magic_Box_to_Replace = params.Magic_Box_to_Replace;
 }
 
 
@@ -43,62 +45,6 @@ void ABP_TT_RitualBox_CursedRogue_C::UserConstructionScript()
 	{
 	} params;
 
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_TT_RitualBox_CursedRogue_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.ReceiveEndPlay"));
-
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
-	params.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void ABP_TT_RitualBox_CursedRogue_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.ReceiveBeginPlay"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.ExecuteUbergraph_BP_TT_RitualBox_CursedRogue
-// ()
-// Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_TT_RitualBox_CursedRogue_C::ExecuteUbergraph_BP_TT_RitualBox_CursedRogue(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TT_RitualBox_CursedRogue.BP_TT_RitualBox_CursedRogue_C.ExecuteUbergraph_BP_TT_RitualBox_CursedRogue"));
-
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
-	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);
 }

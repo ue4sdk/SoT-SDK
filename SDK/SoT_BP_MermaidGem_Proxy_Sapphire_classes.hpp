@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidGem_Proxy_Sapphire.BP_MermaidGem_Proxy_Sapphire_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0868 - 0x0868)
 class ABP_MermaidGem_Proxy_Sapphire_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

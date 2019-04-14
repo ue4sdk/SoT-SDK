@@ -30,7 +30,7 @@ public:
 	}
 
 
-	void OnSetSpawnLocationActor(class AActor* Actor);
+	void TriggerEventProxyBroadcast();
 	void OnSpawn(class APawn* Pawn);
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
 	void OnPickup();

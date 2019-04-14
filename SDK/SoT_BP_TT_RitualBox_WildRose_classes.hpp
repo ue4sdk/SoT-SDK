@@ -15,12 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_RitualBox_WildRose.BP_TT_RitualBox_WildRose_C
-// 0x0028 (0x04D8 - 0x04B0)
+// 0x0020 (0x04E8 - 0x04C8)
 class ABP_TT_RitualBox_WildRose_C : public ABP_TT_RitualBox_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TAssetPtr<class ABP_shop_oos_01_a_C>               Actor_Parent_to_Hide;                                     // 0x04B8(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	TAssetPtr<class ABP_shop_oos_01_a_C>               Actor_Parent_to_Hide;                                     // 0x04C8(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -29,11 +28,8 @@ public:
 	}
 
 
-	void Set_Replaced_Madame_Olive_Box_Hidden(bool Is_Hidden);
+	void Get_World_OOS_Magic_Box_to_Replace(class ABP_shop_oos_01_a_C** Magic_Box_to_Replace);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_TT_RitualBox_WildRose(int EntryPoint);
 };
 
 

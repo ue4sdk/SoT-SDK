@@ -35,6 +35,22 @@ void UBP_Shroudbreaker_MedallionDigEncounter_C::OnDespawn(class APawn* Pawn, TEn
 }
 
 
+// Function BP_Shroudbreaker_MedallionDigEncounter.BP_Shroudbreaker_MedallionDigEncounter_C.OnEnd
+// (Event, Protected, BlueprintEvent)
+
+void UBP_Shroudbreaker_MedallionDigEncounter_C::OnEnd()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_MedallionDigEncounter.BP_Shroudbreaker_MedallionDigEncounter_C.OnEnd"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Shroudbreaker_MedallionDigEncounter.BP_Shroudbreaker_MedallionDigEncounter_C.ExecuteUbergraph_BP_Shroudbreaker_MedallionDigEncounter
 // ()
 // Parameters:

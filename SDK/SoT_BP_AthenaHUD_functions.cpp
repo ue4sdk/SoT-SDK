@@ -12,22 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_AthenaHUD.BP_AthenaHUD_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_AthenaHUD_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AthenaHUD.BP_AthenaHUD_C.UserConstructionScript"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 }
 
 #ifdef _MSC_VER

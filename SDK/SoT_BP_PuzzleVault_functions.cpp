@@ -12,12 +12,32 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_IsMapVisible
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PuzzleVault_C::OnRep_IsMapVisible()
+void ABP_PuzzleVault_C::SetVaultTableTextureVisibility(bool Visibility)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_IsMapVisible"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility"));
+
+	struct
+	{
+		bool                           Visibility;
+	} params;
+
+	params.Visibility = Visibility;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.ToggleVaultTableTextureVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PuzzleVault_C::ToggleVaultTableTextureVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.ToggleVaultTableTextureVisibility"));
 
 	struct
 	{
@@ -25,6 +45,43 @@ void ABP_PuzzleVault_C::OnRep_IsMapVisible()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_IsVaultTableTextureVisible
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_PuzzleVault_C::OnRep_IsVaultTableTextureVisible()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_IsVaultTableTextureVisible"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.GetObjectDisplayName
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText ABP_PuzzleVault_C::GetObjectDisplayName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.GetObjectDisplayName"));
+
+	struct
+	{
+		struct FText                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -34,22 +91,6 @@ void ABP_PuzzleVault_C::OnRep_IsMapVisible()
 void ABP_PuzzleVault_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.UserConstructionScript"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_PuzzleVault.BP_PuzzleVault_C.Multicast ToggleVaultTableVisible
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_PuzzleVault_C::Multicast_ToggleVaultTableVisible()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.Multicast ToggleVaultTableVisible"));
 
 	struct
 	{
@@ -80,28 +121,44 @@ void ABP_PuzzleVault_C::Multicast_SetVaultTableMaterial(class UMaterialInstance*
 }
 
 
-// Function BP_PuzzleVault.BP_PuzzleVault_C.Multicast SetVaultTableIsVisible
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           IsVisible                      (Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_PuzzleVault.BP_PuzzleVault_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void ABP_PuzzleVault_C::Multicast_SetVaultTableIsVisible(bool IsVisible)
+void ABP_PuzzleVault_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.Multicast SetVaultTableIsVisible"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.ReceiveBeginPlay"));
 
 	struct
 	{
-		bool                           IsVisible;
 	} params;
 
-	params.IsVisible = IsVisible;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PuzzleVault_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.ReceiveEndPlay"));
+
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
+	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
 // Function BP_PuzzleVault.BP_PuzzleVault_C.ExecuteUbergraph_BP_PuzzleVault
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

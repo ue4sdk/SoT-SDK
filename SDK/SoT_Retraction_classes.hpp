@@ -14,6 +14,28 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Retraction.RetractableComponent
+// 0x0068 (0x0138 - 0x00D0)
+class URetractableComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x58];                                      // 0x00D0(0x0058) MISSED OFFSET
+	struct FName                                       FeatureToggle;                                            // 0x0128(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                      // 0x0130(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x0133(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               MigrateAttachedWithRetractor;                             // 0x0134(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               WasSimulatingPhysicsBeforeRetract;                        // 0x0135(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0136(0x0002) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Retraction.RetractableComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Retraction.RetractorInterface
 // 0x0000 (0x0028 - 0x0028)
 class URetractorInterface : public UInterface
@@ -53,45 +75,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Retraction.RetractableProviderInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class Retraction.RetractableComponent
-// 0x0068 (0x0138 - 0x00D0)
-class URetractableComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x00D0(0x0058) MISSED OFFSET
-	struct FName                                       FeatureToggle;                                            // 0x0128(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                      // 0x0130(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x0133(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               MigrateAttachedWithRetractor;                             // 0x0134(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               WasSimulatingPhysicsBeforeRetract;                        // 0x0135(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0136(0x0002) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Retraction.RetractableComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class Retraction.RetractableCharacterComponent
-// 0x0018 (0x0150 - 0x0138)
-class URetractableCharacterComponent : public URetractableComponent
-{
-public:
-	class UCharacterMovementComponent*                 OwnerCharacterMovementComponent;                          // 0x0138(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	TScriptInterface<class UDockerInterface>           OwnerDockerInterface;                                     // 0x0140(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Retraction.RetractableCharacterComponent"));
 		return ptr;
 	}
 

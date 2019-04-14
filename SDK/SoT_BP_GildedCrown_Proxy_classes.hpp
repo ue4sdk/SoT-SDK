@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GildedCrown_Proxy.BP_GildedCrown_Proxy_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0868 - 0x0868)
 class ABP_GildedCrown_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

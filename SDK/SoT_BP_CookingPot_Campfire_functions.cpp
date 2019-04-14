@@ -28,6 +28,62 @@ void ABP_CookingPot_Campfire_C::UserConstructionScript()
 }
 
 
+// Function BP_CookingPot_Campfire.BP_CookingPot_Campfire_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ABP_CookingPot_Campfire_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CookingPot_Campfire.BP_CookingPot_Campfire_C.ReceiveBeginPlay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CookingPot_Campfire.BP_CookingPot_Campfire_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CookingPot_Campfire_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CookingPot_Campfire.BP_CookingPot_Campfire_C.ReceiveEndPlay"));
+
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
+	params.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CookingPot_Campfire.BP_CookingPot_Campfire_C.ExecuteUbergraph_BP_CookingPot_Campfire
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CookingPot_Campfire_C::ExecuteUbergraph_BP_CookingPot_Campfire(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CookingPot_Campfire.BP_CookingPot_Campfire_C.ExecuteUbergraph_BP_CookingPot_Campfire"));
+
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
+	params.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

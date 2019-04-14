@@ -36,6 +36,27 @@ bool UMusicZoneInterface::CanPlayForPlayer(class AActor* Player)
 }
 
 
+// Function Music.MusicZoneComponent.GetEmitter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FWwiseEmitter           ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWwiseEmitter UMusicZoneComponent::GetEmitter()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.GetEmitter"));
+
+	struct
+	{
+		struct FWwiseEmitter           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Music.MusicZoneComponent.DisableZone
 // (Final, Native, Public, BlueprintCallable)
 

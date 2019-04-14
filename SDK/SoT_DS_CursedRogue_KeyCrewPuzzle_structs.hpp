@@ -7,7 +7,6 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_CursedRogue_AISpawnParams_classes.hpp"
 
 namespace SDK
 {
@@ -16,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_CursedRogue_KeyCrewPuzzle.DS_CursedRogue_KeyCrewPuzzle
-// 0x0060
+// 0x0008
 struct FDS_CursedRogue_KeyCrewPuzzle
 {
 	class UQuestBookPageBundle*                        Bundle_2_9C1FAE234717012E19748787444617FA;                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FDS_CursedRogue_AISpawnParams               AISpawnParams_8_BE57BD474E45F761250E9182595813E8;         // 0x0008(0x0058) (Edit, BlueprintVisible)
 };
 
 }

@@ -438,7 +438,8 @@ enum class ENetworkFailure : uint8_t
 	ENetworkFailure__InitialConnectionTimeout = 12,
 	ENetworkFailure__PendingConnectionTimeout = 13,
 	ENetworkFailure__PlayerDeemedInactive = 14,
-	ENetworkFailure__ENetworkFailure_MAX = 15
+	ENetworkFailure__CrewMigrationRequested = 15,
+	ENetworkFailure__ENetworkFailure_MAX = 16
 };
 
 

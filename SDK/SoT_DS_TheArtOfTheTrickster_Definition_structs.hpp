@@ -18,7 +18,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_TheArtOfTheTrickster_Definition.DS_TheArtOfTheTrickster_Definition
-// 0x0138
+// 0x01B8
 struct FDS_TheArtOfTheTrickster_Definition
 {
 	TAssetPtr<class AActor>                            CagedSkeletonLocation_38_2F203211491577E63EC160925C2413C8;// 0x0000(0x0020) (Edit, BlueprintVisible)
@@ -33,6 +33,12 @@ struct FDS_TheArtOfTheTrickster_Definition
 	TAssetPtr<class AActor>                            SaltyHandInLocation_54_9A83C89B47953F7939C6FFA3977F49C5;  // 0x00F8(0x0020) (Edit, BlueprintVisible)
 	TArray<struct FDS_Lorebooks>                       LoreBooks_61_1F2C0A7B41C13381634D9581B5016791;            // 0x0118(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FDS_TheArtOfTheTrickster_VaultParams> VaultParams_65_37AD18E24D3A109ADA8CD98AF4DE6817;          // 0x0128(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UVaultPuzzleDataAsset*                       FakeOutVaultDataAsset_75_49994D0F4F050F8580A9DDBC784AFE41;// 0x0138(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UVaultPuzzleDataAsset*                       CombatVaultDataAsset_76_FDDA1F4642EB7EB622CAA9A007826DBA; // 0x0140(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TAssetPtr<class AActor>                            TrapmakersCaveMusicZoneLocation_79_E919C80D4449618EAC8241931883FC8F;// 0x0148(0x0020) (Edit, BlueprintVisible)
+	TArray<class UAISpawner*>                          VaultSpawners_83_66C49EE5427A4502E846ABB34E7D4389;        // 0x0168(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TAssetPtr<class AActor>                            TrapmakersLabMusicZoneLocation_89_FC4C20344E6CE84A1F7C3E89ADFD42EB;// 0x0178(0x0020) (Edit, BlueprintVisible)
+	TAssetPtr<class AActor>                            CaveOfBonesMusicZoneLocation_92_032CEA7146CFDA09B4DFF48C21006AA4;// 0x0198(0x0020) (Edit, BlueprintVisible)
 };
 
 }

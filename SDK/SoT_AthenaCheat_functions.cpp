@@ -5411,12 +5411,12 @@ void UAthenaCheatManager::DisplayLoadingScreenTeleport()
 }
 
 
-// Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenGame
+// Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenBoot
 // (Final, Exec, Native, Public)
 
-void UAthenaCheatManager::DisplayLoadingScreenGame()
+void UAthenaCheatManager::DisplayLoadingScreenBoot()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenGame"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenBoot"));
 
 	struct
 	{
@@ -5427,12 +5427,28 @@ void UAthenaCheatManager::DisplayLoadingScreenGame()
 }
 
 
-// Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenBoot
+// Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenArena
 // (Final, Exec, Native, Public)
 
-void UAthenaCheatManager::DisplayLoadingScreenBoot()
+void UAthenaCheatManager::DisplayLoadingScreenArena()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenBoot"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenArena"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenAdventure
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::DisplayLoadingScreenAdventure()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisplayLoadingScreenAdventure"));
 
 	struct
 	{
@@ -6412,10 +6428,12 @@ void UAthenaCheatManager::AIPlayerShip()
 // bool                           Enabled                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InStartingAmount               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InTargetAmount                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InVengeanceStartingAmount      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InVengeanceTargetAmount        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InDelayBeforeStart             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InBlendDuration                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaCheatManager::AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InDelayBeforeStart, float InBlendDuration)
+void UAthenaCheatManager::AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.AdjustGhostShader"));
 
@@ -6424,6 +6442,8 @@ void UAthenaCheatManager::AdjustGhostShader(bool Enabled, float InStartingAmount
 		bool                           Enabled;
 		float                          InStartingAmount;
 		float                          InTargetAmount;
+		float                          InVengeanceStartingAmount;
+		float                          InVengeanceTargetAmount;
 		float                          InDelayBeforeStart;
 		float                          InBlendDuration;
 	} params;
@@ -6431,6 +6451,8 @@ void UAthenaCheatManager::AdjustGhostShader(bool Enabled, float InStartingAmount
 	params.Enabled = Enabled;
 	params.InStartingAmount = InStartingAmount;
 	params.InTargetAmount = InTargetAmount;
+	params.InVengeanceStartingAmount = InVengeanceStartingAmount;
+	params.InVengeanceTargetAmount = InVengeanceTargetAmount;
 	params.InDelayBeforeStart = InDelayBeforeStart;
 	params.InBlendDuration = InBlendDuration;
 

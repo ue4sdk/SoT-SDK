@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Boar_NE.BP_Constellation_Boar_NE_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04D8 - 0x04D8)
 class ABP_Constellation_Boar_NE_C : public ABP_Constellation_C
 {
 public:

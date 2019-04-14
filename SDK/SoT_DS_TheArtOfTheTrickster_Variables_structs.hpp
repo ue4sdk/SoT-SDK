@@ -17,7 +17,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_TheArtOfTheTrickster_Variables.DS_TheArtOfTheTrickster_Variables
-// 0x00E8
+// 0x0118
 struct FDS_TheArtOfTheTrickster_Variables
 {
 	class AActor*                                      CagedSkeletonLocation_64_F54AAB164656D6A98B75F284133395A0;// 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -43,6 +43,11 @@ struct FDS_TheArtOfTheTrickster_Variables
 	class AActor*                                      AmmoCrateLocation_107_23154AC3410BC63DE412D69509DA4BB2;   // 0x00D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AItemInfo*                                   TotemItemInfo_114_25C4CE52471361B5C13EE085C8011EA0;       // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      LabCollectableNoteItemInfo_117_78503C3E40C71209B8D0AABDBBF85224;// 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      TrapmakersCaveMusicZoneLocation_121_DD8C834644EC59F8EA6A809337DEB3DB;// 0x00E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UAISpawner*>                          VaultSpawners_125_5B9903274F27C1107C32FE805C9179CE;       // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UAISpawner*                                  SelectedVaultSpawner_128_CE1269874DF5466B06994FAF20D3D097;// 0x0100(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      TrapmakersLabMusicZoneLocation_131_EE6E43D444522AA615F784B7CACCA5DA;// 0x0108(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      CaveOfBonesMusicZoneLocation_134_615782524D5877F8A7587FBC92206535;// 0x0110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

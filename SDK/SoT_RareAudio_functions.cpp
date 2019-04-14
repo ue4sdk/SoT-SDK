@@ -12,6 +12,51 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopGlobalEvent
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWwiseEvent*             Event                          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWwiseEmitterBlueprintLibrary::WwiseStopGlobalEvent(class UWwiseEvent* Event, float FadeTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopGlobalEvent"));
+
+	struct
+	{
+		class UWwiseEvent*             Event;
+		float                          FadeTime;
+	} params;
+
+	params.Event = Event;
+	params.FadeTime = FadeTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopAllGlobalEvents
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWwiseEmitterBlueprintLibrary::WwiseStopAllGlobalEvents(float FadeTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopAllGlobalEvents"));
+
+	struct
+	{
+		float                          FadeTime;
+	} params;
+
+	params.FadeTime = FadeTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseSetState
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -64,20 +109,24 @@ void UWwiseEmitterBlueprintLibrary::WwiseSetGlobalRTPC(const struct FName& RTPCN
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UWwiseEvent*             Event                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UWwiseEmitterBlueprintLibrary::WwisePostGlobalEvent(class UWwiseEvent* Event)
+int UWwiseEmitterBlueprintLibrary::WwisePostGlobalEvent(class UWwiseEvent* Event)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostGlobalEvent"));
 
 	struct
 	{
 		class UWwiseEvent*             Event;
+		int                            ReturnValue;
 	} params;
 
 	params.Event = Event;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -118,6 +167,31 @@ int UWwiseEmitterBlueprintLibrary::WwisePostEventAtLocation(class UWwiseEvent* E
 
 	if (Emitter != nullptr)
 		*Emitter = params.Emitter;
+
+	return params.ReturnValue;
+}
+
+
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseIsGlobalEvent
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWwiseEvent*             Event                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWwiseEmitterBlueprintLibrary::WwiseIsGlobalEvent(class UWwiseEvent* Event)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseIsGlobalEvent"));
+
+	struct
+	{
+		class UWwiseEvent*             Event;
+		bool                           ReturnValue;
+	} params;
+
+	params.Event = Event;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

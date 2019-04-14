@@ -197,13 +197,13 @@ public:
 
 
 // Class Interaction.MockActorWithCharacterInteractionComponent
-// 0x00B0 (0x0550 - 0x04A0)
+// 0x00B0 (0x0558 - 0x04A8)
 class AMockActorWithCharacterInteractionComponent : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
-	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x04B0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
+	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x04B8(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -231,15 +231,15 @@ public:
 
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (0x04C8 - 0x04A0)
+// 0x0028 (0x04D0 - 0x04A8)
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
-	class UObject*                                     FocusedInteractable;                                      // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     InteractedObject;                                         // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InteractNotificationType;                                 // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x04C0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
+	class UObject*                                     FocusedInteractable;                                      // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InteractedObject;                                         // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      InteractNotificationType;                                 // 0x04C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x04C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

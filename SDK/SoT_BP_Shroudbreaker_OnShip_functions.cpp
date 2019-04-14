@@ -192,6 +192,46 @@ void ABP_Shroudbreaker_OnShip_C::OnShipDestroyed(const struct FEventShipDestroye
 }
 
 
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnActivateEffects
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FShroudBreakerActivateEffectsEvent Ev                             (Parm)
+
+void ABP_Shroudbreaker_OnShip_C::OnActivateEffects(const struct FShroudBreakerActivateEffectsEvent& Ev)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnActivateEffects"));
+
+	struct
+	{
+		struct FShroudBreakerActivateEffectsEvent Ev;
+	} params;
+
+	params.Ev = Ev;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnDeactivateEffects
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FShroudBreakerDeactivateEffectsEvent Ev                             (Parm)
+
+void ABP_Shroudbreaker_OnShip_C::OnDeactivateEffects(const struct FShroudBreakerDeactivateEffectsEvent& Ev)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnDeactivateEffects"));
+
+	struct
+	{
+		struct FShroudBreakerDeactivateEffectsEvent Ev;
+	} params;
+
+	params.Ev = Ev;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.ExecuteUbergraph_BP_Shroudbreaker_OnShip
 // (HasDefaults)
 // Parameters:

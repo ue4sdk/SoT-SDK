@@ -122,22 +122,22 @@ public:
 
 
 // Class Tethering.Tether
-// 0x0130 (0x05D0 - 0x04A0)
+// 0x0130 (0x05D8 - 0x04A8)
 class ATether : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xF8];                                      // 0x04A0(0x00F8) MISSED OFFSET
-	class USceneComponent*                             TetherPositionAnchorComponent;                            // 0x0598(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            SourcePhysicsHandle;                                      // 0x05A0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            TargetPhysicsHandle;                                      // 0x05A8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UDistanceJointComponent*                     JointComponent;                                           // 0x05B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              SlackCm;                                                  // 0x05B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxLengthWhenGrowing;                                     // 0x05BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x05C0(0x0008) MISSED OFFSET
-	bool                                               HasAttached;                                              // 0x05C8(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               IsSlackEnabled;                                           // 0x05C9(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	TEnumAsByte<ETetherConstrainMode>                  CurrentTetherMode;                                        // 0x05CA(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5];                                       // 0x05CB(0x0005) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xF8];                                      // 0x04A8(0x00F8) MISSED OFFSET
+	class USceneComponent*                             TetherPositionAnchorComponent;                            // 0x05A0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            SourcePhysicsHandle;                                      // 0x05A8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            TargetPhysicsHandle;                                      // 0x05B0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UDistanceJointComponent*                     JointComponent;                                           // 0x05B8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              SlackCm;                                                  // 0x05C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxLengthWhenGrowing;                                     // 0x05C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x05C8(0x0008) MISSED OFFSET
+	bool                                               HasAttached;                                              // 0x05D0(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               IsSlackEnabled;                                           // 0x05D1(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	TEnumAsByte<ETetherConstrainMode>                  CurrentTetherMode;                                        // 0x05D2(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x5];                                       // 0x05D3(0x0005) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

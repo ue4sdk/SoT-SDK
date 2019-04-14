@@ -15,12 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_MedallionDigEncounter.BP_Shroudbreaker_MedallionDigEncounter_C
-// 0x000C (0x00B4 - 0x00A8)
+// 0x000D (0x00B5 - 0x00A8)
 class UBP_Shroudbreaker_MedallionDigEncounter_C : public UBlueprintSpawnAIStepBase
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x00A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	int                                                Killed;                                                   // 0x00B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               MusicPlayed;                                              // 0x00B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,6 +31,7 @@ public:
 
 
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
+	void OnEnd();
 	void ExecuteUbergraph_BP_Shroudbreaker_MedallionDigEncounter(int EntryPoint);
 };
 

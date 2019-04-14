@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_LegendaryTavern.BP_Anim_LegendaryTavern_C
-// 0x0000 (0x1631 - 0x1631)
+// 0x0000 (0x1824 - 0x1824)
 class UBP_Anim_LegendaryTavern_C : public UBP_Anim_NPC_C
 {
 public:

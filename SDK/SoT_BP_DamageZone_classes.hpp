@@ -15,22 +15,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DamageZone.BP_DamageZone_C
-// 0x0058 (0x08C8 - 0x0870)
+// 0x0058 (0x08D8 - 0x0880)
 class ABP_DamageZone_C : public ADamageZone
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0870(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FName                                       Repair_Tag;                                               // 0x0878(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FBP_InternalDamageGroup                     RepairGroup;                                              // 0x0880(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance)
-	int                                                ExternalHitBufferIndex;                                   // 0x0890(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxStoredHits;                                            // 0x0894(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UDecalComponent*>                     Deferred_Decals;                                          // 0x0898(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                Rep_ServerUpdateEventCount;                               // 0x08A8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                ClientUpdateEventCount;                                   // 0x08AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                ExternalDecalBufferIndex;                                 // 0x08B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               HasBeenInitialized;                                       // 0x08B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x08B5(0x0003) MISSED OFFSET
-	TArray<struct FHullDamageHit>                      Rep_ExternalHitList;                                      // 0x08B8(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FName                                       Repair_Tag;                                               // 0x0888(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FBP_InternalDamageGroup                     RepairGroup;                                              // 0x0890(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance)
+	int                                                ExternalHitBufferIndex;                                   // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxStoredHits;                                            // 0x08A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UDecalComponent*>                     Deferred_Decals;                                          // 0x08A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                Rep_ServerUpdateEventCount;                               // 0x08B8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ClientUpdateEventCount;                                   // 0x08BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ExternalDecalBufferIndex;                                 // 0x08C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               HasBeenInitialized;                                       // 0x08C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x08C5(0x0003) MISSED OFFSET
+	TArray<struct FHullDamageHit>                      Rep_ExternalHitList;                                      // 0x08C8(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -137,6 +137,23 @@ public:
 };
 
 
+// Class Tales.TaleQuestGrantRewardStep
+// 0x0038 (0x00A0 - 0x0068)
+class UTaleQuestGrantRewardStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestGrantRewardStepDesc*               Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0070(0x0030) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestGrantRewardStep"));
+		return ptr;
+	}
+
+};
+
+
 // Class Tales.TaleQuestWaitForHandInStep
 // 0x0010 (0x0078 - 0x0068)
 class UTaleQuestWaitForHandInStep : public UTaleQuestStep
@@ -148,6 +165,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestWaitForHandInStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class Tales.TaleQuestGrantRewardStepDesc
+// 0x0020 (0x0050 - 0x0030)
+class UTaleQuestGrantRewardStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FRewardId                                   RewardId;                                                 // 0x0030(0x0008) (Edit)
+	class UClass*                                      Company;                                                  // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       Id;                                                       // 0x0040(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestGrantRewardStepDesc"));
 		return ptr;
 	}
 

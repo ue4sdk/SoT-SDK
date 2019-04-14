@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Shroudbreaker_MedallionLockMechanism.BP_Shroudbreaker_MedallionLockMechanism_C.PlayVFXByIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            VFXIndex                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Shroudbreaker_MedallionLockMechanism_C::PlayVFXByIndex(int VFXIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_MedallionLockMechanism.BP_Shroudbreaker_MedallionLockMechanism_C.PlayVFXByIndex"));
+
+	struct
+	{
+		int                            VFXIndex;
+	} params;
+
+	params.VFXIndex = VFXIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Shroudbreaker_MedallionLockMechanism.BP_Shroudbreaker_MedallionLockMechanism_C.InitialiseVariables
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:

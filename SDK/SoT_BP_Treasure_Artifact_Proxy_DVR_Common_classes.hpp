@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_DVR_Common.BP_Treasure_Artifact_Proxy_DVR_Common_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0868 - 0x0868)
 class ABP_Treasure_Artifact_Proxy_DVR_Common_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

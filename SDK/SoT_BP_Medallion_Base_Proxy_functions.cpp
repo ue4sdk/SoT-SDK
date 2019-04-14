@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Medallion_Base_Proxy.BP_Medallion_Base_Proxy_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Medallion_Base_Proxy_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Medallion_Base_Proxy.BP_Medallion_Base_Proxy_C.UserConstructionScript"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

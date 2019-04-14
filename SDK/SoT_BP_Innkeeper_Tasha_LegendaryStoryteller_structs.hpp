@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_Innkeeper_classes.hpp"
+#include "SoT_BP_Orderofsouls_TallTales_classes.hpp"
 
 namespace SDK
 {

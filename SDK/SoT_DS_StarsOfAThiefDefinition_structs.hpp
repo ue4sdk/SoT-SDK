@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_StarsOfAThiefPairsPuzzles_classes.hpp"
 #include "SoT_DS_StarsOfAThief_VaultParams_classes.hpp"
+#include "SoT_DS_StarsOfAThiefPairsPuzzles_classes.hpp"
 #include "SoT_DS_StarsOfAThiefPuzzle_classes.hpp"
 #include "SoT_DS_Lorebooks_classes.hpp"
 
@@ -19,7 +19,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_StarsOfAThiefDefinition.DS_StarsOfAThiefDefinition
-// 0x00F0
+// 0x0130
 struct FDS_StarsOfAThiefDefinition
 {
 	TArray<class UClass*>                              AncientGems_44_F7C6645541D77186C51CD49ACFDE8490;          // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -32,6 +32,8 @@ struct FDS_StarsOfAThiefDefinition
 	TAssetPtr<class AActor>                            NPCLocation_69_497923BB48D68440D9453A82B6AB5483;          // 0x00B0(0x0020) (Edit, BlueprintVisible)
 	TArray<struct FDS_StarsOfAThief_VaultParams>       VaultParams_81_F60C06F44CDCE098FE439F868904CECE;          // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FDS_Lorebooks>                       Lorebooks_85_6183A12E48EA4AAE09A4FBA355C10921;            // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TAssetPtr<class AActor>                            StatueTrigger_88_C43F48AB46316AC0A4F425870CA14B61;        // 0x00F0(0x0020) (Edit, BlueprintVisible)
+	TAssetPtr<class AActor>                            Statue_92_6257D89E4175E5DCFFB578A6F8089C06;               // 0x0110(0x0020) (Edit, BlueprintVisible)
 };
 
 }

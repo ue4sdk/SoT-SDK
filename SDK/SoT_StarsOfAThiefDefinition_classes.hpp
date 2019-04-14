@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StarsOfAThiefDefinition.StarsOfAThiefDefinition_C
-// 0x0100 (0x0128 - 0x0028)
+// 0x0140 (0x0168 - 0x0028)
 class UStarsOfAThiefDefinition_C : public UTaleQuestDefinition
 {
 public:
-	struct FDS_StarsOfAThiefDefinition                 Definition;                                               // 0x0028(0x00F0) (Edit, BlueprintVisible)
-	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UQuestBookPageBundle*                        VaultMapBundle;                                           // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FDS_StarsOfAThiefDefinition                 Definition;                                               // 0x0028(0x0130) (Edit, BlueprintVisible)
+	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x0158(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UQuestBookPageBundle*                        LocateReefBundle;                                         // 0x0160(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

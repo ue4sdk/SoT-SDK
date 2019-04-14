@@ -7,6 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -15,7 +16,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_WildRoseVariables.DS_WildRoseVariables
-// 0x0090
+// 0x00D0
 struct FDS_WildRoseVariables
 {
 	class AActor*                                      ChestOfMemories_3_5352516349744CAE7AFC3A8C0E874560;       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -33,6 +34,10 @@ struct FDS_WildRoseVariables
 	class AActor*                                      EnchantmentPlaceableReaction_57_3640130C486FA5D81BE51CB9F111293D;// 0x0078(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      EndingPlaceableReaction_60_00E4C5AD4CEF17A0970DCA9D18C14853;// 0x0080(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AAthenaPlayerCharacter*                      CompassCollector_63_27BF65824A36B67CB11FA196A5388E1A;     // 0x0088(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RookeEncounterSelectionPos_66_7FD50B73407DA2B32EFCE680E050A95D;// 0x0090(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	TArray<TAssetPtr<class AActor>>                    RookeEncounterLocations_77_5729DE14445550B4D6154A9FCDD08A90;// 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TAssetPtr<class AActor>                            RookeEncounterSpawnLocation_80_7107236246EDEDB5BB107AB35FC3CA70;// 0x00B0(0x0020) (Edit, BlueprintVisible)
 };
 
 }

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SOT_World_layout_2_Sea_Rocks.SOT_World_layout_2_Sea_Rocks_C
-// 0x0000 (0x04A8 - 0x04A8)
+// 0x0000 (0x04B0 - 0x04B0)
 class ASOT_World_layout_2_Sea_Rocks_C : public ALevelScriptActor
 {
 public:

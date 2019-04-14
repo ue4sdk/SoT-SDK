@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StarsOfAThiefDefinitionDev.StarsOfAThiefDefinitionDev_C
-// 0x0120 (0x0148 - 0x0028)
+// 0x0160 (0x0188 - 0x0028)
 class UStarsOfAThiefDefinitionDev_C : public UObject
 {
 public:
-	struct FDS_StarsOfAThiefDefinition                 Definition;                                               // 0x0028(0x00F0) (Edit, BlueprintVisible)
-	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<TAssetPtr<class AActor>>                    Actors;                                                   // 0x0120(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FName>                               Islands;                                                  // 0x0130(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UQuestBookPageBundle*                        VaultMapBundle;                                           // 0x0140(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FDS_StarsOfAThiefDefinition                 Definition;                                               // 0x0028(0x0130) (Edit, BlueprintVisible)
+	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x0158(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<TAssetPtr<class AActor>>                    Actors;                                                   // 0x0160(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               Islands;                                                  // 0x0170(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UQuestBookPageBundle*                        LocateReefBundle;                                         // 0x0180(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

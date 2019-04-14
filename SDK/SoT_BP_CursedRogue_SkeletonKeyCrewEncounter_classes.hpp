@@ -29,6 +29,7 @@ public:
 	}
 
 
+	void TriggerEventProxyBroadcast();
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
 	void ItemPickedUp();
 	void OnSpawn(class APawn* Pawn);

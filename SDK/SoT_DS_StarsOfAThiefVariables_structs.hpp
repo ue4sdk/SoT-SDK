@@ -7,6 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_DS_StarsOfAThief_VaultParams_classes.hpp"
 #include "SoT_DS_StarsOfAThiefPairsPuzzles_classes.hpp"
 
 namespace SDK
@@ -16,7 +17,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_StarsOfAThiefVariables.DS_StarsOfAThiefVariables
-// 0x00A0
+// 0x0108
 struct FDS_StarsOfAThiefVariables
 {
 	class AActor*                                      BriggsyChest_68_0FC5B9984D2990D23EB05F96BBA380CE;         // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -33,6 +34,12 @@ struct FDS_StarsOfAThiefVariables
 	struct FDS_StarsOfAThiefPairsPuzzles               SelectedPuzzlePair_98_6FD1BAB243E67A08D20C94A3D44F41A3;   // 0x0070(0x0020) (Edit, BlueprintVisible)
 	class AActor*                                      VaultRef_103_4DAE409F49D5CAE65DE2E3914B8350DD;            // 0x0090(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AAthenaPlayerCharacter*                      SpyglassCollector_109_F19C0E0D4087CAE9D37C4CBFB40BFB4A;   // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      StatueTrigger_113_515633C04AC525EF1E088C9B99AF8288;       // 0x00A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      StatueMechanism_116_F039D28948D5F0D51CC598AB91A1E297;     // 0x00A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UQuestBookPageBundle*                        VaultPages_119_2079B9B0464FB89BFFB4839461BD8764;          // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TAssetPtr<class AActor>                            VaultAssetID_122_D91C44DE4AF1A77F5BC837943C19EEA4;        // 0x00B8(0x0020) (Edit, BlueprintVisible)
+	struct FDS_StarsOfAThief_VaultParams               AllocatedVaultParams_125_ED4B489C408DB8097D35E4B86E8769E5;// 0x00D8(0x0028) (Edit, BlueprintVisible)
+	class AActor*                                      StarGem_129_1736228149C9E80498F6C28B7FF3203A;             // 0x0100(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

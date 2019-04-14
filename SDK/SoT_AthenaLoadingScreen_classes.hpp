@@ -80,13 +80,14 @@ public:
 
 
 // Class AthenaLoadingScreen.AthenaLoadingScreenParams
-// 0x0030 (0x0068 - 0x0038)
+// 0x0040 (0x0078 - 0x0038)
 class UAthenaLoadingScreenParams : public UDeveloperSettings
 {
 public:
 	struct FStringAssetReference                       BootLoadingScreen;                                        // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringAssetReference                       TeleportLoadingScreen;                                    // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       GameLoadingScreens;                                       // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       AdventureLoadingScreens;                                  // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       ArenaLoadingScreens;                                      // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

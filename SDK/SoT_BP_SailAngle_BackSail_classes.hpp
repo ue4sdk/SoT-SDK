@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailAngle_BackSail.BP_SailAngle_BackSail_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08D8 - 0x08D8)
 class ABP_SailAngle_BackSail_C : public ABP_SailAngle_C
 {
 public:

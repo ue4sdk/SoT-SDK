@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CursedRogue_SkeletonKeyCrewEncounter.BP_CursedRogue_SkeletonKeyCrewEncounter_C.TriggerEventProxyBroadcast
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_CursedRogue_SkeletonKeyCrewEncounter_C::TriggerEventProxyBroadcast()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CursedRogue_SkeletonKeyCrewEncounter.BP_CursedRogue_SkeletonKeyCrewEncounter_C.TriggerEventProxyBroadcast"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_CursedRogue_SkeletonKeyCrewEncounter.BP_CursedRogue_SkeletonKeyCrewEncounter_C.OnDespawn
 // (Event, Protected, BlueprintEvent)
 // Parameters:

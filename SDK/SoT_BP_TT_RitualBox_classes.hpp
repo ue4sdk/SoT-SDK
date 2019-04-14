@@ -15,12 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_RitualBox.BP_TT_RitualBox_C
-// 0x0010 (0x04B0 - 0x04A0)
+// 0x0020 (0x04C8 - 0x04A8)
 class ABP_TT_RitualBox_C : public AActor
 {
 public:
-	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                            RehideSphere;                                             // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +31,13 @@ public:
 	}
 
 
+	void Set_Replaced_World_OOS_Magic_Box_Hidden(bool Is_Hidden);
+	void Get_World_OOS_Magic_Box_to_Replace(class ABP_shop_oos_01_a_C** Magic_Box_to_Replace);
 	void UserConstructionScript();
+	void BndEvt__RehideSphere_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ExecuteUbergraph_BP_TT_RitualBox(int EntryPoint);
 };
 
 

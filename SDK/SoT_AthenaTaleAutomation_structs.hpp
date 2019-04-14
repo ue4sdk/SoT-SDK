@@ -7,6 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Tales_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 

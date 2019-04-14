@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Innkeeper_Tasha_LegendaryStoryteller.BP_Innkeeper_Tasha_LegendaryStoryteller_C
-// 0x0008 (0x05F0 - 0x05E8)
-class ABP_Innkeeper_Tasha_LegendaryStoryteller_C : public ABP_Innkeeper_C
+// 0x0008 (0x05B8 - 0x05B0)
+class ABP_Innkeeper_Tasha_LegendaryStoryteller_C : public ABP_Orderofsouls_TallTales_C
 {
 public:
-	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

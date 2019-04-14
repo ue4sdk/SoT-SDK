@@ -318,8 +318,9 @@ public:
 	void DisplayServersideHitsAtPlayerPos(uint32_t NumSamplesPerDimension, float DistanceBetweenSamples, float TestHeight);
 	void DisplayNonVagueNonUniqueLandmarksForIsland(bool Enabled);
 	void DisplayLoadingScreenTeleport();
-	void DisplayLoadingScreenGame();
 	void DisplayLoadingScreenBoot();
+	void DisplayLoadingScreenArena();
+	void DisplayLoadingScreenAdventure();
 	void DisplayLandmarkValidTreasureLocationsForPlayer();
 	void DisplayLandmarkRegions();
 	void DisplayLandmarkNames();
@@ -373,7 +374,7 @@ public:
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
 	void AllowTeleportWithItems(bool CanTeleport);
 	void AIPlayerShip();
-	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InDelayBeforeStart, float InBlendDuration);
+	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex);

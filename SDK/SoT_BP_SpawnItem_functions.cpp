@@ -32,22 +32,6 @@ void UBP_SpawnItem_C::OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode)
 }
 
 
-// Function BP_SpawnItem.BP_SpawnItem_C.OnItemPickedUp
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_SpawnItem_C::OnItemPickedUp()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SpawnItem.BP_SpawnItem_C.OnItemPickedUp"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_SpawnItem.BP_SpawnItem_C.ExecuteUbergraph_BP_SpawnItem
 // (HasDefaults)
 // Parameters:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_MermaidQueen_NNE.BP_Constellation_MermaidQueen_NNE_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04D8 - 0x04D8)
 class ABP_Constellation_MermaidQueen_NNE_C : public ABP_Constellation_C
 {
 public:

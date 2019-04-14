@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MapTableControlPoint.BP_MapTableControlPoint_C
-// 0x0000 (0x0600 - 0x0600)
+// 0x0000 (0x0608 - 0x0608)
 class ABP_MapTableControlPoint_C : public AMapTableControlPoint
 {
 public:

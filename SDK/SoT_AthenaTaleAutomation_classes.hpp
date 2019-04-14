@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaTaleAutomation.TaleQuestAutomationService
-// 0x0198 (0x01D8 - 0x0040)
+// 0x0188 (0x01C8 - 0x0040)
 class UTaleQuestAutomationService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x0040(0x00C0) MISSED OFFSET
-	class AAthenaPlayerCharacter*                      Puppet;                                                   // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AAthenaPlayerController*                     PuppetController;                                         // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC8];                                      // 0x0110(0x00C8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0040(0x00B8) MISSED OFFSET
+	class AVoyageAutomationPuppet*                     Puppet;                                                   // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AAthenaPlayerController*                     PuppetController;                                         // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC0];                                      // 0x0108(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -507,12 +507,11 @@ public:
 
 
 // Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetStep
-// 0x0018 (0x0080 - 0x0068)
+// 0x0020 (0x0088 - 0x0068)
 class UTaleQuestAutomationTeleportPuppetStep : public UTaleQuestAutomationStep
 {
 public:
-	class UTaleQuestAutomationTeleportPuppetStepDesc*  Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0070(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -606,16 +605,33 @@ public:
 };
 
 
-// Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetStepDesc
+// Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetToLocationStepDesc
 // 0x0010 (0x0040 - 0x0030)
-class UTaleQuestAutomationTeleportPuppetStepDesc : public UTaleQuestStepDesc
+class UTaleQuestAutomationTeleportPuppetToLocationStepDesc : public UTaleQuestStepDesc
 {
 public:
 	struct FQuestVariableActor                         Destination;                                              // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetStepDesc"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetToLocationStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetToPositionStepDesc
+// 0x0010 (0x0040 - 0x0030)
+class UTaleQuestAutomationTeleportPuppetToPositionStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FVector                                     Destination;                                              // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationTeleportPuppetToPositionStepDesc"));
 		return ptr;
 	}
 

@@ -33,11 +33,11 @@ public:
 
 
 // Class TestUtilities.MockControllerWithMessagingDispatcher
-// 0x00A8 (0x05A8 - 0x0500)
+// 0x00A8 (0x05B0 - 0x0508)
 class AMockControllerWithMessagingDispatcher : public AController
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0500(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0508(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -65,11 +65,11 @@ public:
 
 
 // Class TestUtilities.ObjectCollectorGameState
-// 0x0060 (0x0558 - 0x04F8)
+// 0x0060 (0x0560 - 0x0500)
 class AObjectCollectorGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x04F8(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0500(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -96,7 +96,7 @@ public:
 
 
 // Class TestUtilities.TestActor
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0000 (0x04A8 - 0x04A8)
 class ATestActor : public AActor
 {
 public:
@@ -111,11 +111,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithCapsule
-// 0x0008 (0x04A8 - 0x04A0)
+// 0x0008 (0x04B0 - 0x04A8)
 class ATestActorWithCapsule : public AActor
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x04A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -127,11 +127,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithObjectMessagingDispatcher
-// 0x00A8 (0x0548 - 0x04A0)
+// 0x00A8 (0x0550 - 0x04A8)
 class ATestActorWithObjectMessagingDispatcher : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x04A0(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x04A8(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -173,11 +173,11 @@ public:
 
 
 // Class TestUtilities.TestPawnWithCapsule
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0518 - 0x0510)
 class ATestPawnWithCapsule : public APawn
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x0508(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0510(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

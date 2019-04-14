@@ -29,7 +29,6 @@ public:
 
 
 	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
-	void OnItemPickedUp();
 	void ExecuteUbergraph_BP_SpawnItem(int EntryPoint);
 };
 

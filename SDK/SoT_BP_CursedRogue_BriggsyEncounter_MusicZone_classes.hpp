@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CursedRogue_BriggsyEncounter_MusicZone.BP_CursedRogue_BriggsyEncounter_MusicZone_C
-// 0x0010 (0x04B0 - 0x04A0)
+// 0x0010 (0x04B8 - 0x04A8)
 class ABP_CursedRogue_BriggsyEncounter_MusicZone_C : public AActor
 {
 public:
-	class UMusicZoneComponent*                         AnticipationMusicZone;                                    // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAISpawnerMusicZoneComponent*                AISpawnerMusicZone;                                       // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMusicZoneComponent*                         AnticipationMusicZone;                                    // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAISpawnerMusicZoneComponent*                AISpawnerMusicZone;                                       // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -80,14 +80,22 @@ struct FCollectionSkeleMeshLimits : public FCollectionMeshLimitsBase
 
 };
 
+// ScriptStruct StudiosAutomation.CollectionAnimSequenceLimits
+// 0x0004
+struct FCollectionAnimSequenceLimits
+{
+	int                                                MaxMemory;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct StudiosAutomation.CollectionLimits
-// 0x0028
+// 0x002C
 struct FCollectionLimits
 {
 	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
 	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FCollectionAnimSequenceLimits               AnimLimits;                                               // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimitsArray

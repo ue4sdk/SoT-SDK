@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Base.BP_FishingFish_Base_C
-// 0x0010 (0x0A90 - 0x0A80)
+// 0x0010 (0x0AA0 - 0x0A90)
 class ABP_FishingFish_Base_C : public AFishingFish
 {
 public:
-	class UBoxComponent*                               WaterInteractionOverlap;                                  // 0x0A80(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0A88(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               WaterInteractionOverlap;                                  // 0x0A90(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0A98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,14 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TheArtOfTheTricksterDefinition.TheArtOfTheTricksterDefinition_C
-// 0x0150 (0x0178 - 0x0028)
+// 0x01C8 (0x01F0 - 0x0028)
 class UTheArtOfTheTricksterDefinition_C : public UObject
 {
 public:
-	struct FDS_TheArtOfTheTrickster_Definition         Definition;                                               // 0x0028(0x0138) (Edit, BlueprintVisible)
-	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x0160(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAISpawner*                                  TrapmakersLabSpawner;                                     // 0x0168(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAISpawner*                                  VaultSpawner;                                             // 0x0170(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FDS_TheArtOfTheTrickster_Definition         Definition;                                               // 0x0028(0x01B8) (Edit, BlueprintVisible)
+	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x01E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAISpawner*                                  TrapmakersLabSpawner;                                     // 0x01E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

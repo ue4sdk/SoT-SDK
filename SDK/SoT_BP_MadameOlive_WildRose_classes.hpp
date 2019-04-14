@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_MadameOlive_WildRose.BP_MadameOlive_WildRose_C
-// 0x000F (0x1640 - 0x1631)
+// 0x000C (0x1830 - 0x1824)
 class UBP_MadameOlive_WildRose_C : public UBP_Anim_NPC_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x1631(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1638(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x1824(0x0004) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1828(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

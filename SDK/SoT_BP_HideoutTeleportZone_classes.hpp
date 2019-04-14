@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C
-// 0x0000 (0x04E8 - 0x04E8)
+// 0x0000 (0x04F0 - 0x04F0)
 class ABP_HideoutTeleportZone_C : public AHideoutEntrance
 {
 public:

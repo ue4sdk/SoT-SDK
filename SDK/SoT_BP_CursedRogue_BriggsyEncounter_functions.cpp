@@ -12,21 +12,17 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_CursedRogue_BriggsyEncounter.BP_CursedRogue_BriggsyEncounter_C.OnSetSpawnLocationActor
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_CursedRogue_BriggsyEncounter.BP_CursedRogue_BriggsyEncounter_C.TriggerEventProxyBroadcast
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBP_CursedRogue_BriggsyEncounter_C::OnSetSpawnLocationActor(class AActor* Actor)
+void UBP_CursedRogue_BriggsyEncounter_C::TriggerEventProxyBroadcast()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CursedRogue_BriggsyEncounter.BP_CursedRogue_BriggsyEncounter_C.OnSetSpawnLocationActor"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CursedRogue_BriggsyEncounter.BP_CursedRogue_BriggsyEncounter_C.TriggerEventProxyBroadcast"));
 
 	struct
 	{
-		class AActor*                  Actor;
 	} params;
 
-	params.Actor = Actor;
 
 	UObject::ProcessEvent(fn, &params);
 }

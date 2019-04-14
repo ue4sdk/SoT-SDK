@@ -139,33 +139,27 @@ void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoStat
 // Function NaturalDisasters.Volcano.Multicast_FireProjectile
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
 // Parameters:
-// class UClass*                  ProjectileType                 (Parm, ZeroConstructor, IsPlainOldData)
+// int                            WeightedVolcanoProjectileIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 LaunchVelocity                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 RotationRate                   (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ProjectileGravityScale         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEvent*             LaunchAudioPlayEvent           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AVolcano::Multicast_FireProjectile(class UClass* ProjectileType, const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity, const struct FVector& RotationRate, float ProjectileGravityScale, class UWwiseEvent* LaunchAudioPlayEvent)
+void AVolcano::Multicast_FireProjectile(int WeightedVolcanoProjectileIndex, const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity, const struct FVector& RotationRate)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Volcano.Multicast_FireProjectile"));
 
 	struct
 	{
-		class UClass*                  ProjectileType;
+		int                            WeightedVolcanoProjectileIndex;
 		struct FVector                 AuthoritySpawnLocation;
 		struct FVector                 LaunchVelocity;
 		struct FVector                 RotationRate;
-		float                          ProjectileGravityScale;
-		class UWwiseEvent*             LaunchAudioPlayEvent;
 	} params;
 
-	params.ProjectileType = ProjectileType;
+	params.WeightedVolcanoProjectileIndex = WeightedVolcanoProjectileIndex;
 	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
 	params.LaunchVelocity = LaunchVelocity;
 	params.RotationRate = RotationRate;
-	params.ProjectileGravityScale = ProjectileGravityScale;
-	params.LaunchAudioPlayEvent = LaunchAudioPlayEvent;
 
 	UObject::ProcessEvent(fn, &params);
 }

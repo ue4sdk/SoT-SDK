@@ -17,7 +17,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_RevengeOfTheMorningstar_Variables.DS_RevengeOfTheMorningstar_Variables
-// 0x00F0
+// 0x0158
 struct FDS_RevengeOfTheMorningstar_Variables
 {
 	class AActor*                                      NoteSpawnLocation_17_0F1E0FDB41578EF4C0D3EFB1ECD3BCD8;    // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -34,7 +34,22 @@ struct FDS_RevengeOfTheMorningstar_Variables
 	class AActor*                                      NPCTracy_71_C90128CF497E5CDCFD984DA8E2B253F6;             // 0x0050(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      NPCTyler_74_9C885F374644846244727F8B1D336820;             // 0x0058(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AItemInfo*                                   ShroudbreakerGem_84_370DF2734E671BB452D54A8A293C3CC4;     // 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FDS_RevengeOfTheMorningstar_Graymarrow_SpawnParams GreyMarrowSpawnParams_87_9F6060624098B9C11F4B8F8451347B87;// 0x0068(0x0088) (Edit, BlueprintVisible)
+	struct FDS_RevengeOfTheMorningstar_Graymarrow_SpawnParams GreyMarrowSpawnParams_87_9F6060624098B9C11F4B8F8451347B87;// 0x0068(0x0050) (Edit, BlueprintVisible)
+	TArray<TAssetPtr<class AActor>>                    GrayMarrowPossibleLocations_92_5C007C2A427A2250765DA884000302C1;// 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                AISpawnIndex_95_E56E34B9416FD922766A0BB09D61FF51;         // 0x00C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
+	TArray<class UAISpawner*>                          RawboneSpawners_103_C70F2A9C4DE25A63CA3233A5B27C2E50;     // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UAISpawner*>                          SkullSpawners_104_BF21BD774E3242648FDC8881C80AD8E6;       // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UAISpawner*>                          ThickskullSpawners_108_73C42CC043893CABC6303EA481ACCFBC;  // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UAISpawner*>                          DouglasSpawners_112_39765C434A17EFDFD5F771A5B4654D78;     // 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UAISpawner*>                          GraymarrowSpawners_116_C3876FED4DC1EB510C7FDDB6CE7AEA60;  // 0x0110(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UAISpawner*                                  ChosenRawboneSpawner_119_AA88C57A420CB01BAC67D2BF2F277D53;// 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAISpawner*                                  ChosenSkullSpawner_122_6E37CBB441E6B759F043808D77422E5E;  // 0x0128(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAISpawner*                                  ChosenThickskullSpawner_132_8721174444CA48B4CA1B37B9EBB1ACEE;// 0x0130(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAISpawner*                                  ChosenDouglasSpawner_133_9C259036409E61964D21BB9B4E818E9E;// 0x0138(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAISpawner*                                  ChosenGraymarrowSpawner_131_74EAB3BC45B5C108A89E6790FD72C4C2;// 0x0140(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ABP_RevengeOfTheMorningstar_TrinketTrackerProxy_C* TrinketTrackerProxy_136_BC272DDC480565A68EC15C8738100F40; // 0x0148(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Shipwreck_MusicZone_141_88269B9244AD27E43CF0FF81909E79C7; // 0x0150(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }
