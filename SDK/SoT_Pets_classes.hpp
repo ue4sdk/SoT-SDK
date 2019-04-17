@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Pets.AIPetsOnDemandSpawner
-// 0x0000 (0x0318 - 0x0318)
+// 0x0000 (0x0340 - 0x0340)
 class UAIPetsOnDemandSpawner : public UAISpawner
 {
 public:

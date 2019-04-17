@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Music.MusicZoneInterface.CanPlayForPlayer
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class AActor*                  Player                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

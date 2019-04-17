@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Cooking_enums.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
 namespace SDK
@@ -66,25 +66,25 @@ struct FCookingInfo
 };
 
 // ScriptStruct Cooking.CookEndTelemetryEvent
-// 0x0028
+// 0x0030
 struct FCookEndTelemetryEvent
 {
-	struct FName                                       ItemName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECookingState>                         CookState;                                                // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-	struct FVector                                     Location;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CookId;                                                   // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      ItemName;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	TEnumAsByte<ECookingState>                         CookState;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	struct FVector                                     Location;                                                 // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CookId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Cooking.CookStartTelemetryEvent
-// 0x0028
+// 0x0030
 struct FCookStartTelemetryEvent
 {
-	struct FName                                       ItemName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECookingState>                         CookState;                                                // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-	struct FVector                                     Location;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CookId;                                                   // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      ItemName;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	TEnumAsByte<ECookingState>                         CookState;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	struct FVector                                     Location;                                                 // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CookId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -2514,6 +2514,15 @@ enum class ESelectionPolicy : uint8_t
 };
 
 
+// Enum Athena.EAISpawnerShutdownPolicy
+enum class EAISpawnerShutdownPolicy : uint8_t
+{
+	EAISpawnerShutdownPolicy__SpawnerShutsDownWhenPlayersNoLongerTracked = 0,
+	EAISpawnerShutdownPolicy__SpawnerShutsDownWhenStepEnd = 1,
+	EAISpawnerShutdownPolicy__EAISpawnerShutdownPolicy_MAX = 2
+};
+
+
 // Enum Athena.EAILifeTimePolicy
 enum class EAILifeTimePolicy : uint8_t
 {
@@ -3025,6 +3034,36 @@ enum class ECharacterType : uint8_t
 };
 
 
+// Enum Athena.EPlayerStatsOperator
+enum class EPlayerStatsOperator : uint8_t
+{
+	EPlayerStatsOperator__Sum      = 0,
+	EPlayerStatsOperator__Replace  = 1,
+	EPlayerStatsOperator__Minimum  = 2,
+	EPlayerStatsOperator__Maximum  = 3,
+	EPlayerStatsOperator__EPlayerStatsOperator_MAX = 4
+};
+
+
+// Enum Athena.EPlayerStatsType
+enum class EPlayerStatsType : uint8_t
+{
+	EPlayerStatsType__Int          = 0,
+	EPlayerStatsType__Double       = 1,
+	EPlayerStatsType__EPlayerStatsType_MAX = 2
+};
+
+
+// Enum Athena.EVfxRegion
+enum class EVfxRegion : uint8_t
+{
+	EVfxRegion__None               = 0,
+	EVfxRegion__ShipExterior       = 1,
+	EVfxRegion__ShipInterior       = 2,
+	EVfxRegion__EVfxRegion_MAX     = 3
+};
+
+
 // Enum Athena.EActionDisplayPriority
 enum class EActionDisplayPriority : uint8_t
 {
@@ -3076,16 +3115,6 @@ enum class ETelemetryPlatformId : uint8_t
 };
 
 
-// Enum Athena.EVfxRegion
-enum class EVfxRegion : uint8_t
-{
-	EVfxRegion__None               = 0,
-	EVfxRegion__ShipExterior       = 1,
-	EVfxRegion__ShipInterior       = 2,
-	EVfxRegion__EVfxRegion_MAX     = 3
-};
-
-
 // Enum Athena.ERewardType
 enum class ERewardType : uint8_t
 {
@@ -3097,26 +3126,6 @@ enum class ERewardType : uint8_t
 	ERewardType__Emblem            = 5,
 	ERewardType__Achievement       = 6,
 	ERewardType__ERewardType_MAX   = 7
-};
-
-
-// Enum Athena.EPlayerStatsOperator
-enum class EPlayerStatsOperator : uint8_t
-{
-	EPlayerStatsOperator__Sum      = 0,
-	EPlayerStatsOperator__Replace  = 1,
-	EPlayerStatsOperator__Minimum  = 2,
-	EPlayerStatsOperator__Maximum  = 3,
-	EPlayerStatsOperator__EPlayerStatsOperator_MAX = 4
-};
-
-
-// Enum Athena.EPlayerStatsType
-enum class EPlayerStatsType : uint8_t
-{
-	EPlayerStatsType__Int          = 0,
-	EPlayerStatsType__Double       = 1,
-	EPlayerStatsType__EPlayerStatsType_MAX = 2
 };
 
 

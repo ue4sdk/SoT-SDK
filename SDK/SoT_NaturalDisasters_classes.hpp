@@ -56,7 +56,7 @@ public:
 
 
 // Class NaturalDisasters.Earthquake
-// 0x01F0 (0x0698 - 0x04A8)
+// 0x01C8 (0x0670 - 0x04A8)
 class AEarthquake : public AActor
 {
 public:
@@ -79,7 +79,7 @@ public:
 	class UCapsuleComponent*                           HitDetectionVolume;                                       // 0x0518(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UWindZoneComponent*                          WindZone;                                                 // 0x0520(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	TEnumAsByte<EEarthquakeState>                      EarthquakeState;                                          // 0x0528(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x16F];                                     // 0x0529(0x016F) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x147];                                     // 0x0529(0x0147) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

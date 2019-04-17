@@ -32,7 +32,7 @@ public:
 
 
 // Class Music.MusicZoneComponent
-// 0x0090 (0x0340 - 0x02B0)
+// 0x00A0 (0x0350 - 0x02B0)
 class UMusicZoneComponent : public USceneComponent
 {
 public:
@@ -46,7 +46,7 @@ public:
 	class UWwiseEvent*                                 StopEvent;                                                // 0x02D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               DisableAfterPlayThrough;                                  // 0x02E8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x57];                                      // 0x02E9(0x0057) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x67];                                      // 0x02E9(0x0067) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -62,13 +62,14 @@ public:
 
 
 // Class Music.AISpawnerMusicZoneComponent
-// 0x0010 (0x0350 - 0x0340)
+// 0x0020 (0x0370 - 0x0350)
 class UAISpawnerMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	class UAISpawner*                                  AISpawner;                                                // 0x0340(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0348(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0349(0x0007) MISSED OFFSET
+	class UWwiseEvent*                                 BattleWonEvent;                                           // 0x0350(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAISpawner*                                  AISpawner;                                                // 0x0358(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0360(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x0361(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -82,11 +83,13 @@ public:
 
 
 // Class Music.SynchedMusicZoneComponent
-// 0x0030 (0x0370 - 0x0340)
+// 0x0030 (0x0380 - 0x0350)
 class USynchedMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0340(0x0030) MISSED OFFSET
+	float                                              StartDelayTime;                                           // 0x0350(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                PlayFromStartTimeMS;                                      // 0x0354(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0358(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
