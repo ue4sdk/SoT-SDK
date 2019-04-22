@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_WildSplash_05.BP_FishingFish_WildSplash_05_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0990 - 0x0990)
 class ABP_FishingFish_WildSplash_05_C : public ABP_FishingFish_WildSplash_Base_C
 {
 public:

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C
-// 0x0008 (0x09D8 - 0x09D0)
+// 0x0008 (0x0960 - 0x0958)
 class ABP_TreasureChest_Proxy_Mythical_Rome_C : public ABP_TreasureChestProxy_C
 {
 public:
-	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x09D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

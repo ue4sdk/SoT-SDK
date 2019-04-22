@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Plentifin_05_Colour_04_Bonedust.BP_FishingFish_Plentifin_05_Colour_04_Bonedust_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0990 - 0x0990)
 class ABP_FishingFish_Plentifin_05_Colour_04_Bonedust_C : public ABP_FishingFish_Plentifin_05_C
 {
 public:

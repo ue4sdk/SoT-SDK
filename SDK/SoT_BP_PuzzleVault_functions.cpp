@@ -12,6 +12,42 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PuzzleVault.BP_PuzzleVault_C.SetTableMaterialInstance
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstance*       InMaterialInstance             (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PuzzleVault_C::SetTableMaterialInstance(class UMaterialInstance* InMaterialInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.SetTableMaterialInstance"));
+
+	struct
+	{
+		class UMaterialInstance*       InMaterialInstance;
+	} params;
+
+	params.InMaterialInstance = InMaterialInstance;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_TableMaterialInstance
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PuzzleVault_C::OnRep_TableMaterialInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_TableMaterialInstance"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -101,26 +137,6 @@ void ABP_PuzzleVault_C::UserConstructionScript()
 }
 
 
-// Function BP_PuzzleVault.BP_PuzzleVault_C.Multicast SetVaultTableMaterial
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMaterialInstance*       Material                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_PuzzleVault_C::Multicast_SetVaultTableMaterial(class UMaterialInstance* Material)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.Multicast SetVaultTableMaterial"));
-
-	struct
-	{
-		class UMaterialInstance*       Material;
-	} params;
-
-	params.Material = Material;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_PuzzleVault.BP_PuzzleVault_C.ReceiveBeginPlay
 // (Event, Public, BlueprintEvent)
 
@@ -152,6 +168,38 @@ void ABP_PuzzleVault_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason
 	} params;
 
 	params.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.TriggerRevealVFX
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_PuzzleVault_C::TriggerRevealVFX()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.TriggerRevealVFX"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.TableMaterialInstanceRepped
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PuzzleVault_C::TableMaterialInstanceRepped()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.TableMaterialInstanceRepped"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

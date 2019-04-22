@@ -31,6 +31,7 @@ public:
 	}
 
 
+	void TriggerEventProxyBroadcast();
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
 	void OnSpawn(class APawn* Pawn);
 	void ExecuteUbergraph_BP_CursedRogue_SkeletonBuryCrewEncounter(int EntryPoint);

@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_Shroudbreaker_PuzzleParams_classes.hpp"
 #include "SoT_DS_ShroudBreaker_VaultParams_classes.hpp"
+#include "SoT_DS_Shroudbreaker_PuzzleParams_classes.hpp"
 
 namespace SDK
 {

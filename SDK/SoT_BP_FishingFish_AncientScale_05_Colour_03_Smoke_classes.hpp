@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_AncientScale_05_Colour_03_Smoke.BP_FishingFish_AncientScale_05_Colour_03_Smoke_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0990 - 0x0990)
 class ABP_FishingFish_AncientScale_05_Colour_03_Smoke_C : public ABP_FishingFish_AncientScale_05_C
 {
 public:

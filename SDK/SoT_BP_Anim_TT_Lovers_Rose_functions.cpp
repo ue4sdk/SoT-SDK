@@ -89,8 +89,9 @@ void UBP_Anim_TT_Lovers_Rose_C::ExecuteUbergraph_BP_Anim_TT_Lovers_Rose(int Entr
 // Parameters:
 // float                          FadeAmount                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          BloomAmount                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ShroudAmount                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Anim_TT_Lovers_Rose_C::CutsceneMaterialEventDispatcher__DelegateSignature(float FadeAmount, float BloomAmount)
+void UBP_Anim_TT_Lovers_Rose_C::CutsceneMaterialEventDispatcher__DelegateSignature(float FadeAmount, float BloomAmount, float ShroudAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_TT_Lovers_Rose.BP_Anim_TT_Lovers_Rose_C.CutsceneMaterialEventDispatcher__DelegateSignature"));
 
@@ -98,10 +99,12 @@ void UBP_Anim_TT_Lovers_Rose_C::CutsceneMaterialEventDispatcher__DelegateSignatu
 	{
 		float                          FadeAmount;
 		float                          BloomAmount;
+		float                          ShroudAmount;
 	} params;
 
 	params.FadeAmount = FadeAmount;
 	params.BloomAmount = BloomAmount;
+	params.ShroudAmount = ShroudAmount;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_TheArtOfTheTrickster_Notes_Variables.DS_TheArtOfTheTrickster_Notes_Variables
-// 0x0078
+// 0x0080
 struct FDS_TheArtOfTheTrickster_Notes_Variables
 {
 	class AActor*                                      DigSite1_31_F630CC204886E65A1BDB13A79067453E;             // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -33,6 +33,7 @@ struct FDS_TheArtOfTheTrickster_Notes_Variables
 	class UQuestBookPageBundle*                        PreGunpowderPagesLeft_102_EE83731B4BF9B0130281669E24B21BCF;// 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UQuestBookPageBundle*                        GunpowderPagesLeft_103_B862FCC14522284C103CC29F3F697746;  // 0x0068(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      GunpowderExplosionTriggerActor_113_4D29911E4A15CE1CB88E97B3137AB6DD;// 0x0070(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AAthenaPlayerCharacter*                      RumBottleSpyglassCollector_118_E45733C74B9BC2A4EDF9ED84611B14C5;// 0x0078(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

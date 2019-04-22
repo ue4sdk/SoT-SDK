@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_RevengeOfTheMorningstar_GraymarrowEncounter.BP_RevengeOfTheMorningstar_GraymarrowEncounter_C.BroadcastToProxy
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_RevengeOfTheMorningstar_GraymarrowEncounter_C::BroadcastToProxy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_RevengeOfTheMorningstar_GraymarrowEncounter.BP_RevengeOfTheMorningstar_GraymarrowEncounter_C.BroadcastToProxy"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_RevengeOfTheMorningstar_GraymarrowEncounter.BP_RevengeOfTheMorningstar_GraymarrowEncounter_C.OnSpawn
 // (Event, Protected, BlueprintEvent)
 // Parameters:

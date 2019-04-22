@@ -65,8 +65,9 @@ void ABP_TT_Lovers_Cutscene_Ghost_C::ReceiveBeginPlay()
 // Parameters:
 // float                          GhostOpacity                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          GhostBloom                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ShroudAmount                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TT_Lovers_Cutscene_Ghost_C::GhostCutsceneEventHandler(float GhostOpacity, float GhostBloom)
+void ABP_TT_Lovers_Cutscene_Ghost_C::GhostCutsceneEventHandler(float GhostOpacity, float GhostBloom, float ShroudAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TT_Lovers_Cutscene_Ghost.BP_TT_Lovers_Cutscene_Ghost_C.GhostCutsceneEventHandler"));
 
@@ -74,10 +75,12 @@ void ABP_TT_Lovers_Cutscene_Ghost_C::GhostCutsceneEventHandler(float GhostOpacit
 	{
 		float                          GhostOpacity;
 		float                          GhostBloom;
+		float                          ShroudAmount;
 	} params;
 
 	params.GhostOpacity = GhostOpacity;
 	params.GhostBloom = GhostBloom;
+	params.ShroudAmount = ShroudAmount;
 
 	UObject::ProcessEvent(fn, &params);
 }

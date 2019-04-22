@@ -15,12 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_RitualSkull.BP_TT_RitualSkull_C
-// 0x0010 (0x04B8 - 0x04A8)
+// 0x0020 (0x04C8 - 0x04A8)
 class ABP_TT_RitualSkull_C : public AActor
 {
 public:
-	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x04C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,6 +32,9 @@ public:
 
 
 	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void SetEmissiveGlow(float EmissiveScale);
+	void ExecuteUbergraph_BP_TT_RitualSkull(int EntryPoint);
 };
 
 

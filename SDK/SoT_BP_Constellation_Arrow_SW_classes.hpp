@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Arrow_SW.BP_Constellation_Arrow_SW_C
-// 0x0000 (0x04D8 - 0x04D8)
+// 0x0000 (0x0540 - 0x0540)
 class ABP_Constellation_Arrow_SW_C : public ABP_Constellation_C
 {
 public:

@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Anim_TT_RitualSkullMain.BP_Anim_TT_RitualSkullMain_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Anim_TT_RitualSkullMain_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_TT_RitualSkullMain.BP_Anim_TT_RitualSkullMain_C.BlueprintUpdateAnimation"));
+
+	struct
+	{
+		float                          DeltaTimeX;
+	} params;
+
+	params.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_TT_RitualSkullMain.BP_Anim_TT_RitualSkullMain_C.ExecuteUbergraph_BP_Anim_TT_RitualSkullMain
 // ()
 // Parameters:
@@ -27,6 +47,26 @@ void UBP_Anim_TT_RitualSkullMain_C::ExecuteUbergraph_BP_Anim_TT_RitualSkullMain(
 	} params;
 
 	params.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_TT_RitualSkullMain.BP_Anim_TT_RitualSkullMain_C.SkullEmissiveEventDispatcher__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          EmissiveScale                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Anim_TT_RitualSkullMain_C::SkullEmissiveEventDispatcher__DelegateSignature(float EmissiveScale)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_TT_RitualSkullMain.BP_Anim_TT_RitualSkullMain_C.SkullEmissiveEventDispatcher__DelegateSignature"));
+
+	struct
+	{
+		float                          EmissiveScale;
+	} params;
+
+	params.EmissiveScale = EmissiveScale;
 
 	UObject::ProcessEvent(fn, &params);
 }

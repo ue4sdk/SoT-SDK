@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass ShroudbreakerDefinition.ShroudbreakerDefinition_C
 // 0x00F0 (0x0118 - 0x0028)
-class UShroudbreakerDefinition_C : public UObject
+class UShroudbreakerDefinition_C : public UTaleQuestDefinition
 {
 public:
 	struct FDS_Shroudbreaker_Definition                Definition;                                               // 0x0028(0x00B8) (Edit, BlueprintVisible)

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TheArtOfTheTrickster_CaveMusicZoneComponent.BP_TheArtOfTheTrickster_CaveMusicZoneComponent_C
-// 0x0000 (0x0340 - 0x0340)
+// 0x0000 (0x0350 - 0x0350)
 class UBP_TheArtOfTheTrickster_CaveMusicZoneComponent_C : public UMusicZoneComponent
 {
 public:

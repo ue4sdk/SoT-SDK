@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WildRose_Cutscene_Final.BP_WildRose_Cutscene_Final_C
-// 0x0000 (0x0370 - 0x0370)
+// 0x0000 (0x0380 - 0x0380)
 class UBP_WildRose_Cutscene_Final_C : public USynchedMusicZoneComponent
 {
 public:

@@ -37,7 +37,7 @@ public:
 	void AnimNotify_BeginMaterialUpdate();
 	void AnimNotify_EndMaterialUpdate();
 	void ExecuteUbergraph_BP_Anim_TT_Lovers_Rose(int EntryPoint);
-	void CutsceneMaterialEventDispatcher__DelegateSignature(float FadeAmount, float BloomAmount);
+	void CutsceneMaterialEventDispatcher__DelegateSignature(float FadeAmount, float BloomAmount, float ShroudAmount);
 };
 
 

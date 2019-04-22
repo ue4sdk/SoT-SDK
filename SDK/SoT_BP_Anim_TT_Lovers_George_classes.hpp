@@ -37,7 +37,7 @@ public:
 	void AnimNotify_BeginMaterialUpdate();
 	void AnimNotify_EndMaterialUpdate();
 	void ExecuteUbergraph_BP_Anim_TT_Lovers_George(int EntryPoint);
-	void CutsceneMaterialEventDispatcher__DelegateSignature(float GhostOpacity, float GhostBloom);
+	void CutsceneMaterialEventDispatcher__DelegateSignature(float GhostOpacity, float GhostBloom, float ShroudAmount);
 };
 
 

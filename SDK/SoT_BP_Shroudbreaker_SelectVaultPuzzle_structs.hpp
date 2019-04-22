@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_Tales_classes.hpp"
-#include "SoT_DS_Shroudbreaker_VaultPuzzleSequenceParams_classes.hpp"
-#include "SoT_DS_Shroudbreaker_Definition_classes.hpp"
 #include "SoT_DS_Shroudbreaker_VaultPuzzleParams_classes.hpp"
+#include "SoT_Engine_classes.hpp"
+#include "SoT_DS_Shroudbreaker_VaultPuzzleSequenceParams_classes.hpp"
+#include "SoT_Tales_classes.hpp"
+#include "SoT_DS_Shroudbreaker_Definition_classes.hpp"
 
 namespace SDK
 {

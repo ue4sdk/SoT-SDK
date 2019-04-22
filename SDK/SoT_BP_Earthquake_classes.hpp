@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Earthquake.BP_Earthquake_C
-// 0x0000 (0x0698 - 0x0698)
+// 0x0000 (0x0670 - 0x0670)
 class ABP_Earthquake_C : public AEarthquake
 {
 public:

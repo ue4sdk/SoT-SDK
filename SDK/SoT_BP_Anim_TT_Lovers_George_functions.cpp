@@ -89,8 +89,9 @@ void UBP_Anim_TT_Lovers_George_C::ExecuteUbergraph_BP_Anim_TT_Lovers_George(int 
 // Parameters:
 // float                          GhostOpacity                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          GhostBloom                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ShroudAmount                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Anim_TT_Lovers_George_C::CutsceneMaterialEventDispatcher__DelegateSignature(float GhostOpacity, float GhostBloom)
+void UBP_Anim_TT_Lovers_George_C::CutsceneMaterialEventDispatcher__DelegateSignature(float GhostOpacity, float GhostBloom, float ShroudAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_TT_Lovers_George.BP_Anim_TT_Lovers_George_C.CutsceneMaterialEventDispatcher__DelegateSignature"));
 
@@ -98,10 +99,12 @@ void UBP_Anim_TT_Lovers_George_C::CutsceneMaterialEventDispatcher__DelegateSigna
 	{
 		float                          GhostOpacity;
 		float                          GhostBloom;
+		float                          ShroudAmount;
 	} params;
 
 	params.GhostOpacity = GhostOpacity;
 	params.GhostBloom = GhostBloom;
+	params.ShroudAmount = ShroudAmount;
 
 	UObject::ProcessEvent(fn, &params);
 }

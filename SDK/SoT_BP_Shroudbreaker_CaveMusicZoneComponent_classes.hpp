@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_CaveMusicZoneComponent.BP_Shroudbreaker_CaveMusicZoneComponent_C
-// 0x0000 (0x0340 - 0x0340)
+// 0x0000 (0x0350 - 0x0350)
 class UBP_Shroudbreaker_CaveMusicZoneComponent_C : public UMusicZoneComponent
 {
 public:

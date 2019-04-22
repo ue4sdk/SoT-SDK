@@ -12,6 +12,38 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRep_ShroudBreakerDeactivate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Shroudbreaker_OnShip_C::OnRep_ShroudBreakerDeactivate()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRep_ShroudBreakerDeactivate"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRep_ShroudBreakerEffectsActive
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Shroudbreaker_OnShip_C::OnRep_ShroudBreakerEffectsActive()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRep_ShroudBreakerEffectsActive"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRep_MusicZoneActive
 // (BlueprintCallable, BlueprintEvent)
 
@@ -227,6 +259,78 @@ void ABP_Shroudbreaker_OnShip_C::OnDeactivateEffects(const struct FShroudBreaker
 	} params;
 
 	params.Ev = Ev;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.PlayerEnteredTP
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FEventPlayerEnteredIslandVicinity Ev                             (Parm)
+
+void ABP_Shroudbreaker_OnShip_C::PlayerEnteredTP(const struct FEventPlayerEnteredIslandVicinity& Ev)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.PlayerEnteredTP"));
+
+	struct
+	{
+		struct FEventPlayerEnteredIslandVicinity Ev;
+	} params;
+
+	params.Ev = Ev;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.PlayerLeftTP
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FEventPlayerLeftIslandVicinity Ev                             (Parm)
+
+void ABP_Shroudbreaker_OnShip_C::PlayerLeftTP(const struct FEventPlayerLeftIslandVicinity& Ev)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.PlayerLeftTP"));
+
+	struct
+	{
+		struct FEventPlayerLeftIslandVicinity Ev;
+	} params;
+
+	params.Ev = Ev;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRepFunctionDeactivateShroudBreaker
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Shroudbreaker_OnShip_C::OnRepFunctionDeactivateShroudBreaker()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRepFunctionDeactivateShroudBreaker"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.CallThisEvent
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_Shroudbreaker_OnShip_C::CallThisEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.CallThisEvent"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

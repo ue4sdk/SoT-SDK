@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_LegendaryStorytellerVariables.DS_LegendaryStorytellerVariables
-// 0x0060
+// 0x0070
 struct FDS_LegendaryStorytellerVariables
 {
 	class AActor*                                      NPC_72_0E21BBB242FF38D6654E898B3348A9BA;                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,8 @@ struct FDS_LegendaryStorytellerVariables
 	class AActor*                                      PlankPuzzleLocation_85_906D4B564EB4E702F99F52A920130400;  // 0x0048(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      AncientChest_88_C57F6CA8443032D34D2524BA00E260A1;         // 0x0050(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      HandIn_91_2B183B734882D4B24931658429E33094;               // 0x0058(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      MusicSpawnLocation_94_E3D9DC4E41ED5EB214750CA19171DF14;   // 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      MusicSpawnRef_97_06EC4D634F941228AE8A73AEF2F866B4;        // 0x0068(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

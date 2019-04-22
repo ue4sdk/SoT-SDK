@@ -1814,7 +1814,8 @@ enum class EGlintCondition : uint8_t
 	EGlintCondition__OnShip        = 0,
 	EGlintCondition__Floating      = 1,
 	EGlintCondition__SpawnedAsSunkenSalvage = 2,
-	EGlintCondition__EGlintCondition_MAX = 3
+	EGlintCondition__SpawnedAsTallTaleQuestItem = 3,
+	EGlintCondition__EGlintCondition_MAX = 4
 };
 
 
@@ -3385,7 +3386,8 @@ enum class EEmblemUnlockCriteriaAggregationType : uint8_t
 enum class EPreventDamageTypeLockReasons : uint8_t
 {
 	EPreventDamageTypeLockReasons__IsFiredOutOfACannon = 0,
-	EPreventDamageTypeLockReasons__EPreventDamageTypeLockReasons_MAX = 1
+	EPreventDamageTypeLockReasons__AIStrategy = 1,
+	EPreventDamageTypeLockReasons__EPreventDamageTypeLockReasons_MAX = 2
 };
 
 

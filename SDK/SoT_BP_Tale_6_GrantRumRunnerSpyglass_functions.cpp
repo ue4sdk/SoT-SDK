@@ -33,7 +33,7 @@ void UBP_Tale_6_GrantRumRunnerSpyglass_C::OnBegin(TEnumAsByte<ETaleQuestStepBegi
 
 
 // Function BP_Tale_6_GrantRumRunnerSpyglass.BP_Tale_6_GrantRumRunnerSpyglass_C.ExecuteUbergraph_BP_Tale_6_GrantRumRunnerSpyglass
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

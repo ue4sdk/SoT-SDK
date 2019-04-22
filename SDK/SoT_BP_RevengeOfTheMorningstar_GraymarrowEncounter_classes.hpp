@@ -30,6 +30,7 @@ public:
 	}
 
 
+	void BroadcastToProxy();
 	void OnSpawn(class APawn* Pawn);
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
 	void On_Item_Pickup_Event();

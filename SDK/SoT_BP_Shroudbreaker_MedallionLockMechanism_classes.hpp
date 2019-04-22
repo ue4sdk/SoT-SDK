@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_MedallionLockMechanism.BP_Shroudbreaker_MedallionLockMechanism_C
-// 0x00B0 (0x0578 - 0x04C8)
+// 0x00B4 (0x057C - 0x04C8)
 class ABP_Shroudbreaker_MedallionLockMechanism_C : public AInteractableBase
 {
 public:
@@ -40,6 +40,7 @@ public:
 	bool                                               IsInitialised;                                            // 0x0560(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0561(0x0007) MISSED OFFSET
 	TArray<class UParticleSystemComponent*>            ParticleSystems;                                          // 0x0568(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                VFXIndex;                                                 // 0x0578(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -48,16 +49,17 @@ public:
 	}
 
 
-	void PlayVFXByIndex(int VFXIndex);
 	void InitialiseVariables(class ABP_PuzzleVault_C* Puzzle_Vault, TArray<class UMaterialInstance*>* Materials);
 	void IncrementVaultTableMaterial();
 	struct FText GetObjectDisplayName();
 	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void KeyReceived_Event();
 	void ReceiveDestroyed();
+	void Multicast_Play_VFX();
+	void Multicast_Play_All_VFX();
+	void BndEvt__Lock_K2Node_ComponentBoundEvent_19_OnIndividualLockOpenedDelegate__DelegateSignature();
+	void BndEvt__Lock_K2Node_ComponentBoundEvent_57_OnLockOpenedDelegate__DelegateSignature();
 	void ExecuteUbergraph_BP_Shroudbreaker_MedallionLockMechanism(int EntryPoint);
 	void KeyReceived__DelegateSignature();
 };

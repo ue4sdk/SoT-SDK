@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass TheArtOfTheTricksterDefinition.TheArtOfTheTricksterDefinition_C
 // 0x01C8 (0x01F0 - 0x0028)
-class UTheArtOfTheTricksterDefinition_C : public UObject
+class UTheArtOfTheTricksterDefinition_C : public UTaleQuestDefinition
 {
 public:
 	struct FDS_TheArtOfTheTrickster_Definition         Definition;                                               // 0x0028(0x01B8) (Edit, BlueprintVisible)

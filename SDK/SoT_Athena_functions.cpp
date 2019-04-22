@@ -6055,15 +6055,19 @@ void USkeletonAnimationInstance::StopCustomAnimationLoopingSequence()
 
 // Function Athena.SkeletonAnimationInstance.StopAnimation
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          BlendOutTime                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void USkeletonAnimationInstance::StopAnimation()
+void USkeletonAnimationInstance::StopAnimation(float BlendOutTime)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.SkeletonAnimationInstance.StopAnimation"));
 
 	struct
 	{
+		float                          BlendOutTime;
 	} params;
 
+	params.BlendOutTime = BlendOutTime;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -7345,6 +7349,26 @@ void AAthenaAICharacter::SetAIAnimationState(class UClass* InAnimationState)
 	} params;
 
 	params.InAnimationState = InAnimationState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.AthenaAICharacter.ResetMaxHealthTo
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InMaxHealth                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAICharacter::ResetMaxHealthTo(float InMaxHealth)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaAICharacter.ResetMaxHealthTo"));
+
+	struct
+	{
+		float                          InMaxHealth;
+	} params;
+
+	params.InMaxHealth = InMaxHealth;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -24812,6 +24836,22 @@ void AGhostShipTickManager::EnableActorsOnGhostShip(bool bEnable)
 }
 
 
+// Function Athena.GlintComponent.OnRep_SpawnedAsTallTaleQuestItem
+// (Final, Native, Private)
+
+void UGlintComponent::OnRep_SpawnedAsTallTaleQuestItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.GlintComponent.OnRep_SpawnedAsTallTaleQuestItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.GlintComponent.OnRep_SpawnedAsSunkenSalvage
 // (Final, Native, Private)
 
@@ -37004,6 +37044,22 @@ bool UPirateSelector::CanPiratesSpawn()
 }
 
 
+// Function Athena.PlaceableReaction.TriggerReaction
+// (Final, Native, Public, BlueprintCallable)
+
+void APlaceableReaction::TriggerReaction()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.PlaceableReaction.TriggerReaction"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.PlayerAtmosphericsAudioComponent.GetPoolDensityFactor
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -44476,6 +44532,27 @@ void ATreasureRoom::OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType
 	params.DeathType = DeathType;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.TreasureRoom.GetNumPlayersWithCrewMembersInRoom
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int ATreasureRoom::GetNumPlayersWithCrewMembersInRoom()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.TreasureRoom.GetNumPlayersWithCrewMembersInRoom"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
