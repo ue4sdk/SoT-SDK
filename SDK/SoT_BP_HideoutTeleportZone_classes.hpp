@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x04F0 - 0x04F0)
 class ABP_HideoutTeleportZone_C : public AHideoutEntrance
 {
 public:

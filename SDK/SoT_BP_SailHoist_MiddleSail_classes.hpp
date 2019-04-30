@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailHoist_MiddleSail.BP_SailHoist_MiddleSail_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_SailHoist_MiddleSail_C : public ABP_SailHoist_C
 {
 public:

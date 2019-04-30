@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -343,26 +343,6 @@ void UBP_CharacterVFXComponent_C::On_Foot_Enter_Water(const struct FEventCharact
 	} params;
 
 	params.Enter_Water = Enter_Water;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.DeadEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FEventCharacterDead     EventDead                      (Parm)
-
-void UBP_CharacterVFXComponent_C::DeadEvent(const struct FEventCharacterDead& EventDead)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.DeadEvent"));
-
-	struct
-	{
-		struct FEventCharacterDead     EventDead;
-	} params;
-
-	params.EventDead = EventDead;
 
 	UObject::ProcessEvent(fn, &params);
 }

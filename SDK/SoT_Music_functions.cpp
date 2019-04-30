@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Music.MusicZoneInterface.CanPlayForPlayer
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class AActor*                  Player                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -33,6 +33,59 @@ bool UMusicZoneInterface::CanPlayForPlayer(class AActor* Player)
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Music.MusicZoneComponent.GetEmitter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FWwiseEmitter           ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWwiseEmitter UMusicZoneComponent::GetEmitter()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.GetEmitter"));
+
+	struct
+	{
+		struct FWwiseEmitter           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Music.MusicZoneComponent.DisableZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UMusicZoneComponent::DisableZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.DisableZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Music.MusicZoneComponent.ActivateZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UMusicZoneComponent::ActivateZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.ActivateZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

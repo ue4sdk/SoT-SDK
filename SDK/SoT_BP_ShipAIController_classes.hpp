@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipAIController.BP_ShipAIController_C
-// 0x0000 (0x07A8 - 0x07A8)
+// 0x0000 (0x07B8 - 0x07B8)
 class ABP_ShipAIController_C : public AAthenaAIShipController
 {
 public:

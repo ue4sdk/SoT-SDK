@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DamageZone.BP_DamageZone_C
-// 0x0055 (0x08C5 - 0x0870)
+// 0x0058 (0x08D8 - 0x0880)
 class ABP_DamageZone_C : public ADamageZone
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0870(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<struct FHullDamageHit>                      Rep_ExternalHitList;                                      // 0x0878(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	struct FName                                       Repair_Tag;                                               // 0x0888(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FBP_InternalDamageGroup                     RepairGroup;                                              // 0x0890(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance)
 	int                                                ExternalHitBufferIndex;                                   // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -30,6 +29,8 @@ public:
 	int                                                ClientUpdateEventCount;                                   // 0x08BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                ExternalDecalBufferIndex;                                 // 0x08C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               HasBeenInitialized;                                       // 0x08C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x08C5(0x0003) MISSED OFFSET
+	TArray<struct FHullDamageHit>                      Rep_ExternalHitList;                                      // 0x08C8(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -39,10 +40,10 @@ public:
 
 
 	void GetNumExternalHits(int* NumExternalHits);
+	void OnRep_Rep_ExternalHitList();
 	void GetOrCreateDecalMID(class UMaterialInstanceDynamic** DecalMID);
 	void Initialise();
 	void Update_External_Hits();
-	void OnRep_Rep_ExternalHitList();
 	void Clear_Decal_Flags();
 	void Add_Deferred_Decal(class UDecalComponent* Decal);
 	void KillDeferredDecal(class UDecalComponent** Decal);

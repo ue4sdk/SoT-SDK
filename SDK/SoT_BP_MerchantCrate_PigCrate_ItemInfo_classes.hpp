@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_PigCrate_ItemInfo.BP_MerchantCrate_PigCrate_ItemInfo_C
-// 0x0008 (0x06B8 - 0x06B0)
+// 0x0008 (0x0718 - 0x0710)
 class ABP_MerchantCrate_PigCrate_ItemInfo_C : public AMerchantCrateItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,13 +17,6 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct Animation.EmptyStructForAnimationDataDuplicateStructTest
-// 0x0001
-struct FEmptyStructForAnimationDataDuplicateStructTest
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
 // ScriptStruct Animation.AnimDataEntryStructWrapper
 // 0x0018
 struct FAnimDataEntryStructWrapper
@@ -39,12 +32,28 @@ struct FAnimationDataStoreEntry
 	class UAnimationData*                              AnimData;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
 };
 
+// ScriptStruct Animation.AnimationDataStoreLoadingEntry
+// 0x0040
+struct FAnimationDataStoreLoadingEntry
+{
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0000(0x0038) MISSED OFFSET
+	class UClass*                                      AnimDataId;                                               // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Animation.AnimationDataStoreAssetEntry
 // 0x0010
 struct FAnimationDataStoreAssetEntry
 {
 	class UClass*                                      AnimDataId;                                               // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      AnimDataTypeCooked;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Animation.AnimationDataStoreAssetReferenceEntry
+// 0x0028
+struct FAnimationDataStoreAssetReferenceEntry
+{
+	class UClass*                                      AnimDataId;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TAssetPtr<class UClass>                            AnimData;                                                 // 0x0008(0x0020) (Edit)
 };
 
 // ScriptStruct Animation.DockableInfo
@@ -104,6 +113,21 @@ struct FTransformBlendCurve
 struct FEventDockableObjectDestroyed
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.WeightedAnimationTimeout
+// 0x0014
+struct FWeightedAnimationTimeout
+{
+	struct FFloatRange                                 TimeoutRange;                                             // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Weighting;                                                // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Animation.WeightedAnimationTimeoutSelector
+// 0x0010
+struct FWeightedAnimationTimeoutSelector
+{
+	TArray<struct FWeightedAnimationTimeout>           Weightings;                                               // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 }

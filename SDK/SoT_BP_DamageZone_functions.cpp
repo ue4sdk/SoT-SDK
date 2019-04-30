@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,6 +31,22 @@ void ABP_DamageZone_C::GetNumExternalHits(int* NumExternalHits)
 
 	if (NumExternalHits != nullptr)
 		*NumExternalHits = params.NumExternalHits;
+}
+
+
+// Function BP_DamageZone.BP_DamageZone_C.OnRep_Rep_ExternalHitList
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_DamageZone_C::OnRep_Rep_ExternalHitList()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnRep_Rep_ExternalHitList"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -78,22 +94,6 @@ void ABP_DamageZone_C::Initialise()
 void ABP_DamageZone_C::Update_External_Hits()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.Update External Hits"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_DamageZone.BP_DamageZone_C.OnRep_Rep_ExternalHitList
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_DamageZone_C::OnRep_Rep_ExternalHitList()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnRep_Rep_ExternalHitList"));
 
 	struct
 	{
@@ -199,7 +199,7 @@ void ABP_DamageZone_C::Set_Repair_Visibility(bool Visible)
 
 
 // Function BP_DamageZone.BP_DamageZone_C.Add External Hit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FHullDamageHit          HitData                        (Parm)
 

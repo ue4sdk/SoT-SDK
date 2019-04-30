@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaHUD.BP_AthenaHUD_C
-// 0x0008 (0x0818 - 0x0810)
+// 0x0000 (0x0860 - 0x0860)
 class ABP_AthenaHUD_C : public AAthenaHUD
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +26,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

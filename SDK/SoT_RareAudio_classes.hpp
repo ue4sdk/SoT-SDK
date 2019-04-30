@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,10 +60,13 @@ public:
 	}
 
 
+	static void WwiseStopGlobalEvent(class UWwiseEvent* Event, float FadeTime);
+	static void WwiseStopAllGlobalEvents(float FadeTime);
 	static void WwiseSetState(const struct FName& StateGroup, const struct FName& StateValue);
 	static void WwiseSetGlobalRTPC(const struct FName& RTPCName, float RTPCValue);
-	static void WwisePostGlobalEvent(class UWwiseEvent* Event);
+	static int WwisePostGlobalEvent(class UWwiseEvent* Event);
 	static int WwisePostEventAtLocation(class UWwiseEvent* Event, const struct FVector& Location, const struct FVector& Front, class UWwiseObjectPoolWrapper* EmitterPool, TEnumAsByte<EEmitterRelationship> Relationship, struct FWwiseEmitter* Emitter);
+	static bool WwiseIsGlobalEvent(class UWwiseEvent* Event);
 	static bool WwiseGetListenerInfo(int Viewport, struct FWwiseListenerInfo* InfoOut);
 	static bool WwiseGetListenerEmitter(class UObject* WorldContextObject, int ListenerIndex, const struct FName& Name, const struct FVector& Offset, bool bFollowOrientaion, class UWwiseObjectPoolWrapper* EmitterPool, struct FWwiseEmitter* Emitter);
 	static bool WwiseGetEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter);
@@ -161,11 +164,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x04A8 - 0x04A0)
+// 0x0008 (0x04B0 - 0x04A8)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x04A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -217,7 +220,7 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0000 (0x04A8 - 0x04A8)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -312,7 +315,7 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x0600 - 0x0600)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
@@ -344,6 +347,22 @@ public:
 
 
 	class UAudioSpaceDataAsset* GetCurrentSpace();
+};
+
+
+// Class RareAudio.MockWwiseInputManager
+// 0x0018 (0x0040 - 0x0028)
+class UMockWwiseInputManager : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.MockWwiseInputManager"));
+		return ptr;
+	}
+
 };
 
 
@@ -469,7 +488,7 @@ public:
 
 
 // Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0000 (0x04A8 - 0x04A8)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:

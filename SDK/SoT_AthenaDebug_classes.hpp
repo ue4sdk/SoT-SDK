@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,18 +30,18 @@ public:
 
 
 // Class AthenaDebug.DrawDebugService
-// 0x0078 (0x0518 - 0x04A0)
+// 0x0078 (0x0520 - 0x04A8)
 class ADrawDebugService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
-	TArray<struct FDrawDebugItemSphere>                Spheres;                                                  // 0x04A8(0x0010) (Net, ZeroConstructor)
-	TArray<struct FDrawDebugItemBox>                   Boxes;                                                    // 0x04B8(0x0010) (Net, ZeroConstructor)
-	TArray<struct FDrawDebugItemCapsule>               Capsules;                                                 // 0x04C8(0x0010) (Net, ZeroConstructor)
-	TArray<struct FDrawDebugItemLine>                  Lines;                                                    // 0x04D8(0x0010) (Net, ZeroConstructor)
-	TArray<struct FDrawDebugItemMessage>               Messages;                                                 // 0x04E8(0x0010) (Net, ZeroConstructor)
-	TArray<struct FDrawDebugItemString>                Strings;                                                  // 0x04F8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0508(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
+	TArray<struct FDrawDebugItemSphere>                Spheres;                                                  // 0x04B0(0x0010) (Net, ZeroConstructor)
+	TArray<struct FDrawDebugItemBox>                   Boxes;                                                    // 0x04C0(0x0010) (Net, ZeroConstructor)
+	TArray<struct FDrawDebugItemCapsule>               Capsules;                                                 // 0x04D0(0x0010) (Net, ZeroConstructor)
+	TArray<struct FDrawDebugItemLine>                  Lines;                                                    // 0x04E0(0x0010) (Net, ZeroConstructor)
+	TArray<struct FDrawDebugItemMessage>               Messages;                                                 // 0x04F0(0x0010) (Net, ZeroConstructor)
+	TArray<struct FDrawDebugItemString>                Strings;                                                  // 0x0500(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0510(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -55,14 +55,14 @@ public:
 
 
 // Class AthenaDebug.Videprinter
-// 0x0028 (0x04C8 - 0x04A0)
+// 0x0028 (0x04D0 - 0x04A8)
 class AVideprinter : public AActor
 {
 public:
-	TArray<class FString>                              OutputRingBuffer;                                         // 0x04A0(0x0010) (Net, ZeroConstructor)
-	int                                                AddAt;                                                    // 0x04B0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Id;                                                       // 0x04B4(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x04BC(0x000C) MISSED OFFSET
+	TArray<class FString>                              OutputRingBuffer;                                         // 0x04A8(0x0010) (Net, ZeroConstructor)
+	int                                                AddAt;                                                    // 0x04B8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Id;                                                       // 0x04BC(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x04C4(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

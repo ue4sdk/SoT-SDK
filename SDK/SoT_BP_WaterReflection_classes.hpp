@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterReflection.BP_WaterReflection_C
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0008 (0x04B0 - 0x04A8)
 class ABP_WaterReflection_C : public AActor
 {
 public:
-	class UPlanarReflectionPlaneComponent*             PlanarReflectionPlane;                                    // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlanarReflectionPlaneComponent*             PlanarReflectionPlane;                                    // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

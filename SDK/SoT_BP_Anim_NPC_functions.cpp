@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -332,6 +332,22 @@ void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_Ani
 }
 
 
+// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045
+// (BlueprintEvent)
+
+void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_StartLookat
 // (BlueprintCallable, BlueprintEvent)
 
@@ -428,236 +444,44 @@ void UBP_Anim_NPC_C::AnimNotify_InteractVariantChange()
 }
 
 
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_2()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_3()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_4()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_5()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_DestroyItem()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_2()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_3()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_4()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_5()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_DestroyItem()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_DetachItem()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_DetachItem()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_LH_AttachItem()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Anim_NPC_C::AnimNotify_RH_AttachItem()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Anim_NPC.BP_Anim_NPC_C.BlueprintInitializeAnimation
 // (Event, Public, BlueprintEvent)
 
 void UBP_Anim_NPC_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.BlueprintInitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOn
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_NPCLookAtOn()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOn"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOff
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_NPCLookAtOff()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCLookAtOff"));
 
 	struct
 	{
@@ -802,6 +626,422 @@ void UBP_Anim_NPC_C::AnimNotify_NPCSelectNewCustomAnim_A()
 void UBP_Anim_NPC_C::AnimNotify_NPCDeactivateCustomAnimSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCDeactivateCustomAnimSequence"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_11
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_11()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_11"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_10
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_10()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_10"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_9
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_9()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_9"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_8
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_8()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_8"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_7
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_7()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_7"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_6
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_6()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_6"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_11
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_11()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_11"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_10
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_10()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_10"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_9
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_9()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_9"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_8
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_8()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_8"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_7
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_7()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_7"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_6
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_6()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_6"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_AttachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_AttachItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_AttachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_AttachItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DetachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DetachItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DestroyItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DestroyItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_5()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_5"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_4()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_4"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_3()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_3"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_UseItem_2()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_UseItem_2"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DestroyItem()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DestroyItem"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_5()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_5"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_4()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_4"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_3()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_3"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_2()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_2"));
 
 	struct
 	{

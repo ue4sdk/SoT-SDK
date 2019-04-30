@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -130,6 +130,8 @@ public:
 	void SpawnMerchantCargo(const class FString& MerchantCargoTypeString);
 	void SpawnKrakenAtCurrentLocationWithNumTentacles(uint32_t NumTentacles);
 	void SpawnKrakenAtCurrentLocation();
+	void SpawnItemOnFloor(const class FString& ItemString);
+	void SpawnItemInHand(const class FString& ItemString);
 	void SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy);
 	void SpawnGeyserAtPlayerLocation();
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
@@ -139,7 +141,7 @@ public:
 	void SpawnCollectorsChestOfType(class FString* ChestTypeString);
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnBountyReward(const class FString& BountyTypeString);
-	void SpawnBarrelGroup();
+	void SpawnBarrelGroup(bool ForcedCloseSpawn);
 	void SpawnAThousandTreasureChests();
 	void SpawnAndEquipDebugWieldable(const class FString& DebugWieldableTypeString);
 	void SpawnAINoTrigger(const class FString& AIDescString);
@@ -175,6 +177,7 @@ public:
 	void SetTimeScalar(float TimeScalar);
 	void SetTimeHoursAndMinutes(int Hours, int Minutes);
 	void SetTime(int Hours);
+	void SetShroudbreakerActive(bool bActive);
 	void SetShipYaw(float Yaw);
 	void SetShipWheelFullyRepaired();
 	void SetShipWheelFullyDamaged();
@@ -275,6 +278,8 @@ public:
 	void HideTaleDebug();
 	void HealthSet(float Value);
 	void HealthReset();
+	void HealthRegenResetToEmpty();
+	void HealthRegenAdd(float Value);
 	void HealthContinuousStopWithTestReason();
 	void HealthContinuousStopWithReason(const class FString& Reason);
 	void HealthContinuousStartWithTestReason(float Value);
@@ -292,6 +297,7 @@ public:
 	void EndDemoSession();
 	void EnableVoiceChatMeteringForOutgoingSignals(bool Enabled);
 	void EnableVoiceChatMeteringForIncomingSignals(bool Enabled);
+	void EnableVengeance();
 	void EnableNTP(bool Enable);
 	void EnableMermaidSpawning(int Enable);
 	void EnableMermaidDeletion(int Enable);
@@ -312,8 +318,9 @@ public:
 	void DisplayServersideHitsAtPlayerPos(uint32_t NumSamplesPerDimension, float DistanceBetweenSamples, float TestHeight);
 	void DisplayNonVagueNonUniqueLandmarksForIsland(bool Enabled);
 	void DisplayLoadingScreenTeleport();
-	void DisplayLoadingScreenGame();
 	void DisplayLoadingScreenBoot();
+	void DisplayLoadingScreenArena();
+	void DisplayLoadingScreenAdventure();
 	void DisplayLandmarkValidTreasureLocationsForPlayer();
 	void DisplayLandmarkRegions();
 	void DisplayLandmarkNames();
@@ -334,12 +341,14 @@ public:
 	void DeleteAllMermaids();
 	void DebugIslandDelta();
 	void DeactivateSkellyFort(const class FString& FortName);
+	void DeactivateDeathEffect();
 	void DamageShipFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
 	void DamageShip(float Strength);
 	void DamagePlayerFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
 	void DamagePlayer(float Strength);
 	void CureAllAilings();
 	void CompleteVoyage();
+	void CompleteAllActivePuzzleVaults();
 	void CompleteActiveQuests();
 	void CloseSkeletonFortDoor();
 	void CloseLoadingScreen();
@@ -365,6 +374,7 @@ public:
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
 	void AllowTeleportWithItems(bool CanTeleport);
 	void AIPlayerShip();
+	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex);

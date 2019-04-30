@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,8 @@ struct FDebugMenuDataAssetEntry
 	class FString                                      ConsoleCommand;                                           // 0x0020(0x0010) (Edit, ZeroConstructor)
 	bool                                               CloseMenuWhenExecuted;                                    // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               AvailableInShippingBuilds;                                // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
+	bool                                               AddToCommonlyUsedMenu;                                    // 0x0032(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x0033(0x0005) MISSED OFFSET
 };
 
 // ScriptStruct DebugMenu.DebugMenuButtonShortcut

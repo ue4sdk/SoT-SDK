@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_FishCreature.BP_FishCreature_C.ConfigureMaterialInstance
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FishCreature_C::ConfigureMaterialInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishCreature.BP_FishCreature_C.ConfigureMaterialInstance"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function BP_FishCreature.BP_FishCreature_C.CreateCreature
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)

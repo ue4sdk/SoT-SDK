@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1117,6 +1117,118 @@ struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 	} params;
 
 	params.Rotation = Rotation;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinASphere
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class USphereComponent*        SphereComponent                (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinASphere(class USphereComponent* SphereComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinASphere"));
+
+	struct
+	{
+		class USphereComponent*        SphereComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.SphereComponent = SphereComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACylinder
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UCapsuleComponent*       CylinderComponent              (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinACylinder(class UCapsuleComponent* CylinderComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACylinder"));
+
+	struct
+	{
+		class UCapsuleComponent*       CylinderComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.CylinderComponent = CylinderComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACapsule
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UCapsuleComponent*       CapsuleComponent               (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinACapsule(class UCapsuleComponent* CapsuleComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACapsule"));
+
+	struct
+	{
+		class UCapsuleComponent*       CapsuleComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.CapsuleComponent = CapsuleComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinABox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UBoxComponent*           BoxComponent                   (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinABox"));
+
+	struct
+	{
+		class UBoxComponent*           BoxComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.BoxComponent = BoxComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

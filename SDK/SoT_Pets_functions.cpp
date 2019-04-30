@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,6 +74,26 @@ void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCust
 	params.InPetType = InPetType;
 	params.InCustomisation = InCustomisation;
 	params.InOwner = InOwner;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Pets.WieldablePet.OnRep_DropRequested
+// (Final, Native, Private)
+// Parameters:
+// bool                           DropRequestedPrior             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AWieldablePet::OnRep_DropRequested(bool DropRequestedPrior)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_DropRequested"));
+
+	struct
+	{
+		bool                           DropRequestedPrior;
+	} params;
+
+	params.DropRequestedPrior = DropRequestedPrior;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Proxy_Common_DVR.BP_BountyRewardSkull_Proxy_Common_DVR_C
-// 0x0000 (0x0890 - 0x0890)
+// 0x0000 (0x08A0 - 0x08A0)
 class ABP_BountyRewardSkull_Proxy_Common_DVR_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WoodPlankProxy.BP_WoodPlankProxy_C
-// 0x0008 (0x0700 - 0x06F8)
+// 0x0010 (0x0718 - 0x0708)
 class ABP_WoodPlankProxy_C : public AStaticMeshItemProxy
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0708(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

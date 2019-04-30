@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CookingPotBase.BP_CookingPotBase_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x0600 - 0x0600)
 class ABP_CookingPotBase_C : public ACookingPot
 {
 public:

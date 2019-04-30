@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PocketWatch.BP_PocketWatch_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_PocketWatch_C : public APocketWatch
 {
 public:

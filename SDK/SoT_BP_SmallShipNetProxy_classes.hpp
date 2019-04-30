@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipNetProxy.BP_SmallShipNetProxy_C
-// 0x0018 (0x0528 - 0x0510)
+// 0x0018 (0x0538 - 0x0520)
 class ABP_SmallShipNetProxy_C : public AShipNetProxy
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0510(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UMaterialInstanceDynamic*>            Dynamic_Materials;                                        // 0x0518(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0520(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UMaterialInstanceDynamic*>            Dynamic_Materials;                                        // 0x0528(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
