@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wld_reef_kelp_average.BP_wld_reef_kelp_average_C
-// 0x0000 (0x053D - 0x053D)
+// 0x0000 (0x054D - 0x054D)
 class ABP_wld_reef_kelp_average_C : public ABP_Placement_Garden_C
 {
 public:

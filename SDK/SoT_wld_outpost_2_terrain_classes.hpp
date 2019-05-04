@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_outpost_2_terrain.wld_outpost_2_terrain_C
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0000 (0x04B0 - 0x04B0)
 class Awld_outpost_2_terrain_C : public ALevelScriptActor
 {
 public:

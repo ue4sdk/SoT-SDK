@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_DS_StarsOfAThiefPairsPuzzles_classes.hpp"
-#include "SoT_DS_StarsOfAThief_VaultParams_classes.hpp"
 #include "SoT_DS_StarsOfAThiefPuzzle_classes.hpp"
+#include "SoT_DS_StarsOfAThief_VaultParams_classes.hpp"
 #include "SoT_DS_Lorebooks_classes.hpp"
 
 namespace SDK

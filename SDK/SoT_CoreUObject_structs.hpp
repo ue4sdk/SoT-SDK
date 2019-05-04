@@ -181,6 +181,26 @@ struct FVector2D
 		return *this;
 	}
 
+    friend bool operator==(const FVector2D& one, const FVector2D& two)
+	{
+		return one.X == two.X && one.Y == two.Y;
+	}
+
+    friend bool operator!=(const FVector2D& one, const FVector2D& two)
+	{
+		return !(one == two);
+	}
+
+    friend bool operator>(const FVector2D& one, const FVector2D& two)
+	{
+		return one.X > two.X && one.Y > two.Y;
+	}
+
+    friend bool operator<(const FVector2D& one, const FVector2D& two)
+	{
+		return one.X < two.X && one.Y < two.Y;
+	}
+
 };
 
 // ScriptStruct CoreUObject.TwoVectors

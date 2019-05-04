@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_Graymarrow_SpawnParams_classes.hpp"
-#include "SoT_DS_RevengeOfTheMorningstar_SummoningTrinketsParams2_classes.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_SummoningTrinketsParams_classes.hpp"
+#include "SoT_DS_RevengeOfTheMorningstar_SummoningTrinketsParams2_classes.hpp"
 
 namespace SDK
 {

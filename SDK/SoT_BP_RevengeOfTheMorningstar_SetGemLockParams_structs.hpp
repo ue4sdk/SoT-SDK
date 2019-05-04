@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_DS_RevengeOfTheMorningstar_definition_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Tales_classes.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_GemHandIn_classes.hpp"
-#include "SoT_DS_RevengeOfTheMorningstar_definition_classes.hpp"
 
 namespace SDK
 {
