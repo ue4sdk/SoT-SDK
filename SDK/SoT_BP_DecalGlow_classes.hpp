@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DecalGlow.BP_DecalGlow_C
-// 0x0035 (0x04D5 - 0x04A0)
+// 0x0035 (0x04E5 - 0x04B0)
 class ABP_DecalGlow_C : public ALandmarkReactionActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstanceDynamic*>            DecalMaterials;                                           // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class ADecalActor*>                         DecalActors;                                              // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
-	float                                              Reveal_Duration;                                          // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               GatheredMaterials;                                        // 0x04D4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInstanceDynamic*>            DecalMaterials;                                           // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class ADecalActor*>                         DecalActors;                                              // 0x04D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
+	float                                              Reveal_Duration;                                          // 0x04E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               GatheredMaterials;                                        // 0x04E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

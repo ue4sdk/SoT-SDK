@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Barnacles_01_a.BP_Barnacles_01_a_C
-// 0x0000 (0x04B4 - 0x04B4)
+// 0x0000 (0x04C4 - 0x04C4)
 class ABP_Barnacles_01_a_C : public ABP_InstancedStaticMeshes_C
 {
 public:
