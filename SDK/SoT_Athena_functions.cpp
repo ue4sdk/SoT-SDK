@@ -17709,6 +17709,35 @@ void AContestManagerService::Multicast_LeaderboardForUI(TArray<struct FCrewScore
 }
 
 
+// Function Athena.ContestManagerService.Mulitcast_CrewScoringForUI
+// (Net, NetReliable, Native, Event, NetMulticast, Protected, HasDefaults)
+// Parameters:
+// struct FGuid                   InCrewId                       (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            InCrewScore                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EContestScoreId>   InScoreId                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FStringAssetReference   InScoringIconAssetReference    (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void AContestManagerService::Mulitcast_CrewScoringForUI(const struct FGuid& InCrewId, int InCrewScore, TEnumAsByte<EContestScoreId> InScoreId, const struct FStringAssetReference& InScoringIconAssetReference)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ContestManagerService.Mulitcast_CrewScoringForUI"));
+
+	struct
+	{
+		struct FGuid                   InCrewId;
+		int                            InCrewScore;
+		TEnumAsByte<EContestScoreId>   InScoreId;
+		struct FStringAssetReference   InScoringIconAssetReference;
+	} params;
+
+	params.InCrewId = InCrewId;
+	params.InCrewScore = InCrewScore;
+	params.InScoreId = InScoreId;
+	params.InScoringIconAssetReference = InScoringIconAssetReference;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.ContestManagerService.MigrateAllCrewsAndQuit
 // (Final, Native, Private)
 

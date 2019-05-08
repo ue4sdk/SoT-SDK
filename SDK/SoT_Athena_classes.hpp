@@ -5613,14 +5613,14 @@ public:
 
 
 // Class Athena.OnlineAthenaPlayerController
-// 0x0048 (0x12E0 - 0x1298)
+// 0x00D8 (0x1370 - 0x1298)
 class AOnlineAthenaPlayerController : public AAthenaPlayerController
 {
 public:
 	struct FIdleTimeTracker                            IdleTimeTracker;                                          // 0x1298(0x0038) (Edit)
 	unsigned char                                      UnknownData00[0x1];                                       // 0x12D0(0x0001) MISSED OFFSET
 	bool                                               IdleDisconnectEnabled;                                    // 0x12D1(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xE];                                       // 0x12D2(0x000E) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x9E];                                      // 0x12D2(0x009E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5635,7 +5635,7 @@ public:
 
 
 // Class Athena.TestOnlineAthenaPlayerControllerNoEvents
-// 0x0000 (0x12E0 - 0x12E0)
+// 0x0000 (0x1370 - 0x1370)
 class ATestOnlineAthenaPlayerControllerNoEvents : public AOnlineAthenaPlayerController
 {
 public:
@@ -11451,7 +11451,7 @@ public:
 
 
 // Class Athena.CollectorsChestItemSlotInteractable
-// 0x00A0 (0x01C0 - 0x0120)
+// 0x00E0 (0x0200 - 0x0120)
 class UCollectorsChestItemSlotInteractable : public UInteractableComponent
 {
 public:
@@ -11465,7 +11465,7 @@ public:
 	class UWwiseEvent*                                 PickupItemSound;                                          // 0x0180(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PlaceLerpTime;                                            // 0x0188(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              LocalPredictionTimeout;                                   // 0x018C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0190(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x70];                                      // 0x0190(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12682,6 +12682,7 @@ public:
 	void OnContestComplete();
 	void MulticastTriggerCinematicBlind(const struct FCinematicQuestEvent& InEvent);
 	void Multicast_LeaderboardForUI(TArray<struct FCrewScore> InCrewScores);
+	void Mulitcast_CrewScoringForUI(const struct FGuid& InCrewId, int InCrewScore, TEnumAsByte<EContestScoreId> InScoreId, const struct FStringAssetReference& InScoringIconAssetReference);
 	void MigrateAllCrewsAndQuit();
 	void CollectStartBlindsData(class FString* OutVoyageName, TArray<struct FShipIdentityOwnership>* OutShipPool, float* OutBlindDuration);
 	void CollectLeaderboardData(TArray<struct FCrewScore>* OutCrewScores, TArray<struct FShipIdentityOwnership>* OutShipPool, TArray<struct FText>* OutLeaderboardMessages, float* OutLeaderboardDuration);
@@ -33243,14 +33244,14 @@ public:
 
 
 // Class Athena.SpawnProgressTriggerVolume
-// 0x0020 (0x0510 - 0x04F0)
+// 0x0050 (0x0540 - 0x04F0)
 class ASpawnProgressTriggerVolume : public APhysicsVolume
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04F0(0x0008) MISSED OFFSET
-	TArray<class AProgressSpawnLocation*>              LinkedSpawnLocation;                                      // 0x04F8(0x0010) (Edit, ZeroConstructor)
-	int                                                ProgressLevel;                                            // 0x0508(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x050C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x04F0(0x0038) MISSED OFFSET
+	TArray<class AProgressSpawnLocation*>              LinkedSpawnLocation;                                      // 0x0528(0x0010) (Edit, ZeroConstructor)
+	int                                                ProgressLevel;                                            // 0x0538(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x053C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -10,7 +10,6 @@
 #include "SoT_Athena_enums.hpp"
 #include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
-#include "SoT_GameService_classes.hpp"
 #include "SoT_AthenaInput_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AthenaRigging_classes.hpp"
@@ -23,7 +22,6 @@
 #include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoherentUIGTPlugin_classes.hpp"
 #include "SoT_Animation_classes.hpp"
-#include "SoT_JsonUtilities_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
 #include "SoT_Tales_classes.hpp"
 #include "SoT_DebugMenu_classes.hpp"
@@ -33,6 +31,7 @@
 #include "SoT_Pets_classes.hpp"
 #include "SoT_GameplayDebugger_classes.hpp"
 #include "SoT_RareEngine_classes.hpp"
+#include "SoT_GameService_classes.hpp"
 #include "SoT_Cooking_classes.hpp"
 #include "SoT_Wind_classes.hpp"
 #include "SoT_Repair_classes.hpp"
@@ -48,6 +47,7 @@
 #include "SoT_WwiseAudio_classes.hpp"
 #include "SoT_Tethering_classes.hpp"
 #include "SoT_AthenaServerMigration_classes.hpp"
+#include "SoT_JsonUtilities_classes.hpp"
 #include "SoT_PositionalVoice_classes.hpp"
 
 namespace SDK
@@ -11885,15 +11885,15 @@ struct FUpdateScoreBalanceHUDEvent : public FNetworkEventStruct
 };
 
 // ScriptStruct Athena.ScoreGrantedNotificationUIEvent
-// 0x0030 (0x0040 - 0x0010)
-struct FScoreGrantedNotificationUIEvent : public FNetworkEventStruct
+// 0x0030
+struct FScoreGrantedNotificationUIEvent
 {
-	TEnumAsByte<EContestScoreId>                       ScoreId;                                                  // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	class FString                                      DisplayAmount;                                            // 0x0018(0x0010) (ZeroConstructor)
-	int                                                Amount;                                                   // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	class FString                                      ScoringIconPath;                                          // 0x0030(0x0010) (ZeroConstructor)
+	TEnumAsByte<EContestScoreId>                       ScoreId;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class FString                                      DisplayAmount;                                            // 0x0008(0x0010) (ZeroConstructor)
+	int                                                Amount;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class FString                                      ScoringIconPath;                                          // 0x0020(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.ContestLeaderboardUpdateEvent
