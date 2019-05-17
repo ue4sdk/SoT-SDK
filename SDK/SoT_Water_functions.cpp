@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1171,6 +1171,44 @@ struct FVector UWaterSplashProbeFunctionLibrary::GetRelativeWaterHeightChangeSpd
 		*InSplashProbes = params.InSplashProbes;
 
 	return params.ReturnValue;
+}
+
+
+// Function Water.WaterSpoutVFXComponent.AddSplashVFXSpawnerWithLocation
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// struct FWaterSpout             WaterSplashLocator             (Parm, OutParm)
+
+void UWaterSpoutVFXComponent::AddSplashVFXSpawnerWithLocation(struct FWaterSpout* WaterSplashLocator)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSpoutVFXComponent.AddSplashVFXSpawnerWithLocation"));
+
+	struct
+	{
+		struct FWaterSpout             WaterSplashLocator;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (WaterSplashLocator != nullptr)
+		*WaterSplashLocator = params.WaterSplashLocator;
+}
+
+
+// Function Water.WaterSpoutVFXComponent.ActivateSplashVFXWithDelay
+// (Final, Native, Private)
+
+void UWaterSpoutVFXComponent::ActivateSplashVFXWithDelay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSpoutVFXComponent.ActivateSplashVFXWithDelay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

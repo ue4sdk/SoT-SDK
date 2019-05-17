@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_DS_StarsOfAThiefPairsPuzzles_classes.hpp"
+#include "SoT_DS_Lorebooks_classes.hpp"
 #include "SoT_DS_StarsOfAThief_VaultParams_classes.hpp"
 #include "SoT_DS_StarsOfAThiefPuzzle_classes.hpp"
-#include "SoT_DS_Lorebooks_classes.hpp"
 
 namespace SDK
 {
@@ -19,7 +19,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_StarsOfAThiefDefinition.DS_StarsOfAThiefDefinition
-// 0x0130
+// 0x0150
 struct FDS_StarsOfAThiefDefinition
 {
 	TArray<class UClass*>                              AncientGems_44_F7C6645541D77186C51CD49ACFDE8490;          // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -34,6 +34,7 @@ struct FDS_StarsOfAThiefDefinition
 	TArray<struct FDS_Lorebooks>                       Lorebooks_85_6183A12E48EA4AAE09A4FBA355C10921;            // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TAssetPtr<class AActor>                            StatueTrigger_88_C43F48AB46316AC0A4F425870CA14B61;        // 0x00F0(0x0020) (Edit, BlueprintVisible)
 	TAssetPtr<class AActor>                            Statue_92_6257D89E4175E5DCFFB578A6F8089C06;               // 0x0110(0x0020) (Edit, BlueprintVisible)
+	TAssetPtr<class AActor>                            StatueOpenReaction_95_D94B4E54471BEBFD9E9FB59D5CA553CB;   // 0x0130(0x0020) (Edit, BlueprintVisible)
 };
 
 }

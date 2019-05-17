@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -117,22 +117,6 @@ void ABP_TaleDistanceTrackerProxy_C::ExecuteUbergraph_BP_TaleDistanceTrackerProx
 	} params;
 
 	params.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_TaleDistanceTrackerProxy.BP_TaleDistanceTrackerProxy_C.OnDistanceTravelled__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void ABP_TaleDistanceTrackerProxy_C::OnDistanceTravelled__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TaleDistanceTrackerProxy.BP_TaleDistanceTrackerProxy_C.OnDistanceTravelled__DelegateSignature"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }

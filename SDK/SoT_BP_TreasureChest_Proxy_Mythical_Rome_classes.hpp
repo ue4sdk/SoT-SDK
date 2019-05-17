@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Mythical_Rome.BP_TreasureChest_Proxy_Mythical_Rome_C
-// 0x0008 (0x0960 - 0x0958)
+// 0x0008 (0x0948 - 0x0940)
 class ABP_TreasureChest_Proxy_Mythical_Rome_C : public ABP_TreasureChestProxy_C
 {
 public:
-	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x0940(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
+
+// Class Fire.FlammableComponent
+// 0x0008 (0x00D8 - 0x00D0)
+class UFlammableComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.FlammableComponent"));
+		return ptr;
+	}
+
+};
+
 
 // Class Fire.FireCellStateTimingParamsDataAsset
 // 0x0020 (0x0048 - 0x0028)
@@ -60,6 +76,51 @@ public:
 
 
 	void SetAllCellsOnFire(bool IsOnFire);
+};
+
+
+// Class Fire.FireStatus
+// 0x0000 (0x0028 - 0x0028)
+class UFireStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.FireStatus"));
+		return ptr;
+	}
+
+};
+
+
+// Class Fire.FlammableInterface
+// 0x0000 (0x0028 - 0x0028)
+class UFlammableInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.FlammableInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Fire.IgniteStatus
+// 0x0000 (0x0028 - 0x0028)
+class UIgniteStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.IgniteStatus"));
+		return ptr;
+	}
+
 };
 
 
@@ -119,11 +180,10 @@ public:
 	class UShipFirePropagator*                         Propagator;                                               // 0x0100(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UShipFireDamageParamsDataAsset*              FireDamageDataAsset;                                      // 0x0108(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FShipFireCellDesc>                   FireCellDescs;                                            // 0x0110(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UShipFireVFXManager*                         VFXManager;                                               // 0x0120(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UShipFireLightManager*                       LightManager;                                             // 0x0128(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TArray<struct FReplicatedFireCellData>             ReplicatedCellData;                                       // 0x0130(0x0010) (Net, ZeroConstructor, Transient)
-	TArray<class AActor*>                              DamageableShipParts;                                      // 0x0140(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
+	struct FStatus                                     BurnStatus;                                               // 0x0120(0x0018) (Edit, DisableEditOnInstance)
+	class UShipFireVFXManager*                         VFXManager;                                               // 0x0138(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UShipFireLightManager*                       LightManager;                                             // 0x0140(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TArray<struct FReplicatedFireCellData>             ReplicatedCellData;                                       // 0x0148(0x0010) (Net, ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

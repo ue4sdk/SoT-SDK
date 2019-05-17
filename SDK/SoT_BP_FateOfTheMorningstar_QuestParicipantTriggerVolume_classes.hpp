@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,13 +32,13 @@ public:
 	}
 
 
+	void IsQuestParticipant(class AAthenaPlayerCharacter* PlayerCharacter, bool* IsQuestParticipant);
 	void CastToAthenaPlayerCharacter(class AActor* Actor, bool* Successful, class AAthenaPlayerCharacter** AthenaPlayerCharacter);
 	void Initialise(TArray<class AAthenaCharacter*>* QuestParticipants);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void OnComponentBeginOverlap_Event(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void ExecuteUbergraph_BP_FateOfTheMorningstar_QuestParicipantTriggerVolume(int EntryPoint);
-	void OnPlayerEnteredTrigger__DelegateSignature();
+	void OnPlayerEnteredTrigger__DelegateSignature(class AAthenaPlayerCharacter* PlayerCharacter);
 };
 
 

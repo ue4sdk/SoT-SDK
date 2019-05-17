@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 
 
 	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
-	void On_Triggered_By_Player();
+	void Player_Entered_Trigger(class AAthenaPlayerCharacter* PlayerCharacter);
 	void ExecuteUbergraph_BP_FateOfTheMorningstar_WaitForTriggerBroadcast(int EntryPoint);
 };
 

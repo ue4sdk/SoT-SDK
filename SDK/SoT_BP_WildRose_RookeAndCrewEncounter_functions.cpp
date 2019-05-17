@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_WildRose_RookeAndCrewEncounter.BP_WildRose_RookeAndCrewEncounter_C.TriggerEventProxyBroadcast
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_WildRose_RookeAndCrewEncounter_C::TriggerEventProxyBroadcast()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WildRose_RookeAndCrewEncounter.BP_WildRose_RookeAndCrewEncounter_C.TriggerEventProxyBroadcast"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function BP_WildRose_RookeAndCrewEncounter.BP_WildRose_RookeAndCrewEncounter_C.SetRightPendant
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)

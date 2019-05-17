@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OldKey_Crown_Proxy.BP_OldKey_Crown_Proxy_C
-// 0x0000 (0x0868 - 0x0868)
+// 0x0000 (0x0838 - 0x0838)
 class ABP_OldKey_Crown_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:
@@ -26,6 +26,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

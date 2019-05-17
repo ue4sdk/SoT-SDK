@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,22 +66,6 @@ void UBP_RevengeOfTheMorningstar_GraymarrowEncounter_C::OnDespawn(class APawn* P
 
 	params.Pawn = Pawn;
 	params.DeathType = DeathType;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_RevengeOfTheMorningstar_GraymarrowEncounter.BP_RevengeOfTheMorningstar_GraymarrowEncounter_C.On Item Pickup Event
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_RevengeOfTheMorningstar_GraymarrowEncounter_C::On_Item_Pickup_Event()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_RevengeOfTheMorningstar_GraymarrowEncounter.BP_RevengeOfTheMorningstar_GraymarrowEncounter_C.On Item Pickup Event"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }

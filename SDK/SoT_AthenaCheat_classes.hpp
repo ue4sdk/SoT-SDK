@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -80,6 +80,7 @@ public:
 	void TeleportShip(float X, float Y, float Z);
 	void TeleportPlayerToSafety();
 	void TeleportPlayerToKraken();
+	void TeleportPlayersCrewShipToPlayerLocation();
 	void TeleportOutOfHideout();
 	void TeleportCrewToShip(const class FString& CrewId);
 	void TeleportCrewToSafeSpawnLocationFromRemoteActor(const class FString& ActorIdString, const class FString& CrewId);
@@ -89,6 +90,7 @@ public:
 	void TeleportAllPlayersToPlayerStart();
 	void TeleportAllCrewsToShips();
 	void TeleportAllCrewsToCrewSpawnLocations();
+	void TeleportActorToTrackedActorType(const class FString& ActorIdString, int DestinationActorType);
 	void TeleportActorToTeleportLocationActor(const class FString& ControllerActorIdString, const class FString& TeleportLocationActorIdString);
 	void TeleportActorToLocation(const class FString& ActorIdString, float LocationX, float LocationY, float LocationZ, float Yaw);
 	void TeleportActorToIsland(const class FString& ActorIdString, const class FString& IslandName);
@@ -153,6 +155,7 @@ public:
 	void SinkShipWithKeelOverIndex(int KeelOverConfigIndex);
 	void SinkShipByActorId(const class FString& ShipActorIdString);
 	void SinkShip();
+	void SinkClosestItemProxy();
 	void SinkAllBarrels();
 	void SinkAllAIShips();
 	void ShowTavernBanners();
@@ -263,6 +266,7 @@ public:
 	void KrakenAnimatedTentacleChangePlayerHoldState(const class FString& HoldState);
 	void KillPlayer();
 	void KillCrew(const class FString& CrewId);
+	void KillAllSkeletons();
 	void KillAllPlayers();
 	void KillAllCrews();
 	void JoinAlliance(const class FString& OfferingCrew, const class FString& AcceptingCrew);
@@ -286,11 +290,17 @@ public:
 	void HealthContinuousStartWithReason(float Value, const class FString& Reason);
 	void HealthAdjust(float Amount);
 	void God();
+	void ForcePetHangout(const struct FName& HangoutName, int PositionIndex);
 	void ForceOpenShop();
+	void ForceMigrationServiceHeartBeat();
 	void ForceCloseShop();
 	void Fly();
 	void FloodShipWithKeelOverIndex(float NormalisedWaterAmount, int KeelOverConfigIndex);
 	void FloodShip(float NormalisedWaterAmount);
+	void FireCreatorCrewSignedUpStat();
+	void FireCreatorCrewHoursViewedStat();
+	void FireCreatorCrewHoursStreamedStat();
+	void FireCreatorCrewCurrentViewersStat();
 	void FakeMigrateBountyQuests();
 	void EquipPirateTitle(const class FString& PirateTitleType);
 	void EquipCompassInLoadout();

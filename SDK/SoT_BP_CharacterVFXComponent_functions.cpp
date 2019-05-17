@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,28 +31,6 @@ void UBP_CharacterVFXComponent_C::GetWindService(class UObject** WindInterface)
 
 	if (WindInterface != nullptr)
 		*WindInterface = params.WindInterface;
-}
-
-
-// Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_CanProcessWind
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           CanProcess                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UBP_CharacterVFXComponent_C::WindVFX_CanProcessWind(bool* CanProcess)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_CanProcessWind"));
-
-	struct
-	{
-		bool                           CanProcess;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (CanProcess != nullptr)
-		*CanProcess = params.CanProcess;
 }
 
 
@@ -104,44 +82,12 @@ void UBP_CharacterVFXComponent_C::WindVFX_Create()
 }
 
 
-// Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Update
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_CharacterVFXComponent_C::WindVFX_Update()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Update"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Deactivate
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_CharacterVFXComponent_C::WindVFX_Deactivate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Deactivate"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Activate
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_CharacterVFXComponent_C::WindVFX_Activate()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Activate"));
 
 	struct
 	{

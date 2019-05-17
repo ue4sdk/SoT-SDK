@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_compass_smp_01_a_Wieldable.BP_gmp_compass_smp_01_a_Wieldable_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08C8 - 0x08C8)
 class ABP_gmp_compass_smp_01_a_Wieldable_C : public ABP_Compass_C
 {
 public:

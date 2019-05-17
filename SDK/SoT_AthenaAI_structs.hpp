@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,13 +8,13 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Animation_classes.hpp"
 
 namespace SDK
@@ -492,6 +492,14 @@ struct FAIBountySpawnerWaveGroup
 	TArray<struct FAIBountySpawnerWave>                Waves;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
 	int                                                NumNonTargetAIToKillToMoveToNextWaveGroup;                // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x14];                                      // 0x0014(0x0014) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.AICacheHealthSpawnerWave
+// 0x0008 (0x0148 - 0x0140)
+struct FAICacheHealthSpawnerWave : public FAIPersistentSpawnerWave
+{
+	bool                                               CacheHealthOnDespawn;                                     // 0x0140(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0141(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.AIPerCrewSpawnerRankBasedDelay
@@ -1279,10 +1287,10 @@ struct FTinySharkSpawnTelemetryEvent
 };
 
 // ScriptStruct AthenaAI.AICreatureCharacterAggregateTickFunction
-// 0x00C0 (0x0108 - 0x0048)
+// 0x00D0 (0x0118 - 0x0048)
 struct FAICreatureCharacterAggregateTickFunction : public FTickFunction
 {
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x0048(0x00C0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xD0];                                      // 0x0048(0x00D0) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.EventPetCustomisationComplete

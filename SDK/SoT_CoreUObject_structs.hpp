@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,6 +27,11 @@ struct FGuid
     FGuid() : A(0), B(0), C(0), D(0) {}
 
     FGuid(int a, int b, int c, int d) : A(a), B(b), C(c), D(d) {}
+
+   std::size_t operator()(const FGuid& guid) const
+    {
+      return std::hash<int>()(guid.A) ^ std::hash<int>()(guid.B) ^ std::hash<int>()(guid.C) ^ std::hash<int>()(guid.D);
+    }
 
     friend bool operator==( const FGuid& X, const FGuid& Y )
 	{
@@ -100,6 +105,16 @@ struct FVector
 
     inline FVector& operator*= (const float other)    { X *= other;   Y *= other;   Z *= other;   return *this; }
 
+   friend bool operator==(const FVector& first, const FVector& second)
+	{
+		return first.X == second.X && first.Y == second.Y && first.Z == second.Z;
+	}
+
+   friend bool operator!=(const FVector& first, const FVector& second)
+	{
+		return !(first == second);
+	}
+
 };
 
 // ScriptStruct CoreUObject.Vector4
@@ -169,6 +184,26 @@ struct FVector2D
 		X *= other;
 		Y *= other;
 		return *this;
+	}
+
+    friend bool operator==(const FVector2D& one, const FVector2D& two)
+	{
+		return one.X == two.X && one.Y == two.Y;
+	}
+
+    friend bool operator!=(const FVector2D& one, const FVector2D& two)
+	{
+		return !(one == two);
+	}
+
+    friend bool operator>(const FVector2D& one, const FVector2D& two)
+	{
+		return one.X > two.X && one.Y > two.Y;
+	}
+
+    friend bool operator<(const FVector2D& one, const FVector2D& two)
+	{
+		return one.X < two.X && one.Y < two.Y;
 	}
 
 };

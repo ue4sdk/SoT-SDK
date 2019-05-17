@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,6 +32,7 @@ public:
 	}
 
 
+	void TriggerEventProxyBroadcast();
 	void SetRightPendant(class AActor* Pendant);
 	void OnSpawn(class APawn* Pawn);
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);

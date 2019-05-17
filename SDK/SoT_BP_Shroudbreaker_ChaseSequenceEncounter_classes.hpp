@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 
 
 	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
-	void On_Radius_Exit();
+	void Broadcast_Received();
 	void ExecuteUbergraph_BP_Shroudbreaker_ChaseSequenceEncounter(int EntryPoint);
 };
 

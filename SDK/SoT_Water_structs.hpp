@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,6 +135,16 @@ struct FWaterSplashProbe
 	float                                              LocalOffsetAdjustmentDuration;                            // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EWaterSplashProbeType>                 Type;                                                     // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8F];                                      // 0x0049(0x008F) MISSED OFFSET
+};
+
+// ScriptStruct Water.WaterSpout
+// 0x0070
+struct FWaterSpout
+{
+	struct FTransform                                  SpoutLocatorTransform;                                    // 0x0000(0x0030) (Edit, IsPlainOldData)
+	class UParticleSystemComponent*                    SpoutParticleSystem;                                      // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    SplashParticleSystem;                                     // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0040(0x0030) MISSED OFFSET
 };
 
 // ScriptStruct Water.WaterSplashProbesContainer

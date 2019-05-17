@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingRod.BP_FishingRod_C
-// 0x0000 (0x0B70 - 0x0B70)
+// 0x0000 (0x0B68 - 0x0B68)
 class ABP_FishingRod_C : public AFishingRod
 {
 public:

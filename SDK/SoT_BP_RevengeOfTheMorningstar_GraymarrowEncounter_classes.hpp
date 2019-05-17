@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,6 @@ public:
 	void BroadcastToProxy();
 	void OnSpawn(class APawn* Pawn);
 	void OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType> DeathType);
-	void On_Item_Pickup_Event();
 	void ExecuteUbergraph_BP_RevengeOfTheMorningstar_GraymarrowEncounter(int EntryPoint);
 };
 

@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,22 +27,6 @@ void UBP_Shroudbreaker_SpawnShroudbreaker_C::OnBegin(TEnumAsByte<ETaleQuestStepB
 	} params;
 
 	params.InBeginMode = InBeginMode;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Shroudbreaker_SpawnShroudbreaker.BP_Shroudbreaker_SpawnShroudbreaker_C.OnItemPickedUp_Copy
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Shroudbreaker_SpawnShroudbreaker_C::OnItemPickedUp_Copy()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_SpawnShroudbreaker.BP_Shroudbreaker_SpawnShroudbreaker_C.OnItemPickedUp_Copy"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }

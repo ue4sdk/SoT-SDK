@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,8 +86,24 @@ void UBP_HoldOntoTreasureRoom_C::OnEnd()
 }
 
 
+// Function BP_HoldOntoTreasureRoom.BP_HoldOntoTreasureRoom_C.FailTreasureRoomEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_HoldOntoTreasureRoom_C::FailTreasureRoomEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HoldOntoTreasureRoom.BP_HoldOntoTreasureRoom_C.FailTreasureRoomEvent"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_HoldOntoTreasureRoom.BP_HoldOntoTreasureRoom_C.ExecuteUbergraph_BP_HoldOntoTreasureRoom
-// (HasDefaults)
+// ()
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

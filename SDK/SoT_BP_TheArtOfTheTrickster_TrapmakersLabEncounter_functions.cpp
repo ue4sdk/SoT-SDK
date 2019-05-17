@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_TheArtOfTheTrickster_TrapmakersLabEncounter.BP_TheArtOfTheTrickster_TrapmakersLabEncounter_C.TriggerProxyBroadcast
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_TheArtOfTheTrickster_TrapmakersLabEncounter_C::TriggerProxyBroadcast()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_TrapmakersLabEncounter.BP_TheArtOfTheTrickster_TrapmakersLabEncounter_C.TriggerProxyBroadcast"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function BP_TheArtOfTheTrickster_TrapmakersLabEncounter.BP_TheArtOfTheTrickster_TrapmakersLabEncounter_C.SetNoteInVariables
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)

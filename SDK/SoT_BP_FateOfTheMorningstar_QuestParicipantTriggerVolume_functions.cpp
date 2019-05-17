@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,31 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.IsQuestParticipant
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AAthenaPlayerCharacter*  PlayerCharacter                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsQuestParticipant             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::IsQuestParticipant(class AAthenaPlayerCharacter* PlayerCharacter, bool* IsQuestParticipant)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.IsQuestParticipant"));
+
+	struct
+	{
+		class AAthenaPlayerCharacter*  PlayerCharacter;
+		bool                           IsQuestParticipant;
+	} params;
+
+	params.PlayerCharacter = PlayerCharacter;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (IsQuestParticipant != nullptr)
+		*IsQuestParticipant = params.IsQuestParticipant;
+}
+
 
 // Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.CastToAthenaPlayerCharacter
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
@@ -79,24 +104,8 @@ void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::UserConstructionSc
 }
 
 
-// Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.ReceiveBeginPlay"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.OnComponentBeginOverlap_Event
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -104,9 +113,9 @@ void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::ReceiveBeginPlay()
 // bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::OnComponentBeginOverlap_Event(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.OnComponentBeginOverlap_Event"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature"));
 
 	struct
 	{
@@ -149,15 +158,19 @@ void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::ExecuteUbergraph_B
 
 // Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.OnPlayerEnteredTrigger__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AAthenaPlayerCharacter*  PlayerCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::OnPlayerEnteredTrigger__DelegateSignature()
+void ABP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::OnPlayerEnteredTrigger__DelegateSignature(class AAthenaPlayerCharacter* PlayerCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_QuestParicipantTriggerVolume.BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C.OnPlayerEnteredTrigger__DelegateSignature"));
 
 	struct
 	{
+		class AAthenaPlayerCharacter*  PlayerCharacter;
 	} params;
 
+	params.PlayerCharacter = PlayerCharacter;
 
 	UObject::ProcessEvent(fn, &params);
 }

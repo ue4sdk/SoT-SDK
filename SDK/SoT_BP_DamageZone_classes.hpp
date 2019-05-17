@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,7 +56,7 @@ public:
 	void ClearDecalFlags();
 	void OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InRepairableState);
 	void OnInitialise();
-	void OnDecalMaterialUpdated(class UMaterialInterface* NewMaterial, TEnumAsByte<ERepairableState> RepairableState);
+	void OnDecalMaterialUpdatedToRepaired();
 	void ExecuteUbergraph_BP_DamageZone(int EntryPoint);
 };
 

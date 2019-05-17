@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,6 +23,42 @@ void ABP_OrderOfSouls_WildRose_C::UserConstructionScript()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_OrderOfSouls_WildRose.BP_OrderOfSouls_WildRose_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ABP_OrderOfSouls_WildRose_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_OrderOfSouls_WildRose.BP_OrderOfSouls_WildRose_C.ReceiveBeginPlay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_OrderOfSouls_WildRose.BP_OrderOfSouls_WildRose_C.ExecuteUbergraph_BP_OrderOfSouls_WildRose
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_OrderOfSouls_WildRose_C::ExecuteUbergraph_BP_OrderOfSouls_WildRose(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_OrderOfSouls_WildRose.BP_OrderOfSouls_WildRose_C.ExecuteUbergraph_BP_OrderOfSouls_WildRose"));
+
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
+	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);
 }

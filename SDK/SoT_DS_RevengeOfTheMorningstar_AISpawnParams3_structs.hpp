@@ -1,15 +1,15 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_RevengeOfTheMorningstar_SummoningTrinketsParams_classes.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_Graymarrow_SpawnParams_classes.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_SummoningTrinketsParams2_classes.hpp"
+#include "SoT_DS_RevengeOfTheMorningstar_SummoningTrinketsParams_classes.hpp"
 
 namespace SDK
 {

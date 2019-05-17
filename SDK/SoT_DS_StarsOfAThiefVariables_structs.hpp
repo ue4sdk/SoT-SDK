@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_StarsOfAThiefVariables.DS_StarsOfAThiefVariables
-// 0x0108
+// 0x0118
 struct FDS_StarsOfAThiefVariables
 {
 	class AActor*                                      BriggsyChest_68_0FC5B9984D2990D23EB05F96BBA380CE;         // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -40,6 +40,8 @@ struct FDS_StarsOfAThiefVariables
 	TAssetPtr<class AActor>                            VaultAssetID_122_D91C44DE4AF1A77F5BC837943C19EEA4;        // 0x00B8(0x0020) (Edit, BlueprintVisible)
 	struct FDS_StarsOfAThief_VaultParams               AllocatedVaultParams_125_ED4B489C408DB8097D35E4B86E8769E5;// 0x00D8(0x0028) (Edit, BlueprintVisible)
 	class AActor*                                      StarGem_129_1736228149C9E80498F6C28B7FF3203A;             // 0x0100(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      StatueOpenReaction_132_2C1086314BB51EF2E32681B1A0120057;  // 0x0108(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      CaveMusic_135_F247FB3847D996FE06E38189AF2FF7B8;           // 0x0110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

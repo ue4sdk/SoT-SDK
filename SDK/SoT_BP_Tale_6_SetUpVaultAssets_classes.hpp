@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tale_6_SetUpVaultAssets.BP_Tale_6_SetUpVaultAssets_C
-// 0x0008 (0x0098 - 0x0090)
+// 0x0010 (0x00A0 - 0x0090)
 class UBP_Tale_6_SetUpVaultAssets_C : public UBlueprintStepBase
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class AActor*                                      VaultRef;                                                 // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

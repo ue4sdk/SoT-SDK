@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TaleDistanceTrackerProxy.BP_TaleDistanceTrackerProxy_C
-// 0x0038 (0x04E0 - 0x04A8)
-class ABP_TaleDistanceTrackerProxy_C : public AActor
+// 0x0020 (0x04E0 - 0x04C0)
+class ABP_TaleDistanceTrackerProxy_C : public ABP_TaleEventDispatcherProxy_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnDistanceTravelled;                                      // 0x04B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	class AActor*                                      TrackedTarget;                                            // 0x04C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	struct FVector                                     TargetOrigin;                                             // 0x04D0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TriggerDistance;                                          // 0x04DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -38,7 +36,6 @@ public:
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_TaleDistanceTrackerProxy(int EntryPoint);
-	void OnDistanceTravelled__DelegateSignature();
 };
 
 

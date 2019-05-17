@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,7 +16,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_FateOfTheMorningstar_Variables.DS_FateOfTheMorningstar_Variables
-// 0x0180
+// 0x01B8
 struct FDS_FateOfTheMorningstar_Variables
 {
 	class AActor*                                      ResolvedSarcophagusLocation_13_8BE30A2E467CFF15732A90911DDBE1BA;// 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -37,6 +37,13 @@ struct FDS_FateOfTheMorningstar_Variables
 	class UQuestBookPageBundle*                        SelectedQuestBookBundle_83_61BF87D544F75C22FEA0F6B3C50D32C4;// 0x0168(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      ResolvedSarcophagusMusicZone_86_64A938264F39B98D602A2A92C1380E23;// 0x0170(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AItemInfo*                                   SkeletonKey_89_0DED7A54461F3AC2A9D47CBF083AC434;          // 0x0178(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      SarcophagusIslandMusicZone_92_E85E27524ECCB4D8B801809B4EB64818;// 0x0180(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      DingerChestMusic_105_1130D0484689243D41526C903D126BDC;    // 0x0188(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      DingerChestVo_106_35A94B8249C73891FCDC1D91C0CEF1DB;       // 0x0190(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      FontaineChestMusic_107_3EA592734728F1F76B9180A03C9B55B6;  // 0x0198(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      FontaineChestVo_108_D51FF1914FCC9E127C980A94FFF731B2;     // 0x01A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      EliChestMusic_109_B8B1293744FB0293659986A5400C083E;       // 0x01A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      EliChestVO_110_314A01BF40157C2AF87A88B0D3BC3B0E;          // 0x01B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

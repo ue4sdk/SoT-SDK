@@ -1,18 +1,18 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_FateOfTheMorningstar_KeysParams_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_PuzzleParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_SharkEncounterParams_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_CagedKeyParams_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_GhostFootprints_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_PuzzleParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_GhostScenesParams2_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_KeysParams_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_GhostFootprints_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_CagedKeyParams_classes.hpp"
 
 namespace SDK
 {

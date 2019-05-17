@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,6 +34,7 @@ public:
 	}
 
 
+	void TriggerProxyBroadcast();
 	void SetNoteInVariables(class AActor* CollectableNote);
 	void SetTotemInQuestVariables(class AItemInfo* Totem);
 	void OnSpawn(class APawn* Pawn);

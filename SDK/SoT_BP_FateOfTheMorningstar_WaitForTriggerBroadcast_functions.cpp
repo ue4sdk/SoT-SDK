@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,17 +32,21 @@ void UBP_FateOfTheMorningstar_WaitForTriggerBroadcast_C::OnBegin(TEnumAsByte<ETa
 }
 
 
-// Function BP_FateOfTheMorningstar_WaitForTriggerBroadcast.BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C.On Triggered By Player
+// Function BP_FateOfTheMorningstar_WaitForTriggerBroadcast.BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C.Player Entered Trigger
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AAthenaPlayerCharacter*  PlayerCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_FateOfTheMorningstar_WaitForTriggerBroadcast_C::On_Triggered_By_Player()
+void UBP_FateOfTheMorningstar_WaitForTriggerBroadcast_C::Player_Entered_Trigger(class AAthenaPlayerCharacter* PlayerCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_WaitForTriggerBroadcast.BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C.On Triggered By Player"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FateOfTheMorningstar_WaitForTriggerBroadcast.BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C.Player Entered Trigger"));
 
 	struct
 	{
+		class AAthenaPlayerCharacter*  PlayerCharacter;
 	} params;
 
+	params.PlayerCharacter = PlayerCharacter;
 
 	UObject::ProcessEvent(fn, &params);
 }
