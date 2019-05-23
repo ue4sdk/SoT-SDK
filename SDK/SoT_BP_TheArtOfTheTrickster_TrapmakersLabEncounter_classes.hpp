@@ -34,6 +34,7 @@ public:
 	}
 
 
+	void TriggerProxyBroadcast();
 	void SetNoteInVariables(class AActor* CollectableNote);
 	void SetTotemInQuestVariables(class AItemInfo* Totem);
 	void OnSpawn(class APawn* Pawn);

@@ -671,58 +671,6 @@ public:
 };
 
 
-// Class Engine.Info
-// 0x0000 (0x04A8 - 0x04A8)
-class AInfo : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Info"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.PlayerState
-// 0x0088 (0x0530 - 0x04A8)
-class APlayerState : public AInfo
-{
-public:
-	float                                              Score;                                                    // 0x04A8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Ping;                                                     // 0x04AC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
-	class FString                                      PlayerName;                                               // 0x04B0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04C0(0x0010) MISSED OFFSET
-	int                                                PlayerId;                                                 // 0x04D0(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIsSpectator : 1;                                         // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bOnlySpectator : 1;                                       // 0x04D4(0x0001)
-	unsigned char                                      bIsABot : 1;                                              // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData02 : 1;                                        // 0x04D4(0x0001)
-	unsigned char                                      bIsInactive : 1;                                          // 0x04D4(0x0001)
-	unsigned char                                      bFromPreviousLevel : 1;                                   // 0x04D4(0x0001)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x04D5(0x0003) MISSED OFFSET
-	int                                                StartTime;                                                // 0x04D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
-	class UClass*                                      EngineMessageClass;                                       // 0x04E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x18];                                      // 0x04E8(0x0018) MISSED OFFSET
-	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0500(0x0018) (Net)
-	unsigned char                                      UnknownData06[0x18];                                      // 0x0518(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PlayerState"));
-		return ptr;
-	}
-
-
-	void OnRep_UniqueId();
-	void OnRep_PlayerName();
-};
-
-
 // Class Engine.AnimNotify
 // 0x0008 (0x0030 - 0x0028)
 class UAnimNotify : public UObject
@@ -1198,6 +1146,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.BlockingVolume"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.Info
+// 0x0000 (0x04A8 - 0x04A8)
+class AInfo : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Info"));
 		return ptr;
 	}
 
@@ -2231,6 +2194,43 @@ public:
 };
 
 
+// Class Engine.PlayerState
+// 0x0088 (0x0530 - 0x04A8)
+class APlayerState : public AInfo
+{
+public:
+	float                                              Score;                                                    // 0x04A8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Ping;                                                     // 0x04AC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
+	class FString                                      PlayerName;                                               // 0x04B0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x04C0(0x0010) MISSED OFFSET
+	int                                                PlayerId;                                                 // 0x04D0(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIsSpectator : 1;                                         // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bOnlySpectator : 1;                                       // 0x04D4(0x0001)
+	unsigned char                                      bIsABot : 1;                                              // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData02 : 1;                                        // 0x04D4(0x0001)
+	unsigned char                                      bIsInactive : 1;                                          // 0x04D4(0x0001)
+	unsigned char                                      bFromPreviousLevel : 1;                                   // 0x04D4(0x0001)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x04D5(0x0003) MISSED OFFSET
+	int                                                StartTime;                                                // 0x04D8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
+	class UClass*                                      EngineMessageClass;                                       // 0x04E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x18];                                      // 0x04E8(0x0018) MISSED OFFSET
+	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0500(0x0018) (Net)
+	unsigned char                                      UnknownData06[0x18];                                      // 0x0518(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PlayerState"));
+		return ptr;
+	}
+
+
+	void OnRep_UniqueId();
+	void OnRep_PlayerName();
+};
+
+
 // Class Engine.SpringArmComponent
 // 0x0090 (0x0340 - 0x02B0)
 class USpringArmComponent : public USceneComponent
@@ -2715,32 +2715,6 @@ public:
 };
 
 
-// Class Engine.CapsuleComponent
-// 0x0000 (0x05C0 - 0x05C0)
-class UCapsuleComponent : public UShapeComponent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.CapsuleComponent"));
-		return ptr;
-	}
-
-
-	void SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps);
-	void SetCapsuleRadius(float Radius, bool bUpdateOverlaps);
-	void SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps);
-	void GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight);
-	float GetUnscaledCapsuleRadius();
-	float GetUnscaledCapsuleHalfHeight();
-	float GetShapeScale();
-	void GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight);
-	float GetScaledCapsuleRadius();
-	float GetScaledCapsuleHalfHeight();
-};
-
-
 // Class Engine.ThreadedActor
 // 0x0000 (0x04A8 - 0x04A8)
 class AThreadedActor : public AActor
@@ -3209,6 +3183,32 @@ public:
 };
 
 
+// Class Engine.CapsuleComponent
+// 0x0000 (0x05C0 - 0x05C0)
+class UCapsuleComponent : public UShapeComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.CapsuleComponent"));
+		return ptr;
+	}
+
+
+	void SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps);
+	void SetCapsuleRadius(float Radius, bool bUpdateOverlaps);
+	void SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps);
+	void GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight);
+	float GetUnscaledCapsuleRadius();
+	float GetUnscaledCapsuleHalfHeight();
+	float GetShapeScale();
+	void GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight);
+	float GetScaledCapsuleRadius();
+	float GetScaledCapsuleHalfHeight();
+};
+
+
 // Class Engine.TextureProxy
 // 0x0008 (0x0140 - 0x0138)
 class UTextureProxy : public UTexture
@@ -3328,15 +3328,14 @@ public:
 	unsigned char                                      bHasStaticPermutationResource : 1;                        // 0x0068(0x0001)
 	unsigned char                                      UnknownData00 : 1;                                        // 0x0068(0x0001)
 	unsigned char                                      bOverrideSubsurfaceProfile : 1;                           // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0069(0x0003) MISSED OFFSET
-	struct FGuid                                       ParentLightingGuid;                                       // 0x006C(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	struct FGuid                                       ParentLightingGuid;                                       // 0x0070(0x0010) (ZeroConstructor, IsPlainOldData)
 	TArray<struct FFontParameterValue>                 FontParameterValues;                                      // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FScalarParameterValue>               ScalarParameterValues;                                    // 0x0090(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FTextureParameterValue>              TextureParameterValues;                                   // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FVectorParameterValue>               VectorParameterValues;                                    // 0x00B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	struct FMaterialInstanceBasePropertyOverrides      BasePropertyOverrides;                                    // 0x00C0(0x0074) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0x74];                                      // 0x0134(0x0074) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x74];                                      // 0x0134(0x0074) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3796,6 +3795,53 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.TestInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.DerivedTestInterface
+// 0x0000 (0x0028 - 0x0028)
+class UDerivedTestInterface : public UTestInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.DerivedTestInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.ComponentWithDerivedTestInterface
+// 0x0008 (0x00D8 - 0x00D0)
+class UComponentWithDerivedTestInterface : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.ComponentWithDerivedTestInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.ActorWithComponentWithDerivedTestInterface
+// 0x0008 (0x04B0 - 0x04A8)
+class AActorWithComponentWithDerivedTestInterface : public AActor
+{
+public:
+	class UComponentWithDerivedTestInterface*          ComponentWithDerivedTestInterface;                        // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.ActorWithComponentWithDerivedTestInterface"));
 		return ptr;
 	}
 
@@ -6439,6 +6485,38 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.WaterEmissionVolume"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.ComponentWithTestInterface
+// 0x0008 (0x00D8 - 0x00D0)
+class UComponentWithTestInterface : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.ComponentWithTestInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.AnotherComponentWithTestInterface
+// 0x0008 (0x00D8 - 0x00D0)
+class UAnotherComponentWithTestInterface : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.AnotherComponentWithTestInterface"));
 		return ptr;
 	}
 
@@ -11050,7 +11128,8 @@ public:
 	bool                                               bTryPerTrackBitwiseCompression;                           // 0x0076(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bTryLinearKeyRemovalCompression;                          // 0x0077(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bTryIntervalKeyRemoval;                                   // 0x0078(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	bool                                               bStripAnimationDataOnDedicatedServer;                     // 0x0079(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -15954,14 +16033,14 @@ public:
 
 
 // Class Engine.MaterialParameterCollectionInstance
-// 0x00C0 (0x00E8 - 0x0028)
+// 0x00C8 (0x00F0 - 0x0028)
 class UMaterialParameterCollectionInstance : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 	class UMaterialParameterCollection*                Collection;                                               // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UWorld*                                      World;                                                    // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA8];                                      // 0x0040(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x0040(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16047,12 +16126,13 @@ public:
 
 
 // Class Engine.CompressedCanvasRenderTarget2D
-// 0x0010 (0x01A0 - 0x0190)
+// 0x0018 (0x01A8 - 0x0190)
 class UCompressedCanvasRenderTarget2D : public UTexture2D
 {
 public:
 	TWeakObjectPtr<class UWorld>                       World;                                                    // 0x0190(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UCanvasRenderTarget2D*                       RenderTarget;                                             // 0x0198(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x01A0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

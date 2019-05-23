@@ -1174,6 +1174,44 @@ struct FVector UWaterSplashProbeFunctionLibrary::GetRelativeWaterHeightChangeSpd
 }
 
 
+// Function Water.WaterSpoutVFXComponent.AddSplashVFXSpawnerWithLocation
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// struct FWaterSpout             WaterSplashLocator             (Parm, OutParm)
+
+void UWaterSpoutVFXComponent::AddSplashVFXSpawnerWithLocation(struct FWaterSpout* WaterSplashLocator)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSpoutVFXComponent.AddSplashVFXSpawnerWithLocation"));
+
+	struct
+	{
+		struct FWaterSpout             WaterSplashLocator;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (WaterSplashLocator != nullptr)
+		*WaterSplashLocator = params.WaterSplashLocator;
+}
+
+
+// Function Water.WaterSpoutVFXComponent.ActivateSplashVFXWithDelay
+// (Final, Native, Private)
+
+void UWaterSpoutVFXComponent::ActivateSplashVFXWithDelay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterSpoutVFXComponent.ActivateSplashVFXWithDelay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

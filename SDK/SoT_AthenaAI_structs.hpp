@@ -8,13 +8,13 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_Maths_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
+#include "SoT_Maths_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Animation_classes.hpp"
 
 namespace SDK
@@ -1287,10 +1287,10 @@ struct FTinySharkSpawnTelemetryEvent
 };
 
 // ScriptStruct AthenaAI.AICreatureCharacterAggregateTickFunction
-// 0x00C0 (0x0108 - 0x0048)
+// 0x00D0 (0x0118 - 0x0048)
 struct FAICreatureCharacterAggregateTickFunction : public FTickFunction
 {
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x0048(0x00C0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xD0];                                      // 0x0048(0x00D0) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.EventPetCustomisationComplete

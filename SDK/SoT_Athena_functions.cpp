@@ -1268,61 +1268,6 @@ bool UActorRelevancyTestFunctions::IsActorAckedForPlayer(class APlayerController
 }
 
 
-// Function Athena.CameraFunctionLib.UpdateCameraAdditiveType
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TEnumAsByte<ECameraLookatAnimationType> EnumControllableType           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          CameraAdditiveBlendValue       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          IsCameraAdditive               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          CameraPitchTime                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          CameraYawTime                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          CameraYawAngle                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          CameraPitchAngle               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MinPitchAngle                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxPitchAngle                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxYawAngle                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MinYawAngle                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UCameraFunctionLib::UpdateCameraAdditiveType(TEnumAsByte<ECameraLookatAnimationType> EnumControllableType, float CameraAdditiveBlendValue, float CameraYawAngle, float CameraPitchAngle, float MinPitchAngle, float MaxPitchAngle, float MaxYawAngle, float MinYawAngle, float* IsCameraAdditive, float* CameraPitchTime, float* CameraYawTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.CameraFunctionLib.UpdateCameraAdditiveType"));
-
-	struct
-	{
-		TEnumAsByte<ECameraLookatAnimationType> EnumControllableType;
-		float                          CameraAdditiveBlendValue;
-		float                          IsCameraAdditive;
-		float                          CameraPitchTime;
-		float                          CameraYawTime;
-		float                          CameraYawAngle;
-		float                          CameraPitchAngle;
-		float                          MinPitchAngle;
-		float                          MaxPitchAngle;
-		float                          MaxYawAngle;
-		float                          MinYawAngle;
-	} params;
-
-	params.EnumControllableType = EnumControllableType;
-	params.CameraAdditiveBlendValue = CameraAdditiveBlendValue;
-	params.CameraYawAngle = CameraYawAngle;
-	params.CameraPitchAngle = CameraPitchAngle;
-	params.MinPitchAngle = MinPitchAngle;
-	params.MaxPitchAngle = MaxPitchAngle;
-	params.MaxYawAngle = MaxYawAngle;
-	params.MinYawAngle = MinYawAngle;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	if (IsCameraAdditive != nullptr)
-		*IsCameraAdditive = params.IsCameraAdditive;
-	if (CameraPitchTime != nullptr)
-		*CameraPitchTime = params.CameraPitchTime;
-	if (CameraYawTime != nullptr)
-		*CameraYawTime = params.CameraYawTime;
-}
-
-
 // Function Athena.LookAtOffsetComponent.GetLookAtOffset
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -4130,16 +4075,16 @@ void UPlayerCharacterInterface::ExecuteRumbleProfile(const struct FName& RumbleT
 // Function Athena.PlayerManagerServiceInterface.GetPlayerCharacterFromPlayerState
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AAthenaPlayerState*      PlayerState                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState*            PlayerState                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class AAthenaPlayerCharacter*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AAthenaPlayerCharacter* UPlayerManagerServiceInterface::GetPlayerCharacterFromPlayerState(class AAthenaPlayerState* PlayerState)
+class AAthenaPlayerCharacter* UPlayerManagerServiceInterface::GetPlayerCharacterFromPlayerState(class APlayerState* PlayerState)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.PlayerManagerServiceInterface.GetPlayerCharacterFromPlayerState"));
 
 	struct
 	{
-		class AAthenaPlayerState*      PlayerState;
+		class APlayerState*            PlayerState;
 		class AAthenaPlayerCharacter*  ReturnValue;
 	} params;
 
@@ -5144,43 +5089,6 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnPrimaryIt
 	struct
 	{
 		TEnumAsByte<EInputHandlerResult> ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.AthenaPlayerState.OnRep_PirateDescription
-// (Final, Native, Private)
-
-void AAthenaPlayerState::OnRep_PirateDescription()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaPlayerState.OnRep_PirateDescription"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.AthenaPlayerState.GetUniquePlayerId
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-class FString AAthenaPlayerState::GetUniquePlayerId()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaPlayerState.GetUniquePlayerId"));
-
-	struct
-	{
-		class FString                  ReturnValue;
 	} params;
 
 
@@ -7414,6 +7322,26 @@ void AAthenaAICharacter::OnRep_MeshScale(float OldMeshScale)
 }
 
 
+// Function Athena.AthenaAICharacter.OnRep_DamageResponsesDisabled
+// (Final, Native, Public)
+// Parameters:
+// bool                           OldDamageResponsesDisabled     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAICharacter::OnRep_DamageResponsesDisabled(bool OldDamageResponsesDisabled)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaAICharacter.OnRep_DamageResponsesDisabled"));
+
+	struct
+	{
+		bool                           OldDamageResponsesDisabled;
+	} params;
+
+	params.OldDamageResponsesDisabled = OldDamageResponsesDisabled;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.AthenaAICharacter.OnRep_CurrentAnimationState
 // (Final, Native, Public)
 // Parameters:
@@ -8408,6 +8336,30 @@ void UAthenaCharacterTestFunctions::TeleportToPosition(class UObject* WorldConte
 	params.Rotation = Rotation;
 	params.StreamOutLevel = StreamOutLevel;
 	params.StreamInLevel = StreamInLevel;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.AthenaCharacterTestFunctions.SimulateButtonRelease
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FKey                    Button                         (Parm)
+
+void UAthenaCharacterTestFunctions::SimulateButtonRelease(class APlayerController* PlayerController, const struct FKey& Button)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaCharacterTestFunctions.SimulateButtonRelease"));
+
+	struct
+	{
+		class APlayerController*       PlayerController;
+		struct FKey                    Button;
+	} params;
+
+	params.PlayerController = PlayerController;
+	params.Button = Button;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -10107,6 +10059,43 @@ void UAthenaPlayerControllerTestFunctions::AddEntitlementDescToInventory(class A
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.AthenaPlayerState.OnRep_PirateDescription
+// (Final, Native, Private)
+
+void AAthenaPlayerState::OnRep_PirateDescription()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaPlayerState.OnRep_PirateDescription"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.AthenaPlayerState.GetUniquePlayerId
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString AAthenaPlayerState::GetUniquePlayerId()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaPlayerState.GetUniquePlayerId"));
+
+	struct
+	{
+		class FString                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -11840,26 +11829,6 @@ void AItemProxy::SetActorItemProxyDroppedOn(class AActor* InActorItemProxyDroppe
 }
 
 
-// Function Athena.ItemProxy.PostSfxEvent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UWwiseEvent*             SfxEvent                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void AItemProxy::PostSfxEvent(class UWwiseEvent* SfxEvent)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ItemProxy.PostSfxEvent"));
-
-	struct
-	{
-		class UWwiseEvent*             SfxEvent;
-	} params;
-
-	params.SfxEvent = SfxEvent;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Athena.ItemProxy.PerformDropOnSurfaceFx
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -12978,6 +12947,55 @@ bool UCannonAnimInstance::GetCannonFiring()
 }
 
 
+// Function Athena.Grenade.Server_ThrowGrenade
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// float                          TimeHeld                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          WorldYaw                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ViewPitch                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AGrenade::Server_ThrowGrenade(float TimeHeld, float WorldYaw, float ViewPitch)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.Grenade.Server_ThrowGrenade"));
+
+	struct
+	{
+		float                          TimeHeld;
+		float                          WorldYaw;
+		float                          ViewPitch;
+	} params;
+
+	params.TimeHeld = TimeHeld;
+	params.WorldYaw = WorldYaw;
+	params.ViewPitch = ViewPitch;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.Grenade.Multicast_FireProjectile
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
+// Parameters:
+// struct FVector                 AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 LaunchVelocity                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void AGrenade::Multicast_FireProjectile(const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.Grenade.Multicast_FireProjectile"));
+
+	struct
+	{
+		struct FVector                 AuthoritySpawnLocation;
+		struct FVector                 LaunchVelocity;
+	} params;
+
+	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
+	params.LaunchVelocity = LaunchVelocity;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.CannonReloadCompositeInputHandler.OnSecondaryInteractReleased
 // (Final, Native, Private)
 // Parameters:
@@ -13626,17 +13644,20 @@ TArray<class ACapstanArm*> ACapstan::GetArms()
 // (Final, Native, Protected)
 // Parameters:
 // float                          InNormalisedChanceToDrop       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InDamageInstigator             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ACapstan::ChanceDroppingTheAnchor(float InNormalisedChanceToDrop)
+void ACapstan::ChanceDroppingTheAnchor(float InNormalisedChanceToDrop, class AActor* InDamageInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.Capstan.ChanceDroppingTheAnchor"));
 
 	struct
 	{
 		float                          InNormalisedChanceToDrop;
+		class AActor*                  InDamageInstigator;
 	} params;
 
 	params.InNormalisedChanceToDrop = InNormalisedChanceToDrop;
+	params.InDamageInstigator = InDamageInstigator;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -14706,7 +14727,7 @@ float AShip::GetEmpiricalMaxShipSpeedInMPS()
 
 
 // Function Athena.Ship.GetDeckSurfaceWater
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USurfaceWaterComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -15637,6 +15658,27 @@ bool UCharacterSocketCollisionServiceInterface::IsSocketRegistered(const struct 
 	} params;
 
 	params.Handle = Handle;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.CharacterVfxComponent.WindVFX_CanProcessWind
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCharacterVfxComponent::WindVFX_CanProcessWind()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.CharacterVfxComponent.WindVFX_CanProcessWind"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -19565,24 +19607,17 @@ void ADamageZone::OnInitialise()
 }
 
 
-// Function Athena.DamageZone.OnDecalMaterialUpdated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UMaterialInterface*      NewMaterial                    (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ERepairableState>  RepairableState                (Parm, ZeroConstructor, IsPlainOldData)
+// Function Athena.DamageZone.OnDecalMaterialUpdatedToRepaired
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
-void ADamageZone::OnDecalMaterialUpdated(class UMaterialInterface* NewMaterial, TEnumAsByte<ERepairableState> RepairableState)
+void ADamageZone::OnDecalMaterialUpdatedToRepaired()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.DamageZone.OnDecalMaterialUpdated"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.DamageZone.OnDecalMaterialUpdatedToRepaired"));
 
 	struct
 	{
-		class UMaterialInterface*      NewMaterial;
-		TEnumAsByte<ERepairableState>  RepairableState;
 	} params;
 
-	params.NewMaterial = NewMaterial;
-	params.RepairableState = RepairableState;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -30247,64 +30282,6 @@ struct FVector ULadderBlueprintFunctionLibrary::GetRelativePositionAtHeight(cons
 }
 
 
-// Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapEnd
-// (Final, Native, Public)
-// Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void UOverlapTriggerComponent::OnActivationRegionOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapEnd"));
-
-	struct
-	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-	} params;
-
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapBegin
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UOverlapTriggerComponent::OnActivationRegionOverlapBegin(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapBegin"));
-
-	struct
-	{
-		class AActor*                  Other;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              OverlapInfo;
-	} params;
-
-	params.Other = Other;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.bFromSweep = bFromSweep;
-	params.OverlapInfo = OverlapInfo;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Athena.Landmark.TriggerLandmarkReactionForNearbyPlayersExplicitList
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
@@ -37366,16 +37343,16 @@ bool UPlayerAtmosphericsAudioComponent::GetIsWindAudioPlaying()
 // Function Athena.PlayerCrewComponent.Server_VoteOnSendPlayerToBrig
 // (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
 // Parameters:
-// class AAthenaPlayerState*      PlayerState                    (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState*            PlayerState                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SendIn                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UPlayerCrewComponent::Server_VoteOnSendPlayerToBrig(class AAthenaPlayerState* PlayerState, bool SendIn)
+void UPlayerCrewComponent::Server_VoteOnSendPlayerToBrig(class APlayerState* PlayerState, bool SendIn)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.PlayerCrewComponent.Server_VoteOnSendPlayerToBrig"));
 
 	struct
 	{
-		class AAthenaPlayerState*      PlayerState;
+		class APlayerState*            PlayerState;
 		bool                           SendIn;
 	} params;
 
@@ -37409,16 +37386,16 @@ void UPlayerCrewComponent::Server_VoteOnScuttleShip(bool Scuttle)
 // Function Athena.PlayerCrewComponent.Server_VoteOnReleasePlayerFromBrig
 // (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
 // Parameters:
-// class AAthenaPlayerState*      PlayerState                    (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState*            PlayerState                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Release                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UPlayerCrewComponent::Server_VoteOnReleasePlayerFromBrig(class AAthenaPlayerState* PlayerState, bool Release)
+void UPlayerCrewComponent::Server_VoteOnReleasePlayerFromBrig(class APlayerState* PlayerState, bool Release)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.PlayerCrewComponent.Server_VoteOnReleasePlayerFromBrig"));
 
 	struct
 	{
-		class AAthenaPlayerState*      PlayerState;
+		class APlayerState*            PlayerState;
 		bool                           Release;
 	} params;
 
@@ -42320,6 +42297,70 @@ void UStaggerComponent::SetStaggerStrength(float UnaryStrength, TEnumAsByte<ESta
 
 	params.UnaryStrength = UnaryStrength;
 	params.Reason = Reason;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.SimpleBootyInteractiveItem.ReceiveSecondaryItemUse
+// (Event, Public, BlueprintEvent)
+
+void ASimpleBootyInteractiveItem::ReceiveSecondaryItemUse()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.SimpleBootyInteractiveItem.ReceiveSecondaryItemUse"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.SimpleBootyInteractiveItem.ReceiveSecondaryItemStop
+// (Event, Public, BlueprintEvent)
+
+void ASimpleBootyInteractiveItem::ReceiveSecondaryItemStop()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.SimpleBootyInteractiveItem.ReceiveSecondaryItemStop"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.SimpleBootyInteractiveItem.ReceivePrimaryItemUse
+// (Event, Public, BlueprintEvent)
+
+void ASimpleBootyInteractiveItem::ReceivePrimaryItemUse()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.SimpleBootyInteractiveItem.ReceivePrimaryItemUse"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.SimpleBootyInteractiveItem.ReceivePrimaryItemStop
+// (Event, Public, BlueprintEvent)
+
+void ASimpleBootyInteractiveItem::ReceivePrimaryItemStop()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.SimpleBootyInteractiveItem.ReceivePrimaryItemStop"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -49206,6 +49247,174 @@ void USurfaceWaterComponent::AddWater(const struct FVector& Position, float Radi
 }
 
 
+// Function Athena.VfxSelectorFunctionLibrary.SelectUpdateVfxWithOwner
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVfxSelectorDataAsset*   SelectorAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystemComponent* ExistingVfx                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EAttachLocation>   LocationType                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOwnerOnlySee                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOwnerNoSee                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIsUnderwater                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UParticleSystemComponent* UVfxSelectorFunctionLibrary::SelectUpdateVfxWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class AActor* Owner, class UParticleSystemComponent* ExistingVfx, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.VfxSelectorFunctionLibrary.SelectUpdateVfxWithOwner"));
+
+	struct
+	{
+		class UVfxSelectorDataAsset*   SelectorAsset;
+		float                          Value;
+		class AActor*                  Owner;
+		class UParticleSystemComponent* ExistingVfx;
+		class USceneComponent*         AttachToComponent;
+		struct FName                   AttachPointName;
+		TEnumAsByte<EAttachLocation>   LocationType;
+		struct FVector                 Location;
+		struct FRotator                Rotation;
+		bool                           bAutoDestroy;
+		bool                           bOwnerOnlySee;
+		bool                           bOwnerNoSee;
+		bool                           bIsUnderwater;
+		class UParticleSystemComponent* ReturnValue;
+	} params;
+
+	params.SelectorAsset = SelectorAsset;
+	params.Value = Value;
+	params.Owner = Owner;
+	params.ExistingVfx = ExistingVfx;
+	params.AttachToComponent = AttachToComponent;
+	params.AttachPointName = AttachPointName;
+	params.LocationType = LocationType;
+	params.Location = Location;
+	params.Rotation = Rotation;
+	params.bAutoDestroy = bAutoDestroy;
+	params.bOwnerOnlySee = bOwnerOnlySee;
+	params.bOwnerNoSee = bOwnerNoSee;
+	params.bIsUnderwater = bIsUnderwater;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfxAttachedWithOwner
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVfxSelectorDataAsset*   SelectorAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EAttachLocation>   LocationType                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOwnerOnlySee                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOwnerNoSee                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIsUnderwater                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UParticleSystemComponent* UVfxSelectorFunctionLibrary::SelectSpawnVfxAttachedWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class USceneComponent* AttachToComponent, class AActor* Owner, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfxAttachedWithOwner"));
+
+	struct
+	{
+		class UVfxSelectorDataAsset*   SelectorAsset;
+		float                          Value;
+		class USceneComponent*         AttachToComponent;
+		class AActor*                  Owner;
+		struct FName                   AttachPointName;
+		TEnumAsByte<EAttachLocation>   LocationType;
+		struct FVector                 Location;
+		struct FRotator                Rotation;
+		bool                           bAutoDestroy;
+		bool                           bOwnerOnlySee;
+		bool                           bOwnerNoSee;
+		bool                           bIsUnderwater;
+		class UParticleSystemComponent* ReturnValue;
+	} params;
+
+	params.SelectorAsset = SelectorAsset;
+	params.Value = Value;
+	params.AttachToComponent = AttachToComponent;
+	params.Owner = Owner;
+	params.AttachPointName = AttachPointName;
+	params.LocationType = LocationType;
+	params.Location = Location;
+	params.Rotation = Rotation;
+	params.bAutoDestroy = bAutoDestroy;
+	params.bOwnerOnlySee = bOwnerOnlySee;
+	params.bOwnerNoSee = bOwnerNoSee;
+	params.bIsUnderwater = bIsUnderwater;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfx
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UVfxSelectorDataAsset*   SelectorAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOwnerOnlySee                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOwnerNoSee                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIsUnderwater                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UParticleSystemComponent* UVfxSelectorFunctionLibrary::SelectSpawnVfx(class AActor* Actor, class UVfxSelectorDataAsset* SelectorAsset, float Value, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfx"));
+
+	struct
+	{
+		class AActor*                  Actor;
+		class UVfxSelectorDataAsset*   SelectorAsset;
+		float                          Value;
+		struct FVector                 Location;
+		struct FRotator                Rotation;
+		bool                           bAutoDestroy;
+		bool                           bOwnerOnlySee;
+		bool                           bOwnerNoSee;
+		bool                           bIsUnderwater;
+		class UParticleSystemComponent* ReturnValue;
+	} params;
+
+	params.Actor = Actor;
+	params.SelectorAsset = SelectorAsset;
+	params.Value = Value;
+	params.Location = Location;
+	params.Rotation = Rotation;
+	params.bAutoDestroy = bAutoDestroy;
+	params.bOwnerOnlySee = bOwnerOnlySee;
+	params.bOwnerNoSee = bOwnerNoSee;
+	params.bIsUnderwater = bIsUnderwater;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.BuoyancyComponent.Sink
 // (Native, Public, BlueprintCallable)
 
@@ -49377,174 +49586,6 @@ bool UBuoyancyComponent::IsEnabled()
 
 
 	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.VfxSelectorFunctionLibrary.SelectUpdateVfxWithOwner
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UVfxSelectorDataAsset*   SelectorAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UParticleSystemComponent* ExistingVfx                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EAttachLocation>   LocationType                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOwnerOnlySee                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOwnerNoSee                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsUnderwater                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UParticleSystemComponent* UVfxSelectorFunctionLibrary::SelectUpdateVfxWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class AActor* Owner, class UParticleSystemComponent* ExistingVfx, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.VfxSelectorFunctionLibrary.SelectUpdateVfxWithOwner"));
-
-	struct
-	{
-		class UVfxSelectorDataAsset*   SelectorAsset;
-		float                          Value;
-		class AActor*                  Owner;
-		class UParticleSystemComponent* ExistingVfx;
-		class USceneComponent*         AttachToComponent;
-		struct FName                   AttachPointName;
-		TEnumAsByte<EAttachLocation>   LocationType;
-		struct FVector                 Location;
-		struct FRotator                Rotation;
-		bool                           bAutoDestroy;
-		bool                           bOwnerOnlySee;
-		bool                           bOwnerNoSee;
-		bool                           bIsUnderwater;
-		class UParticleSystemComponent* ReturnValue;
-	} params;
-
-	params.SelectorAsset = SelectorAsset;
-	params.Value = Value;
-	params.Owner = Owner;
-	params.ExistingVfx = ExistingVfx;
-	params.AttachToComponent = AttachToComponent;
-	params.AttachPointName = AttachPointName;
-	params.LocationType = LocationType;
-	params.Location = Location;
-	params.Rotation = Rotation;
-	params.bAutoDestroy = bAutoDestroy;
-	params.bOwnerOnlySee = bOwnerOnlySee;
-	params.bOwnerNoSee = bOwnerNoSee;
-	params.bIsUnderwater = bIsUnderwater;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfxAttachedWithOwner
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UVfxSelectorDataAsset*   SelectorAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EAttachLocation>   LocationType                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOwnerOnlySee                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOwnerNoSee                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsUnderwater                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UParticleSystemComponent* UVfxSelectorFunctionLibrary::SelectSpawnVfxAttachedWithOwner(class UVfxSelectorDataAsset* SelectorAsset, float Value, class USceneComponent* AttachToComponent, class AActor* Owner, const struct FName& AttachPointName, TEnumAsByte<EAttachLocation> LocationType, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfxAttachedWithOwner"));
-
-	struct
-	{
-		class UVfxSelectorDataAsset*   SelectorAsset;
-		float                          Value;
-		class USceneComponent*         AttachToComponent;
-		class AActor*                  Owner;
-		struct FName                   AttachPointName;
-		TEnumAsByte<EAttachLocation>   LocationType;
-		struct FVector                 Location;
-		struct FRotator                Rotation;
-		bool                           bAutoDestroy;
-		bool                           bOwnerOnlySee;
-		bool                           bOwnerNoSee;
-		bool                           bIsUnderwater;
-		class UParticleSystemComponent* ReturnValue;
-	} params;
-
-	params.SelectorAsset = SelectorAsset;
-	params.Value = Value;
-	params.AttachToComponent = AttachToComponent;
-	params.Owner = Owner;
-	params.AttachPointName = AttachPointName;
-	params.LocationType = LocationType;
-	params.Location = Location;
-	params.Rotation = Rotation;
-	params.bAutoDestroy = bAutoDestroy;
-	params.bOwnerOnlySee = bOwnerOnlySee;
-	params.bOwnerNoSee = bOwnerNoSee;
-	params.bIsUnderwater = bIsUnderwater;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfx
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UVfxSelectorDataAsset*   SelectorAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOwnerOnlySee                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOwnerNoSee                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsUnderwater                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UParticleSystemComponent* UVfxSelectorFunctionLibrary::SelectSpawnVfx(class AActor* Actor, class UVfxSelectorDataAsset* SelectorAsset, float Value, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy, bool bOwnerOnlySee, bool bOwnerNoSee, bool bIsUnderwater)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.VfxSelectorFunctionLibrary.SelectSpawnVfx"));
-
-	struct
-	{
-		class AActor*                  Actor;
-		class UVfxSelectorDataAsset*   SelectorAsset;
-		float                          Value;
-		struct FVector                 Location;
-		struct FRotator                Rotation;
-		bool                           bAutoDestroy;
-		bool                           bOwnerOnlySee;
-		bool                           bOwnerNoSee;
-		bool                           bIsUnderwater;
-		class UParticleSystemComponent* ReturnValue;
-	} params;
-
-	params.Actor = Actor;
-	params.SelectorAsset = SelectorAsset;
-	params.Value = Value;
-	params.Location = Location;
-	params.Rotation = Rotation;
-	params.bAutoDestroy = bAutoDestroy;
-	params.bOwnerOnlySee = bOwnerOnlySee;
-	params.bOwnerNoSee = bOwnerNoSee;
-	params.bIsUnderwater = bIsUnderwater;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -50909,6 +50950,48 @@ bool UInventoryManipulatorInterface::AddItem(class AItemInfo* Item)
 }
 
 
+// Function Athena.LoadableItemInterface.CanBeUnloaded
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ULoadableItemInterface::CanBeUnloaded()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.LoadableItemInterface.CanBeUnloaded"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.LoadableItemInterface.CanBeLoaded
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ULoadableItemInterface::CanBeLoaded()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.LoadableItemInterface.CanBeLoaded"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.ItemDropFunctions.OnItemDroppedOnActor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -51122,48 +51205,6 @@ class AItemInfo* UItemFactoryFunctions::SpawnItem(class UObject* WorldContext, c
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.LoadableItemInterface.CanBeUnloaded
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ULoadableItemInterface::CanBeUnloaded()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.LoadableItemInterface.CanBeUnloaded"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.LoadableItemInterface.CanBeLoaded
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ULoadableItemInterface::CanBeLoaded()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.LoadableItemInterface.CanBeLoaded"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -53287,6 +53328,61 @@ void UMountpointComponent::OnRep_ReplicatedMountedItem(class UObject* PrevReplic
 }
 
 
+// Function Athena.CameraFunctionLib.UpdateCameraAdditiveType
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TEnumAsByte<ECameraLookatAnimationType> EnumControllableType           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          CameraAdditiveBlendValue       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          IsCameraAdditive               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          CameraPitchTime                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          CameraYawTime                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          CameraYawAngle                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          CameraPitchAngle               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          MinPitchAngle                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxPitchAngle                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxYawAngle                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          MinYawAngle                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCameraFunctionLib::UpdateCameraAdditiveType(TEnumAsByte<ECameraLookatAnimationType> EnumControllableType, float CameraAdditiveBlendValue, float CameraYawAngle, float CameraPitchAngle, float MinPitchAngle, float MaxPitchAngle, float MaxYawAngle, float MinYawAngle, float* IsCameraAdditive, float* CameraPitchTime, float* CameraYawTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.CameraFunctionLib.UpdateCameraAdditiveType"));
+
+	struct
+	{
+		TEnumAsByte<ECameraLookatAnimationType> EnumControllableType;
+		float                          CameraAdditiveBlendValue;
+		float                          IsCameraAdditive;
+		float                          CameraPitchTime;
+		float                          CameraYawTime;
+		float                          CameraYawAngle;
+		float                          CameraPitchAngle;
+		float                          MinPitchAngle;
+		float                          MaxPitchAngle;
+		float                          MaxYawAngle;
+		float                          MinYawAngle;
+	} params;
+
+	params.EnumControllableType = EnumControllableType;
+	params.CameraAdditiveBlendValue = CameraAdditiveBlendValue;
+	params.CameraYawAngle = CameraYawAngle;
+	params.CameraPitchAngle = CameraPitchAngle;
+	params.MinPitchAngle = MinPitchAngle;
+	params.MaxPitchAngle = MaxPitchAngle;
+	params.MaxYawAngle = MaxYawAngle;
+	params.MinYawAngle = MinYawAngle;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	if (IsCameraAdditive != nullptr)
+		*IsCameraAdditive = params.IsCameraAdditive;
+	if (CameraPitchTime != nullptr)
+		*CameraPitchTime = params.CameraPitchTime;
+	if (CameraYawTime != nullptr)
+		*CameraYawTime = params.CameraYawTime;
+}
+
+
 // Function Athena.FishingFish.Multicast_SetVisible
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 
@@ -55319,6 +55415,64 @@ void AVolumeMechanismTrigger::OnTriggerVolumeBeginOverlap(class AActor* OtherAct
 	params.OtherBodyIndex = OtherBodyIndex;
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapEnd
+// (Final, Native, Public)
+// Parameters:
+// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UOverlapTriggerComponent::OnActivationRegionOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapEnd"));
+
+	struct
+	{
+		class AActor*                  OtherActor;
+		class UPrimitiveComponent*     OtherComp;
+		int                            OtherBodyIndex;
+	} params;
+
+	params.OtherActor = OtherActor;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapBegin
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UOverlapTriggerComponent::OnActivationRegionOverlapBegin(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapBegin"));
+
+	struct
+	{
+		class AActor*                  Other;
+		class UPrimitiveComponent*     OtherComp;
+		int                            OtherBodyIndex;
+		bool                           bFromSweep;
+		struct FHitResult              OverlapInfo;
+	} params;
+
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+	params.bFromSweep = bFromSweep;
+	params.OverlapInfo = OverlapInfo;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannon_ball_01_a_Proxy.BP_cmn_cannon_ball_01_a_Proxy_C
-// 0x0000 (0x0718 - 0x0718)
+// 0x0000 (0x06E8 - 0x06E8)
 class ABP_cmn_cannon_ball_01_a_Proxy_C : public ABP_CannonBallProxy_C
 {
 public:

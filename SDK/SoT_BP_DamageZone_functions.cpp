@@ -322,24 +322,17 @@ void ABP_DamageZone_C::OnInitialise()
 }
 
 
-// Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UMaterialInterface*      NewMaterial                    (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ERepairableState>  RepairableState                (Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdatedToRepaired
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
-void ABP_DamageZone_C::OnDecalMaterialUpdated(class UMaterialInterface* NewMaterial, TEnumAsByte<ERepairableState> RepairableState)
+void ABP_DamageZone_C::OnDecalMaterialUpdatedToRepaired()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdated"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZone.BP_DamageZone_C.OnDecalMaterialUpdatedToRepaired"));
 
 	struct
 	{
-		class UMaterialInterface*      NewMaterial;
-		TEnumAsByte<ERepairableState>  RepairableState;
 	} params;
 
-	params.NewMaterial = NewMaterial;
-	params.RepairableState = RepairableState;
 
 	UObject::ProcessEvent(fn, &params);
 }

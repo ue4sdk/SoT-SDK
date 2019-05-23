@@ -28,6 +28,11 @@ struct FGuid
 
     FGuid(int a, int b, int c, int d) : A(a), B(b), C(c), D(d) {}
 
+   std::size_t operator()(const FGuid& guid) const
+    {
+      return std::hash<int>()(guid.A) ^ std::hash<int>()(guid.B) ^ std::hash<int>()(guid.C) ^ std::hash<int>()(guid.D);
+    }
+
     friend bool operator==( const FGuid& X, const FGuid& Y )
 	{
 		return ((X.A ^ Y.A) | (X.B ^ Y.B) | (X.C ^ Y.C) | (X.D ^ Y.D)) == 0;

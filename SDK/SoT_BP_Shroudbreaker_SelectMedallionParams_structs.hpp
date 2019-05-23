@@ -10,10 +10,10 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Tales_classes.hpp"
-#include "SoT_DS_Shroudbreaker_Variables_classes.hpp"
 #include "SoT_DS_Shroudbreaker_MedallionDigSequenceVariables_classes.hpp"
-#include "SoT_DS_Shroudbreaker_MedallionParams_classes.hpp"
+#include "SoT_DS_Shroudbreaker_Variables_classes.hpp"
 #include "SoT_DS_Shroudbreaker_ResolvedMedallionParams_classes.hpp"
+#include "SoT_DS_Shroudbreaker_MedallionParams_classes.hpp"
 
 namespace SDK
 {

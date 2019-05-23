@@ -32,12 +32,12 @@ void UBP_Shroudbreaker_ChaseSequenceEncounter_C::OnBegin(TEnumAsByte<ETaleQuestS
 }
 
 
-// Function BP_Shroudbreaker_ChaseSequenceEncounter.BP_Shroudbreaker_ChaseSequenceEncounter_C.On Radius Exit
+// Function BP_Shroudbreaker_ChaseSequenceEncounter.BP_Shroudbreaker_ChaseSequenceEncounter_C.Broadcast Received
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Shroudbreaker_ChaseSequenceEncounter_C::On_Radius_Exit()
+void UBP_Shroudbreaker_ChaseSequenceEncounter_C::Broadcast_Received()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_ChaseSequenceEncounter.BP_Shroudbreaker_ChaseSequenceEncounter_C.On Radius Exit"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_ChaseSequenceEncounter.BP_Shroudbreaker_ChaseSequenceEncounter_C.Broadcast Received"));
 
 	struct
 	{

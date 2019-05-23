@@ -24,20 +24,6 @@ struct FTetherProjectileImpact
 	class AActor*                                      HitActor;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Tethering.TetherDetached
-// 0x0001
-struct FTetherDetached
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Tethering.TetherAttached
-// 0x0001
-struct FTetherAttached
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
 }
 
 #ifdef _MSC_VER

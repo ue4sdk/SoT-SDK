@@ -451,13 +451,13 @@ public:
 
 
 // Class RareAudio.TritonService
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x0108 (0x0130 - 0x0028)
 class UTritonService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 	TArray<class UTritonComponent*>                    RegisteredTritonComponents;                               // 0x0038(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xE8];                                      // 0x0048(0x00E8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

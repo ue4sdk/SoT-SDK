@@ -123,26 +123,6 @@ struct FDateTime UTimeInterface::ConvertGameWorldTimeToRealWorldTime(const struc
 }
 
 
-// Function Time.DebugTimeInterface.SetTimeSlowdownScalar
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// float                          RequestedSlowdownScalar        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UDebugTimeInterface::SetTimeSlowdownScalar(float RequestedSlowdownScalar)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetTimeSlowdownScalar"));
-
-	struct
-	{
-		float                          RequestedSlowdownScalar;
-	} params;
-
-	params.RequestedSlowdownScalar = RequestedSlowdownScalar;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Time.DebugTimeInterface.SetTimeScalar
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -158,26 +138,6 @@ void UDebugTimeInterface::SetTimeScalar(int RequestedTimeScalar)
 	} params;
 
 	params.RequestedTimeScalar = RequestedTimeScalar;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Time.DebugTimeInterface.SetTimeCatchupScalar
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// float                          RequestedCatchupScalar         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UDebugTimeInterface::SetTimeCatchupScalar(float RequestedCatchupScalar)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.SetTimeCatchupScalar"));
-
-	struct
-	{
-		float                          RequestedCatchupScalar;
-	} params;
-
-	params.RequestedCatchupScalar = RequestedCatchupScalar;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -243,27 +203,6 @@ void UDebugTimeInterface::SetGameWorldTime(const struct FGameTime& RequestedTime
 }
 
 
-// Function Time.DebugTimeInterface.GetTimeSlowdownScalar
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UDebugTimeInterface::GetTimeSlowdownScalar()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.GetTimeSlowdownScalar"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Time.DebugTimeInterface.GetTimeScalar
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -276,27 +215,6 @@ int UDebugTimeInterface::GetTimeScalar()
 	struct
 	{
 		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Time.DebugTimeInterface.GetTimeCatchupScalar
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UDebugTimeInterface::GetTimeCatchupScalar()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeInterface.GetTimeCatchupScalar"));
-
-	struct
-	{
-		float                          ReturnValue;
 	} params;
 
 
@@ -504,46 +422,6 @@ void ADebugTimeService::MulticastOnTimeScalarOffsetRPC(int Scalar, int64_t Offse
 
 	params.Scalar = Scalar;
 	params.Offset = Offset;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Time.DebugTimeService.MulticastOnSynchronizeTimeSpeedupRateRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Protected)
-// Parameters:
-// float                          Rate                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void ADebugTimeService::MulticastOnSynchronizeTimeSpeedupRateRPC(float Rate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeService.MulticastOnSynchronizeTimeSpeedupRateRPC"));
-
-	struct
-	{
-		float                          Rate;
-	} params;
-
-	params.Rate = Rate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Time.DebugTimeService.MulticastOnSynchronizeTimeSlowdownRateRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Protected)
-// Parameters:
-// float                          Rate                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void ADebugTimeService::MulticastOnSynchronizeTimeSlowdownRateRPC(float Rate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeService.MulticastOnSynchronizeTimeSlowdownRateRPC"));
-
-	struct
-	{
-		float                          Rate;
-	} params;
-
-	params.Rate = Rate;
 
 	UObject::ProcessEvent(fn, &params);
 }

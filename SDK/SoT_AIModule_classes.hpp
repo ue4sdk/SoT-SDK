@@ -415,7 +415,7 @@ public:
 
 
 // Class AIModule.AIController
-// 0x0088 (0x0590 - 0x0508)
+// 0x0090 (0x0598 - 0x0508)
 class AAIController : public AController
 {
 public:
@@ -434,7 +434,7 @@ public:
 	class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                             // 0x0560(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x10];                                      // 0x0568(0x0010) MISSED OFFSET
 	struct FScriptMulticastDelegate                    ReceiveMoveCompleted;                                     // 0x0578(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0588(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0588(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -466,7 +466,7 @@ public:
 
 
 // Class AIModule.DetourCrowdAIController
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x0598 - 0x0598)
 class ADetourCrowdAIController : public AAIController
 {
 public:

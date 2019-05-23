@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_enums.hpp"
-#include "SoT_Slate_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
+#include "SoT_Slate_classes.hpp"
 
 namespace SDK
 {
@@ -260,13 +260,6 @@ struct FSimulatedRootMotionReplicatedMove
 	float                                              Time;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FRepRootMotionMontage                       RootMotion;                                               // 0x0008(0x0040)
-};
-
-// ScriptStruct Engine.UniqueNetIdRepl
-// 0x0018
-struct FUniqueNetIdRepl
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Engine.RainPostProcessSettings
@@ -1207,6 +1200,13 @@ struct FViewTargetTransitionParams
 	float                                              BlendExp;                                                 // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bLockOutgoing : 1;                                        // 0x000C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Engine.UniqueNetIdRepl
+// 0x0018
+struct FUniqueNetIdRepl
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Engine.LatentActionInfo

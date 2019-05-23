@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.Initialise
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TheArtOfTheTrickster_VaultTable_C::Initialise()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.Initialise"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.GetObjectDisplayName
 // (HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -84,6 +100,70 @@ void ABP_TheArtOfTheTrickster_VaultTable_C::UserConstructionScript()
 void ABP_TheArtOfTheTrickster_VaultTable_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.ReceiveBeginPlay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.BndEvt__Lock_K2Node_ComponentBoundEvent_96_OnIndividualLockOpenedDelegate__DelegateSignature
+// (BlueprintEvent)
+
+void ABP_TheArtOfTheTrickster_VaultTable_C::BndEvt__Lock_K2Node_ComponentBoundEvent_96_OnIndividualLockOpenedDelegate__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.BndEvt__Lock_K2Node_ComponentBoundEvent_96_OnIndividualLockOpenedDelegate__DelegateSignature"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.BndEvt__Lock_K2Node_ComponentBoundEvent_109_OnLockOpenedDelegate__DelegateSignature
+// (BlueprintEvent)
+
+void ABP_TheArtOfTheTrickster_VaultTable_C::BndEvt__Lock_K2Node_ComponentBoundEvent_109_OnLockOpenedDelegate__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.BndEvt__Lock_K2Node_ComponentBoundEvent_109_OnLockOpenedDelegate__DelegateSignature"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.Multicast Play Sequential VFX
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_TheArtOfTheTrickster_VaultTable_C::Multicast_Play_Sequential_VFX()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.Multicast Play Sequential VFX"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.Multicast Play All VFX
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_TheArtOfTheTrickster_VaultTable_C::Multicast_Play_All_VFX()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TheArtOfTheTrickster_VaultTable.BP_TheArtOfTheTrickster_VaultTable_C.Multicast Play All VFX"));
 
 	struct
 	{

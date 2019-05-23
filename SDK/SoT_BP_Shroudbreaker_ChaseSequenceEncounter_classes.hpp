@@ -32,7 +32,7 @@ public:
 
 
 	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
-	void On_Radius_Exit();
+	void Broadcast_Received();
 	void ExecuteUbergraph_BP_Shroudbreaker_ChaseSequenceEncounter(int EntryPoint);
 };
 

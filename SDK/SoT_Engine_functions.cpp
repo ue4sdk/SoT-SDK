@@ -6954,38 +6954,6 @@ void USceneComponent::DetachFromParent(bool bMaintainWorldPosition, bool bCallMo
 }
 
 
-// Function Engine.PlayerState.OnRep_UniqueId
-// (Native, Public)
-
-void APlayerState::OnRep_UniqueId()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_UniqueId"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.PlayerState.OnRep_PlayerName
-// (Native, Public)
-
-void APlayerState::OnRep_PlayerName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_PlayerName"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Engine.AnimNotify.Received_Notify
 // (Event, Public, BlueprintEvent, Const)
 // Parameters:
@@ -15310,6 +15278,38 @@ void APlayerController::ActivateTouchInterface(class UTouchInterface* NewTouchIn
 }
 
 
+// Function Engine.PlayerState.OnRep_UniqueId
+// (Native, Public)
+
+void APlayerState::OnRep_UniqueId()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_UniqueId"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerState.OnRep_PlayerName
+// (Native, Public)
+
+void APlayerState::OnRep_PlayerName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_PlayerName"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.PostProcessComponent.AddOrUpdateBlendable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -16816,235 +16816,6 @@ float USphereComponent::GetShapeScale()
 float USphereComponent::GetScaledSphereRadius()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetScaledSphereRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.SetCapsuleSize
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InRadius                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InHalfHeight                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleSize"));
-
-	struct
-	{
-		float                          InRadius;
-		float                          InHalfHeight;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.InRadius = InRadius;
-	params.InHalfHeight = InHalfHeight;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CapsuleComponent.SetCapsuleRadius
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::SetCapsuleRadius(float Radius, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleRadius"));
-
-	struct
-	{
-		float                          Radius;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.Radius = Radius;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CapsuleComponent.SetCapsuleHalfHeight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          HalfHeight                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleHalfHeight"));
-
-	struct
-	{
-		float                          HalfHeight;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.HalfHeight = HalfHeight;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CapsuleComponent.GetUnscaledCapsuleSize
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleSize"));
-
-	struct
-	{
-		float                          OutRadius;
-		float                          OutHalfHeight;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (OutRadius != nullptr)
-		*OutRadius = params.OutRadius;
-	if (OutHalfHeight != nullptr)
-		*OutHalfHeight = params.OutHalfHeight;
-}
-
-
-// Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetUnscaledCapsuleRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetUnscaledCapsuleHalfHeight()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetShapeScale
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetShapeScale()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetShapeScale"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetScaledCapsuleSize
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleSize"));
-
-	struct
-	{
-		float                          OutRadius;
-		float                          OutHalfHeight;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (OutRadius != nullptr)
-		*OutRadius = params.OutRadius;
-	if (OutHalfHeight != nullptr)
-		*OutHalfHeight = params.OutHalfHeight;
-}
-
-
-// Function Engine.CapsuleComponent.GetScaledCapsuleRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetScaledCapsuleRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetScaledCapsuleHalfHeight()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight"));
 
 	struct
 	{
@@ -19323,6 +19094,235 @@ void USplineComponent::AddSplineLocalPoint(const struct FVector& Position)
 	params.Position = Position;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.SetCapsuleSize
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InRadius                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InHalfHeight                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleSize"));
+
+	struct
+	{
+		float                          InRadius;
+		float                          InHalfHeight;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InRadius = InRadius;
+	params.InHalfHeight = InHalfHeight;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.SetCapsuleRadius
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::SetCapsuleRadius(float Radius, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleRadius"));
+
+	struct
+	{
+		float                          Radius;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.Radius = Radius;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.SetCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          HalfHeight                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleHalfHeight"));
+
+	struct
+	{
+		float                          HalfHeight;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.HalfHeight = HalfHeight;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.GetUnscaledCapsuleSize
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleSize"));
+
+	struct
+	{
+		float                          OutRadius;
+		float                          OutHalfHeight;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutRadius != nullptr)
+		*OutRadius = params.OutRadius;
+	if (OutHalfHeight != nullptr)
+		*OutHalfHeight = params.OutHalfHeight;
+}
+
+
+// Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetUnscaledCapsuleRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetUnscaledCapsuleHalfHeight()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetShapeScale
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetShapeScale()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetShapeScale"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetScaledCapsuleSize
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleSize"));
+
+	struct
+	{
+		float                          OutRadius;
+		float                          OutHalfHeight;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutRadius != nullptr)
+		*OutRadius = params.OutRadius;
+	if (OutHalfHeight != nullptr)
+		*OutHalfHeight = params.OutHalfHeight;
+}
+
+
+// Function Engine.CapsuleComponent.GetScaledCapsuleRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetScaledCapsuleRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetScaledCapsuleHalfHeight()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

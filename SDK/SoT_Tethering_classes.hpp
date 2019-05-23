@@ -148,8 +148,6 @@ public:
 		return ptr;
 	}
 
-
-	void OnRep_HasAttached();
 };
 
 
@@ -184,17 +182,17 @@ public:
 
 
 // Class Tethering.TetherCustomisationComponent
-// 0x0060 (0x0130 - 0x00D0)
+// 0x00A8 (0x0178 - 0x00D0)
 class UTetherCustomisationComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
 	class USceneComponent*                             ComponentToTetherTo;                                      // 0x00D8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x00E0(0x0048) MISSED OFFSET
-	float                                              MassIntertiaScale;                                        // 0x0128(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               CanBeTethered;                                            // 0x012C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsMassInertiaScalingEnabled;                              // 0x012D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x012E(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x90];                                      // 0x00E0(0x0090) MISSED OFFSET
+	float                                              MassIntertiaScale;                                        // 0x0170(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               CanBeTethered;                                            // 0x0174(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsMassInertiaScalingEnabled;                              // 0x0175(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x0176(0x0002) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

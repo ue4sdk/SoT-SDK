@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_CannonballCrateProxy.BP_MerchantCrate_CannonballCrateProxy_C
-// 0x0018 (0x0888 - 0x0870)
+// 0x0018 (0x0858 - 0x0840)
 class ABP_MerchantCrate_CannonballCrateProxy_C : public AMerchantCrateItemProxy
 {
 public:
-	class UAddOpenContainerActionRuleComponent*        AddOpenContainerActionRule;                               // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAddOpenContainerActionRuleComponent*        AddOpenContainerActionRule;                               // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

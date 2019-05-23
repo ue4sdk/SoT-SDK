@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Concertina.BP_Concertina_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x08B8 - 0x08B8)
 class ABP_Concertina_C : public AMusicalInstrumentSkeletalMesh
 {
 public:

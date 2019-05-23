@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RotatingBlockPuzzle.BP_RotatingBlockPuzzle_C
-// 0x0000 (0x0650 - 0x0650)
+// 0x0000 (0x0658 - 0x0658)
 class ABP_RotatingBlockPuzzle_C : public ARotatingBlockPuzzle
 {
 public:

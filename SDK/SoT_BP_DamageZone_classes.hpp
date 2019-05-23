@@ -56,7 +56,7 @@ public:
 	void ClearDecalFlags();
 	void OnRepairableStateUpdate(TEnumAsByte<ERepairableState> InRepairableState);
 	void OnInitialise();
-	void OnDecalMaterialUpdated(class UMaterialInterface* NewMaterial, TEnumAsByte<ERepairableState> RepairableState);
+	void OnDecalMaterialUpdatedToRepaired();
 	void ExecuteUbergraph_BP_DamageZone(int EntryPoint);
 };
 

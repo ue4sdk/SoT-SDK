@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_TT_Lovers_Cutscene_Ghost_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_BP_TT_Lovers_Cutscene_Ghost_classes.hpp"
 
 namespace SDK
 {
