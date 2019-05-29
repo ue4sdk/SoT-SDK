@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wpn_sniper_rifle_bdg_01_a_Wieldable.BP_wpn_sniper_rifle_bdg_01_a_Wieldable_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0A98 - 0x0A98)
 class ABP_wpn_sniper_rifle_bdg_01_a_Wieldable_C : public ABP_EyeOfReach_C
 {
 public:

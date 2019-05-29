@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_Puzzle_classes.hpp"
 #include "SoT_DS_Lorebooks_classes.hpp"
+#include "SoT_DS_Puzzle_classes.hpp"
 
 namespace SDK
 {

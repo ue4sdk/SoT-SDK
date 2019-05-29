@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_DS_CursedRogue_ChestItem_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_DS_CursedRogue_BuriedChestParams_classes.hpp"
+#include "SoT_DS_CursedRogue_ChestItem_classes.hpp"
 
 namespace SDK
 {
