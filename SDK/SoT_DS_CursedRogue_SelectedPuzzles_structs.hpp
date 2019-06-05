@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_CursedRogue_BuryPointPuzzle_classes.hpp"
 #include "SoT_DS_CursedRogue_KeyCrewPuzzle_classes.hpp"
+#include "SoT_DS_CursedRogue_BuryPointPuzzle_classes.hpp"
 
 namespace SDK
 {
