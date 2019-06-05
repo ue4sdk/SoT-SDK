@@ -7,14 +7,14 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_ShroudBreaker_VaultParams_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_DS_Shroudbreaker_MedallionParams_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_DS_Shroudbreaker_Variables_classes.hpp"
+#include "SoT_DS_ShroudBreaker_VaultParams_classes.hpp"
 #include "SoT_DS_Shroudbreaker_MedallionLockParams_classes.hpp"
+#include "SoT_DS_Shroudbreaker_MedallionParams_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Tales_classes.hpp"
-#include "SoT_DS_Shroudbreaker_Variables_classes.hpp"
 
 namespace SDK
 {
