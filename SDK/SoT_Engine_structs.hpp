@@ -1166,7 +1166,7 @@ struct FDebugDisplayProperty
 // 0x05B0
 struct FCameraCacheEntry
 {
-	float                                              TimeStamp;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Timestamp;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0004(0x000C) MISSED OFFSET
 	struct FMinimalViewInfo                            POV;                                                      // 0x0010(0x05A0)
 };
@@ -1731,7 +1731,7 @@ struct FInterpGroupActorInfo
 struct FCameraCutInfo
 {
 	struct FVector                                     Location;                                                 // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
-	float                                              TimeStamp;                                                // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Timestamp;                                                // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.NavigationFilterArea

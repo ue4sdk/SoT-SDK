@@ -30,6 +30,21 @@ public:
 };
 
 
+// Class Fire.ExtinguishableInterface
+// 0x0000 (0x0028 - 0x0028)
+class UExtinguishableInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.ExtinguishableInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Fire.FireCellStateTimingParamsDataAsset
 // 0x0020 (0x0048 - 0x0028)
 class UFireCellStateTimingParamsDataAsset : public UDataAsset
@@ -124,6 +139,42 @@ public:
 };
 
 
+// Class Fire.MockFirePropagationComponent
+// 0x0020 (0x00F0 - 0x00D0)
+class UMockFirePropagationComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.MockFirePropagationComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Fire.ShipFireAudioManager
+// 0x00B8 (0x00E0 - 0x0028)
+class UShipFireAudioManager : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
+	struct FFireCellAudioParams                        FireAudioParams;                                          // 0x0040(0x0038) (Edit, DisableEditOnInstance)
+	class AActor*                                      OwningActor;                                              // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UShipFirePropagator*                         FirePropagator;                                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x58];                                      // 0x0088(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.ShipFireAudioManager"));
+		return ptr;
+	}
+
+};
+
+
 // Class Fire.ShipFireDamageParamsDataAsset
 // 0x0020 (0x0048 - 0x0028)
 class UShipFireDamageParamsDataAsset : public UDataAsset
@@ -167,7 +218,7 @@ public:
 
 
 // Class Fire.ShipFirePropagationComponent
-// 0x0088 (0x0158 - 0x00D0)
+// 0x0090 (0x0160 - 0x00D0)
 class UShipFirePropagationComponent : public UActorComponent
 {
 public:
@@ -184,6 +235,7 @@ public:
 	class UShipFireVFXManager*                         VFXManager;                                               // 0x0138(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UShipFireLightManager*                       LightManager;                                             // 0x0140(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	TArray<struct FReplicatedFireCellData>             ReplicatedCellData;                                       // 0x0148(0x0010) (Net, ZeroConstructor, Transient)
+	class UShipFireAudioManager*                       FireAudioManager;                                         // 0x0158(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -249,6 +301,36 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.ShipFireVFXManager"));
+		return ptr;
+	}
+
+};
+
+
+// Class Fire.StatusResponseExtinguish
+// 0x0000 (0x0028 - 0x0028)
+class UStatusResponseExtinguish : public UStatusResponse
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.StatusResponseExtinguish"));
+		return ptr;
+	}
+
+};
+
+
+// Class Fire.StatusResponseIgnite
+// 0x0000 (0x0028 - 0x0028)
+class UStatusResponseIgnite : public UStatusResponse
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.StatusResponseIgnite"));
 		return ptr;
 	}
 

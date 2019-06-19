@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_DS_Shroudbreaker_Variables_classes.hpp"
 #include "SoT_DS_Shroudbreaker_NPCParams_classes.hpp"
+#include "SoT_DS_Shroudbreaker_Variables_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {

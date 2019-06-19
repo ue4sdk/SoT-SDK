@@ -158,6 +158,8 @@ public:
 	void SinkClosestItemProxy();
 	void SinkAllBarrels();
 	void SinkAllAIShips();
+	void SimulatePetReactRequest(const class FString& Id);
+	void SimulatePetReactCancellation(const class FString& Id);
 	void ShowTavernBanners();
 	void ShowTaleDebug();
 	void ShowRandomCrewMemberGamerCard();
@@ -208,8 +210,10 @@ public:
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetCapstanPosition(float Position);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
+	void SendUpdateVoyageProgressEvent();
 	void SendStatEvent(const class FString& StatName, uint64_t StatValue);
 	void SendRewardRequestEvent(const class FString& CompanyNameAndRewardIdSeparatedByColon);
+	void SendResetReaperLevelEvent();
 	void ScuttleShip();
 	void ScreenFadeStart();
 	void ScreenFadeEnd();
@@ -228,6 +232,7 @@ public:
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllMechanisms();
 	void ResetAITeamAttitudes();
+	void ReplenishShipWithDebugSpawner();
 	void ReplenishShip();
 	void ReplaceShipWithSmallShip(const class FString& ShipActorIdConsoleString);
 	void RepairShipAndClearInternalWater();
@@ -240,6 +245,7 @@ public:
 	void PullLatestEmblemProgress();
 	void ProceedToNextContestState();
 	void PrintTime();
+	void PrintNPCs();
 	void PrintAllNetworkActors();
 	void PlayerAnimationOverride(const struct FName& Name);
 	void OverrideShipPartFromCatalogue(const class FString& InShipActorIdConsoleString, int InCataloguePartIndex, int InCataloguePartCustomisationIndex);
@@ -277,6 +283,7 @@ public:
 	void InfiniteGunAmmo(bool Enabled);
 	void IncrementTime(int Hours, int Minutes);
 	void IgniteShipAtPlayerLocation();
+	void IgniteLocalPlayer();
 	void IgniteClosestShip();
 	void IgniteAllShipFires();
 	void HideTaleDebug();

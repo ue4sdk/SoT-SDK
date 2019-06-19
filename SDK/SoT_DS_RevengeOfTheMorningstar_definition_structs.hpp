@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_Puzzle_classes.hpp"
-#include "SoT_DS_RevengeOfTheMorningstar_AISpawnParams3_classes.hpp"
 #include "SoT_DS_RevengeOfTheMorningstar_Lorebooks_classes.hpp"
+#include "SoT_DS_RevengeOfTheMorningstar_AISpawnParams3_classes.hpp"
 
 namespace SDK
 {

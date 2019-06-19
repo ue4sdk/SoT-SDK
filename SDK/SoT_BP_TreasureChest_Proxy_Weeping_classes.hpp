@@ -15,19 +15,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Weeping.BP_TreasureChest_Proxy_Weeping_C
-// 0x0048 (0x0988 - 0x0940)
+// 0x0048 (0x0990 - 0x0948)
 class ABP_TreasureChest_Proxy_Weeping_C : public ABP_TreasureChestProxy_C
 {
 public:
-	class UItemProxyShipTrackerComponent*              ItemProxyShipTracker;                                     // 0x0940(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDecalComponent*                             puddle_decal;                                             // 0x0948(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_mouth_3;                                              // 0x0950(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_mouth_2;                                              // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_long_sides2;                             // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_long_sides;                              // 0x0968(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_short_sides2;                            // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_weepingchest_short_sides;                             // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWeepingComponent*                           Weeping;                                                  // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UItemProxyShipTrackerComponent*              ItemProxyShipTracker;                                     // 0x0948(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDecalComponent*                             puddle_decal;                                             // 0x0950(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_mouth_3;                                              // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_mouth_2;                                              // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_long_sides2;                             // 0x0968(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_long_sides;                              // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_short_sides2;                            // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_weepingchest_short_sides;                             // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWeepingComponent*                           Weeping;                                                  // 0x0988(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

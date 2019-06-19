@@ -28,6 +28,42 @@ void ABP_ShipwrightSandra_RevengeOfTheMorningstar_C::UserConstructionScript()
 }
 
 
+// Function BP_ShipwrightSandra_RevengeOfTheMorningstar.BP_ShipwrightSandra_RevengeOfTheMorningstar_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ABP_ShipwrightSandra_RevengeOfTheMorningstar_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipwrightSandra_RevengeOfTheMorningstar.BP_ShipwrightSandra_RevengeOfTheMorningstar_C.ReceiveBeginPlay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_ShipwrightSandra_RevengeOfTheMorningstar.BP_ShipwrightSandra_RevengeOfTheMorningstar_C.ExecuteUbergraph_BP_ShipwrightSandra_RevengeOfTheMorningstar
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_ShipwrightSandra_RevengeOfTheMorningstar_C::ExecuteUbergraph_BP_ShipwrightSandra_RevengeOfTheMorningstar(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipwrightSandra_RevengeOfTheMorningstar.BP_ShipwrightSandra_RevengeOfTheMorningstar_C.ExecuteUbergraph_BP_ShipwrightSandra_RevengeOfTheMorningstar"));
+
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
+	params.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

@@ -32,22 +32,6 @@ void UBP_Shroudbreaker_SpawnMedallion_C::OnBegin(TEnumAsByte<ETaleQuestStepBegin
 }
 
 
-// Function BP_Shroudbreaker_SpawnMedallion.BP_Shroudbreaker_SpawnMedallion_C.On Pickup
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Shroudbreaker_SpawnMedallion_C::On_Pickup()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_SpawnMedallion.BP_Shroudbreaker_SpawnMedallion_C.On Pickup"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Shroudbreaker_SpawnMedallion.BP_Shroudbreaker_SpawnMedallion_C.ExecuteUbergraph_BP_Shroudbreaker_SpawnMedallion
 // (HasDefaults)
 // Parameters:

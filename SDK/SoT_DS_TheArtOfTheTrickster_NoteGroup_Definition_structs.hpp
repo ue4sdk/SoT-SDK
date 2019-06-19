@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_TheArtOfTheTrickster_Note_Definition_classes.hpp"
 #include "SoT_DS_TheArtOfTheTrickster_Gunpowder_Definition_classes.hpp"
+#include "SoT_DS_TheArtOfTheTrickster_Note_Definition_classes.hpp"
 
 namespace SDK
 {

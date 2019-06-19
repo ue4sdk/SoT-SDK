@@ -2067,6 +2067,22 @@ void APet::OnShipDestroyed(class AActor* InShip)
 }
 
 
+// Function AthenaAI.Pet.OnRep_RollRequest
+// (Final, Native, Private)
+
+void APet::OnRep_RollRequest()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_RollRequest"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.Pet.OnRep_MovementRequest
 // (Final, Native, Private)
 

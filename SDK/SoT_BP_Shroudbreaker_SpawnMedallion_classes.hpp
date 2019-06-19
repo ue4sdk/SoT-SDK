@@ -29,7 +29,6 @@ public:
 
 
 	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
-	void On_Pickup();
 	void ExecuteUbergraph_BP_Shroudbreaker_SpawnMedallion(int EntryPoint);
 };
 

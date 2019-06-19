@@ -317,6 +317,109 @@ void ABP_PlayerPirate_C::TriggerTattooGlow()
 }
 
 
+// Function BP_PlayerPirate.BP_PlayerPirate_C.ScaleMesh
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector                 Scale                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     FirstPersonMesh                (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     ThirdPersonMesh                (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerPirate_C::ScaleMesh(const struct FVector& Scale, class UPrimitiveComponent* FirstPersonMesh, class UPrimitiveComponent* ThirdPersonMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.ScaleMesh"));
+
+	struct
+	{
+		struct FVector                 Scale;
+		class UPrimitiveComponent*     FirstPersonMesh;
+		class UPrimitiveComponent*     ThirdPersonMesh;
+	} params;
+
+	params.Scale = Scale;
+	params.FirstPersonMesh = FirstPersonMesh;
+	params.ThirdPersonMesh = ThirdPersonMesh;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PlayerPirate.BP_PlayerPirate_C.SkipToNextMesh
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPirate_C::SkipToNextMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.SkipToNextMesh"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PlayerPirate.BP_PlayerPirate_C.SetWieldedItemMesh
+// (Net, NetReliable, NetMulticast, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AWieldableItem*          Wieldable_Item_Ref             (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh*             StaticMesh                     (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMesh*           SkeletalMesh                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           WieldItem                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UStaticMesh*>     StaticMeshArray                (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class USkeletalMesh*>   SkeletalMeshArray              (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector                 ItemScale                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerPirate_C::SetWieldedItemMesh(class AWieldableItem* Wieldable_Item_Ref, class UStaticMesh* StaticMesh, class USkeletalMesh* SkeletalMesh, bool WieldItem, const struct FVector& ItemScale, TArray<class UStaticMesh*>* StaticMeshArray, TArray<class USkeletalMesh*>* SkeletalMeshArray)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.SetWieldedItemMesh"));
+
+	struct
+	{
+		class AWieldableItem*          Wieldable_Item_Ref;
+		class UStaticMesh*             StaticMesh;
+		class USkeletalMesh*           SkeletalMesh;
+		bool                           WieldItem;
+		TArray<class UStaticMesh*>     StaticMeshArray;
+		TArray<class USkeletalMesh*>   SkeletalMeshArray;
+		struct FVector                 ItemScale;
+	} params;
+
+	params.Wieldable_Item_Ref = Wieldable_Item_Ref;
+	params.StaticMesh = StaticMesh;
+	params.SkeletalMesh = SkeletalMesh;
+	params.WieldItem = WieldItem;
+	params.ItemScale = ItemScale;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (StaticMeshArray != nullptr)
+		*StaticMeshArray = params.StaticMeshArray;
+	if (SkeletalMeshArray != nullptr)
+		*SkeletalMeshArray = params.SkeletalMeshArray;
+}
+
+
+// Function BP_PlayerPirate.BP_PlayerPirate_C.IncreaseWieldedObjectScale
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector                 ItemScaleIncrement             (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerPirate_C::IncreaseWieldedObjectScale(const struct FVector& ItemScaleIncrement)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.IncreaseWieldedObjectScale"));
+
+	struct
+	{
+		struct FVector                 ItemScaleIncrement;
+	} params;
+
+	params.ItemScaleIncrement = ItemScaleIncrement;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_PlayerPirate.BP_PlayerPirate_C.ExecuteUbergraph_BP_PlayerPirate
 // (HasDefaults)
 // Parameters:
