@@ -105,6 +105,36 @@ void UWwiseEmitterBlueprintLibrary::WwiseSetGlobalRTPC(const struct FName& RTPCN
 }
 
 
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostOneShotOnOwner
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseObjectPoolWrapper* EmitterPool                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FWwiseEmitterCreationParams CreationParams                 (Parm)
+// TEnumAsByte<EEmitterRelationship> Relationship                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWwiseEmitterBlueprintLibrary::WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostOneShotOnOwner"));
+
+	struct
+	{
+		class UObject*                 Owner;
+		class UWwiseObjectPoolWrapper* EmitterPool;
+		struct FWwiseEmitterCreationParams CreationParams;
+		TEnumAsByte<EEmitterRelationship> Relationship;
+	} params;
+
+	params.Owner = Owner;
+	params.EmitterPool = EmitterPool;
+	params.CreationParams = CreationParams;
+	params.Relationship = Relationship;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostGlobalEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:

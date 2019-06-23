@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass ShoresOfGoldDefinition.ShoresOfGoldDefinition_C
 // 0x0208 (0x0230 - 0x0028)
-class UShoresOfGoldDefinition_C : public UObject
+class UShoresOfGoldDefinition_C : public UTaleQuestDefinition
 {
 public:
 	struct FDS_ShoresOfGoldDefinition                  Definition;                                               // 0x0028(0x0200) (Edit, BlueprintVisible)

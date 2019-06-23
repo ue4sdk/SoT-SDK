@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OnlineAthenaGameMode.BP_OnlineAthenaGameMode_C
-// 0x0008 (0x0B90 - 0x0B88)
+// 0x0008 (0x0C00 - 0x0BF8)
 class ABP_OnlineAthenaGameMode_C : public AOnlineAthenaGameMode
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0B88(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0BF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

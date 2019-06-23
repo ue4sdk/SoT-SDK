@@ -53,11 +53,11 @@ public:
 
 
 // Class Interaction.CharacterInteractionComponent
-// 0x0090 (0x0660 - 0x05D0)
+// 0x00C0 (0x0690 - 0x05D0)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x05D0(0x0090) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC0];                                      // 0x05D0(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -165,12 +165,13 @@ public:
 
 
 // Class Interaction.InteractableService
-// 0x0020 (0x0048 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UInteractableService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 	TArray<class UInteractableArea*>                   InteractableAreas;                                        // 0x0038(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

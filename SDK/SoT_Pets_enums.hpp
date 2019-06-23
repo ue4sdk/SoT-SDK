@@ -12,6 +12,17 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum Pets.EPetDangerHearingResponseType
+enum class EPetDangerHearingResponseType : uint8_t
+{
+	EPetDangerHearingResponseType__RunAway = 0,
+	EPetDangerHearingResponseType__RunToHangoutSpot = 1,
+	EPetDangerHearingResponseType__TurnToward = 2,
+	EPetDangerHearingResponseType__MAX = 3,
+	EPetDangerHearingResponseType__EPetDangerHearingResponseType_MAX = 4
+};
+
+
 // Enum Pets.EHangoutRotationMode
 enum class EHangoutRotationMode : uint8_t
 {

@@ -64,6 +64,22 @@ void ABP_Grace_ShoresOfGold_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_Grace_ShoresOfGold.BP_Grace_ShoresOfGold_C.ReceiveBeginPlay_Copy
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Grace_ShoresOfGold_C::ReceiveBeginPlay_Copy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Grace_ShoresOfGold.BP_Grace_ShoresOfGold_C.ReceiveBeginPlay_Copy"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Grace_ShoresOfGold.BP_Grace_ShoresOfGold_C.ExecuteUbergraph_BP_Grace_ShoresOfGold
 // ()
 // Parameters:

@@ -7,11 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_FateOfTheMorningstar_SharkEncounterParams_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_PuzzleParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_GhostScenesParams2_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_KeysParams_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_PuzzleParams_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_SarcophagusSpawnParams_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_SharkEncounterParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_GhostFootprints_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_KeysParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_CagedKeyParams_classes.hpp"
 
 namespace SDK
@@ -21,7 +22,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_FateOfTheMorningstar_IslandPuzzleSet.DS_FateOfTheMorningstar_IslandPuzzleSet
-// 0x00F8
+// 0x0108
 struct FDS_FateOfTheMorningstar_IslandPuzzleSet
 {
 	struct FName                                       IslandName_6_62F50E6B47DA2D80EBFE2CBC563A5F66;            // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -31,6 +32,7 @@ struct FDS_FateOfTheMorningstar_IslandPuzzleSet
 	struct FDS_FateOfTheMorningstar_CagedKeyParams     CagedKeyLocation_56_0B4FFF49497620608C452A9AE791C58D;     // 0x00B0(0x0028) (Edit, BlueprintVisible)
 	TArray<struct FDS_FateOfTheMorningstar_GhostScenesParams2> GhostScenes_67_D3F91FFC45FF9BB04862C09F81CCC81C;          // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FDS_FateOfTheMorningstar_GhostFootprints> GhostFootprints2_71_23C50BD3444295D5C304D49EDB4894C8;     // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FDS_FateOfTheMorningstar_SarcophagusSpawnParams> SarcophagusLocation_75_B0023A66494664C455C598A2EA164480;  // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

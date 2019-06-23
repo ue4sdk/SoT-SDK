@@ -357,6 +357,22 @@ public:
 };
 
 
+// Class Water.MockWaterPlaneRetrievalProviderComponent
+// 0x0018 (0x00E8 - 0x00D0)
+class UMockWaterPlaneRetrievalProviderComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00D0(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterPlaneRetrievalProviderComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Water.WaterVolumeInterface
 // 0x0000 (0x0028 - 0x0028)
 class UWaterVolumeInterface : public UInterface

@@ -14,6 +14,22 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class GameService.ServiceProviderGameState
+// 0x0100 (0x0600 - 0x0500)
+class AServiceProviderGameState : public AGameState
+{
+public:
+	unsigned char                                      UnknownData00[0x100];                                     // 0x0500(0x0100) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameService.ServiceProviderGameState"));
+		return ptr;
+	}
+
+};
+
+
 // Class GameService.GameServiceLifecycleInterface
 // 0x0000 (0x0028 - 0x0028)
 class UGameServiceLifecycleInterface : public UInterface

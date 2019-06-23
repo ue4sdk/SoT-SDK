@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Fire_enums.hpp"
+#include "SoT_ShipDamage_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_ShipDamage_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -31,6 +31,19 @@ struct FFireCellStateTimingParams
 	float                                              SidewaysPropagationTime;                                  // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              UpwardPropagationTime;                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DownwardPropagationTime;                                  // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Fire.FireCellAudioParams
+// 0x0038
+struct FFireCellAudioParams
+{
+	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FirePlay;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FireStop;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 FireDouse;                                                // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FireSwitchGroup;                                          // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FireSwitchBurning;                                        // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FireSwitchKindled;                                        // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Fire.ShipFireDamageParams
@@ -149,18 +162,18 @@ struct FFireParticleSpawnList
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
 };
 
-// ScriptStruct Fire.FlammableActorData
-// 0x0001
-struct FFlammableActorData
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
 // ScriptStruct Fire.FireCellStateData
 // 0x0010
 struct FFireCellStateData
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct Fire.FlammableActorData
+// 0x0001
+struct FFlammableActorData
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Fire.FireExtinguished

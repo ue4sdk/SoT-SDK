@@ -6535,7 +6535,7 @@ void UBP_Humanoid_FirstPerson_C::AnimNotify_BothHandsIKOn_S()
 // Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.OnUndockedFromObject
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventUndockedFromObject Event                          (Parm)
+// struct FEventUndockedFromObject Event                          (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBP_Humanoid_FirstPerson_C::OnUndockedFromObject(const struct FEventUndockedFromObject& Event)
 {

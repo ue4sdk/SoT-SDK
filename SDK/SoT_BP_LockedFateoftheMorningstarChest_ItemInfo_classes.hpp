@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LockedFateoftheMorningstarChest_ItemInfo.BP_LockedFateoftheMorningstarChest_ItemInfo_C
-// 0x0008 (0x0778 - 0x0770)
+// 0x0008 (0x0798 - 0x0790)
 class ABP_LockedFateoftheMorningstarChest_ItemInfo_C : public ABP_CollectorsChest_ItemInfo_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0770(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0790(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

@@ -94,8 +94,8 @@ public:
 	unsigned char                                      bNetLoadOnClient : 1;                                     // 0x007D(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bNetUseOwnerRelevancy : 1;                                // 0x007D(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bBlockInput : 1;                                          // 0x007D(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00 : 2;                                        // 0x007D(0x0001)
-	unsigned char                                      bActorEnableCollision : 1;                                // 0x007D(0x0001)
+	unsigned char                                      UnknownData00 : 3;                                        // 0x007D(0x0001)
+	unsigned char                                      bActorEnableCollision : 1;                                // 0x007E(0x0001)
 	unsigned char                                      UnknownData01 : 3;                                        // 0x007E(0x0001)
 	unsigned char                                      bReplicates : 1;                                          // 0x007E(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 	unsigned char                                      UnknownData02[0x1];                                       // 0x007F(0x0001) MISSED OFFSET
@@ -1026,9 +1026,9 @@ public:
 	void SetAvoidanceGroup(int GroupFlags);
 	void SetAvoidanceEnabled(bool bEnable);
 	void ServerMoveOld(float OldTimeStamp, const struct FVector_NetQuantize10& OldAccel, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char OldMoveFlags);
-	void ServerMoveDualHybridRootMotion(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode);
-	void ServerMoveDual(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode);
-	void ServerMove(float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char CompressedMoveFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode);
+	void ServerMoveDualHybridRootMotion(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode);
+	void ServerMoveDual(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode);
+	void ServerMove(float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char CompressedMoveFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode);
 	float K2_GetWalkableFloorZ();
 	float K2_GetWalkableFloorAngle();
 	float K2_GetModifiedMaxAcceleration();
@@ -1045,10 +1045,10 @@ public:
 	class ACharacter* GetCharacterOwner();
 	float GetAnalogInputModifier();
 	void DisableMovement();
-	void ClientVeryShortAdjustPosition(float TimeStamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode);
-	void ClientAdjustRootMotionPosition(float TimeStamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode);
-	void ClientAdjustPosition(float TimeStamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode);
-	void ClientAckGoodMove(float TimeStamp);
+	void ClientVeryShortAdjustPosition(float Timestamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode);
+	void ClientAdjustRootMotionPosition(float Timestamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode);
+	void ClientAdjustPosition(float Timestamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode);
+	void ClientAckGoodMove(float Timestamp);
 	void CapsuleTouched(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void CalcVelocity(float DeltaTime, float Friction, bool bFluid, float BrakingDeceleration);
 	void AddImpulse(const struct FVector& Impulse, bool bVelocityChange);
@@ -1788,6 +1788,40 @@ public:
 	void AddForceAtLocation(const struct FVector& Force, const struct FVector& Location, const struct FName& BoneName);
 	void AddForce(const struct FVector& Force, const struct FName& BoneName, bool bAccelChange);
 	void AddAngularImpulse(const struct FVector& Impulse, const struct FName& BoneName, bool bVelChange);
+};
+
+
+// Class Engine.GameState
+// 0x0058 (0x0500 - 0x04A8)
+class AGameState : public AInfo
+{
+public:
+	class UClass*                                      GameModeClass;                                            // 0x04A8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AGameMode*                                   AuthorityGameMode;                                        // 0x04B0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	class UClass*                                      SpectatorClass;                                           // 0x04B8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       MatchState;                                               // 0x04C0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       PreviousMatchState;                                       // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                ElapsedTime;                                              // 0x04D0(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04D4(0x0004) MISSED OFFSET
+	TArray<class APlayerState*>                        PlayerArray;                                              // 0x04D8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	float                                              ReplicatedWorldTimeSeconds;                               // 0x04E8(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              ServerWorldTimeSecondsDelta;                              // 0x04EC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              ServerWorldTimeSecondsUpdateFrequency;                    // 0x04F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x04F4(0x000C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.GameState"));
+		return ptr;
+	}
+
+
+	void OnRep_SpectatorClass();
+	void OnRep_ReplicatedWorldTimeSeconds();
+	void OnRep_MatchState();
+	void OnRep_GameModeClass();
+	void OnRep_ElapsedTime();
+	float GetServerWorldTimeSeconds();
 };
 
 
@@ -2636,40 +2670,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Engine.GameState
-// 0x0058 (0x0500 - 0x04A8)
-class AGameState : public AInfo
-{
-public:
-	class UClass*                                      GameModeClass;                                            // 0x04A8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class AGameMode*                                   AuthorityGameMode;                                        // 0x04B0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	class UClass*                                      SpectatorClass;                                           // 0x04B8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	struct FName                                       MatchState;                                               // 0x04C0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	struct FName                                       PreviousMatchState;                                       // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                ElapsedTime;                                              // 0x04D0(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04D4(0x0004) MISSED OFFSET
-	TArray<class APlayerState*>                        PlayerArray;                                              // 0x04D8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	float                                              ReplicatedWorldTimeSeconds;                               // 0x04E8(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              ServerWorldTimeSecondsDelta;                              // 0x04EC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              ServerWorldTimeSecondsUpdateFrequency;                    // 0x04F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x04F4(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.GameState"));
-		return ptr;
-	}
-
-
-	void OnRep_SpectatorClass();
-	void OnRep_ReplicatedWorldTimeSeconds();
-	void OnRep_MatchState();
-	void OnRep_GameModeClass();
-	void OnRep_ElapsedTime();
-	float GetServerWorldTimeSeconds();
 };
 
 
@@ -3925,7 +3925,7 @@ public:
 
 
 // Class Engine.World
-// 0x09C8 (0x09F0 - 0x0028)
+// 0x0A50 (0x0A78 - 0x0028)
 class UWorld : public UObject
 {
 public:
@@ -3970,7 +3970,7 @@ public:
 	unsigned char                                      UnknownData07[0x3D];                                      // 0x08F0(0x003D) MISSED OFFSET
 	unsigned char                                      UnknownData08 : 7;                                        // 0x092D(0x0001)
 	unsigned char                                      bAreConstraintsDirty : 1;                                 // 0x092D(0x0001) (Transient)
-	unsigned char                                      UnknownData09[0xC2];                                      // 0x092E(0x00C2) MISSED OFFSET
+	unsigned char                                      UnknownData09[0x14A];                                     // 0x092E(0x014A) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18099,7 +18099,7 @@ public:
 
 
 // Class Engine.SubUVAnimation
-// 0x0040 (0x0068 - 0x0028)
+// 0x0060 (0x0088 - 0x0028)
 class USubUVAnimation : public UObject
 {
 public:
@@ -18111,7 +18111,7 @@ public:
 	unsigned char                                      UnknownData00[0x2];                                       // 0x003A(0x0002) MISSED OFFSET
 	float                                              AlphaThreshold;                                           // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              SafeMarginSize;                                           // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x24];                                      // 0x0044(0x0024) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x44];                                      // 0x0044(0x0044) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18123,7 +18123,7 @@ public:
 
 
 // Class Engine.ParticleModuleRequired
-// 0x0278 (0x02B0 - 0x0038)
+// 0x0298 (0x02D0 - 0x0038)
 class UParticleModuleRequired : public UParticleModule
 {
 public:
@@ -18225,7 +18225,7 @@ public:
 	float                                              NearScaleBeginDistance;                                   // 0x0284(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              NearScaleEndDistance;                                     // 0x0288(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              NearScaleFactor;                                          // 0x028C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x20];                                      // 0x0290(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData25[0x40];                                      // 0x0290(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

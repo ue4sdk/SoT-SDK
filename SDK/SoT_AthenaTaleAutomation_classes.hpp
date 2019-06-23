@@ -360,6 +360,40 @@ public:
 };
 
 
+// Class AthenaTaleAutomation.TaleQuestAutomationKillAIService
+// 0x0020 (0x0060 - 0x0040)
+class UTaleQuestAutomationKillAIService : public UTaleQuestService
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
+	class UTaleQuestAutomationService*                 AutomationService;                                        // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTaleQuestAutomationKillAIServiceDesc*       Desc;                                                     // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationKillAIService"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaTaleAutomation.TaleQuestAutomationKillAIServiceDesc
+// 0x0010 (0x0038 - 0x0028)
+class UTaleQuestAutomationKillAIServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+	TArray<class UClass*>                              AIClasses;                                                // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationKillAIServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaTaleAutomation.TaleQuestAutomationPickupItemStep
 // 0x0008 (0x0070 - 0x0068)
 class UTaleQuestAutomationPickupItemStep : public UTaleQuestAutomationStep

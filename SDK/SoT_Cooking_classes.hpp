@@ -127,7 +127,8 @@ public:
 	struct FName                                       CookedMaterialParameterName;                              // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       BurnDownDirectionParameterName;                           // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              PlacementVarianceAngleBound;                              // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+	bool                                               OnByDefault;                                              // 0x011C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x011D(0x0003) MISSED OFFSET
 	class UCookingComponentAudioParams*                AudioParams;                                              // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EVfxRegion>                            VfxLocation;                                              // 0x0128(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0129(0x0007) MISSED OFFSET
@@ -137,8 +138,9 @@ public:
 	class UStaticMesh*                                 VisibleStaticMesh;                                        // 0x01E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class USkeletalMesh*                               VisibleSkeletalMesh;                                      // 0x01F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UMaterialInstanceDynamic*                    VisibleCookableMaterial;                                  // 0x01F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               OnIsland;                                                 // 0x0200(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x5F];                                      // 0x0201(0x005F) MISSED OFFSET
+	bool                                               TurnedOn;                                                 // 0x0200(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               OnIsland;                                                 // 0x0201(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x5E];                                      // 0x0202(0x005E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

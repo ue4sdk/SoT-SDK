@@ -319,7 +319,8 @@ enum class EDebugPetStateDescriptor : uint8_t
 	EDebugPetStateDescriptor__Pursuit = 4,
 	EDebugPetStateDescriptor__Idle = 5,
 	EDebugPetStateDescriptor__Follow = 6,
-	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 7
+	EDebugPetStateDescriptor__Eating = 7,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 8
 };
 
 

@@ -36,6 +36,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay_Copy();
 	void ExecuteUbergraph_BP_Grace_ShoresOfGold(int EntryPoint);
 };
 

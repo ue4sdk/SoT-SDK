@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_Lorebooks_classes.hpp"
 #include "SoT_DS_AIGoldHoarderParams_classes.hpp"
+#include "SoT_DS_Lorebooks_classes.hpp"
 
 namespace SDK
 {

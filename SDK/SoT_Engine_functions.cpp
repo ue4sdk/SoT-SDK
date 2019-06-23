@@ -8191,7 +8191,7 @@ void UCharacterMovementComponent::ServerMoveOld(float OldTimeStamp, const struct
 // struct FVector_NetQuantize10   InAccel0                       (Parm)
 // unsigned char                  PendingFlags                   (Parm, ZeroConstructor, IsPlainOldData)
 // uint32_t                       View0                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantize10   InAccel                        (Parm)
 // struct FVector_NetQuantize100  ClientLoc                      (Parm)
 // unsigned char                  NewFlags                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -8201,7 +8201,7 @@ void UCharacterMovementComponent::ServerMoveOld(float OldTimeStamp, const struct
 // struct FName                   ClientBaseBoneName             (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClientMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
+void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ServerMoveDualHybridRootMotion"));
 
@@ -8211,7 +8211,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 		struct FVector_NetQuantize10   InAccel0;
 		unsigned char                  PendingFlags;
 		uint32_t                       View0;
-		float                          TimeStamp;
+		float                          Timestamp;
 		struct FVector_NetQuantize10   InAccel;
 		struct FVector_NetQuantize100  ClientLoc;
 		unsigned char                  NewFlags;
@@ -8226,7 +8226,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 	params.InAccel0 = InAccel0;
 	params.PendingFlags = PendingFlags;
 	params.View0 = View0;
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 	params.InAccel = InAccel;
 	params.ClientLoc = ClientLoc;
 	params.NewFlags = NewFlags;
@@ -8247,7 +8247,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 // struct FVector_NetQuantize10   InAccel0                       (Parm)
 // unsigned char                  PendingFlags                   (Parm, ZeroConstructor, IsPlainOldData)
 // uint32_t                       View0                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantize10   InAccel                        (Parm)
 // struct FVector_NetQuantize100  ClientLoc                      (Parm)
 // unsigned char                  NewFlags                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -8257,7 +8257,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 // struct FName                   ClientBaseBoneName             (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClientMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
+void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ServerMoveDual"));
 
@@ -8267,7 +8267,7 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 		struct FVector_NetQuantize10   InAccel0;
 		unsigned char                  PendingFlags;
 		uint32_t                       View0;
-		float                          TimeStamp;
+		float                          Timestamp;
 		struct FVector_NetQuantize10   InAccel;
 		struct FVector_NetQuantize100  ClientLoc;
 		unsigned char                  NewFlags;
@@ -8282,7 +8282,7 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 	params.InAccel0 = InAccel0;
 	params.PendingFlags = PendingFlags;
 	params.View0 = View0;
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 	params.InAccel = InAccel;
 	params.ClientLoc = ClientLoc;
 	params.NewFlags = NewFlags;
@@ -8299,7 +8299,7 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 // Function Engine.CharacterMovementComponent.ServerMove
 // (Net, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantize10   InAccel                        (Parm)
 // struct FVector_NetQuantize100  ClientLoc                      (Parm)
 // unsigned char                  CompressedMoveFlags            (Parm, ZeroConstructor, IsPlainOldData)
@@ -8309,13 +8309,13 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 // struct FName                   ClientBaseBoneName             (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClientMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ServerMove(float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char CompressedMoveFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
+void UCharacterMovementComponent::ServerMove(float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char CompressedMoveFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ServerMove"));
 
 	struct
 	{
-		float                          TimeStamp;
+		float                          Timestamp;
 		struct FVector_NetQuantize10   InAccel;
 		struct FVector_NetQuantize100  ClientLoc;
 		unsigned char                  CompressedMoveFlags;
@@ -8326,7 +8326,7 @@ void UCharacterMovementComponent::ServerMove(float TimeStamp, const struct FVect
 		unsigned char                  ClientMovementMode;
 	} params;
 
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 	params.InAccel = InAccel;
 	params.ClientLoc = ClientLoc;
 	params.CompressedMoveFlags = CompressedMoveFlags;
@@ -8677,7 +8677,7 @@ void UCharacterMovementComponent::DisableMovement()
 // Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition
 // (Net, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     NewBase                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   NewBaseBoneName                (Parm, ZeroConstructor, IsPlainOldData)
@@ -8685,13 +8685,13 @@ void UCharacterMovementComponent::DisableMovement()
 // bool                           bBaseRelativePosition          (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ServerMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float Timestamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition"));
 
 	struct
 	{
-		float                          TimeStamp;
+		float                          Timestamp;
 		struct FVector                 NewLoc;
 		class UPrimitiveComponent*     NewBase;
 		struct FName                   NewBaseBoneName;
@@ -8700,7 +8700,7 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp,
 		unsigned char                  ServerMovementMode;
 	} params;
 
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 	params.NewLoc = NewLoc;
 	params.NewBase = NewBase;
 	params.NewBaseBoneName = NewBaseBoneName;
@@ -8715,7 +8715,7 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp,
 // Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition
 // (Net, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ServerMontageTrackPosition     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ServerLoc                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantizeNormal ServerRotation                 (Parm)
@@ -8726,13 +8726,13 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp,
 // bool                           bBaseRelativePosition          (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ServerMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float Timestamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition"));
 
 	struct
 	{
-		float                          TimeStamp;
+		float                          Timestamp;
 		float                          ServerMontageTrackPosition;
 		struct FVector                 ServerLoc;
 		struct FVector_NetQuantizeNormal ServerRotation;
@@ -8744,7 +8744,7 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp
 		unsigned char                  ServerMovementMode;
 	} params;
 
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 	params.ServerMontageTrackPosition = ServerMontageTrackPosition;
 	params.ServerLoc = ServerLoc;
 	params.ServerRotation = ServerRotation;
@@ -8762,7 +8762,7 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp
 // Function Engine.CharacterMovementComponent.ClientAdjustPosition
 // (Net, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewVel                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     NewBase                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -8771,13 +8771,13 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp
 // bool                           bBaseRelativePosition          (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ServerMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustPosition(float TimeStamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustPosition(float Timestamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientAdjustPosition"));
 
 	struct
 	{
-		float                          TimeStamp;
+		float                          Timestamp;
 		struct FVector                 NewLoc;
 		struct FVector                 NewVel;
 		class UPrimitiveComponent*     NewBase;
@@ -8787,7 +8787,7 @@ void UCharacterMovementComponent::ClientAdjustPosition(float TimeStamp, const st
 		unsigned char                  ServerMovementMode;
 	} params;
 
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 	params.NewLoc = NewLoc;
 	params.NewVel = NewVel;
 	params.NewBase = NewBase;
@@ -8803,18 +8803,18 @@ void UCharacterMovementComponent::ClientAdjustPosition(float TimeStamp, const st
 // Function Engine.CharacterMovementComponent.ClientAckGoodMove
 // (Net, Native, Event, Public, NetClient)
 // Parameters:
-// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAckGoodMove(float TimeStamp)
+void UCharacterMovementComponent::ClientAckGoodMove(float Timestamp)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientAckGoodMove"));
 
 	struct
 	{
-		float                          TimeStamp;
+		float                          Timestamp;
 	} params;
 
-	params.TimeStamp = TimeStamp;
+	params.Timestamp = Timestamp;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -11392,6 +11392,107 @@ void UPrimitiveComponent::AddAngularImpulse(const struct FVector& Impulse, const
 	params.bVelChange = bVelChange;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_SpectatorClass
+// (Native, Public)
+
+void AGameState::OnRep_SpectatorClass()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_SpectatorClass"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds
+// (Native, Protected)
+
+void AGameState::OnRep_ReplicatedWorldTimeSeconds()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_MatchState
+// (Native, Public)
+
+void AGameState::OnRep_MatchState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_MatchState"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_GameModeClass
+// (Native, Public)
+
+void AGameState::OnRep_GameModeClass()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_GameModeClass"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_ElapsedTime
+// (Native, Public)
+
+void AGameState::OnRep_ElapsedTime()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ElapsedTime"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.GetServerWorldTimeSeconds
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AGameState::GetServerWorldTimeSeconds()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.GetServerWorldTimeSeconds"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -16639,107 +16740,6 @@ void ALevelScriptActor::InitialNetRelevantActorsCreated()
 
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_SpectatorClass
-// (Native, Public)
-
-void AGameState::OnRep_SpectatorClass()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_SpectatorClass"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds
-// (Native, Protected)
-
-void AGameState::OnRep_ReplicatedWorldTimeSeconds()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_MatchState
-// (Native, Public)
-
-void AGameState::OnRep_MatchState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_MatchState"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_GameModeClass
-// (Native, Public)
-
-void AGameState::OnRep_GameModeClass()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_GameModeClass"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_ElapsedTime
-// (Native, Public)
-
-void AGameState::OnRep_ElapsedTime()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ElapsedTime"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.GetServerWorldTimeSeconds
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AGameState::GetServerWorldTimeSeconds()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.GetServerWorldTimeSeconds"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

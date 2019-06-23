@@ -217,7 +217,7 @@ public:
 
 
 // Class Kraken.Kraken
-// 0x0508 (0x09B0 - 0x04A8)
+// 0x0518 (0x09C0 - 0x04A8)
 class AKraken : public AActor
 {
 public:
@@ -227,17 +227,17 @@ public:
 	float                                              InnerRadius;                                              // 0x04D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              OuterRadius;                                              // 0x04D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<EKrakenState>                          CurrentState;                                             // 0x04D8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x197];                                     // 0x04D9(0x0197) MISSED OFFSET
-	class AMurk*                                       MurkActor;                                                // 0x0670(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xA0];                                      // 0x0678(0x00A0) MISSED OFFSET
-	class UKrakenAICharacterAudioComponent*            KrakenAudioComponent;                                     // 0x0718(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UKrakenTelemetryComponent*                   KrakenTelemetryComponent;                                 // 0x0720(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0728(0x000C) (Edit, DisableEditOnInstance)
-	struct FEncounterParams                            CloseEncounterParams;                                     // 0x0734(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData04[0x10];                                      // 0x0740(0x0010) MISSED OFFSET
-	struct FKrakenParams                               Params;                                                   // 0x0750(0x0160) (Transient)
-	int                                                NumTentaclesRemaining;                                    // 0x08B0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0xFC];                                      // 0x08B4(0x00FC) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x1A7];                                     // 0x04D9(0x01A7) MISSED OFFSET
+	class AMurk*                                       MurkActor;                                                // 0x0680(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xA0];                                      // 0x0688(0x00A0) MISSED OFFSET
+	class UKrakenAICharacterAudioComponent*            KrakenAudioComponent;                                     // 0x0728(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UKrakenTelemetryComponent*                   KrakenTelemetryComponent;                                 // 0x0730(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0738(0x000C) (Edit, DisableEditOnInstance)
+	struct FEncounterParams                            CloseEncounterParams;                                     // 0x0744(0x000C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x0750(0x0010) MISSED OFFSET
+	struct FKrakenParams                               Params;                                                   // 0x0760(0x0160) (Transient)
+	int                                                NumTentaclesRemaining;                                    // 0x08C0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0xFC];                                      // 0x08C4(0x00FC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

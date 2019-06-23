@@ -7,12 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Tales_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_DS_LegendaryStoryteller_ItemTracker_classes.hpp"
-#include "SoT_DS_LegendaryStorytellerBuriedTreasure_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Tales_classes.hpp"
+#include "SoT_DS_LegendaryStorytellerBuriedTreasure_classes.hpp"
+#include "SoT_DS_LegendaryStoryteller_ItemTracker_classes.hpp"
 
 namespace SDK
 {

@@ -32,22 +32,6 @@ void UBP_SpawnItem_LegendaryStoryteller_C::OnBegin(TEnumAsByte<ETaleQuestStepBeg
 }
 
 
-// Function BP_SpawnItem_LegendaryStoryteller.BP_SpawnItem_LegendaryStoryteller_C.OnItemPickedUp
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_SpawnItem_LegendaryStoryteller_C::OnItemPickedUp()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SpawnItem_LegendaryStoryteller.BP_SpawnItem_LegendaryStoryteller_C.OnItemPickedUp"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_SpawnItem_LegendaryStoryteller.BP_SpawnItem_LegendaryStoryteller_C.ExecuteUbergraph_BP_SpawnItem_LegendaryStoryteller
 // (HasDefaults)
 // Parameters:

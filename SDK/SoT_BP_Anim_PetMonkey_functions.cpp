@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -268,6 +268,38 @@ void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_6ADF1DC04106EF4AE0ACA1B1BCFCABE6
+// (BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_6ADF1DC04106EF4AE0ACA1B1BCFCABE6()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_6ADF1DC04106EF4AE0ACA1B1BCFCABE6"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_EDD2BC91472CA021B2D44086F9783E96
+// (BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_EDD2BC91472CA021B2D44086F9783E96()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_EDD2BC91472CA021B2D44086F9783E96"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_B7B61B0D4E24346D9E5292933FFFAAFE
 // (BlueprintEvent)
 
@@ -284,12 +316,44 @@ void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_D7BEBCE0439AFD9CBB02EF98E5E63DD7
+// (BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_D7BEBCE0439AFD9CBB02EF98E5E63DD7()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_D7BEBCE0439AFD9CBB02EF98E5E63DD7"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_33C81F3242BCBB8CDE426CA2CA7F9E8E
 // (BlueprintEvent)
 
 void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_33C81F3242BCBB8CDE426CA2CA7F9E8E()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_33C81F3242BCBB8CDE426CA2CA7F9E8E"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_C5BCA08F4FED14BE58AFD69EAD9DCDCA
+// (BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_C5BCA08F4FED14BE58AFD69EAD9DCDCA()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_C5BCA08F4FED14BE58AFD69EAD9DCDCA"));
 
 	struct
 	{
@@ -1388,12 +1452,28 @@ void UBP_Anim_PetMonkey_C::AnimNotify_NewBaseIdleB()
 }
 
 
-// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_InitIdleAnims
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetLookAt_On
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Anim_PetMonkey_C::AnimNotify_InitIdleAnims()
+void UBP_Anim_PetMonkey_C::AnimNotify_PetLookAt_On()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_InitIdleAnims"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetLookAt_On"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetLookAt_Off
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::AnimNotify_PetLookAt_Off()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetLookAt_Off"));
 
 	struct
 	{

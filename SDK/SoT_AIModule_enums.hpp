@@ -347,7 +347,8 @@ enum class EEnvQueryRunMode : uint8_t
 	EEnvQueryRunMode__RandomBest5Pct = 1,
 	EEnvQueryRunMode__RandomBest25Pct = 2,
 	EEnvQueryRunMode__AllMatching  = 3,
-	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 4
+	EEnvQueryRunMode__RandomFromAllMatching = 4,
+	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 5
 };
 
 

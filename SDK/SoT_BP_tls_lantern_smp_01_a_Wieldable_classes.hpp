@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_lantern_smp_01_a_Wieldable.BP_tls_lantern_smp_01_a_Wieldable_C
-// 0x0000 (0x09B4 - 0x09B4)
+// 0x0000 (0x09BC - 0x09BC)
 class ABP_tls_lantern_smp_01_a_Wieldable_C : public ABP_Lantern_C
 {
 public:

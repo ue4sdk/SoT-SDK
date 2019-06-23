@@ -32,7 +32,7 @@ struct FStatusDescriptor
 };
 
 // ScriptStruct StatusEffects.ActiveStatusEffect
-// 0x0038
+// 0x0040
 struct FActiveStatusEffect
 {
 	TArray<class UClass*>                              SourceStatus;                                             // 0x0000(0x0010) (ZeroConstructor)
@@ -40,6 +40,8 @@ struct FActiveStatusEffect
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 	TArray<class UStatusResponse*>                     ResponseTemplates;                                        // 0x0018(0x0010) (ZeroConstructor)
 	TArray<class UStatusResponse*>                     InstancedResponses;                                       // 0x0028(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	bool                                               ResponsesAreActive;                                       // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct StatusEffects.Status
