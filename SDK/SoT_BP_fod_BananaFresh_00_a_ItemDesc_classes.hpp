@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_BananaFresh_00_a_ItemDesc.BP_fod_BananaFresh_00_a_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_fod_BananaFresh_00_a_ItemDesc_C : public UItemDesc
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Mythical_Desc_Rome.BP_TreasureChest_Mythical_Desc_Rome_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_TreasureChest_Mythical_Desc_Rome_C : public UBootyItemDesc
 {
 public:

@@ -8,14 +8,14 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
-#include "SoT_Engine_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_Animation_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 
 namespace SDK
 {
@@ -863,6 +863,14 @@ struct FAIPerCrewSpawnerCrewUnit
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
+// ScriptStruct AthenaAI.AIProgressiveWavesSpawnerArchive
+// 0x0008 (0x0010 - 0x0008)
+struct FAIProgressiveWavesSpawnerArchive : public FAISpawnerArchive
+{
+	int                                                CurrentWaveIndex;                                         // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct AthenaAI.AthenaAIControllerAggregateTickFunction
 // 0x0010 (0x0058 - 0x0048)
 struct FAthenaAIControllerAggregateTickFunction : public FTickFunction
@@ -1300,6 +1308,13 @@ struct FTinySharkSpawnTelemetryEvent
 struct FAICreatureCharacterAggregateTickFunction : public FTickFunction
 {
 	unsigned char                                      UnknownData00[0xD0];                                      // 0x0048(0x00D0) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.EventPetOwnerAssigned
+// 0x0008
+struct FEventPetOwnerAssigned
+{
+	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.EventPetCustomisationComplete

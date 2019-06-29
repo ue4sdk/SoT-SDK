@@ -495,6 +495,41 @@ public:
 };
 
 
+// Class AIModule.CustomDataProviderObject
+// 0x0000 (0x0028 - 0x0028)
+class UCustomDataProviderObject : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AIModule.CustomDataProviderObject"));
+		return ptr;
+	}
+
+};
+
+
+// Class AIModule.AIDataProvider_QueryParamFromCustomObjectProperty
+// 0x0020 (0x0048 - 0x0028)
+class UAIDataProvider_QueryParamFromCustomObjectProperty : public UAIDataProvider
+{
+public:
+	struct FCustomDataProviderObjectPropertySelector   ObjectProperty;                                           // 0x0028(0x0010) (Edit)
+	float                                              FloatValue;                                               // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                IntValue;                                                 // 0x003C(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               BoolValue;                                                // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AIModule.AIDataProvider_QueryParamFromCustomObjectProperty"));
+		return ptr;
+	}
+
+};
+
+
 // Class AIModule.AIDataProvider_QueryParams
 // 0x0018 (0x0040 - 0x0028)
 class UAIDataProvider_QueryParams : public UAIDataProvider

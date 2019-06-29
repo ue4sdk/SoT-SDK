@@ -8,19 +8,26 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Pets_enums.hpp"
-#include "SoT_AIModule_classes.hpp"
-#include "SoT_AthenaAI_classes.hpp"
-#include "SoT_Athena_classes.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Interaction_classes.hpp"
+#include "SoT_AthenaAI_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
+#include "SoT_Athena_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Pets.HangoutSpotId
+// 0x0008
+struct FHangoutSpotId
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
 
 // ScriptStruct Pets.PetAnimationWeighting
 // 0x0008
@@ -58,14 +65,23 @@ struct FHangoutSpotParams
 	TArray<struct FPetHangoutSpotParams>               PetParams;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
+// ScriptStruct Pets.PetDangerHearingThreatResponse
+// 0x0003
+struct FPetDangerHearingThreatResponse
+{
+	TEnumAsByte<EPetDangerHearingResponseType>         Type;                                                     // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPetDangerHearingTarget>               IgnoredTarget;                                            // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               InvertIgnoredTarget;                                      // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Pets.PetDangerHearingThreat
-// 0x0010
+// 0x0020
 struct FPetDangerHearingThreat
 {
 	struct FName                                       SoundTag;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TimeBeforeForgotten;                                      // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPetDangerHearingResponseType>         Response;                                                 // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	TArray<struct FPetDangerHearingThreatResponse>     Responses;                                                // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct Pets.PetFeedingAnimationData
@@ -90,13 +106,6 @@ struct FPetFeedingParams
 	float                                              TimeUntilGivingUp;                                        // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DistToleranceSquared;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              RotationTolerance;                                        // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Pets.HangoutSpotId
-// 0x0008
-struct FHangoutSpotId
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.HangoutSpotPosition

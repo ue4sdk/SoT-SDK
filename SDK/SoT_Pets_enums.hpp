@@ -23,6 +23,17 @@ enum class EPetDangerHearingResponseType : uint8_t
 };
 
 
+// Enum Pets.EPetDangerHearingTarget
+enum class EPetDangerHearingTarget : uint8_t
+{
+	EPetDangerHearingTarget__None  = 0,
+	EPetDangerHearingTarget__Owner = 1,
+	EPetDangerHearingTarget__Crew  = 2,
+	EPetDangerHearingTarget__Alliance = 3,
+	EPetDangerHearingTarget__EPetDangerHearingTarget_MAX = 4
+};
+
+
 // Enum Pets.EHangoutRotationMode
 enum class EHangoutRotationMode : uint8_t
 {

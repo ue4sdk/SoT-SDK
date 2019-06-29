@@ -313,14 +313,15 @@ enum class EFaunaCratedState : uint8_t
 enum class EDebugPetStateDescriptor : uint8_t
 {
 	EDebugPetStateDescriptor__NoState = 0,
-	EDebugPetStateDescriptor__Hangout_Docked = 1,
+	EDebugPetStateDescriptor__Hangout_Attached = 1,
 	EDebugPetStateDescriptor__Hangout_MoveToLocation = 2,
 	EDebugPetStateDescriptor__Reacting = 3,
 	EDebugPetStateDescriptor__Pursuit = 4,
 	EDebugPetStateDescriptor__Idle = 5,
 	EDebugPetStateDescriptor__Follow = 6,
 	EDebugPetStateDescriptor__Eating = 7,
-	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 8
+	EDebugPetStateDescriptor__Scared = 8,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 9
 };
 
 

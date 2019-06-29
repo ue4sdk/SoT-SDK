@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaEngine_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -50,6 +50,16 @@ struct FPlayModeDefiniton
 	TArray<class FString>                              States;                                                   // 0x0010(0x0010) (ZeroConstructor)
 	int                                                CrewMin;                                                  // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CrewMax;                                                  // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaEngine.ActorComponentSelector
+// 0x0020
+struct FActorComponentSelector
+{
+	struct FName                                       ComponentName;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UActorComponent*                             CachedComponent;                                          // 0x0008(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UClass*                                      ComponentClass;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 };
 
 }

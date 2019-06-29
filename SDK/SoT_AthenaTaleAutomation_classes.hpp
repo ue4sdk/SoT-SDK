@@ -30,6 +30,8 @@ public:
 		return ptr;
 	}
 
+
+	class AAthenaPlayerCharacter* GetPuppet();
 };
 
 
@@ -470,6 +472,38 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaTaleAutomation.TaleQuestAutomationSkipAnimationService
+// 0x0018 (0x0058 - 0x0040)
+class UTaleQuestAutomationSkipAnimationService : public UTaleQuestService
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
+	class UTaleQuestAutomationService*                 AutomationService;                                        // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationSkipAnimationService"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaTaleAutomation.TaleQuestAutomationSkipAnimationServiceDesc
+// 0x0000 (0x0028 - 0x0028)
+class UTaleQuestAutomationSkipAnimationServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaTaleAutomation.TaleQuestAutomationSkipAnimationServiceDesc"));
 		return ptr;
 	}
 

@@ -2083,6 +2083,22 @@ void APet::OnRep_RollRequest()
 }
 
 
+// Function AthenaAI.Pet.OnRep_PetOwner
+// (Final, Native, Private)
+
+void APet::OnRep_PetOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PetOwner"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.Pet.OnRep_MovementRequest
 // (Final, Native, Private)
 

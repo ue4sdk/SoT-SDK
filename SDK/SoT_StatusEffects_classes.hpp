@@ -59,6 +59,39 @@ public:
 };
 
 
+// Class StatusEffects.DebugMenuStatusDataAsset
+// 0x0020 (0x0048 - 0x0028)
+class UDebugMenuStatusDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FDebugMenuStatusDefinition>          StatusDefinitions;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<float>                                      Durations;                                                // 0x0038(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.DebugMenuStatusDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.DebugStatusTicketHolder
+// 0x0008 (0x04B0 - 0x04A8)
+class ADebugStatusTicketHolder : public AActor
+{
+public:
+	class AActor*                                      StatusRecipient;                                          // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.DebugStatusTicketHolder"));
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.StatusEffectCancellationInterface
 // 0x0000 (0x0028 - 0x0028)
 class UStatusEffectCancellationInterface : public UInterface
@@ -155,6 +188,7 @@ public:
 
 
 	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects);
+	void MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> ActivatedEffects);
 };
 
 
@@ -267,6 +301,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectPersistenceComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusEffectsSettings
+// 0x0010 (0x0048 - 0x0038)
+class UStatusEffectsSettings : public UDeveloperSettings
+{
+public:
+	struct FStringAssetReference                       DebugMenuStatusDefinitionsDataAsset;                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectsSettings"));
 		return ptr;
 	}
 

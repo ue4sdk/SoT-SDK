@@ -12,6 +12,36 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ExtractEmotesFromPersonas
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FAthenaAnimationDiverseEmotes> Diverse                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAthenaAnimationEmotePersonas> Personas                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAthenaAnimationEmoteAnimations> NewParam                       (Parm, OutParm, ZeroConstructor)
+
+void UBP_Humanoid_ThirdPerson_C::ExtractEmotesFromPersonas(TArray<struct FAthenaAnimationDiverseEmotes>* Diverse, TArray<struct FAthenaAnimationEmotePersonas>* Personas, TArray<struct FAthenaAnimationEmoteAnimations>* NewParam)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ExtractEmotesFromPersonas"));
+
+	struct
+	{
+		TArray<struct FAthenaAnimationDiverseEmotes> Diverse;
+		TArray<struct FAthenaAnimationEmotePersonas> Personas;
+		TArray<struct FAthenaAnimationEmoteAnimations> NewParam;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Diverse != nullptr)
+		*Diverse = params.Diverse;
+	if (Personas != nullptr)
+		*Personas = params.Personas;
+	if (NewParam != nullptr)
+		*NewParam = params.NewParam;
+}
+
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ParametricBlendFunction
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -359,6 +389,54 @@ void UBP_Humanoid_ThirdPerson_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> L
 	params.LimbId = LimbId;
 	params.BlendIn = BlendIn;
 	params.BlendOut = BlendOut;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_57FB99F740445562B7F05A9AFCB961C0
+// (BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_57FB99F740445562B7F05A9AFCB961C0()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_57FB99F740445562B7F05A9AFCB961C0"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_8529EFF94C15CEF950484B820B6B88E7
+// (BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_8529EFF94C15CEF950484B820B6B88E7()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_8529EFF94C15CEF950484B820B6B88E7"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_164BAE1E4C67E9DB902526AA346F6B97
+// (BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_164BAE1E4C67E9DB902526AA346F6B97()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_164BAE1E4C67E9DB902526AA346F6B97"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -908,6 +986,22 @@ void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_
 }
 
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B8C5902E473BBF716C3095AEE335352C
+// (BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B8C5902E473BBF716C3095AEE335352C()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B8C5902E473BBF716C3095AEE335352C"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_7A2F8AFF4F2A8FB841B3D48B8895B6D8
 // (BlueprintEvent)
 
@@ -956,12 +1050,12 @@ void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA
 // (BlueprintEvent)
 
-void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1()
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA"));
 
 	struct
 	{
@@ -972,12 +1066,12 @@ void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_BE9D84464C1DFECA6EAC5F9E49EE635A
 // (BlueprintEvent)
 
-void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA()
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_BE9D84464C1DFECA6EAC5F9E49EE635A()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_BE9D84464C1DFECA6EAC5F9E49EE635A"));
 
 	struct
 	{
@@ -1036,12 +1130,12 @@ void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_BE9D84464C1DFECA6EAC5F9E49EE635A
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1
 // (BlueprintEvent)
 
-void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_BE9D84464C1DFECA6EAC5F9E49EE635A()
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_BE9D84464C1DFECA6EAC5F9E49EE635A"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1"));
 
 	struct
 	{
@@ -1250,6 +1344,38 @@ void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_
 void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_5D434BCA4928B253E7E70FAC478291AF()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_5D434BCA4928B253E7E70FAC478291AF"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_E37C2C404822245850C09ABBF20AE1B5
+// (BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_E37C2C404822245850C09ABBF20AE1B5()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_E37C2C404822245850C09ABBF20AE1B5"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequenceEvaluator_8FBA818B4966BE188A4577B624E1B167
+// (BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequenceEvaluator_8FBA818B4966BE188A4577B624E1B167()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_SequenceEvaluator_8FBA818B4966BE188A4577B624E1B167"));
 
 	struct
 	{

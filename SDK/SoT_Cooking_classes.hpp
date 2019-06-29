@@ -154,25 +154,26 @@ public:
 
 
 // Class Cooking.CookingComponentAudioParams
-// 0x0070 (0x0098 - 0x0028)
+// 0x0078 (0x00A0 - 0x0028)
 class UCookingComponentAudioParams : public UDataAsset
 {
 public:
 	class UWwiseObjectPoolWrapper*                     CookingPool;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     EmitterOffsetVector;                                      // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	class UWwiseEvent*                                 CookingStart;                                             // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 CookingStop;                                              // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       CookingTypeSwitchGroup;                                   // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       CookingTypeSizzle;                                        // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       CookingTypeSimmer;                                        // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FoodTypeSwitchGroup;                                      // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FoodTypeFruit;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FoodTypeMeat;                                             // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FoodTypeRareMeat;                                         // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FoodCookedAmount;                                         // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxCookingRtpcAmount;                                     // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 FoodPlaceInPot;                                           // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 CookingStart;                                             // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 CookingStop;                                              // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       CookingTypeSwitchGroup;                                   // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       CookingTypeSizzle;                                        // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       CookingTypeSimmer;                                        // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FoodTypeSwitchGroup;                                      // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FoodTypeFruit;                                            // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FoodTypeMeat;                                             // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FoodTypeRareMeat;                                         // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       FoodCookedAmount;                                         // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxCookingRtpcAmount;                                     // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

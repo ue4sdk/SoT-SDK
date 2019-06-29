@@ -32,6 +32,26 @@ void ULightweightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct
 }
 
 
+// Function StatusEffects.LightweightStatusEffectManagerComponent.MultiCast_ApplyOneShotStatus
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// TArray<struct FActiveStatusEffect> ActivatedEffects               (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void ULightweightStatusEffectManagerComponent::MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> ActivatedEffects)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.LightweightStatusEffectManagerComponent.MultiCast_ApplyOneShotStatus"));
+
+	struct
+	{
+		TArray<struct FActiveStatusEffect> ActivatedEffects;
+	} params;
+
+	params.ActivatedEffects = ActivatedEffects;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function StatusEffects.StatusEffectManagerComponent.OnRep_ActiveEffects
 // (Final, Native, Private, HasOutParms)
 // Parameters:

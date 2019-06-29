@@ -15,15 +15,40 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Fire.FlammableComponent
-// 0x0008 (0x00D8 - 0x00D0)
+// 0x0018 (0x00E8 - 0x00D0)
 class UFlammableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
+	bool                                               OnFire;                                                   // 0x00E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.FlammableComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_OnFire();
+	void Multicast_NotifyExtinguished_RPC(const struct FVector& InExtinguishLocationWS);
+};
+
+
+// Class Fire.ActorFlammableComponent
+// 0x0030 (0x0118 - 0x00E8)
+class UActorFlammableComponent : public UFlammableComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00E8(0x0018) MISSED OFFSET
+	class UParticleSystem*                             FireVFX;                                                  // 0x0100(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             SteamVFX;                                                 // 0x0108(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FireVFXIntensity;                                         // 0x0110(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.ActorFlammableComponent"));
 		return ptr;
 	}
 

@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Fire_enums.hpp"
-#include "SoT_ShipDamage_classes.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
+#include "SoT_ShipDamage_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 
 namespace SDK
 {
@@ -176,11 +176,18 @@ struct FFlammableActorData
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Fire.FireExtinguished
-// 0x0001
-struct FFireExtinguished
+// ScriptStruct Fire.FireExtinguishedEvent
+// 0x000C
+struct FFireExtinguishedEvent
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	struct FVector                                     ExtinguishLocation;                                       // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Fire.OnFireChangedEvent
+// 0x0001
+struct FOnFireChangedEvent
+{
+	bool                                               OnFire;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 }

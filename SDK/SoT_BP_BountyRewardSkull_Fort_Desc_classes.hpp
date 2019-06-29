@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Fort_Desc.BP_BountyRewardSkull_Fort_Desc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_BountyRewardSkull_Fort_Desc_C : public UBootyItemDesc
 {
 public:

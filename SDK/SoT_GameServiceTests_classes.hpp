@@ -139,6 +139,22 @@ public:
 };
 
 
+// Class GameServiceTests.TestGameStateWithObjectMessagingServiceProvider
+// 0x00B8 (0x0660 - 0x05A8)
+class ATestGameStateWithObjectMessagingServiceProvider : public ATestGameStateWithObjectMessagingDispatcher
+{
+public:
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x05A8(0x00B8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameServiceTests.TestGameStateWithObjectMessagingServiceProvider"));
+		return ptr;
+	}
+
+};
+
+
 // Class GameServiceTests.TestServiceProviderGameInstance
 // 0x0018 (0x00A0 - 0x0088)
 class UTestServiceProviderGameInstance : public UGameInstance

@@ -250,6 +250,7 @@ public:
 	void PlayerAnimationOverride(const struct FName& Name);
 	void OverrideShipPartFromCatalogue(const class FString& InShipActorIdConsoleString, int InCataloguePartIndex, int InCataloguePartCustomisationIndex);
 	void OpenSkeletonFortDoor();
+	void MoveStormToPlayer();
 	void MessageBoxOnGraphicsThreadTest();
 	void MakeSharksBrainDead();
 	void LogShipHierarchy();
@@ -305,9 +306,9 @@ public:
 	void FloodShipWithKeelOverIndex(float NormalisedWaterAmount, int KeelOverConfigIndex);
 	void FloodShip(float NormalisedWaterAmount);
 	void FireCreatorCrewSignedUpStat();
-	void FireCreatorCrewHoursViewedStat();
-	void FireCreatorCrewHoursStreamedStat();
-	void FireCreatorCrewCurrentViewersStat();
+	void FireCreatorCrewMinutesViewedStat(int InNumMinutes);
+	void FireCreatorCrewMinutesStreamedStat(int InNumMinutes);
+	void FireCreatorCrewCurrentViewersStat(int InNumViewers);
 	void FakeMigrateBountyQuests();
 	void EquipPirateTitle(const class FString& PirateTitleType);
 	void EquipCompassInLoadout();
@@ -373,6 +374,7 @@ public:
 	void ClearSlowMotionOverride();
 	void ClearShipRestockingTimeouts();
 	void ClearGrogSecondary();
+	void ClearDebugStormLocation();
 	void ClearAllItemsInInventory();
 	void CheckLandmarkValidTreasureLocationsAtPlayerPos();
 	void CheckLandmarkRelativeToIslandCalculation();
@@ -386,6 +388,7 @@ public:
 	void BlockMigrationForPlayer(bool Enabled);
 	void ApplyVenomWithParams(float InitialDamage, float DamagePerSecond, float DamageOverTimeDuration);
 	void ApplyVenom();
+	void ApplyStatusToPlayer(const class FString& StatusIdentifier, float Duration);
 	void ApplyDamageToAllDamageZones(float Damage);
 	void ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString);
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);

@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AIModule_enums.hpp"
-#include "SoT_GameplayTags_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -95,6 +95,14 @@ struct FPawnActionEvent
 {
 	class UPawnAction*                                 Action;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct AIModule.CustomDataProviderObjectPropertySelector
+// 0x0010
+struct FCustomDataProviderObjectPropertySelector
+{
+	class UClass*                                      ObjectClass;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       PropertyName;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AIStimulus
@@ -248,11 +256,11 @@ struct FCrowdAvoidanceSamplingPattern
 };
 
 // ScriptStruct AIModule.EnvQueryInstanceCache
-// 0x0280
+// 0x0290
 struct FEnvQueryInstanceCache
 {
 	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x278];                                     // 0x0008(0x0278) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x288];                                     // 0x0008(0x0288) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.EnvTraceData
@@ -402,13 +410,13 @@ struct FEnvQueryResult
 };
 
 // ScriptStruct AIModule.EnvQueryRequest
-// 0x0168
+// 0x0170
 struct FEnvQueryRequest
 {
 	class UEnvQuery*                                   QueryTemplate;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UObject*                                     Owner;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UWorld*                                      World;                                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x150];                                     // 0x0018(0x0150) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x158];                                     // 0x0018(0x0158) MISSED OFFSET
 };
 
 }

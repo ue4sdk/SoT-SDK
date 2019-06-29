@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_CoherentUIGTPlugin_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_UMG_classes.hpp"
 
 namespace SDK
