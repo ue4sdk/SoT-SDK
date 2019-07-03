@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_MovieSceneCapture_enums.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_LevelSequence_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {

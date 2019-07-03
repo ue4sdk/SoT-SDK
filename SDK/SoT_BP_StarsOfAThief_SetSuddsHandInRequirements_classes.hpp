@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_StarsOfAThief_SetSuddsHandInRequirements.BP_StarsOfAThief_SetSuddsHandInRequirements_C
-// 0x0010 (0x00A0 - 0x0090)
+// 0x0010 (0x00A8 - 0x0098)
 class UBP_StarsOfAThief_SetSuddsHandInRequirements_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                      Shroudbreaker_Gem;                                        // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                      Shroudbreaker_Gem;                                        // 0x00A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

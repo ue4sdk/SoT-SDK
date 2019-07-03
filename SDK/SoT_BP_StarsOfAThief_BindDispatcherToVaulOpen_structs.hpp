@@ -7,12 +7,12 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_StarsOfAThiefVariables_classes.hpp"
+#include "SoT_DS_TallTales_TrackedActor_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_DS_TallTales_TrackedActor_classes.hpp"
 #include "SoT_Tales_classes.hpp"
+#include "SoT_DS_StarsOfAThiefVariables_classes.hpp"
 
 namespace SDK
 {

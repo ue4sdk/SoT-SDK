@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Kraken.KrakenTentacle
-// 0x0128 (0x05D0 - 0x04A8)
+// 0x0138 (0x05E0 - 0x04A8)
 class AKrakenTentacle : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x04A8(0x0018) MISSED OFFSET
-	class UHealthComponent*                            HealthComponent;                                          // 0x04C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UActorDamageableComponent*                   DamageableComponent;                                      // 0x04C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UVenomComponent*                             VenomComponent;                                           // 0x04D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	float                                              VenomChance;                                              // 0x04D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xF4];                                      // 0x04DC(0x00F4) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x04A8(0x0020) MISSED OFFSET
+	class UHealthComponent*                            HealthComponent;                                          // 0x04C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UActorDamageableComponent*                   DamageableComponent;                                      // 0x04D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UVenomComponent*                             VenomComponent;                                           // 0x04D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	float                                              VenomChance;                                              // 0x04E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xFC];                                      // 0x04E4(0x00FC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -167,27 +167,27 @@ public:
 
 
 // Class Kraken.KrakenShipWrappingTentacle
-// 0x01E8 (0x07B8 - 0x05D0)
+// 0x01E8 (0x07C8 - 0x05E0)
 class AKrakenShipWrappingTentacle : public AKrakenTentacle
 {
 public:
-	class USceneComponent*                             SceneRoot;                                                // 0x05D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        TentacleCollisions;                                       // 0x05D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        TentacleMesh;                                             // 0x05E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               DamageZone;                                               // 0x05E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             InteractableBlockingRegions;                              // 0x05F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             KnockbackRegions;                                         // 0x05F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               TentacleHeadCollisions;                                   // 0x0600(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             TentacleHeadKnockbackRegions;                             // 0x0608(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UKrakenShipWrappingTentacleAIAudioComponent* AudioComponent;                                           // 0x0610(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UStaticMesh*                                 LowDetailTentacleMesh;                                    // 0x0618(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FStringAssetReference                       HighDetailTentacleMeshAsset;                              // 0x0620(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FKrakenShipWrappingTentacleParams           Params;                                                   // 0x0630(0x00F0) (Edit, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*                    TentacleDynamicMaterialInstance;                          // 0x0720(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UStaticMesh*                                 HighDetailTentacleMesh;                                   // 0x0728(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FKrakenShipWrappingTentacleAnimationState   CurrentServerAnimationState;                              // 0x0730(0x0010) (Net, Transient)
-	struct FKrakenShipWrappingTentacleAnimationState   PendingServerAnimationState;                              // 0x0740(0x0010) (Net, Transient)
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0750(0x0068) MISSED OFFSET
+	class USceneComponent*                             SceneRoot;                                                // 0x05E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        TentacleCollisions;                                       // 0x05E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        TentacleMesh;                                             // 0x05F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               DamageZone;                                               // 0x05F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             InteractableBlockingRegions;                              // 0x0600(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             KnockbackRegions;                                         // 0x0608(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               TentacleHeadCollisions;                                   // 0x0610(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             TentacleHeadKnockbackRegions;                             // 0x0618(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UKrakenShipWrappingTentacleAIAudioComponent* AudioComponent;                                           // 0x0620(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UStaticMesh*                                 LowDetailTentacleMesh;                                    // 0x0628(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FStringAssetReference                       HighDetailTentacleMeshAsset;                              // 0x0630(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FKrakenShipWrappingTentacleParams           Params;                                                   // 0x0640(0x00F0) (Edit, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*                    TentacleDynamicMaterialInstance;                          // 0x0730(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UStaticMesh*                                 HighDetailTentacleMesh;                                   // 0x0738(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FKrakenShipWrappingTentacleAnimationState   CurrentServerAnimationState;                              // 0x0740(0x0010) (Net, Transient)
+	struct FKrakenShipWrappingTentacleAnimationState   PendingServerAnimationState;                              // 0x0750(0x0010) (Net, Transient)
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0760(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -217,27 +217,27 @@ public:
 
 
 // Class Kraken.Kraken
-// 0x0518 (0x09C0 - 0x04A8)
+// 0x0528 (0x09D0 - 0x04A8)
 class AKraken : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04A8(0x0010) MISSED OFFSET
-	float                                              RelevancyDistance;                                        // 0x04B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x14];                                      // 0x04BC(0x0014) MISSED OFFSET
-	float                                              InnerRadius;                                              // 0x04D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OuterRadius;                                              // 0x04D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EKrakenState>                          CurrentState;                                             // 0x04D8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1A7];                                     // 0x04D9(0x01A7) MISSED OFFSET
-	class AMurk*                                       MurkActor;                                                // 0x0680(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xA0];                                      // 0x0688(0x00A0) MISSED OFFSET
-	class UKrakenAICharacterAudioComponent*            KrakenAudioComponent;                                     // 0x0728(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UKrakenTelemetryComponent*                   KrakenTelemetryComponent;                                 // 0x0730(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0738(0x000C) (Edit, DisableEditOnInstance)
-	struct FEncounterParams                            CloseEncounterParams;                                     // 0x0744(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData04[0x10];                                      // 0x0750(0x0010) MISSED OFFSET
-	struct FKrakenParams                               Params;                                                   // 0x0760(0x0160) (Transient)
-	int                                                NumTentaclesRemaining;                                    // 0x08C0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0xFC];                                      // 0x08C4(0x00FC) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x04A8(0x0018) MISSED OFFSET
+	float                                              RelevancyDistance;                                        // 0x04C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x14];                                      // 0x04C4(0x0014) MISSED OFFSET
+	float                                              InnerRadius;                                              // 0x04D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              OuterRadius;                                              // 0x04DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EKrakenState>                          CurrentState;                                             // 0x04E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1A7];                                     // 0x04E1(0x01A7) MISSED OFFSET
+	class AMurk*                                       MurkActor;                                                // 0x0688(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xA8];                                      // 0x0690(0x00A8) MISSED OFFSET
+	class UKrakenAICharacterAudioComponent*            KrakenAudioComponent;                                     // 0x0738(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UKrakenTelemetryComponent*                   KrakenTelemetryComponent;                                 // 0x0740(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FEncounterParams                            SightingEncounterParams;                                  // 0x0748(0x000C) (Edit, DisableEditOnInstance)
+	struct FEncounterParams                            CloseEncounterParams;                                     // 0x0754(0x000C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x0760(0x0010) MISSED OFFSET
+	struct FKrakenParams                               Params;                                                   // 0x0770(0x0160) (Transient)
+	int                                                NumTentaclesRemaining;                                    // 0x08D0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0xFC];                                      // 0x08D4(0x00FC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

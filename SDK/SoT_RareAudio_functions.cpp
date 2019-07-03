@@ -302,6 +302,36 @@ bool UWwiseEmitterBlueprintLibrary::WwiseGetListenerEmitter(class UObject* World
 }
 
 
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetGlobalRTPC
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   RTPCName                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          RTPCValue                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWwiseEmitterBlueprintLibrary::WwiseGetGlobalRTPC(const struct FName& RTPCName, float* RTPCValue)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetGlobalRTPC"));
+
+	struct
+	{
+		struct FName                   RTPCName;
+		float                          RTPCValue;
+		bool                           ReturnValue;
+	} params;
+
+	params.RTPCName = RTPCName;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	if (RTPCValue != nullptr)
+		*RTPCValue = params.RTPCValue;
+
+	return params.ReturnValue;
+}
+
+
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter
 // (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:

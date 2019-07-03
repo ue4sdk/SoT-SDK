@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Fontaine_FateOfTheMorningstar.BP_Fontaine_FateOfTheMorningstar_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x05D0 - 0x05D0)
 class ABP_Fontaine_FateOfTheMorningstar_C : public ABP_Orderofsouls_TallTales_C
 {
 public:

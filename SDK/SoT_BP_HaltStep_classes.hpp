@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HaltStep.BP_HaltStep_C
-// 0x0000 (0x0090 - 0x0090)
+// 0x0000 (0x0098 - 0x0098)
 class UBP_HaltStep_C : public UBlueprintStepBase
 {
 public:

@@ -210,6 +210,7 @@ public:
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetCapstanPosition(float Position);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
+	void SetAIAbilityTimeMultiplier(const class FString& AIAbilityString, float IntervalCooldownMultiplier, float ActivationCooldownMultiplier);
 	void SendUpdateVoyageProgressEvent();
 	void SendStatEvent(const class FString& StatName, uint64_t StatValue);
 	void SendRewardRequestEvent(const class FString& CompanyNameAndRewardIdSeparatedByColon);
@@ -376,6 +377,7 @@ public:
 	void ClearGrogSecondary();
 	void ClearDebugStormLocation();
 	void ClearAllItemsInInventory();
+	void ClearAIAbilityTimeMultipliers();
 	void CheckLandmarkValidTreasureLocationsAtPlayerPos();
 	void CheckLandmarkRelativeToIslandCalculation();
 	void CapsizeShip();

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ItemDesc_GoldHoarder_Coin.BP_ItemDesc_GoldHoarder_Coin_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_ItemDesc_GoldHoarder_Coin_C : public UBootyItemDesc
 {
 public:

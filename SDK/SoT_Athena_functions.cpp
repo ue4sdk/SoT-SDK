@@ -3458,7 +3458,7 @@ bool AAthenaCharacter::IsInteractionValid(class UObject* InInteractable)
 
 
 // Function Athena.AthenaCharacter.IsDead
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3471,30 +3471,6 @@ bool AAthenaCharacter::IsDead()
 		bool                           ReturnValue;
 	} params;
 
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.AthenaCharacter.IsCurrentItemReadyForAI
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UClass*                  NotificationInputId            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AAthenaCharacter::IsCurrentItemReadyForAI(class UClass* NotificationInputId)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaCharacter.IsCurrentItemReadyForAI"));
-
-	struct
-	{
-		class UClass*                  NotificationInputId;
-		bool                           ReturnValue;
-	} params;
-
-	params.NotificationInputId = NotificationInputId;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5111,59 +5087,6 @@ TEnumAsByte<EInputHandlerResult> UAILocomotionCompositeInputHandler::OnPrimaryIt
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function Athena.NameplateComponent.GetWorldPosition
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UNameplateComponent::GetWorldPosition()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.NameplateComponent.GetWorldPosition"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.AINameplateComponent.OnRep_DisplayName
-// (Final, Native, Private)
-
-void UAINameplateComponent::OnRep_DisplayName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AINameplateComponent.OnRep_DisplayName"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.AINameplateComponent.OnRep_DebugDisplayText
-// (Final, Native, Private)
-
-void UAINameplateComponent::OnRep_DebugDisplayText()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AINameplateComponent.OnRep_DebugDisplayText"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -12580,6 +12503,56 @@ void ABuoyantStorageContainer::OnRep_PhysicsState()
 }
 
 
+// Function Athena.BuriedTreasureLocation.IsValidTreasureLocation
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLocationGeneratorSample OutLocation                    (Parm, OutParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuriedTreasureLocation::IsValidTreasureLocation(class UObject* WorldContextObject, struct FLocationGeneratorSample* OutLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.BuriedTreasureLocation.IsValidTreasureLocation"));
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		struct FLocationGeneratorSample OutLocation;
+		bool                           ReturnValue;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutLocation != nullptr)
+		*OutLocation = params.OutLocation;
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.BuriedTreasureLocation.GetIdentifier
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString ABuriedTreasureLocation::GetIdentifier()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.BuriedTreasureLocation.GetIdentifier"));
+
+	struct
+	{
+		class FString                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.BurpComponent.Multicast_Burp
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
@@ -16189,6 +16162,48 @@ struct FClothingLoadout UClothingLoadoutViewInterface::GetClothingLoadout()
 	struct
 	{
 		struct FClothingLoadout        ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.EmoteLoadoutViewInterface.GetEmoteLoadoutData
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FEmoteData>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FEmoteData> UEmoteLoadoutViewInterface::GetEmoteLoadoutData()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.EmoteLoadoutViewInterface.GetEmoteLoadoutData"));
+
+	struct
+	{
+		TArray<struct FEmoteData>      ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.EmoteLoadoutViewInterface.GetEmoteLoadout
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UClass*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class UClass*> UEmoteLoadoutViewInterface::GetEmoteLoadout()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.EmoteLoadoutViewInterface.GetEmoteLoadout"));
+
+	struct
+	{
+		TArray<class UClass*>          ReturnValue;
 	} params;
 
 
@@ -35804,64 +35819,6 @@ void URunnable::Run(class UObject* Runner)
 }
 
 
-// Function Athena.NPCReactionBound.OnActivationRegionOverlapEnd
-// (Final, Native, Public)
-// Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void UNPCReactionBound::OnActivationRegionOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.NPCReactionBound.OnActivationRegionOverlapEnd"));
-
-	struct
-	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-	} params;
-
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.NPCReactionBound.OnActivationRegionOverlapBegin
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UNPCReactionBound::OnActivationRegionOverlapBegin(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.NPCReactionBound.OnActivationRegionOverlapBegin"));
-
-	struct
-	{
-		class AActor*                  Other;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              OverlapInfo;
-	} params;
-
-	params.Other = Other;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.bFromSweep = bFromSweep;
-	params.OverlapInfo = OverlapInfo;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Athena.ObjectUtilities.GetDefaultObject
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -36951,6 +36908,27 @@ void APlayerLoadingInteractionPoint::Server_NotifyInteractionPointUsed(class AAc
 	params.UsingActor = UsingActor;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.NameplateComponent.GetWorldPosition
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UNameplateComponent::GetWorldPosition()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.NameplateComponent.GetWorldPosition"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -42002,109 +41980,6 @@ void UStatusEffectComponent::OnRep_StatusEffect()
 }
 
 
-// Function Athena.StorageContainerComponent.TakeItem
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStorageContainerComponent::TakeItem(class AActor* Player, int NodeIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.TakeItem"));
-
-	struct
-	{
-		class AActor*                  Player;
-		int                            NodeIndex;
-	} params;
-
-	params.Player = Player;
-	params.NodeIndex = NodeIndex;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.StorageContainerComponent.OnRep_ContentsChanged
-// (Final, Native, Private)
-// Parameters:
-// struct FStorageContainerBackingStore InOldItemCount                 (Parm)
-
-void UStorageContainerComponent::OnRep_ContentsChanged(const struct FStorageContainerBackingStore& InOldItemCount)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.OnRep_ContentsChanged"));
-
-	struct
-	{
-		struct FStorageContainerBackingStore InOldItemCount;
-	} params;
-
-	params.InOldItemCount = InOldItemCount;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.StorageContainerComponent.Multicast_DetachAllPlayersRPC
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-
-void UStorageContainerComponent::Multicast_DetachAllPlayersRPC()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.Multicast_DetachAllPlayersRPC"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.StorageContainerComponent.GetContainerDisplayName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FText                   ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
-
-struct FText UStorageContainerComponent::GetContainerDisplayName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.GetContainerDisplayName"));
-
-	struct
-	{
-		struct FText                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.StorageContainerComponent.AddItem
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  InItemDesc                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStorageContainerComponent::AddItem(class AActor* Player, class UClass* InItemDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.AddItem"));
-
-	struct
-	{
-		class AActor*                  Player;
-		class UClass*                  InItemDesc;
-	} params;
-
-	params.Player = Player;
-	params.InItemDesc = InItemDesc;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Athena.Storm.Multicast_QueueLightning
 // (Net, NetReliable, Native, Event, NetMulticast, Protected, NetValidate)
 // Parameters:
@@ -44420,6 +44295,22 @@ void ATreasureRoom::OnDespawn(class APawn* Pawn, TEnumAsByte<ECharacterDeathType
 
 	params.Pawn = Pawn;
 	params.DeathType = DeathType;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.TreasureRoom.KillGoldHoarder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void ATreasureRoom::KillGoldHoarder()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.TreasureRoom.KillGoldHoarder"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -52975,6 +52866,27 @@ float AShipInternalWater::GetWaterAmount()
 }
 
 
+// Function Athena.ShipInternalWater.GetRelativeWaterHeight
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AShipInternalWater::GetRelativeWaterHeight()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShipInternalWater.GetRelativeWaterHeight"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.ShipInternalWater.GetNormalizedWaterAmount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -53498,6 +53410,359 @@ struct FGuid UCrewMembershipInterface::GetCrewId()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.ReplenishableInterface.SetShouldRefresh
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InShouldRefresh                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UReplenishableInterface::SetShouldRefresh(bool InShouldRefresh)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.SetShouldRefresh"));
+
+	struct
+	{
+		bool                           InShouldRefresh;
+	} params;
+
+	params.InShouldRefresh = InShouldRefresh;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ReplenishableInterface.ReplenishFromDebugSpawner
+// (Native, Public, BlueprintCallable)
+
+void UReplenishableInterface::ReplenishFromDebugSpawner()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.ReplenishFromDebugSpawner"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ReplenishableInterface.Replenish
+// (Native, Public, BlueprintCallable)
+
+void UReplenishableInterface::Replenish()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.Replenish"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ReplenishableInterface.RefreshFromSpawner
+// (Native, Public, BlueprintCallable)
+
+void UReplenishableInterface::RefreshFromSpawner()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.RefreshFromSpawner"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ReplenishableInterface.IsAtMaxCapacity
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UReplenishableInterface::IsAtMaxCapacity()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.IsAtMaxCapacity"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.ReplenishableInterface.GetShouldRefresh
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UReplenishableInterface::GetShouldRefresh()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.GetShouldRefresh"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.ReplenishableInterface.FillWithDefaultDesc
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<struct FStorageContainerNode> Nodes                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UReplenishableInterface::FillWithDefaultDesc(TArray<struct FStorageContainerNode> Nodes)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.FillWithDefaultDesc"));
+
+	struct
+	{
+		TArray<struct FStorageContainerNode> Nodes;
+	} params;
+
+	params.Nodes = Nodes;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ReplenishableInterface.Deplete
+// (Native, Public, BlueprintCallable)
+
+void UReplenishableInterface::Deplete()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.Deplete"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ReplenishableInterface.CanBeReplenished
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UReplenishableInterface::CanBeReplenished()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.CanBeReplenished"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.ReplenishableInterface.AddDefaultStockLevel
+// (Native, Public, BlueprintCallable)
+
+void UReplenishableInterface::AddDefaultStockLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.AddDefaultStockLevel"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.StorageContainerInterface.TakeItem
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStorageContainerInterface::TakeItem(class AActor* Player, int NodeIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerInterface.TakeItem"));
+
+	struct
+	{
+		class AActor*                  Player;
+		int                            NodeIndex;
+	} params;
+
+	params.Player = Player;
+	params.NodeIndex = NodeIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.StorageContainerInterface.GetContainerDisplayName
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FText                   ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
+
+struct FText UStorageContainerInterface::GetContainerDisplayName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerInterface.GetContainerDisplayName"));
+
+	struct
+	{
+		struct FText                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.StorageContainerInterface.AddItem
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  InItemDesc                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStorageContainerInterface::AddItem(class AActor* Player, class UClass* InItemDesc)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerInterface.AddItem"));
+
+	struct
+	{
+		class AActor*                  Player;
+		class UClass*                  InItemDesc;
+	} params;
+
+	params.Player = Player;
+	params.InItemDesc = InItemDesc;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.StorageContainerComponent.TakeItem
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStorageContainerComponent::TakeItem(class AActor* Player, int NodeIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.TakeItem"));
+
+	struct
+	{
+		class AActor*                  Player;
+		int                            NodeIndex;
+	} params;
+
+	params.Player = Player;
+	params.NodeIndex = NodeIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.StorageContainerComponent.OnRep_ContentsChanged
+// (Final, Native, Private)
+// Parameters:
+// struct FStorageContainerBackingStore InOldItemCount                 (Parm)
+
+void UStorageContainerComponent::OnRep_ContentsChanged(const struct FStorageContainerBackingStore& InOldItemCount)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.OnRep_ContentsChanged"));
+
+	struct
+	{
+		struct FStorageContainerBackingStore InOldItemCount;
+	} params;
+
+	params.InOldItemCount = InOldItemCount;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.StorageContainerComponent.Multicast_DetachAllPlayersRPC
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+
+void UStorageContainerComponent::Multicast_DetachAllPlayersRPC()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.Multicast_DetachAllPlayersRPC"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.StorageContainerComponent.GetContainerDisplayName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FText                   ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
+
+struct FText UStorageContainerComponent::GetContainerDisplayName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.GetContainerDisplayName"));
+
+	struct
+	{
+		struct FText                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.StorageContainerComponent.AddItem
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  InItemDesc                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStorageContainerComponent::AddItem(class AActor* Player, class UClass* InItemDesc)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerComponent.AddItem"));
+
+	struct
+	{
+		class AActor*                  Player;
+		class UClass*                  InItemDesc;
+	} params;
+
+	params.Player = Player;
+	params.InItemDesc = InItemDesc;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -55629,256 +55894,6 @@ void AVolumeMechanismTrigger::OnTriggerVolumeBeginOverlap(class AActor* OtherAct
 }
 
 
-// Function Athena.ReplenishableInterface.SetShouldRefresh
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           InShouldRefresh                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UReplenishableInterface::SetShouldRefresh(bool InShouldRefresh)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.SetShouldRefresh"));
-
-	struct
-	{
-		bool                           InShouldRefresh;
-	} params;
-
-	params.InShouldRefresh = InShouldRefresh;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ReplenishableInterface.ReplenishFromDebugSpawner
-// (Native, Public, BlueprintCallable)
-
-void UReplenishableInterface::ReplenishFromDebugSpawner()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.ReplenishFromDebugSpawner"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ReplenishableInterface.Replenish
-// (Native, Public, BlueprintCallable)
-
-void UReplenishableInterface::Replenish()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.Replenish"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ReplenishableInterface.RefreshFromSpawner
-// (Native, Public, BlueprintCallable)
-
-void UReplenishableInterface::RefreshFromSpawner()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.RefreshFromSpawner"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ReplenishableInterface.IsAtMaxCapacity
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UReplenishableInterface::IsAtMaxCapacity()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.IsAtMaxCapacity"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.ReplenishableInterface.GetShouldRefresh
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UReplenishableInterface::GetShouldRefresh()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.GetShouldRefresh"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.ReplenishableInterface.FillWithDefaultDesc
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FStorageContainerNode> Nodes                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UReplenishableInterface::FillWithDefaultDesc(TArray<struct FStorageContainerNode> Nodes)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.FillWithDefaultDesc"));
-
-	struct
-	{
-		TArray<struct FStorageContainerNode> Nodes;
-	} params;
-
-	params.Nodes = Nodes;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ReplenishableInterface.Deplete
-// (Native, Public, BlueprintCallable)
-
-void UReplenishableInterface::Deplete()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.Deplete"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ReplenishableInterface.CanBeReplenished
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UReplenishableInterface::CanBeReplenished()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.CanBeReplenished"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.ReplenishableInterface.AddDefaultStockLevel
-// (Native, Public, BlueprintCallable)
-
-void UReplenishableInterface::AddDefaultStockLevel()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ReplenishableInterface.AddDefaultStockLevel"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.StorageContainerInterface.TakeItem
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStorageContainerInterface::TakeItem(class AActor* Player, int NodeIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerInterface.TakeItem"));
-
-	struct
-	{
-		class AActor*                  Player;
-		int                            NodeIndex;
-	} params;
-
-	params.Player = Player;
-	params.NodeIndex = NodeIndex;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.StorageContainerInterface.GetContainerDisplayName
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FText                   ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
-
-struct FText UStorageContainerInterface::GetContainerDisplayName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerInterface.GetContainerDisplayName"));
-
-	struct
-	{
-		struct FText                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.StorageContainerInterface.AddItem
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  InItemDesc                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStorageContainerInterface::AddItem(class AActor* Player, class UClass* InItemDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.StorageContainerInterface.AddItem"));
-
-	struct
-	{
-		class AActor*                  Player;
-		class UClass*                  InItemDesc;
-	} params;
-
-	params.Player = Player;
-	params.InItemDesc = InItemDesc;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Athena.OverlapTriggerComponent.OnActivationRegionOverlapEnd
 // (Final, Native, Public)
 // Parameters:
@@ -55987,6 +56002,54 @@ TEnumAsByte<EInputHandlerResult> UDockToObjectCompositeInputHandler::OnDisengage
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.ShroudBreakerOnShip.StopShroudBreakerStateChangeTimer
+// (Final, Native, Public, BlueprintCallable)
+
+void AShroudBreakerOnShip::StopShroudBreakerStateChangeTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.StopShroudBreakerStateChangeTimer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ShroudBreakerOnShip.StartShroudBreakerStateChangeTimer
+// (Final, Native, Public, BlueprintCallable)
+
+void AShroudBreakerOnShip::StartShroudBreakerStateChangeTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.StartShroudBreakerStateChangeTimer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ShroudBreakerOnShip.OnShroudBreakerStateChange
+// (Event, Public, BlueprintEvent)
+
+void AShroudBreakerOnShip::OnShroudBreakerStateChange()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.OnShroudBreakerStateChange"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

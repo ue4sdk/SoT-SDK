@@ -8,12 +8,12 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AIShips_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Maths_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_AthenaAI_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
-#include "SoT_Maths_classes.hpp"
+#include "SoT_AthenaAI_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
 namespace SDK
@@ -425,6 +425,19 @@ struct FAIShipWorldSettings
 {
 	TArray<struct FFeatureLockedCampaignParams>        CampaignParams;                                           // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class UAIShipBattlesDataAsset*                     BattlesData;                                              // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct AIShips.AIShipDamagedTelemetryEvent
+// 0x0048
+struct FAIShipDamagedTelemetryEvent
+{
+	class FString                                      DamageType;                                               // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FVector                                     DamageLocation;                                           // 0x0010(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class FString                                      DamagedShipPart;                                          // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int                                                DamageLevel;                                              // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       AttackId;                                                 // 0x0034(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct AIShips.AIShipDespawnTelemetryEvent

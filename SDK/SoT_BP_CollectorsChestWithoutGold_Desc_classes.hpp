@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChestWithoutGold_Desc.BP_CollectorsChestWithoutGold_Desc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_CollectorsChestWithoutGold_Desc_C : public UBootyItemDesc
 {
 public:

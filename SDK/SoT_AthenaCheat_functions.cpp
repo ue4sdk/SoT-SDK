@@ -3456,6 +3456,32 @@ void UAthenaCheatManager::SetAITeamAttitude(const class FString& TeamAString, co
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SetAIAbilityTimeMultiplier
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  AIAbilityString                (Parm, ZeroConstructor)
+// float                          IntervalCooldownMultiplier     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ActivationCooldownMultiplier   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetAIAbilityTimeMultiplier(const class FString& AIAbilityString, float IntervalCooldownMultiplier, float ActivationCooldownMultiplier)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetAIAbilityTimeMultiplier"));
+
+	struct
+	{
+		class FString                  AIAbilityString;
+		float                          IntervalCooldownMultiplier;
+		float                          ActivationCooldownMultiplier;
+	} params;
+
+	params.AIAbilityString = AIAbilityString;
+	params.IntervalCooldownMultiplier = IntervalCooldownMultiplier;
+	params.ActivationCooldownMultiplier = ActivationCooldownMultiplier;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SendUpdateVoyageProgressEvent
 // (Final, Exec, Native, Public)
 
@@ -6448,6 +6474,22 @@ void UAthenaCheatManager::ClearDebugStormLocation()
 void UAthenaCheatManager::ClearAllItemsInInventory()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ClearAllItemsInInventory"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ClearAIAbilityTimeMultipliers
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ClearAIAbilityTimeMultipliers()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ClearAIAbilityTimeMultipliers"));
 
 	struct
 	{

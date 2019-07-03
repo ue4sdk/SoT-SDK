@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ShoresOfGoldDefinition.ShoresOfGoldDefinition_C
-// 0x0208 (0x0230 - 0x0028)
+// 0x01F8 (0x0220 - 0x0028)
 class UShoresOfGoldDefinition_C : public UTaleQuestDefinition
 {
 public:
-	struct FDS_ShoresOfGoldDefinition                  Definition;                                               // 0x0028(0x0200) (Edit, BlueprintVisible)
-	class UQuestBookPageBundle*                        InitialPages;                                             // 0x0228(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FDS_ShoresOfGoldDefinition                  Definition;                                               // 0x0028(0x01F0) (Edit, BlueprintVisible)
+	class UQuestBookPageBundle*                        InitialPages;                                             // 0x0218(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -108,7 +108,7 @@ public:
 
 
 // Class Time.TimeService
-// 0x00F0 (0x0598 - 0x04A8)
+// 0x00E8 (0x0590 - 0x04A8)
 class ATimeService : public AActor
 {
 public:
@@ -122,15 +122,14 @@ public:
 	float                                              ServiceTimeQueryRapidFrequencyInSeconds;                  // 0x0510(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              ServiceTimeQueryFrequencyInSeconds;                       // 0x0514(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              ClientTimeUpdateFrequencyInSeconds;                       // 0x0518(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              ClientDelayedMessageAdjustmentThreshold;                  // 0x051C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              SunriseTimeHours;                                         // 0x0520(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              SunsetTimeHours;                                          // 0x0524(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              LocalTimeUpdateAdjustMaxTimeDelta;                        // 0x0528(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinLocalTimeUpdateAdjustPercentageToSlowDown;             // 0x052C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxLocalTimeUpdateAdjustPercentageToSlowDown;             // 0x0530(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x0534(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x0538(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5C];                                      // 0x053C(0x005C) MISSED OFFSET
+	float                                              SunriseTimeHours;                                         // 0x051C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              SunsetTimeHours;                                          // 0x0520(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              LocalTimeUpdateAdjustMaxTimeDelta;                        // 0x0524(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinLocalTimeUpdateAdjustPercentageToSlowDown;             // 0x0528(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxLocalTimeUpdateAdjustPercentageToSlowDown;             // 0x052C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x0530(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x0534(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x58];                                      // 0x0538(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -145,11 +144,11 @@ public:
 
 
 // Class Time.DebugTimeService
-// 0x0008 (0x05A0 - 0x0598)
+// 0x0008 (0x0598 - 0x0590)
 class ADebugTimeService : public ATimeService
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0598(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0590(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -163,7 +162,7 @@ public:
 
 
 // Class Time.TestTimeService
-// 0x0000 (0x0598 - 0x0598)
+// 0x0000 (0x0590 - 0x0590)
 class ATestTimeService : public ATimeService
 {
 public:

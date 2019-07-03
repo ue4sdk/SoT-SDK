@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_pocket_watch_wth_01_a_ItemDesc.BP_gmp_pocket_watch_wth_01_a_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_gmp_pocket_watch_wth_01_a_ItemDesc_C : public UItemDesc
 {
 public:

@@ -71,12 +71,11 @@ public:
 
 
 // Class Fire.FireCellStateTimingParamsDataAsset
-// 0x0020 (0x0048 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UFireCellStateTimingParamsDataAsset : public UDataAsset
 {
 public:
-	struct FFireCellStateTimingParams                  TimingParams;                                             // 0x0028(0x001C) (Edit)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	struct FFireCellStateTimingParams                  TimingParams;                                             // 0x0028(0x0080) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -243,7 +242,7 @@ public:
 
 
 // Class Fire.ShipFirePropagationComponent
-// 0x0090 (0x0160 - 0x00D0)
+// 0x00A0 (0x0170 - 0x00D0)
 class UShipFirePropagationComponent : public UActorComponent
 {
 public:
@@ -261,6 +260,7 @@ public:
 	class UShipFireLightManager*                       LightManager;                                             // 0x0140(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	TArray<struct FReplicatedFireCellData>             ReplicatedCellData;                                       // 0x0148(0x0010) (Net, ZeroConstructor, Transient)
 	class UShipFireAudioManager*                       FireAudioManager;                                         // 0x0158(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0160(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -274,13 +274,13 @@ public:
 
 
 // Class Fire.ShipFirePropagator
-// 0x0020 (0x0048 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UShipFirePropagator : public UObject
 {
 public:
 	TArray<struct FShipFireCell>                       Cells;                                                    // 0x0028(0x0010) (ZeroConstructor)
 	class UFireCellStateTimingParamsDataAsset*         CellStateTimingParams;                                    // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0040(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

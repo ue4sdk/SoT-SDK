@@ -2887,7 +2887,8 @@ enum class EAimSensitivitySettingCategory : uint8_t
 	EAimSensitivitySettingCategory__Blunderbuss = 1,
 	EAimSensitivitySettingCategory__Flintlock = 2,
 	EAimSensitivitySettingCategory__EyeOfReach = 3,
-	EAimSensitivitySettingCategory__EAimSensitivitySettingCategory_MAX = 4
+	EAimSensitivitySettingCategory__Spyglass = 4,
+	EAimSensitivitySettingCategory__EAimSensitivitySettingCategory_MAX = 5
 };
 
 
@@ -3542,6 +3543,24 @@ enum class ETrackedOwnerType : uint8_t
 };
 
 
+// Enum Athena.InventoryAction
+enum class EInventoryAction : uint8_t
+{
+	InventoryAction__Take          = 0,
+	InventoryAction__Stow          = 1,
+	InventoryAction__InventoryAction_MAX = 2
+};
+
+
+// Enum Athena.InventoryItemState
+enum class EInventoryItemState : uint8_t
+{
+	InventoryItemState__Default    = 0,
+	InventoryItemState__Locked     = 1,
+	InventoryItemState__InventoryItemState_MAX = 2
+};
+
+
 // Enum Athena.ECameraLookatAnimationType
 enum class ECameraLookatAnimationType : uint8_t
 {
@@ -3796,24 +3815,6 @@ enum class ESwitchMechanismTriggerRandomSelectionMode : uint8_t
 };
 
 
-// Enum Athena.InventoryAction
-enum class EInventoryAction : uint8_t
-{
-	InventoryAction__Take          = 0,
-	InventoryAction__Stow          = 1,
-	InventoryAction__InventoryAction_MAX = 2
-};
-
-
-// Enum Athena.InventoryItemState
-enum class EInventoryItemState : uint8_t
-{
-	InventoryItemState__Default    = 0,
-	InventoryItemState__Locked     = 1,
-	InventoryItemState__InventoryItemState_MAX = 2
-};
-
-
 // Enum Athena.EQuestStatus
 enum class EQuestStatus : uint8_t
 {
@@ -3854,6 +3855,16 @@ enum class EQuestType : uint8_t
 	EQuestType__Reward             = 9,
 	EQuestType__Staging            = 10,
 	EQuestType__EQuestType_MAX     = 11
+};
+
+
+// Enum Athena.EShroudBreakerActivationStateEnum
+enum class EShroudBreakerActivationStateEnum : uint8_t
+{
+	EShroudBreakerActivationStateEnum__STATE = 0,
+	EShroudBreakerActivationStateEnum__STATE01 = 1,
+	EShroudBreakerActivationStateEnum__STATE02 = 2,
+	EShroudBreakerActivationStateEnum__STATE_MAX = 3
 };
 
 

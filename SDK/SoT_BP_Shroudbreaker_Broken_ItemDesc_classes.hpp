@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_Broken_ItemDesc.BP_Shroudbreaker_Broken_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_Shroudbreaker_Broken_ItemDesc_C : public UBootyItemDesc
 {
 public:

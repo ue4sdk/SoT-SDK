@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CursedRogue_SelectPuzzles.BP_CursedRogue_SelectPuzzles_C
-// 0x0028 (0x00B8 - 0x0090)
+// 0x0028 (0x00C0 - 0x0098)
 class UBP_CursedRogue_SelectPuzzles_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<struct FDS_CursedRogue_CrewPuzzle>          SelectedPuzzles;                                          // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FDS_CursedRogue_CrewPuzzle>          Puzzles;                                                  // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<struct FDS_CursedRogue_CrewPuzzle>          SelectedPuzzles;                                          // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FDS_CursedRogue_CrewPuzzle>          Puzzles;                                                  // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

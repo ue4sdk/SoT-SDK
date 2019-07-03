@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_QuestBook_ItemDesc.BP_QuestBook_ItemDesc_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0138 - 0x0138)
 class UBP_QuestBook_ItemDesc_C : public UQuestBookItemDesc
 {
 public:

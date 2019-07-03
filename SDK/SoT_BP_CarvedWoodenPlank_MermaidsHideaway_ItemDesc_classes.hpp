@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CarvedWoodenPlank_MermaidsHideaway_ItemDesc.BP_CarvedWoodenPlank_MermaidsHideaway_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_CarvedWoodenPlank_MermaidsHideaway_ItemDesc_C : public UItemDesc
 {
 public:

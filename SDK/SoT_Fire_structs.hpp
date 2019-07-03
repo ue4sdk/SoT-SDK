@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Fire_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_ShipDamage_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
+#include "SoT_ShipDamage_classes.hpp"
 
 namespace SDK
 {
@@ -21,16 +21,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct Fire.FireCellStateTimingParams
-// 0x001C
+// 0x0080
 struct FFireCellStateTimingParams
 {
-	float                                              KindleTime;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BurningTime;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SmoulderingTime;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SteamingTime;                                             // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SidewaysPropagationTime;                                  // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              UpwardPropagationTime;                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DownwardPropagationTime;                                  // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 KindleTime;                                               // 0x0000(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 BurningTime;                                              // 0x0010(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 SmoulderingTime;                                          // 0x0020(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 SteamingTime;                                             // 0x0030(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 WetTime;                                                  // 0x0040(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 SidewaysPropagationTime;                                  // 0x0050(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 UpwardPropagationTime;                                    // 0x0060(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 DownwardPropagationTime;                                  // 0x0070(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Fire.FireCellAudioParams
@@ -125,11 +126,11 @@ struct FReplicatedFireCellData
 };
 
 // ScriptStruct Fire.ShipFireCell
-// 0x00E0
+// 0x00F0
 struct FShipFireCell
 {
 	struct FShipFireCellDesc                           Desc;                                                     // 0x0000(0x00C0)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00C0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x00C0(0x0030) MISSED OFFSET
 };
 
 // ScriptStruct Fire.ShipFireVFXParams
@@ -163,10 +164,10 @@ struct FFireParticleSpawnList
 };
 
 // ScriptStruct Fire.FireCellStateData
-// 0x0010
+// 0x001C
 struct FFireCellStateData
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1C];                                      // 0x0000(0x001C) MISSED OFFSET
 };
 
 // ScriptStruct Fire.FlammableActorData

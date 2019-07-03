@@ -16871,71 +16871,6 @@ class UMaterial* UMaterialInterface::GetBaseMaterial()
 }
 
 
-// Function Engine.BoxComponent.SetBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 InBoxExtent                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.SetBoxExtent"));
-
-	struct
-	{
-		struct FVector                 InBoxExtent;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.InBoxExtent = InBoxExtent;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.BoxComponent.GetUnscaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetUnscaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetUnscaledBoxExtent"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.BoxComponent.GetScaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetScaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetScaledBoxExtent"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.ParticleSystemComponent.SetVectorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -28900,6 +28835,71 @@ bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
 	} params;
 
 	params.TypeData = TypeData;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.BoxComponent.SetBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 InBoxExtent                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.SetBoxExtent"));
+
+	struct
+	{
+		struct FVector                 InBoxExtent;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InBoxExtent = InBoxExtent;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.BoxComponent.GetUnscaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UBoxComponent::GetUnscaledBoxExtent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetUnscaledBoxExtent"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.BoxComponent.GetScaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UBoxComponent::GetScaledBoxExtent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetScaledBoxExtent"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55262,6 +55262,52 @@ void UPlayerInput::SetCombinedAxisScale(const struct FName& CombinedAxisName, fl
 
 	params.CombinedAxisName = CombinedAxisName;
 	params.Scale = Scale;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerInput.SetCombinedAxisNonLinearity
+// (Final, Exec, Native, Public)
+// Parameters:
+// struct FName                   CombinedAxisName               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          NonLinearity                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerInput::SetCombinedAxisNonLinearity(const struct FName& CombinedAxisName, float NonLinearity)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerInput.SetCombinedAxisNonLinearity"));
+
+	struct
+	{
+		struct FName                   CombinedAxisName;
+		float                          NonLinearity;
+	} params;
+
+	params.CombinedAxisName = CombinedAxisName;
+	params.NonLinearity = NonLinearity;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerInput.SetCombinedAxisLowerDeadzone
+// (Final, Exec, Native, Public)
+// Parameters:
+// struct FName                   CombinedAxisName               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LowerDeadzone                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerInput::SetCombinedAxisLowerDeadzone(const struct FName& CombinedAxisName, float LowerDeadzone)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerInput.SetCombinedAxisLowerDeadzone"));
+
+	struct
+	{
+		struct FName                   CombinedAxisName;
+		float                          LowerDeadzone;
+	} params;
+
+	params.CombinedAxisName = CombinedAxisName;
+	params.LowerDeadzone = LowerDeadzone;
 
 	UObject::ProcessEvent(fn, &params);
 }

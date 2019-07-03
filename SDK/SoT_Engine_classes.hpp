@@ -2929,26 +2929,6 @@ public:
 };
 
 
-// Class Engine.BoxComponent
-// 0x0010 (0x05D0 - 0x05C0)
-class UBoxComponent : public UShapeComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.BoxComponent"));
-		return ptr;
-	}
-
-
-	void SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps);
-	struct FVector GetUnscaledBoxExtent();
-	struct FVector GetScaledBoxExtent();
-};
-
-
 // Class Engine.RotatingMovementComponent
 // 0x0020 (0x0138 - 0x0118)
 class URotatingMovementComponent : public UMovementComponent
@@ -8177,6 +8157,26 @@ public:
 };
 
 
+// Class Engine.BoxComponent
+// 0x0010 (0x05D0 - 0x05C0)
+class UBoxComponent : public UShapeComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.BoxComponent"));
+		return ptr;
+	}
+
+
+	void SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps);
+	struct FVector GetUnscaledBoxExtent();
+	struct FVector GetScaledBoxExtent();
+};
+
+
 // Class Engine.DrawSphereComponent
 // 0x0000 (0x05C0 - 0x05C0)
 class UDrawSphereComponent : public USphereComponent
@@ -8430,7 +8430,8 @@ public:
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0881(0x0003) MISSED OFFSET
 	float                                              AspectRatio;                                              // 0x0884(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bConstrainAspectRatio : 1;                                // 0x0888(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0889(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0889(0x0003) MISSED OFFSET
+	int                                                LandscapeLODOverride;                                     // 0x088C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -12232,6 +12233,8 @@ public:
 	void SetMouseSensitivity(float Sensitivity);
 	void SetForceFeedbackIntensity(float Intensity);
 	void SetCombinedAxisScale(const struct FName& CombinedAxisName, float Scale);
+	void SetCombinedAxisNonLinearity(const struct FName& CombinedAxisName, float NonLinearity);
+	void SetCombinedAxisLowerDeadzone(const struct FName& CombinedAxisName, float LowerDeadzone);
 	void SetBind(const struct FName& BindName, const class FString& Command);
 	void InvertMouseAxis(const struct FName& AxisName);
 	void InvertGamepadAxis(const struct FName& AxisName);

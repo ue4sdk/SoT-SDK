@@ -70,6 +70,7 @@ public:
 	static bool WwiseIsGlobalEvent(class UWwiseEvent* Event);
 	static bool WwiseGetListenerInfo(int Viewport, struct FWwiseListenerInfo* InfoOut);
 	static bool WwiseGetListenerEmitter(class UObject* WorldContextObject, int ListenerIndex, const struct FName& Name, const struct FVector& Offset, bool bFollowOrientaion, class UWwiseObjectPoolWrapper* EmitterPool, struct FWwiseEmitter* Emitter);
+	static bool WwiseGetGlobalRTPC(const struct FName& RTPCName, float* RTPCValue);
 	static bool WwiseGetEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter);
 	static bool WwiseEmitterWaitToComplete(const struct FWwiseEmitter& Emitter, int PlayId, class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
 	static bool WwiseEmitterStop(const struct FWwiseEmitter& Emitter, int PlayId, float FadeTime);
@@ -368,11 +369,11 @@ public:
 
 
 // Class RareAudio.RareAudioHardwareDeviceService
-// 0x0028 (0x0240 - 0x0218)
+// 0x0010 (0x0228 - 0x0218)
 class URareAudioHardwareDeviceService : public UAudioHardwareDeviceService
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0218(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0218(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

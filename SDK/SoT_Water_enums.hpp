@@ -16,9 +16,10 @@ namespace SDK
 enum class EWaterQueryResult : uint8_t
 {
 	EWaterQueryResult__Success     = 0,
-	EWaterQueryResult__Failed      = 1,
-	EWaterQueryResult__NoWater     = 2,
-	EWaterQueryResult__EWaterQueryResult_MAX = 3
+	EWaterQueryResult__NotReady    = 1,
+	EWaterQueryResult__Failed      = 2,
+	EWaterQueryResult__NoWater     = 3,
+	EWaterQueryResult__EWaterQueryResult_MAX = 4
 };
 
 

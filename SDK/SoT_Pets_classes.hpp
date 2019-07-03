@@ -59,6 +59,22 @@ public:
 };
 
 
+// Class Pets.BTDecorator_IsOccupyingHangoutSpotWithGivenId
+// 0x0010 (0x0078 - 0x0068)
+class UBTDecorator_IsOccupyingHangoutSpotWithGivenId : public UBTDecorator_BaseConditional
+{
+public:
+	TArray<struct FHangoutSpotId>                      SuccessIds;                                               // 0x0068(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.BTDecorator_IsOccupyingHangoutSpotWithGivenId"));
+		return ptr;
+	}
+
+};
+
+
 // Class Pets.BTDecorator_PetFoodSourceAvailable
 // 0x0000 (0x0068 - 0x0068)
 class UBTDecorator_PetFoodSourceAvailable : public UBTDecorator_BaseConditional
@@ -107,6 +123,21 @@ public:
 };
 
 
+// Class Pets.BTTask_ChangeHangoutAnimation
+// 0x0000 (0x0088 - 0x0088)
+class UBTTask_ChangeHangoutAnimation : public UBTTask_BlackboardBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.BTTask_ChangeHangoutAnimation"));
+		return ptr;
+	}
+
+};
+
+
 // Class Pets.BTTask_DetachFromHangout
 // 0x0008 (0x0090 - 0x0088)
 class UBTTask_DetachFromHangout : public UBTTask_BlackboardBase
@@ -134,6 +165,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.BTTask_EatFood"));
+		return ptr;
+	}
+
+};
+
+
+// Class Pets.BTTask_GetTotalHangoutTime
+// 0x0000 (0x0088 - 0x0088)
+class UBTTask_GetTotalHangoutTime : public UBTTask_BlackboardBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Pets.BTTask_GetTotalHangoutTime"));
 		return ptr;
 	}
 
@@ -457,7 +503,7 @@ public:
 
 
 // Class Pets.PetAIController
-// 0x0068 (0x0970 - 0x0908)
+// 0x0080 (0x0988 - 0x0908)
 class APetAIController : public AAthenaAIController
 {
 public:
@@ -467,9 +513,12 @@ public:
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0924(0x0004) MISSED OFFSET
 	class UReactStateMappingsDataAsset*                ReactMappings;                                            // 0x0928(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x8];                                       // 0x0930(0x0008) MISSED OFFSET
-	class UPetHangoutSpotSelectorComponent*            HangoutSpotSelector;                                      // 0x0938(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UPetDangerComponent*                         DangerComponent;                                          // 0x0940(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x28];                                      // 0x0948(0x0028) MISSED OFFSET
+	class UPetHangoutSpotSelectorComponent*            HangoutSpotSelectorComponent;                             // 0x0938(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlackboardData*                             DefaultBlackboardAsset;                                   // 0x0940(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBehaviorTree*                               DefaultTree;                                              // 0x0948(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBehaviorTree*                               HangoutTree;                                              // 0x0950(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPetDangerComponent*                         DangerComponent;                                          // 0x0958(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x28];                                      // 0x0960(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -811,7 +860,7 @@ public:
 
 
 // Class Pets.WieldablePetHungerComponent
-// 0x0090 (0x0160 - 0x00D0)
+// 0x00A0 (0x0170 - 0x00D0)
 class UWieldablePetHungerComponent : public UActorComponent
 {
 public:
@@ -819,7 +868,8 @@ public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x00D8(0x0028) MISSED OFFSET
 	TArray<struct FOverlapResult>                      CachedOverlappingActors;                                  // 0x0100(0x0010) (ZeroConstructor)
 	TArray<struct FWieldablePetFoodSourceEntry>        ActiveFoodSources;                                        // 0x0110(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x0120(0x0040) MISSED OFFSET
+	TArray<struct FWieldablePetFoodSourceEntry>        FoodSourcesToRemove;                                      // 0x0120(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x40];                                      // 0x0130(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

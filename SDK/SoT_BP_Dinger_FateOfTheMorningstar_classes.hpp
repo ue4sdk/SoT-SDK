@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Dinger_FateOfTheMorningstar.BP_Dinger_FateOfTheMorningstar_C
-// 0x0008 (0x05B8 - 0x05B0)
+// 0x0008 (0x05D8 - 0x05D0)
 class ABP_Dinger_FateOfTheMorningstar_C : public ABP_Orderofsouls_TallTales_C
 {
 public:
-	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

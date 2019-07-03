@@ -16,12 +16,14 @@ namespace SDK
 enum class EFireCellState : uint8_t
 {
 	EFireCellState__Deactivated    = 0,
-	EFireCellState__Kindled        = 1,
-	EFireCellState__Smouldering    = 2,
-	EFireCellState__Steaming       = 3,
-	EFireCellState__Burning        = 4,
-	EFireCellState__MAX            = 5,
-	EFireCellState__EFireCellState_MAX = 6
+	EFireCellState__Flooded        = 1,
+	EFireCellState__Wet            = 2,
+	EFireCellState__Kindled        = 3,
+	EFireCellState__Smouldering    = 4,
+	EFireCellState__Steaming       = 5,
+	EFireCellState__Burning        = 6,
+	EFireCellState__MAX            = 7,
+	EFireCellState__EFireCellState_MAX = 8
 };
 
 

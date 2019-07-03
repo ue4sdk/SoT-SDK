@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Memento_SpiceBox.BP_Memento_SpiceBox_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_Memento_SpiceBox_C : public UBootyItemDesc
 {
 public:

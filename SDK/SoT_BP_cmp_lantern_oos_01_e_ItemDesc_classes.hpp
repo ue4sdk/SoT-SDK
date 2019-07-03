@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_lantern_oos_01_e_ItemDesc.BP_cmp_lantern_oos_01_e_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_cmp_lantern_oos_01_e_ItemDesc_C : public UItemDesc
 {
 public:

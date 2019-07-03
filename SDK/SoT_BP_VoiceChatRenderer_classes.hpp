@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VoiceChatRenderer.BP_VoiceChatRenderer_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0120 - 0x0120)
 class UBP_VoiceChatRenderer_C : public UVoiceChatRenderer
 {
 public:

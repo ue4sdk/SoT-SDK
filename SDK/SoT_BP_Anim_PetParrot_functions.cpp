@@ -876,12 +876,44 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_EE61AE88436D00DF575F3BB01394F225
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_EE61AE88436D00DF575F3BB01394F225()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_EE61AE88436D00DF575F3BB01394F225"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_D177FF4840AE633809077D9B695DA003_1
 // (BlueprintEvent)
 
 void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_D177FF4840AE633809077D9B695DA003_1()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_D177FF4840AE633809077D9B695DA003_1"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_FEAB4C4C461DC829302313A7C6EA7894
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_FEAB4C4C461DC829302313A7C6EA7894()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_FEAB4C4C461DC829302313A7C6EA7894"));
 
 	struct
 	{
@@ -1602,6 +1634,38 @@ void UBP_Anim_PetParrot_C::AnimNotify_PetLookAt_On()
 void UBP_Anim_PetParrot_C::AnimNotify_PetLookAt_Off()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_PetLookAt_Off"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOn
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::AnimNotify_StaticBaseOn()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOn"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOff
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::AnimNotify_StaticBaseOff()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOff"));
 
 	struct
 	{

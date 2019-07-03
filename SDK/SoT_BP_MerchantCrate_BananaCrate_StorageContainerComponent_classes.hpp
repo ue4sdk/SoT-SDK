@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_BananaCrate_StorageContainerComponent.BP_MerchantCrate_BananaCrate_StorageContainerComponent_C
-// 0x0000 (0x0250 - 0x0250)
+// 0x0000 (0x02B0 - 0x02B0)
 class UBP_MerchantCrate_BananaCrate_StorageContainerComponent_C : public UStorageContainerComponent
 {
 public:

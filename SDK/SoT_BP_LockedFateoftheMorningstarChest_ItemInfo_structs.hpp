@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_CollectorsChest_ItemInfo_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_BP_CollectorsChest_ItemInfo_classes.hpp"
 
 namespace SDK
 {
