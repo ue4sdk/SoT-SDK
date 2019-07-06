@@ -568,19 +568,19 @@ public:
 
 
 // Class Pets.PetHangoutSpotComponent
-// 0x00D0 (0x0380 - 0x02B0)
+// 0x00C0 (0x0380 - 0x02C0)
 class UPetHangoutSpotComponent : public USceneComponent
 {
 public:
-	TArray<struct FHangoutSpotPosition>                HangoutSpots;                                             // 0x02B0(0x0010) (Edit, ZeroConstructor)
-	bool                                               HasLowerDeckFloodThreshold;                               // 0x02C0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x02C1(0x0003) MISSED OFFSET
-	float                                              LowerDeckFloodThreshold;                                  // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               HasMiddleDeckFloodThreshold;                              // 0x02C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02C0(0x0008) MISSED OFFSET
+	bool                                               HasLowerDeckFloodThreshold;                               // 0x02C8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x02C9(0x0003) MISSED OFFSET
-	float                                              MiddleDeckFloodThreshold;                                 // 0x02CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PerchInteractableHeightOffset;                            // 0x02D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xAC];                                      // 0x02D4(0x00AC) MISSED OFFSET
+	float                                              LowerDeckFloodThreshold;                                  // 0x02CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               HasMiddleDeckFloodThreshold;                              // 0x02D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x02D1(0x0003) MISSED OFFSET
+	float                                              MiddleDeckFloodThreshold;                                 // 0x02D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PerchInteractableHeightOffset;                            // 0x02D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xA4];                                      // 0x02DC(0x00A4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -792,7 +792,7 @@ public:
 
 
 // Class Pets.WieldablePet
-// 0x0080 (0x0860 - 0x07E0)
+// 0x00A8 (0x0888 - 0x07E0)
 class AWieldablePet : public ASkeletalMeshWieldableItem
 {
 public:
@@ -808,8 +808,14 @@ public:
 	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UPickupableComponent*                        PickupableComponent;                                      // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UWieldableInteractableComponent*             WieldableInteractableComponent;                           // 0x0830(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               DropRequested;                                            // 0x0838(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x27];                                      // 0x0839(0x0027) MISSED OFFSET
+	class ULightweightStatusEffectManagerComponent*    LightweightStatusEffectManagerComponent;                  // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UFeedingComponent*                           FeedingComponent;                                         // 0x0840(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPetSicknessComponent*                       SicknessComponent;                                        // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UWieldablePetHungerComponent*                HungerComponent;                                          // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UStarvingComponent*                          StarvingComponent;                                        // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TEnumAsByte<EAthenaAnimationPetHeldReactionState>  HungerReactAnimationState;                                // 0x0860(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               DropRequested;                                            // 0x0861(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x26];                                      // 0x0862(0x0026) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -818,6 +824,7 @@ public:
 	}
 
 
+	void OnRep_HungerReactAnimationState();
 	void OnRep_DropRequested(bool DropRequestedPrior);
 };
 

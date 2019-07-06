@@ -167,7 +167,7 @@ public:
 
 
 // Class Kraken.KrakenShipWrappingTentacle
-// 0x01E8 (0x07C8 - 0x05E0)
+// 0x01F0 (0x07D0 - 0x05E0)
 class AKrakenShipWrappingTentacle : public AKrakenTentacle
 {
 public:
@@ -187,7 +187,7 @@ public:
 	class UStaticMesh*                                 HighDetailTentacleMesh;                                   // 0x0738(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	struct FKrakenShipWrappingTentacleAnimationState   CurrentServerAnimationState;                              // 0x0740(0x0010) (Net, Transient)
 	struct FKrakenShipWrappingTentacleAnimationState   PendingServerAnimationState;                              // 0x0750(0x0010) (Net, Transient)
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0760(0x0068) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0760(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -463,15 +463,14 @@ public:
 
 
 // Class Kraken.KrakenShipWrappingKnockbackRegionComponent
-// 0x0080 (0x0330 - 0x02B0)
+// 0x0070 (0x0330 - 0x02C0)
 class UKrakenShipWrappingKnockbackRegionComponent : public USceneComponent
 {
 public:
-	class UBoxComponent*                               KnockbackRegion;                                          // 0x02B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     KnockbackDirection;                                       // 0x02B8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              KnockbackTime;                                            // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FKnockBackInfo                              KnockbackParams;                                          // 0x02C8(0x0034) (Edit)
-	unsigned char                                      UnknownData00[0x34];                                      // 0x02FC(0x0034) MISSED OFFSET
+	struct FVector                                     KnockbackDirection;                                       // 0x02C0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              KnockbackTime;                                            // 0x02CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FKnockBackInfo                              KnockbackParams;                                          // 0x02D0(0x0034) (Edit)
+	unsigned char                                      UnknownData00[0x2C];                                      // 0x0304(0x002C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

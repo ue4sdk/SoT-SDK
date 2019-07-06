@@ -21823,6 +21823,51 @@ bool ANavLinkProxy::HasMovingAgents()
 }
 
 
+// Function Engine.ParticleSystem.GetNumLODs
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UParticleSystem::GetNumLODs()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.GetNumLODs"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ParticleSystem.ContainsEmitterType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  TypeData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.ContainsEmitterType"));
+
+	struct
+	{
+		class UClass*                  TypeData;
+		bool                           ReturnValue;
+	} params;
+
+	params.TypeData = TypeData;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.SkeletalMesh.IsSectionUsingCloth
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -22136,27 +22181,6 @@ void ASceneCaptureCube::OnInterpToggle(bool bEnable)
 	params.bEnable = bEnable;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Interface_Animatable.GetAnimInstance
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAnimInstance* UInterface_Animatable::GetAnimInstance()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Interface_Animatable.GetAnimInstance"));
-
-	struct
-	{
-		class UAnimInstance*           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -23094,6 +23118,27 @@ void UPhysicsConstraintComponent::BreakConstraint()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Interface_Animatable.GetAnimInstance
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimInstance* UInterface_Animatable::GetAnimInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Interface_Animatable.GetAnimInstance"));
+
+	struct
+	{
+		class UAnimInstance*           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -24740,6 +24785,27 @@ bool UNavigationSystem::DoesMainNavDataHaveValidNavMesh()
 	struct
 	{
 		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimSequenceBase.GetPlayLength
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimSequenceBase::GetPlayLength()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimSequenceBase.GetPlayLength"));
+
+	struct
+	{
+		float                          ReturnValue;
 	} params;
 
 
@@ -27451,6 +27517,72 @@ void UMaterialBillboardComponent::AddElement(class UMaterialInterface* Material,
 }
 
 
+// Function Engine.StaticMesh.GetNumUVChannels
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            LodLevel                       (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UStaticMesh::GetNumUVChannels(int LodLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumUVChannels"));
+
+	struct
+	{
+		int                            LodLevel;
+		int                            ReturnValue;
+	} params;
+
+	params.LodLevel = LodLevel;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMesh.GetNumLODsBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UStaticMesh::GetNumLODsBP()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumLODsBP"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMesh.GetBoundingBox
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FBox UStaticMesh::GetBoundingBox()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetBoundingBox"));
+
+	struct
+	{
+		struct FBox                    ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.MergedCollisionComponent.GetStaticMeshByInstanceBodyIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -28797,51 +28929,6 @@ float USplineMeshComponent::GetBoundaryMax()
 }
 
 
-// Function Engine.ParticleSystem.GetNumLODs
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UParticleSystem::GetNumLODs()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.GetNumLODs"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.ParticleSystem.ContainsEmitterType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  TypeData                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.ContainsEmitterType"));
-
-	struct
-	{
-		class UClass*                  TypeData;
-		bool                           ReturnValue;
-	} params;
-
-	params.TypeData = TypeData;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.BoxComponent.SetBoxExtent
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -29767,27 +29854,6 @@ float UTimelineComponent::GetPlayRate()
 float UTimelineComponent::GetPlaybackPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.TimelineComponent.GetPlaybackPosition"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimSequenceBase.GetPlayLength
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimSequenceBase::GetPlayLength()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimSequenceBase.GetPlayLength"));
 
 	struct
 	{
@@ -39932,6 +39998,34 @@ float UKismetMathLibrary::Lerp(float A, float B, float Alpha)
 	params.A = A;
 	params.B = B;
 	params.Alpha = Alpha;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.IsPointInBox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                 Point                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FBox                    Box                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKismetMathLibrary::IsPointInBox(const struct FVector& Point, const struct FBox& Box)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.KismetMathLibrary.IsPointInBox"));
+
+	struct
+	{
+		struct FVector                 Point;
+		struct FBox                    Box;
+		bool                           ReturnValue;
+	} params;
+
+	params.Point = Point;
+	params.Box = Box;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -55790,6 +55884,48 @@ void UMaterialInstanceDynamic::CopyParameterOverrides(class UMaterialInstance* M
 }
 
 
+// Function Engine.Texture2D.Blueprint_GetSizeY
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTexture2D::Blueprint_GetSizeY()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeY"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Texture2D.Blueprint_GetSizeX
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTexture2D::Blueprint_GetSizeX()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeX"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.CanvasRenderTarget2D.UpdateResource
 // (Native, Public, BlueprintCallable)
 
@@ -55912,48 +56048,6 @@ class UCanvasRenderTarget2D* UCanvasRenderTarget2D::CreateCanvasRenderTarget2D(c
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Texture2D.Blueprint_GetSizeY
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UTexture2D::Blueprint_GetSizeY()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeY"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Texture2D.Blueprint_GetSizeX
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UTexture2D::Blueprint_GetSizeX()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeX"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -56504,72 +56598,6 @@ struct FVector USkeletalMeshSocket::GetSocketLocation(class USkeletalMeshCompone
 	} params;
 
 	params.SkelComp = SkelComp;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetNumUVChannels
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            LodLevel                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UStaticMesh::GetNumUVChannels(int LodLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumUVChannels"));
-
-	struct
-	{
-		int                            LodLevel;
-		int                            ReturnValue;
-	} params;
-
-	params.LodLevel = LodLevel;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetNumLODsBP
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UStaticMesh::GetNumLODsBP()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumLODsBP"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetBoundingBox
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FBox UStaticMesh::GetBoundingBox()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetBoundingBox"));
-
-	struct
-	{
-		struct FBox                    ReturnValue;
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 

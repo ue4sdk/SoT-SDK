@@ -108,7 +108,7 @@ public:
 
 
 // Class Time.TimeService
-// 0x00E8 (0x0590 - 0x04A8)
+// 0x0100 (0x05A8 - 0x04A8)
 class ATimeService : public AActor
 {
 public:
@@ -129,7 +129,8 @@ public:
 	float                                              MaxLocalTimeUpdateAdjustPercentageToSlowDown;             // 0x052C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x0530(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x0534(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x58];                                      // 0x0538(0x0058) MISSED OFFSET
+	uint32_t                                           MaxNumReplicatedSyncTimeEntriesToAverage;                 // 0x0538(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6C];                                      // 0x053C(0x006C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -144,11 +145,11 @@ public:
 
 
 // Class Time.DebugTimeService
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05B0 - 0x05A8)
 class ADebugTimeService : public ATimeService
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0590(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -162,7 +163,7 @@ public:
 
 
 // Class Time.TestTimeService
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x05A8 - 0x05A8)
 class ATestTimeService : public ATimeService
 {
 public:

@@ -2879,11 +2879,11 @@ public:
 
 
 // Class AIModule.EQSRenderingComponent
-// 0x0010 (0x05B0 - 0x05A0)
+// 0x0020 (0x05C0 - 0x05A0)
 class UEQSRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05A0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

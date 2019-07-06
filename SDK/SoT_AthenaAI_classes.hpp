@@ -633,14 +633,14 @@ public:
 
 
 // Class AthenaAI.AIDioramaLocationSourceComponent
-// 0x0020 (0x02D0 - 0x02B0)
+// 0x0020 (0x02E0 - 0x02C0)
 class UAIDioramaLocationSourceComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
-	TArray<struct FAIDioramaLocationSourceComponentData> DioramaRelativeLocations;                                 // 0x02B8(0x0010) (Edit, ZeroConstructor)
-	float                                              DialogueTriggerRadius;                                    // 0x02C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DialogueSubtitleBuffer;                                   // 0x02CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAIDioramaLocationSourceComponentData> DioramaRelativeLocations;                                 // 0x02C0(0x0010) (Edit, ZeroConstructor)
+	float                                              DialogueTriggerRadius;                                    // 0x02D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DialogueSubtitleBuffer;                                   // 0x02D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02D8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1441,18 +1441,19 @@ public:
 
 
 // Class AthenaAI.AINameplateComponent
-// 0x00D0 (0x03B0 - 0x02E0)
+// 0x00E0 (0x03C0 - 0x02E0)
 class UAINameplateComponent : public UNameplateComponent
 {
 public:
-	float                                              VisibleFromWorldDistance;                                 // 0x02E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VisibleUntilWorldDistance;                                // 0x02E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VisibleAfterDeathDuration;                                // 0x02E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x02EC(0x0004) MISSED OFFSET
-	class FString                                      DisplayName;                                              // 0x02F0(0x0010) (Net, ZeroConstructor)
-	class FString                                      DebugDisplayText;                                         // 0x0300(0x0010) (Net, ZeroConstructor)
-	bool                                               VisibilityDisabled;                                       // 0x0310(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x9F];                                      // 0x0311(0x009F) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02E0(0x0008) MISSED OFFSET
+	float                                              VisibleFromWorldDistance;                                 // 0x02E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VisibleUntilWorldDistance;                                // 0x02EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VisibleAfterDeathDuration;                                // 0x02F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x02F4(0x0004) MISSED OFFSET
+	class FString                                      DisplayName;                                              // 0x02F8(0x0010) (Net, ZeroConstructor)
+	class FString                                      DebugDisplayText;                                         // 0x0308(0x0010) (Net, ZeroConstructor)
+	bool                                               VisibilityDisabled;                                       // 0x0318(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xA7];                                      // 0x0319(0x00A7) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1599,17 +1600,16 @@ public:
 
 
 // Class AthenaAI.AIRegionComponent
-// 0x0070 (0x0320 - 0x02B0)
+// 0x0070 (0x0330 - 0x02C0)
 class UAIRegionComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
-	bool                                               UpdateRegionPosition;                                     // 0x02B8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x02B9(0x0003) MISSED OFFSET
-	struct FName                                       NavMeshAgentType;                                         // 0x02BC(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RegionRadius;                                             // 0x02C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FSpawnLocationGroup>                 SpawnLocationGroups;                                      // 0x02C8(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x48];                                      // 0x02D8(0x0048) MISSED OFFSET
+	bool                                               UpdateRegionPosition;                                     // 0x02C0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x02C1(0x0003) MISSED OFFSET
+	struct FName                                       NavMeshAgentType;                                         // 0x02C4(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RegionRadius;                                             // 0x02CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FSpawnLocationGroup>                 SpawnLocationGroups;                                      // 0x02D0(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x02E0(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1930,7 +1930,7 @@ public:
 
 
 // Class AthenaAI.AISpawnPointSeedComponent
-// 0x0000 (0x02B0 - 0x02B0)
+// 0x0000 (0x02C0 - 0x02C0)
 class UAISpawnPointSeedComponent : public USceneComponent
 {
 public:
@@ -4795,11 +4795,11 @@ public:
 
 
 // Class AthenaAI.PetNameplateComponent
-// 0x0080 (0x0430 - 0x03B0)
+// 0x0070 (0x0430 - 0x03C0)
 class UPetNameplateComponent : public UAINameplateComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x03B0(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x03C0(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

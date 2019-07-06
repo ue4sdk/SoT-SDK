@@ -71,21 +71,24 @@ struct FShipFireRelativeSpawnDesc
 };
 
 // ScriptStruct Fire.ShipFireLightRelativeSpawnDesc
-// 0x0020 (0x0058 - 0x0038)
+// 0x0028 (0x0060 - 0x0038)
 struct FShipFireLightRelativeSpawnDesc : public FShipFireRelativeSpawnDesc
 {
 	struct FVector                                     LightPositionOffset;                                      // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 	TArray<TEnumAsByte<EShipRegion>>                   DormantShipRegions;                                       // 0x0048(0x0010) (Edit, ZeroConstructor)
+	float                                              DormantFadeDistance;                                      // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Fire.ShipFireLight
-// 0x0068
+// 0x0090
 struct FShipFireLight
 {
-	struct FShipFireLightRelativeSpawnDesc             Desc;                                                     // 0x0000(0x0058)
-	class UPointLightComponent*                        PointLight;                                               // 0x0058(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        AreaLight;                                                // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
+	struct FShipFireLightRelativeSpawnDesc             Desc;                                                     // 0x0000(0x0060)
+	class UPointLightComponent*                        PointLight;                                               // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        AreaLight;                                                // 0x0068(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Fire.FireCellStateParticleTemplate
@@ -134,16 +137,24 @@ struct FShipFireCell
 };
 
 // ScriptStruct Fire.ShipFireVFXParams
-// 0x0030
+// 0x0038
 struct FShipFireVFXParams
 {
 	TArray<struct FFireCellStateParticleTemplate>      DefaultParticleTemplates;                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
-	class UParticleSystem*                             TopDeckSmokeParticleSystem;                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             BelowDeckSmokeParticleSystem;                             // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OnFireThresholdBeforeTopDeckSmokeAppears;                 // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                NumInterleaveSpawnSteps;                                  // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TickIntervalForAllCells;                                  // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	class UParticleSystem*                             TopDeckLowDetailParticleSystem;                           // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             TopDeckSmokeParticleSystem;                               // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             BelowDeckSmokeParticleSystem;                             // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OnFireThresholdBeforeTopDeckSmokeAppears;                 // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumInterleaveSpawnSteps;                                  // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TickIntervalForAllCells;                                  // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Fire.ShipFireLowDetailRelativeSpawnDesc
+// 0x0008 (0x0040 - 0x0038)
+struct FShipFireLowDetailRelativeSpawnDesc : public FShipFireRelativeSpawnDesc
+{
+	struct FName                                       EmitterName;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Fire.FireParticleSpawnData

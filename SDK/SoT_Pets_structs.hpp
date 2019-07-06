@@ -9,11 +9,11 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Pets_enums.hpp"
 #include "SoT_AthenaAI_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Interaction_classes.hpp"
 
 namespace SDK
@@ -192,7 +192,7 @@ struct FWieldablePetFoodSourceEntry
 // 0x0008
 struct FWieldablePetHungerAnimationData
 {
-	TEnumAsByte<EAthenaAnimationPetHeldState>          AnimState;                                                // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EAthenaAnimationPetHeldReactionState>  AnimState;                                                // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              AnimTimeout;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
@@ -282,7 +282,7 @@ struct FEventWieldablePetPendingDrop
 // 0x0001
 struct FEventWieldablePetHungerStateUpdated
 {
-	TEnumAsByte<EAthenaAnimationPetHeldState>          NewState;                                                 // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EAthenaAnimationPetHeldReactionState>  NewState;                                                 // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 }

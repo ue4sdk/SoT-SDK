@@ -98,6 +98,7 @@ public:
 	void TeleportActorToActorWithOffset(const class FString& ActorIdString, const class FString& DestinationActorIdString, float OffsetX, float OffsetY, float OffsetZ);
 	void SuperSailor();
 	void StoreShipLocation(float LocationX, float LocationY, float LocationZ, float Yaw);
+	void StopShip();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
@@ -347,6 +348,7 @@ public:
 	void DisplayDrunkenness(bool Flag);
 	void DisableCinematicCamera();
 	void DisableAIBehaviour();
+	void DioramaStartNearest(const class FString& Spawner, const class FString& DioramaDesc);
 	void DestroyShip(const class FString& ShipActorIdConsoleString);
 	void DestroyMyShip();
 	void DestroyKraken();

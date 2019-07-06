@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwreckChestSpawner.BP_ShipwreckChestSpawner_C
-// 0x0000 (0x03E0 - 0x03E0)
+// 0x0000 (0x03F0 - 0x03F0)
 class UBP_ShipwreckChestSpawner_C : public UItemSpawnComponent
 {
 public:

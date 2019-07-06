@@ -1246,6 +1246,22 @@ void UAthenaCheatManager::StoreShipLocation(float LocationX, float LocationY, fl
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.StopShip
+// (Final, Exec, Native, Public, BlueprintCallable)
+
+void UAthenaCheatManager::StopShip()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.StopShip"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.StartVoyage
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -5922,6 +5938,29 @@ void UAthenaCheatManager::DisableAIBehaviour()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.DioramaStartNearest
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  Spawner                        (Parm, ZeroConstructor)
+// class FString                  DioramaDesc                    (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::DioramaStartNearest(const class FString& Spawner, const class FString& DioramaDesc)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DioramaStartNearest"));
+
+	struct
+	{
+		class FString                  Spawner;
+		class FString                  DioramaDesc;
+	} params;
+
+	params.Spawner = Spawner;
+	params.DioramaDesc = DioramaDesc;
 
 	UObject::ProcessEvent(fn, &params);
 }

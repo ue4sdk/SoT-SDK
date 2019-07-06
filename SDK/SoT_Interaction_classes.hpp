@@ -57,7 +57,8 @@ public:
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x05D0(0x00C0) MISSED OFFSET
+	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x05D8(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

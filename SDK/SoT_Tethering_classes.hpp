@@ -30,13 +30,14 @@ public:
 
 
 // Class Tethering.CordRenderComponent
-// 0x0030 (0x0630 - 0x0600)
+// 0x0040 (0x0640 - 0x0600)
 class UCordRenderComponent : public UStaticMeshComponent
 {
 public:
-	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                            // 0x0600(0x0010) (ZeroConstructor, Transient)
-	float                                              ThicknessCm;                                              // 0x0610(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x0614(0x001C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0600(0x0008) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                            // 0x0608(0x0010) (ZeroConstructor, Transient)
+	float                                              ThicknessCm;                                              // 0x0618(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x24];                                      // 0x061C(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -48,15 +49,15 @@ public:
 
 
 // Class Tethering.HarpoonRenderComponent
-// 0x0020 (0x0650 - 0x0630)
+// 0x0020 (0x0660 - 0x0640)
 class UHarpoonRenderComponent : public UCordRenderComponent
 {
 public:
-	TArray<class UMaterialInstanceDynamic*>            HarpoonMaterials;                                         // 0x0630(0x0010) (ZeroConstructor, Transient)
-	float                                              LaunchAnimationDurationSecs;                              // 0x0640(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              HitAnimationDurationSecs;                                 // 0x0644(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              QuickRetractAnimationSpeed;                               // 0x0648(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x064C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0640(0x0008) MISSED OFFSET
+	float                                              LaunchAnimationDurationSecs;                              // 0x0648(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HitAnimationDurationSecs;                                 // 0x064C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              QuickRetractAnimationSpeed;                               // 0x0650(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0654(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

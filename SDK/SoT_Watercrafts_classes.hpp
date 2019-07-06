@@ -83,13 +83,12 @@ public:
 
 
 // Class Watercrafts.RowboatAudioComponent
-// 0x01B0 (0x0460 - 0x02B0)
+// 0x01A0 (0x0460 - 0x02C0)
 class URowboatAudioComponent : public USceneComponent
 {
 public:
-	class URowboatAudioComponentParams*                Params;                                                   // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class ARowboat*                                    ParentRowboat;                                            // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1A0];                                     // 0x02C0(0x01A0) MISSED OFFSET
+	class ARowboat*                                    ParentRowboat;                                            // 0x02C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x198];                                     // 0x02C8(0x0198) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

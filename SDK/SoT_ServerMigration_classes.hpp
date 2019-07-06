@@ -126,6 +126,23 @@ public:
 };
 
 
+// Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent
+// 0x0008 (0x00D8 - 0x00D0)
+class UServerMigrationSerialisationDetailsTestsMigratableComponent : public UActorComponent
+{
+public:
+	float                                              FloatWithMigrationMarkup;                                 // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                IntWithNoMarkup;                                          // 0x00D4(0x0004) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithChild
 // 0x0008 (0x04B0 - 0x04A8)
 class AServerMigrationSerialisationDetailsTestsActorWithChild : public AActor
@@ -136,6 +153,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithChild"));
+		return ptr;
+	}
+
+};
+
+
+// Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithDynamicComponent
+// 0x0018 (0x04C0 - 0x04A8)
+class AServerMigrationSerialisationDetailsTestsActorWithDynamicComponent : public AActor
+{
+public:
+	class UServerMigrationSerialisationDetailsTestsMigratableComponent* SubObject;                                                // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UServerMigrationSerialisationDetailsTestsMigratableComponent* ActorComponent;                                           // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UServerMigrationSerialisationDetailsTestsMigratableComponent* Subobject2;                                               // 0x04B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithDynamicComponent"));
 		return ptr;
 	}
 
@@ -169,23 +204,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServerMigration.ServerMigrationSerialisationDetailsTestsActorWithUniqueNetId"));
-		return ptr;
-	}
-
-};
-
-
-// Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent
-// 0x0008 (0x00D8 - 0x00D0)
-class UServerMigrationSerialisationDetailsTestsMigratableComponent : public UActorComponent
-{
-public:
-	float                                              FloatWithMigrationMarkup;                                 // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                IntWithNoMarkup;                                          // 0x00D4(0x0004) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ServerMigration.ServerMigrationSerialisationDetailsTestsMigratableComponent"));
 		return ptr;
 	}
 

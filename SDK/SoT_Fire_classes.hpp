@@ -148,6 +148,22 @@ public:
 };
 
 
+// Class Fire.FlammableWieldableComponent
+// 0x0010 (0x00F8 - 0x00E8)
+class UFlammableWieldableComponent : public UFlammableComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00E8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.FlammableWieldableComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Fire.IgniteStatus
 // 0x0000 (0x0028 - 0x0028)
 class UIgniteStatus : public UStatusBase
@@ -292,11 +308,11 @@ public:
 
 
 // Class Fire.ShipFireVFXParamsDataAsset
-// 0x0030 (0x0058 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UShipFireVFXParamsDataAsset : public UDataAsset
 {
 public:
-	struct FShipFireVFXParams                          Params;                                                   // 0x0028(0x0030) (Edit)
+	struct FShipFireVFXParams                          Params;                                                   // 0x0028(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -308,20 +324,23 @@ public:
 
 
 // Class Fire.ShipFireVFXManager
-// 0x0148 (0x0170 - 0x0028)
+// 0x0168 (0x0190 - 0x0028)
 class UShipFireVFXManager : public UObject
 {
 public:
 	TArray<struct FShipFireRelativeSpawnDesc>          BelowDeckSmokeSpawnDescs;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UShipFireVFXParamsDataAsset*                 VfxParams;                                                // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FFireParticleSpawnData>              ParticleSpawnLODSettings;                                 // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TMap<struct FName, class UParticleSystemComponent*> SpawnedParticleSystemsForTemplates;                       // 0x0050(0x0050) (ExportObject, ZeroConstructor)
-	TMap<int, class UParticleSystemComponent*>         SpawnedCustomParticleSystemsForCells;                     // 0x00A0(0x0050) (ExportObject, ZeroConstructor)
-	TMap<int, class UParticleSystemComponent*>         SpawnedParticleSystemsForSmokeDescs;                      // 0x00F0(0x0050) (ExportObject, ZeroConstructor)
-	class UParticleSystemComponent*                    SpawnedTopDeckSmokeParticleSystem;                        // 0x0140(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FFireParticleSpawnList>              InterleavedSpawnLists;                                    // 0x0148(0x0010) (ZeroConstructor)
-	class UShipFirePropagator*                         Propagator;                                               // 0x0158(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0160(0x0010) MISSED OFFSET
+	TArray<struct FShipFireLowDetailRelativeSpawnDesc> LowDetailVFXSpawnDescs;                                   // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FFireParticleSpawnData>              ParticleSpawnLODSettings;                                 // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UShipFireVFXParamsDataAsset*                 VfxParams;                                                // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TMap<struct FName, class UParticleSystemComponent*> SpawnedParticleSystemsForTemplates;                       // 0x0060(0x0050) (ExportObject, ZeroConstructor, Transient)
+	TMap<int, class UParticleSystemComponent*>         SpawnedCustomParticleSystemsForCells;                     // 0x00B0(0x0050) (ExportObject, ZeroConstructor, Transient)
+	TMap<int, class UParticleSystemComponent*>         SpawnedParticleSystemsForSmokeDescs;                      // 0x0100(0x0050) (ExportObject, ZeroConstructor, Transient)
+	class UParticleSystemComponent*                    SpawnedTopDeckSmokeParticleSystem;                        // 0x0150(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    SpawnedLowDetailParticleSystem;                           // 0x0158(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0160(0x0008) MISSED OFFSET
+	TArray<struct FFireParticleSpawnList>              InterleavedSpawnLists;                                    // 0x0168(0x0010) (ZeroConstructor)
+	class UShipFirePropagator*                         Propagator;                                               // 0x0178(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0180(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

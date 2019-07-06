@@ -108,10 +108,11 @@ enum class EAthenaAITeam : uint8_t
 	Sharks                         = 6,
 	TinyShark                      = 7,
 	Kraken                         = 8,
-	NeutralCreatureCharacters      = 9,
-	Pets                           = 10,
-	Max                            = 11,
-	EAthenaAITeam_MAX              = 12
+	KrakenTentacle                 = 9,
+	NeutralCreatureCharacters      = 10,
+	Pets                           = 11,
+	Max                            = 12,
+	EAthenaAITeam_MAX              = 13
 };
 
 
@@ -1264,7 +1265,8 @@ enum class ENotificationType : uint8_t
 	ENotificationType__Chat        = 0,
 	ENotificationType__Server      = 1,
 	ENotificationType__FormattedChat = 2,
-	ENotificationType__ENotificationType_MAX = 3
+	ENotificationType__STTChat     = 3,
+	ENotificationType__ENotificationType_MAX = 4
 };
 
 
@@ -3369,6 +3371,18 @@ enum class EAthenaAnimationPetRoamingState : uint8_t
 };
 
 
+// Enum Athena.EAthenaAnimationPetHeldReactionState
+enum class EAthenaAnimationPetHeldReactionState : uint8_t
+{
+	EAthenaAnimationPetHeldReactionState__None = 0,
+	EAthenaAnimationPetHeldReactionState__Chew = 1,
+	EAthenaAnimationPetHeldReactionState__PositiveReact = 2,
+	EAthenaAnimationPetHeldReactionState__NegativeReact = 3,
+	EAthenaAnimationPetHeldReactionState__RefuseReact = 4,
+	EAthenaAnimationPetHeldReactionState__EAthenaAnimationPetHeldReactionState_MAX = 5
+};
+
+
 // Enum Athena.EAthenaAnimationPetHeldState
 enum class EAthenaAnimationPetHeldState : uint8_t
 {
@@ -3382,10 +3396,7 @@ enum class EAthenaAnimationPetHeldState : uint8_t
 	EAthenaAnimationPetHeldState__Drop = 7,
 	EAthenaAnimationPetHeldState__Stroke = 8,
 	EAthenaAnimationPetHeldState__Give = 9,
-	EAthenaAnimationPetHeldState__Chew = 10,
-	EAthenaAnimationPetHeldState__PositiveReact = 11,
-	EAthenaAnimationPetHeldState__NegativeReact = 12,
-	EAthenaAnimationPetHeldState__EAthenaAnimationPetHeldState_MAX = 13
+	EAthenaAnimationPetHeldState__EAthenaAnimationPetHeldState_MAX = 10
 };
 
 

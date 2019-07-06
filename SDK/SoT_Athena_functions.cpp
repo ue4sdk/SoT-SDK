@@ -4839,6 +4839,27 @@ struct FVector AAthenaPlayerCharacter::GetFirstPersonMeshOffset()
 }
 
 
+// Function Athena.AthenaPlayerCharacter.GetEmotesRadialComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UEmotesRadialComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UEmotesRadialComponent* AAthenaPlayerCharacter::GetEmotesRadialComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaPlayerCharacter.GetEmotesRadialComponent"));
+
+	struct
+	{
+		class UEmotesRadialComponent*  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.AthenaPlayerCharacter.GetEmergentVoyageParticipantComponent
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -14033,6 +14054,30 @@ bool AShip::IsOcclusionZoneFullyReduced()
 }
 
 
+// Function Athena.Ship.GetShipRegion
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 WorldPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TEnumAsByte<EShipRegion>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EShipRegion> AShip::GetShipRegion(const struct FVector& WorldPos)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.Ship.GetShipRegion"));
+
+	struct
+	{
+		struct FVector                 WorldPos;
+		TEnumAsByte<EShipRegion>       ReturnValue;
+	} params;
+
+	params.WorldPos = WorldPos;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Athena.Ship.GetShipLocatorPositionChecked
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -14268,6 +14313,33 @@ struct FVector AShip::GetCurrentVelocity()
 		struct FVector                 ReturnValue;
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.Ship.GetCharacterShipRegion
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPrimitiveComponent*     CharacterOverlapComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TEnumAsByte<EShipRegion>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EShipRegion> AShip::GetCharacterShipRegion(class UPrimitiveComponent* CharacterOverlapComponent, const struct FVector& WorldPos)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.Ship.GetCharacterShipRegion"));
+
+	struct
+	{
+		class UPrimitiveComponent*     CharacterOverlapComponent;
+		struct FVector                 WorldPos;
+		TEnumAsByte<EShipRegion>       ReturnValue;
+	} params;
+
+	params.CharacterOverlapComponent = CharacterOverlapComponent;
+	params.WorldPos = WorldPos;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38443,14 +38515,14 @@ TEnumAsByte<EInputHandlerResult> URadialCompositeInputHandler::HandleAnalogInput
 }
 
 
-// Function Athena.EmotesRadialCompositeInputHandler.OnEmotesRadialTriggerNextSetOfPhrases
+// Function Athena.EmotesRadialCompositeInputHandler.OnEmotesRadialTriggerNextSetOfEmotes
 // (Final, Native, Private)
 // Parameters:
 // TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRadialTriggerNextSetOfPhrases()
+TEnumAsByte<EInputHandlerResult> UEmotesRadialCompositeInputHandler::OnEmotesRadialTriggerNextSetOfEmotes()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.EmotesRadialCompositeInputHandler.OnEmotesRadialTriggerNextSetOfPhrases"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.EmotesRadialCompositeInputHandler.OnEmotesRadialTriggerNextSetOfEmotes"));
 
 	struct
 	{
@@ -40841,6 +40913,34 @@ TArray<class ACannon*> UShipFunctionLibrary::GetCannons(class AActor* Actor)
 	} params;
 
 	params.Actor = Actor;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.ShipFunctionLibrary.CalculateShipRegionBoundsInShipSpace
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EShipRegion>       Region                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FBox UShipFunctionLibrary::CalculateShipRegionBoundsInShipSpace(class AActor* Actor, TEnumAsByte<EShipRegion> Region)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShipFunctionLibrary.CalculateShipRegionBoundsInShipSpace"));
+
+	struct
+	{
+		class AActor*                  Actor;
+		TEnumAsByte<EShipRegion>       Region;
+		struct FBox                    ReturnValue;
+	} params;
+
+	params.Actor = Actor;
+	params.Region = Region;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -46685,6 +46785,35 @@ void UWaitForDemoResetActionStateId::PushCharacterIntoWaitForDemoResetActionStat
 }
 
 
+// Function Athena.WaitForMechanismActivationStep.OnMechanismActionStateChanged
+// (Final, Native, Private)
+// Parameters:
+// TScriptInterface<class UMechanismActionInterface> Action                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMechanismActionState> PreviousState                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMechanismActionState> NewState                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWaitForMechanismActivationStep::OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* Instigator)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.WaitForMechanismActivationStep.OnMechanismActionStateChanged"));
+
+	struct
+	{
+		TScriptInterface<class UMechanismActionInterface> Action;
+		TEnumAsByte<EMechanismActionState> PreviousState;
+		TEnumAsByte<EMechanismActionState> NewState;
+		class AActor*                  Instigator;
+	} params;
+
+	params.Action = Action;
+	params.PreviousState = PreviousState;
+	params.NewState = NewState;
+	params.Instigator = Instigator;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.WaitingToSpawnActionStateId.PushCharacterIntoWaitingToSpawnActionState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -48396,6 +48525,27 @@ struct FPetAnimationDataBeingHeld UWieldablePetAnimationInstance::GetPetHeldAnim
 	struct
 	{
 		struct FPetAnimationDataBeingHeld ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.WieldablePetAnimationInstance.GetHeldReactAnimationState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EAthenaAnimationPetHeldReactionState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EAthenaAnimationPetHeldReactionState> UWieldablePetAnimationInstance::GetHeldReactAnimationState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.WieldablePetAnimationInstance.GetHeldReactAnimationState"));
+
+	struct
+	{
+		TEnumAsByte<EAthenaAnimationPetHeldReactionState> ReturnValue;
 	} params;
 
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AllIslandsWashedUpMermaidGemSpawner.BP_AllIslandsWashedUpMermaidGemSpawner_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class UBP_AllIslandsWashedUpMermaidGemSpawner_C : public USalvageItemSpawnComponent
 {
 public:

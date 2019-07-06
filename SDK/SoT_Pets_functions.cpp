@@ -99,6 +99,22 @@ void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCust
 }
 
 
+// Function Pets.WieldablePet.OnRep_HungerReactAnimationState
+// (Final, Native, Private)
+
+void AWieldablePet::OnRep_HungerReactAnimationState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_HungerReactAnimationState"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Pets.WieldablePet.OnRep_DropRequested
 // (Final, Native, Private)
 // Parameters:
