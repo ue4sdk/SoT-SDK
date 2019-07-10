@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Fire_enums.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_ShipDamage_classes.hpp"
 
@@ -45,6 +45,27 @@ struct FFireCellAudioParams
 	struct FName                                       FireSwitchGroup;                                          // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       FireSwitchBurning;                                        // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       FireSwitchKindled;                                        // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Fire.ShipFireCellAreaSelection
+// 0x0014
+struct FShipFireCellAreaSelection
+{
+	int                                                NumberOfAffectedCells;                                    // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                AdjacencyRadius;                                          // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ChanceToAffectCellsAbove;                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ChanceToAffectCellsBelow;                                 // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               TreatDiagonalsAsAdjacent;                                 // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Fire.ShipFireCellAreaSelectionParams
+// 0x0020
+struct FShipFireCellAreaSelectionParams
+{
+	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ChanceToAffectTheShip;                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FShipFireCellAreaSelection                  ShipFireCellAreaSelectionParams;                          // 0x000C(0x0014) (Edit)
 };
 
 // ScriptStruct Fire.ShipFireDamageParams

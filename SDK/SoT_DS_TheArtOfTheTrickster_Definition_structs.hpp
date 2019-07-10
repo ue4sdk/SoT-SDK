@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_TheArtOfTheTrickster_VaultParams_classes.hpp"
-#include "SoT_DS_TheArtOfTheTrickster_NoteGroup_Definition_classes.hpp"
 #include "SoT_DS_Lorebooks_classes.hpp"
+#include "SoT_DS_TheArtOfTheTrickster_NoteGroup_Definition_classes.hpp"
+#include "SoT_DS_TheArtOfTheTrickster_VaultParams_classes.hpp"
 
 namespace SDK
 {

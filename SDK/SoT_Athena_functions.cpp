@@ -16243,6 +16243,29 @@ struct FClothingLoadout UClothingLoadoutViewInterface::GetClothingLoadout()
 }
 
 
+// Function Athena.EmoteLoadoutControlInterface.ChangeEmotes
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<class UClass*>          InOriginalEmotes               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UClass*>          InNewEmotes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UEmoteLoadoutControlInterface::ChangeEmotes(TArray<class UClass*> InOriginalEmotes, TArray<class UClass*> InNewEmotes)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.EmoteLoadoutControlInterface.ChangeEmotes"));
+
+	struct
+	{
+		TArray<class UClass*>          InOriginalEmotes;
+		TArray<class UClass*>          InNewEmotes;
+	} params;
+
+	params.InOriginalEmotes = InOriginalEmotes;
+	params.InNewEmotes = InNewEmotes;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.EmoteLoadoutViewInterface.GetEmoteLoadoutData
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -33647,11 +33670,11 @@ TEnumAsByte<EInputHandlerResult> UMeleeBlockingCompositeInputHandler::OnDodge()
 // Parameters:
 // TEnumAsByte<EMeleeWeaponAttackType> Type                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// double                         Timestamp                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// double                         TimeStamp                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 AttackLocation                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                AttackRotation                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AMeleeWeapon::Server_RequestAttack(TEnumAsByte<EMeleeWeaponAttackType> Type, int Index, double Timestamp, const struct FVector& AttackLocation, const struct FRotator& AttackRotation)
+void AMeleeWeapon::Server_RequestAttack(TEnumAsByte<EMeleeWeaponAttackType> Type, int Index, double TimeStamp, const struct FVector& AttackLocation, const struct FRotator& AttackRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.MeleeWeapon.Server_RequestAttack"));
 
@@ -33659,14 +33682,14 @@ void AMeleeWeapon::Server_RequestAttack(TEnumAsByte<EMeleeWeaponAttackType> Type
 	{
 		TEnumAsByte<EMeleeWeaponAttackType> Type;
 		int                            Index;
-		double                         Timestamp;
+		double                         TimeStamp;
 		struct FVector                 AttackLocation;
 		struct FRotator                AttackRotation;
 	} params;
 
 	params.Type = Type;
 	params.Index = Index;
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.AttackLocation = AttackLocation;
 	params.AttackRotation = AttackRotation;
 
@@ -33795,6 +33818,27 @@ bool AMemoryTestPawn::IsFinished()
 TEnumAsByte<EInputHandlerResult> UMenuInputHandler::OnTogglePhotoMode()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.MenuInputHandler.OnTogglePhotoMode"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.MenuInputHandler.OnToggleOtherCrewNameplates
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> UMenuInputHandler::OnToggleOtherCrewNameplates()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.MenuInputHandler.OnToggleOtherCrewNameplates"));
 
 	struct
 	{
@@ -34784,6 +34828,26 @@ void AClothingChestInteraction::Server_ClothingChestUnequipItem(class UClass* In
 }
 
 
+// Function Athena.ClothingChestInteraction.Server_ClothingChestUnequipEmote
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// class UClass*                  InDesc                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void AClothingChestInteraction::Server_ClothingChestUnequipEmote(class UClass* InDesc)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ClothingChestInteraction.Server_ClothingChestUnequipEmote"));
+
+	struct
+	{
+		class UClass*                  InDesc;
+	} params;
+
+	params.InDesc = InDesc;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.ClothingChestInteraction.Server_ClothingChestEquipItem
 // (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
 // Parameters:
@@ -34799,6 +34863,29 @@ void AClothingChestInteraction::Server_ClothingChestEquipItem(class UClass* InDe
 	} params;
 
 	params.InDesc = InDesc;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ClothingChestInteraction.Server_ClothingChestEquipEmote
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// class UClass*                  InDesc                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            InIndex                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void AClothingChestInteraction::Server_ClothingChestEquipEmote(class UClass* InDesc, int InIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ClothingChestInteraction.Server_ClothingChestEquipEmote"));
+
+	struct
+	{
+		class UClass*                  InDesc;
+		int                            InIndex;
+	} params;
+
+	params.InDesc = InDesc;
+	params.InIndex = InIndex;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53916,6 +54003,54 @@ void UStorageContainerComponent::AddItem(class AActor* Player, class UClass* InI
 }
 
 
+// Function Athena.ShroudBreakerOnShip.StopShroudBreakerStateChangeTimer
+// (Final, Native, Public, BlueprintCallable)
+
+void AShroudBreakerOnShip::StopShroudBreakerStateChangeTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.StopShroudBreakerStateChangeTimer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ShroudBreakerOnShip.StartShroudBreakerStateChangeTimer
+// (Final, Native, Public, BlueprintCallable)
+
+void AShroudBreakerOnShip::StartShroudBreakerStateChangeTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.StartShroudBreakerStateChangeTimer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.ShroudBreakerOnShip.OnShroudBreakerStateChange
+// (Event, Public, BlueprintEvent)
+
+void AShroudBreakerOnShip::OnShroudBreakerStateChange()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.OnShroudBreakerStateChange"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.MountableComponent.OnRep_ReplicatedMountpoint
 // (Final, Native, Private)
 
@@ -56152,54 +56287,6 @@ TEnumAsByte<EInputHandlerResult> UDockToObjectCompositeInputHandler::OnDisengage
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function Athena.ShroudBreakerOnShip.StopShroudBreakerStateChangeTimer
-// (Final, Native, Public, BlueprintCallable)
-
-void AShroudBreakerOnShip::StopShroudBreakerStateChangeTimer()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.StopShroudBreakerStateChangeTimer"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ShroudBreakerOnShip.StartShroudBreakerStateChangeTimer
-// (Final, Native, Public, BlueprintCallable)
-
-void AShroudBreakerOnShip::StartShroudBreakerStateChangeTimer()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.StartShroudBreakerStateChangeTimer"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Athena.ShroudBreakerOnShip.OnShroudBreakerStateChange
-// (Event, Public, BlueprintEvent)
-
-void AShroudBreakerOnShip::OnShroudBreakerStateChange()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ShroudBreakerOnShip.OnShroudBreakerStateChange"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 

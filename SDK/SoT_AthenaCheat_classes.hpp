@@ -99,6 +99,7 @@ public:
 	void SuperSailor();
 	void StoreShipLocation(float LocationX, float LocationY, float LocationZ, float Yaw);
 	void StopShip();
+	void StopPetHangout();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);

@@ -1262,6 +1262,22 @@ void UAthenaCheatManager::StopShip()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.StopPetHangout
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::StopPetHangout()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.StopPetHangout"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.StartVoyage
 // (Final, Exec, Native, Public)
 // Parameters:

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Orderofsouls_Olivia.BP_Orderofsouls_Olivia_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x05D0 - 0x05D0)
 class ABP_Orderofsouls_Olivia_C : public ABP_Orderofsouls_C
 {
 public:

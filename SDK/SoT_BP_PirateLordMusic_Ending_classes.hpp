@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PirateLordMusic_Ending.BP_PirateLordMusic_Ending_C
-// 0x0000 (0x0380 - 0x0380)
+// 0x0000 (0x0390 - 0x0390)
 class UBP_PirateLordMusic_Ending_C : public USynchedMusicZoneComponent
 {
 public:

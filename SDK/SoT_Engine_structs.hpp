@@ -10,8 +10,8 @@
 #include "SoT_Engine_enums.hpp"
 #include "SoT_InputCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_SlateCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
+#include "SoT_SlateCore_classes.hpp"
 
 namespace SDK
 {
@@ -1166,7 +1166,7 @@ struct FDebugDisplayProperty
 // 0x05B0
 struct FCameraCacheEntry
 {
-	float                                              Timestamp;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              TimeStamp;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0004(0x000C) MISSED OFFSET
 	struct FMinimalViewInfo                            POV;                                                      // 0x0010(0x05A0)
 };
@@ -1731,7 +1731,7 @@ struct FInterpGroupActorInfo
 struct FCameraCutInfo
 {
 	struct FVector                                     Location;                                                 // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
-	float                                              Timestamp;                                                // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              TimeStamp;                                                // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.NavigationFilterArea

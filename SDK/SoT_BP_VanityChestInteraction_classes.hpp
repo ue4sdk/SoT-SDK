@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VanityChestInteraction.BP_VanityChestInteraction_C
-// 0x0008 (0x06D8 - 0x06D0)
+// 0x0008 (0x0768 - 0x0760)
 class ABP_VanityChestInteraction_C : public AClothingChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0760(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

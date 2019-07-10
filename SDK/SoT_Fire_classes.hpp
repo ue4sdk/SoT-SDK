@@ -179,22 +179,6 @@ public:
 };
 
 
-// Class Fire.MockFirePropagationComponent
-// 0x0020 (0x00F0 - 0x00D0)
-class UMockFirePropagationComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.MockFirePropagationComponent"));
-		return ptr;
-	}
-
-};
-
-
 // Class Fire.ShipFireAudioManager
 // 0x00B8 (0x00E0 - 0x0028)
 class UShipFireAudioManager : public UObject
@@ -209,6 +193,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.ShipFireAudioManager"));
+		return ptr;
+	}
+
+};
+
+
+// Class Fire.ShipFireCellAreaSelectionParamsDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UShipFireCellAreaSelectionParamsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FShipFireCellAreaSelectionParams>    ShipFireCellAreaSelectionParams;                          // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Fire.ShipFireCellAreaSelectionParamsDataAsset"));
 		return ptr;
 	}
 
