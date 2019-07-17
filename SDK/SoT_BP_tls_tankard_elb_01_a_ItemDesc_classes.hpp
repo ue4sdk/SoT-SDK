@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_tankard_elb_01_a_ItemDesc.BP_tls_tankard_elb_01_a_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_tls_tankard_elb_01_a_ItemDesc_C : public UItemDesc
 {
 public:

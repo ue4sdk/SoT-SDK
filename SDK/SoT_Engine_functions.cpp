@@ -8191,7 +8191,7 @@ void UCharacterMovementComponent::ServerMoveOld(float OldTimeStamp, const struct
 // struct FVector_NetQuantize10   InAccel0                       (Parm)
 // unsigned char                  PendingFlags                   (Parm, ZeroConstructor, IsPlainOldData)
 // uint32_t                       View0                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantize10   InAccel                        (Parm)
 // struct FVector_NetQuantize100  ClientLoc                      (Parm)
 // unsigned char                  NewFlags                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -8201,7 +8201,7 @@ void UCharacterMovementComponent::ServerMoveOld(float OldTimeStamp, const struct
 // struct FName                   ClientBaseBoneName             (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClientMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
+void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ServerMoveDualHybridRootMotion"));
 
@@ -8211,7 +8211,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 		struct FVector_NetQuantize10   InAccel0;
 		unsigned char                  PendingFlags;
 		uint32_t                       View0;
-		float                          Timestamp;
+		float                          TimeStamp;
 		struct FVector_NetQuantize10   InAccel;
 		struct FVector_NetQuantize100  ClientLoc;
 		unsigned char                  NewFlags;
@@ -8226,7 +8226,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 	params.InAccel0 = InAccel0;
 	params.PendingFlags = PendingFlags;
 	params.View0 = View0;
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.InAccel = InAccel;
 	params.ClientLoc = ClientLoc;
 	params.NewFlags = NewFlags;
@@ -8247,7 +8247,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 // struct FVector_NetQuantize10   InAccel0                       (Parm)
 // unsigned char                  PendingFlags                   (Parm, ZeroConstructor, IsPlainOldData)
 // uint32_t                       View0                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantize10   InAccel                        (Parm)
 // struct FVector_NetQuantize100  ClientLoc                      (Parm)
 // unsigned char                  NewFlags                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -8257,7 +8257,7 @@ void UCharacterMovementComponent::ServerMoveDualHybridRootMotion(float TimeStamp
 // struct FName                   ClientBaseBoneName             (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClientMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
+void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct FVector_NetQuantize10& InAccel0, unsigned char PendingFlags, uint32_t View0, float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char NewFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ServerMoveDual"));
 
@@ -8267,7 +8267,7 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 		struct FVector_NetQuantize10   InAccel0;
 		unsigned char                  PendingFlags;
 		uint32_t                       View0;
-		float                          Timestamp;
+		float                          TimeStamp;
 		struct FVector_NetQuantize10   InAccel;
 		struct FVector_NetQuantize100  ClientLoc;
 		unsigned char                  NewFlags;
@@ -8282,7 +8282,7 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 	params.InAccel0 = InAccel0;
 	params.PendingFlags = PendingFlags;
 	params.View0 = View0;
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.InAccel = InAccel;
 	params.ClientLoc = ClientLoc;
 	params.NewFlags = NewFlags;
@@ -8299,7 +8299,7 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 // Function Engine.CharacterMovementComponent.ServerMove
 // (Net, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantize10   InAccel                        (Parm)
 // struct FVector_NetQuantize100  ClientLoc                      (Parm)
 // unsigned char                  CompressedMoveFlags            (Parm, ZeroConstructor, IsPlainOldData)
@@ -8309,13 +8309,13 @@ void UCharacterMovementComponent::ServerMoveDual(float TimeStamp0, const struct 
 // struct FName                   ClientBaseBoneName             (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ClientMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ServerMove(float Timestamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char CompressedMoveFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
+void UCharacterMovementComponent::ServerMove(float TimeStamp, const struct FVector_NetQuantize10& InAccel, const struct FVector_NetQuantize100& ClientLoc, unsigned char CompressedMoveFlags, unsigned char ClientRoll, uint32_t View, class UPrimitiveComponent* ClientMovementBase, const struct FName& ClientBaseBoneName, unsigned char ClientMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ServerMove"));
 
 	struct
 	{
-		float                          Timestamp;
+		float                          TimeStamp;
 		struct FVector_NetQuantize10   InAccel;
 		struct FVector_NetQuantize100  ClientLoc;
 		unsigned char                  CompressedMoveFlags;
@@ -8326,7 +8326,7 @@ void UCharacterMovementComponent::ServerMove(float Timestamp, const struct FVect
 		unsigned char                  ClientMovementMode;
 	} params;
 
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.InAccel = InAccel;
 	params.ClientLoc = ClientLoc;
 	params.CompressedMoveFlags = CompressedMoveFlags;
@@ -8677,7 +8677,7 @@ void UCharacterMovementComponent::DisableMovement()
 // Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition
 // (Net, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     NewBase                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   NewBaseBoneName                (Parm, ZeroConstructor, IsPlainOldData)
@@ -8685,13 +8685,13 @@ void UCharacterMovementComponent::DisableMovement()
 // bool                           bBaseRelativePosition          (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ServerMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float Timestamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition"));
 
 	struct
 	{
-		float                          Timestamp;
+		float                          TimeStamp;
 		struct FVector                 NewLoc;
 		class UPrimitiveComponent*     NewBase;
 		struct FName                   NewBaseBoneName;
@@ -8700,7 +8700,7 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float Timestamp,
 		unsigned char                  ServerMovementMode;
 	} params;
 
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.NewLoc = NewLoc;
 	params.NewBase = NewBase;
 	params.NewBaseBoneName = NewBaseBoneName;
@@ -8715,7 +8715,7 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float Timestamp,
 // Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition
 // (Net, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ServerMontageTrackPosition     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ServerLoc                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector_NetQuantizeNormal ServerRotation                 (Parm)
@@ -8726,13 +8726,13 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float Timestamp,
 // bool                           bBaseRelativePosition          (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ServerMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float Timestamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition"));
 
 	struct
 	{
-		float                          Timestamp;
+		float                          TimeStamp;
 		float                          ServerMontageTrackPosition;
 		struct FVector                 ServerLoc;
 		struct FVector_NetQuantizeNormal ServerRotation;
@@ -8744,7 +8744,7 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float Timestamp
 		unsigned char                  ServerMovementMode;
 	} params;
 
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.ServerMontageTrackPosition = ServerMontageTrackPosition;
 	params.ServerLoc = ServerLoc;
 	params.ServerRotation = ServerRotation;
@@ -8762,7 +8762,7 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float Timestamp
 // Function Engine.CharacterMovementComponent.ClientAdjustPosition
 // (Net, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewVel                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     NewBase                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -8771,13 +8771,13 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float Timestamp
 // bool                           bBaseRelativePosition          (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  ServerMovementMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustPosition(float Timestamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustPosition(float TimeStamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientAdjustPosition"));
 
 	struct
 	{
-		float                          Timestamp;
+		float                          TimeStamp;
 		struct FVector                 NewLoc;
 		struct FVector                 NewVel;
 		class UPrimitiveComponent*     NewBase;
@@ -8787,7 +8787,7 @@ void UCharacterMovementComponent::ClientAdjustPosition(float Timestamp, const st
 		unsigned char                  ServerMovementMode;
 	} params;
 
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 	params.NewLoc = NewLoc;
 	params.NewVel = NewVel;
 	params.NewBase = NewBase;
@@ -8803,18 +8803,18 @@ void UCharacterMovementComponent::ClientAdjustPosition(float Timestamp, const st
 // Function Engine.CharacterMovementComponent.ClientAckGoodMove
 // (Net, Native, Event, Public, NetClient)
 // Parameters:
-// float                          Timestamp                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TimeStamp                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAckGoodMove(float Timestamp)
+void UCharacterMovementComponent::ClientAckGoodMove(float TimeStamp)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CharacterMovementComponent.ClientAckGoodMove"));
 
 	struct
 	{
-		float                          Timestamp;
+		float                          TimeStamp;
 	} params;
 
-	params.Timestamp = Timestamp;
+	params.TimeStamp = TimeStamp;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -16871,71 +16871,6 @@ class UMaterial* UMaterialInterface::GetBaseMaterial()
 }
 
 
-// Function Engine.BoxComponent.SetBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 InBoxExtent                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.SetBoxExtent"));
-
-	struct
-	{
-		struct FVector                 InBoxExtent;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.InBoxExtent = InBoxExtent;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.BoxComponent.GetUnscaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetUnscaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetUnscaledBoxExtent"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.BoxComponent.GetScaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetScaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetScaledBoxExtent"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.ParticleSystemComponent.SetVectorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -21888,6 +21823,51 @@ bool ANavLinkProxy::HasMovingAgents()
 }
 
 
+// Function Engine.ParticleSystem.GetNumLODs
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UParticleSystem::GetNumLODs()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.GetNumLODs"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ParticleSystem.ContainsEmitterType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  TypeData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.ContainsEmitterType"));
+
+	struct
+	{
+		class UClass*                  TypeData;
+		bool                           ReturnValue;
+	} params;
+
+	params.TypeData = TypeData;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.SkeletalMesh.IsSectionUsingCloth
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -22201,27 +22181,6 @@ void ASceneCaptureCube::OnInterpToggle(bool bEnable)
 	params.bEnable = bEnable;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Interface_Animatable.GetAnimInstance
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAnimInstance* UInterface_Animatable::GetAnimInstance()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Interface_Animatable.GetAnimInstance"));
-
-	struct
-	{
-		class UAnimInstance*           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -23159,6 +23118,27 @@ void UPhysicsConstraintComponent::BreakConstraint()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Interface_Animatable.GetAnimInstance
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimInstance* UInterface_Animatable::GetAnimInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Interface_Animatable.GetAnimInstance"));
+
+	struct
+	{
+		class UAnimInstance*           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -24805,6 +24785,27 @@ bool UNavigationSystem::DoesMainNavDataHaveValidNavMesh()
 	struct
 	{
 		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimSequenceBase.GetPlayLength
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimSequenceBase::GetPlayLength()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimSequenceBase.GetPlayLength"));
+
+	struct
+	{
+		float                          ReturnValue;
 	} params;
 
 
@@ -27516,6 +27517,72 @@ void UMaterialBillboardComponent::AddElement(class UMaterialInterface* Material,
 }
 
 
+// Function Engine.StaticMesh.GetNumUVChannels
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            LodLevel                       (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UStaticMesh::GetNumUVChannels(int LodLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumUVChannels"));
+
+	struct
+	{
+		int                            LodLevel;
+		int                            ReturnValue;
+	} params;
+
+	params.LodLevel = LodLevel;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMesh.GetNumLODsBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UStaticMesh::GetNumLODsBP()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumLODsBP"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMesh.GetBoundingBox
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FBox UStaticMesh::GetBoundingBox()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetBoundingBox"));
+
+	struct
+	{
+		struct FBox                    ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.MergedCollisionComponent.GetStaticMeshByInstanceBodyIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -28862,18 +28929,41 @@ float USplineMeshComponent::GetBoundaryMax()
 }
 
 
-// Function Engine.ParticleSystem.GetNumLODs
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function Engine.BoxComponent.SetBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector                 InBoxExtent                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
 
-int UParticleSystem::GetNumLODs()
+void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.GetNumLODs"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.SetBoxExtent"));
 
 	struct
 	{
-		int                            ReturnValue;
+		struct FVector                 InBoxExtent;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InBoxExtent = InBoxExtent;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.BoxComponent.GetUnscaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UBoxComponent::GetUnscaledBoxExtent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetUnscaledBoxExtent"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
 	} params;
 
 
@@ -28883,23 +28973,20 @@ int UParticleSystem::GetNumLODs()
 }
 
 
-// Function Engine.ParticleSystem.ContainsEmitterType
-// (Final, Native, Public, BlueprintCallable)
+// Function Engine.BoxComponent.GetScaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  TypeData                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
+struct FVector UBoxComponent::GetScaledBoxExtent()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.ContainsEmitterType"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetScaledBoxExtent"));
 
 	struct
 	{
-		class UClass*                  TypeData;
-		bool                           ReturnValue;
+		struct FVector                 ReturnValue;
 	} params;
 
-	params.TypeData = TypeData;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -29767,27 +29854,6 @@ float UTimelineComponent::GetPlayRate()
 float UTimelineComponent::GetPlaybackPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.TimelineComponent.GetPlaybackPosition"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimSequenceBase.GetPlayLength
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimSequenceBase::GetPlayLength()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimSequenceBase.GetPlayLength"));
 
 	struct
 	{
@@ -39932,6 +39998,34 @@ float UKismetMathLibrary::Lerp(float A, float B, float Alpha)
 	params.A = A;
 	params.B = B;
 	params.Alpha = Alpha;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.IsPointInBox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                 Point                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FBox                    Box                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKismetMathLibrary::IsPointInBox(const struct FVector& Point, const struct FBox& Box)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.KismetMathLibrary.IsPointInBox"));
+
+	struct
+	{
+		struct FVector                 Point;
+		struct FBox                    Box;
+		bool                           ReturnValue;
+	} params;
+
+	params.Point = Point;
+	params.Box = Box;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -55267,6 +55361,52 @@ void UPlayerInput::SetCombinedAxisScale(const struct FName& CombinedAxisName, fl
 }
 
 
+// Function Engine.PlayerInput.SetCombinedAxisNonLinearity
+// (Final, Exec, Native, Public)
+// Parameters:
+// struct FName                   CombinedAxisName               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          NonLinearity                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerInput::SetCombinedAxisNonLinearity(const struct FName& CombinedAxisName, float NonLinearity)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerInput.SetCombinedAxisNonLinearity"));
+
+	struct
+	{
+		struct FName                   CombinedAxisName;
+		float                          NonLinearity;
+	} params;
+
+	params.CombinedAxisName = CombinedAxisName;
+	params.NonLinearity = NonLinearity;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerInput.SetCombinedAxisLowerDeadzone
+// (Final, Exec, Native, Public)
+// Parameters:
+// struct FName                   CombinedAxisName               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LowerDeadzone                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerInput::SetCombinedAxisLowerDeadzone(const struct FName& CombinedAxisName, float LowerDeadzone)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerInput.SetCombinedAxisLowerDeadzone"));
+
+	struct
+	{
+		struct FName                   CombinedAxisName;
+		float                          LowerDeadzone;
+	} params;
+
+	params.CombinedAxisName = CombinedAxisName;
+	params.LowerDeadzone = LowerDeadzone;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.PlayerInput.SetBind
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -55744,6 +55884,48 @@ void UMaterialInstanceDynamic::CopyParameterOverrides(class UMaterialInstance* M
 }
 
 
+// Function Engine.Texture2D.Blueprint_GetSizeY
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTexture2D::Blueprint_GetSizeY()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeY"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Texture2D.Blueprint_GetSizeX
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTexture2D::Blueprint_GetSizeX()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeX"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.CanvasRenderTarget2D.UpdateResource
 // (Native, Public, BlueprintCallable)
 
@@ -55866,48 +56048,6 @@ class UCanvasRenderTarget2D* UCanvasRenderTarget2D::CreateCanvasRenderTarget2D(c
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Texture2D.Blueprint_GetSizeY
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UTexture2D::Blueprint_GetSizeY()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeY"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Texture2D.Blueprint_GetSizeX
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UTexture2D::Blueprint_GetSizeX()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeX"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -56458,72 +56598,6 @@ struct FVector USkeletalMeshSocket::GetSocketLocation(class USkeletalMeshCompone
 	} params;
 
 	params.SkelComp = SkelComp;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetNumUVChannels
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            LodLevel                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UStaticMesh::GetNumUVChannels(int LodLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumUVChannels"));
-
-	struct
-	{
-		int                            LodLevel;
-		int                            ReturnValue;
-	} params;
-
-	params.LodLevel = LodLevel;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetNumLODsBP
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UStaticMesh::GetNumLODsBP()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumLODsBP"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetBoundingBox
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FBox UStaticMesh::GetBoundingBox()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetBoundingBox"));
-
-	struct
-	{
-		struct FBox                    ReturnValue;
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 

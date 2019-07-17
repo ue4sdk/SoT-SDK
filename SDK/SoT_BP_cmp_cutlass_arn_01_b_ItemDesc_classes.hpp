@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_cutlass_arn_01_b_ItemDesc.BP_cmp_cutlass_arn_01_b_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_cmp_cutlass_arn_01_b_ItemDesc_C : public UItemDesc
 {
 public:

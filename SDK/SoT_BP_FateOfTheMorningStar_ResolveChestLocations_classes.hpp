@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FateOfTheMorningStar_ResolveChestLocations.BP_FateOfTheMorningStar_ResolveChestLocations_C
-// 0x000C (0x009C - 0x0090)
+// 0x000C (0x00A4 - 0x0098)
 class UBP_FateOfTheMorningStar_ResolveChestLocations_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	int                                                Index;                                                    // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	int                                                Index;                                                    // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

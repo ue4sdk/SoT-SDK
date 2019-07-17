@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_Desc_DVR_Rare.BP_TreasureArtifact_Desc_DVR_Rare_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_TreasureArtifact_Desc_DVR_Rare_C : public UBootyItemDesc
 {
 public:

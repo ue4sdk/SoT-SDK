@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass FateOfTheMorningstarDefinition.FateOfTheMorningstarDefinition_C
 // 0x0118 (0x0140 - 0x0028)
-class UFateOfTheMorningstarDefinition_C : public UObject
+class UFateOfTheMorningstarDefinition_C : public UTaleQuestDefinition
 {
 public:
 	class UQuestBookPageBundle*                        InitialBundle;                                            // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)

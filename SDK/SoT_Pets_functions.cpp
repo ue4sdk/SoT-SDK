@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Pets.PetAIController.OnPerceptionUpdated
+// (Native, Public)
+// Parameters:
+// TArray<class AActor*>          ChangedPerceivedActors         (Parm, ZeroConstructor)
+
+void APetAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerceivedActors)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetAIController.OnPerceptionUpdated"));
+
+	struct
+	{
+		TArray<class AActor*>          ChangedPerceivedActors;
+	} params;
+
+	params.ChangedPerceivedActors = ChangedPerceivedActors;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Pets.PetAIController.GetAthenaAICharPathFollowingComp
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -74,6 +94,22 @@ void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCust
 	params.InPetType = InPetType;
 	params.InCustomisation = InCustomisation;
 	params.InOwner = InOwner;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Pets.WieldablePet.OnRep_HungerReactAnimationState
+// (Final, Native, Private)
+
+void AWieldablePet::OnRep_HungerReactAnimationState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_HungerReactAnimationState"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

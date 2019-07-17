@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_FateofTheMorningstar_Proxy.BP_CollectorsChest_FateofTheMorningstar_Proxy_C
-// 0x006F (0x0A88 - 0x0A19)
+// 0x006F (0x09D8 - 0x0969)
 class ABP_CollectorsChest_FateofTheMorningstar_Proxy_C : public ABP_BaseLockableCollectorsChest_Proxy_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0A19(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A20(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*                    ParticleSystem_CollectSoul;                               // 0x0A28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem_Soul;                                      // 0x0A30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem_Closed;                                    // 0x0A38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FObjectMessagingHandle                      SoulCollectedEventHandle;                                 // 0x0A40(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0969(0x0007) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0970(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*                    ParticleSystem_CollectSoul;                               // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem_Soul;                                      // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem_Closed;                                    // 0x0988(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      SoulCollectedEventHandle;                                 // 0x0990(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

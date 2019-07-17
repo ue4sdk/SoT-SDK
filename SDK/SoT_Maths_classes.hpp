@@ -287,6 +287,21 @@ public:
 };
 
 
+// Class Maths.StatisticsMaths
+// 0x0000 (0x0028 - 0x0028)
+class UStatisticsMaths : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.StatisticsMaths"));
+		return ptr;
+	}
+
+};
+
+
 // Class Maths.TimedBufferFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UTimedBufferFunctionLibrary : public UBlueprintFunctionLibrary

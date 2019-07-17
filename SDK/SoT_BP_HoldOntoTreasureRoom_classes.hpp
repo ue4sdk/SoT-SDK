@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HoldOntoTreasureRoom.BP_HoldOntoTreasureRoom_C
-// 0x000C (0x009C - 0x0090)
+// 0x000C (0x00A4 - 0x0098)
 class UBP_HoldOntoTreasureRoom_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FTimerHandle                                TimeoutHandle;                                            // 0x0098(0x0004) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FTimerHandle                                TimeoutHandle;                                            // 0x00A0(0x0004) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

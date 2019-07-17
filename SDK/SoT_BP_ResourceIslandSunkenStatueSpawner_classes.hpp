@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceIslandSunkenStatueSpawner.BP_ResourceIslandSunkenStatueSpawner_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class UBP_ResourceIslandSunkenStatueSpawner_C : public USalvageItemSpawnComponent
 {
 public:

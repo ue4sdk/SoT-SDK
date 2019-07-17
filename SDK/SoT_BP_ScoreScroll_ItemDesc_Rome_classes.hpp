@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ScoreScroll_ItemDesc_Rome.BP_ScoreScroll_ItemDesc_Rome_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_ScoreScroll_ItemDesc_Rome_C : public UTreasureMapItemDesc
 {
 public:

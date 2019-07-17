@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ItemDesc_CompassToken_Boat.BP_ItemDesc_CompassToken_Boat_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_ItemDesc_CompassToken_Boat_C : public UBootyItemDesc
 {
 public:

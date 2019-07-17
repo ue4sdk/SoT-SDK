@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidGem_Sapphire_Desc.BP_MermaidGem_Sapphire_Desc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_MermaidGem_Sapphire_Desc_C : public UBootyItemDesc
 {
 public:

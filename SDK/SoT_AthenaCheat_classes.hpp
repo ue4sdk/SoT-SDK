@@ -98,6 +98,8 @@ public:
 	void TeleportActorToActorWithOffset(const class FString& ActorIdString, const class FString& DestinationActorIdString, float OffsetX, float OffsetY, float OffsetZ);
 	void SuperSailor();
 	void StoreShipLocation(float LocationX, float LocationY, float LocationZ, float Yaw);
+	void StopShip();
+	void StopPetHangout();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
@@ -105,6 +107,7 @@ public:
 	void StartNearestGeysers();
 	void StartNearestEarthquake();
 	void StartDemoSession();
+	void StartCargoRunFromNearestNPC(int NumOfCrates);
 	void StartAllVolcanos();
 	void StartAllCrewVoyages();
 	void SpinShip(float YawSpdInDegreesPerSecond);
@@ -210,6 +213,7 @@ public:
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetCapstanPosition(float Position);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
+	void SetAIAbilityTimeMultiplier(const class FString& AIAbilityString, float IntervalCooldownMultiplier, float ActivationCooldownMultiplier);
 	void SendUpdateVoyageProgressEvent();
 	void SendStatEvent(const class FString& StatName, uint64_t StatValue);
 	void SendRewardRequestEvent(const class FString& CompanyNameAndRewardIdSeparatedByColon);
@@ -250,6 +254,7 @@ public:
 	void PlayerAnimationOverride(const struct FName& Name);
 	void OverrideShipPartFromCatalogue(const class FString& InShipActorIdConsoleString, int InCataloguePartIndex, int InCataloguePartCustomisationIndex);
 	void OpenSkeletonFortDoor();
+	void MoveStormToPlayer();
 	void MessageBoxOnGraphicsThreadTest();
 	void MakeSharksBrainDead();
 	void LogShipHierarchy();
@@ -305,9 +310,9 @@ public:
 	void FloodShipWithKeelOverIndex(float NormalisedWaterAmount, int KeelOverConfigIndex);
 	void FloodShip(float NormalisedWaterAmount);
 	void FireCreatorCrewSignedUpStat();
-	void FireCreatorCrewHoursViewedStat();
-	void FireCreatorCrewHoursStreamedStat();
-	void FireCreatorCrewCurrentViewersStat();
+	void FireCreatorCrewMinutesViewedStat(int InNumMinutes);
+	void FireCreatorCrewMinutesStreamedStat(int InNumMinutes);
+	void FireCreatorCrewCurrentViewersStat(int InNumViewers);
 	void FakeMigrateBountyQuests();
 	void EquipPirateTitle(const class FString& PirateTitleType);
 	void EquipCompassInLoadout();
@@ -345,6 +350,8 @@ public:
 	void DisplayDrunkenness(bool Flag);
 	void DisableCinematicCamera();
 	void DisableAIBehaviour();
+	void DioramaStartNearest(const class FString& Spawner, const class FString& DioramaDesc);
+	void DioramaStart(const class FString& ActorName, const class FString& Spawner, const class FString& DioramaDesc);
 	void DestroyShip(const class FString& ShipActorIdConsoleString);
 	void DestroyMyShip();
 	void DestroyKraken();
@@ -373,7 +380,9 @@ public:
 	void ClearSlowMotionOverride();
 	void ClearShipRestockingTimeouts();
 	void ClearGrogSecondary();
+	void ClearDebugStormLocation();
 	void ClearAllItemsInInventory();
+	void ClearAIAbilityTimeMultipliers();
 	void CheckLandmarkValidTreasureLocationsAtPlayerPos();
 	void CheckLandmarkRelativeToIslandCalculation();
 	void CapsizeShip();
@@ -386,6 +395,7 @@ public:
 	void BlockMigrationForPlayer(bool Enabled);
 	void ApplyVenomWithParams(float InitialDamage, float DamagePerSecond, float DamageOverTimeDuration);
 	void ApplyVenom();
+	void ApplyStatusToPlayer(const class FString& StatusIdentifier, float Duration);
 	void ApplyDamageToAllDamageZones(float Damage);
 	void ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString);
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);

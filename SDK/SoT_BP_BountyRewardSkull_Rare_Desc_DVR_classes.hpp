@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Rare_Desc_DVR.BP_BountyRewardSkull_Rare_Desc_DVR_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_BountyRewardSkull_Rare_Desc_DVR_C : public UBootyItemDesc
 {
 public:

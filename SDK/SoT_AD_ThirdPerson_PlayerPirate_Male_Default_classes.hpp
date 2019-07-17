@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Male_Default.AD_ThirdPerson_PlayerPirate_Male_Default_C
-// 0x07D8 (0x0800 - 0x0028)
+// 0x07E8 (0x0810 - 0x0028)
 class UAD_ThirdPerson_PlayerPirate_Male_Default_C : public UAnimationData
 {
 public:
@@ -43,13 +43,14 @@ public:
 	struct FADS_SkeletonFleeNative                     SkeletonFlee;                                             // 0x0618(0x0010) (Edit, BlueprintVisible)
 	struct FADS_InteractionNative                      ShopInteraction;                                          // 0x0628(0x0010) (Edit, BlueprintVisible)
 	struct FADS_SkeletonSensing                        SkeletonSensing;                                          // 0x0638(0x0010) (Edit, BlueprintVisible)
-	struct FADS_EmotesNative                           Emotes;                                                   // 0x0648(0x0010) (Edit, BlueprintVisible)
-	struct FADS_SkeletonEmoteActions                   SkeletonActionEmotes;                                     // 0x0658(0x0010) (Edit, BlueprintVisible)
-	struct FADS_RowingBoatNative                       Rowboat;                                                  // 0x0668(0x0098) (Edit, BlueprintVisible)
-	struct FADS_SkeletonCaptainNative                  SkeletonShipCaptain;                                      // 0x0700(0x0048) (Edit, BlueprintVisible)
-	struct FADS_WhisperingNative                       Whispering;                                               // 0x0748(0x0068) (Edit, BlueprintVisible)
-	struct FADS_SkeletonCurseNative                    SkeletonCurse;                                            // 0x07B0(0x0028) (Edit, BlueprintVisible)
-	struct FADS_WaterPumpNative                        WaterPump;                                                // 0x07D8(0x0028) (Edit, BlueprintVisible)
+	struct FADS_DiverseEmoteNative                     EmoteDiverse;                                             // 0x0648(0x0010) (Edit, BlueprintVisible)
+	struct FADS_PersonaNative                          EmotePersonas;                                            // 0x0658(0x0010) (Edit, BlueprintVisible)
+	struct FADS_SkeletonEmoteActions                   SkeletonActionEmotes;                                     // 0x0668(0x0010) (Edit, BlueprintVisible)
+	struct FADS_RowingBoatNative                       Rowboat;                                                  // 0x0678(0x0098) (Edit, BlueprintVisible)
+	struct FADS_SkeletonCaptainNative                  SkeletonShipCaptain;                                      // 0x0710(0x0048) (Edit, BlueprintVisible)
+	struct FADS_WhisperingNative                       Whispering;                                               // 0x0758(0x0068) (Edit, BlueprintVisible)
+	struct FADS_SkeletonCurseNative                    SkeletonCurse;                                            // 0x07C0(0x0028) (Edit, BlueprintVisible)
+	struct FADS_WaterPumpNative                        WaterPump;                                                // 0x07E8(0x0028) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

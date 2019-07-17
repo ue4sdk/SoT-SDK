@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OldKey_Crown.BP_OldKey_Crown_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_OldKey_Crown_C : public UBootyItemDesc
 {
 public:

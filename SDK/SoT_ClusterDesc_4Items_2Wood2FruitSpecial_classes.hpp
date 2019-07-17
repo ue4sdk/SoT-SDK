@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ClusterDesc_4Items_2Wood2FruitSpecial.ClusterDesc_4Items_2Wood2FruitSpecial_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0140 - 0x0140)
 class UClusterDesc_4Items_2Wood2FruitSpecial_C : public UClusterDescription
 {
 public:

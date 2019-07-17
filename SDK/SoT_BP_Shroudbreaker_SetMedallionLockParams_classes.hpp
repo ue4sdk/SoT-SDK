@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_SetMedallionLockParams.BP_Shroudbreaker_SetMedallionLockParams_C
-// 0x0020 (0x00B0 - 0x0090)
+// 0x0020 (0x00B8 - 0x0098)
 class UBP_Shroudbreaker_SetMedallionLockParams_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                      Class;                                                    // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UMaterialInstance*>                   Materials;                                                // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                      Class;                                                    // 0x00A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UMaterialInstance*>                   Materials;                                                // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

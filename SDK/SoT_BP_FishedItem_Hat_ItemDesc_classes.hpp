@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishedItem_Hat_ItemDesc.BP_FishedItem_Hat_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_FishedItem_Hat_ItemDesc_C : public UBootyItemDesc
 {
 public:

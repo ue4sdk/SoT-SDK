@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DS_SetupShoresOfGoldVariables.DS_SetupShoresOfGoldVariables_C
-// 0x0008 (0x0098 - 0x0090)
+// 0x0008 (0x00A0 - 0x0098)
 class UDS_SetupShoresOfGoldVariables_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

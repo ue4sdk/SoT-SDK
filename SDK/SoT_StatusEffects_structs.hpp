@@ -16,19 +16,36 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct StatusEffects.StatusDescriptor
+// 0x0004
+struct FStatusDescriptor
+{
+	float                                              Intensity;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StatusEffects.Status
+// 0x0018
+struct FStatus
+{
+	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FStatusDescriptor                           Descriptor;                                               // 0x0010(0x0004) (Edit)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct StatusEffects.DebugMenuStatusDefinition
+// 0x0020
+struct FDebugMenuStatusDefinition
+{
+	struct FName                                       Identifier;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FStatus                                     Status;                                                   // 0x0008(0x0018) (Edit)
+};
+
 // ScriptStruct StatusEffects.FeatureToggledStatusResponseList
 // 0x0018
 struct FFeatureToggledStatusResponseList
 {
 	struct FName                                       Feature;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0008(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct StatusEffects.StatusDescriptor
-// 0x0004
-struct FStatusDescriptor
-{
-	float                                              Intensity;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.ActiveStatusEffect
@@ -42,15 +59,6 @@ struct FActiveStatusEffect
 	TArray<class UStatusResponse*>                     InstancedResponses;                                       // 0x0028(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	bool                                               ResponsesAreActive;                                       // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct StatusEffects.Status
-// 0x0018
-struct FStatus
-{
-	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FStatusDescriptor                           Descriptor;                                               // 0x0010(0x0004) (Edit)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct StatusEffects.StatusEffectManagerComponentAggregateTickFunction

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureMap_ItemDesc_CargoRun_DVR.BP_TreasureMap_ItemDesc_CargoRun_DVR_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_TreasureMap_ItemDesc_CargoRun_DVR_C : public UTreasureMapItemDesc
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Questbook_ItemDesc_FateOfTheMorningstar.BP_Questbook_ItemDesc_FateOfTheMorningstar_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0138 - 0x0138)
 class UBP_Questbook_ItemDesc_FateOfTheMorningstar_C : public UQuestBookItemDesc
 {
 public:

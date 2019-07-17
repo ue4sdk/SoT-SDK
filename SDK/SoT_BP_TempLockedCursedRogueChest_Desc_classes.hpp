@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TempLockedCursedRogueChest_Desc.BP_TempLockedCursedRogueChest_Desc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_TempLockedCursedRogueChest_Desc_C : public UBP_CollectorsChest_Desc_C
 {
 public:

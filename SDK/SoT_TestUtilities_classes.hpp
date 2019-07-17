@@ -189,10 +189,11 @@ public:
 
 
 // Class TestUtilities.TestPrimitiveComponent
-// 0x0000 (0x05A0 - 0x05A0)
+// 0x0010 (0x05B0 - 0x05A0)
 class UTestPrimitiveComponent : public UPrimitiveComponent
 {
 public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

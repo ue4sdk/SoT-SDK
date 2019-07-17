@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EnchantedCompass_ItemDesc.BP_EnchantedCompass_ItemDesc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_EnchantedCompass_ItemDesc_C : public UItemDesc
 {
 public:

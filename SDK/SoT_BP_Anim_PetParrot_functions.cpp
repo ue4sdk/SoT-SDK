@@ -588,6 +588,166 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_DC06665B4CDEA44E725D5C91B31E77AB
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_DC06665B4CDEA44E725D5C91B31E77AB()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_DC06665B4CDEA44E725D5C91B31E77AB"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A37A786C4D2F7B64C86BC98C1EDFA24F
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A37A786C4D2F7B64C86BC98C1EDFA24F()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A37A786C4D2F7B64C86BC98C1EDFA24F"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_9ECE430B461A89BE3D9036888A112744
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_9ECE430B461A89BE3D9036888A112744()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_9ECE430B461A89BE3D9036888A112744"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_FF7ECFBA467395D82B5BD5AA0AE40508
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_FF7ECFBA467395D82B5BD5AA0AE40508()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_FF7ECFBA467395D82B5BD5AA0AE40508"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A886307541521D7C533942BE0B4B257B
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A886307541521D7C533942BE0B4B257B()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A886307541521D7C533942BE0B4B257B"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_1B4EEC9448AF0EDD066CD89678303FBE
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_1B4EEC9448AF0EDD066CD89678303FBE()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_1B4EEC9448AF0EDD066CD89678303FBE"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_AF334D9142256C348464ADBA1944EEF4
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_AF334D9142256C348464ADBA1944EEF4()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_AF334D9142256C348464ADBA1944EEF4"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_164363FA4E19D074FB0805A57A22F55D
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_164363FA4E19D074FB0805A57A22F55D()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_164363FA4E19D074FB0805A57A22F55D"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_C277CC4B47A12D02A2A3468DA7A865F7
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_C277CC4B47A12D02A2A3468DA7A865F7()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_C277CC4B47A12D02A2A3468DA7A865F7"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_D379320D4EA0C7B9CAE0A2B9251F9B44
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_D379320D4EA0C7B9CAE0A2B9251F9B44()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_D379320D4EA0C7B9CAE0A2B9251F9B44"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_DC97545C448E1D4350F93A80D0D9F276
 // (BlueprintEvent)
 
@@ -716,12 +876,44 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_1827B73F4E5CBBD0C18C47B5DA58731F
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_1827B73F4E5CBBD0C18C47B5DA58731F()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_1827B73F4E5CBBD0C18C47B5DA58731F"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_4F2F25BA4B237657236CDE9100C291AC
 // (BlueprintEvent)
 
 void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_4F2F25BA4B237657236CDE9100C291AC()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_4F2F25BA4B237657236CDE9100C291AC"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_E7D796D54CA3857A38B886BF42BF3F81
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_E7D796D54CA3857A38B886BF42BF3F81()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_E7D796D54CA3857A38B886BF42BF3F81"));
 
 	struct
 	{
@@ -748,12 +940,44 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_7C88C50A4B469DC9B0A6B49A9104E092
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_7C88C50A4B469DC9B0A6B49A9104E092()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_7C88C50A4B469DC9B0A6B49A9104E092"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_500D2BCB4FCF00C14A6CBBB906016DC2
 // (BlueprintEvent)
 
 void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_500D2BCB4FCF00C14A6CBBB906016DC2()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_500D2BCB4FCF00C14A6CBBB906016DC2"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_87FF318D4C4237A7688AC59F6AFD96C5
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_87FF318D4C4237A7688AC59F6AFD96C5()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_87FF318D4C4237A7688AC59F6AFD96C5"));
 
 	struct
 	{
@@ -876,12 +1100,44 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_EE61AE88436D00DF575F3BB01394F225
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_EE61AE88436D00DF575F3BB01394F225()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_EE61AE88436D00DF575F3BB01394F225"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_D177FF4840AE633809077D9B695DA003_1
 // (BlueprintEvent)
 
 void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_D177FF4840AE633809077D9B695DA003_1()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_D177FF4840AE633809077D9B695DA003_1"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_FEAB4C4C461DC829302313A7C6EA7894
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_FEAB4C4C461DC829302313A7C6EA7894()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequenceEvaluator_FEAB4C4C461DC829302313A7C6EA7894"));
 
 	struct
 	{
@@ -962,6 +1218,22 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A94E45A04B118F618546E299E65C0309()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_A94E45A04B118F618546E299E65C0309"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_59E1FF394C2F677D17B70592183B6EAE
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_59E1FF394C2F677D17B70592183B6EAE()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_59E1FF394C2F677D17B70592183B6EAE"));
 
 	struct
 	{
@@ -1260,12 +1532,12 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
-// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_2051482B420E7023A187C0A9B89F3302
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_4159B53941067EB089D9C4A516231D15
 // (BlueprintEvent)
 
-void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_2051482B420E7023A187C0A9B89F3302()
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_4159B53941067EB089D9C4A516231D15()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_2051482B420E7023A187C0A9B89F3302"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_4159B53941067EB089D9C4A516231D15"));
 
 	struct
 	{
@@ -1276,12 +1548,12 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
-// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_51E5954C4D64D669E7670ABAC10D8A87
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_B10366A24250C87443FEFBBAC96524B1
 // (BlueprintEvent)
 
-void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_51E5954C4D64D669E7670ABAC10D8A87()
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_B10366A24250C87443FEFBBAC96524B1()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_51E5954C4D64D669E7670ABAC10D8A87"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_B10366A24250C87443FEFBBAC96524B1"));
 
 	struct
 	{
@@ -1292,12 +1564,12 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
-// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_5FFBE90645A78CA907E694BCED0CF2CC
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_E84311F8441979BC7A63E4BDA0A0321F
 // (BlueprintEvent)
 
-void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_5FFBE90645A78CA907E694BCED0CF2CC()
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_E84311F8441979BC7A63E4BDA0A0321F()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_5FFBE90645A78CA907E694BCED0CF2CC"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_E84311F8441979BC7A63E4BDA0A0321F"));
 
 	struct
 	{
@@ -1308,12 +1580,60 @@ void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
-// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_3C9443F248489B6857B8F08EB9BA49C4
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_C48AB80D4014ED059F6B66B007E584A6
 // (BlueprintEvent)
 
-void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_3C9443F248489B6857B8F08EB9BA49C4()
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_C48AB80D4014ED059F6B66B007E584A6()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_3C9443F248489B6857B8F08EB9BA49C4"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_C48AB80D4014ED059F6B66B007E584A6"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_1598EA0F4AC57CEB06F9CBA50E9A0ABD
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_1598EA0F4AC57CEB06F9CBA50E9A0ABD()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_1598EA0F4AC57CEB06F9CBA50E9A0ABD"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_50C81A964960643D6B2889BCB11E4EFE
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_50C81A964960643D6B2889BCB11E4EFE()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_50C81A964960643D6B2889BCB11E4EFE"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_90E8A20343D4BA9A4FB59BAD2013D387
+// (BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_90E8A20343D4BA9A4FB59BAD2013D387()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_SequencePlayer_90E8A20343D4BA9A4FB59BAD2013D387"));
 
 	struct
 	{
@@ -1602,6 +1922,38 @@ void UBP_Anim_PetParrot_C::AnimNotify_PetLookAt_On()
 void UBP_Anim_PetParrot_C::AnimNotify_PetLookAt_Off()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_PetLookAt_Off"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOn
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::AnimNotify_StaticBaseOn()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOn"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOff
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetParrot_C::AnimNotify_StaticBaseOff()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetParrot.BP_Anim_PetParrot_C.AnimNotify_StaticBaseOff"));
 
 	struct
 	{

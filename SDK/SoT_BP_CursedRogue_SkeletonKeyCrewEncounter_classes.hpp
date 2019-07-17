@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CursedRogue_SkeletonKeyCrewEncounter.BP_CursedRogue_SkeletonKeyCrewEncounter_C
-// 0x0010 (0x00B8 - 0x00A8)
+// 0x0010 (0x00C0 - 0x00B0)
 class UBP_CursedRogue_SkeletonKeyCrewEncounter_C : public UBlueprintSpawnAIStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x00A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class APawn*                                       Target;                                                   // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x00B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class APawn*                                       Target;                                                   // 0x00B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

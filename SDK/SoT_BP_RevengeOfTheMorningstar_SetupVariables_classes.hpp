@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RevengeOfTheMorningstar_SetupVariables.BP_RevengeOfTheMorningstar_SetupVariables_C
-// 0x0018 (0x00A8 - 0x0090)
+// 0x0018 (0x00B0 - 0x0098)
 class UBP_RevengeOfTheMorningstar_SetupVariables_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<TAssetPtr<class AActor>>                    TempGraymarrowPossibleLocations;                          // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<TAssetPtr<class AActor>>                    TempGraymarrowPossibleLocations;                          // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

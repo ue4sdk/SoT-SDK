@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FateOfTheMorningstar_WaitForKeyPickup.BP_FateOfTheMorningstar_WaitForKeyPickup_C
-// 0x0008 (0x0098 - 0x0090)
+// 0x0008 (0x00A0 - 0x0098)
 class UBP_FateOfTheMorningstar_WaitForKeyPickup_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

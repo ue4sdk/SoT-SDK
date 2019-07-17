@@ -7,15 +7,15 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_CursedRogue_CrewPuzzle_classes.hpp"
+#include "SoT_DS_CursedRogue_Variables_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Tales_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_DS_CursedRogue_Definition_classes.hpp"
-#include "SoT_DS_CursedRogue_Variables_classes.hpp"
-#include "SoT_DS_CursedRogue_SelectedPuzzles_classes.hpp"
 #include "SoT_DS_CursedRogue_BuryPointPuzzle_classes.hpp"
 #include "SoT_DS_CursedRogue_KeyCrewPuzzle_classes.hpp"
+#include "SoT_DS_CursedRogue_SelectedPuzzles_classes.hpp"
+#include "SoT_DS_CursedRogue_CrewPuzzle_classes.hpp"
 
 namespace SDK
 {

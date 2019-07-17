@@ -15,23 +15,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C
-// 0x00A8 (0x0A00 - 0x0958)
+// 0x00A8 (0x0950 - 0x08A8)
 class ABP_CollectorsChest_Proxy_C : public ACollectorsChestItemProxy
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0958(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UItemProxyShipTrackerComponent*              ItemProxyShipTracker;                                     // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        WaterOcclusionVolume;                                     // 0x0968(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UGlintComponent*                             Glint;                                                    // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UQuestBookPagesInContainerComponent*         QuestBookPagesInContainer;                                // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UGoldInContainerComponent*                   GoldInContainer;                                          // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x0988(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0990(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractbale_3;                                   // 0x0998(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x09A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x09A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x09B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FObjectMessagingHandle                      OnDroppedHandle;                                          // 0x09B8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UItemProxyShipTrackerComponent*              ItemProxyShipTracker;                                     // 0x08B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        WaterOcclusionVolume;                                     // 0x08B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGlintComponent*                             Glint;                                                    // 0x08C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UQuestBookPagesInContainerComponent*         QuestBookPagesInContainer;                                // 0x08C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGoldInContainerComponent*                   GoldInContainer;                                          // 0x08D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Scene;                                                    // 0x08D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x08E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractbale_3;                                   // 0x08E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x08F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0900(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      OnDroppedHandle;                                          // 0x0908(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -728,6 +728,38 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 }
 
 
+// Function AthenaAI.AINameplateComponent.OnRep_DisplayName
+// (Final, Native, Private)
+
+void UAINameplateComponent::OnRep_DisplayName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayName"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AINameplateComponent.OnRep_DebugDisplayText
+// (Final, Native, Private)
+
+void UAINameplateComponent::OnRep_DebugDisplayText()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DebugDisplayText"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AIPartsRetrievalComponent.RequestNewAIParts
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2073,6 +2105,22 @@ void APet::OnShipDestroyed(class AActor* InShip)
 void APet::OnRep_RollRequest()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_RollRequest"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.OnRep_PetOwner
+// (Final, Native, Private)
+
+void APet::OnRep_PetOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PetOwner"));
 
 	struct
 	{

@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_CursedRogue_BuryPointPuzzle_classes.hpp"
 #include "SoT_DS_CursedRogue_KeyCrewPuzzle_classes.hpp"
 #include "SoT_DS_Lorebooks_classes.hpp"
+#include "SoT_DS_CursedRogue_BuryPointPuzzle_classes.hpp"
 
 namespace SDK
 {
@@ -18,7 +18,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_CursedRogue_Definition.DS_CursedRogue_Definition
-// 0x00F0
+// 0x0110
 struct FDS_CursedRogue_Definition
 {
 	TArray<struct FDS_CursedRogue_KeyCrewPuzzle>       KeyCrewPuzzles_30_636F9638426528526A9AB690EB034E50;       // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -34,6 +34,7 @@ struct FDS_CursedRogue_Definition
 	TArray<class UAISpawner*>                          BuryPointSpawners_59_CF9D682C469D0CC10BE41498D858C79B;    // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<TAssetPtr<class AActor>>                    BriggsyLocations_64_8516D6E741122D73FADB7EB49CF8C995;     // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<class UAISpawner*>                          BriggsySpawners_68_871DA0D247D1A72B399D56BFAEE9F6A5;      // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TAssetPtr<class AActor>                            PlaceableReaction_71_21D85CCC45C1D2A8E667E98E0AD34A3B;    // 0x00F0(0x0020) (Edit, BlueprintVisible)
 };
 
 }

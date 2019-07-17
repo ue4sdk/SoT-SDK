@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tal_enchanted_chalice_01_a_Desc.BP_tal_enchanted_chalice_01_a_Desc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_tal_enchanted_chalice_01_a_Desc_C : public UBootyItemDesc
 {
 public:

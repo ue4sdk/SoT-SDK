@@ -320,6 +320,38 @@ void ABP_Shroudbreaker_OnShip_C::OnRepFunctionDeactivateShroudBreaker()
 }
 
 
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnShroudBreakerStateChange
+// (Event, Public, BlueprintEvent)
+
+void ABP_Shroudbreaker_OnShip_C::OnShroudBreakerStateChange()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnShroudBreakerStateChange"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.TestState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Shroudbreaker_OnShip_C::TestState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.TestState"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.ExecuteUbergraph_BP_Shroudbreaker_OnShip
 // (HasDefaults)
 // Parameters:

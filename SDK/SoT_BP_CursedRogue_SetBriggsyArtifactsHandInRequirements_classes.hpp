@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CursedRogue_SetBriggsyArtifactsHandInRequirements.BP_CursedRogue_SetBriggsyArtifactsHandInRequirements_C
-// 0x0010 (0x00A0 - 0x0090)
+// 0x0010 (0x00A8 - 0x0098)
 class UBP_CursedRogue_SetBriggsyArtifactsHandInRequirements_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0090(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                      Item;                                                     // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                      Item;                                                     // 0x00A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

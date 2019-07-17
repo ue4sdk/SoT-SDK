@@ -30,11 +30,11 @@ public:
 
 
 // Class PositionalVoice.MockVoiceChatRenderer
-// 0x0030 (0x0058 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UMockVoiceChatRenderer : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0028(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -135,7 +135,7 @@ public:
 
 
 // Class PositionalVoice.VoiceChatRenderer
-// 0x0110 (0x0138 - 0x0028)
+// 0x00F8 (0x0120 - 0x0028)
 class UVoiceChatRenderer : public UObject
 {
 public:
@@ -146,7 +146,7 @@ public:
 	int                                                PreBufferInMilliseconds;                                  // 0x0050(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	int                                                ChatRoutingListenerIndex;                                 // 0x0054(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	float                                              EmitterHoldInSeconds;                                     // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xDC];                                      // 0x005C(0x00DC) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xC4];                                      // 0x005C(0x00C4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

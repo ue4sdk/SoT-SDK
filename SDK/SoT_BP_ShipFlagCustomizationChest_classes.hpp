@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipFlagCustomizationChest.BP_ShipFlagCustomizationChest_C
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x0628 - 0x0628)
 class ABP_ShipFlagCustomizationChest_C : public AShipFlagCustomizationChest
 {
 public:

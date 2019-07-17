@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ItemDesc_Medallion_Boar.BP_ItemDesc_Medallion_Boar_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_ItemDesc_Medallion_Boar_C : public UBootyItemDesc
 {
 public:

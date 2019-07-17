@@ -14,6 +14,36 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Animation.AnimationDataStoreId
+// 0x0000 (0x0028 - 0x0028)
+class UAnimationDataStoreId : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataStoreId"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AIAnimationInstanceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAIAnimationInstanceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AIAnimationInstanceInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.AnimationData
 // 0x0000 (0x0028 - 0x0028)
 class UAnimationData : public UObject
@@ -46,21 +76,6 @@ public:
 	static class UAnimationData* MakeAnimationData(class UClass* Class);
 	static struct FAnimDataEntryStructWrapper GetAnimDataEntryStructAsStructWrapper(class UAnimationData* AnimationDataObject, class UScriptStruct* TheClass);
 	static void CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs(class UClass* InClass);
-};
-
-
-// Class Animation.AnimationDataStoreId
-// 0x0000 (0x0028 - 0x0028)
-class UAnimationDataStoreId : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataStoreId"));
-		return ptr;
-	}
-
 };
 
 
@@ -135,7 +150,7 @@ public:
 
 
 // Class Animation.ClientSkeletalMeshComponent
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09A0 - 0x09A0)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:

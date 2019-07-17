@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Drunken-_Desc.BP_TreasureChest_Drunken-_Desc_C
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_TreasureChest_Drunken__Desc_C : public UBootyItemDesc
 {
 public:
