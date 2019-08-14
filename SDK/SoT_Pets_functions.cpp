@@ -53,6 +53,26 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 }
 
 
+// Function Pets.PetsService.SetMaxPetsOnServer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            InMaxPetsOnServer              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPetsService::SetMaxPetsOnServer(int InMaxPetsOnServer)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetsService.SetMaxPetsOnServer"));
+
+	struct
+	{
+		int                            InMaxPetsOnServer;
+	} params;
+
+	params.InMaxPetsOnServer = InMaxPetsOnServer;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Pets.PetsService.RemovePetFromActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -115,21 +135,21 @@ void AWieldablePet::OnRep_HungerReactAnimationState()
 }
 
 
-// Function Pets.WieldablePet.OnRep_DropRequested
+// Function Pets.WieldablePet.OnRep_DropRequest
 // (Final, Native, Private)
 // Parameters:
-// bool                           DropRequestedPrior             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWieldablePet::OnRep_DropRequested(bool DropRequestedPrior)
+void AWieldablePet::OnRep_DropRequest(TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_DropRequested"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_DropRequest"));
 
 	struct
 	{
-		bool                           DropRequestedPrior;
+		TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest;
 	} params;
 
-	params.DropRequestedPrior = DropRequestedPrior;
+	params.PriorDropRequest = PriorDropRequest;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -87,6 +87,24 @@ public:
 };
 
 
+// Class AthenaInput.InputHandlerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UInputHandlerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.InputHandlerInterface"));
+		return ptr;
+	}
+
+
+	TEnumAsByte<EInputHandlerResult> HandleNotificationInput(class UClass* Id);
+	TEnumAsByte<EInputHandlerResult> HandleAnalogInput(class UClass* Id, float Input);
+};
+
+
 // Class AthenaInput.TestAnalogInputId
 // 0x0000 (0x0030 - 0x0030)
 class UTestAnalogInputId : public UAnalogInputId
@@ -114,24 +132,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class AthenaInput.InputHandlerInterface
-// 0x0000 (0x0028 - 0x0028)
-class UInputHandlerInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.InputHandlerInterface"));
-		return ptr;
-	}
-
-
-	TEnumAsByte<EInputHandlerResult> HandleNotificationInput(class UClass* Id);
-	TEnumAsByte<EInputHandlerResult> HandleAnalogInput(class UClass* Id, float Input);
 };
 
 

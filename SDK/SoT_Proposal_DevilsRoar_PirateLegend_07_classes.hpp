@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_DevilsRoar_PirateLegend_07.Proposal_DevilsRoar_PirateLegend_07_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class UProposal_DevilsRoar_PirateLegend_07_C : public UVoyageProposalDesc
 {
 public:

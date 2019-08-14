@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BaseLockableCollectorsChest_Proxy.BP_BaseLockableCollectorsChest_Proxy_C
-// 0x0019 (0x0969 - 0x0950)
+// 0x0019 (0x09A1 - 0x0988)
 class ABP_BaseLockableCollectorsChest_Proxy_C : public ABP_CollectorsChest_Proxy_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0950(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             LockSocketsRoot;                                          // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULockComponent*                              Lock;                                                     // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Open_After_Unlock;                                        // 0x0968(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0988(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                             LockSocketsRoot;                                          // 0x0990(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULockComponent*                              Lock;                                                     // 0x0998(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Open_After_Unlock;                                        // 0x09A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

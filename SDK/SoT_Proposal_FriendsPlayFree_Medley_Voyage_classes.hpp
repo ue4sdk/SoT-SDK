@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_FriendsPlayFree_Medley_Voyage.Proposal_FriendsPlayFree_Medley_Voyage_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class UProposal_FriendsPlayFree_Medley_Voyage_C : public UVoyageProposalDesc
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_MercenaryVoyages_Medley_VoyageTheShoresOfPlenty.Proposal_MercenaryVoyages_Medley_VoyageTheShoresOfPlenty_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class UProposal_MercenaryVoyages_Medley_VoyageTheShoresOfPlenty_C : public UVoyageProposalDesc
 {
 public:

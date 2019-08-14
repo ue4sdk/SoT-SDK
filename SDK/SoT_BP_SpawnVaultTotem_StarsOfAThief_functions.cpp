@@ -32,22 +32,6 @@ void UBP_SpawnVaultTotem_StarsOfAThief_C::OnBegin(TEnumAsByte<ETaleQuestStepBegi
 }
 
 
-// Function BP_SpawnVaultTotem_StarsOfAThief.BP_SpawnVaultTotem_StarsOfAThief_C.OnItemPickedUp
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_SpawnVaultTotem_StarsOfAThief_C::OnItemPickedUp()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SpawnVaultTotem_StarsOfAThief.BP_SpawnVaultTotem_StarsOfAThief_C.OnItemPickedUp"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_SpawnVaultTotem_StarsOfAThief.BP_SpawnVaultTotem_StarsOfAThief_C.ExecuteUbergraph_BP_SpawnVaultTotem_StarsOfAThief
 // (HasDefaults)
 // Parameters:

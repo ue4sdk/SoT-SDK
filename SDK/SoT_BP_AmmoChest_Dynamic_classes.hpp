@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AmmoChest_Dynamic.BP_AmmoChest_Dynamic_C
-// 0x0000 (0x0588 - 0x0588)
+// 0x0000 (0x0578 - 0x0578)
 class ABP_AmmoChest_Dynamic_C : public ABP_AmmoChest_C
 {
 public:

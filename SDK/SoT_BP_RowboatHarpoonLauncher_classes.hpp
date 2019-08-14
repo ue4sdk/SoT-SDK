@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatHarpoonLauncher.BP_RowboatHarpoonLauncher_C
-// 0x0018 (0x0B38 - 0x0B20)
+// 0x0018 (0x0C18 - 0x0C00)
 class ABP_RowboatHarpoonLauncher_C : public AHarpoonLauncher
 {
 public:
-	class UStaticMeshComponent*                        CubeNotWalkable;                                          // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           MountCollision;                                           // 0x0B28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           BarrelCollision;                                          // 0x0B30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        CubeNotWalkable;                                          // 0x0C00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           MountCollision;                                           // 0x0C08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           BarrelCollision;                                          // 0x0C10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

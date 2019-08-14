@@ -93,21 +93,6 @@ public:
 };
 
 
-// Class ShipDamage.TargetPointInterface
-// 0x0000 (0x0028 - 0x0028)
-class UTargetPointInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ShipDamage.TargetPointInterface"));
-		return ptr;
-	}
-
-};
-
-
 }
 
 #ifdef _MSC_VER

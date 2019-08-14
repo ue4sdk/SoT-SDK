@@ -14,23 +14,6 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// Class Occlusion.OcclusionFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UOcclusionFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Occlusion.OcclusionFunctionLibrary"));
-		return ptr;
-	}
-
-
-	static TEnumAsByte<EOcclusionTypes> IsActorOccludedFromActor(class UObject* WorldContextObject, class AActor* Observer, class AActor* Target, const struct FVector& TargetPosition, float InteractionPointRadius, TArray<class AActor*> AdditionalIgnoredActors);
-};
-
-
 // Class Occlusion.OcclusionInterface
 // 0x0000 (0x0028 - 0x0028)
 class UOcclusionInterface : public UInterface

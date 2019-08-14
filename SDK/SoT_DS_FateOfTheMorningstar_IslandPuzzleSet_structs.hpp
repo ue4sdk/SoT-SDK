@@ -11,8 +11,8 @@
 #include "SoT_DS_FateOfTheMorningstar_PuzzleParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_SarcophagusSpawnParams_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_SharkEncounterParams_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_GhostFootprints_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_CagedKeyParams_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_GhostFootprints_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_GhostScenesParams2_classes.hpp"
 
 namespace SDK

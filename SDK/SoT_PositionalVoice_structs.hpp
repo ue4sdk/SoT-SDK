@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_PositionalVoice_enums.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {

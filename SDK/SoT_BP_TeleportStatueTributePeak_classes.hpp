@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TeleportStatueTributePeak.BP_TeleportStatueTributePeak_C
-// 0x0008 (0x05F8 - 0x05F0)
+// 0x0008 (0x05E8 - 0x05E0)
 class ABP_TeleportStatueTributePeak_C : public ATeleportStatue
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

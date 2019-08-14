@@ -14,6 +14,25 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Wind.WindZoneInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWindZoneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindZoneInterface"));
+		return ptr;
+	}
+
+
+	struct FWindZoneParams GetWindZoneParams();
+	struct FVector2D GetWindZoneLocation();
+	struct FWindZoneTurbulence GetTurbulence(const struct FVector& Location);
+};
+
+
 // Class Wind.WindInterface
 // 0x0000 (0x0028 - 0x0028)
 class UWindInterface : public UInterface
@@ -91,25 +110,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Wind.WindZoneInterface
-// 0x0000 (0x0028 - 0x0028)
-class UWindZoneInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindZoneInterface"));
-		return ptr;
-	}
-
-
-	struct FWindZoneParams GetWindZoneParams();
-	struct FVector2D GetWindZoneLocation();
-	struct FWindZoneTurbulence GetTurbulence(const struct FVector& Location);
 };
 
 

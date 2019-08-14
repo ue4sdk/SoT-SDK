@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_OnlineSubsystemUtils_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_OnlineSubsystem_classes.hpp"
 
 namespace SDK

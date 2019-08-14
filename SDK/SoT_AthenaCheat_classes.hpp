@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaCheat.AthenaCheatManager
-// 0x0048 (0x00C0 - 0x0078)
+// 0x0060 (0x00D8 - 0x0078)
 class UAthenaCheatManager : public UCheatManager
 {
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      CinematicCameraControllerClass;                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x24];                                      // 0x0088(0x0024) MISSED OFFSET
-	float                                              TeleportToDigsiteHeightOffset;                            // 0x00AC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x00B0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0088(0x0038) MISSED OFFSET
+	float                                              TeleportToDigsiteHeightOffset;                            // 0x00C0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x14];                                      // 0x00C4(0x0014) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -100,6 +100,7 @@ public:
 	void StoreShipLocation(float LocationX, float LocationY, float LocationZ, float Yaw);
 	void StopShip();
 	void StopPetHangout();
+	void StopAllPetsHangout();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
@@ -243,8 +244,10 @@ public:
 	void RenameTreasure(const class FString& InVendorName);
 	void RemovePetFromPlayer();
 	void RemoveItemInSlot(int SlotIndex);
+	void RemoveDebugPetSpawners();
 	void RemoveAllFog();
 	void RebuildPirateFromSeed(int Seed);
+	void ReallyScrambleMyGamertag();
 	void PushShip(float FwdSpdInMetersPerSecond);
 	void PullLatestEmblemProgress();
 	void ProceedToNextContestState();
@@ -257,6 +260,7 @@ public:
 	void MoveStormToPlayer();
 	void MessageBoxOnGraphicsThreadTest();
 	void MakeSharksBrainDead();
+	void MakeDebugPetSpawner();
 	void LogShipHierarchy();
 	void LogServerShipHierarchy();
 	void LogAITeamAttitudes();
@@ -302,10 +306,15 @@ public:
 	void HealthContinuousStartWithReason(float Value, const class FString& Reason);
 	void HealthAdjust(float Amount);
 	void God();
+	void ForceStopAllPetsDanger();
+	void ForceStartAllPetsDangerWithChangingThreatLocation(const class FString& ResponseType, float UpdateThreatLocationTime);
+	void ForceStartAllPetsDanger(const class FString& ResponseType);
 	void ForcePetHangout(const struct FName& HangoutName, int PositionIndex);
 	void ForceOpenShop();
 	void ForceMigrationServiceHeartBeat();
 	void ForceCloseShop();
+	void ForceAllPetsDangerWithNoiseEventWithChangingThreatLocation(const class FString& ResponseType, float UpdateThreatLocationTime);
+	void ForceAllPetsDangerWithNoiseEvent(const class FString& ResponseType);
 	void Fly();
 	void FloodShipWithKeelOverIndex(float NormalisedWaterAmount, int KeelOverConfigIndex);
 	void FloodShip(float NormalisedWaterAmount);
@@ -352,7 +361,9 @@ public:
 	void DisableAIBehaviour();
 	void DioramaStartNearest(const class FString& Spawner, const class FString& DioramaDesc);
 	void DioramaStart(const class FString& ActorName, const class FString& Spawner, const class FString& DioramaDesc);
+	void DioramaKillAllDebug();
 	void DestroyShip(const class FString& ShipActorIdConsoleString);
+	void DestroyNearestDebugReapersChestMarker();
 	void DestroyMyShip();
 	void DestroyKraken();
 	void DestroyAllTreasureChests();
@@ -371,6 +382,7 @@ public:
 	void DamagePlayerFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
 	void DamagePlayer(float Strength);
 	void CureAllAilings();
+	void CreateDebugReapersChestMarkerAtPlayerLocation();
 	void CompleteVoyage();
 	void CompleteAllActivePuzzleVaults();
 	void CompleteActiveQuests();

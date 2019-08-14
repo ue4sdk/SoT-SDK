@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_MadameOlivia_CursedRogue.BP_MadameOlivia_CursedRogue_C
-// 0x000B (0x18B0 - 0x18A5)
+// 0x000B (0x18C0 - 0x18B5)
 class UBP_MadameOlivia_CursedRogue_C : public UBP_Anim_NPC_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x18A5(0x0003) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x18A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x18B5(0x0003) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x18B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

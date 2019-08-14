@@ -19,10 +19,10 @@ namespace SDK
 class ABP_BuoyantStorageBarrel_LockedToWater_C : public ABuoyantStorageContainer
 {
 public:
-	class UReplenishableComponent*                     Replenishable;                                            // 0x07A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UTelemetrySubjectComponent*                  TelemetrySubject;                                         // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainer;                                         // 0x07B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           Capsule;                                                  // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Sphere;                                                   // 0x07A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UReplenishableComponent*                     Replenishable;                                            // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTelemetrySubjectComponent*                  TelemetrySubject;                                         // 0x07B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

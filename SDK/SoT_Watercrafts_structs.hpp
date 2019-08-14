@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Watercrafts_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Water_classes.hpp"
 
 namespace SDK
@@ -88,6 +88,20 @@ struct FOar
 {
 	struct FOarParams                                  OarParams;                                                // 0x0000(0x0038)
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0038(0x0028) MISSED OFFSET
+};
+
+// ScriptStruct Watercrafts.EventRowboatExitedWater
+// 0x0001
+struct FEventRowboatExitedWater
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Watercrafts.EventRowboatEnteredWater
+// 0x0001
+struct FEventRowboatEnteredWater
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Watercrafts.RowboatMountStateTelemetryEvent

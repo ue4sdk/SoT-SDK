@@ -9,48 +9,49 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_enums.hpp"
 #include "SoT_AthenaAI_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
-#include "SoT_Pets_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_AthenaInput_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Tales_classes.hpp"
-#include "SoT_RareAudio_classes.hpp"
+#include "SoT_CoherentUIGTPlugin_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AthenaRigging_classes.hpp"
 #include "SoT_AthenaSocketLookup_classes.hpp"
-#include "SoT_CoherentUIGTPlugin_classes.hpp"
-#include "SoT_Animation_classes.hpp"
-#include "SoT_Interaction_classes.hpp"
 #include "SoT_Fire_classes.hpp"
+#include "SoT_RareAudio_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_InputCore_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
+#include "SoT_Animation_classes.hpp"
+#include "SoT_EmotingFramework_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 #include "SoT_DebugMenu_classes.hpp"
-#include "SoT_AIShips_classes.hpp"
 #include "SoT_RareEngine_classes.hpp"
-#include "SoT_GameplayDebugger_classes.hpp"
-#include "SoT_GameService_classes.hpp"
-#include "SoT_Cooking_classes.hpp"
-#include "SoT_Wind_classes.hpp"
-#include "SoT_ShipDamage_classes.hpp"
 #include "SoT_StudiosAutomation_classes.hpp"
+#include "SoT_GameService_classes.hpp"
+#include "SoT_GameplayDebugger_classes.hpp"
+#include "SoT_AthenaServerMigration_classes.hpp"
+#include "SoT_Wind_classes.hpp"
 #include "SoT_PirateGenerator_classes.hpp"
-#include "SoT_Time_classes.hpp"
+#include "SoT_AIShips_classes.hpp"
+#include "SoT_Pets_classes.hpp"
 #include "SoT_Water_classes.hpp"
 #include "SoT_Repair_classes.hpp"
-#include "SoT_EmotingFramework_classes.hpp"
+#include "SoT_Interaction_classes.hpp"
 #include "SoT_Sessions_classes.hpp"
+#include "SoT_ShipDamage_classes.hpp"
+#include "SoT_Retraction_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_WwiseAudio_classes.hpp"
-#include "SoT_Retraction_classes.hpp"
+#include "SoT_PrioritisedPrompts_classes.hpp"
 #include "SoT_Watercrafts_classes.hpp"
 #include "SoT_Tethering_classes.hpp"
-#include "SoT_AthenaServerMigration_classes.hpp"
 #include "SoT_JsonUtilities_classes.hpp"
 #include "SoT_PositionalVoice_classes.hpp"
+#include "SoT_Time_classes.hpp"
+#include "SoT_Cooking_classes.hpp"
 
 namespace SDK
 {
@@ -1832,18 +1833,17 @@ struct FVoyageParticipantView
 	bool                                               DoNotNotifyParticipantsOnVoyageComplete;                  // 0x0064(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
 	int                                                Rank;                                                     // 0x0068(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
-	class FString                                      DiscovererName;                                           // 0x0070(0x0010) (ZeroConstructor)
+	struct FNetActorPtr                                PlayerStateOfDiscoverer;                                  // 0x006C(0x0014)
 	bool                                               IsDiscovererMe;                                           // 0x0080(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
 	struct FName                                       ChestRarity;                                              // 0x0084(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               PlayAudio;                                                // 0x008C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x008D(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x3];                                       // 0x008D(0x0003) MISSED OFFSET
 	int                                                ChestDiscoveredId;                                        // 0x0090(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
 	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                CollectCratesPopUpId;                                     // 0x00A0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
 	TArray<struct FPlayerStat>                         VoyageCompletionStats;                                    // 0x00A8(0x0010) (ZeroConstructor)
 	TArray<struct FPlayerStat>                         ReapersMarkCompletionStats;                               // 0x00B8(0x0010) (ZeroConstructor)
 };
@@ -1963,73 +1963,6 @@ struct FNetPositionErrorTolerance
 	float                                              XYDistance;                                               // 0x0004(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 };
 
-// ScriptStruct Athena.DioramaDebugMenuEntry
-// 0x0030
-struct FDioramaDebugMenuEntry
-{
-	class UAISpawner*                                  Spawner;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAIDioramaDesc*                              DioramaDesc;                                              // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class FString                                      DioramaName;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
-	class FString                                      TaleId;                                                   // 0x0020(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct Athena.SeaRock
-// 0x000C
-struct FSeaRock
-{
-	struct FVector2D                                   Location;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Radius;                                                   // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
-
-// ScriptStruct Athena.GameEventSettings
-// 0x00B0
-struct FGameEventSettings
-{
-	class UClass*                                      GameEventType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RepeatQueryTime;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InertQueryTime;                                           // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InertCancelTime;                                          // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	struct FWeightedProbabilityRangeOfRanges           FirstRegenInterval;                                       // 0x0018(0x0030) (Edit)
-	struct FWeightedProbabilityRangeOfRanges           RegenInterval;                                            // 0x0048(0x0030) (Edit)
-	struct FWeightedProbabilityRangeOfRanges           SpawnTime;                                                // 0x0078(0x0030) (Edit)
-	bool                                               Required;                                                 // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Athena.GameEventCount
-// 0x0010
-struct FGameEventCount
-{
-	class UClass*                                      GameEventType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                NumAllowed;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Athena.GameEventSchedulerConfiguration
-// 0x0010
-struct FGameEventSchedulerConfiguration
-{
-	TArray<struct FGameEventCount>                     Events;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct Athena.AthenaStreamedLevelItem
-// 0x0020
-struct FAthenaStreamedLevelItem
-{
-	struct FVector                                     Location;                                                 // 0x0000(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	class UAthenaStreamedLevelDataAsset*               DataAsset;                                                // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       FeatureToggle;                                            // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
-
-// ScriptStruct Athena.WorldSafeZone
-// 0x0018
-struct FWorldSafeZone
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
-};
-
 // ScriptStruct Athena.PlayModeLevelArray
 // 0x0010
 struct FPlayModeLevelArray
@@ -2088,7 +2021,7 @@ struct FEncounterServiceParams
 };
 
 // ScriptStruct Athena.CrewServiceParams
-// 0x0050
+// 0x0060
 struct FCrewServiceParams
 {
 	float                                              MinSafeDistanceToShip;                                    // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -2097,8 +2030,9 @@ struct FCrewServiceParams
 	TArray<int>                                        VotesRequiredForReleaseFromBrig;                          // 0x0018(0x0010) (Edit, ZeroConstructor)
 	TArray<int>                                        VotesRequiredForScuttleShip;                              // 0x0028(0x0010) (Edit, ZeroConstructor)
 	TArray<int>                                        VotesRequiredForChangeMatchmakingVisibility;              // 0x0038(0x0010) (Edit, ZeroConstructor)
-	float                                              BrigMinReleaseTime;                                       // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BrigServerTimeToRememberPastCrewMates;                    // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        VotesRequiredForArenaRivalVote;                           // 0x0048(0x0010) (Edit, ZeroConstructor)
+	float                                              BrigMinReleaseTime;                                       // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BrigServerTimeToRememberPastCrewMates;                    // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.DigEventFxParams
@@ -2353,6 +2287,71 @@ struct FTreasureMapWidgetText : public FTreasureMapWidget
 	float                                              Scale;                                                    // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               CutoutTextStyle;                                          // 0x001C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Athena.SeaRock
+// 0x000C
+struct FSeaRock
+{
+	struct FVector2D                                   Location;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Radius;                                                   // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Athena.GameEventSettings
+// 0x00B0
+struct FGameEventSettings
+{
+	class UClass*                                      GameEventType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RepeatQueryTime;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InertQueryTime;                                           // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InertCancelTime;                                          // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           FirstRegenInterval;                                       // 0x0018(0x0030) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           RegenInterval;                                            // 0x0048(0x0030) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           SpawnTime;                                                // 0x0078(0x0030) (Edit)
+	bool                                               Required;                                                 // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.GameEventCount
+// 0x0010
+struct FGameEventCount
+{
+	class UClass*                                      GameEventType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumAllowed;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Athena.GameEventSchedulerConfiguration
+// 0x0018
+struct FGameEventSchedulerConfiguration
+{
+	struct FName                                       Feature;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FGameEventCount>                     Events;                                                   // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Athena.ChapterQuests
+// 0x0010
+struct FChapterQuests
+{
+	TArray<class UQuestDescDataAsset*>                 QuestDescAssets;                                          // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Athena.AthenaStreamedLevelItem
+// 0x0020
+struct FAthenaStreamedLevelItem
+{
+	struct FVector                                     Location;                                                 // 0x0000(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	class UAthenaStreamedLevelDataAsset*               DataAsset;                                                // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       FeatureToggle;                                            // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Athena.WorldSafeZone
+// 0x0018
+struct FWorldSafeZone
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Athena.AtmosphericPressureZoneParameters
@@ -2641,13 +2640,14 @@ struct FIsland
 };
 
 // ScriptStruct Athena.ItemSpawnWeightedType
-// 0x0018
+// 0x0028
 struct FItemSpawnWeightedType
 {
 	class UClass*                                      Type;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FName                                       Feature;                                                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                Weight;                                                   // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	TArray<class USpawnRequirement*>                   Requirements;                                             // 0x0018(0x0010) (Edit, ExportObject, ZeroConstructor)
 };
 
 // ScriptStruct Athena.ItemSpawnDistribution
@@ -3198,8 +3198,7 @@ struct FCategoryDefaultsUnit
 struct FAIShipsSpotted
 {
 	class AActor*                                      SpottedShip;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              CurrentCooldown;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	double                                             TimeSpotted;                                              // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.PlayerMusicController
@@ -3293,6 +3292,15 @@ struct FCharacterHitReactionDamagerTypeToAnimTypePair
 struct FCharacterSocketCollisionHandle
 {
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct Athena.ChestOfRageReplicatedData
+// 0x0008
+struct FChestOfRageReplicatedData
+{
+	TEnumAsByte<ERageState>                            State;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              RageValue;                                                // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.VoyageLocationFixedParams
@@ -3488,22 +3496,33 @@ struct FNameplateVisibilityFactors
 	unsigned char                                      UnknownData00[0x14];                                      // 0x0000(0x0014) MISSED OFFSET
 };
 
-// ScriptStruct Athena.CollectorsChestItemSlotDefinition
-// 0x0040
-struct FCollectorsChestItemSlotDefinition
+// ScriptStruct Athena.WeightedItemDescSpawnData
+// 0x0018
+struct FWeightedItemDescSpawnData
 {
-	TArray<TAssetPtr<class UClass>>                    TargetObjectTypes;                                        // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FTransform                                  RelativeTransform;                                        // 0x0010(0x0030) (Edit, IsPlainOldData)
+	class UItemSpawnData*                              ItemSpawnData;                                            // 0x0000(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Feature;                                                  // 0x000C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Athena.CollectorsChestStoredItemInfo
-// 0x0020
-struct FCollectorsChestStoredItemInfo
+// ScriptStruct Athena.WeightedItemDescSpawnDataAssetWithWeight
+// 0x0018
+struct FWeightedItemDescSpawnDataAssetWithWeight
 {
-	class AItemInfo*                                   ItemInfo;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class USceneComponent>              SourceAttachParent;                                       // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       SourceAttachSocket;                                       // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	int64_t                                            ItemStoreTimestamp;                                       // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWeightedItemDescSpawnDataAsset*             WeightedItemSpawnDataAsset;                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               LimitMaxSpawnedItems;                                     // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
+	int                                                MaxTimesCanBeSelected;                                    // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Athena.WeightedItemDescSpawnDataAssetsWithWeights
+// 0x0010
+struct FWeightedItemDescSpawnDataAssetsWithWeights
+{
+	TArray<struct FWeightedItemDescSpawnDataAssetWithWeight> WeightedItemSpawnDatas;                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Athena.CompanySkin
@@ -4340,6 +4359,16 @@ struct FItemDiggingEffectsOverride
 	class UItemDiggingEffectsConfig*                   DiggingEffectsConfig;                                     // 0x0010(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
 };
 
+// ScriptStruct Athena.DioramaDebugMenuEntry
+// 0x0030
+struct FDioramaDebugMenuEntry
+{
+	class UAISpawner*                                  Spawner;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAIDioramaDesc*                              DioramaDesc;                                              // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class FString                                      DioramaName;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
+	class FString                                      TaleId;                                                   // 0x0020(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct Athena.BlendableDrowningParams
 // 0x0028
 struct FBlendableDrowningParams
@@ -4366,32 +4395,6 @@ struct FDrunkennessSetupData
 	float                                              SoberingUpDrunkennessChangePerSec;                        // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               AutoSoberUpWhenFullyDrunk;                                // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Athena.Encounter
-// 0x0030
-struct FEncounter
-{
-	class AActor*                                      EncounterActor;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0008(0x0028) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EncounterListenerData
-// 0x0030
-struct FEncounterListenerData
-{
-	TArray<TEnumAsByte<EEncounterListenerType>>        EncounterListenerTypes;                                   // 0x0000(0x0010) (ZeroConstructor)
-	TArray<class AActor*>                              EncounterListeners;                                       // 0x0010(0x0010) (ZeroConstructor)
-	TArray<struct FVector>                             EncounterListenerLocations;                               // 0x0020(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Athena.EncounterStatus
-// 0x0040
-struct FEncounterStatus
-{
-	class AActor*                                      EncounterListenerActor;                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FEncounter                                  Encounter;                                                // 0x0008(0x0030)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ShantyInstrumentData
@@ -4428,44 +4431,50 @@ struct FInstrumentHandlePairedWithActor
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
+// ScriptStruct Athena.EventTaleQuestServiceEntry
+// 0x0048
+struct FEventTaleQuestServiceEntry
+{
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0000(0x0048) MISSED OFFSET
+};
+
 // ScriptStruct Athena.ExplosionInfo
 // 0x0110
 struct FExplosionInfo
 {
-	class UClass*                                      DamagerType;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     CollisionChannel;                                         // 0x0008(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-	float                                              ShipMaximumRadiusInMetres;                                // 0x000C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 ShipDamageCurveInMetres;                                  // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxDamageAmount;                                          // 0x0018(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-	struct FShipPartsDamageMap                         ShipDamageMap;                                            // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	int                                                MaxNumDamageHolesPerShip;                                 // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FWeightedProbabilityRangeOfRanges           ForceToApplyToShip;                                       // 0x0038(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	float                                              ForceModifierToApplyToKrakenWrappedShip;                  // 0x0068(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ShouldIgnoreZForShipHullDamage;                           // 0x006C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
-	class UCurveFloat*                                 PlayerDamageCurve;                                        // 0x0070(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 OtherPawnDamageCurve;                                     // 0x0078(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                      // 0x0080(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UForceFeedbackEffect*                        ForceFeedbackEffectLower;                                 // 0x0088(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ForceFeedbackEffectLowerTriggerPercentage;                // 0x0090(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ForceFeedbackTag;                                         // 0x0094(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
-	class UClass*                                      CameraShake;                                              // 0x00A0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShakeInnerRadius;                                         // 0x00A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShakeOuterRadius;                                         // 0x00AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PlayerInsideShipDamageMultiplier;                         // 0x00B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EHealthChangedReason>                  HealthChangedReason;                                      // 0x00B4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x00B5(0x0003) MISSED OFFSET
-	struct FKnockBackInfo                              KnockbackParams;                                          // 0x00B8(0x0034) (Edit)
-	bool                                               ShouldApplyKnockbackToIgnoreActor;                        // 0x00EC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x00ED(0x0003) MISSED OFFSET
-	TArray<struct FStatus>                             StatusesToApply;                                          // 0x00F0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	bool                                               ShouldApplyStatusesToIgnoreActor;                         // 0x0100(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x7];                                       // 0x0101(0x0007) MISSED OFFSET
-	class UShipFireCellAreaSelectionParamsDataAsset*   ShipIgnitionParameters;                                   // 0x0108(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      DamagerType;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EHealthChangedReason>                  HealthChangedReason;                                      // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     CollisionChannel;                                         // 0x0009(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
+	float                                              MaxExplosionRadius;                                       // 0x000C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BaseDamageAmount;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 PlayerDamageCurve;                                        // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 OtherPawnDamageCurve;                                     // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PlayerInsideShipDamageMultiplier;                         // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DealFriendlyFireDamage;                                   // 0x002C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	struct FShipDamageParams                           ShipDamageParams;                                         // 0x0030(0x0010) (Edit, DisableEditOnInstance)
+	int                                                MaxNumDamageHolesPerShip;                                 // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 ShipDamageCurveInMetres;                                  // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldIgnoreZForShipHullDamage;                           // 0x0050(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FWeightedProbabilityRangeOfRanges           ForceToApplyToShip;                                       // 0x0058(0x0030) (Edit, DisableEditOnInstance)
+	float                                              ForceModifierToApplyToKrakenWrappedShip;                  // 0x0088(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+	class UShipFireCellAreaSelectionParamsDataAsset*   ShipIgnitionParameters;                                   // 0x0090(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FStatus>                             StatusesToApply;                                          // 0x0098(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FKnockBackInfo                              KnockbackParams;                                          // 0x00A8(0x0034) (Edit)
+	float                                              KnockbackInnerRadiusMultiplier;                           // 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                      // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UForceFeedbackEffect*                        ForceFeedbackEffectLower;                                 // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ForceFeedbackEffectInnerRadiusMultiplier;                 // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ForceFeedbackTag;                                         // 0x00F4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
+	class UClass*                                      CameraShake;                                              // 0x0100(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraShakeInnerRadiusMultiplier;                         // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ShipHullLandscapeDamageEntry
@@ -4794,14 +4803,6 @@ struct FContinuousHealthChange
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct Athena.IslandItemSpawnLocationData
-// 0x0018
-struct FIslandItemSpawnLocationData
-{
-	struct FVector                                     SpawnLocation;                                            // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
-	struct FVector                                     SpawnLocationNormal;                                      // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
-};
-
 // ScriptStruct Athena.CanvasWorldMapGeneric
 // 0x0020
 struct FCanvasWorldMapGeneric
@@ -4833,16 +4834,6 @@ struct FOpenForListEntry
 struct FGlintVisibilityLock
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Athena.GoldInContainerData
-// 0x0028
-struct FGoldInContainerData
-{
-	struct FRewardId                                   RewardIdentifier;                                         // 0x0000(0x0008) (Edit, DisableEditOnInstance)
-	struct FVector                                     Position;                                                 // 0x0008(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     Scale;                                                    // 0x0014(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UStaticMesh*                                 GoldMesh;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Athena.QuestVariablePageBundle
@@ -5388,6 +5379,15 @@ struct FCategorySpec
 	class FString                                      DefaultSlotIconURL;                                       // 0x0008(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct Athena.InventoryManipulatorAutoEquipPolicyEntry
+// 0x0010
+struct FInventoryManipulatorAutoEquipPolicyEntry
+{
+	class UClass*                                      Category;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EInventoryManipulatorAutoEquipPolicy>  Policy;                                                   // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct Athena.LandmarkTreasureLocationEntry
 // 0x0020
 struct FLandmarkTreasureLocationEntry
@@ -5425,6 +5425,14 @@ struct FTreasureMapData
 	struct FVector2D                                   MapSpaceLocationOffset;                                   // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              RotationFromNorth;                                        // 0x0028(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Athena.IslandItemSpawnLocationData
+// 0x0018
+struct FIslandItemSpawnLocationData
+{
+	struct FVector                                     SpawnLocation;                                            // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
+	struct FVector                                     SpawnLocationNormal;                                      // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
 };
 
 // ScriptStruct Athena.TypedIslandItemSpawnLocationData
@@ -5488,35 +5496,6 @@ struct FCannonAILocation
 {
 	struct FVector                                     Centre;                                                   // 0x0000(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Direction;                                                // 0x000C(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.WeightedItemDescSpawnData
-// 0x0018
-struct FWeightedItemDescSpawnData
-{
-	class UItemDescSpawnData*                          ItemDescSpawnData;                                        // 0x0000(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Feature;                                                  // 0x000C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Athena.WeightedItemDescSpawnDataAssetWithWeight
-// 0x0018
-struct FWeightedItemDescSpawnDataAssetWithWeight
-{
-	class UWeightedItemDescSpawnDataAsset*             WeightedItemDescSpawnDataAsset;                           // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               LimitMaxSpawnedItems;                                     // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
-	int                                                MaxTimesCanBeSelected;                                    // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Athena.WeightedItemDescSpawnDataAssetsWithWeights
-// 0x0010
-struct FWeightedItemDescSpawnDataAssetsWithWeights
-{
-	TArray<struct FWeightedItemDescSpawnDataAssetWithWeight> WeightedItemDescSpawnDatas;                               // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Athena.ItemLoadoutSlot
@@ -6652,6 +6631,22 @@ struct FNPCData
 	struct FText                                       IslandNameLocalised;                                      // 0x0078(0x0038)
 };
 
+// ScriptStruct Athena.PetSpawnDefinition
+// 0x0020
+struct FPetSpawnDefinition
+{
+	class UClass*                                      PetDesc;                                                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPetCustomisation                           PetCustomisation;                                         // 0x0008(0x0018) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct Athena.SpawnedPetData
+// 0x0010
+struct FSpawnedPetData
+{
+	class APet*                                        SpawnedPet;                                               // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class APetItemInfo*                                SpawnedInfo;                                              // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Athena.PetCustomizationPartMapping
 // 0x0010
 struct FPetCustomizationPartMapping
@@ -6766,6 +6761,14 @@ struct FCrewMatchmakingVisibilityData
 	bool                                               Vote;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      NumVotes;                                                 // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EMatchmakingVisibilityState>           MatchmakingVisibilityState;                               // 0x0002(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.CrewArenaRivalVotingData
+// 0x0002
+struct FCrewArenaRivalVotingData
+{
+	bool                                               IsCrewMemberInFavourOfChangingArenaLobby;                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      NumberOfVotes;                                            // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.PlayerCurseToAudioSwitchValue
@@ -6940,13 +6943,57 @@ struct FShipCustomizationChestMutualExclusion
 	class UClass*                                      B;                                                        // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Athena.PremiumShopBundleOfferItem
+// 0x0010
+struct FPremiumShopBundleOfferItem
+{
+	class UCatalogOfferDataAsset*                      Offer;                                                    // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsPurchasable;                                            // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.PremiumShopOfferItem
+// 0x0048
+struct FPremiumShopOfferItem
+{
+	class UCatalogOfferDataAsset*                      Offer;                                                    // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsSuperPremium;                                           // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	struct FText                                       LockedReason;                                             // 0x0010(0x0038) (Edit)
+};
+
+// ScriptStruct Athena.PremiumCatalogItemSet
+// 0x0048
+struct FPremiumCatalogItemSet
+{
+	struct FText                                       Title;                                                    // 0x0000(0x0038) (Edit)
+	TArray<struct FPremiumShopOfferItem>               Items;                                                    // 0x0038(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Athena.PremiumCatalogLandingPageTab
+// 0x0058
+struct FPremiumCatalogLandingPageTab
+{
+	struct FGuid                                       Id;                                                       // 0x0000(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FText                                       DisplayName;                                              // 0x0010(0x0038) (Edit)
+	TArray<class UPremiumCatalogLandingPageItemDataAsset*> Children;                                                 // 0x0048(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct Athena.WeaponProjectile
-// 0x0240
+// 0x0238
 struct FWeaponProjectile
 {
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0000(0x0098) MISSED OFFSET
-	struct FProjectileAim                              AimData;                                                  // 0x0098(0x0020)
-	unsigned char                                      UnknownData01[0x188];                                     // 0x00B8(0x0188) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x90];                                      // 0x0000(0x0090) MISSED OFFSET
+	struct FProjectileAim                              AimData;                                                  // 0x0090(0x0020)
+	unsigned char                                      UnknownData01[0x188];                                     // 0x00B0(0x0188) MISSED OFFSET
+};
+
+// ScriptStruct Athena.ProjectileAttackGroup
+// 0x0030
+struct FProjectileAttackGroup
+{
+	TArray<struct FWeaponProjectile>                   Projectiles;                                              // 0x0000(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ProjectileShotParams
@@ -7305,15 +7352,19 @@ struct FRiddleTextPhrasebookEntry
 };
 
 // ScriptStruct Athena.SittingActionStateParams
-// 0x0040 (0x0050 - 0x0010)
+// 0x0060 (0x0070 - 0x0010)
 struct FSittingActionStateParams : public FControlObjectActionStateParams
 {
 	struct FLookAtOffsetParams                         LookAtOffsetParams;                                       // 0x0010(0x001C) (Edit, BlueprintVisible, BlueprintReadOnly)
 	bool                                               ShouldHideFirstPersonMesh;                                // 0x002C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowInteractWithOtherObjectsWhileSitting;                // 0x002D(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x002E(0x0002) MISSED OFFSET
-	TArray<class UClass*>                              AllowedInteractableTypes;                                 // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              AllowedInteractionNotificationInputIds;                   // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	class UWwiseEvent*                                 OnSitSfx;                                                 // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 OnStandSfx;                                               // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     SeatPool;                                                 // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowInteractWithOtherObjectsWhileSitting;                // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	TArray<class UClass*>                              AllowedInteractableTypes;                                 // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              AllowedInteractionNotificationInputIds;                   // 0x0060(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Athena.RumbleParameters
@@ -8318,13 +8369,6 @@ struct FVomitProjectiles
 	unsigned char                                      UnknownData00[0x22];                                      // 0x0026(0x0022) MISSED OFFSET
 };
 
-// ScriptStruct Athena.ChapterQuests
-// 0x0010
-struct FChapterQuests
-{
-	TArray<class UQuestDescDataAsset*>                 QuestDescAssets;                                          // 0x0000(0x0010) (Edit, ZeroConstructor)
-};
-
 // ScriptStruct Athena.VoyageGeneratorSimBlackboard
 // 0x0040
 struct FVoyageGeneratorSimBlackboard
@@ -8539,13 +8583,13 @@ struct FAthenaAnimationPets
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	TEnumAsByte<EAthenaAnimationPetSpawnState>         PetSpawnState;                                            // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               PetIsAngry;                                               // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               PetIsSad;                                                 // 0x000A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               FlyingScared;                                             // 0x000B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               PetUniqueActionActive;                                    // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               PetIsStartled;                                            // 0x000D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               StaticBaseHeldPoseActive;                                 // 0x000E(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseAlternativeStrokeAnimations;                           // 0x000F(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               PetIsAngry;                                               // 0x0009(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               PetIsSad;                                                 // 0x000A(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               FlyingScared;                                             // 0x000B(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               PetUniqueActionActive;                                    // 0x000C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               PetIsStartled;                                            // 0x000D(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               StaticBaseHeldPoseActive;                                 // 0x000E(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               UseAlternativeStrokeAnimations;                           // 0x000F(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAthenaAnimationPetHeldState>          CurrentHeldState;                                         // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAthenaAnimationPetRoamingState>       CurrentRoamingState;                                      // 0x0011(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EWieldedItemAnimationState>            ParentCurrentWieldedState;                                // 0x0012(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
@@ -8810,91 +8854,6 @@ struct FAimSensitivitySettingsDefaults
 	TArray<struct FAimSensitivitySettingsEntry>        Entries;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
-// ScriptStruct Athena.RewardDefinition
-// 0x0038
-struct FRewardDefinition
-{
-	struct FName                                       RewardIdentifier;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPopUpMessageDesc*                           PopUp;                                                    // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UReward*>                             Rewards;                                                  // 0x0010(0x0010) (Edit, ExportObject, ZeroConstructor)
-	TArray<class UClass*>                              PrerequisiteEntitlements;                                 // 0x0020(0x0010) (Edit, ZeroConstructor)
-	bool                                               AllowedFromInsecureSources;                               // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Athena.WeightedRewardTableUnit
-// 0x0010
-struct FWeightedRewardTableUnit
-{
-	class UClass*                                      Entitlement;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           Value;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.WeightedRewardTable
-// 0x0010
-struct FWeightedRewardTable
-{
-	TArray<struct FWeightedRewardTableUnit>            Rewards;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct Athena.DropItemParams
-// 0x0048
-struct FDropItemParams
-{
-	TArray<TAssetPtr<class UClass>>                    AttachOnDropParentTypes;                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FVector                                     DropItemOffset;                                           // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxShallowWaterHeightToAllowItemDrop;                     // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     DropItemPosTestTraceChannel;                              // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
-	float                                              WaterVolumeOverlapRadius;                                 // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDroppedItemPitchRoll;                                  // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ItemWorldProxyCapsuleCastRadius;                          // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ItemWorldProxyCapsuleCastHeight;                          // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ItemWorldProxyCapsuleDownCastRadiusModifier;              // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              DefaultLineTraceDepth;                                    // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LineTraceOffsetWhenBelowDefaultLineTraceDepth;            // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SweepPercentageOnHit;                                     // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HitDiffTolerance;                                         // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.PhraseData
-// 0x0040
-struct FPhraseData
-{
-	struct FText                                       TextToBroadcast;                                          // 0x0000(0x0038) (Edit)
-	bool                                               RequiresWieldedItemObjectNameAsArgument;                  // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Athena.HoldToUseInput
-// 0x0030
-struct FHoldToUseInput
-{
-	struct FName                                       FeatureFlag;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      StartUse;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      StopUse;                                                  // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWieldableItemActionVisuals                 ActionVisuals;                                            // 0x0018(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-};
-
-// ScriptStruct Athena.HealthRegenState
-// 0x0008
-struct FHealthRegenState
-{
-	float                                              CurrentPoolAmount;                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ERegenerationState>                    State;                                                    // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Athena.FeedStruct
-// 0x0010
-struct FFeedStruct
-{
-	class AActor*                                      ActorToFeed;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               WantRules;                                                // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
 // ScriptStruct Athena.StandardHullDragDynamicsParameters
 // 0x0018
 struct FStandardHullDragDynamicsParameters
@@ -8956,6 +8915,137 @@ struct FShipSizePartCustomizationInfo
 {
 	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	TArray<struct FShipPartCustomizationInfo>          Customizations;                                           // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Athena.AllianceNotificationData
+// 0x0010
+struct FAllianceNotificationData
+{
+	TEnumAsByte<EAllianceNotificationType>             NotificationType;                                         // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.AlliancePennantData
+// 0x0038
+struct FAlliancePennantData
+{
+	struct FStringAssetReference                       PennantDesc;                                              // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FAllianceNotificationData>           PopUpNotificationDescs;                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FStringAssetReference                       GenericPopupAllianceIcon;                                 // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class UTexture*                                    MapFlagIcon;                                              // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ShipSizePartCustomizationNameData
+// 0x0018
+struct FShipSizePartCustomizationNameData
+{
+	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FName>                               PartNames;                                                // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Athena.RewardDefinition
+// 0x0038
+struct FRewardDefinition
+{
+	struct FName                                       RewardIdentifier;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPopUpMessageDesc*                           PopUp;                                                    // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UReward*>                             Rewards;                                                  // 0x0010(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UClass*>                              PrerequisiteEntitlements;                                 // 0x0020(0x0010) (Edit, ZeroConstructor)
+	bool                                               AllowedFromInsecureSources;                               // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               AwardToAccountAndNotJustToPirate;                         // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct Athena.WeightedRewardEntry
+// 0x000C
+struct FWeightedRewardEntry
+{
+	struct FRewardId                                   Reward;                                                   // 0x0000(0x0008) (Edit)
+	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.WeightedRewardDistribution
+// 0x0010
+struct FWeightedRewardDistribution
+{
+	TArray<struct FWeightedRewardEntry>                RewardWeightings;                                         // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Athena.WeightedRewardTableUnit
+// 0x0010
+struct FWeightedRewardTableUnit
+{
+	class UClass*                                      Entitlement;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           Value;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.WeightedRewardTable
+// 0x0010
+struct FWeightedRewardTable
+{
+	TArray<struct FWeightedRewardTableUnit>            Rewards;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Athena.DropItemParams
+// 0x0048
+struct FDropItemParams
+{
+	TArray<TAssetPtr<class UClass>>                    AttachOnDropParentTypes;                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FVector                                     DropItemOffset;                                           // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxShallowWaterHeightToAllowItemDrop;                     // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     DropItemPosTestTraceChannel;                              // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
+	float                                              WaterVolumeOverlapRadius;                                 // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDroppedItemPitchRoll;                                  // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ItemWorldProxyCapsuleCastRadius;                          // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ItemWorldProxyCapsuleCastHeight;                          // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ItemWorldProxyCapsuleDownCastRadiusModifier;              // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              DefaultLineTraceDepth;                                    // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              LineTraceOffsetWhenBelowDefaultLineTraceDepth;            // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SweepPercentageOnHit;                                     // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HitDiffTolerance;                                         // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.PhraseData
+// 0x0040
+struct FPhraseData
+{
+	struct FText                                       TextToBroadcast;                                          // 0x0000(0x0038) (Edit)
+	bool                                               RequiresWieldedItemObjectNameAsArgument;                  // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               WieldedItemObjectNameIsNotLocalised;                      // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct Athena.HoldToUseInput
+// 0x0038
+struct FHoldToUseInput
+{
+	struct FName                                       FeatureFlag;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      StartUse;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      StopUse;                                                  // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWieldableItemActionVisuals                 ActionVisuals;                                            // 0x0018(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	bool                                               SplitActionRules;                                         // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.HealthRegenState
+// 0x0008
+struct FHealthRegenState
+{
+	float                                              CurrentPoolAmount;                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ERegenerationState>                    State;                                                    // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Athena.FeedStruct
+// 0x0010
+struct FFeedStruct
+{
+	class AActor*                                      ActorToFeed;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               WantRules;                                                // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ItemConsumptionStatusChanceEntry
@@ -9103,31 +9193,30 @@ struct FShipInternalWaterParams
 	class UCurveFloat*                                 FillPercentageVSMaxRollAngleCurve;                        // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Athena.AllianceNotificationData
-// 0x0010
-struct FAllianceNotificationData
+// ScriptStruct Athena.Encounter
+// 0x0030
+struct FEncounter
 {
-	TEnumAsByte<EAllianceNotificationType>             NotificationType;                                         // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      EncounterActor;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0008(0x0028) MISSED OFFSET
 };
 
-// ScriptStruct Athena.AlliancePennantData
-// 0x0038
-struct FAlliancePennantData
+// ScriptStruct Athena.EncounterListenerData
+// 0x0030
+struct FEncounterListenerData
 {
-	struct FStringAssetReference                       PennantDesc;                                              // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FAllianceNotificationData>           PopUpNotificationDescs;                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FStringAssetReference                       GenericPopupAllianceIcon;                                 // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UTexture*                                    MapFlagIcon;                                              // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<TEnumAsByte<EEncounterListenerType>>        EncounterListenerTypes;                                   // 0x0000(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              EncounterListeners;                                       // 0x0010(0x0010) (ZeroConstructor)
+	TArray<struct FVector>                             EncounterListenerLocations;                               // 0x0020(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct Athena.ShipSizePartCustomizationNameData
-// 0x0018
-struct FShipSizePartCustomizationNameData
+// ScriptStruct Athena.EncounterStatus
+// 0x0040
+struct FEncounterStatus
 {
-	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FName>                               PartNames;                                                // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class AActor*                                      EncounterListenerActor;                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FEncounter                                  Encounter;                                                // 0x0008(0x0030)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Athena.RammableDamageEntry
@@ -9411,12 +9500,33 @@ struct FAnimatedMechanismActionState
 	double                                             EndTime;                                                  // 0x0010(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
+// ScriptStruct Athena.MechanismFloatAnimationCurve
+// 0x0008
+struct FMechanismFloatAnimationCurve
+{
+	class UMechanismAnimationCurve_Float*              CurveAsset;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Athena.AllowedInteractableTypes
 // 0x0028
 struct FAllowedInteractableTypes
 {
 	TAssetPtr<class UClass>                            ActorType;                                                // 0x0000(0x0020) (Edit)
 	struct FCollisionProfileName                       CollisionProfileName;                                     // 0x0020(0x0008) (Edit)
+};
+
+// ScriptStruct Athena.MechanismTransformAnimationCurve
+// 0x0008
+struct FMechanismTransformAnimationCurve
+{
+	class UMechanismAnimationCurve_Transform*          CurveAsset;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ToggleAnimatedMechanismActionCachedCurveEvent
+// 0x0010
+struct FToggleAnimatedMechanismActionCachedCurveEvent
+{
+	TArray<class UMechanismAnimationEvent*>            Events;                                                   // 0x0000(0x0010) (ZeroConstructor, Transient)
 };
 
 // ScriptStruct Athena.MechanismBindingSettings
@@ -9472,6 +9582,15 @@ struct FActorsOverlappingMechanismData
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
+// ScriptStruct Athena.ClientMarkerRepresentation
+// 0x0018
+struct FClientMarkerRepresentation
+{
+	struct FVector                                     MarkerPosition;                                           // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	class UParticleSystemComponent*                    ParticleSystemComponent;                                  // 0x0010(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // ScriptStruct Athena.CanvasLOD
 // 0x000C
 struct FCanvasLOD
@@ -9500,6 +9619,42 @@ struct FVoyageProposalOverride
 	class UClass*                                      Proposal;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                ProposalIndex;                                            // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Athena.CollectorsChestItemSlotDefinition
+// 0x0040
+struct FCollectorsChestItemSlotDefinition
+{
+	TArray<TAssetPtr<class UClass>>                    TargetObjectTypes;                                        // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FTransform                                  RelativeTransform;                                        // 0x0010(0x0030) (Edit, IsPlainOldData)
+};
+
+// ScriptStruct Athena.CollectorsChestStoredItemInfo
+// 0x0020
+struct FCollectorsChestStoredItemInfo
+{
+	class AItemInfo*                                   ItemInfo;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class USceneComponent>              SourceAttachParent;                                       // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       SourceAttachSocket;                                       // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	int64_t                                            ItemStoreTimestamp;                                       // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.GoldInContainerData
+// 0x0028
+struct FGoldInContainerData
+{
+	struct FRewardId                                   RewardIdentifier;                                         // 0x0000(0x0008) (Edit, DisableEditOnInstance)
+	struct FVector                                     Position;                                                 // 0x0008(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     Scale;                                                    // 0x0014(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMesh*                                 GoldMesh;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Athena.WeightedGoldReward
+// 0x000C
+struct FWeightedGoldReward
+{
+	struct FRewardId                                   RewardId;                                                 // 0x0000(0x0008) (Edit)
+	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.SeasonTierDefinition
@@ -9864,6 +10019,15 @@ struct FEventObjectStowed
 struct FAthenaCharacterAggregateTickFunction : public FTickFunction
 {
 	unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
+};
+
+// ScriptStruct Athena.CharacterFlammableComponentAggregateTickFunction
+// 0x0028 (0x0070 - 0x0048)
+struct FCharacterFlammableComponentAggregateTickFunction : public FTickFunction
+{
+	TArray<class UCharacterFlammableComponent*>        FlammableComponents;                                      // 0x0048(0x0010) (ExportObject, ZeroConstructor)
+	class UWorld*                                      CachedWorld;                                              // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Athena.SprintLogicHandler
@@ -10878,13 +11042,6 @@ struct FEventCharacterDeath
 	struct FDamageInstance                             DamageInstance;                                           // 0x0000(0x0020)
 };
 
-// ScriptStruct Athena.EventCharacterInert
-// 0x0001
-struct FEventCharacterInert
-{
-	bool                                               bIsInert;                                                 // 0x0000(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Athena.EventKilledCharacter
 // 0x0008
 struct FEventKilledCharacter
@@ -11015,48 +11172,6 @@ struct FEventCannonAimingCenteredPitch
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Athena.EncounterHandle
-// 0x0014
-struct FEncounterHandle
-{
-	unsigned char                                      UnknownData00[0x14];                                      // 0x0000(0x0014) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EncounterListener
-// 0x0018
-struct FEncounterListener
-{
-	class AActor*                                      EncounterListenerActor;                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     EncounterListenerLocation;                                // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEncounterListenerType>                EncounterListenerType;                                    // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventEncounterBase
-// 0x0020
-struct FEventEncounterBase
-{
-	struct FGuid                                       EncounterId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      EncounterActor;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEncounterType>                        EncounterType;                                            // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
-	float                                              EncounterRadiusSquared;                                   // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventEncounterEnd
-// 0x0000 (0x0020 - 0x0020)
-struct FEventEncounterEnd : public FEventEncounterBase
-{
-
-};
-
-// ScriptStruct Athena.EventEncounterStart
-// 0x0000 (0x0020 - 0x0020)
-struct FEventEncounterStart : public FEventEncounterBase
-{
-
-};
-
 // ScriptStruct Athena.ClientTelemetryConfigurationSettings
 // 0x0010
 struct FClientTelemetryConfigurationSettings
@@ -11106,7 +11221,7 @@ struct FEventIslandDiscoveredNotification
 // 0x0010
 struct FEventPlayerSetFootOnIsland
 {
-	class AAthenaPlayerCharacter*                      Player;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 };
 
@@ -11114,7 +11229,7 @@ struct FEventPlayerSetFootOnIsland
 // 0x0020
 struct FEventPlayerLeftIslandVicinity
 {
-	class AAthenaPlayerCharacter*                      Player;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 	struct FName                                       IslandName;                                               // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
@@ -11124,7 +11239,7 @@ struct FEventPlayerLeftIslandVicinity
 // 0x0020
 struct FEventPlayerEnteredIslandVicinity
 {
-	class AAthenaPlayerCharacter*                      Player;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 	struct FName                                       IslandName;                                               // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
@@ -11496,6 +11611,13 @@ struct FSocketCollisionEvent
 	unsigned char                                      UnknownData00[0xD0];                                      // 0x0000(0x00D0) MISSED OFFSET
 };
 
+// ScriptStruct Athena.EventReceiveChestOfRageComponentState
+// 0x0008
+struct FEventReceiveChestOfRageComponentState
+{
+	class UChestOfRageComponent*                       Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // ScriptStruct Athena.EventGameNarrationClientNotificationMessage
 // 0x0028
 struct FEventGameNarrationClientNotificationMessage
@@ -11519,6 +11641,14 @@ struct FEventPlayerSendOutDirectTextMessage
 struct FEventSendNewTextMessageToServer
 {
 	struct FText                                       Message;                                                  // 0x0000(0x0038)
+};
+
+// ScriptStruct Athena.EventRequestSayPhraseWithNonLocalisedArgument
+// 0x0020
+struct FEventRequestSayPhraseWithNonLocalisedArgument
+{
+	class FString                                      PhraseKey;                                                // 0x0000(0x0010) (ZeroConstructor)
+	class FString                                      Argument;                                                 // 0x0010(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.EventRequestSayPhraseWithArgument
@@ -11613,13 +11743,6 @@ struct FAmmoUI
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 	class APawn*                                       TargetPawn;                                               // 0x0018(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x90];                                      // 0x0020(0x0090) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventReceiveCollectorsChestItemSlotsState
-// 0x0008
-struct FEventReceiveCollectorsChestItemSlotsState
-{
-	class UCollectorsChestItemSlotInteractable*        Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct Athena.RegisterCeremonyInterface
@@ -11758,7 +11881,7 @@ struct FContestCrewManagementMemberData
 	class FString                                      GamerTag;                                                 // 0x0010(0x0010) (ZeroConstructor)
 	TEnumAsByte<EMuteState>                            Muted;                                                    // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
-	struct FStringAssetReference                       CrewIcon;                                                 // 0x0028(0x0010) (ZeroConstructor)
+	class FString                                      CrewIcon;                                                 // 0x0028(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.ContestCrewManagementMemberDataEvent
@@ -11990,12 +12113,13 @@ struct FCachedRespawnPoint
 };
 
 // ScriptStruct Athena.PlayerJoinedCrew
-// 0x0040 (0x0050 - 0x0010)
+// 0x0078 (0x0088 - 0x0010)
 struct FPlayerJoinedCrew : public FNetworkEventStruct
 {
 	struct FText                                       PlayerName;                                               // 0x0010(0x0038)
-	bool                                               IsJoining;                                                // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	struct FText                                       PlayerNameOverride;                                       // 0x0048(0x0038)
+	bool                                               IsJoining;                                                // 0x0080(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EventChangeMatchmakingVisibility
@@ -12084,16 +12208,16 @@ struct FVoyageChestDiscoveredInContest : public FNetworkEventStruct
 };
 
 // ScriptStruct Athena.VoyageChestDiscovered
-// 0x0028
+// 0x0030
 struct FVoyageChestDiscovered
 {
-	class FString                                      DiscovererName;                                           // 0x0000(0x0010) (ZeroConstructor)
-	bool                                               IsDiscovererMe;                                           // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	struct FName                                       ChestRarity;                                              // 0x0014(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               PlayAudio;                                                // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
-	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FNetActorPtr                                PlayerStateOfDiscoverer;                                  // 0x0000(0x0014)
+	bool                                               IsDiscovererMe;                                           // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
+	struct FName                                       ChestRarity;                                              // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               PlayAudio;                                                // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
+	class UPopUpMessageDesc*                           PopUpDesc;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.VoyageComplete
@@ -12241,6 +12365,15 @@ struct FFocusRadialInventorySlot : public FRadialInventoryEvent
 	int                                                SlotIndex;                                                // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Athena.CanShowSpecialAmmoButton
+// 0x003C (0x0040 - 0x0004)
+struct FCanShowSpecialAmmoButton : public FRadialInventoryEvent
+{
+	bool                                               CanShow;                                                  // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+	struct FText                                       Text;                                                     // 0x0008(0x0038)
+};
+
 // ScriptStruct Athena.CanShowSecondaryActionButton
 // 0x003C (0x0040 - 0x0004)
 struct FCanShowSecondaryActionButton : public FRadialInventoryEvent
@@ -12280,13 +12413,14 @@ struct FClearRadialInventory : public FRadialInventoryEvent
 };
 
 // ScriptStruct Athena.ShowRadialInventory
-// 0x004C (0x0050 - 0x0004)
+// 0x0054 (0x0058 - 0x0004)
 struct FShowRadialInventory : public FRadialInventoryEvent
 {
 	struct FName                                       ActionKeyBinding;                                         // 0x0004(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       SecondaryActionKeyBinding;                                // 0x000C(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	struct FText                                       ActionText;                                               // 0x0018(0x0038)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	struct FText                                       ActionText;                                               // 0x0010(0x0038)
+	struct FName                                       SecondaryActionKeyBinding;                                // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       SpecialAmmoKeyBinding;                                    // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.EnsembleAggregateTickFunction
@@ -12382,13 +12516,6 @@ struct FMermaidAggregateTickFunction : public FTickFunction
 	unsigned char                                      UnknownData00[0x98];                                      // 0x0048(0x0098) MISSED OFFSET
 };
 
-// ScriptStruct Athena.EventSpawnedFromSpawnComponent
-// 0x0001
-struct FEventSpawnedFromSpawnComponent
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
 // ScriptStruct Athena.EventSpawnComponentRequest
 // 0x0010
 struct FEventSpawnComponentRequest
@@ -12450,13 +12577,6 @@ struct FKrakenAnimatedTentacleHoldingStateTransitionChance
 	float                                              WeightedChance;                                           // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	class UClass*                                      StateToTransitionTo;                                      // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventReceiveQuestBookPagesInContainerComponentState
-// 0x0008
-struct FEventReceiveQuestBookPagesInContainerComponentState
-{
-	class UQuestBookPagesInContainerComponent*         Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct Athena.SimpleLeakerComponentAggregateTickFunction
@@ -12723,37 +12843,6 @@ struct FPlayerObjectUsageBaseTelemetryFragment
 	class FString                                      ObjectID;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
-// ScriptStruct Athena.CrewMember
-// 0x0010
-struct FCrewMember
-{
-	class FString                                      UserId;                                                   // 0x0000(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Athena.PlayerBriggedEndTelemetryEvent
-// 0x0020
-struct FPlayerBriggedEndTelemetryEvent
-{
-	struct FGuid                                       BriggedId;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FDateTime                                   BriggedStartDateTime;                                     // 0x0010(0x0008) (ZeroConstructor)
-	TEnumAsByte<EBrigReleaseReason>                    ReleaseReason;                                            // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Athena.SessionVisibilityChangedTelemetryEvent
-// 0x0010
-struct FSessionVisibilityChangedTelemetryEvent
-{
-	class FString                                      SessionVisibility;                                        // 0x0000(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Athena.ShipScuttledTelemetryEvent
-// 0x0001
-struct FShipScuttledTelemetryEvent
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
 // ScriptStruct Athena.OtherPartyTelemetryFragmentInput
 // 0x0007 (0x0008 - 0x0001)
 struct FOtherPartyTelemetryFragmentInput : public FTelemetryFragmentInput
@@ -12975,6 +13064,13 @@ struct FShipRepairTelemetryEvent
 	class FString                                      RepairedShipPart;                                         // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	int                                                DamageLevel;                                              // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              RepairPercentage;                                         // 0x0034(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ClientInputMatchmakingNotificationResultTelemetryEvent
+// 0x0001
+struct FClientInputMatchmakingNotificationResultTelemetryEvent
+{
+	bool                                               Accepted;                                                 // 0x0000(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.ClientEndEngagementMessageTelemetryEvent
@@ -13236,13 +13332,6 @@ struct FTutorialStepEnteredEvent
 	struct FName                                       StepName;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Athena.EventReceiveOpenableItemComponentState
-// 0x0008
-struct FEventReceiveOpenableItemComponentState
-{
-	class UOpenableItemComponent*                      Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
 // ScriptStruct Athena.PioneerObjectiveCompleteEvent
 // 0x0001
 struct FPioneerObjectiveCompleteEvent
@@ -13490,8 +13579,18 @@ struct FCrewManagementMatchmakingVisibilityData
 	unsigned char                                      UnknownData01[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct Athena.CrewManagementArenaRivalVotingData
+// 0x000C
+struct FCrewManagementArenaRivalVotingData
+{
+	bool                                               Voted;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	int                                                VotesCast;                                                // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                VotesRequired;                                            // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Athena.CrewManagementData
-// 0x0038
+// 0x0048
 struct FCrewManagementData
 {
 	TArray<struct FCrewManagementMemberData>           CrewMembers;                                              // 0x0000(0x0010) (ZeroConstructor)
@@ -13499,15 +13598,16 @@ struct FCrewManagementData
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	struct FCrewManagementShipData                     Ship;                                                     // 0x0014(0x0010)
 	struct FCrewManagementMatchmakingVisibilityData    MatchmakingVisibility;                                    // 0x0024(0x0010)
-	bool                                               CrewFull;                                                 // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
+	struct FCrewManagementArenaRivalVotingData         ArenaRivalVoting;                                         // 0x0034(0x000C)
+	bool                                               CrewFull;                                                 // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Athena.CrewManagementEvent
-// 0x0038
+// 0x0048
 struct FCrewManagementEvent
 {
-	struct FCrewManagementData                         CrewDefinition;                                           // 0x0000(0x0038)
+	struct FCrewManagementData                         CrewDefinition;                                           // 0x0000(0x0048)
 };
 
 // ScriptStruct Athena.StopRequestCrewManagementEvent
@@ -13894,6 +13994,13 @@ struct FPetShopResponseEvent
 	struct FPetShopDefinition                          Data;                                                     // 0x0000(0x0020)
 };
 
+// ScriptStruct Athena.PetShopRefreshEvent
+// 0x0001
+struct FPetShopRefreshEvent
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct Athena.PetShopRequestEvent
 // 0x0001
 struct FPetShopRequestEvent
@@ -13971,100 +14078,6 @@ struct FTaleQuestDesc : public FQuestDesc
 	struct FName                                       TaleFailBannerTag;                                        // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               Development;                                              // 0x0080(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Athena.RewardRequestCrewGame
-// 0x0020
-struct FRewardRequestCrewGame
-{
-	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FPirateIdentity>                     Pirates;                                                  // 0x0010(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Athena.RewardGrantedEvent
-// 0x0050
-struct FRewardGrantedEvent
-{
-	class FString                                      RewardId;                                                 // 0x0000(0x0010) (ZeroConstructor)
-	TEnumAsByte<EWalletCurrencyId>                     CurrencyId;                                               // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	uint32_t                                           CurrencyAmount;                                           // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
-	class FString                                      CompanyId;                                                // 0x0018(0x0010) (ZeroConstructor)
-	uint32_t                                           Xp;                                                       // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           NumLevels;                                                // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
-	TArray<class FString>                              Entitlements;                                             // 0x0030(0x0010) (ZeroConstructor)
-	struct FGuid                                       RequestID;                                                // 0x0040(0x0010) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.XPGrantedEvent
-// 0x002C
-struct FXPGrantedEvent
-{
-	uint32_t                                           XPGranted;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CompanyId;                                                // 0x0004(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       RequestID;                                                // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       BootyId;                                                  // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.CurrencyGrantedEvent
-// 0x0018
-struct FCurrencyGrantedEvent
-{
-	uint32_t                                           Amount;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EWalletCurrencyId>                     Currency;                                                 // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
-	struct FGuid                                       TransactionId;                                            // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.PenaltyRequestEvent
-// 0x0040
-struct FPenaltyRequestEvent
-{
-	struct FGuid                                       RequestID;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0028)
-	struct FName                                       PenaltyId;                                                // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.RewardRequestForPirateEvent
-// 0x0060
-struct FRewardRequestForPirateEvent
-{
-	struct FGuid                                       RequestID;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0028)
-	struct FGuid                                       CrewId;                                                   // 0x0038(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       RewardId;                                                 // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CompanyAffiliation;                                       // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               FromInsecureSource;                                       // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               NotifyPlayer;                                             // 0x0059(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x005A(0x0006) MISSED OFFSET
-};
-
-// ScriptStruct Athena.AllianceRewardRequestEvent
-// 0x0078
-struct FAllianceRewardRequestEvent
-{
-	struct FGuid                                       AllianceId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       RequestID;                                                // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FRewardRequestCrewGame                      PrimaryRecipient;                                         // 0x0020(0x0020)
-	TArray<struct FRewardRequestCrewGame>              SecondaryRecipients;                                      // 0x0040(0x0010) (ZeroConstructor)
-	struct FName                                       RewardId;                                                 // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CompanyAffiliation;                                       // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       BootyId;                                                  // 0x0060(0x0010) (ZeroConstructor, IsPlainOldData)
-	bool                                               NotifyPlayer;                                             // 0x0070(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Athena.RewardRequestEvent
-// 0x0048
-struct FRewardRequestEvent
-{
-	struct FGuid                                       RequestID;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FPirateIdentity>                     PirateIdentities;                                         // 0x0010(0x0010) (ZeroConstructor)
-	struct FGuid                                       CrewId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       RewardId;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CompanyAffiliation;                                       // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               NotifyPlayer;                                             // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Athena.WalletLastKnownBalanceUpdatedEvent
@@ -14585,6 +14598,27 @@ struct FLocalGameChatStatusEvent
 	TEnumAsByte<ELocalGameChatStatus>                  Status;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Athena.ClientInputMatchmakingResult
+// 0x0001
+struct FClientInputMatchmakingResult
+{
+	bool                                               IsAccepted;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.BootFlowCrossInputMatchmakingStateEvent
+// 0x0001
+struct FBootFlowCrossInputMatchmakingStateEvent
+{
+	bool                                               CrossInput;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventBackfillWeightingChange
+// 0x0004
+struct FEventBackfillWeightingChange
+{
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0000(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct Athena.HideGenericConfirmationEvent
 // 0x0001
 struct FHideGenericConfirmationEvent
@@ -14801,7 +14835,7 @@ struct FPirateCreationEvent_Begin
 };
 
 // ScriptStruct Athena.BootFlowWhatsNewArticle
-// 0x0060
+// 0x0070
 struct FBootFlowWhatsNewArticle
 {
 	class FString                                      Title;                                                    // 0x0000(0x0010) (ZeroConstructor)
@@ -14810,6 +14844,7 @@ struct FBootFlowWhatsNewArticle
 	class FString                                      GridImage;                                                // 0x0030(0x0010) (ZeroConstructor)
 	class FString                                      GridPrimaryDescription;                                   // 0x0040(0x0010) (ZeroConstructor)
 	class FString                                      GridSecondaryDescription;                                 // 0x0050(0x0010) (ZeroConstructor)
+	class FString                                      DescriptionTimes;                                         // 0x0060(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.BootFlowSetWhatsNewArticleList
@@ -14945,6 +14980,13 @@ struct FQueryConfirmInviteResponse
 	class FString                                      ErrorMessage;                                             // 0x0008(0x0010) (ZeroConstructor)
 	bool                                               IsErrorMessage;                                           // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.BootFlowInviteConfirmedEvent
+// 0x0001
+struct FBootFlowInviteConfirmedEvent
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Athena.RejectInviteEvent
@@ -15369,7 +15411,7 @@ struct FContestMatchmakingClientRequestModel
 };
 
 // ScriptStruct Athena.WhatsNewArticleModel
-// 0x0060
+// 0x0070
 struct FWhatsNewArticleModel
 {
 	class FString                                      Title;                                                    // 0x0000(0x0010) (ZeroConstructor)
@@ -15378,6 +15420,7 @@ struct FWhatsNewArticleModel
 	class FString                                      GridImage;                                                // 0x0030(0x0010) (ZeroConstructor)
 	class FString                                      GridPrimaryDescription;                                   // 0x0040(0x0010) (ZeroConstructor)
 	class FString                                      GridSecondaryDescription;                                 // 0x0050(0x0010) (ZeroConstructor)
+	class FString                                      DescriptionTimes;                                         // 0x0060(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.WhatsNewArticleClientResponseModel
@@ -15565,6 +15608,22 @@ struct FContestEventScoreUpdated
 struct FContestEventShipAssignmentsUpdated
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Athena.CrewMemberRivalVoteEvent
+// 0x0010
+struct FCrewMemberRivalVoteEvent
+{
+	class APlayerState*                                CrewMemberPlayerState;                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               IsInFavourOfRivalChange;                                  // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.CrewRequestedRivalChangeEvent
+// 0x0010
+struct FCrewRequestedRivalChangeEvent
+{
+	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.ContestCrewMemberModel
@@ -16208,12 +16267,13 @@ struct FDeadActionStateConstructionInfo : public FActorActionStateConstructionIn
 };
 
 // ScriptStruct Athena.EmoteActionStateConstructionInfo
-// 0x0010 (0x0040 - 0x0030)
+// 0x0058 (0x0088 - 0x0030)
 struct FEmoteActionStateConstructionInfo : public FActorActionStateConstructionInfo
 {
-	struct FName                                       EmoteIdentifier;                                          // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               ForcedEmote;                                              // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	struct FEmoteData                                  EmoteData;                                                // 0x0030(0x0048)
+	struct FName                                       EmoteIdentifier;                                          // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               ForcedEmote;                                              // 0x0080(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EmoteActionStateParams
@@ -16348,6 +16408,13 @@ struct FMigrationActionStateConstructionInfo : public FActorActionStateConstruct
 
 };
 
+// ScriptStruct Athena.ClientMigrationEndedEvent
+// 0x0001
+struct FClientMigrationEndedEvent
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct Athena.ServerMigrationStateChanged
 // 0x0001
 struct FServerMigrationStateChanged
@@ -16420,10 +16487,10 @@ struct FShovelDigActionStateConstructionInfo : public FActorActionStateConstruct
 };
 
 // ScriptStruct Athena.SittingActionStateConstructionInfo
-// 0x0050 (0x0098 - 0x0048)
+// 0x0070 (0x00B8 - 0x0048)
 struct FSittingActionStateConstructionInfo : public FControlObjectActionStateConstructionInfo
 {
-	struct FSittingActionStateParams                   SittingActionStateParams;                                 // 0x0048(0x0050)
+	struct FSittingActionStateParams                   SittingActionStateParams;                                 // 0x0048(0x0070)
 };
 
 // ScriptStruct Athena.EventLocalPlayerExittedSittingState
@@ -16651,41 +16718,6 @@ struct FEventRemoveStackableLocomotionActionState
 struct FEventAddStackableLocomotionActionState
 {
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventPagesInContainerTaken
-// 0x0001
-struct FEventPagesInContainerTaken
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventGoldInContainerTaken
-// 0x0001
-struct FEventGoldInContainerTaken
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventOpenableItemAnimationFinished
-// 0x0001
-struct FEventOpenableItemAnimationFinished
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventOpenableItemStateChanged
-// 0x0002
-struct FEventOpenableItemStateChanged
-{
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0000(0x0002) MISSED OFFSET
-};
-
-// ScriptStruct Athena.EventNotifyOpenableItemState
-// 0x0001
-struct FEventNotifyOpenableItemState
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ClientRequestExitConcealingObjectNetworkEvent
@@ -17360,20 +17392,6 @@ struct FEventPlayerProvidedInput
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Athena.EventPlayerLeftProximity
-// 0x0008
-struct FEventPlayerLeftProximity
-{
-	class AAthenaPlayerCharacter*                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventPlayerEnteredProximity
-// 0x0008
-struct FEventPlayerEnteredProximity
-{
-	class AAthenaPlayerCharacter*                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Athena.EventCancelForceFeedback
 // 0x0010
 struct FEventCancelForceFeedback
@@ -18041,77 +18059,6 @@ struct FEventSkeletonFortDoorUnlocked
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Athena.EventClearCrewProgressOverride
-// 0x0010
-struct FEventClearCrewProgressOverride
-{
-	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventSetCrewProgressOverride
-// 0x0018
-struct FEventSetCrewProgressOverride
-{
-	class UClass*                                      ProgressId;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CrewId;                                                   // 0x0008(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventNamedProgressLocationDestroyed
-// 0x0008
-struct FEventNamedProgressLocationDestroyed
-{
-	class AProgressSpawnLocation*                      SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventNamedProgressLocationCreated
-// 0x0008
-struct FEventNamedProgressLocationCreated
-{
-	class AProgressSpawnLocation*                      SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventShipSpawnLocationDestroyed
-// 0x0008
-struct FEventShipSpawnLocationDestroyed
-{
-	class AShipSpawnLocation*                          SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventShipSpawnLocationCreated
-// 0x0008
-struct FEventShipSpawnLocationCreated
-{
-	class AShipSpawnLocation*                          SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventGhostShipPlayerSpawnLocationDestroyed
-// 0x0008
-struct FEventGhostShipPlayerSpawnLocationDestroyed
-{
-	class AGhostShipPlayerSpawnLocation*               SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventGhostShipPlayerSpawnLocationCreated
-// 0x0008
-struct FEventGhostShipPlayerSpawnLocationCreated
-{
-	class AGhostShipPlayerSpawnLocation*               SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventSpawnLocationDestroyed
-// 0x0008
-struct FEventSpawnLocationDestroyed
-{
-	class ASpawnLocation*                              SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventSpawnLocationCreated
-// 0x0008
-struct FEventSpawnLocationCreated
-{
-	class ASpawnLocation*                              SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Athena.EventStormLightningImpact
 // 0x0010
 struct FEventStormLightningImpact
@@ -18250,6 +18197,19 @@ struct FEventCargoRunCrateSetDropOff
 {
 	struct FGuid                                       DropOffLocationId;                                        // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	int64_t                                            DeliveryDeadlineAbsolute;                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ThrowGrenadeRpc
+// 0x0030 (0x0040 - 0x0010)
+struct FThrowGrenadeRpc : public FBoxedRpc
+{
+	class AGrenade*                                    Grenade;                                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              TimeHeld;                                                 // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              WorldYaw;                                                 // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              ViewPitch;                                                // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LocalThrowLocation;                                       // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LocalLaunchVelocity;                                      // 0x0030(0x000C) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EventLanternIsLightOnStateChanged
@@ -18463,17 +18423,26 @@ struct FAllianceCreatedTelemetryEvent
 };
 
 // ScriptStruct Athena.PlayerReleasedFromBrig
-// 0x0010 (0x0020 - 0x0010)
-struct FPlayerReleasedFromBrig : public FNetworkEventStruct
+// 0x0010
+struct FPlayerReleasedFromBrig
 {
-	class FString                                      PlayerName;                                               // 0x0010(0x0010) (ZeroConstructor)
+	class FString                                      PlayerName;                                               // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.PlayerBanishedToBrig
-// 0x0010 (0x0020 - 0x0010)
-struct FPlayerBanishedToBrig : public FNetworkEventStruct
+// 0x0010
+struct FPlayerBanishedToBrig
 {
-	class FString                                      PlayerName;                                               // 0x0010(0x0010) (ZeroConstructor)
+	class FString                                      PlayerName;                                               // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.PlayerBrigStatusChanged
+// 0x0018 (0x0028 - 0x0010)
+struct FPlayerBrigStatusChanged : public FNetworkEventStruct
+{
+	struct FNetActorPtr                                NetPlayerState;                                           // 0x0010(0x0014)
+	bool                                               IsFree;                                                   // 0x0024(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Athena.CrewServiceCrewsReplicatedEvent
@@ -19361,13 +19330,15 @@ struct FRemotePreferences
 	float                                              NotificationScale;                                        // 0x00A8(0x0004) (ZeroConstructor, IsPlainOldData)
 	bool                                               ShowOwnCrewNameplates;                                    // 0x00AC(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               ShowOtherCrewNameplates;                                  // 0x00AD(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               NotificationsInMenus;                                     // 0x00AE(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               ToggleRadialMenu;                                         // 0x00AF(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               StickyRadialItems;                                        // 0x00B0(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               HoldActionsDontRequireHold;                               // 0x00B1(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               EscapeAsBackAccessibilityOption;                          // 0x00B2(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               CrossInputPreference;                                     // 0x00B3(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
+	bool                                               ScrambleGamertags;                                        // 0x00AE(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               NotificationsInMenus;                                     // 0x00AF(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               ToggleRadialMenu;                                         // 0x00B0(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               StickyRadialItems;                                        // 0x00B1(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               HoldActionsDontRequireHold;                               // 0x00B2(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               HoldActionsWithHeldItemsDontRequireHold;                  // 0x00B3(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               EscapeAsBackAccessibilityOption;                          // 0x00B4(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               CrossInputPreference;                                     // 0x00B5(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x00B6(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct Athena.RemotePreferencesModel
@@ -19745,11 +19716,11 @@ struct FPlayerDeveloperTelemetryEvent : public FDeveloperTelemetryPayload
 };
 
 // ScriptStruct Athena.AITelemetryFragmentInput
-// 0x00A7 (0x00A8 - 0x0001)
+// 0x00C7 (0x00C8 - 0x0001)
 struct FAITelemetryFragmentInput : public FTelemetryFragmentInput
 {
 	TWeakObjectPtr<class APawn>                        AIPawn;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xA0];                                      // 0x0008(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC0];                                      // 0x0008(0x00C0) MISSED OFFSET
 };
 
 // ScriptStruct Athena.AITelemetryFragment
@@ -19777,6 +19748,13 @@ struct FPlayerKillAITelemetryEvent
 struct FAISpawnTelemetryEvent
 {
 	class FString                                      LocationName;                                             // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.ClientInputBlockedTelemetryEvent
+// 0x0010
+struct FClientInputBlockedTelemetryEvent
+{
+	class FString                                      BlockedKey;                                               // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Athena.ContestBaseTelemetryFragmentInput
@@ -19879,12 +19857,15 @@ struct FServerDeniedClientAtPreLoginTelemetryEvent
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct Athena.WwiseMemoryPoolTelemetryFragment
+// ScriptStruct Athena.AudioDataTelemetryFragment
 // 0x0010
-struct FWwiseMemoryPoolTelemetryFragment
+struct FAudioDataTelemetryFragment
 {
-	uint64_t                                           WwiseDefaultPoolMemoryUsage;                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	uint64_t                                           WwiseBankPoolMemoryUsage;                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           WwiseDefaultPoolMemoryUsage;                              // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           WwiseBankPoolMemoryUsage;                                 // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int8_t                                             WwiseKWeightedOutput;                                     // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	uint32_t                                           OutputClippingCount;                                      // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.FrameTypeTelemetryFragment
@@ -20015,6 +19996,13 @@ struct FStutterDataTelemetryFragment
 	float                                              StutterFramePercentage;                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              StutterFrameDeltaMax;                                     // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              StutterFrameDeltaAverage;                                 // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ServerNetworkDataTelemetryFragment
+// 0x0020
+struct FServerNetworkDataTelemetryFragment
+{
+	struct FPacketDiscardStats                         DiscardedPackets;                                         // 0x0000(0x0020)
 };
 
 // ScriptStruct Athena.NetworkDataTelemetryFragmentInput
@@ -20231,7 +20219,7 @@ struct FStreamingTelemetryConfigurationSettings
 };
 
 // ScriptStruct Athena.UserSettingsTelemetryEvent
-// 0x0038
+// 0x003C
 struct FUserSettingsTelemetryEvent
 {
 	int                                                AutoDetectedMachineSpec;                                  // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -20252,6 +20240,8 @@ struct FUserSettingsTelemetryEvent
 	bool                                               VariableRefreshRate;                                      // 0x0031(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
 	float                                              NotificationScale;                                        // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               CrossInputPreference;                                     // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EventTestControlStateEnd
@@ -20488,11 +20478,12 @@ struct FCrewUpdateEvent
 };
 
 // ScriptStruct Athena.SetFrontEndSelection
-// 0x0002
+// 0x0003
 struct FSetFrontEndSelection
 {
 	bool                                               IsAdventureActive;                                        // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               IsArenaActive;                                            // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               IsTutorialActive;                                         // 0x0002(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.NotifyFrontendOfCurrentPirateStatus
@@ -21596,7 +21587,7 @@ struct FDistanceThrottledRandomParticleSystemPicker
 };
 
 // ScriptStruct Athena.BountyQuestDesc
-// 0x01A8 (0x01D8 - 0x0030)
+// 0x01B8 (0x01E8 - 0x0030)
 struct FBountyQuestDesc : public FQuestDesc
 {
 	class UAIBountySpawner*                            Spawner;                                                  // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -21606,11 +21597,12 @@ struct FBountyQuestDesc : public FQuestDesc
 	TArray<struct FTreasureMapTextDesc>                Descriptions;                                             // 0x00D0(0x0010) (ZeroConstructor)
 	TArray<struct FBountyMapTargetDesc>                Targets;                                                  // 0x00E0(0x0010) (ZeroConstructor)
 	TArray<class UClass*>                              BountyRewards;                                            // 0x00F0(0x0010) (ZeroConstructor)
-	class ALandmark*                                   Landmark;                                                 // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              IslandRotation;                                           // 0x0108(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
-	TAssetPtr<class UTexture>                          MapInventoryTexture;                                      // 0x0110(0x0020)
-	struct FAIBountySpawnerParams                      SpawnerGeneratedData;                                     // 0x0130(0x00A8)
+	TArray<class UItemDescSpawnData*>                  BountyRewardsSpawnData;                                   // 0x0100(0x0010) (ExportObject, ZeroConstructor)
+	class ALandmark*                                   Landmark;                                                 // 0x0110(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              IslandRotation;                                           // 0x0118(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+	TAssetPtr<class UTexture>                          MapInventoryTexture;                                      // 0x0120(0x0020)
+	struct FAIBountySpawnerParams                      SpawnerGeneratedData;                                     // 0x0140(0x00A8)
 };
 
 // ScriptStruct Athena.BountyQuestTargetDefeatedNetworkEvent
@@ -22256,7 +22248,8 @@ struct FServerTelemetryFragment
 	class FString                                      ServerPlayMode;                                           // 0x0038(0x0010) (ZeroConstructor)
 	class FString                                      PlayModeState;                                            // 0x0048(0x0010) (ZeroConstructor)
 	bool                                               ServerIsActive;                                           // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
+	bool                                               ServerIsXboxPadOnlySession;                               // 0x0059(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x005A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct Athena.ServerDeveloperTelemetryEvent
@@ -22480,11 +22473,21 @@ struct FGenericLightTemplate
 	struct FSpotLightData                              SpotLightData;                                            // 0x00C4(0x000C) (Edit)
 };
 
+// ScriptStruct Athena.AggregateWaterInfo
+// 0x0070
+struct FAggregateWaterInfo
+{
+	struct FWaterSimPlane                              WaterPlane;                                               // 0x0000(0x0030)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0030(0x0040) MISSED OFFSET
+};
+
 // ScriptStruct Athena.BuoyancyComponentAggregateTickFunction
-// 0x0058 (0x00A0 - 0x0048)
+// 0x0048 (0x0090 - 0x0048)
 struct FBuoyancyComponentAggregateTickFunction : public FTickFunction
 {
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
+	TArray<struct FAggregateWaterInfo>                 WaterInfoByPlane;                                         // 0x0060(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Athena.BuoyancyStateChanged
@@ -22515,6 +22518,13 @@ struct FEventFinishedSpawning
 struct FEventCharacterKnockedBack
 {
 	struct FName                                       RumbleTag;                                                // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventCharacterInert
+// 0x0001
+struct FEventCharacterInert
+{
+	bool                                               bIsInert;                                                 // 0x0000(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.EventPlayerInteractedWithObject
@@ -22559,6 +22569,20 @@ struct FPlayerBaseTelemetryFragment
 	unsigned char                                      PlatformId;                                               // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 	class FString                                      DeviceID;                                                 // 0x0038(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.EventPlayerLeftProximity
+// 0x0008
+struct FEventPlayerLeftProximity
+{
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventPlayerEnteredProximity
+// 0x0008
+struct FEventPlayerEnteredProximity
+{
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Athena.LoginTokenServiceResultEvent
@@ -22861,13 +22885,15 @@ struct FPersistentUserGameSettings
 	bool                                               Joinable;                                                 // 0x00E0(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               ShowOwnCrewNameplates;                                    // 0x00E1(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               ShowOtherCrewNameplates;                                  // 0x00E2(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               NotificationsInMenus;                                     // 0x00E3(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               ToggleRadialMenu;                                         // 0x00E4(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               StickyRadialItems;                                        // 0x00E5(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               HoldActionsDontRequireHold;                               // 0x00E6(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               EscapeAsBackAccessibilityOption;                          // 0x00E7(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               CrossInputPreference;                                     // 0x00E8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
+	bool                                               ScrambleGamertags;                                        // 0x00E3(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               NotificationsInMenus;                                     // 0x00E4(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               ToggleRadialMenu;                                         // 0x00E5(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               StickyRadialItems;                                        // 0x00E6(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               HoldActionsDontRequireHold;                               // 0x00E7(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               HoldActionsWithHeldItemsDontRequireHold;                  // 0x00E8(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               EscapeAsBackAccessibilityOption;                          // 0x00E9(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               CrossInputPreference;                                     // 0x00EA(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x5];                                       // 0x00EB(0x0005) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EventUserGameSettingsResponse
@@ -22923,6 +22949,237 @@ struct FMaterialInformationTranslationData : public FTableRowBase
 	struct FName                                       VFXSurfaceType;                                           // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Athena.EventShipTopDeckUnblocked
+// 0x0010
+struct FEventShipTopDeckUnblocked
+{
+	struct FGuid                                       BlockerId;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventShipTopDeckBlocked
+// 0x0010
+struct FEventShipTopDeckBlocked
+{
+	struct FGuid                                       BlockerId;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventSinkingShipTeleportTime
+// 0x0008
+struct FEventSinkingShipTeleportTime
+{
+	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventBeginningToSink
+// 0x0008
+struct FEventBeginningToSink
+{
+	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventExitedShip
+// 0x0010
+struct FEventExitedShip
+{
+	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventEnteredShip
+// 0x0010
+struct FEventEnteredShip
+{
+	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ShipBaseTelemetryFragmentInput
+// 0x0007 (0x0008 - 0x0001)
+struct FShipBaseTelemetryFragmentInput : public FTelemetryFragmentInput
+{
+	TWeakObjectPtr<class AActor>                       ShipActor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ShipBaseTelemetryFragment
+// 0x0060
+struct FShipBaseTelemetryFragment
+{
+	class FString                                      ShipObjectId;                                             // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FVector                                     Position;                                                 // 0x0010(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CrewId;                                                   // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CrewSessionId;                                            // 0x002C(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       ShipId;                                                   // 0x003C(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class FString                                      ShipSize;                                                 // 0x0050(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.CrewMember
+// 0x0010
+struct FCrewMember
+{
+	class FString                                      UserId;                                                   // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.CrewBaseTelemetryFragmentPlayerControllerLookupInput
+// 0x0007 (0x0008 - 0x0001)
+struct FCrewBaseTelemetryFragmentPlayerControllerLookupInput : public FTelemetryFragmentInput
+{
+	class APlayerState*                                CrewMemberPlayerState;                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.CrewBaseTelemetryFragmentPlayerCharacterLookupInput
+// 0x0007 (0x0008 - 0x0001)
+struct FCrewBaseTelemetryFragmentPlayerCharacterLookupInput : public FTelemetryFragmentInput
+{
+	class ACharacter*                                  CrewMemberCharacter;                                      // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.CrewBaseTelemetryFragmentInput
+// 0x000F (0x0010 - 0x0001)
+struct FCrewBaseTelemetryFragmentInput : public FTelemetryFragmentInput
+{
+	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.ServerPopulationTelemetryFragment
+// 0x0008
+struct FServerPopulationTelemetryFragment
+{
+	int                                                NumberOfPlayers;                                          // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                NumberOfCrews;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.CrewBaseTelemetryFragment
+// 0x0058
+struct FCrewBaseTelemetryFragment
+{
+	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CrewSessionId;                                            // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       AllianceId;                                               // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                CurrentCrewCount;                                         // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	class FString                                      SessionType;                                              // 0x0038(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class FString                                      CrewType;                                                 // 0x0048(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Athena.PlayerBriggedEndTelemetryEvent
+// 0x0020
+struct FPlayerBriggedEndTelemetryEvent
+{
+	struct FGuid                                       BriggedId;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FDateTime                                   BriggedStartDateTime;                                     // 0x0010(0x0008) (ZeroConstructor)
+	TEnumAsByte<EBrigReleaseReason>                    ReleaseReason;                                            // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.SessionVisibilityChangedTelemetryEvent
+// 0x0010
+struct FSessionVisibilityChangedTelemetryEvent
+{
+	class FString                                      SessionVisibility;                                        // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.ShipScuttledTelemetryEvent
+// 0x0001
+struct FShipScuttledTelemetryEvent
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Athena.RewardRequestCrewGame
+// 0x0020
+struct FRewardRequestCrewGame
+{
+	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FPirateIdentity>                     Pirates;                                                  // 0x0010(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Athena.RewardGrantedEvent
+// 0x0050
+struct FRewardGrantedEvent
+{
+	class FString                                      RewardId;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	TEnumAsByte<EWalletCurrencyId>                     CurrencyId;                                               // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	uint32_t                                           CurrencyAmount;                                           // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
+	class FString                                      CompanyId;                                                // 0x0018(0x0010) (ZeroConstructor)
+	uint32_t                                           Xp;                                                       // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           NumLevels;                                                // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<class FString>                              Entitlements;                                             // 0x0030(0x0010) (ZeroConstructor)
+	struct FGuid                                       RequestID;                                                // 0x0040(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.XPGrantedEvent
+// 0x002C
+struct FXPGrantedEvent
+{
+	uint32_t                                           XPGranted;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CompanyId;                                                // 0x0004(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       RequestID;                                                // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       BootyId;                                                  // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.CurrencyGrantedEvent
+// 0x0018
+struct FCurrencyGrantedEvent
+{
+	uint32_t                                           Amount;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWalletCurrencyId>                     Currency;                                                 // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+	struct FGuid                                       TransactionId;                                            // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.PenaltyRequestEvent
+// 0x0040
+struct FPenaltyRequestEvent
+{
+	struct FGuid                                       RequestID;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0028)
+	struct FName                                       PenaltyId;                                                // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.RewardRequestForPirateEvent
+// 0x0060
+struct FRewardRequestForPirateEvent
+{
+	struct FGuid                                       RequestID;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0028)
+	struct FGuid                                       CrewId;                                                   // 0x0038(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       RewardId;                                                 // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CompanyAffiliation;                                       // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               FromInsecureSource;                                       // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               NotifyPlayer;                                             // 0x0059(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x005A(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct Athena.AllianceRewardRequestEvent
+// 0x0078
+struct FAllianceRewardRequestEvent
+{
+	struct FGuid                                       AllianceId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       RequestID;                                                // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FRewardRequestCrewGame                      PrimaryRecipient;                                         // 0x0020(0x0020)
+	TArray<struct FRewardRequestCrewGame>              SecondaryRecipients;                                      // 0x0040(0x0010) (ZeroConstructor)
+	struct FName                                       RewardId;                                                 // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CompanyAffiliation;                                       // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       BootyId;                                                  // 0x0060(0x0010) (ZeroConstructor, IsPlainOldData)
+	bool                                               NotifyPlayer;                                             // 0x0070(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Athena.RewardRequestEvent
+// 0x0048
+struct FRewardRequestEvent
+{
+	struct FGuid                                       RequestID;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FPirateIdentity>                     PirateIdentities;                                         // 0x0010(0x0010) (ZeroConstructor)
+	struct FGuid                                       CrewId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       RewardId;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CompanyAffiliation;                                       // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               NotifyPlayer;                                             // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct Athena.RewardRuntimeDefinition
 // 0x0030
 struct FRewardRuntimeDefinition
@@ -22960,6 +23217,13 @@ struct FStatEvent
 struct FWaterHeightProviderAggregateTickFunction : public FTickFunction
 {
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0048(0x0030) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventWieldableItemIsAboutToBeStowed
+// 0x0001
+struct FEventWieldableItemIsAboutToBeStowed
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Athena.EventItemDroppedOnActor
@@ -23352,70 +23616,6 @@ struct FCategorisedLoadout
 	class FString                                      Hash;                                                     // 0x0038(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct Athena.EventShipTopDeckUnblocked
-// 0x0010
-struct FEventShipTopDeckUnblocked
-{
-	struct FGuid                                       BlockerId;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventShipTopDeckBlocked
-// 0x0010
-struct FEventShipTopDeckBlocked
-{
-	struct FGuid                                       BlockerId;                                                // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventSinkingShipTeleportTime
-// 0x0008
-struct FEventSinkingShipTeleportTime
-{
-	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventBeginningToSink
-// 0x0008
-struct FEventBeginningToSink
-{
-	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventExitedShip
-// 0x0010
-struct FEventExitedShip
-{
-	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.EventEnteredShip
-// 0x0010
-struct FEventEnteredShip
-{
-	class AActor*                                      Ship;                                                     // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.ShipBaseTelemetryFragmentInput
-// 0x0007 (0x0008 - 0x0001)
-struct FShipBaseTelemetryFragmentInput : public FTelemetryFragmentInput
-{
-	TWeakObjectPtr<class AActor>                       ShipActor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Athena.ShipBaseTelemetryFragment
-// 0x0060
-struct FShipBaseTelemetryFragment
-{
-	class FString                                      ShipObjectId;                                             // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FVector                                     Position;                                                 // 0x0010(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CrewId;                                                   // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CrewSessionId;                                            // 0x002C(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ShipId;                                                   // 0x003C(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-	class FString                                      ShipSize;                                                 // 0x0050(0x0010) (ZeroConstructor)
-};
-
 // ScriptStruct Athena.FloatingItemProxyAggregateTickFunction
 // 0x00A0 (0x00E8 - 0x0048)
 struct FFloatingItemProxyAggregateTickFunction : public FTickFunction
@@ -23585,46 +23785,53 @@ struct FEventEnteredRainZone
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Athena.CrewBaseTelemetryFragmentPlayerControllerLookupInput
-// 0x0007 (0x0008 - 0x0001)
-struct FCrewBaseTelemetryFragmentPlayerControllerLookupInput : public FTelemetryFragmentInput
+// ScriptStruct Athena.EncounterHandle
+// 0x0014
+struct FEncounterHandle
 {
-	class APlayerState*                                CrewMemberPlayerState;                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x0000(0x0014) MISSED OFFSET
 };
 
-// ScriptStruct Athena.CrewBaseTelemetryFragmentPlayerCharacterLookupInput
-// 0x0007 (0x0008 - 0x0001)
-struct FCrewBaseTelemetryFragmentPlayerCharacterLookupInput : public FTelemetryFragmentInput
+// ScriptStruct Athena.EncounterListener
+// 0x0018
+struct FEncounterListener
 {
-	class ACharacter*                                  CrewMemberCharacter;                                      // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      EncounterListenerActor;                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     EncounterListenerLocation;                                // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEncounterListenerType>                EncounterListenerType;                                    // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct Athena.CrewBaseTelemetryFragmentInput
-// 0x000F (0x0010 - 0x0001)
-struct FCrewBaseTelemetryFragmentInput : public FTelemetryFragmentInput
+// ScriptStruct Athena.EventEncounterBase
+// 0x0020
+struct FEventEncounterBase
 {
-	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       EncounterId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      EncounterActor;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEncounterType>                        EncounterType;                                            // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
+	float                                              EncounterRadiusSquared;                                   // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Athena.ServerPopulationTelemetryFragment
-// 0x0008
-struct FServerPopulationTelemetryFragment
+// ScriptStruct Athena.EventEncounterEnd
+// 0x0000 (0x0020 - 0x0020)
+struct FEventEncounterEnd : public FEventEncounterBase
 {
-	int                                                NumberOfPlayers;                                          // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                NumberOfCrews;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+
 };
 
-// ScriptStruct Athena.CrewBaseTelemetryFragment
-// 0x0058
-struct FCrewBaseTelemetryFragment
+// ScriptStruct Athena.EventEncounterStart
+// 0x0000 (0x0020 - 0x0020)
+struct FEventEncounterStart : public FEventEncounterBase
 {
-	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CrewSessionId;                                            // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       AllianceId;                                               // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                CurrentCrewCount;                                         // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	class FString                                      SessionType;                                              // 0x0038(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class FString                                      CrewType;                                                 // 0x0048(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+};
+
+// ScriptStruct Athena.EventItemSpawnedFromSpawner
+// 0x0001
+struct FEventItemSpawnedFromSpawner
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Athena.TrackedActorEntry
@@ -24029,6 +24236,133 @@ struct FInteractingActorData
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	struct FName                                       PreviousCollisionProfile;                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0010(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventReceiveOpenableItemComponentState
+// 0x0008
+struct FEventReceiveOpenableItemComponentState
+{
+	class UOpenableItemComponent*                      Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventOpenableItemAnimationFinished
+// 0x0001
+struct FEventOpenableItemAnimationFinished
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventOpenableItemStateChanged
+// 0x0002
+struct FEventOpenableItemStateChanged
+{
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0000(0x0002) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventNotifyOpenableItemState
+// 0x0001
+struct FEventNotifyOpenableItemState
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventReceiveCollectorsChestItemSlotsState
+// 0x0008
+struct FEventReceiveCollectorsChestItemSlotsState
+{
+	class UCollectorsChestItemSlotInteractable*        Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventReceiveQuestBookPagesInContainerComponentState
+// 0x0008
+struct FEventReceiveQuestBookPagesInContainerComponentState
+{
+	class UQuestBookPagesInContainerComponent*         Source;                                                   // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventPagesInContainerTaken
+// 0x0001
+struct FEventPagesInContainerTaken
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventGoldInContainerTaken
+// 0x0001
+struct FEventGoldInContainerTaken
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Athena.EventClearCrewProgressOverride
+// 0x0010
+struct FEventClearCrewProgressOverride
+{
+	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventSetCrewProgressOverride
+// 0x0018
+struct FEventSetCrewProgressOverride
+{
+	class UClass*                                      ProgressId;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CrewId;                                                   // 0x0008(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventNamedProgressLocationDestroyed
+// 0x0008
+struct FEventNamedProgressLocationDestroyed
+{
+	class AProgressSpawnLocation*                      SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventNamedProgressLocationCreated
+// 0x0008
+struct FEventNamedProgressLocationCreated
+{
+	class AProgressSpawnLocation*                      SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventShipSpawnLocationDestroyed
+// 0x0008
+struct FEventShipSpawnLocationDestroyed
+{
+	class AShipSpawnLocation*                          SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventShipSpawnLocationCreated
+// 0x0008
+struct FEventShipSpawnLocationCreated
+{
+	class AShipSpawnLocation*                          SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventGhostShipPlayerSpawnLocationDestroyed
+// 0x0008
+struct FEventGhostShipPlayerSpawnLocationDestroyed
+{
+	class AGhostShipPlayerSpawnLocation*               SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventGhostShipPlayerSpawnLocationCreated
+// 0x0008
+struct FEventGhostShipPlayerSpawnLocationCreated
+{
+	class AGhostShipPlayerSpawnLocation*               SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventSpawnLocationDestroyed
+// 0x0008
+struct FEventSpawnLocationDestroyed
+{
+	class ASpawnLocation*                              SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.EventSpawnLocationCreated
+// 0x0008
+struct FEventSpawnLocationCreated
+{
+	class ASpawnLocation*                              SpawnLocation;                                            // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 }

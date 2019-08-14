@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_Capstan.BP_Base_Capstan_C
-// 0x0018 (0x0878 - 0x0860)
+// 0x0018 (0x0868 - 0x0850)
 class ABP_Base_Capstan_C : public ACapstan
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0860(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                            ProjectileCollision;                                      // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEmitterComponent*                      NewVar_1;                                                 // 0x0870(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0850(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                            ProjectileCollision;                                      // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEmitterComponent*                      NewVar_1;                                                 // 0x0860(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

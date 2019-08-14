@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SpiceBox.BP_SpiceBox_C
-// 0x0008 (0x07F0 - 0x07E8)
+// 0x0008 (0x07E0 - 0x07D8)
 class ABP_SpiceBox_C : public ATestStaticWieldableInventoryItem
 {
 public:
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

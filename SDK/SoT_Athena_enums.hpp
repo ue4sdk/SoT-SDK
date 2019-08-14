@@ -58,8 +58,9 @@ enum class EHealthChangedReason : uint8_t
 	EHealthChangedReason__Mechanism = 40,
 	EHealthChangedReason__KnockbackAIAbility = 41,
 	EHealthChangedReason__SpikePit = 42,
-	EHealthChangedReason__MAX      = 43,
-	EHealthChangedReason__EHealthChangedReason_MAX = 44
+	EHealthChangedReason__ChestOfRage = 43,
+	EHealthChangedReason__MAX      = 44,
+	EHealthChangedReason__EHealthChangedReason_MAX = 45
 };
 
 
@@ -603,23 +604,6 @@ enum class ERiddleLocations : uint8_t
 };
 
 
-// Enum Athena.EIslandType
-enum class EIslandType : uint8_t
-{
-	EIslandType__Resource          = 0,
-	EIslandType__Outpost           = 1,
-	EIslandType__Small             = 2,
-	EIslandType__Medium            = 3,
-	EIslandType__Large             = 4,
-	EIslandType__Fort              = 5,
-	EIslandType__Reef              = 6,
-	EIslandType__SeaPost           = 7,
-	EIslandType__None              = 8,
-	EIslandType__Max               = 9,
-	EIslandType__EIslandType_MAX   = 10
-};
-
-
 // Enum Athena.EAllianceStatus
 enum class EAllianceStatus : uint8_t
 {
@@ -845,60 +829,6 @@ enum class EShovelDigType : uint8_t
 };
 
 
-// Enum Athena.EEncounterListenerType
-enum class EEncounterListenerType : uint8_t
-{
-	EEncounterListenerType__None   = 0,
-	EEncounterListenerType__Ship   = 1,
-	EEncounterListenerType__Player = 2,
-	EEncounterListenerType__Count  = 3,
-	EEncounterListenerType__EEncounterListenerType_MAX = 4
-};
-
-
-// Enum Athena.EEncounterMobility
-enum class EEncounterMobility : uint8_t
-{
-	EEncounterMobility__Static     = 0,
-	EEncounterMobility__Mobile     = 1,
-	EEncounterMobility__EEncounterMobility_MAX = 2
-};
-
-
-// Enum Athena.EEncounterDimensions
-enum class EEncounterDimensions : uint8_t
-{
-	EEncounterDimensions__ThreeDimensions = 0,
-	EEncounterDimensions__TwoDimensions = 1,
-	EEncounterDimensions__EEncounterDimensions_MAX = 2
-};
-
-
-// Enum Athena.EEncounterType
-enum class EEncounterType : uint8_t
-{
-	EEncounterType__None           = 0,
-	EEncounterType__Storm          = 1,
-	EEncounterType__BarrelsOfPlenty = 2,
-	EEncounterType__ShipSighting   = 3,
-	EEncounterType__ShipEncounter  = 4,
-	EEncounterType__ShipwreckSighting = 5,
-	EEncounterType__ShipwreckEncounter = 6,
-	EEncounterType__SkellyFortSighting = 7,
-	EEncounterType__SkellyFortEncounter = 8,
-	EEncounterType__KrakenSighting = 9,
-	EEncounterType__KrakenEncounter = 10,
-	EEncounterType__TinySharkSighting = 11,
-	EEncounterType__TinySharkEncounter = 12,
-	EEncounterType__AIShipSighting = 13,
-	EEncounterType__AIShipEncounter = 14,
-	EEncounterType__FogBank        = 15,
-	EEncounterType__BoxOfSecrets   = 16,
-	EEncounterType__Count          = 17,
-	EEncounterType__EEncounterType_MAX = 18
-};
-
-
 // Enum Athena.EFlameOfFateType
 enum class EFlameOfFateType : uint8_t
 {
@@ -943,6 +873,15 @@ enum class ETreasureMapHorizontalAlignment : uint8_t
 };
 
 
+// Enum Athena.EVoyageChapterProgressionType
+enum class EVoyageChapterProgressionType : uint8_t
+{
+	EVoyageChapterProgressionType__DrivenByAnyQuestCompletion = 0,
+	EVoyageChapterProgressionType__DrivenBySpecificQuestCompletion = 1,
+	EVoyageChapterProgressionType__EVoyageChapterProgressionType_MAX = 2
+};
+
+
 // Enum Athena.EBlendedFadeState
 enum class EBlendedFadeState : uint8_t
 {
@@ -971,23 +910,6 @@ enum class ETargetUpdateReason : uint8_t
 	ETargetUpdateReason__Update    = 0,
 	ETargetUpdateReason__Replace   = 1,
 	ETargetUpdateReason__ETargetUpdateReason_MAX = 2
-};
-
-
-// Enum Athena.ESpawnedItemSource
-enum class ESpawnedItemSource : uint8_t
-{
-	ESpawnedItemSource__None       = 0,
-	ESpawnedItemSource__Quest      = 1,
-	ESpawnedItemSource__Shipwreck  = 2,
-	ESpawnedItemSource__FloatingAtSea = 3,
-	ESpawnedItemSource__Island     = 4,
-	ESpawnedItemSource__SkellyFort = 5,
-	ESpawnedItemSource__AIShip     = 6,
-	ESpawnedItemSource__Megalodon  = 7,
-	ESpawnedItemSource__KrakenTentacle = 8,
-	ESpawnedItemSource__SunkenCurseArtefact = 9,
-	ESpawnedItemSource__ESpawnedItemSource_MAX = 10
 };
 
 
@@ -1145,17 +1067,6 @@ enum class ECarouselPirateBodyshapeDirection : uint8_t
 };
 
 
-// Enum Athena.EWalletCurrencyId
-enum class EWalletCurrencyId : uint8_t
-{
-	EWalletCurrencyId__Undefined   = 0,
-	EWalletCurrencyId__Gold        = 1,
-	EWalletCurrencyId__WaywardTokens = 2,
-	EWalletCurrencyId__Premium     = 3,
-	EWalletCurrencyId__EWalletCurrencyId_MAX = 4
-};
-
-
 // Enum Athena.EMastDamageState
 enum class EMastDamageState : uint8_t
 {
@@ -1237,6 +1148,18 @@ enum class ELeftStickScalarReason : uint8_t
 	ELeftStickScalarReason__Pacing = 1,
 	ELeftStickScalarReason__NumReasons = 2,
 	ELeftStickScalarReason__ELeftStickScalarReason_MAX = 3
+};
+
+
+// Enum Athena.ERageState
+enum class ERageState : uint8_t
+{
+	ERageState__Disabled           = 0,
+	ERageState__Dormant            = 1,
+	ERageState__RageBuilding       = 2,
+	ERageState__Steaming           = 3,
+	ERageState__OnFire             = 4,
+	ERageState__ERageState_MAX     = 5
 };
 
 
@@ -1757,6 +1680,16 @@ enum class EDoorState : uint8_t
 };
 
 
+// Enum Athena.EInventoryManipulatorAutoEquipPolicy
+enum class EInventoryManipulatorAutoEquipPolicy : uint8_t
+{
+	EInventoryManipulatorAutoEquipPolicy__LastIn = 0,
+	EInventoryManipulatorAutoEquipPolicy__MatchingItemDescIfPossible = 1,
+	EInventoryManipulatorAutoEquipPolicy__RawMeatLast = 2,
+	EInventoryManipulatorAutoEquipPolicy__EInventoryManipulatorAutoEquipPolicy_MAX = 3
+};
+
+
 // Enum Athena.ECompassDirections
 enum class ECompassDirections : uint8_t
 {
@@ -1913,16 +1846,6 @@ enum class EPlayerAbandoned : uint8_t
 };
 
 
-// Enum Athena.EBrigReleaseReason
-enum class EBrigReleaseReason : uint8_t
-{
-	EBrigReleaseReason__VoteToRelease = 0,
-	EBrigReleaseReason__AutoRelease = 1,
-	EBrigReleaseReason__QuitGameRelease = 2,
-	EBrigReleaseReason__EBrigReleaseReason_MAX = 3
-};
-
-
 // Enum Athena.EShovelState
 enum class EShovelState : uint8_t
 {
@@ -1965,15 +1888,6 @@ enum class ETutorialDialogStep : uint8_t
 	ETutorialDialogStep__StartedTalkedToMysteriousStranger = 1,
 	ETutorialDialogStep__FinishedTalkingToMysteriousStranger = 2,
 	ETutorialDialogStep__ETutorialDialogStep_MAX = 3
-};
-
-
-// Enum Athena.EOpenableItemState
-enum class EOpenableItemState : uint8_t
-{
-	EOpenableItemState__Open       = 0,
-	EOpenableItemState__Closed     = 1,
-	EOpenableItemState__EOpenableItemState_MAX = 2
 };
 
 
@@ -2137,16 +2051,6 @@ enum class ERevealState : uint8_t
 	ERevealState__FarRevealed      = 1,
 	ERevealState__CloseRevealed    = 2,
 	ERevealState__ERevealState_MAX = 3
-};
-
-
-// Enum Athena.ERewardRequestFailureReason
-enum class ERewardRequestFailureReason : uint8_t
-{
-	ERewardRequestFailureReason__FailedToProcess = 0,
-	ERewardRequestFailureReason__TimedOut = 1,
-	ERewardRequestFailureReason__Unknown = 2,
-	ERewardRequestFailureReason__ERewardRequestFailureReason_MAX = 3
 };
 
 
@@ -2388,15 +2292,6 @@ enum class EVoyageDisplayState : uint8_t
 };
 
 
-// Enum Athena.EVoyageChapterProgressionType
-enum class EVoyageChapterProgressionType : uint8_t
-{
-	EVoyageChapterProgressionType__DrivenByAnyQuestCompletion = 0,
-	EVoyageChapterProgressionType__DrivenBySpecificQuestCompletion = 1,
-	EVoyageChapterProgressionType__EVoyageChapterProgressionType_MAX = 2
-};
-
-
 // Enum Athena.EContestType
 enum class EContestType : uint8_t
 {
@@ -2561,15 +2456,18 @@ enum class EBootflowError : uint8_t
 	EBootflowError__SessionSelectInvalidSessionTypeSpecified = 86,
 	EBootflowError__InvitePrivilegesCheckFailed = 87,
 	EBootflowError__InviteUnableToRetrieveSession = 88,
-	EBootflowError__InviteSessionFull = 89,
-	EBootflowError__InviteSessionUnknownFailure = 90,
-	EBootflowError__FailedToEnumerateEntitlements = 91,
-	EBootflowError__WhatsNewArticleRetrievalStateInvalidIdentityInterface = 92,
-	EBootflowError__FailedToFetchExistingSessions = 93,
-	EBootflowError__TestFailed     = 94,
-	EBootflowError__TestNetworkError = 95,
-	EBootflowError__Max            = 96,
-	EBootflowError__EBootflowError_MAX = 97
+	EBootflowError__InviteSessionXboxPadOnly = 89,
+	EBootflowError__InviteSessionFull = 90,
+	EBootflowError__InviteSessionUnknownFailure = 91,
+	EBootflowError__InviteSessionNoTransferHandle = 92,
+	EBootflowError__InviteSessionUnableToFindTargetSession = 93,
+	EBootflowError__FailedToEnumerateEntitlements = 94,
+	EBootflowError__WhatsNewArticleRetrievalStateInvalidIdentityInterface = 95,
+	EBootflowError__FailedToFetchExistingSessions = 96,
+	EBootflowError__TestFailed     = 97,
+	EBootflowError__TestNetworkError = 98,
+	EBootflowError__Max            = 99,
+	EBootflowError__EBootflowError_MAX = 100
 };
 
 
@@ -2686,16 +2584,6 @@ enum class EConsumeEntitlementFailureReason : uint8_t
 };
 
 
-// Enum Athena.ERewardDestinationType
-enum class ERewardDestinationType : uint8_t
-{
-	ERewardDestinationType__Player = 0,
-	ERewardDestinationType__Crew   = 1,
-	ERewardDestinationType__Alliance = 2,
-	ERewardDestinationType__ERewardDestinationType_MAX = 3
-};
-
-
 // Enum Athena.EQuestGenAssetSuffix
 enum class EQuestGenAssetSuffix : uint8_t
 {
@@ -2772,7 +2660,8 @@ enum class EPreLoginDeniedReason : uint8_t
 	EPreLoginDeniedReason__CrewNoLongerOnServer = 4,
 	EPreLoginDeniedReason__CrewAssignmentFailed = 5,
 	EPreLoginDeniedReason__AuthTokenValidation = 6,
-	EPreLoginDeniedReason__EPreLoginDeniedReason_MAX = 7
+	EPreLoginDeniedReason__UWPJoinAttemptRefusal = 7,
+	EPreLoginDeniedReason__EPreLoginDeniedReason_MAX = 8
 };
 
 
@@ -2990,6 +2879,153 @@ enum class ETooltipSpinnerType : uint8_t
 };
 
 
+// Enum Athena.EShipAlignmentType
+enum class EShipAlignmentType : uint8_t
+{
+	EShipAlignmentType__None       = 0,
+	EShipAlignmentType__AlignedToShip = 1,
+	EShipAlignmentType__AlignedToShipXYOnly = 2,
+	EShipAlignmentType__EShipAlignmentType_MAX = 3
+};
+
+
+// Enum Athena.EShipState
+enum class EShipState : uint8_t
+{
+	EShipState__PlainSailing       = 0,
+	EShipState__GrindingToHalt     = 1,
+	EShipState__Lowering           = 2,
+	EShipState__ReduceWaterOcclusionZone = 3,
+	EShipState__KeelingOver        = 4,
+	EShipState__KeeledOver         = 5,
+	EShipState__FinalSinking       = 6,
+	EShipState__Dead               = 7,
+	EShipState__EShipState_MAX     = 8
+};
+
+
+// Enum Athena.EShipRegion
+enum class EShipRegion : uint8_t
+{
+	EShipRegion__None              = 0,
+	EShipRegion__TopDeck_Bow       = 1,
+	EShipRegion__TopDeck_MainStairs = 2,
+	EShipRegion__TopDeck_Hatch     = 3,
+	EShipRegion__TopDeck_CaptainsCabin = 4,
+	EShipRegion__TopDeck_WheelDeck = 5,
+	EShipRegion__MapDeck_Front     = 6,
+	EShipRegion__MapDeck_MainStairs = 7,
+	EShipRegion__MapDeck_Table     = 8,
+	EShipRegion__MapDeck_RearStairs = 9,
+	EShipRegion__BrigDeck_Stairs   = 10,
+	EShipRegion__BrigDeck_OutsideBrig = 11,
+	EShipRegion__BrigDeck_InsideBrig = 12,
+	EShipRegion__EShipRegion_MAX   = 13
+};
+
+
+// Enum Athena.EShipDeck
+enum class EShipDeck : uint8_t
+{
+	EShipDeck__BottomDeck          = 0,
+	EShipDeck__MidDeck             = 1,
+	EShipDeck__TopDeck             = 2,
+	EShipDeck__EShipDeck_MAX       = 3
+};
+
+
+// Enum Athena.EShipDynamicsAnchoredState
+enum class EShipDynamicsAnchoredState : uint8_t
+{
+	EShipDynamicsAnchoredState__Unknown = 0,
+	EShipDynamicsAnchoredState__Raised = 1,
+	EShipDynamicsAnchoredState__Lowered = 2,
+	EShipDynamicsAnchoredState__EShipDynamicsAnchoredState_MAX = 3
+};
+
+
+// Enum Athena.EMatchmakingVisibilityState
+enum class EMatchmakingVisibilityState : uint8_t
+{
+	EMatchmakingVisibilityState__Public = 0,
+	EMatchmakingVisibilityState__Private = 1,
+	EMatchmakingVisibilityState__EMatchmakingVisibilityState_MAX = 2
+};
+
+
+// Enum Athena.EScuttleState
+enum class EScuttleState : uint8_t
+{
+	EScuttleState__Scuttled        = 0,
+	EScuttleState__NotScuttled     = 1,
+	EScuttleState__EScuttleState_MAX = 2
+};
+
+
+// Enum Athena.EBrigState
+enum class EBrigState : uint8_t
+{
+	EBrigState__Unbriggable        = 0,
+	EBrigState__Free               = 1,
+	EBrigState__InBrig_Releasable  = 2,
+	EBrigState__InBrig_Unreleasable = 3,
+	EBrigState__EBrigState_MAX     = 4
+};
+
+
+// Enum Athena.ECrewDestroyedReason
+enum class ECrewDestroyedReason : uint8_t
+{
+	ECrewDestroyedReason__AllCrewMembersRemoved = 0,
+	ECrewDestroyedReason__ServerMigrated = 1,
+	ECrewDestroyedReason__ECrewDestroyedReason_MAX = 2
+};
+
+
+// Enum Athena.EBrigReleaseReason
+enum class EBrigReleaseReason : uint8_t
+{
+	EBrigReleaseReason__VoteToRelease = 0,
+	EBrigReleaseReason__AutoRelease = 1,
+	EBrigReleaseReason__QuitGameRelease = 2,
+	EBrigReleaseReason__EBrigReleaseReason_MAX = 3
+};
+
+
+// Enum Athena.EAllianceNotificationType
+enum class EAllianceNotificationType : uint8_t
+{
+	EAllianceNotificationType__Joined = 0,
+	EAllianceNotificationType__Formed = 1,
+	EAllianceNotificationType__Left = 2,
+	EAllianceNotificationType__Disbanded = 3,
+	EAllianceNotificationType__OtherCrewJoined = 4,
+	EAllianceNotificationType__OtherCrewLeft = 5,
+	EAllianceNotificationType__EAllianceNotificationType_MAX = 6
+};
+
+
+// Enum Athena.EAllianceJoinStatus
+enum class EAllianceJoinStatus : uint8_t
+{
+	EAllianceJoinStatus__CannotJoinAlliance = 0,
+	EAllianceJoinStatus__CanJoinAlliance = 1,
+	EAllianceJoinStatus__IsInAlliance = 2,
+	EAllianceJoinStatus__EAllianceJoinStatus_MAX = 3
+};
+
+
+// Enum Athena.EWalletCurrencyId
+enum class EWalletCurrencyId : uint8_t
+{
+	EWalletCurrencyId__Undefined   = 0,
+	EWalletCurrencyId__Gold        = 1,
+	EWalletCurrencyId__WaywardTokens = 2,
+	EWalletCurrencyId__Premium     = 3,
+	EWalletCurrencyId__EWalletCurrencyId_MAX = 4
+};
+
+
 // Enum Athena.ERewardType
 enum class ERewardType : uint8_t
 {
@@ -3000,7 +3036,28 @@ enum class ERewardType : uint8_t
 	ERewardType__Level             = 4,
 	ERewardType__Emblem            = 5,
 	ERewardType__Achievement       = 6,
-	ERewardType__ERewardType_MAX   = 7
+	ERewardType__PremiumCurrency   = 7,
+	ERewardType__ERewardType_MAX   = 8
+};
+
+
+// Enum Athena.ERewardDestinationType
+enum class ERewardDestinationType : uint8_t
+{
+	ERewardDestinationType__Player = 0,
+	ERewardDestinationType__Crew   = 1,
+	ERewardDestinationType__Alliance = 2,
+	ERewardDestinationType__ERewardDestinationType_MAX = 3
+};
+
+
+// Enum Athena.ERewardRequestFailureReason
+enum class ERewardRequestFailureReason : uint8_t
+{
+	ERewardRequestFailureReason__FailedToProcess = 0,
+	ERewardRequestFailureReason__TimedOut = 1,
+	ERewardRequestFailureReason__Unknown = 2,
+	ERewardRequestFailureReason__ERewardRequestFailureReason_MAX = 3
 };
 
 
@@ -3221,71 +3278,6 @@ enum class EFeedableType : uint8_t
 };
 
 
-// Enum Athena.EShipAlignmentType
-enum class EShipAlignmentType : uint8_t
-{
-	EShipAlignmentType__None       = 0,
-	EShipAlignmentType__AlignedToShip = 1,
-	EShipAlignmentType__AlignedToShipXYOnly = 2,
-	EShipAlignmentType__EShipAlignmentType_MAX = 3
-};
-
-
-// Enum Athena.EShipState
-enum class EShipState : uint8_t
-{
-	EShipState__PlainSailing       = 0,
-	EShipState__GrindingToHalt     = 1,
-	EShipState__Lowering           = 2,
-	EShipState__ReduceWaterOcclusionZone = 3,
-	EShipState__KeelingOver        = 4,
-	EShipState__KeeledOver         = 5,
-	EShipState__FinalSinking       = 6,
-	EShipState__Dead               = 7,
-	EShipState__EShipState_MAX     = 8
-};
-
-
-// Enum Athena.EShipRegion
-enum class EShipRegion : uint8_t
-{
-	EShipRegion__None              = 0,
-	EShipRegion__TopDeck_Bow       = 1,
-	EShipRegion__TopDeck_MainStairs = 2,
-	EShipRegion__TopDeck_Hatch     = 3,
-	EShipRegion__TopDeck_CaptainsCabin = 4,
-	EShipRegion__TopDeck_WheelDeck = 5,
-	EShipRegion__MapDeck_Front     = 6,
-	EShipRegion__MapDeck_MainStairs = 7,
-	EShipRegion__MapDeck_Table     = 8,
-	EShipRegion__MapDeck_RearStairs = 9,
-	EShipRegion__BrigDeck_Stairs   = 10,
-	EShipRegion__BrigDeck_OutsideBrig = 11,
-	EShipRegion__BrigDeck_InsideBrig = 12,
-	EShipRegion__EShipRegion_MAX   = 13
-};
-
-
-// Enum Athena.EShipDeck
-enum class EShipDeck : uint8_t
-{
-	EShipDeck__BottomDeck          = 0,
-	EShipDeck__MidDeck             = 1,
-	EShipDeck__TopDeck             = 2,
-	EShipDeck__EShipDeck_MAX       = 3
-};
-
-
-// Enum Athena.EShipDynamicsAnchoredState
-enum class EShipDynamicsAnchoredState : uint8_t
-{
-	EShipDynamicsAnchoredState__Unknown = 0,
-	EShipDynamicsAnchoredState__Raised = 1,
-	EShipDynamicsAnchoredState__Lowered = 2,
-	EShipDynamicsAnchoredState__EShipDynamicsAnchoredState_MAX = 3
-};
-
-
 // Enum Athena.EBootyTypes
 enum class EBootyTypes : uint8_t
 {
@@ -3304,7 +3296,9 @@ enum class EBootyTypes : uint8_t
 	EBootyTypes__FishedItem        = 12,
 	EBootyTypes__Food              = 13,
 	EBootyTypes__TaleArtifact      = 14,
-	EBootyTypes__EBootyTypes_MAX   = 15
+	EBootyTypes__CampaignBooty     = 15,
+	EBootyTypes__ReapersBooty      = 16,
+	EBootyTypes__EBootyTypes_MAX   = 17
 };
 
 
@@ -3401,21 +3395,21 @@ enum class EAthenaAnimationPetRoamingState : uint8_t
 	EAthenaAnimationPetRoamingState__Interested = 9,
 	EAthenaAnimationPetRoamingState__Talking = 10,
 	EAthenaAnimationPetRoamingState__Happy = 11,
-	EAthenaAnimationPetRoamingState__Grumpy = 12,
-	EAthenaAnimationPetRoamingState__Angry = 13,
-	EAthenaAnimationPetRoamingState__Dance = 14,
-	EAthenaAnimationPetRoamingState__Cleaning = 15,
-	EAthenaAnimationPetRoamingState__Exit = 16,
-	EAthenaAnimationPetRoamingState__Arrive = 17,
-	EAthenaAnimationPetRoamingState__Startled = 18,
-	EAthenaAnimationPetRoamingState__Inactive = 19,
-	EAthenaAnimationPetRoamingState__TakingOff = 20,
-	EAthenaAnimationPetRoamingState__Landing = 21,
-	EAthenaAnimationPetRoamingState__Flying = 22,
-	EAthenaAnimationPetRoamingState__Yawn = 23,
-	EAthenaAnimationPetRoamingState__Scared = 24,
-	EAthenaAnimationPetRoamingState__Protective = 25,
-	EAthenaAnimationPetRoamingState__Play = 26,
+	EAthenaAnimationPetRoamingState__Caged = 12,
+	EAthenaAnimationPetRoamingState__Grumpy = 13,
+	EAthenaAnimationPetRoamingState__Angry = 14,
+	EAthenaAnimationPetRoamingState__Dance = 15,
+	EAthenaAnimationPetRoamingState__Cleaning = 16,
+	EAthenaAnimationPetRoamingState__Exit = 17,
+	EAthenaAnimationPetRoamingState__Arrive = 18,
+	EAthenaAnimationPetRoamingState__Startled = 19,
+	EAthenaAnimationPetRoamingState__Inactive = 20,
+	EAthenaAnimationPetRoamingState__TakingOff = 21,
+	EAthenaAnimationPetRoamingState__Landing = 22,
+	EAthenaAnimationPetRoamingState__Flying = 23,
+	EAthenaAnimationPetRoamingState__Yawn = 24,
+	EAthenaAnimationPetRoamingState__Scared = 25,
+	EAthenaAnimationPetRoamingState__Protective = 26,
 	EAthenaAnimationPetRoamingState__Vomit = 27,
 	EAthenaAnimationPetRoamingState__Chew = 28,
 	EAthenaAnimationPetRoamingState__Sneeze = 29,
@@ -3476,64 +3470,92 @@ enum class ESubmergedState : uint8_t
 };
 
 
-// Enum Athena.EMatchmakingVisibilityState
-enum class EMatchmakingVisibilityState : uint8_t
+// Enum Athena.EIslandType
+enum class EIslandType : uint8_t
 {
-	EMatchmakingVisibilityState__Public = 0,
-	EMatchmakingVisibilityState__Private = 1,
-	EMatchmakingVisibilityState__EMatchmakingVisibilityState_MAX = 2
+	EIslandType__Resource          = 0,
+	EIslandType__Outpost           = 1,
+	EIslandType__Small             = 2,
+	EIslandType__Medium            = 3,
+	EIslandType__Large             = 4,
+	EIslandType__Fort              = 5,
+	EIslandType__Reef              = 6,
+	EIslandType__SeaPost           = 7,
+	EIslandType__Tutorial          = 8,
+	EIslandType__None              = 9,
+	EIslandType__Max               = 10,
+	EIslandType__EIslandType_MAX   = 11
 };
 
 
-// Enum Athena.EScuttleState
-enum class EScuttleState : uint8_t
+// Enum Athena.EEncounterListenerType
+enum class EEncounterListenerType : uint8_t
 {
-	EScuttleState__Scuttled        = 0,
-	EScuttleState__NotScuttled     = 1,
-	EScuttleState__EScuttleState_MAX = 2
+	EEncounterListenerType__None   = 0,
+	EEncounterListenerType__Ship   = 1,
+	EEncounterListenerType__Player = 2,
+	EEncounterListenerType__Count  = 3,
+	EEncounterListenerType__EEncounterListenerType_MAX = 4
 };
 
 
-// Enum Athena.EBrigState
-enum class EBrigState : uint8_t
+// Enum Athena.EEncounterMobility
+enum class EEncounterMobility : uint8_t
 {
-	EBrigState__Unbriggable        = 0,
-	EBrigState__Free               = 1,
-	EBrigState__InBrig_Releasable  = 2,
-	EBrigState__InBrig_Unreleasable = 3,
-	EBrigState__EBrigState_MAX     = 4
+	EEncounterMobility__Static     = 0,
+	EEncounterMobility__Mobile     = 1,
+	EEncounterMobility__EEncounterMobility_MAX = 2
 };
 
 
-// Enum Athena.ECrewDestroyedReason
-enum class ECrewDestroyedReason : uint8_t
+// Enum Athena.EEncounterDimensions
+enum class EEncounterDimensions : uint8_t
 {
-	ECrewDestroyedReason__AllCrewMembersRemoved = 0,
-	ECrewDestroyedReason__ServerMigrated = 1,
-	ECrewDestroyedReason__ECrewDestroyedReason_MAX = 2
+	EEncounterDimensions__ThreeDimensions = 0,
+	EEncounterDimensions__TwoDimensions = 1,
+	EEncounterDimensions__EEncounterDimensions_MAX = 2
 };
 
 
-// Enum Athena.EAllianceNotificationType
-enum class EAllianceNotificationType : uint8_t
+// Enum Athena.EEncounterType
+enum class EEncounterType : uint8_t
 {
-	EAllianceNotificationType__Joined = 0,
-	EAllianceNotificationType__Formed = 1,
-	EAllianceNotificationType__Left = 2,
-	EAllianceNotificationType__Disbanded = 3,
-	EAllianceNotificationType__OtherCrewJoined = 4,
-	EAllianceNotificationType__OtherCrewLeft = 5,
-	EAllianceNotificationType__EAllianceNotificationType_MAX = 6
+	EEncounterType__None           = 0,
+	EEncounterType__Storm          = 1,
+	EEncounterType__BarrelsOfPlenty = 2,
+	EEncounterType__ShipSighting   = 3,
+	EEncounterType__ShipEncounter  = 4,
+	EEncounterType__ShipwreckSighting = 5,
+	EEncounterType__ShipwreckEncounter = 6,
+	EEncounterType__SkellyFortSighting = 7,
+	EEncounterType__SkellyFortEncounter = 8,
+	EEncounterType__KrakenSighting = 9,
+	EEncounterType__KrakenEncounter = 10,
+	EEncounterType__TinySharkSighting = 11,
+	EEncounterType__TinySharkEncounter = 12,
+	EEncounterType__AIShipSighting = 13,
+	EEncounterType__AIShipEncounter = 14,
+	EEncounterType__FogBank        = 15,
+	EEncounterType__BoxOfSecrets   = 16,
+	EEncounterType__Count          = 17,
+	EEncounterType__EEncounterType_MAX = 18
 };
 
 
-// Enum Athena.EAllianceJoinStatus
-enum class EAllianceJoinStatus : uint8_t
+// Enum Athena.ESpawnedItemSource
+enum class ESpawnedItemSource : uint8_t
 {
-	EAllianceJoinStatus__CannotJoinAlliance = 0,
-	EAllianceJoinStatus__CanJoinAlliance = 1,
-	EAllianceJoinStatus__IsInAlliance = 2,
-	EAllianceJoinStatus__EAllianceJoinStatus_MAX = 3
+	ESpawnedItemSource__None       = 0,
+	ESpawnedItemSource__Quest      = 1,
+	ESpawnedItemSource__Shipwreck  = 2,
+	ESpawnedItemSource__FloatingAtSea = 3,
+	ESpawnedItemSource__Island     = 4,
+	ESpawnedItemSource__SkellyFort = 5,
+	ESpawnedItemSource__AIShip     = 6,
+	ESpawnedItemSource__Megalodon  = 7,
+	ESpawnedItemSource__KrakenTentacle = 8,
+	ESpawnedItemSource__SunkenCurseArtefact = 9,
+	ESpawnedItemSource__ESpawnedItemSource_MAX = 10
 };
 
 
@@ -3552,30 +3574,31 @@ enum class ETrackedActorType : uint8_t
 	ETrackedActorType__AI_Skeleton = 9,
 	ETrackedActorType__AI_SwimmingCreature = 10,
 	ETrackedActorType__Booty       = 11,
-	ETrackedActorType__Consumable  = 12,
-	ETrackedActorType__Earthquake  = 13,
-	ETrackedActorType__FishingFish = 14,
-	ETrackedActorType__FogBank     = 15,
-	ETrackedActorType__Geyser      = 16,
-	ETrackedActorType__Mermaid     = 17,
-	ETrackedActorType__NPC         = 18,
-	ETrackedActorType__Player      = 19,
-	ETrackedActorType__Rowboat     = 20,
-	ETrackedActorType__Ship_Large  = 21,
-	ETrackedActorType__Ship_Medium = 22,
-	ETrackedActorType__Ship_Small  = 23,
-	ETrackedActorType__ShipCloud   = 24,
-	ETrackedActorType__Shipwreck   = 25,
-	ETrackedActorType__SkeletonThrone = 26,
-	ETrackedActorType__SkullCloud  = 27,
-	ETrackedActorType__StorageContainer = 28,
-	ETrackedActorType__StorageContainerBuoyant = 29,
-	ETrackedActorType__Storm       = 30,
-	ETrackedActorType__SunkenCurseArtefact = 31,
-	ETrackedActorType__SuperHeatedWater = 32,
-	ETrackedActorType__Volcano     = 33,
-	ETrackedActorType__MAX         = 34,
-	ETrackedActorType__ETrackedActorType_MAX = 35
+	ETrackedActorType__Booty_ReapersChest = 12,
+	ETrackedActorType__Consumable  = 13,
+	ETrackedActorType__Earthquake  = 14,
+	ETrackedActorType__FishingFish = 15,
+	ETrackedActorType__FogBank     = 16,
+	ETrackedActorType__Geyser      = 17,
+	ETrackedActorType__Mermaid     = 18,
+	ETrackedActorType__NPC         = 19,
+	ETrackedActorType__Player      = 20,
+	ETrackedActorType__Rowboat     = 21,
+	ETrackedActorType__Ship_Large  = 22,
+	ETrackedActorType__Ship_Medium = 23,
+	ETrackedActorType__Ship_Small  = 24,
+	ETrackedActorType__ShipCloud   = 25,
+	ETrackedActorType__Shipwreck   = 26,
+	ETrackedActorType__SkeletonThrone = 27,
+	ETrackedActorType__SkullCloud  = 28,
+	ETrackedActorType__StorageContainer = 29,
+	ETrackedActorType__StorageContainerBuoyant = 30,
+	ETrackedActorType__Storm       = 31,
+	ETrackedActorType__SunkenCurseArtefact = 32,
+	ETrackedActorType__SuperHeatedWater = 33,
+	ETrackedActorType__Volcano     = 34,
+	ETrackedActorType__MAX         = 35,
+	ETrackedActorType__ETrackedActorType_MAX = 36
 };
 
 
@@ -3585,7 +3608,8 @@ enum class ETrackedOwnerType : uint8_t
 	ETrackedOwnerType__Unknown     = 0,
 	ETrackedOwnerType__Consumable  = 1,
 	ETrackedOwnerType__Booty       = 2,
-	ETrackedOwnerType__ETrackedOwnerType_MAX = 3
+	ETrackedOwnerType__Booty_ReapersChest = 3,
+	ETrackedOwnerType__ETrackedOwnerType_MAX = 4
 };
 
 
@@ -3675,21 +3699,6 @@ enum class EFishingFishState : uint8_t
 };
 
 
-// Enum Athena.EFishingFloatState
-enum class EFishingFloatState : uint8_t
-{
-	EFishingFloatState__NotSet     = 0,
-	EFishingFloatState__AttachedToRod = 1,
-	EFishingFloatState__Casting    = 2,
-	EFishingFloatState__CastingFailed = 3,
-	EFishingFloatState__FloatingOnWater = 4,
-	EFishingFloatState__BringingInCatch = 5,
-	EFishingFloatState__Retracting = 6,
-	EFishingFloatState__ViolentlyRetracting = 7,
-	EFishingFloatState__EFishingFloatState_MAX = 8
-};
-
-
 // Enum Athena.EFishingMiniGamePlayerInputBattlingDirection
 enum class EFishingMiniGamePlayerInputBattlingDirection : uint8_t
 {
@@ -3709,6 +3718,21 @@ enum class EFishingMiniGamePlayerInputDirection : uint8_t
 	EFishingMiniGamePlayerInputDirection__Right = 3,
 	EFishingMiniGamePlayerInputDirection__Towards = 4,
 	EFishingMiniGamePlayerInputDirection__EFishingMiniGamePlayerInputDirection_MAX = 5
+};
+
+
+// Enum Athena.EFishingFloatState
+enum class EFishingFloatState : uint8_t
+{
+	EFishingFloatState__NotSet     = 0,
+	EFishingFloatState__AttachedToRod = 1,
+	EFishingFloatState__Casting    = 2,
+	EFishingFloatState__CastingFailed = 3,
+	EFishingFloatState__FloatingOnWater = 4,
+	EFishingFloatState__BringingInCatch = 5,
+	EFishingFloatState__Retracting = 6,
+	EFishingFloatState__ViolentlyRetracting = 7,
+	EFishingFloatState__EFishingFloatState_MAX = 8
 };
 
 
@@ -3889,6 +3913,15 @@ enum class EQuestType : uint8_t
 	EQuestType__Reward             = 9,
 	EQuestType__Staging            = 10,
 	EQuestType__EQuestType_MAX     = 11
+};
+
+
+// Enum Athena.EOpenableItemState
+enum class EOpenableItemState : uint8_t
+{
+	EOpenableItemState__Open       = 0,
+	EOpenableItemState__Closed     = 1,
+	EOpenableItemState__EOpenableItemState_MAX = 2
 };
 
 

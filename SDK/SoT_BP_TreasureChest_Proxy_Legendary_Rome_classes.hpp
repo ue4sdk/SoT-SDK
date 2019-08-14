@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Legendary_Rome.BP_TreasureChest_Proxy_Legendary_Rome_C
-// 0x0000 (0x0898 - 0x0898)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_TreasureChest_Proxy_Legendary_Rome_C : public ABP_TreasureChestProxy_C
 {
 public:

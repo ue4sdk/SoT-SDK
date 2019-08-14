@@ -8,9 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Tales_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_PrioritisedPrompts_classes.hpp"
 
 namespace SDK
 {
@@ -23,6 +24,13 @@ namespace SDK
 struct FSplineFootprintPathTool
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Tales.QuestVariablePrioritisedPrompt
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariablePrioritisedPrompt : public FQuestVariable
+{
+
 };
 
 }

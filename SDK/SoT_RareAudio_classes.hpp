@@ -61,7 +61,6 @@ public:
 
 
 	static void WwiseStopGlobalEvent(class UWwiseEvent* Event, float FadeTime);
-	static void WwiseStopAllGlobalEvents(float FadeTime);
 	static void WwiseSetState(const struct FName& StateGroup, const struct FName& StateValue);
 	static void WwiseSetGlobalRTPC(const struct FName& RTPCName, float RTPCValue);
 	static void WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship);

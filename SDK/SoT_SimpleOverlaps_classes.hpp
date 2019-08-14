@@ -46,6 +46,22 @@ public:
 };
 
 
+// Class SimpleOverlaps.SimpleOverlapComponent
+// 0x0008 (0x00D8 - 0x00D0)
+class USimpleOverlapComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SimpleOverlaps.SimpleOverlapComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class SimpleOverlaps.TestObjectMessagingDispatcherInterface
 // 0x00A8 (0x0550 - 0x04A8)
 class ATestObjectMessagingDispatcherInterface : public AActor

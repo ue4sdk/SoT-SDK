@@ -8924,22 +8924,6 @@ void UCharacterMovementComponent::AddForce(const struct FVector& Force)
 }
 
 
-// Function Engine.WorldSettings.OnRep_WorldGravityZ
-// (Native, Public)
-
-void AWorldSettings::OnRep_WorldGravityZ()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.WorldSettings.OnRep_WorldGravityZ"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Engine.GameInstance.ReceiveShutdown
 // (Event, Public, BlueprintEvent)
 
@@ -15411,6 +15395,22 @@ void APlayerState::OnRep_PlayerName()
 }
 
 
+// Function Engine.WorldSettings.OnRep_WorldGravityZ
+// (Native, Public)
+
+void AWorldSettings::OnRep_WorldGravityZ()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.WorldSettings.OnRep_WorldGravityZ"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.PostProcessComponent.AddOrUpdateBlendable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -15723,6 +15723,22 @@ void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVecto
 		*NewViewRotation = params.NewViewRotation;
 	if (NewFOV != nullptr)
 		*NewFOV = params.NewFOV;
+}
+
+
+// Function Engine.DebugCameraController.ToggleDisplay
+// (Final, Native, Public, BlueprintCallable)
+
+void ADebugCameraController::ToggleDisplay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.DebugCameraController.ToggleDisplay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -16740,92 +16756,6 @@ void ALevelScriptActor::InitialNetRelevantActorsCreated()
 
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SphereComponent.SetSphereRadius
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InSphereRadius                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void USphereComponent::SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.SetSphereRadius"));
-
-	struct
-	{
-		float                          InSphereRadius;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.InSphereRadius = InSphereRadius;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SphereComponent.GetUnscaledSphereRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetUnscaledSphereRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetUnscaledSphereRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SphereComponent.GetShapeScale
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetShapeScale()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetShapeScale"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SphereComponent.GetScaledSphereRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetScaledSphereRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetScaledSphereRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -28985,6 +28915,92 @@ struct FVector UBoxComponent::GetScaledBoxExtent()
 	struct
 	{
 		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.SetSphereRadius
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InSphereRadius                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void USphereComponent::SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.SetSphereRadius"));
+
+	struct
+	{
+		float                          InSphereRadius;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InSphereRadius = InSphereRadius;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SphereComponent.GetUnscaledSphereRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetUnscaledSphereRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetUnscaledSphereRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.GetShapeScale
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetShapeScale()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetShapeScale"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.GetScaledSphereRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetScaledSphereRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetScaledSphereRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
 	} params;
 
 

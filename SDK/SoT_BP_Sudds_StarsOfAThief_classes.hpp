@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Sudds_StarsOfAThief.BP_Sudds_StarsOfAThief_C
-// 0x0000 (0x18A5 - 0x18A5)
+// 0x0000 (0x18B5 - 0x18B5)
 class UBP_Sudds_StarsOfAThief_C : public UBP_Anim_NPC_C
 {
 public:

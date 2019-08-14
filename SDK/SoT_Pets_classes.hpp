@@ -342,13 +342,12 @@ public:
 
 
 // Class Pets.PetDangerComponent
-// 0x00D0 (0x01A0 - 0x00D0)
+// 0x00B8 (0x0188 - 0x00D0)
 class UPetDangerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x00D0(0x0028) MISSED OFFSET
-	class UPetDangerDataAsset*                         DangerDataAsset;                                          // 0x00F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0100(0x00A0) MISSED OFFSET
+	class UPetDangerDataAsset*                         DangerDataAsset;                                          // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB0];                                      // 0x00D8(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -503,22 +502,22 @@ public:
 
 
 // Class Pets.PetAIController
-// 0x0080 (0x0988 - 0x0908)
+// 0x0098 (0x09A0 - 0x0908)
 class APetAIController : public AAthenaAIController
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0908(0x0008) MISSED OFFSET
-	TArray<struct FAIStategyControllerMovementMod>     StrategyControllerMovementMods;                           // 0x0910(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              DefaultControlRotationInterpSpeed;                        // 0x0920(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0924(0x0004) MISSED OFFSET
-	class UReactStateMappingsDataAsset*                ReactMappings;                                            // 0x0928(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0930(0x0008) MISSED OFFSET
-	class UPetHangoutSpotSelectorComponent*            HangoutSpotSelectorComponent;                             // 0x0938(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlackboardData*                             DefaultBlackboardAsset;                                   // 0x0940(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UBehaviorTree*                               DefaultTree;                                              // 0x0948(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UBehaviorTree*                               HangoutTree;                                              // 0x0950(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UPetDangerComponent*                         DangerComponent;                                          // 0x0958(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x28];                                      // 0x0960(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0908(0x0010) MISSED OFFSET
+	TArray<struct FAIStategyControllerMovementMod>     StrategyControllerMovementMods;                           // 0x0918(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              DefaultControlRotationInterpSpeed;                        // 0x0928(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x092C(0x0004) MISSED OFFSET
+	class UReactStateMappingsDataAsset*                ReactMappings;                                            // 0x0930(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0938(0x0008) MISSED OFFSET
+	class UPetHangoutSpotSelectorComponent*            HangoutSpotSelectorComponent;                             // 0x0940(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlackboardData*                             DefaultBlackboardAsset;                                   // 0x0948(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBehaviorTree*                               DefaultTree;                                              // 0x0950(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBehaviorTree*                               HangoutTree;                                              // 0x0958(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPetDangerComponent*                         DangerComponent;                                          // 0x0960(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x38];                                      // 0x0968(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -594,17 +593,17 @@ public:
 
 
 // Class Pets.PetItemInfo
-// 0x0058 (0x0628 - 0x05D0)
+// 0x0060 (0x0630 - 0x05D0)
 class APetItemInfo : public ANonStorableItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05D0(0x0010) MISSED OFFSET
-	struct FPetCustomisation                           PetCustomisation;                                         // 0x05E0(0x0018) (Net)
-	class AActor*                                      PetOwner;                                                 // 0x05F8(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      SpawnedForShip;                                           // 0x0600(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DropTraceDistance;                                        // 0x0608(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     DropChannel;                                              // 0x060C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1B];                                      // 0x060D(0x001B) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x05D0(0x0018) MISSED OFFSET
+	struct FPetCustomisation                           PetCustomisation;                                         // 0x05E8(0x0018) (Net)
+	class AActor*                                      PetOwner;                                                 // 0x0600(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      SpawnedForShip;                                           // 0x0608(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              DropTraceDistance;                                        // 0x0610(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     DropChannel;                                              // 0x0614(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1B];                                      // 0x0615(0x001B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -701,11 +700,11 @@ public:
 
 
 // Class Pets.PetsServiceParamsDataAsset
-// 0x0028 (0x0050 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UPetsServiceParamsDataAsset : public UDataAsset
 {
 public:
-	struct FPetsServiceParams                          Params;                                                   // 0x0028(0x0028) (Edit, DisableEditOnInstance)
+	struct FPetsServiceParams                          Params;                                                   // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -717,19 +716,21 @@ public:
 
 
 // Class Pets.PetsService
-// 0x0258 (0x0280 - 0x0028)
+// 0x0278 (0x02A0 - 0x0028)
 class UPetsService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 	TMap<class AActor*, struct FPetRelationship>       PetOwnerRelationships;                                    // 0x0038(0x0050) (ZeroConstructor)
 	class UAIPetsOnDemandSpawner*                      Spawner;                                                  // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x0090(0x0040) MISSED OFFSET
-	TArray<class AActor*>                              OwnersToRemove;                                           // 0x00D0(0x0010) (ZeroConstructor)
-	TArray<class AActor*>                              OwnersToRequestDespawn;                                   // 0x00E0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x160];                                     // 0x00F0(0x0160) MISSED OFFSET
-	class UPetHangoutSpotsDataAsset*                   PetHangoutDataAsset;                                      // 0x0250(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x28];                                      // 0x0258(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0090(0x0018) MISSED OFFSET
+	struct FPetsServiceParams                          PetsServiceParams;                                        // 0x00A8(0x0038)
+	TArray<class AActor*>                              OwnersToRemove;                                           // 0x00E0(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              OwnersToRequestDespawn;                                   // 0x00F0(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              PetsInProximityRadius;                                    // 0x0100(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x160];                                     // 0x0110(0x0160) MISSED OFFSET
+	class UPetHangoutSpotsDataAsset*                   PetHangoutDataAsset;                                      // 0x0270(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x28];                                      // 0x0278(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -738,13 +739,14 @@ public:
 	}
 
 
+	void SetMaxPetsOnServer(int InMaxPetsOnServer);
 	void RemovePetFromActor(class AActor* InOwner);
 	void AddPetForActor(class UClass* InPetType, const struct FPetCustomisation& InCustomisation, class AActor* InOwner);
 };
 
 
 // Class Pets.PetsSettings
-// 0x0040 (0x0068 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UPetsSettings : public UObject
 {
 public:
@@ -752,6 +754,7 @@ public:
 	struct FStringAssetReference                       PetListingDataAsset;                                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 	struct FStringAssetReference                       PetPartIdListingDataAsset;                                // 0x0048(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 	struct FStringAssetReference                       PetsServiceParamsDataAsset;                               // 0x0058(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	struct FStringAssetReference                       PetSpawnDefinitionsDataAsset;                             // 0x0068(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -794,33 +797,34 @@ public:
 
 
 // Class Pets.WieldablePet
-// 0x00D0 (0x08B0 - 0x07E0)
+// 0x00D8 (0x08A8 - 0x07D0)
 class AWieldablePet : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x07E0(0x0018) MISSED OFFSET
-	float                                              ThirdPersonScalingModifier;                               // 0x07F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x07FC(0x0004) MISSED OFFSET
-	class UWieldablePetComponent*                      WieldablePetComponent;                                    // 0x0800(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UAIPartsRetrievalComponent*                  AIPartsRetrievalComponent;                                // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UPetPartCustomisationComponent*              PetPartCustomisationComponent;                            // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitterComponent;                          // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UWaterHeightProviderComponent*               WaterHeightProviderComponent;                             // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UWaterExposureComponent*                     WaterExposureComponent;                                   // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0830(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UPickupableComponent*                        PickupableComponent;                                      // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractableComponent;                           // 0x0840(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UCleanlinessComponent*                       CleanlinessComponent;                                     // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class ULightweightStatusEffectManagerComponent*    LightweightStatusEffectManagerComponent;                  // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class AActor*                                      PetOwner;                                                 // 0x0858(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UFeedingComponent*                           FeedingComponent;                                         // 0x0860(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UPetSicknessComponent*                       SicknessComponent;                                        // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UWieldablePetHungerComponent*                HungerComponent;                                          // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UStarvingComponent*                          StarvingComponent;                                        // 0x0878(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UPetTelemetryComponent*                      TelemetryComponent;                                       // 0x0880(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TEnumAsByte<EAthenaAnimationPetHeldReactionState>  HungerReactAnimationState;                                // 0x0888(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               DropRequested;                                            // 0x0889(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x26];                                      // 0x088A(0x0026) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x07D0(0x0018) MISSED OFFSET
+	float                                              ThirdPersonScalingModifier;                               // 0x07E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x07EC(0x0004) MISSED OFFSET
+	class UWieldablePetComponent*                      WieldablePetComponent;                                    // 0x07F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UAIPartsRetrievalComponent*                  AIPartsRetrievalComponent;                                // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPetPartCustomisationComponent*              PetPartCustomisationComponent;                            // 0x0800(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitterComponent;                          // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UWaterHeightProviderComponent*               WaterHeightProviderComponent;                             // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UWaterExposureComponent*                     WaterExposureComponent;                                   // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPickupableComponent*                        PickupableComponent;                                      // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractableComponent;                           // 0x0830(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UCleanlinessComponent*                       CleanlinessComponent;                                     // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class ULightweightStatusEffectManagerComponent*    LightweightStatusEffectManagerComponent;                  // 0x0840(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPetDitherComponent*                         PetDitherComponent;                                       // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class AActor*                                      PetOwner;                                                 // 0x0850(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UFeedingComponent*                           FeedingComponent;                                         // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPetSicknessComponent*                       SicknessComponent;                                        // 0x0860(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UWieldablePetHungerComponent*                HungerComponent;                                          // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UStarvingComponent*                          StarvingComponent;                                        // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UPetTelemetryComponent*                      TelemetryComponent;                                       // 0x0878(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TEnumAsByte<EAthenaAnimationPetHeldReactionState>  HungerReactAnimationState;                                // 0x0880(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWieldablePetDropRequestReason>        DropRequest;                                              // 0x0881(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x26];                                      // 0x0882(0x0026) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -830,7 +834,7 @@ public:
 
 
 	void OnRep_HungerReactAnimationState();
-	void OnRep_DropRequested(bool DropRequestedPrior);
+	void OnRep_DropRequest(TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest);
 };
 
 
@@ -852,7 +856,7 @@ public:
 
 
 // Class Pets.WieldablePetComponentDataAsset
-// 0x0038 (0x0060 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UWieldablePetComponentDataAsset : public UDataAsset
 {
 public:
@@ -860,7 +864,8 @@ public:
 	struct FFloatRange                                 NormalTimeUntilEscape;                                    // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FFloatRange                                 SubmergedTimeUntilEscape;                                 // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              DamageToOwnerDropThreshold;                               // 0x0058(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DropDelay;                                                // 0x005C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	TArray<struct FWieldablePetDropTimeout>            DropTimeouts;                                             // 0x0060(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

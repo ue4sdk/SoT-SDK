@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_Wieldable_DVR_Mythical.BP_TreasureArtifact_Wieldable_DVR_Mythical_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class ABP_TreasureArtifact_Wieldable_DVR_Mythical_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:

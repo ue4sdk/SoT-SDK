@@ -46,6 +46,17 @@ enum class EAthenaAISpawnType : uint8_t
 };
 
 
+// Enum AthenaAI.ComponentClassLoadState
+enum class EComponentClassLoadState : uint8_t
+{
+	ComponentClassLoadState__Incomplete = 0,
+	ComponentClassLoadState__Success = 1,
+	ComponentClassLoadState__NoLoad = 2,
+	ComponentClassLoadState__Failed = 3,
+	ComponentClassLoadState__ComponentClassLoadState_MAX = 4
+};
+
+
 // Enum AthenaAI.AISpawnLocationSearchResult
 enum class EAISpawnLocationSearchResult : uint8_t
 {
@@ -66,8 +77,9 @@ enum class EAISpawnRequestState : uint8_t
 	AISpawnRequestState__WaitForClassLoad = 2,
 	AISpawnRequestState__WaitForLocationResult = 3,
 	AISpawnRequestState__WaitForLocationCheck = 4,
-	AISpawnRequestState__Complete  = 5,
-	AISpawnRequestState__AISpawnRequestState_MAX = 6
+	AISpawnRequestState__WaitForItemDropComponentClassLoad = 5,
+	AISpawnRequestState__Complete  = 6,
+	AISpawnRequestState__AISpawnRequestState_MAX = 7
 };
 
 
@@ -273,8 +285,9 @@ enum class EAISpawnRequestResult : uint8_t
 	AISpawnRequestResult__FailedNoQuery = 3,
 	AISpawnRequestResult__FailedNoValidPos = 4,
 	AISpawnRequestResult__FailedNoPawnClass = 5,
-	AISpawnRequestResult__Cancelled = 6,
-	AISpawnRequestResult__AISpawnRequestResult_MAX = 7
+	AISpawnRequestResult__FailedLoadingItemDropComponentClass = 6,
+	AISpawnRequestResult__Cancelled = 7,
+	AISpawnRequestResult__AISpawnRequestResult_MAX = 8
 };
 
 

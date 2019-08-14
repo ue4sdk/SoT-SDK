@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Fontaine_Chest_Footprints_classes.hpp"
+#include "SoT_BP_Fontaine_Chest_footprints_classes.hpp"
 
 namespace SDK
 {
@@ -12,12 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Fontaine_Chest_Footprints.BP_Fontaine_Chest_Footprints_C.UserConstructionScript
+// Function BP_Fontaine_Chest_footprints.BP_Fontaine_Chest_Footprints_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fontaine_Chest_Footprints_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Fontaine_Chest_Footprints.BP_Fontaine_Chest_Footprints_C.UserConstructionScript"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Fontaine_Chest_footprints.BP_Fontaine_Chest_Footprints_C.UserConstructionScript"));
 
 	struct
 	{

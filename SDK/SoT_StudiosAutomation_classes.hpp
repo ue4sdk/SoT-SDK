@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class StudiosAutomation.TestablePlayerController
-// 0x0000 (0x0798 - 0x0798)
+// 0x0000 (0x0800 - 0x0800)
 class ATestablePlayerController : public APlayerController
 {
 public:

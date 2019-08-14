@@ -1051,7 +1051,8 @@ enum class ENetworkFailure : uint8_t
 	ENetworkFailure__PlayerDeemedInactive = 14,
 	ENetworkFailure__CrewMigrationRequested = 15,
 	ENetworkFailure__ServerAtMatchmakingCapacity = 16,
-	ENetworkFailure__ENetworkFailure_MAX = 17
+	ENetworkFailure__ServerShuttingDown = 17,
+	ENetworkFailure__ENetworkFailure_MAX = 18
 };
 
 

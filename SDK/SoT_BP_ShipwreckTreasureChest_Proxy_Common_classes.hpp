@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwreckTreasureChest_Proxy_Common.BP_ShipwreckTreasureChest_Proxy_Common_C
-// 0x0000 (0x0898 - 0x0898)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_ShipwreckTreasureChest_Proxy_Common_C : public ABP_TreasureChestProxy_C
 {
 public:

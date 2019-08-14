@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PickupRightPendant_structs.hpp"
+#include "SoT_BP_PickUpRightPendant_structs.hpp"
 
 namespace SDK
 {
@@ -14,7 +14,7 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass BP_PickupRightPendant.BP_PickUpRightPendant_C
+// BlueprintGeneratedClass BP_PickUpRightPendant.BP_PickUpRightPendant_C
 // 0x0008 (0x00A0 - 0x0098)
 class UBP_PickUpRightPendant_C : public UBlueprintStepBase
 {
@@ -23,7 +23,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_PickupRightPendant.BP_PickUpRightPendant_C"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("BlueprintGeneratedClass BP_PickUpRightPendant.BP_PickUpRightPendant_C"));
 		return ptr;
 	}
 

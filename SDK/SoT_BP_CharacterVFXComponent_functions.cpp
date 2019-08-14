@@ -178,26 +178,6 @@ void UBP_CharacterVFXComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 }
 
 
-// Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_CharacterVFXComponent_C::ReceiveTick(float DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveTick"));
-
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
-	params.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveBeginPlay
 // (Event, Public, BlueprintEvent)
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PickupRightPendant_classes.hpp"
+#include "SoT_BP_PickUpRightPendant_classes.hpp"
 
 namespace SDK
 {
@@ -12,12 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_PickupRightPendant.BP_PickUpRightPendant_C.OnPendantPickedUp
+// Function BP_PickUpRightPendant.BP_PickUpRightPendant_C.OnPendantPickedUp
 // (BlueprintCallable, BlueprintEvent)
 
 void UBP_PickUpRightPendant_C::OnPendantPickedUp()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PickupRightPendant.BP_PickUpRightPendant_C.OnPendantPickedUp"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PickUpRightPendant.BP_PickUpRightPendant_C.OnPendantPickedUp"));
 
 	struct
 	{
@@ -28,14 +28,14 @@ void UBP_PickUpRightPendant_C::OnPendantPickedUp()
 }
 
 
-// Function BP_PickupRightPendant.BP_PickUpRightPendant_C.OnBegin
+// Function BP_PickUpRightPendant.BP_PickUpRightPendant_C.OnBegin
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UBP_PickUpRightPendant_C::OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PickupRightPendant.BP_PickUpRightPendant_C.OnBegin"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PickUpRightPendant.BP_PickUpRightPendant_C.OnBegin"));
 
 	struct
 	{
@@ -48,14 +48,14 @@ void UBP_PickUpRightPendant_C::OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBe
 }
 
 
-// Function BP_PickupRightPendant.BP_PickUpRightPendant_C.ExecuteUbergraph_BP_PickUpRightPendant
+// Function BP_PickUpRightPendant.BP_PickUpRightPendant_C.ExecuteUbergraph_BP_PickUpRightPendant
 // (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBP_PickUpRightPendant_C::ExecuteUbergraph_BP_PickUpRightPendant(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PickupRightPendant.BP_PickUpRightPendant_C.ExecuteUbergraph_BP_PickUpRightPendant"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PickUpRightPendant.BP_PickUpRightPendant_C.ExecuteUbergraph_BP_PickUpRightPendant"));
 
 	struct
 	{

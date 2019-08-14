@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Fire_enums.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_ShipDamage_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 
 namespace SDK
 {
@@ -133,14 +133,14 @@ struct FShipFireLightRelativeSpawnDesc : public FShipFireRelativeSpawnDesc
 };
 
 // ScriptStruct Fire.ShipFireLight
-// 0x0098
+// 0x0088
 struct FShipFireLight
 {
 	struct FShipFireLightRelativeSpawnDesc             Desc;                                                     // 0x0000(0x0060)
 	class UPointLightComponent*                        PointLight;                                               // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
 	class UStaticMeshComponent*                        AreaLight;                                                // 0x0068(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
 	class UMaterialInstanceDynamic*                    AreaLightMaterial;                                        // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0078(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Fire.ShipFireLightManager

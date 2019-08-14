@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Water_enums.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -57,7 +57,7 @@ struct FBuoyancyVolumeSample
 };
 
 // ScriptStruct Water.BuoyancyDragSample
-// 0x0050
+// 0x0090
 struct FBuoyancyDragSample
 {
 	struct FVector                                     Offset;                                                   // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
@@ -66,11 +66,11 @@ struct FBuoyancyDragSample
 	float                                              Radius;                                                   // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DragCoefficient;                                          // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBuoyancyDragSampleType>               Type;                                                     // 0x002C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x23];                                      // 0x002D(0x0023) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x63];                                      // 0x002D(0x0063) MISSED OFFSET
 };
 
 // ScriptStruct Water.WaterBuoyancy
-// 0x00B8
+// 0x0130
 struct FWaterBuoyancy
 {
 	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x0000(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
@@ -82,7 +82,7 @@ struct FWaterBuoyancy
 	TArray<struct FBuoyancyDragSample>                 DragSamples;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class UCurveFloat*                                 BuyoancySampleZSpeedVSDampeningScalar;                    // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              QuadSubmersionTestSampleResolution;                       // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x74];                                      // 0x0044(0x0074) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xEC];                                      // 0x0044(0x00EC) MISSED OFFSET
 };
 
 // ScriptStruct Water.BuoyancySampleMovementConfigurationEntry

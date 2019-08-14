@@ -149,11 +149,12 @@ public:
 
 
 // Class Fire.FlammableWieldableComponent
-// 0x0010 (0x00F8 - 0x00E8)
+// 0x0028 (0x0110 - 0x00E8)
 class UFlammableWieldableComponent : public UFlammableComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00E8(0x0010) MISSED OFFSET
+	struct FStatus                                     IgnitedStatus;                                            // 0x00E8(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0100(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

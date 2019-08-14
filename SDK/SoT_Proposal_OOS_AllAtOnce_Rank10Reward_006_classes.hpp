@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_OOS_AllAtOnce_Rank10Reward_006.Proposal_OOS_AllAtOnce_Rank10Reward_006_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class UProposal_OOS_AllAtOnce_Rank10Reward_006_C : public UVoyageProposalDesc
 {
 public:

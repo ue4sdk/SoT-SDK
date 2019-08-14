@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -17,10 +17,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct GameService.GameServiceMap
-// 0x0050
+// 0x0070
 struct FGameServiceMap
 {
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0000(0x0070) MISSED OFFSET
 };
 
 // ScriptStruct GameService.GameServiceCoordinatorUnit

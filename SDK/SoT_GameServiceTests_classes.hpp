@@ -108,11 +108,11 @@ public:
 
 
 // Class GameServiceTests.TestGameServiceProvider
-// 0x0058 (0x0080 - 0x0028)
+// 0x0078 (0x00A0 - 0x0028)
 class UTestGameServiceProvider : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0028(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -140,11 +140,11 @@ public:
 
 
 // Class GameServiceTests.TestGameStateWithObjectMessagingServiceProvider
-// 0x00B8 (0x0660 - 0x05A8)
+// 0x00D8 (0x0680 - 0x05A8)
 class ATestGameStateWithObjectMessagingServiceProvider : public ATestGameStateWithObjectMessagingDispatcher
 {
 public:
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x05A8(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xD8];                                      // 0x05A8(0x00D8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
