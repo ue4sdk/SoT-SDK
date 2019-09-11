@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class GameService.ServiceProviderGameState
-// 0x0100 (0x0600 - 0x0500)
+// 0x0120 (0x0620 - 0x0500)
 class AServiceProviderGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x100];                                     // 0x0500(0x0100) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x120];                                     // 0x0500(0x0120) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

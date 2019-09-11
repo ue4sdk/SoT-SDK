@@ -171,9 +171,9 @@ public:
 };
 
 
-// Class StatusEffects.LightweightStatusEffectManagerComponent
+// Class StatusEffects.LightWeightStatusEffectManagerComponent
 // 0x0030 (0x0100 - 0x00D0)
-class ULightweightStatusEffectManagerComponent : public UActorComponent
+class ULightWeightStatusEffectManagerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x18];                                      // 0x00D0(0x0018) MISSED OFFSET
@@ -182,7 +182,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.LightweightStatusEffectManagerComponent"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.LightWeightStatusEffectManagerComponent"));
 		return ptr;
 	}
 

@@ -17,6 +17,25 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct Wind.WindZoneParams
+// 0x0010
+struct FWindZoneParams
+{
+	float                                              OuterRadius;                                              // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InnerRadius;                                              // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TurbulenceScalar;                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               WindOnlyAffectsTrees;                                     // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Wind.WindZoneTurbulence
+// 0x0008
+struct FWindZoneTurbulence
+{
+	float                                              Base;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Current;                                                  // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Wind.WindServiceParams
 // 0x0024
 struct FWindServiceParams
@@ -30,25 +49,6 @@ struct FWindServiceParams
 	float                                              AbsoluteMaxWindMagnitude;                                 // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              MinBlendTimeBetweenChanges;                               // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              MaxBlendTimeBetweenChanges;                               // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Wind.WindZoneTurbulence
-// 0x0008
-struct FWindZoneTurbulence
-{
-	float                                              Base;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Current;                                                  // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Wind.WindZoneParams
-// 0x0010
-struct FWindZoneParams
-{
-	float                                              OuterRadius;                                              // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InnerRadius;                                              // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TurbulenceScalar;                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               WindOnlyAffectsTrees;                                     // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Wind.WindTurbulenceParameters

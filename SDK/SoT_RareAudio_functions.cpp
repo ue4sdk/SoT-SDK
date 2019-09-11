@@ -36,27 +36,6 @@ void UWwiseEmitterBlueprintLibrary::WwiseStopGlobalEvent(class UWwiseEvent* Even
 }
 
 
-// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopAllGlobalEvents
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWwiseEmitterBlueprintLibrary::WwiseStopAllGlobalEvents(float FadeTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopAllGlobalEvents"));
-
-	struct
-	{
-		float                          FadeTime;
-	} params;
-
-	params.FadeTime = FadeTime;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseSetState
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:

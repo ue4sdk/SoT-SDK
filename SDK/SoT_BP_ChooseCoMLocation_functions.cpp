@@ -12,43 +12,37 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ChooseCoMLocation.BP_ChooseCoMLocation_C.OnBegin
-// (Event, Protected, BlueprintEvent)
+// Function BP_ChooseCoMLocation.BP_ChooseCoMLocation_C.OnBeginCustom
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FDS_Puzzle>      PossibleLocations              (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class AActor*                  Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UQuestBookPageBundle*    Pages                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// TAssetPtr<class AActor>        LocationAssetID                (Parm, OutParm)
 
-void UBP_ChooseCoMLocation_C::OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode)
+void UBP_ChooseCoMLocation_C::OnBeginCustom(TArray<struct FDS_Puzzle>* PossibleLocations, class AActor** Location, class UQuestBookPageBundle** Pages, TAssetPtr<class AActor>* LocationAssetID)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ChooseCoMLocation.BP_ChooseCoMLocation_C.OnBegin"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ChooseCoMLocation.BP_ChooseCoMLocation_C.OnBeginCustom"));
 
 	struct
 	{
-		TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode;
+		TArray<struct FDS_Puzzle>      PossibleLocations;
+		class AActor*                  Location;
+		class UQuestBookPageBundle*    Pages;
+		TAssetPtr<class AActor>        LocationAssetID;
 	} params;
 
-	params.InBeginMode = InBeginMode;
 
 	UObject::ProcessEvent(fn, &params);
-}
 
-
-// Function BP_ChooseCoMLocation.BP_ChooseCoMLocation_C.ExecuteUbergraph_BP_ChooseCoMLocation
-// (HasDefaults)
-// Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_ChooseCoMLocation_C::ExecuteUbergraph_BP_ChooseCoMLocation(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ChooseCoMLocation.BP_ChooseCoMLocation_C.ExecuteUbergraph_BP_ChooseCoMLocation"));
-
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
-	params.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(fn, &params);
+	if (PossibleLocations != nullptr)
+		*PossibleLocations = params.PossibleLocations;
+	if (Location != nullptr)
+		*Location = params.Location;
+	if (Pages != nullptr)
+		*Pages = params.Pages;
+	if (LocationAssetID != nullptr)
+		*LocationAssetID = params.LocationAssetID;
 }
 
 

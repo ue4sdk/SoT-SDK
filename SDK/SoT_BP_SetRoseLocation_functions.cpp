@@ -12,43 +12,29 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_SetRoseLocation.BP_SetRoseLocation_C.OnBegin
-// (Event, Protected, BlueprintEvent)
+// Function BP_SetRoseLocation.BP_SetRoseLocation_C.OnBeginCustom
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<TAssetPtr<class AActor>> PendantLocations               (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class AActor*                  RoseLocation                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_SetRoseLocation_C::OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode)
+void UBP_SetRoseLocation_C::OnBeginCustom(TArray<TAssetPtr<class AActor>>* PendantLocations, class AActor** RoseLocation)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SetRoseLocation.BP_SetRoseLocation_C.OnBegin"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SetRoseLocation.BP_SetRoseLocation_C.OnBeginCustom"));
 
 	struct
 	{
-		TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode;
+		TArray<TAssetPtr<class AActor>> PendantLocations;
+		class AActor*                  RoseLocation;
 	} params;
 
-	params.InBeginMode = InBeginMode;
 
 	UObject::ProcessEvent(fn, &params);
-}
 
-
-// Function BP_SetRoseLocation.BP_SetRoseLocation_C.ExecuteUbergraph_BP_SetRoseLocation
-// (HasDefaults)
-// Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_SetRoseLocation_C::ExecuteUbergraph_BP_SetRoseLocation(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SetRoseLocation.BP_SetRoseLocation_C.ExecuteUbergraph_BP_SetRoseLocation"));
-
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
-	params.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(fn, &params);
+	if (PendantLocations != nullptr)
+		*PendantLocations = params.PendantLocations;
+	if (RoseLocation != nullptr)
+		*RoseLocation = params.RoseLocation;
 }
 
 

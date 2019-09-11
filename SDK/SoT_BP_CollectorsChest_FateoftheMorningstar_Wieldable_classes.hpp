@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_FateoftheMorningstar_Wieldable.BP_CollectorsChest_FateoftheMorningstar_Wieldable_C
-// 0x0029 (0x08A9 - 0x0880)
+// 0x0029 (0x0899 - 0x0870)
 class ABP_CollectorsChest_FateoftheMorningstar_Wieldable_C : public ABP_BaseLockableCollectorsChest_Wieldable_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*                    ParticleSystem_Soul;                                      // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem_Closed;                                    // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem_CollectSoul;                               // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        LockSocket;                                               // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               SoulCollected;                                            // 0x08A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0870(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*                    ParticleSystem_Soul;                                      // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem_Closed;                                    // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem_CollectSoul;                               // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        LockSocket;                                               // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               SoulCollected;                                            // 0x0898(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

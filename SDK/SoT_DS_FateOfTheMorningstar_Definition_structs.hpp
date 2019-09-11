@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_DS_FateOfTheMorningstar_SarcophagusSpawnParams_classes.hpp"
-#include "SoT_DS_FateOfTheMorningstar_IslandPuzzleSet_classes.hpp"
 #include "SoT_DS_FateOfTheMorningstar_Lorebooks_classes.hpp"
+#include "SoT_DS_FateOfTheMorningstar_IslandPuzzleSet_classes.hpp"
 
 namespace SDK
 {

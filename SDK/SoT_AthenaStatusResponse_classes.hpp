@@ -80,6 +80,22 @@ public:
 };
 
 
+// Class AthenaStatusResponse.StatusResponseSetScalarParamOnCharacter
+// 0x0010 (0x0038 - 0x0028)
+class UStatusResponseSetScalarParamOnCharacter : public UStatusResponse
+{
+public:
+	TArray<struct FScalarParamInfo>                    ParamsToChange;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaStatusResponse.StatusResponseSetScalarParamOnCharacter"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaStatusResponse.StatusResponseSuspendStatus
 // 0x0010 (0x0038 - 0x0028)
 class UStatusResponseSuspendStatus : public UStatusResponse

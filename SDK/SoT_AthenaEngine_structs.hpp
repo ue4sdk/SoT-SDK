@@ -62,6 +62,13 @@ struct FActorComponentSelector
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct AthenaEngine.EventMeshAssigned
+// 0x0001
+struct FEventMeshAssigned
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 }
 
 #ifdef _MSC_VER

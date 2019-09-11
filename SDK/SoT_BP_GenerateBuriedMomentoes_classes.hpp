@@ -30,7 +30,7 @@ public:
 
 
 	void SetPuzzle(class UClass* Item, TArray<struct FDS_Puzzle>* Puzzles);
-	void GetIslandFromActorRef(TAssetPtr<class AActor> Actor, struct FName* IslandName);
+	void GetIslandFromActor(TAssetPtr<class AActor> Actor, struct FName* IslandName);
 	void GetPuzzle(TArray<struct FDS_Puzzle>* Puzzles, struct FDS_Puzzle* BuriedItem);
 	void Start();
 	void ForIndex(int Index);

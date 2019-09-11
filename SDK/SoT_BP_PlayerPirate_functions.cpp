@@ -369,8 +369,9 @@ void ABP_PlayerPirate_C::SkipToNextMesh()
 // TArray<class UStaticMesh*>     StaticMeshArray                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class USkeletalMesh*>   SkeletalMeshArray              (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FVector                 ItemScale                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseItemScale                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerPirate_C::SetWieldedItemMesh(class AWieldableItem* Wieldable_Item_Ref, class UStaticMesh* StaticMesh, class USkeletalMesh* SkeletalMesh, bool WieldItem, const struct FVector& ItemScale, TArray<class UStaticMesh*>* StaticMeshArray, TArray<class USkeletalMesh*>* SkeletalMeshArray)
+void ABP_PlayerPirate_C::SetWieldedItemMesh(class AWieldableItem* Wieldable_Item_Ref, class UStaticMesh* StaticMesh, class USkeletalMesh* SkeletalMesh, bool WieldItem, const struct FVector& ItemScale, bool UseItemScale, TArray<class UStaticMesh*>* StaticMeshArray, TArray<class USkeletalMesh*>* SkeletalMeshArray)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate.BP_PlayerPirate_C.SetWieldedItemMesh"));
 
@@ -383,6 +384,7 @@ void ABP_PlayerPirate_C::SetWieldedItemMesh(class AWieldableItem* Wieldable_Item
 		TArray<class UStaticMesh*>     StaticMeshArray;
 		TArray<class USkeletalMesh*>   SkeletalMeshArray;
 		struct FVector                 ItemScale;
+		bool                           UseItemScale;
 	} params;
 
 	params.Wieldable_Item_Ref = Wieldable_Item_Ref;
@@ -390,6 +392,7 @@ void ABP_PlayerPirate_C::SetWieldedItemMesh(class AWieldableItem* Wieldable_Item
 	params.SkeletalMesh = SkeletalMesh;
 	params.WieldItem = WieldItem;
 	params.ItemScale = ItemScale;
+	params.UseItemScale = UseItemScale;
 
 	UObject::ProcessEvent(fn, &params);
 

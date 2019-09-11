@@ -57,7 +57,6 @@ public:
 	void Play_Falling_Splash(float FallingSpeed);
 	void Play_Foot_Splash(const struct FVector& Location);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void PlayerViewUnderWaterEvent(const struct FEventPlayerViewUnderWaterStateChanged& Event);
 	void FallingIntoWaterEvent(const struct FAthena_FFallingIntoWaterEvent& Event);

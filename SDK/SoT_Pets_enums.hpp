@@ -43,6 +43,16 @@ enum class EHangoutRotationMode : uint8_t
 };
 
 
+// Enum Pets.EWieldablePetDropRequestReason
+enum class EWieldablePetDropRequestReason : uint8_t
+{
+	EWieldablePetDropRequestReason__None = 0,
+	EWieldablePetDropRequestReason__Submerged = 1,
+	EWieldablePetDropRequestReason__Escaped = 2,
+	EWieldablePetDropRequestReason__EWieldablePetDropRequestReason_MAX = 3
+};
+
+
 }
 
 #ifdef _MSC_VER

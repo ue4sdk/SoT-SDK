@@ -1055,185 +1055,6 @@ public:
 };
 
 
-// Class Engine.NavigationObjectBase
-// 0x0028 (0x04D0 - 0x04A8)
-class ANavigationObjectBase : public AActor
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
-	class UCapsuleComponent*                           CapsuleComponent;                                         // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBillboardComponent*                         GoodSprite;                                               // 0x04B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBillboardComponent*                         BadSprite;                                                // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      bIsPIEPlayerStart : 1;                                    // 0x04C8(0x0001)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.NavigationObjectBase"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.PlayerStart
-// 0x0008 (0x04D8 - 0x04D0)
-class APlayerStart : public ANavigationObjectBase
-{
-public:
-	struct FName                                       PlayerStartTag;                                           // 0x04D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PlayerStart"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.Brush
-// 0x0038 (0x04E0 - 0x04A8)
-class ABrush : public AActor
-{
-public:
-	TEnumAsByte<EBrushType>                            BrushType;                                                // 0x04A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04A9(0x0003) MISSED OFFSET
-	struct FColor                                      BrushColor;                                               // 0x04AC(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                PolyFlags;                                                // 0x04B0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bColored : 1;                                             // 0x04B4(0x0001)
-	unsigned char                                      bSolidWhenSelected : 1;                                   // 0x04B4(0x0001)
-	unsigned char                                      bPlaceableFromClassBrowser : 1;                           // 0x04B4(0x0001)
-	unsigned char                                      bNotForClientOrServer : 1;                                // 0x04B4(0x0001)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x04B5(0x0003) MISSED OFFSET
-	class UModel*                                      Brush;                                                    // 0x04B8(0x0008) (ExportObject, ZeroConstructor, IsPlainOldData)
-	class UBrushComponent*                             BrushComponent;                                           // 0x04C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      bInManipulation : 1;                                      // 0x04C8(0x0001)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
-	TArray<struct FGeomSelection>                      SavedSelections;                                          // 0x04D0(0x0010) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Brush"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.Volume
-// 0x0000 (0x04E0 - 0x04E0)
-class AVolume : public ABrush
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Volume"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.BlockingVolume
-// 0x0000 (0x04E0 - 0x04E0)
-class ABlockingVolume : public AVolume
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.BlockingVolume"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.Info
-// 0x0000 (0x04A8 - 0x04A8)
-class AInfo : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Info"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.WorldSettings
-// 0x01A8 (0x0650 - 0x04A8)
-class AWorldSettings : public AInfo
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
-	unsigned char                                      bEnableWorldBoundsChecks : 1;                             // 0x04B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bEnableNavigationSystem : 1;                              // 0x04B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x04B1(0x0003) MISSED OFFSET
-	TEnumAsByte<EWorldCompositionSetting>              WorldCompositionSetting;                                  // 0x04B4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x04B5(0x0003) MISSED OFFSET
-	unsigned char                                      bEnableWorldOriginRebasing : 1;                           // 0x04B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bWorldGravitySet : 1;                                     // 0x04B8(0x0001) (Transient)
-	unsigned char                                      bGlobalGravitySet : 1;                                    // 0x04B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x04B9(0x0003) MISSED OFFSET
-	float                                              KillZ;                                                    // 0x04BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      KillZDamageType;                                          // 0x04C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              WorldGravityZ;                                            // 0x04C8(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              GlobalGravityZ;                                           // 0x04CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DefaultPhysicsVolumeClass;                                // 0x04D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData)
-	class UClass*                                      PhysicsCollisionHandlerClass;                             // 0x04D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DefaultGameMode;                                          // 0x04E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FGameModePrefix>                     DefaultMapPrefixes;                                       // 0x04E8(0x0010) (ZeroConstructor, Config)
-	class UClass*                                      GameNetworkManagerClass;                                  // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                PackedLightAndShadowMapTextureSize;                       // 0x0500(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bMinimizeBSPSections : 1;                                 // 0x0504(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0505(0x0003) MISSED OFFSET
-	struct FVector                                     DefaultColorScale;                                        // 0x0508(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bPrecomputeVisibility : 1;                                // 0x0514(0x0001) (Edit)
-	unsigned char                                      bPlaceCellsOnlyAlongCameraTracks : 1;                     // 0x0514(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0515(0x0003) MISSED OFFSET
-	int                                                VisibilityCellSize;                                       // 0x0518(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EVisibilityAggressiveness>             VisibilityAggressiveness;                                 // 0x051C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x051D(0x0003) MISSED OFFSET
-	unsigned char                                      bForceNoPrecomputedLighting : 1;                          // 0x0520(0x0001) (Edit)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0521(0x0003) MISSED OFFSET
-	struct FLightmassWorldInfoSettings                 LightmassSettings;                                        // 0x0524(0x0044) (Edit)
-	TEnumAsByte<ELightingBuildQuality>                 LevelLightingQuality;                                     // 0x0568(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x7];                                       // 0x0569(0x0007) MISSED OFFSET
-	struct FReverbSettings                             DefaultReverbSettings;                                    // 0x0570(0x0018) (Edit, Config)
-	struct FInteriorSettings                           DefaultAmbientZoneSettings;                               // 0x0588(0x0024) (Edit, Config)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
-	class USoundMix*                                   DefaultBaseSoundMix;                                      // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WorldToMeters;                                            // 0x05B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x4];                                       // 0x05BC(0x0004) MISSED OFFSET
-	class UBookMark*                                   BookMarks[0xA];                                           // 0x05C0(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              TimeDilation;                                             // 0x0610(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              MatineeTimeDilation;                                      // 0x0614(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              DemoPlayTimeDilation;                                     // 0x0618(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x4];                                       // 0x061C(0x0004) MISSED OFFSET
-	class APlayerState*                                Pauser;                                                   // 0x0620(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bHighPriorityLoading : 1;                                 // 0x0628(0x0001) (Net)
-	unsigned char                                      bHighPriorityLoadingLocal : 1;                            // 0x0628(0x0001)
-	unsigned char                                      UnknownData12[0x7];                                       // 0x0629(0x0007) MISSED OFFSET
-	TArray<struct FNetViewer>                          ReplicationViewers;                                       // 0x0630(0x0010) (ZeroConstructor)
-	TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0640(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.WorldSettings"));
-		return ptr;
-	}
-
-
-	void OnRep_WorldGravityZ();
-};
-
-
 // Class Engine.Engine
 // 0x0A28 (0x0A50 - 0x0028)
 class UEngine : public UObject
@@ -1515,6 +1336,21 @@ public:
 	void ReceiveInit();
 	void DebugRemovePlayer(int ControllerId);
 	void DebugCreatePlayer(int ControllerId);
+};
+
+
+// Class Engine.Info
+// 0x0000 (0x04A8 - 0x04A8)
+class AInfo : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Info"));
+		return ptr;
+	}
+
 };
 
 
@@ -1869,7 +1705,7 @@ public:
 
 
 // Class Engine.GameViewportClient
-// 0x0338 (0x0368 - 0x0030)
+// 0x0340 (0x0370 - 0x0030)
 class UGameViewportClient : public UScriptViewportClient
 {
 public:
@@ -1879,7 +1715,7 @@ public:
 	unsigned char                                      UnknownData01[0x30];                                      // 0x0050(0x0030) MISSED OFFSET
 	class UWorld*                                      World;                                                    // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UGameInstance*                               GameInstance;                                             // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2D8];                                     // 0x0090(0x02D8) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x2E0];                                     // 0x0090(0x02E0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1976,6 +1812,43 @@ public:
 };
 
 
+// Class Engine.PlayerState
+// 0x0088 (0x0530 - 0x04A8)
+class APlayerState : public AInfo
+{
+public:
+	float                                              Score;                                                    // 0x04A8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Ping;                                                     // 0x04AC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
+	class FString                                      PlayerName;                                               // 0x04B0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x04C0(0x0010) MISSED OFFSET
+	int                                                PlayerId;                                                 // 0x04D0(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIsSpectator : 1;                                         // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bOnlySpectator : 1;                                       // 0x04D4(0x0001)
+	unsigned char                                      bIsABot : 1;                                              // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData02 : 1;                                        // 0x04D4(0x0001)
+	unsigned char                                      bIsInactive : 1;                                          // 0x04D4(0x0001)
+	unsigned char                                      bFromPreviousLevel : 1;                                   // 0x04D4(0x0001)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x04D5(0x0003) MISSED OFFSET
+	int                                                StartTime;                                                // 0x04D8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
+	class UClass*                                      EngineMessageClass;                                       // 0x04E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x18];                                      // 0x04E8(0x0018) MISSED OFFSET
+	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0500(0x0018) (Net)
+	unsigned char                                      UnknownData06[0x18];                                      // 0x0518(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PlayerState"));
+		return ptr;
+	}
+
+
+	void OnRep_UniqueId();
+	void OnRep_PlayerName();
+};
+
+
 // Class Engine.Controller
 // 0x0060 (0x0508 - 0x04A8)
 class AController : public AActor
@@ -2022,7 +1895,7 @@ public:
 
 
 // Class Engine.PlayerController
-// 0x0290 (0x0798 - 0x0508)
+// 0x02F8 (0x0800 - 0x0508)
 class APlayerController : public AController
 {
 public:
@@ -2081,12 +1954,14 @@ public:
 	class ASpectatorPawn*                              SpectatorPawn;                                            // 0x0778(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     SpawnLocation;                                            // 0x0780(0x000C) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData13[0x4];                                       // 0x078C(0x0004) MISSED OFFSET
-	bool                                               bIsLocalPlayerController;                                 // 0x0790(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x1];                                       // 0x0791(0x0001) MISSED OFFSET
-	uint16_t                                           SeamlessTravelCount;                                      // 0x0792(0x0002) (ZeroConstructor, IsPlainOldData)
-	uint16_t                                           LastCompletedSeamlessTravelCount;                         // 0x0794(0x0002) (ZeroConstructor, IsPlainOldData)
-	bool                                               bInCinematicMode;                                         // 0x0796(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x1];                                       // 0x0797(0x0001) MISSED OFFSET
+	TMap<class ULevel*, class UInputComponent*>        LevelInputComponents;                                     // 0x0790(0x0050) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData14[0x14];                                      // 0x07E0(0x0014) MISSED OFFSET
+	bool                                               bIsLocalPlayerController;                                 // 0x07F4(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x1];                                       // 0x07F5(0x0001) MISSED OFFSET
+	uint16_t                                           SeamlessTravelCount;                                      // 0x07F6(0x0002) (ZeroConstructor, IsPlainOldData)
+	uint16_t                                           LastCompletedSeamlessTravelCount;                         // 0x07F8(0x0002) (ZeroConstructor, IsPlainOldData)
+	bool                                               bInCinematicMode;                                         // 0x07FA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x5];                                       // 0x07FB(0x0005) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2225,43 +2100,6 @@ public:
 };
 
 
-// Class Engine.PlayerState
-// 0x0088 (0x0530 - 0x04A8)
-class APlayerState : public AInfo
-{
-public:
-	float                                              Score;                                                    // 0x04A8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Ping;                                                     // 0x04AC(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
-	class FString                                      PlayerName;                                               // 0x04B0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04C0(0x0010) MISSED OFFSET
-	int                                                PlayerId;                                                 // 0x04D0(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIsSpectator : 1;                                         // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bOnlySpectator : 1;                                       // 0x04D4(0x0001)
-	unsigned char                                      bIsABot : 1;                                              // 0x04D4(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData02 : 1;                                        // 0x04D4(0x0001)
-	unsigned char                                      bIsInactive : 1;                                          // 0x04D4(0x0001)
-	unsigned char                                      bFromPreviousLevel : 1;                                   // 0x04D4(0x0001)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x04D5(0x0003) MISSED OFFSET
-	int                                                StartTime;                                                // 0x04D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
-	class UClass*                                      EngineMessageClass;                                       // 0x04E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x18];                                      // 0x04E8(0x0018) MISSED OFFSET
-	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0500(0x0018) (Net)
-	unsigned char                                      UnknownData06[0x18];                                      // 0x0518(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PlayerState"));
-		return ptr;
-	}
-
-
-	void OnRep_UniqueId();
-	void OnRep_PlayerName();
-};
-
-
 // Class Engine.SpringArmComponent
 // 0x0080 (0x0340 - 0x02C0)
 class USpringArmComponent : public USceneComponent
@@ -2316,6 +2154,133 @@ public:
 };
 
 
+// Class Engine.Brush
+// 0x0038 (0x04E0 - 0x04A8)
+class ABrush : public AActor
+{
+public:
+	TEnumAsByte<EBrushType>                            BrushType;                                                // 0x04A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04A9(0x0003) MISSED OFFSET
+	struct FColor                                      BrushColor;                                               // 0x04AC(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                PolyFlags;                                                // 0x04B0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bColored : 1;                                             // 0x04B4(0x0001)
+	unsigned char                                      bSolidWhenSelected : 1;                                   // 0x04B4(0x0001)
+	unsigned char                                      bPlaceableFromClassBrowser : 1;                           // 0x04B4(0x0001)
+	unsigned char                                      bNotForClientOrServer : 1;                                // 0x04B4(0x0001)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x04B5(0x0003) MISSED OFFSET
+	class UModel*                                      Brush;                                                    // 0x04B8(0x0008) (ExportObject, ZeroConstructor, IsPlainOldData)
+	class UBrushComponent*                             BrushComponent;                                           // 0x04C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      bInManipulation : 1;                                      // 0x04C8(0x0001)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
+	TArray<struct FGeomSelection>                      SavedSelections;                                          // 0x04D0(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Brush"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.Volume
+// 0x0000 (0x04E0 - 0x04E0)
+class AVolume : public ABrush
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.Volume"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.BlockingVolume
+// 0x0000 (0x04E0 - 0x04E0)
+class ABlockingVolume : public AVolume
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.BlockingVolume"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.WorldSettings
+// 0x01A8 (0x0650 - 0x04A8)
+class AWorldSettings : public AInfo
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
+	unsigned char                                      bEnableWorldBoundsChecks : 1;                             // 0x04B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bEnableNavigationSystem : 1;                              // 0x04B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x04B1(0x0003) MISSED OFFSET
+	TEnumAsByte<EWorldCompositionSetting>              WorldCompositionSetting;                                  // 0x04B4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x04B5(0x0003) MISSED OFFSET
+	unsigned char                                      bEnableWorldOriginRebasing : 1;                           // 0x04B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bWorldGravitySet : 1;                                     // 0x04B8(0x0001) (Transient)
+	unsigned char                                      bGlobalGravitySet : 1;                                    // 0x04B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x04B9(0x0003) MISSED OFFSET
+	float                                              KillZ;                                                    // 0x04BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      KillZDamageType;                                          // 0x04C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WorldGravityZ;                                            // 0x04C8(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              GlobalGravityZ;                                           // 0x04CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DefaultPhysicsVolumeClass;                                // 0x04D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData)
+	class UClass*                                      PhysicsCollisionHandlerClass;                             // 0x04D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DefaultGameMode;                                          // 0x04E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FGameModePrefix>                     DefaultMapPrefixes;                                       // 0x04E8(0x0010) (ZeroConstructor, Config)
+	class UClass*                                      GameNetworkManagerClass;                                  // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                PackedLightAndShadowMapTextureSize;                       // 0x0500(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bMinimizeBSPSections : 1;                                 // 0x0504(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0505(0x0003) MISSED OFFSET
+	struct FVector                                     DefaultColorScale;                                        // 0x0508(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bPrecomputeVisibility : 1;                                // 0x0514(0x0001) (Edit)
+	unsigned char                                      bPlaceCellsOnlyAlongCameraTracks : 1;                     // 0x0514(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0515(0x0003) MISSED OFFSET
+	int                                                VisibilityCellSize;                                       // 0x0518(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EVisibilityAggressiveness>             VisibilityAggressiveness;                                 // 0x051C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x051D(0x0003) MISSED OFFSET
+	unsigned char                                      bForceNoPrecomputedLighting : 1;                          // 0x0520(0x0001) (Edit)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x0521(0x0003) MISSED OFFSET
+	struct FLightmassWorldInfoSettings                 LightmassSettings;                                        // 0x0524(0x0044) (Edit)
+	TEnumAsByte<ELightingBuildQuality>                 LevelLightingQuality;                                     // 0x0568(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x7];                                       // 0x0569(0x0007) MISSED OFFSET
+	struct FReverbSettings                             DefaultReverbSettings;                                    // 0x0570(0x0018) (Edit, Config)
+	struct FInteriorSettings                           DefaultAmbientZoneSettings;                               // 0x0588(0x0024) (Edit, Config)
+	unsigned char                                      UnknownData09[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
+	class USoundMix*                                   DefaultBaseSoundMix;                                      // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WorldToMeters;                                            // 0x05B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x4];                                       // 0x05BC(0x0004) MISSED OFFSET
+	class UBookMark*                                   BookMarks[0xA];                                           // 0x05C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              TimeDilation;                                             // 0x0610(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              MatineeTimeDilation;                                      // 0x0614(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              DemoPlayTimeDilation;                                     // 0x0618(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x4];                                       // 0x061C(0x0004) MISSED OFFSET
+	class APlayerState*                                Pauser;                                                   // 0x0620(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bHighPriorityLoading : 1;                                 // 0x0628(0x0001) (Net)
+	unsigned char                                      bHighPriorityLoadingLocal : 1;                            // 0x0628(0x0001)
+	unsigned char                                      UnknownData12[0x7];                                       // 0x0629(0x0007) MISSED OFFSET
+	TArray<struct FNetViewer>                          ReplicationViewers;                                       // 0x0630(0x0010) (ZeroConstructor)
+	TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0640(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.WorldSettings"));
+		return ptr;
+	}
+
+
+	void OnRep_WorldGravityZ();
+};
+
+
 // Class Engine.PostProcessComponent
 // 0x0550 (0x0810 - 0x02C0)
 class UPostProcessComponent : public USceneComponent
@@ -2337,64 +2302,6 @@ public:
 
 
 	void AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight);
-};
-
-
-// Class Engine.MeshComponent
-// 0x0010 (0x05B0 - 0x05A0)
-class UMeshComponent : public UPrimitiveComponent
-{
-public:
-	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x05A0(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.MeshComponent"));
-		return ptr;
-	}
-
-
-	void ResetDefaultMaterials();
-	TArray<class UMaterialInterface*> GetMaterials();
-};
-
-
-// Class Engine.StaticMeshComponent
-// 0x0050 (0x0600 - 0x05B0)
-class UStaticMeshComponent : public UMeshComponent
-{
-public:
-	int                                                ForcedLodModel;                                           // 0x05B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bOverrideMinLOD;                                          // 0x05B4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bOverrideNavigationToDefaultObstacle;                     // 0x05B5(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x05B6(0x0002) MISSED OFFSET
-	int                                                MinLOD;                                                   // 0x05B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x05BC(0x0004) MISSED OFFSET
-	class UStaticMesh*                                 StaticMesh;                                               // 0x05C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	bool                                               bOverrideWireframeColor;                                  // 0x05C8(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x05C9(0x0003) MISSED OFFSET
-	struct FColor                                      WireframeColorOverride;                                   // 0x05CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIgnoreInstanceForTextureStreaming : 1;                   // 0x05D0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bOverrideLightMapRes : 1;                                 // 0x05D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x05D1(0x0003) MISSED OFFSET
-	int                                                OverriddenLightMapRes;                                    // 0x05D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              StreamingDistanceMultiplier;                              // 0x05D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
-	TArray<struct FGuid>                               IrrelevantLights;                                         // 0x05E0(0x0010) (ZeroConstructor)
-	TArray<struct FStaticMeshComponentLODInfo>         LODData;                                                  // 0x05F0(0x0010) (ZeroConstructor, Transient)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.StaticMeshComponent"));
-		return ptr;
-	}
-
-
-	bool SetStaticMesh(class UStaticMesh* NewMesh);
-	void SetForcedLodModel(int NewForcedLodModel);
-	void OnRep_StaticMesh(class UStaticMesh* OldStaticMesh);
-	void GetLocalBounds(struct FVector* Min, struct FVector* Max);
-	void EnableAutomaticInstancing();
 };
 
 
@@ -2512,25 +2419,25 @@ public:
 
 
 // Class Engine.DebugCameraController
-// 0x0050 (0x07E8 - 0x0798)
+// 0x0050 (0x0850 - 0x0800)
 class ADebugCameraController : public APlayerController
 {
 public:
-	unsigned char                                      bUseOriginalPlayerHUD : 1;                                // 0x0798(0x0001) (Config, GlobalConfig)
-	unsigned char                                      bShowSelectedInfo : 1;                                    // 0x0798(0x0001) (Config, GlobalConfig)
-	unsigned char                                      bIsFrozenRendering : 1;                                   // 0x0798(0x0001)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0799(0x0007) MISSED OFFSET
-	class UDrawFrustumComponent*                       DrawFrustum;                                              // 0x07A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x07A8(0x0010) MISSED OFFSET
-	class APlayerController*                           OriginalControllerRef;                                    // 0x07B8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UPlayer*                                     OriginalPlayer;                                           // 0x07C0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SpeedScale;                                               // 0x07C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InitialMaxSpeed;                                          // 0x07CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InitialAccel;                                             // 0x07D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InitialDecel;                                             // 0x07D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SpeedScaleAdjustment;                                     // 0x07D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FovScaleAdjustment;                                       // 0x07DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x07E0(0x0008) MISSED OFFSET
+	unsigned char                                      bUseOriginalPlayerHUD : 1;                                // 0x0800(0x0001) (Config, GlobalConfig)
+	unsigned char                                      bShowSelectedInfo : 1;                                    // 0x0800(0x0001) (Config, GlobalConfig)
+	unsigned char                                      bIsFrozenRendering : 1;                                   // 0x0800(0x0001)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0801(0x0007) MISSED OFFSET
+	class UDrawFrustumComponent*                       DrawFrustum;                                              // 0x0808(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0810(0x0010) MISSED OFFSET
+	class APlayerController*                           OriginalControllerRef;                                    // 0x0820(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UPlayer*                                     OriginalPlayer;                                           // 0x0828(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SpeedScale;                                               // 0x0830(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InitialMaxSpeed;                                          // 0x0834(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InitialAccel;                                             // 0x0838(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InitialDecel;                                             // 0x083C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SpeedScaleAdjustment;                                     // 0x0840(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FovScaleAdjustment;                                       // 0x0844(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0848(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2539,6 +2446,7 @@ public:
 	}
 
 
+	void ToggleDisplay();
 	void ShowDebugSelectedInfo();
 	void IncreaseFOV();
 	void IncreaseCameraSpeed();
@@ -2654,6 +2562,64 @@ public:
 };
 
 
+// Class Engine.MeshComponent
+// 0x0010 (0x05B0 - 0x05A0)
+class UMeshComponent : public UPrimitiveComponent
+{
+public:
+	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x05A0(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.MeshComponent"));
+		return ptr;
+	}
+
+
+	void ResetDefaultMaterials();
+	TArray<class UMaterialInterface*> GetMaterials();
+};
+
+
+// Class Engine.StaticMeshComponent
+// 0x0050 (0x0600 - 0x05B0)
+class UStaticMeshComponent : public UMeshComponent
+{
+public:
+	int                                                ForcedLodModel;                                           // 0x05B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverrideMinLOD;                                          // 0x05B4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverrideNavigationToDefaultObstacle;                     // 0x05B5(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x05B6(0x0002) MISSED OFFSET
+	int                                                MinLOD;                                                   // 0x05B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x05BC(0x0004) MISSED OFFSET
+	class UStaticMesh*                                 StaticMesh;                                               // 0x05C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverrideWireframeColor;                                  // 0x05C8(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x05C9(0x0003) MISSED OFFSET
+	struct FColor                                      WireframeColorOverride;                                   // 0x05CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIgnoreInstanceForTextureStreaming : 1;                   // 0x05D0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bOverrideLightMapRes : 1;                                 // 0x05D0(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x05D1(0x0003) MISSED OFFSET
+	int                                                OverriddenLightMapRes;                                    // 0x05D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              StreamingDistanceMultiplier;                              // 0x05D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
+	TArray<struct FGuid>                               IrrelevantLights;                                         // 0x05E0(0x0010) (ZeroConstructor)
+	TArray<struct FStaticMeshComponentLODInfo>         LODData;                                                  // 0x05F0(0x0010) (ZeroConstructor, Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.StaticMeshComponent"));
+		return ptr;
+	}
+
+
+	bool SetStaticMesh(class UStaticMesh* NewMesh);
+	void SetForcedLodModel(int NewForcedLodModel);
+	void OnRep_StaticMesh(class UStaticMesh* OldStaticMesh);
+	void GetLocalBounds(struct FVector* Min, struct FVector* Max);
+	void EnableAutomaticInstancing();
+};
+
+
 // Class Engine.FogVolume
 // 0x0010 (0x04B8 - 0x04A8)
 class AFogVolume : public AActor
@@ -2668,51 +2634,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Engine.ShapeComponent
-// 0x0020 (0x05C0 - 0x05A0)
-class UShapeComponent : public UPrimitiveComponent
-{
-public:
-	struct FColor                                      ShapeColor;                                               // 0x05A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x05A4(0x0004) MISSED OFFSET
-	class UBodySetup*                                  ShapeBodySetup;                                           // 0x05A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      bDrawOnlyIfSelected : 1;                                  // 0x05B0(0x0001)
-	unsigned char                                      bShouldCollideWhenPlacing : 1;                            // 0x05B0(0x0001)
-	unsigned char                                      bDynamicObstacle : 1;                                     // 0x05B0(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x05B1(0x0007) MISSED OFFSET
-	class UClass*                                      AreaClass;                                                // 0x05B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.ShapeComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.SphereComponent
-// 0x0010 (0x05D0 - 0x05C0)
-class USphereComponent : public UShapeComponent
-{
-public:
-	float                                              SphereRadius;                                             // 0x05C0(0x0004) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x05C4(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.SphereComponent"));
-		return ptr;
-	}
-
-
-	void SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps);
-	float GetUnscaledSphereRadius();
-	float GetShapeScale();
-	float GetScaledSphereRadius();
 };
 
 
@@ -3165,6 +3086,29 @@ public:
 };
 
 
+// Class Engine.ShapeComponent
+// 0x0020 (0x05C0 - 0x05A0)
+class UShapeComponent : public UPrimitiveComponent
+{
+public:
+	struct FColor                                      ShapeColor;                                               // 0x05A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x05A4(0x0004) MISSED OFFSET
+	class UBodySetup*                                  ShapeBodySetup;                                           // 0x05A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      bDrawOnlyIfSelected : 1;                                  // 0x05B0(0x0001)
+	unsigned char                                      bShouldCollideWhenPlacing : 1;                            // 0x05B0(0x0001)
+	unsigned char                                      bDynamicObstacle : 1;                                     // 0x05B0(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x05B1(0x0007) MISSED OFFSET
+	class UClass*                                      AreaClass;                                                // 0x05B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.ShapeComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.CapsuleComponent
 // 0x0010 (0x05D0 - 0x05C0)
 class UCapsuleComponent : public UShapeComponent
@@ -3521,7 +3465,7 @@ public:
 
 
 // Class Engine.NetDriver
-// 0x0418 (0x0440 - 0x0028)
+// 0x0430 (0x0458 - 0x0028)
 class UNetDriver : public UObject
 {
 public:
@@ -3550,7 +3494,7 @@ public:
 	struct FName                                       NetDriverName;                                            // 0x00D8(0x0008) (ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x8];                                       // 0x00E0(0x0008) MISSED OFFSET
 	float                                              Time;                                                     // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x354];                                     // 0x00EC(0x0354) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x36C];                                     // 0x00EC(0x036C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4646,12 +4590,12 @@ public:
 
 
 // Class Engine.LogVisualizerCameraController
-// 0x0018 (0x0800 - 0x07E8)
+// 0x0018 (0x0868 - 0x0850)
 class ALogVisualizerCameraController : public ADebugCameraController
 {
 public:
-	class AActor*                                      PickedActor;                                              // 0x07E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07F0(0x0010) MISSED OFFSET
+	class AActor*                                      PickedActor;                                              // 0x0850(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0858(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4842,6 +4786,43 @@ public:
 
 
 	void OnRep_bEnabled();
+};
+
+
+// Class Engine.NavigationObjectBase
+// 0x0028 (0x04D0 - 0x04A8)
+class ANavigationObjectBase : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
+	class UCapsuleComponent*                           CapsuleComponent;                                         // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBillboardComponent*                         GoodSprite;                                               // 0x04B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBillboardComponent*                         BadSprite;                                                // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      bIsPIEPlayerStart : 1;                                    // 0x04C8(0x0001)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.NavigationObjectBase"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.PlayerStart
+// 0x0008 (0x04D8 - 0x04D0)
+class APlayerStart : public ANavigationObjectBase
+{
+public:
+	struct FName                                       PlayerStartTag;                                           // 0x04D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.PlayerStart"));
+		return ptr;
+	}
+
 };
 
 
@@ -7368,7 +7349,7 @@ public:
 
 
 // Class Engine.FogVolumeComponent
-// 0x0060 (0x0320 - 0x02C0)
+// 0x00B0 (0x0370 - 0x02C0)
 class UFogVolumeComponent : public USceneComponent
 {
 public:
@@ -7389,6 +7370,17 @@ public:
 	float                                              ShadowDistance;                                           // 0x0318(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bUseSceneInscattering : 1;                                // 0x031C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x031D(0x0003) MISSED OFFSET
+	bool                                               bAdvancedVolumeFog;                                       // 0x0320(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0321(0x0007) MISSED OFFSET
+	class UTexture*                                    DensityMap;                                               // 0x0328(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DensityMapScale;                                          // 0x0330(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DensityMapOffset;                                         // 0x033C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DensityMapActiveHemisphereOrigin;                         // 0x0348(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DensityMapActiveHemisphereDirection;                      // 0x0354(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              DensityMapActiveHemisphereInnerRadius;                    // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              DensityMapActiveHemisphereOuterRadius;                    // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SelfShadowBrightness;                                     // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SelfShadowFogScale;                                       // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -8338,6 +8330,28 @@ public:
 	void SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps);
 	struct FVector GetUnscaledBoxExtent();
 	struct FVector GetScaledBoxExtent();
+};
+
+
+// Class Engine.SphereComponent
+// 0x0010 (0x05D0 - 0x05C0)
+class USphereComponent : public UShapeComponent
+{
+public:
+	float                                              SphereRadius;                                             // 0x05C0(0x0004) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x05C4(0x000C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.SphereComponent"));
+		return ptr;
+	}
+
+
+	void SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps);
+	float GetUnscaledSphereRadius();
+	float GetShapeScale();
+	float GetScaledSphereRadius();
 };
 
 
@@ -11062,6 +11076,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.CurveTable"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.CustomWidgetDrawerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCustomWidgetDrawerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.CustomWidgetDrawerInterface"));
 		return ptr;
 	}
 
@@ -16454,11 +16483,11 @@ public:
 
 
 // Class Engine.DemoNetDriver
-// 0x00C8 (0x0508 - 0x0440)
+// 0x00C8 (0x0520 - 0x0458)
 class UDemoNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      UnknownData00[0xC8];                                      // 0x0440(0x00C8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x0458(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16607,7 +16636,7 @@ public:
 
 
 // Class Engine.ParticleModule
-// 0x0010 (0x0038 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UParticleModule : public UObject
 {
 public:
@@ -16626,8 +16655,8 @@ public:
 	unsigned char                                      UnknownData00[0x2];                                       // 0x002A(0x0002) MISSED OFFSET
 	unsigned char                                      LODValidity;                                              // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
-	int                                                ModuleInstanceOffset;                                     // 0x0030(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                ModuleOffset;                                             // 0x0034(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<int>                                        ModuleInstanceOffsets;                                    // 0x0030(0x0010) (ZeroConstructor, Transient)
+	TArray<int>                                        ModuleOffsets;                                            // 0x0040(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -16639,12 +16668,12 @@ public:
 
 
 // Class Engine.ParticleModuleAccelerationBase
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleAccelerationBase : public UParticleModule
 {
 public:
-	unsigned char                                      bAlwaysInWorldSpace : 1;                                  // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	unsigned char                                      bAlwaysInWorldSpace : 1;                                  // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16656,13 +16685,13 @@ public:
 
 
 // Class Engine.ParticleModuleAcceleration
-// 0x0040 (0x0080 - 0x0040)
+// 0x0040 (0x0098 - 0x0058)
 class UParticleModuleAcceleration : public UParticleModuleAccelerationBase
 {
 public:
-	struct FRawDistributionVector                      Acceleration;                                             // 0x0040(0x0038) (Edit)
-	unsigned char                                      bApplyOwnerScale : 1;                                     // 0x0078(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      Acceleration;                                             // 0x0058(0x0038) (Edit)
+	unsigned char                                      bApplyOwnerScale : 1;                                     // 0x0090(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16674,12 +16703,12 @@ public:
 
 
 // Class Engine.ParticleModuleAccelerationConstant
-// 0x0010 (0x0050 - 0x0040)
+// 0x0010 (0x0068 - 0x0058)
 class UParticleModuleAccelerationConstant : public UParticleModuleAccelerationBase
 {
 public:
-	struct FVector                                     Acceleration;                                             // 0x0040(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	struct FVector                                     Acceleration;                                             // 0x0058(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16691,12 +16720,12 @@ public:
 
 
 // Class Engine.ParticleModuleAccelerationDrag
-// 0x0010 (0x0050 - 0x0040)
+// 0x0010 (0x0068 - 0x0058)
 class UParticleModuleAccelerationDrag : public UParticleModuleAccelerationBase
 {
 public:
-	class UDistributionFloat*                          DragCoefficient;                                          // 0x0040(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UDistributionFloat*                          DragOnLocalVelocity;                                      // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UDistributionFloat*                          DragCoefficient;                                          // 0x0058(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UDistributionFloat*                          DragOnLocalVelocity;                                      // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -16708,12 +16737,12 @@ public:
 
 
 // Class Engine.ParticleModuleAccelerationDragScaleOverLife
-// 0x0010 (0x0050 - 0x0040)
+// 0x0010 (0x0068 - 0x0058)
 class UParticleModuleAccelerationDragScaleOverLife : public UParticleModuleAccelerationBase
 {
 public:
-	class UDistributionFloat*                          DragScale;                                                // 0x0040(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UDistributionFloat*                          DragLocalVelocityScale;                                   // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UDistributionFloat*                          DragScale;                                                // 0x0058(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UDistributionFloat*                          DragLocalVelocityScale;                                   // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -16725,13 +16754,13 @@ public:
 
 
 // Class Engine.ParticleModuleAccelerationEmitterPoint
-// 0x0040 (0x0080 - 0x0040)
+// 0x0040 (0x0098 - 0x0058)
 class UParticleModuleAccelerationEmitterPoint : public UParticleModuleAccelerationBase
 {
 public:
-	struct FRawDistributionFloat                       AccelerationScale;                                        // 0x0040(0x0038) (Edit)
-	unsigned char                                      bApplyOwnerScale : 1;                                     // 0x0078(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       AccelerationScale;                                        // 0x0058(0x0038) (Edit)
+	unsigned char                                      bApplyOwnerScale : 1;                                     // 0x0090(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16743,11 +16772,11 @@ public:
 
 
 // Class Engine.ParticleModuleAccelerationOverLifetime
-// 0x0038 (0x0078 - 0x0040)
+// 0x0038 (0x0090 - 0x0058)
 class UParticleModuleAccelerationOverLifetime : public UParticleModuleAccelerationBase
 {
 public:
-	struct FRawDistributionVector                      AccelOverLife;                                            // 0x0040(0x0038) (Edit)
+	struct FRawDistributionVector                      AccelOverLife;                                            // 0x0058(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -16759,7 +16788,7 @@ public:
 
 
 // Class Engine.ParticleModuleAttractorBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleAttractorBase : public UParticleModule
 {
 public:
@@ -16774,14 +16803,14 @@ public:
 
 
 // Class Engine.ParticleModuleAttractorLine
-// 0x0088 (0x00C0 - 0x0038)
+// 0x0088 (0x00D8 - 0x0050)
 class UParticleModuleAttractorLine : public UParticleModuleAttractorBase
 {
 public:
-	struct FVector                                     EndPoint0;                                                // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     EndPoint1;                                                // 0x0044(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRawDistributionFloat                       Range;                                                    // 0x0050(0x0038) (Edit)
-	struct FRawDistributionFloat                       Strength;                                                 // 0x0088(0x0038) (Edit)
+	struct FVector                                     EndPoint0;                                                // 0x0050(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     EndPoint1;                                                // 0x005C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionFloat                       Range;                                                    // 0x0068(0x0038) (Edit)
+	struct FRawDistributionFloat                       Strength;                                                 // 0x00A0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -16793,23 +16822,23 @@ public:
 
 
 // Class Engine.ParticleModuleAttractorParticle
-// 0x0090 (0x00C8 - 0x0038)
+// 0x0090 (0x00E0 - 0x0050)
 class UParticleModuleAttractorParticle : public UParticleModuleAttractorBase
 {
 public:
-	struct FName                                       EmitterName;                                              // 0x0038(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData)
-	struct FRawDistributionFloat                       Range;                                                    // 0x0040(0x0038) (Edit)
-	unsigned char                                      bStrengthByDistance : 1;                                  // 0x0078(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       Strength;                                                 // 0x0080(0x0038) (Edit)
-	unsigned char                                      bAffectBaseVelocity : 1;                                  // 0x00B8(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x00B9(0x0003) MISSED OFFSET
-	TEnumAsByte<EAttractorParticleSelectionMethod>     SelectionMethod;                                          // 0x00BC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00BD(0x0003) MISSED OFFSET
-	unsigned char                                      bRenewSource : 1;                                         // 0x00C0(0x0001) (Edit)
-	unsigned char                                      bInheritSourceVel : 1;                                    // 0x00C0(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x00C1(0x0003) MISSED OFFSET
-	int                                                LastSelIndex;                                             // 0x00C4(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       EmitterName;                                              // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData)
+	struct FRawDistributionFloat                       Range;                                                    // 0x0058(0x0038) (Edit)
+	unsigned char                                      bStrengthByDistance : 1;                                  // 0x0090(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       Strength;                                                 // 0x0098(0x0038) (Edit)
+	unsigned char                                      bAffectBaseVelocity : 1;                                  // 0x00D0(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
+	TEnumAsByte<EAttractorParticleSelectionMethod>     SelectionMethod;                                          // 0x00D4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x00D5(0x0003) MISSED OFFSET
+	unsigned char                                      bRenewSource : 1;                                         // 0x00D8(0x0001) (Edit)
+	unsigned char                                      bInheritSourceVel : 1;                                    // 0x00D8(0x0001) (Edit)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x00D9(0x0003) MISSED OFFSET
+	int                                                LastSelIndex;                                             // 0x00DC(0x0004) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -16821,24 +16850,24 @@ public:
 
 
 // Class Engine.ParticleModuleAttractorPoint
-// 0x00B0 (0x00E8 - 0x0038)
+// 0x00B0 (0x0100 - 0x0050)
 class UParticleModuleAttractorPoint : public UParticleModuleAttractorBase
 {
 public:
-	struct FRawDistributionVector                      Position;                                                 // 0x0038(0x0038) (Edit)
-	struct FRawDistributionFloat                       Range;                                                    // 0x0070(0x0038) (Edit)
-	struct FRawDistributionFloat                       Strength;                                                 // 0x00A8(0x0038) (Edit)
-	unsigned char                                      StrengthByDistance : 1;                                   // 0x00E0(0x0001) (Edit)
-	unsigned char                                      bAffectBaseVelocity : 1;                                  // 0x00E0(0x0001) (Edit)
-	unsigned char                                      bOverrideVelocity : 1;                                    // 0x00E0(0x0001) (Edit)
-	unsigned char                                      bUseWorldSpacePosition : 1;                               // 0x00E0(0x0001) (Edit)
-	unsigned char                                      Positive_X : 1;                                           // 0x00E0(0x0001) (Edit)
-	unsigned char                                      Positive_Y : 1;                                           // 0x00E0(0x0001) (Edit)
-	unsigned char                                      Positive_Z : 1;                                           // 0x00E0(0x0001) (Edit)
-	unsigned char                                      Negative_X : 1;                                           // 0x00E0(0x0001) (Edit)
-	unsigned char                                      Negative_Y : 1;                                           // 0x00E1(0x0001) (Edit)
-	unsigned char                                      Negative_Z : 1;                                           // 0x00E1(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x00E2(0x0006) MISSED OFFSET
+	struct FRawDistributionVector                      Position;                                                 // 0x0050(0x0038) (Edit)
+	struct FRawDistributionFloat                       Range;                                                    // 0x0088(0x0038) (Edit)
+	struct FRawDistributionFloat                       Strength;                                                 // 0x00C0(0x0038) (Edit)
+	unsigned char                                      StrengthByDistance : 1;                                   // 0x00F8(0x0001) (Edit)
+	unsigned char                                      bAffectBaseVelocity : 1;                                  // 0x00F8(0x0001) (Edit)
+	unsigned char                                      bOverrideVelocity : 1;                                    // 0x00F8(0x0001) (Edit)
+	unsigned char                                      bUseWorldSpacePosition : 1;                               // 0x00F8(0x0001) (Edit)
+	unsigned char                                      Positive_X : 1;                                           // 0x00F8(0x0001) (Edit)
+	unsigned char                                      Positive_Y : 1;                                           // 0x00F8(0x0001) (Edit)
+	unsigned char                                      Positive_Z : 1;                                           // 0x00F8(0x0001) (Edit)
+	unsigned char                                      Negative_X : 1;                                           // 0x00F8(0x0001) (Edit)
+	unsigned char                                      Negative_Y : 1;                                           // 0x00F9(0x0001) (Edit)
+	unsigned char                                      Negative_Z : 1;                                           // 0x00F9(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x00FA(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16850,13 +16879,13 @@ public:
 
 
 // Class Engine.ParticleModuleAttractorPointGravity
-// 0x0018 (0x0050 - 0x0038)
+// 0x0018 (0x0068 - 0x0050)
 class UParticleModuleAttractorPointGravity : public UParticleModuleAttractorBase
 {
 public:
-	struct FVector                                     Position;                                                 // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Radius;                                                   // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UDistributionFloat*                          Strength;                                                 // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, NoClear, IsPlainOldData)
+	struct FVector                                     Position;                                                 // 0x0050(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UDistributionFloat*                          Strength;                                                 // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, NoClear, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -16868,7 +16897,7 @@ public:
 
 
 // Class Engine.ParticleModuleBeamBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleBeamBase : public UParticleModule
 {
 public:
@@ -16883,21 +16912,21 @@ public:
 
 
 // Class Engine.ParticleModuleBeamModifier
-// 0x00C0 (0x00F8 - 0x0038)
+// 0x00C0 (0x0110 - 0x0050)
 class UParticleModuleBeamModifier : public UParticleModuleBeamBase
 {
 public:
-	TEnumAsByte<EBeamModifierType>                     ModifierType;                                             // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FBeamModifierOptions                        PositionOptions;                                          // 0x003C(0x0004) (Edit)
-	struct FRawDistributionVector                      Position;                                                 // 0x0040(0x0038) (Edit)
-	struct FBeamModifierOptions                        TangentOptions;                                           // 0x0078(0x0004) (Edit)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
-	struct FRawDistributionVector                      Tangent;                                                  // 0x0080(0x0038) (Edit)
-	unsigned char                                      bAbsoluteTangent : 1;                                     // 0x00B8(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00B9(0x0003) MISSED OFFSET
-	struct FBeamModifierOptions                        StrengthOptions;                                          // 0x00BC(0x0004) (Edit)
-	struct FRawDistributionFloat                       Strength;                                                 // 0x00C0(0x0038) (Edit)
+	TEnumAsByte<EBeamModifierType>                     ModifierType;                                             // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FBeamModifierOptions                        PositionOptions;                                          // 0x0054(0x0004) (Edit)
+	struct FRawDistributionVector                      Position;                                                 // 0x0058(0x0038) (Edit)
+	struct FBeamModifierOptions                        TangentOptions;                                           // 0x0090(0x0004) (Edit)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      Tangent;                                                  // 0x0098(0x0038) (Edit)
+	unsigned char                                      bAbsoluteTangent : 1;                                     // 0x00D0(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
+	struct FBeamModifierOptions                        StrengthOptions;                                          // 0x00D4(0x0004) (Edit)
+	struct FRawDistributionFloat                       Strength;                                                 // 0x00D8(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -16909,38 +16938,38 @@ public:
 
 
 // Class Engine.ParticleModuleBeamNoise
-// 0x0158 (0x0190 - 0x0038)
+// 0x0158 (0x01A8 - 0x0050)
 class UParticleModuleBeamNoise : public UParticleModuleBeamBase
 {
 public:
-	unsigned char                                      bLowFreq_Enabled : 1;                                     // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	int                                                Frequency;                                                // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Frequency_LowRange;                                       // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
-	struct FRawDistributionVector                      NoiseRange;                                               // 0x0048(0x0038) (Edit)
-	struct FRawDistributionFloat                       NoiseRangeScale;                                          // 0x0080(0x0038) (Edit)
-	unsigned char                                      bNRScaleEmitterTime : 1;                                  // 0x00B8(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
-	struct FRawDistributionVector                      NoiseSpeed;                                               // 0x00C0(0x0038) (Edit)
-	unsigned char                                      bSmooth : 1;                                              // 0x00F8(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x00F9(0x0003) MISSED OFFSET
-	float                                              NoiseLockRadius;                                          // 0x00FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bNoiseLock : 1;                                           // 0x0100(0x0001)
-	unsigned char                                      bOscillate : 1;                                           // 0x0100(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0101(0x0003) MISSED OFFSET
-	float                                              NoiseLockTime;                                            // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NoiseTension;                                             // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseNoiseTangents : 1;                                    // 0x010C(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x010D(0x0003) MISSED OFFSET
-	struct FRawDistributionFloat                       NoiseTangentStrength;                                     // 0x0110(0x0038) (Edit)
-	int                                                NoiseTessellation;                                        // 0x0148(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bTargetNoise : 1;                                         // 0x014C(0x0001) (Edit)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x014D(0x0003) MISSED OFFSET
-	float                                              FrequencyDistance;                                        // 0x0150(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bApplyNoiseScale : 1;                                     // 0x0154(0x0001) (Edit)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0155(0x0003) MISSED OFFSET
-	struct FRawDistributionFloat                       NoiseScale;                                               // 0x0158(0x0038) (Edit)
+	unsigned char                                      bLowFreq_Enabled : 1;                                     // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	int                                                Frequency;                                                // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Frequency_LowRange;                                       // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      NoiseRange;                                               // 0x0060(0x0038) (Edit)
+	struct FRawDistributionFloat                       NoiseRangeScale;                                          // 0x0098(0x0038) (Edit)
+	unsigned char                                      bNRScaleEmitterTime : 1;                                  // 0x00D0(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      NoiseSpeed;                                               // 0x00D8(0x0038) (Edit)
+	unsigned char                                      bSmooth : 1;                                              // 0x0110(0x0001) (Edit)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0111(0x0003) MISSED OFFSET
+	float                                              NoiseLockRadius;                                          // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bNoiseLock : 1;                                           // 0x0118(0x0001)
+	unsigned char                                      bOscillate : 1;                                           // 0x0118(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0119(0x0003) MISSED OFFSET
+	float                                              NoiseLockTime;                                            // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NoiseTension;                                             // 0x0120(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUseNoiseTangents : 1;                                    // 0x0124(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0125(0x0003) MISSED OFFSET
+	struct FRawDistributionFloat                       NoiseTangentStrength;                                     // 0x0128(0x0038) (Edit)
+	int                                                NoiseTessellation;                                        // 0x0160(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bTargetNoise : 1;                                         // 0x0164(0x0001) (Edit)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x0165(0x0003) MISSED OFFSET
+	float                                              FrequencyDistance;                                        // 0x0168(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bApplyNoiseScale : 1;                                     // 0x016C(0x0001) (Edit)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x016D(0x0003) MISSED OFFSET
+	struct FRawDistributionFloat                       NoiseScale;                                               // 0x0170(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -16952,26 +16981,26 @@ public:
 
 
 // Class Engine.ParticleModuleBeamSource
-// 0x00D0 (0x0108 - 0x0038)
+// 0x00D0 (0x0120 - 0x0050)
 class UParticleModuleBeamSource : public UParticleModuleBeamBase
 {
 public:
-	TEnumAsByte<EBeam2SourceTargetMethod>              SourceMethod;                                             // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FName                                       SourceName;                                               // 0x003C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bSourceAbsolute : 1;                                      // 0x0044(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
-	struct FRawDistributionVector                      Source;                                                   // 0x0048(0x0038) (Edit)
-	unsigned char                                      bLockSource : 1;                                          // 0x0080(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
-	TEnumAsByte<EBeam2SourceTargetTangentMethod>       SourceTangentMethod;                                      // 0x0084(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
-	struct FRawDistributionVector                      SourceTangent;                                            // 0x0088(0x0038) (Edit)
-	unsigned char                                      bLockSourceTangent : 1;                                   // 0x00C0(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       SourceStrength;                                           // 0x00C8(0x0038) (Edit)
-	unsigned char                                      bLockSourceStength : 1;                                   // 0x0100(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x0101(0x0007) MISSED OFFSET
+	TEnumAsByte<EBeam2SourceTargetMethod>              SourceMethod;                                             // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FName                                       SourceName;                                               // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bSourceAbsolute : 1;                                      // 0x005C(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
+	struct FRawDistributionVector                      Source;                                                   // 0x0060(0x0038) (Edit)
+	unsigned char                                      bLockSource : 1;                                          // 0x0098(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
+	TEnumAsByte<EBeam2SourceTargetTangentMethod>       SourceTangentMethod;                                      // 0x009C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x009D(0x0003) MISSED OFFSET
+	struct FRawDistributionVector                      SourceTangent;                                            // 0x00A0(0x0038) (Edit)
+	unsigned char                                      bLockSourceTangent : 1;                                   // 0x00D8(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x00D9(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       SourceStrength;                                           // 0x00E0(0x0038) (Edit)
+	unsigned char                                      bLockSourceStength : 1;                                   // 0x0118(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -16983,27 +17012,27 @@ public:
 
 
 // Class Engine.ParticleModuleBeamTarget
-// 0x00D0 (0x0108 - 0x0038)
+// 0x00D0 (0x0120 - 0x0050)
 class UParticleModuleBeamTarget : public UParticleModuleBeamBase
 {
 public:
-	TEnumAsByte<EBeam2SourceTargetMethod>              TargetMethod;                                             // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FName                                       TargetName;                                               // 0x003C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
-	struct FRawDistributionVector                      Target;                                                   // 0x0048(0x0038) (Edit)
-	unsigned char                                      bTargetAbsolute : 1;                                      // 0x0080(0x0001) (Edit)
-	unsigned char                                      bLockTarget : 1;                                          // 0x0080(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
-	TEnumAsByte<EBeam2SourceTargetTangentMethod>       TargetTangentMethod;                                      // 0x0084(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
-	struct FRawDistributionVector                      TargetTangent;                                            // 0x0088(0x0038) (Edit)
-	unsigned char                                      bLockTargetTangent : 1;                                   // 0x00C0(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       TargetStrength;                                           // 0x00C8(0x0038) (Edit)
-	unsigned char                                      bLockTargetStength : 1;                                   // 0x0100(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0101(0x0003) MISSED OFFSET
-	float                                              LockRadius;                                               // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EBeam2SourceTargetMethod>              TargetMethod;                                             // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FName                                       TargetName;                                               // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      Target;                                                   // 0x0060(0x0038) (Edit)
+	unsigned char                                      bTargetAbsolute : 1;                                      // 0x0098(0x0001) (Edit)
+	unsigned char                                      bLockTarget : 1;                                          // 0x0098(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
+	TEnumAsByte<EBeam2SourceTargetTangentMethod>       TargetTangentMethod;                                      // 0x009C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x009D(0x0003) MISSED OFFSET
+	struct FRawDistributionVector                      TargetTangent;                                            // 0x00A0(0x0038) (Edit)
+	unsigned char                                      bLockTargetTangent : 1;                                   // 0x00D8(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x00D9(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       TargetStrength;                                           // 0x00E0(0x0038) (Edit)
+	unsigned char                                      bLockTargetStength : 1;                                   // 0x0118(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0119(0x0003) MISSED OFFSET
+	float                                              LockRadius;                                               // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17015,7 +17044,7 @@ public:
 
 
 // Class Engine.ParticleModuleCameraBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleCameraBase : public UParticleModule
 {
 public:
@@ -17030,15 +17059,15 @@ public:
 
 
 // Class Engine.ParticleModuleCameraOffset
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleCameraOffset : public UParticleModuleCameraBase
 {
 public:
-	struct FRawDistributionFloat                       CameraOffset;                                             // 0x0038(0x0038) (Edit)
-	unsigned char                                      bSpawnTimeOnly : 1;                                       // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
-	TEnumAsByte<EParticleCameraOffsetUpdateMethod>     UpdateMethod;                                             // 0x0074(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0075(0x0003) MISSED OFFSET
+	struct FRawDistributionFloat                       CameraOffset;                                             // 0x0050(0x0038) (Edit)
+	unsigned char                                      bSpawnTimeOnly : 1;                                       // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0089(0x0003) MISSED OFFSET
+	TEnumAsByte<EParticleCameraOffsetUpdateMethod>     UpdateMethod;                                             // 0x008C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x008D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17050,7 +17079,7 @@ public:
 
 
 // Class Engine.ParticleModuleCollisionBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleCollisionBase : public UParticleModule
 {
 public:
@@ -17065,32 +17094,32 @@ public:
 
 
 // Class Engine.ParticleModuleCollision
-// 0x0150 (0x0188 - 0x0038)
+// 0x0150 (0x01A0 - 0x0050)
 class UParticleModuleCollision : public UParticleModuleCollisionBase
 {
 public:
-	struct FRawDistributionVector                      DampingFactor;                                            // 0x0038(0x0038) (Edit)
-	struct FRawDistributionVector                      DampingFactorRotation;                                    // 0x0070(0x0038) (Edit)
-	struct FRawDistributionFloat                       MaxCollisions;                                            // 0x00A8(0x0038) (Edit)
-	TEnumAsByte<EParticleCollisionComplete>            CollisionCompletionOption;                                // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	TArray<TEnumAsByte<EObjectTypeQuery>>              CollisionTypes;                                           // 0x00E8(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00F8(0x0004) MISSED OFFSET
-	unsigned char                                      bApplyPhysics : 1;                                        // 0x00FC(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00FD(0x0003) MISSED OFFSET
-	struct FRawDistributionFloat                       ParticleMass;                                             // 0x0100(0x0038) (Edit)
-	float                                              DirScalar;                                                // 0x0138(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bPawnsDoNotDecrementCount : 1;                            // 0x013C(0x0001) (Edit)
-	unsigned char                                      bOnlyVerticalNormalsDecrementCount : 1;                   // 0x013C(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x013D(0x0003) MISSED OFFSET
-	float                                              VerticalFudgeFactor;                                      // 0x0140(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x0144(0x0004) MISSED OFFSET
-	struct FRawDistributionFloat                       DelayAmount;                                              // 0x0148(0x0038) (Edit)
-	unsigned char                                      bDropDetail : 1;                                          // 0x0180(0x0001) (Edit)
-	unsigned char                                      bCollideOnlyIfVisible : 1;                                // 0x0180(0x0001) (Edit)
-	unsigned char                                      bIgnoreSourceActor : 1;                                   // 0x0180(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0181(0x0003) MISSED OFFSET
-	float                                              MaxCollisionDistance;                                     // 0x0184(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionVector                      DampingFactor;                                            // 0x0050(0x0038) (Edit)
+	struct FRawDistributionVector                      DampingFactorRotation;                                    // 0x0088(0x0038) (Edit)
+	struct FRawDistributionFloat                       MaxCollisions;                                            // 0x00C0(0x0038) (Edit)
+	TEnumAsByte<EParticleCollisionComplete>            CollisionCompletionOption;                                // 0x00F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00F9(0x0007) MISSED OFFSET
+	TArray<TEnumAsByte<EObjectTypeQuery>>              CollisionTypes;                                           // 0x0100(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0110(0x0004) MISSED OFFSET
+	unsigned char                                      bApplyPhysics : 1;                                        // 0x0114(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0115(0x0003) MISSED OFFSET
+	struct FRawDistributionFloat                       ParticleMass;                                             // 0x0118(0x0038) (Edit)
+	float                                              DirScalar;                                                // 0x0150(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bPawnsDoNotDecrementCount : 1;                            // 0x0154(0x0001) (Edit)
+	unsigned char                                      bOnlyVerticalNormalsDecrementCount : 1;                   // 0x0154(0x0001) (Edit)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0155(0x0003) MISSED OFFSET
+	float                                              VerticalFudgeFactor;                                      // 0x0158(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       DelayAmount;                                              // 0x0160(0x0038) (Edit)
+	unsigned char                                      bDropDetail : 1;                                          // 0x0198(0x0001) (Edit)
+	unsigned char                                      bCollideOnlyIfVisible : 1;                                // 0x0198(0x0001) (Edit)
+	unsigned char                                      bIgnoreSourceActor : 1;                                   // 0x0198(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0199(0x0003) MISSED OFFSET
+	float                                              MaxCollisionDistance;                                     // 0x019C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17102,19 +17131,19 @@ public:
 
 
 // Class Engine.ParticleModuleCollisionGPU
-// 0x0088 (0x00C0 - 0x0038)
+// 0x0088 (0x00D8 - 0x0050)
 class UParticleModuleCollisionGPU : public UParticleModuleCollisionBase
 {
 public:
-	struct FRawDistributionFloat                       Resilience;                                               // 0x0038(0x0038) (Edit)
-	struct FRawDistributionFloat                       ResilienceScaleOverLife;                                  // 0x0070(0x0038) (Edit)
-	float                                              DampingFactorRotation;                                    // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Friction;                                                 // 0x00AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RadiusScale;                                              // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RadiusBias;                                               // 0x00B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EParticleCollisionResponse>            Response;                                                 // 0x00B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EParticleCollisionMode>                CollisionMode;                                            // 0x00B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x00BA(0x0006) MISSED OFFSET
+	struct FRawDistributionFloat                       Resilience;                                               // 0x0050(0x0038) (Edit)
+	struct FRawDistributionFloat                       ResilienceScaleOverLife;                                  // 0x0088(0x0038) (Edit)
+	float                                              DampingFactorRotation;                                    // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Friction;                                                 // 0x00C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RadiusScale;                                              // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RadiusBias;                                               // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EParticleCollisionResponse>            Response;                                                 // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EParticleCollisionMode>                CollisionMode;                                            // 0x00D1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x00D2(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17126,7 +17155,7 @@ public:
 
 
 // Class Engine.ParticleModuleColorBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleColorBase : public UParticleModule
 {
 public:
@@ -17141,21 +17170,21 @@ public:
 
 
 // Class Engine.ParticleModuleColor
-// 0x02B8 (0x02F0 - 0x0038)
+// 0x02B8 (0x0308 - 0x0050)
 class UParticleModuleColor : public UParticleModuleColorBase
 {
 public:
-	unsigned char                                      bUseGroupAColorForAllGroups : 1;                          // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-	struct FRawDistributionVector                      StartColor;                                               // 0x0040(0x0038) (Edit)
-	struct FRawDistributionVector                      AdditionalStartColor[0x5];                                // 0x0078(0x0038) (Edit)
-	unsigned char                                      bUseGroupAAlphaForAllGroups : 1;                          // 0x0190(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       StartAlpha;                                               // 0x0198(0x0038) (Edit)
-	struct FRawDistributionFloat                       AdditionalStartAlpha[0x5];                                // 0x01D0(0x0038) (Edit)
-	unsigned char                                      bClampAlpha : 1;                                          // 0x02E8(0x0001) (Edit)
-	unsigned char                                      bIgnoreComponentColorTint : 1;                            // 0x02E8(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x02E9(0x0007) MISSED OFFSET
+	unsigned char                                      bUseGroupAColorForAllGroups : 1;                          // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      StartColor;                                               // 0x0058(0x0038) (Edit)
+	struct FRawDistributionVector                      AdditionalStartColor[0x5];                                // 0x0090(0x0038) (Edit)
+	unsigned char                                      bUseGroupAAlphaForAllGroups : 1;                          // 0x01A8(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x01A9(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       StartAlpha;                                               // 0x01B0(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalStartAlpha[0x5];                                // 0x01E8(0x0038) (Edit)
+	unsigned char                                      bClampAlpha : 1;                                          // 0x0300(0x0001) (Edit)
+	unsigned char                                      bIgnoreComponentColorTint : 1;                            // 0x0300(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0301(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17167,11 +17196,11 @@ public:
 
 
 // Class Engine.ParticleModuleColor_Seeded
-// 0x0020 (0x0310 - 0x02F0)
+// 0x0020 (0x0328 - 0x0308)
 class UParticleModuleColor_Seeded : public UParticleModuleColor
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x02F0(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0308(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17183,14 +17212,14 @@ public:
 
 
 // Class Engine.ParticleModuleColorOverLife
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0078 (0x00C8 - 0x0050)
 class UParticleModuleColorOverLife : public UParticleModuleColorBase
 {
 public:
-	struct FRawDistributionVector                      ColorOverLife;                                            // 0x0038(0x0038) (Edit)
-	struct FRawDistributionFloat                       AlphaOverLife;                                            // 0x0070(0x0038) (Edit)
-	unsigned char                                      bClampAlpha : 1;                                          // 0x00A8(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      ColorOverLife;                                            // 0x0050(0x0038) (Edit)
+	struct FRawDistributionFloat                       AlphaOverLife;                                            // 0x0088(0x0038) (Edit)
+	unsigned char                                      bClampAlpha : 1;                                          // 0x00C0(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17202,14 +17231,14 @@ public:
 
 
 // Class Engine.ParticleModuleColorScaleOverLife
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0078 (0x00C8 - 0x0050)
 class UParticleModuleColorScaleOverLife : public UParticleModuleColorBase
 {
 public:
-	struct FRawDistributionVector                      ColorScaleOverLife;                                       // 0x0038(0x0038) (Edit)
-	struct FRawDistributionFloat                       AlphaScaleOverLife;                                       // 0x0070(0x0038) (Edit)
-	unsigned char                                      bEmitterTime : 1;                                         // 0x00A8(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      ColorScaleOverLife;                                       // 0x0050(0x0038) (Edit)
+	struct FRawDistributionFloat                       AlphaScaleOverLife;                                       // 0x0088(0x0038) (Edit)
+	unsigned char                                      bEmitterTime : 1;                                         // 0x00C0(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17221,11 +17250,11 @@ public:
 
 
 // Class Engine.ParticleModuleMurkyColor
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleMurkyColor : public UParticleModuleColorBase
 {
 public:
-	struct FLinearColor                                ColorScale;                                               // 0x0038(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                ColorScale;                                               // 0x0050(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17237,7 +17266,7 @@ public:
 
 
 // Class Engine.ParticleModuleEventBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleEventBase : public UParticleModule
 {
 public:
@@ -17252,11 +17281,11 @@ public:
 
 
 // Class Engine.ParticleModuleEventGenerator
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleEventGenerator : public UParticleModuleEventBase
 {
 public:
-	TArray<struct FParticleEvent_GenerateInfo>         Events;                                                   // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, NoClear)
+	TArray<struct FParticleEvent_GenerateInfo>         Events;                                                   // 0x0050(0x0010) (Edit, ExportObject, ZeroConstructor, NoClear)
 
 	static UClass* StaticClass()
 	{
@@ -17268,14 +17297,14 @@ public:
 
 
 // Class Engine.ParticleModuleEventReceiverBase
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleEventReceiverBase : public UParticleModuleEventBase
 {
 public:
-	TEnumAsByte<EParticleEventType>                    EventGeneratorType;                                       // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FName                                       EventName;                                                // 0x003C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	TEnumAsByte<EParticleEventType>                    EventGeneratorType;                                       // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FName                                       EventName;                                                // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17287,12 +17316,12 @@ public:
 
 
 // Class Engine.ParticleModuleEventReceiverKillParticles
-// 0x0008 (0x0050 - 0x0048)
+// 0x0008 (0x0068 - 0x0060)
 class UParticleModuleEventReceiverKillParticles : public UParticleModuleEventReceiverBase
 {
 public:
-	unsigned char                                      bStopSpawning : 1;                                        // 0x0048(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	unsigned char                                      bStopSpawning : 1;                                        // 0x0060(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17304,16 +17333,16 @@ public:
 
 
 // Class Engine.ParticleModuleEventReceiverSpawn
-// 0x0078 (0x00C0 - 0x0048)
+// 0x0078 (0x00D8 - 0x0060)
 class UParticleModuleEventReceiverSpawn : public UParticleModuleEventReceiverBase
 {
 public:
-	struct FRawDistributionFloat                       SpawnCount;                                               // 0x0048(0x0038) (Edit)
-	unsigned char                                      bUseParticleTime : 1;                                     // 0x0080(0x0001) (Edit)
-	unsigned char                                      bUsePSysLocation : 1;                                     // 0x0080(0x0001) (Edit)
-	unsigned char                                      bInheritVelocity : 1;                                     // 0x0080(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
-	struct FRawDistributionVector                      InheritVelocityScale;                                     // 0x0088(0x0038) (Edit)
+	struct FRawDistributionFloat                       SpawnCount;                                               // 0x0060(0x0038) (Edit)
+	unsigned char                                      bUseParticleTime : 1;                                     // 0x0098(0x0001) (Edit)
+	unsigned char                                      bUsePSysLocation : 1;                                     // 0x0098(0x0001) (Edit)
+	unsigned char                                      bInheritVelocity : 1;                                     // 0x0098(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      InheritVelocityScale;                                     // 0x00A0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17325,7 +17354,7 @@ public:
 
 
 // Class Engine.ParticleModuleKillBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleKillBase : public UParticleModule
 {
 public:
@@ -17340,16 +17369,16 @@ public:
 
 
 // Class Engine.ParticleModuleKillBox
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0078 (0x00C8 - 0x0050)
 class UParticleModuleKillBox : public UParticleModuleKillBase
 {
 public:
-	struct FRawDistributionVector                      LowerLeftCorner;                                          // 0x0038(0x0038) (Edit)
-	struct FRawDistributionVector                      UpperRightCorner;                                         // 0x0070(0x0038) (Edit)
-	unsigned char                                      bAbsolute : 1;                                            // 0x00A8(0x0001) (Edit)
-	unsigned char                                      bKillInside : 1;                                          // 0x00A8(0x0001) (Edit)
-	unsigned char                                      bAxisAlignedAndFixedSize : 1;                             // 0x00A8(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      LowerLeftCorner;                                          // 0x0050(0x0038) (Edit)
+	struct FRawDistributionVector                      UpperRightCorner;                                         // 0x0088(0x0038) (Edit)
+	unsigned char                                      bAbsolute : 1;                                            // 0x00C0(0x0001) (Edit)
+	unsigned char                                      bKillInside : 1;                                          // 0x00C0(0x0001) (Edit)
+	unsigned char                                      bAxisAlignedAndFixedSize : 1;                             // 0x00C0(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17361,15 +17390,15 @@ public:
 
 
 // Class Engine.ParticleModuleKillHeight
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleKillHeight : public UParticleModuleKillBase
 {
 public:
-	struct FRawDistributionFloat                       Height;                                                   // 0x0038(0x0038) (Edit)
-	unsigned char                                      bAbsolute : 1;                                            // 0x0070(0x0001) (Edit)
-	unsigned char                                      bFloor : 1;                                               // 0x0070(0x0001) (Edit)
-	unsigned char                                      bApplyPSysScale : 1;                                      // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       Height;                                                   // 0x0050(0x0038) (Edit)
+	unsigned char                                      bAbsolute : 1;                                            // 0x0088(0x0001) (Edit)
+	unsigned char                                      bFloor : 1;                                               // 0x0088(0x0001) (Edit)
+	unsigned char                                      bApplyPSysScale : 1;                                      // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17381,7 +17410,7 @@ public:
 
 
 // Class Engine.ParticleModuleLifetimeBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleLifetimeBase : public UParticleModule
 {
 public:
@@ -17396,14 +17425,14 @@ public:
 
 
 // Class Engine.ParticleModuleLifetime
-// 0x0158 (0x0190 - 0x0038)
+// 0x0158 (0x01A8 - 0x0050)
 class UParticleModuleLifetime : public UParticleModuleLifetimeBase
 {
 public:
-	unsigned char                                      bUseGroupAValuesForAllGroups : 1;                         // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       LifeTime;                                                 // 0x0040(0x0038) (Edit)
-	struct FRawDistributionFloat                       AdditionalLifetimes[0x5];                                 // 0x0078(0x0038) (Edit)
+	unsigned char                                      bUseGroupAValuesForAllGroups : 1;                         // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       LifeTime;                                                 // 0x0058(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalLifetimes[0x5];                                 // 0x0090(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17415,11 +17444,11 @@ public:
 
 
 // Class Engine.ParticleModuleLifetime_Seeded
-// 0x0020 (0x01B0 - 0x0190)
+// 0x0020 (0x01C8 - 0x01A8)
 class UParticleModuleLifetime_Seeded : public UParticleModuleLifetime
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0190(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x01A8(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17431,7 +17460,7 @@ public:
 
 
 // Class Engine.ParticleModuleLightBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleLightBase : public UParticleModule
 {
 public:
@@ -17446,19 +17475,19 @@ public:
 
 
 // Class Engine.ParticleModuleLight
-// 0x00E8 (0x0120 - 0x0038)
+// 0x00E8 (0x0138 - 0x0050)
 class UParticleModuleLight : public UParticleModuleLightBase
 {
 public:
-	bool                                               bUseInverseSquaredFalloff;                                // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bAffectsTranslucency;                                     // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bIgnoreComponentTint;                                     // 0x003A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bPreviewLightRadius;                                      // 0x003B(0x0001) (Edit, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              SpawnFraction;                                            // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRawDistributionVector                      ColorScaleOverLife;                                       // 0x0040(0x0038) (Edit)
-	struct FRawDistributionFloat                       BrightnessOverLife;                                       // 0x0078(0x0038) (Edit)
-	struct FRawDistributionFloat                       RadiusScale;                                              // 0x00B0(0x0038) (Edit)
-	struct FRawDistributionFloat                       LightExponent;                                            // 0x00E8(0x0038) (Edit)
+	bool                                               bUseInverseSquaredFalloff;                                // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bAffectsTranslucency;                                     // 0x0051(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bIgnoreComponentTint;                                     // 0x0052(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bPreviewLightRadius;                                      // 0x0053(0x0001) (Edit, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              SpawnFraction;                                            // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionVector                      ColorScaleOverLife;                                       // 0x0058(0x0038) (Edit)
+	struct FRawDistributionFloat                       BrightnessOverLife;                                       // 0x0090(0x0038) (Edit)
+	struct FRawDistributionFloat                       RadiusScale;                                              // 0x00C8(0x0038) (Edit)
+	struct FRawDistributionFloat                       LightExponent;                                            // 0x0100(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17470,11 +17499,11 @@ public:
 
 
 // Class Engine.ParticleModuleLight_Seeded
-// 0x0020 (0x0140 - 0x0120)
+// 0x0020 (0x0158 - 0x0138)
 class UParticleModuleLight_Seeded : public UParticleModuleLight
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0120(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0138(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17486,7 +17515,7 @@ public:
 
 
 // Class Engine.ParticleModuleLocationBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleLocationBase : public UParticleModule
 {
 public:
@@ -17501,17 +17530,17 @@ public:
 
 
 // Class Engine.ParticleModuleLocation
-// 0x0128 (0x0160 - 0x0038)
+// 0x0128 (0x0178 - 0x0050)
 class UParticleModuleLocation : public UParticleModuleLocationBase
 {
 public:
-	struct FRawDistributionVector                      StartLocation;                                            // 0x0038(0x0038) (Edit)
-	struct FRawDistributionVector                      AdditionalStartLocations[0x4];                            // 0x0070(0x0038) (Edit)
-	unsigned char                                      StartLocationUseGroupAForAll : 1;                         // 0x0150(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0151(0x0003) MISSED OFFSET
-	float                                              DistributeOverNPoints;                                    // 0x0154(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DistributeThreshold;                                      // 0x0158(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      StartLocation;                                            // 0x0050(0x0038) (Edit)
+	struct FRawDistributionVector                      AdditionalStartLocations[0x4];                            // 0x0088(0x0038) (Edit)
+	unsigned char                                      StartLocationUseGroupAForAll : 1;                         // 0x0168(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0169(0x0003) MISSED OFFSET
+	float                                              DistributeOverNPoints;                                    // 0x016C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DistributeThreshold;                                      // 0x0170(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0174(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17523,11 +17552,11 @@ public:
 
 
 // Class Engine.ParticleModuleLocation_Seeded
-// 0x0020 (0x0180 - 0x0160)
+// 0x0020 (0x0198 - 0x0178)
 class UParticleModuleLocation_Seeded : public UParticleModuleLocation
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0160(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0178(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17539,7 +17568,7 @@ public:
 
 
 // Class Engine.ParticleModuleLocationWorldOffset
-// 0x0000 (0x0160 - 0x0160)
+// 0x0000 (0x0178 - 0x0178)
 class UParticleModuleLocationWorldOffset : public UParticleModuleLocation
 {
 public:
@@ -17554,11 +17583,11 @@ public:
 
 
 // Class Engine.ParticleModuleLocationWorldOffset_Seeded
-// 0x0020 (0x0180 - 0x0160)
+// 0x0020 (0x0198 - 0x0178)
 class UParticleModuleLocationWorldOffset_Seeded : public UParticleModuleLocationWorldOffset
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0160(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0178(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17570,23 +17599,23 @@ public:
 
 
 // Class Engine.ParticleModuleLocationBoneSocket
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleLocationBoneSocket : public UParticleModuleLocationBase
 {
 public:
-	TEnumAsByte<ELocationBoneSocketSource>             SourceType;                                               // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FVector                                     UniversalOffset;                                          // 0x003C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FLocationBoneSocketInfo>             SourceLocations;                                          // 0x0048(0x0010) (Edit, ZeroConstructor)
-	TEnumAsByte<ELocationBoneSocketSelectionMethod>    SelectionMethod;                                          // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
-	unsigned char                                      bUpdatePositionEachFrame : 1;                             // 0x005C(0x0001) (Edit)
-	unsigned char                                      bOrientMeshEmitters : 1;                                  // 0x005C(0x0001) (Edit)
-	unsigned char                                      bInheritBoneVelocity : 1;                                 // 0x005C(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
-	struct FVector                                     InheritVelocityScale;                                     // 0x0060(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InheritedSpeedCap;                                        // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SkelMeshActorParamName;                                   // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ELocationBoneSocketSource>             SourceType;                                               // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FVector                                     UniversalOffset;                                          // 0x0054(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FLocationBoneSocketInfo>             SourceLocations;                                          // 0x0060(0x0010) (Edit, ZeroConstructor)
+	TEnumAsByte<ELocationBoneSocketSelectionMethod>    SelectionMethod;                                          // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
+	unsigned char                                      bUpdatePositionEachFrame : 1;                             // 0x0074(0x0001) (Edit)
+	unsigned char                                      bOrientMeshEmitters : 1;                                  // 0x0074(0x0001) (Edit)
+	unsigned char                                      bInheritBoneVelocity : 1;                                 // 0x0074(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0075(0x0003) MISSED OFFSET
+	struct FVector                                     InheritVelocityScale;                                     // 0x0078(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InheritedSpeedCap;                                        // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SkelMeshActorParamName;                                   // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17598,14 +17627,14 @@ public:
 
 
 // Class Engine.ParticleModuleLocationDirect
-// 0x00E0 (0x0118 - 0x0038)
+// 0x00E0 (0x0130 - 0x0050)
 class UParticleModuleLocationDirect : public UParticleModuleLocationBase
 {
 public:
-	struct FRawDistributionVector                      Location;                                                 // 0x0038(0x0038) (Edit)
-	struct FRawDistributionVector                      LocationOffset;                                           // 0x0070(0x0038) (Edit)
-	struct FRawDistributionVector                      ScaleFactor;                                              // 0x00A8(0x0038) (Edit)
-	struct FRawDistributionVector                      Direction;                                                // 0x00E0(0x0038) (Edit)
+	struct FRawDistributionVector                      Location;                                                 // 0x0050(0x0038) (Edit)
+	struct FRawDistributionVector                      LocationOffset;                                           // 0x0088(0x0038) (Edit)
+	struct FRawDistributionVector                      ScaleFactor;                                              // 0x00C0(0x0038) (Edit)
+	struct FRawDistributionVector                      Direction;                                                // 0x00F8(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17617,20 +17646,20 @@ public:
 
 
 // Class Engine.ParticleModuleLocationEmitter
-// 0x0020 (0x0058 - 0x0038)
+// 0x0020 (0x0070 - 0x0050)
 class UParticleModuleLocationEmitter : public UParticleModuleLocationBase
 {
 public:
-	struct FName                                       EmitterName;                                              // 0x0038(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData)
-	TEnumAsByte<ELocationEmitterSelectionMethod>       SelectionMethod;                                          // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
-	unsigned char                                      InheritSourceVelocity : 1;                                // 0x0044(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
-	float                                              InheritSourceVelocityScale;                               // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bInheritSourceRotation : 1;                               // 0x004C(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x004D(0x0003) MISSED OFFSET
-	float                                              InheritSourceRotationScale;                               // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
+	struct FName                                       EmitterName;                                              // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData)
+	TEnumAsByte<ELocationEmitterSelectionMethod>       SelectionMethod;                                          // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
+	unsigned char                                      InheritSourceVelocity : 1;                                // 0x005C(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
+	float                                              InheritSourceVelocityScale;                               // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bInheritSourceRotation : 1;                               // 0x0064(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
+	float                                              InheritSourceRotationScale;                               // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17642,11 +17671,11 @@ public:
 
 
 // Class Engine.ParticleModuleLocationEmitterDirect
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleLocationEmitterDirect : public UParticleModuleLocationBase
 {
 public:
-	struct FName                                       EmitterName;                                              // 0x0038(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData)
+	struct FName                                       EmitterName;                                              // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17658,21 +17687,21 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveBase
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0078 (0x00C8 - 0x0050)
 class UParticleModuleLocationPrimitiveBase : public UParticleModuleLocationBase
 {
 public:
-	unsigned char                                      Positive_X : 1;                                           // 0x0038(0x0001) (Edit)
-	unsigned char                                      Positive_Y : 1;                                           // 0x0038(0x0001) (Edit)
-	unsigned char                                      Positive_Z : 1;                                           // 0x0038(0x0001) (Edit)
-	unsigned char                                      Negative_X : 1;                                           // 0x0038(0x0001) (Edit)
-	unsigned char                                      Negative_Y : 1;                                           // 0x0038(0x0001) (Edit)
-	unsigned char                                      Negative_Z : 1;                                           // 0x0038(0x0001) (Edit)
-	unsigned char                                      SurfaceOnly : 1;                                          // 0x0038(0x0001) (Edit)
-	unsigned char                                      Velocity : 1;                                             // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0040(0x0038) (Edit)
-	struct FRawDistributionVector                      StartLocation;                                            // 0x0078(0x0038) (Edit)
+	unsigned char                                      Positive_X : 1;                                           // 0x0050(0x0001) (Edit)
+	unsigned char                                      Positive_Y : 1;                                           // 0x0050(0x0001) (Edit)
+	unsigned char                                      Positive_Z : 1;                                           // 0x0050(0x0001) (Edit)
+	unsigned char                                      Negative_X : 1;                                           // 0x0050(0x0001) (Edit)
+	unsigned char                                      Negative_Y : 1;                                           // 0x0050(0x0001) (Edit)
+	unsigned char                                      Negative_Z : 1;                                           // 0x0050(0x0001) (Edit)
+	unsigned char                                      SurfaceOnly : 1;                                          // 0x0050(0x0001) (Edit)
+	unsigned char                                      Velocity : 1;                                             // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0058(0x0038) (Edit)
+	struct FRawDistributionVector                      StartLocation;                                            // 0x0090(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17684,11 +17713,11 @@ public:
 
 
 // Class Engine.ParticleModuleLocationComputeShaderOutput
-// 0x0008 (0x00B8 - 0x00B0)
+// 0x0008 (0x00D0 - 0x00C8)
 class UParticleModuleLocationComputeShaderOutput : public UParticleModuleLocationPrimitiveBase
 {
 public:
-	class UParticleComputeShaderData*                  PositionData;                                             // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleComputeShaderData*                  PositionData;                                             // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17700,24 +17729,24 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveCylinder
-// 0x0258 (0x0308 - 0x00B0)
+// 0x0258 (0x0320 - 0x00C8)
 class UParticleModuleLocationPrimitiveCylinder : public UParticleModuleLocationPrimitiveBase
 {
 public:
-	unsigned char                                      RadialVelocity : 1;                                       // 0x00B0(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       StartRadius;                                              // 0x00B8(0x0038) (Edit)
-	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                             // 0x00F0(0x0038) (Edit)
-	unsigned char                                      StartRadiusUseGroupAForAll : 1;                           // 0x01D0(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x01D1(0x0003) MISSED OFFSET
-	struct FVector2D                                   RadiusScale;                                              // 0x01D4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x01DC(0x0004) MISSED OFFSET
-	struct FRawDistributionFloat                       StartHeight;                                              // 0x01E0(0x0038) (Edit)
-	unsigned char                                      StartHeightUseGroupAForAll : 1;                           // 0x0218(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0219(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       AdditionalStartHeights[0x4];                              // 0x0220(0x0038) (Edit)
-	TEnumAsByte<ECylinderHeightAxis>                   HeightAxis;                                               // 0x0300(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0301(0x0007) MISSED OFFSET
+	unsigned char                                      RadialVelocity : 1;                                       // 0x00C8(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00C9(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       StartRadius;                                              // 0x00D0(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                             // 0x0108(0x0038) (Edit)
+	unsigned char                                      StartRadiusUseGroupAForAll : 1;                           // 0x01E8(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x01E9(0x0003) MISSED OFFSET
+	struct FVector2D                                   RadiusScale;                                              // 0x01EC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x01F4(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       StartHeight;                                              // 0x01F8(0x0038) (Edit)
+	unsigned char                                      StartHeightUseGroupAForAll : 1;                           // 0x0230(0x0001) (Edit)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0231(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       AdditionalStartHeights[0x4];                              // 0x0238(0x0038) (Edit)
+	TEnumAsByte<ECylinderHeightAxis>                   HeightAxis;                                               // 0x0318(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0319(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17729,11 +17758,11 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveCylinder_Seeded
-// 0x0020 (0x0328 - 0x0308)
+// 0x0020 (0x0340 - 0x0320)
 class UParticleModuleLocationPrimitiveCylinder_Seeded : public UParticleModuleLocationPrimitiveCylinder
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0308(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0320(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17745,21 +17774,21 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveSphere
-// 0x0150 (0x0200 - 0x00B0)
+// 0x0150 (0x0218 - 0x00C8)
 class UParticleModuleLocationPrimitiveSphere : public UParticleModuleLocationPrimitiveBase
 {
 public:
-	struct FRawDistributionFloat                       StartRadius;                                              // 0x00B0(0x0038) (Edit)
-	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                             // 0x00E8(0x0038) (Edit)
-	unsigned char                                      StartRadiusUseGroupAForAll : 1;                           // 0x01C8(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x01C9(0x0003) MISSED OFFSET
-	struct FVector2D                                   PositiveXAngleRange;                                      // 0x01CC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   NegativeXAngleRange;                                      // 0x01D4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   PositiveYAngleRange;                                      // 0x01DC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   NegativeYAngleRange;                                      // 0x01E4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   PositiveZAngleRange;                                      // 0x01EC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   NegativeZAngleRange;                                      // 0x01F4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01FC(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       StartRadius;                                              // 0x00C8(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                             // 0x0100(0x0038) (Edit)
+	unsigned char                                      StartRadiusUseGroupAForAll : 1;                           // 0x01E0(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x01E1(0x0003) MISSED OFFSET
+	struct FVector2D                                   PositiveXAngleRange;                                      // 0x01E4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   NegativeXAngleRange;                                      // 0x01EC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   PositiveYAngleRange;                                      // 0x01F4(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   NegativeYAngleRange;                                      // 0x01FC(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   PositiveZAngleRange;                                      // 0x0204(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   NegativeZAngleRange;                                      // 0x020C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0214(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17771,11 +17800,11 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveSphere_Seeded
-// 0x0020 (0x0220 - 0x0200)
+// 0x0020 (0x0238 - 0x0218)
 class UParticleModuleLocationPrimitiveSphere_Seeded : public UParticleModuleLocationPrimitiveSphere
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0200(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0218(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17787,17 +17816,17 @@ public:
 
 
 // Class Engine.ParticleModuleLocationVelocityComputeShaderOutput
-// 0x00F0 (0x01A0 - 0x00B0)
+// 0x00F0 (0x01B8 - 0x00C8)
 class UParticleModuleLocationVelocityComputeShaderOutput : public UParticleModuleLocationPrimitiveBase
 {
 public:
-	class UParticleComputeShaderData*                  PositionData;                                             // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRawDistributionVector                      ComputedVelocityScale;                                    // 0x00B8(0x0038) (Edit)
-	float                                              SpeedCap;                                                 // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
-	struct FRawDistributionVector                      BaseVelocity;                                             // 0x00F8(0x0038) (Edit)
-	struct FRawDistributionVector                      LocationOffset;                                           // 0x0130(0x0038) (Edit)
-	struct FRawDistributionVector                      LocationOffsetScaledDirection;                            // 0x0168(0x0038) (Edit)
+	class UParticleComputeShaderData*                  PositionData;                                             // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionVector                      ComputedVelocityScale;                                    // 0x00D0(0x0038) (Edit)
+	float                                              SpeedCap;                                                 // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      BaseVelocity;                                             // 0x0110(0x0038) (Edit)
+	struct FRawDistributionVector                      LocationOffset;                                           // 0x0148(0x0038) (Edit)
+	struct FRawDistributionVector                      LocationOffsetScaledDirection;                            // 0x0180(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17809,21 +17838,21 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveSphereSlice
-// 0x01B8 (0x01F0 - 0x0038)
+// 0x01B8 (0x0208 - 0x0050)
 class UParticleModuleLocationPrimitiveSphereSlice : public UParticleModuleLocationBase
 {
 public:
-	struct FRawDistributionFloat                       StartRadius;                                              // 0x0038(0x0038) (Edit)
-	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                             // 0x0070(0x0038) (Edit)
-	unsigned char                                      StartRadiusUseGroupAForAll : 1;                           // 0x0150(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0151(0x0003) MISSED OFFSET
-	struct FPrimitiveSphereEmitterAngleRanges          AngleRanges[0x2];                                         // 0x0154(0x0010) (Edit)
-	float                                              FirstSliceDistributionWeight;                             // 0x0174(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      SurfaceOnly : 1;                                          // 0x0178(0x0001) (Edit)
-	unsigned char                                      Velocity : 1;                                             // 0x0178(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0179(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0180(0x0038) (Edit)
-	struct FRawDistributionVector                      StartLocation;                                            // 0x01B8(0x0038) (Edit)
+	struct FRawDistributionFloat                       StartRadius;                                              // 0x0050(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                             // 0x0088(0x0038) (Edit)
+	unsigned char                                      StartRadiusUseGroupAForAll : 1;                           // 0x0168(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0169(0x0003) MISSED OFFSET
+	struct FPrimitiveSphereEmitterAngleRanges          AngleRanges[0x2];                                         // 0x016C(0x0010) (Edit)
+	float                                              FirstSliceDistributionWeight;                             // 0x018C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      SurfaceOnly : 1;                                          // 0x0190(0x0001) (Edit)
+	unsigned char                                      Velocity : 1;                                             // 0x0190(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0198(0x0038) (Edit)
+	struct FRawDistributionVector                      StartLocation;                                            // 0x01D0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17835,14 +17864,14 @@ public:
 
 
 // Class Engine.ParticleModuleLocationPrimitiveTriangle
-// 0x00E0 (0x0118 - 0x0038)
+// 0x00E0 (0x0130 - 0x0050)
 class UParticleModuleLocationPrimitiveTriangle : public UParticleModuleLocationBase
 {
 public:
-	struct FRawDistributionVector                      StartOffset;                                              // 0x0038(0x0038) (Edit)
-	struct FRawDistributionFloat                       Height;                                                   // 0x0070(0x0038) (Edit)
-	struct FRawDistributionFloat                       Angle;                                                    // 0x00A8(0x0038) (Edit)
-	struct FRawDistributionFloat                       Thickness;                                                // 0x00E0(0x0038) (Edit)
+	struct FRawDistributionVector                      StartOffset;                                              // 0x0050(0x0038) (Edit)
+	struct FRawDistributionFloat                       Height;                                                   // 0x0088(0x0038) (Edit)
+	struct FRawDistributionFloat                       Angle;                                                    // 0x00C0(0x0038) (Edit)
+	struct FRawDistributionFloat                       Thickness;                                                // 0x00F8(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17854,28 +17883,28 @@ public:
 
 
 // Class Engine.ParticleModuleLocationSkelVertSurface
-// 0x0060 (0x0098 - 0x0038)
+// 0x0060 (0x00B0 - 0x0050)
 class UParticleModuleLocationSkelVertSurface : public UParticleModuleLocationBase
 {
 public:
-	TEnumAsByte<ELocationSkelVertSurfaceSource>        SourceType;                                               // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FVector                                     UniversalOffset;                                          // 0x003C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUpdatePositionEachFrame : 1;                             // 0x0048(0x0001) (Edit)
-	unsigned char                                      bOrientMeshEmitters : 1;                                  // 0x0048(0x0001) (Edit)
-	unsigned char                                      bInheritBoneVelocity : 1;                                 // 0x0048(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
-	struct FName                                       SkelMeshActorParamName;                                   // 0x004C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
-	TArray<struct FName>                               ValidAssociatedBones;                                     // 0x0058(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      bEnforceNormalCheck : 1;                                  // 0x0068(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0069(0x0003) MISSED OFFSET
-	struct FVector                                     NormalToCompare;                                          // 0x006C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NormalCheckToleranceDegrees;                              // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NormalCheckTolerance;                                     // 0x007C(0x0004) (ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        ValidMaterialIndices;                                     // 0x0080(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      bInheritVertexColor : 1;                                  // 0x0090(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+	TEnumAsByte<ELocationSkelVertSurfaceSource>        SourceType;                                               // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FVector                                     UniversalOffset;                                          // 0x0054(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUpdatePositionEachFrame : 1;                             // 0x0060(0x0001) (Edit)
+	unsigned char                                      bOrientMeshEmitters : 1;                                  // 0x0060(0x0001) (Edit)
+	unsigned char                                      bInheritBoneVelocity : 1;                                 // 0x0060(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
+	struct FName                                       SkelMeshActorParamName;                                   // 0x0064(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
+	TArray<struct FName>                               ValidAssociatedBones;                                     // 0x0070(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      bEnforceNormalCheck : 1;                                  // 0x0080(0x0001) (Edit)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
+	struct FVector                                     NormalToCompare;                                          // 0x0084(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NormalCheckToleranceDegrees;                              // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NormalCheckTolerance;                                     // 0x0094(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        ValidMaterialIndices;                                     // 0x0098(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      bInheritVertexColor : 1;                                  // 0x00A8(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17887,11 +17916,11 @@ public:
 
 
 // Class Engine.ParticleModulePivotOffset
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModulePivotOffset : public UParticleModuleLocationBase
 {
 public:
-	struct FVector2D                                   PivotOffset;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   PivotOffset;                                              // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -17903,11 +17932,11 @@ public:
 
 
 // Class Engine.ParticleModuleSourceMovement
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleSourceMovement : public UParticleModuleLocationBase
 {
 public:
-	struct FRawDistributionVector                      SourceMovementScale;                                      // 0x0038(0x0038) (Edit)
+	struct FRawDistributionVector                      SourceMovementScale;                                      // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -17919,7 +17948,7 @@ public:
 
 
 // Class Engine.ParticleModuleMaterialBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleMaterialBase : public UParticleModule
 {
 public:
@@ -17934,11 +17963,11 @@ public:
 
 
 // Class Engine.ParticleModuleMeshMaterial
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleMeshMaterial : public UParticleModuleMaterialBase
 {
 public:
-	TArray<class UMaterialInterface*>                  MeshMaterials;                                            // 0x0038(0x0010) (Edit, ZeroConstructor)
+	TArray<class UMaterialInterface*>                  MeshMaterials;                                            // 0x0050(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -17950,12 +17979,12 @@ public:
 
 
 // Class Engine.ParticleModuleOrbitBase
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleOrbitBase : public UParticleModule
 {
 public:
-	unsigned char                                      bUseEmitterTime : 1;                                      // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	unsigned char                                      bUseEmitterTime : 1;                                      // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17967,21 +17996,21 @@ public:
 
 
 // Class Engine.ParticleModuleOrbit
-// 0x00C8 (0x0108 - 0x0040)
+// 0x00C8 (0x0120 - 0x0058)
 class UParticleModuleOrbit : public UParticleModuleOrbitBase
 {
 public:
-	TEnumAsByte<EOrbitChainMode>                       ChainMode;                                                // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	struct FRawDistributionVector                      OffsetAmount;                                             // 0x0048(0x0038) (Edit)
-	struct FOrbitOptions                               OffsetOptions;                                            // 0x0080(0x0004) (Edit)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
-	struct FRawDistributionVector                      RotationAmount;                                           // 0x0088(0x0038) (Edit)
-	struct FOrbitOptions                               RotationOptions;                                          // 0x00C0(0x0004) (Edit)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
-	struct FRawDistributionVector                      RotationRateAmount;                                       // 0x00C8(0x0038) (Edit)
-	struct FOrbitOptions                               RotationRateOptions;                                      // 0x0100(0x0004) (Edit)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0104(0x0004) MISSED OFFSET
+	TEnumAsByte<EOrbitChainMode>                       ChainMode;                                                // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      OffsetAmount;                                             // 0x0060(0x0038) (Edit)
+	struct FOrbitOptions                               OffsetOptions;                                            // 0x0098(0x0004) (Edit)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      RotationAmount;                                           // 0x00A0(0x0038) (Edit)
+	struct FOrbitOptions                               RotationOptions;                                          // 0x00D8(0x0004) (Edit)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      RotationRateAmount;                                       // 0x00E0(0x0038) (Edit)
+	struct FOrbitOptions                               RotationRateOptions;                                      // 0x0118(0x0004) (Edit)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -17993,7 +18022,7 @@ public:
 
 
 // Class Engine.ParticleModuleOrientationBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleOrientationBase : public UParticleModule
 {
 public:
@@ -18008,12 +18037,12 @@ public:
 
 
 // Class Engine.ParticleModuleOrientationAxisLock
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleOrientationAxisLock : public UParticleModuleOrientationBase
 {
 public:
-	TEnumAsByte<EParticleAxisLock>                     LockAxisFlags;                                            // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	TEnumAsByte<EParticleAxisLock>                     LockAxisFlags;                                            // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18025,7 +18054,7 @@ public:
 
 
 // Class Engine.ParticleModuleParameterBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleParameterBase : public UParticleModule
 {
 public:
@@ -18040,14 +18069,14 @@ public:
 
 
 // Class Engine.ParticleModuleParameterDynamic
-// 0x0018 (0x0050 - 0x0038)
+// 0x0018 (0x0068 - 0x0050)
 class UParticleModuleParameterDynamic : public UParticleModuleParameterBase
 {
 public:
-	TArray<struct FEmitterDynamicParameter>            DynamicParams;                                            // 0x0038(0x0010) (Edit, EditFixedSize, ZeroConstructor)
-	int                                                UpdateFlags;                                              // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUsesVelocity : 1;                                        // 0x004C(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x004D(0x0003) MISSED OFFSET
+	TArray<struct FEmitterDynamicParameter>            DynamicParams;                                            // 0x0050(0x0010) (Edit, EditFixedSize, ZeroConstructor)
+	int                                                UpdateFlags;                                              // 0x0060(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUsesVelocity : 1;                                        // 0x0064(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18059,11 +18088,11 @@ public:
 
 
 // Class Engine.ParticleModuleParameterDynamic_Seeded
-// 0x0020 (0x0070 - 0x0050)
+// 0x0020 (0x0088 - 0x0068)
 class UParticleModuleParameterDynamic_Seeded : public UParticleModuleParameterDynamic
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0050(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0068(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18075,11 +18104,11 @@ public:
 
 
 // Class Engine.ParticleModuleParametersOverX
-// 0x0018 (0x0050 - 0x0038)
+// 0x0018 (0x0068 - 0x0050)
 class UParticleModuleParametersOverX : public UParticleModule
 {
 public:
-	float                                              GroupScales[0x6];                                         // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              GroupScales[0x6];                                         // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -18091,17 +18120,17 @@ public:
 
 
 // Class Engine.ParticleModuleParametersOverCustom
-// 0x0188 (0x01D8 - 0x0050)
+// 0x0188 (0x01F0 - 0x0068)
 class UParticleModuleParametersOverCustom : public UParticleModuleParametersOverX
 {
 public:
-	struct FRawDistributionFloat                       DynamicParamScaleOverCustomScale;                         // 0x0050(0x0038) (Edit)
-	struct FRawDistributionFloat                       SpawnRateOverCustomScale;                                 // 0x0088(0x0038) (Edit)
-	struct FRawDistributionFloat                       LifetimeOverCustomScale;                                  // 0x00C0(0x0038) (Edit)
-	struct FRawDistributionFloat                       SizeOverCustomScale;                                      // 0x00F8(0x0038) (Edit)
-	struct FRawDistributionFloat                       InitialVelocityOverCustomScale;                           // 0x0130(0x0038) (Edit)
-	struct FRawDistributionFloat                       OpacityOverCustomScale;                                   // 0x0168(0x0038) (Edit)
-	struct FRawDistributionFloat                       CylinderRadiusOverCustomScale;                            // 0x01A0(0x0038) (Edit)
+	struct FRawDistributionFloat                       DynamicParamScaleOverCustomScale;                         // 0x0068(0x0038) (Edit)
+	struct FRawDistributionFloat                       SpawnRateOverCustomScale;                                 // 0x00A0(0x0038) (Edit)
+	struct FRawDistributionFloat                       LifetimeOverCustomScale;                                  // 0x00D8(0x0038) (Edit)
+	struct FRawDistributionFloat                       SizeOverCustomScale;                                      // 0x0110(0x0038) (Edit)
+	struct FRawDistributionFloat                       InitialVelocityOverCustomScale;                           // 0x0148(0x0038) (Edit)
+	struct FRawDistributionFloat                       OpacityOverCustomScale;                                   // 0x0180(0x0038) (Edit)
+	struct FRawDistributionFloat                       CylinderRadiusOverCustomScale;                            // 0x01B8(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18113,19 +18142,19 @@ public:
 
 
 // Class Engine.ParticleModuleParametersOverVelocity
-// 0x0130 (0x0180 - 0x0050)
+// 0x0130 (0x0198 - 0x0068)
 class UParticleModuleParametersOverVelocity : public UParticleModuleParametersOverX
 {
 public:
-	float                                              MinSpeed;                                                 // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxSpeed;                                                 // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     VelocityComponentsWeights;                                // 0x0058(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	struct FRawDistributionFloat                       SpawnRateOverSpeedScale;                                  // 0x0068(0x0038) (Edit)
-	struct FRawDistributionFloat                       LifetimeOverSpeedScale;                                   // 0x00A0(0x0038) (Edit)
-	struct FRawDistributionFloat                       SizeOverSpeedScale;                                       // 0x00D8(0x0038) (Edit)
-	struct FRawDistributionFloat                       InitialVelocityOverSpeedScale;                            // 0x0110(0x0038) (Edit)
-	struct FRawDistributionFloat                       OpacityOverSpeedScale;                                    // 0x0148(0x0038) (Edit)
+	float                                              MinSpeed;                                                 // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSpeed;                                                 // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     VelocityComponentsWeights;                                // 0x0070(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       SpawnRateOverSpeedScale;                                  // 0x0080(0x0038) (Edit)
+	struct FRawDistributionFloat                       LifetimeOverSpeedScale;                                   // 0x00B8(0x0038) (Edit)
+	struct FRawDistributionFloat                       SizeOverSpeedScale;                                       // 0x00F0(0x0038) (Edit)
+	struct FRawDistributionFloat                       InitialVelocityOverSpeedScale;                            // 0x0128(0x0038) (Edit)
+	struct FRawDistributionFloat                       OpacityOverSpeedScale;                                    // 0x0160(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18161,109 +18190,109 @@ public:
 
 
 // Class Engine.ParticleModuleRequired
-// 0x0298 (0x02D0 - 0x0038)
+// 0x0298 (0x02E8 - 0x0050)
 class UParticleModuleRequired : public UParticleModule
 {
 public:
-	unsigned char                                      bDeactivateGroupA : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      bDeactivateGroupB : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      bDeactivateGroupC : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      bDeactivateGroupD : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      bDeactivateGroupE : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	TEnumAsByte<EPriorityGroups>                       EmitterPriority;                                          // 0x003C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
-	unsigned char                                      bUseComplexitySystemWhenLooping : 1;                      // 0x0040(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
-	TEnumAsByte<EPriorityGroups>                       SwitchPriority;                                           // 0x0044(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
-	unsigned char                                      bReplacementGroupIsAdditive : 1;                          // 0x0048(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-	class UMaterialInterface*                          Material;                                                 // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     EmitterOrigin;                                            // 0x0058(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      EmitterOriginUseGroupAForAll : 1;                         // 0x0064(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
-	struct FVector                                     AdditionalEmitterOrigins[0x5];                            // 0x0068(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    EmitterRotation;                                          // 0x00A4(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EParticleScreenAlignment>              ScreenAlignment;                                          // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x00B1(0x0003) MISSED OFFSET
-	float                                              AlignmentInheritedVelocityScale;                          // 0x00B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseLocalSpace : 1;                                       // 0x00B8(0x0001) (Edit)
-	unsigned char                                      bFollowEmitter : 1;                                       // 0x00B8(0x0001) (Edit)
-	unsigned char                                      bTrailInGrandParentSpace : 1;                             // 0x00B8(0x0001) (Edit)
-	unsigned char                                      bKillOnDeactivate : 1;                                    // 0x00B8(0x0001) (Edit)
-	unsigned char                                      bKillOnCompleted : 1;                                     // 0x00B8(0x0001) (Edit)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x00B9(0x0003) MISSED OFFSET
-	TEnumAsByte<EParticleSortMode>                     SortMode;                                                 // 0x00BC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x00BD(0x0003) MISSED OFFSET
-	unsigned char                                      bUseLegacyEmitterTime : 1;                                // 0x00C0(0x0001) (Edit)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x00C1(0x0003) MISSED OFFSET
-	float                                              EmitterDuration;                                          // 0x00C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EmitterDurationLow;                                       // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bEmitterDurationUseRange : 1;                             // 0x00CC(0x0001) (Edit)
-	unsigned char                                      bDurationRecalcEachLoop : 1;                              // 0x00CC(0x0001) (Edit)
-	unsigned char                                      bSeparateLoopTimeForSubUV : 1;                            // 0x00CC(0x0001) (Edit)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x00CD(0x0003) MISSED OFFSET
-	int                                                EmitterLoops;                                             // 0x00D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
-	struct FRawDistributionFloat                       LoopTime;                                                 // 0x00D8(0x0038) (Edit)
-	struct FRawDistributionFloat                       LoopOffset;                                               // 0x0110(0x0038) (Edit)
-	struct FRawDistributionFloat                       LoopTimeForSubUV;                                         // 0x0148(0x0038) (Edit)
-	struct FRawDistributionFloat                       SpawnRate;                                                // 0x0180(0x0038)
-	TEnumAsByte<EParticleBurstMethod>                  ParticleBurstMethod;                                      // 0x01B8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
-	TArray<struct FParticleBurst>                      BurstList;                                                // 0x01C0(0x0010) (ExportObject, ZeroConstructor, NoClear)
-	float                                              EmitterDelay;                                             // 0x01D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EmitterDelayLow;                                          // 0x01D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bEmitterDelayUseRange : 1;                                // 0x01D8(0x0001) (Edit)
-	unsigned char                                      bDelayFirstLoopOnly : 1;                                  // 0x01D8(0x0001) (Edit)
-	unsigned char                                      UnknownData13[0x3];                                       // 0x01D9(0x0003) MISSED OFFSET
-	TEnumAsByte<EParticleSubUVInterpMethod>            InterpolationMethod;                                      // 0x01DC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x3];                                       // 0x01DD(0x0003) MISSED OFFSET
-	int                                                SubImages_Horizontal;                                     // 0x01E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                SubImages_Vertical;                                       // 0x01E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bScaleUV : 1;                                             // 0x01E8(0x0001) (Edit)
-	unsigned char                                      UnknownData15[0x3];                                       // 0x01E9(0x0003) MISSED OFFSET
-	float                                              RandomImageTime;                                          // 0x01EC(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                RandomImageChanges;                                       // 0x01F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bOverrideSystemMacroUV : 1;                               // 0x01F4(0x0001) (Edit)
-	unsigned char                                      UnknownData16[0x3];                                       // 0x01F5(0x0003) MISSED OFFSET
-	struct FVector                                     MacroUVPosition;                                          // 0x01F8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MacroUVRadius;                                            // 0x0204(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseMaxDrawCount : 1;                                     // 0x0208(0x0001) (Edit)
-	unsigned char                                      UnknownData17[0x3];                                       // 0x0209(0x0003) MISSED OFFSET
-	int                                                MaxDrawCount;                                             // 0x020C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEmitterNormalsMode>                   EmitterNormalsMode;                                       // 0x0210(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x3];                                       // 0x0211(0x0003) MISSED OFFSET
-	struct FVector                                     NormalsSphereCenter;                                      // 0x0214(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     NormalsCylinderDirection;                                 // 0x0220(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bOrbitModuleAffectsVelocityAlignment : 1;                 // 0x022C(0x0001) (Edit)
-	unsigned char                                      UnknownData19[0x3];                                       // 0x022D(0x0003) MISSED OFFSET
-	TEnumAsByte<EParticleUVFlipMode>                   UVFlippingMode;                                           // 0x0230(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData20[0x7];                                       // 0x0231(0x0007) MISSED OFFSET
-	class UTexture2D*                                  CutoutTexture;                                            // 0x0238(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ESubUVBoundingVertexCount>             BoundingMode;                                             // 0x0240(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EOpacitySourceMode>                    OpacitySourceMode;                                        // 0x0241(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData21[0x2];                                       // 0x0242(0x0002) MISSED OFFSET
-	float                                              AlphaThreshold;                                           // 0x0244(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SafeMarginSize;                                           // 0x0248(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData22[0x4];                                       // 0x024C(0x0004) MISSED OFFSET
-	TArray<struct FName>                               NamedMaterialOverrides;                                   // 0x0250(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      bUseDistanceFading : 1;                                   // 0x0260(0x0001) (Edit)
-	unsigned char                                      UnknownData23[0x3];                                       // 0x0261(0x0003) MISSED OFFSET
-	float                                              FarStopFade;                                              // 0x0264(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FarStartFade;                                             // 0x0268(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearStartFade;                                            // 0x026C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearStopFade;                                             // 0x0270(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseDistanceSizeScale : 1;                                // 0x0274(0x0001) (Edit)
-	unsigned char                                      UnknownData24[0x3];                                       // 0x0275(0x0003) MISSED OFFSET
-	float                                              FarScaleFactor;                                           // 0x0278(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FarScaleEndDistance;                                      // 0x027C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FarScaleBeginDistance;                                    // 0x0280(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearScaleBeginDistance;                                   // 0x0284(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearScaleEndDistance;                                     // 0x0288(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              NearScaleFactor;                                          // 0x028C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x40];                                      // 0x0290(0x0040) MISSED OFFSET
+	unsigned char                                      bDeactivateGroupA : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      bDeactivateGroupB : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      bDeactivateGroupC : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      bDeactivateGroupD : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      bDeactivateGroupE : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	TEnumAsByte<EPriorityGroups>                       EmitterPriority;                                          // 0x0054(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
+	unsigned char                                      bUseComplexitySystemWhenLooping : 1;                      // 0x0058(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
+	TEnumAsByte<EPriorityGroups>                       SwitchPriority;                                           // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
+	unsigned char                                      bReplacementGroupIsAdditive : 1;                          // 0x0060(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
+	class UMaterialInterface*                          Material;                                                 // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     EmitterOrigin;                                            // 0x0070(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      EmitterOriginUseGroupAForAll : 1;                         // 0x007C(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x007D(0x0003) MISSED OFFSET
+	struct FVector                                     AdditionalEmitterOrigins[0x5];                            // 0x0080(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    EmitterRotation;                                          // 0x00BC(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EParticleScreenAlignment>              ScreenAlignment;                                          // 0x00C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x00C9(0x0003) MISSED OFFSET
+	float                                              AlignmentInheritedVelocityScale;                          // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUseLocalSpace : 1;                                       // 0x00D0(0x0001) (Edit)
+	unsigned char                                      bFollowEmitter : 1;                                       // 0x00D0(0x0001) (Edit)
+	unsigned char                                      bTrailInGrandParentSpace : 1;                             // 0x00D0(0x0001) (Edit)
+	unsigned char                                      bKillOnDeactivate : 1;                                    // 0x00D0(0x0001) (Edit)
+	unsigned char                                      bKillOnCompleted : 1;                                     // 0x00D0(0x0001) (Edit)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
+	TEnumAsByte<EParticleSortMode>                     SortMode;                                                 // 0x00D4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x00D5(0x0003) MISSED OFFSET
+	unsigned char                                      bUseLegacyEmitterTime : 1;                                // 0x00D8(0x0001) (Edit)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x00D9(0x0003) MISSED OFFSET
+	float                                              EmitterDuration;                                          // 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EmitterDurationLow;                                       // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bEmitterDurationUseRange : 1;                             // 0x00E4(0x0001) (Edit)
+	unsigned char                                      bDurationRecalcEachLoop : 1;                              // 0x00E4(0x0001) (Edit)
+	unsigned char                                      bSeparateLoopTimeForSubUV : 1;                            // 0x00E4(0x0001) (Edit)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x00E5(0x0003) MISSED OFFSET
+	int                                                EmitterLoops;                                             // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       LoopTime;                                                 // 0x00F0(0x0038) (Edit)
+	struct FRawDistributionFloat                       LoopOffset;                                               // 0x0128(0x0038) (Edit)
+	struct FRawDistributionFloat                       LoopTimeForSubUV;                                         // 0x0160(0x0038) (Edit)
+	struct FRawDistributionFloat                       SpawnRate;                                                // 0x0198(0x0038)
+	TEnumAsByte<EParticleBurstMethod>                  ParticleBurstMethod;                                      // 0x01D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x7];                                       // 0x01D1(0x0007) MISSED OFFSET
+	TArray<struct FParticleBurst>                      BurstList;                                                // 0x01D8(0x0010) (ExportObject, ZeroConstructor, NoClear)
+	float                                              EmitterDelay;                                             // 0x01E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EmitterDelayLow;                                          // 0x01EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bEmitterDelayUseRange : 1;                                // 0x01F0(0x0001) (Edit)
+	unsigned char                                      bDelayFirstLoopOnly : 1;                                  // 0x01F0(0x0001) (Edit)
+	unsigned char                                      UnknownData13[0x3];                                       // 0x01F1(0x0003) MISSED OFFSET
+	TEnumAsByte<EParticleSubUVInterpMethod>            InterpolationMethod;                                      // 0x01F4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x3];                                       // 0x01F5(0x0003) MISSED OFFSET
+	int                                                SubImages_Horizontal;                                     // 0x01F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                SubImages_Vertical;                                       // 0x01FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bScaleUV : 1;                                             // 0x0200(0x0001) (Edit)
+	unsigned char                                      UnknownData15[0x3];                                       // 0x0201(0x0003) MISSED OFFSET
+	float                                              RandomImageTime;                                          // 0x0204(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                RandomImageChanges;                                       // 0x0208(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bOverrideSystemMacroUV : 1;                               // 0x020C(0x0001) (Edit)
+	unsigned char                                      UnknownData16[0x3];                                       // 0x020D(0x0003) MISSED OFFSET
+	struct FVector                                     MacroUVPosition;                                          // 0x0210(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MacroUVRadius;                                            // 0x021C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUseMaxDrawCount : 1;                                     // 0x0220(0x0001) (Edit)
+	unsigned char                                      UnknownData17[0x3];                                       // 0x0221(0x0003) MISSED OFFSET
+	int                                                MaxDrawCount;                                             // 0x0224(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEmitterNormalsMode>                   EmitterNormalsMode;                                       // 0x0228(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x3];                                       // 0x0229(0x0003) MISSED OFFSET
+	struct FVector                                     NormalsSphereCenter;                                      // 0x022C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NormalsCylinderDirection;                                 // 0x0238(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bOrbitModuleAffectsVelocityAlignment : 1;                 // 0x0244(0x0001) (Edit)
+	unsigned char                                      UnknownData19[0x3];                                       // 0x0245(0x0003) MISSED OFFSET
+	TEnumAsByte<EParticleUVFlipMode>                   UVFlippingMode;                                           // 0x0248(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData20[0x7];                                       // 0x0249(0x0007) MISSED OFFSET
+	class UTexture2D*                                  CutoutTexture;                                            // 0x0250(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESubUVBoundingVertexCount>             BoundingMode;                                             // 0x0258(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EOpacitySourceMode>                    OpacitySourceMode;                                        // 0x0259(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData21[0x2];                                       // 0x025A(0x0002) MISSED OFFSET
+	float                                              AlphaThreshold;                                           // 0x025C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SafeMarginSize;                                           // 0x0260(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData22[0x4];                                       // 0x0264(0x0004) MISSED OFFSET
+	TArray<struct FName>                               NamedMaterialOverrides;                                   // 0x0268(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      bUseDistanceFading : 1;                                   // 0x0278(0x0001) (Edit)
+	unsigned char                                      UnknownData23[0x3];                                       // 0x0279(0x0003) MISSED OFFSET
+	float                                              FarStopFade;                                              // 0x027C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FarStartFade;                                             // 0x0280(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearStartFade;                                            // 0x0284(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearStopFade;                                             // 0x0288(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUseDistanceSizeScale : 1;                                // 0x028C(0x0001) (Edit)
+	unsigned char                                      UnknownData24[0x3];                                       // 0x028D(0x0003) MISSED OFFSET
+	float                                              FarScaleFactor;                                           // 0x0290(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FarScaleEndDistance;                                      // 0x0294(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FarScaleBeginDistance;                                    // 0x0298(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearScaleBeginDistance;                                   // 0x029C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearScaleEndDistance;                                     // 0x02A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              NearScaleFactor;                                          // 0x02A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x40];                                      // 0x02A8(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18275,7 +18304,7 @@ public:
 
 
 // Class Engine.ParticleModuleRotationBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleRotationBase : public UParticleModule
 {
 public:
@@ -18290,11 +18319,11 @@ public:
 
 
 // Class Engine.ParticleModuleAlignRotationToVelocity
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleAlignRotationToVelocity : public UParticleModuleRotationBase
 {
 public:
-	struct FRawDistributionFloat                       AdditionalAngle;                                          // 0x0038(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalAngle;                                          // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18306,13 +18335,13 @@ public:
 
 
 // Class Engine.ParticleModuleMeshRotation
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleMeshRotation : public UParticleModuleRotationBase
 {
 public:
-	struct FRawDistributionVector                      StartRotation;                                            // 0x0038(0x0038) (Edit)
-	unsigned char                                      bInheritParent : 1;                                       // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      StartRotation;                                            // 0x0050(0x0038) (Edit)
+	unsigned char                                      bInheritParent : 1;                                       // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18324,11 +18353,11 @@ public:
 
 
 // Class Engine.ParticleModuleMeshRotation_Seeded
-// 0x0020 (0x0098 - 0x0078)
+// 0x0020 (0x00B0 - 0x0090)
 class UParticleModuleMeshRotation_Seeded : public UParticleModuleMeshRotation
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0078(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0090(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18340,11 +18369,11 @@ public:
 
 
 // Class Engine.ParticleModuleRotation
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleRotation : public UParticleModuleRotationBase
 {
 public:
-	struct FRawDistributionFloat                       StartRotation;                                            // 0x0038(0x0038) (Edit)
+	struct FRawDistributionFloat                       StartRotation;                                            // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18356,11 +18385,11 @@ public:
 
 
 // Class Engine.ParticleModuleRotation_Seeded
-// 0x0020 (0x0090 - 0x0070)
+// 0x0020 (0x00A8 - 0x0088)
 class UParticleModuleRotation_Seeded : public UParticleModuleRotation
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0070(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0088(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18372,13 +18401,13 @@ public:
 
 
 // Class Engine.ParticleModuleRotationOverLifetime
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleRotationOverLifetime : public UParticleModuleRotationBase
 {
 public:
-	struct FRawDistributionFloat                       RotationOverLife;                                         // 0x0038(0x0038) (Edit)
-	unsigned char                                      Scale : 1;                                                // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       RotationOverLife;                                         // 0x0050(0x0038) (Edit)
+	unsigned char                                      Scale : 1;                                                // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18390,7 +18419,7 @@ public:
 
 
 // Class Engine.ParticleModuleRotationRateBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleRotationRateBase : public UParticleModule
 {
 public:
@@ -18405,11 +18434,11 @@ public:
 
 
 // Class Engine.ParticleModuleMeshRotationRate
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleMeshRotationRate : public UParticleModuleRotationRateBase
 {
 public:
-	struct FRawDistributionVector                      StartRotationRate;                                        // 0x0038(0x0038) (Edit)
+	struct FRawDistributionVector                      StartRotationRate;                                        // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18421,11 +18450,11 @@ public:
 
 
 // Class Engine.ParticleModuleMeshRotationRate_Seeded
-// 0x0020 (0x0090 - 0x0070)
+// 0x0020 (0x00A8 - 0x0088)
 class UParticleModuleMeshRotationRate_Seeded : public UParticleModuleMeshRotationRate
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0070(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0088(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18437,11 +18466,11 @@ public:
 
 
 // Class Engine.ParticleModuleMeshRotationRateMultiplyLife
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleMeshRotationRateMultiplyLife : public UParticleModuleRotationRateBase
 {
 public:
-	struct FRawDistributionVector                      LifeMultiplier;                                           // 0x0038(0x0038) (Edit)
+	struct FRawDistributionVector                      LifeMultiplier;                                           // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18453,13 +18482,13 @@ public:
 
 
 // Class Engine.ParticleModuleMeshRotationRateOverLife
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleMeshRotationRateOverLife : public UParticleModuleRotationRateBase
 {
 public:
-	struct FRawDistributionVector                      RotRate;                                                  // 0x0038(0x0038) (Edit)
-	unsigned char                                      bScaleRotRate : 1;                                        // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      RotRate;                                                  // 0x0050(0x0038) (Edit)
+	unsigned char                                      bScaleRotRate : 1;                                        // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18471,11 +18500,11 @@ public:
 
 
 // Class Engine.ParticleModuleRotationRate
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleRotationRate : public UParticleModuleRotationRateBase
 {
 public:
-	struct FRawDistributionFloat                       StartRotationRate;                                        // 0x0038(0x0038) (Edit)
+	struct FRawDistributionFloat                       StartRotationRate;                                        // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18487,11 +18516,11 @@ public:
 
 
 // Class Engine.ParticleModuleRotationRate_Seeded
-// 0x0020 (0x0090 - 0x0070)
+// 0x0020 (0x00A8 - 0x0088)
 class UParticleModuleRotationRate_Seeded : public UParticleModuleRotationRate
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0070(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0088(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18503,11 +18532,11 @@ public:
 
 
 // Class Engine.ParticleModuleRotationRateMultiplyLife
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleRotationRateMultiplyLife : public UParticleModuleRotationRateBase
 {
 public:
-	struct FRawDistributionFloat                       LifeMultiplier;                                           // 0x0038(0x0038) (Edit)
+	struct FRawDistributionFloat                       LifeMultiplier;                                           // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18519,7 +18548,7 @@ public:
 
 
 // Class Engine.ParticleModuleSizeBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleSizeBase : public UParticleModule
 {
 public:
@@ -18534,17 +18563,17 @@ public:
 
 
 // Class Engine.ParticleModuleSize
-// 0x0160 (0x0198 - 0x0038)
+// 0x0160 (0x01B0 - 0x0050)
 class UParticleModuleSize : public UParticleModuleSizeBase
 {
 public:
-	unsigned char                                      bUseGroupAForAll : 1;                                     // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-	struct FRawDistributionVector                      StartSize;                                                // 0x0040(0x0038) (Edit)
-	struct FRawDistributionVector                      AdditionalStartSizes[0x5];                                // 0x0078(0x0038) (Edit)
-	unsigned char                                      bKeepAspectRatio : 1;                                     // 0x0190(0x0001) (Edit)
-	unsigned char                                      bIgnoreComponentScale : 1;                                // 0x0190(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
+	unsigned char                                      bUseGroupAForAll : 1;                                     // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      StartSize;                                                // 0x0058(0x0038) (Edit)
+	struct FRawDistributionVector                      AdditionalStartSizes[0x5];                                // 0x0090(0x0038) (Edit)
+	unsigned char                                      bKeepAspectRatio : 1;                                     // 0x01A8(0x0001) (Edit)
+	unsigned char                                      bIgnoreComponentScale : 1;                                // 0x01A8(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x01A9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18556,11 +18585,11 @@ public:
 
 
 // Class Engine.ParticleModuleSize_Seeded
-// 0x0020 (0x01B8 - 0x0198)
+// 0x0020 (0x01D0 - 0x01B0)
 class UParticleModuleSize_Seeded : public UParticleModuleSize
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0198(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x01B0(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18572,15 +18601,15 @@ public:
 
 
 // Class Engine.ParticleModuleSizeMultiplyLife
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleSizeMultiplyLife : public UParticleModuleSizeBase
 {
 public:
-	struct FRawDistributionVector                      LifeMultiplier;                                           // 0x0038(0x0038) (Edit)
-	unsigned char                                      MultiplyX : 1;                                            // 0x0070(0x0001) (Edit)
-	unsigned char                                      MultiplyY : 1;                                            // 0x0070(0x0001) (Edit)
-	unsigned char                                      MultiplyZ : 1;                                            // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      LifeMultiplier;                                           // 0x0050(0x0038) (Edit)
+	unsigned char                                      MultiplyX : 1;                                            // 0x0088(0x0001) (Edit)
+	unsigned char                                      MultiplyY : 1;                                            // 0x0088(0x0001) (Edit)
+	unsigned char                                      MultiplyZ : 1;                                            // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18592,11 +18621,11 @@ public:
 
 
 // Class Engine.ParticleModuleSizeOverVelocity
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleSizeOverVelocity : public UParticleModuleSizeBase
 {
 public:
-	struct FRawDistributionFloat                       SizeMultiplier;                                           // 0x0038(0x0038) (Edit)
+	struct FRawDistributionFloat                       SizeMultiplier;                                           // 0x0050(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -18608,15 +18637,15 @@ public:
 
 
 // Class Engine.ParticleModuleSizeScale
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleSizeScale : public UParticleModuleSizeBase
 {
 public:
-	struct FRawDistributionVector                      SizeScale;                                                // 0x0038(0x0038) (Edit)
-	unsigned char                                      EnableX : 1;                                              // 0x0070(0x0001) (Edit)
-	unsigned char                                      EnableY : 1;                                              // 0x0070(0x0001) (Edit)
-	unsigned char                                      EnableZ : 1;                                              // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      SizeScale;                                                // 0x0050(0x0038) (Edit)
+	unsigned char                                      EnableX : 1;                                              // 0x0088(0x0001) (Edit)
+	unsigned char                                      EnableY : 1;                                              // 0x0088(0x0001) (Edit)
+	unsigned char                                      EnableZ : 1;                                              // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18628,12 +18657,12 @@ public:
 
 
 // Class Engine.ParticleModuleSizeScaleBySpeed
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleSizeScaleBySpeed : public UParticleModuleSizeBase
 {
 public:
-	struct FVector2D                                   SpeedScale;                                               // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   MaxScale;                                                 // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   SpeedScale;                                               // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   MaxScale;                                                 // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -18645,13 +18674,13 @@ public:
 
 
 // Class Engine.ParticleModuleSpawnBase
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleSpawnBase : public UParticleModule
 {
 public:
-	unsigned char                                      bProcessSpawnRate : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      bProcessBurstList : 1;                                    // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	unsigned char                                      bProcessSpawnRate : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      bProcessBurstList : 1;                                    // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18663,23 +18692,23 @@ public:
 
 
 // Class Engine.ParticleModuleSpawn
-// 0x0220 (0x0260 - 0x0040)
+// 0x0220 (0x0278 - 0x0058)
 class UParticleModuleSpawn : public UParticleModuleSpawnBase
 {
 public:
-	struct FRawDistributionFloat                       Rate;                                                     // 0x0040(0x0038) (Edit)
-	struct FRawDistributionFloat                       AdditionalRates[0x5];                                     // 0x0078(0x0038) (Edit)
-	float                                              StartScaleDistance;                                       // 0x0190(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EndScaleDistance;                                         // 0x0194(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRawDistributionFloat                       RateScaleOverDistance;                                    // 0x0198(0x0038) (Edit)
-	struct FRawDistributionFloat                       RateScale;                                                // 0x01D0(0x0038) (Edit)
-	TEnumAsByte<EParticleBurstMethod>                  ParticleBurstMethod;                                      // 0x0208(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0209(0x0007) MISSED OFFSET
-	TArray<struct FParticleBurst>                      BurstList;                                                // 0x0210(0x0010) (Edit, ExportObject, ZeroConstructor, NoClear)
-	struct FRawDistributionFloat                       BurstScale;                                               // 0x0220(0x0038) (Edit)
-	unsigned char                                      bApplyGlobalSpawnRateScale : 1;                           // 0x0258(0x0001) (Edit)
-	unsigned char                                      bBurstTreatedAsLoopingForLODs : 1;                        // 0x0258(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0259(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       Rate;                                                     // 0x0058(0x0038) (Edit)
+	struct FRawDistributionFloat                       AdditionalRates[0x5];                                     // 0x0090(0x0038) (Edit)
+	float                                              StartScaleDistance;                                       // 0x01A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EndScaleDistance;                                         // 0x01AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionFloat                       RateScaleOverDistance;                                    // 0x01B0(0x0038) (Edit)
+	struct FRawDistributionFloat                       RateScale;                                                // 0x01E8(0x0038) (Edit)
+	TEnumAsByte<EParticleBurstMethod>                  ParticleBurstMethod;                                      // 0x0220(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0221(0x0007) MISSED OFFSET
+	TArray<struct FParticleBurst>                      BurstList;                                                // 0x0228(0x0010) (Edit, ExportObject, ZeroConstructor, NoClear)
+	struct FRawDistributionFloat                       BurstScale;                                               // 0x0238(0x0038) (Edit)
+	unsigned char                                      bApplyGlobalSpawnRateScale : 1;                           // 0x0270(0x0001) (Edit)
+	unsigned char                                      bBurstTreatedAsLoopingForLODs : 1;                        // 0x0270(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0271(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18691,27 +18720,27 @@ public:
 
 
 // Class Engine.ParticleModuleSpawnPerUnit
-// 0x0050 (0x0090 - 0x0040)
+// 0x0050 (0x00A8 - 0x0058)
 class UParticleModuleSpawnPerUnit : public UParticleModuleSpawnBase
 {
 public:
-	unsigned char                                      bAffectsGroupA : 1;                                       // 0x0040(0x0001) (Edit)
-	unsigned char                                      bAffectsGroupB : 1;                                       // 0x0040(0x0001) (Edit)
-	unsigned char                                      bAffectsGroupC : 1;                                       // 0x0040(0x0001) (Edit)
-	unsigned char                                      bAffectsGroupD : 1;                                       // 0x0040(0x0001) (Edit)
-	unsigned char                                      bAffectsGroupE : 1;                                       // 0x0040(0x0001) (Edit)
-	unsigned char                                      bAffectsReplacementGroup : 1;                             // 0x0040(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
-	float                                              UnitScalar;                                               // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRawDistributionFloat                       SpawnPerUnit;                                             // 0x0048(0x0038) (Edit)
-	unsigned char                                      bIgnoreSpawnRateWhenMoving : 1;                           // 0x0080(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
-	float                                              MovementTolerance;                                        // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxFrameDistance;                                         // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIgnoreMovementAlongX : 1;                                // 0x008C(0x0001) (Edit)
-	unsigned char                                      bIgnoreMovementAlongY : 1;                                // 0x008C(0x0001) (Edit)
-	unsigned char                                      bIgnoreMovementAlongZ : 1;                                // 0x008C(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x008D(0x0003) MISSED OFFSET
+	unsigned char                                      bAffectsGroupA : 1;                                       // 0x0058(0x0001) (Edit)
+	unsigned char                                      bAffectsGroupB : 1;                                       // 0x0058(0x0001) (Edit)
+	unsigned char                                      bAffectsGroupC : 1;                                       // 0x0058(0x0001) (Edit)
+	unsigned char                                      bAffectsGroupD : 1;                                       // 0x0058(0x0001) (Edit)
+	unsigned char                                      bAffectsGroupE : 1;                                       // 0x0058(0x0001) (Edit)
+	unsigned char                                      bAffectsReplacementGroup : 1;                             // 0x0058(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
+	float                                              UnitScalar;                                               // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionFloat                       SpawnPerUnit;                                             // 0x0060(0x0038) (Edit)
+	unsigned char                                      bIgnoreSpawnRateWhenMoving : 1;                           // 0x0098(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
+	float                                              MovementTolerance;                                        // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxFrameDistance;                                         // 0x00A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIgnoreMovementAlongX : 1;                                // 0x00A4(0x0001) (Edit)
+	unsigned char                                      bIgnoreMovementAlongY : 1;                                // 0x00A4(0x0001) (Edit)
+	unsigned char                                      bIgnoreMovementAlongZ : 1;                                // 0x00A4(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x00A5(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18723,7 +18752,7 @@ public:
 
 
 // Class Engine.ParticleModuleSpawnRepeatPerPoint
-// 0x0000 (0x0040 - 0x0040)
+// 0x0000 (0x0058 - 0x0058)
 class UParticleModuleSpawnRepeatPerPoint : public UParticleModuleSpawnBase
 {
 public:
@@ -18738,7 +18767,7 @@ public:
 
 
 // Class Engine.ParticleModuleSubUVBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleSubUVBase : public UParticleModule
 {
 public:
@@ -18753,13 +18782,13 @@ public:
 
 
 // Class Engine.ParticleModuleSubUV
-// 0x0040 (0x0078 - 0x0038)
+// 0x0040 (0x0090 - 0x0050)
 class UParticleModuleSubUV : public UParticleModuleSubUVBase
 {
 public:
-	struct FRawDistributionFloat                       SubImageIndex;                                            // 0x0038(0x0038) (Edit)
-	unsigned char                                      bUseRealTime : 1;                                         // 0x0070(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       SubImageIndex;                                            // 0x0050(0x0038) (Edit)
+	unsigned char                                      bUseRealTime : 1;                                         // 0x0088(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18771,15 +18800,15 @@ public:
 
 
 // Class Engine.ParticleModuleSubUVMovie
-// 0x0048 (0x00C0 - 0x0078)
+// 0x0048 (0x00D8 - 0x0090)
 class UParticleModuleSubUVMovie : public UParticleModuleSubUV
 {
 public:
-	unsigned char                                      bUseEmitterTime : 1;                                      // 0x0078(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       FrameRate;                                                // 0x0080(0x0038) (Edit)
-	int                                                StartingFrame;                                            // 0x00B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
+	unsigned char                                      bUseEmitterTime : 1;                                      // 0x0090(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       FrameRate;                                                // 0x0098(0x0038) (Edit)
+	int                                                StartingFrame;                                            // 0x00D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18791,7 +18820,7 @@ public:
 
 
 // Class Engine.ParticleModuleTrailBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleTrailBase : public UParticleModule
 {
 public:
@@ -18806,23 +18835,23 @@ public:
 
 
 // Class Engine.ParticleModuleTrailSource
-// 0x0068 (0x00A0 - 0x0038)
+// 0x0068 (0x00B8 - 0x0050)
 class UParticleModuleTrailSource : public UParticleModuleTrailBase
 {
 public:
-	TEnumAsByte<ETrail2SourceMethod>                   SourceMethod;                                             // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	struct FName                                       SourceName;                                               // 0x003C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
-	struct FRawDistributionFloat                       SourceStrength;                                           // 0x0048(0x0038) (Edit)
-	unsigned char                                      bLockSourceStength : 1;                                   // 0x0080(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
-	int                                                SourceOffsetCount;                                        // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             SourceOffsetDefaults;                                     // 0x0088(0x0010) (Edit, EditFixedSize, ZeroConstructor)
-	TEnumAsByte<EParticleSourceSelectionMethod>        SelectionMethod;                                          // 0x0098(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
-	unsigned char                                      bInheritRotation : 1;                                     // 0x009C(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x009D(0x0003) MISSED OFFSET
+	TEnumAsByte<ETrail2SourceMethod>                   SourceMethod;                                             // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	struct FName                                       SourceName;                                               // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       SourceStrength;                                           // 0x0060(0x0038) (Edit)
+	unsigned char                                      bLockSourceStength : 1;                                   // 0x0098(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
+	int                                                SourceOffsetCount;                                        // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             SourceOffsetDefaults;                                     // 0x00A0(0x0010) (Edit, EditFixedSize, ZeroConstructor)
+	TEnumAsByte<EParticleSourceSelectionMethod>        SelectionMethod;                                          // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x00B1(0x0003) MISSED OFFSET
+	unsigned char                                      bInheritRotation : 1;                                     // 0x00B4(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x00B5(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18834,7 +18863,7 @@ public:
 
 
 // Class Engine.ParticleModuleTypeDataBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleTypeDataBase : public UParticleModule
 {
 public:
@@ -18849,19 +18878,19 @@ public:
 
 
 // Class Engine.ParticleModuleTypeDataAnimTrail
-// 0x0018 (0x0050 - 0x0038)
+// 0x0018 (0x0068 - 0x0050)
 class UParticleModuleTypeDataAnimTrail : public UParticleModuleTypeDataBase
 {
 public:
-	unsigned char                                      bDeadTrailsOnDeactivate : 1;                              // 0x0038(0x0001) (Edit)
-	unsigned char                                      bEnablePreviousTangentRecalculation : 1;                  // 0x0038(0x0001) (Edit)
-	unsigned char                                      bTangentRecalculationEveryFrame : 1;                      // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	float                                              TilingDistance;                                           // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DistanceTessellationStepSize;                             // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TangentTessellationStepSize;                              // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WidthTessellationStepSize;                                // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	unsigned char                                      bDeadTrailsOnDeactivate : 1;                              // 0x0050(0x0001) (Edit)
+	unsigned char                                      bEnablePreviousTangentRecalculation : 1;                  // 0x0050(0x0001) (Edit)
+	unsigned char                                      bTangentRecalculationEveryFrame : 1;                      // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	float                                              TilingDistance;                                           // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DistanceTessellationStepSize;                             // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TangentTessellationStepSize;                              // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              WidthTessellationStepSize;                                // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18873,33 +18902,33 @@ public:
 
 
 // Class Engine.ParticleModuleTypeDataBeam2
-// 0x00E8 (0x0120 - 0x0038)
+// 0x00E8 (0x0138 - 0x0050)
 class UParticleModuleTypeDataBeam2 : public UParticleModuleTypeDataBase
 {
 public:
-	TEnumAsByte<EBeam2Method>                          BeamMethod;                                               // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	int                                                TextureTile;                                              // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TextureTileDistance;                                      // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Sheets;                                                   // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxBeamCount;                                             // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Speed;                                                    // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                InterpolationPoints;                                      // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bAlwaysOn : 1;                                            // 0x0054(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
-	int                                                UpVectorStepSize;                                         // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       BranchParentName;                                         // 0x005C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	struct FRawDistributionFloat                       Distance;                                                 // 0x0068(0x0038) (Edit)
-	TEnumAsByte<EBeamTaperMethod>                      TaperMethod;                                              // 0x00A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
-	struct FRawDistributionFloat                       TaperFactor;                                              // 0x00A8(0x0038) (Edit)
-	struct FRawDistributionFloat                       TaperScale;                                               // 0x00E0(0x0038) (Edit)
-	unsigned char                                      RenderGeometry : 1;                                       // 0x0118(0x0001) (Edit)
-	unsigned char                                      RenderDirectLine : 1;                                     // 0x0118(0x0001) (Edit)
-	unsigned char                                      RenderLines : 1;                                          // 0x0118(0x0001) (Edit)
-	unsigned char                                      RenderTessellation : 1;                                   // 0x0118(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
+	TEnumAsByte<EBeam2Method>                          BeamMethod;                                               // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	int                                                TextureTile;                                              // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TextureTileDistance;                                      // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Sheets;                                                   // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxBeamCount;                                             // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Speed;                                                    // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                InterpolationPoints;                                      // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bAlwaysOn : 1;                                            // 0x006C(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
+	int                                                UpVectorStepSize;                                         // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       BranchParentName;                                         // 0x0074(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       Distance;                                                 // 0x0080(0x0038) (Edit)
+	TEnumAsByte<EBeamTaperMethod>                      TaperMethod;                                              // 0x00B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
+	struct FRawDistributionFloat                       TaperFactor;                                              // 0x00C0(0x0038) (Edit)
+	struct FRawDistributionFloat                       TaperScale;                                               // 0x00F8(0x0038) (Edit)
+	unsigned char                                      RenderGeometry : 1;                                       // 0x0130(0x0001) (Edit)
+	unsigned char                                      RenderDirectLine : 1;                                     // 0x0130(0x0001) (Edit)
+	unsigned char                                      RenderLines : 1;                                          // 0x0130(0x0001) (Edit)
+	unsigned char                                      RenderTessellation : 1;                                   // 0x0130(0x0001) (Edit)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0131(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18911,23 +18940,22 @@ public:
 
 
 // Class Engine.ParticleModuleTypeDataGpu
-// 0x08E8 (0x0920 - 0x0038)
+// 0x08E0 (0x0930 - 0x0050)
 class UParticleModuleTypeDataGpu : public UParticleModuleTypeDataBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-	struct FGPUSpriteEmitterInfo                       EmitterInfo;                                              // 0x0040(0x02E0) (Transient)
-	struct FGPUSpriteResourceData                      ResourceData;                                             // 0x0320(0x05E0) (Transient)
-	float                                              CameraMotionBlurAmount;                                   // 0x0900(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bClearExistingParticlesOnInit : 1;                        // 0x0904(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0905(0x0003) MISSED OFFSET
-	TEnumAsByte<EParticleAlphaThresholdLevel>          AlphaCullingAggressiveness;                               // 0x0908(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0909(0x0003) MISSED OFFSET
-	unsigned char                                      bOverrideAlphaThreshold : 1;                              // 0x090C(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x090D(0x0003) MISSED OFFSET
-	float                                              OverriddenAlphaThreshold;                                 // 0x0910(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EInteractionWithKillPlane>             InteractionWithKillPlane;                                 // 0x0914(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0xB];                                       // 0x0915(0x000B) MISSED OFFSET
+	struct FGPUSpriteEmitterInfo                       EmitterInfo;                                              // 0x0050(0x02E0) (Transient)
+	struct FGPUSpriteResourceData                      ResourceData;                                             // 0x0330(0x05E0) (Transient)
+	float                                              CameraMotionBlurAmount;                                   // 0x0910(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bClearExistingParticlesOnInit : 1;                        // 0x0914(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0915(0x0003) MISSED OFFSET
+	TEnumAsByte<EParticleAlphaThresholdLevel>          AlphaCullingAggressiveness;                               // 0x0918(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0919(0x0003) MISSED OFFSET
+	unsigned char                                      bOverrideAlphaThreshold : 1;                              // 0x091C(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x091D(0x0003) MISSED OFFSET
+	float                                              OverriddenAlphaThreshold;                                 // 0x0920(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EInteractionWithKillPlane>             InteractionWithKillPlane;                                 // 0x0924(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xB];                                       // 0x0925(0x000B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18939,34 +18967,34 @@ public:
 
 
 // Class Engine.ParticleModuleTypeDataMesh
-// 0x0070 (0x00A8 - 0x0038)
+// 0x0070 (0x00C0 - 0x0050)
 class UParticleModuleTypeDataMesh : public UParticleModuleTypeDataBase
 {
 public:
-	class UStaticMesh*                                 Mesh;                                                     // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      CastShadows : 1;                                          // 0x0040(0x0001)
-	unsigned char                                      DoCollisions : 1;                                         // 0x0040(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
-	TEnumAsByte<EMeshScreenAlignment>                  MeshAlignment;                                            // 0x0044(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
-	unsigned char                                      bOverrideMaterial : 1;                                    // 0x0048(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
-	float                                              Pitch;                                                    // 0x004C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              Roll;                                                     // 0x0050(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              Yaw;                                                      // 0x0054(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	struct FRawDistributionVector                      RollPitchYawRange;                                        // 0x0058(0x0038) (Edit)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0090(0x0008) MISSED OFFSET
-	TEnumAsByte<EParticleAxisLock>                     AxisLockOption;                                           // 0x0098(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
-	unsigned char                                      bCameraFacing : 1;                                        // 0x009C(0x0001) (Edit)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x009D(0x0003) MISSED OFFSET
-	TEnumAsByte<EMeshCameraFacingUpAxis>               CameraFacingUpAxisOption;                                 // 0x00A0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	TEnumAsByte<EMeshCameraFacingOptions>              CameraFacingOption;                                       // 0x00A1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x2];                                       // 0x00A2(0x0002) MISSED OFFSET
-	unsigned char                                      bApplyParticleRotationAsSpin : 1;                         // 0x00A4(0x0001) (Edit)
-	unsigned char                                      bFaceCameraDirectionRatherThanPosition : 1;               // 0x00A4(0x0001) (Edit)
-	unsigned char                                      bCollisionsConsiderPartilceSize : 1;                      // 0x00A4(0x0001) (Edit)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x00A5(0x0003) MISSED OFFSET
+	class UStaticMesh*                                 Mesh;                                                     // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      CastShadows : 1;                                          // 0x0058(0x0001)
+	unsigned char                                      DoCollisions : 1;                                         // 0x0058(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
+	TEnumAsByte<EMeshScreenAlignment>                  MeshAlignment;                                            // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
+	unsigned char                                      bOverrideMaterial : 1;                                    // 0x0060(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
+	float                                              Pitch;                                                    // 0x0064(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              Roll;                                                     // 0x0068(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              Yaw;                                                      // 0x006C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	struct FRawDistributionVector                      RollPitchYawRange;                                        // 0x0070(0x0038) (Edit)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x00A8(0x0008) MISSED OFFSET
+	TEnumAsByte<EParticleAxisLock>                     AxisLockOption;                                           // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x00B1(0x0003) MISSED OFFSET
+	unsigned char                                      bCameraFacing : 1;                                        // 0x00B4(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x00B5(0x0003) MISSED OFFSET
+	TEnumAsByte<EMeshCameraFacingUpAxis>               CameraFacingUpAxisOption;                                 // 0x00B8(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	TEnumAsByte<EMeshCameraFacingOptions>              CameraFacingOption;                                       // 0x00B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x2];                                       // 0x00BA(0x0002) MISSED OFFSET
+	unsigned char                                      bApplyParticleRotationAsSpin : 1;                         // 0x00BC(0x0001) (Edit)
+	unsigned char                                      bFaceCameraDirectionRatherThanPosition : 1;               // 0x00BC(0x0001) (Edit)
+	unsigned char                                      bCollisionsConsiderPartilceSize : 1;                      // 0x00BC(0x0001) (Edit)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x00BD(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18978,34 +19006,34 @@ public:
 
 
 // Class Engine.ParticleModuleTypeDataRibbon
-// 0x0030 (0x0068 - 0x0038)
+// 0x0030 (0x0080 - 0x0050)
 class UParticleModuleTypeDataRibbon : public UParticleModuleTypeDataBase
 {
 public:
-	int                                                MaxTessellationBetweenParticles;                          // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SheetsPerTrail;                                           // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxTrailCount;                                            // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxParticleInTrailCount;                                  // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bDeadTrailsOnDeactivate : 1;                              // 0x0048(0x0001) (Edit)
-	unsigned char                                      bDeadTrailsOnSourceLoss : 1;                              // 0x0048(0x0001) (Edit)
-	unsigned char                                      bClipSourceSegement : 1;                                  // 0x0048(0x0001) (Edit)
-	unsigned char                                      bEnablePreviousTangentRecalculation : 1;                  // 0x0048(0x0001) (Edit)
-	unsigned char                                      bTangentRecalculationEveryFrame : 1;                      // 0x0048(0x0001) (Edit)
-	unsigned char                                      bSpawnInitialParticle : 1;                                // 0x0048(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
-	TEnumAsByte<ETrailsRenderAxisOption>               RenderAxis;                                               // 0x004C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x004D(0x0003) MISSED OFFSET
-	float                                              TangentSpawningScalar;                                    // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bRenderGeometry : 1;                                      // 0x0054(0x0001) (Edit)
-	unsigned char                                      bRenderSpawnPoints : 1;                                   // 0x0054(0x0001) (Edit)
-	unsigned char                                      bRenderTangents : 1;                                      // 0x0054(0x0001) (Edit)
-	unsigned char                                      bRenderTessellation : 1;                                  // 0x0054(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
-	float                                              TilingDistance;                                           // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DistanceTessellationStepSize;                             // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bEnableTangentDiffInterpScale : 1;                        // 0x0060(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
-	float                                              TangentTessellationScalar;                                // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxTessellationBetweenParticles;                          // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SheetsPerTrail;                                           // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxTrailCount;                                            // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxParticleInTrailCount;                                  // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bDeadTrailsOnDeactivate : 1;                              // 0x0060(0x0001) (Edit)
+	unsigned char                                      bDeadTrailsOnSourceLoss : 1;                              // 0x0060(0x0001) (Edit)
+	unsigned char                                      bClipSourceSegement : 1;                                  // 0x0060(0x0001) (Edit)
+	unsigned char                                      bEnablePreviousTangentRecalculation : 1;                  // 0x0060(0x0001) (Edit)
+	unsigned char                                      bTangentRecalculationEveryFrame : 1;                      // 0x0060(0x0001) (Edit)
+	unsigned char                                      bSpawnInitialParticle : 1;                                // 0x0060(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
+	TEnumAsByte<ETrailsRenderAxisOption>               RenderAxis;                                               // 0x0064(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
+	float                                              TangentSpawningScalar;                                    // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bRenderGeometry : 1;                                      // 0x006C(0x0001) (Edit)
+	unsigned char                                      bRenderSpawnPoints : 1;                                   // 0x006C(0x0001) (Edit)
+	unsigned char                                      bRenderTangents : 1;                                      // 0x006C(0x0001) (Edit)
+	unsigned char                                      bRenderTessellation : 1;                                  // 0x006C(0x0001) (Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
+	float                                              TilingDistance;                                           // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DistanceTessellationStepSize;                             // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bEnableTangentDiffInterpScale : 1;                        // 0x0078(0x0001) (Edit)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0079(0x0003) MISSED OFFSET
+	float                                              TangentTessellationScalar;                                // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19017,7 +19045,7 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleVectorFieldBase : public UParticleModule
 {
 public:
@@ -19032,15 +19060,15 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldGlobal
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleVectorFieldGlobal : public UParticleModuleVectorFieldBase
 {
 public:
-	unsigned char                                      bOverrideGlobalVectorFieldTightness : 1;                  // 0x0038(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	float                                              GlobalVectorFieldScale;                                   // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              GlobalVectorFieldTightness;                               // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	unsigned char                                      bOverrideGlobalVectorFieldTightness : 1;                  // 0x0050(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	float                                              GlobalVectorFieldScale;                                   // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              GlobalVectorFieldTightness;                               // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19052,21 +19080,21 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldLocal
-// 0x0038 (0x0070 - 0x0038)
+// 0x0038 (0x0088 - 0x0050)
 class UParticleModuleVectorFieldLocal : public UParticleModuleVectorFieldBase
 {
 public:
-	class UVectorField*                                VectorField;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     RelativeTranslation;                                      // 0x0040(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    RelativeRotation;                                         // 0x004C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     RelativeScale3D;                                          // 0x0058(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Intensity;                                                // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Tightness;                                                // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIgnoreComponentTransform : 1;                            // 0x006C(0x0001) (Edit)
-	unsigned char                                      bTileX : 1;                                               // 0x006C(0x0001) (Edit)
-	unsigned char                                      bTileY : 1;                                               // 0x006C(0x0001) (Edit)
-	unsigned char                                      bTileZ : 1;                                               // 0x006C(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
+	class UVectorField*                                VectorField;                                              // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RelativeTranslation;                                      // 0x0058(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RelativeRotation;                                         // 0x0064(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RelativeScale3D;                                          // 0x0070(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Intensity;                                                // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Tightness;                                                // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIgnoreComponentTransform : 1;                            // 0x0084(0x0001) (Edit)
+	unsigned char                                      bTileX : 1;                                               // 0x0084(0x0001) (Edit)
+	unsigned char                                      bTileY : 1;                                               // 0x0084(0x0001) (Edit)
+	unsigned char                                      bTileZ : 1;                                               // 0x0084(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19078,12 +19106,12 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldRotation
-// 0x0018 (0x0050 - 0x0038)
+// 0x0018 (0x0068 - 0x0050)
 class UParticleModuleVectorFieldRotation : public UParticleModuleVectorFieldBase
 {
 public:
-	struct FVector                                     MinInitialRotation;                                       // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     MaxInitialRotation;                                       // 0x0044(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     MinInitialRotation;                                       // 0x0050(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     MaxInitialRotation;                                       // 0x005C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19095,12 +19123,12 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldRotationRate
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0060 - 0x0050)
 class UParticleModuleVectorFieldRotationRate : public UParticleModuleVectorFieldBase
 {
 public:
-	struct FVector                                     RotationRate;                                             // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	struct FVector                                     RotationRate;                                             // 0x0050(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19112,11 +19140,11 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldScale
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleVectorFieldScale : public UParticleModuleVectorFieldBase
 {
 public:
-	class UDistributionFloat*                          VectorFieldScale;                                         // 0x0038(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UDistributionFloat*                          VectorFieldScale;                                         // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19128,11 +19156,11 @@ public:
 
 
 // Class Engine.ParticleModuleVectorFieldScaleOverLife
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleVectorFieldScaleOverLife : public UParticleModuleVectorFieldBase
 {
 public:
-	class UDistributionFloat*                          VectorFieldScaleOverLife;                                 // 0x0038(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UDistributionFloat*                          VectorFieldScaleOverLife;                                 // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19144,13 +19172,13 @@ public:
 
 
 // Class Engine.ParticleModuleVelocityBase
-// 0x0008 (0x0040 - 0x0038)
+// 0x0008 (0x0058 - 0x0050)
 class UParticleModuleVelocityBase : public UParticleModule
 {
 public:
-	unsigned char                                      bInWorldSpace : 1;                                        // 0x0038(0x0001) (Edit)
-	unsigned char                                      bApplyOwnerScale : 1;                                     // 0x0038(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	unsigned char                                      bInWorldSpace : 1;                                        // 0x0050(0x0001) (Edit)
+	unsigned char                                      bApplyOwnerScale : 1;                                     // 0x0050(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19162,11 +19190,11 @@ public:
 
 
 // Class Engine.ParticleModuleEmitterPointVelocity
-// 0x0038 (0x0078 - 0x0040)
+// 0x0038 (0x0090 - 0x0058)
 class UParticleModuleEmitterPointVelocity : public UParticleModuleVelocityBase
 {
 public:
-	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0040(0x0038) (Edit)
+	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0058(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -19178,15 +19206,15 @@ public:
 
 
 // Class Engine.ParticleModuleVelocity
-// 0x0190 (0x01D0 - 0x0040)
+// 0x0190 (0x01E8 - 0x0058)
 class UParticleModuleVelocity : public UParticleModuleVelocityBase
 {
 public:
-	unsigned char                                      bUseGroupAForAll : 1;                                     // 0x0040(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	struct FRawDistributionVector                      StartVelocity;                                            // 0x0048(0x0038) (Edit)
-	struct FRawDistributionVector                      AdditionalStartVelocities[0x5];                           // 0x0080(0x0038) (Edit)
-	struct FRawDistributionFloat                       StartVelocityRadial;                                      // 0x0198(0x0038) (Edit)
+	unsigned char                                      bUseGroupAForAll : 1;                                     // 0x0058(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      StartVelocity;                                            // 0x0060(0x0038) (Edit)
+	struct FRawDistributionVector                      AdditionalStartVelocities[0x5];                           // 0x0098(0x0038) (Edit)
+	struct FRawDistributionFloat                       StartVelocityRadial;                                      // 0x01B0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -19198,11 +19226,11 @@ public:
 
 
 // Class Engine.ParticleModuleVelocity_Seeded
-// 0x0020 (0x01F0 - 0x01D0)
+// 0x0020 (0x0208 - 0x01E8)
 class UParticleModuleVelocity_Seeded : public UParticleModuleVelocity
 {
 public:
-	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x01D0(0x0020) (Edit)
+	struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x01E8(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -19214,25 +19242,25 @@ public:
 
 
 // Class Engine.ParticleModuleVelocityCone
-// 0x0330 (0x0370 - 0x0040)
+// 0x0330 (0x0388 - 0x0058)
 class UParticleModuleVelocityCone : public UParticleModuleVelocityBase
 {
 public:
-	struct FRawDistributionFloat                       Angle;                                                    // 0x0040(0x0038) (Edit)
-	struct FRawDistributionFloat                       Velocity;                                                 // 0x0078(0x0038) (Edit)
-	struct FVector                                     Direction;                                                // 0x00B0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseGroupAForAll : 1;                                     // 0x00BC(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x00BD(0x0003) MISSED OFFSET
-	struct FVelocityConeGroupParams                    AdditionalParams[0x5];                                    // 0x00C0(0x0080) (Edit)
-	uint32_t                                           VelocityDistributeOverNPoints;                            // 0x0340(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              VelocityNPointsRandomness;                                // 0x0344(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     AdditiveVelocity;                                         // 0x0348(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ConeDepthScale;                                           // 0x0354(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      WorldSpaceOffset : 1;                                     // 0x0358(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0359(0x0003) MISSED OFFSET
-	struct FVector                                     EmitterOriginOffset;                                      // 0x035C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PushAwayFromCenterFactor;                                 // 0x0368(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x036C(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       Angle;                                                    // 0x0058(0x0038) (Edit)
+	struct FRawDistributionFloat                       Velocity;                                                 // 0x0090(0x0038) (Edit)
+	struct FVector                                     Direction;                                                // 0x00C8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUseGroupAForAll : 1;                                     // 0x00D4(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x00D5(0x0003) MISSED OFFSET
+	struct FVelocityConeGroupParams                    AdditionalParams[0x5];                                    // 0x00D8(0x0080) (Edit)
+	uint32_t                                           VelocityDistributeOverNPoints;                            // 0x0358(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              VelocityNPointsRandomness;                                // 0x035C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     AdditiveVelocity;                                         // 0x0360(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ConeDepthScale;                                           // 0x036C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      WorldSpaceOffset : 1;                                     // 0x0370(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0371(0x0003) MISSED OFFSET
+	struct FVector                                     EmitterOriginOffset;                                      // 0x0374(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PushAwayFromCenterFactor;                                 // 0x0380(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0384(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19244,16 +19272,16 @@ public:
 
 
 // Class Engine.ParticleModuleVelocityConeEmitterPoint
-// 0x0088 (0x00C8 - 0x0040)
+// 0x0088 (0x00E0 - 0x0058)
 class UParticleModuleVelocityConeEmitterPoint : public UParticleModuleVelocityBase
 {
 public:
-	struct FRawDistributionFloat                       Angle;                                                    // 0x0040(0x0038) (Edit)
-	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0078(0x0038) (Edit)
-	uint32_t                                           VelocityDistributeOverNPoints;                            // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              VelocityNPointsRandomness;                                // 0x00B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     AdditiveVelocity;                                         // 0x00B8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
+	struct FRawDistributionFloat                       Angle;                                                    // 0x0058(0x0038) (Edit)
+	struct FRawDistributionFloat                       VelocityScale;                                            // 0x0090(0x0038) (Edit)
+	uint32_t                                           VelocityDistributeOverNPoints;                            // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              VelocityNPointsRandomness;                                // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     AdditiveVelocity;                                         // 0x00D0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19265,14 +19293,14 @@ public:
 
 
 // Class Engine.ParticleModuleVelocityInheritParent
-// 0x0078 (0x00B8 - 0x0040)
+// 0x0078 (0x00D0 - 0x0058)
 class UParticleModuleVelocityInheritParent : public UParticleModuleVelocityBase
 {
 public:
-	struct FRawDistributionVector                      Scale;                                                    // 0x0040(0x0038) (Edit)
-	struct FRawDistributionVector                      CustomParentScale;                                        // 0x0078(0x0038) (Edit)
-	float                                              SpeedCap;                                                 // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
+	struct FRawDistributionVector                      Scale;                                                    // 0x0058(0x0038) (Edit)
+	struct FRawDistributionVector                      CustomParentScale;                                        // 0x0090(0x0038) (Edit)
+	float                                              SpeedCap;                                                 // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19284,13 +19312,13 @@ public:
 
 
 // Class Engine.ParticleModuleVelocityOverLifetime
-// 0x0040 (0x0080 - 0x0040)
+// 0x0040 (0x0098 - 0x0058)
 class UParticleModuleVelocityOverLifetime : public UParticleModuleVelocityBase
 {
 public:
-	struct FRawDistributionVector                      VelOverLife;                                              // 0x0040(0x0038) (Edit)
-	unsigned char                                      Absolute : 1;                                             // 0x0078(0x0001) (Edit, ExportObject)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	struct FRawDistributionVector                      VelOverLife;                                              // 0x0058(0x0038) (Edit)
+	unsigned char                                      Absolute : 1;                                             // 0x0090(0x0001) (Edit, ExportObject)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19302,7 +19330,7 @@ public:
 
 
 // Class Engine.ParticleModuleWindBase
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0050 - 0x0050)
 class UParticleModuleWindBase : public UParticleModule
 {
 public:
@@ -19317,14 +19345,14 @@ public:
 
 
 // Class Engine.ParticleModuleWindInfluence
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0078 (0x00C8 - 0x0050)
 class UParticleModuleWindInfluence : public UParticleModuleWindBase
 {
 public:
-	float                                              WindSpeedCap;                                             // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RandomFactorForWindDirection;                             // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRawDistributionFloat                       InfluenceOnAcceleration;                                  // 0x0040(0x0038) (Edit)
-	struct FRawDistributionFloat                       InfluenceOnVelocity;                                      // 0x0078(0x0038) (Edit)
+	float                                              WindSpeedCap;                                             // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RandomFactorForWindDirection;                             // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRawDistributionFloat                       InfluenceOnAcceleration;                                  // 0x0058(0x0038) (Edit)
+	struct FRawDistributionFloat                       InfluenceOnVelocity;                                      // 0x0090(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{

@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_MerchantCrate_SnakeBasket.BP_MerchantCrate_SnakeBasket_C
 // 0x0028 (0x0838 - 0x0810)
-class ABP_MerchantCrate_SnakeBasket_C : public AMerchantCrate
+class ABP_MerchantCrate_SnakeBasket_C : public ABP_MerchantCrate_C
 {
 public:
 	class UBoxComponent*                               HitVolume;                                                // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)

@@ -49,11 +49,11 @@ public:
 
 
 // Class TestUtilities.MockObjectWithMessagingDispatcher
-// 0x00F8 (0x0120 - 0x0028)
+// 0x0070 (0x0098 - 0x0028)
 class UMockObjectWithMessagingDispatcher : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xF8];                                      // 0x0028(0x00F8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0028(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -12,35 +12,6 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
-// Enum NaturalDisasters.EEarthquakeState
-enum class EEarthquakeState : uint8_t
-{
-	EEarthquakeState__Dormant      = 0,
-	EEarthquakeState__WarmingUp    = 1,
-	EEarthquakeState__Active       = 2,
-	EEarthquakeState__CoolingDown  = 3,
-	EEarthquakeState__EEarthquakeState_MAX = 4
-};
-
-
-// Enum NaturalDisasters.EGeyserState
-enum class EGeyserState : uint8_t
-{
-	EGeyserState__Dormant          = 0,
-	EGeyserState__Active           = 1,
-	EGeyserState__EGeyserState_MAX = 2
-};
-
-
-// Enum NaturalDisasters.EGeyserManagerState
-enum class EGeyserManagerState : uint8_t
-{
-	EGeyserManagerState__Dormant   = 0,
-	EGeyserManagerState__Active    = 1,
-	EGeyserManagerState__EGeyserManagerState_MAX = 2
-};
-
-
 // Enum NaturalDisasters.EVolcanoTargetHitType
 enum class EVolcanoTargetHitType : uint8_t
 {
@@ -68,6 +39,35 @@ enum class EVolcanoState : uint8_t
 	EVolcanoState__WarmingUp       = 1,
 	EVolcanoState__Erupting        = 2,
 	EVolcanoState__EVolcanoState_MAX = 3
+};
+
+
+// Enum NaturalDisasters.EEarthquakeState
+enum class EEarthquakeState : uint8_t
+{
+	EEarthquakeState__Dormant      = 0,
+	EEarthquakeState__WarmingUp    = 1,
+	EEarthquakeState__Active       = 2,
+	EEarthquakeState__CoolingDown  = 3,
+	EEarthquakeState__EEarthquakeState_MAX = 4
+};
+
+
+// Enum NaturalDisasters.EGeyserState
+enum class EGeyserState : uint8_t
+{
+	EGeyserState__Dormant          = 0,
+	EGeyserState__Active           = 1,
+	EGeyserState__EGeyserState_MAX = 2
+};
+
+
+// Enum NaturalDisasters.EGeyserManagerState
+enum class EGeyserManagerState : uint8_t
+{
+	EGeyserManagerState__Dormant   = 0,
+	EGeyserManagerState__Active    = 1,
+	EGeyserManagerState__EGeyserManagerState_MAX = 2
 };
 
 

@@ -15,20 +15,21 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallMapTable.BP_SmallMapTable_C
-// 0x0045 (0x072D - 0x06E8)
+// 0x004D (0x0735 - 0x06E8)
 class ABP_SmallMapTable_C : public AMapTable
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x06E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UChildActorComponent*                        ControlPoint_4;                                           // 0x06F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        ControlPoint_3;                                           // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        ControlPoint_2;                                           // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        ControlPoint_1;                                           // 0x0708(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UTextureFeedbackComponent*                   TextureFeedback;                                          // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Cube;                                                     // 0x0718(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Map;                                                      // 0x0720(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ActiveRange;                                              // 0x0728(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsActive;                                                 // 0x072C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBoxComponent*                               NavBlocker;                                               // 0x06F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ControlPoint_4;                                           // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ControlPoint_3;                                           // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ControlPoint_2;                                           // 0x0708(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ControlPoint_1;                                           // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTextureFeedbackComponent*                   TextureFeedback;                                          // 0x0718(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Cube;                                                     // 0x0720(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Map;                                                      // 0x0728(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ActiveRange;                                              // 0x0730(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsActive;                                                 // 0x0734(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

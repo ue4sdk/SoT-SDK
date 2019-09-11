@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_PetCategory_classes.hpp"
+#include "SoT_ParrotCategory_classes.hpp"
 
 namespace SDK
 {

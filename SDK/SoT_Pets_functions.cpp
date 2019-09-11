@@ -53,6 +53,38 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 }
 
 
+// Function Pets.PetHangoutSpotComponent.OnRep_IsOwnerSinking
+// (Final, Native, Private)
+
+void UPetHangoutSpotComponent::OnRep_IsOwnerSinking()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetHangoutSpotComponent.OnRep_IsOwnerSinking"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Pets.PetOwnerComponent.Server_RequestDismissal
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+
+void UPetOwnerComponent::Server_RequestDismissal()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetOwnerComponent.Server_RequestDismissal"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Pets.PetsService.RemovePetFromActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -115,21 +147,21 @@ void AWieldablePet::OnRep_HungerReactAnimationState()
 }
 
 
-// Function Pets.WieldablePet.OnRep_DropRequested
+// Function Pets.WieldablePet.OnRep_DropRequest
 // (Final, Native, Private)
 // Parameters:
-// bool                           DropRequestedPrior             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWieldablePet::OnRep_DropRequested(bool DropRequestedPrior)
+void AWieldablePet::OnRep_DropRequest(TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_DropRequested"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.WieldablePet.OnRep_DropRequest"));
 
 	struct
 	{
-		bool                           DropRequestedPrior;
+		TEnumAsByte<EWieldablePetDropRequestReason> PriorDropRequest;
 	} params;
 
-	params.DropRequestedPrior = DropRequestedPrior;
+	params.PriorDropRequest = PriorDropRequest;
 
 	UObject::ProcessEvent(fn, &params);
 }

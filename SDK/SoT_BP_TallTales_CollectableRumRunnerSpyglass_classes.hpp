@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TallTales_CollectableRumRunnerSpyglass.BP_TallTales_CollectableRumRunnerSpyglass_C
-// 0x0018 (0x0668 - 0x0650)
+// 0x0018 (0x0650 - 0x0638)
 class ABP_TallTales_CollectableRumRunnerSpyglass_C : public ACollectableQuestObject
 {
 public:
-	class USkeletalMeshComponent*                      SpyglassMesh;                                             // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UGlintComponent*                             Glint;                                                    // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SpyglassMesh;                                             // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGlintComponent*                             Glint;                                                    // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

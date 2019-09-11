@@ -36,6 +36,21 @@ enum class EAIDialogueState : uint8_t
 };
 
 
+// Enum AthenaAI.AISpawnRequestResult
+enum class EAISpawnRequestResult : uint8_t
+{
+	AISpawnRequestResult__Incomplete = 0,
+	AISpawnRequestResult__Success  = 1,
+	AISpawnRequestResult__FailedSpawnDenied = 2,
+	AISpawnRequestResult__FailedNoQuery = 3,
+	AISpawnRequestResult__FailedNoValidPos = 4,
+	AISpawnRequestResult__FailedLoadingPawnClass = 5,
+	AISpawnRequestResult__FailedLoadingItemDropComponentClass = 6,
+	AISpawnRequestResult__Cancelled = 7,
+	AISpawnRequestResult__AISpawnRequestResult_MAX = 8
+};
+
+
 // Enum AthenaAI.EAthenaAISpawnType
 enum class EAthenaAISpawnType : uint8_t
 {
@@ -43,6 +58,17 @@ enum class EAthenaAISpawnType : uint8_t
 	EAthenaAISpawnType__SpawnOnShip = 1,
 	EAthenaAISpawnType__SpawnSummoned = 2,
 	EAthenaAISpawnType__EAthenaAISpawnType_MAX = 3
+};
+
+
+// Enum AthenaAI.ComponentClassLoadState
+enum class EComponentClassLoadState : uint8_t
+{
+	ComponentClassLoadState__Incomplete = 0,
+	ComponentClassLoadState__Success = 1,
+	ComponentClassLoadState__NoLoad = 2,
+	ComponentClassLoadState__Failed = 3,
+	ComponentClassLoadState__ComponentClassLoadState_MAX = 4
 };
 
 
@@ -62,12 +88,13 @@ enum class EAISpawnLocationSearchResult : uint8_t
 enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
-	AISpawnRequestState__WaitForCanSpawn = 1,
+	AISpawnRequestState__DelayUntilNextCanSpawnCheck = 1,
 	AISpawnRequestState__WaitForClassLoad = 2,
 	AISpawnRequestState__WaitForLocationResult = 3,
-	AISpawnRequestState__WaitForLocationCheck = 4,
-	AISpawnRequestState__Complete  = 5,
-	AISpawnRequestState__AISpawnRequestState_MAX = 6
+	AISpawnRequestState__DelayUntilNextLocationCheck = 4,
+	AISpawnRequestState__WaitForItemDropComponentClassLoad = 5,
+	AISpawnRequestState__Complete  = 6,
+	AISpawnRequestState__AISpawnRequestState_MAX = 7
 };
 
 
@@ -264,20 +291,6 @@ enum class ETinySharkState : uint8_t
 };
 
 
-// Enum AthenaAI.AISpawnRequestResult
-enum class EAISpawnRequestResult : uint8_t
-{
-	AISpawnRequestResult__Incomplete = 0,
-	AISpawnRequestResult__Success  = 1,
-	AISpawnRequestResult__FailedSpawnDenied = 2,
-	AISpawnRequestResult__FailedNoQuery = 3,
-	AISpawnRequestResult__FailedNoValidPos = 4,
-	AISpawnRequestResult__FailedNoPawnClass = 5,
-	AISpawnRequestResult__Cancelled = 6,
-	AISpawnRequestResult__AISpawnRequestResult_MAX = 7
-};
-
-
 // Enum AthenaAI.EAIThreatLevel
 enum class EAIThreatLevel : uint8_t
 {
@@ -321,7 +334,8 @@ enum class EDebugPetStateDescriptor : uint8_t
 	EDebugPetStateDescriptor__Follow = 6,
 	EDebugPetStateDescriptor__Eating = 7,
 	EDebugPetStateDescriptor__Scared = 8,
-	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 9
+	EDebugPetStateDescriptor__ForcedIdle = 9,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 10
 };
 
 
@@ -332,6 +346,16 @@ enum class EPetSize : uint8_t
 	EPetSize__Medium               = 1,
 	EPetSize__Large                = 2,
 	EPetSize__EPetSize_MAX         = 3
+};
+
+
+// Enum AthenaAI.EPetFeedingReactionType
+enum class EPetFeedingReactionType : uint8_t
+{
+	EPetFeedingReactionType__None  = 0,
+	EPetFeedingReactionType__Sick  = 1,
+	EPetFeedingReactionType__Happy = 2,
+	EPetFeedingReactionType__EPetFeedingReactionType_MAX = 3
 };
 
 

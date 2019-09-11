@@ -10,8 +10,8 @@
 #include "SoT_NaturalDisasters_enums.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
 
 namespace SDK
@@ -19,39 +19,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct NaturalDisasters.EarthquakeForceFeedbackOption
-// 0x0010
-struct FEarthquakeForceFeedbackOption
-{
-	TArray<struct FLandmarkReactionEventPlayForceFeedbackEntry> ForceFeedback;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-};
-
-// ScriptStruct NaturalDisasters.EarthquakeForceFeedback
-// 0x0040
-struct FEarthquakeForceFeedback
-{
-	TArray<struct FEarthquakeForceFeedbackOption>      ForceFeedbackOptions;                                     // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           TimeBetweenRumbles;                                       // 0x0010(0x0030) (Edit, DisableEditOnInstance)
-};
-
-// ScriptStruct NaturalDisasters.PlayerFeedback
-// 0x0080
-struct FPlayerFeedback
-{
-	struct FEarthquakeForceFeedback                    ForceFeedback;                                            // 0x0000(0x0040) (Edit, DisableEditOnInstance)
-	TArray<class UClass*>                              CameraShakes;                                             // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FWeightedProbabilityRangeOfRanges           StaggerStrength;                                          // 0x0050(0x0030) (Edit, DisableEditOnInstance)
-};
-
-// ScriptStruct NaturalDisasters.GeyserSpawnAngleOption
-// 0x000C
-struct FGeyserSpawnAngleOption
-{
-	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Direction;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Range;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
 
 // ScriptStruct NaturalDisasters.VolcanoTargetChances
 // 0x0058
@@ -95,6 +62,19 @@ struct FVolcanoSetupDataEmbersEntry
 	class UObject*                                     Effect;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct NaturalDisasters.WeightedAshenLordVolcanoProjectile
+// 0x00D0
+struct FWeightedAshenLordVolcanoProjectile
+{
+	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              GravityMultiplier;                                        // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWeightedProbabilityRangeOfRanges           Speed;                                                    // 0x0008(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           RotationRatePitch;                                        // 0x0038(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           RotationRateRoll;                                         // 0x0068(0x0030) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           RotationRateYaw;                                          // 0x0098(0x0030) (Edit, DisableEditOnInstance)
+	class UClass*                                      ProjectileClass;                                          // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct NaturalDisasters.VolcanoStateData
 // 0x000C
 struct FVolcanoStateData
@@ -103,6 +83,39 @@ struct FVolcanoStateData
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              StateDuration;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              PercentageOfMaxTargetingRange;                            // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct NaturalDisasters.EarthquakeForceFeedbackOption
+// 0x0010
+struct FEarthquakeForceFeedbackOption
+{
+	TArray<struct FLandmarkReactionEventPlayForceFeedbackEntry> ForceFeedback;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct NaturalDisasters.EarthquakeForceFeedback
+// 0x0040
+struct FEarthquakeForceFeedback
+{
+	TArray<struct FEarthquakeForceFeedbackOption>      ForceFeedbackOptions;                                     // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           TimeBetweenRumbles;                                       // 0x0010(0x0030) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct NaturalDisasters.PlayerFeedback
+// 0x0080
+struct FPlayerFeedback
+{
+	struct FEarthquakeForceFeedback                    ForceFeedback;                                            // 0x0000(0x0040) (Edit, DisableEditOnInstance)
+	TArray<class UClass*>                              CameraShakes;                                             // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FWeightedProbabilityRangeOfRanges           StaggerStrength;                                          // 0x0050(0x0030) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct NaturalDisasters.GeyserSpawnAngleOption
+// 0x000C
+struct FGeyserSpawnAngleOption
+{
+	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Direction;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Range;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct NaturalDisasters.VolcanoTarget

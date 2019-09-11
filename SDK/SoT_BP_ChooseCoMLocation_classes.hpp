@@ -15,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ChooseCoMLocation.BP_ChooseCoMLocation_C
-// 0x0008 (0x00A0 - 0x0098)
+// 0x0000 (0x0098 - 0x0098)
 class UBP_ChooseCoMLocation_C : public UBlueprintStepBase
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0098(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -28,8 +27,7 @@ public:
 	}
 
 
-	void OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode);
-	void ExecuteUbergraph_BP_ChooseCoMLocation(int EntryPoint);
+	void OnBeginCustom(TArray<struct FDS_Puzzle>* PossibleLocations, class AActor** Location, class UQuestBookPageBundle** Pages, TAssetPtr<class AActor>* LocationAssetID);
 };
 
 

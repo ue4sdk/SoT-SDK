@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkullItemInfo_Rare-.BP_BountyRewardSkullItemInfo_Rare-_C
-// 0x0010 (0x0740 - 0x0730)
+// 0x0010 (0x0748 - 0x0738)
 class ABP_BountyRewardSkullItemInfo_Rare__C : public ABootyItemInfo
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0730(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0738(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0738(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

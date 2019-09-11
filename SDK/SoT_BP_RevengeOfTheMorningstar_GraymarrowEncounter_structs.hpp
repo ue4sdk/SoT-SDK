@@ -10,8 +10,8 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_DS_TallTales_TrackedActor_classes.hpp"
-#include "SoT_DS_RevengeOfTheMorningstar_Variables_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
+#include "SoT_DS_RevengeOfTheMorningstar_Variables_classes.hpp"
 
 namespace SDK
 {

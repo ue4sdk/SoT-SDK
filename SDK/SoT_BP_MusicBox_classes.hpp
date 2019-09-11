@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MusicBox.BP_MusicBox_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x0598 - 0x0598)
 class ABP_MusicBox_C : public AMusicBox
 {
 public:

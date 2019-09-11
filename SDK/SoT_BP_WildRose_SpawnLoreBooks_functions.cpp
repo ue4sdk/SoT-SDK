@@ -12,43 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_WildRose_SpawnLoreBooks.BP_WildRose_SpawnLoreBooks_C.OnBegin
-// (Event, Protected, BlueprintEvent)
+// Function BP_WildRose_SpawnLoreBooks.BP_WildRose_SpawnLoreBooks_C.OnBeginCustom
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FDS_Lorebooks>   Lorebooks                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_WildRose_SpawnLoreBooks_C::OnBegin(TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode)
+void UBP_WildRose_SpawnLoreBooks_C::OnBeginCustom(TArray<struct FDS_Lorebooks>* Lorebooks)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WildRose_SpawnLoreBooks.BP_WildRose_SpawnLoreBooks_C.OnBegin"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WildRose_SpawnLoreBooks.BP_WildRose_SpawnLoreBooks_C.OnBeginCustom"));
 
 	struct
 	{
-		TEnumAsByte<ETaleQuestStepBeginMode> InBeginMode;
+		TArray<struct FDS_Lorebooks>   Lorebooks;
 	} params;
 
-	params.InBeginMode = InBeginMode;
 
 	UObject::ProcessEvent(fn, &params);
-}
 
-
-// Function BP_WildRose_SpawnLoreBooks.BP_WildRose_SpawnLoreBooks_C.ExecuteUbergraph_BP_WildRose_SpawnLoreBooks
-// (HasDefaults)
-// Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_WildRose_SpawnLoreBooks_C::ExecuteUbergraph_BP_WildRose_SpawnLoreBooks(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WildRose_SpawnLoreBooks.BP_WildRose_SpawnLoreBooks_C.ExecuteUbergraph_BP_WildRose_SpawnLoreBooks"));
-
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
-	params.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(fn, &params);
+	if (Lorebooks != nullptr)
+		*Lorebooks = params.Lorebooks;
 }
 
 

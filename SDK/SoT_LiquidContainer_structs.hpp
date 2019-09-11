@@ -18,7 +18,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct LiquidContainer.LiquidTypeParams
-// 0x0048
+// 0x0054
 struct FLiquidTypeParams
 {
 	TEnumAsByte<ELiquidType>                           LiquidType;                                               // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -34,6 +34,9 @@ struct FLiquidTypeParams
 	float                                              Slosh;                                                    // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              SurfaceThickness;                                         // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Viscosity;                                                // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BubbleBrightness;                                         // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BillboardScale;                                           // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EmissiveScale;                                            // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 }

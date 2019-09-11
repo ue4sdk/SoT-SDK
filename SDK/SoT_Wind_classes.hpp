@@ -14,6 +14,25 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Wind.WindZoneInterface
+// 0x0000 (0x0028 - 0x0028)
+class UWindZoneInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindZoneInterface"));
+		return ptr;
+	}
+
+
+	struct FWindZoneParams GetWindZoneParams();
+	struct FVector2D GetWindZoneLocation();
+	struct FWindZoneTurbulence GetTurbulence(const struct FVector& Location);
+};
+
+
 // Class Wind.WindInterface
 // 0x0000 (0x0028 - 0x0028)
 class UWindInterface : public UInterface
@@ -94,25 +113,6 @@ public:
 };
 
 
-// Class Wind.WindZoneInterface
-// 0x0000 (0x0028 - 0x0028)
-class UWindZoneInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Wind.WindZoneInterface"));
-		return ptr;
-	}
-
-
-	struct FWindZoneParams GetWindZoneParams();
-	struct FVector2D GetWindZoneLocation();
-	struct FWindZoneTurbulence GetTurbulence(const struct FVector& Location);
-};
-
-
 // Class Wind.TestWindZone
 // 0x0028 (0x0050 - 0x0028)
 class UTestWindZone : public UObject
@@ -158,7 +158,7 @@ public:
 	float                                              CurrentWindAngle;                                         // 0x04D0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	float                                              CurrentWindMagnitude;                                     // 0x04D4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0xE0];                                      // 0x04D8(0x00E0) MISSED OFFSET
-	TArray<class UObject*>                             WindZones;                                                // 0x05B8(0x0010) (Net, ZeroConstructor)
+	TArray<TScriptInterface<class UWindZoneInterface>> WindZones;                                                // 0x05B8(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

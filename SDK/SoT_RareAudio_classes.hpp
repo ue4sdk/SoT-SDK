@@ -61,7 +61,6 @@ public:
 
 
 	static void WwiseStopGlobalEvent(class UWwiseEvent* Event, float FadeTime);
-	static void WwiseStopAllGlobalEvents(float FadeTime);
 	static void WwiseSetState(const struct FName& StateGroup, const struct FName& StateValue);
 	static void WwiseSetGlobalRTPC(const struct FName& RTPCName, float RTPCValue);
 	static void WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship);
@@ -147,14 +146,18 @@ public:
 
 
 // Class RareAudio.WwiseObjectPoolWrapper
-// 0x0030 (0x0080 - 0x0050)
-class UWwiseObjectPoolWrapper : public UObjectPoolWrapper
+// 0x0058 (0x0080 - 0x0028)
+class UWwiseObjectPoolWrapper : public UObject
 {
 public:
-	bool                                               DisableOcclusion;                                         // 0x0050(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableReverb;                                            // 0x0051(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0052(0x0006) MISSED OFFSET
-	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x0058(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FName                                       PoolName;                                                 // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MaxResources;                                             // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MaxProxies;                                               // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableOcclusion;                                         // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableReverb;                                            // 0x0039(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x0040(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -504,12 +507,28 @@ public:
 };
 
 
+// Class RareAudio.WwiseObjectPoolWrapperMock
+// 0x0018 (0x0098 - 0x0080)
+class UWwiseObjectPoolWrapperMock : public UWwiseObjectPoolWrapper
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0080(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapperMock"));
+		return ptr;
+	}
+
+};
+
+
 // Class RareAudio.WwisePoolManager
-// 0x0090 (0x00B8 - 0x0028)
+// 0x00A8 (0x00D0 - 0x0028)
 class UWwisePoolManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0028(0x0090) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

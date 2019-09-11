@@ -54,6 +54,21 @@ public:
 };
 
 
+// Class AthenaDebug.TickableDebugDrawingServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UTickableDebugDrawingServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaDebug.TickableDebugDrawingServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaDebug.Videprinter
 // 0x0028 (0x04D0 - 0x04A8)
 class AVideprinter : public AActor

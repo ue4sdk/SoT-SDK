@@ -64,6 +64,22 @@ void UBP_Anim_PirateLord_standing_TallTales_C::AnimNotify_EndCutsceneUpdates()
 }
 
 
+// Function BP_Anim_PirateLord_standing_TallTales.BP_Anim_PirateLord_standing_TallTales_C.BlueprintInitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UBP_Anim_PirateLord_standing_TallTales_C::BlueprintInitializeAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PirateLord_standing_TallTales.BP_Anim_PirateLord_standing_TallTales_C.BlueprintInitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PirateLord_standing_TallTales.BP_Anim_PirateLord_standing_TallTales_C.ExecuteUbergraph_BP_Anim_PirateLord_standing_TallTales
 // (HasDefaults)
 // Parameters:

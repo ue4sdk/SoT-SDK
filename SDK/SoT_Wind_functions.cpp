@@ -12,6 +12,72 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Wind.WindZoneInterface.GetWindZoneParams
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FWindZoneParams         ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWindZoneParams UWindZoneInterface::GetWindZoneParams()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetWindZoneParams"));
+
+	struct
+	{
+		struct FWindZoneParams         ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Wind.WindZoneInterface.GetWindZoneLocation
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector2D UWindZoneInterface::GetWindZoneLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetWindZoneLocation"));
+
+	struct
+	{
+		struct FVector2D               ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Wind.WindZoneInterface.GetTurbulence
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Location                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FWindZoneTurbulence     ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVector& Location)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetTurbulence"));
+
+	struct
+	{
+		struct FVector                 Location;
+		struct FWindZoneTurbulence     ReturnValue;
+	} params;
+
+	params.Location = Location;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Wind.WindInterface.UnregisterWindZone
 // (BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
@@ -354,72 +420,6 @@ float UWindInterface::GetMaxWindMagnitude()
 		float                          ReturnValue;
 	} params;
 
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Wind.WindZoneInterface.GetWindZoneParams
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// struct FWindZoneParams         ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWindZoneParams UWindZoneInterface::GetWindZoneParams()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetWindZoneParams"));
-
-	struct
-	{
-		struct FWindZoneParams         ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Wind.WindZoneInterface.GetWindZoneLocation
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector2D UWindZoneInterface::GetWindZoneLocation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetWindZoneLocation"));
-
-	struct
-	{
-		struct FVector2D               ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Wind.WindZoneInterface.GetTurbulence
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FWindZoneTurbulence     ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWindZoneTurbulence UWindZoneInterface::GetTurbulence(const struct FVector& Location)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Wind.WindZoneInterface.GetTurbulence"));
-
-	struct
-	{
-		struct FVector                 Location;
-		struct FWindZoneTurbulence     ReturnValue;
-	} params;
-
-	params.Location = Location;
 
 	UObject::ProcessEvent(fn, &params);
 

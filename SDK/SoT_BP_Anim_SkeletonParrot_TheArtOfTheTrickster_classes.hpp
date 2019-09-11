@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_SkeletonParrot_TheArtOfTheTrickster.BP_Anim_SkeletonParrot_TheArtOfTheTrickster_C
-// 0x0000 (0x1454 - 0x1454)
+// 0x0000 (0x1464 - 0x1464)
 class UBP_Anim_SkeletonParrot_TheArtOfTheTrickster_C : public UBP_Anim_NPCParrot_C
 {
 public:

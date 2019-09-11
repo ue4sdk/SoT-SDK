@@ -56,12 +56,13 @@ struct FEventEmoteStarted
 };
 
 // ScriptStruct EmotingFramework.EventEmoteRequested
-// 0x000C
+// 0x0058
 struct FEventEmoteRequested
 {
-	struct FName                                       EmoteIdentifier;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               ForcedEmote;                                              // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	struct FEmoteData                                  EmoteData;                                                // 0x0000(0x0048)
+	struct FName                                       ForcedEmoteIdentifier;                                    // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               ForcedEmote;                                              // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 };
 
 }

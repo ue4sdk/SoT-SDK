@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_large_mast_mizzen.BP_large_mast_mizzen_C
-// 0x0018 (0x0AF8 - 0x0AE0)
+// 0x0018 (0x0B00 - 0x0AE8)
 class ABP_large_mast_mizzen_C : public ABP_Mast_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AE0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        shp_flag_pennant_01_b;                                    // 0x0AE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        shp_flag_pennant_pole_01_a;                               // 0x0AF0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AE8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        shp_flag_pennant_01_b;                                    // 0x0AF0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shp_flag_pennant_pole_01_a;                               // 0x0AF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_LargeShip_MapDeck_BowRight.BP_Lantern_LargeShip_MapDeck_BowRight_C
-// 0x0000 (0x0835 - 0x0835)
+// 0x0000 (0x081D - 0x081D)
 class ABP_Lantern_LargeShip_MapDeck_BowRight_C : public ABP_InteractableShipLantern_C
 {
 public:

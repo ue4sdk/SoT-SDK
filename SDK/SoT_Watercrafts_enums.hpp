@@ -33,6 +33,16 @@ enum class EOarIdentifier : uint8_t
 };
 
 
+// Enum Watercrafts.ERowboatActionTelemetry
+enum class ERowboatActionTelemetry : uint8_t
+{
+	ERowboatActionTelemetry__None  = 0,
+	ERowboatActionTelemetry__Mount = 1,
+	ERowboatActionTelemetry__Unmount = 2,
+	ERowboatActionTelemetry__ERowboatActionTelemetry_MAX = 3
+};
+
+
 // Enum Watercrafts.EWatercraftDespawnReason
 enum class EWatercraftDespawnReason : uint8_t
 {
@@ -42,16 +52,6 @@ enum class EWatercraftDespawnReason : uint8_t
 	EWatercraftDespawnReason__Migration = 3,
 	EWatercraftDespawnReason__WorldEnding = 4,
 	EWatercraftDespawnReason__EWatercraftDespawnReason_MAX = 5
-};
-
-
-// Enum Watercrafts.ERowboatActionTelemetry
-enum class ERowboatActionTelemetry : uint8_t
-{
-	ERowboatActionTelemetry__None  = 0,
-	ERowboatActionTelemetry__Mount = 1,
-	ERowboatActionTelemetry__Unmount = 2,
-	ERowboatActionTelemetry__ERowboatActionTelemetry_MAX = 3
 };
 
 

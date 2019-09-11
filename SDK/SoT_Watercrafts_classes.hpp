@@ -141,22 +141,6 @@ public:
 };
 
 
-// Class Watercrafts.RowboatSpawnParamsDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class URowboatSpawnParamsDataAsset : public UDataAsset
-{
-public:
-	TArray<class UClass*>                              RowboatTypes;                                             // 0x0028(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.RowboatSpawnParamsDataAsset"));
-		return ptr;
-	}
-
-};
-
-
 // Class Watercrafts.ScrapeableDamageDataAsset
 // 0x0010 (0x0038 - 0x0028)
 class UScrapeableDamageDataAsset : public UDataAsset
@@ -306,6 +290,37 @@ public:
 
 	void SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*> InAlwaysEnabledInteractables);
 	void OnRep_IsSinking();
+};
+
+
+// Class Watercrafts.RowboatPartInterface
+// 0x0000 (0x0028 - 0x0028)
+class URowboatPartInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.RowboatPartInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Watercrafts.RowboatSpawnParamsDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class URowboatSpawnParamsDataAsset : public UDataAsset
+{
+public:
+	TArray<class UClass*>                              RowboatTypes;                                             // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.RowboatSpawnParamsDataAsset"));
+		return ptr;
+	}
+
 };
 
 

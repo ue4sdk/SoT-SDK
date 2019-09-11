@@ -12,14 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function StatusEffects.LightweightStatusEffectManagerComponent.OnRep_ActiveEffects
+// Function StatusEffects.LightWeightStatusEffectManagerComponent.OnRep_ActiveEffects
 // (Final, Native, Private, HasOutParms)
 // Parameters:
 // TArray<struct FActiveStatusEffect> OldEffects                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ULightweightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects)
+void ULightWeightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.LightweightStatusEffectManagerComponent.OnRep_ActiveEffects"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.LightWeightStatusEffectManagerComponent.OnRep_ActiveEffects"));
 
 	struct
 	{
@@ -32,14 +32,14 @@ void ULightweightStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct
 }
 
 
-// Function StatusEffects.LightweightStatusEffectManagerComponent.MultiCast_ApplyOneShotStatus
+// Function StatusEffects.LightWeightStatusEffectManagerComponent.MultiCast_ApplyOneShotStatus
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
 // TArray<struct FActiveStatusEffect> ActivatedEffects               (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
-void ULightweightStatusEffectManagerComponent::MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> ActivatedEffects)
+void ULightWeightStatusEffectManagerComponent::MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> ActivatedEffects)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.LightweightStatusEffectManagerComponent.MultiCast_ApplyOneShotStatus"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.LightWeightStatusEffectManagerComponent.MultiCast_ApplyOneShotStatus"));
 
 	struct
 	{

@@ -56,6 +56,18 @@ struct FInAppPurchaseRestoreInfo
 	class FString                                      ReceiptData;                                              // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
+// ScriptStruct OnlineSubsystem.OnlineStoreCatalogItem
+// 0x0060
+struct FOnlineStoreCatalogItem
+{
+	class FString                                      ProductId;                                                // 0x0000(0x0010) (ZeroConstructor)
+	class FString                                      Title;                                                    // 0x0010(0x0010) (ZeroConstructor)
+	class FString                                      Description;                                              // 0x0020(0x0010) (ZeroConstructor)
+	class FString                                      FormattedPrice;                                           // 0x0030(0x0010) (ZeroConstructor)
+	class FString                                      ImageUri;                                                 // 0x0040(0x0010) (ZeroConstructor)
+	class FString                                      MetaTag;                                                  // 0x0050(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct OnlineSubsystem.InAppPurchaseProductRequest
 // 0x0018
 struct FInAppPurchaseProductRequest

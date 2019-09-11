@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_AllianceLeader_Custom.BP_Anim_AllianceLeader_Custom_C
-// 0x0000 (0x18A5 - 0x18A5)
+// 0x0000 (0x18B5 - 0x18B5)
 class UBP_Anim_AllianceLeader_Custom_C : public UBP_Anim_NPC_C
 {
 public:

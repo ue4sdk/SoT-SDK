@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_EarthwormsFresh_00_a_ItemProxy.BP_fod_EarthwormsFresh_00_a_ItemProxy_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0838 - 0x0838)
 class ABP_fod_EarthwormsFresh_00_a_ItemProxy_C : public ABP_Bait_Proxy_Base_C
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_ShoresOfGoldVariables.DS_ShoresOfGoldVariables
-// 0x00B8
+// 0x00B9
 struct FDS_ShoresOfGoldVariables
 {
 	class AActor*                                      Grace_85_0E21BBB242FF38D6654E898B3348A9BA;                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -38,6 +38,7 @@ struct FDS_ShoresOfGoldVariables
 	class AActor*                                      CaveMusic_129_6A45D6BB46860E739D26A9A3487C47F1;           // 0x00A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      TeleportStatue1_132_AE843F4A4E725F7CE115F0B6061CB354;     // 0x00A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      MusicTrigger_136_9D8E0D574025CD536EA7A890F55B807C;        // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               StateBasedCutscene_138_21EBEA794717C39F991475B21C941DBC;  // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

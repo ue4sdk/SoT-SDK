@@ -11,8 +11,8 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerBuriedTreasure_AdditionalPuzzles_classes.hpp"
-#include "SoT_Tales_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerVariables_AdditionalPuzzles_classes.hpp"
+#include "SoT_Tales_classes.hpp"
 
 namespace SDK
 {

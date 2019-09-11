@@ -44,8 +44,40 @@ void ABP_audio_prem_shop_wsp_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_audio_prem_shop_wsp.BP_audio_prem_shop_wsp_C.BndEvt__AudioSpace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, IsPlainOldData)
+// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void ABP_audio_prem_shop_wsp_C::BndEvt__AudioSpace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_prem_shop_wsp.BP_audio_prem_shop_wsp_C.BndEvt__AudioSpace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"));
+
+	struct
+	{
+		class AActor*                  OtherActor;
+		class UPrimitiveComponent*     OtherComp;
+		int                            OtherBodyIndex;
+		bool                           bFromSweep;
+		struct FHitResult              SweepResult;
+	} params;
+
+	params.OtherActor = OtherActor;
+	params.OtherComp = OtherComp;
+	params.OtherBodyIndex = OtherBodyIndex;
+	params.bFromSweep = bFromSweep;
+	params.SweepResult = SweepResult;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_audio_prem_shop_wsp.BP_audio_prem_shop_wsp_C.ExecuteUbergraph_BP_audio_prem_shop_wsp
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

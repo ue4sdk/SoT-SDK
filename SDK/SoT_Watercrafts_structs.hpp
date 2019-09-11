@@ -90,6 +90,20 @@ struct FOar
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0038(0x0028) MISSED OFFSET
 };
 
+// ScriptStruct Watercrafts.EventRowboatExitedWater
+// 0x0001
+struct FEventRowboatExitedWater
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Watercrafts.EventRowboatEnteredWater
+// 0x0001
+struct FEventRowboatEnteredWater
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct Watercrafts.RowboatMountStateTelemetryEvent
 // 0x0014
 struct FRowboatMountStateTelemetryEvent

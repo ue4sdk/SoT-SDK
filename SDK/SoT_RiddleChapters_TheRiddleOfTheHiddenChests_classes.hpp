@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RiddleChapters_TheRiddleOfTheHiddenChests.RiddleChapters_TheRiddleOfTheHiddenChests_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class URiddleChapters_TheRiddleOfTheHiddenChests_C : public UVoyageProposalDesc
 {
 public:

@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bait_Proxy_Base.BP_Bait_Proxy_Base_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0008 (0x0838 - 0x0830)
 class ABP_Bait_Proxy_Base_C : public ABP_ProxyIngestible_C
 {
 public:
+	class UTetherCustomisationComponent*               TetherCustomisation;                                      // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 
