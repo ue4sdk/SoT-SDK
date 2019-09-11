@@ -15,18 +15,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_BigGunpowderBarrelProxy.BP_MerchantCrate_BigGunpowderBarrelProxy_C
-// 0x0040 (0x0888 - 0x0848)
-class ABP_MerchantCrate_BigGunpowderBarrelProxy_C : public AStaticMerchantCrateItemProxy
+// 0x0040 (0x0898 - 0x0858)
+class ABP_MerchantCrate_BigGunpowderBarrelProxy_C : public ABP_MerchantCrate_GunpowderProxy_Base_C
 {
 public:
-	class UExplosiveTriggerRammableComponent*          ExplosiveTriggerRammable;                                 // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UFuseComponent*                              Fuse;                                                     // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UExplosiveComponent*                         ExplosiveComponent;                                       // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UHealthComponent*                            HealthComponent;                                          // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UActorDamageableComponent*                   ActorDamageable;                                          // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               AttackHitVolume;                                          // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UExplosionComponent*                         ExplosionComponent;                                       // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UExplosiveTriggerRammableComponent*          ExplosiveTriggerRammable;                                 // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UFuseComponent*                              Fuse;                                                     // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UExplosiveComponent*                         ExplosiveComponent;                                       // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UHealthComponent*                            HealthComponent;                                          // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorDamageableComponent*                   ActorDamageable;                                          // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               AttackHitVolume;                                          // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UExplosionComponent*                         ExplosionComponent;                                       // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

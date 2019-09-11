@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectablePage_ScrollContainer_RevengeOfTheMorningstar.BP_CollectablePage_ScrollContainer_RevengeOfTheMorningstar_C
-// 0x0018 (0x0658 - 0x0640)
+// 0x0018 (0x0650 - 0x0638)
 class ABP_CollectablePage_ScrollContainer_RevengeOfTheMorningstar_C : public ACollectableQuestObject
 {
 public:
-	class UGlintComponent*                             Glint;                                                    // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable1;                                            // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGlintComponent*                             Glint;                                                    // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable1;                                            // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

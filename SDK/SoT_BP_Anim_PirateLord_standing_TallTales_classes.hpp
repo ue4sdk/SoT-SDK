@@ -40,6 +40,7 @@ public:
 	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void AnimNotify_BeginCutsceneUpdates();
 	void AnimNotify_EndCutsceneUpdates();
+	void BlueprintInitializeAnimation();
 	void ExecuteUbergraph_BP_Anim_PirateLord_standing_TallTales(int EntryPoint);
 	void ShaderValuesUpdated__DelegateSignature(float GhostOpacity, float GhostBloom);
 };

@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaEngine_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -60,6 +60,13 @@ struct FActorComponentSelector
 	class UActorComponent*                             CachedComponent;                                          // 0x0008(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	class UClass*                                      ComponentClass;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct AthenaEngine.EventMeshAssigned
+// 0x0001
+struct FEventMeshAssigned
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

@@ -7,21 +7,14 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct SimpleOverlaps.SimpleOverlapAggregateTickFunction
-// 0x0040 (0x0088 - 0x0048)
-struct FSimpleOverlapAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
-};
 
 // ScriptStruct SimpleOverlaps.SimpleOverlapInfo
 // 0x0010
@@ -43,6 +36,13 @@ struct FSimpleOverlapEnd
 struct FSimpleOverlapBegin
 {
 	struct FSimpleOverlapInfo                          OverlapInfo;                                              // 0x0000(0x0010)
+};
+
+// ScriptStruct SimpleOverlaps.SimpleOverlapAggregateTickFunction
+// 0x0040 (0x0088 - 0x0048)
+struct FSimpleOverlapAggregateTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
 };
 
 }

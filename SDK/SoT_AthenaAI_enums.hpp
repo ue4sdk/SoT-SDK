@@ -36,6 +36,21 @@ enum class EAIDialogueState : uint8_t
 };
 
 
+// Enum AthenaAI.AISpawnRequestResult
+enum class EAISpawnRequestResult : uint8_t
+{
+	AISpawnRequestResult__Incomplete = 0,
+	AISpawnRequestResult__Success  = 1,
+	AISpawnRequestResult__FailedSpawnDenied = 2,
+	AISpawnRequestResult__FailedNoQuery = 3,
+	AISpawnRequestResult__FailedNoValidPos = 4,
+	AISpawnRequestResult__FailedLoadingPawnClass = 5,
+	AISpawnRequestResult__FailedLoadingItemDropComponentClass = 6,
+	AISpawnRequestResult__Cancelled = 7,
+	AISpawnRequestResult__AISpawnRequestResult_MAX = 8
+};
+
+
 // Enum AthenaAI.EAthenaAISpawnType
 enum class EAthenaAISpawnType : uint8_t
 {
@@ -73,10 +88,10 @@ enum class EAISpawnLocationSearchResult : uint8_t
 enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
-	AISpawnRequestState__WaitForCanSpawn = 1,
+	AISpawnRequestState__DelayUntilNextCanSpawnCheck = 1,
 	AISpawnRequestState__WaitForClassLoad = 2,
 	AISpawnRequestState__WaitForLocationResult = 3,
-	AISpawnRequestState__WaitForLocationCheck = 4,
+	AISpawnRequestState__DelayUntilNextLocationCheck = 4,
 	AISpawnRequestState__WaitForItemDropComponentClassLoad = 5,
 	AISpawnRequestState__Complete  = 6,
 	AISpawnRequestState__AISpawnRequestState_MAX = 7
@@ -276,21 +291,6 @@ enum class ETinySharkState : uint8_t
 };
 
 
-// Enum AthenaAI.AISpawnRequestResult
-enum class EAISpawnRequestResult : uint8_t
-{
-	AISpawnRequestResult__Incomplete = 0,
-	AISpawnRequestResult__Success  = 1,
-	AISpawnRequestResult__FailedSpawnDenied = 2,
-	AISpawnRequestResult__FailedNoQuery = 3,
-	AISpawnRequestResult__FailedNoValidPos = 4,
-	AISpawnRequestResult__FailedNoPawnClass = 5,
-	AISpawnRequestResult__FailedLoadingItemDropComponentClass = 6,
-	AISpawnRequestResult__Cancelled = 7,
-	AISpawnRequestResult__AISpawnRequestResult_MAX = 8
-};
-
-
 // Enum AthenaAI.EAIThreatLevel
 enum class EAIThreatLevel : uint8_t
 {
@@ -334,7 +334,8 @@ enum class EDebugPetStateDescriptor : uint8_t
 	EDebugPetStateDescriptor__Follow = 6,
 	EDebugPetStateDescriptor__Eating = 7,
 	EDebugPetStateDescriptor__Scared = 8,
-	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 9
+	EDebugPetStateDescriptor__ForcedIdle = 9,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 10
 };
 
 

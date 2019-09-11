@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_LegendaryStorytellerPuzzle_AdditionalPuzzles_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerWoodPlankPuzzle_classes.hpp"
+#include "SoT_DS_LegendaryStorytellerPuzzle_AdditionalPuzzles_classes.hpp"
 
 namespace SDK
 {

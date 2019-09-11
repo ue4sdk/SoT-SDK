@@ -68,22 +68,6 @@ struct FAppliedDamageToShipEvent
 	class UClass*                                      ShipType;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct ShipDamage.ActorClassAndLevelOfDamage
-// 0x0028
-struct FActorClassAndLevelOfDamage
-{
-	TAssetPtr<class UClass>                            ActorClass;                                               // 0x0000(0x0020) (Edit, BlueprintVisible)
-	float                                              ChanceOfDamage;                                           // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                LevelOfDamage;                                            // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct ShipDamage.ShipPartsDamageMap
-// 0x0010
-struct FShipPartsDamageMap
-{
-	TArray<struct FActorClassAndLevelOfDamage>         DamageMap;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
 }
 
 #ifdef _MSC_VER

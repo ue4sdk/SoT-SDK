@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C
-// 0x286BC (0x2BA5C - 0x33A0)
+// 0x286C0 (0x2BA60 - 0x33A0)
 class UBP_Humanoid_ThirdPerson_C : public UThirdPersonAnimationInstance
 {
 public:
@@ -1536,6 +1536,7 @@ public:
 	float                                              RowboatTransitionTimes;                                   // 0x2BA4C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UAnimSequence*                               ClamberOffTop;                                            // 0x2BA50(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                HarpoonVariant;                                           // 0x2BA58(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EmoteCoinRotationOffset;                                  // 0x2BA5C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -2421,6 +2422,8 @@ public:
 	void TestAIQuickSpawn();
 	void TestShopInteractionAnimations();
 	void TestAISpawnVariant();
+	void AnimNotify_CoinFlip();
+	void AnimNotify_SpawnEmoteCoin();
 	void AnimNotify_TurnEmoteIKOff();
 	void AnimNotify_ClearIKFlag();
 	void AnimNotify_HideBothOars();

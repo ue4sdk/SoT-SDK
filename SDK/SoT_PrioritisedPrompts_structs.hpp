@@ -36,7 +36,7 @@ struct FPrioritisedPrompt
 // 0x0050
 struct FPrioritisedPromptWithHandle
 {
-	struct FPrioritisedPromptHandle                    PromptHandle;                                             // 0x0000(0x0010) (Edit)
+	struct FPrioritisedPromptHandle                    PromptHandle;                                             // 0x0000(0x0010)
 	struct FPrioritisedPrompt                          Prompt;                                                   // 0x0010(0x0040) (Edit)
 };
 
@@ -47,14 +47,6 @@ struct FPermanentPromptNetworkEvent : public FNetworkEventStruct
 	struct FPrioritisedPromptWithHandle                Prompt;                                                   // 0x0010(0x0050)
 	TEnumAsByte<EPromptStartStop>                      StartOrStop;                                              // 0x0060(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct PrioritisedPrompts.PrioritisedPromptsManager
-// 0x0020
-struct FPrioritisedPromptsManager
-{
-	TArray<struct FPrioritisedPromptWithHandle>        AllPrompts;                                               // 0x0000(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
 };
 
 }

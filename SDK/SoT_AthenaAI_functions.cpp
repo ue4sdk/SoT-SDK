@@ -28,6 +28,27 @@ void UAthenaAIFormComponent::OnRep_FormData()
 }
 
 
+// Function AthenaAI.AISpawner.GetNumOfSpawnRequests
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UAISpawner::GetNumOfSpawnRequests()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AISpawner.GetNumOfSpawnRequests"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaAI.AIEncounterServiceInterface.RegisterLoadedSkillsetProgression
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -283,27 +304,6 @@ void UAIManagerServiceInterface::StartDespawnAI(class APawn* AIActor, TEnumAsByt
 int UAIManagerServiceInterface::GetNumOfSpawnedPawns()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerServiceInterface.GetNumOfSpawnedPawns"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AISpawner.GetNumOfSpawnRequests
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UAISpawner::GetNumOfSpawnRequests()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AISpawner.GetNumOfSpawnRequests"));
 
 	struct
 	{
@@ -2121,6 +2121,22 @@ void APet::OnRep_RollRequest()
 void APet::OnRep_PetOwner()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PetOwner"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.OnRep_PerchedInHangout
+// (Final, Native, Private)
+
+void APet::OnRep_PerchedInHangout()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PerchedInHangout"));
 
 	struct
 	{

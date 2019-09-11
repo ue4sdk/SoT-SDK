@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceIslandWashedUpResourcesSpawner_MaidenVoyage.BP_ResourceIslandWashedUpResourcesSpawner_MaidenVoyage_C
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x0560 - 0x0560)
 class UBP_ResourceIslandWashedUpResourcesSpawner_MaidenVoyage_C : public USalvageItemSpawnComponent
 {
 public:

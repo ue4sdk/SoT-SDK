@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass CockatooParrotCategory.CockatooParrotCategory_C
 // 0x0000 (0x0080 - 0x0080)
-class UCockatooParrotCategory_C : public UPetCategory_C
+class UCockatooParrotCategory_C : public UParrotCategory_C
 {
 public:
 

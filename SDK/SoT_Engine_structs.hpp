@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_enums.hpp"
-#include "SoT_Slate_classes.hpp"
+#include "SoT_SlateCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
-#include "SoT_SlateCore_classes.hpp"
+#include "SoT_Slate_classes.hpp"
 
 namespace SDK
 {
@@ -1098,6 +1098,13 @@ struct FTViewTarget
 	unsigned char                                      UnknownData01[0x8];                                       // 0x05B8(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct Engine.UniqueNetIdRepl
+// 0x0018
+struct FUniqueNetIdRepl
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+};
+
 // ScriptStruct Engine.ActiveForceFeedbackEffect
 // 0x0018
 struct FActiveForceFeedbackEffect
@@ -1116,13 +1123,6 @@ struct FViewTargetTransitionParams
 	float                                              BlendExp;                                                 // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bLockOutgoing : 1;                                        // 0x000C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Engine.UniqueNetIdRepl
-// 0x0018
-struct FUniqueNetIdRepl
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Engine.LatentActionInfo
@@ -1219,24 +1219,6 @@ struct FNetViewer
 	struct FVector                                     ViewDir;                                                  // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.PaintedVertex
-// 0x0014
-struct FPaintedVertex
-{
-	struct FVector                                     Position;                                                 // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FPackedNormal                               Normal;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      Color;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.StaticMeshComponentLODInfo
-// 0x0028
-struct FStaticMeshComponentLODInfo
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	TArray<struct FPaintedVertex>                      PaintedVertices;                                          // 0x0010(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct Engine.ExternalMip
 // 0x0028
 struct FExternalMip
@@ -1278,6 +1260,24 @@ struct FFeatureToggledStringAssetReferenceEntry
 {
 	struct FStringAssetReference                       Asset;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
 	struct FName                                       Feature;                                                  // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.PaintedVertex
+// 0x0014
+struct FPaintedVertex
+{
+	struct FVector                                     Position;                                                 // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FPackedNormal                               Normal;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      Color;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.StaticMeshComponentLODInfo
+// 0x0028
+struct FStaticMeshComponentLODInfo
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+	TArray<struct FPaintedVertex>                      PaintedVertices;                                          // 0x0010(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Engine.LightmassMaterialInterfaceSettings
@@ -5357,13 +5357,13 @@ struct FAnimMontageInstance
 };
 
 // ScriptStruct Engine.FogVolumeInfo
-// 0x0090
+// 0x00D8
 struct FFogVolumeInfo
 {
 	class UFogVolumeComponent*                         Component;                                                // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0008(0x0078) MISSED OFFSET
-	class UTexture*                                    VolumeTexture;                                            // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0008(0x00B8) MISSED OFFSET
+	class UTexture*                                    VolumeTexture;                                            // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Engine.WaterSimPlane

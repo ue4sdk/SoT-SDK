@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FeatureIslandWashedUpCargoRunsSpawner_DVR.BP_FeatureIslandWashedUpCargoRunsSpawner_DVR_C
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x0560 - 0x0560)
 class UBP_FeatureIslandWashedUpCargoRunsSpawner_DVR_C : public USalvageItemSpawnComponent
 {
 public:

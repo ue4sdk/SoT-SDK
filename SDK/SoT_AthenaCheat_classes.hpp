@@ -52,6 +52,7 @@ public:
 	void TriggerFogManagerAtNearestIsland();
 	void TriggerEmblemUnlockedMessage(const class FString& EmblemFriendlyName);
 	void TriggerControllerConnectionChange(bool IsConnect, int UserId, int ControllerId);
+	void TriggerContestMatchmakingMigration();
 	void TriggerContestBannerUnfurl();
 	void TriggerAIShipTimerBattle();
 	void TriggerAIShipPassive();
@@ -109,6 +110,7 @@ public:
 	void StartNearestEarthquake();
 	void StartDemoSession();
 	void StartCargoRunFromNearestNPC(int NumOfCrates);
+	void StartAshenLordGeysers();
 	void StartAllVolcanos();
 	void StartAllCrewVoyages();
 	void SpinShip(float YawSpdInDegreesPerSecond);
@@ -155,6 +157,7 @@ public:
 	void SpawnAIAtLocationDelayed(const class FString& AIDescString, float LocationX, float LocationY, float LocationZ, float Yaw, float Delay);
 	void SpawnAIAtCurrentLocationDelayed(const class FString& AIDescString, float Delay);
 	void SpawnAI(const class FString& AIDescString);
+	void SpawnAggressiveGhostShip();
 	void SlowMotionOverride(bool InValue);
 	void SinkShipWithKeelOverIndex(int KeelOverConfigIndex);
 	void SinkShipByActorId(const class FString& ShipActorIdString);
@@ -201,7 +204,11 @@ public:
 	void SetPlayerVisibleToAI();
 	void SetPlayerInvisibleToAI();
 	void SetPhotoMode(bool Enabled);
+	void SetPetMovementTimeWindow(float TimeWindow);
 	void SetNonCrewChatSpatialisation(bool Enabled);
+	void SetMaxMovingPetsOnShips(int MaxMovingPets);
+	void SetMaxMovingPetsOnServer(int MaxMovingPets);
+	void SetMaxMovingPetsOnLand(int MaxMovingPets);
 	void SetMastsFullyRepaired();
 	void SetMastsFullyDamaged();
 	void SetKnockbackDisabled(bool Disabled);
@@ -234,14 +241,20 @@ public:
 	void ResetTinySharkSpawnTimer();
 	void ResetStats();
 	void ResetMouseDelta();
+	void ResetMaxMovingPetsOnServerToDefault();
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllMechanisms();
 	void ResetAITeamAttitudes();
+	void RequestSmallPassiveAIShip();
+	void RequestSmallAggressiveAIShip();
+	void RequestLargePassiveAIShip();
+	void RequestLargeAggressiveAIShip();
 	void ReplenishShipWithDebugSpawner();
 	void ReplenishShip();
 	void ReplaceShipWithSmallShip(const class FString& ShipActorIdConsoleString);
 	void RepairShipAndClearInternalWater();
 	void RenameTreasure(const class FString& InVendorName);
+	void RemovePetsFromAllPlayers();
 	void RemovePetFromPlayer();
 	void RemoveItemInSlot(int SlotIndex);
 	void RemoveDebugPetSpawners();
@@ -289,6 +302,7 @@ public:
 	void IPGLoadWithoutClothing(const class FString& ActorIdString, const class FString& path);
 	void IPGLoadWithClothing(const class FString& ActorIdString, const class FString& path);
 	void IPGLoad(const class FString& path);
+	void InvincibleEverything();
 	void InfiniteGunAmmo(bool Enabled);
 	void IncrementTime(int Hours, int Minutes);
 	void IgniteShipAtPlayerLocation();
@@ -415,8 +429,10 @@ public:
 	void AIPlayerShip();
 	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
+	void AddRandomPetForAllPlayers();
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex);
+	void AddPetForAllPlayers(int PetTypeIndex, int PetCustomisationIndex);
 	void AddDrunkenness(int DrunkennessType, float DrunkennessChange);
 	void ActivateSkellyFort(const class FString& FortName);
 };

@@ -17,7 +17,8 @@ enum class ELiquidType : uint8_t
 {
 	ELiquidType__Water             = 0,
 	ELiquidType__Vomit             = 1,
-	ELiquidType__ELiquidType_MAX   = 2
+	ELiquidType__BoilingWater      = 2,
+	ELiquidType__ELiquidType_MAX   = 3
 };
 
 

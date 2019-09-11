@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureRoomBrazier.BP_TreasureRoomBrazier_C
-// 0x0091 (0x0539 - 0x04A8)
+// 0x00A4 (0x054C - 0x04A8)
 class ABP_TreasureRoomBrazier_C : public AActor
 {
 public:
@@ -37,6 +37,8 @@ public:
 	float                                              MinFireIntensity;                                         // 0x0530(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              MinLightingIntensity;                                     // 0x0534(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               WasZero;                                                  // 0x0538(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0539(0x0003) MISSED OFFSET
+	struct FLinearColor                                ParticleGhostlyColor;                                     // 0x053C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

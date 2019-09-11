@@ -15,8 +15,8 @@ namespace SDK
 // Enum Cleanliness.EDirtinessType
 enum class EDirtinessType : uint8_t
 {
-	EDirtinessType__Dust           = 0,
-	EDirtinessType__Soot           = 1,
+	EDirtinessType__Soot           = 0,
+	EDirtinessType__Dust           = 1,
 	EDirtinessType__MAX            = 2,
 	EDirtinessType__EDirtinessType_MAX = 3
 };

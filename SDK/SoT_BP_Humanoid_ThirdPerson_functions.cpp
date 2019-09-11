@@ -14266,6 +14266,38 @@ void UBP_Humanoid_ThirdPerson_C::TestAISpawnVariant()
 }
 
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_CoinFlip
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::AnimNotify_CoinFlip()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_CoinFlip"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SpawnEmoteCoin
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::AnimNotify_SpawnEmoteCoin()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_SpawnEmoteCoin"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_TurnEmoteIKOff
 // (BlueprintCallable, BlueprintEvent)
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Emote_Dance_Desc.BP_Emote_Dance_Desc_C
-// 0x0000 (0x00F0 - 0x00F0)
+// 0x0000 (0x0100 - 0x0100)
 class UBP_Emote_Dance_Desc_C : public UEmoteDesc
 {
 public:

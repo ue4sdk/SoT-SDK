@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass MacawParrotCategory.MacawParrotCategory_C
 // 0x0000 (0x0080 - 0x0080)
-class UMacawParrotCategory_C : public UPetCategory_C
+class UMacawParrotCategory_C : public UParrotCategory_C
 {
 public:
 

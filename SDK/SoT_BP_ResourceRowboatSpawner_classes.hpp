@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceRowboatSpawner.BP_ResourceRowboatSpawner_C
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x05A0 - 0x05A0)
 class UBP_ResourceRowboatSpawner_C : public UIslandWatercraftSpawnComponent
 {
 public:

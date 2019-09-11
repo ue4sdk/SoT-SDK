@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectableEnchantedLantern.BP_CollectableEnchantedLantern_C
-// 0x0010 (0x0650 - 0x0640)
+// 0x0010 (0x0648 - 0x0638)
 class ABP_CollectableEnchantedLantern_C : public ACollectableQuestObject
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        LaternMesh;                                               // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        LaternMesh;                                               // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

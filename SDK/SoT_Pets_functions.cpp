@@ -53,21 +53,33 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 }
 
 
-// Function Pets.PetsService.SetMaxPetsOnServer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            InMaxPetsOnServer              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// Function Pets.PetHangoutSpotComponent.OnRep_IsOwnerSinking
+// (Final, Native, Private)
 
-void UPetsService::SetMaxPetsOnServer(int InMaxPetsOnServer)
+void UPetHangoutSpotComponent::OnRep_IsOwnerSinking()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetsService.SetMaxPetsOnServer"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetHangoutSpotComponent.OnRep_IsOwnerSinking"));
 
 	struct
 	{
-		int                            InMaxPetsOnServer;
 	} params;
 
-	params.InMaxPetsOnServer = InMaxPetsOnServer;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Pets.PetOwnerComponent.Server_RequestDismissal
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+
+void UPetOwnerComponent::Server_RequestDismissal()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetOwnerComponent.Server_RequestDismissal"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

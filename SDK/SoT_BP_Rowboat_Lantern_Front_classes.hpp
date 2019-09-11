@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rowboat_Lantern_Front.BP_Rowboat_Lantern_Front_C
-// 0x0000 (0x0721 - 0x0721)
+// 0x0000 (0x0719 - 0x0719)
 class ABP_Rowboat_Lantern_Front_C : public ABP_InteractableRowboatLantern_C
 {
 public:

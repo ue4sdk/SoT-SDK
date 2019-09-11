@@ -37,15 +37,15 @@ void UBP_GenerateBuriedMomentoes_C::SetPuzzle(class UClass* Item, TArray<struct 
 }
 
 
-// Function BP_GenerateBuriedMomentoes.BP_GenerateBuriedMomentoes_C.GetIslandFromActorRef
+// Function BP_GenerateBuriedMomentoes.BP_GenerateBuriedMomentoes_C.GetIslandFromActor
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TAssetPtr<class AActor>        Actor                          (Parm)
 // struct FName                   IslandName                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GenerateBuriedMomentoes_C::GetIslandFromActorRef(TAssetPtr<class AActor> Actor, struct FName* IslandName)
+void UBP_GenerateBuriedMomentoes_C::GetIslandFromActor(TAssetPtr<class AActor> Actor, struct FName* IslandName)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GenerateBuriedMomentoes.BP_GenerateBuriedMomentoes_C.GetIslandFromActorRef"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GenerateBuriedMomentoes.BP_GenerateBuriedMomentoes_C.GetIslandFromActor"));
 
 	struct
 	{

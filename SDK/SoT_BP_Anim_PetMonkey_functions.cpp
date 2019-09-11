@@ -460,6 +460,22 @@ void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendListByBool_301D10F14E3CCF7313F7908F961DC253
+// (BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendListByBool_301D10F14E3CCF7313F7908F961DC253()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendListByBool_301D10F14E3CCF7313F7908F961DC253"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_DC06665B4CDEA44E725D5C91B31E77AB
 // (BlueprintEvent)
 
@@ -700,6 +716,22 @@ void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_SequenceEvaluator_ED3AF26D483FA4A283091E888E56A900
+// (BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_SequenceEvaluator_ED3AF26D483FA4A283091E888E56A900()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_SequenceEvaluator_ED3AF26D483FA4A283091E888E56A900"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendSpacePlayer_12D300C642734B62B2D6139993874BFD
 // (BlueprintEvent)
 
@@ -770,22 +802,6 @@ void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_SequencePlayer_4E9C1745487D3E025824CE94B6B27464_1()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_SequencePlayer_4E9C1745487D3E025824CE94B6B27464_1"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendListByBool_1BC9B1514443B20ED5629A86CA06F2EE
-// (BlueprintEvent)
-
-void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendListByBool_1BC9B1514443B20ED5629A86CA06F2EE()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_BlendListByBool_1BC9B1514443B20ED5629A86CA06F2EE"));
 
 	struct
 	{
@@ -1826,6 +1842,38 @@ void UBP_Anim_PetMonkey_C::AnimNotify_StaticBaseOn()
 void UBP_Anim_PetMonkey_C::AnimNotify_StaticBaseOff()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_StaticBaseOff"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetStaticBase_On
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::AnimNotify_PetStaticBase_On()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetStaticBase_On"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetStaticBase_Off
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::AnimNotify_PetStaticBase_Off()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetStaticBase_Off"));
 
 	struct
 	{

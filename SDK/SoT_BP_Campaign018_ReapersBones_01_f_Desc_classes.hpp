@@ -15,8 +15,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign018_ReapersBones_01_f_Desc.BP_Campaign018_ReapersBones_01_f_Desc_C
-// 0x0000 (0x0130 - 0x0130)
-class UBP_Campaign018_ReapersBones_01_f_Desc_C : public UBootyItemDesc
+// 0x0000 (0x0148 - 0x0148)
+class UBP_Campaign018_ReapersBones_01_f_Desc_C : public UCargoRunItemDesc
 {
 public:
 

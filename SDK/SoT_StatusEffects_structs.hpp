@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -73,6 +73,60 @@ struct FStatusEffectManagerComponentAggregateTickFunction : public FTickFunction
 struct FStatusEffectPersistenceKey
 {
 	struct FStatus                                     AppliedStatuses;                                          // 0x0000(0x0018)
+};
+
+// ScriptStruct StatusEffects.EventStatusMaterialEffectEnded
+// 0x0014
+struct FEventStatusMaterialEffectEnded
+{
+	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CanShowMaterialParam;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              FadeOutAcceleration;                                      // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StatusEffects.EventStatusMaterialEffectStarted
+// 0x0030
+struct FEventStatusMaterialEffectStarted
+{
+	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CanShowMaterialParam;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       TintParamName;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                TintColor;                                                // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
+	float                                              TargetEffectStrength;                                     // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              FadeInAcceleration;                                       // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StatusEffects.EventStatusScreenEffectEnded
+// 0x000C
+struct FEventStatusScreenEffectEnded
+{
+	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              FadeOutAcceleration;                                      // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StatusEffects.EventStatusScreenSpaceParticleEffectEnded
+// 0x0001
+struct FEventStatusScreenSpaceParticleEffectEnded
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct StatusEffects.EventStatusScreenSpaceParticleEffectStarted
+// 0x0008
+struct FEventStatusScreenSpaceParticleEffectStarted
+{
+	class UObject*                                     ParticleSystem;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StatusEffects.EventStatusScreenEffectStarted
+// 0x0028
+struct FEventStatusScreenEffectStarted
+{
+	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       TintParamName;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                TintColor;                                                // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	float                                              TargetEffectStrength;                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              FadeInAcceleration;                                       // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.EventExitedSurfaceMaterialStatusZone

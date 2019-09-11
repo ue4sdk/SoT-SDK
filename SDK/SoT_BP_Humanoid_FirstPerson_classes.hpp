@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C
-// 0x12C62 (0x14E92 - 0x2230)
+// 0x12C6C (0x14E9C - 0x2230)
 class UBP_Humanoid_FirstPerson_C : public UFirstPersonAnimationInstance
 {
 public:
@@ -861,6 +861,8 @@ public:
 	float                                              RowboatCameraAdjustment;                                  // 0x14E8C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               LeftOarActive;                                            // 0x14E90(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               RightOarActive;                                           // 0x14E91(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x2];                                       // 0x14E92(0x0002) MISSED OFFSET
+	struct FRandomStream                               IdlesRandomStream;                                        // 0x14E94(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
