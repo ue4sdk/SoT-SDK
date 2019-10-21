@@ -51,6 +51,15 @@ enum class EIPGTestEnum : uint8_t
 };
 
 
+// Enum PirateGenerator.EIPGSlotType
+enum class EIPGSlotType : uint8_t
+{
+	EIPGSlotType__DEFAULT          = 0,
+	EIPGSlotType__DYNAMIC          = 1,
+	EIPGSlotType__EIPGSlotType_MAX = 2
+};
+
+
 // Enum PirateGenerator.EIPGSetMode
 enum class EIPGSetMode : uint8_t
 {

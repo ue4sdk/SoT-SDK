@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_ItemInfo_DVR_Rare.BP_TreasureArtifact_ItemInfo_DVR_Rare_C
-// 0x0008 (0x0750 - 0x0748)
+// 0x0008 (0x0760 - 0x0758)
 class ABP_TreasureArtifact_ItemInfo_DVR_Rare_C : public ATreasureChestItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

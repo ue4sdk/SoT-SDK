@@ -62,6 +62,32 @@ struct FActorComponentSelector
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct AthenaEngine.PlaySoundRpc
+// 0x0008 (0x0018 - 0x0010)
+struct FPlaySoundRpc : public FBoxedRpc
+{
+	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaEngine.EventCancelForceFeedback
+// 0x0010
+struct FEventCancelForceFeedback
+{
+	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                      // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Tag;                                                      // 0x0008(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaEngine.EventTriggerForceFeedback
+// 0x0018
+struct FEventTriggerForceFeedback
+{
+	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                      // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Looping;                                                  // 0x0008(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	struct FName                                       Tag;                                                      // 0x000C(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct AthenaEngine.EventMeshAssigned
 // 0x0001
 struct FEventMeshAssigned

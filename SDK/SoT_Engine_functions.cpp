@@ -15434,155 +15434,6 @@ void UPostProcessComponent::AddOrUpdateBlendable(const TScriptInterface<class UB
 }
 
 
-// Function Engine.CameraModifier.IsDisabled
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UCameraModifier::IsDisabled()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.IsDisabled"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CameraModifier.GetViewTarget
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* UCameraModifier::GetViewTarget()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.GetViewTarget"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CameraModifier.EnableModifier
-// (Native, Public, BlueprintCallable)
-
-void UCameraModifier::EnableModifier()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.EnableModifier"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CameraModifier.DisableModifier
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCameraModifier::DisableModifier(bool bImmediate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.DisableModifier"));
-
-	struct
-	{
-		bool                           bImmediate;
-	} params;
-
-	params.bImmediate = bImmediate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CameraModifier.BlueprintModifyPostProcess
-// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PostProcessBlendWeight         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FPostProcessSettings    PostProcessSettings            (Parm, OutParm)
-
-void UCameraModifier::BlueprintModifyPostProcess(float DeltaTime, float* PostProcessBlendWeight, struct FPostProcessSettings* PostProcessSettings)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyPostProcess"));
-
-	struct
-	{
-		float                          DeltaTime;
-		float                          PostProcessBlendWeight;
-		struct FPostProcessSettings    PostProcessSettings;
-	} params;
-
-	params.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (PostProcessBlendWeight != nullptr)
-		*PostProcessBlendWeight = params.PostProcessBlendWeight;
-	if (PostProcessSettings != nullptr)
-		*PostProcessSettings = params.PostProcessSettings;
-}
-
-
-// Function Engine.CameraModifier.BlueprintModifyCamera
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ViewLocation                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                ViewRotation                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FOV                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NewViewLocation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                NewViewRotation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          NewFOV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVector& ViewLocation, const struct FRotator& ViewRotation, float FOV, struct FVector* NewViewLocation, struct FRotator* NewViewRotation, float* NewFOV)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyCamera"));
-
-	struct
-	{
-		float                          DeltaTime;
-		struct FVector                 ViewLocation;
-		struct FRotator                ViewRotation;
-		float                          FOV;
-		struct FVector                 NewViewLocation;
-		struct FRotator                NewViewRotation;
-		float                          NewFOV;
-	} params;
-
-	params.DeltaTime = DeltaTime;
-	params.ViewLocation = ViewLocation;
-	params.ViewRotation = ViewRotation;
-	params.FOV = FOV;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (NewViewLocation != nullptr)
-		*NewViewLocation = params.NewViewLocation;
-	if (NewViewRotation != nullptr)
-		*NewViewRotation = params.NewViewRotation;
-	if (NewFOV != nullptr)
-		*NewFOV = params.NewFOV;
-}
-
-
 // Function Engine.DebugCameraController.ToggleDisplay
 // (Final, Native, Public, BlueprintCallable)
 
@@ -16801,6 +16652,155 @@ class UMaterial* UMaterialInterface::GetBaseMaterial()
 }
 
 
+// Function Engine.CameraModifier.IsDisabled
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCameraModifier::IsDisabled()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.IsDisabled"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CameraModifier.GetViewTarget
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* UCameraModifier::GetViewTarget()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.GetViewTarget"));
+
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CameraModifier.EnableModifier
+// (Native, Public, BlueprintCallable)
+
+void UCameraModifier::EnableModifier()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.EnableModifier"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CameraModifier.DisableModifier
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCameraModifier::DisableModifier(bool bImmediate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.DisableModifier"));
+
+	struct
+	{
+		bool                           bImmediate;
+	} params;
+
+	params.bImmediate = bImmediate;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CameraModifier.BlueprintModifyPostProcess
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          PostProcessBlendWeight         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FPostProcessSettings    PostProcessSettings            (Parm, OutParm)
+
+void UCameraModifier::BlueprintModifyPostProcess(float DeltaTime, float* PostProcessBlendWeight, struct FPostProcessSettings* PostProcessSettings)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyPostProcess"));
+
+	struct
+	{
+		float                          DeltaTime;
+		float                          PostProcessBlendWeight;
+		struct FPostProcessSettings    PostProcessSettings;
+	} params;
+
+	params.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (PostProcessBlendWeight != nullptr)
+		*PostProcessBlendWeight = params.PostProcessBlendWeight;
+	if (PostProcessSettings != nullptr)
+		*PostProcessSettings = params.PostProcessSettings;
+}
+
+
+// Function Engine.CameraModifier.BlueprintModifyCamera
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ViewLocation                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ViewRotation                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          FOV                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NewViewLocation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                NewViewRotation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          NewFOV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVector& ViewLocation, const struct FRotator& ViewRotation, float FOV, struct FVector* NewViewLocation, struct FRotator* NewViewRotation, float* NewFOV)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyCamera"));
+
+	struct
+	{
+		float                          DeltaTime;
+		struct FVector                 ViewLocation;
+		struct FRotator                ViewRotation;
+		float                          FOV;
+		struct FVector                 NewViewLocation;
+		struct FRotator                NewViewRotation;
+		float                          NewFOV;
+	} params;
+
+	params.DeltaTime = DeltaTime;
+	params.ViewLocation = ViewLocation;
+	params.ViewRotation = ViewRotation;
+	params.FOV = FOV;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (NewViewLocation != nullptr)
+		*NewViewLocation = params.NewViewLocation;
+	if (NewViewRotation != nullptr)
+		*NewViewRotation = params.NewViewRotation;
+	if (NewFOV != nullptr)
+		*NewFOV = params.NewFOV;
+}
+
+
 // Function Engine.ParticleSystemComponent.SetVectorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -16914,6 +16914,26 @@ void UParticleSystemComponent::SetFloatParameter(const struct FName& ParameterNa
 
 	params.ParameterName = ParameterName;
 	params.Param = Param;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.ParticleSystemComponent.SetEnableDistanceFading
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UParticleSystemComponent::SetEnableDistanceFading(bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystemComponent.SetEnableDistanceFading"));
+
+	struct
+	{
+		bool                           bEnable;
+	} params;
+
+	params.bEnable = bEnable;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -17352,14 +17372,35 @@ void UParticleSystemComponent::BeginTrails(const struct FName& InFirstSocketName
 }
 
 
+// Function Engine.ParticleSystemComponent.AddKillSphere
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector4                KillSphere                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UParticleSystemComponent::AddKillSphere(const struct FVector4& KillSphere)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystemComponent.AddKillSphere"));
+
+	struct
+	{
+		struct FVector4                KillSphere;
+	} params;
+
+	params.KillSphere = KillSphere;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.ParticleSystemComponent.AddEmitterPoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector4                Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector4                InheritedVelocity              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector4                Orientation                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          Scale                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UParticleSystemComponent::AddEmitterPoint(const struct FVector4& Position, const struct FVector4& InheritedVelocity, const struct FVector4& Orientation)
+void UParticleSystemComponent::AddEmitterPoint(const struct FVector4& Position, const struct FVector4& InheritedVelocity, const struct FVector4& Orientation, float Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystemComponent.AddEmitterPoint"));
 
@@ -17368,11 +17409,13 @@ void UParticleSystemComponent::AddEmitterPoint(const struct FVector4& Position, 
 		struct FVector4                Position;
 		struct FVector4                InheritedVelocity;
 		struct FVector4                Orientation;
+		float                          Scale;
 	} params;
 
 	params.Position = Position;
 	params.InheritedVelocity = InheritedVelocity;
 	params.Orientation = Orientation;
+	params.Scale = Scale;
 
 	UObject::ProcessEvent(fn, &params);
 }

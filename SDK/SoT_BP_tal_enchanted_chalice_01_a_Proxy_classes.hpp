@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tal_enchanted_chalice_01_a_Proxy.BP_tal_enchanted_chalice_01_a_Proxy_C
-// 0x0000 (0x0838 - 0x0838)
+// 0x0000 (0x0848 - 0x0848)
 class ABP_tal_enchanted_chalice_01_a_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

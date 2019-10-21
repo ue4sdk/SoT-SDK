@@ -14,6 +14,23 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class MerchantContracts.MerchantContractsBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMerchantContractsBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class MerchantContracts.MerchantContractsBlueprintLibrary"));
+		return ptr;
+	}
+
+
+	static struct FText GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit);
+};
+
+
 // Class MerchantContracts.MerchantContractsServiceInterface
 // 0x0000 (0x0028 - 0x0028)
 class UMerchantContractsServiceInterface : public UInterface

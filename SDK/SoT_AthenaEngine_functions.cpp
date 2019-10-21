@@ -12,51 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function AthenaEngine.NetDormancyHelpers.SetNetDormancy
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ENetDormancy>      DormancyMode                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UNetDormancyHelpers::SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaEngine.NetDormancyHelpers.SetNetDormancy"));
-
-	struct
-	{
-		class AActor*                  TargetActor;
-		TEnumAsByte<ENetDormancy>      DormancyMode;
-	} params;
-
-	params.TargetActor = TargetActor;
-	params.DormancyMode = DormancyMode;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaEngine.NetDormancyHelpers.FlushNetDormancy
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UNetDormancyHelpers::FlushNetDormancy(class AActor* TargetActor)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaEngine.NetDormancyHelpers.FlushNetDormancy"));
-
-	struct
-	{
-		class AActor*                  TargetActor;
-	} params;
-
-	params.TargetActor = TargetActor;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
 }
 
 #ifdef _MSC_VER

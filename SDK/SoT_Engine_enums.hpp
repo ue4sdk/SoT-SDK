@@ -1052,7 +1052,8 @@ enum class ENetworkFailure : uint8_t
 	ENetworkFailure__CrewMigrationRequested = 15,
 	ENetworkFailure__ServerAtMatchmakingCapacity = 16,
 	ENetworkFailure__ServerShuttingDown = 17,
-	ENetworkFailure__ENetworkFailure_MAX = 18
+	ENetworkFailure__CrewSessionLost = 18,
+	ENetworkFailure__ENetworkFailure_MAX = 19
 };
 
 
@@ -3354,6 +3355,16 @@ enum class ECanvasRenderTargetMips : uint8_t
 	ECanvasRenderTargetMips__Disabled = 0,
 	ECanvasRenderTargetMips__Enabled = 1,
 	ECanvasRenderTargetMips__ECanvasRenderTargetMips_MAX = 2
+};
+
+
+// Enum Engine.ReliabilityType
+enum class EReliabilityType : uint8_t
+{
+	ReliabilityType__Reliable      = 0,
+	ReliabilityType__Unreliable    = 1,
+	ReliabilityType__Count         = 2,
+	ReliabilityType__ReliabilityType_MAX = 3
 };
 
 

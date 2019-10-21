@@ -12,42 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_FishAnimGraph.BP_FishAnimGraph_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_FishAnimGraph_C::BlueprintUpdateAnimation(float DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishAnimGraph.BP_FishAnimGraph_C.BlueprintUpdateAnimation"));
-
-	struct
-	{
-		float                          DeltaTimeX;
-	} params;
-
-	params.DeltaTimeX = DeltaTimeX;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_FishAnimGraph.BP_FishAnimGraph_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UBP_FishAnimGraph_C::BlueprintInitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishAnimGraph.BP_FishAnimGraph_C.BlueprintInitializeAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_StartJump
 // (BlueprintCallable, BlueprintEvent)
 

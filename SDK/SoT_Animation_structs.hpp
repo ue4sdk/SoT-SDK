@@ -56,6 +56,13 @@ struct FAnimationDataStoreAssetReferenceEntry
 	TAssetPtr<class UClass>                            AnimData;                                                 // 0x0008(0x0020) (Edit)
 };
 
+// ScriptStruct Animation.CosmeticItems
+// 0x0010
+struct FCosmeticItems
+{
+	TArray<class AActor*>                              CosmeticItemArray;                                        // 0x0000(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct Animation.DockableInfo
 // 0x0018
 struct FDockableInfo

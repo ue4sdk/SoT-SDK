@@ -18,10 +18,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct Cleanliness.CleanlinessInfo
-// 0x0010
+// 0x0008
 struct FCleanlinessInfo
 {
-	TArray<float>                                      DirtinessTracker;                                         // 0x0000(0x0010) (ZeroConstructor, Transient)
+	TEnumAsByte<EDirtinessType>                        DirtinessType;                                            // 0x0000(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              Strength;                                                 // 0x0004(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
 // ScriptStruct Cleanliness.CleanlinessComponentAggregateTickFunction

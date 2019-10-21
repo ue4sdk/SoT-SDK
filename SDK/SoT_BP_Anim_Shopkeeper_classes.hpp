@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Shopkeeper.BP_Anim_Shopkeeper_C
-// 0x0000 (0x18B5 - 0x18B5)
+// 0x0000 (0x18C5 - 0x18C5)
 class UBP_Anim_Shopkeeper_C : public UBP_Anim_NPC_C
 {
 public:

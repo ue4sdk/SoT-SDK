@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ReefIslandWashedUpCollectorsChestSpawner.BP_ReefIslandWashedUpCollectorsChestSpawner_C
-// 0x0000 (0x0560 - 0x0560)
+// 0x0000 (0x0580 - 0x0580)
 class UBP_ReefIslandWashedUpCollectorsChestSpawner_C : public USalvageItemSpawnComponent
 {
 public:

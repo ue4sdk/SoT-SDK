@@ -13,20 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Cleanliness.CleanlinessComponent.OnRep_CleanlinessInfo
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// struct FCleanlinessInfo        PreviousInfo                   (ConstParm, Parm, OutParm, ReferenceParm)
+// (Final, Native, Private)
 
-void UCleanlinessComponent::OnRep_CleanlinessInfo(const struct FCleanlinessInfo& PreviousInfo)
+void UCleanlinessComponent::OnRep_CleanlinessInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Cleanliness.CleanlinessComponent.OnRep_CleanlinessInfo"));
 
 	struct
 	{
-		struct FCleanlinessInfo        PreviousInfo;
 	} params;
 
-	params.PreviousInfo = PreviousInfo;
 
 	UObject::ProcessEvent(fn, &params);
 }

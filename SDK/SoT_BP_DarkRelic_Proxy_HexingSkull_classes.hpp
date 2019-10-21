@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DarkRelic_Proxy_HexingSkull.BP_DarkRelic_Proxy_HexingSkull_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_DarkRelic_Proxy_HexingSkull_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:

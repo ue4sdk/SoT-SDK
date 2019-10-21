@@ -85,14 +85,15 @@ void UWwiseEmitterBlueprintLibrary::WwiseSetGlobalRTPC(const struct FName& RTPCN
 
 
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostOneShotOnOwner
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UWwiseObjectPoolWrapper* EmitterPool                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FWwiseEmitterCreationParams CreationParams                 (Parm)
+// struct FVector                 Offset                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEmitterRelationship> Relationship                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWwiseEmitterBlueprintLibrary::WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship)
+void UWwiseEmitterBlueprintLibrary::WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, const struct FVector& Offset, TEnumAsByte<EEmitterRelationship> Relationship)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwisePostOneShotOnOwner"));
 
@@ -101,12 +102,14 @@ void UWwiseEmitterBlueprintLibrary::WwisePostOneShotOnOwner(class UObject* Owner
 		class UObject*                 Owner;
 		class UWwiseObjectPoolWrapper* EmitterPool;
 		struct FWwiseEmitterCreationParams CreationParams;
+		struct FVector                 Offset;
 		TEnumAsByte<EEmitterRelationship> Relationship;
 	} params;
 
 	params.Owner = Owner;
 	params.EmitterPool = EmitterPool;
 	params.CreationParams = CreationParams;
+	params.Offset = Offset;
 	params.Relationship = Relationship;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();

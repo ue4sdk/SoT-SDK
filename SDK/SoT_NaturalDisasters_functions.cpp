@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function NaturalDisasters.AshenLordAshCloud.OnRep_StateChanged
+// (Final, Native, Private)
+
+void AAshenLordAshCloud::OnRep_StateChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordAshCloud.OnRep_StateChanged"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function NaturalDisasters.Volcano.OnRep_VolcanoState
 // (Final, Native, Private)
 // Parameters:

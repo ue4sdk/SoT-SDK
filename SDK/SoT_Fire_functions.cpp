@@ -48,21 +48,21 @@ void UFlammableComponent::Multicast_NotifyExtinguished_RPC(const struct FVector&
 }
 
 
-// Function Fire.FirePropagationInterface.SetAllCellsOnFire
+// Function Fire.FirePropagationInterface.SetAllCellsState
 // (BlueprintAuthorityOnly, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsOnFire                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EFireCellState>    State                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UFirePropagationInterface::SetAllCellsOnFire(bool IsOnFire)
+void UFirePropagationInterface::SetAllCellsState(TEnumAsByte<EFireCellState> State)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FirePropagationInterface.SetAllCellsOnFire"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FirePropagationInterface.SetAllCellsState"));
 
 	struct
 	{
-		bool                           IsOnFire;
+		TEnumAsByte<EFireCellState>    State;
 	} params;
 
-	params.IsOnFire = IsOnFire;
+	params.State = State;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -74,6 +74,22 @@ void UFirePropagationInterface::SetAllCellsOnFire(bool IsOnFire)
 void UShipFirePropagationComponent::OnRep_CellData()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.ShipFirePropagationComponent.OnRep_CellData"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Fire.ShipFirePropagationComponent.OnRep_CellCharringData
+// (Final, Native, Private)
+
+void UShipFirePropagationComponent::OnRep_CellCharringData()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.ShipFirePropagationComponent.OnRep_CellCharringData"));
 
 	struct
 	{

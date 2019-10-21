@@ -22,6 +22,17 @@ enum class EInteractionBlockReason : uint8_t
 };
 
 
+// Enum Interaction.EInteractionObject
+enum class EInteractionObject : uint8_t
+{
+	EInteractionObject__None       = 0,
+	EInteractionObject__Shop       = 1,
+	EInteractionObject__Chest      = 2,
+	EInteractionObject__Barrel     = 3,
+	EInteractionObject__EInteractionObject_MAX = 4
+};
+
+
 }
 
 #ifdef _MSC_VER

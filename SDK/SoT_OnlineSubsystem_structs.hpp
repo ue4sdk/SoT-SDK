@@ -57,15 +57,19 @@ struct FInAppPurchaseRestoreInfo
 };
 
 // ScriptStruct OnlineSubsystem.OnlineStoreCatalogItem
-// 0x0060
+// 0x0080
 struct FOnlineStoreCatalogItem
 {
 	class FString                                      ProductId;                                                // 0x0000(0x0010) (ZeroConstructor)
 	class FString                                      Title;                                                    // 0x0010(0x0010) (ZeroConstructor)
 	class FString                                      Description;                                              // 0x0020(0x0010) (ZeroConstructor)
 	class FString                                      FormattedPrice;                                           // 0x0030(0x0010) (ZeroConstructor)
-	class FString                                      ImageUri;                                                 // 0x0040(0x0010) (ZeroConstructor)
-	class FString                                      MetaTag;                                                  // 0x0050(0x0010) (ZeroConstructor)
+	class FString                                      FormattedBasePrice;                                       // 0x0040(0x0010) (ZeroConstructor)
+	bool                                               IsOnSale;                                                 // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FDateTime                                   SaleEndDate;                                              // 0x0058(0x0008) (ZeroConstructor)
+	class FString                                      ImageUri;                                                 // 0x0060(0x0010) (ZeroConstructor)
+	class FString                                      MetaTag;                                                  // 0x0070(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct OnlineSubsystem.InAppPurchaseProductRequest

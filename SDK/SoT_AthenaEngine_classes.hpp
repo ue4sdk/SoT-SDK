@@ -76,21 +76,33 @@ public:
 };
 
 
-// Class AthenaEngine.NetDormancyHelpers
+// Class AthenaEngine.OnlinePlayerPermissionsRetrieverInterface
 // 0x0000 (0x0028 - 0x0028)
-class UNetDormancyHelpers : public UBlueprintFunctionLibrary
+class UOnlinePlayerPermissionsRetrieverInterface : public UInterface
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.NetDormancyHelpers"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.OnlinePlayerPermissionsRetrieverInterface"));
 		return ptr;
 	}
 
+};
 
-	static void SetNetDormancy(class AActor* TargetActor, TEnumAsByte<ENetDormancy> DormancyMode);
-	static void FlushNetDormancy(class AActor* TargetActor);
+
+// Class AthenaEngine.PlayModeInterface
+// 0x0000 (0x0028 - 0x0028)
+class UPlayModeInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.PlayModeInterface"));
+		return ptr;
+	}
+
 };
 
 

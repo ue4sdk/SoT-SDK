@@ -63,7 +63,7 @@ public:
 	static void WwiseStopGlobalEvent(class UWwiseEvent* Event, float FadeTime);
 	static void WwiseSetState(const struct FName& StateGroup, const struct FName& StateValue);
 	static void WwiseSetGlobalRTPC(const struct FName& RTPCName, float RTPCValue);
-	static void WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship);
+	static void WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, const struct FVector& Offset, TEnumAsByte<EEmitterRelationship> Relationship);
 	static int WwisePostGlobalEvent(class UWwiseEvent* Event);
 	static int WwisePostEventAtLocation(class UWwiseEvent* Event, const struct FVector& Location, const struct FVector& Front, class UWwiseObjectPoolWrapper* EmitterPool, TEnumAsByte<EEmitterRelationship> Relationship, struct FWwiseEmitter* Emitter);
 	static bool WwiseIsGlobalEvent(class UWwiseEvent* Event);
@@ -169,11 +169,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x04B0 - 0x04A8)
+// 0x0008 (0x04B8 - 0x04B0)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x04B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -225,7 +225,7 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x04A8 - 0x04A8)
+// 0x0000 (0x04B0 - 0x04B0)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -353,6 +353,23 @@ public:
 
 
 	class UAudioSpaceDataAsset* GetCurrentSpace();
+};
+
+
+// Class RareAudio.MockAudioComponent
+// 0x0010 (0x00E0 - 0x00D0)
+class UMockAudioComponent : public UActorComponent
+{
+public:
+	class UWwiseObjectPoolWrapper*                     SfxPool;                                                  // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 SfxEvent;                                                 // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.MockAudioComponent"));
+		return ptr;
+	}
+
 };
 
 
@@ -493,7 +510,7 @@ public:
 
 
 // Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x04A8 - 0x04A8)
+// 0x0000 (0x04B0 - 0x04B0)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Snake_WNW.BP_Constellation_Snake_WNW_C
-// 0x0000 (0x0548 - 0x0548)
+// 0x0000 (0x0550 - 0x0550)
 class ABP_Constellation_Snake_WNW_C : public ABP_Constellation_C
 {
 public:

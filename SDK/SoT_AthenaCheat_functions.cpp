@@ -1651,6 +1651,22 @@ void UAthenaCheatManager::SpawnStrongholdKey()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnStandardStrongholdKey
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SpawnStandardStrongholdKey()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnStandardStrongholdKey"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnSmallShipAtIsland
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2163,6 +2179,22 @@ void UAthenaCheatManager::SpawnGeyserAtLocation(float LocationX, float LocationY
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SpawnFortOfTheDammedStrongholdKey
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SpawnFortOfTheDammedStrongholdKey()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnFortOfTheDammedStrongholdKey"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SpawnFogAtPlayerPosition
 // (Final, Exec, Native, Public)
 
@@ -2455,12 +2487,64 @@ void UAthenaCheatManager::SpawnAI(const class FString& AIDescString)
 }
 
 
-// Function AthenaCheat.AthenaCheatManager.SpawnAggressiveGhostShip
+// Function AthenaCheat.AthenaCheatManager.SpawnAggressiveGhostShipEncounter
 // (Final, Exec, Native, Public)
 
-void UAthenaCheatManager::SpawnAggressiveGhostShip()
+void UAthenaCheatManager::SpawnAggressiveGhostShipEncounter()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnAggressiveGhostShipEncounter"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SpawnAggressiveGhostShip
+// (Final, Exec, Native, Public)
+// Parameters:
+// int                            DifficultyIndex                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SpawnAggressiveGhostShip(int DifficultyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnAggressiveGhostShip"));
+
+	struct
+	{
+		int                            DifficultyIndex;
+	} params;
+
+	params.DifficultyIndex = DifficultyIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SmoulderClosestShipFire
+// (Final, Exec, Native, Public, BlueprintCallable)
+
+void UAthenaCheatManager::SmoulderClosestShipFire()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SmoulderClosestShipFire"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SmoulderAllShipFires
+// (Final, Exec, Native, Public, BlueprintCallable)
+
+void UAthenaCheatManager::SmoulderAllShipFires()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SmoulderAllShipFires"));
 
 	struct
 	{
@@ -3237,6 +3321,22 @@ void UAthenaCheatManager::SetSailAngles(float Angle)
 	} params;
 
 	params.Angle = Angle;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetPreventLeakingOnAllShips
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SetPreventLeakingOnAllShips()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetPreventLeakingOnAllShips"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -4639,6 +4739,42 @@ void UAthenaCheatManager::LocallyUnBreakLeg()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.LightLocalBraziers
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::LightLocalBraziers()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.LightLocalBraziers"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.LightBraziersInRadius
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          Radius                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::LightBraziersInRadius(float Radius)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.LightBraziersInRadius"));
+
+	struct
+	{
+		float                          Radius;
+	} params;
+
+	params.Radius = Radius;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.LeaveAlliance
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -4877,6 +5013,38 @@ void UAthenaCheatManager::KrakenAnimatedTentacleChangePlayerHoldState(const clas
 	} params;
 
 	params.HoldState = HoldState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.KindleClosestShip
+// (Final, Exec, Native, Public, BlueprintCallable)
+
+void UAthenaCheatManager::KindleClosestShip()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.KindleClosestShip"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.KindleAllShipFires
+// (Final, Exec, Native, Public, BlueprintCallable)
+
+void UAthenaCheatManager::KindleAllShipFires()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.KindleAllShipFires"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -6673,6 +6841,26 @@ void UAthenaCheatManager::DebugIslandDelta()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.DeactivateSkellyFortOfTheDamned
+// (Final, Exec, Native, Public, HasOutParms)
+// Parameters:
+// class FString                  FortName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UAthenaCheatManager::DeactivateSkellyFortOfTheDamned(const class FString& FortName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DeactivateSkellyFortOfTheDamned"));
+
+	struct
+	{
+		class FString                  FortName;
+	} params;
+
+	params.FortName = FortName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.DeactivateSkellyFort
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:
@@ -7380,6 +7568,22 @@ void UAthenaCheatManager::AIPlayerShip()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.AggressiveGhostShipEncounterGoToNextWave
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::AggressiveGhostShipEncounterGoToNextWave()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.AggressiveGhostShipEncounterGoToNextWave"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.AdjustGhostShader
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -7544,6 +7748,26 @@ void UAthenaCheatManager::AddDrunkenness(int DrunkennessType, float DrunkennessC
 
 	params.DrunkennessType = DrunkennessType;
 	params.DrunkennessChange = DrunkennessChange;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ActivateSkellyFortOfTheDamned
+// (Final, Exec, Native, Public, HasOutParms)
+// Parameters:
+// class FString                  FortName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UAthenaCheatManager::ActivateSkellyFortOfTheDamned(const class FString& FortName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ActivateSkellyFortOfTheDamned"));
+
+	struct
+	{
+		class FString                  FortName;
+	} params;
+
+	params.FortName = FortName;
 
 	UObject::ProcessEvent(fn, &params);
 }

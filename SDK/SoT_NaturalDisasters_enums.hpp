@@ -12,6 +12,16 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum NaturalDisasters.EAshCloudState
+enum class EAshCloudState : uint8_t
+{
+	EAshCloudState__Spawning       = 0,
+	EAshCloudState__Active         = 1,
+	EAshCloudState__Dissipating    = 2,
+	EAshCloudState__EAshCloudState_MAX = 3
+};
+
+
 // Enum NaturalDisasters.EVolcanoTargetHitType
 enum class EVolcanoTargetHitType : uint8_t
 {

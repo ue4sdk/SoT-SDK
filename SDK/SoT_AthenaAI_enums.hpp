@@ -61,14 +61,14 @@ enum class EAthenaAISpawnType : uint8_t
 };
 
 
-// Enum AthenaAI.ComponentClassLoadState
-enum class EComponentClassLoadState : uint8_t
+// Enum AthenaAI.ClassLoadState
+enum class EClassLoadState : uint8_t
 {
-	ComponentClassLoadState__Incomplete = 0,
-	ComponentClassLoadState__Success = 1,
-	ComponentClassLoadState__NoLoad = 2,
-	ComponentClassLoadState__Failed = 3,
-	ComponentClassLoadState__ComponentClassLoadState_MAX = 4
+	ClassLoadState__Incomplete     = 0,
+	ClassLoadState__Success        = 1,
+	ClassLoadState__NoLoad         = 2,
+	ClassLoadState__Failed         = 3,
+	ClassLoadState__ClassLoadState_MAX = 4
 };
 
 
@@ -89,12 +89,10 @@ enum class EAISpawnRequestState : uint8_t
 {
 	AISpawnRequestState__AwaitingBegin = 0,
 	AISpawnRequestState__DelayUntilNextCanSpawnCheck = 1,
-	AISpawnRequestState__WaitForClassLoad = 2,
-	AISpawnRequestState__WaitForLocationResult = 3,
-	AISpawnRequestState__DelayUntilNextLocationCheck = 4,
-	AISpawnRequestState__WaitForItemDropComponentClassLoad = 5,
-	AISpawnRequestState__Complete  = 6,
-	AISpawnRequestState__AISpawnRequestState_MAX = 7
+	AISpawnRequestState__WaitForClassLoadsAndLocationResult = 2,
+	AISpawnRequestState__DelayUntilNextLocationCheck = 3,
+	AISpawnRequestState__Complete  = 4,
+	AISpawnRequestState__AISpawnRequestState_MAX = 5
 };
 
 
@@ -153,27 +151,6 @@ enum class EAIKnockbackStrengthType : uint8_t
 	EAIKnockbackStrengthType__Medium = 1,
 	EAIKnockbackStrengthType__High = 2,
 	EAIKnockbackStrengthType__EAIKnockbackStrengthType_MAX = 3
-};
-
-
-// Enum AthenaAI.ECustomAiEventDuringDeathEnum
-enum class ECustomAiEventDuringDeathEnum : uint8_t
-{
-	ECustomAiEventDuringDeathEnum__None = 0,
-	ECustomAiEventDuringDeathEnum__StartSinking = 1,
-	ECustomAiEventDuringDeathEnum__StartSinkingAnim = 2,
-	ECustomAiEventDuringDeathEnum__ECustomAiEventDuringDeathEnum_MAX = 3
-};
-
-
-// Enum AthenaAI.EBT_ShipOwnership
-enum class EBT_ShipOwnership : uint8_t
-{
-	EBT_ShipOwnership__Any         = 0,
-	EBT_ShipOwnership__Crew        = 1,
-	EBT_ShipOwnership__Alliance    = 2,
-	EBT_ShipOwnership__AI          = 3,
-	EBT_ShipOwnership__EBT_MAX     = 4
 };
 
 
@@ -346,16 +323,6 @@ enum class EPetSize : uint8_t
 	EPetSize__Medium               = 1,
 	EPetSize__Large                = 2,
 	EPetSize__EPetSize_MAX         = 3
-};
-
-
-// Enum AthenaAI.EPetFeedingReactionType
-enum class EPetFeedingReactionType : uint8_t
-{
-	EPetFeedingReactionType__None  = 0,
-	EPetFeedingReactionType__Sick  = 1,
-	EPetFeedingReactionType__Happy = 2,
-	EPetFeedingReactionType__EPetFeedingReactionType_MAX = 3
 };
 
 

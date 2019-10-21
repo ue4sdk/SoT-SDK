@@ -49,6 +49,14 @@ struct FWeightedProbabilityRangeOfRanges : public FWeightedProbabilityRange
 	TArray<struct FWeightedProbabilityRangeOfRangesFloatPair> SubRanges;                                                // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
+// ScriptStruct Maths.CurveFloatHelper
+// 0x0048
+struct FCurveFloatHelper
+{
+	class UCurveFloat*                                 CurvePointer;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0008(0x0040) MISSED OFFSET
+};
+
 // ScriptStruct Maths.InertialSmoothedFloat
 // 0x0010
 struct FInertialSmoothedFloat

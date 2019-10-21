@@ -36,16 +36,17 @@ public:
 class UMusicZoneComponent : public USceneComponent
 {
 public:
-	float                                              InnerRadius;                                              // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OuterRadius;                                              // 0x02C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       LocationRTPC;                                             // 0x02C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LocalRTPC;                                                // 0x02D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InnerRadius;                                              // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OuterRadius;                                              // 0x02C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       LocationRTPC;                                             // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               LocalRTPC;                                                // 0x02D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x02D1(0x0007) MISSED OFFSET
-	class UWwiseEvent*                                 PlayEvent;                                                // 0x02D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopEvent;                                                // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DisableAfterPlayThrough;                                  // 0x02F0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6F];                                      // 0x02F1(0x006F) MISSED OFFSET
+	class UWwiseEvent*                                 PlayEvent;                                                // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopEvent;                                                // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableAfterPlayThrough;                                  // 0x02F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               ActivateOnBeginPlay;                                      // 0x02F1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6E];                                      // 0x02F2(0x006E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -113,11 +114,11 @@ public:
 
 
 // Class Music.MusicZoneService
-// 0x00A8 (0x0550 - 0x04A8)
+// 0x00A8 (0x0558 - 0x04B0)
 class AMusicZoneService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x04A8(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x04B0(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

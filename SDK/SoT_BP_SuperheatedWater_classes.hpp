@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SuperheatedWater.BP_SuperheatedWater_C
-// 0x0000 (0x0648 - 0x0648)
+// 0x0000 (0x0650 - 0x0650)
 class ABP_SuperheatedWater_C : public ASuperheatedWater
 {
 public:

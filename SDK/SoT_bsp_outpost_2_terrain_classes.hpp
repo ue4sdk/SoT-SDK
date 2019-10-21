@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bsp_outpost_2_terrain.bsp_outpost_2_terrain_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04B8 - 0x04B8)
 class Absp_outpost_2_terrain_C : public ALevelScriptActor
 {
 public:

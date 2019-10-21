@@ -164,6 +164,54 @@ public:
 };
 
 
+// Class Animation.CosmeticItemAnimationComponent
+// 0x0058 (0x0128 - 0x00D0)
+class UCosmeticItemAnimationComponent : public UActorComponent
+{
+public:
+	TMap<class USkeletalMeshComponent*, struct FCosmeticItems> CosmeticItems;                                            // 0x00D0(0x0050) (ZeroConstructor)
+	class UCosmeticItemAnimationDataAsset*             DataAsset;                                                // 0x0120(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CosmeticItemAnimationComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CosmeticItemAnimationDataAsset
+// 0x0038 (0x0060 - 0x0028)
+class UCosmeticItemAnimationDataAsset : public UDataAsset
+{
+public:
+	struct FName                                       WieldSockets[0x7];                                        // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CosmeticItemAnimationDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CosmeticItemAnimationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCosmeticItemAnimationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CosmeticItemAnimationInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.CustomAnimationInstanceInterface
 // 0x0000 (0x0028 - 0x0028)
 class UCustomAnimationInstanceInterface : public UInterface

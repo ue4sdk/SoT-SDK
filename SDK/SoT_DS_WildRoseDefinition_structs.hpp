@@ -17,7 +17,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct DS_WildRoseDefinition.DS_WildRoseDefinition
-// 0x0118
+// 0x0120
 struct FDS_WildRoseDefinition
 {
 	TArray<struct FDS_Puzzle>                          ChestOfMemoriesLocations_21_13FB91184431A95EB8CDBB962DA13E5F;// 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -33,6 +33,7 @@ struct FDS_WildRoseDefinition
 	TAssetPtr<class AActor>                            EndingPlaceableReaction_65_BC62F11B4F31D1CD09909DB61EC3424A;// 0x00E0(0x0020) (Edit, BlueprintVisible)
 	TArray<TAssetPtr<class AActor>>                    RookeEncounterLocations_70_D730B5D941A7696F2395438230EDFD05;// 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	class UClass*                                      ChestOfMemoriesType_77_8FB538BD426853AD330009A85D9EC392;  // 0x0110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAIDioramaDesc*                              RookeEncounterDioramaDesc_81_98CF2C1C42879EB5814866BEA610864B;// 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

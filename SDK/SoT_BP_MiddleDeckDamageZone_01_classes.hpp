@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MiddleDeckDamageZone_01.BP_MiddleDeckDamageZone_01_C
-// 0x0000 (0x0888 - 0x0888)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_MiddleDeckDamageZone_01_C : public ABP_BaseInternalDamageZone_C
 {
 public:

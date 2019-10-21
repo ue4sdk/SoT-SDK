@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidGem_Wieldable_Ruby.BP_MermaidGem_Wieldable_Ruby_C
-// 0x0000 (0x07F0 - 0x07F0)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABP_MermaidGem_Wieldable_Ruby_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:

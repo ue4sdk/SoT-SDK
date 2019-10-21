@@ -636,6 +636,70 @@ void UBP_Anim_NPC_C::AnimNotify_NPCDeactivateCustomAnimSequence()
 }
 
 
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketB
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DetachSocketB()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketB"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketB
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DetachSocketB()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketB"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketA
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DetachSocketA()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketA"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketA
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DetachSocketA()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketA"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_UseItem_11
 // (BlueprintCallable, BlueprintEvent)
 

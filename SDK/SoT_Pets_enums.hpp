@@ -53,6 +53,16 @@ enum class EWieldablePetDropRequestReason : uint8_t
 };
 
 
+// Enum Pets.EPetFeedingReactionType
+enum class EPetFeedingReactionType : uint8_t
+{
+	EPetFeedingReactionType__None  = 0,
+	EPetFeedingReactionType__Sick  = 1,
+	EPetFeedingReactionType__Happy = 2,
+	EPetFeedingReactionType__EPetFeedingReactionType_MAX = 3
+};
+
+
 }
 
 #ifdef _MSC_VER

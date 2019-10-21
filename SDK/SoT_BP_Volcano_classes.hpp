@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Volcano.BP_Volcano_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0678 - 0x0678)
 class ABP_Volcano_C : public AVolcano
 {
 public:

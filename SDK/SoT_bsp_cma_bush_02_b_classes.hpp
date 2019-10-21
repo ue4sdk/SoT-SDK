@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bsp_cma_bush_02_b.bsp_cma_bush_02_b_C
-// 0x0000 (0x04C0 - 0x04C0)
+// 0x0000 (0x04C8 - 0x04C8)
 class Absp_cma_bush_02_b_C : public ACoveredMeshActor
 {
 public:
