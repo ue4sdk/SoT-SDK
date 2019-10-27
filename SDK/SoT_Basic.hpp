@@ -20,13 +20,13 @@ inline Fn GetVFunction(const void *instance, std::size_t index)
 
 class UObject;
 
-class FUObjectItem //it's UObjectBase from UE4 v4.10
+class FUObjectItem
 {
 public:
 	UObject* Object;
 	int32_t Flags;
 	int32_t ClusterIndex; 
-	//__int32 SerialNumber;
+	int32_t SerialNumber;
 
 	enum class EInternalObjectFlags : int32_t
 	{

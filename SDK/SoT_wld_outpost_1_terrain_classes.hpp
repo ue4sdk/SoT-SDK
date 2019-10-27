@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_outpost_1_terrain.wld_outpost_1_terrain_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04B8 - 0x04B8)
 class Awld_outpost_1_terrain_C : public ALevelScriptActor
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwreckBananaSpawner.BP_ShipwreckBananaSpawner_C
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x0450 - 0x0450)
 class UBP_ShipwreckBananaSpawner_C : public UItemSpawnComponent
 {
 public:

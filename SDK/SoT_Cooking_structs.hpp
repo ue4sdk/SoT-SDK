@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Cooking_enums.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 
 namespace SDK
 {
@@ -58,12 +58,24 @@ struct FCookingClientRepresentation
 };
 
 // ScriptStruct Cooking.CookingInfo
-// 0x0008
+// 0x000C
 struct FCookingInfo
 {
-	TEnumAsByte<ECookingSmokeFeedbackLevel>            SmokeFeedbackLevel;                                       // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	float                                              VisibleCookedExtent;                                      // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct Cooking.OnItemStartedCooking
+// 0x0010
+struct FOnItemStartedCooking
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct Cooking.OnItemStoppedCooking
+// 0x0001
+struct FOnItemStoppedCooking
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Cooking.CookEndTelemetryEvent

@@ -124,6 +124,132 @@ void ARowboat::OnRep_IsSinking()
 }
 
 
+// Function Watercrafts.RowingCompositeInputHandler.OnUseRightOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnUseRightOar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.RowingCompositeInputHandler.OnUseRightOar"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Watercrafts.RowingCompositeInputHandler.OnUseLeftOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnUseLeftOar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.RowingCompositeInputHandler.OnUseLeftOar"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Watercrafts.RowingCompositeInputHandler.OnStopUseRightOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnStopUseRightOar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.RowingCompositeInputHandler.OnStopUseRightOar"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Watercrafts.RowingCompositeInputHandler.OnStopUseLeftOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnStopUseLeftOar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.RowingCompositeInputHandler.OnStopUseLeftOar"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Watercrafts.RowingCompositeInputHandler.OnBrakeRightOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnBrakeRightOar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.RowingCompositeInputHandler.OnBrakeRightOar"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Watercrafts.RowingCompositeInputHandler.OnBrakeLeftOar
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EInputHandlerResult> URowingCompositeInputHandler::OnBrakeLeftOar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.RowingCompositeInputHandler.OnBrakeLeftOar"));
+
+	struct
+	{
+		TEnumAsByte<EInputHandlerResult> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -150,31 +276,6 @@ class AWatercraft* UWatercraftBlueprintFunctionLibrary::SpawnWatercraft(class UO
 	params.WatercraftClass = WatercraftClass;
 	params.Location = Location;
 	params.Rotation = Rotation;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AAthenaCharacter*        AthenaCharacter                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWatercraftBlueprintFunctionLibrary::IsCharacterOnWatercraft(class AAthenaCharacter* AthenaCharacter)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Watercrafts.WatercraftBlueprintFunctionLibrary.IsCharacterOnWatercraft"));
-
-	struct
-	{
-		class AAthenaCharacter*        AthenaCharacter;
-		bool                           ReturnValue;
-	} params;
-
-	params.AthenaCharacter = AthenaCharacter;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

@@ -18,8 +18,9 @@ enum class EPetDangerHearingResponseType : uint8_t
 	EPetDangerHearingResponseType__RunAway = 0,
 	EPetDangerHearingResponseType__RunToHangoutSpot = 1,
 	EPetDangerHearingResponseType__TurnToward = 2,
-	EPetDangerHearingResponseType__MAX = 3,
-	EPetDangerHearingResponseType__EPetDangerHearingResponseType_MAX = 4
+	EPetDangerHearingResponseType__RunToOwner = 3,
+	EPetDangerHearingResponseType__MAX = 4,
+	EPetDangerHearingResponseType__EPetDangerHearingResponseType_MAX = 5
 };
 
 
@@ -50,6 +51,16 @@ enum class EWieldablePetDropRequestReason : uint8_t
 	EWieldablePetDropRequestReason__Submerged = 1,
 	EWieldablePetDropRequestReason__Escaped = 2,
 	EWieldablePetDropRequestReason__EWieldablePetDropRequestReason_MAX = 3
+};
+
+
+// Enum Pets.EPetFeedingReactionType
+enum class EPetFeedingReactionType : uint8_t
+{
+	EPetFeedingReactionType__None  = 0,
+	EPetFeedingReactionType__Sick  = 1,
+	EPetFeedingReactionType__Happy = 2,
+	EPetFeedingReactionType__EPetFeedingReactionType_MAX = 3
 };
 
 

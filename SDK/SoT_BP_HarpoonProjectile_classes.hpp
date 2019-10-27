@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HarpoonProjectile.BP_HarpoonProjectile_C
-// 0x0000 (0x0770 - 0x0770)
+// 0x0000 (0x0788 - 0x0788)
 class ABP_HarpoonProjectile_C : public AHarpoonProjectile
 {
 public:

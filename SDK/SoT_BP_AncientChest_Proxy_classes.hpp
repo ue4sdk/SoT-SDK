@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AncientChest_Proxy.BP_AncientChest_Proxy_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08E0 - 0x08E0)
 class ABP_AncientChest_Proxy_C : public ABP_TreasureChestProxy_C
 {
 public:

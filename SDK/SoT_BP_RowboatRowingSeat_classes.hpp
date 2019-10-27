@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatRowingSeat.BP_RowboatRowingSeat_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0008 (0x0878 - 0x0870)
 class ABP_RowboatRowingSeat_C : public ARowingSeat
 {
 public:
+	class UWwiseEmitterComponent*                      RowboatEmitter;                                           // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

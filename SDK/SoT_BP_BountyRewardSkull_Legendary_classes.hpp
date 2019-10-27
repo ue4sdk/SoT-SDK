@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Legendary.BP_BountyRewardSkull_Legendary_C
-// 0x0010 (0x0800 - 0x07F0)
+// 0x0010 (0x0840 - 0x0830)
 class ABP_BountyRewardSkull_Legendary_C : public ABP_BountyRewardSkull_C
 {
 public:
-	class UParticleSystemComponent*                    VFX_Skull_Glow_1st;                                       // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    VFX_Skull_Glow_3rd;                                       // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    VFX_Skull_Glow_1st;                                       // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    VFX_Skull_Glow_3rd;                                       // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

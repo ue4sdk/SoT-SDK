@@ -212,6 +212,26 @@ public:
 };
 
 
+// Class Maths.ProjectileMaths
+// 0x0000 (0x0028 - 0x0028)
+class UProjectileMaths : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.ProjectileMaths"));
+		return ptr;
+	}
+
+
+	static float PredictProjectileFlightTime(float Speed, float Gravity, float Pitch, float Height);
+	static float FindProjectileSpeedModifierToHitTarget(const struct FVector& From, const struct FVector& Target, float Pitch, float ProjectileSpeed, float Gravity);
+	static bool FindAimDirectionToHitTarget(const struct FVector& From, const struct FVector& Target, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FRotator* OutAimDirection);
+	static bool CalculateLaunchVelocity(const struct FVector& From, const struct FVector& Target, const struct FVector& TargetVelocity, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FVector* OutLaunchVelocty, float* OutFlightTime);
+};
+
+
 // Class Maths.RotationMaths
 // 0x0000 (0x0028 - 0x0028)
 class URotationMaths : public UBlueprintFunctionLibrary

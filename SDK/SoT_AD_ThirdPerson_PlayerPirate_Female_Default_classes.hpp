@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Default.AD_ThirdPerson_PlayerPirate_Female_Default_C
-// 0x07E8 (0x0810 - 0x0028)
+// 0x0780 (0x07A8 - 0x0028)
 class UAD_ThirdPerson_PlayerPirate_Female_Default_C : public UAnimationData
 {
 public:
@@ -48,9 +48,8 @@ public:
 	struct FADS_SkeletonEmoteActions                   SkeletonActionEmotes;                                     // 0x0668(0x0010) (Edit, BlueprintVisible)
 	struct FADS_RowingBoatNative                       Rowboat;                                                  // 0x0678(0x0098) (Edit, BlueprintVisible)
 	struct FADS_SkeletonCaptainNative                  SkeletonShipCaptain;                                      // 0x0710(0x0048) (Edit, BlueprintVisible)
-	struct FADS_WhisperingNative                       Whispering;                                               // 0x0758(0x0068) (Edit, BlueprintVisible)
-	struct FADS_SkeletonCurseNative                    SkeletonCurse;                                            // 0x07C0(0x0028) (Edit, BlueprintVisible)
-	struct FADS_WaterPumpNative                        WaterPump;                                                // 0x07E8(0x0028) (Edit, BlueprintVisible)
+	struct FADS_SkeletonCurseNative                    SkeletonCurse;                                            // 0x0758(0x0028) (Edit, BlueprintVisible)
+	struct FADS_WaterPumpNative                        WaterPump;                                                // 0x0780(0x0028) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

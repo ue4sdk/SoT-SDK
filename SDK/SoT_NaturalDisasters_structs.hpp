@@ -11,8 +11,8 @@
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {

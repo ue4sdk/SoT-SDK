@@ -79,6 +79,21 @@ public:
 };
 
 
+// Class Animation.AnimationDataOverriderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAnimationDataOverriderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataOverriderInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.AnimationDataStoreOverrideId
 // 0x0000 (0x0028 - 0x0028)
 class UAnimationDataStoreOverrideId : public UAnimationDataStoreId
@@ -149,6 +164,99 @@ public:
 };
 
 
+// Class Animation.AnimNotify_DestroyCosmeticItem
+// 0x0008 (0x0038 - 0x0030)
+class UAnimNotify_DestroyCosmeticItem : public UAnimNotify
+{
+public:
+	TEnumAsByte<EWieldAnimationLocation>               DestroyLocation;                                          // 0x0030(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotify_DestroyCosmeticItem"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AnimNotify_SetCosmeticItemVisibility
+// 0x0008 (0x0038 - 0x0030)
+class UAnimNotify_SetCosmeticItemVisibility : public UAnimNotify
+{
+public:
+	TEnumAsByte<EWieldAnimationLocation>               ItemLocation;                                             // 0x0030(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               Visible;                                                  // 0x0031(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               RenderShadow;                                             // 0x0032(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               RenderShadowWhenHidden;                                   // 0x0033(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               UpdateForRole;                                            // 0x0034(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ENetRole>                              UpdateRole;                                               // 0x0035(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0036(0x0002) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotify_SetCosmeticItemVisibility"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AnimNotify_SpawnCosmeticItem
+// 0x0010 (0x0040 - 0x0030)
+class UAnimNotify_SpawnCosmeticItem : public UAnimNotify
+{
+public:
+	class UClass*                                      ItemSpawnClass;                                           // 0x0030(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWieldAnimationLocation>               SpawnLocation;                                            // 0x0038(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               SpawnHidden;                                              // 0x0039(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               SpawnForRole;                                             // 0x003A(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ENetRole>                              SpawnRole;                                                // 0x003B(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotify_SpawnCosmeticItem"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AnimNotify_SwitchCosmeticItemAttachment
+// 0x0008 (0x0038 - 0x0030)
+class UAnimNotify_SwitchCosmeticItemAttachment : public UAnimNotify
+{
+public:
+	TEnumAsByte<EWieldAnimationLocation>               PreviousLocation;                                         // 0x0030(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EWieldAnimationLocation>               NewLocation;                                              // 0x0031(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotify_SwitchCosmeticItemAttachment"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CharacterIKInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCharacterIKInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CharacterIKInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.ClientSkeletalMeshComponent
 // 0x0000 (0x09A0 - 0x09A0)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
@@ -164,6 +272,72 @@ public:
 };
 
 
+// Class Animation.CosmeticItemAnimationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCosmeticItemAnimationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CosmeticItemAnimationInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CosmeticItemAnimationComponent
+// 0x0060 (0x0130 - 0x00D0)
+class UCosmeticItemAnimationComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	TMap<class USkeletalMeshComponent*, struct FCosmeticItems> CosmeticItems;                                            // 0x00D8(0x0050) (ZeroConstructor)
+	class UCosmeticItemAnimationDataAsset*             DataAsset;                                                // 0x0128(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CosmeticItemAnimationComponent"));
+		return ptr;
+	}
+
+
+	void DestroyAllCosmeticItems();
+};
+
+
+// Class Animation.CosmeticItemAnimationDataAsset
+// 0x0038 (0x0060 - 0x0028)
+class UCosmeticItemAnimationDataAsset : public UDataAsset
+{
+public:
+	struct FName                                       WieldSockets[0x7];                                        // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CosmeticItemAnimationDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CustomAnimationHandlerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCustomAnimationHandlerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CustomAnimationHandlerInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.CustomAnimationInstanceInterface
 // 0x0000 (0x0028 - 0x0028)
 class UCustomAnimationInstanceInterface : public UInterface
@@ -173,6 +347,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CustomAnimationInstanceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CustomAnimationInstanceProviderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCustomAnimationInstanceProviderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CustomAnimationInstanceProviderInterface"));
 		return ptr;
 	}
 
@@ -228,6 +417,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.DockerInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.DockingAnimationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UDockingAnimationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.DockingAnimationInterface"));
 		return ptr;
 	}
 

@@ -34,8 +34,6 @@ public:
 	}
 
 
-	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void BlueprintInitializeAnimation();
 	void AnimNotify_StartJump();
 	void AnimNotify_EndJump();
 	void ExecuteUbergraph_BP_FishAnimGraph(int EntryPoint);

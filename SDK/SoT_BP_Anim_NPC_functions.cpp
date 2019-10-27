@@ -28,22 +28,6 @@ void UBP_Anim_NPC_C::PlayItemAnimation()
 }
 
 
-// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_HIKLookAt_EEAD7D6244A884C61ADBCF80093831EE
-// (BlueprintEvent)
-
-void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_HIKLookAt_EEAD7D6244A884C61ADBCF80093831EE()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_HIKLookAt_EEAD7D6244A884C61ADBCF80093831EE"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_TransitionResult_B7D7BFE443C78A4DB09BF2954F9FB2A7
 // (BlueprintEvent)
 
@@ -306,38 +290,6 @@ void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_Ani
 void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_SequencePlayer_4E02885E41EFF57B50C89389FF9A70BC()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_SequencePlayer_4E02885E41EFF57B50C89389FF9A70BC"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_B01736E249D02A7A50013BA31AE82AEC
-// (BlueprintEvent)
-
-void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_B01736E249D02A7A50013BA31AE82AEC()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_B01736E249D02A7A50013BA31AE82AEC"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045
-// (BlueprintEvent)
-
-void UBP_Anim_NPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_AnimGraphNode_BlendListByBool_38A355404EEEE5988EB14899B8FB3045"));
 
 	struct
 	{
@@ -626,6 +578,70 @@ void UBP_Anim_NPC_C::AnimNotify_NPCSelectNewCustomAnim_A()
 void UBP_Anim_NPC_C::AnimNotify_NPCDeactivateCustomAnimSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_NPCDeactivateCustomAnimSequence"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketB
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DetachSocketB()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketB"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketB
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DetachSocketB()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketB"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketA
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_RH_DetachSocketA()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_RH_DetachSocketA"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketA
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anim_NPC_C::AnimNotify_LH_DetachSocketA()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC.BP_Anim_NPC_C.AnimNotify_LH_DetachSocketA"));
 
 	struct
 	{
@@ -1053,7 +1069,7 @@ void UBP_Anim_NPC_C::AnimNotify_LH_UseItem_2()
 
 
 // Function BP_Anim_NPC.BP_Anim_NPC_C.ExecuteUbergraph_BP_Anim_NPC
-// (HasDefaults)
+// ()
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

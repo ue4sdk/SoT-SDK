@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyRewardSkull_Ritual.BP_BountyRewardSkull_Ritual_C
-// 0x0000 (0x07F0 - 0x07F0)
+// 0x0000 (0x0830 - 0x0830)
 class ABP_BountyRewardSkull_Ritual_C : public ABP_BountyRewardSkull_C
 {
 public:

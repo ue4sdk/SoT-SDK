@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_goblet_01_a.BP_Treasure_Artifact_Proxy_goblet_01_a_C
-// 0x0000 (0x0838 - 0x0838)
+// 0x0000 (0x0848 - 0x0848)
 class ABP_Treasure_Artifact_Proxy_goblet_01_a_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

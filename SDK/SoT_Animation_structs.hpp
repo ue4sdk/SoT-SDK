@@ -10,6 +10,7 @@
 #include "SoT_Animation_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -54,6 +55,13 @@ struct FAnimationDataStoreAssetReferenceEntry
 {
 	class UClass*                                      AnimDataId;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TAssetPtr<class UClass>                            AnimData;                                                 // 0x0008(0x0020) (Edit)
+};
+
+// ScriptStruct Animation.CosmeticItems
+// 0x0010
+struct FCosmeticItems
+{
+	TArray<class AActor*>                              CosmeticItemArray;                                        // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Animation.DockableInfo
@@ -108,6 +116,13 @@ struct FTransformBlendCurve
 	struct FTransform                                  SourceTransform;                                          // 0x0470(0x0030) (Edit, IsPlainOldData)
 	struct FTransform                                  TargetTransform;                                          // 0x04A0(0x0030) (Edit, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x30];                                      // 0x04D0(0x0030) MISSED OFFSET
+};
+
+// ScriptStruct Animation.EventCosmeticItemAttachmentSwitched
+// 0x0008
+struct FEventCosmeticItemAttachmentSwitched
+{
+	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Animation.EventDockableObjectDestroyed

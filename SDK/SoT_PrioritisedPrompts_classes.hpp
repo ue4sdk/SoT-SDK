@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class PrioritisedPrompts.BasePromptCoordinator
-// 0x0030 (0x0058 - 0x0028)
+// 0x00B8 (0x00E0 - 0x0028)
 class UBasePromptCoordinator : public UObject
 {
 public:
 	class AAthenaPlayerController*                     PlayerController;                                         // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	class UPrioritisedPromptsManager*                  PrioritisedPromptsManager;                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0038(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0038(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -30,22 +30,35 @@ public:
 	}
 
 
+	void UpdateVisiblePrompt();
+	void UnregisterOtherEvents_Implementable();
+	void UnregisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher);
 	void Uninitialize_Implementable();
 	void Uninitialize();
 	void Start();
 	void SetPromptAs(const struct FPrioritisedPromptWithHandle& Prompt);
+	void RegisterOtherEvents_Implementable();
+	void RegisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher);
+	void OnControllerEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void MarkAsComplete_Implementable();
+	static struct FPromptEvaluation MakeShowPrompt(const struct FPrioritisedPromptWithHandle& Prompt);
+	static struct FPromptEvaluation MakeHideCurrentPrompts();
+	static struct FPromptEvaluation MakeCompleteCoordinator();
 	void Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager);
+	bool GetCompleted();
+	struct FPromptEvaluation EvaluatePromptDisplayState();
 	void DismissAllPrompts();
 };
 
 
 // Class PrioritisedPrompts.PrioritisedPromptsManager
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UPrioritisedPromptsManager : public UObject
 {
 public:
 	TArray<struct FPrioritisedPromptWithHandle>        AllPrompts;                                               // 0x0028(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+	class APlayerController*                           PlayerController;                                         // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

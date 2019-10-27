@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TinyShark_Zone.BP_TinyShark_Zone_C
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x0520 - 0x0520)
 class ABP_TinyShark_Zone_C : public AHungeringDeep
 {
 public:

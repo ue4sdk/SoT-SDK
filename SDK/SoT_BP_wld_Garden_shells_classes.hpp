@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wld_Garden_shells.BP_wld_Garden_shells_C
-// 0x0000 (0x054D - 0x054D)
+// 0x0000 (0x0555 - 0x0555)
 class ABP_wld_Garden_shells_C : public ABP_Placement_Garden_C
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_BilgeRat8.BP_Anim_BilgeRat8_C
-// 0x0000 (0x18A5 - 0x18A5)
+// 0x0000 (0x18E5 - 0x18E5)
 class UBP_Anim_BilgeRat8_C : public UBP_Anim_NPC_C
 {
 public:

@@ -105,6 +105,35 @@ void UPetsService::RemovePetFromActor(class AActor* InOwner)
 }
 
 
+// Function Pets.PetsService.AddPetForActorAndWield
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InPetType                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPetCustomisation       InCustomisation                (ConstParm, Parm)
+// class AActor*                  InOwner                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsWielded                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPetsService::AddPetForActorAndWield(class UClass* InPetType, const struct FPetCustomisation& InCustomisation, class AActor* InOwner, bool IsWielded)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Pets.PetsService.AddPetForActorAndWield"));
+
+	struct
+	{
+		class UClass*                  InPetType;
+		struct FPetCustomisation       InCustomisation;
+		class AActor*                  InOwner;
+		bool                           IsWielded;
+	} params;
+
+	params.InPetType = InPetType;
+	params.InCustomisation = InCustomisation;
+	params.InOwner = InOwner;
+	params.IsWielded = IsWielded;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Pets.PetsService.AddPetForActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

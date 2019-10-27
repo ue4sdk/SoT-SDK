@@ -77,11 +77,11 @@ public:
 
 
 // Class StatusEffects.DebugStatusTicketHolder
-// 0x0008 (0x04B0 - 0x04A8)
+// 0x0008 (0x04B8 - 0x04B0)
 class ADebugStatusTicketHolder : public AActor
 {
 public:
-	class AActor*                                      StatusRecipient;                                          // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      StatusRecipient;                                          // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -122,6 +122,21 @@ public:
 };
 
 
+// Class StatusEffects.StatusEffectResponseConfigurationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UStatusEffectResponseConfigurationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectResponseConfigurationInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.StatusEffectSuspensionInterface
 // 0x0000 (0x0028 - 0x0028)
 class UStatusEffectSuspensionInterface : public UInterface
@@ -155,12 +170,13 @@ public:
 
 
 // Class StatusEffects.StatusRecipientResponseList
-// 0x0020 (0x0048 - 0x0028)
+// 0x0030 (0x0058 - 0x0028)
 class UStatusRecipientResponseList : public UDataAsset
 {
 public:
 	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FFeatureToggledStatusResponseList>   FeatureToggledResponseLists;                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	TArray<class UStatusResponseAsset*>                FinalResponseAssets;                                      // 0x0048(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -172,13 +188,13 @@ public:
 
 
 // Class StatusEffects.LightWeightStatusEffectManagerComponent
-// 0x0030 (0x0100 - 0x00D0)
+// 0x0038 (0x0108 - 0x00D0)
 class ULightWeightStatusEffectManagerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x00D0(0x0018) MISSED OFFSET
-	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F0(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
+	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F8(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -257,13 +273,13 @@ public:
 
 
 // Class StatusEffects.StatusEffectManagerComponent
-// 0x0038 (0x0108 - 0x00D0)
+// 0x0040 (0x0110 - 0x00D0)
 class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
-	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x00D0(0x0028) MISSED OFFSET
+	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x0100(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_Merchant_Rank08_CargoRun_Extra_03.Proposal_Merchant_Rank08_CargoRun_Extra_03_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class UProposal_Merchant_Rank08_CargoRun_Extra_03_C : public UVoyageProposalDesc
 {
 public:

@@ -12,6 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.GetShipHullAudio
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AShipHullAudio*          ShipHullAudioRef               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Shroudbreaker_OnShip_C::GetShipHullAudio(class AShipHullAudio** ShipHullAudioRef)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.GetShipHullAudio"));
+
+	struct
+	{
+		class AShipHullAudio*          ShipHullAudioRef;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (ShipHullAudioRef != nullptr)
+		*ShipHullAudioRef = params.ShipHullAudioRef;
+}
+
+
 // Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnRep_ShroudBreakerDeactivate
 // (BlueprintCallable, BlueprintEvent)
 
@@ -320,12 +342,12 @@ void ABP_Shroudbreaker_OnShip_C::OnRepFunctionDeactivateShroudBreaker()
 }
 
 
-// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnShroudBreakerStateChange
-// (Event, Public, BlueprintEvent)
+// Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnShroudBreakerActivationStateChange
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Shroudbreaker_OnShip_C::OnShroudBreakerStateChange()
+void ABP_Shroudbreaker_OnShip_C::OnShroudBreakerActivationStateChange()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnShroudBreakerStateChange"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip.BP_Shroudbreaker_OnShip_C.OnShroudBreakerActivationStateChange"));
 
 	struct
 	{

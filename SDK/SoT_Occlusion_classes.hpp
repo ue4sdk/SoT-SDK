@@ -30,11 +30,11 @@ public:
 
 
 // Class Occlusion.OcclusionService
-// 0x0008 (0x0030 - 0x0028)
+// 0x0100 (0x0128 - 0x0028)
 class UOcclusionService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x100];                                     // 0x0028(0x0100) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DarkRelic_KrakenLeg_Proxy.BP_DarkRelic_KrakenLeg_Proxy_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_DarkRelic_KrakenLeg_Proxy_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:

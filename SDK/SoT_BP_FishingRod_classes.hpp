@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingRod.BP_FishingRod_C
-// 0x0000 (0x0B58 - 0x0B58)
+// 0x0000 (0x0B90 - 0x0B90)
 class ABP_FishingRod_C : public AFishingRod
 {
 public:

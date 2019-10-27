@@ -2143,14 +2143,14 @@ public:
 
 
 // Class UMG.WidgetBlueprintGeneratedClass
-// 0x0038 (0x0238 - 0x0200)
+// 0x0038 (0x0260 - 0x0228)
 class UWidgetBlueprintGeneratedClass : public UBlueprintGeneratedClass
 {
 public:
-	class UWidgetTree*                                 WidgetTree;                                               // 0x0200(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FDelegateRuntimeBinding>             Bindings;                                                 // 0x0208(0x0010) (ZeroConstructor)
-	TArray<class UWidgetAnimation*>                    Animations;                                               // 0x0218(0x0010) (ZeroConstructor)
-	TArray<struct FName>                               NamedSlots;                                               // 0x0228(0x0010) (ZeroConstructor)
+	class UWidgetTree*                                 WidgetTree;                                               // 0x0228(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FDelegateRuntimeBinding>             Bindings;                                                 // 0x0230(0x0010) (ZeroConstructor)
+	TArray<class UWidgetAnimation*>                    Animations;                                               // 0x0240(0x0010) (ZeroConstructor)
+	TArray<struct FName>                               NamedSlots;                                               // 0x0250(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

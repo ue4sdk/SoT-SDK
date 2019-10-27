@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_Merchant_Rank05Reward_006.Proposal_Merchant_Rank05Reward_006_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0140 - 0x0140)
 class UProposal_Merchant_Rank05Reward_006_C : public UVoyageProposalDesc
 {
 public:

@@ -20,7 +20,8 @@ enum class ECrewSessionType : uint8_t
 	ECrewSessionType__MediumShip   = 2,
 	ECrewSessionType__LargeShip    = 3,
 	ECrewSessionType__ServerLarge  = 4,
-	ECrewSessionType__ECrewSessionType_MAX = 5
+	ECrewSessionType__SloopSolo    = 5,
+	ECrewSessionType__ECrewSessionType_MAX = 6
 };
 
 

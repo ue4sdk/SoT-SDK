@@ -120,6 +120,7 @@ public:
 	void SpawnTinySharkAtLocation(float X, float Y, float Z, int PartIndex);
 	void SpawnTinySharkAtCurrentLocation(int ControllerParamIndex, int PartIndex);
 	void SpawnStrongholdKey();
+	void SpawnStandardStrongholdKey();
 	void SpawnSmallShipAtIsland(const class FString& IslandName);
 	void SpawnSmallShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnSkeletonAtNearestAISpawnPoint();
@@ -143,6 +144,7 @@ public:
 	void SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy);
 	void SpawnGeyserAtPlayerLocation();
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
+	void SpawnFortOfTheDammedStrongholdKey();
 	void SpawnFogAtPlayerPosition();
 	void SpawnFishAtPlayerLocation(const class FString& InBaitType);
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
@@ -157,7 +159,10 @@ public:
 	void SpawnAIAtLocationDelayed(const class FString& AIDescString, float LocationX, float LocationY, float LocationZ, float Yaw, float Delay);
 	void SpawnAIAtCurrentLocationDelayed(const class FString& AIDescString, float Delay);
 	void SpawnAI(const class FString& AIDescString);
-	void SpawnAggressiveGhostShip();
+	void SpawnAggressiveGhostShipEncounter();
+	void SpawnAggressiveGhostShip(int DifficultyIndex);
+	void SmoulderClosestShipFire();
+	void SmoulderAllShipFires();
 	void SlowMotionOverride(bool InValue);
 	void SinkShipWithKeelOverIndex(int KeelOverConfigIndex);
 	void SinkShipByActorId(const class FString& ShipActorIdString);
@@ -200,6 +205,7 @@ public:
 	void SetShipBuoyancyBlend(float UnaryBlend);
 	void SetSailLoweredProportions(float Proportion);
 	void SetSailAngles(float Angle);
+	void SetPreventLeakingOnAllShips();
 	void SetPreventLeakingOnAllDamageZones(bool PreventLeaking);
 	void SetPlayerVisibleToAI();
 	void SetPlayerInvisibleToAI();
@@ -221,6 +227,7 @@ public:
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetCapstanPosition(float Position);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
+	void SetAIExclusiveAbility(const class FString& AIAbilityString);
 	void SetAIAbilityTimeMultiplier(const class FString& AIAbilityString, float IntervalCooldownMultiplier, float ActivationCooldownMultiplier);
 	void SendUpdateVoyageProgressEvent();
 	void SendStatEvent(const class FString& StatName, uint64_t StatValue);
@@ -278,6 +285,9 @@ public:
 	void LogServerShipHierarchy();
 	void LogAITeamAttitudes();
 	void LocallyUnBreakLeg();
+	void LocallyDisableTutorial();
+	void LightLocalBraziers();
+	void LightBraziersInRadius(float Radius);
 	void LeaveAlliance(const class FString& CrewId);
 	void LaunchPlayer(float Velocity, float Angle);
 	void KrakenSetTentaclesToOneHealth();
@@ -292,6 +302,8 @@ public:
 	void KrakenAnimatedTentacleDespawn();
 	void KrakenAnimatedTentacleDefeat();
 	void KrakenAnimatedTentacleChangePlayerHoldState(const class FString& HoldState);
+	void KindleClosestShip();
+	void KindleAllShipFires();
 	void KillPlayer();
 	void KillCrew(const class FString& CrewId);
 	void KillAllSkeletons();
@@ -389,6 +401,7 @@ public:
 	void DeleteVoyageHistory();
 	void DeleteAllMermaids();
 	void DebugIslandDelta();
+	void DeactivateSkellyFortOfTheDamned(const class FString& FortName);
 	void DeactivateSkellyFort(const class FString& FortName);
 	void DeactivateDeathEffect();
 	void DamageShipFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
@@ -427,6 +440,7 @@ public:
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
 	void AllowTeleportWithItems(bool CanTeleport);
 	void AIPlayerShip();
+	void AggressiveGhostShipEncounterGoToNextWave();
 	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddRandomPetForAllPlayers();
@@ -434,6 +448,7 @@ public:
 	void AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex);
 	void AddPetForAllPlayers(int PetTypeIndex, int PetCustomisationIndex);
 	void AddDrunkenness(int DrunkennessType, float DrunkennessChange);
+	void ActivateSkellyFortOfTheDamned(const class FString& FortName);
 	void ActivateSkellyFort(const class FString& FortName);
 };
 

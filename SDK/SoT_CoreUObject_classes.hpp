@@ -77,7 +77,7 @@ public:
 
 	inline void ProcessEvent(class UFunction* function, void* parms)
 	{
-		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 57)(this, function, parms);
+		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 58)(this, function, parms);
 	}
 
 
@@ -201,11 +201,11 @@ public:
 
 
 // Class CoreUObject.Class
-// 0x0110 (0x0198 - 0x0088)
+// 0x0138 (0x01C0 - 0x0088)
 class UClass : public UStruct
 {
 public:
-	unsigned char                                      UnknownData00[0x110];                                     // 0x0088(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x138];                                     // 0x0088(0x0138) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -221,7 +221,7 @@ public:
 
 	inline UObject* CreateDefaultObject()
 	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 87)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 88)(this);
 	}
 
 };
@@ -301,11 +301,11 @@ public:
 
 
 // Class CoreUObject.LinkerPlaceholderClass
-// 0x0150 (0x02E8 - 0x0198)
+// 0x0150 (0x0310 - 0x01C0)
 class ULinkerPlaceholderClass : public UClass
 {
 public:
-	unsigned char                                      UnknownData00[0x150];                                     // 0x0198(0x0150) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x150];                                     // 0x01C0(0x0150) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
