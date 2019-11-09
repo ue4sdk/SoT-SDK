@@ -48,7 +48,8 @@ public:
 	unsigned char                                      UnknownData01[0x2];                                       // 0x04C6(0x0002) MISSED OFFSET
 	TArray<struct FTestLevelMetadataEntry>             AdditionalMetadata;                                       // 0x04C8(0x0010) (Edit, ZeroConstructor)
 	TEnumAsByte<EPerformanceCaptureType>               CaptureType;                                              // 0x04D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x04D9(0x0003) MISSED OFFSET
+	TEnumAsByte<ETestAutomationPlayModeOverride>       PlayModeOverride;                                         // 0x04D9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x04DA(0x0002) MISSED OFFSET
 	float                                              TestTimeout;                                              // 0x04DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TestPausedTimeout;                                        // 0x04E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x4];                                       // 0x04E4(0x0004) MISSED OFFSET

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sot_frontend_01_a_lighting.sot_frontend_01_a_lighting_C
-// 0x0010 (0x04C0 - 0x04B0)
+// 0x0010 (0x04B8 - 0x04A8)
 class Asot_frontend_01_a_lighting_C : public ALevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class AMatineeActor*                               LightingController_UniqueObjectNameForCooking_441630218_RefProperty;// 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class AMatineeActor*                               LightingController_UniqueObjectNameForCooking_441630218_RefProperty;// 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -219,6 +219,7 @@ public:
 	void SetMastsFullyDamaged();
 	void SetKnockbackDisabled(bool Disabled);
 	void SetIdleDisconnectEnabled(bool Enabled);
+	void SetHealthInfoReplicateOverride(bool bActive);
 	void SetGrogSecondary(bool InValue);
 	void SetFOV(float InNewFOV);
 	void SetFlameOfFateColour(int InFlameOfFateType);
@@ -338,6 +339,7 @@ public:
 	void ForcePetHangout(const struct FName& HangoutName, int PositionIndex);
 	void ForceOpenShop();
 	void ForceMigrationServiceHeartBeat();
+	void ForceEmote(const struct FName& EmoteIdentifier);
 	void ForceCloseShop();
 	void ForceAllPetsDangerWithNoiseEventWithChangingThreatLocation(const class FString& ResponseType, float UpdateThreatLocationTime);
 	void ForceAllPetsDangerWithNoiseEvent(const class FString& ResponseType);

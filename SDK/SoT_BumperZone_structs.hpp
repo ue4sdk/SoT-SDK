@@ -15,13 +15,27 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct BumperZone.BumperZoneData
+// 0x0028
+struct FBumperZoneData
+{
+	class AShipBumperZone*                             BumperZone;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) MISSED OFFSET
+};
+
+// ScriptStruct BumperZone.CachedShip
+// 0x0018
+struct FCachedShip
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+};
+
 // ScriptStruct BumperZone.ShipBumperZoneAggregateTick
-// 0x0078 (0x00C0 - 0x0048)
+// 0x0028 (0x0070 - 0x0048)
 struct FShipBumperZoneAggregateTick : public FTickFunction
 {
-	TArray<class AShipBumperZone*>                     ShipBumperZones;                                          // 0x0048(0x0010) (ZeroConstructor, Transient)
-	TMap<class AActor*, class AShipBumperZone*>        IntersectingBumperZones;                                  // 0x0058(0x0050) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x00A8(0x0018) MISSED OFFSET
+	TArray<struct FBumperZoneData>                     ShipBumperZones;                                          // 0x0048(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0058(0x0018) MISSED OFFSET
 };
 
 }

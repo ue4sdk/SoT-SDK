@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_PetMonkey.BP_Anim_PetMonkey_C
-// 0x52D9 (0x5AA9 - 0x07D0)
+// 0x5309 (0x5AD9 - 0x07D0)
 class UBP_Anim_PetMonkey_C : public UWieldablePetAnimationInstance
 {
 public:
@@ -251,9 +251,9 @@ public:
 	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_AA3629F84E6F8810D32D918AA8CC9358;// 0x5780(0x0048)
 	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_7D11EC6A493A4814B509ABA2BC456414;// 0x57C8(0x0048)
 	struct FAnimNode_LookAt                            AnimGraphNode_LookAt_5762229E421479A72A95AFAD857A33C3;    // 0x5810(0x00C0)
-	struct FPetAnimationDataBeingHeld                  PetHeldAnimations;                                        // 0x58D0(0x0130) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPetAnimationDataRoaming                    PetRoamingAnimations;                                     // 0x5A00(0x00A8) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               ReactActive;                                              // 0x5AA8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPetAnimationDataBeingHeld                  PetHeldAnimations;                                        // 0x58D0(0x0160) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPetAnimationDataRoaming                    PetRoamingAnimations;                                     // 0x5A30(0x00A8) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               ReactActive;                                              // 0x5AD8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -76,6 +76,41 @@ public:
 };
 
 
+// Class StatusEffects.StatusEffectOverlapZone
+// 0x0018 (0x04C8 - 0x04B0)
+class AStatusEffectOverlapZone : public AActor
+{
+public:
+	class UBoxComponent*                               CollisionMesh;                                            // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FStatus>                             StatusesToApplyOnOverlap;                                 // 0x04B8(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectOverlapZone"));
+		return ptr;
+	}
+
+
+	void OnOverlapZoneEndOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnOverlapZoneBeginOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult);
+};
+
+
+// Class StatusEffects.DebugStatusEffectOverlapZoneVisualizer
+// 0x0000 (0x00D0 - 0x00D0)
+class UDebugStatusEffectOverlapZoneVisualizer : public UActorComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.DebugStatusEffectOverlapZoneVisualizer"));
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.DebugStatusTicketHolder
 // 0x0008 (0x04B8 - 0x04B0)
 class ADebugStatusTicketHolder : public AActor

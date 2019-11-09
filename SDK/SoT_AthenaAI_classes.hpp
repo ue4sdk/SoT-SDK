@@ -128,6 +128,33 @@ public:
 };
 
 
+// Class AthenaAI.AthenaAIFormDataAsset
+// 0x0060 (0x0088 - 0x0028)
+class UAthenaAIFormDataAsset : public UDataAsset
+{
+public:
+	TArray<TEnumAsByte<EHealthChangedReason>>          PreventHealthChangedReasons;                              // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FAIFormDamageResponse>               DamageResponses;                                          // 0x0038(0x0010) (Edit, ZeroConstructor)
+	class UStatusRecipientResponseList*                OverrideStatusRecipientResponseList;                      // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPhysicalMaterial*                           SurfaceMaterial;                                          // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     KilledVfxTemplate;                                        // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      AICharacterAudioComponent;                                // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      AnimNotifyEmitterWithObservers;                           // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               HighPriorityFootstepAudio;                                // 0x0070(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
+	float                                              MovementSpeedMultipler;                                   // 0x0074(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       FeatureName;                                              // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      FormComponentClass;                                       // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AthenaAIFormDataAsset"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.AIPlayerTracker
 // 0x0000 (0x0028 - 0x0028)
 class UAIPlayerTracker : public UObject
@@ -168,33 +195,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AIInteractableType"));
-		return ptr;
-	}
-
-};
-
-
-// Class AthenaAI.AthenaAIFormDataAsset
-// 0x0060 (0x0088 - 0x0028)
-class UAthenaAIFormDataAsset : public UDataAsset
-{
-public:
-	TArray<TEnumAsByte<EHealthChangedReason>>          PreventHealthChangedReasons;                              // 0x0028(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FAIFormDamageResponse>               DamageResponses;                                          // 0x0038(0x0010) (Edit, ZeroConstructor)
-	class UStatusRecipientResponseList*                OverrideStatusRecipientResponseList;                      // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPhysicalMaterial*                           SurfaceMaterial;                                          // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     KilledVfxTemplate;                                        // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      AICharacterAudioComponent;                                // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      AnimNotifyEmitterWithObservers;                           // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               HighPriorityFootstepAudio;                                // 0x0070(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
-	float                                              MovementSpeedMultipler;                                   // 0x0074(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       FeatureName;                                              // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      FormComponentClass;                                       // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AthenaAIFormDataAsset"));
 		return ptr;
 	}
 
@@ -1598,6 +1598,22 @@ public:
 };
 
 
+// Class AthenaAI.AINoiseFireInstigator
+// 0x0008 (0x04B8 - 0x04B0)
+class AAINoiseFireInstigator : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AINoiseFireInstigator"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.AIPartsService
 // 0x0018 (0x0040 - 0x0028)
 class UAIPartsService : public UObject
@@ -1709,6 +1725,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.FilterFirstPlayerEnterPlayerTrackerDecorator"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAI.AIProjectileInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAIProjectileInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AIProjectileInterface"));
 		return ptr;
 	}
 
@@ -1937,7 +1968,7 @@ public:
 
 
 // Class AthenaAI.AIBoobyTrapSpawner
-// 0x00B0 (0x05D0 - 0x0520)
+// 0x00C0 (0x05E0 - 0x0520)
 class UAIBoobyTrapSpawner : public UAIPerPlayerSpawner
 {
 public:
@@ -1945,9 +1976,11 @@ public:
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0524(0x0004) MISSED OFFSET
 	class UWwiseEvent*                                 NewWaveSpawnSfx;                                          // 0x0528(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              NewWaveSpawnSfxTriggerRadius;                             // 0x0530(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0534(0x0004) MISSED OFFSET
+	bool                                               ShowNameplates;                                           // 0x0534(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0535(0x0003) MISSED OFFSET
 	class AActor*                                      ActorToTrack;                                             // 0x0538(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x90];                                      // 0x0540(0x0090) MISSED OFFSET
+	class UQuestsConfig*                               CachedQuestConfig;                                        // 0x0540(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x98];                                      // 0x0548(0x0098) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3113,6 +3146,21 @@ public:
 };
 
 
+// Class AthenaAI.BTService_UpdateFocusOnBBChange
+// 0x0000 (0x00A0 - 0x00A0)
+class UBTService_UpdateFocusOnBBChange : public UBTService_DefaultFocus
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.BTService_UpdateFocusOnBBChange"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.BTService_UpdateTargetForInteractable
 // 0x0050 (0x00C0 - 0x0070)
 class UBTService_UpdateTargetForInteractable : public UBTService
@@ -3124,6 +3172,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.BTService_UpdateTargetForInteractable"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAI.BTService_UpdateViewPitchForWieldedProjectileToHitTarget
+// 0x0000 (0x0098 - 0x0098)
+class UBTService_UpdateViewPitchForWieldedProjectileToHitTarget : public UBTService_BlackboardBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.BTService_UpdateViewPitchForWieldedProjectileToHitTarget"));
 		return ptr;
 	}
 
@@ -4117,6 +4180,21 @@ public:
 };
 
 
+// Class AthenaAI.AIDioramaCategory
+// 0x0000 (0x0028 - 0x0028)
+class UAIDioramaCategory : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AIDioramaCategory"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAI.AIDioramaController
 // 0x0078 (0x00A0 - 0x0028)
 class UAIDioramaController : public UObject
@@ -4171,7 +4249,7 @@ public:
 
 
 // Class AthenaAI.AIDioramaLocationSourceComponent
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0080 (0x0340 - 0x02C0)
 class UAIDioramaLocationSourceComponent : public USceneComponent
 {
 public:
@@ -4180,17 +4258,53 @@ public:
 	float                                              DialogueTriggerRadius;                                    // 0x02D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DialogueSubtitleBuffer;                                   // 0x02DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              AISenseRadiusForDebugDisplay;                             // 0x02E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FColor                                      DebugTriggerRadiusColor;                                  // 0x02E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FColor                                      DebugSubtitleRadiusColor;                                 // 0x02E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FColor                                      AISenseRadiusColor;                                       // 0x02EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            DialogueTriggerRadiusSphere;                              // 0x02F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            DialogueSubtitleRadiusSphere;                             // 0x02F8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            AISenseRadiusSphere;                                      // 0x0300(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0308(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x02E4(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              Categories;                                               // 0x02E8(0x0010) (Edit, ZeroConstructor)
+	struct FColor                                      DebugTriggerRadiusColor;                                  // 0x02F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FColor                                      DebugSubtitleRadiusColor;                                 // 0x02FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FColor                                      AISenseRadiusColor;                                       // 0x0300(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0304(0x0004) MISSED OFFSET
+	class USphereComponent*                            DialogueTriggerRadiusSphere;                              // 0x0308(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            DialogueSubtitleRadiusSphere;                             // 0x0310(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            AISenseRadiusSphere;                                      // 0x0318(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x20];                                      // 0x0320(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AIDioramaLocationSourceComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAI.AIDioramaServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAIDioramaServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AIDioramaServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAI.AIDioramaService
+// 0x0068 (0x0518 - 0x04B0)
+class AAIDioramaService : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
+	TMap<class UClass*, struct FDioramaCategoryEntries> AllDioramasLocationsByCategory;                           // 0x04B8(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0508(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAI.AIDioramaService"));
 		return ptr;
 	}
 
@@ -4879,9 +4993,10 @@ public:
 	class UWwiseEvent*                                 FiredFromActorSFX;                                        // 0x09C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UPetDitherComponent*                         DitherComponent;                                          // 0x09D0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	float                                              MinimumDamageForHealthReact;                              // 0x09D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinimumDurationUntilPetCanDespawnConcealed;               // 0x09DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EDebugPetStateDescriptor>              DebugStateDescriptor;                                     // 0x09E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x09E1(0x0007) MISSED OFFSET
+	float                                              MaxDistForWaterBucketToClean;                             // 0x09DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinimumDurationUntilPetCanDespawnConcealed;               // 0x09E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EDebugPetStateDescriptor>              DebugStateDescriptor;                                     // 0x09E4(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x09E5(0x0003) MISSED OFFSET
 	class UAINameplateComponent*                       AINameplateComponent;                                     // 0x09E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UFeedingComponent*                           FeedingComponent;                                         // 0x09F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UStarvingComponent*                          StarvingComponent;                                        // 0x09F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
@@ -4962,11 +5077,11 @@ public:
 
 
 // Class AthenaAI.PetDitherComponent
-// 0x0070 (0x01D8 - 0x0168)
+// 0x0070 (0x01E0 - 0x0170)
 class UPetDitherComponent : public UDitherComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0168(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0170(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

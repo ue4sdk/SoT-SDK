@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FirePropagation_SmallShip.BP_FirePropagation_SmallShip_C
-// 0x0000 (0x0170 - 0x0170)
+// 0x0000 (0x0280 - 0x0280)
 class UBP_FirePropagation_SmallShip_C : public UShipFirePropagationComponent
 {
 public:

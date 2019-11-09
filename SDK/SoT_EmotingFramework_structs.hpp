@@ -8,6 +8,7 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -64,6 +65,13 @@ struct FEventEmoteRequested
 	struct FName                                       ForcedEmoteIdentifier;                                    // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               ForcedEmote;                                              // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct EmotingFramework.EmoteId
+// 0x0008
+struct FEmoteId
+{
+	struct FName                                       EmoteId;                                                  // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -15,19 +15,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C
-// 0x0148 (0x0248 - 0x0100)
+// 0x0148 (0x0260 - 0x0118)
 class UBP_Prompt_UseAMermaid_C : public UBP_PromptCoordinator_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0100(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	bool                                               State_IsThereAMermaid;                                    // 0x0108(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0109(0x0007) MISSED OFFSET
-	struct FObjectMessagingHandle                      Handle_OnMermaidActivatedLocally;                         // 0x0110(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_OnMermaidDeactivatedLocally;                       // 0x0158(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_OnMermaidUsed;                                     // 0x01A0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               State_MermaidUsed;                                        // 0x01E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x01E9(0x0007) MISSED OFFSET
-	struct FPrioritisedPromptWithHandle                Prompt_UseMermaid;                                        // 0x01F0(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0118(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	bool                                               State_IsThereAMermaid;                                    // 0x0120(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
+	struct FObjectMessagingHandle                      Handle_OnMermaidActivatedLocally;                         // 0x0128(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_OnMermaidDeactivatedLocally;                       // 0x0170(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_OnMermaidUsed;                                     // 0x01B8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               State_MermaidUsed;                                        // 0x0200(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0201(0x0007) MISSED OFFSET
+	struct FPrioritisedPromptWithHandle                Prompt_UseMermaid;                                        // 0x0208(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

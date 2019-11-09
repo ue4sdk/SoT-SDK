@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Goldhoarder.BP_Anim_Goldhoarder_C
-// 0x0000 (0x18E5 - 0x18E5)
+// 0x0000 (0x18F5 - 0x18F5)
 class UBP_Anim_Goldhoarder_C : public UBP_Anim_NPC_C
 {
 public:

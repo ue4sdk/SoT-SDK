@@ -14,6 +14,30 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Animation.CharacterAnimationInstance
+// 0x0220 (0x0660 - 0x0440)
+class UCharacterAnimationInstance : public UAnimInstance
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0440(0x0010) MISSED OFFSET
+	struct FCharacterAnimationIKUpdateParams           IKLeftHandUpdateParams;                                   // 0x0450(0x0040) (BlueprintVisible, BlueprintReadOnly)
+	struct FCharacterAnimationIKUpdateParams           IKRightHandUpdateParams;                                  // 0x0490(0x0040) (BlueprintVisible, BlueprintReadOnly)
+	struct FName                                       RightHandIKSocketName;                                    // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       LeftHandIKSocketName;                                     // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLimbIK                                     RightHandIK;                                              // 0x04E0(0x0060)
+	struct FLimbIK                                     LeftHandIK;                                               // 0x0540(0x0060)
+	struct FLimbIK                                     RightFootIK;                                              // 0x05A0(0x0060)
+	struct FLimbIK                                     LeftFootIK;                                               // 0x0600(0x0060)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CharacterAnimationInstance"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.AnimationDataStoreId
 // 0x0000 (0x0028 - 0x0028)
 class UAnimationDataStoreId : public UObject
@@ -242,6 +266,24 @@ public:
 };
 
 
+// Class Animation.AnimNotify_ToggleIK
+// 0x0018 (0x0048 - 0x0030)
+class UAnimNotify_ToggleIK : public UAnimNotify
+{
+public:
+	TArray<TEnumAsByte<ECharacterIKLimb>>              IKLimbsToAdjust;                                          // 0x0030(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
+	bool                                               Enabled;                                                  // 0x0040(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotify_ToggleIK"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.CharacterIKInterface
 // 0x0000 (0x0028 - 0x0028)
 class UCharacterIKInterface : public UInterface
@@ -251,6 +293,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CharacterIKInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.PreviewCharacterAnimationInstance
+// 0x0080 (0x06E0 - 0x0660)
+class UPreviewCharacterAnimationInstance : public UCharacterAnimationInstance
+{
+public:
+	class UAnimMontage*                                ActiveMontage;                                            // 0x0660(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0668(0x0078) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.PreviewCharacterAnimationInstance"));
 		return ptr;
 	}
 

@@ -21643,17 +21643,40 @@ void AMatineeActor::Reverse()
 }
 
 
-// Function Engine.MatineeActor.Play
-// (Native, Public, BlueprintCallable)
+// Function Engine.MatineeActor.PlayInstantly
+// (Final, Native, Public, BlueprintCallable)
 
-void AMatineeActor::Play()
+void AMatineeActor::PlayInstantly()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MatineeActor.Play"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MatineeActor.PlayInstantly"));
 
 	struct
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.MatineeActor.Play
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLatentActionInfo       LatentInfo                     (Parm)
+
+void AMatineeActor::Play(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MatineeActor.Play"));
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		struct FLatentActionInfo       LatentInfo;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+	params.LatentInfo = LatentInfo;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -33050,6 +33073,118 @@ void UGameplayStatics::ActivateReverbEffect(class UObject* WorldContextObject, c
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GPUSortTestLibrary.ValidateGPUTransposeForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        TestData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGPUSortTestLibrary::ValidateGPUTransposeForSize(class UObject* WorldContext, class UGPUSortDestData* TestData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.ValidateGPUTransposeForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		class UGPUSortDestData*        TestData;
+		bool                           ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.TestData = TestData;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GPUSortTestLibrary.ValidateGPUSortForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        TestData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGPUSortTestLibrary::ValidateGPUSortForSize(class UObject* WorldContext, class UGPUSortDestData* TestData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.ValidateGPUSortForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		class UGPUSortDestData*        TestData;
+		bool                           ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.TestData = TestData;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GPUSortTestLibrary.TestGPUTransposeForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Size                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UGPUSortDestData* UGPUSortTestLibrary::TestGPUTransposeForSize(class UObject* WorldContext, int Size)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.TestGPUTransposeForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		int                            Size;
+		class UGPUSortDestData*        ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.Size = Size;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GPUSortTestLibrary.TestGPUSortForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Size                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UGPUSortDestData* UGPUSortTestLibrary::TestGPUSortForSize(class UObject* WorldContext, int Size)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.TestGPUSortForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		int                            Size;
+		class UGPUSortDestData*        ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.Size = Size;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_Campfire_Buildable.BP_Base_Campfire_Buildable_C
-// 0x0000 (0x0850 - 0x0850)
+// 0x0000 (0x0860 - 0x0860)
 class ABP_Base_Campfire_Buildable_C : public ACampfire
 {
 public:

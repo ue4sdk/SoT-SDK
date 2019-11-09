@@ -18,7 +18,8 @@ enum class EAIShipEncounterType : uint8_t
 	EAIShipEncounterType__Battle   = 0,
 	EAIShipEncounterType__Passive  = 1,
 	EAIShipEncounterType__Aggressive = 2,
-	EAIShipEncounterType__EAIShipEncounterType_MAX = 3
+	EAIShipEncounterType__MAX      = 3,
+	EAIShipEncounterType__EAIShipEncounterType_MAX = 4
 };
 
 

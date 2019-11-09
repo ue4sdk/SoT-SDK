@@ -63,10 +63,12 @@ struct FActorComponentSelector
 };
 
 // ScriptStruct AthenaEngine.PlaySoundRpc
-// 0x0008 (0x0018 - 0x0010)
+// 0x0010 (0x0020 - 0x0010)
 struct FPlaySoundRpc : public FBoxedRpc
 {
 	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               PlayOnTarget;                                             // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AthenaEngine.EventCancelForceFeedback

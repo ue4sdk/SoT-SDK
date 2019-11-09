@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Unfit.AD_FirstPerson_PlayerPirate_Female_Unfit_C
-// 0x0000 (0x0438 - 0x0438)
+// 0x0000 (0x0458 - 0x0458)
 class UAD_FirstPerson_PlayerPirate_Female_Unfit_C : public UAD_FirstPerson_PlayerPirate_Female_Default_C
 {
 public:

@@ -196,14 +196,15 @@ struct FAIShipCaptainParams
 };
 
 // ScriptStruct AIShips.AIShipContextDescGenerationSharedParams
-// 0x0050
+// 0x0060
 struct FAIShipContextDescGenerationSharedParams
 {
-	TArray<struct FWeightedAIShipCrewFormType>         SkeletonForms;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FWeightedAIShipCrewAmmoType>         SkeletonAmmoTypes;                                        // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FColor>                              SailColours;                                              // 0x0020(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FAIShipCaptainParams>                Captains;                                                 // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              CaptainGenders;                                           // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<TEnumAsByte<EAIShipEncounterType>>          EncounterTypes;                                           // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FWeightedAIShipCrewFormType>         SkeletonForms;                                            // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FWeightedAIShipCrewAmmoType>         SkeletonAmmoTypes;                                        // 0x0020(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FColor>                              SailColours;                                              // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FAIShipCaptainParams>                Captains;                                                 // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              CaptainGenders;                                           // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct AIShips.AIShipSkeletonSkillsetOverride
@@ -239,11 +240,12 @@ struct FAIShipContextDescGenerationShipSpecificParams
 };
 
 // ScriptStruct AIShips.AIShipContextDescGenerationParams
-// 0x0060
+// 0x0080
 struct FAIShipContextDescGenerationParams
 {
-	struct FAIShipContextDescGenerationSharedParams    SharedParams;                                             // 0x0000(0x0050) (Edit, DisableEditOnInstance)
-	TArray<struct FAIShipContextDescGenerationShipSpecificParams> ShipSpecificParams;                                       // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FAIShipContextDescGenerationSharedParams    SharedParams;                                             // 0x0000(0x0060) (Edit, DisableEditOnInstance)
+	TArray<struct FAIShipContextDescGenerationSharedParams> EncounterSpecificParams;                                  // 0x0060(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FAIShipContextDescGenerationShipSpecificParams> ShipSpecificParams;                                       // 0x0070(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct AIShips.AIShipSizeLimit

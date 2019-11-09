@@ -12,6 +12,18 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum Animation.ECharacterIKLimb
+enum class ECharacterIKLimb : uint8_t
+{
+	ECharacterIKLimb__None         = 0,
+	ECharacterIKLimb__LeftHand     = 1,
+	ECharacterIKLimb__RightHand    = 2,
+	ECharacterIKLimb__LeftFoot     = 3,
+	ECharacterIKLimb__RightFoot    = 4,
+	ECharacterIKLimb__ECharacterIKLimb_MAX = 5
+};
+
+
 // Enum Animation.ELimbIKSpace
 enum class ELimbIKSpace : uint8_t
 {

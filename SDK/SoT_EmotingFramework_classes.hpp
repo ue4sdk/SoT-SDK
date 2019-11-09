@@ -30,13 +30,30 @@ public:
 };
 
 
+// Class EmotingFramework.EmoteIdListingAsset
+// 0x0010 (0x0038 - 0x0028)
+class UEmoteIdListingAsset : public UDataAsset
+{
+public:
+	TArray<struct FName>                               EmoteIds;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EmotingFramework.EmoteIdListingAsset"));
+		return ptr;
+	}
+
+};
+
+
 // Class EmotingFramework.EmoteSettings
-// 0x0008 (0x0040 - 0x0038)
+// 0x0018 (0x0050 - 0x0038)
 class UEmoteSettings : public UDeveloperSettings
 {
 public:
-	int                                                Pages;                                                    // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	struct FStringAssetReference                       EmoteIdListingAsset;                                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	int                                                Pages;                                                    // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

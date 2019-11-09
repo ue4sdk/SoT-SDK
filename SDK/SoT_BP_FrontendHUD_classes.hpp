@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontendHUD.BP_FrontendHUD_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0008 (0x06A8 - 0x06A0)
 class ABP_FrontendHUD_C : public AFrontendHUD
 {
 public:
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureArtifact_Wieldable_goblet_01_a.BP_TreasureArtifact_Wieldable_goblet_01_a_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0870 - 0x0870)
 class ABP_TreasureArtifact_Wieldable_goblet_01_a_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:

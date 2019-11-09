@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,26 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
-
-// Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_Anim_CharacterSelect_C::BlueprintUpdateAnimation(float DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.BlueprintUpdateAnimation"));
-
-	struct
-	{
-		float                          DeltaTimeX;
-	} params;
-
-	params.DeltaTimeX = DeltaTimeX;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
 
 // Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.BlueprintInitializeAnimation
 // (Event, Public, BlueprintEvent)

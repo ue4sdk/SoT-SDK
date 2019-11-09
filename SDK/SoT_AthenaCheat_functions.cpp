@@ -3586,6 +3586,26 @@ void UAthenaCheatManager::SetIdleDisconnectEnabled(bool Enabled)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SetHealthInfoReplicateOverride
+// (Final, Exec, Native, Public)
+// Parameters:
+// bool                           bActive                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetHealthInfoReplicateOverride(bool bActive)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetHealthInfoReplicateOverride"));
+
+	struct
+	{
+		bool                           bActive;
+	} params;
+
+	params.bActive = bActive;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SetGrogSecondary
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -5717,6 +5737,26 @@ void UAthenaCheatManager::ForceMigrationServiceHeartBeat()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ForceEmote
+// (Final, Exec, Native, Public, HasOutParms)
+// Parameters:
+// struct FName                   EmoteIdentifier                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UAthenaCheatManager::ForceEmote(const struct FName& EmoteIdentifier)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ForceEmote"));
+
+	struct
+	{
+		struct FName                   EmoteIdentifier;
+	} params;
+
+	params.EmoteIdentifier = EmoteIdentifier;
 
 	UObject::ProcessEvent(fn, &params);
 }

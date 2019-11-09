@@ -1287,6 +1287,34 @@ struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 }
 
 
+// Function Maths.ShapeMathsBlueprintLibrary.IsPointOnOrWithinABox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UBoxComponent*           BoxComponent                   (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UShapeMathsBlueprintLibrary::IsPointOnOrWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.IsPointOnOrWithinABox"));
+
+	struct
+	{
+		class UBoxComponent*           BoxComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		bool                           ReturnValue;
+	} params;
+
+	params.BoxComponent = BoxComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinASphere
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:

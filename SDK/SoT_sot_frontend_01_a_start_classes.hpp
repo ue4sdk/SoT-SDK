@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sot_frontend_01_a_start.sot_frontend_01_a_start_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04A8 - 0x04A8)
 class Asot_frontend_01_a_start_C : public ALevelScriptActor
 {
 public:

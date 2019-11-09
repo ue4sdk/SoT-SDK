@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_DS_TheArtOfTheTrickster_VaultVariables_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
+#include "SoT_DS_TheArtOfTheTrickster_VaultVariables_classes.hpp"
 
 namespace SDK
 {

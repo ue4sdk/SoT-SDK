@@ -7,11 +7,11 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Tutorial_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
 
 namespace SDK
 {

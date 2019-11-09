@@ -3642,6 +3642,18 @@ enum class EStartRadiusGroupNames : uint8_t
 };
 
 
+// Enum Engine.EAngleRangeGroupNames
+enum class EAngleRangeGroupNames : uint8_t
+{
+	AngleRangeGroupB               = 0,
+	AngleRangeGroupC               = 1,
+	AngleRangeGroupD               = 2,
+	AngleRangeGroupE               = 3,
+	AngleRangeGroup_MAX            = 4,
+	EAngleRangeGroupNames_MAX      = 5
+};
+
+
 // Enum Engine.CylinderHeightAxis
 enum class ECylinderHeightAxis : uint8_t
 {

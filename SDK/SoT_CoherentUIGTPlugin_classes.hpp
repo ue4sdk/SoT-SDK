@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class CoherentUIGTPlugin.CoherentUIGTBaseComponent
-// 0x0270 (0x0340 - 0x00D0)
+// 0x0278 (0x0348 - 0x00D0)
 class UCoherentUIGTBaseComponent : public UActorComponent
 {
 public:
@@ -43,7 +43,7 @@ public:
 	int                                                LayerHeightThreshold;                                     // 0x01CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bEnableAdditionalDefaultStyles;                           // 0x01D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bDelayedUpdate;                                           // 0x01D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x16E];                                     // 0x01D2(0x016E) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x176];                                     // 0x01D2(0x0176) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -79,18 +79,18 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTComponent
-// 0x0038 (0x0378 - 0x0340)
+// 0x0038 (0x0380 - 0x0348)
 class UCoherentUIGTComponent : public UCoherentUIGTBaseComponent
 {
 public:
-	class FString                                      URL;                                                      // 0x0340(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                Width;                                                    // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                Height;                                                   // 0x0354(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               ManualTexture;                                            // 0x0358(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0359(0x0003) MISSED OFFSET
-	float                                              ClickThroughAlphaThreshold;                               // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Transparent;                                              // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x17];                                      // 0x0361(0x0017) MISSED OFFSET
+	class FString                                      URL;                                                      // 0x0348(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                Width;                                                    // 0x0358(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                Height;                                                   // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               ManualTexture;                                            // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0361(0x0003) MISSED OFFSET
+	float                                              ClickThroughAlphaThreshold;                               // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Transparent;                                              // 0x0368(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x17];                                      // 0x0369(0x0017) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -169,11 +169,12 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTJSEvent
-// 0x0080 (0x00A8 - 0x0028)
+// 0x0090 (0x00B8 - 0x0028)
 class UCoherentUIGTJSEvent : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x80];                                      // 0x0028(0x0080) MISSED OFFSET
+	TArray<class UStruct*>                             StructTypes;                                              // 0x00A8(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -182,9 +183,11 @@ public:
 	}
 
 
+	void AddText(const struct FText& Text);
 	void AddStructArg(class UStructProperty* Arg);
 	void AddString(const class FString& Str);
 	void AddObject(class UObject* Object);
+	void AddName(const struct FName& Name);
 	void AddInt32(int integer);
 	void AddFloat(float fl);
 	void AddByte(unsigned char byte);
@@ -232,14 +235,14 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTHUD
-// 0x0028 (0x0368 - 0x0340)
+// 0x0028 (0x0370 - 0x0348)
 class UCoherentUIGTHUD : public UCoherentUIGTBaseComponent
 {
 public:
-	struct FStringAssetReference                       HUDMaterialName;                                          // 0x0340(0x0010) (ZeroConstructor)
-	class UMaterial*                                   HUDMaterial;                                              // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    HUDMaterialInstance;                                      // 0x0358(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0360(0x0008) MISSED OFFSET
+	struct FStringAssetReference                       HUDMaterialName;                                          // 0x0348(0x0010) (ZeroConstructor)
+	class UMaterial*                                   HUDMaterial;                                              // 0x0358(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    HUDMaterialInstance;                                      // 0x0360(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0368(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -279,12 +282,12 @@ public:
 
 
 // Class CoherentUIGTPlugin.CoherentUIGTGameHUD
-// 0x0088 (0x0630 - 0x05A8)
+// 0x0098 (0x0640 - 0x05A8)
 class ACoherentUIGTGameHUD : public AHUD
 {
 public:
 	class UCoherentUIGTHUD*                            CoherentUIGTHUD;                                          // 0x05A8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x80];                                      // 0x05B0(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x90];                                      // 0x05B0(0x0090) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -294,6 +297,7 @@ public:
 
 
 	void SetupUIGTView(const class FString& PageUrl, bool bIsTransparent, float ClickThroughAlphaThreshold, float AnimationFrameDefer, bool bDelayedUpdate);
+	bool HasSetupUIGTView();
 };
 
 
@@ -346,9 +350,10 @@ public:
 	bool                                               AllowPerformanceWarningsInEditor;                         // 0x0039(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               ShowWarningsOnScreen;                                     // 0x003A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	TEnumAsByte<ECoherentUIGTSettingsSeverity>         LogSeverity;                                              // 0x003B(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bRespectTitleSafeZone;                                    // 0x003C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bRespectLetterboxing;                                     // 0x003D(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x003E(0x0002) MISSED OFFSET
+	bool                                               bPaintToBackBuffer;                                       // 0x003C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bRespectTitleSafeZone;                                    // 0x003D(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bRespectLetterboxing;                                     // 0x003E(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x003F(0x0001) MISSED OFFSET
 	class FString                                      HUDMaterialName;                                          // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 	class FString                                      CoUIResourcesRoot;                                        // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
 	bool                                               TickWhileGameIsPaused;                                    // 0x0060(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
@@ -380,22 +385,21 @@ public:
 	struct FScriptMulticastDelegate                    JavaScriptEvent;                                          // 0x01C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    UIGTScriptingReady;                                       // 0x01D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData01[0x48];                                      // 0x01E0(0x0048) MISSED OFFSET
-	class UTextureRenderTarget2D*                      Texture;                                                  // 0x0228(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETextureFilter>                        Filter;                                                   // 0x0230(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bReceiveInput;                                            // 0x0231(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bReceiveInputWhenTransparent;                             // 0x0232(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bGammaCorrectedMaterial;                                  // 0x0233(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowPerformanceWarnings;                                 // 0x0234(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0235(0x0003) MISSED OFFSET
-	float                                              ExecuteJSTimersThresholdMs;                               // 0x0238(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              UpdateStylesAndLayoutThresholdMs;                         // 0x023C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RecordRenderingCommandsThresholdMs;                       // 0x0240(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PaintWarningThresholdMs;                                  // 0x0244(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                LayersCountThreshold;                                     // 0x0248(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                LayerWidthThreshold;                                      // 0x024C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                LayerHeightThreshold;                                     // 0x0250(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableAdditionalDefaultStyles;                           // 0x0254(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x19B];                                     // 0x0255(0x019B) MISSED OFFSET
+	TEnumAsByte<ETextureFilter>                        Filter;                                                   // 0x0228(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bReceiveInput;                                            // 0x0229(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bReceiveInputWhenTransparent;                             // 0x022A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bGammaCorrectedMaterial;                                  // 0x022B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowPerformanceWarnings;                                 // 0x022C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x022D(0x0003) MISSED OFFSET
+	float                                              ExecuteJSTimersThresholdMs;                               // 0x0230(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              UpdateStylesAndLayoutThresholdMs;                         // 0x0234(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RecordRenderingCommandsThresholdMs;                       // 0x0238(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PaintWarningThresholdMs;                                  // 0x023C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                LayersCountThreshold;                                     // 0x0240(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                LayerWidthThreshold;                                      // 0x0244(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                LayerHeightThreshold;                                     // 0x0248(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bEnableAdditionalDefaultStyles;                           // 0x024C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x1A3];                                     // 0x024D(0x01A3) MISSED OFFSET
 	class FString                                      URL;                                                      // 0x03F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              ClickThroughAlphaThreshold;                               // 0x0400(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               Transparent;                                              // 0x0404(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -422,6 +426,7 @@ public:
 	bool IsReadyForBindings();
 	bool IsDocumentReady();
 	bool HasRequestedView();
+	class UTextureRenderTarget2D* GetRenderTexture();
 	float GetClickThroughAlphaThreshold();
 	void EndDebugFrameSave();
 	void DebugSaveNextFrame();

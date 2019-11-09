@@ -25,6 +25,17 @@ enum class EComparisonMethod : uint8_t
 };
 
 
+// Enum StudiosAutomation.ETestAutomationPlayModeOverride
+enum class ETestAutomationPlayModeOverride : uint8_t
+{
+	ETestAutomationPlayModeOverride__Adventure = 0,
+	ETestAutomationPlayModeOverride__Contest = 1,
+	ETestAutomationPlayModeOverride__Tutorial = 2,
+	ETestAutomationPlayModeOverride__NotSelectedYet = 3,
+	ETestAutomationPlayModeOverride__ETestAutomationPlayModeOverride_MAX = 4
+};
+
+
 // Enum StudiosAutomation.EPerformanceCaptureType
 enum class EPerformanceCaptureType : uint8_t
 {

@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerBuriedTreasure_AdditionalPuzzles_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerPuzzle_AdditionalPuzzles_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerVariables_AdditionalPuzzles_classes.hpp"
 #include "SoT_DS_LegendaryStorytellerDefinition_AdditionalPuzzles_classes.hpp"

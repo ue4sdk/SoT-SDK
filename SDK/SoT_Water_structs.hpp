@@ -156,6 +156,14 @@ struct FWaterSplashProbesContainer
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Water.EventCurrentWaterPlaneChange
+// 0x0010
+struct FEventCurrentWaterPlaneChange
+{
+	class UBaseWaterComponent*                         FormerWaterPlane;                                         // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         NewWaterPlane;                                            // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // ScriptStruct Water.EventLeftWaterExclusionZone
 // 0x0001
 struct FEventLeftWaterExclusionZone

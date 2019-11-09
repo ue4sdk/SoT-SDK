@@ -8,14 +8,14 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
+#include "SoT_Animation_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
-#include "SoT_Animation_classes.hpp"
 
 namespace SDK
 {
@@ -614,6 +614,20 @@ struct FAIDioramaLocationSourceComponentData
 	struct FTransform                                  RelativeTransform;                                        // 0x0000(0x0030) (Edit, IsPlainOldData)
 	class AActor*                                      Interactable;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.IslandDioramas
+// 0x0010
+struct FIslandDioramas
+{
+	TArray<TScriptInterface<class UAIDioramaLocationSourceInterface>> Entries;                                                  // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct AthenaAI.DioramaCategoryEntries
+// 0x0050
+struct FDioramaCategoryEntries
+{
+	TMap<struct FName, struct FIslandDioramas>         EntriesByIslandName;                                      // 0x0000(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct AthenaAI.AIFaunaSpawnerWave

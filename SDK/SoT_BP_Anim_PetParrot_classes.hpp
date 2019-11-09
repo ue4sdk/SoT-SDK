@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_PetParrot.BP_Anim_PetParrot_C
-// 0x5648 (0x5E18 - 0x07D0)
+// 0x5678 (0x5E48 - 0x07D0)
 class UBP_Anim_PetParrot_C : public UWieldablePetAnimationInstance
 {
 public:
@@ -264,8 +264,8 @@ public:
 	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_E0E254734C2A00A8D9A8CA867319C113;// 0x5AF0(0x0048)
 	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_A367591D450BE747E74B30B8A52EDB2E;// 0x5B38(0x0048)
 	struct FAnimNode_LookAt                            AnimGraphNode_LookAt_59F8102F4DE642B2D238E9B964E5BF59;    // 0x5B80(0x00C0)
-	struct FPetAnimationDataBeingHeld                  PetHeldAnimations;                                        // 0x5C40(0x0130) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPetAnimationDataRoaming                    PetRoamingAnimations;                                     // 0x5D70(0x00A8) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPetAnimationDataBeingHeld                  PetHeldAnimations;                                        // 0x5C40(0x0160) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPetAnimationDataRoaming                    PetRoamingAnimations;                                     // 0x5DA0(0x00A8) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

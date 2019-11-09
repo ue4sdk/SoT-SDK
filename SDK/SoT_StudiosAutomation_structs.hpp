@@ -115,14 +115,16 @@ struct FCollectionAnimSequenceLimits
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimits
-// 0x002C
+// 0x0030
 struct FCollectionLimits
 {
 	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x0008(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FCollectionAnimSequenceLimits               AnimLimits;                                               // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsOnlyParentCollection;                                   // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x000C(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x001C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0024(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FCollectionAnimSequenceLimits               AnimLimits;                                               // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimitsArray

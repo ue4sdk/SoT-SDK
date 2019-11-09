@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sot_frontend_01_a_start_audio.sot_frontend_01_a_start_audio_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04A8 - 0x04A8)
 class Asot_frontend_01_a_start_audio_C : public ALevelScriptActor
 {
 public:

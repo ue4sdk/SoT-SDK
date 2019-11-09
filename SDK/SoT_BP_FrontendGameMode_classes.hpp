@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontendGameMode.BP_FrontendGameMode_C
-// 0x0008 (0x05B8 - 0x05B0)
+// 0x0008 (0x05B0 - 0x05A8)
 class ABP_FrontendGameMode_C : public AFrontendGameMode
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

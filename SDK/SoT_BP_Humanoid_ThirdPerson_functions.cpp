@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.SetInitialAthenaCharacterAndAnimSet
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                  CharacterType                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Humanoid_ThirdPerson_C::SetInitialAthenaCharacterAndAnimSet(class UClass* CharacterType)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.SetInitialAthenaCharacterAndAnimSet"));
+
+	struct
+	{
+		class UClass*                  CharacterType;
+	} params;
+
+	params.CharacterType = CharacterType;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ExtractEmotesFromPersonas
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -9401,102 +9421,6 @@ void UBP_Humanoid_ThirdPerson_C::LoadCharacterAnimations(class UClass* AnimDataI
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOff_WaterPump
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_IKOff_WaterPump()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOff_WaterPump"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOn_WaterPump
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_IKOn_WaterPump()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOn_WaterPump"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_FootIKOff
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_FootIKOff()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_FootIKOff"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_FootIKOn
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_FootIKOn()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_FootIKOn"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOn
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_IKOn()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOn"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOff
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_IKOff()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOff"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.IK Limb Active
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -9518,182 +9442,6 @@ void UBP_Humanoid_ThirdPerson_C::IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId,
 	params.LimbId = LimbId;
 	params.Active = Active;
 	params.CoordinateSpace = CoordinateSpace;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIIKOff_S
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_RightHandIIKOff_S()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIIKOff_S"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIKOff
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_RightHandIKOff()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIKOff"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIKOff
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_LeftHandIKOff()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIKOff"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIIKOff_S
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_LeftHandIIKOff_S()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIIKOff_S"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIKOn
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_RightHandIKOn()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIKOn"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIKOn
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_LeftHandIKOn()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIKOn"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_BothHandsIKOn_S
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_BothHandsIKOn_S()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_BothHandsIKOn_S"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOnLocal
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_IKOnLocal()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_IKOnLocal"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIKOnLocal
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_RightHandIKOnLocal()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_RightHandIKOnLocal"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIKOnLocal
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_LeftHandIKOnLocal()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_LeftHandIKOnLocal"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_BothHandsIKOn_Local
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_BothHandsIKOn_Local()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_BothHandsIKOn_Local"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }

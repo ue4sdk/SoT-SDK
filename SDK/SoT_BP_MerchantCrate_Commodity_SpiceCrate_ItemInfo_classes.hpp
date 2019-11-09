@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_Commodity_SpiceCrate_ItemInfo.BP_MerchantCrate_Commodity_SpiceCrate_ItemInfo_C
-// 0x0008 (0x0750 - 0x0748)
+// 0x0008 (0x0780 - 0x0778)
 class ABP_MerchantCrate_Commodity_SpiceCrate_ItemInfo_C : public ABootyItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0778(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
