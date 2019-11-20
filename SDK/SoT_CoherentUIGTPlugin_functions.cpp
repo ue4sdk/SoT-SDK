@@ -499,6 +499,26 @@ void UCoherentUIGTLiveView::OnLiveViewSizeRequest(class UCoherentUIGTBaseCompone
 }
 
 
+// Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddText
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FText                   Text                           (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UCoherentUIGTJSEvent::AddText(const struct FText& Text)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddText"));
+
+	struct
+	{
+		struct FText                   Text;
+	} params;
+
+	params.Text = Text;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddStructArg
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -554,6 +574,26 @@ void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 	} params;
 
 	params.Object = Object;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddName
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   Name                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UCoherentUIGTJSEvent::AddName(const struct FName& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddName"));
+
+	struct
+	{
+		struct FName                   Name;
+	} params;
+
+	params.Name = Name;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1105,6 +1145,27 @@ void ACoherentUIGTGameHUD::SetupUIGTView(const class FString& PageUrl, bool bIsT
 }
 
 
+// Function CoherentUIGTPlugin.CoherentUIGTGameHUD.HasSetupUIGTView
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACoherentUIGTGameHUD::HasSetupUIGTView()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTGameHUD.HasSetupUIGTView"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function CoherentUIGTPlugin.CoherentUIGTInputActor.ToggleCoherentUIGTInputFocus
 // (Final, Native, Public, BlueprintCallable)
 
@@ -1600,6 +1661,27 @@ bool UCoherentUIGTWidget::HasRequestedView()
 	struct
 	{
 		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function CoherentUIGTPlugin.CoherentUIGTWidget.GetRenderTexture
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UTextureRenderTarget2D*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTextureRenderTarget2D* UCoherentUIGTWidget::GetRenderTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CoherentUIGTPlugin.CoherentUIGTWidget.GetRenderTexture"));
+
+	struct
+	{
+		class UTextureRenderTarget2D*  ReturnValue;
 	} params;
 
 

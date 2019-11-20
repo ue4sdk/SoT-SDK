@@ -27,6 +27,16 @@ enum class EFireCellState : uint8_t
 };
 
 
+// Enum Fire.ELastIgnitionState
+enum class ELastIgnitionState : uint8_t
+{
+	ELastIgnitionState__None       = 0,
+	ELastIgnitionState__Success    = 1,
+	ELastIgnitionState__Failure    = 2,
+	ELastIgnitionState__ELastIgnitionState_MAX = 3
+};
+
+
 }
 
 #ifdef _MSC_VER

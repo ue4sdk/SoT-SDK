@@ -10,12 +10,36 @@
 #include "SoT_Animation_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Animation.CharacterAnimationIKUpdateParams
+// 0x0040
+struct FCharacterAnimationIKUpdateParams
+{
+	float                                              CurrentAlpha;                                             // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TranslationStrength;                                      // 0x0004(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RotationStrength;                                         // 0x0008(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // 0x000C(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+	struct FQuat                                       Orientation;                                              // 0x0020(0x0010) (BlueprintVisible, IsPlainOldData)
+	TEnumAsByte<EHIKEffectorSpace>                     EffectorSpace;                                            // 0x0030(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
+	struct FName                                       ParentBone;                                               // 0x0034(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Animation.LimbIK
+// 0x0060
+struct FLimbIK
+{
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
+};
 
 // ScriptStruct Animation.AnimDataEntryStructWrapper
 // 0x0018
@@ -80,13 +104,6 @@ struct FDocker
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };
 
-// ScriptStruct Animation.LimbIK
-// 0x0060
-struct FLimbIK
-{
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
-};
-
 // ScriptStruct Animation.ActorVelocityData
 // 0x0018
 struct FActorVelocityData
@@ -117,11 +134,25 @@ struct FTransformBlendCurve
 	unsigned char                                      UnknownData04[0x30];                                      // 0x04D0(0x0030) MISSED OFFSET
 };
 
+// ScriptStruct Animation.EventCosmeticItemAttachmentSwitched
+// 0x0008
+struct FEventCosmeticItemAttachmentSwitched
+{
+	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Animation.EventDockableObjectDestroyed
 // 0x0001
 struct FEventDockableObjectDestroyed
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.EventPreviewCharacterAnimationRequest
+// 0x0008
+struct FEventPreviewCharacterAnimationRequest
+{
+	class UAnimationAsset*                             AnimationToPlay;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Animation.WeightedAnimationTimeout

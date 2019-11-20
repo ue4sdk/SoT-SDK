@@ -48,6 +48,22 @@ public:
 };
 
 
+// Class TestUtilities.MockObjectCollectorComponent
+// 0x0060 (0x0130 - 0x00D0)
+class UMockObjectCollectorComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x60];                                      // 0x00D0(0x0060) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.MockObjectCollectorComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class TestUtilities.MockObjectWithMessagingDispatcher
 // 0x0070 (0x0098 - 0x0028)
 class UMockObjectWithMessagingDispatcher : public UObject

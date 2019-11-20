@@ -130,21 +130,6 @@ public:
 };
 
 
-// Class RareAudio.WwiseEmitterInterface
-// 0x0000 (0x0028 - 0x0028)
-class UWwiseEmitterInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterInterface"));
-		return ptr;
-	}
-
-};
-
-
 // Class RareAudio.WwiseObjectPoolWrapper
 // 0x0058 (0x0080 - 0x0028)
 class UWwiseObjectPoolWrapper : public UObject
@@ -205,6 +190,79 @@ public:
 	void ClearMappings();
 	void AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent);
 	void AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents);
+};
+
+
+// Class RareAudio.WwiseEmitterComponentBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UWwiseEmitterComponentBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterComponentBlueprintLibrary"));
+		return ptr;
+	}
+
+
+	static bool GetNamedEmitter(const struct FName& InNameOfEmitterToRetrieve, class AActor* InActorToFindEmitterOn, struct FWwiseEmitter* OutEmitter);
+	static bool GetClosestNEmitters(const struct FVector& InFromPosition, int InNumEmittersToFind, class AActor* InActorToFindClosestEmitterOn, TArray<struct FWwiseEmitter>* OutEmitters);
+	static bool GetClosestEmitter(const struct FVector& InFromPosition, class AActor* InActorToFindClosestEmitterOn, struct FWwiseEmitter* OutEmitter);
+};
+
+
+// Class RareAudio.TritonAcousticMap
+// 0x0038 (0x0060 - 0x0028)
+class UTritonAcousticMap : public UObject
+{
+public:
+	class FString                                      TritonMapFilename;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0038(0x0028) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonAcousticMap"));
+		return ptr;
+	}
+
+};
+
+
+// Class RareAudio.TritonComponent
+// 0x0010 (0x02D0 - 0x02C0)
+class UTritonComponent : public USceneComponent
+{
+public:
+	float                                              TritonEffectRadius;                                       // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x02C4(0x000C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class RareAudio.TritonService
+// 0x0108 (0x0130 - 0x0028)
+class UTritonService : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class UTritonComponent*>                    RegisteredTritonComponents;                               // 0x0038(0x0010) (ExportObject, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0xA8];                                      // 0x0048(0x00A8) MISSED OFFSET
+	class UTritonComponent*                            CachedListenerInfo;                                       // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x38];                                      // 0x00F8(0x0038) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonService"));
+		return ptr;
+	}
+
 };
 
 
@@ -356,39 +414,6 @@ public:
 };
 
 
-// Class RareAudio.MockAudioComponent
-// 0x0010 (0x00E0 - 0x00D0)
-class UMockAudioComponent : public UActorComponent
-{
-public:
-	class UWwiseObjectPoolWrapper*                     SfxPool;                                                  // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 SfxEvent;                                                 // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.MockAudioComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.MockWwiseInputManager
-// 0x0018 (0x0040 - 0x0028)
-class UMockWwiseInputManager : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.MockWwiseInputManager"));
-		return ptr;
-	}
-
-};
-
-
 // Class RareAudio.RareAudioHardwareDeviceService
 // 0x0010 (0x0228 - 0x0218)
 class URareAudioHardwareDeviceService : public UAudioHardwareDeviceService
@@ -420,139 +445,6 @@ public:
 
 
 	void PopulateInstanceAssociations();
-};
-
-
-// Class RareAudio.TritonAcousticMap
-// 0x0038 (0x0060 - 0x0028)
-class UTritonAcousticMap : public UObject
-{
-public:
-	class FString                                      TritonMapFilename;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0038(0x0028) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonAcousticMap"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.TritonComponent
-// 0x0010 (0x02D0 - 0x02C0)
-class UTritonComponent : public USceneComponent
-{
-public:
-	float                                              TritonEffectRadius;                                       // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x02C4(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.TritonInterface
-// 0x0000 (0x0028 - 0x0028)
-class UTritonInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonInterface"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.TritonService
-// 0x0108 (0x0130 - 0x0028)
-class UTritonService : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
-	TArray<class UTritonComponent*>                    RegisteredTritonComponents;                               // 0x0038(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0xE8];                                      // 0x0048(0x00E8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.TritonService"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.WwiseEmitterComponentBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UWwiseEmitterComponentBlueprintLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterComponentBlueprintLibrary"));
-		return ptr;
-	}
-
-
-	static bool GetNamedEmitter(const struct FName& InNameOfEmitterToRetrieve, class AActor* InActorToFindEmitterOn, struct FWwiseEmitter* OutEmitter);
-	static bool GetClosestNEmitters(const struct FVector& InFromPosition, int InNumEmittersToFind, class AActor* InActorToFindClosestEmitterOn, TArray<struct FWwiseEmitter>* OutEmitters);
-	static bool GetClosestEmitter(const struct FVector& InFromPosition, class AActor* InActorToFindClosestEmitterOn, struct FWwiseEmitter* OutEmitter);
-};
-
-
-// Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x04B0 - 0x04B0)
-class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseEmitterComponentBlueprintLibraryTestActor"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.WwiseObjectPoolWrapperMock
-// 0x0018 (0x0098 - 0x0080)
-class UWwiseObjectPoolWrapperMock : public UWwiseObjectPoolWrapper
-{
-public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0080(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapperMock"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.WwisePoolManager
-// 0x00A8 (0x00D0 - 0x0028)
-class UWwisePoolManager : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwisePoolManager"));
-		return ptr;
-	}
-
 };
 
 

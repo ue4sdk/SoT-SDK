@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign005_CursedSails_WeapondealerWonda_CursedSails.BP_Campaign005_CursedSails_WeapondealerWonda_CursedSails_C
-// 0x0010 (0x05E8 - 0x05D8)
+// 0x0010 (0x0690 - 0x0680)
 class ABP_Campaign005_CursedSails_WeapondealerWonda_CursedSails_C : public ABP_Weapondealer_C
 {
 public:
-	class UCapsuleComponent*                           SolidHits_1;                                              // 0x05D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter_1;                                 // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           SolidHits_1;                                              // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter_1;                                 // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

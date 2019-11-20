@@ -30,11 +30,11 @@ public:
 
 
 // Class Occlusion.OcclusionService
-// 0x0060 (0x0088 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UOcclusionService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0028(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -42,6 +42,9 @@ public:
 		return ptr;
 	}
 
+
+	void OnPrimaryActorEndPlay(class AActor* InActor);
+	void OnIgnoredActorEndPlay(class AActor* InActor);
 };
 
 

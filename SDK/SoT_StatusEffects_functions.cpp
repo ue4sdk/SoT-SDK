@@ -12,6 +12,38 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_SetDebugDrawColour
+// (Final, Native, Private)
+
+void UDebugStatusEffectOverlapZoneVisualizerComponent::OnRep_SetDebugDrawColour()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_SetDebugDrawColour"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_DebugBoxDimensions
+// (Final, Native, Private)
+
+void UDebugStatusEffectOverlapZoneVisualizerComponent::OnRep_DebugBoxDimensions()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_DebugBoxDimensions"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function StatusEffects.LightWeightStatusEffectManagerComponent.OnRep_ActiveEffects
 // (Final, Native, Private, HasOutParms)
 // Parameters:

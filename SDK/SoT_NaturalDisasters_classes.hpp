@@ -36,7 +36,7 @@ public:
 
 
 // Class NaturalDisasters.AshenLordAshCloud
-// 0x0070 (0x0520 - 0x04B0)
+// 0x0048 (0x04F8 - 0x04B0)
 class AAshenLordAshCloud : public AActor
 {
 public:
@@ -45,11 +45,10 @@ public:
 	unsigned char                                      UnknownData00[0x4];                                       // 0x04C0(0x0004) MISSED OFFSET
 	float                                              LifeTime;                                                 // 0x04C4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	float                                              StartTime;                                                // 0x04C8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04CC(0x0004) MISSED OFFSET
-	struct FCurveFloatHelper                           CurveHelper;                                              // 0x04D0(0x0048)
-	TEnumAsByte<EAshCloudState>                        CloudState;                                               // 0x0518(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0519(0x0003) MISSED OFFSET
-	float                                              Radius;                                                   // 0x051C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x24];                                      // 0x04CC(0x0024) MISSED OFFSET
+	TEnumAsByte<EAshCloudState>                        CloudState;                                               // 0x04F0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x04F1(0x0003) MISSED OFFSET
+	float                                              Radius;                                                   // 0x04F4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

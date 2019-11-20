@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Maths_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -49,12 +49,22 @@ struct FWeightedProbabilityRangeOfRanges : public FWeightedProbabilityRange
 	TArray<struct FWeightedProbabilityRangeOfRangesFloatPair> SubRanges;                                                // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
-// ScriptStruct Maths.CurveFloatHelper
-// 0x0048
-struct FCurveFloatHelper
+// ScriptStruct Maths.FixedStepInterpCurvePointVector2D
+// 0x0010
+struct FFixedStepInterpCurvePointVector2D
 {
-	class UCurveFloat*                                 CurvePointer;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0008(0x0040) MISSED OFFSET
+	struct FVector2D                                   OutVal;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   Tangent;                                                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Maths.FixedStepInterpCurveVector2D
+// 0x0018
+struct FFixedStepInterpCurveVector2D
+{
+	TArray<struct FFixedStepInterpCurvePointVector2D>  Points;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              StepTime;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IsLooped;                                                 // 0x0014(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Maths.InertialSmoothedFloat

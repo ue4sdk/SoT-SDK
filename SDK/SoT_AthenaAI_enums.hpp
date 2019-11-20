@@ -144,16 +144,6 @@ enum class EAITargetWeaponFiringArcResult : uint8_t
 };
 
 
-// Enum AthenaAI.EAIKnockbackStrengthType
-enum class EAIKnockbackStrengthType : uint8_t
-{
-	EAIKnockbackStrengthType__Low  = 0,
-	EAIKnockbackStrengthType__Medium = 1,
-	EAIKnockbackStrengthType__High = 2,
-	EAIKnockbackStrengthType__EAIKnockbackStrengthType_MAX = 3
-};
-
-
 // Enum AthenaAI.EBlackboardValueCompositeType
 enum class EBlackboardValueCompositeType : uint8_t
 {
@@ -186,6 +176,56 @@ enum class EFloatValueComparisonType : uint8_t
 	EFloatValueComparisonType__GreaterThanEquals = 4,
 	EFloatValueComparisonType__LessThanEquals = 5,
 	EFloatValueComparisonType__EFloatValueComparisonType_MAX = 6
+};
+
+
+// Enum AthenaAI.ETraceDirection
+enum class ETraceDirection : uint8_t
+{
+	ETraceDirection__ItemToContext = 0,
+	ETraceDirection__ContextToItem = 1,
+	ETraceDirection__ETraceDirection_MAX = 2
+};
+
+
+// Enum AthenaAI.EAIKnockbackStrengthType
+enum class EAIKnockbackStrengthType : uint8_t
+{
+	EAIKnockbackStrengthType__Low  = 0,
+	EAIKnockbackStrengthType__Medium = 1,
+	EAIKnockbackStrengthType__High = 2,
+	EAIKnockbackStrengthType__EAIKnockbackStrengthType_MAX = 3
+};
+
+
+// Enum AthenaAI.EAIThreatLevel
+enum class EAIThreatLevel : uint8_t
+{
+	EAIThreatLevel__NoDanger       = 0,
+	EAIThreatLevel__Nervous        = 1,
+	EAIThreatLevel__Threatened     = 2,
+	EAIThreatLevel__Calm           = 3,
+	EAIThreatLevel__EAIThreatLevel_MAX = 4
+};
+
+
+// Enum AthenaAI.EFaunaInWaterState
+enum class EFaunaInWaterState : uint8_t
+{
+	EFaunaInWaterState__NotInWater = 0,
+	EFaunaInWaterState__FloatingOnSurface = 1,
+	EFaunaInWaterState__Underwater = 2,
+	EFaunaInWaterState__EFaunaInWaterState_MAX = 3
+};
+
+
+// Enum AthenaAI.EFaunaCratedState
+enum class EFaunaCratedState : uint8_t
+{
+	EFaunaCratedState__NotInCrate  = 0,
+	EFaunaCratedState__InProxyCrate = 1,
+	EFaunaCratedState__InWieldedCrate = 2,
+	EFaunaCratedState__EFaunaCratedState_MAX = 3
 };
 
 
@@ -226,15 +266,6 @@ enum class ESwimmingGoalCheckMode : uint8_t
 };
 
 
-// Enum AthenaAI.ETraceDirection
-enum class ETraceDirection : uint8_t
-{
-	ETraceDirection__ItemToContext = 0,
-	ETraceDirection__ContextToItem = 1,
-	ETraceDirection__ETraceDirection_MAX = 2
-};
-
-
 // Enum AthenaAI.ETinySharkDespawnReason
 enum class ETinySharkDespawnReason : uint8_t
 {
@@ -265,37 +296,6 @@ enum class ETinySharkState : uint8_t
 	ETinySharkState__Defeated      = 3,
 	ETinySharkState__Despawning    = 4,
 	ETinySharkState__ETinySharkState_MAX = 5
-};
-
-
-// Enum AthenaAI.EAIThreatLevel
-enum class EAIThreatLevel : uint8_t
-{
-	EAIThreatLevel__NoDanger       = 0,
-	EAIThreatLevel__Nervous        = 1,
-	EAIThreatLevel__Threatened     = 2,
-	EAIThreatLevel__Calm           = 3,
-	EAIThreatLevel__EAIThreatLevel_MAX = 4
-};
-
-
-// Enum AthenaAI.EFaunaInWaterState
-enum class EFaunaInWaterState : uint8_t
-{
-	EFaunaInWaterState__NotInWater = 0,
-	EFaunaInWaterState__FloatingOnSurface = 1,
-	EFaunaInWaterState__Underwater = 2,
-	EFaunaInWaterState__EFaunaInWaterState_MAX = 3
-};
-
-
-// Enum AthenaAI.EFaunaCratedState
-enum class EFaunaCratedState : uint8_t
-{
-	EFaunaCratedState__NotInCrate  = 0,
-	EFaunaCratedState__InProxyCrate = 1,
-	EFaunaCratedState__InWieldedCrate = 2,
-	EFaunaCratedState__EFaunaCratedState_MAX = 3
 };
 
 

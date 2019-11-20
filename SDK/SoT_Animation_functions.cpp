@@ -194,6 +194,22 @@ class UAnimationData* UAnimationDataStoreInterface::GetAnimationDataForId(class 
 }
 
 
+// Function Animation.CosmeticItemAnimationComponent.DestroyAllCosmeticItems
+// (Native, Public, BlueprintCallable)
+
+void UCosmeticItemAnimationComponent::DestroyAllCosmeticItems()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CosmeticItemAnimationComponent.DestroyAllCosmeticItems"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Animation.DockableInterface.HandleDestroy
 // (Native, Public)
 

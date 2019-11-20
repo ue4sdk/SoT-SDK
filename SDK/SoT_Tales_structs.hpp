@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Tales_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
-#include "SoT_MerchantContracts_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Athena_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
+#include "SoT_MerchantContracts_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -25,6 +25,14 @@ namespace SDK
 struct FSplineFootprintPathTool
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Tales.TaleQuestCargoRunContractItem
+// 0x0018
+struct FTaleQuestCargoRunContractItem
+{
+	class UClass*                                      ItemToCollect;                                            // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Tales.TaleQuestDeliveryRequest

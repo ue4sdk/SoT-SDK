@@ -8,6 +8,7 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_ObjectMessaging_classes.hpp"
 

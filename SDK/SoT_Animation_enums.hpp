@@ -12,12 +12,15 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
-// Enum Animation.EDockableSocketOverlapUpdates
-enum class EDockableSocketOverlapUpdates : uint8_t
+// Enum Animation.ECharacterIKLimb
+enum class ECharacterIKLimb : uint8_t
 {
-	EDockableSocketOverlapUpdates__AllowUpdate = 0,
-	EDockableSocketOverlapUpdates__BlockUpdate = 1,
-	EDockableSocketOverlapUpdates__EDockableSocketOverlapUpdates_MAX = 2
+	ECharacterIKLimb__None         = 0,
+	ECharacterIKLimb__LeftHand     = 1,
+	ECharacterIKLimb__RightHand    = 2,
+	ECharacterIKLimb__LeftFoot     = 3,
+	ECharacterIKLimb__RightFoot    = 4,
+	ECharacterIKLimb__ECharacterIKLimb_MAX = 5
 };
 
 
@@ -28,6 +31,15 @@ enum class ELimbIKSpace : uint8_t
 	ELimbIKSpace__World            = 1,
 	ELimbIKSpace__Character        = 2,
 	ELimbIKSpace__ELimbIKSpace_MAX = 3
+};
+
+
+// Enum Animation.EDockableSocketOverlapUpdates
+enum class EDockableSocketOverlapUpdates : uint8_t
+{
+	EDockableSocketOverlapUpdates__AllowUpdate = 0,
+	EDockableSocketOverlapUpdates__BlockUpdate = 1,
+	EDockableSocketOverlapUpdates__EDockableSocketOverlapUpdates_MAX = 2
 };
 
 

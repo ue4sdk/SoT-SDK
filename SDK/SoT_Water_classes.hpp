@@ -323,6 +323,22 @@ public:
 };
 
 
+// Class Water.MockWaterServiceWithValidWaterPlane
+// 0x0008 (0x0040 - 0x0038)
+class UMockWaterServiceWithValidWaterPlane : public UMockWaterInterface
+{
+public:
+	class UFFTWaterComponent*                          DefaultWaterComponent;                                    // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterServiceWithValidWaterPlane"));
+		return ptr;
+	}
+
+};
+
+
 // Class Water.WaterSubmersionTests
 // 0x0000 (0x0038 - 0x0038)
 class UWaterSubmersionTests : public UMockWaterInterface

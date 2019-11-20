@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_GunpowderBarrel_Base.BP_MerchantCrate_GunpowderBarrel_Base_C
-// 0x0018 (0x0830 - 0x0818)
+// 0x0018 (0x08A8 - 0x0890)
 class ABP_MerchantCrate_GunpowderBarrel_Base_C : public AStaticMerchantCrate
 {
 public:
-	class UItemHealthComponent*                        ItemHealth;                                               // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UFlammableWieldableComponent*                FlammableWieldable;                                       // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UItemHealthComponent*                        ItemHealth;                                               // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UFlammableWieldableComponent*                FlammableWieldable;                                       // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

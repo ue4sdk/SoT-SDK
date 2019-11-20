@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Innkeeper_Tasha.BP_Innkeeper_Tasha_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x06C0 - 0x06C0)
 class ABP_Innkeeper_Tasha_C : public ABP_Innkeeper_C
 {
 public:

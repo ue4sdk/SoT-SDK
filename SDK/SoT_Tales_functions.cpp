@@ -12,6 +12,63 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Tales.TaleQuestCargoRunContractsService.GetContract
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FGuid                   Guid                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UTaleQuestCargoRunContract* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTaleQuestCargoRunContract* UTaleQuestCargoRunContractsService::GetContract(const struct FGuid& Guid)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestCargoRunContractsService.GetContract"));
+
+	struct
+	{
+		struct FGuid                   Guid;
+		class UTaleQuestCargoRunContract* ReturnValue;
+	} params;
+
+	params.Guid = Guid;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Tales.TaleQuestCargoRunContractsService.AddContract
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<class UClass*>          InItems                        (Parm, ZeroConstructor)
+// class AActor*                  InCollectFromNPC               (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InDeliverToNPC                 (Parm, ZeroConstructor, IsPlainOldData)
+// int                            InTimeLimitInMinutes           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGuid                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FGuid UTaleQuestCargoRunContractsService::AddContract(TArray<class UClass*> InItems, class AActor* InCollectFromNPC, class AActor* InDeliverToNPC, int InTimeLimitInMinutes)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestCargoRunContractsService.AddContract"));
+
+	struct
+	{
+		TArray<class UClass*>          InItems;
+		class AActor*                  InCollectFromNPC;
+		class AActor*                  InDeliverToNPC;
+		int                            InTimeLimitInMinutes;
+		struct FGuid                   ReturnValue;
+	} params;
+
+	params.InItems = InItems;
+	params.InCollectFromNPC = InCollectFromNPC;
+	params.InDeliverToNPC = InDeliverToNPC;
+	params.InTimeLimitInMinutes = InTimeLimitInMinutes;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Tales.TaleQuestMerchantContractsService.GetContract
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:

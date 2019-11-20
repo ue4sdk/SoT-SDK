@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Water_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -154,6 +154,14 @@ struct FWaterSplashProbesContainer
 	TArray<struct FWaterSplashProbe>                   Probes;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              ProbeSamplingTime;                                        // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Water.EventCurrentWaterPlaneChange
+// 0x0010
+struct FEventCurrentWaterPlaneChange
+{
+	class UBaseWaterComponent*                         FormerWaterPlane;                                         // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         NewWaterPlane;                                            // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct Water.EventLeftWaterExclusionZone

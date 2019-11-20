@@ -185,20 +185,22 @@ public:
 
 
 // Class Cooking.CookingPot
-// 0x0138 (0x0608 - 0x04D0)
+// 0x01E0 (0x06B0 - 0x04D0)
 class ACookingPot : public AInteractableBase
 {
 public:
-	class UStaticMeshComponent*                        MeshComponent;                                            // 0x04D0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UCookerComponent*                            CookerComponent;                                          // 0x04E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	float                                              HoldToInteractTime;                                       // 0x04E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04EC(0x0004) MISSED OFFSET
-	struct FText                                       NotWieldingCookableItemTooltip;                           // 0x04F0(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       WieldingCookableItemTooltip;                              // 0x0528(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       TakeItemTooltip;                                          // 0x0560(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       CannotTakeItemTooltip;                                    // 0x0598(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       MixInItemTooltip;                                         // 0x05D0(0x0038) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04D0(0x0008) MISSED OFFSET
+	class UStaticMeshComponent*                        MeshComponent;                                            // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x04E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UCookerComponent*                            CookerComponent;                                          // 0x04E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	float                                              HoldToInteractTime;                                       // 0x04F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04F4(0x0004) MISSED OFFSET
+	struct FText                                       NotWieldingCookableItemTooltip;                           // 0x04F8(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       WieldingCookableItemTooltip;                              // 0x0530(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       TakeItemTooltip;                                          // 0x0568(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       CannotTakeItemTooltip;                                    // 0x05A0(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       MixInItemTooltip;                                         // 0x05D8(0x0038) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0xA0];                                      // 0x0610(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

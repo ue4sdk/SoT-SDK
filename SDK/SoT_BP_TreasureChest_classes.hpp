@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest.BP_TreasureChest_C
-// 0x0008 (0x07E0 - 0x07D8)
+// 0x0008 (0x0858 - 0x0850)
 class ABP_TreasureChest_C : public ATreasureChest
 {
 public:
-	class UBoxComponent*                               HitVolume;                                                // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               HitVolume;                                                // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

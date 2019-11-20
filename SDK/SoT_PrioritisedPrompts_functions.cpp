@@ -188,6 +188,22 @@ void UBasePromptCoordinator::OnControllerEndPlay(TEnumAsByte<EEndPlayReason> End
 }
 
 
+// Function PrioritisedPrompts.BasePromptCoordinator.MarkAsComplete_Implementable
+// (Event, Public, BlueprintEvent)
+
+void UBasePromptCoordinator::MarkAsComplete_Implementable()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.MarkAsComplete_Implementable"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function PrioritisedPrompts.BasePromptCoordinator.MakeShowPrompt
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -262,9 +278,8 @@ struct FPromptEvaluation UBasePromptCoordinator::MakeCompleteCoordinator()
 // Parameters:
 // class AAthenaPlayerController* PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrioritisedPromptsManager* PrioritisedPromptsManager      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ImmediatelyRegisterForCharacterEvents (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBasePromptCoordinator::Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager, bool ImmediatelyRegisterForCharacterEvents)
+void UBasePromptCoordinator::Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.Initialize"));
 
@@ -272,14 +287,33 @@ void UBasePromptCoordinator::Initialize(class AAthenaPlayerController* PlayerCon
 	{
 		class AAthenaPlayerController* PlayerController;
 		class UPrioritisedPromptsManager* PrioritisedPromptsManager;
-		bool                           ImmediatelyRegisterForCharacterEvents;
 	} params;
 
 	params.PlayerController = PlayerController;
 	params.PrioritisedPromptsManager = PrioritisedPromptsManager;
-	params.ImmediatelyRegisterForCharacterEvents = ImmediatelyRegisterForCharacterEvents;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function PrioritisedPrompts.BasePromptCoordinator.GetCompleted
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBasePromptCoordinator::GetCompleted()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.GetCompleted"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

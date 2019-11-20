@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_msc_hurdygurdy_smp_01_a_Wieldable.BP_msc_hurdygurdy_smp_01_a_Wieldable_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_msc_hurdygurdy_smp_01_a_Wieldable_C : public ABP_HurdyGurdy_C
 {
 public:

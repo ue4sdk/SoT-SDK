@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Banjo.BP_Banjo_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_Banjo_C : public AMusicalInstrumentStaticMesh
 {
 public:

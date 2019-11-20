@@ -18,7 +18,8 @@ enum class EWaterQueryResult : uint8_t
 	EWaterQueryResult__Success     = 0,
 	EWaterQueryResult__Failed      = 1,
 	EWaterQueryResult__NoWater     = 2,
-	EWaterQueryResult__EWaterQueryResult_MAX = 3
+	EWaterQueryResult__Count       = 3,
+	EWaterQueryResult__EWaterQueryResult_MAX = 4
 };
 
 

@@ -76,6 +76,46 @@ public:
 };
 
 
+// Class StatusEffects.StatusEffectOverlapZone
+// 0x0018 (0x04C8 - 0x04B0)
+class AStatusEffectOverlapZone : public AActor
+{
+public:
+	class UBoxComponent*                               CollisionMesh;                                            // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FStatus>                             StatusesToApplyOnOverlap;                                 // 0x04B8(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusEffectOverlapZone"));
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent
+// 0x0020 (0x00F0 - 0x00D0)
+class UDebugStatusEffectOverlapZoneVisualizerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
+	struct FVector                                     BoxCollisionDimensions;                                   // 0x00D8(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	struct FColor                                      DebugColour;                                              // 0x00E4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               VisibleState;                                             // 0x00E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_SetDebugDrawColour();
+	void OnRep_DebugBoxDimensions();
+};
+
+
 // Class StatusEffects.DebugStatusTicketHolder
 // 0x0008 (0x04B8 - 0x04B0)
 class ADebugStatusTicketHolder : public AActor
@@ -170,12 +210,13 @@ public:
 
 
 // Class StatusEffects.StatusRecipientResponseList
-// 0x0020 (0x0048 - 0x0028)
+// 0x0030 (0x0058 - 0x0028)
 class UStatusRecipientResponseList : public UDataAsset
 {
 public:
 	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FFeatureToggledStatusResponseList>   FeatureToggledResponseLists;                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	TArray<class UStatusResponseAsset*>                FinalResponseAssets;                                      // 0x0048(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -139,6 +139,50 @@ public:
 };
 
 
+// Class Tales.TaleQuestCargoRunContract
+// 0x0088 (0x00B0 - 0x0028)
+class UTaleQuestCargoRunContract : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnCompleted;                                              // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnDelivered;                                              // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnCollected;                                              // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TArray<struct FTaleQuestCargoRunContractItem>      ItemsToCollect;                                           // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
+	class AActor*                                      DeliverToNPC;                                             // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      CollectFromNPC;                                           // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0098(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestCargoRunContract"));
+		return ptr;
+	}
+
+};
+
+
+// Class Tales.TaleQuestCargoRunContractsService
+// 0x0048 (0x0088 - 0x0040)
+class UTaleQuestCargoRunContractsService : public UTaleQuestService
+{
+public:
+	TArray<class UTaleQuestCargoRunContract*>          Contracts;                                                // 0x0040(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0050(0x0038) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestCargoRunContractsService"));
+		return ptr;
+	}
+
+
+	class UTaleQuestCargoRunContract* GetContract(const struct FGuid& Guid);
+	struct FGuid AddContract(TArray<class UClass*> InItems, class AActor* InCollectFromNPC, class AActor* InDeliverToNPC, int InTimeLimitInMinutes);
+};
+
+
 // Class Tales.TaleQuestMerchantContract
 // 0x0060 (0x0088 - 0x0028)
 class UTaleQuestMerchantContract : public UObject
@@ -195,6 +239,21 @@ public:
 
 	void UpdateMerchantMap(const struct FName& MapId, int Index, const struct FTaleQuestDeliverableItem& Deliverable);
 	void AdvanceRiddleMap(const struct FName& MapId);
+};
+
+
+// Class Tales.TaleQuestCargoRunContractsServiceDesc
+// 0x0000 (0x0028 - 0x0028)
+class UTaleQuestCargoRunContractsServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestCargoRunContractsServiceDesc"));
+		return ptr;
+	}
+
 };
 
 

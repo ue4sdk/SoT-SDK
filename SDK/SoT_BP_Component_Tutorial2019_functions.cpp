@@ -220,6 +220,22 @@ void UBP_Component_Tutorial2019_C::On_Start_Destructing(const struct FEventPlaye
 }
 
 
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ForceDisableComponent_Blueprint
+// (Event, Public, BlueprintEvent)
+
+void UBP_Component_Tutorial2019_C::ForceDisableComponent_Blueprint()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ForceDisableComponent_Blueprint"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ExecuteUbergraph_BP_Component_Tutorial2019
 // (HasDefaults)
 // Parameters:

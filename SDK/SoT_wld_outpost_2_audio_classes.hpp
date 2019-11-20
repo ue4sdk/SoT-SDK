@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_outpost_2_audio.wld_outpost_2_audio_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04B8 - 0x04B8)
 class Awld_outpost_2_audio_C : public ALevelScriptActor
 {
 public:

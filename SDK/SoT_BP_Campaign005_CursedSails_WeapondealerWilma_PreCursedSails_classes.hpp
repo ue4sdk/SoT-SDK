@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign005_CursedSails_WeapondealerWilma_PreCursedSails.BP_Campaign005_CursedSails_WeapondealerWilma_PreCursedSails_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x0680 - 0x0680)
 class ABP_Campaign005_CursedSails_WeapondealerWilma_PreCursedSails_C : public ABP_Weapondealer_C
 {
 public:

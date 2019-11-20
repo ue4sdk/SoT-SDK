@@ -1119,7 +1119,7 @@ public:
 
 
 // Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass
-// 0x0000 (0x0200 - 0x0200)
+// 0x0000 (0x0228 - 0x0228)
 class UGameplayAbilityBlueprintGeneratedClass : public UBlueprintGeneratedClass
 {
 public:

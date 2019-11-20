@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwreckWoodSpawner.BP_ShipwreckWoodSpawner_C
-// 0x0000 (0x0460 - 0x0460)
+// 0x0000 (0x0450 - 0x0450)
 class UBP_ShipwreckWoodSpawner_C : public UItemSpawnComponent
 {
 public:

@@ -12,6 +12,34 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PromptCoordinator_Base.BP_PromptCoordinator_Base_C.IsCharacterInsideRadius
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 Center                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_PromptCoordinator_Base_C::IsCharacterInsideRadius(const struct FVector& Center, float Radius, bool* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PromptCoordinator_Base.BP_PromptCoordinator_Base_C.IsCharacterInsideRadius"));
+
+	struct
+	{
+		struct FVector                 Center;
+		float                          Radius;
+		bool                           Result;
+	} params;
+
+	params.Center = Center;
+	params.Radius = Radius;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
 // Function BP_PromptCoordinator_Base.BP_PromptCoordinator_Base_C.UninitializeImplementable
 // (Public, BlueprintCallable, BlueprintEvent)
 

@@ -1314,7 +1314,8 @@ enum class ECameraAnimPlaySpace : uint8_t
 	ECameraAnimPlaySpace__CameraLocal = 0,
 	ECameraAnimPlaySpace__World    = 1,
 	ECameraAnimPlaySpace__UserDefined = 2,
-	ECameraAnimPlaySpace__ECameraAnimPlaySpace_MAX = 3
+	ECameraAnimPlaySpace__RARE_CutsceneWorld = 3,
+	ECameraAnimPlaySpace__ECameraAnimPlaySpace_MAX = 4
 };
 
 
@@ -3639,6 +3640,18 @@ enum class EStartRadiusGroupNames : uint8_t
 	StartRadiusGroupE              = 3,
 	StartRadiusGroup_MAX           = 4,
 	EStartRadiusGroupNames_MAX     = 5
+};
+
+
+// Enum Engine.EAngleRangeGroupNames
+enum class EAngleRangeGroupNames : uint8_t
+{
+	AngleRangeGroupB               = 0,
+	AngleRangeGroupC               = 1,
+	AngleRangeGroupD               = 2,
+	AngleRangeGroupE               = 3,
+	AngleRangeGroup_MAX            = 4,
+	EAngleRangeGroupNames_MAX      = 5
 };
 
 

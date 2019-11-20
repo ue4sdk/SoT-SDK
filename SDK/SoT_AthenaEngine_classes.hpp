@@ -138,6 +138,21 @@ public:
 };
 
 
+// Class AthenaEngine.SyncedRandomRetrievalInterface
+// 0x0000 (0x0028 - 0x0028)
+class USyncedRandomRetrievalInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.SyncedRandomRetrievalInterface"));
+		return ptr;
+	}
+
+};
+
+
 }
 
 #ifdef _MSC_VER

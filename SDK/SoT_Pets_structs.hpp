@@ -9,13 +9,13 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Pets_enums.hpp"
 #include "SoT_Interaction_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_Athena_classes.hpp"
-#include "SoT_RareAudio_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
+#include "SoT_RareAudio_classes.hpp"
 
 namespace SDK
 {
@@ -109,7 +109,8 @@ struct FHangoutSpotPosition
 	unsigned char                                      UnknownData03[0x2];                                       // 0x0062(0x0002) MISSED OFFSET
 	struct FVector                                     OverrideInteractionPointPosition;                         // 0x0064(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               BlockPetEmoteReactions;                                   // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0xF];                                       // 0x0071(0x000F) MISSED OFFSET
+	bool                                               IgnorePickupFromHangoutTooltipDisplayOffset;              // 0x0071(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0xE];                                       // 0x0072(0x000E) MISSED OFFSET
 };
 
 // ScriptStruct Pets.PetCustomisation
@@ -124,7 +125,7 @@ struct FPetCustomisation
 // 0x0038
 struct FPetListingTypeEntry
 {
-	TArray<struct FPetCustomisation>                   PetCustomisations;                                        // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       PetPartsCategory;                                         // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringClassReference                       PetType;                                                  // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FName                                       FeatureToggleName;                                        // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class FString                                      PetListingName;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -306,7 +307,8 @@ struct FEventWieldablePetPutOnPerch
 	uint32_t                                           HangoutSpotIndex;                                         // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	TWeakObjectPtr<class AActor>                       WieldingActor;                                            // 0x0014(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               ShouldBlockPetEmoteReactions;                             // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
+	bool                                               ShouldIgnorePickupFromHangoutTooltipDisplayOffset;        // 0x001D(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x001E(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct Pets.EventPetDropped

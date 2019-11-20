@@ -1263,6 +1263,7 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 // TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset                       (ConstParm, Parm)
 // TAssetPtr<class ULoadoutAsset> Loadout                        (ConstParm, Parm)
 // TAssetPtr<class UAthenaAIFormDataAsset> Form                           (ConstParm, Parm)
+// TAssetPtr<class UClass>        AIItemSpawnComponent           (ConstParm, Parm)
 // class UClass*                  ClassId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -1271,7 +1272,7 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 // struct FName                   NavMeshOverride                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
+void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, TAssetPtr<class UClass> AIItemSpawnComponent, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings"));
 
@@ -1281,6 +1282,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 		TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset;
 		TAssetPtr<class ULoadoutAsset> Loadout;
 		TAssetPtr<class UAthenaAIFormDataAsset> Form;
+		TAssetPtr<class UClass>        AIItemSpawnComponent;
 		class UClass*                  ClassId;
 		struct FVector                 Pos;
 		struct FRotator                Rot;
@@ -1294,6 +1296,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 	params.Skillset = Skillset;
 	params.Loadout = Loadout;
 	params.Form = Form;
+	params.AIItemSpawnComponent = AIItemSpawnComponent;
 	params.ClassId = ClassId;
 	params.Pos = Pos;
 	params.Rot = Rot;
@@ -1586,183 +1589,6 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 	params.Enable = Enable;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                  InDestroyedActor               (Parm, ZeroConstructor, IsPlainOldData)
-
-void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed"));
-
-	struct
-	{
-		class AActor*                  InDestroyedActor;
-	} params;
-
-	params.InDestroyedActor = InDestroyedActor;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.TinySharkExperience.GetTrackedShip
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AShip*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AShip* ATinySharkExperience::GetTrackedShip()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetTrackedShip"));
-
-	struct
-	{
-		class AShip*                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.TinySharkExperience.GetCurrentState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<ETinySharkState>   ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetCurrentState"));
-
-	struct
-	{
-		TEnumAsByte<ETinySharkState>   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.TinySharkExperience.GetActiveState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<ETinySharkActiveState> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetActiveState"));
-
-	struct
-	{
-		TEnumAsByte<ETinySharkActiveState> ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.TinySharkService.RequestTinySharkWithShip
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AShip*                   InTrackedShip                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            OverrideControllerParamIndex   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PartIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex, int PartIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.RequestTinySharkWithShip"));
-
-	struct
-	{
-		class AShip*                   InTrackedShip;
-		int                            OverrideControllerParamIndex;
-		int                            PartIndex;
-		bool                           ReturnValue;
-	} params;
-
-	params.InTrackedShip = InTrackedShip;
-	params.OverrideControllerParamIndex = OverrideControllerParamIndex;
-	params.PartIndex = PartIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 SpawnLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            PartIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation, int PartIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation"));
-
-	struct
-	{
-		struct FVector                 SpawnLocation;
-		int                            PartIndex;
-		bool                           ReturnValue;
-	} params;
-
-	params.SpawnLocation = SpawnLocation;
-	params.PartIndex = PartIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.TinySharkService.DismissAllTinySharks
-// (Native, Public, BlueprintCallable)
-
-void ATinySharkService::DismissAllTinySharks()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.DismissAllTinySharks"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ATinySharkService::CanSpawnTinySharkExperience()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -2155,6 +1981,183 @@ void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 	params.InTargetTurnAngle = InTargetTurnAngle;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  InDestroyedActor               (Parm, ZeroConstructor, IsPlainOldData)
+
+void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed"));
+
+	struct
+	{
+		class AActor*                  InDestroyedActor;
+	} params;
+
+	params.InDestroyedActor = InDestroyedActor;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.TinySharkExperience.GetTrackedShip
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AShip*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AShip* ATinySharkExperience::GetTrackedShip()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetTrackedShip"));
+
+	struct
+	{
+		class AShip*                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkExperience.GetCurrentState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<ETinySharkState>   ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<ETinySharkState> ATinySharkExperience::GetCurrentState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetCurrentState"));
+
+	struct
+	{
+		TEnumAsByte<ETinySharkState>   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkExperience.GetActiveState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<ETinySharkActiveState> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<ETinySharkActiveState> ATinySharkExperience::GetActiveState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.GetActiveState"));
+
+	struct
+	{
+		TEnumAsByte<ETinySharkActiveState> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkService.RequestTinySharkWithShip
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AShip*                   InTrackedShip                  (Parm, ZeroConstructor, IsPlainOldData)
+// int                            OverrideControllerParamIndex   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            PartIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATinySharkService::RequestTinySharkWithShip(class AShip* InTrackedShip, int OverrideControllerParamIndex, int PartIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.RequestTinySharkWithShip"));
+
+	struct
+	{
+		class AShip*                   InTrackedShip;
+		int                            OverrideControllerParamIndex;
+		int                            PartIndex;
+		bool                           ReturnValue;
+	} params;
+
+	params.InTrackedShip = InTrackedShip;
+	params.OverrideControllerParamIndex = OverrideControllerParamIndex;
+	params.PartIndex = PartIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkService.RequestTinySharkWithLocation
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 SpawnLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            PartIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATinySharkService::RequestTinySharkWithLocation(const struct FVector& SpawnLocation, int PartIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.RequestTinySharkWithLocation"));
+
+	struct
+	{
+		struct FVector                 SpawnLocation;
+		int                            PartIndex;
+		bool                           ReturnValue;
+	} params;
+
+	params.SpawnLocation = SpawnLocation;
+	params.PartIndex = PartIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.TinySharkService.DismissAllTinySharks
+// (Native, Public, BlueprintCallable)
+
+void ATinySharkService::DismissAllTinySharks()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.DismissAllTinySharks"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATinySharkService::CanSpawnTinySharkExperience()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkService.CanSpawnTinySharkExperience"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

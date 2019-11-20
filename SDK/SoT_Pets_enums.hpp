@@ -18,8 +18,9 @@ enum class EPetDangerHearingResponseType : uint8_t
 	EPetDangerHearingResponseType__RunAway = 0,
 	EPetDangerHearingResponseType__RunToHangoutSpot = 1,
 	EPetDangerHearingResponseType__TurnToward = 2,
-	EPetDangerHearingResponseType__MAX = 3,
-	EPetDangerHearingResponseType__EPetDangerHearingResponseType_MAX = 4
+	EPetDangerHearingResponseType__RunToOwner = 3,
+	EPetDangerHearingResponseType__MAX = 4,
+	EPetDangerHearingResponseType__EPetDangerHearingResponseType_MAX = 5
 };
 
 

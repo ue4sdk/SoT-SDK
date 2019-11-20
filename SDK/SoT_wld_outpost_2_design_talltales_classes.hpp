@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_outpost_2_design_talltales.wld_outpost_2_design_talltales_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04B8 - 0x04B8)
 class Awld_outpost_2_design_talltales_C : public ALevelScriptActor
 {
 public:

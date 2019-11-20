@@ -15,41 +15,41 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C
-// 0x0530 (0x0630 - 0x0100)
+// 0x0538 (0x0650 - 0x0118)
 class UBP_Prompt_CTPurchaseVoyageSequence_C : public UBP_PromptCoordinator_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0100(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              TriggerVolumeRadius;                                      // 0x0108(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                InsideGoldHoardersRadius;                                 // 0x010C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class AOverlapTriggerActor*>                GoldHoarderOverlapActors;                                 // 0x0110(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AOverlapTriggerActor*>                OutpostOverlapActors;                                     // 0x0120(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	float                                              OutpostRadiusReduction;                                   // 0x0130(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0134(0x0004) MISSED OFFSET
-	struct FPrioritisedPromptWithHandle                Prompt_GoToVendors;                                       // 0x0138(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPrioritisedPromptWithHandle                Prompt_GoToGoldhoarders;                                  // 0x0190(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPrioritisedPromptWithHandle                Prompt_GoToOrderOfSouls;                                  // 0x01E8(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPrioritisedPromptWithHandle                Prompt_GoToMerchantAlliance;                              // 0x0240(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPrioritisedPromptWithHandle                Prompt_ProposeVoyage;                                     // 0x0298(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPrioritisedPromptWithHandle                Prompt_VoteOnVoyage;                                      // 0x02F0(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPrioritisedPromptWithHandle                Prompt_BoardShip;                                         // 0x0348(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_OfferPurchased;                                    // 0x03A0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_VoyageProposalDiscarded;                           // 0x03E8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_VoyageProposed;                                    // 0x0430(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_VoyageBegun;                                       // 0x0478(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_VoyageComplete;                                    // 0x04C0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_PlayerEnteredShip;                                 // 0x0508(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_PlayerExitedShip;                                  // 0x0550(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_PlayerWithdrewVoyage;                              // 0x0598(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FObjectMessagingHandle                      Handle_VoyageCancelled;                                   // 0x05E0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               State_VoyageAcquired;                                     // 0x0628(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_VoyageProposed;                                     // 0x0629(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_ShowVendorPrompts;                                  // 0x062A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_GoToGoldhoarders;                                   // 0x062B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_GoToOrderOfSouls;                                   // 0x062C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_GoToMerchantAlliance;                               // 0x062D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_OnVoyage;                                           // 0x062E(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               State_OnShip;                                             // 0x062F(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0118(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	float                                              TriggerVolumeRadius;                                      // 0x0120(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                InsideGoldHoardersRadius;                                 // 0x0124(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class AOverlapTriggerActor*>                GoldHoarderOverlapActors;                                 // 0x0128(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AOverlapTriggerActor*>                OutpostOverlapActors;                                     // 0x0138(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	float                                              OutpostRadiusReduction;                                   // 0x0148(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x014C(0x0004) MISSED OFFSET
+	struct FPrioritisedPromptWithHandle                Prompt_GoToVendors;                                       // 0x0150(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_GoToGoldhoarders;                                  // 0x01A8(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_GoToOrderOfSouls;                                  // 0x0200(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_GoToMerchantAlliance;                              // 0x0258(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_ProposeVoyage;                                     // 0x02B0(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_VoteOnVoyage;                                      // 0x0308(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_BoardShip;                                         // 0x0360(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_OfferPurchased;                                    // 0x03B8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_VoyageProposalDiscarded;                           // 0x0400(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_VoyageProposed;                                    // 0x0448(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_VoyageBegun;                                       // 0x0490(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_VoyageComplete;                                    // 0x04D8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_PlayerEnteredShip;                                 // 0x0520(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_PlayerExitedShip;                                  // 0x0568(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_PlayerWithdrewVoyage;                              // 0x05B0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FObjectMessagingHandle                      Handle_VoyageCancelled;                                   // 0x05F8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               State_InsideOutpostRadius;                                // 0x0640(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               State_InsideGoldhoardersRadius;                           // 0x0641(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               State_InsideOrderOfSouls;                                 // 0x0642(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               State_InsideMerchantAllianceRadius;                       // 0x0643(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               State_OnShip;                                             // 0x0644(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               State_IsTutorialForceDisabled;                            // 0x0645(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0646(0x0002) MISSED OFFSET
+	class UBP_CT_TutorialProgress_C*                   CompanyTutorialProgress;                                  // 0x0648(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -58,10 +58,12 @@ public:
 	}
 
 
+	void IsNearAnyShopkeeper(bool* Result);
+	void AreTutorialsForceDisabled(bool* Result);
+	void IsCurrentlyControlledCharacter(class AActor* Actor, bool* Result);
 	void ShouldShowMerchantAllianceCompanyPrompts(bool* Result);
 	void ShouldShowOrderOfSoulsCompanyPrompts(bool* Result);
 	void ClearAllOutpostOverlapActors();
-	void EvaluateShouldShowFromCompanyEntitlements(bool* ShouldShowAny, bool* ShouldShowGoldHoarders, bool* ShouldShowOrderOfSouls, bool* ShouldShowMerchantAlliance);
 	void ShouldShowGoldHoarderCompanyPrompts(bool* Result);
 	void ClearAllGoldHoarderOverlapActors();
 	void SetGoldHoardersLocations(TArray<struct FVector>* GoldHoarderLocations);
@@ -76,6 +78,7 @@ public:
 	void UnregisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher);
 	void UnregisterOtherEvents_Implementable();
 	void RegisterOtherEvents_Implementable();
+	void ForceDisableTutorials();
 	void OnOfferPurchased(const struct FOfferPurchasedEvent& Event);
 	void OnPlayerProposedVoyage(const struct FVoyageProposalSelectedEvent& Event);
 	void OnVoyageDiscardFromInventory(const struct FVoyageProposalDiscardEvent& Event);
@@ -83,10 +86,10 @@ public:
 	void OnVoyageCompleted(const struct FVoyageComplete& Event);
 	void OnSomethingEnteredShip(const struct FEventEnteredShip& Event);
 	void OnPlayerExitedShip(const struct FEventExitedShip& Event);
-	void OnPlayerLeftOutpostRadius();
-	void OnPlayerEnteredOutpostRadius();
-	void PlayerLeftGoldHoarderRadius();
-	void PlayerInsideGoldHoarderRadius();
+	void PlayerLeftOutpostRadius(class AActor* ActorInZone);
+	void PlayerEnteredOutpostRadius(class AActor* ActorInZone);
+	void PlayerLeftGoldhoarderRadius(class AActor* ActorInZone);
+	void PlayerEnteredGoldhoarderRadius(class AActor* ActorInZone);
 	void OnPlayerWithdrewVoyage(const struct FEventPlayerWithdrewVoyage& Event);
 	void OnPlayerCancelledVoyage(const struct FVoyageCancelled& Event);
 	void ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence(int EntryPoint);

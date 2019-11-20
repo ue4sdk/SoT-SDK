@@ -14,6 +14,21 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class DeliverableFramework.DeliverableRequirementBase
+// 0x0000 (0x0028 - 0x0028)
+class UDeliverableRequirementBase : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DeliverableFramework.DeliverableRequirementBase"));
+		return ptr;
+	}
+
+};
+
+
 // Class DeliverableFramework.DeliverableInterface
 // 0x0000 (0x0028 - 0x0028)
 class UDeliverableInterface : public UInterface
@@ -40,21 +55,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DeliverableFramework.DeliverableComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class DeliverableFramework.DeliverableRequirementBase
-// 0x0000 (0x0028 - 0x0028)
-class UDeliverableRequirementBase : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class DeliverableFramework.DeliverableRequirementBase"));
 		return ptr;
 	}
 

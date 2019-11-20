@@ -12,6 +12,75 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.IsNearAnyShopkeeper
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Prompt_CTPurchaseVoyageSequence_C::IsNearAnyShopkeeper(bool* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.IsNearAnyShopkeeper"));
+
+	struct
+	{
+		bool                           Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.AreTutorialsForceDisabled
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Prompt_CTPurchaseVoyageSequence_C::AreTutorialsForceDisabled(bool* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.AreTutorialsForceDisabled"));
+
+	struct
+	{
+		bool                           Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.IsCurrentlyControlledCharacter
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Prompt_CTPurchaseVoyageSequence_C::IsCurrentlyControlledCharacter(class AActor* Actor, bool* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.IsCurrentlyControlledCharacter"));
+
+	struct
+	{
+		class AActor*                  Actor;
+		bool                           Result;
+	} params;
+
+	params.Actor = Actor;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
 // Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.ShouldShowMerchantAllianceCompanyPrompts
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -69,40 +138,6 @@ void UBP_Prompt_CTPurchaseVoyageSequence_C::ClearAllOutpostOverlapActors()
 
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.EvaluateShouldShowFromCompanyEntitlements
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           ShouldShowAny                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ShouldShowGoldHoarders         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ShouldShowOrderOfSouls         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ShouldShowMerchantAlliance     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UBP_Prompt_CTPurchaseVoyageSequence_C::EvaluateShouldShowFromCompanyEntitlements(bool* ShouldShowAny, bool* ShouldShowGoldHoarders, bool* ShouldShowOrderOfSouls, bool* ShouldShowMerchantAlliance)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.EvaluateShouldShowFromCompanyEntitlements"));
-
-	struct
-	{
-		bool                           ShouldShowAny;
-		bool                           ShouldShowGoldHoarders;
-		bool                           ShouldShowOrderOfSouls;
-		bool                           ShouldShowMerchantAlliance;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (ShouldShowAny != nullptr)
-		*ShouldShowAny = params.ShouldShowAny;
-	if (ShouldShowGoldHoarders != nullptr)
-		*ShouldShowGoldHoarders = params.ShouldShowGoldHoarders;
-	if (ShouldShowOrderOfSouls != nullptr)
-		*ShouldShowOrderOfSouls = params.ShouldShowOrderOfSouls;
-	if (ShouldShowMerchantAlliance != nullptr)
-		*ShouldShowMerchantAlliance = params.ShouldShowMerchantAlliance;
 }
 
 
@@ -368,6 +403,22 @@ void UBP_Prompt_CTPurchaseVoyageSequence_C::RegisterOtherEvents_Implementable()
 }
 
 
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.ForceDisableTutorials
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Prompt_CTPurchaseVoyageSequence_C::ForceDisableTutorials()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.ForceDisableTutorials"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.OnOfferPurchased
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -508,65 +559,81 @@ void UBP_Prompt_CTPurchaseVoyageSequence_C::OnPlayerExitedShip(const struct FEve
 }
 
 
-// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.OnPlayerLeftOutpostRadius
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerLeftOutpostRadius
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                  ActorInZone                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Prompt_CTPurchaseVoyageSequence_C::OnPlayerLeftOutpostRadius()
+void UBP_Prompt_CTPurchaseVoyageSequence_C::PlayerLeftOutpostRadius(class AActor* ActorInZone)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.OnPlayerLeftOutpostRadius"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerLeftOutpostRadius"));
 
 	struct
 	{
+		class AActor*                  ActorInZone;
 	} params;
 
+	params.ActorInZone = ActorInZone;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.OnPlayerEnteredOutpostRadius
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerEnteredOutpostRadius
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                  ActorInZone                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Prompt_CTPurchaseVoyageSequence_C::OnPlayerEnteredOutpostRadius()
+void UBP_Prompt_CTPurchaseVoyageSequence_C::PlayerEnteredOutpostRadius(class AActor* ActorInZone)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.OnPlayerEnteredOutpostRadius"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerEnteredOutpostRadius"));
 
 	struct
 	{
+		class AActor*                  ActorInZone;
 	} params;
 
+	params.ActorInZone = ActorInZone;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerLeftGoldHoarderRadius
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerLeftGoldhoarderRadius
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                  ActorInZone                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Prompt_CTPurchaseVoyageSequence_C::PlayerLeftGoldHoarderRadius()
+void UBP_Prompt_CTPurchaseVoyageSequence_C::PlayerLeftGoldhoarderRadius(class AActor* ActorInZone)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerLeftGoldHoarderRadius"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerLeftGoldhoarderRadius"));
 
 	struct
 	{
+		class AActor*                  ActorInZone;
 	} params;
 
+	params.ActorInZone = ActorInZone;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerInsideGoldHoarderRadius
+// Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerEnteredGoldhoarderRadius
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                  ActorInZone                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Prompt_CTPurchaseVoyageSequence_C::PlayerInsideGoldHoarderRadius()
+void UBP_Prompt_CTPurchaseVoyageSequence_C::PlayerEnteredGoldhoarderRadius(class AActor* ActorInZone)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerInsideGoldHoarderRadius"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_CTPurchaseVoyageSequence.BP_Prompt_CTPurchaseVoyageSequence_C.PlayerEnteredGoldhoarderRadius"));
 
 	struct
 	{
+		class AActor*                  ActorInZone;
 	} params;
 
+	params.ActorInZone = ActorInZone;
 
 	UObject::ProcessEvent(fn, &params);
 }

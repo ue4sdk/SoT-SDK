@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipCookingPot.BP_ShipCookingPot_C
-// 0x0000 (0x0608 - 0x0608)
+// 0x0008 (0x06B8 - 0x06B0)
 class ABP_ShipCookingPot_C : public ABP_CookingPotBase_C
 {
 public:
+	class UCookerIgnitionComponent*                    CookerIgnition;                                           // 0x06B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

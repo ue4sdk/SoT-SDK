@@ -45,15 +45,16 @@ public:
 
 
 // Class Cleanliness.CleanlinessComponent
-// 0x0078 (0x0148 - 0x00D0)
+// 0x0080 (0x0150 - 0x00D0)
 class UCleanlinessComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00D0(0x0010) MISSED OFFSET
 	class UCurveFloat*                                 DirtinessStrengthToMaterialStrength;                      // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FCleanlinessInfo                            CleanlinessInfo;                                          // 0x00E8(0x0008) (Net, Transient)
-	float                                              DirtinessDecayRatePerSecond;                              // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x54];                                      // 0x00F4(0x0054) MISSED OFFSET
+	struct FCleanlinessInfo                            CleanlinessInfo;                                          // 0x00E8(0x000C) (Net, Transient)
+	float                                              DirtinessDecayRatePerSecond;                              // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              QuickCleanDirtynessDecayRatePerSecond;                    // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x54];                                      // 0x00FC(0x0054) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
