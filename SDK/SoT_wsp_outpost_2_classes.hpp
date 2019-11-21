@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_outpost_2.wsp_outpost_1_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04B8 - 0x04B8)
 class Awsp_outpost_1_C : public ALevelScriptActor
 {
 public:

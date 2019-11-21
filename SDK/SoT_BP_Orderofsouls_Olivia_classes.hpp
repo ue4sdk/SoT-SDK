@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Orderofsouls_Olivia.BP_Orderofsouls_Olivia_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x0680 - 0x0680)
 class ABP_Orderofsouls_Olivia_C : public ABP_Orderofsouls_C
 {
 public:

@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_EFlyingCreatures_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_ECreatureRadialDirection_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_ECreatureRadialDirection_classes.hpp"
+#include "SoT_EFlyingCreatures_classes.hpp"
 #include "SoT_ECreatureNumbers_classes.hpp"
 
 namespace SDK

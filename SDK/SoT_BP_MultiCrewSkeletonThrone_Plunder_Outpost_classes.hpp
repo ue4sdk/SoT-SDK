@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Plunder_Outpost.BP_MultiCrewSkeletonThrone_Plunder_Outpost_C
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0530 - 0x0530)
 class ABP_MultiCrewSkeletonThrone_Plunder_Outpost_C : public ABP_MultiCrewSkeletonThrone_C
 {
 public:

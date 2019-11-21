@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Animation_classes.hpp"
 #include "SoT_ADS_FrontendPiratePoses_classes.hpp"
+#include "SoT_Animation_classes.hpp"
 
 namespace SDK
 {

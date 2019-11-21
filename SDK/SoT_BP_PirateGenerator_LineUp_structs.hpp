@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_BP_LineUp_Animation_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_BP_LineUp_Animation_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_PirateGenerator_classes.hpp"
 #include "SoT_BP_LineUp_Props_classes.hpp"
