@@ -12,89 +12,21 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_PuzzleVault.BP_PuzzleVault_C.SetTableMaterialInstance
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PuzzleVault.BP_PuzzleVault_C.PlayVisibilityTransition
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMaterialInstance*       InMaterialInstance             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           New_Visibility                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PuzzleVault_C::SetTableMaterialInstance(class UMaterialInstance* InMaterialInstance)
+void ABP_PuzzleVault_C::PlayVisibilityTransition(bool New_Visibility)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.SetTableMaterialInstance"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.PlayVisibilityTransition"));
 
 	struct
 	{
-		class UMaterialInstance*       InMaterialInstance;
+		bool                           New_Visibility;
 	} params;
 
-	params.InMaterialInstance = InMaterialInstance;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_TableMaterialInstance
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PuzzleVault_C::OnRep_TableMaterialInstance()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_TableMaterialInstance"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_PuzzleVault_C::SetVaultTableTextureVisibility(bool Visibility)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility"));
-
-	struct
-	{
-		bool                           Visibility;
-	} params;
-
-	params.Visibility = Visibility;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_PuzzleVault.BP_PuzzleVault_C.ToggleVaultTableTextureVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PuzzleVault_C::ToggleVaultTableTextureVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.ToggleVaultTableTextureVisibility"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_IsVaultTableTextureVisible
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_PuzzleVault_C::OnRep_IsVaultTableTextureVisible()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.OnRep_IsVaultTableTextureVisible"));
-
-	struct
-	{
-	} params;
-
+	params.New_Visibility = New_Visibility;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -189,17 +121,41 @@ void ABP_PuzzleVault_C::TriggerRevealVFX()
 }
 
 
-// Function BP_PuzzleVault.BP_PuzzleVault_C.TableMaterialInstanceRepped
+// Function BP_PuzzleVault.BP_PuzzleVault_C.SetTableMaterialInstance
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstance*       New_Material                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PuzzleVault_C::TableMaterialInstanceRepped()
+void ABP_PuzzleVault_C::SetTableMaterialInstance(class UMaterialInstance* New_Material)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.TableMaterialInstanceRepped"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.SetTableMaterialInstance"));
 
 	struct
 	{
+		class UMaterialInstance*       New_Material;
 	} params;
 
+	params.New_Material = New_Material;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PuzzleVault_C::SetVaultTableTextureVisibility(bool Visibility)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PuzzleVault.BP_PuzzleVault_C.SetVaultTableTextureVisibility"));
+
+	struct
+	{
+		bool                           Visibility;
+	} params;
+
+	params.Visibility = Visibility;
 
 	UObject::ProcessEvent(fn, &params);
 }

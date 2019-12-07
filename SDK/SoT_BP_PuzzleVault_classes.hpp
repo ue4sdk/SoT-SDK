@@ -261,8 +261,7 @@ public:
 	struct FVector                                     TableWaterPosition;                                       // 0x1A28(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PuzzleImageSwapTime;                                      // 0x1A34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PuzzleWaterFadeInOut;                                     // 0x1A38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsVaultTableTextureVisible;                               // 0x1A3C(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1A3D(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x1A3C(0x0004) MISSED OFFSET
 	struct FWwiseEmitter                               TableWaterLapEmitter;                                     // 0x1A40(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 	class UMaterialInstance*                           TableMaterialInstance;                                    // 0x1A60(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
@@ -273,17 +272,14 @@ public:
 	}
 
 
-	void SetTableMaterialInstance(class UMaterialInstance* InMaterialInstance);
-	void OnRep_TableMaterialInstance();
-	void SetVaultTableTextureVisibility(bool Visibility);
-	void ToggleVaultTableTextureVisibility();
-	void OnRep_IsVaultTableTextureVisible();
+	void PlayVisibilityTransition(bool New_Visibility);
 	struct FText GetObjectDisplayName();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void TriggerRevealVFX();
-	void TableMaterialInstanceRepped();
+	void SetTableMaterialInstance(class UMaterialInstance* New_Material);
+	void SetVaultTableTextureVisibility(bool Visibility);
 	void ExecuteUbergraph_BP_PuzzleVault(int EntryPoint);
 };
 

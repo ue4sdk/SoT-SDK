@@ -1,0 +1,111 @@
+// Sea of Thieves (2.0) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_BP_CannonBall_Cursed_classes.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Functions
+//---------------------------------------------------------------------------
+
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CannonBall_Cursed_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.UserConstructionScript"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ABP_CannonBall_Cursed_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.ReceiveBeginPlay"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.OnIsWielded
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FEventWieldableItemSetIsWielded NewParam                       (Parm)
+
+void ABP_CannonBall_Cursed_C::OnIsWielded(const struct FEventWieldableItemSetIsWielded& NewParam)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.OnIsWielded"));
+
+	struct
+	{
+		struct FEventWieldableItemSetIsWielded NewParam;
+	} params;
+
+	params.NewParam = NewParam;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CannonBall_Cursed_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.ReceiveEndPlay"));
+
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
+	params.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.ExecuteUbergraph_BP_CannonBall_Cursed
+// (HasDefaults)
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CannonBall_Cursed_C::ExecuteUbergraph_BP_CannonBall_Cursed(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.ExecuteUbergraph_BP_CannonBall_Cursed"));
+
+	struct
+	{
+		int                            EntryPoint;
+	} params;
+
+	params.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
