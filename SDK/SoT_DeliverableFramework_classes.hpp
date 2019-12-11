@@ -45,12 +45,12 @@ public:
 
 
 // Class DeliverableFramework.DeliverableComponent
-// 0x0010 (0x00E0 - 0x00D0)
+// 0x0010 (0x00D8 - 0x00C8)
 class UDeliverableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	class UDeliverableRequirementsDataAsset*           DeliveryRequirementsAsset;                                // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	class UDeliverableRequirementsDataAsset*           DeliveryRequirementsAsset;                                // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

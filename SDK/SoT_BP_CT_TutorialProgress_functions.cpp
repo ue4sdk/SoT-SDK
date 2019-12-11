@@ -92,10 +92,11 @@ void UBP_CT_TutorialProgress_C::FindTutorialProgressObject(const struct FText& V
 // Parameters:
 // class UClass*                  VoyageProposalDesc             (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  TaleRankDesc                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  ExclusionRank                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Disable                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_CT_VoyageProgress_C* Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_CT_TutorialProgress_C::CreateTutorialProgressTracker(class UClass* VoyageProposalDesc, class UClass* TaleRankDesc, bool Disable, class UBP_CT_VoyageProgress_C** Result)
+void UBP_CT_TutorialProgress_C::CreateTutorialProgressTracker(class UClass* VoyageProposalDesc, class UClass* TaleRankDesc, class UClass* ExclusionRank, bool Disable, class UBP_CT_VoyageProgress_C** Result)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.CreateTutorialProgressTracker"));
 
@@ -103,12 +104,14 @@ void UBP_CT_TutorialProgress_C::CreateTutorialProgressTracker(class UClass* Voya
 	{
 		class UClass*                  VoyageProposalDesc;
 		class UClass*                  TaleRankDesc;
+		class UClass*                  ExclusionRank;
 		bool                           Disable;
 		class UBP_CT_VoyageProgress_C* Result;
 	} params;
 
 	params.VoyageProposalDesc = VoyageProposalDesc;
 	params.TaleRankDesc = TaleRankDesc;
+	params.ExclusionRank = ExclusionRank;
 	params.Disable = Disable;
 
 	UObject::ProcessEvent(fn, &params);

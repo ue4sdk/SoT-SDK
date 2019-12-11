@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FogBankManager.BP_FogBankManager_C
-// 0x0008 (0x04C0 - 0x04B8)
+// 0x0008 (0x0420 - 0x0418)
 class ABP_FogBankManager_C : public AFogBankManager
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

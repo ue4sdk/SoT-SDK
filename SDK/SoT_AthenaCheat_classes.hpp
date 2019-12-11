@@ -166,6 +166,7 @@ public:
 	void SmoulderClosestShipFire();
 	void SmoulderAllShipFires();
 	void SlowMotionOverride(bool InValue);
+	void SkipToEndOfOnboarding();
 	void SinkShipWithKeelOverIndex(int KeelOverConfigIndex);
 	void SinkShipByActorId(const class FString& ShipActorIdString);
 	void SinkShip();
@@ -214,6 +215,7 @@ public:
 	void SetPhotoMode(bool Enabled);
 	void SetPetMovementTimeWindow(float TimeWindow);
 	void SetNonCrewChatSpatialisation(bool Enabled);
+	void SetMaxNumOfSpawnedAI(int MaxNumOfSpawnedActors);
 	void SetMaxMovingPetsOnShips(int MaxMovingPets);
 	void SetMaxMovingPetsOnServer(int MaxMovingPets);
 	void SetMaxMovingPetsOnLand(int MaxMovingPets);
@@ -252,6 +254,7 @@ public:
 	void ResetTinySharkSpawnTimer();
 	void ResetStats();
 	void ResetMouseDelta();
+	void ResetMaxNumOfSpawnedAI();
 	void ResetMaxMovingPetsOnServerToDefault();
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllMechanisms();

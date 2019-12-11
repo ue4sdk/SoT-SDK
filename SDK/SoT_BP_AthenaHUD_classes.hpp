@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaHUD.BP_AthenaHUD_C
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x07D8 - 0x07D8)
 class ABP_AthenaHUD_C : public AAthenaHUD
 {
 public:

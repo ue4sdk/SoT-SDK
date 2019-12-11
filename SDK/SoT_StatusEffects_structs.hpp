@@ -40,6 +40,15 @@ struct FDebugMenuStatusDefinition
 	struct FStatus                                     Status;                                                   // 0x0008(0x0018) (Edit)
 };
 
+// ScriptStruct StatusEffects.DelayedStatusEffect
+// 0x0020
+struct FDelayedStatusEffect
+{
+	struct FStatus                                     StatusEffect;                                             // 0x0000(0x0018) (Edit)
+	float                                              InEffectTime;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct StatusEffects.FeatureToggledStatusResponseList
 // 0x0018
 struct FFeatureToggledStatusResponseList
@@ -59,13 +68,6 @@ struct FActiveStatusEffect
 	TArray<class UStatusResponse*>                     InstancedResponses;                                       // 0x0028(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	bool                                               ResponsesAreActive;                                       // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x17];                                      // 0x0039(0x0017) MISSED OFFSET
-};
-
-// ScriptStruct StatusEffects.StatusEffectManagerComponentAggregateTickFunction
-// 0x0010 (0x0058 - 0x0048)
-struct FStatusEffectManagerComponentAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct StatusEffects.StatusEffectPersistenceKey

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Fish_ENE.BP_Constellation_Fish_ENE_C
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x04B0 - 0x04B0)
 class ABP_Constellation_Fish_ENE_C : public ABP_Constellation_C
 {
 public:

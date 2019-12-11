@@ -314,45 +314,6 @@ bool UWwiseEmitterBlueprintLibrary::WwiseGetGlobalRTPC(const struct FName& RTPCN
 }
 
 
-// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter
-// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FWwiseEmitter           Emitter                        (Parm, OutParm)
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseObjectPoolWrapper* EmitterPool                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Offset                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWwiseEmitterBlueprintLibrary::WwiseGetEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter"));
-
-	struct
-	{
-		struct FWwiseEmitter           Emitter;
-		struct FName                   Name;
-		class UObject*                 Owner;
-		class UWwiseObjectPoolWrapper* EmitterPool;
-		struct FVector                 Offset;
-		bool                           ReturnValue;
-	} params;
-
-	params.Name = Name;
-	params.Owner = Owner;
-	params.EmitterPool = EmitterPool;
-	params.Offset = Offset;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	if (Emitter != nullptr)
-		*Emitter = params.Emitter;
-
-	return params.ReturnValue;
-}
-
-
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterWaitToComplete
 // (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -850,6 +811,45 @@ int UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentPostEvent(class UWwiseEm
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateEmitter
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FWwiseEmitter           Emitter                        (Parm, OutParm)
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseObjectPoolWrapper* EmitterPool                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Offset                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWwiseEmitterBlueprintLibrary::WwiseCreateEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateEmitter"));
+
+	struct
+	{
+		struct FWwiseEmitter           Emitter;
+		struct FName                   Name;
+		class UObject*                 Owner;
+		class UWwiseObjectPoolWrapper* EmitterPool;
+		struct FVector                 Offset;
+		bool                           ReturnValue;
+	} params;
+
+	params.Name = Name;
+	params.Owner = Owner;
+	params.EmitterPool = EmitterPool;
+	params.Offset = Offset;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	if (Emitter != nullptr)
+		*Emitter = params.Emitter;
 
 	return params.ReturnValue;
 }

@@ -117,18 +117,18 @@ public:
 
 
 // Class Tales.SplineFootprintPathComponent
-// 0x0030 (0x0650 - 0x0620)
+// 0x0030 (0x0620 - 0x05F0)
 class USplineFootprintPathComponent : public USplineComponent
 {
 public:
-	float                                              DistanceBetweenDecals;                                    // 0x0620(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0624(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          DecalMaterial;                                            // 0x0628(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FSplineFootprintPathTool                    PathTool;                                                 // 0x0630(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0631(0x0003) MISSED OFFSET
-	float                                              DecalYaw;                                                 // 0x0634(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DecalUniformScale;                                        // 0x0638(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x0644(0x000C) MISSED OFFSET
+	float                                              DistanceBetweenDecals;                                    // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x05F4(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          DecalMaterial;                                            // 0x05F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FSplineFootprintPathTool                    PathTool;                                                 // 0x0600(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0601(0x0003) MISSED OFFSET
+	float                                              DecalYaw;                                                 // 0x0604(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DecalUniformScale;                                        // 0x0608(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xC];                                       // 0x0614(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

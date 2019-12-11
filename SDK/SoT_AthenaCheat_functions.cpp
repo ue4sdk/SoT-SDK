@@ -2591,6 +2591,22 @@ void UAthenaCheatManager::SlowMotionOverride(bool InValue)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SkipToEndOfOnboarding
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SkipToEndOfOnboarding()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SkipToEndOfOnboarding"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SinkShipWithKeelOverIndex
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -3470,6 +3486,26 @@ void UAthenaCheatManager::SetNonCrewChatSpatialisation(bool Enabled)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SetMaxNumOfSpawnedAI
+// (Final, Exec, Native, Public)
+// Parameters:
+// int                            MaxNumOfSpawnedActors          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetMaxNumOfSpawnedAI(int MaxNumOfSpawnedActors)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetMaxNumOfSpawnedAI"));
+
+	struct
+	{
+		int                            MaxNumOfSpawnedActors;
+	} params;
+
+	params.MaxNumOfSpawnedActors = MaxNumOfSpawnedActors;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SetMaxMovingPetsOnShips
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -4175,6 +4211,22 @@ void UAthenaCheatManager::ResetStats()
 void UAthenaCheatManager::ResetMouseDelta()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ResetMouseDelta"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ResetMaxNumOfSpawnedAI
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ResetMaxNumOfSpawnedAI()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ResetMaxNumOfSpawnedAI"));
 
 	struct
 	{

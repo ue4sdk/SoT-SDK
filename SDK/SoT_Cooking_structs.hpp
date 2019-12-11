@@ -64,6 +64,13 @@ struct FCookingInfo
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
 };
 
+// ScriptStruct Cooking.OnPlacedItemInCookingPot
+// 0x0008
+struct FOnPlacedItemInCookingPot
+{
+	class AItemInfo*                                   ItemToCook;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Cooking.OnItemStartedCooking
 // 0x0010
 struct FOnItemStartedCooking

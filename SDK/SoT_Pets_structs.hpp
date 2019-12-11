@@ -198,13 +198,6 @@ struct FWieldablePetHungerAnimationData
 	float                                              AnimTimeout;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
-// ScriptStruct Pets.WieldablePetAggregateTickFunction
-// 0x0098 (0x00E0 - 0x0048)
-struct FWieldablePetAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0048(0x0098) MISSED OFFSET
-};
-
 // ScriptStruct Pets.EventWieldablePetPendingDrop
 // 0x0001
 struct FEventWieldablePetPendingDrop

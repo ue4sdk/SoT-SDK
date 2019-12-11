@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Goldhoarder_Herbert.BP_Goldhoarder_Herbert_C
-// 0x0000 (0x0690 - 0x0690)
+// 0x0000 (0x05F0 - 0x05F0)
 class ABP_Goldhoarder_Herbert_C : public ABP_Goldhoarder_C
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DarkRelic_MutinousEffigy_Wieldable.BP_DarkRelic_MutinousEffigy_Wieldable_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x07D0 - 0x07D0)
 class ABP_DarkRelic_MutinousEffigy_Wieldable_C : public ABP_BountyRewardSkull_C
 {
 public:

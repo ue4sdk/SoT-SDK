@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OrderOfSouls_WildRose.BP_OrderOfSouls_WildRose_C
-// 0x0010 (0x0690 - 0x0680)
+// 0x0010 (0x05F0 - 0x05E0)
 class ABP_OrderOfSouls_WildRose_C : public ABP_Orderofsouls_TallTales_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0680(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x05E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UActorPhasingComponent*                      ActorPhasing;                                             // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

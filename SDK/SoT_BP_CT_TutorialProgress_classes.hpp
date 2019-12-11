@@ -38,7 +38,7 @@ public:
 	void AreAllTutorialsOnState(TEnumAsByte<ETutorialVoyageInternalState> QueryVoyageState, bool* Result);
 	void IsAnyTutorialOnState(TEnumAsByte<ETutorialVoyageInternalState> QueryVoyageState, bool* Result);
 	void FindTutorialProgressObject(const struct FText& VoyageName, class UBP_CT_VoyageProgress_C** Voyage);
-	void CreateTutorialProgressTracker(class UClass* VoyageProposalDesc, class UClass* TaleRankDesc, bool Disable, class UBP_CT_VoyageProgress_C** Result);
+	void CreateTutorialProgressTracker(class UClass* VoyageProposalDesc, class UClass* TaleRankDesc, class UClass* ExclusionRank, bool Disable, class UBP_CT_VoyageProgress_C** Result);
 	void Start();
 	void Change_Voyage_Progress(const struct FText& VoyageName, TEnumAsByte<ETutorialVoyageInternalState> New_Progress_State);
 	void ExecuteUbergraph_BP_CT_TutorialProgress(int EntryPoint);

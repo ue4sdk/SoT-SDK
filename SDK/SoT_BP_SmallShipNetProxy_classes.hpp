@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipNetProxy.BP_SmallShipNetProxy_C
-// 0x0018 (0x0538 - 0x0520)
+// 0x0018 (0x0498 - 0x0480)
 class ABP_SmallShipNetProxy_C : public AShipNetProxy
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0520(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UMaterialInstanceDynamic*>            Dynamic_Materials;                                        // 0x0528(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0480(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UMaterialInstanceDynamic*>            Dynamic_Materials;                                        // 0x0488(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceIslandWashedUpAmmoCrateSpawner.BP_ResourceIslandWashedUpAmmoCrateSpawner_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0540 - 0x0540)
 class UBP_ResourceIslandWashedUpAmmoCrateSpawner_C : public USalvageItemSpawnComponent
 {
 public:

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate.BP_MerchantCrate_C
-// 0x0010 (0x0890 - 0x0880)
+// 0x0010 (0x07F0 - 0x07E0)
 class ABP_MerchantCrate_C : public AMerchantCrate
 {
 public:
-	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UFlammableWieldableComponent*                FlammableWieldable;                                       // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UFlammableWieldableComponent*                FlammableWieldable;                                       // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

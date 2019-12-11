@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HurdyGurdy.BP_HurdyGurdy_C
-// 0x0000 (0x0920 - 0x0920)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_HurdyGurdy_C : public AMusicalInstrumentSkeletalMesh
 {
 public:

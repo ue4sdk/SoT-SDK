@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AD_FirstPerson_PlayerPirate_Female_Unfit.AD_FirstPerson_PlayerPirate_Female_Unfit_C
-// 0x0000 (0x0458 - 0x0458)
+// 0x0000 (0x0460 - 0x0460)
 class UAD_FirstPerson_PlayerPirate_Female_Unfit_C : public UAD_FirstPerson_PlayerPirate_Female_Default_C
 {
 public:

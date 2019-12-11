@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceIslandSunkenChestsSpawner_DVR.BP_ResourceIslandSunkenChestsSpawner_DVR_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0540 - 0x0540)
 class UBP_ResourceIslandSunkenChestsSpawner_DVR_C : public USalvageItemSpawnComponent
 {
 public:

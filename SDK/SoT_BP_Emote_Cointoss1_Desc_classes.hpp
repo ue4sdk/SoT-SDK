@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Emote_Cointoss1_Desc.BP_Emote_Cointoss1_Desc_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x0108 - 0x0108)
 class UBP_Emote_Cointoss1_Desc_C : public UEmoteDesc
 {
 public:

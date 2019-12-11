@@ -75,20 +75,20 @@ public:
 
 
 // Class Cooking.CookableComponent
-// 0x0058 (0x0128 - 0x00D0)
+// 0x0058 (0x0120 - 0x00C8)
 class UCookableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D0(0x0020) MISSED OFFSET
-	class UClass*                                      NextCookState;                                            // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TimeToNextCookState;                                      // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
-	TArray<struct FCookableComponentSmokeFeedbackTimingEntry> SmokeFeedbackLevels;                                      // 0x0100(0x0010) (Edit, ZeroConstructor)
-	class UCurveFloat*                                 VisibleCookedExtentOverTime;                              // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DefaultVisibleCookedExtent;                               // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       CookableTypeName;                                         // 0x011C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECookingState>                         CookingState;                                             // 0x0124(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0125(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00C8(0x0020) MISSED OFFSET
+	class UClass*                                      NextCookState;                                            // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeToNextCookState;                                      // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
+	TArray<struct FCookableComponentSmokeFeedbackTimingEntry> SmokeFeedbackLevels;                                      // 0x00F8(0x0010) (Edit, ZeroConstructor)
+	class UCurveFloat*                                 VisibleCookedExtentOverTime;                              // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DefaultVisibleCookedExtent;                               // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       CookableTypeName;                                         // 0x0114(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECookingState>                         CookingState;                                             // 0x011C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x011D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -115,32 +115,32 @@ public:
 
 
 // Class Cooking.CookerComponent
-// 0x0190 (0x0260 - 0x00D0)
+// 0x0190 (0x0258 - 0x00C8)
 class UCookerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	TArray<struct FStatus>                             StatusToApplyToContents;                                  // 0x00D8(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FCookerSmokeFeedbackEntry>           VFXFeedback;                                              // 0x00E8(0x0010) (Edit, ZeroConstructor)
-	class UStaticMeshComponent*                        CookableStaticMeshComponent;                              // 0x00F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USkeletalMeshComponent*                      CookableSkeletalMeshComponent;                            // 0x0100(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	struct FName                                       CookedMaterialParameterName;                              // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       BurnDownDirectionParameterName;                           // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PlacementVarianceAngleBound;                              // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               OnByDefault;                                              // 0x011C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x011D(0x0003) MISSED OFFSET
-	class UCookingComponentAudioParams*                AudioParams;                                              // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EVfxRegion>                            VfxLocation;                                              // 0x0128(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0129(0x0007) MISSED OFFSET
-	class AItemInfo*                                   CurrentlyCookingItem;                                     // 0x0130(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FCookingClientRepresentation                CookingState;                                             // 0x0138(0x00A8) (Net, Transient)
-	class UParticleSystemComponent*                    SmokeParticleComponent;                                   // 0x01E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UStaticMesh*                                 VisibleStaticMesh;                                        // 0x01E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class USkeletalMesh*                               VisibleSkeletalMesh;                                      // 0x01F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    VisibleCookableMaterial;                                  // 0x01F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               TurnedOn;                                                 // 0x0200(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               OnIsland;                                                 // 0x0201(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x5E];                                      // 0x0202(0x005E) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	TArray<struct FStatus>                             StatusToApplyToContents;                                  // 0x00D0(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FCookerSmokeFeedbackEntry>           VFXFeedback;                                              // 0x00E0(0x0010) (Edit, ZeroConstructor)
+	class UStaticMeshComponent*                        CookableStaticMeshComponent;                              // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      CookableSkeletalMeshComponent;                            // 0x00F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	struct FName                                       CookedMaterialParameterName;                              // 0x0100(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       BurnDownDirectionParameterName;                           // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PlacementVarianceAngleBound;                              // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               OnByDefault;                                              // 0x0114(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0115(0x0003) MISSED OFFSET
+	class UCookingComponentAudioParams*                AudioParams;                                              // 0x0118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EVfxRegion>                            VfxLocation;                                              // 0x0120(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
+	class AItemInfo*                                   CurrentlyCookingItem;                                     // 0x0128(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FCookingClientRepresentation                CookingState;                                             // 0x0130(0x00A8) (Net, Transient)
+	class UParticleSystemComponent*                    SmokeParticleComponent;                                   // 0x01D8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UStaticMesh*                                 VisibleStaticMesh;                                        // 0x01E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class USkeletalMesh*                               VisibleSkeletalMesh;                                      // 0x01E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    VisibleCookableMaterial;                                  // 0x01F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               TurnedOn;                                                 // 0x01F8(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               OnIsland;                                                 // 0x01F9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x5E];                                      // 0x01FA(0x005E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -185,22 +185,22 @@ public:
 
 
 // Class Cooking.CookingPot
-// 0x01E0 (0x06B0 - 0x04D0)
+// 0x01E0 (0x0610 - 0x0430)
 class ACookingPot : public AInteractableBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04D0(0x0008) MISSED OFFSET
-	class UStaticMeshComponent*                        MeshComponent;                                            // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x04E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UCookerComponent*                            CookerComponent;                                          // 0x04E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	float                                              HoldToInteractTime;                                       // 0x04F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04F4(0x0004) MISSED OFFSET
-	struct FText                                       NotWieldingCookableItemTooltip;                           // 0x04F8(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       WieldingCookableItemTooltip;                              // 0x0530(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       TakeItemTooltip;                                          // 0x0568(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       CannotTakeItemTooltip;                                    // 0x05A0(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       MixInItemTooltip;                                         // 0x05D8(0x0038) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0xA0];                                      // 0x0610(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	class UStaticMeshComponent*                        MeshComponent;                                            // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UCookerComponent*                            CookerComponent;                                          // 0x0448(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	float                                              HoldToInteractTime;                                       // 0x0450(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0454(0x0004) MISSED OFFSET
+	struct FText                                       NotWieldingCookableItemTooltip;                           // 0x0458(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       WieldingCookableItemTooltip;                              // 0x0490(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       TakeItemTooltip;                                          // 0x04C8(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       CannotTakeItemTooltip;                                    // 0x0500(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       MixInItemTooltip;                                         // 0x0538(0x0038) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0xA0];                                      // 0x0570(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -242,13 +242,13 @@ public:
 
 
 // Class Cooking.PottableComponent
-// 0x0010 (0x00E0 - 0x00D0)
+// 0x0010 (0x00D8 - 0x00C8)
 class UPottableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	bool                                               CanBePutInPot;                                            // 0x00D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00D9(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	bool                                               CanBePutInPot;                                            // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

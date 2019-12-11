@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ForceSpot_Rowboat_Launch.BP_ForceSpot_Rowboat_Launch_C
-// 0x0010 (0x0648 - 0x0638)
+// 0x0010 (0x05A8 - 0x0598)
 class ABP_ForceSpot_Rowboat_Launch_C : public AForceSpot
 {
 public:
-	TArray<struct FVector>                             InteractionSplinePoints;                                  // 0x0638(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             InteractionSplinePoints;                                  // 0x0598(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

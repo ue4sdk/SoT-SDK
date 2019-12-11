@@ -29,6 +29,22 @@ public:
 };
 
 
+// Class PhysicsHelpers.MockPostPhysicsTickerComponent
+// 0x0010 (0x00D8 - 0x00C8)
+class UMockPostPhysicsTickerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PhysicsHelpers.MockPostPhysicsTickerComponent"));
+		return ptr;
+	}
+
+};
+
+
 }
 
 #ifdef _MSC_VER

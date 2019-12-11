@@ -4283,1357 +4283,6 @@ bool ACharacter::CanJump()
 }
 
 
-// Function Engine.AnimInstance.UnlockAIResources
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bUnlockMovement                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           UnlockAILogic                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::UnlockAIResources(bool bUnlockMovement, bool UnlockAILogic)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.UnlockAIResources"));
-
-	struct
-	{
-		bool                           bUnlockMovement;
-		bool                           UnlockAILogic;
-	} params;
-
-	params.bUnlockMovement = bUnlockMovement;
-	params.UnlockAILogic = UnlockAILogic;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.TryGetPawnOwner
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class APawn* UAnimInstance::TryGetPawnOwner()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.TryGetPawnOwner"));
-
-	struct
-	{
-		class APawn*                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.StopSlotAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::StopSlotAnimation(float InBlendOutTime, const struct FName& SlotNodeName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.StopSlotAnimation"));
-
-	struct
-	{
-		float                          InBlendOutTime;
-		struct FName                   SlotNodeName;
-	} params;
-
-	params.InBlendOutTime = InBlendOutTime;
-	params.SlotNodeName = SlotNodeName;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.SetMorphTarget
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   MorphTargetName                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::SetMorphTarget(const struct FName& MorphTargetName, float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.SetMorphTarget"));
-
-	struct
-	{
-		struct FName                   MorphTargetName;
-		float                          Value;
-	} params;
-
-	params.MorphTargetName = MorphTargetName;
-	params.Value = Value;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTriggerTime            (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAnimMontage* UAnimInstance::PlaySlotAnimationAsDynamicMontage(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, float BlendOutTriggerTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage"));
-
-	struct
-	{
-		class UAnimSequenceBase*       Asset;
-		struct FName                   SlotNodeName;
-		float                          BlendInTime;
-		float                          BlendOutTime;
-		float                          InPlayRate;
-		int                            LoopCount;
-		float                          BlendOutTriggerTime;
-		class UAnimMontage*            ReturnValue;
-	} params;
-
-	params.Asset = Asset;
-	params.SlotNodeName = SlotNodeName;
-	params.BlendInTime = BlendInTime;
-	params.BlendOutTime = BlendOutTime;
-	params.InPlayRate = InPlayRate;
-	params.LoopCount = LoopCount;
-	params.BlendOutTriggerTime = BlendOutTriggerTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.PlaySlotAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::PlaySlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimation"));
-
-	struct
-	{
-		class UAnimSequenceBase*       Asset;
-		struct FName                   SlotNodeName;
-		float                          BlendInTime;
-		float                          BlendOutTime;
-		float                          InPlayRate;
-		int                            LoopCount;
-		float                          ReturnValue;
-	} params;
-
-	params.Asset = Asset;
-	params.SlotNodeName = SlotNodeName;
-	params.BlendInTime = BlendInTime;
-	params.BlendOutTime = BlendOutTime;
-	params.InPlayRate = InPlayRate;
-	params.LoopCount = LoopCount;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_Stop
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_Stop(float InBlendOutTime, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Stop"));
-
-	struct
-	{
-		float                          InBlendOutTime;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.InBlendOutTime = InBlendOutTime;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_SetPlayRate
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewPlayRate                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_SetPlayRate(class UAnimMontage* Montage, float NewPlayRate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetPlayRate"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		float                          NewPlayRate;
-	} params;
-
-	params.Montage = Montage;
-	params.NewPlayRate = NewPlayRate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_SetNextSection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SectionNameToChange            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   NextSection                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_SetNextSection(const struct FName& SectionNameToChange, const struct FName& NextSection, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetNextSection"));
-
-	struct
-	{
-		struct FName                   SectionNameToChange;
-		struct FName                   NextSection;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.SectionNameToChange = SectionNameToChange;
-	params.NextSection = NextSection;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_Play
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::Montage_Play(class UAnimMontage* MontageToPlay, float InPlayRate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Play"));
-
-	struct
-	{
-		class UAnimMontage*            MontageToPlay;
-		float                          InPlayRate;
-		float                          ReturnValue;
-	} params;
-
-	params.MontageToPlay = MontageToPlay;
-	params.InPlayRate = InPlayRate;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_Pause
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_Pause(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Pause"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_JumpToSectionsEnd
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_JumpToSectionsEnd(const struct FName& SectionName, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSectionsEnd"));
-
-	struct
-	{
-		struct FName                   SectionName;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.SectionName = SectionName;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_JumpToSection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_JumpToSection(const struct FName& SectionName, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSection"));
-
-	struct
-	{
-		struct FName                   SectionName;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.SectionName = SectionName;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_IsPlaying
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimInstance::Montage_IsPlaying(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsPlaying"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		bool                           ReturnValue;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_IsActive
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimInstance::Montage_IsActive(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsActive"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		bool                           ReturnValue;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_GetCurrentSection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UAnimInstance::Montage_GetCurrentSection(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_GetCurrentSection"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		struct FName                   ReturnValue;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.LockAIResources
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bLockMovement                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           LockAILogic                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::LockAIResources(bool bLockMovement, bool LockAILogic)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.LockAIResources"));
-
-	struct
-	{
-		bool                           bLockMovement;
-		bool                           LockAILogic;
-	} params;
-
-	params.bLockMovement = bLockMovement;
-	params.LockAILogic = LockAILogic;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.IsPlayingSlotAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimInstance::IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.IsPlayingSlotAnimation"));
-
-	struct
-	{
-		class UAnimSequenceBase*       Asset;
-		struct FName                   SlotNodeName;
-		bool                           ReturnValue;
-	} params;
-
-	params.Asset = Asset;
-	params.SlotNodeName = SlotNodeName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetSyncGroupPosition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetSyncGroupPosition(const struct FName& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetSyncGroupPosition"));
-
-	struct
-	{
-		struct FName                   Name;
-		float                          ReturnValue;
-	} params;
-
-	params.Name = Name;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetStateWeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetStateWeight(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetStateWeight"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTimeRemainingFraction(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTimeRemaining
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTimeRemaining(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemaining"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTimeFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTimeFraction(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeFraction"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTime(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTime"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimLength
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimLength(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimLength"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetOwningComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class USkeletalMeshComponent* UAnimInstance::GetOwningComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningComponent"));
-
-	struct
-	{
-		class USkeletalMeshComponent*  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetOwningActor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* UAnimInstance::GetOwningActor()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningActor"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetMaxPlayingAnimTimeRemaining(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetMaxAnimTimeRemaining
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetMaxAnimTimeRemaining(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxAnimTimeRemaining"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceTransitionTimeElapsedFraction(int MachineIndex, int TransitionIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            TransitionIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.TransitionIndex = TransitionIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceTransitionTimeElapsed(int MachineIndex, int TransitionIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            TransitionIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.TransitionIndex = TransitionIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceTransitionCrossfadeDuration(int MachineIndex, int TransitionIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            TransitionIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.TransitionIndex = TransitionIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceStateWeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceStateWeight(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceStateWeight"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceCurrentStateElapsedTime(int MachineIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime"));
-
-	struct
-	{
-		int                            MachineIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTimeFromEndFraction(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTimeFromEnd(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTimeFraction(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTime(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTime"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerLength
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerLength(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerLength"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetCurveValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FName                   CurveName                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetCurveValue(const struct FName& CurveName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurveValue"));
-
-	struct
-	{
-		struct FName                   CurveName;
-		float                          ReturnValue;
-	} params;
-
-	params.CurveName = CurveName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetCurrentStateName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UAnimInstance::GetCurrentStateName(int MachineIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateName"));
-
-	struct
-	{
-		int                            MachineIndex;
-		struct FName                   ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetCurrentStateElapsedTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetCurrentStateElapsedTime(int MachineIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateElapsedTime"));
-
-	struct
-	{
-		int                            MachineIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerTimeFromEndFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          CurrentTime;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-	params.CurrentTime = CurrentTime;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerTimeFromEnd(class UAnimationAsset* AnimAsset, float CurrentTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          CurrentTime;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-	params.CurrentTime = CurrentTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerTimeFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          CurrentTime;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-	params.CurrentTime = CurrentTime;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerLength
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerLength(class UAnimationAsset* AnimAsset)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerLength"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.ClearMorphTargets
-// (Final, Native, Public, BlueprintCallable)
-
-void UAnimInstance::ClearMorphTargets()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.ClearMorphTargets"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.CalculateDirection
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 Velocity                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                BaseRotation                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::CalculateDirection(const struct FVector& Velocity, const struct FRotator& BaseRotation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.CalculateDirection"));
-
-	struct
-	{
-		struct FVector                 Velocity;
-		struct FRotator                BaseRotation;
-		float                          ReturnValue;
-	} params;
-
-	params.Velocity = Velocity;
-	params.BaseRotation = BaseRotation;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::BlueprintUpdateAnimation(float DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUpdateAnimation"));
-
-	struct
-	{
-		float                          DeltaTimeX;
-	} params;
-
-	params.DeltaTimeX = DeltaTimeX;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.BlueprintUninitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UAnimInstance::BlueprintUninitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUninitializeAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.BlueprintPostEvaluateAnimation
-// (Event, Public, BlueprintEvent)
-
-void UAnimInstance::BlueprintPostEvaluateAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintPostEvaluateAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UAnimInstance::BlueprintInitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintInitializeAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.AnimNotify_Sound
-// (Final, Native, Public)
-// Parameters:
-// class UAnimNotify*             Notify                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::AnimNotify_Sound(class UAnimNotify* Notify)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.AnimNotify_Sound"));
-
-	struct
-	{
-		class UAnimNotify*             Notify;
-	} params;
-
-	params.Notify = Notify;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimNotify.Received_Notify
-// (Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.Received_Notify"));
-
-	struct
-	{
-		class USkeletalMeshComponent*  MeshComp;
-		class UAnimSequenceBase*       Animation;
-		bool                           ReturnValue;
-	} params;
-
-	params.MeshComp = MeshComp;
-	params.Animation = Animation;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimNotify.GetNotifyName
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-class FString UAnimNotify::GetNotifyName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.GetNotifyName"));
-
-	struct
-	{
-		class FString                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.SceneComponent.ToggleVisibility
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -6999,6 +5648,1357 @@ void USceneComponent::DetachFromParent(bool bMaintainWorldPosition, bool bCallMo
 	params.bCallModify = bCallModify;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.UnlockAIResources
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bUnlockMovement                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UnlockAILogic                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::UnlockAIResources(bool bUnlockMovement, bool UnlockAILogic)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.UnlockAIResources"));
+
+	struct
+	{
+		bool                           bUnlockMovement;
+		bool                           UnlockAILogic;
+	} params;
+
+	params.bUnlockMovement = bUnlockMovement;
+	params.UnlockAILogic = UnlockAILogic;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.TryGetPawnOwner
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class APawn* UAnimInstance::TryGetPawnOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.TryGetPawnOwner"));
+
+	struct
+	{
+		class APawn*                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.StopSlotAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::StopSlotAnimation(float InBlendOutTime, const struct FName& SlotNodeName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.StopSlotAnimation"));
+
+	struct
+	{
+		float                          InBlendOutTime;
+		struct FName                   SlotNodeName;
+	} params;
+
+	params.InBlendOutTime = InBlendOutTime;
+	params.SlotNodeName = SlotNodeName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.SetMorphTarget
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   MorphTargetName                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::SetMorphTarget(const struct FName& MorphTargetName, float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.SetMorphTarget"));
+
+	struct
+	{
+		struct FName                   MorphTargetName;
+		float                          Value;
+	} params;
+
+	params.MorphTargetName = MorphTargetName;
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTriggerTime            (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimMontage* UAnimInstance::PlaySlotAnimationAsDynamicMontage(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, float BlendOutTriggerTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage"));
+
+	struct
+	{
+		class UAnimSequenceBase*       Asset;
+		struct FName                   SlotNodeName;
+		float                          BlendInTime;
+		float                          BlendOutTime;
+		float                          InPlayRate;
+		int                            LoopCount;
+		float                          BlendOutTriggerTime;
+		class UAnimMontage*            ReturnValue;
+	} params;
+
+	params.Asset = Asset;
+	params.SlotNodeName = SlotNodeName;
+	params.BlendInTime = BlendInTime;
+	params.BlendOutTime = BlendOutTime;
+	params.InPlayRate = InPlayRate;
+	params.LoopCount = LoopCount;
+	params.BlendOutTriggerTime = BlendOutTriggerTime;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.PlaySlotAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::PlaySlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimation"));
+
+	struct
+	{
+		class UAnimSequenceBase*       Asset;
+		struct FName                   SlotNodeName;
+		float                          BlendInTime;
+		float                          BlendOutTime;
+		float                          InPlayRate;
+		int                            LoopCount;
+		float                          ReturnValue;
+	} params;
+
+	params.Asset = Asset;
+	params.SlotNodeName = SlotNodeName;
+	params.BlendInTime = BlendInTime;
+	params.BlendOutTime = BlendOutTime;
+	params.InPlayRate = InPlayRate;
+	params.LoopCount = LoopCount;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_Stop
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_Stop(float InBlendOutTime, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Stop"));
+
+	struct
+	{
+		float                          InBlendOutTime;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.InBlendOutTime = InBlendOutTime;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_SetPlayRate
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewPlayRate                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_SetPlayRate(class UAnimMontage* Montage, float NewPlayRate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetPlayRate"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		float                          NewPlayRate;
+	} params;
+
+	params.Montage = Montage;
+	params.NewPlayRate = NewPlayRate;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_SetNextSection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   SectionNameToChange            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   NextSection                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_SetNextSection(const struct FName& SectionNameToChange, const struct FName& NextSection, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetNextSection"));
+
+	struct
+	{
+		struct FName                   SectionNameToChange;
+		struct FName                   NextSection;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.SectionNameToChange = SectionNameToChange;
+	params.NextSection = NextSection;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_Play
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::Montage_Play(class UAnimMontage* MontageToPlay, float InPlayRate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Play"));
+
+	struct
+	{
+		class UAnimMontage*            MontageToPlay;
+		float                          InPlayRate;
+		float                          ReturnValue;
+	} params;
+
+	params.MontageToPlay = MontageToPlay;
+	params.InPlayRate = InPlayRate;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_Pause
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_Pause(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Pause"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_JumpToSectionsEnd
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_JumpToSectionsEnd(const struct FName& SectionName, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSectionsEnd"));
+
+	struct
+	{
+		struct FName                   SectionName;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.SectionName = SectionName;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_JumpToSection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_JumpToSection(const struct FName& SectionName, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSection"));
+
+	struct
+	{
+		struct FName                   SectionName;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.SectionName = SectionName;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_IsPlaying
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimInstance::Montage_IsPlaying(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsPlaying"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		bool                           ReturnValue;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_IsActive
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimInstance::Montage_IsActive(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsActive"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		bool                           ReturnValue;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_GetCurrentSection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UAnimInstance::Montage_GetCurrentSection(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_GetCurrentSection"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		struct FName                   ReturnValue;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.LockAIResources
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bLockMovement                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           LockAILogic                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::LockAIResources(bool bLockMovement, bool LockAILogic)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.LockAIResources"));
+
+	struct
+	{
+		bool                           bLockMovement;
+		bool                           LockAILogic;
+	} params;
+
+	params.bLockMovement = bLockMovement;
+	params.LockAILogic = LockAILogic;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.IsPlayingSlotAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimInstance::IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.IsPlayingSlotAnimation"));
+
+	struct
+	{
+		class UAnimSequenceBase*       Asset;
+		struct FName                   SlotNodeName;
+		bool                           ReturnValue;
+	} params;
+
+	params.Asset = Asset;
+	params.SlotNodeName = SlotNodeName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetSyncGroupPosition
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetSyncGroupPosition(const struct FName& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetSyncGroupPosition"));
+
+	struct
+	{
+		struct FName                   Name;
+		float                          ReturnValue;
+	} params;
+
+	params.Name = Name;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetStateWeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetStateWeight(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetStateWeight"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTimeRemainingFraction(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTimeRemaining
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTimeRemaining(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemaining"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTimeFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTimeFraction(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeFraction"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTime(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTime"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimLength
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimLength(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimLength"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetOwningComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USkeletalMeshComponent* UAnimInstance::GetOwningComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningComponent"));
+
+	struct
+	{
+		class USkeletalMeshComponent*  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetOwningActor
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* UAnimInstance::GetOwningActor()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningActor"));
+
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetMaxPlayingAnimTimeRemaining(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetMaxAnimTimeRemaining
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetMaxAnimTimeRemaining(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxAnimTimeRemaining"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceTransitionTimeElapsedFraction(int MachineIndex, int TransitionIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            TransitionIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.TransitionIndex = TransitionIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceTransitionTimeElapsed(int MachineIndex, int TransitionIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            TransitionIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.TransitionIndex = TransitionIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceTransitionCrossfadeDuration(int MachineIndex, int TransitionIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            TransitionIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.TransitionIndex = TransitionIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceStateWeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceStateWeight(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceStateWeight"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceCurrentStateElapsedTime(int MachineIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime"));
+
+	struct
+	{
+		int                            MachineIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTimeFromEndFraction(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTimeFromEnd(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTimeFraction(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTime(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTime"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerLength
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerLength(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerLength"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetCurveValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FName                   CurveName                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetCurveValue(const struct FName& CurveName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurveValue"));
+
+	struct
+	{
+		struct FName                   CurveName;
+		float                          ReturnValue;
+	} params;
+
+	params.CurveName = CurveName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetCurrentStateName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UAnimInstance::GetCurrentStateName(int MachineIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateName"));
+
+	struct
+	{
+		int                            MachineIndex;
+		struct FName                   ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetCurrentStateElapsedTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetCurrentStateElapsedTime(int MachineIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateElapsedTime"));
+
+	struct
+	{
+		int                            MachineIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerTimeFromEndFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          CurrentTime;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+	params.CurrentTime = CurrentTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerTimeFromEnd(class UAnimationAsset* AnimAsset, float CurrentTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          CurrentTime;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+	params.CurrentTime = CurrentTime;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerTimeFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          CurrentTime;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+	params.CurrentTime = CurrentTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerLength
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerLength(class UAnimationAsset* AnimAsset)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerLength"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.ClearMorphTargets
+// (Final, Native, Public, BlueprintCallable)
+
+void UAnimInstance::ClearMorphTargets()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.ClearMorphTargets"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.CalculateDirection
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 Velocity                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator                BaseRotation                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::CalculateDirection(const struct FVector& Velocity, const struct FRotator& BaseRotation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.CalculateDirection"));
+
+	struct
+	{
+		struct FVector                 Velocity;
+		struct FRotator                BaseRotation;
+		float                          ReturnValue;
+	} params;
+
+	params.Velocity = Velocity;
+	params.BaseRotation = BaseRotation;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUpdateAnimation"));
+
+	struct
+	{
+		float                          DeltaTimeX;
+	} params;
+
+	params.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.BlueprintUninitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UAnimInstance::BlueprintUninitializeAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUninitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.BlueprintPostEvaluateAnimation
+// (Event, Public, BlueprintEvent)
+
+void UAnimInstance::BlueprintPostEvaluateAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintPostEvaluateAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.BlueprintInitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UAnimInstance::BlueprintInitializeAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintInitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.AnimNotify_Sound
+// (Final, Native, Public)
+// Parameters:
+// class UAnimNotify*             Notify                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::AnimNotify_Sound(class UAnimNotify* Notify)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.AnimNotify_Sound"));
+
+	struct
+	{
+		class UAnimNotify*             Notify;
+	} params;
+
+	params.Notify = Notify;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimNotify.Received_Notify
+// (Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.Received_Notify"));
+
+	struct
+	{
+		class USkeletalMeshComponent*  MeshComp;
+		class UAnimSequenceBase*       Animation;
+		bool                           ReturnValue;
+	} params;
+
+	params.MeshComp = MeshComp;
+	params.Animation = Animation;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimNotify.GetNotifyName
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString UAnimNotify::GetNotifyName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.GetNotifyName"));
+
+	struct
+	{
+		class FString                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -11821,9 +11821,10 @@ class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeCla
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                UserPlaySpaceRot               (Parm, ZeroConstructor, IsPlainOldData)
+// class UCurveFloat*             BlendInCurve                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UCameraAnimInst*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
+class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot, class UCurveFloat* BlendInCurve)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerCameraManager.PlayCameraAnim"));
 
@@ -11839,6 +11840,7 @@ class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* A
 		float                          Duration;
 		TEnumAsByte<ECameraAnimPlaySpace> PlaySpace;
 		struct FRotator                UserPlaySpaceRot;
+		class UCurveFloat*             BlendInCurve;
 		class UCameraAnimInst*         ReturnValue;
 	} params;
 
@@ -11852,6 +11854,7 @@ class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* A
 	params.Duration = Duration;
 	params.PlaySpace = PlaySpace;
 	params.UserPlaySpaceRot = UserPlaySpaceRot;
+	params.BlendInCurve = BlendInCurve;
 
 	UObject::ProcessEvent(fn, &params);
 

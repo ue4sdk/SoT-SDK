@@ -317,6 +317,26 @@ bool UBasePromptCoordinator::GetCompleted()
 }
 
 
+// Function PrioritisedPrompts.BasePromptCoordinator.FirePromptCompleted
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBasePromptCoordinator::FirePromptCompleted(class UClass* AccessKey)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.FirePromptCompleted"));
+
+	struct
+	{
+		class UClass*                  AccessKey;
+	} params;
+
+	params.AccessKey = AccessKey;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function PrioritisedPrompts.BasePromptCoordinator.EvaluatePromptDisplayState
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

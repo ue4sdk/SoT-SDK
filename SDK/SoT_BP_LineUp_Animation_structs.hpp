@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_LineUp_Props_classes.hpp"
 #include "SoT_BP_LineUp_AnimSequences_classes.hpp"
+#include "SoT_BP_LineUp_Props_classes.hpp"
 
 namespace SDK
 {

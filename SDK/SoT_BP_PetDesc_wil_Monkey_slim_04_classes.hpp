@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PetDesc_wil_Monkey_slim_04.BP_PetDesc_wil_Monkey_slim_04_C
-// 0x0000 (0x00F0 - 0x00F0)
+// 0x0000 (0x0110 - 0x0110)
 class UBP_PetDesc_wil_Monkey_slim_04_C : public UPetCustomizationDesc
 {
 public:

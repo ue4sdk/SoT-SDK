@@ -27,13 +27,6 @@ struct FCleanlinessInfo
 	float                                              QuickClean;                                               // 0x0008(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
-// ScriptStruct Cleanliness.CleanlinessComponentAggregateTickFunction
-// 0x0010 (0x0058 - 0x0048)
-struct FCleanlinessComponentAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
-};
-
 // ScriptStruct Cleanliness.EventQuickCleanRequest
 // 0x0001
 struct FEventQuickCleanRequest

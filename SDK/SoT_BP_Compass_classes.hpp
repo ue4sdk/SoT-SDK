@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Compass.BP_Compass_C
-// 0x0008 (0x0928 - 0x0920)
+// 0x0008 (0x0888 - 0x0880)
 class ABP_Compass_C : public ACompass
 {
 public:
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0920(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

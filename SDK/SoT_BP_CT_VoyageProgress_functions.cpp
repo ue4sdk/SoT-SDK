@@ -12,6 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Rank
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_CT_VoyageProgress_C::EntitlementQuery__Has_Rank(bool* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Rank"));
+
+	struct
+	{
+		bool                           Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
 // Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.SetProgress
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

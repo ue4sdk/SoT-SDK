@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rose.BP_Rose_C
-// 0x0010 (0x04C0 - 0x04B0)
+// 0x0010 (0x0420 - 0x0410)
 class ABP_Rose_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        gmp_tall_tales_rose_skelly_01_a;                          // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        gmp_tall_tales_rose_skelly_01_a;                          // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

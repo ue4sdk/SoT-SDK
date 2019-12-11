@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_Lovers_Rose.BP_TT_Lovers_Rose_C
-// 0x0008 (0x04F0 - 0x04E8)
+// 0x0008 (0x0450 - 0x0448)
 class ABP_TT_Lovers_Rose_C : public ABP_TT_Lovers_Cutscene_Ghost_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0448(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

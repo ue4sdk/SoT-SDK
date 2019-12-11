@@ -526,13 +526,6 @@ struct FKrakenShipWrappingBehaviourParams
 	unsigned char                                      UnknownData01[0x8];                                       // 0x03E8(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct Kraken.MurkAggregateTickFunction
-// 0x0018 (0x0060 - 0x0048)
-struct FMurkAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
-};
-
 // ScriptStruct Kraken.KrakenWorldSettingsParams
 // 0x0001
 struct FKrakenWorldSettingsParams

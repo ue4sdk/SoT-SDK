@@ -41,6 +41,14 @@ struct FLimbIK
 	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
 };
 
+// ScriptStruct Animation.NamedFirstPersonAnimatic
+// 0x0018
+struct FNamedFirstPersonAnimatic
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       Anim;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct Animation.AnimDataEntryStructWrapper
 // 0x0018
 struct FAnimDataEntryStructWrapper
@@ -146,6 +154,41 @@ struct FEventCosmeticItemAttachmentSwitched
 struct FEventDockableObjectDestroyed
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.EventHitReactAnimationFinished
+// 0x0001
+struct FEventHitReactAnimationFinished
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.EventHitReactAnimationRequested
+// 0x001C
+struct FEventHitReactAnimationRequested
+{
+	struct FVector                                     HitNormal;                                                // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitVelocity;                                              // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterHitReactionAnimType>         ReactionAnimType;                                         // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Animation.HitReactionAnimationData
+// 0x0008
+struct FHitReactionAnimationData
+{
+	class UBlendSpace1D*                               HitReactBlendSpace;                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Animation.HitReactionAnimationState
+// 0x0028
+struct FHitReactionAnimationState
+{
+	float                                              Yaw;                                                      // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AdditiveBlend;                                            // 0x0004(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterHitReactionAnimType>         ReactType;                                                // 0x0008(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               ActivateNewHitReact;                                      // 0x0009(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1E];                                      // 0x000A(0x001E) MISSED OFFSET
 };
 
 // ScriptStruct Animation.EventPreviewCharacterAnimationRequest

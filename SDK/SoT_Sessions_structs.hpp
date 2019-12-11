@@ -8,6 +8,7 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Sessions_enums.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -26,6 +27,13 @@ struct FCrewSessionTemplate
 	class UClass*                                      ShipSize;                                                 // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                MaxPlayers;                                               // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaxMatchmakingPlayers;                                    // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Sessions.SessionInfoUpdateAvailableEvent
+// 0x0010
+struct FSessionInfoUpdateAvailableEvent
+{
+	struct FGuid                                       CrewId;                                                   // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 }

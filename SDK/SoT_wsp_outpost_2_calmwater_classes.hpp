@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_outpost_2_calmwater.wsp_outpost_2_calmwater_C
-// 0x0000 (0x04B8 - 0x04B8)
+// 0x0000 (0x0418 - 0x0418)
 class Awsp_outpost_2_calmwater_C : public ALevelScriptActor
 {
 public:

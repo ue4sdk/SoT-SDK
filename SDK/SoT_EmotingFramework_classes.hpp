@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class EmotingFramework.EmoteCoin
-// 0x0118 (0x05C8 - 0x04B0)
+// 0x0118 (0x0528 - 0x0410)
 class AEmoteCoin : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x118];                                     // 0x04B0(0x0118) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x118];                                     // 0x0410(0x0118) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

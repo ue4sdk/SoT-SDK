@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HighValueGift_Proxy.BP_HighValueGift_Proxy_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x07B8 - 0x07B8)
 class ABP_HighValueGift_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

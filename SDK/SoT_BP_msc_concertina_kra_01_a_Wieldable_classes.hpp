@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_msc_concertina_kra_01_a_Wieldable.BP_msc_concertina_kra_01_a_Wieldable_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_msc_concertina_kra_01_a_Wieldable_C : public ABP_Concertina_C
 {
 public:

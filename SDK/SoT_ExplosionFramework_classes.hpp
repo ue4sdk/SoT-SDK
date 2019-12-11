@@ -14,6 +14,23 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class ExplosionFramework.CreateActorInstanceOnExplodeComponent
+// 0x0060 (0x0128 - 0x00C8)
+class UCreateActorInstanceOnExplodeComponent : public UActorComponent
+{
+public:
+	class UClass*                                      ActorToInstance;                                          // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x58];                                      // 0x00D0(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ExplosionFramework.CreateActorInstanceOnExplodeComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class ExplosionFramework.ExplosiveComponentInterface
 // 0x0000 (0x0028 - 0x0028)
 class UExplosiveComponentInterface : public UInterface

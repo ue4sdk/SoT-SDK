@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkullRitual_Pipe.BP_SkullRitual_Pipe_C
-// 0x0008 (0x04B8 - 0x04B0)
+// 0x0008 (0x0418 - 0x0410)
 class ABP_SkullRitual_Pipe_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        gmp_sm_pipe_oos_01_a;                                     // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        gmp_sm_pipe_oos_01_a;                                     // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

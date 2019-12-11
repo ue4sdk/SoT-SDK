@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_RitualBox_WildRose.BP_TT_RitualBox_WildRose_C
-// 0x0020 (0x04F0 - 0x04D0)
+// 0x0020 (0x0450 - 0x0430)
 class ABP_TT_RitualBox_WildRose_C : public ABP_TT_RitualBox_C
 {
 public:
-	TAssetPtr<class ABP_shop_oos_01_a_C>               Actor_Parent_to_Hide;                                     // 0x04D0(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	TAssetPtr<class ABP_shop_oos_01_a_C>               Actor_Parent_to_Hide;                                     // 0x0430(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

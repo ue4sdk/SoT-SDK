@@ -91,6 +91,58 @@ void UTutorial2019Component::ReceiveTutorial2019BeginPlayOnClient()
 }
 
 
+// Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnServer
+// (Event, Public, BlueprintEvent)
+
+void UTutorial2019Component::ReceiveIntroBeginPlayOnServer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnServer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnClient
+// (Event, Public, BlueprintEvent)
+
+void UTutorial2019Component::ReceiveIntroBeginPlayOnClient()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnClient"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.OnRep_IsIntroEnabledByServer
+// (Final, Native, Private)
+// Parameters:
+// bool                           OldIsIntroEnabled              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTutorial2019Component::OnRep_IsIntroEnabledByServer(bool OldIsIntroEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.OnRep_IsIntroEnabledByServer"));
+
+	struct
+	{
+		bool                           OldIsIntroEnabled;
+	} params;
+
+	params.OldIsIntroEnabled = OldIsIntroEnabled;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Tutorial.Tutorial2019Component.OnRep_IsEnabledByServer
 // (Final, Native, Private)
 // Parameters:
@@ -111,12 +163,49 @@ void UTutorial2019Component::OnRep_IsEnabledByServer(bool OldIsEnabled)
 }
 
 
+// Function Tutorial.Tutorial2019Component.HasPrerequisites
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UTutorial2019Component::HasPrerequisites()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.HasPrerequisites"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Tutorial.Tutorial2019Component.ForceDisableComponent_Blueprint
 // (Event, Public, BlueprintEvent)
 
 void UTutorial2019Component::ForceDisableComponent_Blueprint()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.ForceDisableComponent_Blueprint"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.BeginOnServer
+// (Final, Native, Public, BlueprintCallable)
+
+void UTutorial2019Component::BeginOnServer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.BeginOnServer"));
 
 	struct
 	{

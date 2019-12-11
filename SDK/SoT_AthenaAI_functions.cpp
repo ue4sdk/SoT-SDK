@@ -1256,6 +1256,94 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 }
 
 
+// Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled"));
+
+	struct
+	{
+		class UClass*                  Sense;
+		bool                           ReturnValue;
+	} params;
+
+	params.Sense = Sense;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAthenaAIPerceptionComponent::IsAnyPerceptionEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Enable                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIPerceptionComponent::EnablePerceptionSense(class UClass* Sense, bool Enable)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense"));
+
+	struct
+	{
+		class UClass*                  Sense;
+		bool                           Enable;
+	} params;
+
+	params.Sense = Sense;
+	params.Enable = Enable;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           Enable                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception"));
+
+	struct
+	{
+		bool                           Enable;
+	} params;
+
+	params.Enable = Enable;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -1501,94 +1589,6 @@ struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class 
 	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAthenaAIPerceptionComponent::IsPerceptionSenseEnabled(class UClass* Sense)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled"));
-
-	struct
-	{
-		class UClass*                  Sense;
-		bool                           ReturnValue;
-	} params;
-
-	params.Sense = Sense;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAthenaAIPerceptionComponent::IsAnyPerceptionEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.IsAnyPerceptionEnabled"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Enable                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIPerceptionComponent::EnablePerceptionSense(class UClass* Sense, bool Enable)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.EnablePerceptionSense"));
-
-	struct
-	{
-		class UClass*                  Sense;
-		bool                           Enable;
-	} params;
-
-	params.Sense = Sense;
-	params.Enable = Enable;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           Enable                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIPerceptionComponent.EnableAllPerception"));
-
-	struct
-	{
-		bool                           Enable;
-	} params;
-
-	params.Enable = Enable;
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 

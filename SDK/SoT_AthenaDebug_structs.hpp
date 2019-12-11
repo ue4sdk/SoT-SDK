@@ -16,6 +16,16 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AthenaDebug.DrawDebugItemString
+// 0x0028
+struct FDrawDebugItemString
+{
+	struct FName                                       GroupName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class FString                                      String;                                                   // 0x0008(0x0010) (ZeroConstructor)
+	struct FColor                                      Colour;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     StringPos;                                                // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AthenaDebug.DrawDebugItemSphere
 // 0x001C
 struct FDrawDebugItemSphere
@@ -26,16 +36,25 @@ struct FDrawDebugItemSphere
 	struct FColor                                      Colour;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct AthenaDebug.DrawDebugItemBox
-// 0x0040
-struct FDrawDebugItemBox
+// ScriptStruct AthenaDebug.DrawDebugItemMessage
+// 0x0020
+struct FDrawDebugItemMessage
 {
 	struct FName                                       GroupName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     CentrePos;                                                // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Box;                                                      // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FQuat                                       Rotation;                                                 // 0x0020(0x0010) (IsPlainOldData)
-	struct FColor                                      Colour;                                                   // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0034(0x000C) MISSED OFFSET
+	class FString                                      Message;                                                  // 0x0008(0x0010) (ZeroConstructor)
+	struct FColor                                      Colour;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct AthenaDebug.DrawDebugItemLine
+// 0x0028
+struct FDrawDebugItemLine
+{
+	struct FName                                       GroupName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LineStart;                                                // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LineEnd;                                                  // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      Colour;                                                   // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Thickness;                                                // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaDebug.DrawDebugItemCapsule
@@ -52,35 +71,16 @@ struct FDrawDebugItemCapsule
 	unsigned char                                      UnknownData01[0xC];                                       // 0x0034(0x000C) MISSED OFFSET
 };
 
-// ScriptStruct AthenaDebug.DrawDebugItemLine
-// 0x0028
-struct FDrawDebugItemLine
+// ScriptStruct AthenaDebug.DrawDebugItemBox
+// 0x0040
+struct FDrawDebugItemBox
 {
 	struct FName                                       GroupName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LineStart;                                                // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     LineEnd;                                                  // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FColor                                      Colour;                                                   // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Thickness;                                                // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaDebug.DrawDebugItemMessage
-// 0x0020
-struct FDrawDebugItemMessage
-{
-	struct FName                                       GroupName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      Message;                                                  // 0x0008(0x0010) (ZeroConstructor)
-	struct FColor                                      Colour;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct AthenaDebug.DrawDebugItemString
-// 0x0028
-struct FDrawDebugItemString
-{
-	struct FName                                       GroupName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      String;                                                   // 0x0008(0x0010) (ZeroConstructor)
-	struct FColor                                      Colour;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     StringPos;                                                // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     CentrePos;                                                // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Box;                                                      // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FQuat                                       Rotation;                                                 // 0x0020(0x0010) (IsPlainOldData)
+	struct FColor                                      Colour;                                                   // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0034(0x000C) MISSED OFFSET
 };
 
 }

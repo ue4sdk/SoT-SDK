@@ -63,13 +63,6 @@ struct FRowboatStrainDamageData
 	float                                              MaxWorldEdgeDamageFrequencyInSeconds;                     // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
-// ScriptStruct Watercrafts.RowboatAudioAggregateTickFunction
-// 0x0018 (0x0060 - 0x0048)
-struct FRowboatAudioAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
-};
-
 // ScriptStruct Watercrafts.OarParams
 // 0x0038
 struct FOarParams

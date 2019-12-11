@@ -308,13 +308,6 @@ struct FReplicatedFireCellCharringData
 	TArray<float>                                      TimeSpentCharring;                                        // 0x0008(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct Fire.FireCellStateData
-// 0x0030
-struct FFireCellStateData
-{
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
-};
-
 // ScriptStruct Fire.CurrentShipDeckOnFireUpdatedEvent
 // 0x0008
 struct FCurrentShipDeckOnFireUpdatedEvent
@@ -348,6 +341,13 @@ struct FFireExtinguishedEvent
 struct FOnFireChangedEvent
 {
 	bool                                               OnFire;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Fire.FireCellStateData
+// 0x0030
+struct FFireCellStateData
+{
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
 };
 
 // ScriptStruct Fire.ShipFireTickParams

@@ -48,19 +48,20 @@ public:
 	static struct FPromptEvaluation MakeCompleteCoordinator();
 	void Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager);
 	bool GetCompleted();
+	void FirePromptCompleted(class UClass* AccessKey);
 	struct FPromptEvaluation EvaluatePromptDisplayState();
 	void DismissAllPrompts();
 };
 
 
 // Class PrioritisedPrompts.PrioritisedPromptsManager
-// 0x0028 (0x0050 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UPrioritisedPromptsManager : public UObject
 {
 public:
 	TArray<struct FPrioritisedPromptWithHandle>        AllPrompts;                                               // 0x0028(0x0010) (ZeroConstructor)
 	class APlayerController*                           PlayerController;                                         // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0040(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

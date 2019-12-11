@@ -12,6 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.CheckIsFemale
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           IsFemale                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Humanoid_FirstPerson_C::CheckIsFemale(bool* IsFemale)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.CheckIsFemale"));
+
+	struct
+	{
+		bool                           IsFemale;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (IsFemale != nullptr)
+		*IsFemale = params.IsFemale;
+}
+
+
 // Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.SetInitialAthenaCharacterAndAnimSet
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

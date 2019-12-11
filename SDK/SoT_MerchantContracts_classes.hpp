@@ -80,12 +80,12 @@ public:
 
 
 // Class MerchantContracts.PlayerMerchantContractsComponent
-// 0x0018 (0x00E8 - 0x00D0)
+// 0x0018 (0x00E0 - 0x00C8)
 class UPlayerMerchantContractsComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	TArray<struct FPlayerMerchantContract>             Contracts;                                                // 0x00D8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	TArray<struct FPlayerMerchantContract>             Contracts;                                                // 0x00D0(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

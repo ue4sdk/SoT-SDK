@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TheAshenDragon_MarthaSkull_Proxy.BP_TheAshenDragon_MarthaSkull_Proxy_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x07F0 - 0x07F0)
 class ABP_TheAshenDragon_MarthaSkull_Proxy_C : public ABP_BountyRewardSkull_Proxy_C
 {
 public:

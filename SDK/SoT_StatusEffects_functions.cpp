@@ -12,6 +12,29 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function StatusEffects.StatusEffectOverlapZone.OnStatusDelayEnd
+// (Final, Native, Private)
+// Parameters:
+// int                            InStatusIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ActorRef                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStatusEffectOverlapZone::OnStatusDelayEnd(int InStatusIndex, class AActor* ActorRef)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectOverlapZone.OnStatusDelayEnd"));
+
+	struct
+	{
+		int                            InStatusIndex;
+		class AActor*                  ActorRef;
+	} params;
+
+	params.InStatusIndex = InStatusIndex;
+	params.ActorRef = ActorRef;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_SetDebugDrawColour
 // (Final, Native, Private)
 
@@ -99,6 +122,26 @@ void UStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveSta
 	} params;
 
 	params.OldEffects = OldEffects;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function StatusEffects.StatusEffectManagerComponent.MultiCast_ApplyOneShotStatus
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// TArray<struct FActiveStatusEffect> ActivatedEffects               (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void UStatusEffectManagerComponent::MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> ActivatedEffects)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectManagerComponent.MultiCast_ApplyOneShotStatus"));
+
+	struct
+	{
+		TArray<struct FActiveStatusEffect> ActivatedEffects;
+	} params;
+
+	params.ActivatedEffects = ActivatedEffects;
 
 	UObject::ProcessEvent(fn, &params);
 }

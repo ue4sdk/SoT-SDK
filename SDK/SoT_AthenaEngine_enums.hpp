@@ -29,9 +29,10 @@ enum class EPlayMode : uint8_t
 	EPlayMode__Adventure           = 0,
 	EPlayMode__Contest             = 1,
 	EPlayMode__Tutorial            = 2,
-	EPlayMode__MAX                 = 3,
-	EPlayMode__Invalid             = 4,
-	EPlayMode__EPlayMode_MAX       = 5
+	EPlayMode__NotSelectedYet      = 3,
+	EPlayMode__MAX                 = 4,
+	EPlayMode__Invalid             = 5,
+	EPlayMode__EPlayMode_MAX       = 6
 };
 
 

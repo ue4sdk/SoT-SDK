@@ -30,14 +30,6 @@ struct FCachedShip
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
-// ScriptStruct BumperZone.ShipBumperZoneAggregateTick
-// 0x0028 (0x0070 - 0x0048)
-struct FShipBumperZoneAggregateTick : public FTickFunction
-{
-	TArray<struct FBumperZoneData>                     ShipBumperZones;                                          // 0x0048(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0058(0x0018) MISSED OFFSET
-};
-
 }
 
 #ifdef _MSC_VER

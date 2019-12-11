@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipwreckStorageBarrel_Food.BP_ShipwreckStorageBarrel_Food_C
-// 0x0020 (0x05B8 - 0x0598)
+// 0x0020 (0x0518 - 0x04F8)
 class ABP_ShipwreckStorageBarrel_Food_C : public AStorageContainer
 {
 public:
-	class UReplenishableComponent*                     Replenishable;                                            // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                     // 0x05A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainer;                                         // 0x05A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UReplenishableComponent*                     Replenishable;                                            // 0x04F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                     // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStorageContainerComponent*                  StorageContainer;                                         // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
