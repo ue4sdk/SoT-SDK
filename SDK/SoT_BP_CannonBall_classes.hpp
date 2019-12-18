@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CannonBall.BP_CannonBall_C
-// 0x0018 (0x0878 - 0x0860)
+// 0x0018 (0x07D8 - 0x07C0)
 class ABP_CannonBall_C : public ACannonBall
 {
 public:
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

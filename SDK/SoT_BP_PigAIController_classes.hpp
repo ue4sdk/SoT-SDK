@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PigAIController.BP_PigAIController_C
-// 0x0008 (0x0AC0 - 0x0AB8)
+// 0x0008 (0x0A20 - 0x0A18)
 class ABP_PigAIController_C : public AAthenaFaunaAIController
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AB8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A18(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

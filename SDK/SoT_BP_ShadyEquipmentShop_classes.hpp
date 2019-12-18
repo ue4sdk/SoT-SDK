@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShadyEquipmentShop.BP_ShadyEquipmentShop_C
-// 0x0008 (0x0568 - 0x0560)
+// 0x0008 (0x04C8 - 0x04C0)
 class ABP_ShadyEquipmentShop_C : public AShopkeeperInteractionProxy
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
